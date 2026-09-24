@@ -22,7 +22,7 @@ const missingPath = join(root, 'maintenance/missing-portraits.json');
 const provenancePath = join(root, 'maintenance/portrait-provenance.json');
 const fixturePath = join(root, 'maintenance/portrait-audit-sample.json');
 const portraitsDir = join(root, 'public/portraits');
-const userAgent = 'VietProfs portrait maintenance (https://vietroars.roars.dev)';
+const userAgent = 'VietProfs portrait maintenance (https://vietprofs.roars.dev)';
 const args = new Set(process.argv.slice(2));
 const requestedBatch = Number(process.argv.find((arg) => /^\d+$/.test(arg)) ?? '1');
 const applying = args.has('--apply');
@@ -50,7 +50,11 @@ function hasNameEvidence(name: string, context: string): boolean { return hasWor
 function sourcePages(person: Person): Page[] {
   const sources: Array<[string | undefined, SourceType]> = [[person.profileUrl, 'official_faculty'], [person.websiteUrl, 'personal_homepage'], [person.labUrl, 'lab_site']];
   const seen = new Set<string>();
-  return sources.flatMap(([url, sourceType]) => !url || seen.has(url) ? [] : (seen.add(url), [{ url, sourceType, stored: true }]));
+  return sources.flatMap(([url, sourceType]) => {
+    if (!url || seen.has(url)) return [];
+    seen.add(url);
+    return [{ url, sourceType, stored: true }];
+  });
 }
 function identitySignals(person: Person, imageUrl: string, context: string, page: Page, pageHtml: string): string[] {
   const evidence = `${imageUrl} ${context} ${pageHtml.slice(0, 200_000)}`;
@@ -107,7 +111,7 @@ async function archiveImage(bytes: Buffer, output: string): Promise<void> {
   try { await execFileAsync('magick', [input, '-auto-orient', '-strip', '-resize', '1200x1200>', '-quality', '86', output]); } finally { await unlink(input).catch(() => undefined); }
 }
 async function isPortraitLike(output: string): Promise<boolean> {
-  try { const { stdout } = await execFileAsync('identify', ['-format', '%w %h', output]); const [width, height] = stdout.trim().split(/\s+/).map(Number); return width >= 120 && height >= 120 && width / height <= 1.55; } catch { return false; }
+  try { const { stdout } = await execFileAsync('identify', ['-format', '%w %h', output]); const [width, height] = stdout.trim().split(/\s+/).map(Number); return width >= 120 && height >= 120 && width / height >= 0.7 && width / height <= 1.55; } catch { return false; }
 }
 async function loadLedger(): Promise<ProvenanceLedger> { try { return JSON.parse(await readFile(provenancePath, 'utf8')) as ProvenanceLedger; } catch { return { version: 1, entries: {} }; } }
 async function loadQueue(people: Person[]): Promise<QueueItem[]> {
@@ -118,7 +122,7 @@ async function auditIds(): Promise<Set<string>> { const fixture = JSON.parse(awa
 const people = JSON.parse(await readFile(dataPath, 'utf8')) as Person[];
 const queue = await loadQueue(people);
 const ledger = await loadLedger();
-if (args.has('--status')) { console.log(JSON.stringify({ queue: queue.reduce<Record<string, number>>((counts, item) => ({ ...counts, [item.status]: (counts[item.status] ?? 0) + 1 }), {}), provenance: Object.keys(ledger.entries).length }, null, 2)); process.exit(0); }
+if (args.has('--status')) { console.log(JSON.stringify({ queue: queue.reduce<Record<string, number>>((counts, item) => { counts[item.status] = (counts[item.status] ?? 0) + 1; return counts; }, {}), provenance: Object.keys(ledger.entries).length }, null, 2)); process.exit(0); }
 const audit = args.has('--sample');
 if (explicitIds) {
   for (const person of people.filter((candidate) => explicitIds.has(candidate.id))) {

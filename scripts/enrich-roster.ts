@@ -5,7 +5,8 @@
  * separate: this command records the immutable batch snapshot and accepts only validated,
  * source-backed JSON proposals from an external collector.
  *
- *   npm run enrich -- snapshot
+ *   npm run enrich -- snapshot          # syncs with the roster, keeping recorded outcomes
+ *   npm run enrich -- snapshot --reset  # rebuilds the ledger from scratch
  *   npm run enrich -- status
  *   npm run enrich -- apply proposals.json
  */
@@ -17,6 +18,7 @@ import { validateEnrichment } from '../src/enrichment.ts';
 const rosterPath = resolve('public/data.json');
 const ledgerPath = resolve('maintenance/enrichment.json');
 const BATCH_SIZE = 20;
+const ENRICHMENT_FIELDS = new Set(['researchOverview', 'selectedWork', 'recentWork']);
 
 interface Batch { number: number; ids: string[]; status: 'pending' | 'in_progress' | 'complete'; startedAt?: string; publishedAt?: string; commit?: string; }
 interface Ledger { version: 1; snapshotAt: string; ids: string[]; batches: Batch[]; entries: Record<string, {
@@ -68,10 +70,41 @@ function makeEntry(person: RosterEntry, at = new Date().toISOString()): LedgerEn
 
 async function save(ledger: Ledger) { await writeFile(ledgerPath, `${JSON.stringify(ledger, null, 2)}\n`); }
 
-async function snapshot() {
-  const { roster } = await load();
-  await save(makeLedger(roster));
-  console.log(`Snapshotted ${roster.length} people in ${Math.ceil(roster.length / BATCH_SIZE)} batches.`);
+// Re-running snapshot after roster additions/removals must not discard recorded outcomes: keep
+// existing entries and batch assignments, drop removed IDs, and append new IDs as new batches.
+// `--reset` rebuilds the ledger from scratch.
+function syncLedger(ledger: Ledger, roster: Roster): { ledger: Ledger; added: number; removed: number } {
+  const now = new Date().toISOString();
+  const rosterIds = new Set(roster.map((person) => person.id));
+  const batches = ledger.batches.map((batch) => ({ ...batch, ids: batch.ids.filter((id) => rosterIds.has(id)) }));
+  const batched = new Set(batches.flatMap((batch) => batch.ids));
+  const newIds = roster.map((person) => person.id).filter((id) => !batched.has(id));
+  let number = Math.max(0, ...batches.map((batch) => batch.number));
+  for (let index = 0; index < newIds.length; index += BATCH_SIZE) batches.push({ number: ++number, ids: newIds.slice(index, index + BATCH_SIZE), status: 'pending' });
+  const removed = Object.keys(ledger.entries).filter((id) => !rosterIds.has(id)).length;
+  return {
+    ledger: {
+      version: 1,
+      snapshotAt: now,
+      ids: roster.map((person) => person.id),
+      batches,
+      entries: Object.fromEntries(roster.map((person): [string, LedgerEntry] => [person.id, ledger.entries[person.id] ?? makeEntry(person, now)])),
+    },
+    added: newIds.length,
+    removed,
+  };
+}
+
+async function snapshot(reset: boolean) {
+  const { roster, ledger } = await load();
+  if (!ledger || reset) {
+    await save(makeLedger(roster));
+    console.log(`Snapshotted ${roster.length} people in ${Math.ceil(roster.length / BATCH_SIZE)} batches.`);
+    return;
+  }
+  const synced = syncLedger(ledger, roster);
+  await save(synced.ledger);
+  console.log(`Synced ledger with ${roster.length} people: ${synced.added} added, ${synced.removed} removed; existing outcomes kept.`);
 }
 
 async function status() {
@@ -149,11 +182,17 @@ async function apply(inputPath: string) {
   for (const [id, proposal] of Object.entries(proposals)) {
     const person = roster.find((candidate) => candidate.id === id);
     if (!person) throw new Error(`Unknown roster ID: ${id}`);
+    const unexpected = Object.keys(proposal).filter((key) => !ENRICHMENT_FIELDS.has(key));
+    if (unexpected.length) throw new Error(`${id}: proposals may only set ${[...ENRICHMENT_FIELDS].join(', ')} (got ${unexpected.join(', ')})`);
+    const protectedKeys = Object.keys(proposal).filter((key) => person.directFields?.includes(key));
+    if (protectedKeys.length) throw new Error(`${id}: ${protectedKeys.join(', ')} protected by directFields`);
     const errors = validateEnrichment(proposal);
     if (errors.length) throw new Error(`${id}: ${errors.join('; ')}`);
     if (proposal.selectedWork && proposal.recentWork) throw new Error(`${id}: choose selectedWork or recentWork`);
-    Object.assign(person, proposal);
     const entry = ledger.entries[id];
+    if (!entry) throw new Error(`${id}: not in the enrichment ledger; run snapshot first`);
+    Object.assign(person, proposal);
+    person.lastUpdatedAt = new Date().toISOString();
     if (proposal.researchOverview) entry.overview = 'verified';
     if (proposal.selectedWork || proposal.recentWork) entry.work = 'verified';
     entry.updatedAt = new Date().toISOString();
@@ -227,11 +266,11 @@ async function resolveRetries() {
 }
 
 const [command = 'status', argument] = process.argv.slice(2);
-if (command === 'snapshot') await snapshot();
+if (command === 'snapshot') await snapshot(argument === '--reset');
 else if (command === 'status') await status();
 else if (command === 'start' && argument && /^\d+$/.test(argument)) await startBatch(Number(argument));
 else if (command === 'collect' && argument && /^\d+$/.test(argument)) await collectBatch(Number(argument));
 else if (command === 'apply' && argument) await apply(argument);
 else if (command === 'finalize' && argument && /^\d+$/.test(argument)) await finalizeBatch(Number(argument));
 else if (command === 'resolve-retries') await resolveRetries();
-else throw new Error('Usage: enrich-roster.ts snapshot|status|start N|collect N|apply proposals.json|finalize N|resolve-retries');
+else throw new Error('Usage: enrich-roster.ts snapshot [--reset]|status|start N|collect N|apply proposals.json|finalize N|resolve-retries');

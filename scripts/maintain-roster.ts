@@ -47,7 +47,7 @@ import { dirname, join, resolve } from 'node:path';
 import process from 'node:process';
 import { fileURLToPath } from 'node:url';
 import { isDeepStrictEqual } from 'node:util';
-import { FIELDS, fieldOf, type Roster, type RosterEntry } from '../src/data.ts';
+import { FIELDS, fieldOf, type Roster } from '../src/data.ts';
 import { DIRECT_FIELD_EXCLUSIONS, HONOR_CATEGORIES, HONOR_FIELDS, INSTITUTION_TYPES, OTHER_DEGREE_FIELDS, ROSTER_FIELDS, TRACKS } from '../src/roster-constants.ts';
 import { validateEnrichment } from '../src/enrichment.ts';
 import { loadEvidenceLedger, recordFieldEvidence, saveEvidenceLedger } from '../src/evidence.ts';

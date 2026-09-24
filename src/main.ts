@@ -32,13 +32,10 @@ import {
   uniqueResearchAreas,
   uniqueStates,
   uniqueUndergradInstitutions,
-  type GitInfo,
   type Roster,
   type RosterEntry,
-  type SearchIndex,
-  type StatsHistoryPoint,
 } from './data.ts';
-import { abbreviateInsightText, escapeHtml, formatRosterDate, showToast } from './utils.ts';
+import { abbreviateInsightText, escapeHtml, formatRosterDate } from './utils.ts';
 import { applyFavoriteToggle, fieldDropdownLabel, renderRosterEntry } from './render.ts';
 import { clearPinnedSearches, clearRecentProfiles, loadFavorites, loadPinnedSearches, loadRecentProfiles, toggleFavorite, togglePinnedSearch } from './favorites-store.ts';
 import { openRosterShell } from './roster-shell.ts';
@@ -365,7 +362,6 @@ async function init() {
     hasEnoughPeopleForRosterHub(filterRoster(roster, { location: region }).length)));
   const statsHistory = await loadStatsHistory();
   const gitInfo = await loadGitInfo();
-  const allFacts = buildFunFacts(roster);
 
   // Matches everything filterRoster actually searches over (name, university, city, state, country,
   // department, rank, research areas, degree institutions, and honors) so a suggestion always yields at least one result.

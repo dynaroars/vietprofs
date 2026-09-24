@@ -352,7 +352,9 @@ test('mobile pages avoid horizontal overflow and provide usable tap targets', as
       .filter((element) => {
         const style = getComputedStyle(element);
         const rect = element.getBoundingClientRect();
-        return style.display !== 'none' && style.visibility !== 'hidden' && (rect.width < 44 || rect.height < 44);
+        // getClientRects() is empty when the element or an ancestor (e.g. a `hidden` form
+        // section) isn't rendered at all, so there is nothing to tap.
+        return element.getClientRects().length > 0 && style.display !== 'none' && style.visibility !== 'hidden' && (rect.width < 44 || rect.height < 44);
       })
       .map((element) => ({
         selector: `${element.tagName.toLowerCase()}#${element.id}.${String(element.className).replace(/\s+/g, '.')}`,
@@ -707,12 +709,13 @@ test('verified academic connections render on both linked profiles', async () =>
     await page.goto(`${baseUrl}/people/${id}.html`, { waitUntil: 'networkidle' });
     const connections = page.locator('.man-section').filter({ has: page.locator('h2', { hasText: 'CONNECTIONS' }) });
     assert.equal(await connections.count(), 1);
-    const personLink = connections.locator('.connection-person');
-    assert.equal(await personLink.textContent(), linkedName);
-    assert.equal(await personLink.getAttribute('href'), `../people/${linkedId}.html`);
-    assert.equal(await connections.locator('.connection-kind').textContent(), 'Coauthor · 2 shared works');
-    assert.equal(await connections.locator('.connection-sources a').count(), 3);
-    assert.equal(await connections.locator('.connection-works').count(), 0);
+    // Scope to this pair: either person may gain further connections over time.
+    const item = connections.locator('.connection-item').filter({ has: page.locator(`a.connection-person[href="../people/${linkedId}.html"]`) });
+    assert.equal(await item.count(), 1);
+    assert.equal(await item.locator('.connection-person').textContent(), linkedName);
+    assert.equal(await item.locator('.connection-kind').textContent(), 'Coauthor · 2 shared works');
+    assert.equal(await item.locator('.connection-sources a').count(), 3);
+    assert.equal(await item.locator('.connection-works').count(), 0);
   }
   await page.goto(`${baseUrl}/people/vp-0001.html`, { waitUntil: 'networkidle' });
   assert.equal(await page.locator('.connection-list').count(), 0);

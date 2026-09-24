@@ -4,7 +4,9 @@
 // university/research-institute affiliations are only leads. Every pending record still needs
 // the roster's normal identity and appointment verification before it can be included.
 //
-// Usage: ./scripts/extract-openalex-leads.ts [--pages N] [--include-economics]
+// Usage: ./scripts/extract-openalex-leads.ts [--pages N] [--include-economics] [--api-key KEY]
+//        [--surnames-only | --given-names-only | --diacritics-only] [--include-diacritics]
+// OPENALEX_API_KEY in the environment takes precedence over --api-key.
 // The default is one 200-result page for each Vietnamese surname. Increase --pages on later,
 // resumable runs rather than mistaking this bounded discovery pass for a complete census.
 
@@ -25,8 +27,6 @@ const surnames = [
 const givenNames = [
   'Quoc', 'Duy', 'Khang', 'Hieu', 'Kien', 'Tung', 'Triet', 'Bao', 'Phuong', 'Thao', 'Giang', 'Trang', 'Viet', 'Thanh', 'Tuan', 'Hung', 'Cuong', 'Xuan', 'Thuan', 'Nhat', 'Quyen', 'Linh', 'Huyen', 'Manh', 'Duc'
 ];
-
-const allSurnamesSet = new Set(surnames.map((s) => s.toLowerCase().replace(/[^a-z]/g, '')));
 
 // A surname alone is much too broad internationally (especially Le, Do, Mai, and Dang). This is
 // deliberately a discovery lexicon, not an identity determination: a candidate still needs
@@ -133,7 +133,7 @@ async function fetchQuery(query: string, maxPages: number): Promise<Author[]> {
       try {
         const headers: Record<string, string> = { 'User-Agent': 'VietProfs-Discovery/1.0 (mailto:vietprofs@roars.dev)' };
         if (apiKey) {
-          headers['api_key'] = apiKey;
+          headers.api_key = apiKey;
         }
         response = await fetch(url, { headers });
         if (response.status === 429) {

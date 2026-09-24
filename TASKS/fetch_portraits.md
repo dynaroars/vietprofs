@@ -71,11 +71,10 @@ python3 scripts/fast_portrait_analyzer.py
   ```bash
   npx tsx scripts/find-all-nonhuman-portraits.ts
   ```
-- Clean/purge confirmed non-human portraits:
-  ```bash
-  npx tsx scripts/clean-nonhuman-portraits.ts
-  python3 scripts/purge_verified_nonhuman_portraits.py
-  ```
+- Remove a confirmed non-human portrait by hand, only after looking at the image: delete the
+  file under `public/portraits/`, drop `portrait`/`portraitSource` from the entry (never on an
+  entry whose `directFields` protect them), and set `lastUpdatedAt`. Aspect ratio alone is not
+  evidence — a ratio-only bulk purge once removed 103 valid headshots (#106).
 - Run the full portrait audit suite:
   ```bash
   npx tsx scripts/audit-portraits.ts

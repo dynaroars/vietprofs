@@ -55,7 +55,18 @@ function getChangedFiles(): string[] {
       }
     }
 
-    // 3. If working tree is clean, inspect the latest commit (or PR base in CI)
+    // 3. Local commits not yet pushed. Checked even when the working tree is dirty, so a pending
+    // data edit can't hide an already-committed UI change from the "before pushing" run.
+    try {
+      const unpushed = execSync('git diff --name-only @{upstream}...HEAD', { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] });
+      for (const file of unpushed.split('\n')) {
+        if (file.trim()) changed.add(file.trim());
+      }
+    } catch {
+      // No upstream branch configured.
+    }
+
+    // 4. If nothing is pending, inspect the latest commit (or PR base in CI)
     if (changed.size === 0) {
       if (process.env.GITHUB_BASE_REF) {
         // GitHub Actions PR
@@ -79,7 +90,7 @@ function getChangedFiles(): string[] {
     }
   } catch {
     // If git commands fail (e.g. shallow clone without HEAD~1 or non-git environment),
-    // return null to trigger safe fallback to full run.
+    // return an empty list to trigger the safe fallback to a full run.
     return [];
   }
 
@@ -99,7 +110,7 @@ if (buildResult.status !== 0) {
 if (forceRun) {
   console.log('🚀 Running full Playwright browser smoke tests (--force requested)...');
   const testResult = spawnSync('npx', ['tsx', '--test', 'test/browser-smoke.test.ts'], { stdio: 'inherit' });
-  process.exit(testResult.status ?? 0);
+  process.exit(testResult.status ?? 1);
 }
 
 const changedFiles = getChangedFiles();
@@ -130,4 +141,4 @@ if (uiFilesModified.length > 0) {
 
 console.log('🚀 Running Playwright browser smoke tests...');
 const testResult = spawnSync('npx', ['tsx', '--test', 'test/browser-smoke.test.ts'], { stdio: 'inherit' });
-process.exit(testResult.status ?? 0);
+process.exit(testResult.status ?? 1);

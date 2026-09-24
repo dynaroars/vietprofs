@@ -2,12 +2,12 @@
 // Field counts come from the canonical `fieldOf` in src/data.ts, so this report and the
 // live site always agree on the broad-field taxonomy.
 import fs from 'node:fs';
-import { FIELDS, countBy, fieldOf, type Roster, type RosterEntry } from '../src/data.ts';
+import { FIELDS, canonicalState, countBy, fieldOf, type Roster, type RosterEntry } from '../src/data.ts';
 
 const roster: Roster = JSON.parse(fs.readFileSync(new URL('../public/data.json', import.meta.url), 'utf8'));
 
 const countryOf = (p: RosterEntry) => p.country ?? 'United States';
-const fieldsOf = (people: Roster) => countBy(people, (p) => fieldOf(p.department ?? '', p.university));
+const fieldsOf = (people: Roster) => countBy(people, (p) => fieldOf(p.department, p.university));
 const withShares = (people: Roster) =>
   fieldsOf(people).map(([field, n]) => [field, n, Math.round((100 * n) / people.length)]);
 
@@ -47,7 +47,7 @@ console.log(JSON.stringify({
   topUniversities: universities.slice(0, 20),
   topCountries: countBy(roster, countryOf),
   fields: fieldsOf(roster),
-  states: countBy(us, (p) => p.state ?? 'missing').slice(0, 20),
+  states: countBy(us, (p) => canonicalState(p.state, p.country) ?? 'missing').slice(0, 20),
   departmentSpread: departmentSpread.slice(0, 20),
   sameInstitutionFieldClusters: sameInstitutionFieldClusters.slice(0, 20),
   usFieldShares: withShares(us),

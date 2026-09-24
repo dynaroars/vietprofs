@@ -258,7 +258,7 @@ function profilePage(
   <link rel="apple-touch-icon" href="../vietprofs-bamboo-v-512.png">
   <link rel="manifest" href="../manifest.webmanifest">
   <title>${escapeHtml(title)}</title>
-  <script type="application/ld+json">${jsonLd}</script>
+  <script type="application/ld+json">${jsonLd.replace(/</g, '\\u003c')}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -405,7 +405,7 @@ function categoryHubPage(config: HubConfig) {
   <link rel="apple-touch-icon" href="${rootPrefix}vietprofs-bamboo-v-512.png">
   <link rel="manifest" href="${rootPrefix}manifest.webmanifest">
   <title>${escapeHtml(title)}</title>
-  <script type="application/ld+json">${jsonLd}</script>
+  <script type="application/ld+json">${jsonLd.replace(/</g, '\\u003c')}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">

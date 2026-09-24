@@ -37,12 +37,13 @@ async function scanNonHumanPortraits() {
       const [w, h] = stdout.trim().split(/\s+/).map(Number);
       const ratio = w / h;
 
-      if (ratio > 1.4) {
+      // Same 0.70–1.55 portrait band as fetch-portraits.ts and TASKS/fetch_portraits.md.
+      if (ratio > 1.55 || ratio < 0.7) {
         nonHumanEntries.push({
           id: p.id,
           name: p.name,
           university: p.university,
-          reason: `Banner/Landscape aspect ratio (${w}x${h}, ratio ${ratio.toFixed(2)})`,
+          reason: `Non-portrait aspect ratio (${w}x${h}, ratio ${ratio.toFixed(2)})`,
           portrait: p.portrait,
           portraitSource: p.portraitSource,
         });

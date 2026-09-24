@@ -83,9 +83,6 @@ export type Roster = RosterEntry[];
 import {
   COUNTRY_FLAGS,
   COUNTRY_TO_CONTINENT,
-  INSTITUTION_TYPES,
-  LOCATION_LABELS,
-  LOCATIONS,
   TRACKS,
 } from './roster-constants.ts';
 import type { RelationshipDatabase } from './relationships.ts';
@@ -235,7 +232,7 @@ function sortedUnique(values: (string | undefined)[]): string[] {
 }
 
 export function uniqueStates(roster: Roster): string[] {
-  return sortedUnique(roster.map((p) => p.state));
+  return sortedUnique(roster.map((p) => canonicalState(p.state, p.country)));
 }
 
 export function uniqueDepartments(roster: Roster): string[] {
@@ -939,7 +936,7 @@ function stripDiacritics(s: string): string {
 
 export const STATE_ABBR: Record<string, string> = {
   Alabama: 'AL', Alaska: 'AK', Arizona: 'AZ', Arkansas: 'AR', California: 'CA', Colorado: 'CO',
-  Connecticut: 'CT', DC: 'DC', Delaware: 'DE', Florida: 'FL', Georgia: 'GA', Hawaii: 'HI',
+  Connecticut: 'CT', 'District of Columbia': 'DC', Delaware: 'DE', Florida: 'FL', Georgia: 'GA', Hawaii: 'HI',
   Idaho: 'ID', Illinois: 'IL', Indiana: 'IN', Iowa: 'IA', Kansas: 'KS', Kentucky: 'KY',
   Louisiana: 'LA', Maine: 'ME', Maryland: 'MD', Massachusetts: 'MA', Michigan: 'MI',
   Minnesota: 'MN', Mississippi: 'MS', Missouri: 'MO', Montana: 'MT', Nebraska: 'NE',
@@ -949,6 +946,16 @@ export const STATE_ABBR: Record<string, string> = {
   Tennessee: 'TN', Texas: 'TX', Utah: 'UT', Vermont: 'VT', Virginia: 'VA', Washington: 'WA',
   'West Virginia': 'WV', Wisconsin: 'WI', Wyoming: 'WY',
 };
+
+const STATE_NAME_BY_ABBR = new Map(Object.entries(STATE_ABBR).map(([name, abbr]) => [abbr, name]));
+
+// U.S. states are stored as full names, but a few records (including protected direct values)
+// carry the postal abbreviation. Map those to the full name so counts and filters agree. Only
+// U.S. records are mapped: other countries' region codes (e.g. Australia's WA) can collide.
+export function canonicalState(state: string | undefined, country?: string): string | undefined {
+  if (!state || (country && !['United States', 'US', 'USA'].includes(country))) return state;
+  return STATE_NAME_BY_ABBR.get(state.trim().toUpperCase()) ?? state;
+}
 
 interface FilterOptions {
   query?: string;
@@ -1052,12 +1059,10 @@ export function filterRoster(roster: Roster | SearchIndex, { query = '', locatio
     result = result.filter((p) => p.phdInstitution && stripDiacritics(p.phdInstitution.toLowerCase()).includes(norm));
   }
   if (state) {
-    const norm = stripDiacritics(state.trim().toLowerCase());
-    result = result.filter((p) => {
-      if (!p.state) return false;
-      const s = stripDiacritics(p.state.toLowerCase());
-      return s === norm || s.includes(norm) || (STATE_ABBR[p.state] && STATE_ABBR[p.state].toLowerCase() === norm);
-    });
+    // Exact match on the canonical name: a substring test let "Virginia" match West Virginia
+    // and "VA" match Nevada or Pennsylvania.
+    const norm = stripDiacritics((canonicalState(state) ?? '').trim().toLowerCase());
+    result = result.filter((p) => p.state !== undefined && stripDiacritics((canonicalState(p.state, p.country) ?? '').toLowerCase()) === norm);
   }
 
   if (searchScope !== 'all') {
@@ -1254,7 +1259,7 @@ export function buildUsObservations(roster: Roster | null | undefined): string[]
   const usRoster = (roster || []).filter((p) => (p.country || 'United States') === 'United States');
   if (usRoster.length === 0) return ['No United States faculty currently listed under the active filter selection.'];
   const facts = [`${usRoster.length} U.S. entries across ${new Set(usRoster.map((p) => p.university)).size} institutions.`];
-  const places = countBy(usRoster, (p) => p.state);
+  const places = countBy(usRoster, (p) => canonicalState(p.state, p.country));
   if (places.length >= 2 && places[0][1] + places[1][1] >= usRoster.length * 0.2) {
     facts.push(`${places[0][0]} and ${places[1][0]} together contain ${observationShare(places[0][1] + places[1][1], usRoster.length)} of U.S. entries.`);
   }

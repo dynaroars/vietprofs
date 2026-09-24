@@ -63,18 +63,6 @@ function tokenize(s: string): string[] {
     .filter((t) => t.length > 1);
 }
 
-function extractSlugTokens(urlStr: string): string[] {
-  try {
-    const url = new URL(urlStr);
-    const rawTokens = normalize(url.pathname + ' ' + url.hostname)
-      .split(/\s+/)
-      .filter((t) => t.length > 2 && !COMMON_SLUG_STOPWORDS.has(t));
-    return rawTokens;
-  } catch {
-    return [];
-  }
-}
-
 async function runAudit(): Promise<void> {
   const rosterPath = resolve('public/data.json');
   const roster: RosterEntry[] = JSON.parse(await readFile(rosterPath, 'utf8'));
@@ -290,7 +278,7 @@ async function runAudit(): Promise<void> {
           // Extract tokens only from the pathname or github/google subdomain (not the root university hostname)
           let slugStr = parsed.pathname;
           if (parsed.hostname.includes('github.io') || parsed.hostname.includes('sites.google.com')) {
-            slugStr += ' ' + parsed.hostname.split('.')[0];
+            slugStr += ` ${parsed.hostname.split('.')[0]}`;
           }
           const slugTokens = normalize(slugStr)
             .split(/\s+/)

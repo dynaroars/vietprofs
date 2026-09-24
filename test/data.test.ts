@@ -433,6 +433,14 @@ test('search is diacritic-insensitive in both directions', () => {
   assert.ok(plain.length > 0);
 });
 
+test('state filter matches the exact state, by full name or postal abbreviation', () => {
+  const people = (entries: Partial<RosterEntry>[]) => entries.map((entry, index) => ({ id: `vp-${index}`, name: `P ${index}`, university: 'U', ...entry }) as RosterEntry);
+  const sample = people([{ state: 'Virginia' }, { state: 'West Virginia' }, { state: 'Nevada' }, { state: 'Pennsylvania' }, { state: 'VA' }, { state: 'WA', country: 'Australia' }]);
+  assert.deepEqual(filterRoster(sample, { state: 'Virginia' }).map((p) => p.id), ['vp-0', 'vp-4']);
+  assert.deepEqual(filterRoster(sample, { state: 'VA' }).map((p) => p.id), ['vp-0', 'vp-4']);
+  assert.deepEqual(filterRoster(sample, { state: 'Washington' }).map((p) => p.id), []);
+});
+
 test('search matches on simplified rank, not just name/university/location/area', () => {
   const result = filterRoster(roster, { query: 'Teaching', field: 'all' });
   assert.ok(result.length > 0);

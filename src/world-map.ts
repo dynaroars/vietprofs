@@ -81,7 +81,7 @@ export function renderWorldMap(roster: Roster, selectedLocation?: string): strin
   }).join('');
 
   // Vietnam Origin Pin
-  const vnCoords = COUNTRY_PIN_COORDS['Vietnam'] || { x: 662, y: 490 };
+  const vnCoords = COUNTRY_PIN_COORDS.Vietnam || { x: 662, y: 490 };
   const vnPinHtml = `
     <g class="world-map-pin is-origin-pin" data-country="Vietnam" data-count="0" data-flag="🇻🇳" data-share="0" transform="translate(${vnCoords.x}, ${vnCoords.y})" role="button" tabindex="0" aria-label="Vietnam: Origin of diaspora">
       <circle class="origin-pin-halo" r="9" />

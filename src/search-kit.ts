@@ -179,7 +179,7 @@ export function createSearchController(opts: SearchControllerOptions): SearchCon
     if (!activeScope) return raw;
     const meta = keywordMeta[activeScope];
     const label = (meta ? meta.label : activeScope).toLowerCase();
-    return `${label}:${raw ? ' ' + raw : ''}`;
+    return `${label}:${raw ? ` ${raw}` : ''}`;
   }
 
   function resetScope() {
@@ -355,7 +355,7 @@ export function createCommandHandler(opts: CommandHandlerOptions) {
     if (cmd === 'uname -a' || cmd === 'build' || cmd === 'built' || cmd === 'build it' || cmd === 'version') {
       const commit = opts.buildCommit ?? 'dev';
       const label = opts.buildLabel ?? '';
-      completeCommand(`${opts.siteName} static-web build ${commit}${label ? ' (' + label + ')' : ''} browser/${navigator.platform || 'unknown'}`);
+      completeCommand(`${opts.siteName} static-web build ${commit}${label ? ` (${label})` : ''} browser/${navigator.platform || 'unknown'}`);
       return true;
     }
     if (cmd === 'stats' || cmd === 'status') {

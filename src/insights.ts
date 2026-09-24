@@ -1,5 +1,6 @@
 import {
   STATE_ABBR,
+  canonicalState,
   buildAwardsFunFacts,
   buildDecadeCounts,
   buildFieldCounts,
@@ -50,8 +51,9 @@ export function renderStateGrid(roster: Roster): string {
   // Entries with no recorded state are skipped rather than pooled under one undefined key,
   // which would otherwise feed the max() below and wash out the whole grid's shading.
   for (const p of roster) {
-    if (!p.state) continue;
-    counts.set(p.state, (counts.get(p.state) ?? 0) + 1);
+    const state = canonicalState(p.state, p.country);
+    if (!state) continue;
+    counts.set(state, (counts.get(state) ?? 0) + 1);
   }
   const max = Math.max(0, ...counts.values());
   const tiles = Object.entries(STATE_GRID)

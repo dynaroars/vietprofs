@@ -234,7 +234,9 @@ async function checkOne(entry: UrlEntry): Promise<CheckResult> {
           }
 
           if (!warning && entry.field === 'profileUrl') {
-            const tokens = entry.name.replace(/\s*-\s*.*$/, '').trim().split(/\s+/);
+            // Strip only the " - University" disambiguation suffix; a bare hyphen is part of names
+            // like "Anh-Thu Nguyen".
+            const tokens = entry.name.split(' - ')[0].trim().split(/\s+/);
             const lastName = tokens[tokens.length - 1];
             const firstName = tokens[0];
             const lowerText = text.toLowerCase();

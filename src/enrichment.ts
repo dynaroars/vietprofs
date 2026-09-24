@@ -42,7 +42,7 @@ export function validateOverview(value: unknown): EnrichmentError[] {
   else {
     const textWithoutLinks = overview.text
       .replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g, '$1')
-      .replace(/\b[A-Z]\.\s+/g, (m) => m[0] + ' ');
+      .replace(/\b[A-Z]\.\s+/g, (m) => `${m[0]} `);
     const sentences = textWithoutLinks.trim().split(/[.!?]+(?:\s+|$)/).filter(Boolean);
     if (sentences.length < 1) errors.push('overview must contain at least one sentence');
     if (sentences.length > 3) errors.push('overview may contain at most three sentences');

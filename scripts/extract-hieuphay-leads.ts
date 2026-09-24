@@ -83,12 +83,14 @@ function looksLikeEligibleInstitution(inst: string): boolean {
   if (!inst) return false;
   const low = inst.toLowerCase();
   if (ELIGIBLE_RESEARCH_INSTITUTE_HINTS.some((hint) => low.includes(hint))) return true;
+  // Checked before NON_UNI_HINTS, whose generic 'institute of' would otherwise drop MIT,
+  // Caltech, Georgia Tech, and similar.
+  if (low.includes('institute of technology')) return true;
   if (NON_UNI_HINTS.some((h) => low.includes(h))) return false;
   return (
     low.includes('university') ||
     low.includes('college') ||
     low.includes('school of') ||
-    low.includes('institute of technology') ||
     low.includes('polytechnic')
   );
 }
@@ -176,6 +178,12 @@ async function main() {
       note: existing?.note,
       rosterId: existing?.rosterId,
     });
+  }
+
+  // Keep reviewed leads the source no longer lists (or that no longer pass the filters) so a
+  // rerun can't discard a human decision. Vanished pending leads are simply dropped.
+  for (const lead of existingLeads) {
+    if (lead.status !== 'pending' && !seenThisRun.has(`${lead.name}|${lead.inst}`)) candidates.push(lead);
   }
 
   candidates.sort((a, b) => (b.cited as number) - (a.cited as number));

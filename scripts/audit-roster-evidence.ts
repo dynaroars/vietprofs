@@ -12,7 +12,7 @@
 
 import { readFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
-import type { Roster, RosterEntry } from '../src/data.ts';
+import type { Roster } from '../src/data.ts';
 import {
   validateEducationChronology,
   validateInstitutionFormat,
@@ -139,7 +139,7 @@ if (liveCheck) {
           if (contentType.includes('text/html')) {
             const html = await res.text();
             // Check if person's family name appears in page
-            const nameTokens = person.name.split(' ');
+            const nameTokens = person.name.split(' - ')[0].trim().split(/\s+/);
             const lastName = nameTokens[nameTokens.length - 1];
             if (lastName && !html.toLowerCase().includes(lastName.toLowerCase())) {
               issues.push({

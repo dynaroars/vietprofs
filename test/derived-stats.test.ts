@@ -4,7 +4,6 @@ import {
   computeAcademicGenerations,
   computeCompleteness,
   computeRecentUpdates,
-  computeRegionFieldDistribution,
   computeTopPhdOrigins,
   computeTopUndergradFeeders,
   deriveRosterStats,

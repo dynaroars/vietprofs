@@ -61,12 +61,6 @@ function personLink(person: RosterEntry): string {
   return `<a href="${escapeHtml(`${base}${personPath(person.id)}`)}">${escapeHtml(displayName(person.name))}</a>`;
 }
 
-function edgeLabel(relationship: AcademicRelationship): string {
-  if (DIRECTIONAL_TYPES.has(relationship.type)) return TYPE_LABELS[relationship.type];
-  const works = relationship.works.length;
-  return `${TYPE_LABELS[relationship.type]} · ${works} shared work${works === 1 ? '' : 's'}`;
-}
-
 function edgeArrow(relationship: AcademicRelationship): string {
   return DIRECTIONAL_TYPES.has(relationship.type) ? '→' : '↔';
 }
