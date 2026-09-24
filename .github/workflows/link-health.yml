@@ -30,6 +30,10 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
+          if ! grep -q 'Link & Content Verification Summary' link-report.txt; then
+            echo "::error::check-links did not finish; see the 'Check stored URLs' step."
+            exit 1
+          fi
           if ! grep -q 'BROKEN LINKS' link-report.txt; then
             echo "No broken links found."
             exit 0

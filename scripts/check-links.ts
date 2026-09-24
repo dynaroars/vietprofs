@@ -124,6 +124,18 @@ if (checkPortraitsOnly || !targetField) {
   }
 }
 
+// Node's bundled HTTP client (undici) can throw an internal assertion from a socket event when a
+// server closes a connection mid-response. It escapes every promise and would abort the whole
+// sweep; the affected request still hits its timeout and is reported as ERROR.
+process.on('uncaughtException', (error: NodeJS.ErrnoException) => {
+  if (error.code === 'ERR_ASSERTION' && String(error.stack).includes('undici')) {
+    console.error(`\n⚠️  Ignored internal HTTP client assertion: ${error.message}`);
+    return;
+  }
+  console.error(error);
+  process.exit(1);
+});
+
 const USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36';
 
 const SOFT_404_PATTERNS = [
