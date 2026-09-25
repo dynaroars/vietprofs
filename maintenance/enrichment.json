@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "snapshotAt": "2026-09-23T04:32:58.864Z",
+  "snapshotAt": "2026-09-25T03:50:50.908Z",
   "ids": [
     "vp-0001",
     "vp-0002",
@@ -1614,7 +1614,13 @@
     "vp-1683",
     "vp-1684",
     "vp-1686",
-    "vp-1687"
+    "vp-1687",
+    "vp-1688",
+    "vp-1689",
+    "vp-1690",
+    "vp-1691",
+    "vp-1692",
+    "vp-1693"
   ],
   "batches": [
     {
@@ -3785,6 +3791,18 @@
         "vp-1684",
         "vp-1686",
         "vp-1687"
+      ],
+      "status": "pending"
+    },
+    {
+      "number": 95,
+      "ids": [
+        "vp-1688",
+        "vp-1689",
+        "vp-1690",
+        "vp-1691",
+        "vp-1692",
+        "vp-1693"
       ],
       "status": "pending"
     }
@@ -20540,6 +20558,68 @@
       "evidence": [],
       "errors": [],
       "updatedAt": "2026-09-24T00:00:00.000Z"
+    },
+    "vp-1688": {
+      "overview": "pending",
+      "work": "pending",
+      "sourcesChecked": [
+        "https://www.uec.ac.jp/eng/research/information/teacher/759?lang=en",
+        "https://thuchoang90.github.io/"
+      ],
+      "evidence": [],
+      "errors": [],
+      "updatedAt": "2026-09-25T03:50:50.908Z"
+    },
+    "vp-1689": {
+      "overview": "pending",
+      "work": "pending",
+      "sourcesChecked": [
+        "https://www.ut.edu/directory/pham-katie"
+      ],
+      "evidence": [],
+      "errors": [],
+      "updatedAt": "2026-09-25T03:50:50.908Z"
+    },
+    "vp-1690": {
+      "overview": "pending",
+      "work": "pending",
+      "sourcesChecked": [
+        "https://www.udel.edu/academics/colleges/cas/units/departments/mathematical-sciences/our-people/vu-dinh/",
+        "https://vucdinh.github.io/"
+      ],
+      "evidence": [],
+      "errors": [],
+      "updatedAt": "2026-09-25T03:50:50.908Z"
+    },
+    "vp-1691": {
+      "overview": "pending",
+      "work": "pending",
+      "sourcesChecked": [
+        "https://www.newcastle.edu.au/profile/duy-ngo"
+      ],
+      "evidence": [],
+      "errors": [],
+      "updatedAt": "2026-09-25T03:50:50.908Z"
+    },
+    "vp-1692": {
+      "overview": "pending",
+      "work": "pending",
+      "sourcesChecked": [
+        "https://engineering.wayne.edu/profile/ex6091"
+      ],
+      "evidence": [],
+      "errors": [],
+      "updatedAt": "2026-09-25T03:50:50.908Z"
+    },
+    "vp-1693": {
+      "overview": "pending",
+      "work": "pending",
+      "sourcesChecked": [
+        "https://vietducle1102.github.io/"
+      ],
+      "evidence": [],
+      "errors": [],
+      "updatedAt": "2026-09-25T03:50:50.908Z"
     }
   }
 }
