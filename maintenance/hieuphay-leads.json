@@ -6229,8 +6229,8 @@
       "country": "NZ",
       "npapers": 3,
       "cited": 10,
-      "status": "pending",
-      "note": "Fourth session (2026-09-07): identity remains solid — Thanh (Harris) Vu on AUT's official staff system (academics.aut.ac.nz/harris.vu) and ACFR people page (not the visiting-researchers list); new signal this session: named co-organiser of the 2025 New Zealand Finance Meeting (ACFR-hosted) alongside senior continuing AUT finance faculty. Exact rank (Lecturer/Senior Lecturer/Research Fellow) still unconfirmable — aut.ac.nz domains (incl. academics., acfr., airc. subdomains) remain egress-blocked, as do proxy workarounds (r.jina.ai, translate.goog, webcache.googleusercontent.com) and LinkedIn/profiles.auckland.ac.nz. Left pending again — appointment is very likely genuine and continuing; needs manual/direct page access to pin down rank before adding."
+      "status": "excluded",
+      "note": "[scheduled:honors 2026-09-24] Real identity: Thanh \"Harris\" Vu. AUT's official staff API (https://academics.aut.ac.nz/api/users/harris.vu) lists his only current appointment as Research Fellow, Auckland Centre for Financial Research (ACFR), AUT, start 2025-02-24. AUT/ACFR's own SSRN job ad for this exact role (https://www.ssrn.com/index.cfm/en/janda/job/?id=16468) describes it as an explicit fixed-term ~2-year postdoctoral position — excluded regardless of title. PhD Finance, U. Auckland, completed 2024-09. Prior role: Lecturer, National Economics University, Hanoi (Vietnam-based), 2013-2019. Resolves the prior sessions' pending status now that AUT domains are reachable."
     },
     {
       "name": "Monica Tran",
@@ -7331,7 +7331,8 @@
       "country": "JP",
       "npapers": 2,
       "cited": 5,
-      "status": "pending"
+      "status": "pending",
+      "note": "[scheduled:honors 2026-09-24] Not found in Tohoku's Graduate School of Economics and Management faculty directory (econ.tohoku.ac.jp/en/teacher). Closest IDEAS/RePEc match, Quang-Thanh Tran (initials Q.-T., not Q.-N.N.), is a DEPOCEN (Vietnam-based think tank)-linked recent Tohoku econ PhD graduate — initials don't match and he'd likely be ineligible anyway (postdoc-stage/Vietnam-linked). OpenAlex API hit its unauthenticated rate limit mid-session before the exact author ID/paper list could be pulled to disambiguate. Left pending for a session with OpenAlex API access."
     },
     {
       "name": "Quang Nguyen",
@@ -7363,7 +7364,8 @@
       "country": "FI",
       "npapers": 3,
       "cited": 5,
-      "status": "pending"
+      "status": "excluded",
+      "note": "[scheduled:honors 2026-09-24] Full name Aino Mirjami Tran Minh. Official University of Helsinki Research Portal profile (https://researchportal.helsinki.fi/en/persons/aino-mirjami-tran-minh) lists her current role as Visiting scholar, HiLIFE, with her primary role being Project manager at the Finnish Cancer Center (FICAN)/HUS — a non-academic role. No permanent faculty appointment found."
     },
     {
       "name": "Tran T. Doan",
@@ -7371,7 +7373,8 @@
       "country": "US",
       "npapers": 3,
       "cited": 5,
-      "status": "pending"
+      "status": "pending",
+      "note": "[scheduled:honors 2026-09-24] ELIGIBLE — filed as a New candidate Issue (not yet assigned a roster id). Assistant Professor, TT (tenure-track), Dept. of Health Systems, Management & Policy, Colorado School of Public Health, University of Colorado Anschutz Medical Campus, since July 2024. Official profile: https://coloradosph.cuanschutz.edu/resources/directory/directory-profile/Doan-Tran-UCD6004304393. See the linked Issue for full enrichment."
     },
     {
       "name": "V. T. Hoang",
@@ -7379,7 +7382,8 @@
       "country": "US",
       "npapers": 2,
       "cited": 5,
-      "status": "pending"
+      "status": "pending",
+      "note": "[scheduled:honors 2026-09-24] Not found in WashU's Department of Economics people page (economics.washu.edu/people) or Olin Business School faculty search; no IDEAS/RePEc match. OpenAlex API rate-limited before the exact author ID/paper list could be pulled — that would be the most promising next step to identify this person. Left pending."
     },
     {
       "name": "Mai Anh Huynh",
@@ -7387,7 +7391,8 @@
       "country": "US",
       "npapers": 2,
       "cited": 5,
-      "status": "pending"
+      "status": "pending",
+      "note": "[scheduled:honors 2026-09-24] The exact name \"Mai Anh Huynh\" is already on the roster as vp-1291 (Dana-Farber/Harvard Radiation Oncology, PhD Harvard Neurobiology), but OpenAlex's author search for this name only resolves to that same physician-scientist (no economics topics) — this economics-labeled Wichita State lead (2 papers/5 citations) is very likely a different, unidentifiable person, not vp-1291. Not listed in WSU's Barton School faculty directory; no LinkedIn/IDEAS/RePEc trace. OpenAlex API rate-limited mid-session before further disambiguation was possible. Left pending rather than guessing a duplicate match."
     },
     {
       "name": "Huong Thu Ngo",
@@ -7395,7 +7400,8 @@
       "country": "JP",
       "npapers": 2,
       "cited": 5,
-      "status": "pending"
+      "status": "pending",
+      "note": "[scheduled:honors 2026-09-24] OpenAlex confirms a real author (A5081567340, ORCID 0000-0001-7468-604X) affiliated with Waseda University 2022-2023, and a matching LinkedIn profile (huong-thu-ngo-a5226a1aa) now lists her as based in Switzerland — but LinkedIn blocked direct fetch (HTTP 999 bot-block), so current title/employer couldn't be confirmed. No institutional profile or faculty-directory hit found anywhere. Left pending for a session with LinkedIn access."
     },
     {
       "name": "Phuoc Van Nguyen",
@@ -7411,7 +7417,8 @@
       "country": "FI",
       "npapers": 3,
       "cited": 4,
-      "status": "pending"
+      "status": "excluded",
+      "note": "[scheduled:honors 2026-09-24] His own Google Scholar profile (scholar.google.com/citations?user=1MwMnF8AAAAJ), verified via @uel.edu.vn email, states his current affiliation as Lecturer, University of Economics and Law - Vietnam National University HCMC — Vietnam-based, excluded regardless of the Aalto University PhD-era affiliation OpenAlex surfaced. (Distinct from an unrelated 'Vinh Vo,' PhD candidate at Monash University's Centre for Health Economics.)"
     },
     {
       "name": "Khoa Trinh Anh",
@@ -7419,7 +7426,8 @@
       "country": "JP",
       "npapers": 2,
       "cited": 4,
-      "status": "pending"
+      "status": "pending",
+      "note": "[scheduled:honors 2026-09-24] OpenAlex (A5004802914) shows a single Tokyo University of Agriculture and Technology affiliation (2022) but the record mixes unrelated topics (nematode/legume-symbiosis alongside economics), suggesting possible name-disambiguation noise. researchmap.jp query blocked (403). No independent web trace under this name or plausible variants; distinct from unrelated people named Khoa Anh Trinh (FPT/Can Tho, Vietnam) and Anh Khoa Trinh (UW-Madison chemistry). Left pending."
     },
     {
       "name": "Li Dao",
@@ -7427,7 +7435,8 @@
       "country": "DK",
       "npapers": 2,
       "cited": 4,
-      "status": "pending"
+      "status": "pending",
+      "note": "[scheduled:honors 2026-09-24] No matching person found: OpenAlex author search for \"Li Dao\" returns only unrelated researchers with no Aalborg affiliation; an OpenAlex works search for \"Dao\"+\"Aalborg\" (558 hits scanned) surfaced no actual Aalborg-affiliated author named Dao; Aalborg's own VBN research portal and web search were also negative. Given the extremely thin signal (2 papers/4 citations) and total absence of any independent trace, most likely a garbled name from the source scrape. Left pending rather than excluding outright, since identity was never established either way."
     },
     {
       "name": "C. Thach Nguyen",
@@ -7443,7 +7452,8 @@
       "country": "GB",
       "npapers": 2,
       "cited": 4,
-      "status": "pending"
+      "status": "pending",
+      "note": "[scheduled:honors 2026-09-24] OpenAlex query for all Nguyen-surname authors with QUB as last-known institution (13 results) found no initials match; QUB Business School's own economics staff directory pages returned 403/blocked via WebFetch, so could not positively confirm or rule out from the primary source. The closest identifiable QUB \"Nguyen\" (Duyen Nguyen, pure.qub.ac.uk) is an unrelated postdoctoral Research Fellow in health economics. Left pending for a session that can browse QUB's Pure portal directly."
     },
     {
       "name": "Luan Vo",
@@ -7451,7 +7461,8 @@
       "country": "CA",
       "npapers": 2,
       "cited": 4,
-      "status": "pending"
+      "status": "excluded",
+      "note": "[scheduled:honors 2026-09-24] TMU's Economics PhD-student roster (torontomu.ca/economics/people/phds/) is fully enumerated with no matching name. The identifiable people named \"Luan Vo\" are: two Vietnam-based researchers on ResearchGate (Ho Chi Minh City University of Industry and Trade; Tra Vinh University), and a Toronto-based industry professional (Sr. Manager, Data Engineering at RBC, linkedin.com/in/luanhvo/, MASc in engineering) whose OpenAlex-indexed work plausibly explains the TMU-adjacent lead. No evidence of any current TMU or other eligible faculty appointment."
     },
     {
       "name": "Do Le Nhu Quynh",
@@ -7475,7 +7486,8 @@
       "country": "US",
       "npapers": 3,
       "cited": 4,
-      "status": "pending"
+      "status": "excluded",
+      "note": "[scheduled:honors 2026-09-24] \"Hanh T. Vu\" is the author of a WKU undergraduate honors thesis (digitalcommons.wku.edu/econ_stu_hon_theses/) — a student, not faculty. WKU's current Economics staff/faculty directory (wku.edu/economics/staff/, 15 names fully enumerated) has no Vietnamese-sounding name. No LinkedIn/RePEc/IDEAS trace of a current employer, academic or otherwise."
     },
     {
       "name": "Anna‐Lisa V. Nguyen",
@@ -7483,7 +7495,8 @@
       "country": "CA",
       "npapers": 3,
       "cited": 4,
-      "status": "pending"
+      "status": "excluded",
+      "note": "[scheduled:honors 2026-09-24] Her own Google Scholar profile (scholar.google.com/citations?user=N7jqZWUAAAAJ, verified uottawa.ca email) identifies her as a Resident (medical trainee) at the University of Ottawa, in urology/reconstructive surgery — a term-limited clinical-training position, and not an economist. Western University's Economics faculty listing has no matching name. Appears to be an OpenAlex field-tag misclassification."
     },
     {
       "name": "Do Phuong Thao",
@@ -7491,7 +7504,8 @@
       "country": "YE",
       "npapers": 2,
       "cited": 4,
-      "status": "pending"
+      "status": "pending",
+      "note": "[scheduled:honors 2026-09-24] An OpenAlex author search filtered to Sana'a University (institution ID I170535673) + \"Thao\" returns zero results, and extensive independent web/LinkedIn/RePEc search for this name and variants found no matching person — only unrelated Vietnam-based students/professionals. Likely a scrape/geocoding artifact rather than a real appointment; identity was never established. Left pending rather than excluding without a confirmed identity."
     },
     {
       "name": "Viet Nguyen",
@@ -7507,7 +7521,8 @@
       "country": "NZ",
       "npapers": 2,
       "cited": 4,
-      "status": "pending"
+      "status": "duplicate",
+      "note": "[scheduled:honors 2026-09-24] Already on roster as vp-1197 (Associate Professor, Tenure-line, School of Aviation, Massey University; research areas — efficiency/productivity analysis, DEA, banking/finance, aviation economics — match this lead exactly). No new facts found beyond what's already in the entry."
     },
     {
       "name": "Phan Phung Phu",
@@ -7531,7 +7546,8 @@
       "country": "US",
       "npapers": 5,
       "cited": 4,
-      "status": "pending"
+      "status": "pending",
+      "note": "[scheduled:honors 2026-09-24] \"University of Wisconsin–Extension\" no longer exists as a standalone institution (merged into UW System campuses ~2018) and no successor-institution profile was found. Semantic Scholar author search surfaced 7+ \"Cecilia Tran\"/\"C. Tran\" records with no populated affiliations, none disambiguable; IDEAS/RePEc had no match; LinkedIn search returned only unrelated professionals (nutrition/dietetics, healthcare, engineering). Left pending rather than excluding without a confirmed identity."
     },
     {
       "name": "Amy Nguyen-Chyung",
@@ -7539,7 +7555,8 @@
       "country": "US",
       "npapers": 4,
       "cited": 4,
-      "status": "pending"
+      "status": "pending",
+      "note": "[scheduled:honors 2026-09-24] ELIGIBLE — filed as a New candidate Issue (not yet assigned a roster id). She has left UCSD; now Dean, College of Business, Hawai'i Pacific University, effective July 2025 (https://www.hpu.edu/faculty/cob/amy-nguyen-chyung.html). Exact underlying professorial rank/track at HPU is not stated on the official page — flagged as an open question in the Issue. See the linked Issue for full enrichment."
     },
     {
       "name": "Thithuha NGUYEN",
@@ -7547,7 +7564,8 @@
       "country": "CN",
       "npapers": 2,
       "cited": 4,
-      "status": "pending"
+      "status": "pending",
+      "note": "[scheduled:honors 2026-09-24] Fuzhou University School of Economics and Management's RePEc/EDIRC listing has only 2 registered authors, neither Vietnamese-sounding, and web search for this name/variants found no matching person outside Vietnam. Fuzhou's own Chinese-language faculty site (jgxy.fzu.edu.cn) was not directly fetched, only seen in search snippets — a future run should try fetching it directly. Left pending."
     },
     {
       "name": "Duc Ha",
@@ -7555,7 +7573,8 @@
       "country": "US",
       "npapers": 2,
       "cited": 4,
-      "status": "pending"
+      "status": "pending",
+      "note": "[scheduled:honors 2026-09-24] Not found in UCSD Economics faculty/affiliated-faculty pages, course listings, IDEAS/RePEc, LinkedIn (300+ unrelated results), or econjobmarket. OpenAlex API rate-limited before the exact author ID/paper list could be pulled — that would be the most promising next step. Left pending."
     },
     {
       "name": "Anne Trinh",
