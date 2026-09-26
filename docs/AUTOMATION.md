@@ -57,6 +57,7 @@ Outside the cloud:
 | What | Where | When | Notes |
 | :-- | :-- | :-- | :-- |
 | Link-health report | GitHub Action `.github/workflows/link-health.yml` | 1st of month, 08:00 UTC; manual via `gh workflow run link-health.yml` | Opens or comments on the "Link-health report (automated)" Issue. No model involved. |
+| Automation watchdog | GitHub Action `.github/workflows/automation-watchdog.yml` | Mondays 12:00 UTC; manual via `gh workflow run automation-watchdog.yml` | Opens or comments on one "Automation watchdog (automated)" Issue when a PR has been open more than 4 days (auditor stopped or PR stuck) or nothing `[scheduled:*]` appeared in 7 days (routines stopped); closes it when checks pass. No model involved. |
 | Full-roster controller | Owner's crontab: `0 22 * * 6 …/scripts/cron-maintain-roster.sh` | Sat 10 PM local | Runs `scripts/maintain-roster.ts` in the separate clone `~/git/projects/vietprofs-maintenance`; state in `~/.local/state/vietprofs-maintenance/cron-state`, log in `…/cron.log`. Pushes to `main`. With the default 365-day staleness it selects nobody until entries age (about Aug 2027); set `VIETPROFS_MAINT_ARGS="--stale-days 180"` on the cron line for a shorter cycle. |
 
 Retired routines (deleted; no longer at claude.ai/code/routines). The routines above replace them:
