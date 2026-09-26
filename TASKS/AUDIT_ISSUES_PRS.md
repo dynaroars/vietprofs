@@ -24,7 +24,7 @@ PRs and Issues from task agents exist so that a separate agent can check them. T
 therefore:
 
 - does not audit or merge a PR/Issue that it opened itself or that was opened in the same
-  session, and in scheduled runs skips anything created less than 12 hours ago (the next day's run
+  session, and in scheduled runs skips anything created less than 12 hours ago (the next audit run
   picks it up);
 - re-verifies claims against live sources rather than trusting the PR description; a PR's own
   "verified" note is not evidence;

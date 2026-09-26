@@ -25,8 +25,9 @@ Policy (eligibility, evidence, routing of Issues/PRs/direct pushes) lives in `AG
 - While researching, producers also report **side findings**: errors or leads outside their own
   task, filed as Issues (see "Side findings" below). This is how a narrow task like the LinkedIn
   backfill turns up stale ranks, duplicates, missing honors, and new candidates.
-- **The auditor** is a separate model and a separate session. It runs once a day and only takes
-  items at least 12 hours old, so each producer run is reviewed by a different agent the next day.
+- **The auditor** is a separate model and a separate session. It runs twice a week and only takes
+  items at least 12 hours old, so each producer run is reviewed by a different agent at the next
+  audit.
   Its rules are in `TASKS/AUDIT_ISSUES_PRS.md` ("Independent review").
 - **The owner** only sees what the auditor leaves open: protected `directFields` conflicts,
   ambiguous identities or eligibility, and anything it couldn't verify from the cloud.
@@ -39,25 +40,32 @@ is shown for convenience (EDT; add an hour in winter).
 Each routine attaches only the `Claude_Docs` connector. Don't add `Claude_Code_Remote`: with it,
 a run that opens a PR schedules hourly "Re-check PR" reminders until the PR is merged.
 
+Ordering rule: the auditor runs at 03:00 UTC and every producer starts between 05:00 and
+06:30 UTC. So an audit never runs while that day's producers are still working, and everything a
+producer creates is at least ~18 hours old at the next audit, past the auditor's 12-hour minimum.
+Weekly producers run early in each audit cycle (Mon/Tue before the Wed audit, Thu before the Sat
+audit); twice-monthly ones land on any weekday and are picked up by the next audit. Keep new
+routines inside those windows.
+
 | Key | Routine id | Model | Cron (UTC) | ET | Section |
 | :-- | :-- | :-- | :-- | :-- | :-- |
-| `audit` | `trig_01GeWQmgtoeJtaf7E2LsA7BA` | Opus 5.5 | `0 3 * * *` | daily 11 PM | [Auditor](#auditor-audit) |
-| `linkedin` | `trig_0162DEq1aGRH3vWrEtpKoNmy` | Sonnet 5 | `0 5 */3 * *` | every 3rd day of the month (1st, 4th, … 31st) 1 AM | [LinkedIn](#linkedin-backfill-linkedin) |
-| `scholar` | `trig_01KLRvszaFCY869VkchMmiAE` | Sonnet 5 | `30 5 * * 1,4` | Mon/Thu 1:30 AM | [Scholar](#google-scholar-backfill-scholar) |
-| `websites` | `trig_01RKg7at1hAC3cY8NHVN8VBU` | Sonnet 5 | `30 5 * * 2,5` | Tue/Fri 1:30 AM | [Websites](#websites-and-labs-websites) |
-| `portraits` | `trig_01D58Azgkh8kdKFBdFNAXox2` | Sonnet 5 | `30 5 * * 3,6` | Wed/Sat 1:30 AM | [Portraits](#portraits-portraits) |
-| `overviews` | `trig_01NUyNrE7x8WZgLMHbpCU7Zi` | Sonnet 5 | `30 5 * * 0` | Sun 1:30 AM | [Overviews](#research-overviews-overviews) |
-| `education` | `trig_011kuvE1P6aHNn7fcw9XVnLS` | Sonnet 5 | `30 6 * * 0` | Sun 2:30 AM | [Education](#education-chronology-education) |
-| `honors` | `trig_012eH5rSZwQw7PXiQPSRj9Wn` | Sonnet 5 | `30 6 * * 4` | Thu 2:30 AM | [Honors & leads](#honors-and-lead-triage-honors) |
-| `discover` | `trig_01R9AeywUniWNP3iK8XDw9ju` | Sonnet 5 | `30 6 * * 2` | Tue 2:30 AM | [Discovery](#discover-new-faculty-discover) |
-| `relationships` | `trig_01EgwQ418znNbFQ95ghg4p5E` | Sonnet 5 | `0 7 * * 1,3,5` | Mon/Wed/Fri 3 AM | [Relationships](#academic-relationships-relationships) |
+| `audit` | `trig_01GeWQmgtoeJtaf7E2LsA7BA` | Opus 5.5 | `0 3 * * 3,6` | Tue/Fri 11 PM | [Auditor](#auditor-audit) |
+| `discover` | `trig_01R9AeywUniWNP3iK8XDw9ju` | Sonnet 5 | `30 5 * * 1` | Mon 1:30 AM | [Discovery](#discover-new-faculty-discover) |
+| `relationships` | `trig_01EgwQ418znNbFQ95ghg4p5E` | Sonnet 5 | `30 6 * * 1` | Mon 2:30 AM | [Relationships](#academic-relationships-relationships) |
+| `websites` | `trig_01RKg7at1hAC3cY8NHVN8VBU` | Sonnet 5 | `30 5 * * 2` | Tue 1:30 AM | [Websites](#websites-and-labs-websites) |
+| `portraits` | `trig_01D58Azgkh8kdKFBdFNAXox2` | Sonnet 5 | `30 5 * * 4` | Thu 1:30 AM | [Portraits](#portraits-portraits) |
+| `linkedin` | `trig_0162DEq1aGRH3vWrEtpKoNmy` | Sonnet 5 | `0 5 1,15 * *` | 1st and 15th, 1 AM | [LinkedIn](#linkedin-backfill-linkedin) |
+| `honors` | `trig_012eH5rSZwQw7PXiQPSRj9Wn` | Sonnet 5 | `30 6 3,17 * *` | 3rd and 17th, 2:30 AM | [Honors & leads](#honors-and-lead-triage-honors) |
+| `overviews` | `trig_01NUyNrE7x8WZgLMHbpCU7Zi` | Sonnet 5 | `30 5 5,19 * *` | 5th and 19th, 1:30 AM | [Overviews](#research-overviews-overviews) |
+| `scholar` | `trig_01KLRvszaFCY869VkchMmiAE` | Sonnet 5 | `30 5 8,22 * *` | 8th and 22nd, 1:30 AM | [Scholar](#google-scholar-backfill-scholar) |
+| `education` | `trig_011kuvE1P6aHNn7fcw9XVnLS` | Sonnet 5 | `30 6 11,25 * *` | 11th and 25th, 2:30 AM | [Education](#education-chronology-education) |
 
 Outside the cloud:
 
 | What | Where | When | Notes |
 | :-- | :-- | :-- | :-- |
 | Link-health report | GitHub Action `.github/workflows/link-health.yml` | 1st of month, 08:00 UTC; manual via `gh workflow run link-health.yml` | Opens or comments on the "Link-health report (automated)" Issue. No model involved. |
-| Automation watchdog | GitHub Action `.github/workflows/automation-watchdog.yml` | Mondays 12:00 UTC; manual via `gh workflow run automation-watchdog.yml` | Opens or comments on one "Automation watchdog (automated)" Issue when a PR has been open more than 4 days (auditor stopped or PR stuck) or nothing `[scheduled:*]` appeared in 7 days (routines stopped); closes it when checks pass. No model involved. |
+| Automation watchdog | GitHub Action `.github/workflows/automation-watchdog.yml` | Mondays 12:00 UTC; manual via `gh workflow run automation-watchdog.yml` | Opens or comments on one "Automation watchdog (automated)" Issue when a PR has been open more than 8 days (auditor stopped or PR stuck) or nothing `[scheduled:*]` appeared in 7 days (routines stopped); closes it when checks pass. No model involved. |
 | Full-roster controller | Owner's crontab: `0 22 * * 6 …/scripts/cron-maintain-roster.sh` | Sat 10 PM local | Runs `scripts/maintain-roster.ts` in the separate clone `~/git/projects/vietprofs-maintenance`; state in `~/.local/state/vietprofs-maintenance/cron-state`, log in `…/cron.log`. Pushes to `main`. With the default 365-day staleness it selects nobody until entries age (about Aug 2027); set `VIETPROFS_MAINT_ARGS="--stale-days 180"` on the cron line for a shorter cycle. |
 
 Retired routines (deleted; no longer at claude.ai/code/routines). The routines above replace them:
@@ -153,8 +161,8 @@ Follow `TASKS/AUDIT_ISSUES_PRS.md`, including "Independent review". Also read
 - Tracking Issues such as the link-health report: work up to 10 entries, post a progress comment,
   and leave it open.
 - The auditor doesn't file side findings about its own items; it resolves them.
-- Automation health (Sunday runs only, after the normal work). Check:
-  1. PRs open more than 3 days, and why (red CI, conflict, rejected but still open).
+- Automation health (Saturday runs only, after the normal work). Check:
+  1. PRs open more than 5 days, and why (red CI, conflict, rejected but still open).
   2. Open PRs touching the same maintenance file: merge the first as usual, then rebase the rest
      onto `main`, regenerate the shared file, and re-test before merging.
   3. Each routine in the Schedule table: no `[scheduled:<key>]` PR, Issue, or commit (for

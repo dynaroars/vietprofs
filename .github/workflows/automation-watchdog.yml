@@ -23,7 +23,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
-          STALE_PR_DAYS: 4
+          STALE_PR_DAYS: 8
           QUIET_DAYS: 7
         run: |
           set -euo pipefail
@@ -33,7 +33,7 @@ jobs:
           quiet_cutoff=$(date -u -d "-${QUIET_DAYS} days" +%Y-%m-%dT%H:%M:%SZ)
           problems=""
 
-          # The auditor runs daily and takes PRs older than 12 hours, so none should sit this long.
+          # The auditor runs twice a week and takes PRs older than 12 hours, so none should sit this long.
           stale=$(gh pr list --state open --limit 100 --json number,title,createdAt \
             --jq ".[] | select(.createdAt < \"$pr_cutoff\") | \"- #\(.number) \(.title) (opened \(.createdAt[:10]))\"")
           if [ -n "$stale" ]; then
