@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-23T15:14:00.000Z",
+  "updatedAt": "2026-09-25T07:13:00.303Z",
   "batches": [
     {
       "batchNumber": 1,
@@ -15547,7 +15547,7 @@
         "vp-0567"
       ],
       "startedAt": "2026-09-23T15:19:33.000Z",
-      "status": "in-progress",
+      "status": "complete",
       "outcomes": [
         {
           "rosterId": "vp-0586",
@@ -15555,7 +15555,7 @@
             "https://www.pharmacy.utoronto.ca/faculty/minh-hien-le-adjunct-lecturer"
           ],
           "relationshipIds": [],
-          "nextAction": "Review official profile, publications, explicit mentorship records, public award leadership, and patent records against the existing roster; continue bounded searches before closing the batch.",
+          "nextAction": "Official U Toronto profile checked: no PhD advisor, postdoctoral mentor, or supervised-student names given (clinical Teaching Stream appointment; PharmD/BScPhm at U Toronto, residency at Hamilton Health Sciences). No roster-internal relationship evidence found; bounded sources exhausted.",
           "status": "unresolved",
           "notes": []
         },
@@ -15565,7 +15565,7 @@
             "https://staffprofile.unisq.edu.au/profile/Thanh-Tran-Cong"
           ],
           "relationshipIds": [],
-          "nextAction": "Review official profile, publications, explicit mentorship records, public award leadership, and patent records against the existing roster; continue bounded searches before closing the batch.",
+          "nextAction": "Official USQ profile checked (PhD, University of Sydney): no advisor, postdoctoral mentor, or supervised-student names given. No roster-internal relationship evidence found; bounded sources exhausted.",
           "status": "unresolved",
           "notes": []
         },
@@ -15575,17 +15575,18 @@
             "https://chem-eng.utoronto.ca/faculty-staff/professors-emeriti/"
           ],
           "relationshipIds": [],
-          "nextAction": "Review official profile, publications, explicit mentorship records, public award leadership, and patent records against the existing roster; continue bounded searches before closing the batch.",
+          "nextAction": "Official U Toronto emeritus listing checked (PhD Toronto): no advisor or supervised-student names given. No roster-internal relationship evidence found; bounded sources exhausted.",
           "status": "unresolved",
           "notes": []
         },
         {
           "rosterId": "vp-0583",
           "sources": [
-            "https://www.unsw.edu.au/staff/binh-tran-nam"
+            "https://www.unsw.edu.au/staff/binh-tran-nam",
+            "https://www.unsw.edu.au/content/dam/pdfs/business/acct-audit-tax/research-reports/ejournal-of-tax-research/2025-volume-23-number-1/2025-06-emeritus-professor-binh-tran-nam-a-personal-tribute-ejtr-v23-n1.pdf"
           ],
           "relationshipIds": [],
-          "nextAction": "Review official profile, publications, explicit mentorship records, public award leadership, and patent records against the existing roster; continue bounded searches before closing the batch.",
+          "nextAction": "Search snippet from the UNSW eJournal of Tax Research personal-tribute article identifies his own doctoral supervisor as Research Professor Murray C Kemp (UNSW, PhD 1978-1982) and states he supervised nine PhD and two MPhil candidates in taxation at UNSW; the tribute PDF could not be parsed for their names on this pass, and Kemp is not a roster member. No roster-internal relationship confirmed. Next run: re-fetch the tribute PDF (e.g. via a text-extraction route) to check the named supervised students against the roster.",
           "status": "unresolved",
           "notes": []
         },
@@ -15595,17 +15596,18 @@
             "https://medbio.utoronto.ca/faculty/long-nguyen"
           ],
           "relationshipIds": [],
-          "nextAction": "Review official profile, publications, explicit mentorship records, public award leadership, and patent records against the existing roster; continue bounded searches before closing the batch.",
+          "nextAction": "Official U Toronto profile checked: PhD advisor Dr. Connie Eaves (UBC) and postdoctoral mentor Dr. Carlos Caldas (University of Cambridge) are both explicitly named but neither is a VietProfs roster member. No roster-internal relationship evidence found; bounded sources exhausted.",
           "status": "unresolved",
           "notes": []
         },
         {
           "rosterId": "vp-0581",
           "sources": [
-            "https://csb.utoronto.ca/faculty-members/alex-nguyen-ba/"
+            "https://csb.utoronto.ca/faculty-members/alex-nguyen-ba/",
+            "https://www.desai-lab.com/people/"
           ],
           "relationshipIds": [],
-          "nextAction": "Review official profile, publications, explicit mentorship records, public award leadership, and patent records against the existing roster; continue bounded searches before closing the batch.",
+          "nextAction": "Official U Toronto profile checked (PhD U Toronto 2014); profile itself names no advisor. Desai Lab alumni page confirms his postdoctoral mentor was Michael Desai (Harvard), not a roster member. No roster-internal relationship evidence found; bounded sources exhausted.",
           "status": "unresolved",
           "notes": []
         },
@@ -15615,7 +15617,7 @@
             "https://research.monash.edu/en/persons/nga-pham"
           ],
           "relationshipIds": [],
-          "nextAction": "Review official profile, publications, explicit mentorship records, public award leadership, and patent records against the existing roster; continue bounded searches before closing the batch.",
+          "nextAction": "Official Monash research-profile checked (PhD Finance, La Trobe University): no advisor named. Listed project coauthors (Bei Cui, Ummul Ruthbah, Klaus Ackermann, Simon Angus, Dayna Simpson, Ka-Leung Lam, Trinh Le) include no name that identity-resolves to a current roster member from this profile alone. No roster-internal relationship evidence found; bounded sources exhausted.",
           "status": "unresolved",
           "notes": []
         },
@@ -15625,7 +15627,7 @@
             "https://research.monash.edu/en/persons/thanh-pham"
           ],
           "relationshipIds": [],
-          "nextAction": "Review official profile, publications, explicit mentorship records, public award leadership, and patent records against the existing roster; continue bounded searches before closing the batch.",
+          "nextAction": "Official Monash research-profile checked (PhD/postdoc, University of Queensland): no advisor or postdoctoral mentor named. Listed coauthors (Eisuke Saito, M. Tang, Dat Bao, Sylvia Ang, Dharmalingam Arunachalam, F. Gao) include a \"Dat Bao\" lead that did not identity-resolve to any current roster entry by name search. No roster-internal relationship confirmed; bounded sources exhausted.",
           "status": "unresolved",
           "notes": []
         },
@@ -15635,7 +15637,7 @@
             "https://findanexpert.unimelb.edu.au/profile/18768-cuc-nguyen"
           ],
           "relationshipIds": [],
-          "nextAction": "Review official profile, publications, explicit mentorship records, public award leadership, and patent records against the existing roster; continue bounded searches before closing the batch.",
+          "nextAction": "Official U Melbourne \"Find an Expert\" profile checked: page contains only research-area keywords, no education history, advisor, or coauthor information. No roster-internal relationship evidence found; bounded sources exhausted.",
           "status": "unresolved",
           "notes": []
         },
@@ -15645,7 +15647,7 @@
             "https://research.monash.edu/en/persons/nathalie-nguyen"
           ],
           "relationshipIds": [],
-          "nextAction": "Review official profile, publications, explicit mentorship records, public award leadership, and patent records against the existing roster; continue bounded searches before closing the batch.",
+          "nextAction": "Official Monash research-profile checked (PhD Oxford, Commonwealth Scholar): no advisor named. Listed project collaborators (F. Ricatti, T. Evans, A. Dellios, L. Allen) do not identity-resolve to any roster member. No roster-internal relationship evidence found; bounded sources exhausted.",
           "status": "unresolved",
           "notes": []
         },
@@ -15655,7 +15657,7 @@
             "https://www.deakin.edu.au/about-deakin/people/tien-dinh"
           ],
           "relationshipIds": [],
-          "nextAction": "Review official profile, publications, explicit mentorship records, public award leadership, and patent records against the existing roster; continue bounded searches before closing the batch.",
+          "nextAction": "Official Deakin profile returned HTTP 403 (blocked) on this pass. Could not check for advisor, postdoctoral mentor, or coauthor evidence. Retry with a different fetch route on a later run.",
           "status": "unresolved",
           "notes": []
         },
@@ -15665,17 +15667,18 @@
             "https://www.concordia.ca/faculty/tien-bui.html"
           ],
           "relationshipIds": [],
-          "nextAction": "Review official profile, publications, explicit mentorship records, public award leadership, and patent records against the existing roster; continue bounded searches before closing the batch.",
+          "nextAction": "Official Concordia profile checked: lists only research areas and contact info, no advisor, postdoctoral mentor, or education history; references a personal website not retrieved on this pass. No roster-internal relationship evidence found; bounded sources exhausted for this run.",
           "status": "unresolved",
           "notes": []
         },
         {
           "rosterId": "vp-0574",
           "sources": [
+            "https://hvpham.github.io/",
             "https://lassonde.yorku.ca/users/hung-viet-pham"
           ],
           "relationshipIds": [],
-          "nextAction": "Review official profile, publications, explicit mentorship records, public award leadership, and patent records against the existing roster; continue bounded searches before closing the batch.",
+          "nextAction": "Personal academic site checked (PhD in Software Engineering, University of Waterloo, 2018-2022; MSc Sussex; BSc Imperial College London): no doctoral advisor named. Lassonde faculty profile URL returned HTTP 404 on this pass. No roster-internal relationship evidence found; bounded sources exhausted.",
           "status": "unresolved",
           "notes": []
         },
@@ -15716,7 +15719,7 @@
             "https://users.informatik.uni-rostock.de/~le/"
           ],
           "relationshipIds": [],
-          "nextAction": "Review official profile, publications, explicit mentorship records, public award leadership, and patent records against the existing roster; continue bounded searches before closing the batch.",
+          "nextAction": "Personal academic page checked (Diplom/PhD in Mathematics, TU Berlin; Habilitation, U Rostock): no advisor named on the page and no explicit PhD-student list found. No roster-internal relationship evidence found; bounded sources exhausted.",
           "status": "unresolved",
           "notes": []
         },
@@ -15726,7 +15729,7 @@
             "https://www.ims.uni-stuttgart.de/en/institute/team/Vu-00002/"
           ],
           "relationshipIds": [],
-          "nextAction": "Review official profile, publications, explicit mentorship records, public award leadership, and patent records against the existing roster; continue bounded searches before closing the batch.",
+          "nextAction": "Official University of Stuttgart profile checked (PhD, Karlsruhe Institute of Technology, 2009-2014): no advisor named; page offers only open BSc/MSc thesis topics, no named doctoral students. No roster-internal relationship evidence found; bounded sources exhausted.",
           "status": "unresolved",
           "notes": []
         },
@@ -15736,7 +15739,7 @@
             "https://www.southampton.ac.uk/people/5xfl2w"
           ],
           "relationshipIds": [],
-          "nextAction": "Review official profile, publications, explicit mentorship records, public award leadership, and patent records against the existing roster; continue bounded searches before closing the batch.",
+          "nextAction": "Official University of Southampton profile checked (PhD UNSW 2006, thesis \"The Development of a Probabilistic B-Method and a Supporting Toolkit\"): no advisor named. No roster-internal relationship evidence found; bounded sources exhausted.",
           "status": "unresolved",
           "notes": []
         },
@@ -15746,7 +15749,7 @@
             "https://www.kcl.ac.uk/people/ngoc-khanh-nguyen"
           ],
           "relationshipIds": [],
-          "nextAction": "Review official profile, publications, explicit mentorship records, public award leadership, and patent records against the existing roster; continue bounded searches before closing the batch.",
+          "nextAction": "Official King's College London profile checked: PhD advisors Vadim Lyubashevsky and Dennis Hofheinz (ETH Zurich / IBM Research Europe - Zurich) and postdoctoral mentor Alessandro Chiesa (EPFL) are explicitly named, none is a VietProfs roster member. No roster-internal relationship evidence found; bounded sources exhausted.",
           "status": "unresolved",
           "notes": []
         },
@@ -15756,11 +15759,12 @@
             "https://pure.qub.ac.uk/en/persons/hien-quoc-ngo"
           ],
           "relationshipIds": [],
-          "nextAction": "Review official profile, publications, explicit mentorship records, public award leadership, and patent records against the existing roster; continue bounded searches before closing the batch.",
+          "nextAction": "Official Queen's University Belfast Pure profile checked (PhD in Communication Systems, Linkoping University, 2015): doctoral advisor not named on the profile; DBLP coauthor lookup was blocked by an Anubis bot-protection page on this pass. No roster-internal relationship evidence found; bounded sources exhausted for this run.",
           "status": "unresolved",
           "notes": []
         }
-      ]
+      ],
+      "completedAt": "2026-09-25T07:13:00.303Z"
     }
   ],
   "earlyOutcomes": [
