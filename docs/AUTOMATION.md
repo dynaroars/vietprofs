@@ -152,6 +152,19 @@ Follow `TASKS/AUDIT_ISSUES_PRS.md`, including "Independent review". Also read
 - Tracking Issues such as the link-health report: work up to 10 entries, post a progress comment,
   and leave it open.
 - The auditor doesn't file side findings about its own items; it resolves them.
+- Automation health (Sunday runs only, after the normal work). Check:
+  1. PRs open more than 3 days, and why (red CI, conflict, rejected but still open).
+  2. Open PRs touching the same maintenance file: merge the first as usual, then rebase the rest
+     onto `main`, regenerate the shared file, and re-test before merging.
+  3. Each routine in the Schedule table: no `[scheduled:<key>]` PR, Issue, or commit (for
+     `relationships`, a `data(relationships)` commit on `main`) within two of its cron cycles means
+     it has likely stopped.
+  4. Issues left open for an owner decision for more than 14 days.
+
+  Fix what you can within the normal caps. Report the rest in one open Issue titled
+  `[scheduled:audit] Automation health`: update it with a comment when something is wrong, and
+  close it when a check comes back clean. Never open a second one. When everything is healthy
+  and no such Issue is open, do nothing.
 
 ### LinkedIn backfill (`linkedin`)
 
