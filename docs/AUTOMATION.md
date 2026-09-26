@@ -36,6 +36,9 @@ Policy (eligibility, evidence, routing of Issues/PRs/direct pushes) lives in `AG
 Cloud routines live at <https://claude.ai/code/routines> (environment: Default, network access **Full** since 2026-09-24; edit it from the environment button above the claude.ai/code message box → gear icon). Cron is UTC; ET
 is shown for convenience (EDT; add an hour in winter).
 
+Each routine attaches only the `Claude_Docs` connector. Don't add `Claude_Code_Remote`: with it,
+a run that opens a PR schedules hourly "Re-check PR" reminders until the PR is merged.
+
 | Key | Routine id | Model | Cron (UTC) | ET | Section |
 | :-- | :-- | :-- | :-- | :-- | :-- |
 | `audit` | `trig_01GeWQmgtoeJtaf7E2LsA7BA` | Opus 5.5 | `0 3 * * *` | daily 11 PM | [Auditor](#auditor-audit) |
