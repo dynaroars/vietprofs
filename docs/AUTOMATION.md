@@ -87,6 +87,9 @@ them share these rules:
 7. **Side findings.** Report them as described below.
 8. **Summary.** End with entries processed, changes made, PR/Issue links, side findings filed,
    entries skipped with reasons, and any egress blocks.
+9. **No follow-ups.** Once your PR/Issues are open, stop. Don't schedule check-ins, reminders,
+   wakeups, or re-armed routines to watch CI or the PR; the auditor handles review. If CI fails,
+   note it in the PR and leave it for the auditor.
 
 ## Side findings
 
