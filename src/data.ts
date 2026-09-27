@@ -27,6 +27,8 @@ export interface RosterEntry {
   vietnameseName?: string;
   researchAreas?: string[];
   honors?: Honor[];
+  /** A completed postdoc, recorded as education. A current postdoc is not eligible for the roster. */
+  postdocInstitution?: string;
   phdInstitution?: string;
   phdYear?: number;
   mdInstitution?: string;
@@ -92,6 +94,7 @@ function searchableFields(person: RosterEntry) {
     person.rank,
     canonicalRank(person),
     healthSubfieldOf(person),
+    person.postdocInstitution,
     person.phdInstitution,
     person.mdInstitution,
     person.undergradInstitution,

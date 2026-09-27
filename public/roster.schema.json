@@ -118,6 +118,10 @@
         "format": "uri",
         "description": "Public source URL where portrait was obtained"
       },
+      "postdocInstitution": {
+        "type": "string",
+        "description": "Postdoctoral training institution"
+      },
       "undergradInstitution": {
         "type": "string",
         "description": "Undergraduate alma mater"

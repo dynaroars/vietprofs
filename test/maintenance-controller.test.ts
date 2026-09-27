@@ -223,6 +223,15 @@ test('proposal validation rejects unknown roster and nested fields', () => {
   assert.match(rejection(proposalValidationError(proposal)), /unsupported field otherDegrees/);
 });
 
+test('proposal analysis preserves completed postdoctoral training fields', () => {
+  const after = structuredClone(people);
+  after[1].postdocInstitution = 'Carnegie Mellon University';
+  const result = analyzeRosterProposal(people, after, 'Old Person');
+  assert.equal(result.ok, true);
+  assert.equal(result.substantiveChange, true);
+  assert.equal(result.proposal.postdocInstitution, 'Carnegie Mellon University');
+});
+
 test('proposal analysis rejects proposals that drop verified baseline honors', () => {
   const honoredPeople = structuredClone(people);
   honoredPeople[1].honors = [

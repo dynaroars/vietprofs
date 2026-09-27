@@ -214,7 +214,7 @@ for (const [index, person] of roster.entries()) {
     fail(rosterFile, `${label} state must be the full U.S. state name (${canonicalState(person.state, person.country)}), not ${person.state}`);
   }
   if (person.country !== undefined && typeof person.country !== 'string') fail(rosterFile, `${label} country must be a string`);
-  const institutionFields = ['phdInstitution', 'undergradInstitution', 'msInstitution', 'mdInstitution'];
+  const institutionFields = ['phdInstitution', 'undergradInstitution', 'msInstitution', 'mdInstitution', 'postdocInstitution'];
   for (const field of institutionFields) {
     if (person[field] !== undefined) {
       if (typeof person[field] !== 'string' || !person[field].trim()) {

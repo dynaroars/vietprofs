@@ -318,7 +318,7 @@ function renderFaqPage(): string {
             <li><strong>Bilingual Name:</strong> English published name alongside authentic Vietnamese diacritics (<code>vietnameseName</code>).</li>
             <li><strong>Affiliation:</strong> Current rank, department, university/institute, city, state/province, and country flag.</li>
             <li><strong>Appointment Track &amp; Institution Type:</strong> Clearly distinguishing tenure-line, teaching, research, clinical, staff, or emeritus roles.</li>
-            <li><strong>Education History:</strong> Undergraduate, master's, PhD, and MD institutions, with undergraduate and PhD years.</li>
+            <li><strong>Education History:</strong> Undergraduate, master's, PhD, MD, and completed postdoctoral institutions, with undergraduate and PhD years.</li>
             <li><strong>Curated Honors:</strong> Badges for academy memberships, society fellowships, career awards, and endowed chairs.</li>
             <li><strong>Research Areas:</strong> Clickable keyword tags.</li>
             <li><strong>Direct Links:</strong> One-click links to official university profile pages, personal/lab websites, and Google Scholar.</li>

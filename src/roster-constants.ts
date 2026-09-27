@@ -47,6 +47,7 @@ export const ROSTER_FIELDS = [
   'honors',
   'portrait',
   'portraitSource',
+  'postdocInstitution',
   'phdInstitution',
   'phdYear',
   'mdInstitution',

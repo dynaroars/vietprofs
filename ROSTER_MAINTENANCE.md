@@ -377,8 +377,8 @@ after the first correction:
 - a maintained personal or lab `websiteUrl` and Google Scholar `scholarUrl`, keeping each URL in
   its designated field;
 - a suitable current portrait and its source;
-- explicitly documented education in the stored fields (undergraduate, master's, PhD, and MD
-  institutions; undergraduate and PhD years); and
+- explicitly documented education in the stored fields (undergraduate, master's, PhD, MD, and
+  completed-postdoc institutions; undergraduate and PhD years); and
 - honors and awards that meet the eligibility standard below, with supporting sources.
 
 If the person already has an entry, compare the collected evidence with every relevant stored
@@ -505,7 +505,7 @@ Lead-queue entries (currently `maintenance/hieuphay-leads.json`) are **leads onl
 5. **Metadata Structuring & Roster Enrichment:**
    - **Name order:** Canonical roster name must use Western order `"First (Middle) Last"`. For hyphenated or maiden names, verify against publications and add to `surnameFirstAllowlist` in `scripts/validate-data.ts` if a Vietnamese token is the first name.
    - **Vietnamese name:** Record full diacritic Vietnamese name (`vietnameseName`) in `"Họ Tên"` order when verified from authoritative sources (e.g., Vietnamese media, thesis, university bio).
-   - **Academic degrees:** Extract explicit degree credentials (`phdInstitution`, `phdYear`, `mdInstitution`, `msInstitution`, `undergradInstitution`, `undergradYear`) only when explicitly documented in institutional bios or CVs.
+   - **Academic degrees:** Extract explicit degree credentials (`phdInstitution`, `phdYear`, `mdInstitution`, `msInstitution`, `undergradInstitution`, `undergradYear`, `postdocInstitution`) only when explicitly documented in institutional bios or CVs.
    - **Honors & Awards:** Record major academy memberships, fellow titles (e.g., IEEE Fellow, AIAA Fellow, NAI Fellow, ACM Fellow), national orders (e.g., *Légion d'honneur*), and career awards with proper category, year, organization, and HTTPS source URL.
    - **Field Classification & Overrides:** Ensure the candidate's department maps correctly to `FIELD_RULES`. For specialized research labs, foreign institutes, or clinical divisions that do not match default regex rules (e.g. French UMRs, medical service units), add an explicit entry to `FIELD_OVERRIDES` in `src/data.ts`.
 
@@ -605,8 +605,9 @@ later qualify again. None of that is a new person, so none of it gets a new ID.
 - `rank` is the career level only, one of `Assistant Professor`, `Associate Professor`, `Professor`, `Lecturer`, `Senior Lecturer`, `Researcher`, `Senior Researcher`, `Librarian`, or `Administrator` (`npm test` rejects anything else). The track carries the appointment type, and the display combines them ("Assistant Clinical Professor", "Teaching Professor", "Professor Emeritus"). Don't store the published title, a named chair, a department ("of Medicine"), or a leadership role; the linked profile has those, and named chairs go in `honors`. Map by level, not by translating systems: `Clinical Assistant Professor` → `Assistant Professor` (Clinical track); `Research Scientist`, `Chargé(e) de recherche`, `Staff Scientist` → `Researcher`; `Directeur de recherche`, `Principal`/`Senior Scientist`, `Group Leader` → `Senior Researcher`; `Distinguished`/`Full`/`Endowed Professor` → `Professor`. Keep Commonwealth `Lecturer` and `Senior Lecturer` as they are; never equate them with US ranks. A modern UK `Reader` is `Associate Professor`. Leave `rank` empty when the level isn't stated (e.g. a bare emeritus title); never guess.
 - Add `phdYear` and `phdInstitution` only when a source explicitly states them. Never infer them from dates, CV chronology, or context. Institution names must not contain degree prefixes (e.g., "Ph.D. in ...").
 - Education is deliberately small: `undergradInstitution`/`undergradYear`, `msInstitution`,
-  `phdInstitution`/`phdYear`, and `mdInstitution`. There are no majors, other degrees, postdoc
-  institutions, or master's/MD years (removed 2026-09-27; `npm test` rejects them). The one chronology rule is at least 2 years
+  `phdInstitution`/`phdYear`, `mdInstitution`, and `postdocInstitution` for a completed postdoc,
+  which is education like a PhD. (A *current* postdoc is an eligibility question: that person isn't
+  on the roster.) There are no majors, other degrees, or master's/MD/postdoc years (removed 2026-09-27; `npm test` rejects them). The one chronology rule is at least 2 years
   between `undergradYear` and `phdYear`. Don't force a JD, MBA, or other professional degree into
   these fields; leave it on the linked profile.
 - For undergraduate education, use the explicitly stated bachelor’s institution and completion year. A professional degree such as a JD is separate from undergraduate education and must not be substituted for it.

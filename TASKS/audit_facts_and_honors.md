@@ -50,6 +50,7 @@ Academic degrees must be corroborated by official institutional bios, personal a
 - `msInstitution`
 - `undergradInstitution`, `undergradYear`
 - `mdInstitution`
+- `postdocInstitution` (completed postdoc only)
 
 ### B. Strict Chronology & Formatting Rules
 1. **Academic Progression Order:** `phdYear` must be at least 2 years after `undergradYear`.

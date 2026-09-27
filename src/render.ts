@@ -55,8 +55,10 @@ export function applyFavoriteToggle(button: HTMLButtonElement, favorited: boolea
 }
 
 export function formatEducationDetails(person: RosterEntry, { fullLabels = false } = {}): string[] {
+  const postdocPrefix = fullLabels ? 'Postdoctoral training' : 'Postdoc';
   const undergradPrefix = fullLabels ? 'Undergraduate' : 'Undergrad';
   return [
+    person.postdocInstitution && `${postdocPrefix}: ${displayUniversity(person.postdocInstitution)}`,
     person.phdInstitution && `PhD: ${[displayUniversity(person.phdInstitution), person.phdYear].filter(Boolean).join(', ')}`,
     person.msInstitution && `MS: ${displayUniversity(person.msInstitution)}`,
     person.mdInstitution && `MD: ${displayUniversity(person.mdInstitution)}`,

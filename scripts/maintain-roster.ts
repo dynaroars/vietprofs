@@ -631,7 +631,7 @@ export function proposalValidationError(proposal: JsonRecord): string | null {
       honorKeys.add(honorKey);
     }
   }
-  for (const field of ['phdInstitution', 'undergradInstitution', 'msInstitution', 'mdInstitution']) {
+  for (const field of ['phdInstitution', 'undergradInstitution', 'msInstitution', 'mdInstitution', 'postdocInstitution']) {
     if (proposal[field] !== undefined) {
       if (typeof proposal[field] !== 'string' || !proposal[field].trim()) return `proposal has invalid ${field}`;
       const formatErr = validateInstitutionFormat(proposal[field], field);

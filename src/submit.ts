@@ -46,6 +46,7 @@ interface SubmissionDraft {
   phdYear?: number;
   phdInstitution?: string;
   mdInstitution?: string;
+  postdocInstitution?: string;
 }
 
 function renderShell() {
@@ -307,6 +308,13 @@ function renderShell() {
               </div>
             </div>
 
+            <div class="form-section form-row">
+              <div>
+                <label for="postdocInstitution">Completed postdoc institution</label>
+                <input id="postdocInstitution" name="postdocInstitution" type="text" placeholder="e.g. Carnegie Mellon University" />
+              </div>
+            </div>
+
             <div class="form-section">
               <label for="researchAreas">Research areas (comma-separated)</label>
               <input id="researchAreas" name="researchAreas" type="text" placeholder="e.g. Machine Learning, Robotics" />
@@ -368,6 +376,7 @@ const FIELD_LABELS: Partial<Record<keyof SubmissionDraft, string>> = {
   phdInstitution: 'PhD institution',
   phdYear: 'PhD year',
   mdInstitution: 'MD institution',
+  postdocInstitution: 'Postdoc institution',
   researchAreas: 'Research areas',
 };
 
@@ -511,6 +520,7 @@ function populateEntry(form: SubmitForm, entry: RosterEntry): void {
   form.undergradYear.value = entry.undergradYear ? String(entry.undergradYear) : '';
   form.undergradInstitution.value = entry.undergradInstitution ?? '';
   form.msInstitution.value = entry.msInstitution ?? '';
+  form.postdocInstitution.value = entry.postdocInstitution ?? '';
   form.phdYear.value = entry.phdYear ? String(entry.phdYear) : '';
   form.phdInstitution.value = entry.phdInstitution ?? '';
   form.mdInstitution.value = entry.mdInstitution ?? '';
@@ -625,6 +635,7 @@ function onSubmit(e: SubmitEvent, entriesById: Map<string, RosterEntry> | null, 
     phdYear: form.phdYear.value ? Number(form.phdYear.value) : undefined,
     phdInstitution: form.phdInstitution.value.trim() || undefined,
     mdInstitution: form.mdInstitution.value.trim() || undefined,
+    postdocInstitution: form.postdocInstitution.value.trim() || undefined,
   };
 
   let title;

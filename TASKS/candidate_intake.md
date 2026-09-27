@@ -85,7 +85,7 @@ research:
   memory: conference distinguished/best-paper awards do not qualify; test-of-time/most-influential
   awards do) with `name`, `year`, `organization`, and `source` URL for each.
 - **Degrees/history:** `phdInstitution`/`phdYear`, `msInstitution`, `mdInstitution`,
-  and `undergradInstitution`/`undergradYear` where findable.
+  `undergradInstitution`/`undergradYear`, and a completed `postdocInstitution` where findable.
 - **About/bio summary:** a short factual "about" paragraph or research-overview draft (same quality
   bar as `researchOverview.text` in `ROSTER_MAINTENANCE.md`: neutral, gender-neutral phrasing, no
   raw HTML/citations/boilerplate, ≤3 sentences, ≤500 characters) with its source(s), for the
