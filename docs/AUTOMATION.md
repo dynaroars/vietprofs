@@ -201,7 +201,9 @@ link, search the name and university fresh before calling it unfixable.
 
 ### Portraits (`portraits`)
 
-Playbook: `TASKS/fetch_portraits.md` section 4, exactly. Cap: 2 batches of 10. Run
+Playbook: `TASKS/fetch_portraits.md` section 4, exactly. Cap: 2 batches of 10, newest roster
+entries first (`--next=10`; the script queues new entries automatically). Old unresolved entries
+are retried only once every new entry has been attempted. Run
 `pip install pillow numpy` if the analyzer needs it. Open every added image with the Read tool and
 look at it. In the PR body, give each portrait's id, its source page, and one line on why it was
 accepted. Never replace a portrait protected by `directFields`.

@@ -28,6 +28,8 @@ const requestedBatch = Number(process.argv.find((arg) => /^\d+$/.test(arg)) ?? '
 const applying = args.has('--apply');
 const replaceExisting = args.has('--replace');
 const retry = args.has('--retry');
+const nextArgument = process.argv.find((arg) => arg.startsWith('--next='));
+const nextCount = nextArgument ? Number(nextArgument.slice('--next='.length)) : 0;
 const explicitIdsArgument = process.argv.find((arg) => arg.startsWith('--ids='));
 const explicitIds = explicitIdsArgument
   ? new Set(explicitIdsArgument.slice('--ids='.length).split(',').filter((id) => /^vp-\d{4}$/.test(id)))
@@ -117,12 +119,47 @@ async function loadLedger(): Promise<ProvenanceLedger> { try { return JSON.parse
 async function loadQueue(people: Person[]): Promise<QueueItem[]> {
   try { return JSON.parse(await readFile(queuePath, 'utf8')) as QueueItem[]; } catch { return people.filter((person) => !person.portrait).map((person, index) => ({ id: person.id, name: person.name, university: person.university, profileUrl: person.profileUrl, batch: Math.floor(index / 20) + 1, status: 'pending' })); }
 }
+// Keep the queue aligned with the roster: entries added after the queue was built are enqueued
+// as pending, entries that gained a portrait elsewhere are marked fetched, entries whose portrait
+// was removed are re-queued, and entries no longer in the roster are dropped.
+function syncQueue(queue: QueueItem[], people: Person[]): QueueItem[] {
+  const byId = new Map(people.map((person) => [person.id, person]));
+  const synced = queue.filter((item) => byId.has(item.id));
+  for (const item of synced) {
+    const person = byId.get(item.id) as Person;
+    if (person.portrait && item.status !== 'fetched') { item.status = 'fetched'; item.portraitSource = person.portraitSource; item.note = 'portrait present in roster'; }
+    else if (!person.portrait && item.status === 'fetched') { item.status = 'pending'; item.note = 'portrait no longer in roster'; }
+  }
+  const queued = new Set(synced.map((item) => item.id));
+  const added = people.filter((person) => !person.portrait && !queued.has(person.id)).sort((a, b) => b.id.localeCompare(a.id));
+  const nextBatch = Math.max(0, ...synced.map((item) => item.batch)) + 1;
+  added.forEach((person, index) => synced.push({ id: person.id, name: person.name, university: person.university, profileUrl: person.profileUrl, batch: nextBatch + Math.floor(index / 10), status: 'pending' }));
+  return synced;
+}
+// --next=N: never-attempted entries first, newest roster id first (fresh profile URLs, just
+// verified). Only when none remain, and with --retry, unresolved entries least recently attempted.
+function nextIds(queue: QueueItem[], ledger: ProvenanceLedger, count: number): Set<string> {
+  const pending = queue.filter((item) => item.status === 'pending').sort((a, b) => b.id.localeCompare(a.id));
+  if (pending.length || !retry) return new Set(pending.slice(0, count).map((item) => item.id));
+  const attempted = (item: QueueItem) => ledger.entries[item.id]?.retrievedAt ?? '';
+  const unresolved = queue.filter((item) => item.status === 'unresolved').sort((a, b) => attempted(a).localeCompare(attempted(b)) || b.id.localeCompare(a.id));
+  return new Set(unresolved.slice(0, count).map((item) => item.id));
+}
 async function auditIds(): Promise<Set<string>> { const fixture = JSON.parse(await readFile(fixturePath, 'utf8')) as AuditFixture; return new Set([...fixture.knownGood, ...fixture.missing, ...fixture.knownBad, ...fixture.blocked, ...fixture.commonNames]); }
 
 const people = JSON.parse(await readFile(dataPath, 'utf8')) as Person[];
-const queue = await loadQueue(people);
+const queue = syncQueue(await loadQueue(people), people);
 const ledger = await loadLedger();
-if (args.has('--status')) { console.log(JSON.stringify({ queue: queue.reduce<Record<string, number>>((counts, item) => { counts[item.status] = (counts[item.status] ?? 0) + 1; return counts; }, {}), provenance: Object.keys(ledger.entries).length }, null, 2)); process.exit(0); }
+async function writeQueue() {
+  await writeFile(queuePath, `${JSON.stringify(queue, null, 2)}\n`);
+  await writeFile(missingPath, `${JSON.stringify(queue.filter((item) => item.status === 'unresolved' || item.status === 'pending'), null, 2)}\n`);
+}
+if (args.has('--status')) {
+  if (args.has('--sync')) await writeQueue();
+  const newestPending = queue.filter((item) => item.status === 'pending').map((item) => item.id).sort().reverse().slice(0, 10);
+  console.log(JSON.stringify({ queue: queue.reduce<Record<string, number>>((counts, item) => { counts[item.status] = (counts[item.status] ?? 0) + 1; return counts; }, {}), provenance: Object.keys(ledger.entries).length, newestPending }, null, 2));
+  process.exit(0);
+}
 const audit = args.has('--sample');
 if (explicitIds) {
   for (const person of people.filter((candidate) => explicitIds.has(candidate.id))) {
@@ -131,7 +168,7 @@ if (explicitIds) {
 }
 const selectedIds = audit
   ? await auditIds()
-  : explicitIds ?? new Set(queue.filter((item) => item.batch === requestedBatch && (item.status === 'pending' || (retry && item.status === 'unresolved'))).map((item) => item.id));
+  : explicitIds ?? (nextCount > 0 ? nextIds(queue, ledger, nextCount) : null) ?? new Set(queue.filter((item) => item.batch === requestedBatch && (item.status === 'pending' || (retry && item.status === 'unresolved'))).map((item) => item.id));
 const selected = people.filter((person) => selectedIds.has(person.id) && (!person.portrait || replaceExisting || audit));
 await mkdir(portraitsDir, { recursive: true });
 const report: Array<Record<string, unknown>> = [];
@@ -169,7 +206,6 @@ for (const person of selected) {
 await writeFile(provenancePath, `${JSON.stringify(ledger, null, 2)}\n`);
 if (applying) {
   await writeFile(dataPath, `${JSON.stringify(people, null, 2)}\n`);
-  await writeFile(queuePath, `${JSON.stringify(queue, null, 2)}\n`);
-  await writeFile(missingPath, `${JSON.stringify(queue.filter((item) => item.status === 'unresolved' || item.status === 'pending'), null, 2)}\n`);
+  await writeQueue();
 }
-console.log(JSON.stringify({ mode: audit ? 'sample' : explicitIds ? `explicit-${explicitIds.size}` : `batch-${requestedBatch}`, applying, results: report }, null, 2));
+console.log(JSON.stringify({ mode: audit ? 'sample' : explicitIds ? `explicit-${explicitIds.size}` : nextCount > 0 ? `next-${nextCount}` : `batch-${requestedBatch}`, applying, results: report }, null, 2));
