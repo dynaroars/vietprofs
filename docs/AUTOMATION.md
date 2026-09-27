@@ -244,8 +244,9 @@ show:
   issue:` side finding with the evidence.
 - **Links:** check the stored `profileUrl` and `websiteUrl`, and fill a missing Scholar or LinkedIn
   only on a strict identity match (never name alone; `npm test` rejects a Scholar or LinkedIn URL
-  shared by two entries). For a dead link, search the name and university fresh before calling it
-  unfixable.
+  shared by two entries). LinkedIn blocks fetches; verify it from the search index as described in
+  `TASKS/backfill_linkedin.md` "Verifying without fetching LinkedIn". For a dead link, search the
+  name and university fresh before calling it unfixable.
 - **Honors and degrees** noticed on those pages go in side findings, not this PR.
 
 In the PR body, list each entry with what was checked and what changed, including entries checked
