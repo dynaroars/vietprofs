@@ -476,24 +476,15 @@ Resuming across sessions (including on a different machine):
    mid-batch: the last pushed commit plus `maintenance/hieuphay-leads.json`'s recorded statuses are
    the entire state a fresh session needs to continue. Push immediately after each commit.
 
-### OpenAlex cross-discipline lead queues & triage methodology
+### Lead triage methodology
 
-`npm run extract-openalex-leads` queries the OpenAlex author API for a bounded set of Vietnamese surname searches, then writes `maintenance/openalex-leads.json`, grouped into broad disciplines. It establishes an automated candidate harvesting pipeline that feeds the roster maintenance workflow.
+#### 1. Systematic Triage & Resolution Playbook
 
-#### 1. Candidate Harvesting Architecture (`scripts/extract-openalex-leads.ts`)
-
-- **Multi-signal name filtering:** Querying open international bibliographic APIs by surname alone produces massive false-positive rates (e.g. French surnames like *Le Cam* or *Le Bihan*, Spanish surnames like *Dao*, and East Asian surname overlaps like *Mai*, *Lai*, *Dang*, *Do*). The extractor enforces a **Vietnamese name token signal** (`surnames` + `vietnameseNameTokens` intersection) to ensure candidates exhibit recognizable Vietnamese given/middle name tokens before entering the triage queue.
-- **Affiliation & Recency Filter:** The extraction pipeline retains only authors with $\ge 3$ works and an active overseas affiliation in the last two years (`currentYear - 2` or newer) at an OpenAlex `education`, `government`, `nonprofit`, or `facility` institution. Authors whose sole or most recent affiliations are in Vietnam are filtered out.
-- **Discipline Partitioning:** Each author is mapped to a broad discipline batch (e.g., Computer Science, Engineering, Mathematics & Statistics, Physical Sciences, Life Sciences, Medicine & Health, Agriculture & Environment, Social Sciences) based on OpenAlex primary topic taxonomy and domain classification.
-- **Pagination and Resumability:** The extractor supports `-- --pages N` (fetching up to 2,000 authors per surname) and preserves all existing human/agent-reviewed statuses (`included`, `duplicate`, `excluded`, `unresolved`) by OpenAlex author ID across re-extractions using `pipelineVersion: 3`.
-
-#### 2. Systematic Triage & Resolution Playbook
-
-OpenAlex author profiles are **leads only** — OpenAlex does not know faculty status, tenure eligibility, or Vietnamese heritage. Maintainers and automated agents process each candidate queue using the following step-by-step verification standard:
+Lead-queue entries (currently `maintenance/hieuphay-leads.json`) are **leads only**: the source does not know faculty status, tenure eligibility, or Vietnamese heritage. Maintainers and automated agents process each candidate queue using the following step-by-step verification standard:
 
 1. **Fast-path Deduplication & Entity Matching:**
-   - Check the candidate against the existing roster (`public/data.json`) by canonical name, full diacritic `vietnameseName`, and OpenAlex raw aliases.
-   - Detect **split OpenAlex profiles** (multiple author IDs corresponding to the same individual). Map all duplicate OpenAlex author IDs to the single primary canonical roster ID (`matchedId: "vp-####"`).
+   - Check the candidate against the existing roster (`public/data.json`) by canonical name, full diacritic `vietnameseName`, and the lead's recorded name variants.
+   - Detect **split leads** (several lead records for the same individual). Map all of them to the single primary canonical roster ID (`matchedId: "vp-####"`).
    - Beware of false-positive duplicate collisions on 2-token names (e.g., "Minh Huynh" at CSIRO vs an unrelated clinical namesake). Always verify institution and research domain before marking as duplicate.
 
 2. **Geographic & Primary Appointment Verification:**
@@ -526,13 +517,13 @@ OpenAlex author profiles are **leads only** — OpenAlex does not know faculty s
    - **Honors & Awards:** Record major academy memberships, fellow titles (e.g., IEEE Fellow, AIAA Fellow, NAI Fellow, ACM Fellow), national orders (e.g., *Légion d'honneur*), and career awards with proper category, year, organization, and HTTPS source URL.
    - **Field Classification & Overrides:** Ensure the candidate's department maps correctly to `FIELD_RULES`. For specialized research labs, foreign institutes, or clinical divisions that do not match default regex rules (e.g. French UMRs, medical service units), add an explicit entry to `FIELD_OVERRIDES` in `src/data.ts`.
 
-#### 3. State Synchronization & Resumable Commit Protocol
+#### 2. State Synchronization & Resumable Commit Protocol
 
 To prevent desynchronization between data files and ensure interrupted runs are cleanly resumable:
 
 1. Update `public/data.json` with new entries.
 2. Update `maintenance/verification.json` with entry verification timestamps matching canonical roster names.
-3. Update `maintenance/openalex-leads.json` with updated candidate statuses (`included`, `duplicate`, `excluded`, `unresolved`).
+3. Update the lead file (`maintenance/hieuphay-leads.json`) with updated candidate statuses (`included`, `duplicate`, `excluded`, `unresolved`).
 4. Run immutable ID assignment:
    ```bash
    npm run assign-profile-ids -- --apply
@@ -543,8 +534,8 @@ To prevent desynchronization between data files and ensure interrupted runs are 
    ```
 6. Commit and push each batch immediately after validation:
    ```bash
-   git add TODO.md maintenance/openalex-leads.json maintenance/verification.json public/data.json scripts/validate-data.ts src/data.ts
-   git commit -m "Resolve OpenAlex <Discipline> leads batch"
+   git add TODO.md maintenance/hieuphay-leads.json maintenance/verification.json public/data.json scripts/validate-data.ts src/data.ts
+   git commit -m "Resolve <source> leads batch"
    git push origin main
    ```
 

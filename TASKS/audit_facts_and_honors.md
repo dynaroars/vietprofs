@@ -1,14 +1,14 @@
 # Credentials, Honors, and Direct Fields Protection (`audit_facts_and_honors.md`)
 
 > **Autonomous Goal Directive (`/goal TASKS/audit_facts_and_honors.md`):**
-> When invoked as `/goal TASKS/audit_facts_and_honors.md`, the agent MUST immediately execute this full credentials and honors auditing workflow without needing any extra prompt text. Work in 15–20 candidate batches (`hieuphay-leads.json` / `openalex-leads.json`), verify inclusion criteria and degree chronology, submit verified batches as GitHub PRs, and loop until all lead candidates are processed. Per `AGENTS.md`'s "New entries vs. edits" policy: a lead that is a brand-new person (needs a new `vp-####` ID) goes to a GitHub Issue, never a PR; only credential/honors corrections to a person who already has a roster ID belong in a PR.
+> When invoked as `/goal TASKS/audit_facts_and_honors.md`, the agent MUST immediately execute this full credentials and honors auditing workflow without needing any extra prompt text. Work in 15–20 candidate batches (`hieuphay-leads.json`), verify inclusion criteria and degree chronology, submit verified batches as GitHub PRs, and loop until all lead candidates are processed. Per `AGENTS.md`'s "New entries vs. edits" policy: a lead that is a brand-new person (needs a new `vp-####` ID) goes to a GitHub Issue, never a PR; only credential/honors corrections to a person who already has a roster ID belong in a PR.
 
 ---
 
 ## ⚡ Batching, PR/Issue Submission, and `/goal` Protocol
 
 1. **Routing:** Follow the "Where each kind of change lands" table in `AGENTS.md` (existing-ID edits → PR; new people → Issue; never commit directly to `main`).
-2. **Strict Batch Size (15–20 Candidates Per Batch):** Work in bounded batches of **15–20 candidates per batch** using lead files (`maintenance/hieuphay-leads.json` or `maintenance/openalex-leads.json`).
+2. **Strict Batch Size (15–20 Candidates Per Batch):** Work in bounded batches of **15–20 candidates per batch** using the lead file (`maintenance/hieuphay-leads.json`).
 3. **Thorough Verification Standard:** Verify full inclusion standard for every candidate: current appointment outside Vietnam, accepted track, non-corporate employer, degree chronology (`undergradYear <= msYear <= phdYear <= postdocYear`), and honors categorization.
 4. **New-ID vs. Edit Split (per `AGENTS.md`):** A batch's candidates fall into two kinds, and each kind is submitted differently:
    - **Brand-new person (needs a new `vp-####` ID):** Do NOT run `assign-profile-ids -- --apply` or add them to `public/data.json` on a branch. File one GitHub Issue per candidate (or a small group) with evidence, source URLs, and proposed fields, and let the owner or `AUDIT_ISSUES_PRS.md` assign the ID.
@@ -24,7 +24,7 @@
    - Push topic branch: `git push origin maintenance/leads-batch-[DISCIPLINE/TIMESTAMP]`
    - File GitHub PR:
      ```bash
-     gh pr create --title "Resolve OpenAlex [DISCIPLINE] leads batch" --body "Verified and corrected 15 candidate leads..."
+     gh pr create --title "Resolve hieuphay leads batch" --body "Verified and corrected 15 candidate leads..."
      ```
    - For ambiguous eligibility cases, protected field conflicts, or honors requiring maintainer review (on an existing entry), file GitHub Issues (`gh issue create`).
    - Return to `main`: `git checkout main`
