@@ -100,12 +100,6 @@ export function computeCompleteness(roster: Roster): CompletenessMetric[] {
       count: roster.filter((p) => Boolean(p.linkedinUrl)).length,
       description: 'Validated professional LinkedIn profiles.',
     },
-    {
-      key: 'researchOverview',
-      label: 'Research Summaries & Bios',
-      count: roster.filter((p) => Boolean(p.researchOverview?.text)).length,
-      description: 'Evidence-backed narrative summaries of scholarly contributions.',
-    },
   ];
 
   return metrics.map((m) => ({

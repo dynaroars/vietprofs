@@ -12,7 +12,6 @@ import {
   UTC_TIMESTAMP_PATTERN,
 } from '../src/roster-constants.ts';
 import { canonicalState, looksSurnameFirst, type RosterEntry } from '../src/data.ts';
-import { validateEnrichment } from '../src/enrichment.ts';
 import { identityKey, namesMatch, nameTokens } from '../src/identity.ts';
 import {
   validateEducationChronology,
@@ -23,7 +22,6 @@ import { validateRelationshipDatabase } from '../src/relationships.ts';
 
 const rosterFile = resolve('public/data.json');
 const verificationFile = resolve('maintenance/verification.json');
-const enrichmentFile = resolve('maintenance/enrichment.json');
 const evidenceFile = resolve('maintenance/evidence.json');
 const relationshipsFile = resolve('public/relationships.json');
 const allowedTracks = new Set<string>(TRACKS);
@@ -68,10 +66,9 @@ function validateTimestamp(file: string, value: string, label: string, field: st
   if (timestamp.valueOf() > Date.now()) fail(file, `${label} ${field} must not be in the future`);
 }
 
-const [roster, verification, enrichment, evidence, relationships] = await Promise.all([
+const [roster, verification, evidence, relationships] = await Promise.all([
   readFile(rosterFile, 'utf8').then(JSON.parse),
   readFile(verificationFile, 'utf8').then(JSON.parse),
-  readFile(enrichmentFile, 'utf8').then(JSON.parse),
   readFile(evidenceFile, 'utf8').then(JSON.parse),
   readFile(relationshipsFile, 'utf8').then(JSON.parse),
 ]);
@@ -79,25 +76,10 @@ if (!Array.isArray(roster) || roster.length === 0) fail(rosterFile, 'must contai
 if (!verification || typeof verification !== 'object' || Array.isArray(verification)) {
   fail(verificationFile, 'must contain an object keyed by roster id');
 }
-if (!enrichment || enrichment.version !== 1 || !Array.isArray(enrichment.ids) || !Array.isArray(enrichment.batches) || !enrichment.entries || typeof enrichment.entries !== 'object') {
-  fail(enrichmentFile, 'must contain a versioned ID-keyed enrichment ledger');
-}
 if (!evidence || evidence.version !== 1 || typeof evidence.entries !== 'object') {
   fail(evidenceFile, 'must contain a versioned evidence ledger');
 }
 const rosterIds = new Set((roster as Array<{ id: string }>).map((person) => person.id));
-if (enrichment.ids.length !== rosterIds.size || enrichment.ids.some((id: unknown) => typeof id !== 'string' || !rosterIds.has(id as string))) {
-  fail(enrichmentFile, 'IDs must exactly match the current roster');
-}
-const batchedIds = enrichment.batches.flatMap((batch: { ids?: unknown[] }) => batch.ids ?? []);
-if (batchedIds.length !== rosterIds.size || new Set(batchedIds).size !== rosterIds.size || batchedIds.some((id: unknown) => !rosterIds.has(id as string))) {
-  fail(enrichmentFile, 'batches must cover every roster ID exactly once');
-}
-for (const [id, entry] of Object.entries(enrichment.entries as Record<string, { overview?: string }>)) {
-  if (!rosterIds.has(id)) fail(enrichmentFile, `contains stale entry for ${id}`);
-  if (!['pending', 'verified', 'no suitable evidence', 'retry needed'].includes(entry.overview ?? '')) fail(enrichmentFile, `invalid outcome for ${id}`);
-}
-if (Object.keys(enrichment.entries).length !== rosterIds.size) fail(enrichmentFile, 'must contain one ledger entry per roster ID');
 
 // Retired ids stay retired: a merged duplicate points at the entry that absorbed it, and a person
 // who comes back gets the original id restored (npm run retire-profile-id), not a fresh one.
@@ -207,8 +189,6 @@ for (const [index, person] of roster.entries()) {
     fail(rosterFile, `${label} non-university institutionType requires the Research, Emeritus, or Deceased track`);
   }
   if (!Array.isArray(person.researchAreas) || person.researchAreas.length === 0) fail(rosterFile, `${label} needs researchAreas`);
-  const enrichmentErrors = validateEnrichment(person);
-  if (enrichmentErrors.length) fail(rosterFile, `${label} enrichment: ${enrichmentErrors.join('; ')}`);
   if (person.state !== undefined && typeof person.state !== 'string') fail(rosterFile, `${label} state must be a string`);
   if (typeof person.state === 'string' && canonicalState(person.state, person.country) !== person.state) {
     fail(rosterFile, `${label} state must be the full U.S. state name (${canonicalState(person.state, person.country)}), not ${person.state}`);

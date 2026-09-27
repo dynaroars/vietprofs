@@ -49,7 +49,6 @@ import { fileURLToPath } from 'node:url';
 import { isDeepStrictEqual } from 'node:util';
 import { FIELDS, fieldOf, type Roster } from '../src/data.ts';
 import { DIRECT_FIELD_EXCLUSIONS, HONOR_CATEGORIES, PROTECTABLE_FIELDS, RANKS, HONOR_FIELDS, INSTITUTION_TYPES, ROSTER_FIELDS, TRACKS } from '../src/roster-constants.ts';
-import { validateEnrichment } from '../src/enrichment.ts';
 import { loadEvidenceLedger, recordFieldEvidence, saveEvidenceLedger } from '../src/evidence.ts';
 import {
   validateEducationChronology,
@@ -75,7 +74,7 @@ const MAX_PROPOSAL_REVISIONS = 2;
 const DEFAULT_AGENT_TIMEOUT_MINUTES = 90;
 const DEFAULT_RATE_LIMIT_WAIT_MINUTES = 30;
 const MAX_CAPTURE_CHARS = 2_000_000;
-const MAINTAINED_PATHS = new Set(['public/data.json', 'maintenance/verification.json', 'maintenance/enrichment.json', 'maintenance/evidence.json', 'maintenance/portrait-provenance.json']);
+const MAINTAINED_PATHS = new Set(['public/data.json', 'maintenance/verification.json', 'maintenance/evidence.json', 'maintenance/portrait-provenance.json']);
 const ALLOWED_ROSTER_FIELDS = new Set<string>(ROSTER_FIELDS);
 const ALLOWED_HONOR_FIELDS = new Set<string>(HONOR_FIELDS);
 // Fields whose absence marks an entry as an enrichment gap (missing portrait, Scholar link, or
@@ -655,8 +654,6 @@ export function proposalValidationError(proposal: JsonRecord): string | null {
   }
   if (proposal.state !== undefined && typeof proposal.state !== 'string') return 'proposal state must be a string';
   if (proposal.country !== undefined && typeof proposal.country !== 'string') return 'proposal country must be a string';
-  const enrichmentErrors = validateEnrichment(proposal);
-  if (enrichmentErrors.length) return `proposal enrichment: ${enrichmentErrors.join('; ')}`;
   return null;
 }
 
@@ -1288,19 +1285,8 @@ async function applyProposal(current: JsonRecord): Promise<void> {
     await saveEvidenceLedger(evidenceLedger, evidencePath);
   }
 
-  // Keep the enrichment ledger synchronized when an approved removal changes the roster ID set.
-  // This must happen before validation so a removal cannot leave the controller stuck on stale
-  // enrichment IDs or batch assignments.
-  const enrichmentPath = join(REPO_ROOT, 'maintenance/enrichment.json');
-  const enrichment = await readJsonRequired<JsonRecord>(enrichmentPath);
+  // Keep the portrait ledger synchronized when an approved removal changes the roster ID set.
   if (personId && current.proposal === null) {
-    enrichment.ids = (enrichment.ids as string[]).filter((id) => id !== personId);
-    enrichment.batches = (enrichment.batches as JsonRecord[]).map((batch) => ({
-      ...batch,
-      ids: (batch.ids as string[]).filter((id) => id !== personId),
-    }));
-    delete (enrichment.entries as JsonRecord)[personId];
-    await writeAtomic(enrichmentPath, enrichment);
     const portraitProvenancePath = join(REPO_ROOT, 'maintenance/portrait-provenance.json');
     const portraitProvenance = await readJsonRequired<JsonRecord>(portraitProvenancePath);
     delete (portraitProvenance.entries as JsonRecord)[personId];
@@ -1328,7 +1314,7 @@ async function commitBatch() {
     return 'existing';
   }
   if (status === 'none') return 'none';
-  await git(['add', 'public/data.json', 'maintenance/verification.json', 'maintenance/enrichment.json', 'maintenance/evidence.json', 'maintenance/portrait-provenance.json']);
+  await git(['add', 'public/data.json', 'maintenance/verification.json', 'maintenance/evidence.json', 'maintenance/portrait-provenance.json']);
   await git([
     'commit',
     '-m', `Automated roster maintenance: batch ${activeState().runId}`,

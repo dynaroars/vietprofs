@@ -7,12 +7,6 @@ export interface Honor {
   source?: string;
 }
 
-export interface ResearchOverview {
-  text: string;
-  sources: string[];
-  verifiedAt: string;
-}
-
 export interface RosterEntry {
   id: string;
   name: string;
@@ -46,7 +40,6 @@ export interface RosterEntry {
   lastUpdatedAt?: string;
   portrait?: string;
   portraitSource?: string;
-  researchOverview?: ResearchOverview;
 }
 
 export type Roster = RosterEntry[];

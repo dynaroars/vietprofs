@@ -55,7 +55,6 @@ Keep new routines inside those windows.
 | `audit` | `trig_01GeWQmgtoeJtaf7E2LsA7BA` | Opus 5.5 | `0 3 * * *` | Daily 11 PM (previous day) | [Auditor](#auditor-audit) |
 | `discover` | `trig_01R9AeywUniWNP3iK8XDw9ju` | Sonnet 5 | `30 5 * * 1,4` | Mon/Thu 1:30 AM | [Discovery](#discover-new-faculty-discover) |
 | `relationships` | `trig_01EgwQ418znNbFQ95ghg4p5E` | Sonnet 5 | `30 6 * * 1,4` | Mon/Thu 2:30 AM | [Relationships](#academic-relationships-relationships) |
-| `overviews` | `trig_01NUyNrE7x8WZgLMHbpCU7Zi` | Sonnet 5 | `30 6 * * 2` | Tue 2:30 AM | [Overviews](#research-overviews-overviews) |
 | `links` | `trig_0162DEq1aGRH3vWrEtpKoNmy` | Sonnet 5 | `0 5 * * 3,6` | Wed/Sat 1 AM | [Links](#links-links) |
 | `portraits` | `trig_01D58Azgkh8kdKFBdFNAXox2` | Sonnet 5 | `0 5 * * 4` | Thu 1 AM | [Portraits](#portraits-portraits) |
 | `honors` | `trig_012eH5rSZwQw7PXiQPSRj9Wn` | Sonnet 5 | `30 6 * * 5` | Fri 2:30 AM | [Honors & leads](#honors-and-lead-triage-honors) |
@@ -80,6 +79,9 @@ Retired routines (deleted; no longer at claude.ai/code/routines). The routines a
   reuses the `linkedin` routine id. Three routines each reading the same pages for one field
   tripled the writers on `public/data.json`. `scholar` (`trig_01KLRvszaFCY869VkchMmiAE`) and
   `websites` (`trig_01RKg7at1hAC3cY8NHVN8VBU`) are disabled; delete them in the web UI.
+- `overviews` (`trig_01NUyNrE7x8WZgLMHbpCU7Zi`, Tue) → retired 2026-09-27 with the research-overview
+  ("About") field, which was the main source of invented or mismatched text. Disabled; delete it in
+  the web UI.
 - `education` (`trig_011kuvE1P6aHNn7fcw9XVnLS`, Sat) → retired 2026-09-27 when the degree years,
   majors, and other degrees it mostly maintained were removed. Disabled; delete it in the web UI.
 - `vietprofs-linkedin-url-backfill` (every 2h) → `linkedin`, later `links`. Same task; its side-findings behavior now applies to all producers.
@@ -130,7 +132,6 @@ File a finding when a source you actually read shows one of these:
 | Two roster entries are the same person | `Duplicate roster entry: <name> (<vp-id>) duplicates <vp-id>` |
 | An honor that plausibly meets the honors bar is missing | `Possible new honor: <name> (<vp-id>) — <honor>` |
 | Degree fact wrong or missing | `Review incorrect <field>: <name> (<vp-id>)` |
-| `researchOverview` describes someone else or is stale | `Review mismatched researchOverview: <name> (<vp-id>)` |
 | An eligible person not on the roster (coauthor, lab member, colleague) | `New candidate: <name> — <rank>, <institution>` (follow `TASKS/candidate_intake.md` steps 1-4; if `npm run find-roster-matches` hits them at another institution, file `Review stale institution:` for that id instead) |
 
 Rules:
@@ -204,8 +205,8 @@ Follow `TASKS/AUDIT_ISSUES_PRS.md`, including "Independent review". Also read
      queue exhausted, source blocked, or the playbook re-selecting entries already tried.
   7. Queues running dry: a producer whose remaining work runs out within about 4 weeks at its
      cap. Check `npx tsx scripts/fetch-portraits.ts --status` (pending portraits), pending leads
-     in `maintenance/hieuphay-leads.json`, roster ids not yet in a completed batch in
-     `maintenance/relationship-research.json`, and `npm run enrich -- status` (overviews).
+     in `maintenance/hieuphay-leads.json`, and roster ids not yet in a completed batch in
+     `maintenance/relationship-research.json`.
      Recommend a lower frequency or a new source.
 
   Item 8 catches data problems that pass every test:
@@ -241,13 +242,6 @@ are retried only once every new entry has been attempted. Run
 `pip install pillow numpy` if the analyzer needs it. Open every added image with the Read tool and
 look at it. In the PR body, give each portrait's id, its source page, and one line on why it was
 accepted. Never replace a portrait protected by `directFields`.
-
-### Research overviews (`overviews`)
-
-Playbook: `TASKS/enrich_research_overviews.md`. Cap: one 20-profile snapshot
-(`npm run enrich -- snapshot/status/collect/apply/finalize`). Write only from the scholar's own
-pages, check for namesakes, and follow the ROSTER_MAINTENANCE.md quality rules. Overviews don't
-change `lastUpdatedAt`.
 
 ### Honors and lead triage (`honors`)
 

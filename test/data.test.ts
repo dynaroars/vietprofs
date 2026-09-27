@@ -5,7 +5,6 @@ import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { FIELDS, LOCATIONS, HEALTH_SUBFIELDS, canonicalRank, displayName, displayUniversity, fieldOf, healthSubfieldOf, continentOf, locationMatches, buildFunFacts, buildAwardsFunFacts, buildInternationalObservations, buildLocationObservations, filterRoster, looksSurnameFirst, buildFieldCounts, buildTopCountries, buildTrackCounts, buildTopUndergradInstitutions, buildPhdToFacultyPairings, type Roster, type RosterEntry } from '../src/data.ts';
-import { validateEnrichment } from '../src/enrichment.ts';
 import { connectionsFor, relationshipId, validateRelationshipDatabase, type RelationshipDatabase } from '../src/relationships.ts';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -79,17 +78,6 @@ test('grant-collaborator and patent-coinventor relationships validate like coaut
   };
   assert.deepEqual(validateRelationshipDatabase(database, roster), []);
   assert.equal(connectionsFor(sourceId, database)[0].label, 'Patent co-inventor · 1 shared patent');
-});
-
-test('enrichment validation rejects unsafe links and corrupted scrapes', () => {
-  assert.ok(validateEnrichment({ researchOverview: { text: 'Studies networks.', sources: ['javascript:alert(1)'], verifiedAt: '2026-01-01T00:00:00.000Z' } }).some((error) => /unsafe/.test(error)));
-  assert.ok(validateEnrichment({ researchOverview: { text: 'Directs [Lab](javascript:alert(1)).', sources: ['https://example.org'], verifiedAt: '2026-01-01T00:00:00.000Z' } }).some((error) => /unsafe/.test(error)));
-  assert.ok(validateEnrichment({ researchOverview: { text: 'Research on AI &amp; machine learning.', sources: ['https://example.org'], verifiedAt: '2026-01-01T00:00:00.000Z' } }).some((error) => /HTML entity/.test(error)));
-  assert.ok(validateEnrichment({ researchOverview: { text: 'Research in bio&#039;engineering.', sources: ['https://example.org'], verifiedAt: '2026-01-01T00:00:00.000Z' } }).some((error) => /HTML entity/.test(error)));
-  assert.ok(validateEnrichment({ researchOverview: { text: 'Toggle navigation Skip to main content. Studies AI.', sources: ['https://example.org'], verifiedAt: '2026-01-01T00:00:00.000Z' } }).some((error) => /boilerplate/.test(error)));
-  assert.ok(validateEnrichment({ researchOverview: { text: 'Overview with {{placeholder}}.', sources: ['https://example.org'], verifiedAt: '2026-01-01T00:00:00.000Z' } }).some((error) => /placeholder/.test(error)));
-  assert.ok(validateEnrichment({ researchOverview: { text: 'Directs lab at https://example.org/lab without markdown link.', sources: ['https://example.org'], verifiedAt: '2026-01-01T00:00:00.000Z' } }).some((error) => /unformatted URL/.test(error)));
-  assert.equal(validateEnrichment({ researchOverview: { text: 'Directs the [Lab](https://roars.dev). Built [Tool](https://vietprofs.roars.dev).', sources: ['https://example.org'], verifiedAt: '2026-01-01T00:00:00.000Z' } }).length, 0);
 });
 
 test('reviewed portraits use local WebP files with source provenance', () => {

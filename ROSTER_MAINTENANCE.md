@@ -126,32 +126,10 @@ used for corporate laboratories. Non-university entries must use the `Research` 
 
 ## Research workflow
 
-Research overviews are optional, source-backed fields on an existing roster
-entry. There are no work-list fields (`selectedWork` and `recentWork` were removed in 2026-09); long
-excerpts, source-fetch details, outcomes, errors, and resumable batch state belong in
-`maintenance/enrichment.json`, keyed by immutable `vp-####` ID. A generated overview must be written neutrally without gendered pronouns (do not use He, She, His, Her, Him, Hers; use the scholar's name or direct active-voice phrasing) and must be independently checked against its stored evidence. The command
-`npm run enrich -- snapshot` creates a stable 20-person batch snapshot, `status` reports coverage,
-`collect N` records bounded source retrieval, `apply proposals.json` accepts only validated
-structured proposals, and `finalize N` closes a batch's reviewed outcomes. After a run, use
-`resolve-retries` for one recorded, bounded second retrieval attempt; it retains both retrieval
-results and closes a retry only as `no suitable evidence` when no independently verified public
-enrichment is added. For subsequent roster additions, rerun `snapshot` only after the prior
-snapshot is complete, then repeat the collect/verify/apply/finalize cycle for the new stable ID
-set. Enrichment does not alter `lastUpdatedAt` or appointment verification status.
-
-### Research overview quality and sanitization guidelines
-
-Research overviews (`researchOverview.text`) are publicly rendered on individual scholar profile pages (`/vp-####.html`). They must read as high-quality, professional, 1–3 sentence academic summaries written in standard English.
-
-**Strict Quality Rules for `researchOverview`:**
-
-- **No Raw HTML Entities or Markup:** Never include unescaped HTML entities (e.g. `&amp;`, `&nbsp;`, `&#039;`, `&times;`, `&quot;`) or HTML tags (`<p>`, `<a>`, `<span>`, `<div>`). Any scraped text containing HTML entities must be decoded into plain text or cleanly rewritten.
-- **No Scraped Web Boilerplate or UI Artifacts:** Never allow raw web-scraper output to enter overviews. Scraped artifacts such as `Toggle navigation`, `Skip to main content`, `Researchers Information`, `What are you looking for?`, `Staff Directory`, `Loading...`, `Phone:`, `Email:`, or contact card snippets (`Download contact card`) are strictly prohibited and will be rejected by validation.
-- **No Raw Citation or Publication Dumps:** An overview is a research summary, not a bibliographic record. Do not dump journal volume/issue citations (e.g., `12(4): 203-210`), PubMed/MEDLINE extracts, co-author lists, DOI links, or unformatted paper titles into the text.
-- **No Unresolved Template Tags or Placeholders:** Text containing `{{...}}`, `<!-- ... -->`, or template placeholders is invalid.
-- **No Bare Unformatted URLs:** Web links inside overviews must use standard Markdown format (`[Anchor Text](https://...)`) with safe HTTPS destinations. Never leave raw URLs (`https://...`) loose in prose.
-- **Gender-Neutral Phrasing:** Maintain the repository standard: do not use gendered pronouns (`He`, `She`, `His`, `Her`, `Him`, `Hers`). Use the scholar's surname or direct active-voice phrasing.
-- **Sentence & Length Constraints:** Maximum 3 sentences and at most 500 characters.
+There are no generated prose fields: research overviews ("About") and work lists were removed in
+2026-09 because generated text was the roster's main source of invented or mismatched content. An
+entry's research is described only by `researchAreas` (short keywords from the person's own pages),
+and the linked official profile carries the full bio.
 
 Work on one institution or broad field at a time. Audit existing entries before adding candidates. For every candidate, verify identity, current appointment, primary department or research unit, rank/track, institution type, and profile URL individually. Deduplicate by person rather than URL and check for former affiliations or recent moves (see "One person, one ID").
 
@@ -598,7 +576,7 @@ later qualify again. None of that is a new person, so none of it gets a new ID.
 - `profileUrl` must be a current, working academic or official institutional profile and must not be a Google Scholar URL. Store Scholar separately in `scholarUrl` (must be a canonical citations profile URL `https://scholar.google.com/citations?user=...`, never a search query). Store one maintained personal or lab homepage in `websiteUrl` (there is no separate lab field; prefer the personal page when both exist); store a verified LinkedIn profile in `linkedinUrl` (must be a direct personal profile URL `https://linkedin.com/in/...` or `https://www.linkedin.com/in/...`, never search or company pages). Verify Scholar and LinkedIn matches strictly: confirm name, institution, and publication/field overlap before attaching them — never guess from name alone. Prefer LinkedIn profiles directly linked from the faculty member's institutional bio or homepage.
 - `lastUpdatedAt` is required, but never set it by hand: `npm test` (via `npm run stamp-updates`)
   stamps every entry whose content changed since the last commit, and new entries. It records when
-  roster content for the person last changed; overviews and `directFields` don't count. For a
+  roster content for the person last changed; `directFields` doesn't count. For a
   roster-wide schema or formatting migration, run `SCHEMA_MIGRATION=1 npm test` so it stamps
   nothing.
 - Preserve an existing Scholar URL by moving it to `scholarUrl` before replacing `profileUrl`. Verify replacement URLs follow redirects and do not return 404.
@@ -731,8 +709,8 @@ verification and validation gates pass. Never backdate a new review, infer a tim
 metadata, or set a future value.
 
 `lastUpdatedAt` is generated, not chosen: `npm run stamp-updates` (run by `npm test`) compares each
-entry with the last commit and stamps the ones whose content changed, ignoring key order,
-overviews, and `directFields`. The maintenance controller stamps its own approved patches. Only the
+entry with the last commit and stamps the ones whose content changed, ignoring key order and
+`directFields`. The maintenance controller stamps its own approved patches. Only the
 ledger timestamp is set by hand, and only for a complete review.
 
 ### Honors and awards eligibility

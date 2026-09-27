@@ -86,10 +86,6 @@ research:
   awards do) with `name`, `year`, `organization`, and `source` URL for each.
 - **Degrees/history:** `phdInstitution`/`phdYear`, `msInstitution`, `mdInstitution`,
   `undergradInstitution`/`undergradYear`, and a completed `postdocInstitution` where findable.
-- **About/bio summary:** a short factual "about" paragraph or research-overview draft (same quality
-  bar as `researchOverview.text` in `ROSTER_MAINTENANCE.md`: neutral, gender-neutral phrasing, no
-  raw HTML/citations/boilerplate, ≤3 sentences, ≤500 characters) with its source(s), for the
-  downstream agent to adapt into `researchOverview`.
 - Cite a source URL for every fact gathered. Do not invent or infer facts not backed by a source.
 
 ## 4. File one GitHub Issue per candidate

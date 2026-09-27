@@ -27,11 +27,6 @@ const mockRoster: RosterEntry[] = [
     researchAreas: ['Artificial Intelligence', 'Formal Methods'],
     scholarUrl: 'https://scholar.google.com/citations?user=test1',
     linkedinUrl: 'https://www.linkedin.com/in/test1',
-    researchOverview: {
-      text: 'Researching automated verification and deep learning.',
-      sources: ['https://cs.stanford.edu/tnguyen'],
-      verifiedAt: '2026-09-10T00:00:00.000Z',
-    },
     lastUpdatedAt: new Date(Date.now() - 2 * 24 * 60 * 60 * 1000).toISOString(),
   },
   {
@@ -63,7 +58,7 @@ const mockRoster: RosterEntry[] = [
 describe('Derived Roster Stats', () => {
   it('computes completeness percentages accurately', () => {
     const completeness = computeCompleteness(mockRoster);
-    assert.equal(completeness.length, 9);
+    assert.equal(completeness.length, 8);
 
     const profiles = completeness.find((c) => c.key === 'profileUrl');
     assert.ok(profiles);

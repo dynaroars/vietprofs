@@ -54,7 +54,6 @@ export const ROSTER_FIELDS = [
   'msInstitution',
   'undergradInstitution',
   'undergradYear',
-  'researchOverview',
 ] as const;
 
 export const DIRECT_FIELD_EXCLUSIONS = new Set<string>(['id', 'lastUpdatedAt', 'directFields']);

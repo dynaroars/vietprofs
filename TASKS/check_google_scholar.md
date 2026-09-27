@@ -1,7 +1,7 @@
 # Check & Backfill Google Scholar Profiles (`check_google_scholar.md`)
 
 > **Autonomous Goal Directive (`/goal TASKS/check_google_scholar.md`):**  
-> Audit missing Google Scholar citation profile links in `public/data.json`. Execute the audit and backfill workflow batch by batch until every missing entry has been audited (across runs; a scheduled run stops at its batch cap per `AGENTS.md`). Perform targeted web searches to identify authentic Google Scholar user IDs matching faculty publication records. Update `scholarUrl` and `lastUpdatedAt` (never the verification ledger). For each batch of verified updates, create a topic branch (`task/check-scholar-batch-[BATCH_NUM]`), run verification (`npm test && npm run build && git diff --check`), submit a GitHub PR (or Issue), return to `main`, and continue with the next batch.
+> Audit missing Google Scholar citation profile links in `public/data.json`. Execute the audit and backfill workflow batch by batch until every missing entry has been audited (across runs; a scheduled run stops at its batch cap per `AGENTS.md`). Perform targeted web searches to identify authentic Google Scholar user IDs matching faculty publication records. Update `scholarUrl`; `npm test` stamps `lastUpdatedAt`. Never touch the verification ledger. On a schedule this runs inside the `links` routine. For each batch of verified updates, create a topic branch (`task/check-scholar-batch-[BATCH_NUM]`), run verification (`npm test && npm run build && git diff --check`), submit a GitHub PR (or Issue), return to `main`, and continue with the next batch.
 
 ---
 

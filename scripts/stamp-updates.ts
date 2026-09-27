@@ -1,7 +1,7 @@
 // Sets lastUpdatedAt on roster entries whose content changed since the last commit, so nobody
 // stamps it by hand. Runs before npm test. An entry is stamped once: if its lastUpdatedAt already
 // differs from the committed one, it was stamped earlier (or deliberately set) and is left alone.
-// Overviews and directFields are metadata and don't count as changes (ROSTER_MAINTENANCE.md).
+// directFields is metadata and doesn't count as a change (ROSTER_MAINTENANCE.md).
 //
 //   npm run stamp-updates            # compare with HEAD
 //   npm run stamp-updates -- <ref>   # compare with another commit, e.g. origin/main
@@ -12,7 +12,7 @@ import { execFileSync } from 'node:child_process';
 import { readFile, writeFile } from 'node:fs/promises';
 import type { RosterEntry } from '../src/data.ts';
 
-const IGNORED = new Set(['lastUpdatedAt', 'researchOverview', 'directFields']);
+const IGNORED = new Set(['lastUpdatedAt', 'directFields']);
 const ref = process.argv[2] ?? 'HEAD';
 const rosterFile = 'public/data.json';
 

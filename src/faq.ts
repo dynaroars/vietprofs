@@ -188,12 +188,9 @@ function renderFaqPage(): string {
           </ol>
           <p>A fleet of scheduled cloud routines runs on a predictable cadence:</p>
           <ul>
-            <li><strong>Daily Auditor:</strong> Runs daily to independently re-verify open PRs and candidate issues.</li>
-            <li><strong>LinkedIn Backfill:</strong> Sweeps entries to verify and link authentic professional profiles.</li>
-            <li><strong>Google Scholar Backfill:</strong> Discovers and validates publication profiles.</li>
-            <li><strong>Websites &amp; Lab URLs:</strong> Verifies official directory links and personal lab homepages.</li>
+            <li><strong>Nightly Auditor:</strong> Runs every night to independently re-verify the previous day's PRs and issues.</li>
+            <li><strong>Links:</strong> Verifies each person's website, Google Scholar, and LinkedIn links in one pass, twice a week.</li>
             <li><strong>Portraits Sweep:</strong> Ingests and optimizes high-resolution, verified portrait photos with provenance.</li>
-            <li><strong>Education Chronology:</strong> Audits undergraduate, master's, and PhD degrees for chronological integrity.</li>
             <li><strong>Honors &amp; Awards Triage:</strong> Audits major disciplinary awards against official awarding bodies.</li>
             <li><strong>Academic Relationships:</strong> Discovers and validates advisor-advisee and co-affiliation connections.</li>
             <li><strong>Faculty Discovery:</strong> Bounded searches across under-represented institutions and fields.</li>
@@ -206,7 +203,7 @@ function renderFaqPage(): string {
         <div class="faq-answer">
           <p>To guarantee data integrity, VietProfs uses an independent two-tier agent model:</p>
           <ul>
-            <li><strong>Producers (Worker Agents):</strong> Perform focused research playbooks in capped batches (e.g., backfilling missing links or education). Producers <em>never</em> merge pull requests or push directly to <code>main</code> (with narrow exceptions for relationship data).</li>
+            <li><strong>Producers (Worker Agents):</strong> Perform focused research playbooks in capped batches (e.g., backfilling missing links or portraits). Producers <em>never</em> merge pull requests or push directly to <code>main</code> (with narrow exceptions for relationship data).</li>
             <li><strong>The Auditor Agent:</strong> A separate, higher-capacity model runs daily on a minimum 12-hour delay. It checks out a clean clone of <code>main</code>, re-verifies every changed record against the live web, tests the build and test suite (<code>npm test</code>, <code>npm run build</code>), and only then squash-merges valid PRs or closes verified Issues.</li>
           </ul>
         </div>
@@ -321,8 +318,8 @@ function renderFaqPage(): string {
             <li><strong>Education History:</strong> Undergraduate, master's, PhD, MD, and completed postdoctoral institutions, with undergraduate and PhD years.</li>
             <li><strong>Curated Honors:</strong> Badges for academy memberships, society fellowships, career awards, and endowed chairs.</li>
             <li><strong>Research Areas:</strong> Clickable keyword tags.</li>
-            <li><strong>Direct Links:</strong> One-click links to official university profile pages, personal/lab websites, and Google Scholar.</li>
-            <li><strong>Freshness Timestamp:</strong> <code>lastUpdatedAt</code> showing exactly when the profile was last revalidated against the live web.</li>
+            <li><strong>Direct Links:</strong> One-click links to the official university profile, a website (personal page or lab site), Google Scholar, and LinkedIn.</li>
+            <li><strong>Last Updated:</strong> <code>lastUpdatedAt</code>, the date the entry's stored facts last changed. It is set automatically; it is not the date the record was last re-checked.</li>
           </ul>
         </div>
       </div>

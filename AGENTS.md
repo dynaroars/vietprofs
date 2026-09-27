@@ -58,7 +58,7 @@ instead of restating it.
 | Change | Route |
 | :--- | :--- |
 | New roster ID (any new `public/data.json` entry) | GitHub Issue, one per candidate |
-| Edit to existing IDs from a `TASKS/` playbook (links, portraits, honors, degrees, overviews) | Topic branch + PR; the auditor (`TASKS/AUDIT_ISSUES_PRS.md`) merges |
+| Edit to existing IDs from a `TASKS/` playbook (links, portraits, honors, degrees) | Topic branch + PR; the auditor (`TASKS/AUDIT_ISSUES_PRS.md`) merges |
 | Auditor's own fix for a verified single Issue | Commit and push to `main`, then close the Issue |
 | `scripts/maintain-roster.ts` controller output | Controller commits and pushes to `main` |
 | Relationship batches (`public/relationships.json`) | Commit and push to `main` |

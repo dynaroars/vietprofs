@@ -14,7 +14,6 @@ Each playbook is pre-configured with an **Autonomous Goal Directive** header. Yo
 /goal TASKS/backfill_linkedin.md
 /goal TASKS/check_google_scholar.md
 /goal TASKS/verify_websites_and_labs.md
-/goal TASKS/enrich_research_overviews.md
 /goal TASKS/audit_facts_and_honors.md
 /goal TASKS/discover_academic_relationships.md
 /goal TASKS/candidate_intake.md
@@ -42,7 +41,6 @@ are in [`docs/AUTOMATION.md`](../docs/AUTOMATION.md).
 | [`backfill_linkedin.md`](backfill_linkedin.md) | Audit and backfill missing personal LinkedIn profile links. | `public/data.json` LinkedIn PRs |
 | [`check_google_scholar.md`](check_google_scholar.md) | Audit and backfill missing Google Scholar citation profile links. | `public/data.json` Scholar PRs |
 | [`verify_websites_and_labs.md`](verify_websites_and_labs.md) | Verify personal homepages, lab URLs, and resolve broken links. | `public/data.json` URL PRs |
-| [`enrich_research_overviews.md`](enrich_research_overviews.md) | Audit research area summaries and keywords against author publications. | `maintenance/enrichment.json` PRs |
 | [`audit_facts_and_honors.md`](audit_facts_and_honors.md) | Audit honors, academy fellowships, and interesting facts against strict provenance rules. | `public/data.json` honors PRs (existing IDs) / new-candidate Issues |
 | [`discover_academic_relationships.md`](discover_academic_relationships.md) | Verify roster-internal advisor and postdoctoral mentorships, coauthorship, joint award leadership across NSF, NIH, and other public funders, and patent co-inventorship; personal relationships are prohibited. | `public/relationships.json` direct-to-`main` commits |
 | [`candidate_intake.md`](candidate_intake.md) | Dedup, vet, and enrich candidate names the owner pastes into a conversation. | One new-candidate Issue per eligible person |

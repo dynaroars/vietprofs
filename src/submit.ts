@@ -178,7 +178,7 @@ function renderShell() {
             </div>
 
             <div class="form-section">
-              <label for="websiteUrl">Personal website</label>
+              <label for="websiteUrl">Website (personal page, or lab site)</label>
               <input id="websiteUrl" name="websiteUrl" type="url" placeholder="https:// (personal homepage or lab site)" />
             </div>
 
@@ -356,7 +356,7 @@ function buildGithubIssueUrl(title: string, body: string): string {
 const FIELD_LABELS: Partial<Record<keyof SubmissionDraft, string>> = {
   profileUrl: 'Profile or verification link',
   vietnameseName: 'Vietnamese name',
-  websiteUrl: 'Personal website',
+  websiteUrl: 'Website',
   universityProfileUrl: 'Institutional profile website',
   scholarUrl: 'Google Scholar',
   linkedinUrl: 'LinkedIn',

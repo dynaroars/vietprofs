@@ -112,19 +112,16 @@ VietProfs operates two continuous loops:
 2. **Periodic Revalidation Loop:** Regularly auditing existing records against live university pages to refresh ranks, detect relocations, backfill degrees and Google Scholar profiles, and update honors.
 
 A fleet of scheduled cloud routines runs on a predictable cadence:
-- **Daily Auditor:** Runs daily to independently re-verify open PRs and candidate issues.
-- **LinkedIn Backfill:** Sweeps entries to verify and link authentic professional profiles.
-- **Google Scholar Backfill:** Discovers and validates publication profiles.
-- **Websites & Lab URLs:** Verifies official directory links and personal lab homepages.
+- **Nightly Auditor:** Runs every night to independently re-verify the previous day's PRs and issues.
+- **Links:** Verifies each person's website, Google Scholar, and LinkedIn links in one pass, twice a week.
 - **Portraits Sweep:** Ingests and optimizes high-resolution, verified portrait photos with provenance.
-- **Education Chronology:** Audits undergraduate, master's, and PhD degrees for chronological integrity.
 - **Honors & Awards Triage:** Audits major disciplinary awards against official awarding bodies.
 - **Academic Relationships:** Discovers and validates advisor-advisee and co-affiliation connections.
 - **Faculty Discovery:** Bounded searches across under-represented institutions and fields.
 
 ### What is the Producer-Auditor architecture?
 To guarantee data integrity, VietProfs uses an independent two-tier agent model:
-- **Producers (Worker Agents):** Perform focused research playbooks in capped batches (e.g., backfilling missing links or education). Producers *never* merge pull requests or push directly to `main` (with narrow exceptions for relationship data).
+- **Producers (Worker Agents):** Perform focused research playbooks in capped batches (e.g., backfilling missing links or portraits). Producers *never* merge pull requests or push directly to `main` (with narrow exceptions for relationship data).
 - **The Auditor Agent:** A separate, higher-capacity model runs daily on a minimum 12-hour delay. It checks out a clean clone of `main`, re-verifies every changed record against the live web, tests the build and test suite (`npm test`, `npm run build`), and only then squash-merges valid PRs or closes verified Issues.
 
 ### What are "Side Findings"?
@@ -133,9 +130,9 @@ When a producer agent is auditing an entry for one task (e.g., checking a Google
 Instead of making unauthorized out-of-scope edits, the agent files a structured **Side Finding Issue**. The daily auditor then independently verifies the finding and updates the database.
 
 ### How is human ground-truth protected from bot overwrites?
-When a scholar or contributor directly submits verified facts (such as correct Vietnamese diacritics, joint appointments, or mid-career degrees), those attributes are registered in an immutable `directFields` list on the entry. 
+When a scholar or contributor directly submits facts that the web can't settle, such as the correct Vietnamese name with diacritics, an honor, or a portrait, those fields are recorded in a `directFields` list on the entry.
 
-Automated maintenance bots are strictly forbidden from modifying or deleting protected `directFields`, preventing scrapers from overwriting human ground truth with stripped or outdated web data.
+Automated maintenance never changes or deletes those protected fields. Appointment details such as rank, department, and university are applied as submitted but follow the official profile afterwards, so a later move or promotion is picked up automatically.
 
 ### How does VietProfs prevent "soft-404" errors and broken links?
 Modern university websites often catch deleted faculty pages and silently redirect them (HTTP 301/302) to generic department landing pages or admissions portals with a `200 OK` status code. 
@@ -194,8 +191,8 @@ Each card displays:
 - **Education History:** Undergraduate, master's, PhD, MD, and completed postdoctoral institutions, with undergraduate and PhD years.
 - **Curated Honors:** Badges for academy memberships, society fellowships, career awards, and endowed chairs.
 - **Research Areas:** Clickable keyword tags.
-- **Direct Links:** One-click links to official university profile pages, personal/lab websites, and Google Scholar.
-- **Freshness Timestamp:** `lastUpdatedAt` showing exactly when the profile was last revalidated against the live web.
+- **Direct Links:** One-click links to the official university profile, a website (personal page or lab site), Google Scholar, and LinkedIn.
+- **Last Updated:** `lastUpdatedAt`, the date the entry's stored facts last changed. It is set automatically; it is not the date the record was last re-checked.
 
 ### Are dynamic statistics stored statically or computed live?
 All summary statistics, leaderboards, and aggregate metrics are **computed dynamically at runtime** from the underlying data. This prevents stale statistical claims from lingering when scholars relocate, get promoted, or join the roster.

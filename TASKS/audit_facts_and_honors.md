@@ -16,8 +16,7 @@
    - **Credential/honors correction to an existing roster ID:** Submit via the PR pipeline below.
 5. **Automated PR Submission Pipeline (existing-ID edits only):**
    After completing each batch's existing-ID edits:
-   - Sync verification ledger: update `maintenance/verification.json`
-   - Snapshot enrichment: `npm run enrich -- snapshot`
+   - Sync verification ledger: update `maintenance/verification.json` (keyed by id) only for complete reviews
    - Create batch topic branch: `git checkout -b maintenance/leads-batch-[DISCIPLINE/TIMESTAMP]`
    - Validate pipeline: `npm test && npm run build && git diff --check`
    - Commit batch: `git add public/data.json maintenance/verification.json maintenance/hieuphay-leads.json`

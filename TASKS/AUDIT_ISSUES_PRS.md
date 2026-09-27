@@ -8,7 +8,7 @@ This document defines the standard operating procedure for auditing, verifying, 
 
 ### Primary Audit & Merge Role
 In this multi-agent architecture:
-- **Task Agents** (`fetch_portraits.md`, `backfill_linkedin.md`, `check_google_scholar.md`, `verify_websites_and_labs.md`, `enrich_research_overviews.md`, `audit_facts_and_honors.md`) discover data, perform deep research, create topic branches, and **file GitHub Pull Requests or GitHub Issues**. Task agents DO NOT commit directly to `main` or merge their own PRs.
+- **Task Agents** (`fetch_portraits.md`, `backfill_linkedin.md`, `check_google_scholar.md`, `verify_websites_and_labs.md`, `audit_facts_and_honors.md`) discover data, perform deep research, create topic branches, and **file GitHub Pull Requests or GitHub Issues**. Task agents DO NOT commit directly to `main` or merge their own PRs.
 - **Audit Agent (`AUDIT_ISSUES_PRS.md`):** Acts as the primary auditor. Reviews all open PRs, verifies diffs, executes test suites (`npm test`, `npm run build`), **squash-merges verified PRs**, deletes topic branches, processes issues, and updates ledgers.
 
 > **No PR-for-an-issue-fix step.** When auditing a GitHub *issue* (not a PR), the fix flow is: verify the
@@ -96,7 +96,7 @@ Before modifying data or closing issues, ensure compliance with repository rules
      textual conflict (see Step 5): identify which entries are new relative to `main`, clear only their
      `id` field, run `npm run assign-profile-ids -- --apply` to remint fresh ids, and re-run the test
      suite before proceeding. Also patch any other file this PR touches that referenced the discarded
-     id (e.g. `maintenance/enrichment.json`'s `ids`/`batches`/`entries`). Reminting is only for ids
+     id (e.g. `maintenance/verification.json` rows). Reminting is only for ids
      that never reached `main`; an id already on `main` is permanent (see `ROSTER_MAINTENANCE.md`
      "One person, one ID").
    - **Check that nothing on `main` disappears.** A branch that rewrote `public/data.json` from a stale
@@ -157,11 +157,7 @@ Before modifying data or closing issues, ensure compliance with repository rules
      - Keep the **older (lower) ID**, even when the newer entry has protected `directFields` or more data; protected values move with the data onto the older ID. Follow `ROSTER_MAINTENANCE.md` "One person, one ID": put the verified current facts and unique sourced fields on the older entry, drop fields that only fit the other institution, delete the newer entry, then run `npm run retire-profile-id -- <newer-id> --into <older-id> --reason "..." --apply` (it also moves the `maintenance/verification.json` row).
      - If the older ID was already removed (a merge that kept the newer one, or a person re-added after removal), restore it: `npm run retire-profile-id -- <newer-id> --into <older-id> --reason "..." --apply` renames the entry back.
 
-   - **D. Mismatched `researchOverview`:**
-     - Regenerate 1–3 sentence neutral academic summary from the scholar's official profile/homepage.
-     - Ensure no gendered pronouns, raw HTML entities, or scraped boilerplate.
-
-   - **E. Multi-item Maintenance Sweeps:**
+   - **D. Multi-item Maintenance Sweeps:**
      - Update verified items.
 
 ---
@@ -175,10 +171,6 @@ Before modifying data or closing issues, ensure compliance with repository rules
    - Add a row for each new id (keyed by id) with the review timestamp. Renames need no change.
 3. **Update `src/data.ts` (Field Overrides):**
    - If a new institution or department falls into unmapped `Others`, add an entry to `FIELD_OVERRIDES` in `src/data.ts`.
-4. **Update `maintenance/enrichment.json`:**
-   ```bash
-   npm run enrich -- snapshot
-   ```
 
 ---
 
@@ -189,7 +181,7 @@ Before modifying data or closing issues, ensure compliance with repository rules
    ```
 2. **Commit and push changes:**
    ```bash
-   git add maintenance/enrichment.json maintenance/verification.json public/data.json src/data.ts
+   git add maintenance/verification.json public/data.json src/data.ts
    git commit -m "fix(roster): resolve open github issue updates, honors, and direct submissions"
    git push origin main
    ```
@@ -216,7 +208,7 @@ gh issue view <ISSUE_NUM>
 
 # Roster synchronization
 npm run assign-profile-ids -- --apply
-npm run enrich -- snapshot
+npm run find-roster-matches -- "<name>" --url <url>
 
 # Local testing & build validation
 npm test

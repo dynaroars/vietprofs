@@ -60,11 +60,8 @@ test('generated profile pages use the same stylesheet source as the directory', 
   assert.match(generator, /public\/relationships\.json/);
   assert.match(generator, /class="links" aria-label="Other VietProfs destinations"/);
   assert.doesNotMatch(generator, /class="man-footer"/);
-  assert.match(generator, />ABOUT</);
+  assert.doesNotMatch(generator, />ABOUT</);
   assert.match(generator, /view raw record/);
-  assert.match(generator, /class="section-note research-overview-note"/);
-  assert.match(generator, /Automatically summarized/);
-  assert.doesNotMatch(generator, /Automatically summarized from/);
   assert.doesNotMatch(generator, /Report stale record/);
   assert.match(generator, /<span>\$\{sectionLabel\}<\/span>/);
   assert.doesNotMatch(generator, /<span><a href="\.\.\/index\.html">\$\{sectionLabel\}<\/a><\/span>/);
