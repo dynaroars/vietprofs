@@ -132,54 +132,42 @@ test('proposal analysis accepts one targeted edit and ignores model-chosen times
 
 test('automated maintenance preserves direct fields while allowing other fields to change', () => {
   const protectedPeople = structuredClone(people);
-  protectedPeople[1].directFields = ['university'];
+  protectedPeople[1].vietnameseName = 'Nguyễn Văn A';
+  protectedPeople[1].directFields = ['vietnameseName'];
   const allowed = structuredClone(protectedPeople);
-  allowed[1].state = 'New State';
+  allowed[1].university = 'Moved University';
   assert.equal(analyzeRosterProposal(protectedPeople, allowed, 'Old Person').ok, true);
 
   const rejected = structuredClone(protectedPeople);
-  rejected[1].university = 'Scouted University';
+  rejected[1].vietnameseName = 'Nguyen Van A';
   const result = analyzeRosterProposal(protectedPeople, rejected, 'Old Person');
   assert.equal(result.ok, false);
-  assert.match(result.reason, /changed direct fields: university/);
+  assert.match(result.reason, /changed direct fields: vietnameseName/);
 });
 
-test('automated maintenance may canonicalize a protected value but not change its meaning', () => {
-  const protectedPeople = structuredClone(people);
-  protectedPeople[1].state = 'CA';
-  protectedPeople[1].directFields = ['state'];
-  const canonical = structuredClone(protectedPeople);
-  canonical[1].state = 'California';
-  assert.equal(analyzeRosterProposal(protectedPeople, canonical, 'Old Person').ok, true);
-
-  const changed = structuredClone(protectedPeople);
-  changed[1].state = 'Nevada';
-  const result = analyzeRosterProposal(protectedPeople, changed, 'Old Person');
-  assert.equal(result.ok, false);
-  assert.match(result.reason, /changed direct fields: state/);
-
-  // Rewriting a canonical value into an abbreviation is not canonicalization.
-  const fullName = structuredClone(protectedPeople);
-  fullName[1].state = 'California';
-  const abbreviated = structuredClone(fullName);
-  abbreviated[1].state = 'CA';
-  assert.equal(analyzeRosterProposal(fullName, abbreviated, 'Old Person').ok, false);
+test('only facts the web cannot settle can be protected', () => {
+  const proposal = {
+    name: 'Old Person', profileUrl: 'https://example.edu/old', lastUpdatedAt: '2026-01-01T00:00:00.000Z',
+    university: 'Old University', city: 'Old City', department: 'History', track: 'Tenure-line', researchAreas: ['History'],
+  };
+  assert.equal(proposalValidationError({ ...proposal, directFields: ['name'] }), null);
+  assert.match(rejection(proposalValidationError({ ...proposal, directFields: ['university'] })), /invalid direct field "university"/);
 });
 
 test('automated maintenance cannot remove entries with direct fields', () => {
   const protectedPeople = structuredClone(people);
-  protectedPeople[1].directFields = ['rank'];
+  protectedPeople[1].directFields = ['name'];
   const after = protectedPeople.filter((person) => person.name !== 'Old Person');
   const result = analyzeRosterProposal(protectedPeople, after, 'Old Person');
   assert.equal(result.ok, false);
-  assert.match(result.reason, /removed an entry with direct fields: rank/);
+  assert.match(result.reason, /removed an entry with direct fields: name/);
 });
 
 test('automated maintenance cannot alter directFields metadata', () => {
   const protectedPeople = structuredClone(people);
-  protectedPeople[1].directFields = ['university'];
+  protectedPeople[1].directFields = ['name'];
   const after = structuredClone(protectedPeople);
-  after[1].directFields = ['rank', 'university'];
+  after[1].directFields = ['honors', 'name'];
   const result = analyzeRosterProposal(protectedPeople, after, 'Old Person');
   assert.equal(result.ok, false);
   assert.match(result.reason, /cannot change directFields/);

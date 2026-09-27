@@ -29,8 +29,8 @@ For each pasted name, follow `ROSTER_MAINTENANCE.md` "One person, one ID":
 - **Already listed (including under a former institution or name):** stop here for that person.
   Update the existing entry in place; never file a `New candidate:` Issue or create a second entry.
   If the owner's message supplies new facts about them (an award, a moved institution, a corrected
-  link, etc.), treat that per `AGENTS.md` "Direct updates": add the fields to `directFields` and
-  follow the entry's normal edit path (PR or direct-to-`main`, per the field/task involved). A move
+  link, etc.), treat that per `AGENTS.md` "Direct updates": apply the fields (protecting only name,
+  Vietnamese name, honors, or portrait) and follow the entry's normal edit path (PR or direct-to-`main`, per the field/task involved). A move
   also changes `profileUrl`, department, rank, and location; keep everything that is still true.
   Report back which existing `vp-####` ID it matches.
 - **Previously on the roster (retired id):** the person keeps the original ID. File the Issue as

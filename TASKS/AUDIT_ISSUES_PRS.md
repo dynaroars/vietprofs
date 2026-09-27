@@ -58,8 +58,8 @@ When running this task (especially during a long-running or overnight `/goal` ru
 
 Before modifying data or closing issues, ensure compliance with repository rules:
 - **Authoritative Reference:** [ROSTER_MAINTENANCE.md](../ROSTER_MAINTENANCE.md) dictates eligibility, degree formats, honors standards, rank vocabulary, and field mappings.
-- **Direct Updates & `directFields`:** Information explicitly submitted by the repo owner or via a direct issue submission is treated as ground truth. Add each asserted field name to the entry's sorted `directFields` array.
-- **Protected Direct Fields:** Fields listed in `directFields` must never be altered or removed by automated maintenance without explicit owner authorization. The one exception is rewriting a protected value into an exactly equivalent canonical form (e.g. state `CA` → `California`); the field stays in `directFields`. If web evidence conflicts with a protected field, do not edit it directly; file or update a GitHub issue for maintainer review.
+- **Direct Updates & `directFields`:** Apply every field an owner or direct submission asserts. Only `name`, `vietnameseName`, `honors`, `portrait`, and `portraitSource` go in the sorted `directFields` array (see `AGENTS.md` "Direct updates").
+- **Protected Direct Fields:** Those five fields must never be altered or removed by automated maintenance. If web evidence conflicts with one, file or update a GitHub issue for the owner. Appointment facts, degrees, and links are never protected: update them from the current official page.
 - **Verification Requirement:** Never declare a task complete without local verification (`npm test`, `npm run build`, `git diff --check`).
 
 ---
@@ -131,7 +131,7 @@ Before modifying data or closing issues, ensure compliance with repository rules
 
    - **A. Direct Updates / Candidate Submissions:**
      - Ground truth info submitted by owner/user, and — per `AGENTS.md`'s "New entries vs. edits" policy — every brand-new roster candidate proposed by `discover_new_faculty.md` or `audit_facts_and_honors.md`, since a new roster ID always arrives here as an Issue rather than a PR.
-     - Add asserted fields to the entry's sorted `directFields` array (owner/user submissions only, not independently-sourced candidate research).
+     - Apply the submitted fields; add asserted `name`/`vietnameseName`/`honors`/`portrait`/`portraitSource` to the sorted `directFields` array (owner/user submissions only, not independently-sourced candidate research).
      - Ensure Western display name order (`First (Middle) Last`) in `name` and Vietnamese order in `vietnameseName`.
      - Re-verify eligibility (appointment, track, institution type) against live sources before assigning an ID — an Issue is a proposal, not a pre-cleared fact.
      - Re-run the dedup check from `TASKS/candidate_intake.md` step 1 (`npm run find-roster-matches -- "<name>" --url ...` with every identity URL in the Issue) against the current `public/data.json`; the Issue's "not on the roster" claim may be stale. A hit at another institution is a probable move: if it's the same person, update that entry in place (the Issue's fields become an edit, with owner-asserted ones in `directFields`) and close the Issue naming the existing ID. See `ROSTER_MAINTENANCE.md` "One person, one ID".

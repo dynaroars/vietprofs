@@ -29,7 +29,7 @@ Policy (eligibility, evidence, routing of Issues/PRs/direct pushes) lives in `AG
 - **The auditor** is a separate model and a separate session. It runs every night and only takes items at least
   12 hours old, so each producer run is reviewed by a different agent at the next night's audit.
   Its rules are in `TASKS/AUDIT_ISSUES_PRS.md` ("Independent review").
-- **The owner** only sees what the auditor leaves open: protected `directFields` conflicts,
+- **The owner** only sees what the auditor leaves open: conflicts with a protected name, honor, or portrait,
   ambiguous identities or eligibility, and anything it couldn't verify from the cloud.
 
 ## Schedule
@@ -95,8 +95,8 @@ them share these rules:
 3. **Titles.** Every PR and Issue title starts with `[scheduled:<key>]`.
 4. **Boundaries.** Producers never merge PRs and never push to `main` (relationships excepted).
    They never add a person to `public/data.json` or assign an id. New people always go in an
-   Issue. Protected `directFields` values are never edited (except rewriting into an exactly equivalent
-   canonical form, e.g. state `CA` → `California`); a conflict goes in an Issue.
+   Issue. Protected `directFields` values (name, Vietnamese name, honors, portrait) are never edited; a
+   conflict goes in an Issue. Appointment facts and links are never protected.
 5. **Timestamps.** Set `lastUpdatedAt` on changed entries. Only a complete live review advances
    `maintenance/verification.json`, so no routine here touches it except the auditor when it adds
    a new entry.

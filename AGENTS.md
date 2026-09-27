@@ -11,23 +11,19 @@ Interesting-facts output must follow the roster-only, reproducible-observation r
 ## Direct updates
 
 Information explicitly supplied by the repository owner, or in a GitHub issue, email, or similar
-submission that the owner asks you to process, is ground truth. Add each supplied roster field to
-the entry's sorted `directFields` array. This applies only to fields the submission actually
-asserts; facts independently found on the web while processing it are not direct.
+submission that the owner asks you to process, is ground truth when it is applied: apply every
+field it asserts. Canonical formatting and field mapping may be applied while processing it.
 
-Protected direct fields mean you do not edit them directly, but this does not mean you should not
-check them — you **should** always check and verify them against live evidence. If web evidence
-shows that a protected field has changed, is outdated, or conflicts with live reality, do not edit
-it directly; instead, create a GitHub Issue for a direct correction and let the repository owner
-know as an output to the screen.
+Only facts that the web can't settle are protected afterwards: `name`, `vietnameseName`, `honors`,
+`portrait`, and `portraitSource`. Add those, when the submission asserts them, to the entry's sorted
+`directFields` array. Automated work must never change or remove a protected value, or delete an
+entry that has protected fields; if live evidence conflicts with one, file an Issue for the owner.
+Only another direct update may replace a protected value.
 
-Web scouting and automated maintenance may update fields not listed in `directFields`, but must
-never change or remove a protected field or delete an entry that has protected fields on their own.
-Only another direct update may replace a protected value or remove its protection. Canonical
-formatting and field mapping may be applied while processing the direct update. Exception: a
-protected value may be rewritten at any time into an exactly equivalent canonical form (e.g. a U.S.
-state abbreviation `CA` → `California`) for roster-wide consistency. This changes formatting only,
-never meaning, and the field stays in `directFields`.
+Appointment and other checkable facts (`university`, `department`, `rank`, `track`, `profileUrl`,
+location, degrees, links) are not protected. They go stale when people move or get promoted, and
+the current official page is the authority: a later verified change updates them normally, and
+its commit or PR says what the submitted value was.
 
 When updating names or processing university profile changes where a scholar's published surname has changed (e.g. to a non-Vietnamese surname), retain the original Vietnamese surname in `name` and `vietnameseName` (e.g., `First [Vietnamese Surname] [New Surname]`) as per `ROSTER_MAINTENANCE.md` so that the entry's Vietnamese lineage and discovery context are preserved.
 

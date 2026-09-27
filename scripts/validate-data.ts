@@ -5,7 +5,7 @@ import {
   HONOR_FIELDS,
   INSTITUTION_TYPES,
   OTHER_DEGREE_FIELDS,
-  DIRECT_FIELD_EXCLUSIONS,
+  PROTECTABLE_FIELDS,
   REQUIRED_ROSTER_STRINGS,
   ROSTER_FIELDS,
   TRACKS,
@@ -261,8 +261,8 @@ for (const [index, person] of roster.entries()) {
     }
     const directFields = new Set<string>();
     for (const field of person.directFields) {
-      if (typeof field !== 'string' || !allowedRosterFields.has(field) || DIRECT_FIELD_EXCLUSIONS.has(field)) {
-        fail(rosterFile, `${label} has invalid direct field ${JSON.stringify(field)}`);
+      if (typeof field !== 'string' || !PROTECTABLE_FIELDS.has(field)) {
+        fail(rosterFile, `${label} has invalid direct field ${JSON.stringify(field)}: only ${[...PROTECTABLE_FIELDS].join(', ')} can be protected`);
       }
       if (person[field] === undefined || person[field] === null || (typeof person[field] === 'string' && !person[field].trim())) {
         fail(rosterFile, `${label} (${person.id}) lists "${field}" in directFields but the field value is missing or empty`);

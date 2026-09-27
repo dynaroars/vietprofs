@@ -223,8 +223,8 @@ function renderFaqPage(): string {
       <div class="faq-item">
         <h3 class="faq-question">How is human ground-truth protected from bot overwrites?</h3>
         <div class="faq-answer">
-          <p>When a scholar or contributor directly submits verified facts (such as correct Vietnamese diacritics, joint appointments, or mid-career degrees), those attributes are registered in an immutable <code>directFields</code> list on the entry.</p>
-          <p>Automated maintenance bots are strictly forbidden from modifying or deleting protected <code>directFields</code>, preventing scrapers from overwriting human ground truth with stripped or outdated web data.</p>
+          <p>When a scholar or contributor directly submits facts that the web can't settle, such as the correct Vietnamese name with diacritics, an honor, or a portrait, those fields are recorded in a <code>directFields</code> list on the entry.</p>
+          <p>Automated maintenance never changes or deletes those protected fields. Appointment details such as rank, department, and university are applied as submitted but follow the official profile afterwards, so a later move or promotion is picked up automatically.</p>
         </div>
       </div>
 

@@ -353,22 +353,15 @@ Every result still requires the appointment, track, and source-quality checks ab
 ### Reviewing user-supplied links
 
 Information explicitly asserted by the repository owner or by a submission the owner asks to
-process is a direct update and is treated as ground truth. Add the corresponding canonical roster
-field names to the entry's sorted `directFields` array. Protect only asserted fields, not facts
-independently discovered while completing the review. Direct values may be normalized or mapped to
-the correct roster field during processing.
-
-Protected direct fields mean you do not edit them directly, but this does not mean you should not
-check them — you **should** always check and verify all fields (including protected ones) against
-live evidence. If live web evidence shows that a protected field has changed, is outdated, or
-conflicts with live reality, do not edit it directly; instead, create a GitHub Issue for a direct
-correction and let the repository owner know as an output to the screen. Later web scouting and
-automated maintenance may update other fields, but must never change or remove a protected value
-or delete an entry with protected fields on their own. Only another direct update may replace a
-protected value or remove its protection. The one exception is canonical formatting: a protected
-value may be rewritten into an exactly equivalent canonical form (e.g. a U.S. state abbreviation
-`CA` → `California`) so the roster stays consistent. Formatting only, never meaning; the field stays
-protected. `directFields` is provenance metadata and does not by itself advance `lastUpdatedAt`.
+process is a direct update: apply every field it asserts, normalized or mapped to the right roster
+field. Only `name`, `vietnameseName`, `honors`, `portrait`, and `portraitSource` can be protected
+afterwards (`npm test` rejects anything else in `directFields`): list the ones the submission
+asserts in the entry's sorted `directFields` array. Automated work never changes or removes a
+protected value, or deletes an entry with protected fields; a conflict with live evidence goes in
+an Issue for the owner. Appointment facts, degrees, and links are not protected: the current
+official page wins, so a later verified change updates them and says what the submitted value was
+(see `AGENTS.md` "Direct updates"). `directFields` is provenance metadata and does not by itself
+advance `lastUpdatedAt`.
 
 Unless the user gives narrower instructions, treat a supplied personal profile, university
 profile, homepage, lab site, or CV as a request to identify the person, check whether they already
@@ -560,7 +553,8 @@ later qualify again. None of that is a new person, so none of it gets a new ID.
 - **Same person, current entry:** update that entry in place: `university`, `department`, `rank`,
   `track`, `profileUrl`, location, and anything else the move changed. Keep everything still true
   (honors, degrees, Scholar, LinkedIn, portrait if still them). For an owner or Issue submission,
-  the supplied fields go in `directFields` as usual. This is an edit, never a `New candidate:`
+  the supplied fields are applied as usual (only name, Vietnamese name, honors, and portrait go in
+  `directFields`). This is an edit, never a `New candidate:`
   Issue.
 - **Same person, retired ID** (removed earlier, e.g. as retired before an emeritus title, or
   merged): restore the original ID. Add the entry with that ID and remove it from

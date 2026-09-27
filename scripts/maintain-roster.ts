@@ -47,8 +47,8 @@ import { dirname, join, resolve } from 'node:path';
 import process from 'node:process';
 import { fileURLToPath } from 'node:url';
 import { isDeepStrictEqual } from 'node:util';
-import { FIELDS, canonicalFieldValue, fieldOf, type Roster } from '../src/data.ts';
-import { DIRECT_FIELD_EXCLUSIONS, HONOR_CATEGORIES, HONOR_FIELDS, INSTITUTION_TYPES, OTHER_DEGREE_FIELDS, ROSTER_FIELDS, TRACKS } from '../src/roster-constants.ts';
+import { FIELDS, fieldOf, type Roster } from '../src/data.ts';
+import { DIRECT_FIELD_EXCLUSIONS, HONOR_CATEGORIES, PROTECTABLE_FIELDS, HONOR_FIELDS, INSTITUTION_TYPES, OTHER_DEGREE_FIELDS, ROSTER_FIELDS, TRACKS } from '../src/roster-constants.ts';
 import { validateEnrichment } from '../src/enrichment.ts';
 import { loadEvidenceLedger, recordFieldEvidence, saveEvidenceLedger } from '../src/evidence.ts';
 import {
@@ -664,7 +664,7 @@ export function proposalValidationError(proposal: JsonRecord): string | null {
     if (!Array.isArray(proposal.directFields) || proposal.directFields.length === 0) return 'proposal directFields must be a non-empty array';
     const seen = new Set<string>();
     for (const field of proposal.directFields) {
-      if (typeof field !== 'string' || !ALLOWED_ROSTER_FIELDS.has(field) || DIRECT_FIELD_EXCLUSIONS.has(field)) return `proposal has invalid direct field ${JSON.stringify(field)}`;
+      if (typeof field !== 'string' || !PROTECTABLE_FIELDS.has(field)) return `proposal has invalid direct field ${JSON.stringify(field)}`;
       if (seen.has(field)) return `proposal duplicates direct field ${field}`;
       seen.add(field);
     }
@@ -711,11 +711,7 @@ export function analyzeRosterProposal(beforeRoster: JsonRecord[], afterRoster: J
   if (!proposal && protectedFields.length) {
     return { ok: false, reason: `proposal removed an entry with direct fields: ${protectedFields.join(', ')}` };
   }
-  // A protected value may only be kept as-is or rewritten into its exactly equivalent canonical
-  // form (e.g. state CA -> California); any other difference is a real change.
-  const overwrittenFields = protectedFields.filter((field: string) =>
-    !jsonEqual(baseline?.[field], proposal?.[field])
-    && !jsonEqual(canonicalFieldValue(field, baseline?.[field], baseline ?? {}), proposal?.[field]));
+  const overwrittenFields = protectedFields.filter((field: string) => !jsonEqual(baseline?.[field], proposal?.[field]));
   if (overwrittenFields.length) {
     return { ok: false, reason: `proposal changed direct fields: ${overwrittenFields.join(', ')}` };
   }
