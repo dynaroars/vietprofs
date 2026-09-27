@@ -1,0 +1,55 @@
+name: Delete closed PR branches
+
+# Model-free branch cleanup. Routines open a branch per PR and can't delete branches themselves
+# (the cloud git proxy refuses ref deletion), so this removes a PR's head branch once the PR is
+# merged or closed. The weekly/manual sweep catches anything missed. Only branches in this repo
+# whose PRs are all closed are deleted; the default branch, branches with an open PR, and branches
+# that never had a PR are kept.
+
+on:
+  pull_request:
+    types: [closed]
+  schedule:
+    - cron: '0 13 * * 1' # Mondays, 13:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: read
+
+jobs:
+  delete:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Delete branches whose PRs are all closed
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+          EVENT: ${{ github.event_name }}
+          HEAD_REF: ${{ github.event.pull_request.head.ref }}
+          HEAD_REPO: ${{ github.event.pull_request.head.repo.full_name }}
+        run: |
+          set -euo pipefail
+          if [ "$EVENT" = pull_request ]; then
+            [ "$HEAD_REPO" = "$REPO" ] || { echo "PR from a fork; nothing to delete."; exit 0; }
+            branches="$HEAD_REF"
+          else
+            branches=$(gh api --paginate "repos/$REPO/branches" --jq '.[].name')
+          fi
+          deleted=0
+          for branch in $branches; do
+            [ "$branch" = "$DEFAULT_BRANCH" ] && continue
+            states=$(gh pr list -R "$REPO" --head "$branch" --state all --json state --jq '.[].state' | sort -u)
+            if [ -z "$states" ] || echo "$states" | grep -qx OPEN; then
+              echo "keep    $branch (${states:-no PR})"
+              continue
+            fi
+            if gh api -X DELETE "repos/$REPO/git/refs/heads/$branch" --silent 2>/dev/null; then
+              echo "deleted $branch"; deleted=$((deleted + 1))
+            else
+              echo "skip    $branch (already gone)"
+            fi
+          done
+          echo "Deleted $deleted branch(es)."

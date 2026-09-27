@@ -21,7 +21,8 @@ Policy (eligibility, evidence, routing of Issues/PRs/direct pushes) lives in `AG
 ```
 
 - **Producers** do one playbook each, in small capped batches. They never merge or push to `main`,
-  except the relationships routine (see `AGENTS.md`).
+  except the relationships routine (see `AGENTS.md`). The auditor merges PRs and pushes its own
+  verified Issue fixes and new roster entries to `main`.
 - While researching, producers also report **side findings**: errors or leads outside their own
   task, filed as Issues (see "Side findings" below). This is how a narrow task like the LinkedIn
   backfill turns up stale ranks, duplicates, missing honors, and new candidates.
@@ -67,6 +68,7 @@ Outside the cloud:
 | :-- | :-- | :-- | :-- |
 | Link-health report | GitHub Action `.github/workflows/link-health.yml` | 1st of month, 08:00 UTC; manual via `gh workflow run link-health.yml` | Opens or comments on the "Link-health report (automated)" Issue. No model involved. |
 | Automation watchdog | GitHub Action `.github/workflows/automation-watchdog.yml` | Mondays 12:00 UTC; manual via `gh workflow run automation-watchdog.yml` | Opens or comments on one "Automation watchdog (automated)" Issue when a PR has been open more than 8 days (auditor stopped or PR stuck) or nothing `[scheduled:*]` appeared in 7 days (routines stopped); closes it when checks pass. No model involved. |
+| Branch cleanup | GitHub Action `.github/workflows/delete-pr-branches.yml` | Whenever a PR is merged or closed; sweep Mondays 13:00 UTC; manual via `gh workflow run delete-pr-branches.yml` | Deletes a PR's branch once all its PRs are closed, because cloud agents can't delete branches. Keeps `main`, branches with an open PR, and branches that never had a PR. No model involved. |
 | Full-roster controller | Owner's crontab: `0 20 * * 6 …/scripts/cron-maintain-roster.sh` | Sat 8 PM local (00:00–01:00 UTC Sun, finishing before the 03:00 UTC Sun audit) | Runs `scripts/maintain-roster.ts` in the separate clone `~/git/projects/vietprofs-maintenance`; state in `~/.local/state/vietprofs-maintenance/cron-state`, log in `…/cron.log`. Pushes to `main`. With the default 365-day staleness it selects nobody until entries age (about Aug 2027); set `VIETPROFS_MAINT_ARGS="--stale-days 180"` on the cron line for a shorter cycle. |
 
 Retired routines (deleted; no longer at claude.ai/code/routines). The routines above replace them:
@@ -162,6 +164,10 @@ Follow `TASKS/AUDIT_ISSUES_PRS.md`, including "Independent review". Also read
 - Tracking Issues such as the link-health report: work up to 10 entries, post a progress comment,
   and leave it open.
 - The auditor doesn't file side findings about its own items; it resolves them.
+- Writing to `main`: the owner authorizes the auditor to push verified Issue fixes and new roster
+  entries straight to `main`, and the routine prompt says so. Keep that sentence when editing the
+  prompt. Without it, the 2026-09-25 and 09-26 runs could merge PRs but had every push to `main`
+  and every new entry denied, so verified fixes sat as Issue comments.
 - Automation health (Sunday runs only, after the normal work). Check:
   1. PRs open more than 5 days, and why (red CI, conflict, rejected but still open).
   2. Open PRs touching the same maintenance file: merge the first as usual, then rebase the rest
@@ -225,7 +231,7 @@ Professional degrees go in `otherDegrees`.
 ### Honors and lead triage (`honors`)
 
 Playbooks: `TASKS/audit_facts_and_honors.md` and `TASKS/candidate_intake.md`. Cap: 15-20
-unprocessed leads from `maintenance/openalex-leads.json` or `maintenance/hieuphay-leads.json`.
+unprocessed leads from `maintenance/hieuphay-leads.json`.
 Leads already on the roster get honor and degree fixes in the batch PR. New eligible people get one
 `New candidate:` Issue each. Ineligible leads are marked resolved in the lead file with the reason.
 
@@ -261,6 +267,11 @@ out-of-roster advisors or coauthors.
   the section for <key>. ...`
 
 ## Troubleshooting
+
+- **Fixes posted on Issues but never applied:** check the run log (`get_run_log`) for
+  `permission_denied`. See "Writing to `main`" in the auditor section.
+- **PR branches piling up:** agents can't delete branches (the cloud git proxy returns 403). The
+  branch-cleanup Action does it; check its runs with `gh run list -w delete-pr-branches.yml`.
 
 - **What did a run do?** Use `RemoteTrigger list_runs` for the routine, then `get_run_log` for a
   session. Or open the session link in the commit's `Claude-Session:` trailer.

@@ -586,7 +586,7 @@ test('data health reports the generated HTML inventory and links standalone page
   await page.goto(`${baseUrl}/?view=health`, { waitUntil: 'networkidle' });
   assert.equal(await textOf(page.locator('.html-inventory-title')), 'Generated HTML Inventory');
   assert.equal(await page.locator('.html-inventory-item').count(), 4);
-  assert.equal(await page.locator('.html-standalone-links a').count(), 4);
+  assert.equal(await page.locator('.html-standalone-links a').count(), 6);
   assert.match(await textOf(page.locator('.html-inventory-total')), /^\d[\d,]* pages$/);
   await page.close();
 });
