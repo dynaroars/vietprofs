@@ -9,7 +9,6 @@ interface RosterEntry {
   vietnameseName?: string;
   profileUrl: string;
   websiteUrl?: string;
-  labUrl?: string;
   scholarUrl?: string;
   linkedinUrl?: string;
   portrait?: string;
@@ -73,7 +72,6 @@ async function runAudit(): Promise<void> {
   const websiteUrls = new Map<string, RosterEntry>();
   const scholarUrls = new Map<string, RosterEntry>();
   const linkedinUrls = new Map<string, RosterEntry>();
-  const labUrls = new Map<string, RosterEntry[]>();
   const portraitSources = new Map<string, RosterEntry[]>();
   const portraitHashes = new Map<string, RosterEntry[]>();
 
@@ -142,13 +140,6 @@ async function runAudit(): Promise<void> {
       }
     }
 
-    // Lab URL (Multiple entries can co-direct a lab, so warn as INFO/WARNING)
-    if (p.labUrl) {
-      const existing = labUrls.get(p.labUrl) || [];
-      existing.push(p);
-      labUrls.set(p.labUrl, existing);
-    }
-
     // Portrait Sources
     if (p.portraitSource) {
       const existing = portraitSources.get(p.portraitSource) || [];
@@ -174,17 +165,6 @@ async function runAudit(): Promise<void> {
           message: `Portrait image file does not exist on disk: ${p.portrait}`,
         });
       }
-    }
-  }
-
-  // Check duplicate lab URLs
-  for (const [url, entries] of labUrls.entries()) {
-    if (entries.length > 1) {
-      issues.push({
-        severity: 'INFO',
-        category: 'Shared Lab URL',
-        message: `Shared labUrl (${entries.length} faculty): ${url} -> ${entries.map((e) => `${e.name} (${e.id})`).join(', ')}`,
-      });
     }
   }
 

@@ -377,9 +377,8 @@ after the first correction:
 - a maintained personal or lab `websiteUrl` and Google Scholar `scholarUrl`, keeping each URL in
   its designated field;
 - a suitable current portrait and its source;
-- explicitly documented education, including degree institutions, graduation years, majors,
-  professional degrees, and completed postdoctoral institution (plus end/completion year when
-  explicitly documented); and
+- explicitly documented education in the stored fields (undergraduate, master's, PhD, and MD
+  institutions; undergraduate and PhD years); and
 - honors and awards that meet the eligibility standard below, with supporting sources.
 
 If the person already has an entry, compare the collected evidence with every relevant stored
@@ -506,7 +505,7 @@ Lead-queue entries (currently `maintenance/hieuphay-leads.json`) are **leads onl
 5. **Metadata Structuring & Roster Enrichment:**
    - **Name order:** Canonical roster name must use Western order `"First (Middle) Last"`. For hyphenated or maiden names, verify against publications and add to `surnameFirstAllowlist` in `scripts/validate-data.ts` if a Vietnamese token is the first name.
    - **Vietnamese name:** Record full diacritic Vietnamese name (`vietnameseName`) in `"Họ Tên"` order when verified from authoritative sources (e.g., Vietnamese media, thesis, university bio).
-   - **Academic degrees:** Extract explicit degree credentials (`phdInstitution`, `phdYear`, `mdInstitution`, `msInstitution`, `undergradInstitution`, `undergradYear`, `postdocInstitution`) only when explicitly documented in institutional bios or CVs.
+   - **Academic degrees:** Extract explicit degree credentials (`phdInstitution`, `phdYear`, `mdInstitution`, `msInstitution`, `undergradInstitution`, `undergradYear`) only when explicitly documented in institutional bios or CVs.
    - **Honors & Awards:** Record major academy memberships, fellow titles (e.g., IEEE Fellow, AIAA Fellow, NAI Fellow, ACM Fellow), national orders (e.g., *Légion d'honneur*), and career awards with proper category, year, organization, and HTTPS source URL.
    - **Field Classification & Overrides:** Ensure the candidate's department maps correctly to `FIELD_RULES`. For specialized research labs, foreign institutes, or clinical divisions that do not match default regex rules (e.g. French UMRs, medical service units), add an explicit entry to `FIELD_OVERRIDES` in `src/data.ts`.
 
@@ -596,7 +595,7 @@ later qualify again. None of that is a new person, so none of it gets a new ID.
 - `institutionType`, when present, must be `University`, `Public research institute`, or
   `Independent nonprofit research institute`. Omit it for ordinary university records; it is
   required for eligible non-university institutes, which must use the `Research` track.
-- `profileUrl` must be a current, working academic or official institutional profile and must not be a Google Scholar URL. Store Scholar separately in `scholarUrl` (must be a canonical citations profile URL `https://scholar.google.com/citations?user=...`, never a search query). Store a maintained personal or lab homepage in `websiteUrl`; store a verified LinkedIn profile in `linkedinUrl` (must be a direct personal profile URL `https://linkedin.com/in/...` or `https://www.linkedin.com/in/...`, never search or company pages). Verify Scholar and LinkedIn matches strictly: confirm name, institution, and publication/field overlap before attaching them — never guess from name alone. Prefer LinkedIn profiles directly linked from the faculty member's institutional bio or homepage.
+- `profileUrl` must be a current, working academic or official institutional profile and must not be a Google Scholar URL. Store Scholar separately in `scholarUrl` (must be a canonical citations profile URL `https://scholar.google.com/citations?user=...`, never a search query). Store one maintained personal or lab homepage in `websiteUrl` (there is no separate lab field; prefer the personal page when both exist); store a verified LinkedIn profile in `linkedinUrl` (must be a direct personal profile URL `https://linkedin.com/in/...` or `https://www.linkedin.com/in/...`, never search or company pages). Verify Scholar and LinkedIn matches strictly: confirm name, institution, and publication/field overlap before attaching them — never guess from name alone. Prefer LinkedIn profiles directly linked from the faculty member's institutional bio or homepage.
 - `lastUpdatedAt` is required, but never set it by hand: `npm test` (via `npm run stamp-updates`)
   stamps every entry whose content changed since the last commit, and new entries. It records when
   roster content for the person last changed; overviews and `directFields` don't count. For a
@@ -606,9 +605,8 @@ later qualify again. None of that is a new person, so none of it gets a new ID.
 - `rank` is the career level only, one of `Assistant Professor`, `Associate Professor`, `Professor`, `Lecturer`, `Senior Lecturer`, `Researcher`, `Senior Researcher`, `Librarian`, or `Administrator` (`npm test` rejects anything else). The track carries the appointment type, and the display combines them ("Assistant Clinical Professor", "Teaching Professor", "Professor Emeritus"). Don't store the published title, a named chair, a department ("of Medicine"), or a leadership role; the linked profile has those, and named chairs go in `honors`. Map by level, not by translating systems: `Clinical Assistant Professor` → `Assistant Professor` (Clinical track); `Research Scientist`, `Chargé(e) de recherche`, `Staff Scientist` → `Researcher`; `Directeur de recherche`, `Principal`/`Senior Scientist`, `Group Leader` → `Senior Researcher`; `Distinguished`/`Full`/`Endowed Professor` → `Professor`. Keep Commonwealth `Lecturer` and `Senior Lecturer` as they are; never equate them with US ranks. A modern UK `Reader` is `Associate Professor`. Leave `rank` empty when the level isn't stated (e.g. a bare emeritus title); never guess.
 - Add `phdYear` and `phdInstitution` only when a source explicitly states them. Never infer them from dates, CV chronology, or context. Institution names must not contain degree prefixes (e.g., "Ph.D. in ...").
 - Education is deliberately small: `undergradInstitution`/`undergradYear`, `msInstitution`,
-  `phdInstitution`/`phdYear`, `mdInstitution`, and `postdocInstitution` (completed training only;
-  a current postdoc is ineligible). There are no majors, other degrees, or master's/MD/postdoc
-  years (removed 2026-09-27; `npm test` rejects them). The one chronology rule is at least 2 years
+  `phdInstitution`/`phdYear`, and `mdInstitution`. There are no majors, other degrees, postdoc
+  institutions, or master's/MD years (removed 2026-09-27; `npm test` rejects them). The one chronology rule is at least 2 years
   between `undergradYear` and `phdYear`. Don't force a JD, MBA, or other professional degree into
   these fields; leave it on the linked profile.
 - For undergraduate education, use the explicitly stated bachelor’s institution and completion year. A professional degree such as a JD is separate from undergraduate education and must not be substituted for it.
@@ -626,7 +624,7 @@ person independently; never run a generic image scraper blindly across the roste
 
 1. **Establish the target identity.** Start with the roster's full name, university or eligible
    research institute, department/field, rank when available, and all stored first-party URLs:
-   `profileUrl`, `websiteUrl`, and `labUrl`. Do not use facial similarity as identity evidence.
+   `profileUrl` and `websiteUrl`. Do not use facial similarity as identity evidence.
    Take particular care with common Vietnamese names.
 2. **Inspect stored pages first.** Follow redirects and inspect the person's official profile,
    personal academic homepage, and lab page for `<img>` elements, `og:image`, `twitter:image`,

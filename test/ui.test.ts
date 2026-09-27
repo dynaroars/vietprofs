@@ -165,7 +165,6 @@ test('full HTML roster rendering produces clean HTML with no undefined/null/NaN 
 
 test('multiple education credentials share one semicolon-separated row', () => {
   const person = roster.find((entry) => [
-    entry.postdocInstitution,
     entry.phdInstitution || entry.phdYear,
     entry.msInstitution,
     entry.undergradInstitution || entry.undergradYear,
@@ -173,7 +172,6 @@ test('multiple education credentials share one semicolon-separated row', () => {
   ].filter(Boolean).length > 1);
   assert.ok(person, 'expected a roster entry with multiple education credentials');
   const credentials = [
-    person.postdocInstitution && 'Postdoc',
     (person.phdInstitution || person.phdYear) && 'PhD',
     person.msInstitution && 'MS',
     (person.undergradInstitution || person.undergradYear) && 'Undergrad',

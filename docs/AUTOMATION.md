@@ -126,7 +126,7 @@ File a finding when a source you actually read shows one of these:
 | Rank, track, department, or field looks stale | `Review possible rank mismatch: <name> (<vp-id>)` (or `stale department`, `stale institution`) |
 | Person seems to have moved, retired, died, or left academia | `Review stale institution: <name> (<vp-id>)` |
 | Appointment looks postdoc, visiting, adjunct, or otherwise ineligible | `Review possible eligibility issue: <name> (<vp-id>)` |
-| Dead or wrong `profileUrl`, `websiteUrl`, `labUrl`, `scholarUrl`, or portrait | `Likely wrong <field>: <name> (<vp-id>)` |
+| Dead or wrong `profileUrl`, `websiteUrl`, `scholarUrl`, `linkedinUrl`, or portrait | `Likely wrong <field>: <name> (<vp-id>)` |
 | Two roster entries are the same person | `Duplicate roster entry: <name> (<vp-id>) duplicates <vp-id>` |
 | An honor that plausibly meets the honors bar is missing | `Possible new honor: <name> (<vp-id>) — <honor>` |
 | Degree fact wrong or missing | `Review incorrect <field>: <name> (<vp-id>)` |
@@ -226,8 +226,8 @@ Playbooks: `TASKS/verify_websites_and_labs.md`, `TASKS/check_google_scholar.md`,
 link-health sweep". Cap: 2 batches of 15 entries. Handle entries from the open link-health report
 Issue first, then continue in id order after the highest id in the last `[scheduled:links]` PR,
 wrapping at the end of the roster; pick entries missing `scholarUrl`, `linkedinUrl`, or
-`websiteUrl`/`labUrl`. For each entry, read the official profile, homepage, and Scholar once and
-settle all its link fields together: check any stored website or lab link, fill a missing Scholar
+`websiteUrl`. For each entry, read the official profile, homepage, and Scholar once and
+settle all its link fields together: check any stored website (a personal page or, failing that, a lab page), fill a missing Scholar
 or LinkedIn only on a strict identity match (never name alone; `npm test` rejects a Scholar or
 LinkedIn URL shared by two entries), and for a dead link search the name and university fresh
 before calling it unfixable. This routine reads the most first-party pages, so it is the main

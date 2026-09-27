@@ -96,12 +96,7 @@
       "websiteUrl": {
         "type": "string",
         "format": "uri",
-        "description": "Personal scholarly homepage"
-      },
-      "labUrl": {
-        "type": "string",
-        "format": "uri",
-        "description": "Research group or laboratory website"
+        "description": "Personal homepage, or the lab site when there is none"
       },
       "scholarUrl": {
         "type": "string",
@@ -142,10 +137,6 @@
       "phdYear": {
         "type": "integer",
         "description": "PhD completion year"
-      },
-      "postdocInstitution": {
-        "type": "string",
-        "description": "Postdoctoral training institution"
       },
       "mdInstitution": {
         "type": "string",

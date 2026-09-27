@@ -26,7 +26,6 @@ interface SubmissionDraft {
   profileUrl: string;
   vietnameseName?: string;
   websiteUrl?: string;
-  labUrl?: string;
   universityProfileUrl?: string;
   scholarUrl?: string;
   linkedinUrl?: string;
@@ -47,7 +46,6 @@ interface SubmissionDraft {
   phdYear?: number;
   phdInstitution?: string;
   mdInstitution?: string;
-  postdocInstitution?: string;
 }
 
 function renderShell() {
@@ -180,12 +178,7 @@ function renderShell() {
 
             <div class="form-section">
               <label for="websiteUrl">Personal website</label>
-              <input id="websiteUrl" name="websiteUrl" type="url" placeholder="https:// (personal homepage)" />
-            </div>
-
-            <div class="form-section">
-              <label for="labUrl">Lab website</label>
-              <input id="labUrl" name="labUrl" type="url" placeholder="https:// (research group or lab site)" />
+              <input id="websiteUrl" name="websiteUrl" type="url" placeholder="https:// (personal homepage or lab site)" />
             </div>
 
             <div class="form-section">
@@ -314,13 +307,6 @@ function renderShell() {
               </div>
             </div>
 
-            <div class="form-section form-row">
-              <div>
-                <label for="postdocInstitution">Postdoc institution</label>
-                <input id="postdocInstitution" name="postdocInstitution" type="text" placeholder="e.g. Carnegie Mellon University" />
-              </div>
-            </div>
-
             <div class="form-section">
               <label for="researchAreas">Research areas (comma-separated)</label>
               <input id="researchAreas" name="researchAreas" type="text" placeholder="e.g. Machine Learning, Robotics" />
@@ -363,7 +349,6 @@ const FIELD_LABELS: Partial<Record<keyof SubmissionDraft, string>> = {
   profileUrl: 'Profile or verification link',
   vietnameseName: 'Vietnamese name',
   websiteUrl: 'Personal website',
-  labUrl: 'Lab website',
   universityProfileUrl: 'Institutional profile website',
   scholarUrl: 'Google Scholar',
   linkedinUrl: 'LinkedIn',
@@ -383,7 +368,6 @@ const FIELD_LABELS: Partial<Record<keyof SubmissionDraft, string>> = {
   phdInstitution: 'PhD institution',
   phdYear: 'PhD year',
   mdInstitution: 'MD institution',
-  postdocInstitution: 'Postdoc institution',
   researchAreas: 'Research areas',
 };
 
@@ -509,7 +493,6 @@ function populateEntry(form: SubmitForm, entry: RosterEntry): void {
   form.profileUrl.value = entry.profileUrl ?? '';
   form.vietnameseName.value = entry.vietnameseName ?? '';
   form.websiteUrl.value = entry.websiteUrl ?? '';
-  form.labUrl.value = entry.labUrl ?? '';
   // universityProfileUrl has no canonical roster field (see SubmissionDraft above), so an
   // existing entry never has anything to pre-fill here.
   form.universityProfileUrl.value = '';
@@ -528,7 +511,6 @@ function populateEntry(form: SubmitForm, entry: RosterEntry): void {
   form.undergradYear.value = entry.undergradYear ? String(entry.undergradYear) : '';
   form.undergradInstitution.value = entry.undergradInstitution ?? '';
   form.msInstitution.value = entry.msInstitution ?? '';
-  form.postdocInstitution.value = entry.postdocInstitution ?? '';
   form.phdYear.value = entry.phdYear ? String(entry.phdYear) : '';
   form.phdInstitution.value = entry.phdInstitution ?? '';
   form.mdInstitution.value = entry.mdInstitution ?? '';
@@ -623,7 +605,6 @@ function onSubmit(e: SubmitEvent, entriesById: Map<string, RosterEntry> | null, 
     profileUrl: form.profileUrl.value.trim(),
     vietnameseName: form.vietnameseName.value.trim() || undefined,
     websiteUrl: form.websiteUrl.value.trim() || undefined,
-    labUrl: form.labUrl.value.trim() || undefined,
     universityProfileUrl: form.universityProfileUrl.value.trim() || undefined,
     scholarUrl: form.scholarUrl.value.trim() || undefined,
     linkedinUrl: form.linkedinUrl.value.trim() || undefined,
@@ -644,7 +625,6 @@ function onSubmit(e: SubmitEvent, entriesById: Map<string, RosterEntry> | null, 
     phdYear: form.phdYear.value ? Number(form.phdYear.value) : undefined,
     phdInstitution: form.phdInstitution.value.trim() || undefined,
     mdInstitution: form.mdInstitution.value.trim() || undefined,
-    postdocInstitution: form.postdocInstitution.value.trim() || undefined,
   };
 
   let title;

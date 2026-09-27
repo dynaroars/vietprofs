@@ -3,7 +3,7 @@ import { extname, join, resolve } from 'node:path';
 import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
 
-type Person = { id: string; name: string; university: string; department?: string; rank?: string; profileUrl: string; websiteUrl?: string; labUrl?: string; portrait?: string; portraitSource?: string; directFields?: string[]; lastUpdatedAt: string };
+type Person = { id: string; name: string; university: string; department?: string; rank?: string; profileUrl: string; websiteUrl?: string; portrait?: string; portraitSource?: string; directFields?: string[]; lastUpdatedAt: string };
 type QueueItem = Pick<Person, 'id' | 'name' | 'university' | 'profileUrl'> & { batch: number; status: 'pending' | 'fetched' | 'unresolved'; portraitSource?: string; note?: string };
 type SourceType = 'official_faculty' | 'personal_homepage' | 'lab_site' | 'authoritative_academic';
 type Confidence = 'HIGH' | 'MEDIUM' | 'LOW';
@@ -49,7 +49,7 @@ function hasWordEvidence(value: string, context: string, minimum = 2): boolean {
 function hasNameEvidence(name: string, context: string): boolean { return hasWordEvidence(name, context, 2); }
 
 function sourcePages(person: Person): Page[] {
-  const sources: Array<[string | undefined, SourceType]> = [[person.profileUrl, 'official_faculty'], [person.websiteUrl, 'personal_homepage'], [person.labUrl, 'lab_site']];
+  const sources: Array<[string | undefined, SourceType]> = [[person.profileUrl, 'official_faculty'], [person.websiteUrl, 'personal_homepage']];
   const seen = new Set<string>();
   return sources.flatMap(([url, sourceType]) => {
     if (!url || seen.has(url)) return [];

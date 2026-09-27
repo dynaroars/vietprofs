@@ -26,7 +26,6 @@ import {
 } from '../src/relationships.ts';
 import {
   formatEducationDetails,
-  LAB_SITE_ICON,
   LINKEDIN_ICON,
   PERSONAL_SITE_ICON,
   PROFILE_ICON,
@@ -143,8 +142,7 @@ function profilePage(
     : '';
   const links = [
     person.profileUrl && { label: person.confirmed === false ? 'Verification source' : person.institutionType && person.institutionType !== 'University' ? 'Official institution profile' : 'Official university profile', href: person.profileUrl, icon: PROFILE_ICON },
-    person.websiteUrl && { label: 'Personal website', href: person.websiteUrl, icon: PERSONAL_SITE_ICON },
-    person.labUrl && { label: 'Lab website', href: person.labUrl, icon: LAB_SITE_ICON },
+    person.websiteUrl && { label: 'Website', href: person.websiteUrl, icon: PERSONAL_SITE_ICON },
     person.scholarUrl && { label: 'Google Scholar', href: person.scholarUrl, icon: SCHOLAR_ICON },
     person.linkedinUrl && { label: 'LinkedIn', href: person.linkedinUrl, icon: LINKEDIN_ICON },
   ].filter(Boolean) as { label: string; href: string; icon: string }[];
@@ -177,7 +175,6 @@ function profilePage(
     person.websiteUrl,
     person.scholarUrl,
     person.linkedinUrl,
-    person.labUrl,
   ].filter(Boolean) as string[];
 
   const alumniOf = [

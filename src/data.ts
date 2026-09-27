@@ -27,7 +27,6 @@ export interface RosterEntry {
   vietnameseName?: string;
   researchAreas?: string[];
   honors?: Honor[];
-  postdocInstitution?: string;
   phdInstitution?: string;
   phdYear?: number;
   mdInstitution?: string;
@@ -36,7 +35,6 @@ export interface RosterEntry {
   msInstitution?: string;
   profileUrl?: string;
   websiteUrl?: string;
-  labUrl?: string;
   scholarUrl?: string;
   linkedinUrl?: string;
   /** Fields supplied through a direct owner/community update; automated scouting must preserve them. */
@@ -94,7 +92,6 @@ function searchableFields(person: RosterEntry) {
     person.rank,
     canonicalRank(person),
     healthSubfieldOf(person),
-    person.postdocInstitution,
     person.phdInstitution,
     person.mdInstitution,
     person.undergradInstitution,

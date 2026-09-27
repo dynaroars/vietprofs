@@ -16,7 +16,7 @@ import { identityKey, namesMatch, nameTokens } from '../src/identity.ts';
 
 type Retired = Record<string, { replacedBy: string | null; name: string; university: string; reason: string }>;
 
-const URL_FIELDS = ['profileUrl', 'websiteUrl', 'labUrl', 'scholarUrl', 'linkedinUrl', 'portraitSource'] as const;
+const URL_FIELDS = ['profileUrl', 'websiteUrl', 'scholarUrl', 'linkedinUrl', 'portraitSource'] as const;
 
 function urlsOf(person: Partial<RosterEntry>): Map<string, string> {
   const keys = new Map<string, string>();
@@ -38,7 +38,7 @@ if (args.includes('--roster')) {
   for (const [index, person] of roster.entries()) {
     for (const [key, field] of urlsOf(person)) {
       // Department pages, group labs, and placeholder images are legitimately shared.
-      if (field === 'profileUrl' || field === 'labUrl' || field === 'portraitSource') continue;
+      if (field === 'profileUrl' || field === 'portraitSource') continue;
       const other = byUrl.get(key);
       if (other && other !== person.id) pairs.push(`${other} & ${person.id} (${person.name}) share ${field} ${key}`);
       else byUrl.set(key, person.id);

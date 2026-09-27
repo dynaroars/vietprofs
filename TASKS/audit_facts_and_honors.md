@@ -49,14 +49,12 @@ Academic degrees must be corroborated by official institutional bios, personal a
 - `phdInstitution`, `phdYear`
 - `msInstitution`
 - `undergradInstitution`, `undergradYear`
-- `postdocInstitution`
 - `mdInstitution`
 
 ### B. Strict Chronology & Formatting Rules
 1. **Academic Progression Order:** `phdYear` must be at least 2 years after `undergradYear`.
 2. **Implausible Interval Detection:** Flag and investigate implausible intervals (e.g. an undergrad graduation year of 2024 for a professor who completed a PhD in 2003).
 3. **Canonical Institution Formatting:** Store canonical institution names without prepended degree prefixes (e.g., store `"University of California, Berkeley"`, NOT `"PhD from UC Berkeley"`).
-4. **Completed Postdoctoral Training:** Record the completed postdoctoral institution (`postdocInstitution`) when explicitly documented.
 
 ---
 

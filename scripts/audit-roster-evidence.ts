@@ -59,7 +59,7 @@ for (const person of candidates) {
   }
 
   // 2. Institution format
-  for (const field of ['phdInstitution', 'undergradInstitution', 'msInstitution', 'postdocInstitution'] as const) {
+  for (const field of ['phdInstitution', 'undergradInstitution', 'msInstitution'] as const) {
     const val = person[field];
     if (val) {
       const err = validateInstitutionFormat(val, field);

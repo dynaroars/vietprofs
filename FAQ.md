@@ -191,7 +191,7 @@ Each card displays:
 - **Bilingual Name:** English published name alongside authentic Vietnamese diacritics (`vietnameseName`).
 - **Affiliation:** Current rank, department, university/institute, city, state/province, and country flag.
 - **Appointment Track & Institution Type:** Clearly distinguishing tenure-line, teaching, research, clinical, staff, or emeritus roles.
-- **Education History:** Chronological records of undergraduate, master's, PhD, and postdoctoral training.
+- **Education History:** Undergraduate, master's, PhD, and MD institutions, with undergraduate and PhD years.
 - **Curated Honors:** Badges for academy memberships, society fellowships, career awards, and endowed chairs.
 - **Research Areas:** Clickable keyword tags.
 - **Direct Links:** One-click links to official university profile pages, personal/lab websites, and Google Scholar.

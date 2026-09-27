@@ -1,7 +1,7 @@
 # Verify Homepages & Lab Websites (`verify_websites_and_labs.md`)
 
 > **Autonomous Goal Directive (`/goal TASKS/verify_websites_and_labs.md`):**  
-> Audit all personal academic websites and research lab URLs in `public/data.json`. Execute the link verification workflow batch by batch until every entry has been audited (across runs; a scheduled run stops at its batch cap per `AGENTS.md`). Verify active HTTP status, fix broken/404 links, remove outdated domain redirects, and update new lab sites (`.edu/~user`, GitHub Pages, personal domains). Update `websiteUrl`, `labUrl`, and `lastUpdatedAt` (never the verification ledger). For each batch of verified updates, create a topic branch (`task/verify-urls-batch-[BATCH_NUM]`), run verification (`npm test && npm run build && git diff --check`), submit a GitHub PR (or Issue), return to `main`, and continue with the next batch.
+> Audit all personal academic websites and research lab URLs in `public/data.json`. Execute the link verification workflow batch by batch until every entry has been audited (across runs; a scheduled run stops at its batch cap per `AGENTS.md`). Verify active HTTP status, fix broken/404 links, remove outdated domain redirects, and update new lab sites (`.edu/~user`, GitHub Pages, personal domains). Update `websiteUrl` (one link: the personal page, or the lab site if there is none); `npm test` stamps `lastUpdatedAt`. Never touch the verification ledger. For each batch of verified updates, create a topic branch (`task/verify-urls-batch-[BATCH_NUM]`), run verification (`npm test && npm run build && git diff --check`), submit a GitHub PR (or Issue), return to `main`, and continue with the next batch.
 
 ---
 

@@ -143,9 +143,6 @@ for (const [index, person] of roster.entries()) {
     }
     websiteUrls.set(person.websiteUrl, person.name);
   }
-  if (person.labUrl !== undefined && !/^https?:\/\//.test(person.labUrl)) fail(rosterFile, `${label} labUrl must use HTTP(S)`);
-  if (person.labUrl !== undefined && person.labUrl === person.profileUrl) fail(rosterFile, `${label} labUrl must differ from profileUrl`);
-  if (person.labUrl !== undefined && person.labUrl === person.websiteUrl) fail(rosterFile, `${label} labUrl must differ from websiteUrl`);
   if (person.scholarUrl !== undefined) {
     const scholarErr = validateExternalUrl(person.scholarUrl, 'scholarUrl');
     if (scholarErr) fail(rosterFile, `${label} ${scholarErr}`);
@@ -217,7 +214,7 @@ for (const [index, person] of roster.entries()) {
     fail(rosterFile, `${label} state must be the full U.S. state name (${canonicalState(person.state, person.country)}), not ${person.state}`);
   }
   if (person.country !== undefined && typeof person.country !== 'string') fail(rosterFile, `${label} country must be a string`);
-  const institutionFields = ['phdInstitution', 'undergradInstitution', 'msInstitution', 'mdInstitution', 'postdocInstitution'];
+  const institutionFields = ['phdInstitution', 'undergradInstitution', 'msInstitution', 'mdInstitution'];
   for (const field of institutionFields) {
     if (person[field] !== undefined) {
       if (typeof person[field] !== 'string' || !person[field].trim()) {

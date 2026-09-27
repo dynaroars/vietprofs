@@ -75,8 +75,7 @@ research:
 - **Official profile:** the institutional faculty-profile `profileUrl`; note whether this makes the
   record confirmable (no `confirmed` field) or whether only identity-resolved secondary sources are
   available (`"confirmed": false`, and say why).
-- **Links:** `websiteUrl` (personal/academic homepage), `labUrl` (if the candidate runs or belongs
-  to a named lab), `linkedinUrl`, `scholarUrl` (Google Scholar), and any other reputable profile
+- **Links:** `websiteUrl` (personal homepage, or the lab site if there is none), `linkedinUrl`, `scholarUrl` (Google Scholar), and any other reputable profile
   (DBLP, ORCID, etc.) worth recording as a source even if not a stored field.
 - **Portrait:** a candidate headshot image URL (`portraitSource`) from an official or otherwise
   reliable page, following the quality bar in `fetch_portraits.md` (real individual headshot, not a
@@ -86,7 +85,7 @@ research:
   memory: conference distinguished/best-paper awards do not qualify; test-of-time/most-influential
   awards do) with `name`, `year`, `organization`, and `source` URL for each.
 - **Degrees/history:** `phdInstitution`/`phdYear`, `msInstitution`, `mdInstitution`,
-  `undergradInstitution`/`undergradYear`, and a completed `postdocInstitution` where findable.
+  and `undergradInstitution`/`undergradYear` where findable.
 - **About/bio summary:** a short factual "about" paragraph or research-overview draft (same quality
   bar as `researchOverview.text` in `ROSTER_MAINTENANCE.md`: neutral, gender-neutral phrasing, no
   raw HTML/citations/boilerplate, ≤3 sentences, ≤500 characters) with its source(s), for the

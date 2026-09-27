@@ -92,7 +92,7 @@ for (const person of roster) {
     ? ['portraitSource']
     : targetField
     ? [targetField]
-    : ['profileUrl', 'websiteUrl', 'labUrl', 'scholarUrl', 'linkedinUrl', 'portraitSource'];
+    : ['profileUrl', 'websiteUrl', 'scholarUrl', 'linkedinUrl', 'portraitSource'];
 
   for (const field of fieldsToCheck) {
     if (person[field]) {

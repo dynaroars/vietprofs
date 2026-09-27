@@ -54,7 +54,7 @@ Do NOT rely on a single search-engine snippet. Synthesize overviews using the fo
 
 1. **Source Exploration:**
    - Read the scholar's official university bio page (`profileUrl`).
-   - Read personal academic homepages (`websiteUrl`) or lab group pages (`labUrl`).
+   - Read the personal or lab homepage (`websiteUrl`).
    - Read major recent paper abstracts or research statement overviews.
 
 2. **Drafting Prose:**
