@@ -6362,7 +6362,9 @@
     "university": "Wayne State University",
     "profileUrl": "https://engineering.wayne.edu/profile/ex6091",
     "batch": 35,
-    "status": "pending"
+    "status": "fetched",
+    "portraitSource": "https://eng.auburn.edu/images/programs/csse/headshots/nguyen-tin.jpg",
+    "note": "portrait present in roster"
   },
   {
     "id": "vp-1691",
@@ -6794,6 +6796,14 @@
     "university": "University of Louisville",
     "profileUrl": "https://engineering.louisville.edu/faculty/hoang-long-nguyen/",
     "batch": 40,
+    "status": "pending"
+  },
+  {
+    "id": "vp-1694",
+    "name": "Amy Nguyen-Chyung",
+    "university": "Hawaiʻi Pacific University",
+    "profileUrl": "https://www.hpu.edu/faculty/cob/amy-nguyen-chyung.html",
+    "batch": 41,
     "status": "pending"
   }
 ]
