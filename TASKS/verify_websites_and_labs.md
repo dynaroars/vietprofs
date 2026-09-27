@@ -1,7 +1,7 @@
 # Verify Homepages & Lab Websites (`verify_websites_and_labs.md`)
 
 > **Autonomous Goal Directive (`/goal TASKS/verify_websites_and_labs.md`):**  
-> Audit all personal academic websites and research lab URLs in `public/data.json`. Execute the link verification workflow batch by batch until every entry has been audited (across runs; a scheduled run stops at its batch cap per `AGENTS.md`). Verify active HTTP status, fix broken/404 links, remove outdated domain redirects, and update new lab sites (`.edu/~user`, GitHub Pages, personal domains). Update `websiteUrl` (one link: the personal page, or the lab site if there is none); `npm test` stamps `lastUpdatedAt`. Never touch the verification ledger. On a schedule this runs inside the `links` routine. For each batch of verified updates, create a topic branch (`task/verify-urls-batch-[BATCH_NUM]`), run verification (`npm test && npm run build && git diff --check`), submit a GitHub PR (or Issue), return to `main`, and continue with the next batch.
+> Audit all personal academic websites and research lab URLs in `public/data.json`. Execute the link verification workflow batch by batch until every entry has been audited (across runs; a scheduled run stops at its batch cap per `AGENTS.md`). Verify active HTTP status, fix broken/404 links, remove outdated domain redirects, and update new lab sites (`.edu/~user`, GitHub Pages, personal domains). Update `websiteUrl` (one link: the personal page, or the lab site if there is none); `npm test` stamps `lastUpdatedAt`. On a schedule this runs inside the `links` routine. For each batch of verified updates, create a topic branch (`task/verify-urls-batch-[BATCH_NUM]`), run verification (`npm test && npm run build && git diff --check`), submit a GitHub PR (or Issue), return to `main`, and continue with the next batch.
 
 ---
 
@@ -25,5 +25,5 @@ Ensure all personal homepage and lab links across faculty directory profiles are
    ```bash
    npm test && npm run build && git diff --check
    ```
-4. **Timestamps:** `npm test` stamps `lastUpdatedAt` on changed entries; do not touch `maintenance/verification.json` (a single-field backfill is not a full review).
+4. **Timestamps:** `npm test` stamps `lastUpdatedAt` on changed entries.
 5. **Submission:** Submit per-batch edits as a PR on a topic branch, per the routing table in `AGENTS.md`. Never commit directly to `main`. Protected `directFields` conflicts go to an Issue.

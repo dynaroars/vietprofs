@@ -21,8 +21,6 @@ import {
 import { validateRelationshipDatabase } from '../src/relationships.ts';
 
 const rosterFile = resolve('public/data.json');
-const verificationFile = resolve('maintenance/verification.json');
-const evidenceFile = resolve('maintenance/evidence.json');
 const relationshipsFile = resolve('public/relationships.json');
 const allowedTracks = new Set<string>(TRACKS);
 const allowedInstitutionTypes = new Set<string>(INSTITUTION_TYPES);
@@ -66,19 +64,11 @@ function validateTimestamp(file: string, value: string, label: string, field: st
   if (timestamp.valueOf() > Date.now()) fail(file, `${label} ${field} must not be in the future`);
 }
 
-const [roster, verification, evidence, relationships] = await Promise.all([
+const [roster, relationships] = await Promise.all([
   readFile(rosterFile, 'utf8').then(JSON.parse),
-  readFile(verificationFile, 'utf8').then(JSON.parse),
-  readFile(evidenceFile, 'utf8').then(JSON.parse),
   readFile(relationshipsFile, 'utf8').then(JSON.parse),
 ]);
 if (!Array.isArray(roster) || roster.length === 0) fail(rosterFile, 'must contain a non-empty array');
-if (!verification || typeof verification !== 'object' || Array.isArray(verification)) {
-  fail(verificationFile, 'must contain an object keyed by roster id');
-}
-if (!evidence || evidence.version !== 1 || typeof evidence.entries !== 'object') {
-  fail(evidenceFile, 'must contain a versioned evidence ledger');
-}
 const rosterIds = new Set((roster as Array<{ id: string }>).map((person) => person.id));
 
 // Retired ids stay retired: a merged duplicate points at the entry that absorbed it, and a person
@@ -270,14 +260,6 @@ for (const [index, person] of (roster as RosterEntry[]).entries()) {
   }
 }
 
-// Keyed by id, so renames and merges never orphan a timestamp.
-for (const id of rosterIds) {
-  if (!Object.hasOwn(verification, id)) fail(verificationFile, `missing verification timestamp for ${id}`);
-  validateTimestamp(verificationFile, verification[id], id, 'lastVerifiedAt');
-}
-for (const id of Object.keys(verification)) {
-  if (!rosterIds.has(id)) fail(verificationFile, `contains stale entry for ${id}`);
-}
 const relationshipErrors = validateRelationshipDatabase(relationships, roster);
 if (relationshipErrors.length) fail(relationshipsFile, relationshipErrors.join('; '));
 console.log(`Validated ${roster.length} roster entries and ${relationships.relationships.length} academic relationships.`);

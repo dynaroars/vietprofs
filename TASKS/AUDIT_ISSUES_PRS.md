@@ -96,7 +96,7 @@ Before modifying data or closing issues, ensure compliance with repository rules
      textual conflict (see Step 5): identify which entries are new relative to `main`, clear only their
      `id` field, run `npm run assign-profile-ids -- --apply` to remint fresh ids, and re-run the test
      suite before proceeding. Also patch any other file this PR touches that referenced the discarded
-     id (e.g. `maintenance/verification.json` rows). Reminting is only for ids
+     id (e.g. rows in `maintenance/portrait-queue.json`). Reminting is only for ids
      that never reached `main`; an id already on `main` is permanent (see `ROSTER_MAINTENANCE.md`
      "One person, one ID").
    - **Check that nothing on `main` disappears.** A branch that rewrote `public/data.json` from a stale
@@ -154,7 +154,7 @@ Before modifying data or closing issues, ensure compliance with repository rules
        header pointing at the page that linked it.
 
    - **C2. Duplicate entries (`Duplicate roster entry:` Issues, or two IDs found for one person):**
-     - Keep the **older (lower) ID**, even when the newer entry has protected `directFields` or more data; protected values move with the data onto the older ID. Follow `ROSTER_MAINTENANCE.md` "One person, one ID": put the verified current facts and unique sourced fields on the older entry, drop fields that only fit the other institution, delete the newer entry, then run `npm run retire-profile-id -- <newer-id> --into <older-id> --reason "..." --apply` (it also moves the `maintenance/verification.json` row).
+     - Keep the **older (lower) ID**, even when the newer entry has protected `directFields` or more data; protected values move with the data onto the older ID. Follow `ROSTER_MAINTENANCE.md` "One person, one ID": put the verified current facts and unique sourced fields on the older entry, drop fields that only fit the other institution, delete the newer entry, then run `npm run retire-profile-id -- <newer-id> --into <older-id> --reason "..." --apply` (it also rewrites every maintenance-file reference).
      - If the older ID was already removed (a merge that kept the newer one, or a person re-added after removal), restore it: `npm run retire-profile-id -- <newer-id> --into <older-id> --reason "..." --apply` renames the entry back.
 
    - **D. Multi-item Maintenance Sweeps:**
@@ -167,9 +167,7 @@ Before modifying data or closing issues, ensure compliance with repository rules
    ```bash
    npm run assign-profile-ids -- --apply
    ```
-2. **Update `maintenance/verification.json`:**
-   - Add a row for each new id (keyed by id) with the review timestamp. Renames need no change.
-3. **Update `src/data.ts` (Field Overrides):**
+2. **Update `src/data.ts` (Field Overrides):**
    - If a new institution or department falls into unmapped `Others`, add an entry to `FIELD_OVERRIDES` in `src/data.ts`.
 
 ---

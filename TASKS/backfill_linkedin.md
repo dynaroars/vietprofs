@@ -1,7 +1,7 @@
 # Backfill LinkedIn Profiles (`backfill_linkedin.md`)
 
 > **Autonomous Goal Directive (`/goal TASKS/backfill_linkedin.md`):**  
-> Systematically search for missing LinkedIn profile links in `public/data.json`. Execute the research and backfill workflow batch by batch until every missing entry has been audited (across runs; a scheduled run stops at its batch cap per `AGENTS.md`). Perform multi-query research using name, affiliation, department, and degree. Validate that candidate LinkedIn profiles match the exact individual. Update `linkedinUrl`; `npm test` stamps `lastUpdatedAt`. Never touch the verification ledger. On a schedule this runs inside the `links` routine. For each batch of verified updates, create a topic branch (`task/backfill-linkedin-batch-[BATCH_NUM]`), run verification (`npm test && npm run build && git diff --check`), submit a GitHub PR (or Issue), return to `main`, and continue with the next batch.
+> Systematically search for missing LinkedIn profile links in `public/data.json`. Execute the research and backfill workflow batch by batch until every missing entry has been audited (across runs; a scheduled run stops at its batch cap per `AGENTS.md`). Perform multi-query research using name, affiliation, department, and degree. Validate that candidate LinkedIn profiles match the exact individual. Update `linkedinUrl`; `npm test` stamps `lastUpdatedAt`. On a schedule this runs inside the `links` routine. For each batch of verified updates, create a topic branch (`task/backfill-linkedin-batch-[BATCH_NUM]`), run verification (`npm test && npm run build && git diff --check`), submit a GitHub PR (or Issue), return to `main`, and continue with the next batch.
 
 ---
 
@@ -20,5 +20,5 @@ Achieve complete, verified LinkedIn profile coverage across the entire roster.
    ```bash
    npm test && npm run build && git diff --check
    ```
-5. **Timestamps:** `npm test` stamps `lastUpdatedAt` on changed entries; do not touch `maintenance/verification.json` (a single-field backfill is not a full review).
+5. **Timestamps:** `npm test` stamps `lastUpdatedAt` on changed entries.
 6. **Submission:** Submit per-batch edits as a PR on a topic branch, per the routing table in `AGENTS.md`. Never commit directly to `main`. Protected `directFields` conflicts go to an Issue.

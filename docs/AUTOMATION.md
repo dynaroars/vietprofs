@@ -71,7 +71,6 @@ Outside the cloud:
 | Link-health report | GitHub Action `.github/workflows/link-health.yml` | 1st of month, 08:00 UTC; manual via `gh workflow run link-health.yml` | Opens or comments on the "Link-health report (automated)" Issue. No model involved. |
 | Automation watchdog | GitHub Action `.github/workflows/automation-watchdog.yml` | Mon and Thu 12:00 UTC; manual via `gh workflow run automation-watchdog.yml` | Opens or comments on one "Automation watchdog (automated)" Issue when a PR has been open more than 5 days (auditor stopped or PR stuck) or nothing `[scheduled:*]` appeared in 4 days (routines stopped); closes it when checks pass. No model involved. |
 | Branch cleanup | GitHub Action `.github/workflows/delete-pr-branches.yml` | Whenever a PR is merged or closed; sweep Mondays 13:00 UTC; manual via `gh workflow run delete-pr-branches.yml` | Deletes a PR's branch once all its PRs are closed, because cloud agents can't delete branches. Keeps `main`, branches with an open PR, and branches that never had a PR. No model involved. |
-| Full-roster controller | Owner's crontab: `0 20 * * 6 …/scripts/cron-maintain-roster.sh` | Sat 8 PM local (00:00–01:00 UTC Sun, finishing before the 03:00 UTC Sun audit) | Runs `scripts/maintain-roster.ts` in the separate clone `~/git/projects/vietprofs-maintenance`; state in `~/.local/state/vietprofs-maintenance/cron-state`, log in `…/cron.log`. Pushes to `main`. With the default 365-day staleness it selects nobody until entries age (about Aug 2027); set `VIETPROFS_MAINT_ARGS="--stale-days 180"` on the cron line for a shorter cycle. |
 
 Retired routines (deleted; no longer at claude.ai/code/routines). The routines above replace them:
 
@@ -102,9 +101,7 @@ them share these rules:
    They never add a person to `public/data.json` or assign an id. New people always go in an
    Issue. Protected `directFields` values (name, Vietnamese name, honors, portrait) are never edited; a
    conflict goes in an Issue. Appointment facts and links are never protected.
-5. **Timestamps.** Never set `lastUpdatedAt` by hand; `npm test` stamps changed entries. Only a
-   complete live review advances `maintenance/verification.json`, so no routine here touches it except the auditor when it adds
-   a new entry.
+5. **Timestamps.** Never set `lastUpdatedAt` by hand; `npm test` stamps changed entries.
 6. **Unverifiable means untouched.** If the egress proxy blocks a source, don't accept the fact,
    and don't delete an existing value because of the block. List those entries in the PR/Issue so
    a later run retries them.
@@ -165,14 +162,14 @@ Follow `TASKS/AUDIT_ISSUES_PRS.md`, including "Independent review". Also read
   identity URL in the Issue) against current `public/data.json`. If it hits the same person
   (often at a former institution), update that entry in place and close the Issue with its id; a
   retired-id hit gets its original id back. Otherwise re-verify eligibility live, add the entry, run
-  `npm run assign-profile-ids -- --apply`, update `maintenance/verification.json`, validate, and
+  `npm run assign-profile-ids -- --apply`, validate, and
   put it in the run's fix PR (see "Applying fixes" below); the PR closes the Issue.
 - Side-finding and other correction Issues: verify live. If confirmed, fix, validate, and put it
   in the run's fix PR with what changed and the source. If the evidence is wrong, close with the
   reason. Duplicates: keep the older (lower) id, even if the newer entry is richer or has protected
   fields; move the verified current facts and unique sourced fields onto it, delete the newer
   entry, and run `npm run retire-profile-id -- <newer> --into <older> --reason "..." --apply`,
-  which also moves the `maintenance/verification.json` row (`ROSTER_MAINTENANCE.md` "One person,
+  which also rewrites every maintenance-file reference (`ROSTER_MAINTENANCE.md` "One person,
   one ID").
 - Needs an owner decision (protected `directFields` conflict, ambiguous identity or eligibility,
   unverifiable from the cloud): comment with findings and a recommendation, and leave it open.
@@ -230,17 +227,29 @@ Follow `TASKS/AUDIT_ISSUES_PRS.md`, including "Independent review". Also read
 
 ### Links (`links`)
 
-Playbooks: `TASKS/verify_websites_and_labs.md`, `TASKS/check_google_scholar.md`, and
-`TASKS/backfill_linkedin.md`, plus steps 2-3 of "Periodic full-roster refresh" and "Periodic
-link-health sweep". Cap: 2 batches of 15 entries. Handle entries from the open link-health report
-Issue first, then continue in id order after the highest id in the last `[scheduled:links]` PR,
-wrapping at the end of the roster; pick entries missing `scholarUrl`, `linkedinUrl`, or
-`websiteUrl`. For each entry, read the official profile, homepage, and Scholar once and
-settle all its link fields together: check any stored website (a personal page or, failing that, a lab page), fill a missing Scholar
-or LinkedIn only on a strict identity match (never name alone; `npm test` rejects a Scholar or
-LinkedIn URL shared by two entries), and for a dead link search the name and university fresh
-before calling it unfixable. This routine reads the most first-party pages, so it is the main
-source of side findings (a Scholar affiliation line often shows a stale institution).
+Playbooks: "Periodic full-roster refresh" steps 1-4 in `ROSTER_MAINTENANCE.md`, plus
+`TASKS/verify_websites_and_labs.md`, `TASKS/check_google_scholar.md`, `TASKS/backfill_linkedin.md`,
+and "Periodic link-health sweep". Cap: 2 batches of 15 entries. Handle entries from the open
+link-health report Issue first, then continue in id order after the highest id in the last
+`[scheduled:links]` PR, wrapping at the end of the roster. That rotation reaches every entry, not
+only ones missing a link, so each person is re-checked about every six months.
+
+For each entry, open the official profile, homepage, and Scholar once and settle everything they
+show:
+- **Appointment:** confirm `university`, `department`, `rank`, and `track` against the official
+  profile, and fix what changed (a promotion, a new department, a move). A move follows
+  `ROSTER_MAINTENANCE.md` "One person, one ID": update the entry in place. Someone who is gone or no
+  longer eligible (left academia, retired without an emeritus title, now a postdoc or visiting)
+  isn't removed by this routine; file a `Review stale institution:` or `Review possible eligibility
+  issue:` side finding with the evidence.
+- **Links:** check the stored `profileUrl` and `websiteUrl`, and fill a missing Scholar or LinkedIn
+  only on a strict identity match (never name alone; `npm test` rejects a Scholar or LinkedIn URL
+  shared by two entries). For a dead link, search the name and university fresh before calling it
+  unfixable.
+- **Honors and degrees** noticed on those pages go in side findings, not this PR.
+
+In the PR body, list each entry with what was checked and what changed, including entries checked
+with no change, so the rotation is visible.
 
 ### Portraits (`portraits`)
 
@@ -305,6 +314,3 @@ out-of-roster advisors or coauthors.
   Full access; in that case, blocked items stay open rather than being guessed.
 - **Duplicate-id failures after a merge:** see `TASKS/AUDIT_ISSUES_PRS.md` Step 1 (test on fresh
   `main`; remint only the new entries' ids).
-- **Controller not doing anything:** run `./scripts/maintain-roster.ts status` in the maintenance
-  clone with `VIETPROFS_MAINTENANCE_STATE_DIR=~/.local/state/vietprofs-maintenance/cron-state`, and
-  check `cron.log`. A 365-day staleness window means an idle week is normal.

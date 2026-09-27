@@ -49,10 +49,9 @@ Thanks to [hieuphay.com](https://hieuphay.com/ban-do-kinh-te-viet-nam/) for an i
 Vietnamese economists that seeded a batch of entries, and to the many contributors over
 LinkedIn and other channels who've suggested corrections and additions.
 
-An unattended AI-based maintenance controller ([`scripts/maintain-roster.ts`](./scripts/maintain-roster.ts))
-periodically re-verifies existing entries and pushes updates directly to `main`; see
-[ROSTER_MAINTENANCE.md](./ROSTER_MAINTENANCE.md#periodic-full-roster-refresh) for how it works and
-how to run it manually.
+Scheduled AI routines maintain the roster, each reviewed by an independent nightly auditor; see
+[docs/AUTOMATION.md](./docs/AUTOMATION.md). Existing entries are re-verified in rotation following
+[ROSTER_MAINTENANCE.md](./ROSTER_MAINTENANCE.md#periodic-full-roster-refresh).
 
 ## License
 

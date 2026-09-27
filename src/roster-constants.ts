@@ -56,8 +56,6 @@ export const ROSTER_FIELDS = [
   'undergradYear',
 ] as const;
 
-export const DIRECT_FIELD_EXCLUSIONS = new Set<string>(['id', 'lastUpdatedAt', 'directFields']);
-
 // Only facts the web can't settle stay protected after an owner submission. Appointment facts,
 // degrees, and links go stale when people move, so the current official page wins for those.
 export const PROTECTABLE_FIELDS = new Set<string>(['name', 'vietnameseName', 'honors', 'portrait', 'portraitSource']);

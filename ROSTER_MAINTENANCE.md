@@ -367,9 +367,6 @@ graduation detail, award, or other fact merely because it appears at the supplie
 is not about a person or the user explicitly requests only a summary or another narrower action,
 follow that context instead.
 
-Advance the verification ledger only if the work also completes the full live review required by the
-verification-ledger and periodic-refresh rules; a supplied link or partial correction alone is not
-enough.
 
 ### Reviewing user-supplied names
 
@@ -438,7 +435,7 @@ Resuming across sessions (including on a different machine):
 4. For each resolved candidate, update its `maintenance/hieuphay-leads.json` entry: set `status`
    to `included` (with `rosterId`), `excluded` (with a one-line `note` explaining why), or
    `duplicate` (with a `note` pointing at the existing roster entry). Then add every `included`
-   candidate to `public/data.json` and `maintenance/verification.json` following the "Data-entry
+   candidate to `public/data.json` following the "Data-entry
    rules" and inclusion standard exactly as for any other addition.
 5. Run the validation checklist (`npm test`, `npm run build`, `git diff --check`), then commit
    and push. Commit after every batch (roughly every 10-20 resolved candidates) rather than
@@ -492,19 +489,18 @@ Lead-queue entries (currently `maintenance/hieuphay-leads.json`) are **leads onl
 To prevent desynchronization between data files and ensure interrupted runs are cleanly resumable:
 
 1. Update `public/data.json` with new entries.
-2. After assigning ids (step 4), add each new id to `maintenance/verification.json` with its verification timestamp.
-3. Update the lead file (`maintenance/hieuphay-leads.json`) with updated candidate statuses (`included`, `duplicate`, `excluded`, `unresolved`).
-4. Run immutable ID assignment:
+2. Update the lead file (`maintenance/hieuphay-leads.json`) with updated candidate statuses (`included`, `duplicate`, `excluded`, `unresolved`).
+3. Run immutable ID assignment:
    ```bash
    npm run assign-profile-ids -- --apply
    ```
-5. Run the validation suite:
+4. Run the validation suite:
    ```bash
    npm test && npm run build && git diff --check
    ```
-6. Commit and push each batch immediately after validation:
+5. Commit and push each batch immediately after validation:
    ```bash
-   git add TODO.md maintenance/hieuphay-leads.json maintenance/verification.json public/data.json scripts/validate-data.ts src/data.ts
+   git add maintenance/hieuphay-leads.json public/data.json scripts/validate-data.ts src/data.ts
    git commit -m "Resolve <source> leads batch"
    git push origin main
    ```
@@ -542,7 +538,7 @@ later qualify again. None of that is a new person, so none of it gets a new ID.
   (`institutionType`, an old `profileUrl`, a stale portrait). Protected `directFields` values move
   with the data: the rule protects the value, not the ID it was stored under. Delete the newer
   entry, then run `npm run retire-profile-id -- <newer-id> --into <older-id> --reason "..." --apply`
-  (which also moves the `maintenance/verification.json` row). Never keep the newer ID because it has
+  (which also rewrites every maintenance-file reference). Never keep the newer ID because it has
   protected fields or looks more complete.
 - **Retired IDs are permanent.** `maintenance/retired-ids.json` records every ID ever removed,
   with what replaced it and why. `assign-profile-ids` never hands them out again, the build writes
@@ -683,36 +679,6 @@ broadly until that sample demonstrates very high precision.
   `Penn State`). Apply the same display rule to education institutions. Never shorten the
   canonical roster value or generically remove `College`, `Institute`, or other name components.
 
-### Verification ledger and update timestamps
-
-`lastVerifiedAt` is maintenance state, not public roster content. Store it in the tracked
-`maintenance/verification.json` ledger, keyed by roster id (`"vp-0037": "<timestamp>"`); do not
-add it to a public roster entry. Tracking the ledger in Git lets weekly automation resume on
-another machine or fresh clone, while keeping it out of the site build. The validator requires
-exactly one ledger entry for every roster id and rejects stale ones. Because it is keyed by id, a
-rename needs no ledger change; a new entry gets its row after `assign-profile-ids`, and
-`retire-profile-id` handles merges.
-
-Set a ledger timestamp for a new entry only after independently verifying every part of the
-inclusion standard and all required roster fields. For an existing entry, advance it only after a
-complete live review covers the person's identity, current and primary university appointment,
-department, rank/track, profile URL, and the other information described in the periodic-refresh
-workflow. A complete review may advance the timestamp even when no roster facts changed. Ledger
-values must use canonical UTC ISO `YYYY-MM-DDTHH:mm:ss.sssZ` form.
-
-Do not advance the ledger timestamp for a link-health check, a partial correction, a single
-supplied source, a failed or blocked fetch, or a review that leaves a material eligibility or
-appointment question unresolved. Automated maintenance should record those attempts in its
-resumable working state and retry them later without changing the durable ledger. The maintenance
-controller, not a research model, should generate the timestamp only after all required
-verification and validation gates pass. Never backdate a new review, infer a timestamp from page
-metadata, or set a future value.
-
-`lastUpdatedAt` is generated, not chosen: `npm run stamp-updates` (run by `npm test`) compares each
-entry with the last commit and stamps the ones whose content changed, ignoring key order and
-`directFields`. The maintenance controller stamps its own approved patches. Only the
-ledger timestamp is set by hand, and only for a complete review.
-
 ### Honors and awards eligibility
 
 The `honors` field is curated for substantial distinctions, not every item listed on a CV or
@@ -845,27 +811,11 @@ finding and vetting *new* candidates. This section covers re-verifying *every ex
 `public/data.json`, since profiles go dead, people move institutions, ranks change, and new
 honors accrue over time. Run this when the user asks for a periodic roster refresh.
 
-For unattended local maintenance, use `./scripts/maintain-roster.ts run`. The controller applies
-the workflow below one person at a time. An independent Codex approval of the research can be
-enabled with `--codex-review`; when enabled, it is required before applying the researcher's
-proposal. The research agent defaults to Claude and can be changed to Codex with
-`--agent codex`. The controller keeps resumable state outside the repository, and commits and pushes
-after the entire selected batch. `./scripts/maintain-roster.ts stop` safely pauses it; running `run` again
-resumes the saved person and stage. Incomplete or disputed entries must remain unverified so a
-later run retries them. When Codex rejects a correctable proposal, the controller gives Claude up
-to two revisions containing the proposal and the reviewer's exact reasons, and independently
-reviews each revision. It never applies only the convenient subset of a rejected proposal.
-
-Because it touches the whole roster, split the work into roughly 20 batches (about 35-40 people
-each) and work one batch at a time. For recurring automated maintenance, select entries missing
-from `maintenance/verification.json` first and then those with the oldest ledger timestamps; for
-a manually initiated full pass, consecutive file order is also acceptable. Track which entries
-and stages are done in durable working state so a refresh can resume without redoing successful
-work. Commit after each batch (or another reviewably small chunk) rather than as one giant diff,
-and run the validation checklist before each commit. Push each commit immediately after making
-it, then continue straight on to the next batch without stopping for confirmation in between — treat
-commit-and-push-per-batch as pre-authorized for this recurring task. Only pause if you hit a
-genuine blocker (for example, a validation failure you can't resolve, or a push that's rejected).
+On a schedule this runs in rotation inside the `links` routine (`docs/AUTOMATION.md`): each run
+takes the next entries in id order and, while it has each person's official profile open, applies
+the checks below and fixes what changed in its PR. A manually requested full pass follows the same
+steps in id order, in small batches (about 20-40 people), committing and pushing each validated
+batch before moving on.
 
 Do this very thoroughly for each person and expect it to take a long time. Do not skip someone
 because their existing entry looks fine at a glance — confirm it live. For every person, in
@@ -906,133 +856,6 @@ order:
    `TASKS/candidate_intake.md` steps 1–4. Do not add the entry yourself — new roster IDs always go
    through an Issue (see `AGENTS.md`). Don't let a promising lead stall progress on the current
    batch.
-6. **Record successful verification.** After all applicable checks above are complete and no
-   material question remains unresolved, set the person's timestamp in
-   `maintenance/verification.json` to the current UTC time. Do this even if the review found no
-   other change, so future refreshes can reliably choose the oldest entries. (`lastUpdatedAt` is
-   stamped automatically if facts changed.) If the review is incomplete, preserve the old ledger
-   timestamp and retry later.
-
-### Automated maintenance controller usage
-
-[`scripts/maintain-roster.ts`](scripts/maintain-roster.ts) is the unattended weekly
-maintenance controller. It selects missing or oldest entries from
-`maintenance/verification.json`, asks the selected agent to
-perform the full live research pass. Claude is the default agent. An independent Codex verification pass is optional and can be enabled
-with `--codex-review`. The agent can be changed from Claude (the default) to Codex with
-`--agent codex`. Neither agent can edit repository files. The controller applies structured data
-after the agent's work, or after the independent Codex review when that
-flag is enabled, and runs the
-project checks, commits that person, and pushes directly to `origin/main`. No pull request or
-manual review is required.
-
-Prerequisites:
-
-- Linux with Node.js, npm, and Git;
-- a configured Git author identity and push access to `origin/main`.
-
-The default Claude agent requires the `claude` CLI and a successful `claude auth status`.
-
-The optional `--codex-review` pass also requires the `codex` CLI and a successful
-`codex login status`.
-
-Run it from the repository root:
-
-```bash
-./scripts/maintain-roster.ts run
-```
-
-A new run processes at most 40 entries that have not completed a full review in 365 days. Preview
-the selection without invoking either agent or changing Git:
-
-```bash
-./scripts/maintain-roster.ts run --dry-run
-```
-
-For the first complete sweep of the roster, allow one long run to queue every current entry:
-
-```bash
-./scripts/maintain-roster.ts run --all --limit 1000
-```
-
-To process the entire roster in smaller commit-and-push batches, use `--all` with the batch size
-specified by `--limit`. To cap the run, use `--total` instead. Both modes prioritize the least
-recently verified entries before each batch:
-
-```bash
-./scripts/maintain-roster.ts run --all --limit 40
-# or, for up to 1,000 entries:
-./scripts/maintain-roster.ts run --total 1000 --limit 40
-```
-
-The controller commits and pushes after each completed batch and resumes the active batch if it is
-interrupted.
-
-After that sweep completes, the normal weekly command selects only entries whose successful full
-verification is at least one year old.
-
-Use `--limit` or `--stale-days` to change the run, or force a small current-data pass with:
-
-```bash
-./scripts/maintain-roster.ts run --all --limit 1
-```
-
-Enable independent Codex verification for a run with:
-
-```bash
-./scripts/maintain-roster.ts run --all --limit 1 --codex-review
-```
-
-Use Codex as the agent when Claude is unavailable or rate-limited:
-
-```bash
-./scripts/maintain-roster.ts run --all --limit 1 --agent codex
-```
-
-Use `--name` with a person-like query to have Claude match it to one canonical roster member and
-run the full workflow regardless of verification age. Capitalization and omitted middle initials
-may be resolved when the match is unambiguous:
-
-```bash
-./scripts/maintain-roster.ts run --name "Thanhvu Nguyen"
-```
-
-The same option accepts a field-like query. Claude maps it to a canonical field and the controller
-queues every roster member in that field, ignoring the normal age and entry-limit selection:
-
-```bash
-./scripts/maintain-roster.ts run --name "Computer Science"
-```
-
-The process may remain active for hours while an account limit resets. It automatically retries
-rate limits with increasing waits. To stop it safely, press <kbd>Ctrl</kbd>+<kbd>C</kbd>, or run this
-from another terminal:
-
-```bash
-./scripts/maintain-roster.ts stop
-```
-
-Running `./scripts/maintain-roster.ts run` again—even days later—detects the saved checkpoint and
-resumes the interrupted person and stage. Check progress with:
-
-```bash
-./scripts/maintain-roster.ts status
-```
-
-For a run that should survive closing the terminal, start it in the background:
-
-```bash
-nohup ./scripts/maintain-roster.ts run >/tmp/vietprofs-maintenance.log 2>&1 &
-```
-
-Controller state and per-agent logs live under `~/.local/state/vietprofs-maintenance/` by default.
-Set `VIETPROFS_MAINTENANCE_STATE_DIR=/another/path` to override that location. Start a new run from
-a clean `main` checkout, and do not edit that checkout while the controller is active or paused.
-When enabled, rejected proposals receive up to two Claude revisions using Codex's concrete
-feedback, with a new independent review after each revision. Proposals still rejected after those
-attempts, and incomplete or uncertain reviews, are logged, keep their old verification timestamp,
-and are deferred for 30 days so they do not prevent the rest of the roster from being processed.
-
 ## Education-field consistency sweep
 
 This is a separate, cheaper technique from the periodic full-roster refresh above. It targets
@@ -1059,9 +882,7 @@ Two gap patterns are easy to find with a plain scan of the roster file, with ver
 Apply the same data-entry rules as any other correction: add only what the page explicitly states,
 never infer a year from chronology, and don't force a professional degree (JD, DMD, PharmD, MBA,
 etc.) into `phdInstitution` or `msInstitution`. Only the education fields in "Data-entry rules"
-exist; the validator rejects anything else. Do not advance
-`lastVerifiedAt` in the ledger for this sweep alone — it does not perform the full live review the
-periodic refresh requires, so advancing the ledger would let that record skip a real refresh later.
+exist; the validator rejects anything else.
 When a scan turns up no education fields and the primary source states none, leave the record
 unresolved and say so explicitly (which people, and why) rather than silently treating an empty
 page as proof no degree exists.

@@ -16,10 +16,9 @@
    - **Credential/honors correction to an existing roster ID:** Submit via the PR pipeline below.
 5. **Automated PR Submission Pipeline (existing-ID edits only):**
    After completing each batch's existing-ID edits:
-   - Sync verification ledger: update `maintenance/verification.json` (keyed by id) only for complete reviews
    - Create batch topic branch: `git checkout -b maintenance/leads-batch-[DISCIPLINE/TIMESTAMP]`
    - Validate pipeline: `npm test && npm run build && git diff --check`
-   - Commit batch: `git add public/data.json maintenance/verification.json maintenance/hieuphay-leads.json`
+   - Commit batch: `git add public/data.json maintenance/hieuphay-leads.json`
    - Commit message: `git commit -m "fix(roster): resolve candidate leads batch [DISCIPLINE/BATCH_NAME]"`
    - Push topic branch: `git push origin maintenance/leads-batch-[DISCIPLINE/TIMESTAMP]`
    - File GitHub PR:
@@ -35,8 +34,7 @@
 ## 1. Core Principles & Governance Rules
 
 `directFields` protection and the direct-update rules are defined in `AGENTS.md` ("Direct
-updates"). `npm test` stamps `lastUpdatedAt` on changed entries; advance `maintenance/verification.json`
-(keyed by id) only for a complete live review.
+updates"). `npm test` stamps `lastUpdatedAt` on changed entries.
 
 ---
 

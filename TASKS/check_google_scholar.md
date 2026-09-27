@@ -1,7 +1,7 @@
 # Check & Backfill Google Scholar Profiles (`check_google_scholar.md`)
 
 > **Autonomous Goal Directive (`/goal TASKS/check_google_scholar.md`):**  
-> Audit missing Google Scholar citation profile links in `public/data.json`. Execute the audit and backfill workflow batch by batch until every missing entry has been audited (across runs; a scheduled run stops at its batch cap per `AGENTS.md`). Perform targeted web searches to identify authentic Google Scholar user IDs matching faculty publication records. Update `scholarUrl`; `npm test` stamps `lastUpdatedAt`. Never touch the verification ledger. On a schedule this runs inside the `links` routine. For each batch of verified updates, create a topic branch (`task/check-scholar-batch-[BATCH_NUM]`), run verification (`npm test && npm run build && git diff --check`), submit a GitHub PR (or Issue), return to `main`, and continue with the next batch.
+> Audit missing Google Scholar citation profile links in `public/data.json`. Execute the audit and backfill workflow batch by batch until every missing entry has been audited (across runs; a scheduled run stops at its batch cap per `AGENTS.md`). Perform targeted web searches to identify authentic Google Scholar user IDs matching faculty publication records. Update `scholarUrl`; `npm test` stamps `lastUpdatedAt`. On a schedule this runs inside the `links` routine. For each batch of verified updates, create a topic branch (`task/check-scholar-batch-[BATCH_NUM]`), run verification (`npm test && npm run build && git diff --check`), submit a GitHub PR (or Issue), return to `main`, and continue with the next batch.
 
 ---
 
@@ -20,5 +20,5 @@ Ensure all scholars with active Google Scholar profiles have verified citation p
    ```bash
    npm test && npm run build && git diff --check
    ```
-5. **Timestamps:** `npm test` stamps `lastUpdatedAt` on changed entries; do not touch `maintenance/verification.json` (a single-field backfill is not a full review).
+5. **Timestamps:** `npm test` stamps `lastUpdatedAt` on changed entries.
 6. **Submission:** Submit per-batch edits as a PR on a topic branch, per the routing table in `AGENTS.md`. Never commit directly to `main`. Protected `directFields` conflicts go to an Issue.
