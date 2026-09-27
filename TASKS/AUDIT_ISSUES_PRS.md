@@ -174,17 +174,25 @@ Before modifying data or closing issues, ensure compliance with repository rules
 
 ---
 
-### Step 4: Validate, Commit, and Push
-1. **Run full verification pipeline:**
+### Step 4: Validate and Land the Fixes Through One PR
+Scheduled audit runs never push to `main` directly (see `docs/AUTOMATION.md` "Applying fixes"; the
+cloud permission check blocks it). Make every verified fix on one branch:
+1. **Branch from fresh `main` and commit one Issue at a time:**
+   ```bash
+   git checkout -B audit-fix/$(date -u +%F) origin/main
+   # ...apply the fix for one Issue...
+   git add -A public/data.json maintenance/ src/data.ts
+   git commit -m "fix(roster): <what changed> (Closes #<n>)"
+   ```
+2. **Validate, push the branch, open the PR, merge on green CI:**
    ```bash
    npm test && npm run build && git diff --check
+   git push -u origin HEAD
+   # open "[scheduled:audit] Verified Issue fixes (<date>)" listing each Issue and its evidence,
+   # with one "Closes #<n>" line per Issue (a comma-separated list only closes the first),
+   # wait for CI to pass, then squash-merge it (the GitHub MCP merge tool or gh pr merge --squash)
    ```
-2. **Commit and push changes:**
-   ```bash
-   git add maintenance/verification.json public/data.json src/data.ts
-   git commit -m "fix(roster): resolve open github issue updates, honors, and direct submissions"
-   git push origin main
-   ```
+   A local owner session may still commit a single verified fix straight to `main`.
 
 ---
 

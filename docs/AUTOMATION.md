@@ -165,10 +165,10 @@ Follow `TASKS/AUDIT_ISSUES_PRS.md`, including "Independent review". Also read
   identity URL in the Issue) against current `public/data.json`. If it hits the same person
   (often at a former institution), update that entry in place and close the Issue with its id; a
   retired-id hit gets its original id back. Otherwise re-verify eligibility live, add the entry, run
-  `npm run assign-profile-ids -- --apply`, update `maintenance/verification.json`, validate, push
-  to `main`, and close the Issue with the new id.
-- Side-finding and other correction Issues: verify live. If confirmed, fix, validate, push to
-  `main`, and close with what changed and the source. If the evidence is wrong, close with the
+  `npm run assign-profile-ids -- --apply`, update `maintenance/verification.json`, validate, and
+  put it in the run's fix PR (see "Applying fixes" below); the PR closes the Issue.
+- Side-finding and other correction Issues: verify live. If confirmed, fix, validate, and put it
+  in the run's fix PR with what changed and the source. If the evidence is wrong, close with the
   reason. Duplicates: keep the older (lower) id, even if the newer entry is richer or has protected
   fields; move the verified current facts and unique sourced fields onto it, delete the newer
   entry, and run `npm run retire-profile-id -- <newer> --into <older> --reason "..." --apply`,
@@ -180,10 +180,18 @@ Follow `TASKS/AUDIT_ISSUES_PRS.md`, including "Independent review". Also read
   and leave it open.
 - The auditor doesn't file side findings about its own items; it resolves them.
 - `[scheduled:review]` Issues are for the owner: leave them open and don't act on them.
-- Writing to `main`: the owner authorizes the auditor to push verified Issue fixes and new roster
-  entries straight to `main`, and the routine prompt says so. Keep that sentence when editing the
-  prompt. Without it, the 2026-09-25 and 09-26 runs could merge PRs but had every push to `main`
-  and every new entry denied, so verified fixes sat as Issue comments.
+- Applying fixes: the auditor never edits `main` directly. It makes all of a run's verified Issue
+  fixes and new entries on one branch, `audit-fix/<YYYY-MM-DD>`, with one commit per Issue
+  (`Closes #n` in each message), runs `npm test`, `npm run build`, and `git diff --check`, pushes
+  the branch, opens one PR titled `[scheduled:audit] Verified Issue fixes (<date>)` that lists each
+  Issue and its evidence, with one `Closes #n` line per Issue (a comma list only closes the first), and squash-merges it once CI is green, then comments on each Issue with
+  the change. This is the one PR the auditor merges itself: the Issues were filed by other agents or
+  the owner, so the review is still independent, and the PR adds a CI gate and a record. Why not
+  push to `main`: the cloud session's permission check blocks large unreviewed rewrites of
+  `public/data.json` headed for `main` ("Modify Shared Resources"), even with written authorization
+  in the prompt. The 2026-09-25, 09-26, and 09-27 runs had every such edit denied and left the fixes
+  as Issue comments, while branch edits and PR merges were always allowed. If the fix PR's CI is
+  red, leave it open with a comment; the next run fixes or closes it.
 - Automation health (Sunday runs only, after the normal work). Check:
   1. PRs open more than 3 days, and why (red CI, conflict, rejected but still open).
   2. Open PRs touching the same maintenance file: merge the first as usual, then rebase the rest
@@ -284,7 +292,8 @@ out-of-roster advisors or coauthors.
 ## Troubleshooting
 
 - **Fixes posted on Issues but never applied:** check the run log (`get_run_log`) for
-  `permission_denied`. See "Writing to `main`" in the auditor section.
+  `permission_denied`. See "Applying fixes" in the auditor section: fixes must go through the
+  `audit-fix/<date>` PR, not a direct edit of `main`.
 - **PR branches piling up:** agents can't delete branches (the cloud git proxy returns 403). The
   branch-cleanup Action does it; check its runs with `gh run list -w delete-pr-branches.yml`.
 

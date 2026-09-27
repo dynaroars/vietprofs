@@ -59,12 +59,12 @@ instead of restating it.
 | :--- | :--- |
 | New roster ID (any new `public/data.json` entry) | GitHub Issue, one per candidate |
 | Edit to existing IDs from a `TASKS/` playbook (links, portraits, honors, degrees) | Topic branch + PR; the auditor (`TASKS/AUDIT_ISSUES_PRS.md`) merges |
-| Auditor's own fix for a verified single Issue | Commit and push to `main`, then close the Issue |
+| Auditor's own fixes for verified Issues | One `audit-fix/<date>` branch + PR per run; the auditor squash-merges it on green CI (`docs/AUTOMATION.md` "Applying fixes") |
 | `scripts/maintain-roster.ts` controller output | Controller commits and pushes to `main` |
 | Relationship batches (`public/relationships.json`) | Commit and push to `main` |
 | Conflict with a protected `directFields` value, or anything needing an owner decision | GitHub Issue |
 
-Never merge your own PR. PRs and Issues are review handoffs: a separate auditor run checks them
+Never merge your own PR (the one exception is the auditor's `audit-fix` PR for Issues other agents or the owner filed). PRs and Issues are review handoffs: a separate auditor run checks them
 later (see "Independent review" in `TASKS/AUDIT_ISSUES_PRS.md`). Advance `maintenance/verification.json` only for a complete live review
 (see "Verification ledger and update timestamps" in `ROSTER_MAINTENANCE.md`); single-field
 backfills such as LinkedIn, Scholar, or website links leave the ledger
