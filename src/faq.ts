@@ -105,7 +105,7 @@ function renderFaqPage(): string {
             <li><strong>Teaching:</strong> Full-time, stable, continuing non-tenure-track teaching faculty (e.g., Professor of Instruction, Professor of the Practice, Senior Lecturer with permanent appointment).</li>
             <li><strong>Research:</strong> Permanent or stable faculty-equivalent research scientists at universities or eligible public/nonprofit research institutes (e.g., CNRS, Max Planck, INRIA, CSIRO, NIH, RIKEN) who lead research groups and mentor students.</li>
             <li><strong>Clinical:</strong> Stable clinical-faculty appointments (e.g., Clinical Professor, Clinical Associate Professor) on a documented institutional ladder.</li>
-            <li><strong>Academic Staff:</strong> University librarians or archivists with documented faculty rank or permanent academic status.</li>
+            <li><strong>Admin and Staff:</strong> Senior academic leaders (presidents, provosts, deans) without a faculty rank on another track, and university librarians or archivists with documented faculty rank or permanent academic status.</li>
             <li><strong>Emeritus:</strong> Formally conferred emeritus or emerita faculty.</li>
             <li><strong>Deceased:</strong> Historical scholars who held an eligible faculty or permanent research appointment outside Vietnam during their active careers.</li>
           </ul>

@@ -68,7 +68,7 @@ VietProfs recognizes seven distinct appointment tracks:
 - **Teaching:** Full-time, stable, continuing non-tenure-track teaching faculty (e.g., Professor of Instruction, Professor of the Practice, Senior Lecturer with permanent appointment).
 - **Research:** Permanent or stable faculty-equivalent research scientists at universities or eligible public/nonprofit research institutes (e.g., CNRS, Max Planck, INRIA, CSIRO, NIH, RIKEN) who lead research groups and mentor students.
 - **Clinical:** Stable clinical-faculty appointments (e.g., Clinical Professor, Clinical Associate Professor) on a documented institutional ladder.
-- **Academic Staff:** University librarians or archivists with documented faculty rank or permanent academic status.
+- **Admin and Staff:** Senior academic leaders (presidents, provosts, deans) without a faculty rank on another track, and university librarians or archivists with documented faculty rank or permanent academic status.
 - **Emeritus:** Formally conferred emeritus or emerita faculty.
 - **Deceased:** Historical scholars who held an eligible faculty or permanent research appointment outside Vietnam during their active careers.
 

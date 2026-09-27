@@ -64,7 +64,7 @@ const TRACK_SECTION: Record<string, number> = {
   'Teaching': 2,
   'Research': 3,
   'Clinical': 4,
-  'Academic staff': 5,
+  'Admin and Staff': 5,
   'Emeritus': 6,
   'Deceased': 7,
 };

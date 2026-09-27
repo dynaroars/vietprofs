@@ -42,8 +42,13 @@ Accepted tracks:
 - `Clinical`: a stable, full-time, continuing clinical-faculty appointment, such as Clinical
   Professor or a documented clinical-faculty ladder. Do not include adjunct or temporary clinical
   teaching.
-- `Academic staff`: university librarians and archivists with documented faculty status or a
-  senior, permanent academic appointment. Ordinary professional staff roles do not qualify.
+- `Admin and Staff`: senior academic leaders at an eligible university — presidents, chancellors,
+  provosts, deans, and associate deans — who hold no published faculty rank on another track, plus
+  university librarians and archivists with documented faculty status or a senior, permanent
+  academic appointment. Store the published title (e.g. `Dean`) in `rank`. A leader who also holds a
+  published professorship belongs on that faculty track instead. Ordinary professional staff roles
+  (for example HR, IT, advising, program coordination, communications, or center management) do
+  not qualify.
 - `Emeritus`: a formally conferred emeritus/emerita title following a tenure-line career. Prefer an active emeritus listing or a source documenting the conferral.
 - `Deceased`: deceased or historical scholars who held an eligible tenure-line, permanent teaching/research, or emeritus faculty appointment at a university or eligible public/nonprofit research institute outside Vietnam during their career.
 
@@ -107,7 +112,9 @@ residency and is not enough; mark a record unconfirmed if the evidence is not of
 Keep leadership titles in `rank` only when they are the institution's published academic title and
 the underlying academic appointment is independently eligible. Do not use a presidency,
 provostship, deanship, or center directorship to convert an otherwise ineligible administrative or
-temporary role into an academic appointment.
+temporary role into a Tenure-line, Teaching, Research, or Clinical appointment. A current
+university president, chancellor, provost, dean, or associate dean with no published faculty rank
+goes on the `Admin and Staff` track; center directors and other administrative roles do not.
 
 ### Institution type
 
@@ -550,7 +557,7 @@ To prevent desynchronization between data files and ensure interrupted runs are 
   an ID strictly higher than every ID currently in the roster. Tests, development, and builds only
   verify IDs and do not edit the roster. Preserve the generated ID when correcting a name,
   appointment, or other facts.
-- `track` must be `Tenure-line`, `Teaching`, `Research`, `Clinical`, `Academic staff`, or `Emeritus`.
+- `track` must be `Tenure-line`, `Teaching`, `Research`, `Clinical`, `Admin and Staff`, `Emeritus`, or `Deceased`.
 - `institutionType`, when present, must be `University`, `Public research institute`, or
   `Independent nonprofit research institute`. Omit it for ordinary university records; it is
   required for eligible non-university institutes, which must use the `Research` track.
@@ -561,7 +568,7 @@ To prevent desynchronization between data files and ensure interrupted runs are 
   appointment, degree, honor, portrait, source, or another stored fact. A verification that finds
   no data change must not advance it.
 - Preserve an existing Scholar URL by moving it to `scholarUrl` before replacing `profileUrl`. Verify replacement URLs follow redirects and do not return 404.
-- Use only `Assistant Professor`, `Associate Professor`, or `Professor` as the rank vocabulary for Tenure-line entries; use `Teaching` and `Emeritus` for those corresponding tracks. For Research, Clinical, and Academic staff entries, preserve the institution's published appointment title in `rank`. Preserve a Professor of Practice title in `rank` for Teaching entries when that is the institution's published title.
+- Use only `Assistant Professor`, `Associate Professor`, or `Professor` as the rank vocabulary for Tenure-line entries; use `Teaching` and `Emeritus` for those corresponding tracks. For Research, Clinical, and Admin and Staff entries, preserve the institution's published appointment title in `rank`. Preserve a Professor of Practice title in `rank` for Teaching entries when that is the institution's published title.
 - Add `phdYear` and `phdInstitution` only when a source explicitly states them. Never infer them from dates, CV chronology, or context. Institution names must not contain degree prefixes (e.g., "Ph.D. in ...").
 - Education degrees must follow chronological sanity: `undergradYear <= msYear <= phdYear <= postdocYear`, with at least a 2-year interval between `undergradYear` and `phdYear`. Legitimate mid-career master's degrees earned after a doctorate must be allowlisted in `MID_CAREER_MS_ALLOWLIST`. Run `npm run audit-evidence` to audit the roster for anomalies.
 - Record completed postdoctoral training when a source explicitly identifies the institution. Add

@@ -1,7 +1,7 @@
 # Discover New Faculty & Scholars (`discover_new_faculty.md`)
 
 > **Autonomous Goal Directive (`/goal TASKS/discover_new_faculty.md`):**  
-> Systematically search external university department directories, public research institutes, Google Scholar, DBLP, and academic conference author rosters to discover eligible Vietnamese and Vietnamese-diaspora faculty outside Vietnam who are not yet listed in `vietprofs`. Verify identity, appointment track (Tenure-line, Teaching, Research, Clinical, Academic staff, Emeritus), institution eligibility, and official current institutional profile URL according to `ROSTER_MAINTENANCE.md`. Every candidate here needs a brand-new `vp-####` ID, so submit all proposed new entries as a **GitHub Issue** (never a PR, and never a direct commit to `main`) with the evidence and proposed fields, and let the owner or the audit workflow assign the ID. Iterate in bounded batches until target research areas/universities are thoroughly scouted.
+> Systematically search external university department directories, public research institutes, Google Scholar, DBLP, and academic conference author rosters to discover eligible Vietnamese and Vietnamese-diaspora faculty outside Vietnam who are not yet listed in `vietprofs`. Verify identity, appointment track (Tenure-line, Teaching, Research, Clinical, Admin and Staff, Emeritus), institution eligibility, and official current institutional profile URL according to `ROSTER_MAINTENANCE.md`. Every candidate here needs a brand-new `vp-####` ID, so submit all proposed new entries as a **GitHub Issue** (never a PR, and never a direct commit to `main`) with the evidence and proposed fields, and let the owner or the audit workflow assign the ID. Iterate in bounded batches until target research areas/universities are thoroughly scouted.
 
 ---
 
@@ -15,7 +15,7 @@ Expand roster coverage by finding qualified Vietnamese and Vietnamese-diaspora s
 
 1. **Eligibility Criteria**:
    - Current academic appointment at a university or eligible public/nonprofit research institute outside Vietnam (e.g. CNRS, INRIA, Max Planck, NIH, NIST, NASA, Argonne, LBNL, Allen Institute).
-   - Accepted track: `Tenure-line`, `Teaching`, `Research`, `Clinical`, `Academic staff`, `Emeritus`, `Deceased`.
+   - Accepted track: `Tenure-line`, `Teaching`, `Research`, `Clinical`, `Admin and Staff`, `Emeritus`, `Deceased`.
    - Exclude adjunct, visiting, postdoctoral, graduate student, industry-only (e.g. Microsoft Research without university appointment), and temporary positions.
 2. **Data Fields Required**:
    - `name`, `university`, `country`, `rank`, `track`, `department`, `field`, `profileUrl`, `keywords`, `confirmed`.

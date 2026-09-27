@@ -242,9 +242,9 @@ const TRACK_INFO: Record<string, { label: string; tooltip: string }> = {
     label: 'clinical-track',
     tooltip: 'A stable clinical faculty appointment — not adjunct, visiting, or other temporary clinical work.',
   },
-  'Academic staff': {
-    label: 'academic-staff',
-    tooltip: 'A faculty-status or senior permanent academic librarian or archivist — not an ordinary staff or temporary role.',
+  'Admin and Staff': {
+    label: 'admin-and-staff',
+    tooltip: 'A senior academic leader (dean, provost, president) without a faculty rank on another track, or a faculty-status or senior permanent academic librarian or archivist — not an ordinary staff or temporary role.',
   },
   Emeritus: {
     label: 'emeritus',
@@ -735,7 +735,8 @@ async function init() {
   const requestedLocation = params.get('loc') ?? params.get('location');
   filterState.state = params.get('state') ?? '';
   const requestedField = params.get('field') ?? '';
-  const requestedTrack = params.get('track') ?? '';
+  // 'Academic staff' was renamed 'Admin and Staff'; keep old shared links working.
+  const requestedTrack = (params.get('track') ?? '').replace(/^Academic staff$/, 'Admin and Staff');
   const requestedInstitutionType = params.get('institutionType') ?? '';
   const requestedSort = params.get('sort') ?? '';
   let initialLocation = 'World';

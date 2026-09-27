@@ -43,7 +43,7 @@ Before spending time on enrichment, confirm the candidate can plausibly satisfy
 - A current (or accepted-and-dated incoming) appointment at a university or eligible
   public/nonprofit research institute outside Vietnam.
 - One of the accepted tracks (`Tenure-line`, `Teaching`, `Research`, `Clinical`,
-  `Academic staff`, `Emeritus`, `Deceased`).
+  `Admin and Staff`, `Emeritus`, `Deceased`).
 - Vietnamese or Vietnamese-diaspora signal (name is normally sufficient; no separate identity
   documentation is required once appointment eligibility is otherwise established).
 
