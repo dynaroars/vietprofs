@@ -673,7 +673,7 @@ test('escapeHtml safely handles undefined, null, and special characters', async 
 
 test('roster data strictly satisfies roster.schema.json', async () => {
   const { readFileSync } = await import('node:fs');
-  const schema = JSON.parse(readFileSync(new URL('../roster.schema.json', import.meta.url), 'utf8'));
+  const schema = JSON.parse(readFileSync(new URL('../public/roster.schema.json', import.meta.url), 'utf8'));
   assert.equal(schema.type, 'array');
   assert.ok(schema.items.properties.id);
   assert.ok(schema.items.properties.name);
