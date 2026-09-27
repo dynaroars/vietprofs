@@ -62,6 +62,11 @@ Keep new routines inside those windows.
 | `scholar` | `trig_01KLRvszaFCY869VkchMmiAE` | Sonnet 5 | `30 5 8,22 * *` | 8th and 22nd, 1:30 AM | [Scholar](#google-scholar-backfill-scholar) |
 | `education` | `trig_011kuvE1P6aHNn7fcw9XVnLS` | Sonnet 5 | `30 6 11,25 * *` | 11th and 25th, 2:30 AM | [Education](#education-chronology-education) |
 
+One-time: `review` (`trig_017xbcfAPtZwntWrPBW8W5A6`, Opus 5.5) runs once on 2026-10-26 at 14:00 UTC
+(10 AM ET), after every routine above has run at least twice. It changes nothing and files one
+`[scheduled:review] Automation setup review (2026-10-26)` Issue with per-routine results and
+recommendations for the owner. Until then, leave the setup as it is unless something is broken.
+
 Outside the cloud:
 
 | What | Where | When | Notes |
@@ -164,6 +169,7 @@ Follow `TASKS/AUDIT_ISSUES_PRS.md`, including "Independent review". Also read
 - Tracking Issues such as the link-health report: work up to 10 entries, post a progress comment,
   and leave it open.
 - The auditor doesn't file side findings about its own items; it resolves them.
+- `[scheduled:review]` Issues are for the owner: leave them open and don't act on them.
 - Writing to `main`: the owner authorizes the auditor to push verified Issue fixes and new roster
   entries straight to `main`, and the routine prompt says so. Keep that sentence when editing the
   prompt. Without it, the 2026-09-25 and 09-26 runs could merge PRs but had every push to `main`
