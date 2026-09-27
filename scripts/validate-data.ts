@@ -247,6 +247,7 @@ for (const [index, person] of roster.entries()) {
 // different people go in DISTINCT_PEOPLE with how that was confirmed.
 const DISTINCT_PEOPLE = new Set<string>([
   'vp-0972 vp-0973', // Katherine Nguyen (Rheumatology) and Katherine Nguyen Williams (Psychiatry), UC San Diego: separate UCSD profiles
+  'vp-0673 vp-1700', // Lan K. Nguyen (Biochemistry) and Lan Nguyen (Accounting), Monash: separate Monash research profiles (#223)
 ]);
 const identityOwners = new Map<string, string>();
 const rosterTokens = (roster as RosterEntry[]).map((person) => nameTokens(person.name));
