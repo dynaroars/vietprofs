@@ -46,7 +46,7 @@ everything a producer creates is at least ~19 hours old at the next night's audi
 auditor's 12-hour minimum. Producers run Mon–Sat, so every producer run is audited the following
 night; Sunday has no producers, so the Sun audit takes Saturday's output, overflow past the
 nightly caps, and the automation-health check. Frequencies (changed 2026-09-27): discovery,
-relationships, websites, and LinkedIn twice a week; the rest weekly. Portraits stays weekly
+relationships, and links twice a week; the rest weekly. Portraits stays weekly
 because its pending queue (71 new entries on 2026-09-27) would run dry within weeks at twice that.
 Keep new routines inside those windows.
 
@@ -55,13 +55,10 @@ Keep new routines inside those windows.
 | `audit` | `trig_01GeWQmgtoeJtaf7E2LsA7BA` | Opus 5.5 | `0 3 * * *` | Daily 11 PM (previous day) | [Auditor](#auditor-audit) |
 | `discover` | `trig_01R9AeywUniWNP3iK8XDw9ju` | Sonnet 5 | `30 5 * * 1,4` | Mon/Thu 1:30 AM | [Discovery](#discover-new-faculty-discover) |
 | `relationships` | `trig_01EgwQ418znNbFQ95ghg4p5E` | Sonnet 5 | `30 6 * * 1,4` | Mon/Thu 2:30 AM | [Relationships](#academic-relationships-relationships) |
-| `websites` | `trig_01RKg7at1hAC3cY8NHVN8VBU` | Sonnet 5 | `30 5 * * 2,5` | Tue/Fri 1:30 AM | [Websites](#websites-and-labs-websites) |
 | `overviews` | `trig_01NUyNrE7x8WZgLMHbpCU7Zi` | Sonnet 5 | `30 6 * * 2` | Tue 2:30 AM | [Overviews](#research-overviews-overviews) |
-| `linkedin` | `trig_0162DEq1aGRH3vWrEtpKoNmy` | Sonnet 5 | `0 5 * * 3,6` | Wed/Sat 1 AM | [LinkedIn](#linkedin-backfill-linkedin) |
-| `scholar` | `trig_01KLRvszaFCY869VkchMmiAE` | Sonnet 5 | `0 6 * * 3` | Wed 2 AM | [Scholar](#google-scholar-backfill-scholar) |
+| `links` | `trig_0162DEq1aGRH3vWrEtpKoNmy` | Sonnet 5 | `0 5 * * 3,6` | Wed/Sat 1 AM | [Links](#links-links) |
 | `portraits` | `trig_01D58Azgkh8kdKFBdFNAXox2` | Sonnet 5 | `0 5 * * 4` | Thu 1 AM | [Portraits](#portraits-portraits) |
 | `honors` | `trig_012eH5rSZwQw7PXiQPSRj9Wn` | Sonnet 5 | `30 6 * * 5` | Fri 2:30 AM | [Honors & leads](#honors-and-lead-triage-honors) |
-| `education` | `trig_011kuvE1P6aHNn7fcw9XVnLS` | Sonnet 5 | `30 6 * * 6` | Sat 2:30 AM | [Education](#education-chronology-education) |
 
 One-time: `review` (`trig_017xbcfAPtZwntWrPBW8W5A6`, Opus 5.5) runs once on 2026-10-26 at 14:00 UTC
 (10 AM ET), after every routine above has run at least four times. It changes nothing and files one
@@ -79,8 +76,14 @@ Outside the cloud:
 
 Retired routines (deleted; no longer at claude.ai/code/routines). The routines above replace them:
 
-- `vietprofs-linkedin-url-backfill` (every 2h) → `linkedin`. Same task; its side-findings behavior now applies to all producers.
-- `vietprofs-link-health-sweep` (Mon) → link-health Action + `websites` + `audit`. Running `check-links` inside the cloud sandbox is useless: on 2026-09-21, 4,794 of 5,501 URLs returned egress-proxy 403s. Its prompt also allowed deleting fields or entries over "dead" links. Link detection now runs on GitHub runners with real internet access.
+- `linkedin` (Wed/Sat), `scholar` (Wed), and `websites` (Tue/Fri) → `links` on 2026-09-27, which
+  reuses the `linkedin` routine id. Three routines each reading the same pages for one field
+  tripled the writers on `public/data.json`. `scholar` (`trig_01KLRvszaFCY869VkchMmiAE`) and
+  `websites` (`trig_01RKg7at1hAC3cY8NHVN8VBU`) are disabled; delete them in the web UI.
+- `education` (`trig_011kuvE1P6aHNn7fcw9XVnLS`, Sat) → retired 2026-09-27 when the degree years,
+  majors, and other degrees it mostly maintained were removed. Disabled; delete it in the web UI.
+- `vietprofs-linkedin-url-backfill` (every 2h) → `linkedin`, later `links`. Same task; its side-findings behavior now applies to all producers.
+- `vietprofs-link-health-sweep` (Mon) → link-health Action + `links` + `audit`. Running `check-links` inside the cloud sandbox is useless: on 2026-09-21, 4,794 of 5,501 URLs returned egress-proxy 403s. Its prompt also allowed deleting fields or entries over "dead" links. Link detection now runs on GitHub runners with real internet access.
 
 ## Conventions for every scheduled run
 
@@ -216,28 +219,19 @@ Follow `TASKS/AUDIT_ISSUES_PRS.md`, including "Independent review". Also read
   close it when a check comes back clean. Never open a second one. When everything is healthy
   and no such Issue is open, do nothing.
 
-### LinkedIn backfill (`linkedin`)
+### Links (`links`)
 
-Playbook: `TASKS/backfill_linkedin.md`. Cap: 2 batches of 15 entries missing `linkedinUrl`.
-Continue in id order after the highest id covered by recent LinkedIn backfill PRs (open or
-merged), wrapping at the end of the roster. Each candidate means reading the person's official
-profile, Scholar, and homepage, so this routine is the main source of side findings. Apply the
-rules above to everything you read.
-
-### Google Scholar backfill (`scholar`)
-
-Playbook: `TASKS/check_google_scholar.md`, plus step 3 of "Periodic full-roster refresh" in
-`ROSTER_MAINTENANCE.md`. Cap: 2 batches of 15 entries missing `scholarUrl`, in id order after the
-last `[scheduled:scholar]` PR, wrapping. Never match on name alone (`npm test` rejects a Scholar
-URL shared by two people). A Scholar profile's affiliation line is a common source of
-stale-institution findings.
-
-### Websites and labs (`websites`)
-
-Playbook: `TASKS/verify_websites_and_labs.md`, plus step 2 of "Periodic full-roster refresh" and
-"Periodic link-health sweep". Cap: 2 batches of 15. Handle entries from the open link-health
-report Issue first, then continue in id order after the last `[scheduled:websites]` PR. For a dead
-link, search the name and university fresh before calling it unfixable.
+Playbooks: `TASKS/verify_websites_and_labs.md`, `TASKS/check_google_scholar.md`, and
+`TASKS/backfill_linkedin.md`, plus steps 2-3 of "Periodic full-roster refresh" and "Periodic
+link-health sweep". Cap: 2 batches of 15 entries. Handle entries from the open link-health report
+Issue first, then continue in id order after the highest id in the last `[scheduled:links]` PR,
+wrapping at the end of the roster; pick entries missing `scholarUrl`, `linkedinUrl`, or
+`websiteUrl`/`labUrl`. For each entry, read the official profile, homepage, and Scholar once and
+settle all its link fields together: check any stored website or lab link, fill a missing Scholar
+or LinkedIn only on a strict identity match (never name alone; `npm test` rejects a Scholar or
+LinkedIn URL shared by two entries), and for a dead link search the name and university fresh
+before calling it unfixable. This routine reads the most first-party pages, so it is the main
+source of side findings (a Scholar affiliation line often shows a stale institution).
 
 ### Portraits (`portraits`)
 
@@ -254,13 +248,6 @@ Playbook: `TASKS/enrich_research_overviews.md`. Cap: one 20-profile snapshot
 (`npm run enrich -- snapshot/status/collect/apply/finalize`). Write only from the scholar's own
 pages, check for namesakes, and follow the ROSTER_MAINTENANCE.md quality rules. Overviews don't
 change `lastUpdatedAt`.
-
-### Education chronology (`education`)
-
-Playbook: `TASKS/audit_education_chronology.md`, plus "Education-field consistency sweep". Cap:
-20 entries, in this order: a year without its institution; out-of-order years; no education
-fields (prefer medical-center profiles). Add only explicit facts, never inferred years.
-Professional degrees go in `otherDegrees`.
 
 ### Honors and lead triage (`honors`)
 
