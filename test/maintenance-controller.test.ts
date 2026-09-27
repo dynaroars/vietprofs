@@ -31,8 +31,8 @@ const people: RosterEntry[] = [
 
 test('maintenance selection prioritizes missing and oldest verification timestamps', () => {
   const verification = {
-    'Recent Person': '2026-08-01T00:00:00.000Z',
-    'Old Person': '2024-08-01T00:00:00.000Z',
+    'vp-0001': '2026-08-01T00:00:00.000Z',
+    'vp-0002': '2024-08-01T00:00:00.000Z',
   };
   assert.deepEqual(selectDueEntries(people, verification, {
     limit: 2,
@@ -72,7 +72,7 @@ test('an interrupted batch commit is recognized and remains pushable', () => {
 
 test('maintenance selection can explicitly include recently verified entries', () => {
   const verification = Object.fromEntries(people.map((person, index) => [
-    person.name,
+    person.id,
     `2026-08-0${index + 1}T00:00:00.000Z`,
   ]));
   assert.deepEqual(selectDueEntries(people, verification, { all: true, limit: 2 }), [
@@ -82,7 +82,7 @@ test('maintenance selection can explicitly include recently verified entries', (
 });
 
 test('maintenance selection excludes names already processed in an earlier batch', () => {
-  const verification = Object.fromEntries(people.map((person) => [person.name, '2026-08-01T00:00:00.000Z']));
+  const verification = Object.fromEntries(people.map((person) => [person.id, '2026-08-01T00:00:00.000Z']));
   assert.deepEqual(selectDueEntries(people, verification, {
     all: true,
     limit: 3,

@@ -65,7 +65,7 @@ python3 scripts/fast_portrait_analyzer.py
   ```
 - Remove a confirmed non-human portrait by hand, only after looking at the image: delete the
   file under `public/portraits/`, drop `portrait`/`portraitSource` from the entry (never on an
-  entry whose `directFields` protect them), and set `lastUpdatedAt`. Aspect ratio alone is not
+  entry whose `directFields` protect them); `npm test` stamps `lastUpdatedAt`. Aspect ratio alone is not
   evidence — a ratio-only bulk purge once removed 103 valid headshots (#106).
 - Run the full portrait audit suite:
   ```bash

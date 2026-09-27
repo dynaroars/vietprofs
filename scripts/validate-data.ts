@@ -79,7 +79,7 @@ const [roster, verification, enrichment, evidence, relationships] = await Promis
 ]);
 if (!Array.isArray(roster) || roster.length === 0) fail(rosterFile, 'must contain a non-empty array');
 if (!verification || typeof verification !== 'object' || Array.isArray(verification)) {
-  fail(verificationFile, 'must contain an object keyed by canonical roster name');
+  fail(verificationFile, 'must contain an object keyed by roster id');
 }
 if (!enrichment || enrichment.version !== 1 || !Array.isArray(enrichment.ids) || !Array.isArray(enrichment.batches) || !enrichment.entries || typeof enrichment.entries !== 'object') {
   fail(enrichmentFile, 'must contain a versioned ID-keyed enrichment ledger');
@@ -314,12 +314,13 @@ for (const [index, person] of (roster as RosterEntry[]).entries()) {
   }
 }
 
-for (const name of names) {
-  if (!Object.hasOwn(verification, name)) fail(verificationFile, `missing verification timestamp for ${name}`);
-  validateTimestamp(verificationFile, verification[name], name, 'lastVerifiedAt');
+// Keyed by id, so renames and merges never orphan a timestamp.
+for (const id of rosterIds) {
+  if (!Object.hasOwn(verification, id)) fail(verificationFile, `missing verification timestamp for ${id}`);
+  validateTimestamp(verificationFile, verification[id], id, 'lastVerifiedAt');
 }
-for (const name of Object.keys(verification)) {
-  if (!names.has(name)) fail(verificationFile, `contains stale entry for ${name}`);
+for (const id of Object.keys(verification)) {
+  if (!rosterIds.has(id)) fail(verificationFile, `contains stale entry for ${id}`);
 }
 const relationshipErrors = validateRelationshipDatabase(relationships, roster);
 if (relationshipErrors.length) fail(relationshipsFile, relationshipErrors.join('; '));

@@ -20,5 +20,5 @@ Achieve complete, verified LinkedIn profile coverage across the entire roster.
    ```bash
    npm test && npm run build && git diff --check
    ```
-5. **Timestamps:** Set `lastUpdatedAt` on changed entries; do not touch `maintenance/verification.json` (a single-field backfill is not a full review).
+5. **Timestamps:** `npm test` stamps `lastUpdatedAt` on changed entries; do not touch `maintenance/verification.json` (a single-field backfill is not a full review).
 6. **Submission:** Submit per-batch edits as a PR on a topic branch, per the routing table in `AGENTS.md`. Never commit directly to `main`. Protected `directFields` conflicts go to an Issue.

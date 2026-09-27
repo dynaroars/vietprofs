@@ -25,5 +25,5 @@ Ensure all personal homepage and lab links across faculty directory profiles are
    ```bash
    npm test && npm run build && git diff --check
    ```
-4. **Timestamps:** Set `lastUpdatedAt` on changed entries; do not touch `maintenance/verification.json` (a single-field backfill is not a full review).
+4. **Timestamps:** `npm test` stamps `lastUpdatedAt` on changed entries; do not touch `maintenance/verification.json` (a single-field backfill is not a full review).
 5. **Submission:** Submit per-batch edits as a PR on a topic branch, per the routing table in `AGENTS.md`. Never commit directly to `main`. Protected `directFields` conflicts go to an Issue.

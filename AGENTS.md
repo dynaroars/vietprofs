@@ -67,7 +67,7 @@ instead of restating it.
 Never merge your own PR. PRs and Issues are review handoffs: a separate auditor run checks them
 later (see "Independent review" in `TASKS/AUDIT_ISSUES_PRS.md`). Advance `maintenance/verification.json` only for a complete live review
 (see "Verification ledger and update timestamps" in `ROSTER_MAINTENANCE.md`); single-field
-backfills such as LinkedIn, Scholar, or website links set `lastUpdatedAt` but leave the ledger
+backfills such as LinkedIn, Scholar, or website links leave the ledger
 alone.
 
 ## Unattended and scheduled runs

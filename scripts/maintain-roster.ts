@@ -480,7 +480,7 @@ export function selectDueEntries(roster: Roster, verification: Record<string, st
   const cutoff = now - staleDays * 86_400_000;
   return roster
     .map((person, index) => {
-      const timestamp = Date.parse(verification[person.name]);
+      const timestamp = Date.parse(verification[person.id]);
       const missingCount = COMPLETENESS_FIELDS.filter((field) => !(person as unknown as Record<string, unknown>)[field]).length;
       const priority = Number.isNaN(timestamp)
         ? -Infinity
@@ -1236,15 +1236,16 @@ async function applyProposal(current: JsonRecord): Promise<void> {
   if (index < 0 && finalName) index = roster.findIndex((person) => person.name === finalName);
 
   if (current.proposal === null) {
-    if (index >= 0) roster.splice(index, 1);
-    delete verification[current.name];
+    if (index >= 0) {
+      delete verification[roster[index].id];
+      roster.splice(index, 1);
+    }
   } else {
     if (index < 0) throw new Error(`cannot apply proposal because ${current.name} is missing`);
     const next = { id: current.proposal.id, ...current.proposal };
     next.lastUpdatedAt = current.substantiveChange ? approvalTime : current.baseline.lastUpdatedAt;
     roster[index] = next;
-    if (finalName !== current.name) delete verification[current.name];
-    verification[finalName] = approvalTime;
+    verification[next.id] = approvalTime;
   }
   // A reviewed removal can leave a formerly necessary " - University" disambiguator orphaned.
   // Normalize those deterministic display-only suffixes before validation/commit so a batch does
@@ -1258,10 +1259,7 @@ async function applyProposal(current: JsonRecord): Promise<void> {
     if (!person.name.includes(' - ')) continue;
     const baseName = person.name.split(' - ')[0];
     if (nameCounts.get(baseName) !== 1) continue;
-    const oldName = person.name;
     person.name = baseName;
-    verification[baseName] = verification[oldName];
-    delete verification[oldName];
   }
   await writeAtomic(rosterPath, roster);
   await writeAtomic(verificationPath, verification);

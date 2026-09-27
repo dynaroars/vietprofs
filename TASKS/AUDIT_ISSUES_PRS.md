@@ -154,7 +154,7 @@ Before modifying data or closing issues, ensure compliance with repository rules
        header pointing at the page that linked it.
 
    - **C2. Duplicate entries (`Duplicate roster entry:` Issues, or two IDs found for one person):**
-     - Keep the **older (lower) ID**, even when the newer entry has protected `directFields` or more data; protected values move with the data onto the older ID. Follow `ROSTER_MAINTENANCE.md` "One person, one ID": put the verified current facts and unique sourced fields on the older entry, drop fields that only fit the other institution, delete the newer entry, then run `npm run retire-profile-id -- <newer-id> --into <older-id> --reason "..." --apply` and fix `maintenance/verification.json`'s name keys.
+     - Keep the **older (lower) ID**, even when the newer entry has protected `directFields` or more data; protected values move with the data onto the older ID. Follow `ROSTER_MAINTENANCE.md` "One person, one ID": put the verified current facts and unique sourced fields on the older entry, drop fields that only fit the other institution, delete the newer entry, then run `npm run retire-profile-id -- <newer-id> --into <older-id> --reason "..." --apply` (it also moves the `maintenance/verification.json` row).
      - If the older ID was already removed (a merge that kept the newer one, or a person re-added after removal), restore it: `npm run retire-profile-id -- <newer-id> --into <older-id> --reason "..." --apply` renames the entry back.
 
    - **D. Mismatched `researchOverview`:**
@@ -163,7 +163,6 @@ Before modifying data or closing issues, ensure compliance with repository rules
 
    - **E. Multi-item Maintenance Sweeps:**
      - Update verified items.
-     - If a canonical `name` is changed (e.g., `Son Phan Lam Tran` → `Lam-Son Phan Tran`), rename the corresponding key in `maintenance/verification.json`.
 
 ---
 
@@ -173,8 +172,7 @@ Before modifying data or closing issues, ensure compliance with repository rules
    npm run assign-profile-ids -- --apply
    ```
 2. **Update `maintenance/verification.json`:**
-   - Map every roster entry name to an ISO timestamp.
-   - Preserve alphabetical key sorting.
+   - Add a row for each new id (keyed by id) with the review timestamp. Renames need no change.
 3. **Update `src/data.ts` (Field Overrides):**
    - If a new institution or department falls into unmapped `Others`, add an entry to `FIELD_OVERRIDES` in `src/data.ts`.
 4. **Update `maintenance/enrichment.json`:**

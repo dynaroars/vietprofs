@@ -390,8 +390,7 @@ graduation detail, award, or other fact merely because it appears at the supplie
 is not about a person or the user explicitly requests only a summary or another narrower action,
 follow that context instead.
 
-Update `lastUpdatedAt` whenever this review changes substantive roster data. Advance the
-verification ledger only if the work also completes the full live review required by the
+Advance the verification ledger only if the work also completes the full live review required by the
 verification-ledger and periodic-refresh rules; a supplied link or partial correction alone is not
 enough.
 
@@ -516,7 +515,7 @@ Lead-queue entries (currently `maintenance/hieuphay-leads.json`) are **leads onl
 To prevent desynchronization between data files and ensure interrupted runs are cleanly resumable:
 
 1. Update `public/data.json` with new entries.
-2. Update `maintenance/verification.json` with entry verification timestamps matching canonical roster names.
+2. After assigning ids (step 4), add each new id to `maintenance/verification.json` with its verification timestamp.
 3. Update the lead file (`maintenance/hieuphay-leads.json`) with updated candidate statuses (`included`, `duplicate`, `excluded`, `unresolved`).
 4. Run immutable ID assignment:
    ```bash
@@ -566,7 +565,7 @@ later qualify again. None of that is a new person, so none of it gets a new ID.
   (`institutionType`, an old `profileUrl`, a stale portrait). Protected `directFields` values move
   with the data: the rule protects the value, not the ID it was stored under. Delete the newer
   entry, then run `npm run retire-profile-id -- <newer-id> --into <older-id> --reason "..." --apply`
-  and fix `maintenance/verification.json`'s name keys. Never keep the newer ID because it has
+  (which also moves the `maintenance/verification.json` row). Never keep the newer ID because it has
   protected fields or looks more complete.
 - **Retired IDs are permanent.** `maintenance/retired-ids.json` records every ID ever removed,
   with what replaced it and why. `assign-profile-ids` never hands them out again, the build writes
@@ -598,11 +597,9 @@ later qualify again. None of that is a new person, so none of it gets a new ID.
   `Independent nonprofit research institute`. Omit it for ordinary university records; it is
   required for eligible non-university institutes, which must use the `Research` track.
 - `profileUrl` must be a current, working academic or official institutional profile and must not be a Google Scholar URL. Store Scholar separately in `scholarUrl` (must be a canonical citations profile URL `https://scholar.google.com/citations?user=...`, never a search query). Store a maintained personal or lab homepage in `websiteUrl`; store a verified LinkedIn profile in `linkedinUrl` (must be a direct personal profile URL `https://linkedin.com/in/...` or `https://www.linkedin.com/in/...`, never search or company pages). Verify Scholar and LinkedIn matches strictly: confirm name, institution, and publication/field overlap before attaching them — never guess from name alone. Prefer LinkedIn profiles directly linked from the faculty member's institutional bio or homepage.
-- `lastUpdatedAt` is required and must be a canonical UTC ISO timestamp in
-  `YYYY-MM-DDTHH:mm:ss.sssZ` form. It records when roster content for
-  the person last materially changed, whether by adding the person or changing a profile,
-  appointment, degree, honor, portrait, source, or another stored fact. A verification that finds
-  no data change must not advance it.
+- `lastUpdatedAt` is required, but never set it by hand: `npm test` (via `npm run stamp-updates`)
+  stamps every entry whose content changed since the last commit, and new entries. It records when
+  roster content for the person last changed; overviews and `directFields` don't count.
 - Preserve an existing Scholar URL by moving it to `scholarUrl` before replacing `profileUrl`. Verify replacement URLs follow redirects and do not return 404.
 - `rank` is the career level only, one of `Assistant Professor`, `Associate Professor`, `Professor`, `Lecturer`, `Senior Lecturer`, `Researcher`, `Senior Researcher`, `Librarian`, or `Administrator` (`npm test` rejects anything else). The track carries the appointment type, and the display combines them ("Assistant Clinical Professor", "Teaching Professor", "Professor Emeritus"). Don't store the published title, a named chair, a department ("of Medicine"), or a leadership role; the linked profile has those, and named chairs go in `honors`. Map by level, not by translating systems: `Clinical Assistant Professor` → `Assistant Professor` (Clinical track); `Research Scientist`, `Chargé(e) de recherche`, `Staff Scientist` → `Researcher`; `Directeur de recherche`, `Principal`/`Senior Scientist`, `Group Leader` → `Senior Researcher`; `Distinguished`/`Full`/`Endowed Professor` → `Professor`. Keep Commonwealth `Lecturer` and `Senior Lecturer` as they are; never equate them with US ranks. A modern UK `Reader` is `Associate Professor`. Leave `rank` empty when the level isn't stated (e.g. a bare emeritus title); never guess.
 - Add `phdYear` and `phdInstitution` only when a source explicitly states them. Never infer them from dates, CV chronology, or context. Institution names must not contain degree prefixes (e.g., "Ph.D. in ...").
@@ -710,11 +707,12 @@ broadly until that sample demonstrates very high precision.
 ### Verification ledger and update timestamps
 
 `lastVerifiedAt` is maintenance state, not public roster content. Store it in the tracked
-`maintenance/verification.json` ledger, keyed by the exact canonical `name` in
-`public/data.json`; do not add it to a public roster entry. Tracking the ledger in Git lets weekly
-automation resume on another machine or fresh clone, while keeping it out of the site build.
-The validator requires exactly one ledger entry for every roster name and rejects stale entries.
-When adding, renaming, or removing a person, update the public roster and ledger together.
+`maintenance/verification.json` ledger, keyed by roster id (`"vp-0037": "<timestamp>"`); do not
+add it to a public roster entry. Tracking the ledger in Git lets weekly automation resume on
+another machine or fresh clone, while keeping it out of the site build. The validator requires
+exactly one ledger entry for every roster id and rejects stale ones. Because it is keyed by id, a
+rename needs no ledger change; a new entry gets its row after `assign-profile-ids`, and
+`retire-profile-id` handles merges.
 
 Set a ledger timestamp for a new entry only after independently verifying every part of the
 inclusion standard and all required roster fields. For an existing entry, advance it only after a
@@ -731,14 +729,10 @@ controller, not a research model, should generate the timestamp only after all r
 verification and validation gates pass. Never backdate a new review, infer a timestamp from page
 metadata, or set a future value.
 
-Set `lastUpdatedAt` when adding a new entry and whenever at least one substantive field in an
-existing entry changes. For a new entry, `lastUpdatedAt` and the ledger timestamp will normally be
-the same. During a refresh that changes facts, set both to the successful review time; during a
-complete refresh that confirms the existing facts without changing them, advance only the ledger
-timestamp. Do not treat timestamp-only edits, key reordering, formatting, generated-file
-changes, or maintenance-state changes as roster updates. The maintenance controller should
-compare substantive fields and generate `lastUpdatedAt` after an approved patch rather than
-allowing a research model to choose it.
+`lastUpdatedAt` is generated, not chosen: `npm run stamp-updates` (run by `npm test`) compares each
+entry with the last commit and stamps the ones whose content changed, ignoring key order,
+overviews, and `directFields`. The maintenance controller stamps its own approved patches. Only the
+ledger timestamp is set by hand, and only for a complete review.
 
 ### Honors and awards eligibility
 
@@ -936,10 +930,9 @@ order:
 6. **Record successful verification.** After all applicable checks above are complete and no
    material question remains unresolved, set the person's timestamp in
    `maintenance/verification.json` to the current UTC time. Do this even if the review found no
-   other change, so future refreshes can reliably choose the oldest entries. If the review changed
-   any substantive roster data, set `lastUpdatedAt` to the same time; otherwise preserve the
-   existing `lastUpdatedAt`. If the review is incomplete, preserve the old timestamps and retry
-   later.
+   other change, so future refreshes can reliably choose the oldest entries. (`lastUpdatedAt` is
+   stamped automatically if facts changed.) If the review is incomplete, preserve the old ledger
+   timestamp and retry later.
 
 ### Automated maintenance controller usage
 
@@ -1089,8 +1082,7 @@ never infer a year from chronology, and route a professional degree without a de
 DMD, DO, PharmD, MFA, MBA, etc.) through `otherDegrees` rather than forcing it into `phdInstitution`
 or `msInstitution`. Store explicitly stated fields of study in `phdMajor`, `msMajor`, or
 `undergradMajor`; for entries in `otherDegrees`, use that object's `major` field. Do not introduce
-alternate degree keys: the data validator rejects fields outside the canonical schema. Update
-`lastUpdatedAt` for any record that gains a fact. Do not advance
+alternate degree keys: the data validator rejects fields outside the canonical schema. Do not advance
 `lastVerifiedAt` in the ledger for this sweep alone — it does not perform the full live review the
 periodic refresh requires, so advancing the ledger would let that record skip a real refresh later.
 When a scan turns up no education fields and the primary source states none, leave the record

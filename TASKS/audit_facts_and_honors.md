@@ -36,8 +36,8 @@
 ## 1. Core Principles & Governance Rules
 
 `directFields` protection and the direct-update rules are defined in `AGENTS.md` ("Direct
-updates"). Set `lastUpdatedAt` whenever a substantive fact (appointment, rank, degree, honor,
-portrait) changes; advance `maintenance/verification.json` only for a complete live review.
+updates"). `npm test` stamps `lastUpdatedAt` on changed entries; advance `maintenance/verification.json`
+(keyed by id) only for a complete live review.
 
 ---
 

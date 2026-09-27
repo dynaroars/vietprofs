@@ -97,8 +97,8 @@ them share these rules:
    They never add a person to `public/data.json` or assign an id. New people always go in an
    Issue. Protected `directFields` values (name, Vietnamese name, honors, portrait) are never edited; a
    conflict goes in an Issue. Appointment facts and links are never protected.
-5. **Timestamps.** Set `lastUpdatedAt` on changed entries. Only a complete live review advances
-   `maintenance/verification.json`, so no routine here touches it except the auditor when it adds
+5. **Timestamps.** Never set `lastUpdatedAt` by hand; `npm test` stamps changed entries. Only a
+   complete live review advances `maintenance/verification.json`, so no routine here touches it except the auditor when it adds
    a new entry.
 6. **Unverifiable means untouched.** If the egress proxy blocks a source, don't accept the fact,
    and don't delete an existing value because of the block. List those entries in the PR/Issue so
@@ -167,8 +167,9 @@ Follow `TASKS/AUDIT_ISSUES_PRS.md`, including "Independent review". Also read
   `main`, and close with what changed and the source. If the evidence is wrong, close with the
   reason. Duplicates: keep the older (lower) id, even if the newer entry is richer or has protected
   fields; move the verified current facts and unique sourced fields onto it, delete the newer
-  entry, run `npm run retire-profile-id -- <newer> --into <older> --reason "..." --apply`, and fix
-  its `maintenance/verification.json` key (`ROSTER_MAINTENANCE.md` "One person, one ID").
+  entry, and run `npm run retire-profile-id -- <newer> --into <older> --reason "..." --apply`,
+  which also moves the `maintenance/verification.json` row (`ROSTER_MAINTENANCE.md` "One person,
+  one ID").
 - Needs an owner decision (protected `directFields` conflict, ambiguous identity or eligibility,
   unverifiable from the cloud): comment with findings and a recommendation, and leave it open.
 - Tracking Issues such as the link-health report: work up to 10 entries, post a progress comment,
