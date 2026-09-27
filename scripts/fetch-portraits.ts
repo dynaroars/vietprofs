@@ -18,7 +18,6 @@ const execFileAsync = promisify(execFile);
 const root = resolve('.');
 const dataPath = join(root, 'public/data.json');
 const queuePath = join(root, 'maintenance/portrait-queue.json');
-const missingPath = join(root, 'maintenance/missing-portraits.json');
 const provenancePath = join(root, 'maintenance/portrait-provenance.json');
 const fixturePath = join(root, 'maintenance/portrait-audit-sample.json');
 const portraitsDir = join(root, 'public/portraits');
@@ -152,7 +151,6 @@ const queue = syncQueue(await loadQueue(people), people);
 const ledger = await loadLedger();
 async function writeQueue() {
   await writeFile(queuePath, `${JSON.stringify(queue, null, 2)}\n`);
-  await writeFile(missingPath, `${JSON.stringify(queue.filter((item) => item.status === 'unresolved' || item.status === 'pending'), null, 2)}\n`);
 }
 if (args.has('--status')) {
   if (args.has('--sync')) await writeQueue();
