@@ -91,6 +91,7 @@ export {
   INSTITUTION_TYPES,
   LOCATION_LABELS,
   LOCATIONS,
+  RANKS,
   TRACKS,
 } from './roster-constants.ts';
 
@@ -312,22 +313,17 @@ export function hasEnoughPeopleForRosterHub(memberCount: number): boolean {
   return memberCount >= MIN_ROSTER_HUB_SIZE;
 }
 
-// Keep the public rank vocabulary intentionally small. Institution-specific honorifics and
-// appointment wording belong on the linked profile; the directory only needs the career stage.
+// The displayed title combines the stored career level (`rank`, one of RANKS) with the track, so
+// a Clinical-track Assistant Professor reads "Assistant Clinical Professor". Nothing is converted
+// between systems: a Lecturer stays a Lecturer.
 export function canonicalRank(person: Pick<RosterEntry, 'track' | 'rank'>): string | undefined {
-  if (person.track === 'Emeritus') return 'Emeritus';
-  if (person.track === 'Research') return 'Research Scientist';
-  if (person.track === 'Teaching' || person.track === 'Clinical') {
-    const label = person.track;
-    if (/assistant/i.test(person.rank ?? '')) return `Assistant ${label} Professor`;
-    if (/associate/i.test(person.rank ?? '')) return `Associate ${label} Professor`;
-    if (/professor/i.test(person.rank ?? '')) return `${label} Professor`;
-    return label;
-  }
-  if (person.track !== 'Tenure-line') return person.rank;
-  if (/assistant/i.test(person.rank ?? '') || /^lecturer/i.test(person.rank ?? '')) return 'Assistant Professor';
-  if (/associate/i.test(person.rank ?? '') || /senior lecturer|reader/i.test(person.rank ?? '')) return 'Associate Professor';
-  return 'Professor';
+  const { rank, track } = person;
+  if (track === 'Emeritus') return rank ? `${rank} Emeritus` : 'Emeritus';
+  if (!rank) return track;
+  const qualifier = track === 'Teaching' || track === 'Clinical' || track === 'Research' ? track : '';
+  if (qualifier && rank === 'Professor') return `${qualifier} Professor`;
+  if (qualifier && (rank === 'Assistant Professor' || rank === 'Associate Professor')) return rank.replace(' Professor', ` ${qualifier} Professor`);
+  return rank;
 }
 
 // The roster's canonical `name` stays in the form used by the institution. This companion

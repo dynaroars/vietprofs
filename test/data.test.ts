@@ -285,20 +285,19 @@ test('the roster has no unmapped Others entries in the current snapshot', () => 
   );
 });
 
-test('rank labels use the simplified public vocabulary', () => {
-  assert.equal(canonicalRank({ track: 'Tenure-line', rank: 'Distinguished Professor' }), 'Professor');
-  assert.equal(canonicalRank({ track: 'Tenure-line', rank: 'Associate Professor of Finance' }), 'Associate Professor');
-  assert.equal(canonicalRank({ track: 'Tenure-line', rank: 'Assistant Professor of Practice' }), 'Assistant Professor');
-  assert.equal(canonicalRank({ track: 'Tenure-line', rank: 'Lecturer' }), 'Assistant Professor');
-  assert.equal(canonicalRank({ track: 'Tenure-line', rank: 'Senior Lecturer' }), 'Associate Professor');
-  assert.equal(canonicalRank({ track: 'Tenure-line', rank: 'Reader' }), 'Associate Professor');
-  assert.equal(canonicalRank({ track: 'Teaching', rank: 'Senior Lecturer II' }), 'Teaching');
-  assert.equal(canonicalRank({ track: 'Research', rank: 'Assistant Research Professor' }), 'Research Scientist');
-  assert.equal(canonicalRank({ track: 'Clinical', rank: 'Clinical Professor' }), 'Clinical Professor');
-  assert.equal(canonicalRank({ track: 'Clinical', rank: 'Assistant Clinical Professor' }), 'Assistant Clinical Professor');
-  assert.equal(canonicalRank({ track: 'Teaching', rank: 'Associate Professor of Teaching' }), 'Associate Teaching Professor');
-  assert.equal(canonicalRank({ track: 'Teaching', rank: 'Professor of Practice' }), 'Teaching Professor');
-  assert.equal(canonicalRank({ track: 'Emeritus', rank: 'Professor Emerita' }), 'Emeritus');
+test('rank labels combine the stored career level with the track', () => {
+  assert.equal(canonicalRank({ track: 'Tenure-line', rank: 'Professor' }), 'Professor');
+  assert.equal(canonicalRank({ track: 'Tenure-line', rank: 'Lecturer' }), 'Lecturer');
+  assert.equal(canonicalRank({ track: 'Tenure-line', rank: 'Senior Lecturer' }), 'Senior Lecturer');
+  assert.equal(canonicalRank({ track: 'Clinical', rank: 'Assistant Professor' }), 'Assistant Clinical Professor');
+  assert.equal(canonicalRank({ track: 'Clinical', rank: 'Professor' }), 'Clinical Professor');
+  assert.equal(canonicalRank({ track: 'Teaching', rank: 'Associate Professor' }), 'Associate Teaching Professor');
+  assert.equal(canonicalRank({ track: 'Teaching', rank: 'Senior Lecturer' }), 'Senior Lecturer');
+  assert.equal(canonicalRank({ track: 'Teaching' }), 'Teaching');
+  assert.equal(canonicalRank({ track: 'Research', rank: 'Senior Researcher' }), 'Senior Researcher');
+  assert.equal(canonicalRank({ track: 'Research', rank: 'Assistant Professor' }), 'Assistant Research Professor');
+  assert.equal(canonicalRank({ track: 'Emeritus', rank: 'Professor' }), 'Professor Emeritus');
+  assert.equal(canonicalRank({ track: 'Emeritus' }), 'Emeritus');
 });
 
 test('unmatched departments map to Others', () => {

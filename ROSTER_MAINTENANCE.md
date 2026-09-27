@@ -45,7 +45,7 @@ Accepted tracks:
 - `Admin and Staff`: senior academic leaders at an eligible university — presidents, chancellors,
   provosts, deans, and associate deans — who hold no published faculty rank on another track, plus
   university librarians and archivists with documented faculty status or a senior, permanent
-  academic appointment. Store the published title (e.g. `Dean`) in `rank`. A leader who also holds a
+  academic appointment. Use `rank` `Administrator` for leaders and `Librarian` for librarians. A leader who also holds a
   published professorship belongs on that faculty track instead. Ordinary professional staff roles
   (for example HR, IT, advising, program coordination, communications, or center management) do
   not qualify.
@@ -101,16 +101,16 @@ establish that the role is faculty-level or faculty-equivalent and stable throug
 following: a departmental faculty directory, an institutional profile, an established promotion
 ladder, explicit continuing/permanent/full-time language, or an enduring appointment page.
 
-`Research Assistant Professor` needs particular care. Include it only when the institution treats it as a genuine research-faculty rank or there is comparably strong evidence of a career-type appointment; do not treat a senior postdoctoral role as faculty merely because it uses that title. Similarly, only include a Senior or Principal Research Scientist when reliable evidence establishes a faculty-equivalent, permanent university or eligible research-institute appointment; mark the record unconfirmed if no official current profile is available.
+A research-track assistant professor (`Research Assistant Professor`) needs particular care. Include it only when the institution treats it as a genuine research-faculty rank or there is comparably strong evidence of a career-type appointment; do not treat a senior postdoctoral role as faculty merely because it uses that title. Similarly, only include a Senior or Principal Research Scientist when reliable evidence establishes a faculty-equivalent, permanent university or eligible research-institute appointment; mark the record unconfirmed if no official current profile is available.
 
-Professor of Practice, Associate Professor of Practice, Assistant Professor of Practice, and equivalent institution-specific practice titles belong in `Teaching`, not a separate track. They still require evidence that the appointment is stable and substantive; exclude visiting and adjunct practice roles. Keep the published practice title in `rank`.
+Professor of Practice, Associate Professor of Practice, Assistant Professor of Practice, and equivalent institution-specific practice titles belong in `Teaching`, not a separate track. They still require evidence that the appointment is stable and substantive; exclude visiting and adjunct practice roles. Store the career level in `rank` (a Professor of Practice is `Professor` on the `Teaching` track).
 
 Artist in Residence and Writer in Residence titles also belong in `Teaching`, but only when reliable
 evidence establishes a full-time, continuing position. The title by itself usually denotes a temporary
 residency and is not enough; mark a record unconfirmed if the evidence is not official.
 
-Keep leadership titles in `rank` only when they are the institution's published academic title and
-the underlying academic appointment is independently eligible. Do not use a presidency,
+Leadership titles (chair, dean, director) are not stored in `rank`; record the underlying academic
+level, which must be independently eligible. Do not use a presidency,
 provostship, deanship, or center directorship to convert an otherwise ineligible administrative or
 temporary role into a Tenure-line, Teaching, Research, or Clinical appointment. A current
 university president, chancellor, provost, dean, or associate dean with no published faculty rank
@@ -604,7 +604,7 @@ later qualify again. None of that is a new person, so none of it gets a new ID.
   appointment, degree, honor, portrait, source, or another stored fact. A verification that finds
   no data change must not advance it.
 - Preserve an existing Scholar URL by moving it to `scholarUrl` before replacing `profileUrl`. Verify replacement URLs follow redirects and do not return 404.
-- Use only `Assistant Professor`, `Associate Professor`, or `Professor` as the rank vocabulary for Tenure-line entries; use `Teaching` and `Emeritus` for those corresponding tracks. For Research, Clinical, and Admin and Staff entries, preserve the institution's published appointment title in `rank`. Preserve a Professor of Practice title in `rank` for Teaching entries when that is the institution's published title.
+- `rank` is the career level only, one of `Assistant Professor`, `Associate Professor`, `Professor`, `Lecturer`, `Senior Lecturer`, `Researcher`, `Senior Researcher`, `Librarian`, or `Administrator` (`npm test` rejects anything else). The track carries the appointment type, and the display combines them ("Assistant Clinical Professor", "Teaching Professor", "Professor Emeritus"). Don't store the published title, a named chair, a department ("of Medicine"), or a leadership role; the linked profile has those, and named chairs go in `honors`. Map by level, not by translating systems: `Clinical Assistant Professor` → `Assistant Professor` (Clinical track); `Research Scientist`, `Chargé(e) de recherche`, `Staff Scientist` → `Researcher`; `Directeur de recherche`, `Principal`/`Senior Scientist`, `Group Leader` → `Senior Researcher`; `Distinguished`/`Full`/`Endowed Professor` → `Professor`. Keep Commonwealth `Lecturer` and `Senior Lecturer` as they are; never equate them with US ranks. A modern UK `Reader` is `Associate Professor`. Leave `rank` empty when the level isn't stated (e.g. a bare emeritus title); never guess.
 - Add `phdYear` and `phdInstitution` only when a source explicitly states them. Never infer them from dates, CV chronology, or context. Institution names must not contain degree prefixes (e.g., "Ph.D. in ...").
 - Education degrees must follow chronological sanity: `undergradYear <= msYear <= phdYear <= postdocYear`, with at least a 2-year interval between `undergradYear` and `phdYear`. Legitimate mid-career master's degrees earned after a doctorate must be allowlisted in `MID_CAREER_MS_ALLOWLIST`. Run `npm run audit-evidence` to audit the roster for anomalies.
 - Record completed postdoctoral training when a source explicitly identifies the institution. Add

@@ -6,6 +6,7 @@ import {
   INSTITUTION_TYPES,
   OTHER_DEGREE_FIELDS,
   PROTECTABLE_FIELDS,
+  RANKS,
   REQUIRED_ROSTER_STRINGS,
   ROSTER_FIELDS,
   TRACKS,
@@ -216,6 +217,9 @@ for (const [index, person] of roster.entries()) {
     }
   }
   if (!allowedTracks.has(person.track)) fail(rosterFile, `${label} has unsupported track ${person.track}`);
+  if (person.rank !== undefined && !(RANKS as readonly string[]).includes(person.rank)) {
+    fail(rosterFile, `${label} has unsupported rank ${JSON.stringify(person.rank)}: use one of ${RANKS.join(', ')} (the track carries Clinical/Teaching/Research; the exact title stays on the profile)`);
+  }
   if (person.institutionType !== undefined && !allowedInstitutionTypes.has(person.institutionType)) {
     fail(rosterFile, `${label} has unsupported institutionType ${person.institutionType}`);
   }

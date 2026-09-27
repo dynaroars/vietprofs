@@ -48,7 +48,7 @@ import process from 'node:process';
 import { fileURLToPath } from 'node:url';
 import { isDeepStrictEqual } from 'node:util';
 import { FIELDS, fieldOf, type Roster } from '../src/data.ts';
-import { DIRECT_FIELD_EXCLUSIONS, HONOR_CATEGORIES, PROTECTABLE_FIELDS, HONOR_FIELDS, INSTITUTION_TYPES, OTHER_DEGREE_FIELDS, ROSTER_FIELDS, TRACKS } from '../src/roster-constants.ts';
+import { DIRECT_FIELD_EXCLUSIONS, HONOR_CATEGORIES, PROTECTABLE_FIELDS, RANKS, HONOR_FIELDS, INSTITUTION_TYPES, OTHER_DEGREE_FIELDS, ROSTER_FIELDS, TRACKS } from '../src/roster-constants.ts';
 import { validateEnrichment } from '../src/enrichment.ts';
 import { loadEvidenceLedger, recordFieldEvidence, saveEvidenceLedger } from '../src/evidence.ts';
 import {
@@ -596,6 +596,7 @@ export function proposalValidationError(proposal: JsonRecord): string | null {
   if (!/^https?:\/\//.test(proposal.profileUrl)) return 'proposal profileUrl must use HTTP(S)';
   if (!Array.isArray(proposal.researchAreas) || proposal.researchAreas.length === 0 || proposal.researchAreas.some((area) => typeof area !== 'string' || !area.trim())) return 'proposal needs valid researchAreas';
   if (!TRACKS.includes(proposal.track)) return 'proposal has unsupported track';
+  if (proposal.rank !== undefined && !(RANKS as readonly string[]).includes(proposal.rank)) return `proposal has unsupported rank; use one of ${RANKS.join(', ')}`;
   if (proposal.institutionType !== undefined && !INSTITUTION_TYPES.includes(proposal.institutionType)) return 'proposal has unsupported institutionType';
   if (proposal.institutionType !== undefined && proposal.institutionType !== 'University' && !['Research', 'Emeritus', 'Deceased'].includes(proposal.track)) return 'proposal non-university institutionType requires the Research, Emeritus, or Deceased track';
   if (proposal.websiteUrl !== undefined && proposal.websiteUrl === proposal.profileUrl) return 'proposal websiteUrl must differ from profileUrl';

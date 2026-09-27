@@ -50,7 +50,8 @@
       },
       "rank": {
         "type": "string",
-        "description": "Academic rank (e.g. Assistant Professor, Associate Professor, Professor)"
+        "enum": ["Assistant Professor", "Associate Professor", "Professor", "Lecturer", "Senior Lecturer", "Researcher", "Senior Researcher", "Librarian", "Administrator"],
+        "description": "Career level; the track says Clinical/Teaching/Research. Omit when unknown."
       },
       "track": {
         "type": "string",

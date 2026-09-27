@@ -1,5 +1,5 @@
 import './style.css';
-import { FIELDS, fieldOf, INSTITUTION_TYPES, institutionTypeOf, loadRoster, personPath, TRACKS, type RosterEntry } from './data.ts';
+import { FIELDS, fieldOf, INSTITUTION_TYPES, institutionTypeOf, loadRoster, personPath, RANKS, TRACKS, type RosterEntry } from './data.ts';
 import { escapeHtml } from './utils.ts';
 
 const SUBMISSION_EMAIL = 'root@roars.dev';
@@ -274,8 +274,11 @@ function renderShell() {
             </fieldset>
 
             <div class="form-section">
-              <label for="rank">Simplified academic rank</label>
-              <input id="rank" name="rank" type="text" placeholder="Assistant Professor, Clinical Professor, Professor of Practice, or other official title" />
+              <label for="rank">Career level</label>
+              <select id="rank" name="rank">
+                <option value="">Not sure</option>
+                ${RANKS.map((rank) => `<option value="${escapeHtml(rank)}">${escapeHtml(rank)}</option>`).join('')}
+              </select>
             </div>
 
             <div class="form-section form-row">
