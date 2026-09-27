@@ -16390,7 +16390,7 @@
     "profileUrl": "https://www.math.uri.edu/meet/nhu-nguyen/",
     "scholarUrl": "https://scholar.google.com/citations?user=OzylpX4AAAAJ",
     "linkedinUrl": "https://www.linkedin.com/in/nhu-nguyen-819063174/",
-    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
+    "lastUpdatedAt": "2026-09-27T00:54:59.000Z",
     "university": "University of Rhode Island",
     "city": "Kingston",
     "state": "Rhode Island",
@@ -16421,7 +16421,12 @@
       ],
       "verifiedAt": "2026-09-13T00:00:00.000Z"
     },
-    "websiteUrl": "https://sites.google.com/view/nhunnguyen/home"
+    "websiteUrl": "https://sites.google.com/view/nhunnguyen/home",
+    "directFields": [
+      "name",
+      "rank",
+      "university"
+    ]
   },
   {
     "id": "vp-0339",
@@ -41710,9 +41715,9 @@
   },
   {
     "id": "vp-1045",
-    "name": "Hao Manh Quach",
+    "name": "Manh Hao Quach",
     "profileUrl": "https://staff.lincoln.ac.uk/51b498aa-2149-4fbb-9156-707c594cb5d3",
-    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
+    "lastUpdatedAt": "2026-09-27T00:54:59.000Z",
     "scholarUrl": "https://scholar.google.com/citations?user=sX5sBdQAAAAJ",
     "university": "University of Lincoln",
     "city": "Lincoln",
@@ -41723,6 +41728,11 @@
     "researchAreas": [
       "Banking",
       "Finance"
+    ],
+    "directFields": [
+      "name",
+      "rank",
+      "university"
     ]
   },
   {
@@ -48837,10 +48847,10 @@
     "university": "University of Liverpool",
     "city": "Liverpool",
     "country": "United Kingdom",
-    "department": "Department of Electrical Engineering and Electronics",
+    "department": "School of Computer Science and Informatics",
     "rank": "Assistant Professor",
     "track": "Tenure-line",
-    "profileUrl": "https://www.liverpool.ac.uk/electrical-engineering-and-electronics/staff/huynh-nguyen/",
+    "profileUrl": "https://www.liverpool.ac.uk/people/huynh-nguyen",
     "researchAreas": [
       "Wireless Communications",
       "5G/6G Networks",
@@ -48852,20 +48862,26 @@
     "undergradYear": 2016,
     "undergradMajor": "Electronics and Telecommunications",
     "phdInstitution": "University of Technology Sydney",
-    "phdYear": 2021,
+    "phdYear": 2022,
     "phdMajor": "Electrical and Computer Engineering",
-    "lastUpdatedAt": "2026-09-14T20:28:00.000Z",
+    "lastUpdatedAt": "2026-09-27T00:54:59.000Z",
     "portrait": "portraits/vp-1264-van-huynh-nguyen.webp",
     "portraitSource": "https://www.liverpool.ac.uk/people/huynh-nguyen/photo",
     "scholarUrl": "https://scholar.google.com/citations?user=MaZr_8wAAAAJ",
     "linkedinUrl": "https://www.linkedin.com/in/huynhnv1993/",
     "researchOverview": {
-      "text": "Lecturer in Accounting and Finance at the University of Liverpool researching banking performance and financial risk management.",
+      "text": "Huynh Nguyen studies cybersecurity, mobile computing, 5G/6G networks, the Internet of Things, and machine learning.",
       "sources": [
         "https://www.liverpool.ac.uk/people/huynh-nguyen"
       ],
-      "verifiedAt": "2026-09-15T02:40:23.706Z"
-    }
+      "verifiedAt": "2026-09-27T00:54:59.000Z"
+    },
+    "directFields": [
+      "name",
+      "rank",
+      "university"
+    ],
+    "websiteUrl": "https://pcwww.liv.ac.uk/~huynhnv/"
   },
   {
     "id": "vp-1265",
@@ -60817,7 +60833,7 @@
     "vietnameseName": "Phạm Dương",
     "profileUrl": "https://www.ut.edu/directory/pham-katie",
     "linkedinUrl": "https://www.linkedin.com/in/dktpham/",
-    "lastUpdatedAt": "2026-09-25T05:09:53.712Z",
+    "lastUpdatedAt": "2026-09-27T00:54:59.000Z",
     "university": "University of Tampa",
     "city": "Tampa",
     "state": "Florida",
@@ -60836,7 +60852,9 @@
     "phdYear": 2017,
     "directFields": [
       "department",
-      "rank"
+      "name",
+      "rank",
+      "university"
     ],
     "researchOverview": {
       "text": "Pham is an Associate Professor of Finance at the University of Tampa's Sykes College of Business. Research covers corporate finance and corporate governance, with an emphasis on the role and effectiveness of boards of directors, executive compensation, and firm value.",
