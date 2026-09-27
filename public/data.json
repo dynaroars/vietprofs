@@ -16315,7 +16315,7 @@
     "profileUrl": "https://www.math.uri.edu/meet/nhu-nguyen/",
     "scholarUrl": "https://scholar.google.com/citations?user=OzylpX4AAAAJ",
     "linkedinUrl": "https://www.linkedin.com/in/nhu-nguyen-819063174/",
-    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
+    "lastUpdatedAt": "2026-09-27T00:54:59.000Z",
     "university": "University of Rhode Island",
     "city": "Kingston",
     "state": "Rhode Island",
@@ -16346,7 +16346,12 @@
       ],
       "verifiedAt": "2026-09-13T00:00:00.000Z"
     },
-    "websiteUrl": "https://sites.google.com/view/nhunnguyen/home"
+    "websiteUrl": "https://sites.google.com/view/nhunnguyen/home",
+    "directFields": [
+      "name",
+      "rank",
+      "university"
+    ]
   },
   {
     "id": "vp-0339",
@@ -25081,7 +25086,12 @@
       ],
       "verifiedAt": "2026-09-07T05:13:19.683Z"
     },
-    "undergradYear": 2014
+    "undergradYear": 2014,
+    "directFields": [
+      "name",
+      "rank",
+      "university"
+    ]
   },
   {
     "id": "vp-0565",
@@ -26439,7 +26449,12 @@
         "https://le.ac.uk/people/hoa-do"
       ],
       "verifiedAt": "2026-09-17T00:30:08.000Z"
-    }
+    },
+    "directFields": [
+      "name",
+      "rank",
+      "university"
+    ]
   },
   {
     "id": "vp-0603",
@@ -40370,7 +40385,12 @@
       "verifiedAt": "2026-09-15T02:40:23.702Z"
     },
     "websiteUrl": "https://sites.google.com/view/thanhhuynh/home",
-    "undergradYear": 2021
+    "undergradYear": 2021,
+    "directFields": [
+      "name",
+      "rank",
+      "university"
+    ]
   },
   {
     "id": "vp-1003",
@@ -41635,9 +41655,9 @@
   },
   {
     "id": "vp-1045",
-    "name": "Hao Manh Quach",
+    "name": "Manh Hao Quach",
     "profileUrl": "https://staff.lincoln.ac.uk/51b498aa-2149-4fbb-9156-707c594cb5d3",
-    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
+    "lastUpdatedAt": "2026-09-27T00:54:59.000Z",
     "scholarUrl": "https://scholar.google.com/citations?user=sX5sBdQAAAAJ",
     "university": "University of Lincoln",
     "city": "Lincoln",
@@ -41648,6 +41668,11 @@
     "researchAreas": [
       "Banking",
       "Finance"
+    ],
+    "directFields": [
+      "name",
+      "rank",
+      "university"
     ]
   },
   {
@@ -42132,7 +42157,12 @@
         "https://jcsmr.anu.edu.au/people/associate-professor-nhung-nghiem"
       ],
       "verifiedAt": "2026-09-14T20:28:00.000Z"
-    }
+    },
+    "directFields": [
+      "name",
+      "rank",
+      "university"
+    ]
   },
   {
     "id": "vp-1062",
@@ -48762,10 +48792,10 @@
     "university": "University of Liverpool",
     "city": "Liverpool",
     "country": "United Kingdom",
-    "department": "Department of Electrical Engineering and Electronics",
+    "department": "School of Computer Science and Informatics",
     "rank": "Assistant Professor",
     "track": "Tenure-line",
-    "profileUrl": "https://www.liverpool.ac.uk/electrical-engineering-and-electronics/staff/huynh-nguyen/",
+    "profileUrl": "https://www.liverpool.ac.uk/people/huynh-nguyen",
     "researchAreas": [
       "Wireless Communications",
       "5G/6G Networks",
@@ -48777,20 +48807,26 @@
     "undergradYear": 2016,
     "undergradMajor": "Electronics and Telecommunications",
     "phdInstitution": "University of Technology Sydney",
-    "phdYear": 2021,
+    "phdYear": 2022,
     "phdMajor": "Electrical and Computer Engineering",
-    "lastUpdatedAt": "2026-09-14T20:28:00.000Z",
+    "lastUpdatedAt": "2026-09-27T00:54:59.000Z",
     "portrait": "portraits/vp-1264-van-huynh-nguyen.webp",
     "portraitSource": "https://www.liverpool.ac.uk/people/huynh-nguyen/photo",
     "scholarUrl": "https://scholar.google.com/citations?user=MaZr_8wAAAAJ",
     "linkedinUrl": "https://www.linkedin.com/in/huynhnv1993/",
     "researchOverview": {
-      "text": "Lecturer in Accounting and Finance at the University of Liverpool researching banking performance and financial risk management.",
+      "text": "Huynh Nguyen studies cybersecurity, mobile computing, 5G/6G networks, the Internet of Things, and machine learning.",
       "sources": [
         "https://www.liverpool.ac.uk/people/huynh-nguyen"
       ],
-      "verifiedAt": "2026-09-15T02:40:23.706Z"
-    }
+      "verifiedAt": "2026-09-27T00:54:59.000Z"
+    },
+    "directFields": [
+      "name",
+      "rank",
+      "university"
+    ],
+    "websiteUrl": "https://pcwww.liv.ac.uk/~huynhnv/"
   },
   {
     "id": "vp-1265",
@@ -56472,7 +56508,12 @@
       }
     ],
     "portrait": "portraits/vp-1527-nam-trang.webp",
-    "portraitSource": "https://sites.cos.unt.edu/~ntrang/Nam.jpg"
+    "portraitSource": "https://sites.cos.unt.edu/~ntrang/Nam.jpg",
+    "directFields": [
+      "name",
+      "rank",
+      "university"
+    ]
   },
   {
     "id": "vp-1528",
@@ -60454,13 +60495,13 @@
     "id": "vp-1676",
     "name": "Justin Hung Nguyen",
     "profileUrl": "https://www.ecu.edu.au/schools/business-and-law/faculty/profiles/senior-lecturer/dr-justin-nguyen",
-    "confirmed": false,
+    "confirmed": true,
     "university": "Edith Cowan University",
     "city": "Perth",
     "state": "Western Australia",
     "country": "Australia",
     "department": "School of Business and Law",
-    "rank": "Senior Lecturer",
+    "rank": "Assistant Professor",
     "track": "Tenure-line",
     "researchAreas": [
       "Empirical Corporate Finance",
@@ -60471,15 +60512,20 @@
     ],
     "linkedinUrl": "https://www.linkedin.com/in/justin-nguyen-92643b34/",
     "scholarUrl": "https://scholar.google.com/citations?user=o_FF3-AAAAAJ&hl=en",
-    "phdInstitution": "Massey University",
-    "lastUpdatedAt": "2026-09-23T23:45:56.000Z",
+    "phdInstitution": "RMIT University",
+    "lastUpdatedAt": "2026-09-27T01:03:59.669Z",
     "researchOverview": {
       "text": "Nguyen researches empirical corporate finance, corporate governance, and climate and labor finance, with additional work on CSR and ESG, at Edith Cowan University's School of Business and Law.",
       "sources": [
         "https://scholar.google.com/citations?user=o_FF3-AAAAAJ&hl=en"
       ],
       "verifiedAt": "2026-09-23T23:45:56.000Z"
-    }
+    },
+    "directFields": [
+      "name",
+      "rank"
+    ],
+    "phdYear": 2018
   },
   {
     "id": "vp-1677",
@@ -60633,7 +60679,11 @@
         "https://www.lboro.ac.uk/schools/business-school/our-people/trung-vu/"
       ],
       "verifiedAt": "2026-09-23T23:45:56.000Z"
-    }
+    },
+    "directFields": [
+      "name",
+      "university"
+    ]
   },
   {
     "id": "vp-1686",
@@ -60725,6 +60775,7 @@
     "undergradInstitution": "Ho Chi Minh University of Science (HCMUS)",
     "undergradYear": 2012,
     "directFields": [
+      "name",
       "rank",
       "researchAreas"
     ],
@@ -60742,7 +60793,7 @@
     "vietnameseName": "Phạm Dương",
     "profileUrl": "https://www.ut.edu/directory/pham-katie",
     "linkedinUrl": "https://www.linkedin.com/in/dktpham/",
-    "lastUpdatedAt": "2026-09-25T05:09:53.712Z",
+    "lastUpdatedAt": "2026-09-27T00:54:59.000Z",
     "university": "University of Tampa",
     "city": "Tampa",
     "state": "Florida",
@@ -60761,7 +60812,9 @@
     "phdYear": 2017,
     "directFields": [
       "department",
-      "rank"
+      "name",
+      "rank",
+      "university"
     ],
     "researchOverview": {
       "text": "Pham is an Associate Professor of Finance at the University of Tampa's Sykes College of Business. Research covers corporate finance and corporate governance, with an emphasis on the role and effectiveness of boards of directors, executive compensation, and firm value.",
@@ -60797,6 +60850,7 @@
     "phdInstitution": "Purdue University",
     "postdocInstitution": "Fred Hutchinson Cancer Research Center",
     "directFields": [
+      "name",
       "rank",
       "university"
     ],
@@ -60813,7 +60867,7 @@
     "name": "Duy Trong Ngo",
     "vietnameseName": "Ngô Trọng Duy",
     "profileUrl": "https://www.newcastle.edu.au/profile/duy-ngo",
-    "lastUpdatedAt": "2026-09-25T05:09:53.712Z",
+    "lastUpdatedAt": "2026-09-27T01:03:59.669Z",
     "university": "The University of Newcastle",
     "city": "Newcastle",
     "state": "New South Wales",
@@ -60827,7 +60881,7 @@
       "Wireless Communications"
     ],
     "track": "Tenure-line",
-    "department": "School of Electrical Engineering and Computing",
+    "department": "School of Engineering",
     "rank": "Associate Professor",
     "scholarUrl": "https://scholar.google.com/citations?user=SQyL0ZgAAAAJ&hl=en",
     "linkedinUrl": "https://www.linkedin.com/in/duy-ngo-3a810147/",
@@ -60836,11 +60890,12 @@
     "msInstitution": "University of Alberta",
     "phdInstitution": "McGill University",
     "directFields": [
+      "name",
       "rank",
       "university"
     ],
     "researchOverview": {
-      "text": "Ngo is an Associate Professor in the School of Electrical Engineering and Computing at the University of Newcastle, Australia. Research spans wireless communications, edge intelligence, IoT, applied machine learning, and 5G/6G and intelligent transportation systems.",
+      "text": "Ngo is an Associate Professor in the School of Engineering at the University of Newcastle, Australia. Research spans wireless communications, edge intelligence, IoT, applied machine learning, and 5G/6G and intelligent transportation systems.",
       "sources": [
         "https://www.newcastle.edu.au/profile/duy-ngo"
       ],
@@ -60948,6 +61003,7 @@
     "phdInstitution": "Wayne State University",
     "confirmed": false,
     "directFields": [
+      "name",
       "rank",
       "university"
     ],
