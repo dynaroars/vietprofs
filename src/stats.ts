@@ -1,4 +1,5 @@
 import './style.css';
+import { renderSeeAlso } from './see-also.ts';
 import { escapeHtml } from './utils.ts';
 
 interface DailyBrowserStat {
@@ -58,17 +59,6 @@ function runningHead(): string {
   </p>`;
 }
 
-function footer(): string {
-  return `<footer class="man-footer"><p>
-    <a href="${base}index.html">← Back to Directory</a> ·
-    <a href="${base}faq.html">FAQ</a> ·
-    <a href="${base}index.html?view=health">Data Health &amp; Completeness</a> ·
-    <a href="${base}index.html?view=insights">Diaspora Insights &amp; Pathways</a> ·
-    <a href="${base}connections.html">Academic Connections</a> ·
-    <a href="${base}submit.html">Submit / Update</a> ·
-    <a href="https://github.com/dynaroars/vietprofs" target="_blank" rel="noopener noreferrer">GitHub</a>
-  </p></footer>`;
-}
 
 function renderMetrics(data: BrowserStatsResponse): string {
   const countries = data.countries.filter(country => country.pageViews > 0).length;
@@ -174,7 +164,7 @@ function renderStats(data: BrowserStatsResponse): string {
     <section class="man-section privacy-section"><h2>PRIVACY &amp; METHODOLOGY</h2><div class="privacy-note">
       <p>These statistics come from privacy-preserving Cloudflare Web Analytics browser beacons, not raw server logs — no cookies, IPs, or individual visitor records are collected, though crawlers are excluded and JavaScript-blocking readers can go uncounted. A "page view" is a browser load and a "visit" is Cloudflare's session-like aggregate, not an exact unique-visitor count. Dates use complete UTC days only; the clean browser series begins ${escapeHtml(transitionDate)}, with earlier crawler-inclusive history kept separately.</p>
     </div></section>
-    ${footer()}
+    ${renderSeeAlso(base, 'stats')}
   </article></main>`;
 }
 
@@ -184,7 +174,7 @@ function renderLoading(): string {
 
 function renderError(message: string): string {
   return `<main><article class="man-page stats-man-page">${runningHead()}<section class="man-section name-section"><h1>VietProfs Visitor Statistics</h1><p class="synopsis">Privacy-preserving browser measurements.</p></section>
-    <section class="man-section"><h2>VISITOR TRAFFIC</h2><div class="stats-error-box" role="alert"><p class="error-title">Browser statistics are temporarily unavailable.</p><p class="error-detail">${escapeHtml(message)}</p><button type="button" id="retry-btn" class="retry-btn">Retry</button></div></section>${footer()}</article></main>`;
+    <section class="man-section"><h2>VISITOR TRAFFIC</h2><div class="stats-error-box" role="alert"><p class="error-title">Browser statistics are temporarily unavailable.</p><p class="error-detail">${escapeHtml(message)}</p><button type="button" id="retry-btn" class="retry-btn">Retry</button></div></section>${renderSeeAlso(base, 'stats')}</article></main>`;
 }
 
 const STATS_ENDPOINTS = ['/api/stats', 'https://vietprofs.roars.dev/api/stats'];

@@ -1,4 +1,5 @@
 import './style.css';
+import { renderSeeAlso } from './see-also.ts';
 
 const app = document.getElementById('app')!;
 const base = import.meta.env.BASE_URL;
@@ -11,17 +12,6 @@ function runningHead(): string {
   </p>`;
 }
 
-function footer(): string {
-  return `<footer class="man-footer"><p>
-    <a href="${base}index.html">← Back to Directory</a> ·
-    <a href="${base}stats.html">Visitor Statistics</a> ·
-    <a href="${base}index.html?view=health">Data Health &amp; Completeness</a> ·
-    <a href="${base}index.html?view=insights">Diaspora Insights &amp; Pathways</a> ·
-    <a href="${base}connections.html">Academic Connections</a> ·
-    <a href="${base}submit.html">Submit / Update</a> ·
-    <a href="https://github.com/dynaroars/vietprofs" target="_blank" rel="noopener noreferrer">GitHub</a>
-  </p></footer>`;
-}
 
 function renderFaqPage(): string {
   return `<main><article class="man-page stats-man-page faq-man-page">
@@ -351,7 +341,7 @@ function renderFaqPage(): string {
       </div>
     </section>
 
-    ${footer()}
+    ${renderSeeAlso(base, 'faq')}
   </article></main>`;
 }
 

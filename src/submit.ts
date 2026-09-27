@@ -1,4 +1,5 @@
 import './style.css';
+import { renderSeeAlso } from './see-also.ts';
 import { FIELDS, fieldOf, INSTITUTION_TYPES, institutionTypeOf, loadRoster, personPath, RANKS, TRACKS, type RosterEntry } from './data.ts';
 import { escapeHtml } from './utils.ts';
 
@@ -19,14 +20,12 @@ type SubmitForm = Omit<HTMLFormElement, 'name'> & Record<string, FormField | und
 // The draft a visitor builds in the form before it's emailed/filed as an issue. It mirrors
 // RosterEntry's field names where they overlap (see FIELD_LABELS below), but is a maintainer lead
 // rather than a validated roster record: `field` is the broad-field dropdown value rather than a
-// derived fact, `universityProfileUrl` has no equivalent in the canonical schema, and required
-// vs. optional differs from RosterEntry (e.g. `profileUrl` is required here for a new entry).
+// derived fact, and required vs. optional differs from RosterEntry (e.g. `profileUrl` is required here for a new entry).
 interface SubmissionDraft {
   name: string;
   profileUrl: string;
   vietnameseName?: string;
   websiteUrl?: string;
-  universityProfileUrl?: string;
   scholarUrl?: string;
   linkedinUrl?: string;
   portraitSource?: string;
@@ -89,7 +88,7 @@ function renderShell() {
 
         <form id="submit-form" class="submit-form" novalidate>
           <section class="man-section form-group" id="add-mode-section">
-            <h2>SUBMIT INFORMATION</h2>
+            <h2 id="add-mode-heading">SUBMIT INFORMATION</h2>
             <p class="criteria" id="bulk-criteria">
               Paste anything: a name, a link to someone's institutional profile or homepage, or a link to a
               page that lists several people (a department directory, a lab site). Plain text is fine —
@@ -180,11 +179,6 @@ function renderShell() {
             <div class="form-section">
               <label for="websiteUrl">Website (personal page, or lab site)</label>
               <input id="websiteUrl" name="websiteUrl" type="url" placeholder="https:// (personal homepage or lab site)" />
-            </div>
-
-            <div class="form-section">
-              <label for="universityProfileUrl">Institutional profile website</label>
-              <input id="universityProfileUrl" name="universityProfileUrl" type="url" placeholder="https://… (official university or research-institute page)" />
             </div>
 
             <div class="form-section">
@@ -335,10 +329,7 @@ function renderShell() {
           </section>
         </form>
 
-        <footer>
-          <p>VietProfs is a community-maintained directory. Consult the linked sources for the most current details.</p>
-          <p class="man-footer-line">SUBMIT(1) · VietProfs Submission · SUBMIT(1)</p>
-        </footer>
+        ${renderSeeAlso(import.meta.env.BASE_URL, 'submit')}
       </article>
     </main>
   `;
@@ -357,7 +348,6 @@ const FIELD_LABELS: Partial<Record<keyof SubmissionDraft, string>> = {
   profileUrl: 'Profile or verification link',
   vietnameseName: 'Vietnamese name',
   websiteUrl: 'Website',
-  universityProfileUrl: 'Institutional profile website',
   scholarUrl: 'Google Scholar',
   linkedinUrl: 'LinkedIn',
   portraitSource: 'Profile picture URL',
@@ -432,7 +422,7 @@ function buildUpdateBody(matchedEntry: RosterEntry, entry: SubmissionDraft, note
     changes.push(`- Name: ${matchedEntry.name} → ${entry.name}`);
   }
   // matchedEntry (RosterEntry) and entry (SubmissionDraft) are deliberately not the same shape
-  // (e.g. universityProfileUrl has no roster equivalent), so the old-value lookup goes through an
+  // (e.g. `field` is a dropdown value), so the old-value lookup goes through an
   // untyped view rather than claiming RosterEntry has every SubmissionDraft key.
   const matchedRecord = matchedEntry as unknown as Record<string, unknown>;
   for (const key of FIELD_ORDER) {
@@ -502,9 +492,6 @@ function populateEntry(form: SubmitForm, entry: RosterEntry): void {
   form.profileUrl.value = entry.profileUrl ?? '';
   form.vietnameseName.value = entry.vietnameseName ?? '';
   form.websiteUrl.value = entry.websiteUrl ?? '';
-  // universityProfileUrl has no canonical roster field (see SubmissionDraft above), so an
-  // existing entry never has anything to pre-fill here.
-  form.universityProfileUrl.value = '';
   form.scholarUrl.value = entry.scholarUrl ?? '';
   form.linkedinUrl.value = entry.linkedinUrl ?? '';
   form.portraitSource.value = entry.portraitSource ?? '';
@@ -615,7 +602,6 @@ function onSubmit(e: SubmitEvent, entriesById: Map<string, RosterEntry> | null, 
     profileUrl: form.profileUrl.value.trim(),
     vietnameseName: form.vietnameseName.value.trim() || undefined,
     websiteUrl: form.websiteUrl.value.trim() || undefined,
-    universityProfileUrl: form.universityProfileUrl.value.trim() || undefined,
     scholarUrl: form.scholarUrl.value.trim() || undefined,
     linkedinUrl: form.linkedinUrl.value.trim() || undefined,
     portraitSource: form.portraitSource.value.trim() || undefined,
@@ -683,6 +669,10 @@ function applyPurpose(purpose: string): void {
   const isConnection = purpose === 'connection';
   const isUpdate = !isAdd && !isConnection;
   addModeSection.hidden = isConnection;
+  // Updating an entry: identify it first (Required), then say what changed (Notes), then the
+  // optional details. Adding: the paste box leads the form.
+  if (isUpdate) requiredSection.after(addModeSection);
+  else connectionSection.before(addModeSection);
   optionalDetails.hidden = isConnection;
   connectionSection.hidden = !isConnection;
   requiredSection.classList.toggle('single-entry-details', isAdd);
@@ -696,6 +686,7 @@ function applyPurpose(purpose: string): void {
     ? "Paste anything: a name, a link to someone's institutional profile or homepage, or a link to a page that lists several people (a department directory, a lab site). Plain text is fine — one item per line, or however you have it. Feel free to include any other notes or evidence here too — whatever helps us verify and add them."
     : 'Add any notes, corrections, or evidence links that will help us verify this update.';
   bulkLabel.textContent = isAdd ? 'Names, links, or notes' : 'Notes';
+  byId('add-mode-heading').textContent = isUpdate ? 'WHAT CHANGED' : 'SUBMIT INFORMATION';
   bulkInput.placeholder = isAdd
     ? 'e.g.\nJane T. Nguyen — https://cs.example.edu/~jnguyen\nhttps://example.edu/faculty-directory\nSome Name, Some University'
     : 'e.g. Moved to a new university, updated title, corrected spelling, etc.';

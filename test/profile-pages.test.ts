@@ -54,11 +54,15 @@ test('generated profile pages use the same stylesheet source as the directory', 
   assert.match(generator, /<svg viewBox="0 0 24 24" aria-hidden="true">\$\{icon\}<\/svg>/);
   assert.match(generator, />SYNOPSIS</);
   assert.match(generator, />ROSTER METADATA</);
-  assert.match(generator, />SEE ALSO</);
+  // SEE ALSO comes from the shared src/see-also.ts block used by every standalone page.
+  const seeAlso = await readFile(new URL('../src/see-also.ts', import.meta.url), 'utf8');
+  assert.match(generator, /renderSeeAlso\('\.\.\/'\)/);
+  assert.match(seeAlso, />SEE ALSO</);
+  assert.match(seeAlso, /connections\.html/);
   assert.match(generator, />CONNECTIONS</);
   assert.match(generator, /connectionsFor/);
   assert.match(generator, /public\/relationships\.json/);
-  assert.match(generator, /class="links" aria-label="Other VietProfs destinations"/);
+  assert.match(seeAlso, /class="links" aria-label="Other VietProfs destinations"/);
   assert.doesNotMatch(generator, /class="man-footer"/);
   assert.doesNotMatch(generator, />ABOUT</);
   assert.match(generator, /view raw record/);

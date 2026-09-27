@@ -552,6 +552,12 @@ test('submit form defaults to bulk add mode and toggles to single-entry details'
   assert.equal(await page.locator('#bulkInput-label').innerText(), 'Notes');
   assert.equal(await page.locator('#add-mode-details-help').isVisible(), false);
   assert.equal(await page.locator('#required-section').isVisible(), true);
+  // Update order: Required, then the notes, then Optional details. Back to the top for adding.
+  const order = () => page.evaluate(() => [...document.querySelectorAll('#submit-form > section:not([hidden]), #submit-form > details:not([hidden])')].map((el) => el.id).filter(Boolean));
+  assert.deepEqual(await order(), ['required-section', 'add-mode-section', 'optional-details']);
+  assert.equal(await page.locator('#add-mode-heading').innerText(), 'WHAT CHANGED');
+  await page.locator('input[name="purpose"][value="add"]').check();
+  assert.deepEqual((await order()).slice(0, 2), ['add-mode-section', 'required-section']);
   await page.close();
 });
 
@@ -691,7 +697,8 @@ test('profile pages honor dark mode through the shared stylesheet', async () => 
   assert.equal(await page.locator('.profile-actions .submission-link').count(), 1);
   assert.equal(await page.locator('.name-heading .profile-actions').count(), 1);
   const seeAlso = page.locator('.man-section').filter({ has: page.locator('h2', { hasText: 'SEE ALSO' }) });
-  assert.equal(await seeAlso.locator('nav.links a').count(), 6);
+  assert.equal(await seeAlso.locator('nav.links a').count(), 8);
+  assert.equal(await seeAlso.locator('a[href="../connections.html"]').count(), 1);
   assert.equal(await page.locator('footer.man-footer').count(), 0);
   const profileStar = page.locator('.name-title .favorite-toggle');
   assert.equal(await profileStar.getAttribute('aria-pressed'), 'true');

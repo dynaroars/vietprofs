@@ -1,4 +1,5 @@
 import './style.css';
+import { renderSeeAlso } from './see-also.ts';
 import { escapeHtml } from './utils.ts';
 import { displayName, personPath, type Roster, type RosterEntry } from './data.ts';
 import type { AcademicRelationship, RelationshipDatabase, RelationshipType } from './relationships.ts';
@@ -41,16 +42,6 @@ function runningHead(): string {
   </p>`;
 }
 
-function footer(): string {
-  return `<footer class="man-footer"><p>
-    <a href="${base}index.html">← Back to Directory</a> ·
-    <a href="${base}faq.html">FAQ</a> ·
-    <a href="${base}stats.html">Visitor Statistics</a> ·
-    <a href="${base}index.html?view=insights">Diaspora Insights &amp; Pathways</a> ·
-    <a href="${base}submit.html">Submit / Update</a> ·
-    <a href="https://github.com/dynaroars/vietprofs" target="_blank" rel="noopener noreferrer">GitHub</a>
-  </p></footer>`;
-}
 
 interface Edge {
   relationship: AcademicRelationship;
@@ -152,7 +143,7 @@ function renderConnections(roster: Roster, database: RelationshipDatabase): stri
     <section class="man-section privacy-section"><h2>METHODOLOGY</h2><div class="privacy-note">
       <p>Every connection listed here is independently verified against public evidence (advisor pages, dissertations, shared publications, shared grant or patent records) before being added — see each row's source link. Coauthor, grant-collaborator, and patent-coinventor links require multiple independently attributable shared works; advisor and mentor links are directional and verified against an official advisor-side listing where possible. This view only shows connections between two people already on the VietProfs roster.</p>
     </div></section>
-    ${footer()}
+    ${renderSeeAlso(base, 'connections')}
   </article></main>`;
 }
 
@@ -162,7 +153,7 @@ function renderLoading(): string {
 
 function renderError(message: string): string {
   return `<main><article class="man-page stats-man-page">${runningHead()}<section class="man-section name-section"><h1>VietProfs Academic Connections</h1><p class="synopsis">Verified academic connections among roster members.</p></section>
-    <section class="man-section"><h2>CONNECTIONS</h2><div class="stats-error-box" role="alert"><p class="error-title">Connections data is temporarily unavailable.</p><p class="error-detail">${escapeHtml(message)}</p><button type="button" id="retry-btn" class="retry-btn">Retry</button></div></section>${footer()}</article></main>`;
+    <section class="man-section"><h2>CONNECTIONS</h2><div class="stats-error-box" role="alert"><p class="error-title">Connections data is temporarily unavailable.</p><p class="error-detail">${escapeHtml(message)}</p><button type="button" id="retry-btn" class="retry-btn">Retry</button></div></section>${renderSeeAlso(base, 'connections')}</article></main>`;
 }
 
 async function fetchJson<T>(path: string): Promise<T> {
