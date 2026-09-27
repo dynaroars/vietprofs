@@ -53,9 +53,10 @@ test('each schedule row states its ET time and weekdays to match the UTC cron', 
 });
 
 test('the auditor health check runs on a day the audit is scheduled', () => {
-  assert.ok(audit?.weekdays, 'audit has a weekly cron');
+  assert.ok(audit, 'Schedule table has an audit row');
+  const auditDays = audit.weekdays ?? [0, 1, 2, 3, 4, 5, 6];
   for (const [, day] of automation.matchAll(/\((\w+day) runs only/g)) {
-    assert.ok(audit.weekdays.includes(DAY_NAMES.indexOf(day)), `"${day} runs only" must be an audit day (UTC cron ${audit.cron})`);
+    assert.ok(auditDays.includes(DAY_NAMES.indexOf(day)), `"${day} runs only" must be an audit day (UTC cron ${audit.cron})`);
   }
 });
 

@@ -1,4 +1,4 @@
-name: Weekly automation watchdog
+name: Automation watchdog
 
 # Model-free check that the scheduled cloud routines are still working. It can't see the routines,
 # only their GitHub output: producers stopping shows up as no new scheduled work, and the auditor
@@ -6,7 +6,7 @@ name: Weekly automation watchdog
 
 on:
   schedule:
-    - cron: '0 12 * * 1' # Mondays, 12:00 UTC
+    - cron: '0 12 * * 1,4' # Mondays and Thursdays, 12:00 UTC
   workflow_dispatch:
 
 permissions:
@@ -23,8 +23,8 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
-          STALE_PR_DAYS: 8
-          QUIET_DAYS: 7
+          STALE_PR_DAYS: 5
+          QUIET_DAYS: 4
         run: |
           set -euo pipefail
           title="Automation watchdog (automated)"
@@ -33,7 +33,7 @@ jobs:
           quiet_cutoff=$(date -u -d "-${QUIET_DAYS} days" +%Y-%m-%dT%H:%M:%SZ)
           problems=""
 
-          # The auditor runs three times a week and takes PRs older than 12 hours, so none should sit this long.
+          # The auditor runs nightly and takes PRs older than 12 hours, so none should sit this long.
           stale=$(gh pr list --state open --limit 100 --json number,title,createdAt \
             --jq ".[] | select(.createdAt < \"$pr_cutoff\") | \"- #\(.number) \(.title) (opened \(.createdAt[:10]))\"")
           if [ -n "$stale" ]; then
