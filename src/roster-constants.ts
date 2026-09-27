@@ -57,7 +57,6 @@ export const ROSTER_FIELDS = [
   'undergradMajor',
   'otherDegrees',
   'researchOverview',
-  'selectedWork',
   'recentWork',
 ] as const;
 

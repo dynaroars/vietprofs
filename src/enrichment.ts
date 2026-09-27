@@ -90,12 +90,10 @@ function validateWork(work: unknown, label: string): string[] {
   return errors;
 }
 
-export function validateEnrichment(person: Pick<RosterEntry, 'researchOverview' | 'selectedWork' | 'recentWork'>): string[] {
+export function validateEnrichment(person: Pick<RosterEntry, 'researchOverview' | 'recentWork'>): string[] {
   return [
     ...(person.researchOverview ? validateOverview(person.researchOverview) : []),
-    ...(person.selectedWork ? validateWork(person.selectedWork, 'selectedWork') : []),
     ...(person.recentWork ? validateWork(person.recentWork, 'recentWork') : []),
-    ...(person.selectedWork && person.recentWork ? ['selectedWork and recentWork cannot both be present'] : []),
   ];
 }
 

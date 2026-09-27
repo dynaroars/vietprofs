@@ -127,7 +127,7 @@ used for corporate laboratories. Non-university entries must use the `Research` 
 ## Research workflow
 
 Research overviews are optional, source-backed fields on an existing roster
-entry. Individual profile pages do not render work list sections (`selectedWork` or `recentWork`); long
+entry. Individual profile pages do not render work list sections (`recentWork`), and `selectedWork` is no longer a roster field (removed 2026-09-12, again 2026-09-27); long
 excerpts, source-fetch details, outcomes, errors, and resumable batch state belong in
 `maintenance/enrichment.json`, keyed by immutable `vp-####` ID. A generated overview must be written neutrally without gendered pronouns (do not use He, She, His, Her, Him, Hers; use the scholar's name or direct active-voice phrasing) and must be independently checked against its stored evidence. The command
 `npm run enrich -- snapshot` creates a stable 20-person batch snapshot, `status` reports coverage,

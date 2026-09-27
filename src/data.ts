@@ -74,7 +74,6 @@ export interface RosterEntry {
   portraitSource?: string;
   otherDegrees?: OtherDegree[];
   researchOverview?: ResearchOverview;
-  selectedWork?: WorkItem[];
   recentWork?: WorkItem[];
 }
 

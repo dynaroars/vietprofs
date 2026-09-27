@@ -18,7 +18,8 @@ import { validateEnrichment } from '../src/enrichment.ts';
 const rosterPath = resolve('public/data.json');
 const ledgerPath = resolve('maintenance/enrichment.json');
 const BATCH_SIZE = 20;
-const ENRICHMENT_FIELDS = new Set(['researchOverview', 'selectedWork', 'recentWork']);
+// selectedWork was dropped from the roster on 2026-09-12 and again on 2026-09-27 (#233).
+const ENRICHMENT_FIELDS = new Set(['researchOverview', 'recentWork']);
 
 interface Batch { number: number; ids: string[]; status: 'pending' | 'in_progress' | 'complete'; startedAt?: string; publishedAt?: string; commit?: string; }
 interface Ledger { version: 1; snapshotAt: string; ids: string[]; batches: Batch[]; entries: Record<string, {
@@ -188,13 +189,12 @@ async function apply(inputPath: string) {
     if (protectedKeys.length) throw new Error(`${id}: ${protectedKeys.join(', ')} protected by directFields`);
     const errors = validateEnrichment(proposal);
     if (errors.length) throw new Error(`${id}: ${errors.join('; ')}`);
-    if (proposal.selectedWork && proposal.recentWork) throw new Error(`${id}: choose selectedWork or recentWork`);
     const entry = ledger.entries[id];
     if (!entry) throw new Error(`${id}: not in the enrichment ledger; run snapshot first`);
     Object.assign(person, proposal);
     person.lastUpdatedAt = new Date().toISOString();
     if (proposal.researchOverview) entry.overview = 'verified';
-    if (proposal.selectedWork || proposal.recentWork) entry.work = 'verified';
+    if (proposal.recentWork) entry.work = 'verified';
     entry.updatedAt = new Date().toISOString();
     changed += 1;
   }
