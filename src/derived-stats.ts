@@ -174,7 +174,7 @@ export function computeAcademicGenerations(roster: Roster): GenerationStat[] {
   let totalWithYear = 0;
 
   for (const person of roster) {
-    const year = person.phdYear || person.mdYear;
+    const year = person.phdYear;
     if (!year || typeof year !== 'number' || Number.isNaN(year)) continue;
     totalWithYear += 1;
 

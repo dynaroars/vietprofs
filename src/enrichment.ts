@@ -1,7 +1,6 @@
-import type { ResearchOverview, RosterEntry, WorkItem } from './data.ts';
+import type { ResearchOverview, RosterEntry } from './data.ts';
 
 export const SAFE_WEB_URL = /^https?:\/\/[^\s<>"']+$/i;
-const ISO_DATE = /^\d{4}-\d{2}-\d{2}$/;
 const ISO_TIMESTAMP = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$/;
 
 export type EnrichmentError = string;
@@ -68,41 +67,6 @@ export function validateOverview(value: unknown): EnrichmentError[] {
   return errors;
 }
 
-function validateWork(work: unknown, label: string): string[] {
-  if (!Array.isArray(work)) return [`${label} must be an array`];
-  if (work.length > 3) return [`${label} may contain at most three items`];
-  const errors: string[] = [];
-  const titles = new Set<string>();
-  work.forEach((raw, i) => {
-    const item = raw as Partial<WorkItem>;
-    const prefix = `${label} item ${i + 1}`;
-    if (!raw || typeof raw !== 'object' || Array.isArray(raw)) { errors.push(`${prefix} must be an object`); return; }
-    for (const field of ['title', 'type', 'url', 'selectionSource', 'verifiedAt']) {
-      if (typeof item[field as keyof WorkItem] !== 'string' || !(item[field as keyof WorkItem] as string).trim()) errors.push(`${prefix} needs ${field}`);
-    }
-    if (typeof item.url === 'string' && !SAFE_WEB_URL.test(item.url)) errors.push(`${prefix} has unsafe URL`);
-    if (item.selectionMode !== 'selected' && item.selectionMode !== 'recent') errors.push(`${prefix} has invalid selectionMode`);
-    if (item.year !== undefined && (!Number.isInteger(item.year) || item.year < 1000 || item.year > new Date().getFullYear())) errors.push(`${prefix} has invalid year`);
-    if (item.date !== undefined && (typeof item.date !== 'string' || !ISO_DATE.test(item.date))) errors.push(`${prefix} has invalid date`);
-    if (titles.has(item.title ?? '')) errors.push(`${prefix} duplicates a title`);
-    titles.add(item.title ?? '');
-  });
-  return errors;
-}
-
-export function validateEnrichment(person: Pick<RosterEntry, 'researchOverview' | 'recentWork'>): string[] {
-  return [
-    ...(person.researchOverview ? validateOverview(person.researchOverview) : []),
-    ...(person.recentWork ? validateWork(person.recentWork, 'recentWork') : []),
-  ];
-}
-
-export function chooseWork(items: WorkItem[], mode: 'selected' | 'recent'): WorkItem[] {
-  const unique = new Map<string, WorkItem>();
-  for (const item of items) {
-    const key = item.title.trim().toLocaleLowerCase();
-    if (!unique.has(key)) unique.set(key, item);
-  }
-  if (mode === 'selected') return [...unique.values()].slice(0, 3);
-  return [...unique.values()].sort((a, b) => (b.date ?? `${b.year ?? 0}-00-00`).localeCompare(a.date ?? `${a.year ?? 0}-00-00`)).slice(0, 3);
+export function validateEnrichment(person: Pick<RosterEntry, 'researchOverview'>): string[] {
+  return person.researchOverview ? validateOverview(person.researchOverview) : [];
 }

@@ -43,13 +43,10 @@ interface SubmissionDraft {
   researchAreas?: string[];
   undergradYear?: number;
   undergradInstitution?: string;
-  msYear?: number;
   msInstitution?: string;
   phdYear?: number;
   phdInstitution?: string;
-  mdYear?: number;
   mdInstitution?: string;
-  postdocYear?: number;
   postdocInstitution?: string;
 }
 
@@ -294,10 +291,6 @@ function renderShell() {
 
             <div class="form-section form-row">
               <div>
-                <label for="msYear">Master's completion year</label>
-                <input id="msYear" name="msYear" type="number" min="1900" max="${new Date().getFullYear()}" placeholder="e.g. 2014" />
-              </div>
-              <div>
                 <label for="msInstitution">Master's institution</label>
                 <input id="msInstitution" name="msInstitution" type="text" placeholder="e.g. Stanford University" />
               </div>
@@ -316,20 +309,12 @@ function renderShell() {
 
             <div class="form-section form-row">
               <div>
-                <label for="mdYear">MD completion year</label>
-                <input id="mdYear" name="mdYear" type="number" min="1900" max="${new Date().getFullYear()}" placeholder="e.g. 2016" />
-              </div>
-              <div>
                 <label for="mdInstitution">MD institution</label>
                 <input id="mdInstitution" name="mdInstitution" type="text" placeholder="e.g. Johns Hopkins University" />
               </div>
             </div>
 
             <div class="form-section form-row">
-              <div>
-                <label for="postdocYear">Postdoc completion year</label>
-                <input id="postdocYear" name="postdocYear" type="number" min="1900" max="${new Date().getFullYear()}" placeholder="e.g. 2022" />
-              </div>
               <div>
                 <label for="postdocInstitution">Postdoc institution</label>
                 <input id="postdocInstitution" name="postdocInstitution" type="text" placeholder="e.g. Carnegie Mellon University" />
@@ -395,13 +380,10 @@ const FIELD_LABELS: Partial<Record<keyof SubmissionDraft, string>> = {
   undergradInstitution: 'Undergraduate institution',
   undergradYear: 'Undergraduate year',
   msInstitution: "Master's institution",
-  msYear: "Master's year",
   phdInstitution: 'PhD institution',
   phdYear: 'PhD year',
   mdInstitution: 'MD institution',
-  mdYear: 'MD year',
   postdocInstitution: 'Postdoc institution',
-  postdocYear: 'Postdoc year',
   researchAreas: 'Research areas',
 };
 
@@ -545,13 +527,10 @@ function populateEntry(form: SubmitForm, entry: RosterEntry): void {
   form.rank.value = entry.rank ?? '';
   form.undergradYear.value = entry.undergradYear ? String(entry.undergradYear) : '';
   form.undergradInstitution.value = entry.undergradInstitution ?? '';
-  form.msYear.value = entry.msYear ? String(entry.msYear) : '';
   form.msInstitution.value = entry.msInstitution ?? '';
-  form.postdocYear.value = entry.postdocYear ? String(entry.postdocYear) : '';
   form.postdocInstitution.value = entry.postdocInstitution ?? '';
   form.phdYear.value = entry.phdYear ? String(entry.phdYear) : '';
   form.phdInstitution.value = entry.phdInstitution ?? '';
-  form.mdYear.value = entry.mdYear ? String(entry.mdYear) : '';
   form.mdInstitution.value = entry.mdInstitution ?? '';
   form.researchAreas.value = entry.researchAreas ? entry.researchAreas.join(', ') : '';
   const trackValue = entry.track ?? '';
@@ -661,13 +640,10 @@ function onSubmit(e: SubmitEvent, entriesById: Map<string, RosterEntry> | null, 
     researchAreas: researchAreas.length ? researchAreas : undefined,
     undergradYear: form.undergradYear.value ? Number(form.undergradYear.value) : undefined,
     undergradInstitution: form.undergradInstitution.value.trim() || undefined,
-    msYear: form.msYear.value ? Number(form.msYear.value) : undefined,
     msInstitution: form.msInstitution.value.trim() || undefined,
     phdYear: form.phdYear.value ? Number(form.phdYear.value) : undefined,
     phdInstitution: form.phdInstitution.value.trim() || undefined,
-    mdYear: form.mdYear.value ? Number(form.mdYear.value) : undefined,
     mdInstitution: form.mdInstitution.value.trim() || undefined,
-    postdocYear: form.postdocYear.value ? Number(form.postdocYear.value) : undefined,
     postdocInstitution: form.postdocInstitution.value.trim() || undefined,
   };
 

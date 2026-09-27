@@ -23,12 +23,9 @@ interface RosterEntry {
   track?: string;
   undergradInstitution?: string;
   undergradYear?: number;
-  undergradMajor?: string;
   msInstitution?: string;
-  msYear?: number;
   phdInstitution?: string;
   phdYear?: number;
-  phdMajor?: string;
   directFields?: string[];
   [key: string]: unknown;
 }

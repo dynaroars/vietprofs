@@ -4,7 +4,6 @@ import {
   HONOR_CATEGORIES,
   HONOR_FIELDS,
   INSTITUTION_TYPES,
-  OTHER_DEGREE_FIELDS,
   PROTECTABLE_FIELDS,
   RANKS,
   REQUIRED_ROSTER_STRINGS,
@@ -32,7 +31,6 @@ const allowedInstitutionTypes = new Set<string>(INSTITUTION_TYPES);
 const allowedHonorCategories = new Set<string>(HONOR_CATEGORIES);
 const allowedRosterFields = new Set<string>(ROSTER_FIELDS);
 const allowedHonorFields = new Set<string>(HONOR_FIELDS);
-const allowedOtherDegreeFields = new Set<string>(OTHER_DEGREE_FIELDS);
 
 // looksSurnameFirst() is a heuristic (see its definition), so it's a review flag, not an
 // infallible rule. Names checked here and confirmed already correct (verified against DBLP,
@@ -95,9 +93,9 @@ const batchedIds = enrichment.batches.flatMap((batch: { ids?: unknown[] }) => ba
 if (batchedIds.length !== rosterIds.size || new Set(batchedIds).size !== rosterIds.size || batchedIds.some((id: unknown) => !rosterIds.has(id as string))) {
   fail(enrichmentFile, 'batches must cover every roster ID exactly once');
 }
-for (const [id, entry] of Object.entries(enrichment.entries as Record<string, { overview?: string; work?: string }>)) {
+for (const [id, entry] of Object.entries(enrichment.entries as Record<string, { overview?: string }>)) {
   if (!rosterIds.has(id)) fail(enrichmentFile, `contains stale entry for ${id}`);
-  if (!['pending', 'verified', 'no suitable evidence', 'retry needed'].includes(entry.overview ?? '') || !['pending', 'verified', 'no suitable evidence', 'retry needed'].includes(entry.work ?? '')) fail(enrichmentFile, `invalid outcome for ${id}`);
+  if (!['pending', 'verified', 'no suitable evidence', 'retry needed'].includes(entry.overview ?? '')) fail(enrichmentFile, `invalid outcome for ${id}`);
 }
 if (Object.keys(enrichment.entries).length !== rosterIds.size) fail(enrichmentFile, 'must contain one ledger entry per roster ID');
 
@@ -135,7 +133,8 @@ for (const [index, person] of roster.entries()) {
   if (Object.keys(person)[0] !== 'id') fail(rosterFile, `${label} (${person.id}) must list id as its first field`);
   validateTimestamp(rosterFile, person.lastUpdatedAt, label, 'lastUpdatedAt');
   if (!/^https?:\/\//.test(person.profileUrl)) fail(rosterFile, `${label} profileUrl must use HTTP(S)`);
-  if (person.confirmed !== undefined && typeof person.confirmed !== 'boolean') fail(rosterFile, `${label} confirmed must be a boolean`);
+  // Confirmed is the default; only an unconfirmed record (no official current profile) says so.
+  if (person.confirmed !== undefined && person.confirmed !== false) fail(rosterFile, `${label} confirmed may only be false; omit it for a confirmed record`);
   if (person.websiteUrl !== undefined) {
     if (!/^https?:\/\//.test(person.websiteUrl)) fail(rosterFile, `${label} websiteUrl must use HTTP(S)`);
     if (person.websiteUrl === person.profileUrl) fail(rosterFile, `${label} websiteUrl must differ from profileUrl`);
@@ -189,8 +188,7 @@ for (const [index, person] of roster.entries()) {
         if (typeof honor[field] !== 'string' || !honor[field].trim()) fail(rosterFile, `${honorLabel} has invalid ${field}`);
       }
       if (!allowedHonorCategories.has(honor.category)) fail(rosterFile, `${honorLabel} has unsupported category ${honor.category}`);
-      // Honors always carry a `year` key; `null` records an award whose year is unknown. That is
-      // deliberately stricter than `otherDegrees` below, where the key may be omitted entirely.
+      // Honors always carry a `year` key; `null` records an award whose year is unknown.
       if (!Object.hasOwn(honor, 'year')) fail(rosterFile, `${honorLabel} must set year (use null when unknown)`);
       if (honor.year !== null && (!Number.isInteger(honor.year) || honor.year < 1900 || honor.year > CURRENT_YEAR)) {
         fail(rosterFile, `${honorLabel} has invalid year (expected an integer 1900-${CURRENT_YEAR}, or null when unknown)`);
@@ -199,21 +197,6 @@ for (const [index, person] of roster.entries()) {
       const honorKey = `${honor.name}|${honor.year ?? 'unknown'}|${honor.organization}`;
       if (honorNames.has(honorKey)) fail(rosterFile, `${honorLabel} duplicates an honor for ${person.name}`);
       honorNames.add(honorKey);
-    }
-  }
-  if (person.otherDegrees !== undefined) {
-    if (!Array.isArray(person.otherDegrees)) fail(rosterFile, `${label} otherDegrees must be an array`);
-    for (const [degreeIndex, degree] of person.otherDegrees.entries()) {
-      const degreeLabel = `${label} degree ${degreeIndex + 1}`;
-      if (!degree || typeof degree !== 'object') fail(rosterFile, `${degreeLabel} must be an object`);
-      for (const field of Object.keys(degree)) {
-        if (!allowedOtherDegreeFields.has(field)) fail(rosterFile, `${degreeLabel} has unsupported field ${field}`);
-      }
-      if (typeof degree.degree !== 'string' || !degree.degree.trim()) fail(rosterFile, `${degreeLabel} has invalid degree`);
-      if (typeof degree.institution !== 'string' || !degree.institution.trim()) fail(rosterFile, `${degreeLabel} has invalid institution`);
-      if (degree.year !== undefined && (!Number.isInteger(degree.year) || degree.year < 1900 || degree.year > CURRENT_YEAR)) fail(rosterFile, `${degreeLabel} has invalid year`);
-      if (degree.major !== undefined && (typeof degree.major !== 'string' || !degree.major.trim())) fail(rosterFile, `${degreeLabel} has invalid major`);
-      if (degree.source !== undefined && !/^https?:\/\//.test(degree.source)) fail(rosterFile, `${degreeLabel} source must use HTTP(S)`);
     }
   }
   if (!allowedTracks.has(person.track)) fail(rosterFile, `${label} has unsupported track ${person.track}`);
@@ -244,7 +227,7 @@ for (const [index, person] of roster.entries()) {
       if (formatErr) fail(rosterFile, `${label} ${formatErr}`);
     }
   }
-  const yearFields = ['phdYear', 'undergradYear', 'msYear', 'mdYear', 'postdocYear'];
+  const yearFields = ['phdYear', 'undergradYear'];
   for (const field of yearFields) {
     if (person[field] !== undefined && (!Number.isInteger(person[field]) || person[field] < 1900 || person[field] > CURRENT_YEAR)) {
       fail(rosterFile, `${label} has invalid ${field}`);
@@ -253,11 +236,6 @@ for (const [index, person] of roster.entries()) {
   const chronologyErrors = validateEducationChronology(person);
   if (chronologyErrors.length) {
     fail(rosterFile, `${label} education chronology: ${chronologyErrors.join('; ')}`);
-  }
-  for (const field of ['phdMajor', 'undergradMajor', 'msMajor']) {
-    if (person[field] !== undefined && (typeof person[field] !== 'string' || !person[field].trim())) {
-      fail(rosterFile, `${label} has invalid ${field}`);
-    }
   }
   if (person.directFields !== undefined) {
     if (!Array.isArray(person.directFields) || person.directFields.length === 0) {

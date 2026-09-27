@@ -73,7 +73,7 @@ research:
   AGENTS.md rule of preserving the original Vietnamese surname in `name`/`vietnameseName` if the
   candidate publishes under a changed surname).
 - **Official profile:** the institutional faculty-profile `profileUrl`; note whether this makes the
-  record confirmable (`"confirmed": true`) or whether only identity-resolved secondary sources are
+  record confirmable (no `confirmed` field) or whether only identity-resolved secondary sources are
   available (`"confirmed": false`, and say why).
 - **Links:** `websiteUrl` (personal/academic homepage), `labUrl` (if the candidate runs or belongs
   to a named lab), `linkedinUrl`, `scholarUrl` (Google Scholar), and any other reputable profile
@@ -85,8 +85,8 @@ research:
 - **Awards/honors:** any awards, fellowships, or honors meeting the roster's honors bar (see
   memory: conference distinguished/best-paper awards do not qualify; test-of-time/most-influential
   awards do) with `name`, `year`, `organization`, and `source` URL for each.
-- **Degrees/history:** `phdInstitution`/`phdYear`, `msInstitution`/`msYear`,
-  `undergradInstitution`/`undergradYear`, `postdocInstitution`/`postdocYear` where findable.
+- **Degrees/history:** `phdInstitution`/`phdYear`, `msInstitution`, `mdInstitution`,
+  `undergradInstitution`/`undergradYear`, and a completed `postdocInstitution` where findable.
 - **About/bio summary:** a short factual "about" paragraph or research-overview draft (same quality
   bar as `researchOverview.text` in `ROSTER_MAINTENANCE.md`: neutral, gender-neutral phrasing, no
   raw HTML/citations/boilerplate, ≤3 sentences, ≤500 characters) with its source(s), for the

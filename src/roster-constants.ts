@@ -49,21 +49,13 @@ export const ROSTER_FIELDS = [
   'portrait',
   'portraitSource',
   'postdocInstitution',
-  'postdocYear',
   'phdInstitution',
   'phdYear',
-  'phdMajor',
   'mdInstitution',
-  'mdYear',
   'msInstitution',
-  'msYear',
-  'msMajor',
   'undergradInstitution',
   'undergradYear',
-  'undergradMajor',
-  'otherDegrees',
   'researchOverview',
-  'recentWork',
 ] as const;
 
 export const DIRECT_FIELD_EXCLUSIONS = new Set<string>(['id', 'lastUpdatedAt', 'directFields']);
@@ -73,7 +65,6 @@ export const DIRECT_FIELD_EXCLUSIONS = new Set<string>(['id', 'lastUpdatedAt', '
 export const PROTECTABLE_FIELDS = new Set<string>(['name', 'vietnameseName', 'honors', 'portrait', 'portraitSource']);
 
 export const HONOR_FIELDS = ['name', 'organization', 'category', 'year', 'source'] as const;
-export const OTHER_DEGREE_FIELDS = ['degree', 'institution', 'year', 'major', 'source'] as const;
 
 export const UTC_TIMESTAMP_PATTERN = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$/;
 

@@ -59,12 +59,11 @@ export function formatEducationDetails(person: RosterEntry, { fullLabels = false
   const postdocPrefix = fullLabels ? 'Postdoctoral training' : 'Postdoc';
   const undergradPrefix = fullLabels ? 'Undergraduate' : 'Undergrad';
   return [
-    person.postdocInstitution && `${postdocPrefix}: ${[displayUniversity(person.postdocInstitution), person.postdocYear].filter(Boolean).join(', ')}`,
-    person.phdInstitution && `PhD: ${[displayUniversity(person.phdInstitution), person.phdYear, person.phdMajor].filter(Boolean).join(', ')}`,
-    person.msInstitution && `MS: ${[displayUniversity(person.msInstitution), person.msYear, person.msMajor].filter(Boolean).join(', ')}`,
-    (person.mdYear || person.mdInstitution) && `MD: ${[displayUniversity(person.mdInstitution), person.mdYear].filter(Boolean).join(', ')}`,
-    person.undergradInstitution && `${undergradPrefix}: ${[displayUniversity(person.undergradInstitution), person.undergradYear, person.undergradMajor].filter(Boolean).join(', ')}`,
-    ...(person.otherDegrees ?? []).map((degree) => `${degree.degree}: ${[displayUniversity(degree.institution), degree.year, degree.major].filter(Boolean).join(', ')}`),
+    person.postdocInstitution && `${postdocPrefix}: ${displayUniversity(person.postdocInstitution)}`,
+    person.phdInstitution && `PhD: ${[displayUniversity(person.phdInstitution), person.phdYear].filter(Boolean).join(', ')}`,
+    person.msInstitution && `MS: ${displayUniversity(person.msInstitution)}`,
+    person.mdInstitution && `MD: ${displayUniversity(person.mdInstitution)}`,
+    person.undergradInstitution && `${undergradPrefix}: ${[displayUniversity(person.undergradInstitution), person.undergradYear].filter(Boolean).join(', ')}`,
   ].filter(Boolean) as string[];
 }
 

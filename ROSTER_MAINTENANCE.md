@@ -127,7 +127,7 @@ used for corporate laboratories. Non-university entries must use the `Research` 
 ## Research workflow
 
 Research overviews are optional, source-backed fields on an existing roster
-entry. Individual profile pages do not render work list sections (`recentWork`), and `selectedWork` is no longer a roster field (removed 2026-09-12, again 2026-09-27); long
+entry. There are no work-list fields (`selectedWork` and `recentWork` were removed in 2026-09); long
 excerpts, source-fetch details, outcomes, errors, and resumable batch state belong in
 `maintenance/enrichment.json`, keyed by immutable `vp-####` ID. A generated overview must be written neutrally without gendered pronouns (do not use He, She, His, Her, Him, Hers; use the scholar's name or direct active-voice phrasing) and must be independently checked against its stored evidence. The command
 `npm run enrich -- snapshot` creates a stable 20-person batch snapshot, `status` reports coverage,
@@ -506,7 +506,7 @@ Lead-queue entries (currently `maintenance/hieuphay-leads.json`) are **leads onl
 5. **Metadata Structuring & Roster Enrichment:**
    - **Name order:** Canonical roster name must use Western order `"First (Middle) Last"`. For hyphenated or maiden names, verify against publications and add to `surnameFirstAllowlist` in `scripts/validate-data.ts` if a Vietnamese token is the first name.
    - **Vietnamese name:** Record full diacritic Vietnamese name (`vietnameseName`) in `"Họ Tên"` order when verified from authoritative sources (e.g., Vietnamese media, thesis, university bio).
-   - **Academic degrees:** Extract explicit degree credentials (`phdInstitution`, `phdYear`, `phdMajor`, `mdInstitution`, `mdYear`, `msInstitution`, `undergradInstitution`) only when explicitly documented in institutional bios or CVs.
+   - **Academic degrees:** Extract explicit degree credentials (`phdInstitution`, `phdYear`, `mdInstitution`, `msInstitution`, `undergradInstitution`, `undergradYear`, `postdocInstitution`) only when explicitly documented in institutional bios or CVs.
    - **Honors & Awards:** Record major academy memberships, fellow titles (e.g., IEEE Fellow, AIAA Fellow, NAI Fellow, ACM Fellow), national orders (e.g., *Légion d'honneur*), and career awards with proper category, year, organization, and HTTPS source URL.
    - **Field Classification & Overrides:** Ensure the candidate's department maps correctly to `FIELD_RULES`. For specialized research labs, foreign institutes, or clinical divisions that do not match default regex rules (e.g. French UMRs, medical service units), add an explicit entry to `FIELD_OVERRIDES` in `src/data.ts`.
 
@@ -603,12 +603,12 @@ later qualify again. None of that is a new person, so none of it gets a new ID.
 - Preserve an existing Scholar URL by moving it to `scholarUrl` before replacing `profileUrl`. Verify replacement URLs follow redirects and do not return 404.
 - `rank` is the career level only, one of `Assistant Professor`, `Associate Professor`, `Professor`, `Lecturer`, `Senior Lecturer`, `Researcher`, `Senior Researcher`, `Librarian`, or `Administrator` (`npm test` rejects anything else). The track carries the appointment type, and the display combines them ("Assistant Clinical Professor", "Teaching Professor", "Professor Emeritus"). Don't store the published title, a named chair, a department ("of Medicine"), or a leadership role; the linked profile has those, and named chairs go in `honors`. Map by level, not by translating systems: `Clinical Assistant Professor` → `Assistant Professor` (Clinical track); `Research Scientist`, `Chargé(e) de recherche`, `Staff Scientist` → `Researcher`; `Directeur de recherche`, `Principal`/`Senior Scientist`, `Group Leader` → `Senior Researcher`; `Distinguished`/`Full`/`Endowed Professor` → `Professor`. Keep Commonwealth `Lecturer` and `Senior Lecturer` as they are; never equate them with US ranks. A modern UK `Reader` is `Associate Professor`. Leave `rank` empty when the level isn't stated (e.g. a bare emeritus title); never guess.
 - Add `phdYear` and `phdInstitution` only when a source explicitly states them. Never infer them from dates, CV chronology, or context. Institution names must not contain degree prefixes (e.g., "Ph.D. in ...").
-- Education degrees must follow chronological sanity: `undergradYear <= msYear <= phdYear <= postdocYear`, with at least a 2-year interval between `undergradYear` and `phdYear`. Legitimate mid-career master's degrees earned after a doctorate must be allowlisted in `MID_CAREER_MS_ALLOWLIST`. Run `npm run audit-evidence` to audit the roster for anomalies.
-- Record completed postdoctoral training when a source explicitly identifies the institution. Add
-  `postdocYear` only when the source also explicitly states an end or completion year; never infer
-  it from CV chronology or context. Past postdoctoral training is an education credential; a
-  current postdoctoral appointment remains ineligible for the roster.
-- Education research is not limited to PhD, MS, and undergraduate degrees. Record explicitly documented professional or equivalent degrees such as MD, JD, DDS, PharmD, EdD, DO, and other credentials when the data model has an appropriate field. Do not force an MD/JD or another degree into the PhD/MS/undergraduate fields; if no suitable field exists yet, preserve the source for a later schema update and mention it in the change notes.
+- Education is deliberately small: `undergradInstitution`/`undergradYear`, `msInstitution`,
+  `phdInstitution`/`phdYear`, `mdInstitution`, and `postdocInstitution` (completed training only;
+  a current postdoc is ineligible). There are no majors, other degrees, or master's/MD/postdoc
+  years (removed 2026-09-27; `npm test` rejects them). The one chronology rule is at least 2 years
+  between `undergradYear` and `phdYear`. Don't force a JD, MBA, or other professional degree into
+  these fields; leave it on the linked profile.
 - For undergraduate education, use the explicitly stated bachelor’s institution and completion year. A professional degree such as a JD is separate from undergraduate education and must not be substituted for it.
 - Use the person's full published academic name only when an official profile or maintained academic homepage supplies it. Expand initials only with direct evidence.
 - Store `name` without Vietnamese diacritics and in First (Middle) Last order. This is a display normalization, not a claim about publishing name order.
@@ -1066,7 +1066,7 @@ page in fact states the missing fact.
 Two gap patterns are easy to find with a plain scan of the roster file, with very different yield:
 
 - **A degree year without its paired institution** (`phdYear` present but `phdInstitution` absent,
-  and likewise for `msYear`/`msInstitution` and `undergradYear`/`undergradInstitution`). This is
+  and likewise for `undergradYear`/`undergradInstitution`). This is
   close to always resolvable: whatever page supplied the year almost always names the institution
   next to it, so the original entry was very likely an incomplete transcription rather than a gap
   in the source.
@@ -1078,11 +1078,9 @@ Two gap patterns are easy to find with a plain scan of the roster file, with ver
   section with medical school, residency, and fellowship institutions and years.
 
 Apply the same data-entry rules as any other correction: add only what the page explicitly states,
-never infer a year from chronology, and route a professional degree without a dedicated field (JD,
-DMD, DO, PharmD, MFA, MBA, etc.) through `otherDegrees` rather than forcing it into `phdInstitution`
-or `msInstitution`. Store explicitly stated fields of study in `phdMajor`, `msMajor`, or
-`undergradMajor`; for entries in `otherDegrees`, use that object's `major` field. Do not introduce
-alternate degree keys: the data validator rejects fields outside the canonical schema. Do not advance
+never infer a year from chronology, and don't force a professional degree (JD, DMD, PharmD, MBA,
+etc.) into `phdInstitution` or `msInstitution`. Only the education fields in "Data-entry rules"
+exist; the validator rejects anything else. Do not advance
 `lastVerifiedAt` in the ledger for this sweep alone — it does not perform the full live review the
 periodic refresh requires, so advancing the ledger would let that record skip a real refresh later.
 When a scan turns up no education fields and the primary source states none, leave the record

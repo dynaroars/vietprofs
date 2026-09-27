@@ -219,19 +219,17 @@ test('proposal validation rejects unknown roster and nested fields', () => {
   };
   assert.match(rejection(proposalValidationError(proposal)), /unsupported field unsupportedInstitution/);
   delete proposal.unsupportedInstitution;
-  proposal.otherDegrees = [{ degree: 'MA', institution: 'Example University', unsupportedMajor: 'History' }];
-  assert.match(rejection(proposalValidationError(proposal)), /other degree has unsupported field unsupportedMajor/);
+  proposal.otherDegrees = [{ degree: 'MA', institution: 'Example University' }];
+  assert.match(rejection(proposalValidationError(proposal)), /unsupported field otherDegrees/);
 });
 
 test('proposal analysis preserves completed postdoctoral training fields', () => {
   const after = structuredClone(people);
   after[1].postdocInstitution = 'Carnegie Mellon University';
-  after[1].postdocYear = 2022;
   const result = analyzeRosterProposal(people, after, 'Old Person');
   assert.equal(result.ok, true);
   assert.equal(result.substantiveChange, true);
   assert.equal(result.proposal.postdocInstitution, 'Carnegie Mellon University');
-  assert.equal(result.proposal.postdocYear, 2022);
 });
 
 test('proposal analysis rejects proposals that drop verified baseline honors', () => {
@@ -258,16 +256,6 @@ test('proposal analysis rejects proposals that drop verified baseline honors', (
   const result = analyzeRosterProposal(honoredPeople, after, 'Old Person');
   assert.equal(result.ok, false);
   assert.match(result.reason, /proposal dropped verified baseline honor/);
-});
-
-test('proposal analysis allows a completed postdoc institution without a completion year', () => {
-  const after = structuredClone(people);
-  after[1].postdocInstitution = 'Carnegie Mellon University';
-  const result = analyzeRosterProposal(people, after, 'Old Person');
-  assert.equal(result.ok, true);
-  assert.equal(result.substantiveChange, true);
-  assert.equal(result.proposal.postdocInstitution, 'Carnegie Mellon University');
-  assert.equal(result.proposal.postdocYear, undefined);
 });
 
 test('rejected proposals receive bounded revision attempts', () => {

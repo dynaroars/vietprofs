@@ -18,13 +18,13 @@ import { validateEnrichment } from '../src/enrichment.ts';
 const rosterPath = resolve('public/data.json');
 const ledgerPath = resolve('maintenance/enrichment.json');
 const BATCH_SIZE = 20;
-// selectedWork was dropped from the roster on 2026-09-12 and again on 2026-09-27 (#233).
-const ENRICHMENT_FIELDS = new Set(['researchOverview', 'recentWork']);
+// Only the research overview is enriched; the work-list fields (selectedWork, recentWork) were
+// dropped from the roster in 2026-09.
+const ENRICHMENT_FIELDS = new Set(['researchOverview']);
 
 interface Batch { number: number; ids: string[]; status: 'pending' | 'in_progress' | 'complete'; startedAt?: string; publishedAt?: string; commit?: string; }
 interface Ledger { version: 1; snapshotAt: string; ids: string[]; batches: Batch[]; entries: Record<string, {
   overview: 'pending' | 'verified' | 'no suitable evidence' | 'retry needed';
-  work: 'pending' | 'verified' | 'no suitable evidence' | 'retry needed';
   sourcesChecked: string[]; evidence: unknown[]; errors: string[]; nextAction?: string; updatedAt: string;
 }>; }
 type LedgerEntry = Ledger['entries'][string];
@@ -61,7 +61,6 @@ function makeEntry(person: RosterEntry, at = new Date().toISOString()): LedgerEn
   const now = at;
   return {
     overview: 'pending' as const,
-    work: 'pending' as const,
     sourcesChecked: sourceUrlsFor(person),
     evidence: [] as unknown[],
     errors: [] as string[],
@@ -111,8 +110,8 @@ async function snapshot(reset: boolean) {
 async function status() {
   const { ledger } = await load();
   if (!ledger) throw new Error('No enrichment snapshot exists; run snapshot first.');
-  const counts = (key: 'overview' | 'work') => Object.values(ledger.entries).reduce<Record<string, number>>((all, entry) => { all[entry[key]] = (all[entry[key]] ?? 0) + 1; return all; }, {});
-  console.log(JSON.stringify({ snapshotAt: ledger.snapshotAt, people: ledger.ids.length, batches: ledger.batches, overview: counts('overview'), work: counts('work') }, null, 2));
+  const counts = (key: 'overview') => Object.values(ledger.entries).reduce<Record<string, number>>((all, entry) => { all[entry[key]] = (all[entry[key]] ?? 0) + 1; return all; }, {});
+  console.log(JSON.stringify({ snapshotAt: ledger.snapshotAt, people: ledger.ids.length, batches: ledger.batches, overview: counts('overview') }, null, 2));
 }
 
 async function startBatch(number: number) {
@@ -166,8 +165,7 @@ async function collectBatch(number: number) {
       }
     }
     entry.overview = entry.evidence.length ? 'pending' : 'retry needed';
-    entry.work = entry.evidence.length ? 'pending' : 'retry needed';
-    entry.nextAction = entry.evidence.length ? 'Generate and independently verify overview/work proposal.' : 'Retry inaccessible source fetch.';
+    entry.nextAction = entry.evidence.length ? 'Generate and independently verify an overview proposal.' : 'Retry inaccessible source fetch.';
     entry.updatedAt = new Date().toISOString();
     await save(ledger);
     console.log(`${id}: ${entry.evidence.length ? 'evidence collected' : 'retry needed'}`);
@@ -191,10 +189,8 @@ async function apply(inputPath: string) {
     if (errors.length) throw new Error(`${id}: ${errors.join('; ')}`);
     const entry = ledger.entries[id];
     if (!entry) throw new Error(`${id}: not in the enrichment ledger; run snapshot first`);
-    Object.assign(person, proposal);
-    person.lastUpdatedAt = new Date().toISOString();
+    Object.assign(person, proposal); // overviews don't advance lastUpdatedAt
     if (proposal.researchOverview) entry.overview = 'verified';
-    if (proposal.recentWork) entry.work = 'verified';
     entry.updatedAt = new Date().toISOString();
     changed += 1;
   }
@@ -212,13 +208,12 @@ async function finalizeBatch(number: number) {
     const entry = ledger.entries[id];
     if (!entry) continue;
     if (entry.overview === 'pending') entry.overview = 'no suitable evidence';
-    if (entry.work === 'pending') entry.work = 'no suitable evidence';
-    if (entry.overview === 'no suitable evidence' || entry.work === 'no suitable evidence') {
+    if (entry.overview === 'no suitable evidence') {
       entry.nextAction ??= 'Completed source review found no suitable evidence for the remaining optional enrichment.';
     }
     entry.updatedAt = new Date().toISOString();
   }
-  const unresolved = batch.ids.some((id) => ledger.entries[id]?.overview === 'retry needed' || ledger.entries[id]?.work === 'retry needed');
+  const unresolved = batch.ids.some((id) => ledger.entries[id]?.overview === 'retry needed');
   batch.status = unresolved ? 'in_progress' : 'complete';
   if (!unresolved) batch.publishedAt = new Date().toISOString();
   await save(ledger);
@@ -229,7 +224,7 @@ async function resolveRetries() {
   const { ledger } = await load();
   if (!ledger) throw new Error('No enrichment snapshot exists; run snapshot first.');
   const ids = Object.entries(ledger.entries)
-    .filter(([, entry]) => entry.overview === 'retry needed' || entry.work === 'retry needed')
+    .filter(([, entry]) => entry.overview === 'retry needed')
     .map(([id]) => id);
   for (let offset = 0; offset < ids.length; offset += BATCH_SIZE) {
     const chunk = ids.slice(offset, offset + BATCH_SIZE);
@@ -247,7 +242,6 @@ async function resolveRetries() {
       entry.errors ??= [];
       entry.errors.push(`Retry resolution ${new Date().toISOString()}: ${attempts.join(' | ')}`);
       if (entry.overview === 'retry needed') entry.overview = 'no suitable evidence';
-      if (entry.work === 'retry needed') entry.work = 'no suitable evidence';
       entry.nextAction = 'Second bounded retrieval attempt completed; no independently verified enrichment was added.';
       entry.updatedAt = new Date().toISOString();
     }));
@@ -255,7 +249,7 @@ async function resolveRetries() {
     console.log(`Resolved retry outcomes ${offset + 1}-${offset + chunk.length} of ${ids.length}.`);
   }
   for (const batch of ledger.batches) {
-    const unresolved = batch.ids.some((id) => ledger.entries[id]?.overview === 'retry needed' || ledger.entries[id]?.work === 'retry needed');
+    const unresolved = batch.ids.some((id) => ledger.entries[id]?.overview === 'retry needed');
     if (!unresolved) {
       batch.status = 'complete';
       batch.publishedAt ??= new Date().toISOString();

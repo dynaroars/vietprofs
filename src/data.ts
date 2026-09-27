@@ -7,30 +7,10 @@ export interface Honor {
   source?: string;
 }
 
-export interface OtherDegree {
-  degree: string;
-  institution: string;
-  year?: number;
-  major?: string;
-  source?: string;
-}
-
 export interface ResearchOverview {
   text: string;
   sources: string[];
   verifiedAt: string;
-}
-
-export interface WorkItem {
-  title: string;
-  type: string;
-  year?: number;
-  date?: string;
-  url: string;
-  selectionSource: string;
-  selectionMode: 'selected' | 'recent';
-  verifiedAt: string;
-  description?: string;
 }
 
 export interface RosterEntry {
@@ -48,18 +28,12 @@ export interface RosterEntry {
   researchAreas?: string[];
   honors?: Honor[];
   postdocInstitution?: string;
-  postdocYear?: number;
   phdInstitution?: string;
   phdYear?: number;
-  phdMajor?: string;
   mdInstitution?: string;
-  mdYear?: number;
   undergradInstitution?: string;
   undergradYear?: number;
-  undergradMajor?: string;
   msInstitution?: string;
-  msYear?: number;
-  msMajor?: string;
   profileUrl?: string;
   websiteUrl?: string;
   labUrl?: string;
@@ -72,9 +46,7 @@ export interface RosterEntry {
   lastUpdatedAt?: string;
   portrait?: string;
   portraitSource?: string;
-  otherDegrees?: OtherDegree[];
   researchOverview?: ResearchOverview;
-  recentWork?: WorkItem[];
 }
 
 export type Roster = RosterEntry[];
@@ -124,13 +96,9 @@ function searchableFields(person: RosterEntry) {
     healthSubfieldOf(person),
     person.postdocInstitution,
     person.phdInstitution,
-    person.phdMajor,
     person.mdInstitution,
     person.undergradInstitution,
-    person.undergradMajor,
     person.msInstitution,
-    person.msMajor,
-    ...(person.otherDegrees ?? []).flatMap((degree) => [degree.degree, degree.institution, degree.major]),
     ...(person.researchAreas ?? []),
     ...(person.honors ?? []).flatMap((honor) => [honor.name, honor.organization]),
   ];

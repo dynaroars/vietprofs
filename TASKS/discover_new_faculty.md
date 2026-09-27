@@ -20,7 +20,7 @@ Expand roster coverage by finding qualified Vietnamese and Vietnamese-diaspora s
 2. **Data Fields Required**:
    - `name`, `university`, `country`, `rank`, `track`, `department`, `field`, `profileUrl`, `keywords`, `confirmed`.
 3. **Verification Protocol**:
-   - Official institutional profile page sets `"confirmed": true`.
+   - Official institutional profile page: omit `confirmed` (the default).
    - Identity-resolved public page (lab site, personal site, Google Scholar) sets `"confirmed": false` (Unconfirmed).
 4. **Local Verification** (run against a scratch copy before filing the Issue, never committed to a branch):
    ```bash

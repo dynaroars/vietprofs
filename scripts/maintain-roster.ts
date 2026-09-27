@@ -48,7 +48,7 @@ import process from 'node:process';
 import { fileURLToPath } from 'node:url';
 import { isDeepStrictEqual } from 'node:util';
 import { FIELDS, fieldOf, type Roster } from '../src/data.ts';
-import { DIRECT_FIELD_EXCLUSIONS, HONOR_CATEGORIES, PROTECTABLE_FIELDS, RANKS, HONOR_FIELDS, INSTITUTION_TYPES, OTHER_DEGREE_FIELDS, ROSTER_FIELDS, TRACKS } from '../src/roster-constants.ts';
+import { DIRECT_FIELD_EXCLUSIONS, HONOR_CATEGORIES, PROTECTABLE_FIELDS, RANKS, HONOR_FIELDS, INSTITUTION_TYPES, ROSTER_FIELDS, TRACKS } from '../src/roster-constants.ts';
 import { validateEnrichment } from '../src/enrichment.ts';
 import { loadEvidenceLedger, recordFieldEvidence, saveEvidenceLedger } from '../src/evidence.ts';
 import {
@@ -78,7 +78,6 @@ const MAX_CAPTURE_CHARS = 2_000_000;
 const MAINTAINED_PATHS = new Set(['public/data.json', 'maintenance/verification.json', 'maintenance/enrichment.json', 'maintenance/evidence.json', 'maintenance/portrait-provenance.json']);
 const ALLOWED_ROSTER_FIELDS = new Set<string>(ROSTER_FIELDS);
 const ALLOWED_HONOR_FIELDS = new Set<string>(HONOR_FIELDS);
-const ALLOWED_OTHER_DEGREE_FIELDS = new Set<string>(OTHER_DEGREE_FIELDS);
 // Fields whose absence marks an entry as an enrichment gap (missing portrait, Scholar link, or
 // personal/lab site) rather than just plain staleness.
 const COMPLETENESS_FIELDS = ['portrait', 'scholarUrl', 'websiteUrl'];
@@ -597,6 +596,7 @@ export function proposalValidationError(proposal: JsonRecord): string | null {
   if (!Array.isArray(proposal.researchAreas) || proposal.researchAreas.length === 0 || proposal.researchAreas.some((area) => typeof area !== 'string' || !area.trim())) return 'proposal needs valid researchAreas';
   if (!TRACKS.includes(proposal.track)) return 'proposal has unsupported track';
   if (proposal.rank !== undefined && !(RANKS as readonly string[]).includes(proposal.rank)) return `proposal has unsupported rank; use one of ${RANKS.join(', ')}`;
+  if (proposal.confirmed !== undefined && proposal.confirmed !== false) return 'proposal confirmed may only be false; omit it for a confirmed record';
   if (proposal.institutionType !== undefined && !INSTITUTION_TYPES.includes(proposal.institutionType)) return 'proposal has unsupported institutionType';
   if (proposal.institutionType !== undefined && proposal.institutionType !== 'University' && !['Research', 'Emeritus', 'Deceased'].includes(proposal.track)) return 'proposal non-university institutionType requires the Research, Emeritus, or Deceased track';
   if (proposal.websiteUrl !== undefined && proposal.websiteUrl === proposal.profileUrl) return 'proposal websiteUrl must differ from profileUrl';
@@ -634,18 +634,6 @@ export function proposalValidationError(proposal: JsonRecord): string | null {
       honorKeys.add(honorKey);
     }
   }
-  if (proposal.otherDegrees !== undefined) {
-    if (!Array.isArray(proposal.otherDegrees)) return 'proposal otherDegrees must be an array';
-    for (const degree of proposal.otherDegrees) {
-      if (!degree || typeof degree.degree !== 'string' || !degree.degree.trim() || typeof degree.institution !== 'string' || !degree.institution.trim()) return 'proposal has invalid other degree';
-      for (const field of Object.keys(degree)) {
-        if (!ALLOWED_OTHER_DEGREE_FIELDS.has(field)) return `proposal other degree has unsupported field ${field}`;
-      }
-      if (degree.year !== undefined && (!Number.isInteger(degree.year) || degree.year < 1900 || degree.year > new Date().getFullYear())) return 'proposal has invalid other degree year';
-      if (degree.major !== undefined && (typeof degree.major !== 'string' || !degree.major.trim())) return 'proposal has invalid other degree major';
-      if (degree.source !== undefined && !/^https?:\/\//.test(degree.source)) return 'proposal other degree source must use HTTP(S)';
-    }
-  }
   for (const field of ['phdInstitution', 'undergradInstitution', 'msInstitution', 'mdInstitution', 'postdocInstitution']) {
     if (proposal[field] !== undefined) {
       if (typeof proposal[field] !== 'string' || !proposal[field].trim()) return `proposal has invalid ${field}`;
@@ -653,14 +641,11 @@ export function proposalValidationError(proposal: JsonRecord): string | null {
       if (formatErr) return `proposal ${formatErr}`;
     }
   }
-  for (const field of ['phdYear', 'undergradYear', 'msYear', 'mdYear', 'postdocYear']) {
+  for (const field of ['phdYear', 'undergradYear']) {
     if (proposal[field] !== undefined && (!Number.isInteger(proposal[field]) || proposal[field] < 1900 || proposal[field] > new Date().getFullYear())) return `proposal has invalid ${field}`;
   }
   const chronologyErrors = validateEducationChronology(proposal);
   if (chronologyErrors.length) return `proposal education chronology: ${chronologyErrors.join('; ')}`;
-  for (const field of ['phdMajor', 'undergradMajor', 'msMajor']) {
-    if (proposal[field] !== undefined && (typeof proposal[field] !== 'string' || !proposal[field].trim())) return `proposal has invalid ${field}`;
-  }
   if (proposal.directFields !== undefined) {
     if (!Array.isArray(proposal.directFields) || proposal.directFields.length === 0) return 'proposal directFields must be a non-empty array';
     const seen = new Set<string>();
@@ -1033,11 +1018,11 @@ from affiliation and publication titles rather than name alone, and cite the mat
 if ambiguous or if multiple scholars share the name, omit scholarUrl. Only add or keep linkedinUrl if it is linked
 directly from the person's official profile/personal website or if both their current university and degree/field
 match unambiguously; never guess from name alone. Check all explicitly documented education: PhD, master's,
-undergraduate, professional or equivalent degrees, majors and graduation years, plus completed
-postdoctoral institution and, when explicitly documented, its end/completion year. NEVER infer graduation years,
+undergraduate, master's, and MD institutions, the undergraduate and PhD years, and the completed
+postdoctoral institution (no majors, other degrees, or master's/MD/postdoc years; those fields were removed). NEVER infer graduation years,
 completion years, or alma maters from CV chronology, publication history, or career start dates. In your report,
 quote the exact verbatim sentence from the source verifying any added or changed degree credential. Ensure chronological
-sanity (undergradYear <= msYear <= phdYear <= postdocYear, with at least 2 years between undergrad and PhD).
+sanity (at least 2 years between undergradYear and phdYear).
 Check every honor under the documented honors
 eligibility rules, including that each is a faculty-level distinction and not a dissertation award,
 dissertation fellowship/grant, or other student/trainee-stage award — remove any stored honor that

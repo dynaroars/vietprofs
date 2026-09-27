@@ -5,6 +5,9 @@
 //
 //   npm run stamp-updates            # compare with HEAD
 //   npm run stamp-updates -- <ref>   # compare with another commit, e.g. origin/main
+//
+// A roster-wide schema or formatting migration (dropping a field, normalizing values) is not an
+// update to anyone's record: run it with SCHEMA_MIGRATION=1 npm test so nothing is stamped.
 import { execFileSync } from 'node:child_process';
 import { readFile, writeFile } from 'node:fs/promises';
 import type { RosterEntry } from '../src/data.ts';
@@ -35,7 +38,7 @@ function content(person: RosterEntry): string {
 
 const text = await readFile(rosterFile, 'utf8');
 const roster: RosterEntry[] = JSON.parse(text);
-const base = committedRoster();
+const base = process.env.SCHEMA_MIGRATION ? null : committedRoster();
 if (base) {
   const before = new Map(base.map((person) => [person.id, person]));
   const now = new Date().toISOString();

@@ -50,7 +50,17 @@
       },
       "rank": {
         "type": "string",
-        "enum": ["Assistant Professor", "Associate Professor", "Professor", "Lecturer", "Senior Lecturer", "Researcher", "Senior Researcher", "Librarian", "Administrator"],
+        "enum": [
+          "Assistant Professor",
+          "Associate Professor",
+          "Professor",
+          "Lecturer",
+          "Senior Lecturer",
+          "Researcher",
+          "Senior Researcher",
+          "Librarian",
+          "Administrator"
+        ],
         "description": "Career level; the track says Clinical/Teaching/Research. Omit when unknown."
       },
       "track": {
@@ -67,8 +77,9 @@
         "description": "Appointment track"
       },
       "confirmed": {
-        "type": "boolean",
-        "description": "False when supported by secondary evidence but lacking an active official university directory page"
+        "description": "Present only for an unconfirmed record (no official current profile); omit when confirmed.",
+        "const": false,
+        "type": "boolean"
       },
       "researchAreas": {
         "type": "array",
@@ -120,21 +131,9 @@
         "type": "integer",
         "description": "Undergraduate graduation year"
       },
-      "undergradMajor": {
-        "type": "string",
-        "description": "Undergraduate major / degree field"
-      },
       "msInstitution": {
         "type": "string",
         "description": "Master's degree institution"
-      },
-      "msYear": {
-        "type": "integer",
-        "description": "Master's degree graduation year"
-      },
-      "msMajor": {
-        "type": "string",
-        "description": "Master's degree major"
       },
       "phdInstitution": {
         "type": "string",
@@ -144,25 +143,13 @@
         "type": "integer",
         "description": "PhD completion year"
       },
-      "phdMajor": {
-        "type": "string",
-        "description": "Doctoral field of study"
-      },
       "postdocInstitution": {
         "type": "string",
         "description": "Postdoctoral training institution"
       },
-      "postdocYear": {
-        "type": "integer",
-        "description": "Postdoctoral completion year"
-      },
       "mdInstitution": {
         "type": "string",
         "description": "Medical degree institution"
-      },
-      "mdYear": {
-        "type": "integer",
-        "description": "Medical degree graduation year"
       },
       "honors": {
         "type": "array",
@@ -193,33 +180,6 @@
           }
         },
         "description": "Honors, awards, academy memberships, and chair appointments"
-      },
-      "otherDegrees": {
-        "type": "array",
-        "items": {
-          "type": "object",
-          "required": [
-            "degree",
-            "institution"
-          ],
-          "properties": {
-            "degree": {
-              "type": "string"
-            },
-            "institution": {
-              "type": "string"
-            },
-            "year": {
-              "type": "integer"
-            },
-            "major": {
-              "type": "string"
-            },
-            "source": {
-              "type": "string"
-            }
-          }
-        }
       },
       "directFields": {
         "type": "array",

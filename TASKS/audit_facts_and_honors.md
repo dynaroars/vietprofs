@@ -9,7 +9,7 @@
 
 1. **Routing:** Follow the "Where each kind of change lands" table in `AGENTS.md` (existing-ID edits → PR; new people → Issue; never commit directly to `main`).
 2. **Strict Batch Size (15–20 Candidates Per Batch):** Work in bounded batches of **15–20 candidates per batch** using the lead file (`maintenance/hieuphay-leads.json`).
-3. **Thorough Verification Standard:** Verify full inclusion standard for every candidate: current appointment outside Vietnam, accepted track, non-corporate employer, degree chronology (`undergradYear <= msYear <= phdYear <= postdocYear`), and honors categorization.
+3. **Thorough Verification Standard:** Verify full inclusion standard for every candidate: current appointment outside Vietnam, accepted track, non-corporate employer, degree chronology (PhD at least 2 years after undergrad), and honors categorization.
 4. **New-ID vs. Edit Split (per `AGENTS.md`):** A batch's candidates fall into two kinds, and each kind is submitted differently:
    - **Already on the roster, possibly elsewhere:** run `npm run find-roster-matches -- "<name>" --url ...` first. A hit, including one at a former institution or a retired id, is an edit to that id (or a restore), not a new person (`ROSTER_MAINTENANCE.md` "One person, one ID").
    - **Brand-new person (needs a new `vp-####` ID):** Do NOT run `assign-profile-ids -- --apply` or add them to `public/data.json` on a branch. File one GitHub Issue per candidate (or a small group) with evidence, source URLs, and proposed fields, and let the owner or `AUDIT_ISSUES_PRS.md` assign the ID.
@@ -46,17 +46,17 @@ updates"). `npm test` stamps `lastUpdatedAt` on changed entries; advance `mainte
 Academic degrees must be corroborated by official institutional bios, personal academic homepages, or verified CVs.
 
 ### A. Allowed Credential Fields
-- `phdInstitution`, `phdYear`, `phdMajor`
-- `msInstitution`, `msYear`
+- `phdInstitution`, `phdYear`
+- `msInstitution`
 - `undergradInstitution`, `undergradYear`
-- `postdocInstitution`, `postdocYear`
-- `mdInstitution`, `mdYear`
+- `postdocInstitution`
+- `mdInstitution`
 
 ### B. Strict Chronology & Formatting Rules
-1. **Academic Progression Order:** Degrees must follow logical academic chronology: `undergradYear <= msYear <= phdYear <= postdocYear`.
+1. **Academic Progression Order:** `phdYear` must be at least 2 years after `undergradYear`.
 2. **Implausible Interval Detection:** Flag and investigate implausible intervals (e.g. an undergrad graduation year of 2024 for a professor who completed a PhD in 2003).
 3. **Canonical Institution Formatting:** Store canonical institution names without prepended degree prefixes (e.g., store `"University of California, Berkeley"`, NOT `"PhD from UC Berkeley"`).
-4. **Completed Postdoctoral Training:** Record completed postdoctoral institution (`postdocInstitution`) and completion year (`postdocYear`) when explicitly documented.
+4. **Completed Postdoctoral Training:** Record the completed postdoctoral institution (`postdocInstitution`) when explicitly documented.
 
 ---
 

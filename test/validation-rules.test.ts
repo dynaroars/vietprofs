@@ -11,9 +11,7 @@ test('validateEducationChronology accepts standard academic progression', () => 
   const normal = {
     name: 'Normal Scholar',
     undergradYear: 2010,
-    msYear: 2012,
     phdYear: 2016,
-    postdocYear: 2018,
   };
   assert.deepEqual(validateEducationChronology(normal), []);
 
@@ -53,49 +51,6 @@ test('validateEducationChronology rejects inverted degrees and impossible interv
     validateEducationChronology(sameYear)[0],
     /interval between undergradYear \(2015\) and phdYear \(2015\) is less than 2 years/,
   );
-
-  // Postdoc before PhD
-  const postdocBeforePhd = {
-    name: 'Early Postdoc',
-    phdYear: 2020,
-    postdocYear: 2018,
-  };
-  assert.match(
-    validateEducationChronology(postdocBeforePhd)[0],
-    /postdocYear \(2018\) cannot precede phdYear \(2020\)/,
-  );
-
-  // MS before undergrad
-  const msBeforeUndergrad = {
-    name: 'Early MS',
-    undergradYear: 2015,
-    msYear: 2012,
-  };
-  assert.match(
-    validateEducationChronology(msBeforeUndergrad)[0],
-    /msYear \(2012\) cannot precede undergradYear \(2015\)/,
-  );
-});
-
-test('validateEducationChronology handles mid-career master degrees correctly', () => {
-  // Non-allowlisted MS after PhD
-  const unallowlisted = {
-    name: 'Unknown Scholar',
-    phdYear: 2014,
-    msYear: 2025,
-  };
-  assert.match(
-    validateEducationChronology(unallowlisted)[0],
-    /msYear \(2025\) is after phdYear \(2014\)/,
-  );
-
-  // Allowlisted mid-career MS (e.g. Huyen C. Nguyen)
-  const allowlisted = {
-    name: 'Huyen C. Nguyen',
-    phdYear: 2014,
-    msYear: 2025,
-  };
-  assert.deepEqual(validateEducationChronology(allowlisted), []);
 });
 
 test('validateInstitutionFormat flags degree prefixes prepended to institutions', () => {
