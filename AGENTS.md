@@ -64,8 +64,8 @@ instead of restating it.
 | Conflict with a protected `directFields` value, or anything needing an owner decision | GitHub Issue |
 
 Never merge your own PR (the one exception is the auditor's `audit-fix` PR for Issues other agents or the owner filed). PRs and Issues are review handoffs: a separate auditor run checks them
-later (see "Independent review" in `TASKS/AUDIT_ISSUES_PRS.md`). `lastUpdatedAt` is stamped by
-`npm test`; never set it by hand.
+later (see "Independent review" in `TASKS/AUDIT_ISSUES_PRS.md`). `lastUpdatedAt` lives in
+`public/updates.json` and is stamped by `npm test`; never set it by hand.
 
 ## Unattended and scheduled runs
 

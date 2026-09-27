@@ -3,7 +3,7 @@ import { extname, join, resolve } from 'node:path';
 import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
 
-type Person = { id: string; name: string; university: string; department?: string; rank?: string; profileUrl: string; websiteUrl?: string; portrait?: string; portraitSource?: string; directFields?: string[]; lastUpdatedAt: string };
+type Person = { id: string; name: string; university: string; department?: string; rank?: string; profileUrl: string; websiteUrl?: string; portrait?: string; portraitSource?: string; directFields?: string[] };
 type QueueItem = Pick<Person, 'id' | 'name' | 'university' | 'profileUrl'> & { batch: number; status: 'pending' | 'fetched' | 'unresolved'; portraitSource?: string; note?: string };
 type SourceType = 'official_faculty' | 'personal_homepage' | 'lab_site' | 'authoritative_academic';
 type Confidence = 'HIGH' | 'MEDIUM' | 'LOW';
@@ -196,7 +196,7 @@ for (const person of selected) {
   }
   if (!(await isPortraitLike(temporary))) { await unlink(temporary).catch(() => undefined); ledger.entries[person.id] = { ...entry, outcome: 'not_found', note: 'candidate failed 120x120 or portrait-aspect validation' }; report.push({ id: person.id, name: person.name, result: 'not_found', source: candidate.page.sourceType, confidence: level }); continue; }
   await rename(temporary, output);
-  person.portrait = portrait; person.portraitSource = candidate.imageUrl; person.lastUpdatedAt = now; ledger.entries[person.id] = entry;
+  person.portrait = portrait; person.portraitSource = candidate.imageUrl; ledger.entries[person.id] = entry;
   const item = queue.find((queued) => queued.id === person.id);
   if (item) { item.status = 'fetched'; item.portraitSource = candidate.imageUrl; item.note = `HIGH-confidence ${candidate.page.sourceType}`; }
   report.push({ id: person.id, name: person.name, result: 'correct portrait found', source: candidate.page.sourceType, confidence: level });

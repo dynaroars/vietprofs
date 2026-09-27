@@ -82,6 +82,18 @@ for (const [id, record] of Object.entries(retiredIds)) {
   if (typeof record.name !== 'string' || typeof record.reason !== 'string' || !record.reason.trim()) fail(retiredFile, `${id} needs a name and a reason`);
 }
 
+// updates.json holds each entry's lastUpdatedAt, keyed by id and written by stamp-updates.ts.
+// Exactly one canonical timestamp per roster id, in id order, and nothing for ids not on the roster.
+const updatesFile = resolve('public/updates.json');
+const updates: Record<string, string> = JSON.parse(await readFile(updatesFile, 'utf8'));
+const updateIds = Object.keys(updates);
+if (updateIds.join() !== [...updateIds].sort().join()) fail(updatesFile, 'keys must be sorted by id; run npm run stamp-updates');
+for (const id of updateIds) {
+  if (!rosterIds.has(id)) fail(updatesFile, `${id} is not in the roster; run npm run stamp-updates`);
+  validateTimestamp(updatesFile, updates[id], id, 'timestamp');
+}
+for (const id of rosterIds) if (!(id in updates)) fail(updatesFile, `${id} has no timestamp; run npm run stamp-updates`);
+
 const names = new Set<string>();
 const ids = new Set<string>();
 const profileUrls = new Set();
@@ -103,7 +115,6 @@ for (const [index, person] of roster.entries()) {
   // Cheap to satisfy: JSON.stringify preserves insertion order, so anything that parses the
   // roster and writes it back keeps this automatically.
   if (Object.keys(person)[0] !== 'id') fail(rosterFile, `${label} (${person.id}) must list id as its first field`);
-  validateTimestamp(rosterFile, person.lastUpdatedAt, label, 'lastUpdatedAt');
   if (!/^https?:\/\//.test(person.profileUrl)) fail(rosterFile, `${label} profileUrl must use HTTP(S)`);
   // Confirmed is the default; only an unconfirmed record (no official current profile) says so.
   if (person.confirmed !== undefined && person.confirmed !== false) fail(rosterFile, `${label} confirmed may only be false; omit it for a confirmed record`);

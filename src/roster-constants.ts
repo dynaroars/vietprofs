@@ -24,7 +24,6 @@ export const REQUIRED_ROSTER_STRINGS = [
   'id',
   'name',
   'profileUrl',
-  'lastUpdatedAt',
   'university',
   'city',
   'department',

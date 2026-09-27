@@ -179,7 +179,7 @@ cloud permission check blocks it). Make every verified fix on one branch:
    ```bash
    git checkout -B audit-fix/$(date -u +%F) origin/main
    # ...apply the fix for one Issue...
-   git add -A public/data.json maintenance/ src/data.ts
+   git add -A public/data.json public/updates.json maintenance/ src/data.ts
    git commit -m "fix(roster): <what changed> (Closes #<n>)"
    ```
 2. **Validate, push the branch, open the PR, merge on green CI:**

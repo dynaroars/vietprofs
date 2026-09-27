@@ -37,12 +37,21 @@ export interface RosterEntry {
   directFields?: string[];
   /** False when the appointment has reliable evidence but lacks an official current profile. */
   confirmed?: boolean;
+  /** Not stored in data.json: merged in from updates.json (see withUpdates). */
   lastUpdatedAt?: string;
   portrait?: string;
   portraitSource?: string;
 }
 
 export type Roster = RosterEntry[];
+
+/** public/updates.json: when each entry's stored facts last changed, keyed by id. Written only by
+ * scripts/stamp-updates.ts, so roster edits don't carry a timestamp line. */
+export type RosterUpdates = Record<string, string>;
+
+export function withUpdates(roster: Roster, updates: RosterUpdates): Roster {
+  return roster.map((person) => (updates[person.id] ? { ...person, lastUpdatedAt: updates[person.id] } : person));
+}
 
 import {
   COUNTRY_FLAGS,
@@ -128,9 +137,15 @@ export function buildSearchIndex(roster: Roster): SearchIndex {
 export async function loadRoster(): Promise<Roster> {
   if (cached) return cached;
   const cacheBuster = typeof __BUILD_COMMIT__ !== 'undefined' && __BUILD_COMMIT__ ? `?v=${__BUILD_COMMIT__}` : '';
-  const res = await fetch(`${import.meta.env.BASE_URL}data.json${cacheBuster}`);
+  const [res, updates] = await Promise.all([
+    fetch(`${import.meta.env.BASE_URL}data.json${cacheBuster}`),
+    // Update dates are optional decoration: the directory still works without them.
+    fetch(`${import.meta.env.BASE_URL}updates.json${cacheBuster}`)
+      .then((response) => (response.ok ? (response.json() as Promise<RosterUpdates>) : {}))
+      .catch(() => ({})),
+  ]);
   if (!res.ok) throw new Error(`Failed to load data.json: ${res.status}`);
-  const roster = (await res.json()) as Roster;
+  const roster = withUpdates((await res.json()) as Roster, updates);
   cached = roster;
   return roster;
 }

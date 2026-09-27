@@ -181,10 +181,6 @@
           "type": "string"
         },
         "description": "Fields directly asserted by repository owner or community submission"
-      },
-      "lastUpdatedAt": {
-        "type": "string",
-        "description": "ISO timestamp of last verification update"
       }
     }
   }

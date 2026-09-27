@@ -101,7 +101,8 @@ them share these rules:
    They never add a person to `public/data.json` or assign an id. New people always go in an
    Issue. Protected `directFields` values (name, Vietnamese name, honors, portrait) are never edited; a
    conflict goes in an Issue. Appointment facts and links are never protected.
-5. **Timestamps.** Never set `lastUpdatedAt` by hand; `npm test` stamps changed entries.
+5. **Timestamps.** Never set `lastUpdatedAt` by hand; `npm test` stamps changed entries in
+   `public/updates.json`. Commit that file with `public/data.json`.
 6. **Unverifiable means untouched.** If the egress proxy blocks a source, don't accept the fact,
    and don't delete an existing value because of the block. List those entries in the PR/Issue so
    a later run retries them.

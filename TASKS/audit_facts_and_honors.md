@@ -18,7 +18,7 @@
    After completing each batch's existing-ID edits:
    - Create batch topic branch: `git checkout -b maintenance/leads-batch-[DISCIPLINE/TIMESTAMP]`
    - Validate pipeline: `npm test && npm run build && git diff --check`
-   - Commit batch: `git add public/data.json maintenance/hieuphay-leads.json`
+   - Commit batch: `git add public/data.json public/updates.json maintenance/hieuphay-leads.json`
    - Commit message: `git commit -m "fix(roster): resolve candidate leads batch [DISCIPLINE/BATCH_NAME]"`
    - Push topic branch: `git push origin maintenance/leads-batch-[DISCIPLINE/TIMESTAMP]`
    - File GitHub PR:

@@ -13,7 +13,7 @@
 4. **Thorough Verification Per Candidate:** For every candidate, inspect the image visually or run statistical analyzers (`python3 scripts/fast_portrait_analyzer.py`), check aspect ratio (0.70–1.55), and confirm single-person headshot identity before accepting.
 5. **Per-Run PR Pipeline:** (commands in section 4)
    - Before the first batch, create one topic branch for the run: `git checkout -b maintenance/portraits-$(date -u +%Y%m%d)` (never reuse an old branch name).
-   - After each 10-profile batch: validate (`npm test && npm run build && git diff --check`) and commit it on that branch with `git add public/data.json public/portraits/ maintenance/portrait-provenance.json maintenance/portrait-queue.json` and message `fix(portraits): recover missing portraits (<first id>–<last id>)`.
+   - After each 10-profile batch: validate (`npm test && npm run build && git diff --check`) and commit it on that branch with `git add public/data.json public/updates.json public/portraits/ maintenance/portrait-provenance.json maintenance/portrait-queue.json` and message `fix(portraits): recover missing portraits (<first id>–<last id>)`.
    - Continue with the next batch on the same branch until the run's batch cap is reached.
    - Push (`git push -u origin HEAD`), open one PR for the run listing every batch, and return to `main`.
 6. **Auditing & Merging Delegation:** Do NOT merge PRs yourself. The dedicated audit agent running `TASKS/AUDIT_ISSUES_PRS.md` will review, test, squash-merge, and delete PR branches.
@@ -102,7 +102,7 @@ new and the next run fetches the same image again. Only then:
 ```bash
 npm test && npm run build && git diff --check
 git checkout -b maintenance/portraits-$(date -u +%Y%m%d)   # first batch only; later batches stay on it
-git add public/data.json public/portraits/ maintenance/portrait-provenance.json maintenance/portrait-queue.json
+git add public/data.json public/updates.json public/portraits/ maintenance/portrait-provenance.json maintenance/portrait-queue.json
 git commit -m "fix(portraits): recover missing portraits (<first id>–<last id>)"
 git push -u origin HEAD                             # after the run's last batch
 # open the PR (gh pr create, or the GitHub MCP tools in cloud sessions), then:

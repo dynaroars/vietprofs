@@ -16,7 +16,9 @@ import {
   regionPath,
   type Roster,
   type RosterEntry,
+  type RosterUpdates,
   vietnameseName,
+  withUpdates,
 } from '../src/data.ts';
 import { escapeHtml, formatRosterDate } from '../src/utils.ts';
 import {
@@ -453,7 +455,8 @@ function categoryHubPage(config: HubConfig) {
 
 async function main() {
   const [roster, relationships, retiredIds] = await Promise.all([
-    readFile(resolve(root, 'public/data.json'), 'utf8').then((value) => JSON.parse(value) as Roster),
+    Promise.all([readFile(resolve(root, 'public/data.json'), 'utf8'), readFile(resolve(root, 'public/updates.json'), 'utf8')])
+      .then(([data, updates]) => withUpdates(JSON.parse(data) as Roster, JSON.parse(updates) as RosterUpdates)),
     readFile(resolve(root, 'public/relationships.json'), 'utf8').then((value) => JSON.parse(value) as RelationshipDatabase),
     readFile(resolve(root, 'maintenance/retired-ids.json'), 'utf8').then((value) => JSON.parse(value) as Record<string, { replacedBy: string | null }>),
   ]);
