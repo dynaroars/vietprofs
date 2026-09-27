@@ -25161,7 +25161,12 @@
       ],
       "verifiedAt": "2026-09-07T05:13:19.683Z"
     },
-    "undergradYear": 2014
+    "undergradYear": 2014,
+    "directFields": [
+      "name",
+      "rank",
+      "university"
+    ]
   },
   {
     "id": "vp-0565",
@@ -26519,7 +26524,12 @@
         "https://le.ac.uk/people/hoa-do"
       ],
       "verifiedAt": "2026-09-17T00:30:08.000Z"
-    }
+    },
+    "directFields": [
+      "name",
+      "rank",
+      "university"
+    ]
   },
   {
     "id": "vp-0603",
@@ -40450,7 +40460,12 @@
       "verifiedAt": "2026-09-15T02:40:23.702Z"
     },
     "websiteUrl": "https://sites.google.com/view/thanhhuynh/home",
-    "undergradYear": 2021
+    "undergradYear": 2021,
+    "directFields": [
+      "name",
+      "rank",
+      "university"
+    ]
   },
   {
     "id": "vp-1003",
@@ -42217,7 +42232,12 @@
         "https://jcsmr.anu.edu.au/people/associate-professor-nhung-nghiem"
       ],
       "verifiedAt": "2026-09-14T20:28:00.000Z"
-    }
+    },
+    "directFields": [
+      "name",
+      "rank",
+      "university"
+    ]
   },
   {
     "id": "vp-1062",
@@ -56563,7 +56583,12 @@
       }
     ],
     "portrait": "portraits/vp-1527-nam-trang.webp",
-    "portraitSource": "https://sites.cos.unt.edu/~ntrang/Nam.jpg"
+    "portraitSource": "https://sites.cos.unt.edu/~ntrang/Nam.jpg",
+    "directFields": [
+      "name",
+      "rank",
+      "university"
+    ]
   },
   {
     "id": "vp-1528",
@@ -60545,13 +60570,13 @@
     "id": "vp-1676",
     "name": "Justin Hung Nguyen",
     "profileUrl": "https://www.ecu.edu.au/schools/business-and-law/faculty/profiles/senior-lecturer/dr-justin-nguyen",
-    "confirmed": false,
+    "confirmed": true,
     "university": "Edith Cowan University",
     "city": "Perth",
     "state": "Western Australia",
     "country": "Australia",
     "department": "School of Business and Law",
-    "rank": "Senior Lecturer",
+    "rank": "Assistant Professor",
     "track": "Tenure-line",
     "researchAreas": [
       "Empirical Corporate Finance",
@@ -60562,15 +60587,20 @@
     ],
     "linkedinUrl": "https://www.linkedin.com/in/justin-nguyen-92643b34/",
     "scholarUrl": "https://scholar.google.com/citations?user=o_FF3-AAAAAJ&hl=en",
-    "phdInstitution": "Massey University",
-    "lastUpdatedAt": "2026-09-23T23:45:56.000Z",
+    "phdInstitution": "RMIT University",
+    "lastUpdatedAt": "2026-09-27T01:03:59.669Z",
     "researchOverview": {
       "text": "Nguyen researches empirical corporate finance, corporate governance, and climate and labor finance, with additional work on CSR and ESG, at Edith Cowan University's School of Business and Law.",
       "sources": [
         "https://scholar.google.com/citations?user=o_FF3-AAAAAJ&hl=en"
       ],
       "verifiedAt": "2026-09-23T23:45:56.000Z"
-    }
+    },
+    "directFields": [
+      "name",
+      "rank"
+    ],
+    "phdYear": 2018
   },
   {
     "id": "vp-1677",
@@ -60724,7 +60754,11 @@
         "https://www.lboro.ac.uk/schools/business-school/our-people/trung-vu/"
       ],
       "verifiedAt": "2026-09-23T23:45:56.000Z"
-    }
+    },
+    "directFields": [
+      "name",
+      "university"
+    ]
   },
   {
     "id": "vp-1686",
@@ -60816,6 +60850,7 @@
     "undergradInstitution": "Ho Chi Minh University of Science (HCMUS)",
     "undergradYear": 2012,
     "directFields": [
+      "name",
       "rank",
       "researchAreas"
     ],
@@ -60890,6 +60925,7 @@
     "phdInstitution": "Purdue University",
     "postdocInstitution": "Fred Hutchinson Cancer Research Center",
     "directFields": [
+      "name",
       "rank",
       "university"
     ],
@@ -60906,7 +60942,7 @@
     "name": "Duy Trong Ngo",
     "vietnameseName": "Ngô Trọng Duy",
     "profileUrl": "https://www.newcastle.edu.au/profile/duy-ngo",
-    "lastUpdatedAt": "2026-09-25T05:09:53.712Z",
+    "lastUpdatedAt": "2026-09-27T01:03:59.669Z",
     "university": "The University of Newcastle",
     "city": "Newcastle",
     "state": "New South Wales",
@@ -60920,7 +60956,7 @@
       "Wireless Communications"
     ],
     "track": "Tenure-line",
-    "department": "School of Electrical Engineering and Computing",
+    "department": "School of Engineering",
     "rank": "Associate Professor",
     "scholarUrl": "https://scholar.google.com/citations?user=SQyL0ZgAAAAJ&hl=en",
     "linkedinUrl": "https://www.linkedin.com/in/duy-ngo-3a810147/",
@@ -60929,11 +60965,12 @@
     "msInstitution": "University of Alberta",
     "phdInstitution": "McGill University",
     "directFields": [
+      "name",
       "rank",
       "university"
     ],
     "researchOverview": {
-      "text": "Ngo is an Associate Professor in the School of Electrical Engineering and Computing at the University of Newcastle, Australia. Research spans wireless communications, edge intelligence, IoT, applied machine learning, and 5G/6G and intelligent transportation systems.",
+      "text": "Ngo is an Associate Professor in the School of Engineering at the University of Newcastle, Australia. Research spans wireless communications, edge intelligence, IoT, applied machine learning, and 5G/6G and intelligent transportation systems.",
       "sources": [
         "https://www.newcastle.edu.au/profile/duy-ngo"
       ],
@@ -60995,6 +61032,7 @@
     "phdInstitution": "Wayne State University",
     "confirmed": false,
     "directFields": [
+      "name",
       "rank",
       "university"
     ],
