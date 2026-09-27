@@ -4,7 +4,7 @@ export const TRACKS = ['Tenure-line', 'Teaching', 'Research', 'Clinical', 'Admin
 // is rank Assistant Professor on the Clinical track). The exact published title lives on the linked
 // profile. Commonwealth Lecturer/Senior Lecturer stay separate instead of being equated with US
 // ranks. Leave rank empty when the level isn't known (e.g. an emeritus title with no stated rank).
-export const RANKS = ['Assistant Professor', 'Associate Professor', 'Professor', 'Lecturer', 'Senior Lecturer', 'Researcher', 'Senior Researcher', 'Librarian', 'Administrator'] as const;
+export const RANKS = ['Assistant Professor', 'Associate Professor', 'Professor', 'Lecturer', 'Senior Lecturer', 'Researcher', 'Librarian', 'Administrator'] as const;
 
 export const INSTITUTION_TYPES = [
   'University',

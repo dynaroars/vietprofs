@@ -275,7 +275,7 @@ test('rank labels combine the stored career level with the track', () => {
   assert.equal(canonicalRank({ track: 'Teaching', rank: 'Associate Professor' }), 'Associate Teaching Professor');
   assert.equal(canonicalRank({ track: 'Teaching', rank: 'Senior Lecturer' }), 'Senior Lecturer');
   assert.equal(canonicalRank({ track: 'Teaching' }), 'Teaching');
-  assert.equal(canonicalRank({ track: 'Research', rank: 'Senior Researcher' }), 'Senior Researcher');
+  assert.equal(canonicalRank({ track: 'Research', rank: 'Researcher' }), 'Researcher');
   assert.equal(canonicalRank({ track: 'Research', rank: 'Assistant Professor' }), 'Assistant Research Professor');
   assert.equal(canonicalRank({ track: 'Emeritus', rank: 'Professor' }), 'Professor Emeritus');
   assert.equal(canonicalRank({ track: 'Emeritus' }), 'Emeritus');
