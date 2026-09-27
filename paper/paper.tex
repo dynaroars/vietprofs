@@ -296,14 +296,14 @@ Every attribute displayed on a profile card (Figure~\ref{fig:home}) serves a spe
 \item \textbf{Curated Honors:} We highlight major, field-wide distinctions (such as academy memberships or early-career awards) to showcase scholarly impact while avoiding routine CV clutter (Section~\ref{sec:honors}).
 \item \textbf{Research Areas:} Short keyword tags support topic-based searching beyond high-level department names.
 \item \textbf{Web and Profile Links:} Direct links to university directory pages, Google Scholar, and personal/lab homepages let visitors verify information and explore publications.
-\item \textbf{Verification Timestamp (\code{lastUpdatedAt}):} Showing when a profile was last verified against the open web gives visitors a transparent measure of data freshness.
+\item \textbf{Update Timestamp (\code{lastUpdatedAt}):} Showing when a profile's stored facts last changed gives visitors a transparent measure of data freshness.
 \end{itemize}
 
 \section{Data Model and Curated Attributes}
 \label{sec:model}
 The public source of truth is \codelink{public/data.json}, loaded and queried entirely client-side. Table~\ref{tab:schema} lists the record schema implemented by \code{RosterEntry} in \codelink{src/data.ts}.
-A record contains an immutable \code{vp-} identifier, name, diacritic spelling, current profile URL, university, non-university \code{institutionType}, city, state, country, department, research areas, rank, appointment track, optional education across five credential types, curated honors, optional links, portrait provenance, and \code{lastUpdatedAt}.
-The separate \codelink{maintenance/verification.json} ledger records the time of completed full reviews, keyed by canonical name, allowing maintenance state to travel with the repository without inflating the client bundle.
+A record contains an immutable \code{vp-} identifier, name, diacritic spelling, current profile URL, university, non-university \code{institutionType}, city, state, country, department, research areas, rank, appointment track, optional education across five credential types, curated honors, optional links, and portrait provenance.
+Each record's \code{lastUpdatedAt} is kept out of the roster file, in \codelink{public/updates.json}, keyed by identifier; the client merges it into the loaded records. The build stamps it automatically whenever a record's stored content changes, so roster edits carry only the facts that changed.
 
 \begin{table}[t]
 \centering
@@ -314,7 +314,7 @@ The separate \codelink{maintenance/verification.json} ledger records the time of
 \toprule
 Group & Stored Attributes \\
 \midrule
-Required & \code{id}, \code{name}, \code{university}, \code{department}, \code{rank}, \code{track}, \code{profileUrl}, \code{lastUpdatedAt}, \code{researchAreas[]} \\
+Required & \code{id}, \code{name}, \code{university}, \code{department}, \code{rank}, \code{track}, \code{profileUrl}, \code{researchAreas[]} \\
 Location & \code{city}, \code{state}, \code{country} \\
 Identity & \code{vietnameseName} (authoritative diacritic spelling) \\
 Institution & \code{institutionType} (required for eligible non-university research institutes) \\
@@ -322,6 +322,7 @@ Education & \code{undergradInstitution}/\code{Year}/\code{Major}, \code{msInstit
 Honors & \code{honors[]}: \code{name}, \code{organization}, \code{category}, \code{year}, \code{source} \\
 Links & \code{websiteUrl} (personal/lab page), \code{scholarUrl} (Google Scholar) \\
 Portrait & \code{portrait} (local WebP path), \code{portraitSource} (provenance URL) \\
+Update time & \code{lastUpdatedAt} (stored in \code{updates.json}, merged in on load) \\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -482,7 +483,7 @@ Discovery queries & \codelinkd{scripts/faculty-discovery-queries.ts}{faculty-dis
 Maintenance engine & \codelinkd{scripts/maintain-roster.ts}{maintain-roster.ts} & Unattended controller; invokes LLM agent (Claude/Codex) via CLI. \\
 Proposal validation & Controller + \codelinkd{scripts/validate-data.ts}{validate-data.ts} & Deterministic schema, track, URL, and target-scope enforcement. \\
 Canonical data & \codelinkd{public/data.json}{data.json} & Immutable-ID JSON repository; modified only by validated patches. \\
-Verification ledger & \codelinkd{maintenance/verification.json}{verification.json} & Timestamped ledger tracking when each record was last verified. \\
+Update timestamps & \codelinkd{public/updates.json}{updates.json} & Per-record \code{lastUpdatedAt}, keyed by identifier; stamped by the build when a record changes. \\
 Static profiles & \codelinkd{scripts/generate-profile-pages.ts}{generate-profile-pages.ts} & Deterministic generator creating individual static HTML pages. \\
 Client app & \codelinkd{src/data.ts}{data.ts}, \codelinkd{src/main.ts}{main.ts} & In-browser search, indexing, filtering, and dynamic fact aggregation. \\
 \bottomrule
