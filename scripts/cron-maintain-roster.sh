@@ -4,7 +4,7 @@
 # The controller must run from a clean main checkout that nobody edits while it is active, so this
 # uses its own clone rather than your working copy. Example crontab entry (Saturday 20:00 local):
 #
-#   0 22 * * 6 /path/to/vietprofs/scripts/cron-maintain-roster.sh
+#   0 20 * * 6 /path/to/vietprofs/scripts/cron-maintain-roster.sh
 #
 # Environment:
 #   VIETPROFS_MAINT_CLONE  clone to run in (default: ~/git/projects/vietprofs-maintenance)
