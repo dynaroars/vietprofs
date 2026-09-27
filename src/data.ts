@@ -464,7 +464,7 @@ const FIELD_OVERRIDES = new Map([
   ['Physical and Computational Sciences Directorate|Pacific Northwest National Laboratory', 'Physics & Astronomy'],
   // Aerospace-engineering PhD applied to offshore wind turbine CFD; the center name alone
   // carries no field keyword.
-  ['National Wind Technology Center|National Renewable Energy Laboratory', 'Engineering'],
+  ['Center for Energy Conversion and Storage Systems|National Laboratory of the Rockies', 'Engineering'],
   // Social epidemiologist; the NIH intramural program name alone carries no field keyword.
   ['NIH Intramural Research Program|National Institute of Nursing Research', 'Health Sciences'],
   // Astrophysicist (galaxy formation, cosmological simulations) stationed at NASA Goddard; the
@@ -652,7 +652,7 @@ const FIELD_OVERRIDES = new Map([
   ['Laboratoire d\u0027Optique Appliquée (LOA)|CNRS (Centre National de la Recherche Scientifique)', 'Physics & Astronomy'],
   ['Laboratoire de Physique Théorique|CNRS (Centre National de la Recherche Scientifique)', 'Physics & Astronomy'],
   ['UMR TETIS|INRAE (Institut National de Recherche pour l\u0027Agriculture, l\u0027Alimentation et l\u0027Environnement)', 'Earth & Environmental Sciences'],
-  ['Laboratoire de Conception et d\u0027Intégration des Systèmes (LCIS)|Institut polytechnique de Grenoble', 'Engineering'],
+  ['Centre de radiofréquences, optique et micro-nanoélectronique des Alpes (CROMA)|Institut polytechnique de Grenoble', 'Engineering'],
   ['Département de chirurgie, Faculté de médecine et des sciences de la santé|Université de Sherbrooke', 'Health Sciences'],
   ['Center for Oncological Research (CORE) & Antwerp University Hospital (UZA)|University of Antwerp', 'Health Sciences'],
   ['Department of Virology II|National Institute of Infectious Diseases', 'Health Sciences'],
