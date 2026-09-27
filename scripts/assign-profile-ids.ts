@@ -5,7 +5,10 @@ import type { RosterEntry } from '../src/data.ts';
 const rosterFile = resolve('public/data.json');
 const apply = process.argv.includes('--apply');
 const roster: RosterEntry[] = JSON.parse(await readFile(rosterFile, 'utf8'));
-const ids = new Set<string>(roster.map((person) => person.id).filter(Boolean));
+// Retired ids (merged duplicates, removed people) are never handed out again: their old public
+// pages redirect to the kept entry, and a returning person gets their original id back.
+const retired = Object.keys(JSON.parse(await readFile(resolve('maintenance/retired-ids.json'), 'utf8')));
+const ids = new Set<string>([...roster.map((person) => person.id).filter(Boolean), ...retired]);
 let next = Math.max(0, ...[...ids].map((id) => Number(id.slice(3))).filter(Number.isFinite)) + 1;
 
 function nextId(): string {

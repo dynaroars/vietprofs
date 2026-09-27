@@ -28,4 +28,5 @@ Expand roster coverage by finding qualified Vietnamese and Vietnamese-diaspora s
    ```
 5. **Issue Submission** (per `AGENTS.md`'s "New entries vs. edits" policy — a new roster ID always goes through an Issue, never a PR or direct commit):
    - File one GitHub Issue per candidate (or a small batch of candidates), including full name, evidence/source URLs, proposed fields (university, country, rank, track, department, field, profileUrl, keywords, confirmed), and eligibility rationale.
+   - Before filing, run `npm run find-roster-matches -- "<name>" --url ...` with every identity URL. A hit at another institution is usually the same person after a move: file a `Review stale institution:` side finding for that id instead of a new candidate (`ROSTER_MAINTENANCE.md` "One person, one ID").
    - Do not run `assign-profile-ids -- --apply` or add the candidate to `public/data.json` yourself; leave ID assignment to the owner or to `AUDIT_ISSUES_PRS.md` once the Issue is resolved.

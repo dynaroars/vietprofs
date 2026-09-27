@@ -3462,8 +3462,7 @@
     {
       "batchNumber": 19,
       "rosterIds": [
-        "vp-1611",
-        "vp-1612",
+        "vp-0638",
         "vp-1613",
         "vp-1614",
         "vp-1615",
@@ -3477,8 +3476,6 @@
         "vp-1624",
         "vp-1625",
         "vp-1626",
-        "vp-1627",
-        "vp-1628",
         "vp-1629",
         "vp-1630",
         "vp-1631"
@@ -3487,25 +3484,6 @@
       "completedAt": "2026-09-23T05:44:24.000Z",
       "status": "complete",
       "outcomes": [
-        {
-          "rosterId": "vp-1611",
-          "status": "unresolved",
-          "sources": [
-            "https://ait.ac.th/people/prof-nguyen-thi-kim-oanh/",
-            "https://ait.ac.th/wp-content/uploads/2021/12/Prof.-Nguyen-Thi-Kim-Oanh_CV.pdf"
-          ],
-          "nextAction": "Official AIT profile and CV checked; although the CV describes numerous collaborative projects, bounded searches did not establish a roster-internal co-PI/shared-award, coauthor, advisor or patent relation."
-        },
-        {
-          "rosterId": "vp-1612",
-          "status": "unresolved",
-          "sources": [
-            "https://foodscience.uni-mate.hu/etti-management",
-            "https://research.uni-mate.hu/w/prof.-dr.-quang-d.-nguyen",
-            "https://uni-mate.hu/en/en-directory-staff/-/telepules/budapest/g/nguyen.quang.d/nguyen.quang.d/"
-          ],
-          "nextAction": "Official MATE profile and research profile checked; listed fellowship is individual; no shared award or other roster-internal relation established. New cross-check against vp-1589 raises a possible duplicate identity: the official MATE research profile identifies Prof. Dr. Quang D. Nguyen (email Nguyen.Duc.Quang@uni-mate.hu), while vp-1589 and vp-1612 have overlapping MATE affiliations/research but conflicting recorded PhD institutions. No relationship edge was added pending owner identity review."
-        },
         {
           "rosterId": "vp-1613",
           "status": "unresolved",
@@ -3620,15 +3598,7 @@
           "nextAction": "Official SIIT faculty page checked; no qualifying roster-internal relation surfaced."
         },
         {
-          "rosterId": "vp-1627",
-          "status": "unresolved",
-          "sources": [
-            "https://www.sunykorea.ac.kr/en/html/sub03/030101.html?mode=V&no=2019010041"
-          ],
-          "nextAction": "Official SUNY Korea profile checked; no qualifying roster-internal relation surfaced."
-        },
-        {
-          "rosterId": "vp-1628",
+          "rosterId": "vp-0638",
           "status": "unresolved",
           "sources": [
             "https://www.list.lu/en/research/erin/sustainable-energy-systems/",
@@ -3667,14 +3637,12 @@
       "rosterIds": [
         "vp-1584",
         "vp-1585",
-        "vp-1586",
         "vp-1588",
         "vp-1589",
         "vp-1590",
         "vp-1591",
         "vp-1592",
         "vp-1593",
-        "vp-1594",
         "vp-1595",
         "vp-1597",
         "vp-1598",
@@ -3706,15 +3674,6 @@
           "sources": [
             "https://profiles.sussex.ac.uk/p427207-xuan-huy-nguyen",
             "https://blogs.sussex.ac.uk/learning-matters/2023/02/27/bridging-the-gap-in-perceived-usefulness-of-educational-technologies-between-students-and-lecturers/"
-          ],
-          "nextAction": "Official profile and bounded advisor, coauthor, shared award and patent searches checked; no qualifying roster-internal relation surfaced."
-        },
-        {
-          "rosterId": "vp-1586",
-          "status": "unresolved",
-          "sources": [
-            "https://bfa.u-paris.fr/",
-            "https://publication-theses.unistra.fr/public/theses_doctorat/2020/Tran_Nguyen_Viet_Khoa_2020_ED222.pdf"
           ],
           "nextAction": "Official profile and bounded advisor, coauthor, shared award and patent searches checked; no qualifying roster-internal relation surfaced."
         },
@@ -3768,14 +3727,6 @@
           "sources": [
             "https://www.southampton.ac.uk/people/5x8m8x/dr-tuyen-nguyen",
             "https://www.southampton.ac.uk/people/659l2y/doctor-tan-viet-tuyen-nguyen?page=1"
-          ],
-          "nextAction": "Official profile and bounded advisor, coauthor, shared award and patent searches checked; no qualifying roster-internal relation surfaced."
-        },
-        {
-          "rosterId": "vp-1594",
-          "status": "unresolved",
-          "sources": [
-            "https://aerospace.illinois.edu/directory/profile/httran"
           ],
           "nextAction": "Official profile and bounded advisor, coauthor, shared award and patent searches checked; no qualifying roster-internal relation surfaced."
         },
@@ -3880,19 +3831,16 @@
         "vp-1610",
         "vp-1609",
         "vp-1607",
-        "vp-1606",
         "vp-1583",
         "vp-1582",
-        "vp-1581",
         "vp-1580",
         "vp-1579",
         "vp-1578",
         "vp-1577",
         "vp-1576",
         "vp-1575",
-        "vp-1574",
         "vp-1573",
-        "vp-1572",
+        "vp-1520",
         "vp-1571",
         "vp-1570",
         "vp-1569",
@@ -3933,16 +3881,6 @@
           "nextAction": "Official AIT profile and annual research report checked; no roster-internal advisor, qualifying coauthor, joint award-leadership, or patent relation established."
         },
         {
-          "rosterId": "vp-1606",
-          "status": "unresolved",
-          "sources": [
-            "https://www.mimuw.edu.pl/en/employees/722/",
-            "https://www.mimuw.edu.pl/pl/publikacje/osoba/722/"
-          ],
-          "relationshipIds": [],
-          "nextAction": "Official University of Warsaw profile/publication list checked. Published Vietnamese-named coauthors were compared with roster identities; no author identity matched a roster person, and no roster advisor/mentee relation surfaced."
-        },
-        {
           "rosterId": "vp-1583",
           "status": "unresolved",
           "sources": [
@@ -3961,16 +3899,6 @@
           ],
           "relationshipIds": [],
           "nextAction": "Official personal academic page identifies PhD supervisors and published collaborators; none resolve to roster members. No eligible roster relationship surfaced."
-        },
-        {
-          "rosterId": "vp-1581",
-          "status": "unresolved",
-          "sources": [
-            "https://researchmap.jp/thanh_phuc?lang=en",
-            "https://vietprofs.roars.dev/people/vp-0806.html"
-          ],
-          "relationshipIds": [],
-          "nextAction": "The researchmap URL assigned to this record resolves to Thanh Phuc Nguyen at Kyoto University and matches existing roster profile vp-0806, while this record has a different recorded name variant/lineage. Identity or duplicate-entry review is needed; no relationship was recorded based on the ambiguous profile mapping."
         },
         {
           "rosterId": "vp-1580",
@@ -4040,17 +3968,6 @@
           "nextAction": "Official NTU source confirms identity and research field. Bounded searches of the current profile and research record did not establish a roster-internal advisor, qualifying coauthor, shared award, or patent relation."
         },
         {
-          "rosterId": "vp-1574",
-          "status": "unresolved",
-          "sources": [
-            "https://findanexpert.unimelb.edu.au/profile/361260-viet-nguyen",
-            "https://melbourneinstitute.unimelb.edu.au/__data/assets/pdf_file/0007/4359859/Melbourne-Institute-Compendium-2022_FV.pdf",
-            "https://ideas.repec.org/e/png132.html"
-          ],
-          "relationshipIds": [],
-          "nextAction": "Official Melbourne Institute profile and works checked; identity-resolved coauthors are outside the roster. No roster-internal mentorship, shared award leadership, or patent pair surfaced."
-        },
-        {
           "rosterId": "vp-1573",
           "status": "unresolved",
           "sources": [
@@ -4060,7 +3977,7 @@
           "nextAction": "Official Bristol profile identifies supervisors Piotr Korczak and Mariano Scapin for the PhD; neither is in the roster. No other qualifying roster connection surfaced."
         },
         {
-          "rosterId": "vp-1572",
+          "rosterId": "vp-1520",
           "status": "unresolved",
           "sources": [
             "https://www.uibk.ac.at/en/textilchemie/staff/",
@@ -8723,7 +8640,7 @@
         "vp-1157",
         "vp-1156",
         "vp-1155",
-        "vp-1153",
+        "vp-0648",
         "vp-1152",
         "vp-1151",
         "vp-1149",
@@ -8847,7 +8764,7 @@
           "notes": []
         },
         {
-          "rosterId": "vp-1153",
+          "rosterId": "vp-0648",
           "status": "completed",
           "sources": [
             "https://uwaterloo.ca/economics/profiles/trien-nguyen-retired",
@@ -8987,7 +8904,7 @@
         "vp-1130",
         "vp-1129",
         "vp-1128",
-        "vp-1127",
+        "vp-0526",
         "vp-1126",
         "vp-1125",
         "vp-1124",
@@ -9106,7 +9023,7 @@
           "notes": []
         },
         {
-          "rosterId": "vp-1127",
+          "rosterId": "vp-0526",
           "status": "completed",
           "sources": [
             "https://www.inria.fr/fr/phong-nguyen",
@@ -14122,7 +14039,6 @@
         "vp-0722",
         "vp-0721",
         "vp-0720",
-        "vp-0719",
         "vp-0718",
         "vp-0717",
         "vp-0716",
@@ -14216,16 +14132,6 @@
           "relationshipIds": [],
           "nextAction": "Reviewed Washburn’s official faculty profile and targeted relationship searches. No qualifying roster-internal relationship was established.",
           "status": "completed",
-          "notes": []
-        },
-        {
-          "rosterId": "vp-0719",
-          "sources": [
-            "https://faculty.erau.edu/Hai.Tran"
-          ],
-          "relationshipIds": [],
-          "nextAction": "Embry-Riddle’s profile says Hai Tran previously worked at Point Park and the University of Pittsburgh and has a mechanical engineering PhD from USF. Point Park’s profile for vp-0718 gives matching history and research areas, strongly suggesting the two roster IDs may be duplicates. Human identity review is required; an issue was attempted but the GitHub integration returned 403 (Resource not accessible by integration). No relationship edge was added.",
-          "status": "unresolved",
           "notes": []
         },
         {

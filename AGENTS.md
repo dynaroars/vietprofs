@@ -43,6 +43,11 @@ passed eligibility review. Because of that:
   evidence is. Do not run `assign-profile-ids -- --apply` or otherwise commit a new ID to a
   branch for review; describe the candidate (evidence, source URLs, proposed fields) in the
   Issue and let the repository owner or the audit workflow decide before any ID is assigned.
+- **A person already on the roster is never a new ID**, even at a new institution, under a
+  different name order, or after an earlier removal. Run `npm run find-roster-matches` with the
+  name and every identity URL before proposing anyone; a hit at another institution is usually a
+  move and becomes an edit to that ID. When two IDs turn out to be one person, the older ID is
+  kept. See "One person, one ID" in `ROSTER_MAINTENANCE.md`.
 - **Any change that only edits or corrects existing roster IDs** (facts, honors, links,
   portraits, relationships between already-listed people, etc.) follows the routing table below.
 - If a single batch mixes both (some brand-new candidates, some edits to existing entries),

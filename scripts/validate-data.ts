@@ -11,8 +11,9 @@ import {
   TRACKS,
   UTC_TIMESTAMP_PATTERN,
 } from '../src/roster-constants.ts';
-import { canonicalState, looksSurnameFirst } from '../src/data.ts';
+import { canonicalState, looksSurnameFirst, type RosterEntry } from '../src/data.ts';
 import { validateEnrichment } from '../src/enrichment.ts';
+import { identityKey, namesMatch, nameTokens } from '../src/identity.ts';
 import {
   validateEducationChronology,
   validateExternalUrl,
@@ -98,6 +99,17 @@ for (const [id, entry] of Object.entries(enrichment.entries as Record<string, { 
   if (!['pending', 'verified', 'no suitable evidence', 'retry needed'].includes(entry.overview ?? '') || !['pending', 'verified', 'no suitable evidence', 'retry needed'].includes(entry.work ?? '')) fail(enrichmentFile, `invalid outcome for ${id}`);
 }
 if (Object.keys(enrichment.entries).length !== rosterIds.size) fail(enrichmentFile, 'must contain one ledger entry per roster ID');
+
+// Retired ids stay retired: a merged duplicate points at the entry that absorbed it, and a person
+// who comes back gets the original id restored (npm run retire-profile-id), not a fresh one.
+const retiredFile = resolve('maintenance/retired-ids.json');
+const retiredIds = JSON.parse(await readFile(retiredFile, 'utf8')) as Record<string, { replacedBy: string | null; name: string; reason: string }>;
+for (const [id, record] of Object.entries(retiredIds)) {
+  if (!/^vp-\d{4,}$/.test(id)) fail(retiredFile, `invalid id ${id}`);
+  if (rosterIds.has(id)) fail(retiredFile, `${id} is back in the roster; remove it from retired-ids.json when restoring an id`);
+  if (record.replacedBy !== null && !rosterIds.has(record.replacedBy)) fail(retiredFile, `${id} points at ${record.replacedBy}, which is not in the roster`);
+  if (typeof record.name !== 'string' || typeof record.reason !== 'string' || !record.reason.trim()) fail(retiredFile, `${id} needs a name and a reason`);
+}
 
 const names = new Set<string>();
 const ids = new Set<string>();
@@ -268,6 +280,34 @@ for (const [index, person] of roster.entries()) {
   names.add(person.name);
   ids.add(person.id);
   profileUrls.add(person.profileUrl);
+}
+
+// One person, one entry. The exact-string checks above miss the same Scholar profile, LinkedIn
+// slug, or homepage written differently, and a person entered twice under reordered names at one
+// institution (vp-0675/vp-1574, vp-0806/vp-1581, ... merged 2026-09-27). Pairs confirmed to be
+// different people go in DISTINCT_PEOPLE with how that was confirmed.
+const DISTINCT_PEOPLE = new Set<string>([
+  'vp-0972 vp-0973', // Katherine Nguyen (Rheumatology) and Katherine Nguyen Williams (Psychiatry), UC San Diego: separate UCSD profiles
+]);
+const identityOwners = new Map<string, string>();
+const rosterTokens = (roster as RosterEntry[]).map((person) => nameTokens(person.name));
+for (const [index, person] of (roster as RosterEntry[]).entries()) {
+  for (const field of ['websiteUrl', 'scholarUrl', 'linkedinUrl'] as const) {
+    const value = person[field];
+    if (!value) continue;
+    const key = identityKey(value);
+    const owner = identityOwners.get(key);
+    if (owner && owner !== person.id && !DISTINCT_PEOPLE.has([owner, person.id].sort().join(' '))) {
+      fail(rosterFile, `${person.id} and ${owner} share ${field} ${key}: probably one person entered twice; merge into the older id (npm run retire-profile-id)`);
+    }
+    identityOwners.set(key, person.id);
+  }
+  for (let other = 0; other < index; other += 1) {
+    const earlier = (roster as RosterEntry[])[other];
+    if (earlier.university !== person.university || !namesMatch(rosterTokens[index], rosterTokens[other])) continue;
+    if (DISTINCT_PEOPLE.has([earlier.id, person.id].sort().join(' '))) continue;
+    fail(rosterFile, `${earlier.id} "${earlier.name}" and ${person.id} "${person.name}" look like one person at ${person.university}: merge into the older id, or add the pair to DISTINCT_PEOPLE with how you confirmed they differ`);
+  }
 }
 
 for (const name of names) {

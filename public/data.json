@@ -2015,6 +2015,85 @@
     }
   },
   {
+    "id": "vp-0037",
+    "name": "Tin Nguyen - Wayne State University",
+    "vietnameseName": "Nguyễn Tin",
+    "profileUrl": "https://engineering.wayne.edu/profile/ex6091",
+    "lastUpdatedAt": "2026-09-27T05:44:57.464Z",
+    "university": "Wayne State University",
+    "city": "Detroit",
+    "state": "Michigan",
+    "country": "United States",
+    "researchAreas": [
+      "Machine Learning",
+      "Bioinformatics",
+      "Cancer Subtyping",
+      "Multi-Omics Data Integration",
+      "Single-Cell and Spatial Transcriptomics"
+    ],
+    "track": "Tenure-line",
+    "department": "Industrial and Systems Engineering",
+    "rank": "Professor",
+    "phdInstitution": "Wayne State University",
+    "directFields": [
+      "rank",
+      "university"
+    ],
+    "researchOverview": {
+      "text": "Nguyen is a Professor in the Department of Industrial and Systems Engineering at Wayne State University, with a joint appointment as Professor of Oncology at the Karmanos Cancer Institute. Research applies machine learning and computational methods to high-throughput biological data, focusing on multi-omics integration, cancer subtyping, and single-cell and spatial transcriptomics.",
+      "sources": [
+        "https://engineering.wayne.edu/profile/ex6091"
+      ],
+      "verifiedAt": "2026-09-25T02:08:57.000Z"
+    },
+    "scholarUrl": "https://scholar.google.com/citations?user=aUjOGMEAAAAJ",
+    "linkedinUrl": "https://www.linkedin.com/in/tinnguyenchi/",
+    "labUrl": "https://tinnguyen-lab.com/home/",
+    "honors": [
+      {
+        "name": "NSF CAREER Award",
+        "year": 2022,
+        "category": "career_award",
+        "organization": "National Science Foundation",
+        "source": "https://tinnguyen-lab.com/home/files/Tin_CurriculumVitae.pdf"
+      }
+    ],
+    "selectedWork": [
+      {
+        "title": "RCPA: An Open-Source R Package for Data Processing, Differential Analysis, Consensus Pathway Analysis, and Visualization",
+        "type": "software",
+        "url": "https://CRAN.R-project.org/package=RCPA",
+        "selectionSource": "https://tinnguyen-lab.com/home/",
+        "selectionMode": "selected",
+        "verifiedAt": "2026-09-06T23:45:00.000Z",
+        "year": 2024
+      },
+      {
+        "title": "scCAN",
+        "type": "software",
+        "url": "https://CRAN.R-project.org/package=scCAN",
+        "selectionSource": "https://tinnguyen-lab.com/home/",
+        "selectionMode": "selected",
+        "verifiedAt": "2026-09-06T23:45:00.000Z",
+        "year": 2023
+      },
+      {
+        "title": "scISR",
+        "type": "software",
+        "url": "https://cran.r-project.org/package=scISR",
+        "selectionSource": "https://tinnguyen-lab.com/home/",
+        "selectionMode": "selected",
+        "verifiedAt": "2026-09-06T23:45:00.000Z",
+        "year": 2022
+      }
+    ],
+    "phdYear": 2017,
+    "undergradInstitution": "Eotvos Lorand University",
+    "msInstitution": "Eotvos Lorand University",
+    "portrait": "portraits/037-tin-nguyen-wayne-state-university-wayne-state-university.webp",
+    "portraitSource": "https://eng.auburn.edu/images/programs/csse/headshots/nguyen-tin.jpg"
+  },
+  {
     "id": "vp-0038",
     "name": "Tu Nguyen - Kennesaw State University",
     "vietnameseName": "Nguyễn Tu",
@@ -6992,7 +7071,7 @@
     "name": "Huy T. Tran",
     "vietnameseName": "Trần T. Huy",
     "profileUrl": "https://aerospace.illinois.edu/directory/profile/huytran1",
-    "lastUpdatedAt": "2026-09-13T04:29:39.508Z",
+    "lastUpdatedAt": "2026-09-27T15:28:12.095Z",
     "websiteUrl": "https://huytrtran.github.io/",
     "scholarUrl": "https://scholar.google.com/citations?user=TgaPukcAAAAJ",
     "linkedinUrl": "https://www.linkedin.com/in/huyttran/",
@@ -7002,7 +7081,9 @@
     "researchAreas": [
       "Resilient Systems",
       "Reinforcement Learning",
-      "Autonomous Systems"
+      "Autonomous Systems",
+      "Multi-Agent Systems",
+      "Aerospace Engineering"
     ],
     "track": "Tenure-line",
     "department": "Aerospace Engineering",
@@ -23678,7 +23759,7 @@
     "vietnameseName": "Nguyễn Phong",
     "profileUrl": "https://www.di.ens.fr/~pnguyen/",
     "linkedinUrl": "https://www.linkedin.com/in/phong-q-nguyen-9437b8a/",
-    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
+    "lastUpdatedAt": "2026-09-27T15:28:12.095Z",
     "university": "École Normale Supérieure PSL",
     "city": "Paris",
     "country": "France",
@@ -25380,7 +25461,7 @@
     "name": "Linh Anh Nguyen",
     "vietnameseName": "Nguyễn Anh Linh",
     "profileUrl": "https://www.mimuw.edu.pl/~nguyen/",
-    "lastUpdatedAt": "2026-09-14T20:28:00.000Z",
+    "lastUpdatedAt": "2026-09-27T15:28:12.095Z",
     "university": "University of Warsaw",
     "city": "Warsaw",
     "country": "Poland",
@@ -25388,7 +25469,9 @@
       "Description Logics",
       "Knowledge Representation",
       "Automated Reasoning",
-      "Semantic Web"
+      "Semantic Web",
+      "Modal Logics and Description Logics",
+      "Fuzzy Logic Systems"
     ],
     "track": "Tenure-line",
     "department": "Faculty of Mathematics, Informatics, and Mechanics",
@@ -25403,7 +25486,8 @@
         "https://www.mimuw.edu.pl/~nguyen/"
       ],
       "verifiedAt": "2026-09-14T20:28:00.000Z"
-    }
+    },
+    "phdMajor": "Computer Science"
   },
   {
     "id": "vp-0574",
@@ -27116,17 +27200,20 @@
     "city": "Paris",
     "country": "France",
     "department": "Unité de Biologie Fonctionnelle et Adaptative",
-    "rank": "Associate Professor",
+    "rank": "Assistant Professor",
     "track": "Tenure-line",
     "profileUrl": "https://bfa.u-pariscite.fr/annuaire/viet-khoa-tran-nguyen-2/",
     "scholarUrl": "https://scholar.google.com/citations?user=y3ybMoAAAAAJ",
     "linkedinUrl": "https://www.linkedin.com/in/viet-khoa-tran-nguyen/",
-    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
+    "lastUpdatedAt": "2026-09-27T15:28:12.095Z",
     "researchAreas": [
       "Cheminformatics",
       "Computational Chemistry",
       "Machine Learning",
-      "Drug Discovery"
+      "Drug Discovery",
+      "Structure-Based Drug Design",
+      "Medicinal Chemistry",
+      "Machine Learning for Drug Discovery"
     ],
     "phdYear": 2020,
     "phdInstitution": "University of Strasbourg",
@@ -27140,6 +27227,13 @@
         "category": "career_award",
         "organization": "Société de Chimie Thérapeutique",
         "source": "https://www.sct-asso.fr/ymc-academia-award"
+      },
+      {
+        "name": "SCT Young Academic Investigator Award",
+        "category": "career_award",
+        "organization": "Société de Chimie Thérapeutique",
+        "year": 2024,
+        "source": "https://www.sct-asso.fr/ymc-academia-award"
       }
     ],
     "researchOverview": {
@@ -27149,7 +27243,8 @@
         "https://scholar.google.com/citations?user=dt42krUAAAAJ"
       ],
       "verifiedAt": "2026-09-13T00:00:00.000Z"
-    }
+    },
+    "phdMajor": "Cheminformatics"
   },
   {
     "id": "vp-0624",
@@ -27646,12 +27741,14 @@
     "profileUrl": "https://research.tue.nl/en/persons/phuong-h-nguyen/",
     "scholarUrl": "https://scholar.google.com/citations?user=6YrrpGwAAAAJ",
     "linkedinUrl": "https://www.linkedin.com/in/phuong-nguyen-7a85b714/",
-    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
+    "lastUpdatedAt": "2026-09-27T15:28:12.095Z",
     "researchAreas": [
       "Smart Grids",
       "Power Systems",
       "Distributed Intelligence",
-      "Energy Systems"
+      "Energy Systems",
+      "Renewable Energy Integration",
+      "Electric Vehicles"
     ],
     "phdYear": 2010,
     "phdInstitution": "Eindhoven University of Technology",
@@ -27665,7 +27762,8 @@
       ],
       "verifiedAt": "2026-09-07T05:25:00.000Z"
     },
-    "labUrl": "https://sites.google.com/view/digi-pes/home"
+    "labUrl": "https://sites.google.com/view/digi-pes/home",
+    "phdMajor": "Electrical Energy Systems"
   },
   {
     "id": "vp-0639",
@@ -28010,6 +28108,38 @@
         "https://scholar.google.com/citations?user=dt42krUAAAAJ"
       ],
       "verifiedAt": "2026-09-13T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "vp-0648",
+    "name": "Trien Nguyen",
+    "vietnameseName": "Nguyễn Triển",
+    "university": "University of Waterloo",
+    "department": "Department of Economics",
+    "rank": "Professor Emeritus",
+    "portrait": "portraits/vp-1153-trien-nguyen.webp",
+    "portraitSource": "https://uwaterloo.ca/economics/sites/default/files/uploads/images/trien-nguyen_0.jpg",
+    "track": "Emeritus",
+    "city": "Waterloo",
+    "state": "Ontario",
+    "country": "Canada",
+    "profileUrl": "https://uwaterloo.ca/economics/profiles/trien-nguyen-retired",
+    "phdInstitution": "University of Western Ontario",
+    "undergradInstitution": "University of California, Berkeley",
+    "undergradMajor": "Chemical Engineering",
+    "researchAreas": [
+      "Public Policy",
+      "Economics of Taxation",
+      "Computational Economics",
+      "Asian Economies"
+    ],
+    "lastUpdatedAt": "2026-09-27T15:34:21.219Z",
+    "researchOverview": {
+      "text": "Nguyen, a Professor Emeritus of Economics at the University of Waterloo, applies economic analysis to public-policy questions, with work on computational economic models, price controls, taxation, housing, and immigration. Nguyen has also worked on development, Asian economies, and the scholarship of teaching and learning.",
+      "sources": [
+        "https://uwaterloo.ca/economics/profiles/trien-nguyen-retired"
+      ],
+      "verifiedAt": "2026-09-27T15:34:21.219Z"
     }
   },
   {
@@ -29005,12 +29135,15 @@
     "rank": "Associate Professor",
     "track": "Tenure-line",
     "profileUrl": "https://melbourneinstitute.unimelb.edu.au/staff/research/staff-listings/viet-hoang-nguyen",
-    "lastUpdatedAt": "2026-09-13T00:00:00.000Z",
+    "lastUpdatedAt": "2026-09-27T15:28:12.095Z",
     "researchAreas": [
       "Applied Macroeconomics",
       "Behavioural Macroeconomics",
       "Housing Economics",
-      "Economic Forecasting"
+      "Economic Forecasting",
+      "Econometrics",
+      "Consumer Expectations",
+      "Monetary Policy"
     ],
     "portrait": "portraits/697-viet-hoang-nguyen-university-of-melbourne.webp",
     "portraitSource": "https://pictures.staff.unimelb.edu.au/picture/361260picture.jpg",
@@ -29023,7 +29156,8 @@
         "https://melbourneinstitute.unimelb.edu.au/staff/research/staff-listings/viet-hoang-nguyen"
       ],
       "verifiedAt": "2026-09-17T00:30:08.000Z"
-    }
+    },
+    "phdInstitution": "University of Leeds"
   },
   {
     "id": "vp-0676",
@@ -30675,38 +30809,6 @@
   },
   {
     "id": "vp-0718",
-    "name": "Hai T. Tran",
-    "vietnameseName": "Trần T. Hải",
-    "university": "Point Park University",
-    "city": "Pittsburgh",
-    "state": "Pennsylvania",
-    "country": "United States",
-    "department": "Natural Sciences and Engineering Technology",
-    "rank": "Assistant Professor",
-    "track": "Tenure-line",
-    "profileUrl": "https://www.pointpark.edu/academics/schools/schoolofartsandsciences/departments/naturalsciencesandengineeringtechnology/faculty/hai-tran",
-    "lastUpdatedAt": "2026-09-14T20:28:00.000Z",
-    "researchAreas": [
-      "Fracture Mechanics",
-      "Computational Solid Mechanics",
-      "Thin Multilayered Films",
-      "Additive Manufacturing"
-    ],
-    "phdYear": 2016,
-    "phdInstitution": "University of South Florida",
-    "undergradInstitution": "Hanoi University of Science and Technology",
-    "portrait": "portraits/740-hai-t-tran-point-park-university.webp",
-    "portraitSource": "https://www.pointpark.edu/academics/schools/schoolofartsandsciences/departments/naturalsciencesandengineeringtechnology/naturalsciengtechfacstaff/media/2haitran_malloryneil.jpg",
-    "researchOverview": {
-      "text": "Assistant Professor in the Natural Sciences and Engineering Technology at Point Park University. Research specialization encompasses Fracture Mechanics, Computational Solid Mechanics, Thin Multilayered Films, Additive Manufacturing.",
-      "sources": [
-        "https://www.pointpark.edu/page-not-found"
-      ],
-      "verifiedAt": "2026-09-14T20:28:00.000Z"
-    }
-  },
-  {
-    "id": "vp-0719",
     "name": "Hai Tran - Embry-Riddle Aeronautical University",
     "vietnameseName": "Trần Hải",
     "university": "Embry-Riddle Aeronautical University",
@@ -30717,14 +30819,17 @@
     "rank": "Associate Professor",
     "track": "Tenure-line",
     "profileUrl": "https://erau.edu/faculty/Hai.Tran",
-    "lastUpdatedAt": "2026-09-14T20:28:00.000Z",
+    "lastUpdatedAt": "2026-09-27T15:28:12.095Z",
     "scholarUrl": "https://scholar.google.com/citations?user=ijECkL4AAAAJ",
     "linkedinUrl": "https://www.linkedin.com/in/hai-tran-202b7849/",
     "researchAreas": [
       "Fracture Mechanics",
       "Metal Additive Manufacturing",
       "Computational Mechanics",
-      "Modeling and Simulation"
+      "Modeling and Simulation",
+      "Computational Solid Mechanics",
+      "Thin Multilayered Films",
+      "Additive Manufacturing"
     ],
     "phdInstitution": "University of South Florida",
     "undergradInstitution": "Hanoi University of Science and Technology",
@@ -30736,7 +30841,8 @@
         "https://erau.edu/faculty/Hai.Tran"
       ],
       "verifiedAt": "2026-09-14T20:28:00.000Z"
-    }
+    },
+    "phdYear": 2016
   },
   {
     "id": "vp-0720",
@@ -33717,18 +33823,20 @@
     "vietnameseName": "Nguyễn Phúc Thanh",
     "profileUrl": "https://researchmap.jp/thanh_phuc?lang=en",
     "scholarUrl": "https://scholar.google.com/citations?user=Wk81QNUAAAAJ",
-    "lastUpdatedAt": "2026-09-14T19:38:00.000Z",
+    "lastUpdatedAt": "2026-09-27T15:28:12.095Z",
     "university": "Kyoto University",
     "city": "Kyoto",
     "researchAreas": [
       "Quantum Transport",
       "Open Quantum Systems",
-      "Molecular Polariton",
-      "Quantum Engineering"
+      "Quantum Engineering",
+      "Molecular Polaritons",
+      "Photosynthesis",
+      "Excitation Energy Transfer"
     ],
     "track": "Tenure-line",
     "department": "Graduate School of Engineering, Department of Molecular Engineering",
-    "rank": "Assistant Professor",
+    "rank": "Lecturer",
     "phdInstitution": "The University of Tokyo",
     "phdYear": 2014,
     "country": "Japan",
@@ -33740,7 +33848,17 @@
       "verifiedAt": "2026-09-07T18:55:00.000Z"
     },
     "portrait": "portraits/vp-0806-thanh-phuc-nguyen.webp",
-    "portraitSource": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=Wk81QNUAAAAJ"
+    "portraitSource": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=Wk81QNUAAAAJ",
+    "phdMajor": "Physics",
+    "honors": [
+      {
+        "name": "JST PRESTO Research Fellowship",
+        "category": "career_award",
+        "organization": "Japan Science and Technology Agency",
+        "year": 2024,
+        "source": "https://researchmap.jp/thanh_phuc?lang=en"
+      }
+    ]
   },
   {
     "id": "vp-0807",
@@ -44410,36 +44528,6 @@
     "phdYear": 1990
   },
   {
-    "id": "vp-1127",
-    "name": "Phong Q. Nguyen",
-    "profileUrl": "https://www.inria.fr/fr/phong-nguyen",
-    "lastUpdatedAt": "2026-09-14T19:38:00.000Z",
-    "university": "Inria",
-    "city": "Paris",
-    "country": "France",
-    "researchAreas": [
-      "Cryptography",
-      "Algorithmic Number Theory",
-      "Lattice-Based Cryptography"
-    ],
-    "track": "Research",
-    "institutionType": "Public research institute",
-    "department": "Computer Science Department, ENS / CASCADE project-team, Inria Paris",
-    "rank": "Research Director",
-    "phdYear": 1999,
-    "phdInstitution": "École Normale Supérieure",
-    "researchOverview": {
-      "text": "Nguyen's research seeks to secure lattice-based cryptography against quantum computing and reconcile big data with privacy.",
-      "sources": [
-        "https://www.inria.fr/fr/phong-nguyen"
-      ],
-      "verifiedAt": "2026-09-07T19:35:00.000Z"
-    },
-    "websiteUrl": "https://www.di.ens.fr/~pnguyen/",
-    "portrait": "portraits/vp-1127-phong-q-nguyen.webp",
-    "portraitSource": "https://www.inria.fr/fr/phong-nguyen"
-  },
-  {
     "id": "vp-1128",
     "name": "Benjamin Nguyen - INSA Centre Val de Loire",
     "profileUrl": "https://www.univ-orleans.fr/lifo/membre/Benjamin.NGUYEN",
@@ -45054,38 +45142,6 @@
     "websiteUrl": "http://emmy.nmsu.edu/~hunguyen/",
     "portrait": "portraits/vp-1152-hung-trung-nguyen.webp",
     "portraitSource": "https://math.nmsu.edu/people/facultydirectory/_images/Nguyen-1473aa0fe7b357cf962f09a1adf6f84c.jpg"
-  },
-  {
-    "id": "vp-1153",
-    "name": "Trien Nguyen",
-    "vietnameseName": "Nguyễn Triển",
-    "university": "University of Waterloo",
-    "department": "Department of Economics",
-    "rank": "Professor Emeritus",
-    "portrait": "portraits/vp-1153-trien-nguyen.webp",
-    "portraitSource": "https://uwaterloo.ca/economics/sites/default/files/uploads/images/trien-nguyen_0.jpg",
-    "track": "Emeritus",
-    "city": "Waterloo",
-    "state": "Ontario",
-    "country": "Canada",
-    "profileUrl": "https://uwaterloo.ca/economics/profiles/trien-nguyen-retired",
-    "phdInstitution": "University of Western Ontario",
-    "undergradInstitution": "University of California, Berkeley",
-    "undergradMajor": "Chemical Engineering",
-    "researchAreas": [
-      "Public Policy",
-      "Economics of Taxation",
-      "Computational Economics",
-      "Asian Economies"
-    ],
-    "lastUpdatedAt": "2026-09-14T20:28:00.000Z",
-    "researchOverview": {
-      "text": "I am also interested in issues of development, Asian economies, and lately, the new field of scholarship of teaching and learning (SoTL). Selected publications Nguyen, T. Our active work toward reconciliation takes place across our campuses through research, learning, teaching, and community building, and is co-ordinated within the Office of Indigenous Relations .",
-      "sources": [
-        "https://uwaterloo.ca/economics/profiles/trien-nguyen-retired"
-      ],
-      "verifiedAt": "2026-09-14T20:28:00.000Z"
-    }
   },
   {
     "id": "vp-1155",
@@ -55415,10 +55471,12 @@
       "Emission Inventory",
       "Atmospheric Modeling",
       "Climate Change",
-      "Environmental Engineering"
+      "Environmental Engineering",
+      "Air Pollution Management",
+      "Air Quality and Climate Change"
     ],
     "profileUrl": "https://ait.ac.th/people/faculty/prof-nguyen-thi-kim-oanh/",
-    "lastUpdatedAt": "2026-09-14T20:28:00.000Z",
+    "lastUpdatedAt": "2026-09-27T15:28:12.095Z",
     "portrait": "portraits/vp-1469-kim-oanh-thi-nguyen.webp",
     "portraitSource": "https://ait.ac.th/wp-content/uploads/2022/05/DSC_0032-e1551323597684-683x1024-1-Edited-e1759290737534.jpg",
     "websiteUrl": "https://ait.ac.th/people/prof-nguyen-thi-kim-oanh/",
@@ -55430,7 +55488,8 @@
         "https://ait.ac.th/people/prof-nguyen-thi-kim-oanh/"
       ],
       "verifiedAt": "2026-09-14T20:28:00.000Z"
-    }
+    },
+    "linkedinUrl": "https://www.linkedin.com/in/kim-oanh-nguyen-a41a3ba3/"
   },
   {
     "id": "vp-1470",
@@ -56468,6 +56527,29 @@
     ],
     "portrait": "portraits/vp-1502-duc-thi-luu.webp",
     "portraitSource": "https://www.esilv.fr/ecole-ingenieur/wp-content/uploads/2026/07/From-Mathematics-to-Markets-How-Financial-Engineers-Work-in-Real-Life-150x150.jpg"
+  },
+  {
+    "id": "vp-1520",
+    "name": "Tung Pham",
+    "vietnameseName": "Phạm Tùng",
+    "profileUrl": "https://www.uibk.ac.at/de/textilchemie/team/folder/pham_tung/",
+    "linkedinUrl": "https://www.linkedin.com/in/tung-pham-088b1220/",
+    "university": "University of Innsbruck",
+    "city": "Innsbruck",
+    "country": "Austria",
+    "department": "Research Institute of Textile Chemistry and Textile Physics",
+    "rank": "Full Professor",
+    "track": "Tenure-line",
+    "phdInstitution": "Martin Luther University Halle-Wittenberg",
+    "phdYear": 1995,
+    "phdMajor": "Materials Science",
+    "researchAreas": [
+      "Textile Chemistry",
+      "Fibre Functionalization",
+      "Composites",
+      "Polymer Technology"
+    ],
+    "lastUpdatedAt": "2026-09-19T16:45:04.000Z"
   },
   {
     "id": "vp-1527",
@@ -58069,29 +58151,6 @@
     "lastUpdatedAt": "2026-09-17T01:30:00.000Z"
   },
   {
-    "id": "vp-1572",
-    "name": "Tung Pham",
-    "vietnameseName": "Phạm Tùng",
-    "profileUrl": "https://www.uibk.ac.at/de/textilchemie/team/folder/pham_tung/",
-    "linkedinUrl": "https://www.linkedin.com/in/tung-pham-088b1220/",
-    "university": "University of Innsbruck",
-    "city": "Innsbruck",
-    "country": "Austria",
-    "department": "Research Institute of Textile Chemistry and Textile Physics",
-    "rank": "Full Professor",
-    "track": "Tenure-line",
-    "phdInstitution": "Martin Luther University Halle-Wittenberg",
-    "phdYear": 1995,
-    "phdMajor": "Materials Science",
-    "researchAreas": [
-      "Textile Chemistry",
-      "Fibre Functionalization",
-      "Composites",
-      "Polymer Technology"
-    ],
-    "lastUpdatedAt": "2026-09-19T16:45:04.000Z"
-  },
-  {
     "id": "vp-1573",
     "name": "Trang Nguyen",
     "vietnameseName": "Nguyễn Thị Trang",
@@ -58112,27 +58171,6 @@
       "Climate Finance"
     ],
     "lastUpdatedAt": "2026-09-19T16:45:04.000Z"
-  },
-  {
-    "id": "vp-1574",
-    "name": "Viet Nguyen",
-    "vietnameseName": "Nguyễn Việt",
-    "profileUrl": "https://findanexpert.unimelb.edu.au/profile/361260-viet-nguyen",
-    "linkedinUrl": "https://www.linkedin.com/in/viet-hoang-nguyen-26b765b4",
-    "university": "University of Melbourne",
-    "city": "Melbourne",
-    "country": "Australia",
-    "department": "Melbourne Institute of Applied Economic and Social Research",
-    "rank": "Associate Professor",
-    "track": "Tenure-line",
-    "phdInstitution": "University of Leeds",
-    "researchAreas": [
-      "Applied Macroeconomics",
-      "Econometrics",
-      "Consumer Expectations",
-      "Monetary Policy"
-    ],
-    "lastUpdatedAt": "2026-09-19T21:04:56.747Z"
   },
   {
     "id": "vp-1575",
@@ -58272,37 +58310,6 @@
     "portraitSource": "https://www.kitao.bio.titech.ac.jp/images/duy.jpg"
   },
   {
-    "id": "vp-1581",
-    "name": "Phuc Thanh Nguyen",
-    "vietnameseName": "Nguyễn Thành Phúc",
-    "profileUrl": "https://researchmap.jp/thanh_phuc",
-    "university": "Kyoto University",
-    "city": "Kyoto",
-    "country": "Japan",
-    "department": "Department of Molecular Engineering",
-    "rank": "Lecturer",
-    "track": "Tenure-line",
-    "phdInstitution": "The University of Tokyo",
-    "phdYear": 2014,
-    "phdMajor": "Physics",
-    "researchAreas": [
-      "Molecular Polaritons",
-      "Quantum Engineering",
-      "Photosynthesis",
-      "Excitation Energy Transfer"
-    ],
-    "lastUpdatedAt": "2026-09-19T21:04:56.747Z",
-    "honors": [
-      {
-        "name": "JST PRESTO Research Fellowship",
-        "category": "career_award",
-        "organization": "Japan Science and Technology Agency",
-        "year": 2024,
-        "source": "https://researchmap.jp/thanh_phuc?lang=en"
-      }
-    ]
-  },
-  {
     "id": "vp-1582",
     "name": "Thi Tuyet Trinh Pham",
     "vietnameseName": "Phạm Thị Tuyết Trinh",
@@ -58328,7 +58335,7 @@
     "id": "vp-1583",
     "name": "Ky Q. Tran",
     "vietnameseName": "Trần Quốc Kỳ",
-    "profileUrl": "https://www.sunykorea.ac.kr/en/",
+    "profileUrl": "https://www.sunykorea.ac.kr/en/html/sub03/030101.html?mode=V&no=2019010041",
     "university": "SUNY Korea",
     "city": "Incheon",
     "country": "South Korea",
@@ -58342,9 +58349,11 @@
       "Stochastic Differential Equations",
       "Markovian Switching",
       "Stochastic Control",
-      "Mathematical Biology"
+      "Mathematical Biology",
+      "Stochastic Systems",
+      "Numerical Approximations"
     ],
-    "lastUpdatedAt": "2026-09-17T01:30:00.000Z"
+    "lastUpdatedAt": "2026-09-27T15:28:12.095Z"
   },
   {
     "id": "vp-1584",
@@ -58393,38 +58402,6 @@
     "lastUpdatedAt": "2026-09-19T21:04:56.746Z"
   },
   {
-    "id": "vp-1586",
-    "name": "Viet-Khoa Tran-Nguyen",
-    "vietnameseName": "Trần Nguyễn Việt Khoa",
-    "profileUrl": "https://bfa.u-paris.fr/",
-    "linkedinUrl": "https://www.linkedin.com/in/viet-khoa-tran-nguyen",
-    "university": "Université Paris Cité",
-    "city": "Paris",
-    "country": "France",
-    "department": "Unité de Biologie Fonctionnelle et Adaptative",
-    "rank": "Assistant Professor",
-    "track": "Tenure-line",
-    "phdInstitution": "University of Strasbourg",
-    "phdYear": 2020,
-    "phdMajor": "Cheminformatics",
-    "researchAreas": [
-      "Cheminformatics",
-      "Structure-Based Drug Design",
-      "Medicinal Chemistry",
-      "Machine Learning for Drug Discovery"
-    ],
-    "lastUpdatedAt": "2026-09-19T21:04:56.746Z",
-    "honors": [
-      {
-        "name": "SCT Young Academic Investigator Award",
-        "category": "career_award",
-        "organization": "Société de Chimie Thérapeutique",
-        "year": 2024,
-        "source": "https://www.sct-asso.fr/ymc-academia-award"
-      }
-    ]
-  },
-  {
     "id": "vp-1588",
     "name": "Gia Huy Pham",
     "vietnameseName": "Phạm Gia Huy",
@@ -58464,9 +58441,22 @@
       "Food Biotechnology",
       "Fermentation Technology",
       "Bioconversion",
-      "Functional Foods"
+      "Functional Foods",
+      "Biochemical Engineering",
+      "Food Technology",
+      "Fermentation Engineering",
+      "Biotechnology"
     ],
-    "lastUpdatedAt": "2026-09-17T00:00:00.000Z"
+    "lastUpdatedAt": "2026-09-27T15:28:12.095Z",
+    "honors": [
+      {
+        "name": "Bolyai János Research Fellowship (2007-2010, 2012-2015)",
+        "year": 2007,
+        "category": "career_award",
+        "organization": "Hungarian Academy of Sciences",
+        "source": "https://research.uni-mate.hu/w/prof.-dr.-quang-d.-nguyen"
+      }
+    ]
   },
   {
     "id": "vp-1590",
@@ -58548,26 +58538,6 @@
       "Robotics"
     ],
     "lastUpdatedAt": "2026-09-19T20:45:22.000Z"
-  },
-  {
-    "id": "vp-1594",
-    "name": "Huy Trong Tran",
-    "vietnameseName": "Trần Trọng Huy",
-    "university": "University of Illinois Urbana-Champaign",
-    "city": "Urbana",
-    "state": "Illinois",
-    "country": "United States",
-    "department": "Department of Aerospace Engineering",
-    "rank": "Assistant Professor",
-    "track": "Tenure-line",
-    "profileUrl": "https://aerospace.illinois.edu/directory/profile/httran",
-    "researchAreas": [
-      "Multi-Agent Systems",
-      "Reinforcement Learning",
-      "Aerospace Engineering",
-      "Autonomous Systems"
-    ],
-    "lastUpdatedAt": "2026-09-17T00:00:00.000Z"
   },
   {
     "id": "vp-1595",
@@ -58784,28 +58754,6 @@
     "lastUpdatedAt": "2026-09-17T12:48:45.000Z"
   },
   {
-    "id": "vp-1606",
-    "name": "Anh Linh Nguyen",
-    "vietnameseName": "Nguyễn Anh Linh",
-    "university": "University of Warsaw",
-    "city": "Warsaw",
-    "country": "Poland",
-    "department": "Institute of Informatics",
-    "rank": "Professor",
-    "track": "Tenure-line",
-    "profileUrl": "https://www.mimuw.edu.pl/en/employees/722/",
-    "phdInstitution": "University of Warsaw",
-    "phdYear": 2000,
-    "phdMajor": "Computer Science",
-    "researchAreas": [
-      "Modal Logics and Description Logics",
-      "Automated Reasoning",
-      "Fuzzy Logic Systems",
-      "Knowledge Representation"
-    ],
-    "lastUpdatedAt": "2026-09-17T12:48:45.000Z"
-  },
-  {
     "id": "vp-1607",
     "name": "Loc Thai Nguyen",
     "vietnameseName": "Nguyễn Thái Lộc",
@@ -58873,64 +58821,6 @@
     "lastUpdatedAt": "2026-09-22T14:15:38.589Z",
     "portrait": "portraits/vp-1610-thi-phuoc-lai-nguyen.webp",
     "portraitSource": "https://ait.ac.th/wp-content/uploads/2022/03/thi_phuoc_lau_nguyen.jpg"
-  },
-  {
-    "id": "vp-1611",
-    "name": "Kim Oanh Nguyen",
-    "vietnameseName": "Nguyễn Thị Kim Oánh",
-    "university": "Asian Institute of Technology",
-    "city": "Khlong Luang",
-    "country": "Thailand",
-    "department": "Environmental Engineering and Management",
-    "rank": "Distinguished Emeritus Professor",
-    "track": "Emeritus",
-    "profileUrl": "https://ait.ac.th/people/prof-nguyen-thi-kim-oanh/",
-    "linkedinUrl": "https://www.linkedin.com/in/kim-oanh-nguyen-a41a3ba3/",
-    "phdInstitution": "Asian Institute of Technology",
-    "phdYear": 1994,
-    "phdMajor": "Environmental Technology and Management",
-    "msInstitution": "Asian Institute of Technology",
-    "msYear": 1991,
-    "msMajor": "Environmental Technology and Management",
-    "undergradInstitution": "Odessa State Environmental University",
-    "undergradYear": 1978,
-    "undergradMajor": "Meteorology",
-    "researchAreas": [
-      "Air Pollution Management",
-      "Air Quality and Climate Change",
-      "Emission Inventory",
-      "Environmental Engineering"
-    ],
-    "lastUpdatedAt": "2026-09-20T02:46:31.000Z"
-  },
-  {
-    "id": "vp-1612",
-    "name": "Quang Duc Nguyen",
-    "vietnameseName": "Nguyễn Đức Quang",
-    "university": "Hungarian University of Agriculture and Life Sciences",
-    "city": "Budapest",
-    "country": "Hungary",
-    "department": "Institute of Food Science and Technology",
-    "rank": "Professor",
-    "track": "Tenure-line",
-    "profileUrl": "https://foodscience.uni-mate.hu/etti-management",
-    "phdInstitution": "Corvinus University of Budapest",
-    "researchAreas": [
-      "Biochemical Engineering",
-      "Food Technology",
-      "Fermentation Engineering",
-      "Biotechnology"
-    ],
-    "lastUpdatedAt": "2026-09-21T01:08:21.000Z",
-    "honors": [
-      {
-        "name": "Bolyai János Research Fellowship (2007-2010, 2012-2015)",
-        "year": 2007,
-        "category": "career_award",
-        "organization": "Hungarian Academy of Sciences",
-        "source": "https://research.uni-mate.hu/w/prof.-dr.-quang-d.-nguyen"
-      }
-    ]
   },
   {
     "id": "vp-1613",
@@ -59225,47 +59115,6 @@
       "Bullwhip Effect"
     ],
     "lastUpdatedAt": "2026-09-16T21:15:00.000Z"
-  },
-  {
-    "id": "vp-1627",
-    "name": "Ky Quan Tran",
-    "vietnameseName": "Trần Quân Kỳ",
-    "university": "SUNY Korea",
-    "city": "Incheon",
-    "country": "South Korea",
-    "department": "Department of Applied Mathematics and Statistics",
-    "rank": "Associate Professor",
-    "track": "Tenure-line",
-    "profileUrl": "https://www.sunykorea.ac.kr/en/html/sub03/030101.html?mode=V&no=2019010041",
-    "researchAreas": [
-      "Stochastic Systems",
-      "Stochastic Control",
-      "Mathematical Biology",
-      "Numerical Approximations"
-    ],
-    "lastUpdatedAt": "2026-09-16T21:15:00.000Z"
-  },
-  {
-    "id": "vp-1628",
-    "name": "Phuong Nguyen",
-    "vietnameseName": "Nguyễn Phương",
-    "university": "Luxembourg Institute of Science and Technology",
-    "city": "Esch-sur-Alzette",
-    "country": "Luxembourg",
-    "institutionType": "Public research institute",
-    "department": "Environmental Research and Innovation Department",
-    "rank": "Research Group Leader",
-    "track": "Research",
-    "profileUrl": "https://www.list.lu/en/research/erin/sustainable-energy-systems/",
-    "phdInstitution": "Eindhoven University of Technology",
-    "phdMajor": "Electrical Energy Systems",
-    "researchAreas": [
-      "Energy Systems",
-      "Smart Grids",
-      "Renewable Energy Integration",
-      "Electric Vehicles"
-    ],
-    "lastUpdatedAt": "2026-09-16T21:18:00.000Z"
   },
   {
     "id": "vp-1629",
@@ -60901,85 +60750,6 @@
       ],
       "verifiedAt": "2026-09-25T02:08:57.000Z"
     }
-  },
-  {
-    "id": "vp-1692",
-    "name": "Tin Nguyen - Wayne State University",
-    "vietnameseName": "Nguyễn Tin",
-    "profileUrl": "https://engineering.wayne.edu/profile/ex6091",
-    "lastUpdatedAt": "2026-09-27T05:44:57.464Z",
-    "university": "Wayne State University",
-    "city": "Detroit",
-    "state": "Michigan",
-    "country": "United States",
-    "researchAreas": [
-      "Machine Learning",
-      "Bioinformatics",
-      "Cancer Subtyping",
-      "Multi-Omics Data Integration",
-      "Single-Cell and Spatial Transcriptomics"
-    ],
-    "track": "Tenure-line",
-    "department": "Industrial and Systems Engineering",
-    "rank": "Professor",
-    "phdInstitution": "Wayne State University",
-    "directFields": [
-      "rank",
-      "university"
-    ],
-    "researchOverview": {
-      "text": "Nguyen is a Professor in the Department of Industrial and Systems Engineering at Wayne State University, with a joint appointment as Professor of Oncology at the Karmanos Cancer Institute. Research applies machine learning and computational methods to high-throughput biological data, focusing on multi-omics integration, cancer subtyping, and single-cell and spatial transcriptomics.",
-      "sources": [
-        "https://engineering.wayne.edu/profile/ex6091"
-      ],
-      "verifiedAt": "2026-09-25T02:08:57.000Z"
-    },
-    "scholarUrl": "https://scholar.google.com/citations?user=aUjOGMEAAAAJ",
-    "linkedinUrl": "https://www.linkedin.com/in/tinnguyenchi/",
-    "labUrl": "https://tinnguyen-lab.com/home/",
-    "honors": [
-      {
-        "name": "NSF CAREER Award",
-        "year": 2022,
-        "category": "career_award",
-        "organization": "National Science Foundation",
-        "source": "https://tinnguyen-lab.com/home/files/Tin_CurriculumVitae.pdf"
-      }
-    ],
-    "selectedWork": [
-      {
-        "title": "RCPA: An Open-Source R Package for Data Processing, Differential Analysis, Consensus Pathway Analysis, and Visualization",
-        "type": "software",
-        "url": "https://CRAN.R-project.org/package=RCPA",
-        "selectionSource": "https://tinnguyen-lab.com/home/",
-        "selectionMode": "selected",
-        "verifiedAt": "2026-09-06T23:45:00.000Z",
-        "year": 2024
-      },
-      {
-        "title": "scCAN",
-        "type": "software",
-        "url": "https://CRAN.R-project.org/package=scCAN",
-        "selectionSource": "https://tinnguyen-lab.com/home/",
-        "selectionMode": "selected",
-        "verifiedAt": "2026-09-06T23:45:00.000Z",
-        "year": 2023
-      },
-      {
-        "title": "scISR",
-        "type": "software",
-        "url": "https://cran.r-project.org/package=scISR",
-        "selectionSource": "https://tinnguyen-lab.com/home/",
-        "selectionMode": "selected",
-        "verifiedAt": "2026-09-06T23:45:00.000Z",
-        "year": 2022
-      }
-    ],
-    "phdYear": 2017,
-    "undergradInstitution": "Eotvos Lorand University",
-    "msInstitution": "Eotvos Lorand University",
-    "portrait": "portraits/037-tin-nguyen-wayne-state-university-wayne-state-university.webp",
-    "portraitSource": "https://eng.auburn.edu/images/programs/csse/headshots/nguyen-tin.jpg"
   },
   {
     "id": "vp-1693",

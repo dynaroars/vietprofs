@@ -153,7 +153,7 @@ Research overviews (`researchOverview.text`) are publicly rendered on individual
 - **Gender-Neutral Phrasing:** Maintain the repository standard: do not use gendered pronouns (`He`, `She`, `His`, `Her`, `Him`, `Hers`). Use the scholar's surname or direct active-voice phrasing.
 - **Sentence & Length Constraints:** Maximum 3 sentences and at most 500 characters.
 
-Work on one institution or broad field at a time. Audit existing entries before adding candidates. For every candidate, verify identity, current appointment, primary department or research unit, rank/track, institution type, and profile URL individually. Deduplicate by person rather than URL and check for former affiliations or recent moves.
+Work on one institution or broad field at a time. Audit existing entries before adding candidates. For every candidate, verify identity, current appointment, primary department or research unit, rank/track, institution type, and profile URL individually. Deduplicate by person rather than URL and check for former affiliations or recent moves (see "One person, one ID").
 
 Use all relevant candidate sources:
 
@@ -463,8 +463,9 @@ Resuming across sessions (including on a different machine):
    reliable source. Watch specifically for: the listed institution being stale (people move); the
    role being non-academic, visiting, adjunct, or postdoctoral; the same person appearing under
    multiple leads (split OpenAlex profiles, or a name common enough to collide with an unrelated
-   person); and the person already being in the roster under a name-token order or spelling this
-   queue's dedup missed (search `public/data.json` by surname before adding).
+   person); and the person already being in the roster under a name-token order, spelling, or
+   former institution this queue's dedup missed (run `npm run find-roster-matches` as in "One
+   person, one ID" before adding).
 4. For each resolved candidate, update its `maintenance/hieuphay-leads.json` entry: set `status`
    to `included` (with `rosterId`), `excluded` (with a one-line `note` explaining why), or
    `duplicate` (with a `note` pointing at the existing roster entry). Then add every `included`
@@ -483,7 +484,7 @@ Resuming across sessions (including on a different machine):
 Lead-queue entries (currently `maintenance/hieuphay-leads.json`) are **leads only**: the source does not know faculty status, tenure eligibility, or Vietnamese heritage. Maintainers and automated agents process each candidate queue using the following step-by-step verification standard:
 
 1. **Fast-path Deduplication & Entity Matching:**
-   - Check the candidate against the existing roster (`public/data.json`) by canonical name, full diacritic `vietnameseName`, and the lead's recorded name variants.
+   - Check the candidate against the existing roster (`public/data.json`) by canonical name, full diacritic `vietnameseName`, and the lead's recorded name variants, using `npm run find-roster-matches` with every identity URL (see "One person, one ID"). A same-name entry at another institution is a probable move, not a namesake.
    - Detect **split leads** (several lead records for the same individual). Map all of them to the single primary canonical roster ID (`matchedId: "vp-####"`).
    - Beware of false-positive duplicate collisions on 2-token names (e.g., "Minh Huynh" at CSIRO vs an unrelated clinical namesake). Always verify institution and research domain before marking as duplicate.
 
@@ -539,6 +540,55 @@ To prevent desynchronization between data files and ensure interrupted runs are 
    git push origin main
    ```
 
+## One person, one ID
+
+A `vp-####` ID is the person's permanent public address (`people/vp-####.html`). People move,
+get promoted, change the name they publish under, retire into emeritus status, or get removed and
+later qualify again. None of that is a new person, so none of it gets a new ID.
+
+- **Dedup before anything else.** Before filing, adding, or approving any candidate, run
+  `npm run find-roster-matches -- "<name>" --url <profile> --url <website> --url <lab> --url <Scholar> --url <LinkedIn>`
+  with every identity URL you have. It matches order-independent name tokens (diacritics and
+  initials ignored), every identity URL against every identity field of every entry, and
+  `maintenance/retired-ids.json`. The candidate intake playbook (`TASKS/candidate_intake.md`
+  step 1) is the full procedure; every other playbook uses it.
+- **A hit is the same person until ruled out.** A same-name entry at a different institution is
+  the usual sign of a move, not a namesake. Compare former affiliations (the new profile's CV or
+  bio, the old entry's institution), PhD institution and year, lab or homepage, Scholar, LinkedIn,
+  and research area. Only call it a different person when those actually differ, and say how in
+  the Issue.
+- **Same person, current entry:** update that entry in place: `university`, `department`, `rank`,
+  `track`, `profileUrl`, location, and anything else the move changed. Keep everything still true
+  (honors, degrees, Scholar, LinkedIn, portrait if still them). For an owner or Issue submission,
+  the supplied fields go in `directFields` as usual. This is an edit, never a `New candidate:`
+  Issue.
+- **Same person, retired ID** (removed earlier, e.g. as retired before an emeritus title, or
+  merged): restore the original ID. Add the entry with that ID and remove it from
+  `maintenance/retired-ids.json` (or, if a new ID was already assigned by mistake, run
+  `npm run retire-profile-id -- <new-id> --into <original-id> --reason "..." --apply`, which
+  renames the entry back and rewrites every ledger reference). Re-verify eligibility first.
+- **Two entries for one person:** keep the older (lower) ID. Move the current, verified facts and
+  any unique sourced fields onto it; drop fields that only applied to the other institution
+  (`institutionType`, an old `profileUrl`, a stale portrait). Protected `directFields` values move
+  with the data: the rule protects the value, not the ID it was stored under. Delete the newer
+  entry, then run `npm run retire-profile-id -- <newer-id> --into <older-id> --reason "..." --apply`
+  and fix `maintenance/verification.json`'s name keys. Never keep the newer ID because it has
+  protected fields or looks more complete.
+- **Retired IDs are permanent.** `maintenance/retired-ids.json` records every ID ever removed,
+  with what replaced it and why. `assign-profile-ids` never hands them out again, the build writes
+  a redirect page from each merged ID to the entry that absorbed it, and `npm test` fails if a
+  retired ID reappears in the roster without being removed from the ledger.
+- **`npm test` blocks the common duplicates:** the same Scholar profile, LinkedIn slug, or homepage
+  (in any URL form) on two entries, and matching names at one institution. A pair confirmed to be
+  different people goes in `DISTINCT_PEOPLE` in `scripts/validate-data.ts` with how it was
+  confirmed. `npm run find-roster-matches -- --roster` lists the remaining likely pairs (for
+  example, same name and PhD at different institutions).
+- **Never remove an entry silently.** Removing someone (ineligible, deceased without a record, a
+  merge) needs its reason in the commit message and a row in `maintenance/retired-ids.json`.
+  Stale-branch overwrites of `public/data.json` have dropped entries before (fc655f5, 2026-09-12);
+  test on fresh `main` (see `TASKS/AUDIT_ISSUES_PRS.md`) and check that the entry count only
+  changes by the entries you meant to add or remove.
+
 ## Data-entry rules
 
 `public/data.json` is the canonical roster. Each entry should use the following conventions:
@@ -547,7 +597,8 @@ To prevent desynchronization between data files and ensure interrupted runs are 
   or edit it manually: after adding an entry, run `npm run assign-profile-ids -- --apply` to assign
   an ID strictly higher than every ID currently in the roster. Tests, development, and builds only
   verify IDs and do not edit the roster. Preserve the generated ID when correcting a name,
-  appointment, or other facts.
+  appointment, or other facts. An ID belongs to the person, not the appointment: see "One person,
+  one ID" above before adding anyone.
 - `track` must be `Tenure-line`, `Teaching`, `Research`, `Clinical`, `Admin and Staff`, `Emeritus`, or `Deceased`.
 - `institutionType`, when present, must be `University`, `Public research institute`, or
   `Independent nonprofit research institute`. Omit it for ordinary university records; it is

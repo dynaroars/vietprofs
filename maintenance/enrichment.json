@@ -38,6 +38,7 @@
     "vp-0034",
     "vp-0035",
     "vp-0036",
+    "vp-0037",
     "vp-0038",
     "vp-0039",
     "vp-0040",
@@ -647,6 +648,7 @@
     "vp-0645",
     "vp-0646",
     "vp-0647",
+    "vp-0648",
     "vp-0649",
     "vp-0650",
     "vp-0651",
@@ -716,7 +718,6 @@
     "vp-0716",
     "vp-0717",
     "vp-0718",
-    "vp-0719",
     "vp-0720",
     "vp-0721",
     "vp-0722",
@@ -1115,7 +1116,6 @@
     "vp-1124",
     "vp-1125",
     "vp-1126",
-    "vp-1127",
     "vp-1128",
     "vp-1129",
     "vp-1130",
@@ -1135,7 +1135,6 @@
     "vp-1149",
     "vp-1151",
     "vp-1152",
-    "vp-1153",
     "vp-1155",
     "vp-1156",
     "vp-1157",
@@ -1467,6 +1466,7 @@
     "vp-1500",
     "vp-1501",
     "vp-1502",
+    "vp-1520",
     "vp-1527",
     "vp-1528",
     "vp-1529",
@@ -1509,28 +1509,23 @@
     "vp-1569",
     "vp-1570",
     "vp-1571",
-    "vp-1572",
     "vp-1573",
-    "vp-1574",
     "vp-1575",
     "vp-1576",
     "vp-1577",
     "vp-1578",
     "vp-1579",
     "vp-1580",
-    "vp-1581",
     "vp-1582",
     "vp-1583",
     "vp-1584",
     "vp-1585",
-    "vp-1586",
     "vp-1588",
     "vp-1589",
     "vp-1590",
     "vp-1591",
     "vp-1592",
     "vp-1593",
-    "vp-1594",
     "vp-1595",
     "vp-1597",
     "vp-1598",
@@ -1541,12 +1536,9 @@
     "vp-1603",
     "vp-1604",
     "vp-1605",
-    "vp-1606",
     "vp-1607",
     "vp-1609",
     "vp-1610",
-    "vp-1611",
-    "vp-1612",
     "vp-1613",
     "vp-1614",
     "vp-1615",
@@ -1560,8 +1552,6 @@
     "vp-1624",
     "vp-1625",
     "vp-1626",
-    "vp-1627",
-    "vp-1628",
     "vp-1629",
     "vp-1630",
     "vp-1631",
@@ -1618,7 +1608,6 @@
     "vp-1689",
     "vp-1690",
     "vp-1691",
-    "vp-1692",
     "vp-1693",
     "vp-1694",
     "vp-1695"
@@ -2551,7 +2540,6 @@
         "vp-0716",
         "vp-0717",
         "vp-0718",
-        "vp-0719",
         "vp-0720",
         "vp-0721",
         "vp-0722",
@@ -3070,7 +3058,6 @@
         "vp-1124",
         "vp-1125",
         "vp-1126",
-        "vp-1127",
         "vp-1128",
         "vp-1129",
         "vp-1130",
@@ -3081,6 +3068,7 @@
     {
       "number": 57,
       "ids": [
+        "vp-0648",
         "vp-1133",
         "vp-1134",
         "vp-1135",
@@ -3096,7 +3084,6 @@
         "vp-1149",
         "vp-1151",
         "vp-1152",
-        "vp-1153",
         "vp-1155",
         "vp-1156",
         "vp-1157",
@@ -3574,6 +3561,7 @@
     {
       "number": 76,
       "ids": [
+        "vp-1520",
         "vp-1562",
         "vp-1563",
         "vp-1564",
@@ -3584,16 +3572,13 @@
         "vp-1569",
         "vp-1570",
         "vp-1571",
-        "vp-1572",
         "vp-1573",
-        "vp-1574",
         "vp-1575",
         "vp-1576",
         "vp-1577",
         "vp-1578",
         "vp-1579",
-        "vp-1580",
-        "vp-1581"
+        "vp-1580"
       ],
       "status": "pending"
     },
@@ -3604,14 +3589,12 @@
         "vp-1583",
         "vp-1584",
         "vp-1585",
-        "vp-1586",
         "vp-1588",
         "vp-1589",
         "vp-1590",
         "vp-1591",
         "vp-1592",
         "vp-1593",
-        "vp-1594",
         "vp-1595",
         "vp-1597",
         "vp-1598",
@@ -3628,12 +3611,9 @@
       "ids": [
         "vp-1604",
         "vp-1605",
-        "vp-1606",
         "vp-1607",
         "vp-1609",
         "vp-1610",
-        "vp-1611",
-        "vp-1612",
         "vp-1613",
         "vp-1614",
         "vp-1615",
@@ -3653,8 +3633,6 @@
       "ids": [
         "vp-1625",
         "vp-1626",
-        "vp-1627",
-        "vp-1628",
         "vp-1629",
         "vp-1630",
         "vp-1631",
@@ -3797,11 +3775,11 @@
     {
       "number": 95,
       "ids": [
+        "vp-0037",
         "vp-1688",
         "vp-1689",
         "vp-1690",
         "vp-1691",
-        "vp-1692",
         "vp-1693"
       ],
       "status": "pending"
@@ -4224,6 +4202,16 @@
       "evidence": [],
       "errors": [],
       "updatedAt": "2026-09-19T22:54:09.974Z"
+    },
+    "vp-0037": {
+      "overview": "pending",
+      "work": "pending",
+      "sourcesChecked": [
+        "https://engineering.wayne.edu/profile/ex6091"
+      ],
+      "evidence": [],
+      "errors": [],
+      "updatedAt": "2026-09-25T03:50:50.908Z"
     },
     "vp-0038": {
       "overview": "pending",
@@ -10636,6 +10624,16 @@
       "errors": [],
       "updatedAt": "2026-09-19T22:54:09.974Z"
     },
+    "vp-0648": {
+      "overview": "pending",
+      "work": "pending",
+      "sourcesChecked": [
+        "https://uwaterloo.ca/economics/profiles/trien-nguyen-retired"
+      ],
+      "evidence": [],
+      "errors": [],
+      "updatedAt": "2026-09-19T22:54:09.974Z"
+    },
     "vp-0649": {
       "overview": "pending",
       "work": "pending",
@@ -11349,16 +11347,6 @@
       "work": "pending",
       "sourcesChecked": [
         "https://www.pointpark.edu/academics/schools/schoolofartsandsciences/departments/naturalsciencesandengineeringtechnology/faculty/hai-tran"
-      ],
-      "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-19T22:54:09.974Z"
-    },
-    "vp-0719": {
-      "overview": "pending",
-      "work": "pending",
-      "sourcesChecked": [
-        "https://erau.edu/faculty/Hai.Tran"
       ],
       "evidence": [],
       "errors": [],
@@ -15477,17 +15465,6 @@
       "errors": [],
       "updatedAt": "2026-09-19T22:54:09.974Z"
     },
-    "vp-1127": {
-      "overview": "pending",
-      "work": "pending",
-      "sourcesChecked": [
-        "https://www.inria.fr/fr/phong-nguyen",
-        "https://www.di.ens.fr/~pnguyen/"
-      ],
-      "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-19T22:54:09.974Z"
-    },
     "vp-1128": {
       "overview": "pending",
       "work": "pending",
@@ -15677,16 +15654,6 @@
       "sourcesChecked": [
         "https://math.nmsu.edu/people/facultydirectory/hung-t.-nguyen.html",
         "http://emmy.nmsu.edu/~hunguyen/"
-      ],
-      "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-19T22:54:09.974Z"
-    },
-    "vp-1153": {
-      "overview": "pending",
-      "work": "pending",
-      "sourcesChecked": [
-        "https://uwaterloo.ca/economics/profiles/trien-nguyen-retired"
       ],
       "evidence": [],
       "errors": [],
@@ -19119,6 +19086,16 @@
       "errors": [],
       "updatedAt": "2026-09-19T22:54:09.974Z"
     },
+    "vp-1520": {
+      "overview": "pending",
+      "work": "pending",
+      "sourcesChecked": [
+        "https://www.uibk.ac.at/de/textilchemie/team/folder/pham_tung/"
+      ],
+      "evidence": [],
+      "errors": [],
+      "updatedAt": "2026-09-19T22:54:09.974Z"
+    },
     "vp-1527": {
       "overview": "pending",
       "work": "pending",
@@ -19566,31 +19543,11 @@
       "errors": [],
       "updatedAt": "2026-09-19T22:54:09.974Z"
     },
-    "vp-1572": {
-      "overview": "pending",
-      "work": "pending",
-      "sourcesChecked": [
-        "https://www.uibk.ac.at/de/textilchemie/team/folder/pham_tung/"
-      ],
-      "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-19T22:54:09.974Z"
-    },
     "vp-1573": {
       "overview": "pending",
       "work": "pending",
       "sourcesChecked": [
         "https://research-information.bris.ac.uk/en/persons/trang-nguyen/"
-      ],
-      "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-19T22:54:09.974Z"
-    },
-    "vp-1574": {
-      "overview": "pending",
-      "work": "pending",
-      "sourcesChecked": [
-        "https://findanexpert.unimelb.edu.au/profile/361260-viet-nguyen"
       ],
       "evidence": [],
       "errors": [],
@@ -19656,16 +19613,6 @@
       "errors": [],
       "updatedAt": "2026-09-19T22:54:09.974Z"
     },
-    "vp-1581": {
-      "overview": "pending",
-      "work": "pending",
-      "sourcesChecked": [
-        "https://researchmap.jp/thanh_phuc"
-      ],
-      "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-19T22:54:09.974Z"
-    },
     "vp-1582": {
       "overview": "pending",
       "work": "pending",
@@ -19701,16 +19648,6 @@
       "work": "pending",
       "sourcesChecked": [
         "https://profiles.sussex.ac.uk/p427207-xuan-huy-nguyen"
-      ],
-      "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-19T22:54:09.974Z"
-    },
-    "vp-1586": {
-      "overview": "pending",
-      "work": "pending",
-      "sourcesChecked": [
-        "https://bfa.u-paris.fr/"
       ],
       "evidence": [],
       "errors": [],
@@ -19771,16 +19708,6 @@
       "work": "pending",
       "sourcesChecked": [
         "https://www.southampton.ac.uk/people/5x8m8x/dr-tuyen-nguyen"
-      ],
-      "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-19T22:54:09.974Z"
-    },
-    "vp-1594": {
-      "overview": "pending",
-      "work": "pending",
-      "sourcesChecked": [
-        "https://aerospace.illinois.edu/directory/profile/httran"
       ],
       "evidence": [],
       "errors": [],
@@ -19886,16 +19813,6 @@
       "errors": [],
       "updatedAt": "2026-09-19T22:54:09.974Z"
     },
-    "vp-1606": {
-      "overview": "pending",
-      "work": "pending",
-      "sourcesChecked": [
-        "https://www.mimuw.edu.pl/en/employees/722/"
-      ],
-      "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-19T22:54:09.974Z"
-    },
     "vp-1607": {
       "overview": "pending",
       "work": "pending",
@@ -19921,26 +19838,6 @@
       "work": "pending",
       "sourcesChecked": [
         "https://ait.ac.th/people/dr-thi-phuoc-lai-nguyen/"
-      ],
-      "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-19T22:54:09.974Z"
-    },
-    "vp-1611": {
-      "overview": "pending",
-      "work": "pending",
-      "sourcesChecked": [
-        "https://ait.ac.th/people/prof-nguyen-thi-kim-oanh/"
-      ],
-      "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-19T22:54:09.974Z"
-    },
-    "vp-1612": {
-      "overview": "pending",
-      "work": "pending",
-      "sourcesChecked": [
-        "https://foodscience.uni-mate.hu/etti-management"
       ],
       "evidence": [],
       "errors": [],
@@ -20071,26 +19968,6 @@
       "work": "pending",
       "sourcesChecked": [
         "https://www.siit.tu.ac.th/personnel.php?id=255"
-      ],
-      "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-19T22:54:09.974Z"
-    },
-    "vp-1627": {
-      "overview": "pending",
-      "work": "pending",
-      "sourcesChecked": [
-        "https://www.sunykorea.ac.kr/en/html/sub03/030101.html?mode=V&no=2019010041"
-      ],
-      "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-19T22:54:09.974Z"
-    },
-    "vp-1628": {
-      "overview": "pending",
-      "work": "pending",
-      "sourcesChecked": [
-        "https://www.list.lu/en/research/erin/sustainable-energy-systems/"
       ],
       "evidence": [],
       "errors": [],
@@ -20599,16 +20476,6 @@
       "work": "pending",
       "sourcesChecked": [
         "https://www.newcastle.edu.au/profile/duy-ngo"
-      ],
-      "evidence": [],
-      "errors": [],
-      "updatedAt": "2026-09-25T03:50:50.908Z"
-    },
-    "vp-1692": {
-      "overview": "pending",
-      "work": "pending",
-      "sourcesChecked": [
-        "https://engineering.wayne.edu/profile/ex6091"
       ],
       "evidence": [],
       "errors": [],

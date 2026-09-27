@@ -8,9 +8,14 @@ verify, enrich, and hand off, not to search broadly for new names.
 
 ## 1. Roster dedup check (do this first, before any deep research)
 
-For each pasted name:
+For each pasted name, follow `ROSTER_MAINTENANCE.md` "One person, one ID":
 
-- Check `public/data.json` for an existing entry: match on `name`, `vietnameseName`, and obvious
+- Run `npm run find-roster-matches -- "<name>" --url <each identity URL you have>` (profile,
+  homepage, lab, Scholar, LinkedIn; rerun it once step 3 has found more). Treat every hit as the
+  same person until ruled out. A same-name entry at a different institution usually means the
+  person moved (Tin Nguyen was listed at Auburn as vp-0037 when an intake re-added him at Wayne
+  State as vp-1692, 2026-09-24). A retired-id hit means they were on the roster before.
+- Also check `public/data.json` for an existing entry by hand: match on `name`, `vietnameseName`, and obvious
   name-order/diacritic/anglicized variants (see the given-name/surname search guidance in
   `ROSTER_MAINTENANCE.md`). Also check common Vietnamese surname/given-name reordering — a
   candidate can be already listed under a shortened, anglicized, or reordered published name that a
@@ -21,18 +26,22 @@ For each pasted name:
   entry's corresponding fields, not just against names. A shared institutional profile, personal
   site, Scholar ID, or LinkedIn URL is a stronger duplicate signal than name matching alone and
   catches cases a name-only pass misses.
-- **Already listed:** stop here for that person. If the owner's message also supplies new facts
-  about them (an award, a moved institution, a corrected link, etc.), treat that per `AGENTS.md`
-  "Direct updates" — add the fields to `directFields` and follow the entry's normal edit path
-  (PR or direct-to-`main`, per the field/task involved). Report back which existing `vp-####` ID
-  it matches.
+- **Already listed (including under a former institution or name):** stop here for that person.
+  Update the existing entry in place; never file a `New candidate:` Issue or create a second entry.
+  If the owner's message supplies new facts about them (an award, a moved institution, a corrected
+  link, etc.), treat that per `AGENTS.md` "Direct updates": add the fields to `directFields` and
+  follow the entry's normal edit path (PR or direct-to-`main`, per the field/task involved). A move
+  also changes `profileUrl`, department, rank, and location; keep everything that is still true.
+  Report back which existing `vp-####` ID it matches.
+- **Previously on the roster (retired id):** the person keeps the original ID. File the Issue as
+  usual, but say "restore `vp-####`" and include why the earlier removal no longer applies.
 - **This dedup check goes stale.** It only reflects the roster's state at the moment the Issue is
   filed. The roster keeps growing from other automated maintenance passes running concurrently or
   afterward, so a candidate cleared here can be added by a different process before this Issue is
   ever acted on. Whoever later assigns the `vp-####` ID (the audit workflow, per
-  `AUDIT_ISSUES_PRS.md`) must re-run this same dedup check — name variants and identity-URL
-  matching — against the *current* `public/data.json` immediately before adding the entry, not rely
-  on the Issue's original "not already on the roster" claim.
+  `AUDIT_ISSUES_PRS.md`) must re-run this same dedup check (`npm run find-roster-matches` with
+  every identity URL in the Issue) against the *current* `public/data.json` immediately before
+  adding the entry, not rely on the Issue's original "not already on the roster" claim.
 - **Not listed:** continue to step 2.
 
 ## 2. Eligibility check

@@ -128,7 +128,7 @@ File a finding when a source you actually read shows one of these:
 | An honor that plausibly meets the honors bar is missing | `Possible new honor: <name> (<vp-id>) — <honor>` |
 | Degree fact wrong or missing | `Review incorrect <field>: <name> (<vp-id>)` |
 | `researchOverview` describes someone else or is stale | `Review mismatched researchOverview: <name> (<vp-id>)` |
-| An eligible person not on the roster (coauthor, lab member, colleague) | `New candidate: <name> — <rank>, <institution>` (follow `TASKS/candidate_intake.md` steps 1-4) |
+| An eligible person not on the roster (coauthor, lab member, colleague) | `New candidate: <name> — <rank>, <institution>` (follow `TASKS/candidate_intake.md` steps 1-4; if `npm run find-roster-matches` hits them at another institution, file `Review stale institution:` for that id instead) |
 
 Rules:
 
@@ -157,14 +157,18 @@ Follow `TASKS/AUDIT_ISSUES_PRS.md`, including "Independent review". Also read
   re-verify every changed entry live, check `directFields` and the ledger rule, and require green
   CI. Squash-merge and delete the branch, or request changes (or close) with a comment naming each
   rejected entry and why. Never merge a partial subset silently.
-- New-candidate Issues: re-run the dedup (name variants plus profile/website/Scholar/LinkedIn
-  URLs) against current `public/data.json`, re-verify eligibility live, add the entry, run
+- New-candidate Issues: re-run the dedup (`npm run find-roster-matches` with the name and every
+  identity URL in the Issue) against current `public/data.json`. If it hits the same person
+  (often at a former institution), update that entry in place and close the Issue with its id; a
+  retired-id hit gets its original id back. Otherwise re-verify eligibility live, add the entry, run
   `npm run assign-profile-ids -- --apply`, update `maintenance/verification.json`, validate, push
   to `main`, and close the Issue with the new id.
 - Side-finding and other correction Issues: verify live. If confirmed, fix, validate, push to
   `main`, and close with what changed and the source. If the evidence is wrong, close with the
-  reason. Duplicates: keep the richer entry, move any unique sourced fields onto it, remove the
-  other, and rename or remove its `maintenance/verification.json` key.
+  reason. Duplicates: keep the older (lower) id, even if the newer entry is richer or has protected
+  fields; move the verified current facts and unique sourced fields onto it, delete the newer
+  entry, run `npm run retire-profile-id -- <newer> --into <older> --reason "..." --apply`, and fix
+  its `maintenance/verification.json` key (`ROSTER_MAINTENANCE.md` "One person, one ID").
 - Needs an owner decision (protected `directFields` conflict, ambiguous identity or eligibility,
   unverifiable from the cloud): comment with findings and a recommendation, and leave it open.
 - Tracking Issues such as the link-health report: work up to 10 entries, post a progress comment,
@@ -199,6 +203,12 @@ Follow `TASKS/AUDIT_ISSUES_PRS.md`, including "Independent review". Also read
      in `maintenance/hieuphay-leads.json`, roster ids not yet in a completed batch in
      `maintenance/relationship-research.json`, and `npm run enrich -- status` (overviews).
      Recommend a lower frequency or a new source.
+
+  Item 8 catches data problems that pass every test:
+
+  8. Duplicates: run `npm run find-roster-matches -- --roster` and file (or resolve, within the
+     caps) a `Duplicate roster entry:` Issue for each new likely pair. Also check that the roster
+     size only changed by entries added or retired on purpose since the last Sunday audit.
 
   Fix what you can within the normal caps. Report the rest in one open Issue titled
   `[scheduled:audit] Automation health`: update it with a comment when something is wrong, and

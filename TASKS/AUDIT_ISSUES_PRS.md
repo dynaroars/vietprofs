@@ -96,7 +96,18 @@ Before modifying data or closing issues, ensure compliance with repository rules
      textual conflict (see Step 5): identify which entries are new relative to `main`, clear only their
      `id` field, run `npm run assign-profile-ids -- --apply` to remint fresh ids, and re-run the test
      suite before proceeding. Also patch any other file this PR touches that referenced the discarded
-     id (e.g. `maintenance/enrichment.json`'s `ids`/`batches`/`entries`).
+     id (e.g. `maintenance/enrichment.json`'s `ids`/`batches`/`entries`). Reminting is only for ids
+     that never reached `main`; an id already on `main` is permanent (see `ROSTER_MAINTENANCE.md`
+     "One person, one ID").
+   - **Check that nothing on `main` disappears.** A branch that rewrote `public/data.json` from a stale
+     copy drops every entry added to `main` since it branched, plus later edits, and still merges
+     cleanly (fc655f5 on 2026-09-12 lost 22 people and undid a field removal this way). On the scratch
+     branch, list ids that `main` has and the merge result doesn't:
+     ```bash
+     comm -23 <(git show main:public/data.json | grep -o '"id": "vp-[0-9]*"' | sort) <(grep -o '"id": "vp-[0-9]*"' public/data.json | sort)
+     ```
+     Any id the PR doesn't explicitly remove (with a reason and a `maintenance/retired-ids.json` row)
+     means a stale overwrite: request changes, don't merge.
 4. **Merge verified PRs** — only after the fresh-`main`+PR combination above passes cleanly:
    ```bash
    gh pr merge <PR_NUMBER> --squash --delete-branch
@@ -123,8 +134,9 @@ Before modifying data or closing issues, ensure compliance with repository rules
      - Add asserted fields to the entry's sorted `directFields` array (owner/user submissions only, not independently-sourced candidate research).
      - Ensure Western display name order (`First (Middle) Last`) in `name` and Vietnamese order in `vietnameseName`.
      - Re-verify eligibility (appointment, track, institution type) against live sources before assigning an ID — an Issue is a proposal, not a pre-cleared fact.
-     - Re-run the dedup check from `TASKS/candidate_intake.md` step 1 (name variants plus `profileUrl`/`websiteUrl`/`scholarUrl`/`linkedinUrl` matching) against the current `public/data.json`; the Issue's "not on the roster" claim may be stale.
-     - Assign immutable profile IDs for new additions: `npm run assign-profile-ids -- --apply`.
+     - Re-run the dedup check from `TASKS/candidate_intake.md` step 1 (`npm run find-roster-matches -- "<name>" --url ...` with every identity URL in the Issue) against the current `public/data.json`; the Issue's "not on the roster" claim may be stale. A hit at another institution is a probable move: if it's the same person, update that entry in place (the Issue's fields become an edit, with owner-asserted ones in `directFields`) and close the Issue naming the existing ID. See `ROSTER_MAINTENANCE.md` "One person, one ID".
+     - A retired-ID hit means the person was on the roster before: add them back under that original ID and remove it from `maintenance/retired-ids.json`, instead of assigning a new one.
+     - Assign immutable profile IDs for genuinely new people only: `npm run assign-profile-ids -- --apply`.
 
    - **B. Honors & Award Additions:**
      - Check against `ROSTER_MAINTENANCE.md` honors eligibility.
@@ -140,6 +152,10 @@ Before modifying data or closing issues, ensure compliance with repository rules
        personal/lab site, or research-database entry frequently surfaces that a generic directory
        search misses, and a page that 404s directly may still render when fetched with a `Referer`
        header pointing at the page that linked it.
+
+   - **C2. Duplicate entries (`Duplicate roster entry:` Issues, or two IDs found for one person):**
+     - Keep the **older (lower) ID**, even when the newer entry has protected `directFields` or more data; protected values move with the data onto the older ID. Follow `ROSTER_MAINTENANCE.md` "One person, one ID": put the verified current facts and unique sourced fields on the older entry, drop fields that only fit the other institution, delete the newer entry, then run `npm run retire-profile-id -- <newer-id> --into <older-id> --reason "..." --apply` and fix `maintenance/verification.json`'s name keys.
+     - If the older ID was already removed (a merge that kept the newer one, or a person re-added after removal), restore it: `npm run retire-profile-id -- <newer-id> --into <older-id> --reason "..." --apply` renames the entry back.
 
    - **D. Mismatched `researchOverview`:**
      - Regenerate 1–3 sentence neutral academic summary from the scholar's official profile/homepage.

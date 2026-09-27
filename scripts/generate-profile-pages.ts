@@ -53,6 +53,24 @@ function absoluteUrl(path: string) {
   return `${siteUrl}/${path}`;
 }
 
+// A retired id's old profile page forwards to the entry that absorbed it, so shared links survive
+// a duplicate merge.
+function redirectPage(from: string, to: RosterEntry) {
+  const target = `${personPath(to.id).split('/').pop()}`;
+  const canonical = absoluteUrl(personPath(to.id));
+  return `<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>${escapeHtml(displayName(to.name))} | VietProfs</title>
+<meta name="robots" content="noindex">
+<link rel="canonical" href="${canonical}">
+<meta http-equiv="refresh" content="0; url=${target}">
+</head>
+<body><p>This profile moved to <a href="${target}">${escapeHtml(displayName(to.name))}</a> (${escapeHtml(from)} is now ${escapeHtml(to.id)}).</p></body>
+</html>`;
+}
+
 function locationOf(person: RosterEntry) {
   return [person.city, person.state, person.country && !['United States', 'US', 'USA'].includes(person.country) ? person.country : '']
     .filter(Boolean)
@@ -460,9 +478,10 @@ function categoryHubPage(config: HubConfig) {
 }
 
 async function main() {
-  const [roster, relationships] = await Promise.all([
+  const [roster, relationships, retiredIds] = await Promise.all([
     readFile(resolve(root, 'public/data.json'), 'utf8').then((value) => JSON.parse(value) as Roster),
     readFile(resolve(root, 'public/relationships.json'), 'utf8').then((value) => JSON.parse(value) as RelationshipDatabase),
+    readFile(resolve(root, 'maintenance/retired-ids.json'), 'utf8').then((value) => JSON.parse(value) as Record<string, { replacedBy: string | null }>),
   ]);
   const ids = new Set<string>();
   for (const person of roster) {
@@ -495,6 +514,10 @@ async function main() {
     const outputFile = resolve(output, personPath(person.id));
     await mkdir(dirname(outputFile), { recursive: true });
     await writeFile(outputFile, profilePage(person, availableCountryHubs, relationships, rosterById));
+  }));
+  await Promise.all(Object.entries(retiredIds).map(async ([id, { replacedBy }]) => {
+    const target = replacedBy && rosterById.get(replacedBy);
+    if (target) await writeFile(resolve(output, personPath(id)), redirectPage(id, target));
   }));
 
   // 2. Generate Discipline Hub pages

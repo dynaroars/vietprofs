@@ -11,6 +11,7 @@
 2. **Strict Batch Size (15–20 Candidates Per Batch):** Work in bounded batches of **15–20 candidates per batch** using the lead file (`maintenance/hieuphay-leads.json`).
 3. **Thorough Verification Standard:** Verify full inclusion standard for every candidate: current appointment outside Vietnam, accepted track, non-corporate employer, degree chronology (`undergradYear <= msYear <= phdYear <= postdocYear`), and honors categorization.
 4. **New-ID vs. Edit Split (per `AGENTS.md`):** A batch's candidates fall into two kinds, and each kind is submitted differently:
+   - **Already on the roster, possibly elsewhere:** run `npm run find-roster-matches -- "<name>" --url ...` first. A hit, including one at a former institution or a retired id, is an edit to that id (or a restore), not a new person (`ROSTER_MAINTENANCE.md` "One person, one ID").
    - **Brand-new person (needs a new `vp-####` ID):** Do NOT run `assign-profile-ids -- --apply` or add them to `public/data.json` on a branch. File one GitHub Issue per candidate (or a small group) with evidence, source URLs, and proposed fields, and let the owner or `AUDIT_ISSUES_PRS.md` assign the ID.
    - **Credential/honors correction to an existing roster ID:** Submit via the PR pipeline below.
 5. **Automated PR Submission Pipeline (existing-ID edits only):**
