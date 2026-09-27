@@ -177,6 +177,22 @@ Follow `TASKS/AUDIT_ISSUES_PRS.md`, including "Independent review". Also read
      it has likely stopped.
   4. Issues left open for an owner decision for more than 14 days.
 
+  Items 1-4 catch routines that stopped. Items 5-7 catch routines that run and report success
+  but accomplish nothing, which the watchdog and the run status can't see:
+
+  5. Verified work never applied: open Issues where an earlier audit comment says a verified fix
+     or new entry couldn't be applied (permission denied, push rejected, tool failure). Apply it
+     now within the caps; if it fails again, report the exact error. That is an automation
+     failure, not an owner decision.
+  6. Empty runs: a producer whose last two runs changed no roster data (PRs touching only
+     `maintenance/` files, "no new candidates found", or nothing filed). Say the likely reason:
+     queue exhausted, source blocked, or the playbook re-selecting entries already tried.
+  7. Queues running dry: a producer whose remaining work runs out within about 4 weeks at its
+     cap. Check `npx tsx scripts/fetch-portraits.ts --status` (pending portraits), pending leads
+     in `maintenance/hieuphay-leads.json`, roster ids not yet in a completed batch in
+     `maintenance/relationship-research.json`, and `npm run enrich -- status` (overviews).
+     Recommend a lower frequency or a new source.
+
   Fix what you can within the normal caps. Report the rest in one open Issue titled
   `[scheduled:audit] Automation health`: update it with a comment when something is wrong, and
   close it when a check comes back clean. Never open a second one. When everything is healthy
