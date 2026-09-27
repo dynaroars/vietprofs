@@ -101,7 +101,7 @@ test('directory loads and searching changes the roster', async () => {
   assert.equal(await page.locator('.entry').count(), 1);
   assert.match(await textOf(page.locator('.entry-meta')), /George Mason Univ\./);
   assert.doesNotMatch(await textOf(page.locator('.entry-meta')), /George Mason University/);
-  assert.match(await textOf(page.locator('.entry-details')), /MS: Penn State, 2006; Undergrad: Penn State, 2003/);
+  assert.match(await textOf(page.locator('.entry-details')), /MS: Penn State; Undergrad: Penn State, 2003/);
   await page.locator('#search').fill('Nguyen');
   await page.waitForTimeout(250);
   assert.ok((await page.locator('.entry').count()) > 0);
