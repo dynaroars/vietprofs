@@ -108,8 +108,10 @@ Before modifying data or closing issues, ensure compliance with repository rules
      ```
      Any id the PR doesn't explicitly remove (with a reason and a `maintenance/retired-ids.json` row)
      means a stale overwrite: request changes, don't merge.
-4. **Merge verified PRs** — only after the fresh-`main`+PR combination above passes cleanly:
+4. **Merge verified PRs** — only after the fresh-`main`+PR combination above passes cleanly, and
+   comment with what you re-verified first (`docs/AUTOMATION.md` convention 10):
    ```bash
+   gh pr comment <PR_NUMBER> --body "Re-verified <ids> live on <date>; CI green; merged."
    gh pr merge <PR_NUMBER> --squash --delete-branch
    ```
 5. **Handle conflicts & duplicate PRs:**
@@ -190,12 +192,15 @@ cloud permission check blocks it). Make every verified fix on one branch:
    # with one "Closes #<n>" line per Issue (a comma-separated list only closes the first),
    # wait for CI to pass, then squash-merge it (the GitHub MCP merge tool or gh pr merge --squash)
    ```
-   A local owner session may still commit a single verified fix straight to `main`.
+   A local owner session may still commit a single verified fix straight to `main`; it then
+   closes the Issue explicitly with a comment (Step 5), not only through the commit's `Closes #n`.
 
 ---
 
 ### Step 5: Close GitHub Issues
-Close resolved issues with a clear summary comment:
+Every close gets a comment saying what was found and what was done (`docs/AUTOMATION.md`
+convention 10). Issues that the fix PR's `Closes #n` already closed still get a comment with the
+change and its source. Close other resolved issues with a clear summary comment:
 ```bash
 gh issue close <ISSUE_NUMBER> --comment "Verified and resolved: <SUMMARY_OF_CHANGES>"
 ```

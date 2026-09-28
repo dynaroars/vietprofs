@@ -112,6 +112,9 @@ them share these rules:
 9. **No follow-ups.** Once your PR/Issues are open, stop. Don't schedule check-ins, reminders,
    wakeups, or re-armed routines to watch CI or the PR; the auditor handles review. If CI fails,
    note it in the PR and leave it for the auditor.
+10. **Every close gets a comment.** Never close a PR or Issue, or merge a PR, without a comment
+   saying what was found and what was done: the change and its source, or the reason for
+   rejecting it. A `Closes #n` line or a commit message alone doesn't count.
 
 ## Side findings
 
@@ -157,8 +160,9 @@ Follow `TASKS/AUDIT_ISSUES_PRS.md`, including "Independent review". Also read
   session created. At most 5 PRs and 10 Issues per run.
 - PRs: test merged onto fresh `main` (`npm test`, `npm run build`, `git diff --check`),
   re-verify every changed entry live, check `directFields` and the ledger rule, and require green
-  CI. Squash-merge and delete the branch, or request changes (or close) with a comment naming each
-  rejected entry and why. Never merge a partial subset silently.
+  CI. Squash-merge and delete the branch, with a comment saying what was re-verified (for example,
+  "Re-verified vp-0123 and vp-0456 live on <date>; CI green; merged."), or request changes (or
+  close) with a comment naming each rejected entry and why. Never merge a partial subset silently.
 - New-candidate Issues: re-run the dedup (`npm run find-roster-matches` with the name and every
   identity URL in the Issue) against current `public/data.json`. If it hits the same person
   (often at a former institution), update that entry in place and close the Issue with its id; a
@@ -223,7 +227,7 @@ Follow `TASKS/AUDIT_ISSUES_PRS.md`, including "Independent review". Also read
 
   Fix what you can within the normal caps. Report the rest in one open Issue titled
   `[scheduled:audit] Automation health`: update it with a comment when something is wrong, and
-  close it when a check comes back clean. Never open a second one. When everything is healthy
+  close it with a "checks clean on <date>" comment when a check comes back clean. Never open a second one. When everything is healthy
   and no such Issue is open, do nothing.
 
 ### Links (`links`)
