@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-23T15:19:33.000Z",
+  "updatedAt": "2026-09-28T06:52:05.906Z",
   "relationships": [
     {
       "id": "rel-coauthor-vp-0015-vp-0018",
@@ -2005,6 +2005,117 @@
       "verifiedAt": "2026-09-23T04:45:00.000Z",
       "direct": true,
       "notes": "Owner-directed: repository owner asked to check his own CV for connections."
+    },
+    {
+      "id": "rel-doctoral-advisor-vp-0575-vp-0018",
+      "type": "doctoral-advisor",
+      "sourceId": "vp-0575",
+      "targetId": "vp-0018",
+      "sources": [
+        "https://cjournal.concordia.ca/archives/20100617/imagination_over_knowledge_khoa_luu.php"
+      ],
+      "evidence": "The Concordia Journal (official Concordia University publication) states that Khoa Luu (vp-0018) went from his master's research directly into a PhD, and that \"his doctoral research was conducted under the supervision of Tien Bui and Ching Suen (Computer Science and Software Engineering)\" at Concordia University; this matches vp-0575 (Tien D. Bui, Concordia University Computer Science and Software Engineering).",
+      "works": [],
+      "verifiedAt": "2026-09-28T06:52:05.906Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-0018-vp-0575",
+      "type": "coauthor",
+      "sourceId": "vp-0018",
+      "targetId": "vp-0575",
+      "sources": [
+        "https://directory.uark.edu/people/khoaluu",
+        "https://www.concordia.ca/faculty/tien-bui.html",
+        "https://arxiv.org/abs/1606.02254",
+        "https://arxiv.org/abs/1811.11082",
+        "https://arxiv.org/abs/1711.10520"
+      ],
+      "evidence": "Khoa Luu (University of Arkansas computer vision researcher, former Concordia PhD student of Tien D. Bui) and Tien D. Bui (Concordia University Computer Science and Software Engineering) are identity-resolved via Khoa Luu's official phdInstitution (Concordia University) and the documented advisor relationship. Three retained works list both as authors.",
+      "works": [
+        {
+          "identifier": "arXiv:1606.02254",
+          "title": "Longitudinal Face Modeling via Temporal Deep Restricted Boltzmann Machines",
+          "date": "2016",
+          "url": "https://arxiv.org/abs/1606.02254"
+        },
+        {
+          "identifier": "arXiv:1811.11082",
+          "title": "Automatic Face Aging in Videos via Deep Reinforcement Learning",
+          "date": "2018",
+          "url": "https://arxiv.org/abs/1811.11082"
+        },
+        {
+          "identifier": "arXiv:1711.10520",
+          "title": "Learning from Longitudinal Face Demonstration - Where Tractable Deep Modeling Meets Inverse Reinforcement Learning",
+          "date": "2019",
+          "url": "https://arxiv.org/abs/1711.10520"
+        }
+      ],
+      "verifiedAt": "2026-09-28T06:52:05.906Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-0015-vp-0575",
+      "type": "coauthor",
+      "sourceId": "vp-0015",
+      "targetId": "vp-0575",
+      "sources": [
+        "https://engineering.uark.edu/electrical-engineering-computer-science/electrical-engineering-faculty/uid/thile/name/Ngan+Le/",
+        "https://www.concordia.ca/faculty/tien-bui.html",
+        "https://arxiv.org/abs/1811.11082",
+        "https://arxiv.org/abs/1711.10520"
+      ],
+      "evidence": "Ngan Hoang Le (vp-0015, University of Arkansas, published as \"Ngan Le\" / \"T. Hoang Ngan Le\") and Tien D. Bui (vp-0575, Concordia University) are identity-resolved by field (computer vision, facial aging), coauthor network (both work with Khoa Luu, vp-0018, Ngan Le's University of Arkansas colleague), and consistent name variants. Two retained works list both as authors.",
+      "works": [
+        {
+          "identifier": "arXiv:1811.11082",
+          "title": "Automatic Face Aging in Videos via Deep Reinforcement Learning",
+          "date": "2018",
+          "url": "https://arxiv.org/abs/1811.11082"
+        },
+        {
+          "identifier": "arXiv:1711.10520",
+          "title": "Learning from Longitudinal Face Demonstration - Where Tractable Deep Modeling Meets Inverse Reinforcement Learning",
+          "date": "2019",
+          "url": "https://arxiv.org/abs/1711.10520"
+        }
+      ],
+      "verifiedAt": "2026-09-28T06:52:05.906Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-0267-vp-0574",
+      "type": "coauthor",
+      "sourceId": "vp-0267",
+      "targetId": "vp-0574",
+      "sources": [
+        "https://engineering.tamu.edu/cse/profiles/nguyen-tung.html",
+        "https://lassonde.yorku.ca/users/hung-viet-pham",
+        "https://doi.org/10.1145/3183399.3183422",
+        "https://arxiv.org/abs/2409.18365"
+      ],
+      "evidence": "Tung Thanh Nguyen (vp-0267, Texas A&M University, software engineering) and Hung Viet Pham (vp-0574, York University, software engineering) are identity-resolved by affiliation and field, both confirmed in the ICSE-NIER 2018 and arXiv:2409.18365 (2024) author lists (\"Hung Viet Pham is from York University, Canada\" and \"Tung Thanh Nguyen is from Texas A&M University, USA\"). Two retained works list both as authors.",
+      "works": [
+        {
+          "identifier": "doi:10.1145/3183399.3183422",
+          "title": "Deep Learning UI Design Patterns of Mobile Apps",
+          "date": "2018",
+          "url": "https://doi.org/10.1145/3183399.3183422"
+        },
+        {
+          "identifier": "arXiv:2409.18365",
+          "title": "Defect Prediction with Content-based Features",
+          "date": "2024",
+          "url": "https://arxiv.org/abs/2409.18365"
+        }
+      ],
+      "verifiedAt": "2026-09-28T06:52:05.906Z",
+      "direct": false,
+      "notes": ""
     }
   ]
 }

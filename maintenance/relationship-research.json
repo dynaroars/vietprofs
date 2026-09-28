@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-25T07:13:00.303Z",
+  "updatedAt": "2026-09-28T06:52:19.893Z",
   "batches": [
     {
       "batchNumber": 1,
@@ -15570,22 +15570,36 @@
         {
           "rosterId": "vp-0575",
           "sources": [
-            "https://www.concordia.ca/faculty/tien-bui.html"
+            "https://www.concordia.ca/faculty/tien-bui.html",
+            "https://users.encs.concordia.ca/~bui/",
+            "https://cjournal.concordia.ca/archives/20100617/imagination_over_knowledge_khoa_luu.php",
+            "https://arxiv.org/abs/1606.02254",
+            "https://arxiv.org/abs/1811.11082",
+            "https://arxiv.org/abs/1711.10520"
           ],
-          "relationshipIds": [],
-          "nextAction": "Official Concordia profile checked: lists only research areas and contact info, no advisor, postdoctoral mentor, or education history; references a personal website not retrieved on this pass. No roster-internal relationship evidence found; bounded sources exhausted for this run.",
-          "status": "unresolved",
+          "relationshipIds": [
+            "rel-doctoral-advisor-vp-0575-vp-0018",
+            "rel-coauthor-vp-0018-vp-0575",
+            "rel-coauthor-vp-0015-vp-0575"
+          ],
+          "nextAction": "Follow-up pass: the personal page (users.encs.concordia.ca/~bui/) lists 27 former graduate students including Khoa Luu (vp-0018), Kha Gia Quach, and Chi Nhan Duong. The official Concordia Journal confirms Khoa Luu's doctoral research was supervised by Tien Bui and Ching Suen; recorded rel-doctoral-advisor-vp-0575-vp-0018. Verified 3 shared works with Khoa Luu (vp-0018) and 2 shared works with Ngan Hoang Le (vp-0015, a University of Arkansas colleague of Luu who coauthors the same face-aging papers); recorded both coauthor edges. Out-of-roster former students/coauthors Kha Gia Quach and Chi Nhan Duong both appear to currently hold industry roles rather than faculty positions, so not filed as new-candidate leads.",
+          "status": "completed",
           "notes": []
         },
         {
           "rosterId": "vp-0574",
           "sources": [
             "https://hvpham.github.io/",
-            "https://lassonde.yorku.ca/users/hung-viet-pham"
+            "https://lassonde.yorku.ca/users/hung-viet-pham",
+            "https://engineering.tamu.edu/cse/profiles/nguyen-tung.html",
+            "https://doi.org/10.1145/3183399.3183422",
+            "https://arxiv.org/abs/2409.18365"
           ],
-          "relationshipIds": [],
-          "nextAction": "Personal academic site checked (PhD in Software Engineering, University of Waterloo, 2018-2022; MSc Sussex; BSc Imperial College London): no doctoral advisor named. Lassonde faculty profile URL returned HTTP 404 on this pass. No roster-internal relationship evidence found; bounded sources exhausted.",
-          "status": "unresolved",
+          "relationshipIds": [
+            "rel-coauthor-vp-0267-vp-0574"
+          ],
+          "nextAction": "Follow-up pass: identity-resolved Tung Thanh Nguyen (vp-0267, Texas A&M) as a coauthor via two retained works (ICSE-NIER 2018 \"Deep Learning UI Design Patterns of Mobile Apps\" and arXiv:2409.18365 \"Defect Prediction with Content-based Features\"); recorded rel-coauthor-vp-0267-vp-0574. Other coauthors (Tam The Nguyen, Phong Minh Vu, Lin Tan, Thibaud Lutellier, etc.) are not roster matches.",
+          "status": "completed",
           "notes": []
         },
         {
