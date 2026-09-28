@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-28T06:52:05.906Z",
+  "updatedAt": "2026-09-28T06:59:56.533Z",
   "relationships": [
     {
       "id": "rel-coauthor-vp-0015-vp-0018",
@@ -2114,6 +2114,96 @@
         }
       ],
       "verifiedAt": "2026-09-28T06:52:05.906Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-0559-vp-0560",
+      "type": "coauthor",
+      "sourceId": "vp-0559",
+      "targetId": "vp-0560",
+      "sources": [
+        "https://sites.google.com/view/thanhtoando",
+        "https://research.monash.edu/en/persons/trung-le",
+        "https://arxiv.org/abs/2306.04178",
+        "https://arxiv.org/abs/2302.02713"
+      ],
+      "evidence": "Thanh-Toan Do (vp-0559) and Trung Le (vp-0560) are both faculty in the Department of Data Science and AI at Monash University, identity-resolved via their official Monash profiles and consistent coauthor network (both regularly publish with Dinh Phung). Two retained NeurIPS 2023 works list both as authors.",
+      "works": [
+        {
+          "identifier": "arXiv:2306.04178",
+          "title": "Optimal Transport Model Distributional Robustness",
+          "date": "2023",
+          "url": "https://arxiv.org/abs/2306.04178"
+        },
+        {
+          "identifier": "arXiv:2302.02713",
+          "title": "Flat Seeking Bayesian Neural Networks",
+          "date": "2023",
+          "url": "https://arxiv.org/abs/2302.02713"
+        }
+      ],
+      "verifiedAt": "2026-09-28T06:59:56.533Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-0516-vp-0547",
+      "type": "coauthor",
+      "sourceId": "vp-0516",
+      "targetId": "vp-0547",
+      "sources": [
+        "https://research.com/u/trung-q-duong",
+        "https://research.com/u/hoang-duong-tuan",
+        "https://pureadmin.qub.ac.uk/ws/files/196108990/6._TCOM_TPS_19_0488.R2.pdf",
+        "https://arxiv.org/abs/1708.07334"
+      ],
+      "evidence": "Trung Q. Duong (vp-0516) and Duong Tuan Hoang (vp-0547, published as \"Hoang Duong Tuan\" / \"H. D. Tuan\", a Western-order flip of the roster name matching vietnameseName Hoang Tuan Duong) are both wireless-communications/signal-processing researchers, identity-resolved by field and consistent coauthor network with H. Vincent Poor. Two retained works list both as authors.",
+      "works": [
+        {
+          "identifier": "doi:10.1109/TCOMM.2019.2962436",
+          "title": "Security and Energy Harvesting for MIMO-OFDM Networks",
+          "date": "2019",
+          "url": "https://pureadmin.qub.ac.uk/ws/files/196108990/6._TCOM_TPS_19_0488.R2.pdf"
+        },
+        {
+          "identifier": "arXiv:1708.07334",
+          "title": "Power Allocation for Energy Efficiency and Secrecy of Interference Wireless Networks",
+          "date": "2018",
+          "url": "https://arxiv.org/abs/1708.07334"
+        }
+      ],
+      "verifiedAt": "2026-09-28T06:59:56.533Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-0548-vp-0841",
+      "type": "coauthor",
+      "sourceId": "vp-0548",
+      "targetId": "vp-0841",
+      "sources": [
+        "https://profiles.uts.edu.au/diep.nguyen",
+        "https://sites.google.com/view/dinh-thai-hoang/home",
+        "https://arxiv.org/abs/2005.02816",
+        "https://opus.lib.uts.edu.au/bitstream/10453/142003/3/Learning%20Latent%20Representation%20for%20IoT%20Anomaly%20Detection.pdf"
+      ],
+      "evidence": "Diep N. Nguyen (vp-0548) and Dinh Thai Hoang (vp-0841) are both faculty in UTS's School of Electrical and Data Engineering / 5G-6G wireless research group, identity-resolved via matching middle initials and shared UTS affiliation. Two retained works list both as authors. (A search initially misattributed these to a same-batch entry, \"Duong Tuan Hoang\"; the actual coauthor, identity-resolved against the exact author string \"Dinh Thai Hoang\", is the separate roster entry vp-0841.)",
+      "works": [
+        {
+          "identifier": "arXiv:2005.02816",
+          "title": "Enabling and Emerging Technologies for Social Distancing: A Comprehensive Survey and Open Problems",
+          "date": "2020",
+          "url": "https://arxiv.org/abs/2005.02816"
+        },
+        {
+          "identifier": "doi:10.1109/TCYB.2020.3013416",
+          "title": "Learning Latent Representation for IoT Anomaly Detection",
+          "date": "2020",
+          "url": "https://opus.lib.uts.edu.au/bitstream/10453/142003/3/Learning%20Latent%20Representation%20for%20IoT%20Anomaly%20Detection.pdf"
+        }
+      ],
+      "verifiedAt": "2026-09-28T06:59:56.533Z",
       "direct": false,
       "notes": ""
     }

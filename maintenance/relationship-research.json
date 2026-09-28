@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-28T06:52:19.893Z",
+  "updatedAt": "2026-09-28T07:00:36.280Z",
   "batches": [
     {
       "batchNumber": 1,
@@ -15685,6 +15685,256 @@
         }
       ],
       "completedAt": "2026-09-25T07:13:00.303Z"
+    },
+    {
+      "batchNumber": 68,
+      "rosterIds": [
+        "vp-0566",
+        "vp-0565",
+        "vp-0564",
+        "vp-0563",
+        "vp-0562",
+        "vp-0561",
+        "vp-0560",
+        "vp-0559",
+        "vp-0558",
+        "vp-0557",
+        "vp-0556",
+        "vp-0555",
+        "vp-0554",
+        "vp-0553",
+        "vp-0552",
+        "vp-0551",
+        "vp-0550",
+        "vp-0549",
+        "vp-0548",
+        "vp-0547"
+      ],
+      "startedAt": "2026-09-28T06:54:31.937Z",
+      "status": "complete",
+      "outcomes": [
+        {
+          "rosterId": "vp-0566",
+          "sources": [
+            "https://site.uit.no/arcticgreen/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "Reviewed official UiT ArcticGreen lab page. No advisor, mentee, or coauthor names given (grants list only). Bounded sources exhausted.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0565",
+          "sources": [
+            "https://dnductien.github.io"
+          ],
+          "relationshipIds": [],
+          "nextAction": "Reviewed personal site (Professor, University of Bergen). No advisor, mentee, or coauthor names given. Bounded sources exhausted.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0564",
+          "sources": [
+            "https://people.utwente.nl/v.d.le"
+          ],
+          "relationshipIds": [],
+          "nextAction": "Reviewed official Twente profile. Coauthors given only as abbreviated surnames (Nguyen S.M., Tran Q.C.V., Nguyen N.D.T., Tran L.D.) too ambiguous for identity resolution against the roster. No advisor named. Bounded sources exhausted.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0563",
+          "sources": [
+            "https://dongnguyen.nl/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "Reviewed personal site (PhD Twente, MS Carnegie Mellon). No advisor, mentee, or coauthor names given. Bounded sources exhausted.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0562",
+          "sources": [
+            "https://researchers.westernsydney.edu.au/en/persons/quang-vinh-nguyen"
+          ],
+          "relationshipIds": [],
+          "nextAction": "Reviewed official Western Sydney profile (PhD UTS). No advisor named; listed coauthors (Simoff, Qu, Catchpoole, Kennedy, Adam) are not Vietnamese-sounding or roster matches. Bounded sources exhausted.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0561",
+          "sources": [
+            "https://thuanpv.github.io/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "Reviewed personal site. PhD advisor Abhik Roychoudhury (NUS) and postdoctoral mentor Marcel Bohme (Monash) are named but neither is Vietnamese nor a roster member. Current/graduated PhD students and coauthors with Vietnamese-sounding names (Manh-Dung Nguyen, Quang-Trung Ta, Viet Hoang Anh, Dung Cao Tuan, Viet Hoang Luu) do not identity-resolve to any current roster faculty entry (likely still students, not yet faculty). Bounded sources exhausted.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0560",
+          "sources": [
+            "https://research.monash.edu/en/persons/trung-le",
+            "https://sites.google.com/view/thanhtoando",
+            "https://arxiv.org/abs/2306.04178",
+            "https://arxiv.org/abs/2302.02713"
+          ],
+          "relationshipIds": [
+            "rel-coauthor-vp-0559-vp-0560"
+          ],
+          "nextAction": "Identity-resolved Thanh-Toan Do (vp-0559, Monash Data Science & AI colleague) as a coauthor via two retained NeurIPS 2023 works; recorded rel-coauthor-vp-0559-vp-0560. An initial lead \"Trang Vu\" (project coauthor on PromptDSI) turned out on verification to be a different published name, \"Thuy-Trang Vu\", who is not a roster member (not the same person as vp-0739 Trang Vu); correctly excluded.",
+          "status": "completed",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0559",
+          "sources": [
+            "https://sites.google.com/view/thanhtoando",
+            "https://research.monash.edu/en/persons/trung-le",
+            "https://arxiv.org/abs/2306.04178",
+            "https://arxiv.org/abs/2302.02713"
+          ],
+          "relationshipIds": [
+            "rel-coauthor-vp-0559-vp-0560"
+          ],
+          "nextAction": "Identity-resolved Trung Le (vp-0560, Monash Data Science & AI colleague) as a coauthor via two retained NeurIPS 2023 works; recorded rel-coauthor-vp-0559-vp-0560. PhD advisor (INRIA Rennes, 2012) not named on the reviewed page.",
+          "status": "completed",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0558",
+          "sources": [
+            "https://www3.cs.stonybrook.edu/~minhhoai/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "Confirmed PhD advisor Fernando De la Torre (Carnegie Mellon, dissertation \"Segment-based SVMs for Time Series Analysis\", 2011) via web search; not Vietnamese, not a roster member. No Vietnamese-sounding coauthors surfaced. Bounded sources exhausted.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0557",
+          "sources": [
+            "https://researchers.anu.edu.au/researchers/bui-qm"
+          ],
+          "relationshipIds": [],
+          "nextAction": "Official ANU profile URL returned HTTP 404 and redirected to the ANU research portal homepage on this pass, which could not be searched for an individual profile. No advisor, mentee, or coauthor evidence found. Retry with a direct portal search on a later run.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0556",
+          "sources": [
+            "https://ljk.imag.fr/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "Reviewed Laboratoire Jean Kuntzmann lab homepage (no individual profile page found for this pass) and web search: PhD from Joseph Fourier University Grenoble, 1970, no advisor name found. No Vietnamese-sounding coauthors surfaced (coauthor \"Vrins\" is not Vietnamese). Bounded sources exhausted.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0555",
+          "sources": [
+            "https://lama-umr8050.fr/membres/tran.viet_chi"
+          ],
+          "relationshipIds": [],
+          "nextAction": "Reviewed official Universite Gustave Eiffel lab profile. No advisor or mentee names given. Listed Vietnamese-sounding coauthors (Dinh-Toan Nguyen, Phu Thanh Nguyen, Thi Phuong Thuy Vo) do not identity-resolve to any current roster entry by name search. Bounded sources exhausted.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0554",
+          "sources": [
+            "https://www.idpoisson.fr/ducmanhnguyen/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "Reviewed personal site (PhD Universite Paris Sud XI 2008, Habilitation Bordeaux 2016). No advisor named; coauthors (Koziarz, Menet, Lanneau, Aulicino, Wright, Pan, Su) are not Vietnamese-sounding or roster matches. Bounded sources exhausted.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0553",
+          "sources": [
+            "https://sakaguchi-lab.net/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "Reviewed Sakaguchi & Tran lab page (Tokyo Institute of Technology / Institute of Science Tokyo). No advisor, mentee, or coauthor names beyond lab-mate researchers (Tao Yu, Kui Wang, Zongdian Li, not Vietnamese) given. Bounded sources exhausted.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0552",
+          "sources": [
+            "https://profiles.auckland.ac.nz/kenneth-tran"
+          ],
+          "relationshipIds": [],
+          "nextAction": "Official Auckland profile page returned only a browser-compatibility notice (JS-rendered app not retrievable via this pass's fetch route). No advisor, mentee, or coauthor evidence found. Retry with a different fetch route on a later run.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0551",
+          "sources": [
+            "https://academics.aut.ac.nz/minh.nguyen"
+          ],
+          "relationshipIds": [],
+          "nextAction": "Official AUT profile page returned only a heading (\"Discovery\"), no body content retrievable via this pass's fetch route. No advisor, mentee, or coauthor evidence found. Retry with a different fetch route on a later run.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0550",
+          "sources": [
+            "https://staffportal.curtin.edu.au/staff/profile/view/sonny-pham-c9584d9f/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "Official Curtin staff-profile page returned only the generic portal template (JS-rendered app not retrievable via this pass's fetch route). No advisor, mentee, or coauthor evidence found. Retry with a different fetch route on a later run.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0549",
+          "sources": [
+            "https://profiles.uts.edu.au/quang.ha"
+          ],
+          "relationshipIds": [],
+          "nextAction": "Official UTS profile page returned only a browser-compatibility notice (JS-rendered app not retrievable via this pass's fetch route); Google Scholar fetch was blocked by a CAPTCHA. Searched for a coauthor pairing with the two other UTS entries in this batch (vp-0548, vp-0547): no confirmed shared work found for vp-0549 specifically. No advisor, mentee, or coauthor evidence found. Retry with a different fetch route on a later run.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0548",
+          "sources": [
+            "https://profiles.uts.edu.au/diep.nguyen",
+            "https://sites.google.com/view/dinh-thai-hoang/home",
+            "https://arxiv.org/abs/2005.02816",
+            "https://opus.lib.uts.edu.au/bitstream/10453/142003/3/Learning%20Latent%20Representation%20for%20IoT%20Anomaly%20Detection.pdf"
+          ],
+          "relationshipIds": [
+            "rel-coauthor-vp-0548-vp-0841"
+          ],
+          "nextAction": "A search initially suggested a shared-work pairing with this batch's vp-0547 (\"Duong Tuan Hoang\"), but the actual coauthor named in both retained papers is \"Dinh Thai Hoang\", identity-resolved to the separate roster entry vp-0841 (also UTS). Recorded rel-coauthor-vp-0548-vp-0841 with two retained works. No relationship recorded with vp-0547.",
+          "status": "completed",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0547",
+          "sources": [
+            "https://research.com/u/hoang-duong-tuan",
+            "https://research.com/u/trung-q-duong",
+            "https://pureadmin.qub.ac.uk/ws/files/196108990/6._TCOM_TPS_19_0488.R2.pdf",
+            "https://arxiv.org/abs/1708.07334"
+          ],
+          "relationshipIds": [
+            "rel-coauthor-vp-0516-vp-0547"
+          ],
+          "nextAction": "Identity-resolved via the roster's Western-order name \"Duong Tuan Hoang\" matching the widely-published author order \"Hoang Duong Tuan\" / \"H. D. Tuan\" (control theory / wireless communications, PhD Odessa State University 1991). Verified two shared works with Trung Q. Duong (vp-0516); recorded rel-coauthor-vp-0516-vp-0547. Avoided a false match: an initial search conflated a shared coauthor \"Dinh Thai Hoang\" (a distinct roster entry, vp-0841) with this entry's own name; verified the exact author string before ruling that pairing out for vp-0547.",
+          "status": "completed",
+          "notes": []
+        }
+      ],
+      "completedAt": "2026-09-28T07:00:36.280Z"
     }
   ],
   "earlyOutcomes": [
