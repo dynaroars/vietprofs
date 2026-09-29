@@ -44,24 +44,25 @@ is shown for convenience (EDT; add an hour in winter).
 Each routine attaches only the `Claude_Docs` connector. Don't add `Claude_Code_Remote`: with it,
 a run that opens a PR schedules hourly "Re-check PR" reminders until the PR is merged.
 
-Ordering rule: the auditor runs nightly at 03:00 UTC and every producer starts between 05:00
-and 06:30 UTC. So an audit never runs while that day's producers are still working, and
-everything a producer creates is at least ~19 hours old at the next night's audit, past the
-auditor's 12-hour minimum. Producers run Mon–Sat, so every producer run is audited the following
-night; Sunday has no producers, so the Sun audit takes Saturday's output, overflow past the
-nightly caps, and the automation-health check. Frequencies (changed 2026-09-27): discovery,
-relationships, and links twice a week; the rest weekly. Portraits stays weekly
-because its pending queue (71 new entries on 2026-09-27) would run dry within weeks at twice that.
-Keep new routines inside those windows.
+Ordering rule: the auditor runs nightly at 03:00 UTC and only takes items at least 12 hours old,
+so every producer must run between 04:00 and 15:00 UTC: after the audit finishes, and early enough
+that its output is 12+ hours old at the next night's audit. Producers are spread across that window
+(links 05:00, discover 08:00, portraits/honors 11:00, relationships 14:00) so no two writers of
+`public/data.json` overlap: portraits and honors alternate days, and links finishes hours before
+either. Producers run Mon–Sat, so every run is audited the following night; Sunday has no
+producers, so the Sun audit takes Saturday's output, overflow past the nightly caps, and the
+automation-health check. Frequencies (changed 2026-09-29): discovery, relationships, and links
+Mon–Sat; portraits Mon/Wed/Fri; honors Tue/Thu/Sat. Watch the portraits queue (71 pending on
+2026-09-27); it drains faster at this rate. Keep new routines inside the 04:00–15:00 window.
 
 | Key | Routine id | Model | Cron (UTC) | ET | Section |
 | :-- | :-- | :-- | :-- | :-- | :-- |
 | `audit` | `trig_01GeWQmgtoeJtaf7E2LsA7BA` | Opus 5.5 | `0 3 * * *` | Daily 11 PM (previous day) | [Auditor](#auditor-audit) |
-| `discover` | `trig_01R9AeywUniWNP3iK8XDw9ju` | Sonnet 5 | `30 5 * * 1,4` | Mon/Thu 1:30 AM | [Discovery](#discover-new-faculty-discover) |
-| `relationships` | `trig_01EgwQ418znNbFQ95ghg4p5E` | Sonnet 5 | `30 6 * * 1,4` | Mon/Thu 2:30 AM | [Relationships](#academic-relationships-relationships) |
-| `links` | `trig_0162DEq1aGRH3vWrEtpKoNmy` | Sonnet 5 | `0 5 * * 3,6` | Wed/Sat 1 AM | [Links](#links-links) |
-| `portraits` | `trig_01D58Azgkh8kdKFBdFNAXox2` | Sonnet 5 | `0 5 * * 4` | Thu 1 AM | [Portraits](#portraits-portraits) |
-| `honors` | `trig_012eH5rSZwQw7PXiQPSRj9Wn` | Sonnet 5 | `30 6 * * 5` | Fri 2:30 AM | [Honors & leads](#honors-and-lead-triage-honors) |
+| `discover` | `trig_01R9AeywUniWNP3iK8XDw9ju` | Sonnet 5.5 | `0 8 * * 1-6` | Mon–Sat 4 AM | [Discovery](#discover-new-faculty-discover) |
+| `relationships` | `trig_01EgwQ418znNbFQ95ghg4p5E` | Sonnet 5.5 | `0 14 * * 1-6` | Mon–Sat 10 AM | [Relationships](#academic-relationships-relationships) |
+| `links` | `trig_0162DEq1aGRH3vWrEtpKoNmy` | Sonnet 5.5 | `0 5 * * 1-6` | Mon–Sat 1 AM | [Links](#links-links) |
+| `portraits` | `trig_01D58Azgkh8kdKFBdFNAXox2` | Sonnet 5.5 | `0 11 * * 1,3,5` | Mon/Wed/Fri 7 AM | [Portraits](#portraits-portraits) |
+| `honors` | `trig_012eH5rSZwQw7PXiQPSRj9Wn` | Sonnet 5.5 | `0 11 * * 2,4,6` | Tue/Thu/Sat 7 AM | [Honors & leads](#honors-and-lead-triage-honors) |
 
 One-time: `review` (`trig_017xbcfAPtZwntWrPBW8W5A6`, Opus 5.5) runs once on 2026-10-26 at 14:00 UTC
 (10 AM ET), after every routine above has run at least four times. It changes nothing and files one
@@ -161,12 +162,15 @@ Follow `TASKS/AUDIT_ISSUES_PRS.md`, including "Independent review". Also read
 `TASKS/candidate_intake.md`.
 
 - Scope: open PRs and Issues created at least 12 hours ago, oldest first, skipping anything this
-  session created. At most 5 PRs and 10 Issues per run.
+  session created. At most 5 PRs and 20 Issues per run.
 - PRs: test merged onto fresh `main` (`npm test`, `npm run build`, `git diff --check`),
   re-verify every changed entry live, check `directFields` and the ledger rule, and require green
   CI. Squash-merge and delete the branch, with a comment saying what was re-verified (for example,
   "Re-verified vp-0123 and vp-0456 live on <date>; CI green; merged."), or request changes (or
   close) with a comment naming each rejected entry and why. Never merge a partial subset silently.
+  Every night, when several open PRs touch the same file (usually `public/data.json` or a
+  maintenance file), merge the oldest first, then rebase each remaining PR onto `main`,
+  regenerate the shared file, and re-test before merging it.
 - New-candidate Issues: re-run the dedup (`npm run find-roster-matches` with the name and every
   identity URL in the Issue) against current `public/data.json`. If it hits the same person
   (often at a former institution), update that entry in place and close the Issue with its id; a
@@ -208,8 +212,7 @@ Follow `TASKS/AUDIT_ISSUES_PRS.md`, including "Independent review". Also read
   red, leave it open with a comment; the next run fixes or closes it.
 - Automation health (Sunday runs only, after the normal work). Check:
   1. PRs open more than 3 days, and why (red CI, conflict, rejected but still open).
-  2. Open PRs touching the same maintenance file: merge the first as usual, then rebase the rest
-     onto `main`, regenerate the shared file, and re-test before merging.
+  2. Open PRs that still conflict or fail after the nightly rebase (see PRs above): why.
   3. Each routine in the Schedule table: no `[scheduled:<key>]` PR, Issue, or commit (for
      `relationships`, a `data(relationships)` commit on `main`) within two of its cron cycles means
      it has likely stopped.

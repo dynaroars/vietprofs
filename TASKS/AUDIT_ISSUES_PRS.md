@@ -33,7 +33,7 @@ therefore:
 - when it rejects part of a PR, requests changes or closes it with a comment that names each
   rejected entry and the reason. It doesn't silently drop entries and merge the rest.
 
-In scheduled runs, handle at most 5 PRs and 10 Issues per run, oldest first, and leave the rest
+In scheduled runs, handle at most 5 PRs and 20 Issues per run, oldest first, and leave the rest
 for the next run.
 
 ---
@@ -140,7 +140,7 @@ Before modifying data or closing issues, ensure compliance with repository rules
      - A retired-ID hit means the person was on the roster before: add them back under that original ID and remove it from `maintenance/retired-ids.json`, instead of assigning a new one.
      - Assign immutable profile IDs for genuinely new people only: `npm run assign-profile-ids -- --apply`.
      - Scheduled cloud audits stop before adding a genuinely new person: they comment "verified, ready for owner" with a ready-to-paste entry and leave the Issue open for the owner to add locally (`docs/AUTOMATION.md`, auditor "New-candidate Issues").
-     - When adding a new entry locally, also fetch its portrait if the Issue or the verified official profile page has a clear single-person headshot: validate with `identify` (≥120×120, aspect ≤1.55), convert to WebP in `public/portraits/`, set `portrait` and the direct original URL as `portraitSource`. Don't leave it for the weekly `portraits` routine.
+     - When adding a new entry locally, also fetch its portrait if the Issue or the verified official profile page has a clear single-person headshot: validate with `identify` (≥120×120, aspect ≤1.55), convert to WebP in `public/portraits/`, set `portrait` and the direct original URL as `portraitSource`. Don't leave it for the `portraits` routine.
 
    - **B. Honors & Award Additions:**
      - Check against `ROSTER_MAINTENANCE.md` honors eligibility.
