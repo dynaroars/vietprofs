@@ -172,7 +172,10 @@ Follow `TASKS/AUDIT_ISSUES_PRS.md`, including "Independent review". Also read
   (often at a former institution), update that entry in place and close the Issue with its id; a
   retired-id hit gets its original id back. Otherwise re-verify eligibility live and hand it to the
   owner: comment `## Audit <date>: verified, ready for owner` with the evidence and a ready-to-paste
-  entry (no `id`), and leave the Issue open. Don't add the entry or run `assign-profile-ids`: the
+  entry (no `id`), and leave the Issue open. If the verified official profile page shows a clear
+  single-person headshot, put its direct image URL in the entry as `portraitSource` and name the
+  page; the owner's local add downloads and converts it (`TASKS/fetch_portraits.md`), so the
+  entry doesn't wait weeks in the `portraits` queue. Don't add the entry or run `assign-profile-ids`: the
   cloud permission check denies adding a new person to `public/data.json` ("Modify Shared
   Resources"), even on an `audit-fix` branch with written authorization in the prompt (2026-09-29
   run). The owner adds it from a local session, which assigns the id and closes the Issue. A
