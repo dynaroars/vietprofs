@@ -139,6 +139,7 @@ Before modifying data or closing issues, ensure compliance with repository rules
      - Re-run the dedup check from `TASKS/candidate_intake.md` step 1 (`npm run find-roster-matches -- "<name>" --url ...` with every identity URL in the Issue) against the current `public/data.json`; the Issue's "not on the roster" claim may be stale. A hit at another institution is a probable move: if it's the same person, update that entry in place (the Issue's fields become an edit, with owner-asserted ones in `directFields`) and close the Issue naming the existing ID. See `ROSTER_MAINTENANCE.md` "One person, one ID".
      - A retired-ID hit means the person was on the roster before: add them back under that original ID and remove it from `maintenance/retired-ids.json`, instead of assigning a new one.
      - Assign immutable profile IDs for genuinely new people only: `npm run assign-profile-ids -- --apply`.
+     - Scheduled cloud audits stop before adding a genuinely new person: they comment "verified, ready for owner" with a ready-to-paste entry and leave the Issue open for the owner to add locally (`docs/AUTOMATION.md`, auditor "New-candidate Issues").
 
    - **B. Honors & Award Additions:**
      - Check against `ROSTER_MAINTENANCE.md` honors eligibility.

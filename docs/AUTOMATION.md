@@ -15,22 +15,26 @@ Policy (eligibility, evidence, routing of Issues/PRs/direct pushes) lives in `AG
  ─────────────────────────────           ──────────────────────────          ─────
  task PRs  "[scheduled:<task>] ..."  ──►  re-verify live, test on main,
                                           CI green → squash-merge
- finding Issues (side discoveries)   ──►  verify → fix on main → close   ──►  only items the
- new-candidate Issues                ──►  re-dedup → add entry → close        auditor leaves
- owner-review Issues                 ──►  comment findings, leave open        open
+ finding Issues (side discoveries)   ──►  verify → fix PR → close
+ new-candidate Issues                ──►  re-dedup → verify → "ready for  ──►  adds entry from a
+                                          owner" comment, leave open          local session
+ owner-review Issues                 ──►  comment findings, leave open   ──►  only items the
+                                                                              auditor leaves open
 ```
 
 - **Producers** do one playbook each, in small capped batches. They never merge or push to `main`,
-  except the relationships routine (see `AGENTS.md`). The auditor merges PRs and pushes its own
-  verified Issue fixes and new roster entries to `main`.
+  except the relationships routine (see `AGENTS.md`). The auditor merges PRs and lands its own
+  verified Issue fixes through one fix PR per run. New roster entries are the exception: the
+  owner adds them (see "New-candidate Issues" under the auditor section).
 - While researching, producers also report **side findings**: errors or leads outside their own
   task, filed as Issues (see "Side findings" below). This is how a narrow task like the LinkedIn
   backfill turns up stale ranks, duplicates, missing honors, and new candidates.
 - **The auditor** is a separate model and a separate session. It runs every night and only takes items at least
   12 hours old, so each producer run is reviewed by a different agent at the next night's audit.
   Its rules are in `TASKS/AUDIT_ISSUES_PRS.md` ("Independent review").
-- **The owner** only sees what the auditor leaves open: conflicts with a protected name, honor, or portrait,
-  ambiguous identities or eligibility, and anything it couldn't verify from the cloud.
+- **The owner** only sees what the auditor leaves open: verified new candidates ready to add,
+  conflicts with a protected name, honor, or portrait, ambiguous identities or eligibility, and
+  anything it couldn't verify from the cloud.
 
 ## Schedule
 
@@ -166,9 +170,13 @@ Follow `TASKS/AUDIT_ISSUES_PRS.md`, including "Independent review". Also read
 - New-candidate Issues: re-run the dedup (`npm run find-roster-matches` with the name and every
   identity URL in the Issue) against current `public/data.json`. If it hits the same person
   (often at a former institution), update that entry in place and close the Issue with its id; a
-  retired-id hit gets its original id back. Otherwise re-verify eligibility live, add the entry, run
-  `npm run assign-profile-ids -- --apply`, validate, and
-  put it in the run's fix PR (see "Applying fixes" below); the PR closes the Issue.
+  retired-id hit gets its original id back. Otherwise re-verify eligibility live and hand it to the
+  owner: comment `## Audit <date>: verified, ready for owner` with the evidence and a ready-to-paste
+  entry (no `id`), and leave the Issue open. Don't add the entry or run `assign-profile-ids`: the
+  cloud permission check denies adding a new person to `public/data.json` ("Modify Shared
+  Resources"), even on an `audit-fix` branch with written authorization in the prompt (2026-09-29
+  run). The owner adds it from a local session, which assigns the id and closes the Issue. A
+  moved-person or retired-id hit is an edit, not a new entry, so it still goes in the fix PR.
 - Side-finding and other correction Issues: verify live. If confirmed, fix, validate, and put it
   in the run's fix PR with what changed and the source. If the evidence is wrong, close with the
   reason. Duplicates: keep the older (lower) id, even if the newer entry is richer or has protected
@@ -183,7 +191,7 @@ Follow `TASKS/AUDIT_ISSUES_PRS.md`, including "Independent review". Also read
 - The auditor doesn't file side findings about its own items; it resolves them.
 - `[scheduled:review]` Issues are for the owner: leave them open and don't act on them.
 - Applying fixes: the auditor never edits `main` directly. It makes all of a run's verified Issue
-  fixes and new entries on one branch, `audit-fix/<YYYY-MM-DD>`, with one commit per Issue
+  fixes on one branch, `audit-fix/<YYYY-MM-DD>`, with one commit per Issue
   (`Closes #n` in each message), runs `npm test`, `npm run build`, and `git diff --check`, pushes
   the branch, opens one PR titled `[scheduled:audit] Verified Issue fixes (<date>)` that lists each
   Issue and its evidence, with one `Closes #n` line per Issue (a comma list only closes the first), and squash-merges it once CI is green, then comments on each Issue with
@@ -192,7 +200,8 @@ Follow `TASKS/AUDIT_ISSUES_PRS.md`, including "Independent review". Also read
   push to `main`: the cloud session's permission check blocks large unreviewed rewrites of
   `public/data.json` headed for `main` ("Modify Shared Resources"), even with written authorization
   in the prompt. The 2026-09-25, 09-26, and 09-27 runs had every such edit denied and left the fixes
-  as Issue comments, while branch edits and PR merges were always allowed. If the fix PR's CI is
+  as Issue comments, while edits to existing entries on a branch and PR merges were allowed.
+  Adding a new entry is denied even on the branch (see "New-candidate Issues"). If the fix PR's CI is
   red, leave it open with a comment; the next run fixes or closes it.
 - Automation health (Sunday runs only, after the normal work). Check:
   1. PRs open more than 3 days, and why (red CI, conflict, rejected but still open).
@@ -207,9 +216,10 @@ Follow `TASKS/AUDIT_ISSUES_PRS.md`, including "Independent review". Also read
   but accomplish nothing, which the watchdog and the run status can't see:
 
   5. Verified work never applied: open Issues where an earlier audit comment says a verified fix
-     or new entry couldn't be applied (permission denied, push rejected, tool failure). Apply it
-     now within the caps; if it fails again, report the exact error. That is an automation
-     failure, not an owner decision.
+     couldn't be applied (permission denied, push rejected, tool failure). Apply it now within the
+     caps; if it fails again, report the exact error. That is an automation failure, not an owner
+     decision. New candidates marked "ready for owner" are not failures; list any older than 7
+     days so the owner can add them.
   6. Empty runs: a producer whose last two runs changed no roster data (PRs touching only
      `maintenance/` files, "no new candidates found", or nothing filed). Say the likely reason:
      queue exhausted, source blocked, or the playbook re-selecting entries already tried.
