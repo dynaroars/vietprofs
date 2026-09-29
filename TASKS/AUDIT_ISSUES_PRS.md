@@ -11,12 +11,9 @@ In this multi-agent architecture:
 - **Task Agents** (`fetch_portraits.md`, `backfill_linkedin.md`, `check_google_scholar.md`, `verify_websites_and_labs.md`, `audit_facts_and_honors.md`) discover data, perform deep research, create topic branches, and **file GitHub Pull Requests or GitHub Issues**. Task agents DO NOT commit directly to `main` or merge their own PRs.
 - **Audit Agent (`AUDIT_ISSUES_PRS.md`):** Acts as the primary auditor. Reviews all open PRs, verifies diffs, executes test suites (`npm test`, `npm run build`), **squash-merges verified PRs**, deletes topic branches, processes issues, and updates ledgers.
 
-> **One fix PR per run.** When auditing a GitHub *issue* (not a PR), the fix flow is: verify the
-> claim live, apply the change on the run's `audit-fix/<date>` branch, run the validation pipeline,
-> open one PR for all of the run's fixes and squash-merge it on green CI (Step 4); the PR's
-> `Closes #n` lines close the Issues (Step 5). Scheduled runs never push to `main` directly: the
-> cloud permission check denies it, and fixes left only as Issue comments never reach the roster.
-> A local owner session may still commit a single verified fix straight to `main`.
+> **One fix PR per run.** Verified Issue fixes go on the run's `audit-fix/<date>` branch and land
+> through one squash-merged PR (Steps 4–5). Scheduled runs never push to `main` directly; a local
+> owner session may commit a single verified fix straight to `main`.
 
 ### Independent review (agent checks agent)
 
@@ -161,18 +158,10 @@ Before modifying data or closing issues, ensure compliance with repository rules
      - Keep the **older (lower) ID**, even when the newer entry has protected `directFields` or more data; protected values move with the data onto the older ID. Follow `ROSTER_MAINTENANCE.md` "One person, one ID": put the verified current facts and unique sourced fields on the older entry, drop fields that only fit the other institution, delete the newer entry, then run `npm run retire-profile-id -- <newer-id> --into <older-id> --reason "..." --apply` (it also rewrites every maintenance-file reference).
      - If the older ID was already removed (a merge that kept the newer one, or a person re-added after removal), restore it: `npm run retire-profile-id -- <newer-id> --into <older-id> --reason "..." --apply` renames the entry back.
 
-   - **D. Multi-item Maintenance Sweeps:**
-     - Update verified items.
-
 ---
 
-### Step 3: Synchronize Ledgers & Field Overrides
-1. **Assign Profile IDs:**
-   ```bash
-   npm run assign-profile-ids -- --apply
-   ```
-2. **Update `src/data.ts` (Field Overrides):**
-   - If a new institution or department falls into unmapped `Others`, add an entry to `FIELD_OVERRIDES` in `src/data.ts`.
+### Step 3: Field Overrides
+- **Update `src/data.ts`:** if a new institution or department falls into unmapped `Others`, add an entry to `FIELD_OVERRIDES` in `src/data.ts`.
 
 ---
 
@@ -207,28 +196,3 @@ change and its source. Close other resolved issues with a clear summary comment:
 gh issue close <ISSUE_NUMBER> --comment "Verified and resolved: <SUMMARY_OF_CHANGES>"
 ```
 For ongoing tracking issues (e.g., dead link tracking or ambiguous eligibility calls requiring owner decision), post an updated audit comment summarizing progress and leave open.
-
----
-
-## 3. Quick Command Reference
-
-```bash
-# PR & Issue inspection
-gh pr list --state open
-gh issue list --state open
-gh pr diff <PR_NUM>
-gh issue view <ISSUE_NUM>
-
-# Roster synchronization
-npm run assign-profile-ids -- --apply
-npm run find-roster-matches -- "<name>" --url <url>
-
-# Local testing & build validation
-npm test
-npm run build
-git diff --check
-
-# Merging & Issue closure
-gh pr merge <PR_NUM> --squash --delete-branch
-gh issue close <ISSUE_NUM> --comment "..."
-```

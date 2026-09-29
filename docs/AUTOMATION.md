@@ -52,8 +52,8 @@ that its output is 12+ hours old at the next night's audit. Producers are spread
 either. Producers run Mon–Sat, so every run is audited the following night; Sunday has no
 producers, so the Sun audit takes Saturday's output, overflow past the nightly caps, and the
 automation-health check. Frequencies (changed 2026-09-29): discovery, relationships, and links
-Mon–Sat; portraits Mon/Wed/Fri; honors Tue/Thu/Sat. Watch the portraits queue (71 pending on
-2026-09-27); it drains faster at this rate. Keep new routines inside the 04:00–15:00 window.
+Mon–Sat; portraits Mon/Wed/Fri; honors Tue/Thu/Sat. Watch the portraits queue
+(`npx tsx scripts/fetch-portraits.ts --status`). Keep new routines inside the 04:00–15:00 window.
 
 | Key | Routine id | Model | Cron (UTC) | ET | Section |
 | :-- | :-- | :-- | :-- | :-- | :-- |
@@ -77,19 +77,18 @@ Outside the cloud:
 | Automation watchdog | GitHub Action `.github/workflows/automation-watchdog.yml` | Mon and Thu 12:00 UTC; manual via `gh workflow run automation-watchdog.yml` | Opens or comments on one "Automation watchdog (automated)" Issue when a PR has been open more than 5 days (auditor stopped or PR stuck) or nothing `[scheduled:*]` appeared in 4 days (routines stopped); closes it when checks pass. No model involved. |
 | Branch cleanup | GitHub Action `.github/workflows/delete-pr-branches.yml` | Whenever a PR is merged or closed; sweep Mondays 13:00 UTC; manual via `gh workflow run delete-pr-branches.yml` | Deletes a PR's branch once all its PRs are closed, because cloud agents can't delete branches. Keeps `main`, branches with an open PR, and branches that never had a PR. No model involved. |
 
-Retired routines (deleted; no longer at claude.ai/code/routines). The routines above replace them:
+Retired routines (2026-09-27), replaced by the ones above:
 
-- `linkedin` (Wed/Sat), `scholar` (Wed), and `websites` (Tue/Fri) → `links` on 2026-09-27, which
-  reuses the `linkedin` routine id. Three routines each reading the same pages for one field
-  tripled the writers on `public/data.json`. `scholar` (`trig_01KLRvszaFCY869VkchMmiAE`) and
-  `websites` (`trig_01RKg7at1hAC3cY8NHVN8VBU`) are disabled; delete them in the web UI.
-- `overviews` (`trig_01NUyNrE7x8WZgLMHbpCU7Zi`, Tue) → retired 2026-09-27 with the research-overview
-  ("About") field, which was the main source of invented or mismatched text. Disabled; delete it in
-  the web UI.
-- `education` (`trig_011kuvE1P6aHNn7fcw9XVnLS`, Sat) → retired 2026-09-27 when the degree years,
-  majors, and other degrees it mostly maintained were removed. Disabled; delete it in the web UI.
-- `vietprofs-linkedin-url-backfill` (every 2h) → `linkedin`, later `links`. Same task; its side-findings behavior now applies to all producers.
-- `vietprofs-link-health-sweep` (Mon) → link-health Action + `links` + `audit`. Running `check-links` inside the cloud sandbox is useless: on 2026-09-21, 4,794 of 5,501 URLs returned egress-proxy 403s. Its prompt also allowed deleting fields or entries over "dead" links. Link detection now runs on GitHub runners with real internet access.
+- `scholar` (`trig_01KLRvszaFCY869VkchMmiAE`) and `websites` (`trig_01RKg7at1hAC3cY8NHVN8VBU`) were
+  merged with `linkedin` into `links` (which reuses the `linkedin` id): three routines reading the
+  same pages tripled the writers on `public/data.json`.
+- `overviews` (`trig_01NUyNrE7x8WZgLMHbpCU7Zi`) and `education` (`trig_011kuvE1P6aHNn7fcw9XVnLS`)
+  were retired with the fields they maintained (the "About" overview, degree years and majors).
+- The link-health sweep became the link-health Action plus `links` and `audit`: `check-links` in
+  the cloud sandbox is useless (4,794 of 5,501 URLs returned egress-proxy 403s on 2026-09-21).
+
+`scholar`, `websites`, `overviews`, and `education` are disabled but not deleted; delete them in
+the web UI.
 
 ## Conventions for every scheduled run
 
@@ -180,9 +179,8 @@ Follow `TASKS/AUDIT_ISSUES_PRS.md`, including "Independent review". Also read
   single-person headshot, put its direct image URL in the entry as `portraitSource` and name the
   page; the owner's local add downloads and converts it (`TASKS/fetch_portraits.md`), so the
   entry doesn't wait weeks in the `portraits` queue. Don't add the entry or run `assign-profile-ids`: the
-  cloud permission check denies adding a new person to `public/data.json` ("Modify Shared
-  Resources"), even on an `audit-fix` branch with written authorization in the prompt (2026-09-29
-  run). The owner adds it from a local session, which assigns the id and closes the Issue. A
+  cloud permission check denies adding a new person to `public/data.json`, even on an `audit-fix`
+  branch. The owner adds it from a local session, which assigns the id and closes the Issue. A
   moved-person or retired-id hit is an edit, not a new entry, so it still goes in the fix PR.
 - Side-finding and other correction Issues: verify live. If confirmed, fix, validate, and put it
   in the run's fix PR with what changed and the source. If the evidence is wrong, close with the
@@ -206,10 +204,9 @@ Follow `TASKS/AUDIT_ISSUES_PRS.md`, including "Independent review". Also read
   the owner, so the review is still independent, and the PR adds a CI gate and a record. Why not
   push to `main`: the cloud session's permission check blocks large unreviewed rewrites of
   `public/data.json` headed for `main` ("Modify Shared Resources"), even with written authorization
-  in the prompt. The 2026-09-25, 09-26, and 09-27 runs had every such edit denied and left the fixes
-  as Issue comments, while edits to existing entries on a branch and PR merges were allowed.
-  Adding a new entry is denied even on the branch (see "New-candidate Issues"). If the fix PR's CI is
-  red, leave it open with a comment; the next run fixes or closes it.
+  in the prompt, while edits to existing entries on a branch and PR merges are allowed. Adding a
+  new entry is denied even on the branch (see "New-candidate Issues"). If the fix PR's CI is red,
+  leave it open with a comment; the next run fixes or closes it.
 - Automation health (Sunday runs only, after the normal work). Check:
   1. PRs open more than 3 days, and why (red CI, conflict, rejected but still open).
   2. Open PRs that still conflict or fail after the nightly rebase (see PRs above): why.
@@ -331,7 +328,6 @@ out-of-roster advisors or coauthors.
   `audit-fix/<date>` PR, not a direct edit of `main`.
 - **PR branches piling up:** agents can't delete branches (the cloud git proxy returns 403). The
   branch-cleanup Action does it; check its runs with `gh run list -w delete-pr-branches.yml`.
-
 - **What did a run do?** Use `RemoteTrigger list_runs` for the routine, then `get_run_log` for a
   session. Or open the session link in the commit's `Claude-Session:` trailer.
 - **Lots of "unverified" items or `EGRESS_BLOCKED` errors:** check that the Default environment's
