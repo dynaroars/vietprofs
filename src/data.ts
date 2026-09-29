@@ -702,6 +702,9 @@ const FIELD_OVERRIDES = new Map([
   ['Beckman Institute for Advanced Science and Technology, Illinois Polymer Maker Lab|University of Illinois Urbana-Champaign', 'Chemistry'],
   ['Laboratoire Auscultation, Modélisation, Expérimentation des Infrastructures de Transport (LAMES), Département Matériaux et Structures (MAST)|Université Gustave Eiffel', 'Engineering'],
   ['Laboratoire de Conception, Optimisation et Modélisation des Systèmes (LCOMS)|Université de Lorraine', 'Computer & Information Sciences'],
+  // Philosopher of science and neuroethicist (PhD in Philosophy); the bioethics center name alone
+  // carries no field keyword.
+  ['Center for Bioethics and Social Justice|Michigan State University', 'Humanities'],
 ]);
 
 // Buckets granular `department` values into the broad fields above. Order matters, and is not
