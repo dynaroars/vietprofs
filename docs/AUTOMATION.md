@@ -268,6 +268,10 @@ show:
   shared by two entries). LinkedIn blocks fetches; verify it from the search index as described in
   `TASKS/backfill_linkedin.md` "Verifying without fetching LinkedIn". For a dead link, search the
   name and university fresh before calling it unfixable.
+- **Portrait:** open the stored portrait and compare it with the official page (see the portrait
+  recheck in `ROSTER_MAINTENANCE.md` step 4). Run `npx tsx scripts/find-all-nonhuman-portraits.ts`
+  at the start and handle flagged entries before the id-order rotation. Replace or remove a wrong
+  unprotected portrait in the PR; for a protected one file `Likely wrong portrait: <name> (<vp-id>)`.
 - **Honors and degrees** noticed on those pages go in side findings, not this PR.
 
 In the PR body, list each entry with what was checked and what changed, including entries checked

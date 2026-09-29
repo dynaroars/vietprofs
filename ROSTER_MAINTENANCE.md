@@ -850,6 +850,15 @@ order:
    inferred), other documented degrees, and honors/awards. Apply the same
    Honors and awards eligibility rules as elsewhere — do not import a full CV award list, only
    distinctions that meet the documented bar.
+
+   Also recheck the stored portrait: open the image (Read tool) next to the official page and
+   confirm it is a single-person headshot of this person, not a banner, ad, logo, group photo, or
+   someone else's picture (a `portraitSource` filename like `taxe26-v2-copie` is a warning sign;
+   `npx tsx scripts/find-all-nonhuman-portraits.ts` lists candidates). If it fails and `portrait`
+   is not in `directFields`, replace it from the official page (`TASKS/fetch_portraits.md`
+   section 4 rules) or, when none exists, remove `portrait`/`portraitSource` and the file and mark
+   the entry unresolved in the portrait ledger and queue so the `portraits` routine refills it. If it is protected,
+   file a `Likely wrong portrait: <name> (<vp-id>)` Issue instead.
 5. **Watch for new candidates while you're there.** Coauthors, lab members who became faculty, or
    other Vietnamese-diaspora names surfaced incidentally during this research are leads, not
    confirmed additions. If you find a plausibly eligible new person, verify them independently
