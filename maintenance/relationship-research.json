@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-28T07:00:36.280Z",
+  "updatedAt": "2026-09-29T15:50:00.000Z",
   "batches": [
     {
       "batchNumber": 1,
@@ -15935,6 +15935,236 @@
         }
       ],
       "completedAt": "2026-09-28T07:00:36.280Z"
+    },
+    {
+      "batchNumber": 69,
+      "rosterIds": [
+        "vp-1704",
+        "vp-1703",
+        "vp-1702",
+        "vp-1701",
+        "vp-1700",
+        "vp-1699",
+        "vp-1698",
+        "vp-1697",
+        "vp-1696",
+        "vp-1695",
+        "vp-1694",
+        "vp-1693",
+        "vp-1691",
+        "vp-1690",
+        "vp-1689",
+        "vp-1688",
+        "vp-1687",
+        "vp-1686",
+        "vp-1684",
+        "vp-1683"
+      ],
+      "startedAt": "2026-09-29T15:28:00.000Z",
+      "status": "complete",
+      "outcomes": [
+        {
+          "rosterId": "vp-1704",
+          "sources": [
+            "https://bioethics.msu.edu/people/michelle-pham"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No advisor information on official profile.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-1703",
+          "sources": [
+            "https://research.monash.edu/en/persons/giang-hoang/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "Crossref pair checks vs vp-1686, vp-1700 found no shared works.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-1702",
+          "sources": [
+            "https://business.ecu.edu/?p=13518"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No advisor information within bounded sources.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-1701",
+          "sources": [
+            "https://research-portal.uea.ac.uk/en/persons/chau-le/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No advisor information within bounded sources.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-1700",
+          "sources": [
+            "https://research.monash.edu/en/persons/lan-nguyen-2/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No shared works with roster peers found; no advisor named.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-1699",
+          "sources": [
+            "https://www.rmit.edu.au/profiles/t/thao-tran2"
+          ],
+          "relationshipIds": [],
+          "nextAction": "Rejected mapping: Thao Phuong Tran (UEH, ORCID 0000-0003-1402-8090) works with Anh-Tuan Le not shown to be this RMIT Vuong Thao Tran. No edge recorded.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-1698",
+          "sources": [
+            "https://www.rmit.edu.au/profiles/l/anh-le2"
+          ],
+          "relationshipIds": [],
+          "nextAction": "Rejected mapping: Crossref works by Anh-Tuan Le and Thao Phuong Tran (UEH Vietnam, ORCID 0000-0003-3135-8681) are not this RMIT Anh Le (ORCID 0000-0002-0821-4009). No coauthor edge with vp-1699 recorded.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-1697",
+          "sources": [
+            "https://www.tamucc.edu/files/php/views/faculty-details.php?profile=Thang_Nguyen"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No advisor information within bounded sources.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-1696",
+          "sources": [
+            "https://tungprime.github.io/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "Site names PhD advisor Kazuya Kato (Chicago), not in roster; other mentions are non-roster. Excluded.",
+          "status": "excluded",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-1695",
+          "sources": [
+            "https://www.trantdoan.com/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "Personal site has no advisor named for the doctorate; no roster counterparties.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-1694",
+          "sources": [
+            "https://www.hpu.edu/faculty/cob/amy-nguyen-chyung.html"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No advisor information on profile.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-1693",
+          "sources": [
+            "https://vietducle1102.github.io/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "Site states PhD advisors Boris Mordukhovich (Wayne State) and Pham Duy Khanh (HCMUE); find-roster-matches found neither in roster. Excluded. Site still labels the person a PhD student, unlike the stored appointment; not verified either way.",
+          "status": "excluded",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-1691",
+          "sources": [
+            "https://www.newcastle.edu.au/profile/duy-ngo"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No advisor information located within bounded sources.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-1690",
+          "sources": [
+            "https://vucdinh.github.io/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "Site names PhD advisors Greg Buzzard and Ann Rundell (Purdue) and postdoc group Matsen Group (FHCRC); none Vietnamese-named or in roster. Out-of-roster counterparties, excluded.",
+          "status": "excluded",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-1689",
+          "sources": [
+            "https://www.ut.edu/directory/pham-katie"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No advisor information on official profile.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-1688",
+          "sources": [
+            "https://thuchoang90.github.io/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "Site is tutorials only; no advisor information.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-1687",
+          "sources": [
+            "https://www.massey.ac.nz/massey/expertise/profile.cfm?stref=697450"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No advisor named; no shared works with roster peers found via Crossref.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-1686",
+          "sources": [
+            "https://research.monash.edu/en/persons/huu-nhan-duong/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "Crossref pair checks vs vp-1703, vp-1700, vp-1687 returned no shared works. No advisor named.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-1684",
+          "sources": [
+            "https://sites.google.com/view/trungvuecons/home"
+          ],
+          "relationshipIds": [],
+          "nextAction": "Homepage lists PhD (Otago) but no advisor names; Crossref pair checks with roster finance colleagues found no shared works.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-1683",
+          "sources": [
+            "https://kimtienly.github.io/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "Personal site names postdoc supervisor Ioannis Havoutis (Oxford); no explicit postdoctoral-mentor wording and he is not in the roster. Exhausted.",
+          "status": "unresolved",
+          "notes": []
+        }
+      ],
+      "completedAt": "2026-09-29T15:50:00.000Z"
     }
   ],
   "earlyOutcomes": [
