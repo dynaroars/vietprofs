@@ -701,6 +701,9 @@ personal homepage. An honor should normally fit one of these patterns:
 - a named endowed chair, distinguished professorship, university professorship, or comparable
   research chair that represents a significant appointment distinction (`distinguished_professorship`).
 
+Clarivate Highly Cited Researchers listings qualify as `major_award` (owner decision, Issue #243);
+the source must be Clarivate or an official institutional announcement that names the person and year.
+
 Do not add routine conference best-paper or distinguished-paper awards, paper awards with only
 runner-up or candidate status, institution-local student, departmental, university
 service/teaching, or community-engagement awards, generic grants, invited talks, or ambiguous

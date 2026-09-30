@@ -2913,6 +2913,21 @@
       "identitySignals": [],
       "retrievedAt": "2026-09-26T05:40:53.957Z",
       "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1534": {
+      "name": "TuongThuy Vu",
+      "outcome": "found",
+      "pageUrl": "https://news.curtin.edu.my/news/curtin-malaysia-appoints-new-dean-of-faculty-of-engineering-and-science/",
+      "imageUrl": "https://s44937.pcdn.co/wp-content/uploads/sites/171/2020/01/Professor-Vu-Tuong-Thuy_Curtin-Malaysia_new-Dean-of-Faculty-of-Engineering-and-Science-600x840.jpg",
+      "sourceType": "university_news",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "rank"
+      ],
+      "retrievedAt": "2026-09-30T03:11:46.438Z",
+      "note": "Replaced a wrong-person image (source Wong-KS.jpg) after visual comparison with the official Curtin Malaysia dean-appointment photo; cropped to head and shoulders (Issue #244)."
     }
   }
 }
