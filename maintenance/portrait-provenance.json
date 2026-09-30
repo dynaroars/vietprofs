@@ -2966,7 +2966,7 @@
         "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-09-30T11:21:22.876Z",
+      "retrievedAt": "2026-09-30T11:23:05.033Z",
       "note": "candidate could not be converted to a local image"
     },
     "vp-1697": {
@@ -3000,7 +3000,7 @@
         "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-09-30T11:21:29.715Z",
+      "retrievedAt": "2026-09-30T11:23:08.420Z",
       "note": "candidate could not be converted to a local image"
     },
     "vp-1699": {
@@ -3046,6 +3046,92 @@
       "outcome": "not_found",
       "identitySignals": [],
       "retrievedAt": "2026-09-30T11:21:40.942Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1684": {
+      "name": "Trung Vu",
+      "outcome": "not_found",
+      "pageUrl": "https://www.lboro.ac.uk/schools/business-school/our-people/trung-vu/",
+      "imageUrl": "https://www.lboro.ac.uk/media/media/schoolanddepartments/business-school/images/staff/trung-vu.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-30T11:22:37.754Z",
+      "note": "candidate could not be converted to a local image"
+    },
+    "vp-1686": {
+      "name": "Huu Nhan Duong",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-09-30T11:22:40.599Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1687": {
+      "name": "Harvey Nguyen",
+      "outcome": "needs_review",
+      "pageUrl": "https://www.massey.ac.nz/massey/expertise/profile.cfm?stref=697450",
+      "imageUrl": "https://www.massey.ac.nz/massey/fms/expertise/user_images/profile_054796_86CB031A-F204-4DC2-AA16CAA1EE5A84A5.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-30T11:22:42.151Z",
+      "note": "candidate requires visual review before acceptance"
+    },
+    "vp-1688": {
+      "name": "Trong-Thuc Hoang",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-09-30T11:22:49.068Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1689": {
+      "name": "Duong Katie Pham",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-09-30T11:22:51.520Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1690": {
+      "name": "Vu Dinh",
+      "outcome": "not_found",
+      "pageUrl": "https://www.udel.edu/academics/colleges/cas/units/departments/mathematical-sciences/our-people/vu-dinh/",
+      "imageUrl": "https://www.udel.edu/referenced-components/cas/math-faculty/_jcr_content/par_udel_panel/columngenerator_179624381/par/staff.coreimg.png/1728504083660/vu-dinh.png",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-30T11:22:52.623Z",
+      "note": "candidate could not be converted to a local image"
+    },
+    "vp-1691": {
+      "name": "Duy Trong Ngo",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-09-30T11:22:53.651Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1693": {
+      "name": "Viet Duc Le",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-09-30T11:22:54.722Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     }
   }
