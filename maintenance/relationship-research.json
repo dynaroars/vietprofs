@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-29T15:50:00.000Z",
+  "updatedAt": "2026-09-30T14:40:00.000Z",
   "batches": [
     {
       "batchNumber": 1,
@@ -16165,6 +16165,239 @@
         }
       ],
       "completedAt": "2026-09-29T15:50:00.000Z"
+    },
+    {
+      "batchNumber": 70,
+      "rosterIds": [
+        "vp-1680",
+        "vp-1678",
+        "vp-1677",
+        "vp-1676",
+        "vp-1675",
+        "vp-1517",
+        "vp-1376",
+        "vp-0645",
+        "vp-0644",
+        "vp-0643",
+        "vp-0642",
+        "vp-0641",
+        "vp-0640",
+        "vp-0639",
+        "vp-0637",
+        "vp-0636",
+        "vp-0635",
+        "vp-0634",
+        "vp-0633",
+        "vp-0632"
+      ],
+      "startedAt": "2026-09-30T14:00:00.000Z",
+      "status": "complete",
+      "outcomes": [
+        {
+          "rosterId": "vp-1680",
+          "sources": [
+            "https://le.ac.uk/people/linh-xd-nguyen"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No advisor/mentor information on official profile or homepage within bounded sources; Crossref pair checks against same-batch and same-institution roster entries found no shared works.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-1678",
+          "sources": [
+            "https://www.researchgate.net/profile/Phuc-Nguyen-67"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No advisor/mentor information on official profile or homepage within bounded sources; Crossref pair checks against same-batch and same-institution roster entries found no shared works.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-1677",
+          "sources": [
+            "https://www.susqu.edu/profiles/bui/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No advisor/mentor information on official profile or homepage within bounded sources; Crossref pair checks against same-batch and same-institution roster entries found no shared works.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-1676",
+          "sources": [
+            "https://www.ecu.edu.au/schools/business-and-law/faculty/profiles/senior-lecturer/dr-justin-nguyen"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No advisor/mentor information on official profile or homepage within bounded sources; Crossref pair checks against same-batch and same-institution roster entries found no shared works.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-1675",
+          "sources": [
+            "https://faculty.erau.edu/Viet.Tran2"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No advisor/mentor information on official profile or homepage within bounded sources; Crossref pair checks against same-batch and same-institution roster entries found no shared works.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-1517",
+          "sources": [
+            "https://ucrisportal.univie.ac.at/en/persons/andr%C3%A9-h-hoang"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No advisor/mentor information on official profile or homepage within bounded sources; Crossref pair checks against same-batch and same-institution roster entries found no shared works.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-1376",
+          "sources": [
+            "https://surgery.ucsf.edu/bio/binh-n-trinh"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No advisor/mentor information on official profile or homepage within bounded sources; Crossref pair checks against same-batch and same-institution roster entries found no shared works.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0645",
+          "sources": [
+            "https://www.grad.ubc.ca/researcher/15390-tran",
+            "https://www.urbanpredictiveanalytics.com/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No advisor/mentor information on official profile or homepage within bounded sources; Crossref pair checks against same-batch and same-institution roster entries found no shared works.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0644",
+          "sources": [
+            "https://www.daniels.utoronto.ca/people/core-faculty/jason-nguyen"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No advisor/mentor information on official profile or homepage within bounded sources; Crossref pair checks against same-batch and same-institution roster entries found no shared works.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0643",
+          "sources": [
+            "https://www.surgery.utoronto.ca/faculty/john-tran"
+          ],
+          "relationshipIds": [],
+          "nextAction": "Official profile names PhD supervisor Anne Agur (U Toronto) and postdoc host Eldon Loh (Western); neither is in the roster (find-roster-matches: no hit for Agur), so no edge. Exhausted.",
+          "status": "excluded",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0642",
+          "sources": [
+            "https://www.utsc.utoronto.ca/acm/thy-phu"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No advisor/mentor information on official profile or homepage within bounded sources; Crossref pair checks against same-batch and same-institution roster entries found no shared works.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0641",
+          "sources": [
+            "https://munkschool.utoronto.ca/person/nhung-tran"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No advisor/mentor information on official profile or homepage within bounded sources; Crossref pair checks against same-batch and same-institution roster entries found no shared works.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0640",
+          "sources": [
+            "https://www2.philosophy.su.se/nguyen/CV.pdf"
+          ],
+          "relationshipIds": [],
+          "nextAction": "CV names PhD supervisor Roman Frigg (LSE); not in the roster. Supervision list shows only Stockholm students not in the roster. Exhausted.",
+          "status": "excluded",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0639",
+          "sources": [
+            "https://quynhnguyenunibern.com/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "Homepage names ETH Zurich PhD and Princeton postdoc but no advisor or mentor; nothing to verify.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0637",
+          "sources": [
+            "https://www.rug.nl/staff/n.h.nguyen/?lang=en"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No advisor/mentor information on official profile or homepage within bounded sources; Crossref pair checks against same-batch and same-institution roster entries found no shared works.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0636",
+          "sources": [
+            "https://www.uu.nl/staff/DNguyen1"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No advisor/mentor information on official profile or homepage within bounded sources; Crossref pair checks against same-batch and same-institution roster entries found no shared works.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0635",
+          "sources": [
+            "https://www.uu.nl/staff/LNNguyen"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No advisor/mentor information on official profile or homepage within bounded sources; Crossref pair checks against same-batch and same-institution roster entries found no shared works.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0634",
+          "sources": [
+            "https://www.gif.uni-hannover.de/fileadmin/gif/CVs/CV_Giang_Nghiem_Feb2025.pdf"
+          ],
+          "relationshipIds": [],
+          "nextAction": "CV lists Master's thesis supervision and a Frankfurt PhD but no advisor name; no roster counterparty found.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0633",
+          "sources": [
+            "https://cn.ifn.et.tu-dresden.de/team-member/giang-nguyen/",
+            "https://tu-dresden.de/ing/elektrotechnik/ifn/hcs/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No advisor/mentor information on official profile or homepage within bounded sources; Crossref pair checks against same-batch and same-institution roster entries found no shared works.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0632",
+          "sources": [
+            "https://www.math.lmu.de/de/personen/kontaktseite/phan-thanh-nam-146705d9.html",
+            "https://www.math.lmu.de/~nam/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No advisor/mentor information on official profile or homepage within bounded sources; Crossref pair checks against same-batch and same-institution roster entries found no shared works.",
+          "status": "unresolved",
+          "notes": []
+        }
+      ],
+      "completedAt": "2026-09-30T14:40:00.000Z"
     }
   ],
   "earlyOutcomes": [
