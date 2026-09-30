@@ -2928,6 +2928,125 @@
       ],
       "retrievedAt": "2026-09-30T03:11:46.438Z",
       "note": "Replaced a wrong-person image (source Wong-KS.jpg) after visual comparison with the official Curtin Malaysia dean-appointment photo; cropped to head and shoulders (Issue #244)."
+    },
+    "vp-1694": {
+      "name": "Amy Nguyen-Chyung",
+      "outcome": "needs_review",
+      "pageUrl": "https://www.hpu.edu/faculty/cob/amy-nguyen-chyung.html",
+      "imageUrl": "https://www.hpu.edu/faculty/images/anguyenchyung.jpeg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-30T11:21:10.167Z",
+      "note": "candidate requires visual review before acceptance"
+    },
+    "vp-1695": {
+      "name": "Tran T. Doan",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-09-30T11:21:10.755Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1696": {
+      "name": "Tung T. Nguyen",
+      "outcome": "not_found",
+      "pageUrl": "https://www.elmhurst.edu/academics/departments/mathematics/faculty/",
+      "imageUrl": "https://www.elmhurst.edu/wp-content/uploads/2026/02/Tung-Nguyen-Headshot-Cropped-Resized.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-30T11:21:22.876Z",
+      "note": "candidate could not be converted to a local image"
+    },
+    "vp-1697": {
+      "name": "Thang Tien Nguyen",
+      "outcome": "needs_review",
+      "pageUrl": "https://www.tamucc.edu/files/php/views/faculty-details.php?profile=Thang_Nguyen",
+      "imageUrl": "https://www.tamucc.edu/directory/thumbs/tnguyen129.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-30T11:21:27.753Z",
+      "note": "candidate requires visual review before acceptance"
+    },
+    "vp-1698": {
+      "name": "Anh Le - RMIT University",
+      "outcome": "not_found",
+      "pageUrl": "https://www.rmit.edu.au/profiles/l/anh-le2",
+      "imageUrl": "https://www.rmit.edu.au/assets/au/en/profile-images/l/anh-le2.jpeg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-30T11:21:29.715Z",
+      "note": "candidate could not be converted to a local image"
+    },
+    "vp-1699": {
+      "name": "Vuong Thao Tran",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-09-30T11:21:33.729Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1700": {
+      "name": "Lan Nguyen - Monash University",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-09-30T11:21:36.639Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1701": {
+      "name": "Chau Le - University of East Anglia",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-09-30T11:21:38.261Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1702": {
+      "name": "Thanh Ngo - East Carolina University",
+      "outcome": "needs_review",
+      "pageUrl": "https://business.ecu.edu/?p=13518",
+      "imageUrl": "https://business.ecu.edu/wp-content/themes/gangplank/images/ECU_lockup_primary_White.svg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-09-30T11:21:40.196Z",
+      "note": "candidate requires visual review before acceptance"
+    },
+    "vp-1703": {
+      "name": "Giang Hoang",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-09-30T11:21:40.942Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     }
   }
 }
