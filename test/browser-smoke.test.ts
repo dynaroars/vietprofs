@@ -408,7 +408,6 @@ test('mobile pages avoid horizontal overflow and provide usable tap targets', as
         { key: 'profiles', label: 'Professor profiles', pageViews: 20, pct: 28.6 },
         { key: 'submit', label: 'Submit / update', pageViews: 3, pct: 4.3 },
         { key: 'statistics', label: 'Statistics', pageViews: 2, pct: 2.9 },
-        { key: 'insights-health', label: 'Insights / health', pageViews: 0, pct: 0 },
         { key: 'other', label: 'Other', pageViews: 5, pct: 7.1 },
       ],
       categoryTotal: 70,

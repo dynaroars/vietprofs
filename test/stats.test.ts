@@ -84,7 +84,7 @@ test('live analytics uses bot-filtered account RUM, complete-day averages, norma
     assert.equal(data.countries[1].name, 'Ukraine');
     assert.match(data.countries[2].name, /Unknown location/);
     assert.deepEqual(Object.fromEntries(data.categories.map((row: any) => [row.key, row.pageViews])), {
-      directory: 30, profiles: 15, submit: 5, statistics: 4, 'insights-health': 0, other: 6,
+      directory: 30, profiles: 15, submit: 5, statistics: 4, other: 6,
     });
     assert.equal(data.categoryTotal, 60);
     assert.equal(data.categories.reduce((total: number, row: any) => total + row.pageViews, 0), data.categoryTotal);

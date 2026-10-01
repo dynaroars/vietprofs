@@ -136,13 +136,9 @@ function renderCountries(data: BrowserStatsResponse): string {
 
 function renderCategories(data: BrowserStatsResponse): string {
   const total = data.categoryTotal;
-  const rows = data.categories.map(category => {
-    const queryOnly = category.key === 'insights-health';
-    return `<tr><td>${escapeHtml(category.label)}</td><td class="num-col">${queryOnly ? '—' : formatNumber(category.pageViews)}</td><td class="num-col">${queryOnly ? 'Not separable' : `${category.pct.toFixed(1)}%`}</td></tr>`;
-  }).join('');
+  const rows = data.categories.map(category => `<tr><td>${escapeHtml(category.label)}</td><td class="num-col">${formatNumber(category.pageViews)}</td><td class="num-col">${category.pct.toFixed(1)}%</td></tr>`).join('');
   return `<p class="stat-sub">Page categories for ${escapeHtml(formatDate(data.categoryPeriod.startDate))}–${escapeHtml(formatDate(data.categoryPeriod.endDate))}. Cloudflare's path aggregation counted ${formatNumber(total)} browser page views; its independently aggregated daily total may differ slightly.</p>
-    <div class="stats-table-wrapper"><table class="stats-table"><thead><tr><th>Page category</th><th class="num-col">Browser page views</th><th class="num-col">Share</th></tr></thead><tbody>${rows}</tbody></table></div>
-    <p class="stats-footnote">Cloudflare does not retain URL query strings. The current Insights and Health views use <code>?view=…</code>, so their views are included with the main directory and cannot be separated honestly.</p>`;
+    <div class="stats-table-wrapper"><table class="stats-table"><thead><tr><th>Page category</th><th class="num-col">Browser page views</th><th class="num-col">Share</th></tr></thead><tbody>${rows}</tbody></table></div>`;
 }
 
 function renderStats(data: BrowserStatsResponse): string {

@@ -31,7 +31,7 @@ export interface CountryStat {
 }
 
 export interface CategoryStat {
-  key: 'directory' | 'profiles' | 'submit' | 'statistics' | 'insights-health' | 'other';
+  key: 'directory' | 'profiles' | 'submit' | 'statistics' | 'other';
   label: string;
   pageViews: number;
   pct: number;
@@ -83,7 +83,6 @@ const CATEGORY_DEFINITIONS: Array<Pick<CategoryStat, 'key' | 'label'>> = [
   { key: 'profiles', label: 'Professor profiles' },
   { key: 'submit', label: 'Submit / update' },
   { key: 'statistics', label: 'Statistics' },
-  { key: 'insights-health', label: 'Insights / health' },
   { key: 'other', label: 'Other' },
 ];
 
@@ -124,7 +123,6 @@ export function categoryForPath(rawPath: string): CategoryStat['key'] {
   if (/^\/people\/[^/]+\.html$/.test(path)) return 'profiles';
   if (path === '/submit.html') return 'submit';
   if (path === '/stats.html') return 'statistics';
-  if (path === '/insights.html' || path === '/health.html') return 'insights-health';
   return 'other';
 }
 
@@ -261,7 +259,7 @@ function demoResponse(now = new Date()): BrowserStatsResponse {
   const total = sum(last7.map(row => row.pageViews || 0));
   const fixedCategories: Array<[CategoryStat['key'], string, number]> = [
     ['directory', 'Main directory', 72], ['profiles', 'Professor profiles', 50], ['submit', 'Submit / update', 8],
-    ['statistics', 'Statistics', 6], ['insights-health', 'Insights / health', 0], ['other', 'Other', Math.max(0, total - 136)],
+    ['statistics', 'Statistics', 6], ['other', 'Other', Math.max(0, total - 136)],
   ];
   const categories = fixedCategories.map(([key, label, pageViews]) => ({ key, label, pageViews, pct: total ? Math.round(pageViews / total * 1000) / 10 : 0 }));
   const visits = sum(last7.map(row => row.visits || 0));
