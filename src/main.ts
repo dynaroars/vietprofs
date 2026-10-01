@@ -1476,7 +1476,7 @@ async function init() {
     : `${rosterStats.total.toLocaleString('en-US')} Tracked Profiles`;
 
   type Example = {
-    type: 'search' | 'field' | 'track' | 'loc' | 'fact' | 'health' | 'stats';
+    type: 'search' | 'field' | 'track' | 'loc' | 'fact' | 'health' | 'stats' | 'connections';
     value: string;
     label?: string;
     icon?: string;
@@ -1486,11 +1486,13 @@ async function init() {
   const coreExamples: Example[] = [
     { type: 'health' as const, value: 'Dataset Health', label: abbreviateInsightText(randomHealthMetric), icon: '💚' },
     { type: 'stats' as const, value: 'Visitor Traffic', label: abbreviateInsightText(randomTrafficMetric), icon: '📈' },
+    ...(relationshipDatabase?.relationships.length
+      ? [{ type: 'connections' as const, value: 'Academic Connections', label: `${relationshipDatabase.relationships.length.toLocaleString('en-US')} Verified Connections`, icon: '🔗' }]
+      : []),
     { type: 'fact' as const, value: 'Diaspora Insights', label: shortFact, icon: '💡' },
   ];
 
   const categoryExamples: Example[] = shuffle([
-    ...pickRandomUnique(roster.map((person) => displayName(person.name)), 1).map((value) => ({ type: 'search' as const, value, label: value, icon: '👤' })),
     ...pickRandomUnique(populatedFields, 1).map((value) => ({ type: 'field' as const, value, label: abbreviateInsightText(fieldDropdownLabel(value)), icon: '🔬' })),
     ...pickRandomUnique(TRACKS.filter((track) => roster.some((person) => person.track === track)), 1).map((value) => ({ type: 'track' as const, value, label: value, icon: '🎓' })),
     ...pickRandomUnique(populatedLocations, 1).map((value) => ({ type: 'loc' as const, value, label: value, icon: '📍' })),
@@ -1509,6 +1511,7 @@ async function init() {
     const chipTypeClass = ex.type === 'fact' ? ' insight-chip'
       : ex.type === 'health' ? ' health-chip'
       : ex.type === 'stats' ? ' stats-chip'
+      : ex.type === 'connections' ? ' connections-chip'
       : '';
     button.className = `example-chip${chipTypeClass}`;
     const iconPrefix = ex.icon ? `${ex.icon} ` : '';
@@ -1516,6 +1519,7 @@ async function init() {
     if (ex.type === 'fact') button.dataset.fact = '1';
     if (ex.type === 'health') button.dataset.health = '1';
     if (ex.type === 'stats') button.dataset.stats = '1';
+    if (ex.type === 'connections') button.dataset.connections = '1';
     if (ex.type === 'field') button.dataset.field = ex.value;
     if (ex.type === 'track') button.dataset.track = ex.value;
     if (ex.type === 'loc') button.dataset.loc = ex.value;
@@ -1527,6 +1531,10 @@ async function init() {
     filterState.state = '';
     if (btn.dataset.stats) {
       window.location.href = `${import.meta.env.BASE_URL}stats.html`;
+      return;
+    }
+    if (btn.dataset.connections) {
+      window.location.href = `${import.meta.env.BASE_URL}connections.html`;
       return;
     }
     if (btn.dataset.health) {
