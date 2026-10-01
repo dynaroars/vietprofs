@@ -33,12 +33,22 @@ Adding a person to the roster requires assigning a new immutable `vp-####` ID â€
 higher-stakes, harder-to-reverse action than editing a field on an entry that has already
 passed eligibility review. Because of that:
 
-- **Any change that adds a new roster ID** (a new faculty discovery, a relationship
-  counterparty who isn't in the roster yet, or any other brand-new `public/data.json` entry)
-  must be proposed as a **GitHub Issue**, not a PR, regardless of how strong the supporting
-  evidence is. Do not run `assign-profile-ids -- --apply` or otherwise commit a new ID to a
-  branch for review; describe the candidate (evidence, source URLs, proposed fields) in the
-  Issue and let the repository owner or the audit workflow decide before any ID is assigned.
+- **Standing owner authorization (2026-10-01).** The repository owner authorizes two kinds of
+  session to add and remove roster entries directly, on `main`, without asking again: the
+  scheduled **auditor** (`audit`) and any **owner-run session** the owner has asked to process an
+  Issue, an owner submission, or a pasted candidate. When the audit verifies a New-candidate Issue
+  (the dedup is clean and the eligibility is confirmed live), it adds the entry, runs
+  `assign-profile-ids -- --apply`, stores the portrait, and closes the Issue. When it confirms that
+  someone is gone or no longer eligible, it retires the id (`maintenance/retired-ids.json`). Tests,
+  build, and `git diff --check` must pass first. An entry with protected `directFields` is never
+  removed by automation; that conflict goes to an Issue.
+- **All other producers** (`discover`, `honors`, `links`, `portraits`, `relationships`) never
+  assign an id. For them, **any change that adds a new roster ID** (a new faculty discovery, a
+  relationship counterparty who isn't in the roster yet, or any other brand-new
+  `public/data.json` entry) must be proposed as a **GitHub Issue**, not a PR, regardless of how
+  strong the supporting evidence is. Do not run `assign-profile-ids -- --apply` or otherwise commit
+  a new ID to a branch for review; describe the candidate (evidence, source URLs, proposed fields)
+  in the Issue and let the auditor or the owner add it.
 - **A person already on the roster is never a new ID**, even at a new institution, under a
   different name order, or after an earlier removal. Run `npm run find-roster-matches` with the
   name and every identity URL before proposing anyone; a hit at another institution is usually a
