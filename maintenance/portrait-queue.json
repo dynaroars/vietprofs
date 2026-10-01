@@ -817,10 +817,9 @@
     "university": "University of Florida",
     "profileUrl": "https://ufhealthjax.org/pharmacy-residency/faculty",
     "batch": 4,
-    "status": "fetched",
-    "note": "portrait present in roster",
-    "recoveryBatch": 4,
-    "portraitSource": "https://ufhealthjax.org/assets/images/pages/_1000x667_crop_center-center_line/Pharmacy-Residency-Program.jpg"
+    "status": "unresolved",
+    "note": "stored image was a hospital group photo from the residency program page, not the person",
+    "recoveryBatch": 4
   },
   {
     "id": "vp-0880",
@@ -3349,10 +3348,9 @@
     "university": "University of Warwick",
     "profileUrl": "https://warwick.ac.uk/fac/sci/wmg/",
     "batch": 18,
-    "status": "fetched",
-    "note": "The operation was aborted due to timeout",
-    "recoveryBatch": 14,
-    "portraitSource": "https://warwick.ac.uk/fac/sci/wmg/dfs_image.jpg"
+    "status": "unresolved",
+    "note": "stored image was a generic WMG group photo, not the person; profileUrl is the department page, so no personal headshot found",
+    "recoveryBatch": 14
   },
   {
     "id": "vp-1262",
