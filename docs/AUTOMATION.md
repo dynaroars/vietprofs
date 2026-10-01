@@ -173,15 +173,23 @@ Follow `TASKS/AUDIT_ISSUES_PRS.md`, including "Independent review". Also read
 - New-candidate Issues: re-run the dedup (`npm run find-roster-matches` with the name and every
   identity URL in the Issue) against current `public/data.json`. If it hits the same person
   (often at a former institution), update that entry in place and close the Issue with its id; a
-  retired-id hit gets its original id back. Otherwise re-verify eligibility live and hand it to the
-  owner: comment `## Audit <date>: verified, ready for owner` with the evidence and a ready-to-paste
-  entry (no `id`), and leave the Issue open. If the verified official profile page shows a clear
-  single-person headshot, put its direct image URL in the entry as `portraitSource` and name the
-  page; the owner's local add downloads and converts it (`TASKS/fetch_portraits.md`), so the
-  entry doesn't wait weeks in the `portraits` queue. Don't add the entry or run `assign-profile-ids`: the
-  cloud permission check denies adding a new person to `public/data.json`, even on an `audit-fix`
-  branch. The owner adds it from a local session, which assigns the id and closes the Issue. A
-  moved-person or retired-id hit is an edit, not a new entry, so it still goes in the fix PR.
+  retired-id hit gets its original id back. Otherwise re-verify eligibility live. Under the standing
+  owner authorization in `AGENTS.md` ("New entries vs. edits"), a verified candidate is added by
+  the auditor itself: add the entry (no `id`) to `public/data.json` on the run's `audit-fix` branch,
+  run `npm run assign-profile-ids -- --apply`, and store the portrait if the verified official
+  profile page shows a clear single-person headshot (validate with `identify`, convert to WebP in
+  `public/portraits/`, set `portrait` and `portraitSource`; `TASKS/fetch_portraits.md`). Give the
+  commit its own `Closes #n` line and comment on the Issue with the new id and the evidence. If the
+  cloud permission check still denies the add, comment `## Audit <date>: verified, ready for owner`
+  with the evidence and a ready-to-paste entry (no `id`), leave the Issue open, and report the exact
+  denial in the Sunday health Issue. A moved-person or retired-id hit is an edit, not a new entry,
+  so it goes in the fix PR as before.
+- Removals: when live evidence confirms that a person is gone or no longer eligible (left academia,
+  now visiting or postdoc, deceased), the auditor retires the id in the fix PR instead of leaving
+  the Issue for the owner: delete the entry and its portrait, and add a row to
+  `maintenance/retired-ids.json` (`replacedBy: null`, with the reason and source). The official page
+  outranks a personal homepage. An entry with protected `directFields` is never removed by
+  automation; that conflict goes to the owner.
 - Side-finding and other correction Issues: verify live. If confirmed, fix, validate, and put it
   in the run's fix PR with what changed and the source. If the evidence is wrong, close with the
   reason. Duplicates: keep the older (lower) id, even if the newer entry is richer or has protected
@@ -221,7 +229,8 @@ Follow `TASKS/AUDIT_ISSUES_PRS.md`, including "Independent review". Also read
   5. Verified work never applied: open Issues where an earlier audit comment says a verified fix
      couldn't be applied (permission denied, push rejected, tool failure). Apply it now within the
      caps; if it fails again, report the exact error. That is an automation failure, not an owner
-     decision. New candidates marked "ready for owner" are not failures; list any older than 7
+     decision. New candidates marked "ready for owner" mean the permission check denied the add;
+     report the denial, and list any older than 7
      days so the owner can add them.
   6. Empty runs: a producer whose last two runs changed no roster data (PRs touching only
      `maintenance/` files, "no new candidates found", or nothing filed). Say the likely reason:
