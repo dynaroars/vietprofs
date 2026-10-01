@@ -269,6 +269,12 @@ show:
   longer eligible (left academia, retired without an emeritus title, now a postdoc or visiting)
   isn't removed by this routine; file a `Review stale institution:` or `Review possible eligibility
   issue:` side finding with the evidence.
+- **Website:** for batch entries with no `websiteUrl`, run
+  `npm run harvest-websites -- --ids=<the batch's ids>`. It reads each official profile, keeps links
+  labeled website/homepage/lab/group, follows redirects, and requires the destination to name the
+  person. Store a HIGH candidate after opening it (a lab or personal site, not a clinic, a
+  department, an institute, or a colleague's page); MEDIUM is a lead only. Candidates are written to
+  `maintenance/website-candidates.json`; don't commit that file from a batch PR.
 - **Links:** check the stored `profileUrl` and `websiteUrl`, and fill a missing Scholar or LinkedIn
   only on a strict identity match (never name alone; `npm test` rejects a Scholar or LinkedIn URL
   shared by two entries). LinkedIn blocks fetches; verify it from the search index as described in
