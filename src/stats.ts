@@ -39,10 +39,10 @@ function formatNumber(value: number | null): string {
   return value === null ? '—' : new Intl.NumberFormat('en-US', { maximumFractionDigits: 1 }).format(value);
 }
 
-function formatDate(value: string | null, withYear = true): string {
+function formatDate(value: string | null, withYear = true, withWeekday = false): string {
   if (!value) return 'Not available';
   const date = new Date(`${value}T00:00:00Z`);
-  return new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', year: withYear ? 'numeric' : undefined, timeZone: 'UTC' }).format(date);
+  return new Intl.DateTimeFormat('en-US', { weekday: withWeekday ? 'short' : undefined, month: 'short', day: 'numeric', year: withYear ? 'numeric' : undefined, timeZone: 'UTC' }).format(date);
 }
 
 function formatTimestamp(value: string): string {
@@ -122,7 +122,7 @@ function renderDailyTable(daily: DailyBrowserStat[]): string {
   return `<details class="stats-secondary-details"><summary><strong>View day-by-day browser traffic</strong></summary>
     <div class="stats-table-wrapper"><table class="stats-table"><thead><tr><th>Date (UTC)</th><th class="num-col">Page views</th><th class="num-col">Browser visits</th><th>Status</th></tr></thead>
     <tbody>${[...daily].reverse().map(row => `<tr class="${row.status === 'partial' ? 'partial-row' : ''}">
-      <td><strong>${escapeHtml(formatDate(row.date))}</strong></td><td class="num-col">${formatNumber(row.pageViews)}</td><td class="num-col">${formatNumber(row.visits)}</td>
+      <td><strong>${escapeHtml(formatDate(row.date, true, true))}</strong></td><td class="num-col">${formatNumber(row.pageViews)}</td><td class="num-col">${formatNumber(row.visits)}</td>
       <td>${row.status === 'partial' ? 'In progress' : row.status === 'missing' ? 'Not collected' : 'Complete'}</td></tr>`).join('')}</tbody></table></div>
   </details>`;
 }
