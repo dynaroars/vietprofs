@@ -979,7 +979,7 @@ function matchesRelationshipScope(person: RosterEntry, query: string, database?:
   );
   if (!query.trim()) return connected.length > 0;
   const normalized = query.replace(/[^a-z0-9]/gi, '').toLowerCase();
-  if (['mentor', 'advise', 'advisor', 'mentoradvise'].includes(normalized)) {
+  if (['mentor', 'mentorship', 'advise', 'advisor', 'mentoradvise'].includes(normalized)) {
     return connected.some((relationship) =>
       relationship.type === 'doctoral-advisor'
       || relationship.type === 'masters-advisor'
