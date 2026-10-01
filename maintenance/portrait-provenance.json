@@ -2928,6 +2928,91 @@
       ],
       "retrievedAt": "2026-09-30T03:11:46.438Z",
       "note": "Replaced a wrong-person image (source Wong-KS.jpg) after visual comparison with the official Curtin Malaysia dean-appointment photo; cropped to head and shoulders (Issue #244)."
+    },
+    "vp-0875": {
+      "name": "Cam-Tu Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-01T10:08:31.663Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1261": {
+      "name": "Dinh Quang Truong",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-01T10:08:32.961Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1684": {
+      "name": "Trung Vu",
+      "outcome": "found",
+      "pageUrl": "https://www.lboro.ac.uk/schools/business-school/our-people/trung-vu/",
+      "imageUrl": "https://www.lboro.ac.uk/media/media/schoolanddepartments/business-school/images/staff/trung-vu.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-01T10:08:49.509Z"
+    },
+    "vp-1690": {
+      "name": "Vu Dinh",
+      "outcome": "found",
+      "pageUrl": "https://www.udel.edu/academics/colleges/cas/units/departments/mathematical-sciences/our-people/vu-dinh/",
+      "imageUrl": "https://www.udel.edu/referenced-components/cas/math-faculty/_jcr_content/par_udel_panel/columngenerator_179624381/par/staff.coreimg.png/1728504083660/vu-dinh.png",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-01T10:08:50.382Z"
+    },
+    "vp-1696": {
+      "name": "Tung T. Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://www.elmhurst.edu/academics/departments/mathematics/faculty/",
+      "imageUrl": "https://www.elmhurst.edu/wp-content/uploads/2026/02/Tung-Nguyen-Headshot-Cropped-Resized.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-01T10:08:51.111Z"
+    },
+    "vp-1698": {
+      "name": "Anh Le - RMIT University",
+      "outcome": "found",
+      "pageUrl": "https://www.rmit.edu.au/profiles/l/anh-le2",
+      "imageUrl": "https://www.rmit.edu.au/assets/au/en/profile-images/l/anh-le2.jpeg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-01T10:08:53.039Z"
+    },
+    "vp-1703": {
+      "name": "Giang Hoang",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-01T10:08:55.731Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     }
   }
 }

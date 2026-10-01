@@ -113,6 +113,15 @@ async function archiveImage(bytes: Buffer, output: string): Promise<void> {
   // ImageMagick 6 (cloud sandbox) has `convert` but no `magick`.
   try { await execFileAsync('magick', args).catch((error: NodeJS.ErrnoException) => { if (error.code !== 'ENOENT') throw error; return execFileAsync('convert', args); }); } finally { await unlink(input).catch(() => undefined); }
 }
+// Exactly one dominant face (scripts/portrait_faces.py). Aspect and skin-tone checks cannot tell a
+// headshot from a lab group photo, a building, or a logo; this can. Needs opencv-python-headless.
+const faceCheckPython = process.env.PORTRAIT_PYTHON ?? 'python3';
+async function faceCheckAvailable(): Promise<boolean> {
+  try { await execFileAsync(faceCheckPython, ['-c', 'import cv2, numpy, PIL']); return true; } catch { return false; }
+}
+async function faceVerdict(file: string): Promise<{ verdict: string; faces: number; error?: string }> {
+  try { const { stdout } = await execFileAsync(faceCheckPython, [join(root, 'scripts/portrait_faces.py'), file]); return JSON.parse(stdout.trim().split('\n')[0]); } catch (error) { return { verdict: 'error', faces: 0, error: String(error).slice(0, 120) }; }
+}
 async function isPortraitLike(output: string): Promise<boolean> {
   try { const { stdout } = await execFileAsync('identify', ['-format', '%w %h', output]); const [width, height] = stdout.trim().split(/\s+/).map(Number); return width >= 120 && height >= 120 && width / height >= 0.7 && width / height <= 1.55; } catch { return false; }
 }
@@ -171,6 +180,7 @@ const selectedIds = audit
   : explicitIds ?? (nextCount > 0 ? nextIds(queue, ledger, nextCount) : null) ?? new Set(queue.filter((item) => item.batch === requestedBatch && (item.status === 'pending' || (retry && item.status === 'unresolved'))).map((item) => item.id));
 const selected = people.filter((person) => selectedIds.has(person.id) && (!person.portrait || replaceExisting || audit));
 await mkdir(portraitsDir, { recursive: true });
+if (applying && !(await faceCheckAvailable())) throw new Error(`face check unavailable: run 'pip install opencv-python-headless pillow numpy' (or set PORTRAIT_PYTHON to a Python that has them); refusing to store portraits unchecked`);
 const report: Array<Record<string, unknown>> = [];
 for (const person of selected) {
   const protectedPortrait = person.directFields?.includes('portrait') || person.directFields?.includes('portraitSource');
@@ -197,6 +207,14 @@ for (const person of selected) {
     continue;
   }
   if (!(await isPortraitLike(temporary))) { await unlink(temporary).catch(() => undefined); ledger.entries[person.id] = { ...entry, outcome: 'not_found', note: 'candidate failed 120x120 or portrait-aspect validation' }; report.push({ id: person.id, name: person.name, result: 'not_found', source: candidate.page.sourceType, confidence: level }); continue; }
+  const face = await faceVerdict(temporary);
+  if (face.verdict !== 'ok') {
+    await unlink(temporary).catch(() => undefined);
+    ledger.entries[person.id] = { ...entry, outcome: 'not_found', note: `candidate failed face check: ${face.verdict} (${face.faces} faces)${face.error ? ` ${face.error}` : ''}` };
+    const queued = queue.find((item) => item.id === person.id); if (queued) queued.status = 'unresolved';
+    report.push({ id: person.id, name: person.name, result: 'not_found', source: candidate.page.sourceType, confidence: level, faceCheck: face.verdict });
+    continue;
+  }
   await rename(temporary, output);
   person.portrait = portrait; person.portraitSource = candidate.imageUrl; ledger.entries[person.id] = entry;
   const item = queue.find((queued) => queued.id === person.id);
