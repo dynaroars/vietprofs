@@ -291,9 +291,15 @@ interface HubConfig {
   region?: string;
 }
 
+const COUNTRIES_WITH_ARTICLE = new Set(['United States', 'United Kingdom', 'Netherlands', 'Philippines', 'Czech Republic', 'United Arab Emirates']);
+
+function withArticle(region: string) {
+  return COUNTRIES_WITH_ARTICLE.has(region) ? `the ${region}` : region;
+}
+
 function categoryHubPage(config: HubConfig) {
   const canonicalUrl = absoluteUrl(config.canonicalPath);
-  const title = `${config.categoryTitle} — VietProfs`;
+  const title = `${config.categoryTitle} (${config.people.length}) — VietProfs`;
   const ogImage = absoluteUrl('vietprofs-bamboo-v-512.png');
   const ogImageAlt = 'VietProfs bamboo V logo';
   const sectionLabel = 'VIETPROFS(HUB)';
@@ -324,24 +330,11 @@ function categoryHubPage(config: HubConfig) {
       {
         '@type': 'BreadcrumbList',
         itemListElement: [
-          {
-            '@type': 'ListItem',
-            position: 1,
-            name: 'VietProfs',
-            item: `${siteUrl}/`,
-          },
-          {
-            '@type': 'ListItem',
-            position: 2,
-            name: config.categoryType === 'Discipline' ? 'Disciplines' : 'Regions',
-            item: `${siteUrl}/`,
-          },
-          {
-            '@type': 'ListItem',
-            position: 3,
-            name: config.categoryName,
-            item: canonicalUrl,
-          },
+          { '@type': 'ListItem', position: 1, name: 'VietProfs', item: `${siteUrl}/` },
+          // Intersection hubs sit under their discipline hub; other hubs have no intermediate
+          // page, so they hang directly off the home page.
+          ...(config.field ? [{ '@type': 'ListItem', position: 2, name: config.field, item: absoluteUrl(fieldPath(config.field)) }] : []),
+          { '@type': 'ListItem', position: config.field ? 3 : 2, name: config.categoryName, item: canonicalUrl },
         ],
       },
     ],
@@ -494,7 +487,7 @@ async function main() {
     return {
       categoryType: 'Discipline' as const,
       categoryName: field,
-      categoryTitle: `${field} Faculty`,
+      categoryTitle: `Vietnamese ${field} Professors`,
       categorySubtitle: `Vietnamese Professors & Scholars in ${field}`,
       description: `Directory of ${people.length} Vietnamese and Vietnamese-diaspora professors in ${field} across universities worldwide.`,
       people,
@@ -517,7 +510,7 @@ async function main() {
     return {
       categoryType: 'Region' as const,
       categoryName: continent,
-      categoryTitle: `Faculty in ${continent}`,
+      categoryTitle: `Vietnamese Professors in ${continent}`,
       categorySubtitle: `Vietnamese Academic Diaspora in ${continent}`,
       description: `Directory of ${people.length} Vietnamese and Vietnamese-diaspora professors teaching and researching across ${continent}.`,
       people,
@@ -539,9 +532,9 @@ async function main() {
     return {
       categoryType: 'Region' as const,
       categoryName: country,
-      categoryTitle: `Faculty in ${country}`,
-      categorySubtitle: `Vietnamese Academic Diaspora in ${country}`,
-      description: `Directory of ${people.length} Vietnamese and Vietnamese-diaspora professors at universities in ${country}.`,
+      categoryTitle: `Vietnamese Professors in ${withArticle(country)}`,
+      categorySubtitle: `Vietnamese Academic Diaspora in ${withArticle(country)}`,
+      description: `Directory of ${people.length} Vietnamese and Vietnamese-diaspora professors at universities in ${withArticle(country)}.`,
       people,
       canonicalPath: regionPath(country),
       interactiveUrl: `index.html?loc=${encodeURIComponent(country === 'United States' ? 'US' : country)}`,
@@ -573,9 +566,9 @@ async function main() {
       return [{
         categoryType: 'Discipline × Region' as const,
         categoryName: `${field} in ${region}`,
-        categoryTitle: `${field} Faculty in ${region}`,
-        categorySubtitle: `Vietnamese Professors & Scholars in ${field} in ${region}`,
-        description: `Directory of ${people.length} Vietnamese and Vietnamese-diaspora professors in ${field} at universities and eligible research institutions in ${region}.`,
+        categoryTitle: `Vietnamese ${field} Professors in ${withArticle(region)}`,
+        categorySubtitle: `Vietnamese Professors & Scholars in ${field} in ${withArticle(region)}`,
+        description: `Directory of ${people.length} Vietnamese and Vietnamese-diaspora professors in ${field} at universities and eligible research institutions in ${withArticle(region)}.`,
         people,
         canonicalPath: fieldRegionPath(field, region),
         interactiveUrl: `index.html?field=${encodeURIComponent(field)}&loc=${encodeURIComponent(region === 'United States' ? 'US' : region)}`,
