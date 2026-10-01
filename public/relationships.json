@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-28T06:59:56.533Z",
+  "updatedAt": "2026-10-01T14:12:08.000Z",
   "relationships": [
     {
       "id": "rel-coauthor-vp-0015-vp-0018",
@@ -2204,6 +2204,139 @@
         }
       ],
       "verifiedAt": "2026-09-28T06:59:56.533Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-0543-vp-0567",
+      "type": "coauthor",
+      "sourceId": "vp-0543",
+      "targetId": "vp-0567",
+      "sources": [
+        "https://doi.org/10.1109/tgcn.2017.2770215",
+        "https://doi.org/10.1109/tcomm.2021.3097718",
+        "https://doi.org/10.1109/twc.2022.3148531",
+        "https://doi.org/10.1109/lcomm.2022.3207092",
+        "https://doi.org/10.1109/jstsp.2025.3579644"
+      ],
+      "evidence": "Le-Nam Tran (vp-0543, UCD, ORCID 0000-0002-9317-9980) and Hien Quoc Ngo (vp-0567, Queen's University Belfast, ORCID 0000-0002-3367-2220) are identity-resolved via ORCIDs in Crossref author records, matching affiliations, and the shared cell-free massive MIMO topic. Five retained works list both as authors (small author lists, no consortium papers).",
+      "works": [
+        {
+          "identifier": "doi:10.1109/tgcn.2017.2770215",
+          "title": "On the Total Energy Efficiency of Cell-Free Massive MIMO",
+          "date": "2018",
+          "url": "https://doi.org/10.1109/tgcn.2017.2770215"
+        },
+        {
+          "identifier": "doi:10.1109/tcomm.2021.3097718",
+          "title": "Utility Maximization for Large-Scale Cell-Free Massive MIMO Downlink",
+          "date": "2021",
+          "url": "https://doi.org/10.1109/tcomm.2021.3097718"
+        },
+        {
+          "identifier": "doi:10.1109/twc.2022.3148531",
+          "title": "Energy Efficiency Maximization in Large-Scale Cell-Free Massive MIMO",
+          "date": "2022",
+          "url": "https://doi.org/10.1109/twc.2022.3148531"
+        },
+        {
+          "identifier": "doi:10.1109/lcomm.2022.3207092",
+          "title": "Mirror Prox Algorithm for Large-Scale Cell-Free Massive MIMO Uplink Power Control",
+          "date": "2022",
+          "url": "https://doi.org/10.1109/lcomm.2022.3207092"
+        },
+        {
+          "identifier": "doi:10.1109/jstsp.2025.3579644",
+          "title": "Variational Bayesian Channel Estimation and Data Detection for Cell-Free Massive MIMO",
+          "date": "2025",
+          "url": "https://doi.org/10.1109/jstsp.2025.3579644"
+        }
+      ],
+      "verifiedAt": "2026-10-01T14:12:08.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-0543-vp-0840",
+      "type": "coauthor",
+      "sourceId": "vp-0543",
+      "targetId": "vp-0840",
+      "sources": [
+        "https://doi.org/10.1109/jiot.2026.3665108",
+        "https://doi.org/10.1109/tai.2025.3631005"
+      ],
+      "evidence": "Le-Nam Tran (vp-0543, ORCID 0000-0002-9317-9980) and Van-Dinh Nguyen (vp-0840, Trinity College Dublin, ORCID 0000-0002-9575-1063) are identity-resolved via ORCIDs in Crossref records and matching UCD/TCD affiliations. Two retained works list both as authors.",
+      "works": [
+        {
+          "identifier": "doi:10.1109/jiot.2026.3665108",
+          "title": "Deadline-Aware Task Offloading With Concurrency in Serverless Edge Computing",
+          "date": "2026",
+          "url": "https://doi.org/10.1109/jiot.2026.3665108"
+        },
+        {
+          "identifier": "doi:10.1109/tai.2025.3631005",
+          "title": "Multimodal Human Pose Estimation: A Wi-Fi-Driven Approach With Adaptive Kernel Selection",
+          "date": "2026",
+          "url": "https://doi.org/10.1109/tai.2025.3631005"
+        }
+      ],
+      "verifiedAt": "2026-10-01T14:12:08.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-0543-vp-0707",
+      "type": "coauthor",
+      "sourceId": "vp-0543",
+      "targetId": "vp-0707",
+      "sources": [
+        "https://doi.org/10.1109/jstsp.2025.3579644",
+        "https://doi.org/10.1109/iccworkshops63917.2026.11586471"
+      ],
+      "evidence": "Le-Nam Tran (vp-0543, ORCID 0000-0002-9317-9980) and Duy H. N. Nguyen (vp-0707, San Diego State University, ORCID 0000-0002-1412-1175) are identity-resolved via ORCID in the Crossref record and matching affiliations on both works. Two retained works list both as authors.",
+      "works": [
+        {
+          "identifier": "doi:10.1109/jstsp.2025.3579644",
+          "title": "Variational Bayesian Channel Estimation and Data Detection for Cell-Free Massive MIMO",
+          "date": "2025",
+          "url": "https://doi.org/10.1109/jstsp.2025.3579644"
+        },
+        {
+          "identifier": "doi:10.1109/iccworkshops63917.2026.11586471",
+          "title": "Secure Rate-Splitting and RIS Beamforming with Untrusted Energy Harvesting Receivers",
+          "date": "2026",
+          "url": "https://doi.org/10.1109/iccworkshops63917.2026.11586471"
+        }
+      ],
+      "verifiedAt": "2026-10-01T14:12:08.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-0567-vp-0707",
+      "type": "coauthor",
+      "sourceId": "vp-0567",
+      "targetId": "vp-0707",
+      "sources": [
+        "https://doi.org/10.1109/jstsp.2025.3579644",
+        "https://doi.org/10.1109/iccworkshops63917.2026.11586471"
+      ],
+      "evidence": "Hien Quoc Ngo (vp-0567, ORCID 0000-0002-3367-2220) and Duy H. N. Nguyen (vp-0707, SDSU, ORCID 0000-0002-1412-1175) are identity-resolved via ORCID and matching affiliations on both works. Two retained works list both as authors.",
+      "works": [
+        {
+          "identifier": "doi:10.1109/jstsp.2025.3579644",
+          "title": "Variational Bayesian Channel Estimation and Data Detection for Cell-Free Massive MIMO",
+          "date": "2025",
+          "url": "https://doi.org/10.1109/jstsp.2025.3579644"
+        },
+        {
+          "identifier": "doi:10.1109/iccworkshops63917.2026.11586471",
+          "title": "Secure Rate-Splitting and RIS Beamforming with Untrusted Energy Harvesting Receivers",
+          "date": "2026",
+          "url": "https://doi.org/10.1109/iccworkshops63917.2026.11586471"
+        }
+      ],
+      "verifiedAt": "2026-10-01T14:12:08.000Z",
       "direct": false,
       "notes": ""
     }

@@ -16398,6 +16398,248 @@
         }
       ],
       "completedAt": "2026-09-30T14:40:00.000Z"
+    },
+    {
+      "batchNumber": 71,
+      "rosterIds": [
+        "vp-1706",
+        "vp-1705",
+        "vp-0631",
+        "vp-0630",
+        "vp-0629",
+        "vp-0628",
+        "vp-0627",
+        "vp-0546",
+        "vp-0545",
+        "vp-0544",
+        "vp-0543",
+        "vp-0542",
+        "vp-0541",
+        "vp-0540",
+        "vp-0539",
+        "vp-0538",
+        "vp-0537",
+        "vp-0536",
+        "vp-0535",
+        "vp-0534"
+      ],
+      "startedAt": "2026-10-01T14:12:08.000Z",
+      "status": "complete",
+      "outcomes": [
+        {
+          "rosterId": "vp-1706",
+          "sources": [
+            "https://www.csueastbay.edu/directory/profiles/epsy/tranoanh.html",
+            "https://www.csueastbay.edu/school-psychology/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No advisor information within bounded sources; no qualifying shared works with roster peers found.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-1705",
+          "sources": [
+            "https://www.depaul.edu/faculty/susan-tran",
+            "https://pediatricchilllab.com/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No advisor information within bounded sources; no qualifying shared works with roster peers found.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0631",
+          "sources": [
+            "https://www.inalco.fr/annuaire-enseignement-recherche/doan-cam-thi"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No advisor information within bounded sources; no qualifying shared works with roster peers found.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0630",
+          "sources": [
+            "https://faculty.essec.edu/en/cv/nguyen-liem/pdf"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No advisor information within bounded sources; no qualifying shared works with roster peers found.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0629",
+          "sources": [
+            "https://www.gemtex.fr/gemtex-members/phuc-tran/",
+            "https://sites.google.com/view/kim-phuc-tran"
+          ],
+          "relationshipIds": [],
+          "nextAction": "Site lists thesis topics (Nantes PhD) but names no advisor; one shared work with vp-0675 only.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0628",
+          "sources": [
+            "https://sites.google.com/site/ngocthachdinh/home",
+            "https://cedric.cnam.fr/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "Site gives no named PhD advisor; coauthor check vs vp-0632 found 1 shared work only (below 2).",
+          "status": "excluded",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0627",
+          "sources": [
+            "https://webusers.i3s.unice.fr/~tpnguyen/index.html"
+          ],
+          "relationshipIds": [],
+          "nextAction": "Personal page names PhD supervisor Isabelle Debled-Rennesson (Lorraine); not in roster. One shared work with vp-0607 only.",
+          "status": "excluded",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0546",
+          "sources": [
+            "https://profiles.uts.edu.au/duclong.nghiem"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No advisor information within bounded sources; no qualifying shared works with roster peers found.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0545",
+          "sources": [
+            "https://www.mcgill.ca/newsroom/van-thanh-van-nguyen"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No advisor information within bounded sources; no qualifying shared works with roster peers found.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0544",
+          "sources": [
+            "https://www.tudelft.nl/en/staff/n.a.k.doan",
+            "https://sites.google.com/view/anh-khoa-doan/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No advisor information within bounded sources; no qualifying shared works with roster peers found.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0543",
+          "sources": [
+            "https://people.ucd.ie/lenam.tran"
+          ],
+          "relationshipIds": [
+            "rel-coauthor-vp-0543-vp-0567",
+            "rel-coauthor-vp-0543-vp-0840",
+            "rel-coauthor-vp-0543-vp-0707"
+          ],
+          "nextAction": "Coauthor edges verified via ORCID-matched Crossref records with vp-0567 (5 works), vp-0840 (2), vp-0707 (2). Also recorded vp-0567/vp-0707 edge. Single-work hits with vp-0808, vp-0621, vp-0516, vp-0548, vp-0841 not recorded. No advisor named.",
+          "status": "completed",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0542",
+          "sources": [
+            "https://www.birmingham.ac.uk/staff/profiles/mechanical/pham-duc"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No advisor information within bounded sources; no qualifying shared works with roster peers found.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0541",
+          "sources": [
+            "https://adelaide.edu.au/people/thuc.le"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No advisor info; one shared work with vp-1110 (name-only), not recorded.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0540",
+          "sources": [
+            "https://www.sydney.edu.au/business/about/our-people/academic-staff/minh-ngoc-tran.html"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No advisor named on profile; single-work Crossref hits with Hoang Nguyen/Ngoc Anh Nguyen entries rejected as name-only matches.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0539",
+          "sources": [
+            "https://findanexpert.unimelb.edu.au/profile/6717-tuan-ngo",
+            "https://eng.unimelb.edu.au/arc-prefabs"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No advisor information; Crossref hits for Tuan Nguyen (NYU, pediatrics) rejected as field mismatch.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0538",
+          "sources": [
+            "https://research.monash.edu/en/persons/ha-hong-bui"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No advisor information; Crossref hits with two Nhu Nguyen roster entries (math/plant science) rejected as field mismatch with geomechanics.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0537",
+          "sources": [
+            "https://findanexpert.unimelb.edu.au/profile/853277-bach-le",
+            "https://xuanbachle.github.io/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "Personal site names PhD advisor David Lo (SMU), postdoc advisor Corina Pasareanu (CMU), BSc advisors Huynh Quyet Thang and Wei Ngan Chin; none in roster (find-roster-matches).",
+          "status": "excluded",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0536",
+          "sources": [
+            "https://www.hkubs.hku.hk/people/tuan-quang-phan/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No advisor information within bounded sources; no qualifying shared works with roster peers found.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0535",
+          "sources": [
+            "https://www.fris.tohoku.ac.jp/en/researcher/creative/lebinho.html"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No advisor info; one shared work each with vp-0932, vp-0933, not recorded.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0534",
+          "sources": [
+            "https://research.cuhk.edu.hk/en/persons/viet-anh-nguyen/",
+            "https://www.vietanhnguyen.net/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No advisor info on profile; Crossref hits vs vp-0097, vp-0461, vp-0213, vp-0752, vp-0851, vp-1530 are single works or ambiguous names, not recorded.",
+          "status": "unresolved",
+          "notes": []
+        }
+      ],
+      "completedAt": "2026-10-01T14:12:08.000Z"
     }
   ],
   "earlyOutcomes": [
