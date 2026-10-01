@@ -109,7 +109,9 @@ async function fetchImage(url: string): Promise<Buffer | null> { try { const byt
 async function archiveImage(bytes: Buffer, output: string): Promise<void> {
   const input = `${output}.source${extname(output) || '.bin'}`;
   await writeFile(input, bytes);
-  try { await execFileAsync('magick', [input, '-auto-orient', '-strip', '-resize', '1200x1200>', '-quality', '86', output]); } finally { await unlink(input).catch(() => undefined); }
+  const args = [input, '-auto-orient', '-strip', '-resize', '1200x1200>', '-quality', '86', output];
+  // ImageMagick 6 (cloud sandbox) has `convert` but no `magick`.
+  try { await execFileAsync('magick', args).catch((error: NodeJS.ErrnoException) => { if (error.code !== 'ENOENT') throw error; return execFileAsync('convert', args); }); } finally { await unlink(input).catch(() => undefined); }
 }
 async function isPortraitLike(output: string): Promise<boolean> {
   try { const { stdout } = await execFileAsync('identify', ['-format', '%w %h', output]); const [width, height] = stdout.trim().split(/\s+/).map(Number); return width >= 120 && height >= 120 && width / height >= 0.7 && width / height <= 1.55; } catch { return false; }
