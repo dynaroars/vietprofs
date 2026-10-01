@@ -276,7 +276,10 @@ show:
   name and university fresh before calling it unfixable.
 - **Portrait:** open the stored portrait and compare it with the official page (see the portrait
   recheck in `ROSTER_MAINTENANCE.md` step 4). Run `npx tsx scripts/find-all-nonhuman-portraits.ts`
-  at the start and handle flagged entries before the id-order rotation. Replace or remove a wrong
+  and `python3 scripts/portrait_faces.py --roster` (`pip install opencv-python-headless pillow numpy`;
+  it prints a verdict per portrait; `multiple` and `none` are almost always a group photo, logo, or
+  building, but look at the image before removing) at the start and handle flagged entries before
+  the id-order rotation. Replace or remove a wrong
   unprotected portrait in the PR; for a protected one file `Likely wrong portrait: <name> (<vp-id>)`.
 - **Honors and degrees** noticed on those pages go in side findings, not this PR.
 
@@ -288,7 +291,9 @@ with no change, so the rotation is visible.
 Playbook: `TASKS/fetch_portraits.md` section 4, exactly. Cap: 2 batches of 10, newest roster
 entries first (`--next=10`; the script queues new entries automatically). Old unresolved entries
 are retried only once every new entry has been attempted. Run
-`pip install pillow numpy` if the analyzer needs it. Open every added image with the Read tool and
+`pip install opencv-python-headless pillow numpy` first: `fetch-portraits.ts --apply` refuses to
+run without OpenCV, because every candidate must pass the one-dominant-face check
+(`scripts/portrait_faces.py`) before it is stored. Open every added image with the Read tool and
 look at it. In the PR body, give each portrait's id, its source page, and one line on why it was
 accepted. Never replace a portrait protected by `directFields`.
 

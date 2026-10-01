@@ -58,6 +58,20 @@ python3 scripts/fast_portrait_analyzer.py
 - **Color Count (`num_colors < 150`):** Flags flat vector graphics and logos.
 - **Color Variance (`stddev < 10.0`):** Flags flat silhouettes and monochrome icons.
 
+### A2. Face Check (`scripts/portrait_faces.py`)
+The statistical analyzer cannot tell a headshot from a lab group photo, a building, or a logo
+that contains some skin tone. The face check can: it runs OpenCV's YuNet detector and reports
+`ok` (one dominant face), `multiple` (a group), `none` (no face: building, logo, scenery, chart),
+or `tiny` (a person lost in a scene). `fetch-portraits.ts --apply` rejects anything but `ok`.
+```bash
+pip install opencv-python-headless pillow numpy       # once per environment
+python3 scripts/portrait_faces.py public/portraits/a.webp ...   # specific images
+python3 scripts/portrait_faces.py --roster                      # every stored portrait (~15 s)
+```
+Locally, `PORTRAIT_PYTHON=/path/to/venv/bin/python` points the scripts at a Python that has OpenCV.
+A non-`ok` verdict means "look at the image", not "delete": the detector can miss a real face
+(profile view, heavy shadow), so confirm visually before removing a portrait.
+
 ### B. Portrait Audit & Cleaning Scripts
 - Find non-human portraits in the roster:
   ```bash
@@ -90,6 +104,7 @@ git checkout main && git pull --ff-only
 npx tsx scripts/fetch-portraits.ts --status        # syncs the queue with the roster; newestPending = what --next picks
 npx tsx scripts/fetch-portraits.ts --next=10 --apply --retry   # newest never-attempted 10 (retries only when none remain); stores HIGH-confidence candidates
 python3 scripts/fast_portrait_analyzer.py          # flags logos, silhouettes, flat graphics
+python3 scripts/portrait_faces.py $(git status --porcelain public/portraits | awk '{print $2}')   # every added image must be `ok`
 ```
 
 Then open every portrait this batch added (`git status --porcelain public/portraits/`) and look at
