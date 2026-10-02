@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-30T14:40:00.000Z",
+  "updatedAt": "2026-10-02T14:05:00.000Z",
   "batches": [
     {
       "batchNumber": 1,
@@ -16640,6 +16640,256 @@
         }
       ],
       "completedAt": "2026-10-01T14:12:08.000Z"
+    },
+    {
+      "batchNumber": 72,
+      "rosterIds": [
+        "vp-0533",
+        "vp-0532",
+        "vp-0531",
+        "vp-0530",
+        "vp-0529",
+        "vp-0528",
+        "vp-0527",
+        "vp-0525",
+        "vp-0524",
+        "vp-0523",
+        "vp-0522",
+        "vp-0521",
+        "vp-0520",
+        "vp-0519",
+        "vp-0518",
+        "vp-0517",
+        "vp-0516",
+        "vp-0515",
+        "vp-0514",
+        "vp-0513"
+      ],
+      "startedAt": "2026-10-02T14:00:00.000Z",
+      "status": "complete",
+      "outcomes": [
+        {
+          "rosterId": "vp-0533",
+          "sources": [
+            "https://www.jaist.ac.jp/~bao/",
+            "https://www.jaist.ac.jp/ks/labs/ho/"
+          ],
+          "relationshipIds": [
+            "rel-coauthor-vp-0532-vp-0533",
+            "rel-coauthor-vp-0533-vp-0843",
+            "rel-coauthor-vp-0533-vp-0928"
+          ],
+          "nextAction": "Coauthor edges recorded via Crossref (JAIST affiliations); no advisor named on official pages.",
+          "status": "completed",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0532",
+          "sources": [
+            "https://www.jaist.ac.jp/is/labs/nguyen-lab/home/"
+          ],
+          "relationshipIds": [
+            "rel-coauthor-vp-0532-vp-0533"
+          ],
+          "nextAction": "Coauthor edges recorded via Crossref (JAIST affiliations); no advisor named on official pages.",
+          "status": "completed",
+          "notes": [
+            "Single shared work with vp-0843 (doi:10.1016/j.csl.2007.11.001) is below the two-work threshold."
+          ]
+        },
+        {
+          "rosterId": "vp-0531",
+          "sources": [
+            "https://www.staff-ksi.pwr.edu.pl/nguyen/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No advisor information within bounded sources; no qualifying shared works with roster peers found.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0530",
+          "sources": [
+            "http://www.quantchem.kuleuven.be/cmms"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No advisor information within bounded sources; no qualifying shared works with roster peers found.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0529",
+          "sources": [
+            "https://www.uva.nl/en/profile/p/h/k.d.pham/k.d.pham.html",
+            "https://www.kevindoanpham.com"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No advisor information within bounded sources; no qualifying shared works with roster peers found.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0528",
+          "sources": [
+            "https://people.epfl.ch/minhquang.tran",
+            "https://spc.epfl.ch/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No advisor information within bounded sources; no qualifying shared works with roster peers found.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0527",
+          "sources": [
+            "https://people.epfl.ch/suong.nguyen",
+            "https://www.epfl.ch/labs/lcps/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No advisor information within bounded sources; no qualifying shared works with roster peers found.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0525",
+          "sources": [
+            "https://lmf.cnrs.fr/Perso/Kn",
+            "https://usr.lmf.cnrs.fr/~kn/index_en.html"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No advisor information within bounded sources; no qualifying shared works with roster peers found.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0524",
+          "sources": [
+            "https://limos.fr/detailperson/353",
+            "https://perso.isima.fr/~vhnguyen/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No advisor information within bounded sources; no qualifying shared works with roster peers found.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0523",
+          "sources": [
+            "https://economix.fr/en/membres/phu-nguyen-van/",
+            "https://sites.google.com/view/nguyen-van/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No advisor information within bounded sources; no qualifying shared works with roster peers found.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0522",
+          "sources": [
+            "https://www.telecom-paris.fr/phan",
+            "https://www.di.ens.fr/users/phan/index.html"
+          ],
+          "relationshipIds": [],
+          "nextAction": "Official page and homepage name PhD supervisor David Pointcheval (ENS); no roster or retired-id match, so out of roster and not recorded.",
+          "status": "excluded",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0521",
+          "sources": [
+            "https://www.math.univ-toulouse.fr/~tienzung/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No advisor information within bounded sources; no qualifying shared works with roster peers found.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0520",
+          "sources": [
+            "https://www.southampton.ac.uk/people/5x5mt5/doctor-phan-vuong"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No advisor information within bounded sources; no qualifying shared works with roster peers found.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0519",
+          "sources": [
+            "https://www.globalhealth.ox.ac.uk/our-researchers/le-van-tan"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No advisor information within bounded sources; no qualifying shared works with roster peers found.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0518",
+          "sources": [
+            "https://faculty.educ.cam.ac.uk/people/staff/dao/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No advisor information within bounded sources; no qualifying shared works with roster peers found.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0517",
+          "sources": [
+            "https://www.wbs.ac.uk/about/person/xuan-doan"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No advisor information within bounded sources; no qualifying shared works with roster peers found.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0516",
+          "sources": [
+            "https://www.mun.ca/engineering/about/our-people/trung-q-duong/",
+            "https://qc3.ca/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No advisor information within bounded sources; no qualifying shared works with roster peers found.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0515",
+          "sources": [
+            "https://profiles.ucl.ac.uk/2135",
+            "https://www.ntk-thanh.co.uk/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No advisor information within bounded sources; no qualifying shared works with roster peers found.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0514",
+          "sources": [
+            "https://www.mcgill.ca/plant/nguyen-huong",
+            "https://hnguyen19.github.io"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No advisor information within bounded sources; no qualifying shared works with roster peers found.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0513",
+          "sources": [
+            "https://uwaterloo.ca/english/people-profiles/vinh-nguyen",
+            "https://vinhnguyen.ca/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No advisor information within bounded sources; no qualifying shared works with roster peers found.",
+          "status": "unresolved",
+          "notes": []
+        }
+      ],
+      "completedAt": "2026-10-02T14:05:00.000Z"
     }
   ],
   "earlyOutcomes": [

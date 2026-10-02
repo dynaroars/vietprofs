@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-01T14:12:08.000Z",
+  "updatedAt": "2026-10-02T14:05:00.000Z",
   "relationships": [
     {
       "id": "rel-coauthor-vp-0015-vp-0018",
@@ -2337,6 +2337,125 @@
         }
       ],
       "verifiedAt": "2026-10-01T14:12:08.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-0532-vp-0533",
+      "type": "coauthor",
+      "sourceId": "vp-0532",
+      "targetId": "vp-0533",
+      "sources": [
+        "https://doi.org/10.1145/1081870.1081906",
+        "https://doi.org/10.1145/1236181.1236187",
+        "https://doi.org/10.3115/1690299.1690301"
+      ],
+      "evidence": "Le Minh Nguyen (vp-0532) and Tu Bao Ho (vp-0533) are both JAIST faculty; Crossref lists both with JAIST affiliations (or on JAIST NLP work by the same group) on three retained works, with 4 to 5 authors each.",
+      "works": [
+        {
+          "identifier": "doi:10.1145/1081870.1081906",
+          "title": "Improving discriminative sequential learning with rare-but-important associations",
+          "date": "2005",
+          "url": "https://doi.org/10.1145/1081870.1081906"
+        },
+        {
+          "identifier": "doi:10.1145/1236181.1236187",
+          "title": "Improving discriminative sequential learning by discovering important association of statistics",
+          "date": "2006",
+          "url": "https://doi.org/10.1145/1236181.1236187"
+        },
+        {
+          "identifier": "doi:10.3115/1690299.1690301",
+          "title": "An empirical study of Vietnamese noun phrase chunking with discriminative sequence models",
+          "date": "2009",
+          "url": "https://doi.org/10.3115/1690299.1690301"
+        }
+      ],
+      "verifiedAt": "2026-10-02T14:05:00.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-0533-vp-0843",
+      "type": "coauthor",
+      "sourceId": "vp-0533",
+      "targetId": "vp-0843",
+      "sources": [
+        "https://doi.org/10.1007/3-540-44967-1_26",
+        "https://doi.org/10.1007/978-3-540-30502-6_8",
+        "https://doi.org/10.1007/11548669_39",
+        "https://doi.org/10.1007/11908029_32",
+        "https://doi.org/10.1007/s10700-007-9011-0"
+      ],
+      "evidence": "Tu Bao Ho (vp-0533) and Van-Nam Huynh (vp-0843) are both JAIST faculty (the roster's JAIST entries for both are on the official JAIST site); Crossref lists both as authors, with 3 to 4 authors each, on five retained works from 2003 to 2007 in JAIST knowledge-science and fuzzy/rough-set research.",
+      "works": [
+        {
+          "identifier": "doi:10.1007/3-540-44967-1_26",
+          "title": "Fuzziness and Uncertainty within the Framework of Context Model",
+          "date": "2003",
+          "url": "https://doi.org/10.1007/3-540-44967-1_26"
+        },
+        {
+          "identifier": "doi:10.1007/978-3-540-30502-6_8",
+          "title": "Assessment Aggregation in the Evidential Reasoning Approach to MADM Under Uncertainty",
+          "date": "2004",
+          "url": "https://doi.org/10.1007/978-3-540-30502-6_8"
+        },
+        {
+          "identifier": "doi:10.1007/11548669_39",
+          "title": "An Extension of Rough Approximation Quality to Fuzzy Classification",
+          "date": "2005",
+          "url": "https://doi.org/10.1007/11548669_39"
+        },
+        {
+          "identifier": "doi:10.1007/11908029_32",
+          "title": "Utility Function Induced by Fuzzy Target in Probabilistic Decision Making",
+          "date": "2006",
+          "url": "https://doi.org/10.1007/11908029_32"
+        },
+        {
+          "identifier": "doi:10.1007/s10700-007-9011-0",
+          "title": "Decision making under uncertainty with fuzzy targets",
+          "date": "2007",
+          "url": "https://doi.org/10.1007/s10700-007-9011-0"
+        }
+      ],
+      "verifiedAt": "2026-10-02T14:05:00.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-0533-vp-0928",
+      "type": "coauthor",
+      "sourceId": "vp-0533",
+      "targetId": "vp-0928",
+      "sources": [
+        "https://doi.org/10.1063/1.4862156",
+        "https://doi.org/10.2142/biophys.54.s216_6",
+        "https://doi.org/10.4018/978-1-4666-4663-6.ch007"
+      ],
+      "evidence": "Tu Bao Ho (vp-0533) and Hieu Chi Dam (vp-0928) are both JAIST faculty; Crossref lists JAIST affiliations for both on the three retained works, with 4 to 5 authors each.",
+      "works": [
+        {
+          "identifier": "doi:10.1063/1.4862156",
+          "title": "Data mining for materials design: A computational study of single molecule magnet",
+          "date": "2014",
+          "url": "https://doi.org/10.1063/1.4862156"
+        },
+        {
+          "identifier": "doi:10.2142/biophys.54.s216_6",
+          "title": "2P132 Hydration water behavior classified by mixture model: Simulation data-mining",
+          "date": "2014",
+          "url": "https://doi.org/10.2142/biophys.54.s216_6"
+        },
+        {
+          "identifier": "doi:10.4018/978-1-4666-4663-6.ch007",
+          "title": "Big Data and Service Science",
+          "date": "2014",
+          "url": "https://doi.org/10.4018/978-1-4666-4663-6.ch007"
+        }
+      ],
+      "verifiedAt": "2026-10-02T14:05:00.000Z",
       "direct": false,
       "notes": ""
     }
