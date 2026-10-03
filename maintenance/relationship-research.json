@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-02T14:05:00.000Z",
+  "updatedAt": "2026-10-03T14:30:00.000Z",
   "batches": [
     {
       "batchNumber": 1,
@@ -16890,6 +16890,248 @@
         }
       ],
       "completedAt": "2026-10-02T14:05:00.000Z"
+    },
+    {
+      "batchNumber": 73,
+      "rosterIds": [
+        "vp-0512",
+        "vp-0511",
+        "vp-0510",
+        "vp-0509",
+        "vp-0508",
+        "vp-0507",
+        "vp-0506",
+        "vp-0505",
+        "vp-0504",
+        "vp-0503",
+        "vp-0502",
+        "vp-0501",
+        "vp-0500",
+        "vp-0499",
+        "vp-0498",
+        "vp-0497",
+        "vp-0496",
+        "vp-0495",
+        "vp-0494",
+        "vp-0493"
+      ],
+      "startedAt": "2026-10-03T14:00:00.000Z",
+      "status": "complete",
+      "outcomes": [
+        {
+          "rosterId": "vp-0512",
+          "sources": [
+            "https://www.wlu.ca/academics/faculties/faculty-of-science/faculty-profiles/chinh-t-hoang/index.html"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor named on official profile or personal site; Crossref author-name search (affiliation-agnostic, works with <=15 authors) found no pair of roster members sharing two or more works. OpenAlex was rate-limited (HTTP 429), so retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0511",
+          "sources": [
+            "https://uwaterloo.ca/chemistry/profile/d6bui"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor named on official profile or personal site; Crossref author-name search (affiliation-agnostic, works with <=15 authors) found no pair of roster members sharing two or more works. OpenAlex was rate-limited (HTTP 429), so retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0510",
+          "sources": [
+            "https://pharmsci.ubc.ca/directory/ly-vu",
+            "https://www.bccrc.ca/dept/tfl/labs/vu-lab"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor named on official profile or personal site; Crossref author-name search (affiliation-agnostic, works with <=15 authors) found no pair of roster members sharing two or more works. OpenAlex was rate-limited (HTTP 429), so retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0509",
+          "sources": [
+            "https://www.cs.ubc.ca/people/nguyen-phong-hoang",
+            "https://homepage.np-tokumei.net"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor named on official profile or personal site; Crossref author-name search (affiliation-agnostic, works with <=15 authors) found no pair of roster members sharing two or more works. OpenAlex was rate-limited (HTTP 429), so retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": [
+            "Personal site names PhD advisor Michalis Polychronakis (Stony Brook) and postdoc host Nick Feamster; neither is Vietnamese or in the roster, so excluded as out-of-roster counterparties."
+          ]
+        },
+        {
+          "rosterId": "vp-0508",
+          "sources": [
+            "https://www.chemistry.utoronto.ca/people/directories/all-faculty/helen-tran",
+            "https://helen-t.com"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor named on official profile or personal site; Crossref author-name search (affiliation-agnostic, works with <=15 authors) found no pair of roster members sharing two or more works. OpenAlex was rate-limited (HTTP 429), so retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0507",
+          "sources": [
+            "https://www.mcgill.ca/ece/tho-le-ngoc"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor named on official profile or personal site; Crossref author-name search (affiliation-agnostic, works with <=15 authors) found no pair of roster members sharing two or more works. OpenAlex was rate-limited (HTTP 429), so retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0506",
+          "sources": [
+            "https://www.rmit.edu.au/profiles/d/sonhoang-dau",
+            "https://sites.google.com/view/dausonhoang/home"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor named on official profile or personal site; Crossref author-name search (affiliation-agnostic, works with <=15 authors) found no pair of roster members sharing two or more works. OpenAlex was rate-limited (HTTP 429), so retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0505",
+          "sources": [
+            "https://www.unsw.edu.au/staff/hoa-nguyen"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor named on official profile or personal site; Crossref author-name search (affiliation-agnostic, works with <=15 authors) found no pair of roster members sharing two or more works. OpenAlex was rate-limited (HTTP 429), so retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0504",
+          "sources": [
+            "https://www.unsw.edu.au/staff/hoang-phuong-phan",
+            "https://www.phan-lab.com/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor named on official profile or personal site; Crossref author-name search (affiliation-agnostic, works with <=15 authors) found no pair of roster members sharing two or more works. OpenAlex was rate-limited (HTTP 429), so retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0503",
+          "sources": [
+            "https://profiles.sydney.edu.au/nguyen.tran",
+            "https://dual-grp.github.io/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor named on official profile or personal site; Crossref author-name search (affiliation-agnostic, works with <=15 authors) found no pair of roster members sharing two or more works. OpenAlex was rate-limited (HTTP 429), so retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0502",
+          "sources": [
+            "https://profiles.uts.edu.au/TuanVan.Nguyen",
+            "https://nguyenvantuan.info/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor named on official profile or personal site; Crossref author-name search (affiliation-agnostic, works with <=15 authors) found no pair of roster members sharing two or more works. OpenAlex was rate-limited (HTTP 429), so retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0501",
+          "sources": [
+            "https://experts.griffith.edu.au/18898-namtrung-nguyen",
+            "https://www.griffith.edu.au/queensland-micro-nanotechnology-centre"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor named on official profile or personal site; Crossref author-name search (affiliation-agnostic, works with <=15 authors) found no pair of roster members sharing two or more works. OpenAlex was rate-limited (HTTP 429), so retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0500",
+          "sources": [
+            "https://research.monash.edu/en/persons/dinh-phung"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor named on official profile or personal site; Crossref author-name search (affiliation-agnostic, works with <=15 authors) found no pair of roster members sharing two or more works. OpenAlex was rate-limited (HTTP 429), so retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0499",
+          "sources": [
+            "https://research.monash.edu/en/persons/san-hoa-thang",
+            "https://www.monash.edu/science/schools/chemistry/our-research/research-groups/thang-group"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor named on official profile or personal site; Crossref author-name search (affiliation-agnostic, works with <=15 authors) found no pair of roster members sharing two or more works. OpenAlex was rate-limited (HTTP 429), so retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0498",
+          "sources": [
+            "https://faculty.smu.edu.sg/profile/don-ta-326"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor named on official profile or personal site; Crossref author-name search (affiliation-agnostic, works with <=15 authors) found no pair of roster members sharing two or more works. OpenAlex was rate-limited (HTTP 429), so retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0497",
+          "sources": [
+            "https://sites.google.com/view/tien-mai/home"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor named on official profile or personal site; Crossref author-name search (affiliation-agnostic, works with <=15 authors) found no pair of roster members sharing two or more works. OpenAlex was rate-limited (HTTP 429), so retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0496",
+          "sources": [
+            "https://www.ntu.edu.sg/research/faculty-directory/detail/Viet-Ha-Hoang",
+            "https://personal.ntu.edu.sg/vhhoang/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor named on official profile or personal site; Crossref author-name search (affiliation-agnostic, works with <=15 authors) found no pair of roster members sharing two or more works. OpenAlex was rate-limited (HTTP 429), so retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0495",
+          "sources": [
+            "https://www.ntu.edu.sg/erian/about-us/our-people/cluster-directors/hung-dinh-nguyen"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor named on official profile or personal site; Crossref author-name search (affiliation-agnostic, works with <=15 authors) found no pair of roster members sharing two or more works. OpenAlex was rate-limited (HTTP 429), so retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0494",
+          "sources": [
+            "https://dr.ntu.edu.sg/entities/person/Tuan-TRAN"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor named on official profile or personal site; Crossref author-name search (affiliation-agnostic, works with <=15 authors) found no pair of roster members sharing two or more works. OpenAlex was rate-limited (HTTP 429), so retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0493",
+          "sources": [
+            "https://www.ieee-ras.org/ras_member/quang-cuong-pham/",
+            "https://personal.ntu.edu.sg/cuong/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor named on official profile or personal site; Crossref author-name search (affiliation-agnostic, works with <=15 authors) found no pair of roster members sharing two or more works. OpenAlex was rate-limited (HTTP 429), so retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        }
+      ]
     }
   ],
   "earlyOutcomes": [
