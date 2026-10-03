@@ -200,7 +200,11 @@ Follow `TASKS/AUDIT_ISSUES_PRS.md`, including "Independent review". Also read
 - Needs an owner decision (protected `directFields` conflict, ambiguous identity or eligibility,
   unverifiable from the cloud): comment with findings and a recommendation, and leave it open.
 - Tracking Issues such as the link-health report: work up to 10 entries, post a progress comment,
-  and leave it open.
+  and leave it open while entries remain. When every entry is resolved (fixed, or re-checked live
+  and confirmed healthy), close it with a comment listing the outcome of each entry. Entries that
+  can't be checked from the cloud (blocked sites, bot challenges) don't hold it open: list them in
+  the closing comment and file one Issue per entry that needs an owner decision, since the next
+  monthly report will flag them again.
 - The auditor doesn't file side findings about its own items; it resolves them.
 - `[scheduled:review]` Issues are for the owner: leave them open and don't act on them.
 - Applying fixes: the auditor never edits `main` directly. It makes all of a run's verified Issue
