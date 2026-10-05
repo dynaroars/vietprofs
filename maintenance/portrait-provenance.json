@@ -3212,6 +3212,104 @@
       "identitySignals": [],
       "retrievedAt": "2026-10-02T11:23:07.543Z",
       "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1598": {
+      "name": "Hau Le",
+      "outcome": "found",
+      "pageUrl": "https://www.surgery.wisc.edu/staff/hau-le/",
+      "imageUrl": "https://www.surgery.wisc.edu/wp-content/uploads/2017/08/Le_Hau_400px-1-300x300.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-05T11:26:39.068Z"
+    },
+    "vp-1599": {
+      "name": "Minh Do",
+      "outcome": "needs_review",
+      "pageUrl": "https://www.uoguelph.ca/profile/minh-do",
+      "imageUrl": "https://www.uoguelph.ca/_next/image?url=https%3A%2F%2Fapi.liveugconthub.uoguelph.dev%2Fsites%2Fdefault%2Ffiles%2Fmigration%2Fug_profile%2Ffiles%2FMinh_Do_500x500.jpg&w=1080&q=75",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-05T11:26:40.543Z",
+      "note": "candidate requires visual review before acceptance"
+    },
+    "vp-1600": {
+      "name": "Hoang-Thanh Le",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-05T11:26:41.604Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1601": {
+      "name": "Anh Pham - University of Waterloo",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-05T11:26:52.020Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1602": {
+      "name": "Bach Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-05T11:26:55.027Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1603": {
+      "name": "Lan Anh Hoang",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-05T11:26:56.701Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1604": {
+      "name": "Manh Hoang",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-05T11:26:58.355Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1605": {
+      "name": "Daniel Hoang",
+      "outcome": "found",
+      "pageUrl": "https://cf.uni-hohenheim.de/daniel-hoang",
+      "imageUrl": "https://cf.uni-hohenheim.de/fileadmin/_processed_/csm_Foto_Daniel_Hoang_35a39fdc3a.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-05T11:27:01.800Z"
+    },
+    "vp-1607": {
+      "name": "Loc Thai Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-05T11:27:04.520Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1671": {
+      "name": "Thu Phuong Pham",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-05T11:27:07.785Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     }
   }
 }
