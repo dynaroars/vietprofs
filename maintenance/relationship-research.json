@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-03T14:30:00.000Z",
+  "updatedAt": "2026-10-05T14:45:00.000Z",
   "batches": [
     {
       "batchNumber": 1,
@@ -17128,6 +17128,244 @@
           ],
           "relationshipIds": [],
           "nextAction": "No roster-internal advisor/mentor named on official profile or personal site; Crossref author-name search (affiliation-agnostic, works with <=15 authors) found no pair of roster members sharing two or more works. OpenAlex was rate-limited (HTTP 429), so retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        }
+      ]
+    },
+    {
+      "batchNumber": 74,
+      "rosterIds": [
+        "vp-0492",
+        "vp-0491",
+        "vp-0490",
+        "vp-0489",
+        "vp-0488",
+        "vp-0487",
+        "vp-0486",
+        "vp-0485",
+        "vp-0484",
+        "vp-0483",
+        "vp-0482",
+        "vp-0481",
+        "vp-0480",
+        "vp-0479",
+        "vp-0478",
+        "vp-0477",
+        "vp-0476",
+        "vp-0475",
+        "vp-0474",
+        "vp-0473"
+      ],
+      "startedAt": "2026-10-05T14:16:00.000Z",
+      "status": "complete",
+      "outcomes": [
+        {
+          "rosterId": "vp-0492",
+          "sources": [
+            "https://lkyspp.nus.edu.sg/our-people/faculty/vu-minh-khuong"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor named on the checked official profile or personal site (or page unavailable/unreadable from the cloud sandbox). Crossref author-name search (works with <=15 authors) returned only given-name/surname-token namesake matches, none identity-resolved by affiliation, so no coauthor pair reached two verified shared works. OpenAlex daily quota was exhausted (HTTP 429); retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0491",
+          "sources": [
+            "https://discovery.nus.edu.sg/974-toan-thang-phan"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor named on the checked official profile or personal site (or page unavailable/unreadable from the cloud sandbox). Crossref author-name search (works with <=15 authors) returned only given-name/surname-token namesake matches, none identity-resolved by affiliation, so no coauthor pair reached two verified shared works. OpenAlex daily quota was exhausted (HTTP 429); retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0490",
+          "sources": [
+            "https://medicine.nus.edu.sg/phys/faculty/thai-tran/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor named on the checked official profile or personal site (or page unavailable/unreadable from the cloud sandbox). Crossref author-name search (works with <=15 authors) returned only given-name/surname-token namesake matches, none identity-resolved by affiliation, so no coauthor pair reached two verified shared works. OpenAlex daily quota was exhausted (HTTP 429); retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0489",
+          "sources": [
+            "https://chemistry.nus.edu.sg/people/huynh-han-vinh/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor named on the checked official profile or personal site (or page unavailable/unreadable from the cloud sandbox). Crossref author-name search (works with <=15 authors) returned only given-name/surname-token namesake matches, none identity-resolved by affiliation, so no coauthor pair reached two verified shared works. OpenAlex daily quota was exhausted (HTTP 429); retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0488",
+          "sources": [
+            "https://cde.nus.edu.sg/me/staff/duong-hai-minh/",
+            "https://www.haimduong.com/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor named on the checked official profile or personal site (or page unavailable/unreadable from the cloud sandbox). Crossref author-name search (works with <=15 authors) returned only given-name/surname-token namesake matches, none identity-resolved by affiliation, so no coauthor pair reached two verified shared works. OpenAlex daily quota was exhausted (HTTP 429); retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0487",
+          "sources": [
+            "https://cde.nus.edu.sg/me/staff/phan-thien-nhan/",
+            "https://nhanphanthien.wordpress.com"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor named on the checked official profile or personal site (or page unavailable/unreadable from the cloud sandbox). Crossref author-name search (works with <=15 authors) returned only given-name/surname-token namesake matches, none identity-resolved by affiliation, so no coauthor pair reached two verified shared works. OpenAlex daily quota was exhausted (HTTP 429); retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0486",
+          "sources": [
+            "https://asian.washington.edu/people/bich-ngoc-turner"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor named on the checked official profile or personal site (or page unavailable/unreadable from the cloud sandbox). Crossref author-name search (works with <=15 authors) returned only given-name/surname-token namesake matches, none identity-resolved by affiliation, so no coauthor pair reached two verified shared works. OpenAlex daily quota was exhausted (HTTP 429); retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0485",
+          "sources": [
+            "https://history.fas.harvard.edu/people/hue-tam-ho-tai"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor named on the checked official profile or personal site (or page unavailable/unreadable from the cloud sandbox). Crossref author-name search (works with <=15 authors) returned only given-name/surname-token namesake matches, none identity-resolved by affiliation, so no coauthor pair reached two verified shared works. OpenAlex daily quota was exhausted (HTTP 429); retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0484",
+          "sources": [
+            "https://gws.berkeley.edu/people/trinh-t-minh-ha/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor named on the checked official profile or personal site (or page unavailable/unreadable from the cloud sandbox). Crossref author-name search (works with <=15 authors) returned only given-name/surname-token namesake matches, none identity-resolved by affiliation, so no coauthor pair reached two verified shared works. OpenAlex daily quota was exhausted (HTTP 429); retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0483",
+          "sources": [
+            "https://sociology.uchicago.edu/directory/kimberly-kay-hoang"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor named on the checked official profile or personal site (or page unavailable/unreadable from the cloud sandbox). Crossref author-name search (works with <=15 authors) returned only given-name/surname-token namesake matches, none identity-resolved by affiliation, so no coauthor pair reached two verified shared works. OpenAlex daily quota was exhausted (HTTP 429); retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0482",
+          "sources": [
+            "https://www.scifac.hku.hk/people/ngo-bao-chau",
+            "https://www.math.uchicago.edu/~ngo/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor named on the checked official profile or personal site (or page unavailable/unreadable from the cloud sandbox). Crossref author-name search (works with <=15 authors) returned only given-name/surname-token namesake matches, none identity-resolved by affiliation, so no coauthor pair reached two verified shared works. OpenAlex daily quota was exhausted (HTTP 429); retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0481",
+          "sources": [
+            "https://integrativebio.utexas.edu/directory/phuong-dao",
+            "https://daolab.weebly.com/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor named on the checked official profile or personal site (or page unavailable/unreadable from the cloud sandbox). Crossref author-name search (works with <=15 authors) returned only given-name/surname-token namesake matches, none identity-resolved by affiliation, so no coauthor pair reached two verified shared works. OpenAlex daily quota was exhausted (HTTP 429); retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0480",
+          "sources": [
+            "https://medicine.yale.edu/profile/don-nguyen/",
+            "https://medicine.yale.edu/lab/nguyen/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor named on the checked official profile or personal site (or page unavailable/unreadable from the cloud sandbox). Crossref author-name search (works with <=15 authors) returned only given-name/surname-token namesake matches, none identity-resolved by affiliation, so no coauthor pair reached two verified shared works. OpenAlex daily quota was exhausted (HTTP 429); retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0479",
+          "sources": [
+            "https://www.wcupa.edu/_admin/research/forms/ram-research-directory/profile.aspx?id=428",
+            "https://www.cs.wcupa.edu/lngo/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor named on the checked official profile or personal site (or page unavailable/unreadable from the cloud sandbox). Crossref author-name search (works with <=15 authors) returned only given-name/surname-token namesake matches, none identity-resolved by affiliation, so no coauthor pair reached two verified shared works. OpenAlex daily quota was exhausted (HTTP 429); retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0478",
+          "sources": [
+            "https://mathstat.vcu.edu/directory/anh-bui.html",
+            "https://sites.google.com/vcu.edu/anhbui/home"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor named on the checked official profile or personal site (or page unavailable/unreadable from the cloud sandbox). Crossref author-name search (works with <=15 authors) returned only given-name/surname-token namesake matches, none identity-resolved by affiliation, so no coauthor pair reached two verified shared works. OpenAlex daily quota was exhausted (HTTP 429); retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0477",
+          "sources": [
+            "https://americanstudies.as.virginia.edu/office-hours",
+            "https://www.patricianguyen.info"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor named on the checked official profile or personal site (or page unavailable/unreadable from the cloud sandbox). Crossref author-name search (works with <=15 authors) returned only given-name/surname-token namesake matches, none identity-resolved by affiliation, so no coauthor pair reached two verified shared works. OpenAlex daily quota was exhausted (HTTP 429); retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0476",
+          "sources": [
+            "https://philosophy.utah.edu/directory/faculty.php",
+            "https://objectionable.net/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor named on the checked official profile or personal site (or page unavailable/unreadable from the cloud sandbox). Crossref author-name search (works with <=15 authors) returned only given-name/surname-token namesake matches, none identity-resolved by affiliation, so no coauthor pair reached two verified shared works. OpenAlex daily quota was exhausted (HTTP 429); retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0475",
+          "sources": [
+            "https://profiles.utsouthwestern.edu/profile/96328/benjamin-nguyen.html"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor named on the checked official profile or personal site (or page unavailable/unreadable from the cloud sandbox). Crossref author-name search (works with <=15 authors) returned only given-name/surname-token namesake matches, none identity-resolved by affiliation, so no coauthor pair reached two verified shared works. OpenAlex daily quota was exhausted (HTTP 429); retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0474",
+          "sources": [
+            "https://profiles.utsouthwestern.edu/profile/181972/bau-tran.html"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor named on the checked official profile or personal site (or page unavailable/unreadable from the cloud sandbox). Crossref author-name search (works with <=15 authors) returned only given-name/surname-token namesake matches, none identity-resolved by affiliation, so no coauthor pair reached two verified shared works. OpenAlex daily quota was exhausted (HTTP 429); retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0473",
+          "sources": [
+            "https://geography.utk.edu/wp-content/uploads/2023/10/Tran_CV_April2023.pdf"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor named on the checked official profile or personal site (or page unavailable/unreadable from the cloud sandbox). Crossref author-name search (works with <=15 authors) returned only given-name/surname-token namesake matches, none identity-resolved by affiliation, so no coauthor pair reached two verified shared works. OpenAlex daily quota was exhausted (HTTP 429); retry coauthor check with OpenAlex when available.",
           "status": "unresolved",
           "notes": []
         }
