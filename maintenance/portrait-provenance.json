@@ -2555,10 +2555,10 @@
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1589": {
-      "name": "Quang Duc Nguyen",
+      "name": "Quang D. Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-26T04:26:19.872Z",
+      "retrievedAt": "2026-10-05T11:27:48.059Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1613": {
@@ -3211,6 +3211,216 @@
       "outcome": "not_found",
       "identitySignals": [],
       "retrievedAt": "2026-10-02T11:23:07.543Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1598": {
+      "name": "Hau Le",
+      "outcome": "found",
+      "pageUrl": "https://www.surgery.wisc.edu/staff/hau-le/",
+      "imageUrl": "https://www.surgery.wisc.edu/wp-content/uploads/2017/08/Le_Hau_400px-1-300x300.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-05T11:26:39.068Z"
+    },
+    "vp-1599": {
+      "name": "Minh Do",
+      "outcome": "needs_review",
+      "pageUrl": "https://www.uoguelph.ca/profile/minh-do",
+      "imageUrl": "https://www.uoguelph.ca/_next/image?url=https%3A%2F%2Fapi.liveugconthub.uoguelph.dev%2Fsites%2Fdefault%2Ffiles%2Fmigration%2Fug_profile%2Ffiles%2FMinh_Do_500x500.jpg&w=1080&q=75",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-05T11:26:40.543Z",
+      "note": "candidate requires visual review before acceptance"
+    },
+    "vp-1600": {
+      "name": "Hoang-Thanh Le",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-05T11:26:41.604Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1601": {
+      "name": "Anh Pham - University of Waterloo",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-05T11:26:52.020Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1602": {
+      "name": "Bach Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-05T11:26:55.027Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1603": {
+      "name": "Lan Anh Hoang",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-05T11:26:56.701Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1604": {
+      "name": "Manh Hoang",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-05T11:26:58.355Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1605": {
+      "name": "Daniel Hoang",
+      "outcome": "found",
+      "pageUrl": "https://cf.uni-hohenheim.de/daniel-hoang",
+      "imageUrl": "https://cf.uni-hohenheim.de/fileadmin/_processed_/csm_Foto_Daniel_Hoang_35a39fdc3a.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-05T11:27:01.800Z"
+    },
+    "vp-1607": {
+      "name": "Loc Thai Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-05T11:27:04.520Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1671": {
+      "name": "Thu Phuong Pham",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-05T11:27:07.785Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1584": {
+      "name": "Kim Hong Nguyen",
+      "outcome": "not_found",
+      "pageUrl": "https://uwaterloo.ca/communication-arts/profiles/kim-hong-nguyen",
+      "imageUrl": "https://uwaterloo.ca/communication-arts/sites/default/files/uploads/images/nguyen-kim-7.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-05T11:27:43.088Z",
+      "note": "candidate failed 120x120 or portrait-aspect validation"
+    },
+    "vp-1585": {
+      "name": "Xuan Huy Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-05T11:27:45.720Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1588": {
+      "name": "Gia Huy Pham",
+      "outcome": "needs_review",
+      "pageUrl": "https://directory.statler.wvu.edu/faculty-staff-directory/gia-huy-pham",
+      "imageUrl": "https://directory.statler.wvu.edu/files/ec228ba9-1a91-4b44-abc5-b8370e5eee51/290x290?cb=e07e1935dd1785d5a1b0975d3105d6ef",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-05T11:27:47.196Z",
+      "note": "candidate requires visual review before acceptance"
+    },
+    "vp-1590": {
+      "name": "Quang Chinh Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-05T11:27:49.999Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1591": {
+      "name": "Duc H. Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-05T11:27:50.800Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1592": {
+      "name": "Nguyen B. Truong",
+      "outcome": "needs_review",
+      "pageUrl": "https://nguyentb.github.io/",
+      "imageUrl": "https://nguyentb.github.io/images/profile.png",
+      "sourceType": "personal_homepage",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-05T11:27:52.232Z",
+      "note": "candidate requires visual review before acceptance"
+    },
+    "vp-1593": {
+      "name": "Tan Viet Tuyen Nguyen",
+      "outcome": "needs_review",
+      "pageUrl": "https://www.southampton.ac.uk/people/659l2y/doctor-tan-viet-tuyen-nguyen",
+      "imageUrl": "https://www.southampton.ac.uk/sites/default/files/styles/max_1300x1300/public/staff/tvtn1c23-38677.jpg.webp?h=c85281be&itok=o9QSH_uS",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-05T11:27:54.644Z",
+      "note": "candidate requires visual review before acceptance"
+    },
+    "vp-1595": {
+      "name": "Dan Tran",
+      "outcome": "found",
+      "pageUrl": "https://ceae.ku.edu/people/dan-tran",
+      "imageUrl": "https://ceae.ku.edu/sites/ceae/files/styles/portrait_col_xl_6/public/files/Faculty%20photos/MC-1903561_Tran_Dan_Web_Final.jpg?h=8e721ef9&itok=tE-BEcRh",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-05T11:27:57.840Z"
+    },
+    "vp-1597": {
+      "name": "Trang K. Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-05T11:27:59.449Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     }
   }
