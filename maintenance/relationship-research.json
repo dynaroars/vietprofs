@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-05T14:45:00.000Z",
+  "updatedAt": "2026-10-06T14:30:00.000Z",
   "batches": [
     {
       "batchNumber": 1,
@@ -17366,6 +17366,237 @@
           ],
           "relationshipIds": [],
           "nextAction": "No roster-internal advisor/mentor named on the checked official profile or personal site (or page unavailable/unreadable from the cloud sandbox). Crossref author-name search (works with <=15 authors) returned only given-name/surname-token namesake matches, none identity-resolved by affiliation, so no coauthor pair reached two verified shared works. OpenAlex daily quota was exhausted (HTTP 429); retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        }
+      ]
+    },
+    {
+      "batchNumber": 75,
+      "rosterIds": [
+        "vp-0472",
+        "vp-0471",
+        "vp-0470",
+        "vp-0469",
+        "vp-0468",
+        "vp-0467",
+        "vp-0466",
+        "vp-0465",
+        "vp-0464",
+        "vp-0463",
+        "vp-0462",
+        "vp-0461",
+        "vp-0460",
+        "vp-0459",
+        "vp-0458",
+        "vp-0457",
+        "vp-0456",
+        "vp-0455",
+        "vp-0454",
+        "vp-0453"
+      ],
+      "startedAt": "2026-10-06T14:11:00.000Z",
+      "status": "complete",
+      "outcomes": [
+        {
+          "rosterId": "vp-0472",
+          "sources": [
+            "https://health.usf.edu/medicine/neurology/faculty/tvu6"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor named on the checked official profile (or page unavailable/unreadable from the cloud sandbox). Crossref author-name search (works with <=15 authors) found no pair of roster members sharing two or more name-matched works among same-institution colleagues (USF neurology, UF, UMN); none identity-resolved. OpenAlex rate-limited (HTTP 429); retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0471",
+          "sources": [
+            "https://health.usf.edu/medicine/neurology/faculty#nam-tran"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor named on the checked official profile (or page unavailable/unreadable from the cloud sandbox). Crossref author-name search (works with <=15 authors) found no pair of roster members sharing two or more name-matched works among same-institution colleagues (USF neurology, UF, UMN); none identity-resolved. OpenAlex rate-limited (HTTP 429); retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0470",
+          "sources": [
+            "https://health.usf.edu/medicine/neurology/faculty#johanna-tran"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor named on the checked official profile (or page unavailable/unreadable from the cloud sandbox). Crossref author-name search (works with <=15 authors) found no pair of roster members sharing two or more name-matched works among same-institution colleagues (USF neurology, UF, UMN); none identity-resolved. OpenAlex rate-limited (HTTP 429); retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0469",
+          "sources": [
+            "https://health.usf.edu/medicine/neurology/faculty#hung-tran"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor named on the checked official profile (or page unavailable/unreadable from the cloud sandbox). Crossref author-name search (works with <=15 authors) found no pair of roster members sharing two or more name-matched works among same-institution colleagues (USF neurology, UF, UMN); none identity-resolved. OpenAlex rate-limited (HTTP 429); retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0468",
+          "sources": [
+            "https://www.med.upenn.edu/apps/faculty/index.php/g275/p9543200"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor named on the checked official profile (or page unavailable/unreadable from the cloud sandbox). Crossref author-name search (works with <=15 authors) found no pair of roster members sharing two or more name-matched works among same-institution colleagues (USF neurology, UF, UMN); none identity-resolved. OpenAlex rate-limited (HTTP 429); retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0467",
+          "sources": [
+            "https://dentistry.unc.edu/person/tung-nguyen/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor named on the checked official profile (or page unavailable/unreadable from the cloud sandbox). Crossref author-name search (works with <=15 authors) found no pair of roster members sharing two or more name-matched works among same-institution colleagues (USF neurology, UF, UMN); none identity-resolved. OpenAlex rate-limited (HTTP 429); retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0466",
+          "sources": [
+            "https://med.umn.edu/bio/mai-nguyen"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor named on the checked official profile (or page unavailable/unreadable from the cloud sandbox). Crossref author-name search (works with <=15 authors) found no pair of roster members sharing two or more name-matched works among same-institution colleagues (USF neurology, UF, UMN); none identity-resolved. OpenAlex rate-limited (HTTP 429); retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0465",
+          "sources": [
+            "https://med.umn.edu/bio/lahn-nguyen"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor named on the checked official profile (or page unavailable/unreadable from the cloud sandbox). Crossref author-name search (works with <=15 authors) found no pair of roster members sharing two or more name-matched works among same-institution colleagues (USF neurology, UF, UMN); none identity-resolved. OpenAlex rate-limited (HTTP 429); retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0464",
+          "sources": [
+            "https://www.memphis.edu/music/fac-staff/nguyen-a.php"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor named on the checked official profile (or page unavailable/unreadable from the cloud sandbox). Crossref author-name search (works with <=15 authors) found no pair of roster members sharing two or more name-matched works among same-institution colleagues (USF neurology, UF, UMN); none identity-resolved. OpenAlex rate-limited (HTTP 429); retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0463",
+          "sources": [
+            "https://www.uml.edu/sciences/mathematics/people/tran-thao.aspx"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor named on the checked official profile (or page unavailable/unreadable from the cloud sandbox). Crossref author-name search (works with <=15 authors) found no pair of roster members sharing two or more name-matched works among same-institution colleagues (USF neurology, UF, UMN); none identity-resolved. OpenAlex rate-limited (HTTP 429); retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0462",
+          "sources": [
+            "https://sph.umd.edu/people/thu-nguyen"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor named on the checked official profile (or page unavailable/unreadable from the cloud sandbox). Crossref author-name search (works with <=15 authors) found no pair of roster members sharing two or more name-matched works among same-institution colleagues (USF neurology, UF, UMN); none identity-resolved. OpenAlex rate-limited (HTTP 429); retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0461",
+          "sources": [
+            "https://researchworks.laverne.edu/esploro/profile/ngoc_bui"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor named on the checked official profile (or page unavailable/unreadable from the cloud sandbox). Crossref author-name search (works with <=15 authors) found no pair of roster members sharing two or more name-matched works among same-institution colleagues (USF neurology, UF, UMN); none identity-resolved. OpenAlex rate-limited (HTTP 429); retry coauthor check with OpenAlex when available. Official profile page returned no readable content from the sandbox.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0460",
+          "sources": [
+            "https://www.opt.uh.edu/profiles/chi-nguyen.cfm"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor named on the checked official profile (or page unavailable/unreadable from the cloud sandbox). Crossref author-name search (works with <=15 authors) found no pair of roster members sharing two or more name-matched works among same-institution colleagues (USF neurology, UF, UMN); none identity-resolved. OpenAlex rate-limited (HTTP 429); retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0459",
+          "sources": [
+            "https://manoa.hawaii.edu/tpss/people/nhu-nguyen/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor named on the checked official profile (or page unavailable/unreadable from the cloud sandbox). Crossref author-name search (works with <=15 authors) found no pair of roster members sharing two or more name-matched works among same-institution colleagues (USF neurology, UF, UMN); none identity-resolved. OpenAlex rate-limited (HTTP 429); retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0458",
+          "sources": [
+            "https://radiology.med.jax.ufl.edu/profile/nguyen-minh/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor named on the checked official profile (or page unavailable/unreadable from the cloud sandbox). Crossref author-name search (works with <=15 authors) found no pair of roster members sharing two or more name-matched works among same-institution colleagues (USF neurology, UF, UMN); none identity-resolved. OpenAlex rate-limited (HTTP 429); retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0457",
+          "sources": [
+            "https://mgm.ufl.edu/profile/nguyen-lien/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor named on the checked official profile (or page unavailable/unreadable from the cloud sandbox). Crossref author-name search (works with <=15 authors) found no pair of roster members sharing two or more name-matched works among same-institution colleagues (USF neurology, UF, UMN); none identity-resolved. OpenAlex rate-limited (HTTP 429); retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0456",
+          "sources": [
+            "https://www.vetmed.ufl.edu/profile/nguyen-cuong/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor named on the checked official profile (or page unavailable/unreadable from the cloud sandbox). Crossref author-name search (works with <=15 authors) found no pair of roster members sharing two or more name-matched works among same-institution colleagues (USF neurology, UF, UMN); none identity-resolved. OpenAlex rate-limited (HTTP 429); retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0455",
+          "sources": [
+            "https://www.colorado.edu/music/alexandra-nguyen"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor named on the checked official profile (or page unavailable/unreadable from the cloud sandbox). Crossref author-name search (works with <=15 authors) found no pair of roster members sharing two or more name-matched works among same-institution colleagues (USF neurology, UF, UMN); none identity-resolved. OpenAlex rate-limited (HTTP 429); retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0454",
+          "sources": [
+            "https://researchdirectory.uc.edu/p/trangq"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor named on the checked official profile (or page unavailable/unreadable from the cloud sandbox). Crossref author-name search (works with <=15 authors) found no pair of roster members sharing two or more name-matched works among same-institution colleagues (USF neurology, UF, UMN); none identity-resolved. OpenAlex rate-limited (HTTP 429); retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": [
+            "Profile lists mentor/adviser roles for trainees (grant/fellowship), none naming a roster member; not recorded."
+          ]
+        },
+        {
+          "rosterId": "vp-0453",
+          "sources": [
+            "https://english.uchicago.edu/people/vu-tran"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor named on the checked official profile (or page unavailable/unreadable from the cloud sandbox). Crossref author-name search (works with <=15 authors) found no pair of roster members sharing two or more name-matched works among same-institution colleagues (USF neurology, UF, UMN); none identity-resolved. OpenAlex rate-limited (HTTP 429); retry coauthor check with OpenAlex when available.",
           "status": "unresolved",
           "notes": []
         }
