@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-06T14:30:00.000Z",
+  "updatedAt": "2026-10-07T14:30:00.000Z",
   "batches": [
     {
       "batchNumber": 1,
@@ -17597,6 +17597,235 @@
           ],
           "relationshipIds": [],
           "nextAction": "No roster-internal advisor/mentor named on the checked official profile (or page unavailable/unreadable from the cloud sandbox). Crossref author-name search (works with <=15 authors) found no pair of roster members sharing two or more name-matched works among same-institution colleagues (USF neurology, UF, UMN); none identity-resolved. OpenAlex rate-limited (HTTP 429); retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        }
+      ]
+    },
+    {
+      "batchNumber": 76,
+      "rosterIds": [
+        "vp-0452",
+        "vp-0451",
+        "vp-0450",
+        "vp-0449",
+        "vp-0448",
+        "vp-0447",
+        "vp-0446",
+        "vp-0445",
+        "vp-0444",
+        "vp-0443",
+        "vp-0442",
+        "vp-0441",
+        "vp-0440",
+        "vp-0439",
+        "vp-0438",
+        "vp-0437",
+        "vp-0436",
+        "vp-0434",
+        "vp-0433",
+        "vp-0432"
+      ],
+      "startedAt": "2026-10-07T14:10:00.000Z",
+      "status": "complete",
+      "outcomes": [
+        {
+          "rosterId": "vp-0452",
+          "sources": [
+            "https://pediatrics.ucsd.edu/research/centers/lung/members-list.html"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor checked on the official profile (profile pages not individually opened in this run). Crossref author-name search (works with <=15 authors, top 200 per name) returned only given-name/surname-token namesake matches against roster members at unrelated institutions and fields (e.g. repeated hits on shared DOIs with Vietnamese given-name/family-name order ambiguity); none identity-resolved by affiliation, so no coauthor pair reached two verified shared works. No grant or patent search completed. OpenAlex daily quota exhausted (HTTP 429); retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0451",
+          "sources": [
+            "https://faculty.uci.edu/profile/?facultyId=4876"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor checked on the official profile (profile pages not individually opened in this run). Crossref author-name search (works with <=15 authors, top 200 per name) returned only given-name/surname-token namesake matches against roster members at unrelated institutions and fields (e.g. repeated hits on shared DOIs with Vietnamese given-name/family-name order ambiguity); none identity-resolved by affiliation, so no coauthor pair reached two verified shared works. No grant or patent search completed. OpenAlex daily quota exhausted (HTTP 429); retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0450",
+          "sources": [
+            "https://www.faculty.uci.edu/profile/?facultyId=6127"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor checked on the official profile (profile pages not individually opened in this run). Crossref author-name search (works with <=15 authors, top 200 per name) returned only given-name/surname-token namesake matches against roster members at unrelated institutions and fields (e.g. repeated hits on shared DOIs with Vietnamese given-name/family-name order ambiguity); none identity-resolved by affiliation, so no coauthor pair reached two verified shared works. No grant or patent search completed. OpenAlex daily quota exhausted (HTTP 429); retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0449",
+          "sources": [
+            "https://www.faculty.uci.edu/profile/?facultyId=6329"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor checked on the official profile (profile pages not individually opened in this run). Crossref author-name search (works with <=15 authors, top 200 per name) returned only given-name/surname-token namesake matches against roster members at unrelated institutions and fields (e.g. repeated hits on shared DOIs with Vietnamese given-name/family-name order ambiguity); none identity-resolved by affiliation, so no coauthor pair reached two verified shared works. No grant or patent search completed. OpenAlex daily quota exhausted (HTTP 429); retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0448",
+          "sources": [
+            "https://www.faculty.uci.edu/profile/?facultyId=5621"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor checked on the official profile (profile pages not individually opened in this run). Crossref author-name search (works with <=15 authors, top 200 per name) returned only given-name/surname-token namesake matches against roster members at unrelated institutions and fields (e.g. repeated hits on shared DOIs with Vietnamese given-name/family-name order ambiguity); none identity-resolved by affiliation, so no coauthor pair reached two verified shared works. No grant or patent search completed. OpenAlex daily quota exhausted (HTTP 429); retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0447",
+          "sources": [
+            "https://www.faculty.uci.edu/profile/?facultyId=6988"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor checked on the official profile (profile pages not individually opened in this run). Crossref author-name search (works with <=15 authors, top 200 per name) returned only given-name/surname-token namesake matches against roster members at unrelated institutions and fields (e.g. repeated hits on shared DOIs with Vietnamese given-name/family-name order ambiguity); none identity-resolved by affiliation, so no coauthor pair reached two verified shared works. No grant or patent search completed. OpenAlex daily quota exhausted (HTTP 429); retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0446",
+          "sources": [
+            "https://classics.ucla.edu/person/kelly-nguyen/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor checked on the official profile (profile pages not individually opened in this run). Crossref author-name search (works with <=15 authors, top 200 per name) returned only given-name/surname-token namesake matches against roster members at unrelated institutions and fields (e.g. repeated hits on shared DOIs with Vietnamese given-name/family-name order ambiguity); none identity-resolved by affiliation, so no coauthor pair reached two verified shared works. No grant or patent search completed. OpenAlex daily quota exhausted (HTTP 429); retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0445",
+          "sources": [
+            "https://www.uab.edu/medicine/peds/faculty/brittany-huynh-m-d"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor checked on the official profile (profile pages not individually opened in this run). Crossref author-name search (works with <=15 authors, top 200 per name) returned only given-name/surname-token namesake matches against roster members at unrelated institutions and fields (e.g. repeated hits on shared DOIs with Vietnamese given-name/family-name order ambiguity); none identity-resolved by affiliation, so no coauthor pair reached two verified shared works. No grant or patent search completed. OpenAlex daily quota exhausted (HTTP 429); retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0444",
+          "sources": [
+            "https://www.dpo.uab.edu/medicine/physicalmedicine/faculty/nguyen-vu-q-m-d-mba"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor checked on the official profile (profile pages not individually opened in this run). Crossref author-name search (works with <=15 authors, top 200 per name) returned only given-name/surname-token namesake matches against roster members at unrelated institutions and fields (e.g. repeated hits on shared DOIs with Vietnamese given-name/family-name order ambiguity); none identity-resolved by affiliation, so no coauthor pair reached two verified shared works. No grant or patent search completed. OpenAlex daily quota exhausted (HTTP 429); retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0443",
+          "sources": [
+            "https://www.uakron.edu/math/our-people/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor checked on the official profile (profile pages not individually opened in this run). Crossref author-name search (works with <=15 authors, top 200 per name) returned only given-name/surname-token namesake matches against roster members at unrelated institutions and fields (e.g. repeated hits on shared DOIs with Vietnamese given-name/family-name order ambiguity); none identity-resolved by affiliation, so no coauthor pair reached two verified shared works. No grant or patent search completed. OpenAlex daily quota exhausted (HTTP 429); retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0442",
+          "sources": [
+            "https://blogs.uakron.edu/tran/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor checked on the official profile (profile pages not individually opened in this run). Crossref author-name search (works with <=15 authors, top 200 per name) returned only given-name/surname-token namesake matches against roster members at unrelated institutions and fields (e.g. repeated hits on shared DOIs with Vietnamese given-name/family-name order ambiguity); none identity-resolved by affiliation, so no coauthor pair reached two verified shared works. No grant or patent search completed. OpenAlex daily quota exhausted (HTTP 429); retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0441",
+          "sources": [
+            "https://dentistry.uth.edu/directory/profile/long-d-tran"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor checked on the official profile (profile pages not individually opened in this run). Crossref author-name search (works with <=15 authors, top 200 per name) returned only given-name/surname-token namesake matches against roster members at unrelated institutions and fields (e.g. repeated hits on shared DOIs with Vietnamese given-name/family-name order ambiguity); none identity-resolved by affiliation, so no coauthor pair reached two verified shared works. No grant or patent search completed. OpenAlex daily quota exhausted (HTTP 429); retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0440",
+          "sources": [
+            "https://sopa.tulane.edu/about-sopa/advisors-faculty-staff/trung-nguyen"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor checked on the official profile (profile pages not individually opened in this run). Crossref author-name search (works with <=15 authors, top 200 per name) returned only given-name/surname-token namesake matches against roster members at unrelated institutions and fields (e.g. repeated hits on shared DOIs with Vietnamese given-name/family-name order ambiguity); none identity-resolved by affiliation, so no coauthor pair reached two verified shared works. No grant or patent search completed. OpenAlex daily quota exhausted (HTTP 429); retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0439",
+          "sources": [
+            "https://medicine.tulane.edu/departments/radiology-debakey/faculty/jeremy-binh-nguyen-md-facr"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor checked on the official profile (profile pages not individually opened in this run). Crossref author-name search (works with <=15 authors, top 200 per name) returned only given-name/surname-token namesake matches against roster members at unrelated institutions and fields (e.g. repeated hits on shared DOIs with Vietnamese given-name/family-name order ambiguity); none identity-resolved by affiliation, so no coauthor pair reached two verified shared works. No grant or patent search completed. OpenAlex daily quota exhausted (HTTP 429); retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0438",
+          "sources": [
+            "https://sph.tulane.edu/ihsd/mai-do"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor checked on the official profile (profile pages not individually opened in this run). Crossref author-name search (works with <=15 authors, top 200 per name) returned only given-name/surname-token namesake matches against roster members at unrelated institutions and fields (e.g. repeated hits on shared DOIs with Vietnamese given-name/family-name order ambiguity); none identity-resolved by affiliation, so no coauthor pair reached two verified shared works. No grant or patent search completed. OpenAlex daily quota exhausted (HTTP 429); retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0437",
+          "sources": [
+            "https://as.tufts.edu/biology/people/faculty/khoa-tran"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor checked on the official profile (profile pages not individually opened in this run). Crossref author-name search (works with <=15 authors, top 200 per name) returned only given-name/surname-token namesake matches against roster members at unrelated institutions and fields (e.g. repeated hits on shared DOIs with Vietnamese given-name/family-name order ambiguity); none identity-resolved by affiliation, so no coauthor pair reached two verified shared works. No grant or patent search completed. OpenAlex daily quota exhausted (HTTP 429); retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0436",
+          "sources": [
+            "https://www.towson.edu/fcsm/departments/chemistry/facultystaff/ktranba.html"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor checked on the official profile (profile pages not individually opened in this run). Crossref author-name search (works with <=15 authors, top 200 per name) returned only given-name/surname-token namesake matches against roster members at unrelated institutions and fields (e.g. repeated hits on shared DOIs with Vietnamese given-name/family-name order ambiguity); none identity-resolved by affiliation, so no coauthor pair reached two verified shared works. No grant or patent search completed. OpenAlex daily quota exhausted (HTTP 429); retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0434",
+          "sources": [
+            "https://faculty.mdanderson.org/profiles/an_ngo.html"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor checked on the official profile (profile pages not individually opened in this run). Crossref author-name search (works with <=15 authors, top 200 per name) returned only given-name/surname-token namesake matches against roster members at unrelated institutions and fields (e.g. repeated hits on shared DOIs with Vietnamese given-name/family-name order ambiguity); none identity-resolved by affiliation, so no coauthor pair reached two verified shared works. No grant or patent search completed. OpenAlex daily quota exhausted (HTTP 429); retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0433",
+          "sources": [
+            "https://faculty.mdanderson.org/profiles/sydney_pham.html"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor checked on the official profile (profile pages not individually opened in this run). Crossref author-name search (works with <=15 authors, top 200 per name) returned only given-name/surname-token namesake matches against roster members at unrelated institutions and fields (e.g. repeated hits on shared DOIs with Vietnamese given-name/family-name order ambiguity); none identity-resolved by affiliation, so no coauthor pair reached two verified shared works. No grant or patent search completed. OpenAlex daily quota exhausted (HTTP 429); retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0432",
+          "sources": [
+            "https://faculty.mdanderson.org/profiles/christopher_nguyen.html"
+          ],
+          "relationshipIds": [],
+          "nextAction": "No roster-internal advisor/mentor checked on the official profile (profile pages not individually opened in this run). Crossref author-name search (works with <=15 authors, top 200 per name) returned only given-name/surname-token namesake matches against roster members at unrelated institutions and fields (e.g. repeated hits on shared DOIs with Vietnamese given-name/family-name order ambiguity); none identity-resolved by affiliation, so no coauthor pair reached two verified shared works. No grant or patent search completed. OpenAlex daily quota exhausted (HTTP 429); retry coauthor check with OpenAlex when available.",
           "status": "unresolved",
           "notes": []
         }
