@@ -543,6 +543,9 @@ const FIELD_OVERRIDES = new Map([
   // Theology in the Great Texts Program") and George W. Baines Chair of Religion put him
   // squarely in Humanities.
   ['Great Texts Program|Baylor University', 'Humanities'],
+  // Physics department whose combined name contains "Materials Science", which the Engineering
+  // rule would otherwise catch before Physics & Astronomy.
+  ['Physics and Materials Science|University of Memphis', 'Physics & Astronomy'],
   // Contains "linguistics", which the Humanities rule below would otherwise catch — but this
   // program trains language teachers inside Teachers College, a graduate school of education,
   // not an arts-and-sciences linguistics department. School/unit context wins over the string.
