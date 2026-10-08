@@ -582,7 +582,7 @@ test('combined field and location filters link to their static intersection hub'
   assert.match(await attrOf(fieldHubLink, 'href'), /\/regions\/japan\/health-sciences\.html$/);
   await fieldHubLink.click();
   await page.waitForLoadState('networkidle');
-  assert.equal(await textOf(page.locator('h1')), 'Health Sciences Faculty in Japan');
+  assert.equal(await textOf(page.locator('h1')), 'Vietnamese Health Sciences Professors in Japan');
   await page.close();
 });
 
@@ -745,5 +745,79 @@ test('main directory and profile pages meet core WCAG accessibility standards', 
     .analyze();
   const profileViolations = profileResults.violations.filter((v: any) => v.impact === 'critical' || v.impact === 'serious');
   assert.equal(profileViolations.length, 0, `Profile page has severe a11y violations: ${JSON.stringify(profileViolations, null, 2)}`);
+  await page.close();
+});
+
+test('connections explorer filters verified edges, focuses people, and exposes evidence on mobile', async () => {
+  const page = await context.newPage();
+  await page.goto(`${baseUrl}/connections.html`, { waitUntil: 'networkidle' });
+  const response = await page.request.get(`${baseUrl}/relationships.json`);
+  const database = await response.json() as { relationships: { sourceId: string; targetId: string; type: string }[] };
+  const ids = new Set(database.relationships.flatMap(edge => [edge.sourceId, edge.targetId]));
+  assert.equal(await page.locator('.network-node').count(), ids.size);
+  assert.equal(await page.locator('.network-edge').count(), database.relationships.length);
+
+  await page.locator('.network-node').first().focus();
+  await page.keyboard.press('Enter');
+  assert.equal(await page.locator('.network-node.is-selected').count(), 1);
+  assert.ok(await page.locator('.network-node.is-selected').evaluate(node => node === document.activeElement));
+  assert.match(await textOf(page.locator('#network-summary')), /Network of/);
+  await page.locator('#network-depth').selectOption('2');
+  await page.locator('#network-clear').click();
+  await page.locator('#network-type').selectOption('doctoral-advisor');
+  assert.equal(await page.locator('.network-edge').count(), database.relationships.filter(edge => edge.type === 'doctoral-advisor').length);
+  assert.ok(await page.locator('.network-edge path[marker-end]').count() > 0);
+
+  await page.locator('#network-table-toggle').click();
+  assert.ok(await page.locator('#network-table-panel').isVisible());
+  await page.locator('#network-table-panel button').first().click();
+  assert.ok(await page.locator('#network-details a[target="_blank"]').count() > 0);
+  await page.locator('#network-type').selectOption('');
+  await page.locator('#network-search').fill('nguyen');
+  assert.ok(await page.locator('#network-results button').count() > 0);
+  await page.locator('#network-results button').first().click();
+  await page.locator('#network-graph-toggle').click();
+  await page.locator('#network-zoom-in').click();
+  assert.match(await attrOf(page.locator('#network-layer'), 'transform'), /scale\(1.3\)/);
+  await page.locator('#network-fit').click();
+  assert.match(await attrOf(page.locator('#network-layer'), 'transform'), /scale\(1\)/);
+  await page.setViewportSize({ width: 375, height: 812 });
+  assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth));
+  await page.close();
+});
+
+test('lineage and path views preserve advisor directions, show evidence, and handle missing paths', async () => {
+  const page = await context.newPage();
+  const roster = await (await page.request.get(`${baseUrl}/data.json`)).json() as RosterEntry[];
+  const [a, b, c, isolated] = roster;
+  const edges = [
+    { id: 'lineage-a-b', sourceId: a.id, targetId: b.id, type: 'doctoral-advisor' },
+    { id: 'lineage-b-c', sourceId: b.id, targetId: c.id, type: 'masters-advisor' },
+  ].map(edge => ({ ...edge, sources: ['https://example.org/evidence'], evidence: 'Verified mentorship evidence', works: [], notes: '', direct: false }));
+  await page.route('**/relationships.json*', route => route.fulfill({ json: { version: 1, updatedAt: '2026-10-01T00:00:00.000Z', relationships: edges } }));
+  await page.goto(`${baseUrl}/connections.html`, { waitUntil: 'networkidle' });
+  await page.locator('#network-mode').selectOption('lineage');
+  const positions = await page.locator('.network-node').evaluateAll(nodes => nodes.map(node => ({ id: node.getAttribute('data-person'), y: Number(node.getAttribute('transform')!.split(' ')[1].replace(')', '')) })));
+  assert.ok(positions.find(node => node.id === a.id)!.y < positions.find(node => node.id === b.id)!.y);
+  assert.ok(positions.find(node => node.id === b.id)!.y < positions.find(node => node.id === c.id)!.y);
+  await page.locator('#network-mode').selectOption('path');
+  await page.locator('#network-path-start').selectOption(c.id);
+  await page.locator('#network-path-end').selectOption(a.id);
+  assert.match(await textOf(page.locator('#network-summary')), /2 steps/);
+  assert.equal(await page.locator('#network-path-result li').count(), 3);
+  assert.match(await textOf(page.locator('#network-path-result button').first()), /←/);
+  await page.locator('#network-path-result button').first().click();
+  assert.match(await textOf(page.locator('#network-details')), /Verified mentorship evidence/);
+  await page.locator('#network-type').selectOption('doctoral-advisor');
+  assert.match(await textOf(page.locator('#network-summary')), /No path is recorded/);
+  await page.locator('#network-type').selectOption('');
+  await page.locator('#network-path-end').selectOption(isolated.id);
+  assert.equal(await page.locator('.network-edge').count(), 0);
+  await page.locator('#network-path-end').selectOption(c.id);
+  assert.match(await textOf(page.locator('#network-summary')), /two different people/);
+  await page.setViewportSize({ width: 375, height: 812 });
+  assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth));
+  await page.locator('#network-clear').click();
+  assert.match(await textOf(page.locator('#network-summary')), /Choose two people/);
   await page.close();
 });

@@ -1,4 +1,5 @@
 import './style.css';
+import { initGraphExplorer, renderGraphExplorer } from './connections-graph.ts';
 import { renderSeeAlso } from './see-also.ts';
 import { escapeHtml } from './utils.ts';
 import { displayName, personPath, type Roster, type RosterEntry } from './data.ts';
@@ -137,6 +138,7 @@ function renderConnections(roster: Roster, database: RelationshipDatabase): stri
       <p class="synopsis stats-snapshot">Last updated: <time datetime="${escapeHtml(database.updatedAt)}">${escapeHtml(formatTimestamp(database.updatedAt))}</time></p>
     </div></div></section>
     <section class="man-section"><h2>AT A GLANCE</h2>${renderMetrics(roster, database)}</section>
+    ${renderGraphExplorer()}
     <section class="man-section"><h2>CONNECTIONS BY TYPE</h2>${renderTypeBreakdown(database)}</section>
     <section class="man-section"><h2>MOST CONNECTED PEOPLE</h2><p class="stat-sub">Counts every verified edge touching the person, in either direction.</p>${renderTopConnected(roster, database)}</section>
     <section class="man-section"><h2>ALL CONNECTIONS</h2>${renderAllConnections(roster, database)}</section>
@@ -171,6 +173,7 @@ async function init(): Promise<void> {
       fetchJson<RelationshipDatabase>('relationships.json'),
     ]);
     app.innerHTML = renderConnections(roster, database);
+    initGraphExplorer(roster, database);
   } catch (error) {
     app.innerHTML = renderError(error instanceof Error ? error.message : 'Unknown error');
     document.getElementById('retry-btn')?.addEventListener('click', () => void init());
