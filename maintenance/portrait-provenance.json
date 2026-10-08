@@ -2243,26 +2243,16 @@
     "vp-1565": {
       "name": "Yen Tran",
       "outcome": "not_found",
-      "identitySignals": [
-        "name",
-        "institution",
-        "department",
-        "stored_roster_url"
-      ],
-      "retrievedAt": "2026-09-15T05:00:00.000Z",
-      "note": "CSIRO profile exposed no verified individual portrait."
+      "identitySignals": [],
+      "retrievedAt": "2026-10-07T11:24:50.449Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1567": {
       "name": "Hai Pham",
       "outcome": "not_found",
-      "identitySignals": [
-        "name",
-        "institution",
-        "department",
-        "stored_roster_url"
-      ],
-      "retrievedAt": "2026-09-15T05:00:00.000Z",
-      "note": "Towson faculty URL returned 404; no alternative portrait verified."
+      "identitySignals": [],
+      "retrievedAt": "2026-10-07T11:25:02.871Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1568": {
       "name": "Hung Cao",
@@ -2653,10 +2643,10 @@
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1583": {
-      "name": "Ky Quan Tran",
+      "name": "Ky Q. Tran",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-26T04:27:02.878Z",
+      "retrievedAt": "2026-10-07T11:23:28.573Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-0638": {
@@ -3325,7 +3315,7 @@
         "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-10-05T11:27:43.088Z",
+      "retrievedAt": "2026-10-07T11:25:10.119Z",
       "note": "candidate failed 120x120 or portrait-aspect validation"
     },
     "vp-1585": {
@@ -3422,6 +3412,140 @@
       "identitySignals": [],
       "retrievedAt": "2026-10-05T11:27:59.449Z",
       "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1570": {
+      "name": "Lu Trong Khiem Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-07T11:22:48.388Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1571": {
+      "name": "Phuoc Tai Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-07T11:22:51.261Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1573": {
+      "name": "Trang Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-07T11:22:53.883Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1575": {
+      "name": "Thanh Ngoc Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-07T11:22:55.468Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1576": {
+      "name": "Ngoc Tien Tran",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-07T11:22:57.299Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1577": {
+      "name": "Minh Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-07T11:22:58.862Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1578": {
+      "name": "Thinh Xuan Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-07T11:23:24.369Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1582": {
+      "name": "Thi Tuyet Trinh Pham",
+      "outcome": "needs_review",
+      "pageUrl": "https://www.trinhttpham.com/",
+      "imageUrl": "https://trinhttpham.github.io/cv/profile3.jpg?raw=1",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-07T11:23:28.233Z",
+      "note": "candidate requires visual review before acceptance"
+    },
+    "vp-1502": {
+      "name": "Duc Thi Luu",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-07T11:24:10.609Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1517": {
+      "name": "André H. Hoang",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-07T11:24:25.903Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1520": {
+      "name": "Tung Pham",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-07T11:24:27.648Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1539": {
+      "name": "Thoa Thieu",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-07T11:24:29.997Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1544": {
+      "name": "Tuan Anh Le",
+      "outcome": "needs_review",
+      "pageUrl": "https://www.mdx.ac.uk/about-us/our-people/staff-directory/dr-tuan-le/",
+      "imageUrl": "https://repository.mdx.ac.uk/download/7ad92db06d373d1629ac32dd13e9fb1a71f588c0a6118eff65ad91f1df9462ee/6928642/webdisplay/Tuan.png",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-07T11:24:31.280Z",
+      "note": "candidate requires visual review before acceptance"
+    },
+    "vp-1557": {
+      "name": "Tuong Vy Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-07T11:24:32.498Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1569": {
+      "name": "Hoanh Le",
+      "outcome": "needs_review",
+      "pageUrl": "https://extension.sdstate.edu/about/our-experts/hoanh-le",
+      "imageUrl": "https://extension.sdstate.edu/sites/default/files/styles/960x960/public/2025-08/le_hoanh_2024_web.jpg?h=ce6be221&itok=f523uFTt",
+      "sourceType": "authoritative_academic",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank"
+      ],
+      "retrievedAt": "2026-10-07T11:25:05.473Z",
+      "note": "candidate requires visual review before acceptance"
     }
   }
 }
