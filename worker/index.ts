@@ -143,6 +143,15 @@ function countryFlag(code: string): string {
   return String.fromCodePoint(...normalized.split('').map(character => character.charCodeAt(0) + 127397));
 }
 
+// Cloudflare's own `bot: 0` filter misses a headless mobile-Chrome crawl that began 2026-10-02: Chrome on
+// iOS/Android, never arriving from an external site (no referrer, or navigating from our own pages).
+// Count mobile Chrome only when an external site sent the visitor; every other browser is kept as-is.
+// Real direct mobile-Chrome visits are undercounted as a result (about 15% of the pre-October baseline).
+const SUSPECTED_AUTOMATION_FILTER = `OR: [
+          { userAgentBrowser_neq: "ChromeMobile" }
+          { AND: [{ refererHost_neq: "" }, { refererHost_neq: $hostname }] }
+        ]`;
+
 function buildQuery(): string {
   return `
 query BrowserTraffic($accountTag: string!, $hostname: string!, $windowStart: Date!, $today: Date!, $categoryStart: Date!, $lastCompleteDate: Date!) {
@@ -151,17 +160,20 @@ query BrowserTraffic($accountTag: string!, $hostname: string!, $windowStart: Dat
       daily: rumPageloadEventsAdaptiveGroups(
         limit: 40
         orderBy: [date_ASC]
-        filter: { date_geq: $windowStart, date_leq: $today, requestHost: $hostname, bot: 0 }
+        filter: { date_geq: $windowStart, date_leq: $today, requestHost: $hostname, bot: 0
+        ${SUSPECTED_AUTOMATION_FILTER} }
       ) { count sum { visits } avg { sampleInterval } dimensions { date } }
       countries: rumPageloadEventsAdaptiveGroups(
         limit: 250
         orderBy: [count_DESC]
-        filter: { date_geq: $categoryStart, date_leq: $lastCompleteDate, requestHost: $hostname, bot: 0 }
+        filter: { date_geq: $categoryStart, date_leq: $lastCompleteDate, requestHost: $hostname, bot: 0
+        ${SUSPECTED_AUTOMATION_FILTER} }
       ) { count dimensions { countryName } }
       paths: rumPageloadEventsAdaptiveGroups(
         limit: 5000
         orderBy: [count_DESC]
-        filter: { date_geq: $categoryStart, date_leq: $lastCompleteDate, requestHost: $hostname, bot: 0 }
+        filter: { date_geq: $categoryStart, date_leq: $lastCompleteDate, requestHost: $hostname, bot: 0
+        ${SUSPECTED_AUTOMATION_FILTER} }
       ) { count dimensions { requestPath } }
     }
   }

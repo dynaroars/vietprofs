@@ -74,6 +74,8 @@ test('live analytics uses bot-filtered account RUM, complete-day averages, norma
     assert.match(requestBody.query, /rumPageloadEventsAdaptiveGroups/);
     assert.match(requestBody.query, /accounts\(filter:/);
     assert.match(requestBody.query, /bot: 0/);
+    assert.equal((requestBody.query.match(/userAgentBrowser_neq: "ChromeMobile"/g) || []).length, 3, 'every dataset excludes suspected automated mobile Chrome');
+    assert.equal((requestBody.query.match(/refererHost_neq: \$hostname/g) || []).length, 3);
     assert.doesNotMatch(requestBody.query, /httpRequestsAdaptiveGroups|javascript|css/);
     assert.equal(requestBody.variables.hostname, 'vietprofs.roars.dev');
     assert.equal(data.today.pageViews, 99);

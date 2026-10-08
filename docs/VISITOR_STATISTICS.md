@@ -19,6 +19,7 @@ Those values included crawlers and other automated clients. The old KV archive r
 
 The Worker queries the account-scoped `rumPageloadEventsAdaptiveGroups` GraphQL dataset for `vietprofs.roars.dev`, with Cloudflare's `bot: 0` filter.
 
+- **Suspected automated traffic is excluded.** Starting 2026-10-02 a headless mobile-Chrome crawl (about 2,000 page views a day, roughly 10 rotating Pixel/Galaxy/iPhone user agents, flat around the clock, every hit its own visit) passed Cloudflare's `bot: 0` filter because it runs the beacon. All three queries therefore keep mobile Chrome (`userAgentBrowser = ChromeMobile`) only when an external site is the referrer; other browsers are unaffected. This drops about 15% of the pre-October baseline (real direct mobile-Chrome visits), so counts are slightly conservative. Remove the filter (`SUSPECTED_AUTOMATION_FILTER` in `worker/index.ts`) if the crawl stops and you want the full counts back.
 - **Browser page views today** is the RUM page-load count for the current UTC day and is marked in progress.
 - **Average daily browser page views** is the sum over the last seven successfully collected, complete UTC days divided by the number of those days. The current day is excluded.
 - **30-day browser page views** sums collected complete days in the available 30-day query window.
