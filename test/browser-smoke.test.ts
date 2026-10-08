@@ -761,7 +761,18 @@ test('connections explorer filters verified edges, focuses people, and exposes e
   assert.ok((await page.locator('.network-canvas').boundingBox())!.height >= 620);
   assert.ok((await page.locator('.network-node circle').first().boundingBox())!.width >= 24);
 
-  await page.locator('.network-node').first().focus();
+  const firstNode = page.locator('.network-node').first();
+  const firstId = await firstNode.getAttribute('data-person');
+  await firstNode.hover();
+  const activeLabel = page.locator(`#network-labels [data-label="${firstId}"]`);
+  assert.equal(await activeLabel.evaluate(label => getComputedStyle(label).opacity), '1');
+  assert.ok(await activeLabel.evaluate(label => label === label.parentElement!.lastElementChild));
+  assert.ok(await page.locator('#network-labels').evaluate(layer => layer === layer.parentElement!.lastElementChild));
+  assert.equal(await page.locator('#network-labels').evaluate(layer => getComputedStyle(layer).pointerEvents), 'none');
+  await page.mouse.move(0, 0);
+  assert.equal(await activeLabel.evaluate(label => getComputedStyle(label).opacity), '0');
+  await firstNode.focus();
+  assert.equal(await activeLabel.evaluate(label => getComputedStyle(label).opacity), '1');
   await page.keyboard.press('Enter');
   assert.equal(await page.locator('.network-node.is-selected').count(), 1);
   assert.ok(await page.locator('.network-node.is-selected').evaluate(node => node === document.activeElement));

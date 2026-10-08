@@ -143,6 +143,18 @@ export function initGraphExplorer(roster: Roster, database: RelationshipDatabase
   const link = (id: string): string => `<a href="${escapeHtml(`${import.meta.env.BASE_URL}${personPath(id)}`)}">${escapeHtml(displayName(byId.get(id)!.name))}</a>`;
   let selected = '', visible: AcademicRelationship[] = [], points = new Map<string, Point>();
   let zoom = 1, panX = 0, panY = 0, moved = false;
+  let hoveredPerson = '', focusedPerson = '';
+  function syncLabels(): void {
+    const labels = svg.querySelector('#network-labels');
+    if (!labels) return;
+    labels.querySelectorAll<SVGTextElement>('[data-label]').forEach(label => {
+      const id = label.dataset.label!;
+      label.classList.toggle('is-visible', Boolean(selected) || mode.value !== 'network' || id === hoveredPerson || id === focusedPerson);
+    });
+    // SVG paints in document order. Promote only text, keeping node tab order stable.
+    const active = labels.querySelector(`[data-label="${hoveredPerson || focusedPerson || selected}"]`);
+    if (active) labels.append(active);
+  }
   get('network-type').innerHTML = `<button type="button" data-type="" aria-pressed="true">All</button>${RELATIONSHIP_TYPES.filter(t => valid.some(edge => edge.type === t)).map(t => `<button type="button" data-type="${t}" aria-pressed="false">${escapeHtml(LABELS[t])}</button>`).join('')}`;
 
   function transform(): void { svg.querySelector('#network-layer')?.setAttribute('transform', `translate(${panX} ${panY}) scale(${zoom})`); }
@@ -172,7 +184,9 @@ export function initGraphExplorer(roster: Roster, database: RelationshipDatabase
         const dash = directed(edge) ? 'stroke-dasharray="5 3"' : '';
         return `<g class="network-edge" role="button" tabindex="0" data-edge="${edge.id}" aria-label="${escapeHtml(`${byId.get(edge.sourceId)!.name}, ${LABELS[edge.type]}, ${byId.get(edge.targetId)!.name}`)}"><title>${escapeHtml(LABELS[edge.type])}</title><path d="${curve}" fill="none" stroke="${COLORS[edge.type]}" stroke-width="2" ${dash} ${directed(edge) ? `marker-end="url(#arrow-${edge.type})"` : ''}/><path d="${curve}" fill="none" stroke="transparent" stroke-width="14"/></g>`;
       }).join('')}
-      ${[...points].map(([id, point]) => `<g class="network-node${selected || mode.value !== 'network' ? ' in-person-view' : ''}${id === selected ? ' is-selected' : ''}" transform="translate(${point.x} ${point.y})" role="button" tabindex="0" data-person="${id}" aria-label="${escapeHtml(`${byId.get(id)!.name}, ${byId.get(id)!.university}`)}"><title>${escapeHtml(`${byId.get(id)!.name} · ${byId.get(id)!.university}`)}</title><circle r="13"/><text x="20" y="5">${escapeHtml(displayName(byId.get(id)!.name))}</text></g>`).join('')}</g>`;
+      ${[...points].map(([id, point]) => `<g class="network-node${selected || mode.value !== 'network' ? ' in-person-view' : ''}${id === selected ? ' is-selected' : ''}" transform="translate(${point.x} ${point.y})" role="button" tabindex="0" data-person="${id}" aria-label="${escapeHtml(`${byId.get(id)!.name}, ${byId.get(id)!.university}`)}"><title>${escapeHtml(`${byId.get(id)!.name} · ${byId.get(id)!.university}`)}</title><circle r="13"/></g>`).join('')}
+      <g id="network-labels" aria-hidden="true">${[...points].map(([id, point]) => `<text class="network-label" data-label="${id}" x="${point.x + 20}" y="${point.y + 5}">${escapeHtml(displayName(byId.get(id)!.name))}</text>`).join('')}</g></g>`;
+    syncLabels();
     if (!points.size) svg.innerHTML += '<text x="400" y="120" text-anchor="middle" fill="currentColor">No recorded connections match this view.</text>';
     transform();
   }
@@ -239,9 +253,25 @@ export function initGraphExplorer(roster: Roster, database: RelationshipDatabase
     else if (edge) { const found = valid.find(item => item.id === edge); if (found) evidence(found); }
   }
   root.addEventListener('click', event => { if (moved) { moved = false; return; } if (event.target instanceof Element) activate(event.target); });
+  svg.addEventListener('pointerover', event => {
+    if (!(event.target instanceof Element)) return;
+    hoveredPerson = event.target.closest('.network-node')?.getAttribute('data-person') ?? '';
+    syncLabels();
+  });
+  svg.addEventListener('pointerout', event => {
+    const next = event.relatedTarget;
+    hoveredPerson = next instanceof Element && svg.contains(next) ? next.closest('.network-node')?.getAttribute('data-person') ?? '' : '';
+    syncLabels();
+  });
+  svg.addEventListener('focusout', event => {
+    focusedPerson = event.relatedTarget instanceof Element ? event.relatedTarget.closest('.network-node')?.getAttribute('data-person') ?? '' : '';
+    syncLabels();
+  });
   svg.addEventListener('focusin', event => {
     if (!(event.target instanceof Element)) return;
     const id = event.target.getAttribute('data-person');
+    focusedPerson = id ?? '';
+    syncLabels();
     const edgeId = event.target.getAttribute('data-edge');
     const edge = visible.find(item => item.id === edgeId);
     const point = id ? points.get(id) : edge ? { x: (points.get(edge.sourceId)!.x + points.get(edge.targetId)!.x) / 2, y: (points.get(edge.sourceId)!.y + points.get(edge.targetId)!.y) / 2 } : undefined;

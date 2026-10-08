@@ -3983,8 +3983,9 @@ button.chart-row-btn:hover {
 .network-node { cursor: pointer; }
 .network-node circle { fill: var(--bamboo-green); stroke: var(--card-bg); stroke-width: 2; }
 .network-node.is-selected circle { fill: var(--focus-ring); stroke: var(--text-primary); stroke-width: 3; }
-.network-node text { font: 16px var(--font-body); fill: var(--text-primary); opacity: 0; pointer-events: none; paint-order: stroke; stroke: var(--card-bg); stroke-width: 4px; stroke-linejoin: round; }
-.network-node.in-person-view text, .network-node:hover text, .network-node:focus text, .network-node.is-selected text { opacity: 1; }
+#network-labels { pointer-events: none; }
+.network-label { font: 16px var(--font-body); fill: var(--text-primary); opacity: 0; pointer-events: none; paint-order: stroke; stroke: var(--card-bg); stroke-width: 4px; stroke-linejoin: round; }
+.network-label.is-visible { opacity: 1; }
 .network-node:focus circle { stroke: var(--focus-ring); stroke-width: 4; }
 .network-edge { cursor: pointer; }
 .network-edge:hover path:first-of-type, .network-edge:focus path:first-of-type { stroke-width: 4; }
