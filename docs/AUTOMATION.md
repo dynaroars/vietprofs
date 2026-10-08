@@ -16,16 +16,16 @@ Policy (eligibility, evidence, routing of Issues/PRs/direct pushes) lives in `AG
  task PRs  "[scheduled:<task>] ..."  ──►  re-verify live, test on main,
                                           CI green → squash-merge
  finding Issues (side discoveries)   ──►  verify → fix PR → close
- new-candidate Issues                ──►  re-dedup → verify → "ready for  ──►  adds entry from a
-                                          owner" comment, leave open          local session
+ new-candidate Issues                ──►  re-dedup → verify → add entry,  ──►  only if the add is
+                                          close (else "ready for owner")      denied or unclear
  owner-review Issues                 ──►  comment findings, leave open   ──►  only items the
                                                                               auditor leaves open
 ```
 
 - **Producers** do one playbook each, in small capped batches. They never merge or push to `main`,
   except the relationships routine (see `AGENTS.md`). The auditor merges PRs and lands its own
-  verified Issue fixes through one fix PR per run. New roster entries are the exception: the
-  owner adds them (see "New-candidate Issues" under the auditor section).
+  verified Issue fixes through one fix PR per run. Verified new candidates are added by the
+  auditor itself (see "New-candidate Issues" under the auditor section).
 - While researching, producers also report **side findings**: errors or leads outside their own
   task, filed as Issues (see "Side findings" below). This is how a narrow task like the LinkedIn
   backfill turns up stale ranks, duplicates, missing honors, and new candidates.
