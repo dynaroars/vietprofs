@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-07T14:30:00.000Z",
+  "updatedAt": "2026-10-08T14:10:00.000Z",
   "batches": [
     {
       "batchNumber": 1,
@@ -17826,6 +17826,238 @@
           ],
           "relationshipIds": [],
           "nextAction": "No roster-internal advisor/mentor checked on the official profile (profile pages not individually opened in this run). Crossref author-name search (works with <=15 authors, top 200 per name) returned only given-name/surname-token namesake matches against roster members at unrelated institutions and fields (e.g. repeated hits on shared DOIs with Vietnamese given-name/family-name order ambiguity); none identity-resolved by affiliation, so no coauthor pair reached two verified shared works. No grant or patent search completed. OpenAlex daily quota exhausted (HTTP 429); retry coauthor check with OpenAlex when available.",
+          "status": "unresolved",
+          "notes": []
+        }
+      ]
+    },
+    {
+      "batchNumber": 77,
+      "rosterIds": [
+        "vp-1724",
+        "vp-1723",
+        "vp-1722",
+        "vp-1721",
+        "vp-1720",
+        "vp-1719",
+        "vp-1718",
+        "vp-1717",
+        "vp-1716",
+        "vp-1715",
+        "vp-1714",
+        "vp-1713",
+        "vp-1712",
+        "vp-1711",
+        "vp-1710",
+        "vp-1709",
+        "vp-1708",
+        "vp-1707",
+        "vp-0431",
+        "vp-0430"
+      ],
+      "startedAt": "2026-10-08T14:10:00.000Z",
+      "status": "complete",
+      "outcomes": [
+        {
+          "rosterId": "vp-1724",
+          "sources": [
+            "https://search.asu.edu/profile/4879634"
+          ],
+          "relationshipIds": [],
+          "nextAction": "Official profile checked for advisor/mentor/postdoc wording: none naming a roster member. Crossref author-name search (works with <=15 authors) gave only given/family-token namesake matches to roster members at unrelated institutions/fields; none identity-resolved. OpenAlex unavailable (daily rate limit); no grant or patent search completed. Retry coauthor check with OpenAlex, then NSF/NIH/patent searches.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-1723",
+          "sources": [
+            "https://facultyprofiles.midwestern.edu/1670-thu-huynh"
+          ],
+          "relationshipIds": [],
+          "nextAction": "Official profile checked for advisor/mentor/postdoc wording: none naming a roster member. Crossref author-name search (works with <=15 authors) gave only given/family-token namesake matches to roster members at unrelated institutions/fields; none identity-resolved. OpenAlex unavailable (daily rate limit); no grant or patent search completed. Retry coauthor check with OpenAlex, then NSF/NIH/patent searches.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-1722",
+          "sources": [
+            "https://uwm.edu/biology/about/directory/tran-an-phu/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "Official profile checked for advisor/mentor/postdoc wording: none naming a roster member. Crossref author-name search (works with <=15 authors) gave only given/family-token namesake matches to roster members at unrelated institutions/fields; none identity-resolved. OpenAlex unavailable (daily rate limit); no grant or patent search completed. Retry coauthor check with OpenAlex, then NSF/NIH/patent searches.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-1721",
+          "sources": [
+            "https://biochem.ubc.ca/fac-research/faculty/franck-duong/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "Official profile checked for advisor/mentor/postdoc wording: none naming a roster member. Crossref author-name search (works with <=15 authors) gave only given/family-token namesake matches to roster members at unrelated institutions/fields; none identity-resolved. OpenAlex unavailable (daily rate limit); no grant or patent search completed. Retry coauthor check with OpenAlex, then NSF/NIH/patent searches.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-1720",
+          "sources": [
+            "https://www.mcgill.ca/economics/channels/news/memory-our-colleague-ngo-van-long-368496"
+          ],
+          "relationshipIds": [],
+          "nextAction": "Official profile checked for advisor/mentor/postdoc wording: none naming a roster member. Crossref author-name search (works with <=15 authors) gave only given/family-token namesake matches to roster members at unrelated institutions/fields; none identity-resolved. OpenAlex unavailable (daily rate limit); no grant or patent search completed. Retry coauthor check with OpenAlex, then NSF/NIH/patent searches.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-1719",
+          "sources": [
+            "https://www.jcsu.edu/faculty/thanh-thuy-nguyen"
+          ],
+          "relationshipIds": [],
+          "nextAction": "Official profile checked for advisor/mentor/postdoc wording: none naming a roster member. Crossref author-name search (works with <=15 authors) gave only given/family-token namesake matches to roster members at unrelated institutions/fields; none identity-resolved. OpenAlex unavailable (daily rate limit); no grant or patent search completed. Retry coauthor check with OpenAlex, then NSF/NIH/patent searches.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-1718",
+          "sources": [
+            "https://www.fit.edu/faculty-profiles/n/nguyen-son/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "Official profile checked for advisor/mentor/postdoc wording: none naming a roster member. Crossref author-name search (works with <=15 authors) gave only given/family-token namesake matches to roster members at unrelated institutions/fields; none identity-resolved. OpenAlex unavailable (daily rate limit); no grant or patent search completed. Retry coauthor check with OpenAlex, then NSF/NIH/patent searches.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-1717",
+          "sources": [
+            "https://math.utk.edu/people/tuoc-phan/"
+          ],
+          "relationshipIds": [
+            "rel-coauthor-vp-0058-vp-1717",
+            "rel-coauthor-vp-0294-vp-1717"
+          ],
+          "nextAction": "Verified two coauthor edges (vp-0058, vp-0294) from Crossref and both scholars' own publication pages. vp-0374 hit rejected as namesake (Truyen D. Nguyen, Human Services vs. Truyen V. Nguyen, mathematician, not on roster). No advisor/mentor names on official page; no grant or patent search completed.",
+          "status": "completed",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-1716",
+          "sources": [
+            "https://www.usf.edu/arts-sciences/departments/chemistry/faculty/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "Official profile checked for advisor/mentor/postdoc wording: none naming a roster member. Crossref author-name search (works with <=15 authors) gave only given/family-token namesake matches to roster members at unrelated institutions/fields; none identity-resolved. OpenAlex unavailable (daily rate limit); no grant or patent search completed. Retry coauthor check with OpenAlex, then NSF/NIH/patent searches.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-1715",
+          "sources": [
+            "https://www.memphis.edu/physics/faculty-hoang/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "Official profile checked for advisor/mentor/postdoc wording: none naming a roster member. Crossref author-name search (works with <=15 authors) gave only given/family-token namesake matches to roster members at unrelated institutions/fields; none identity-resolved. OpenAlex unavailable (daily rate limit); no grant or patent search completed. Retry coauthor check with OpenAlex, then NSF/NIH/patent searches.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-1714",
+          "sources": [
+            "https://www.tntech.edu/directory/cas/chemistry/lac-ha-nguyen.php"
+          ],
+          "relationshipIds": [],
+          "nextAction": "Official profile checked for advisor/mentor/postdoc wording: none naming a roster member. Crossref author-name search (works with <=15 authors) gave only given/family-token namesake matches to roster members at unrelated institutions/fields; none identity-resolved. OpenAlex unavailable (daily rate limit); no grant or patent search completed. Retry coauthor check with OpenAlex, then NSF/NIH/patent searches.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-1713",
+          "sources": [
+            "https://www.med.unc.edu/medicine/gi/people/judy-trieu-md-mph/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "Official profile checked for advisor/mentor/postdoc wording: none naming a roster member. Crossref author-name search (works with <=15 authors) gave only given/family-token namesake matches to roster members at unrelated institutions/fields; none identity-resolved. OpenAlex unavailable (daily rate limit); no grant or patent search completed. Retry coauthor check with OpenAlex, then NSF/NIH/patent searches.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-1712",
+          "sources": [
+            "https://www.odu.edu/directory/duc-nguyen"
+          ],
+          "relationshipIds": [],
+          "nextAction": "Official profile checked for advisor/mentor/postdoc wording: none naming a roster member. Crossref author-name search (works with <=15 authors) gave only given/family-token namesake matches to roster members at unrelated institutions/fields; none identity-resolved. OpenAlex unavailable (daily rate limit); no grant or patent search completed. Retry coauthor check with OpenAlex, then NSF/NIH/patent searches.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-1711",
+          "sources": [
+            "https://chicago.medicine.uic.edu/medicine/profiles/nguyen-ryan/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "Official profile checked for advisor/mentor/postdoc wording: none naming a roster member. Crossref author-name search (works with <=15 authors) gave only given/family-token namesake matches to roster members at unrelated institutions/fields; none identity-resolved. OpenAlex unavailable (daily rate limit); no grant or patent search completed. Retry coauthor check with OpenAlex, then NSF/NIH/patent searches.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-1710",
+          "sources": [
+            "https://art.missouristate.edu/profile.asp?p=DVu"
+          ],
+          "relationshipIds": [],
+          "nextAction": "Official profile checked for advisor/mentor/postdoc wording: none naming a roster member. Crossref author-name search (works with <=15 authors) gave only given/family-token namesake matches to roster members at unrelated institutions/fields; none identity-resolved. OpenAlex unavailable (daily rate limit); no grant or patent search completed. Retry coauthor check with OpenAlex, then NSF/NIH/patent searches.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-1709",
+          "sources": [
+            "https://www.seattleu.edu/directory/profiles/trung-pham-sj-mfa.php"
+          ],
+          "relationshipIds": [],
+          "nextAction": "Official profile checked for advisor/mentor/postdoc wording: none naming a roster member. Crossref author-name search (works with <=15 authors) gave only given/family-token namesake matches to roster members at unrelated institutions/fields; none identity-resolved. OpenAlex unavailable (daily rate limit); no grant or patent search completed. Retry coauthor check with OpenAlex, then NSF/NIH/patent searches.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-1708",
+          "sources": [
+            "https://filmandmediastudies.georgetown.edu/profiles/van-tran-nguyen/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "Official profile checked for advisor/mentor/postdoc wording: none naming a roster member. Crossref author-name search (works with <=15 authors) gave only given/family-token namesake matches to roster members at unrelated institutions/fields; none identity-resolved. OpenAlex unavailable (daily rate limit); no grant or patent search completed. Retry coauthor check with OpenAlex, then NSF/NIH/patent searches.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-1707",
+          "sources": [
+            "https://www.depaul.edu/faculty/jerry-tran"
+          ],
+          "relationshipIds": [],
+          "nextAction": "Official profile checked for advisor/mentor/postdoc wording: none naming a roster member. Crossref author-name search (works with <=15 authors) gave only given/family-token namesake matches to roster members at unrelated institutions/fields; none identity-resolved. OpenAlex unavailable (daily rate limit); no grant or patent search completed. Retry coauthor check with OpenAlex, then NSF/NIH/patent searches.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0431",
+          "sources": [
+            "https://faculty.mdanderson.org/profiles/quynh_nguyen.html"
+          ],
+          "relationshipIds": [],
+          "nextAction": "Official profile checked for advisor/mentor/postdoc wording: none naming a roster member. Crossref author-name search (works with <=15 authors) gave only given/family-token namesake matches to roster members at unrelated institutions/fields; none identity-resolved. OpenAlex unavailable (daily rate limit); no grant or patent search completed. Retry coauthor check with OpenAlex, then NSF/NIH/patent searches.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0430",
+          "sources": [
+            "https://faculty.mdanderson.org/profiles/hop_trancao.html"
+          ],
+          "relationshipIds": [],
+          "nextAction": "Official profile checked for advisor/mentor/postdoc wording: none naming a roster member. Crossref author-name search (works with <=15 authors) gave only given/family-token namesake matches to roster members at unrelated institutions/fields; none identity-resolved. OpenAlex unavailable (daily rate limit); no grant or patent search completed. Retry coauthor check with OpenAlex, then NSF/NIH/patent searches.",
           "status": "unresolved",
           "notes": []
         }

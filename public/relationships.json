@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-02T14:05:00.000Z",
+  "updatedAt": "2026-10-08T14:10:00.000Z",
   "relationships": [
     {
       "id": "rel-coauthor-vp-0015-vp-0018",
@@ -2456,6 +2456,66 @@
         }
       ],
       "verifiedAt": "2026-10-02T14:05:00.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-0058-vp-1717",
+      "type": "coauthor",
+      "sourceId": "vp-0058",
+      "targetId": "vp-1717",
+      "sources": [
+        "https://doi.org/10.1090/tran/8892",
+        "https://doi.org/10.1016/j.jfa.2024.110374",
+        "https://web.math.utk.edu/~tphan2/pup.html",
+        "https://people.math.wisc.edu/~hung/research.html"
+      ],
+      "evidence": "Hung V. Tran (vp-0058, UW-Madison) and Tuoc Phan (vp-1717, UT Knoxville) are listed with Hongjie Dong on both retained three-author works; each scholar's own official publication page lists both papers as joint work with the other (Phan: 'with H. Dong and H. V. Tran'; Tran: 'with H. Dong, Tuoc Phan').",
+      "works": [
+        {
+          "identifier": "doi:10.1090/tran/8892",
+          "title": "Degenerate linear parabolic equations in divergence form on the upper half space",
+          "date": "2023",
+          "url": "https://doi.org/10.1090/tran/8892"
+        },
+        {
+          "identifier": "doi:10.1016/j.jfa.2024.110374",
+          "title": "Nondivergence form degenerate linear parabolic equations on the upper half space",
+          "date": "2024",
+          "url": "https://doi.org/10.1016/j.jfa.2024.110374"
+        }
+      ],
+      "verifiedAt": "2026-10-08T14:10:00.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-0294-vp-1717",
+      "type": "coauthor",
+      "sourceId": "vp-0294",
+      "targetId": "vp-1717",
+      "sources": [
+        "https://doi.org/10.1515/ans-2015-5038",
+        "https://doi.org/10.1137/140981447",
+        "https://web.math.utk.edu/~tphan2/pup.html",
+        "https://luanhoangmath.github.io/"
+      ],
+      "evidence": "Luan Hoang (vp-0294, Texas Tech) and Tuoc Phan (vp-1717, UT Knoxville) are listed with Truyen V. Nguyen on both retained three-author works; each scholar's own publication page lists both papers (Hoang's site: 'Luan Hoang, Truyen Nguyen, Tuoc Phan'; Phan's: 'with Luan T. Hoang and Truyen V. Nguyen'). The third author is not roster member vp-0374 (Truyen D. Nguyen, Human Services), a namesake.",
+      "works": [
+        {
+          "identifier": "doi:10.1515/ans-2015-5038",
+          "title": "Local Gradient Estimates for Degenerate Elliptic Equations",
+          "date": "2016",
+          "url": "https://doi.org/10.1515/ans-2015-5038"
+        },
+        {
+          "identifier": "doi:10.1137/140981447",
+          "title": "Gradient Estimates and Global Existence of Smooth Solutions to a Cross-Diffusion System",
+          "date": "2015",
+          "url": "https://doi.org/10.1137/140981447"
+        }
+      ],
+      "verifiedAt": "2026-10-08T14:10:00.000Z",
       "direct": false,
       "notes": ""
     }
