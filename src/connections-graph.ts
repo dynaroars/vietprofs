@@ -17,7 +17,7 @@ const normalize = (value: string): string => value.normalize('NFD').replace(/\p{
 interface Point { x: number; y: number }
 
 /** Stable component packing keeps unrelated pairs from collapsing into one large cloud. */
-function layout(edges: AcademicRelationship[]): { points: Map<string, Point>; height: number } {
+function layout(edges: AcademicRelationship[]): { points: Map<string, Point>; height: number; width: number } {
   const adjacency = new Map<string, Set<string>>();
   for (const edge of edges) {
     for (const [a, b] of [[edge.sourceId, edge.targetId], [edge.targetId, edge.sourceId]]) {
@@ -66,31 +66,34 @@ function layout(edges: AcademicRelationship[]): { points: Map<string, Point>; he
     for (const point of local) points.set(point.id, { x: x + size / 2 + point.x, y: y + size / 2 + point.y });
     x += size; rowHeight = Math.max(rowHeight, size);
   }
-  const scale = 800 / packingWidth;
-  for (const point of points.values()) { point.x *= scale; point.y *= scale; }
-  return { points, height: Math.max(240, (y + rowHeight) * scale) };
+  return { points, width: packingWidth, height: Math.max(240, y + rowHeight) };
 }
 
 export function renderGraphExplorer(): string {
-  return `<section class="man-section"><h2>EXPLORE THE NETWORK</h2>
+  return `<section class="man-section connection-explorer-section"><h2>EXPLORE THE NETWORK</h2>
     <p>Shows verified relationships recorded in VietProfs. Missing links do not mean no relationship exists.</p>
     <div id="connection-explorer" class="connection-explorer">
-      <label class="network-mode-label">Explore<select id="network-mode"><option value="network">Network overview</option><option value="lineage">Academic lineage</option><option value="path">Connection path</option></select></label>
+      <div class="network-toolbar network-modes" role="group" aria-label="Explore connections">
+        <button type="button" id="network-mode-network" data-mode="network" aria-pressed="true">Network</button>
+        <button type="button" id="network-mode-lineage" data-mode="lineage" aria-pressed="false">Lineage</button>
+        <button type="button" id="network-mode-path" data-mode="path" aria-pressed="false">Find a path</button>
+      </div>
       <p id="network-mode-help" class="network-help"></p>
       <div id="network-path-controls" class="connection-path-controls" hidden>
-        <label>From<select id="network-path-start"><option value="">Choose a person</option></select></label>
-        <label>To<select id="network-path-end"><option value="">Choose a person</option></select></label>
+        <label>From<input id="network-path-start" type="search" list="network-people" placeholder="Search for a person" autocomplete="off"></label>
+        <label>To<input id="network-path-end" type="search" list="network-people" placeholder="Search for a person" autocomplete="off"></label>
+        <datalist id="network-people"></datalist>
       </div>
-      <div class="connection-controls">
+      <div id="network-person-search" class="connection-controls">
         <label>Find a person<input id="network-search" type="search" placeholder="Name or institution" aria-controls="network-results" autocomplete="off"></label>
-        <label>Relationship<select id="network-type"><option value="">All types</option></select></label>
-        <label>Person’s network<select id="network-depth"><option value="1">Direct connections</option><option value="2">Two steps away</option></select></label>
       </div>
+      <details id="network-filters" class="network-filters"><summary>Filter connections</summary><div id="network-type" class="network-toolbar" role="group" aria-label="Relationship filter"></div></details>
       <div id="network-results" class="network-results" aria-label="People matching your search"></div>
       <div class="network-toolbar" role="group" aria-label="Network view">
         <button type="button" id="network-graph-toggle" aria-pressed="true">Graph</button>
         <button type="button" id="network-table-toggle" aria-pressed="false">Table</button>
-        <button type="button" id="network-clear">Show all people</button>
+        <button type="button" id="network-clear" hidden>Show all people</button>
+        <button type="button" id="network-depth" aria-pressed="false" hidden>Include two steps</button>
       </div>
       <p id="network-summary" class="stat-sub" role="status"></p>
       <div id="network-graph-panel">
@@ -98,8 +101,9 @@ export function renderGraphExplorer(): string {
           <button type="button" id="network-zoom-in" aria-label="Zoom in">+</button>
           <button type="button" id="network-zoom-out" aria-label="Zoom out">−</button>
           <button type="button" id="network-fit">Fit graph</button>
+          <button type="button" id="network-reset">Reset size</button>
         </div>
-        <p class="network-help" id="network-help">Drag the background to pan. Drag a person to rearrange. Select a person or line for details. Use Tab and Enter to select people and connections.</p>
+        <p class="network-help" id="network-help">Graphs open at a readable size. Drag the background to explore more groups. Drag a person to rearrange. Select a person or line for details. Use Tab and Enter to select people and connections.</p>
         <div class="network-canvas"><svg id="network-svg" viewBox="0 0 800 500" role="group" aria-label="Verified academic relationship graph" aria-describedby="network-help"></svg></div>
         <div id="network-legend" class="network-legend" aria-label="Relationship legend"></div>
       </div>
@@ -117,21 +121,29 @@ export function initGraphExplorer(roster: Roster, database: RelationshipDatabase
   const connectedIds = new Set(valid.flatMap(edge => [edge.sourceId, edge.targetId]));
   const people = roster.filter(person => connectedIds.has(person.id)).sort((a, b) => a.name.localeCompare(b.name));
   const get = <T extends HTMLElement>(id: string): T => root.querySelector<T>(`#${id}`)!;
-  const search = get<HTMLInputElement>('network-search'), type = get<HTMLSelectElement>('network-type');
-  const depth = get<HTMLSelectElement>('network-depth');
-  const mode = get<HTMLSelectElement>('network-mode');
-  const pathStart = get<HTMLSelectElement>('network-path-start');
-  const pathEnd = get<HTMLSelectElement>('network-path-end');
-  const options = [...roster].sort((a, b) => a.name.localeCompare(b.name)).map(person => `<option value="${person.id}">${escapeHtml(displayName(person.name))} · ${escapeHtml(person.university)}</option>`).join('');
-  pathStart.innerHTML += options; pathEnd.innerHTML += options;
+  const search = get<HTMLInputElement>('network-search');
+  const type = { value: '' }, depth = { value: '1' }, mode = { value: 'network' };
+  const pathStart = get<HTMLInputElement>('network-path-start');
+  const pathEnd = get<HTMLInputElement>('network-path-end');
+  const choiceLabel = (person: Roster[number]): string => `${displayName(person.name)} · ${person.university} (${person.id})`;
+  const choices = new Map(roster.map(person => [choiceLabel(person), person.id]));
+  const pathId = (input: HTMLInputElement): string => choices.get(input.value) ?? '';
+  get('network-people').innerHTML = [...choices.keys()].sort().map(label => `<option value="${escapeHtml(label)}"></option>`).join('');
   let pathIds: string[] = [];
   let modeMessage = '';
   const svg = root.querySelector<SVGSVGElement>('#network-svg')!;
   const details = get('network-details');
+  const canvas = root.querySelector<HTMLElement>('.network-canvas')!;
+  let graphWidth = 800, graphHeight = 500;
+  function viewport(): void {
+    if (!canvas.clientWidth) return;
+    svg.setAttribute('viewBox', `0 0 ${canvas.clientWidth} ${canvas.clientHeight}`);
+  }
+  new ResizeObserver(viewport).observe(canvas);
   const link = (id: string): string => `<a href="${escapeHtml(`${import.meta.env.BASE_URL}${personPath(id)}`)}">${escapeHtml(displayName(byId.get(id)!.name))}</a>`;
   let selected = '', visible: AcademicRelationship[] = [], points = new Map<string, Point>();
   let zoom = 1, panX = 0, panY = 0, moved = false;
-  type.innerHTML += RELATIONSHIP_TYPES.filter(t => valid.some(edge => edge.type === t)).map(t => `<option value="${t}">${escapeHtml(LABELS[t])}</option>`).join('');
+  get('network-type').innerHTML = `<button type="button" data-type="" aria-pressed="true">All</button>${RELATIONSHIP_TYPES.filter(t => valid.some(edge => edge.type === t)).map(t => `<button type="button" data-type="${t}" aria-pressed="false">${escapeHtml(LABELS[t])}</button>`).join('')}`;
 
   function transform(): void { svg.querySelector('#network-layer')?.setAttribute('transform', `translate(${panX} ${panY}) scale(${zoom})`); }
   function evidence(edge: AcademicRelationship): void {
@@ -156,11 +168,11 @@ export function initGraphExplorer(roster: Roster, database: RelationshipDatabase
         const siblings = visible.filter(other => [other.sourceId, other.targetId].sort().join('|') === [edge.sourceId, edge.targetId].sort().join('|'));
         const bend = (siblings.indexOf(edge) - (siblings.length - 1) / 2) * 30;
         const direction = edge.sourceId < edge.targetId ? 1 : -1;
-        const curve = `M${a.x + Math.cos(angle) * 10} ${a.y + Math.sin(angle) * 10} Q${(a.x + b.x) / 2 - Math.sin(angle) * bend * direction} ${(a.y + b.y) / 2 + Math.cos(angle) * bend * direction} ${b.x - Math.cos(angle) * 12} ${b.y - Math.sin(angle) * 12}`;
+        const curve = `M${a.x + Math.cos(angle) * 15} ${a.y + Math.sin(angle) * 15} Q${(a.x + b.x) / 2 - Math.sin(angle) * bend * direction} ${(a.y + b.y) / 2 + Math.cos(angle) * bend * direction} ${b.x - Math.cos(angle) * 17} ${b.y - Math.sin(angle) * 17}`;
         const dash = directed(edge) ? 'stroke-dasharray="5 3"' : '';
         return `<g class="network-edge" role="button" tabindex="0" data-edge="${edge.id}" aria-label="${escapeHtml(`${byId.get(edge.sourceId)!.name}, ${LABELS[edge.type]}, ${byId.get(edge.targetId)!.name}`)}"><title>${escapeHtml(LABELS[edge.type])}</title><path d="${curve}" fill="none" stroke="${COLORS[edge.type]}" stroke-width="2" ${dash} ${directed(edge) ? `marker-end="url(#arrow-${edge.type})"` : ''}/><path d="${curve}" fill="none" stroke="transparent" stroke-width="14"/></g>`;
       }).join('')}
-      ${[...points].map(([id, point]) => `<g class="network-node${selected || mode.value !== 'network' ? ' in-person-view' : ''}${id === selected ? ' is-selected' : ''}" transform="translate(${point.x} ${point.y})" role="button" tabindex="0" data-person="${id}" aria-label="${escapeHtml(`${byId.get(id)!.name}, ${byId.get(id)!.university}`)}"><title>${escapeHtml(`${byId.get(id)!.name} · ${byId.get(id)!.university}`)}</title><circle r="9"/><text x="14" y="4">${escapeHtml(displayName(byId.get(id)!.name))}</text></g>`).join('')}</g>`;
+      ${[...points].map(([id, point]) => `<g class="network-node${selected || mode.value !== 'network' ? ' in-person-view' : ''}${id === selected ? ' is-selected' : ''}" transform="translate(${point.x} ${point.y})" role="button" tabindex="0" data-person="${id}" aria-label="${escapeHtml(`${byId.get(id)!.name}, ${byId.get(id)!.university}`)}"><title>${escapeHtml(`${byId.get(id)!.name} · ${byId.get(id)!.university}`)}</title><circle r="13"/><text x="20" y="5">${escapeHtml(displayName(byId.get(id)!.name))}</text></g>`).join('')}</g>`;
     if (!points.size) svg.innerHTML += '<text x="400" y="120" text-anchor="middle" fill="currentColor">No recorded connections match this view.</text>';
     transform();
   }
@@ -170,11 +182,11 @@ export function initGraphExplorer(roster: Roster, database: RelationshipDatabase
     pathIds = [];
     modeMessage = '';
     if (mode.value === 'path') {
-      if (!pathStart.value || !pathEnd.value) {
+      if (!pathId(pathStart) || !pathId(pathEnd)) {
         visible = [];
         modeMessage = 'Choose two people to find a connection path.';
       } else {
-        const path = connectionPath(visible, pathStart.value, pathEnd.value);
+        const path = connectionPath(visible, pathId(pathStart), pathId(pathEnd));
         visible = path?.edges ?? [];
         pathIds = path?.ids ?? [];
         modeMessage = path ? (path.edges.length ? `Shortest recorded path: ${path.edges.length} step${path.edges.length === 1 ? '' : 's'}.` : 'Choose two different people to explore a connection path.') : 'No path is recorded between these people with the current relationship filter. This does not mean they have no connection.';
@@ -192,14 +204,23 @@ export function initGraphExplorer(roster: Roster, database: RelationshipDatabase
     points = arranged.points;
     if ('hasCycle' in arranged && arranged.hasCycle) modeMessage = 'Some mentorship records form a cycle. Those people and their descendants appear in a separate row without an assigned generation.';
     if (mode.value === 'path') {
-      points = new Map(pathIds.map((id, index) => [id, { x: 100, y: 60 + index * 110 }]));
+      points = new Map(pathIds.map((id, index) => [id, { x: 45, y: 60 + index * 110 }]));
       arranged.height = Math.max(240, pathIds.length * 110 + 40);
     }
     if (selected && mode.value !== 'path' && !points.has(selected)) points.set(selected, { x: 400, y: 120 });
-    svg.setAttribute('viewBox', `0 0 ${'width' in arranged ? arranged.width : 800} ${arranged.height}`);
+    graphWidth = arranged.width; graphHeight = arranged.height;
+    viewport();
     zoom = 1; panX = panY = 0;
+    if (selected && points.size) { panX = 40 - Math.min(...[...points.values()].map(point => point.x)); panY = 50 - Math.min(...[...points.values()].map(point => point.y)); }
     draw();
-    get('network-depth').toggleAttribute('disabled', !selected || mode.value !== 'network');
+    get('network-depth').hidden = !selected || mode.value !== 'network';
+    get('network-depth').setAttribute('aria-pressed', String(depth.value === '2'));
+    get('network-person-search').hidden = mode.value === 'path';
+    get('network-results').hidden = mode.value === 'path';
+    get('network-clear').hidden = !selected && mode.value !== 'path';
+    root.querySelectorAll<HTMLElement>('[data-mode]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.mode === mode.value)));
+    root.querySelectorAll<HTMLElement>('[data-type]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.type === type.value)));
+    root.querySelector('#network-filters summary')!.textContent = type.value ? `Filter: ${LABELS[type.value as RelationshipType]}` : 'Filter connections';
     get('network-path-controls').hidden = mode.value !== 'path';
     get('network-mode-help').textContent = mode.value === 'lineage' ? 'Advisor and mentor → advisee. Rows follow recorded mentorship links, not dates. Select a person to explore their full mentorship group. Pan sideways to explore wide rows.' : mode.value === 'path' ? 'Finds one shortest path through recorded relationships, in either direction. Advisor arrows keep their original direction. The relationship filter applies to the whole path.' : 'Explore recorded relationships, or select a person to see their network.';
     get('network-clear').textContent = mode.value === 'path' ? 'Clear path' : 'Show all people';
@@ -218,16 +239,34 @@ export function initGraphExplorer(roster: Roster, database: RelationshipDatabase
     else if (edge) { const found = valid.find(item => item.id === edge); if (found) evidence(found); }
   }
   root.addEventListener('click', event => { if (moved) { moved = false; return; } if (event.target instanceof Element) activate(event.target); });
+  svg.addEventListener('focusin', event => {
+    if (!(event.target instanceof Element)) return;
+    const id = event.target.getAttribute('data-person');
+    const edgeId = event.target.getAttribute('data-edge');
+    const edge = visible.find(item => item.id === edgeId);
+    const point = id ? points.get(id) : edge ? { x: (points.get(edge.sourceId)!.x + points.get(edge.targetId)!.x) / 2, y: (points.get(edge.sourceId)!.y + points.get(edge.targetId)!.y) / 2 } : undefined;
+    if (!point) return;
+    const width = svg.viewBox.baseVal.width, height = svg.viewBox.baseVal.height;
+    const x = point.x * zoom + panX, y = point.y * zoom + panY;
+    if (x < 25 || x > width - 25) panX = width / 3 - point.x * zoom;
+    if (y < 25 || y > height - 25) panY = height / 2 - point.y * zoom;
+    transform();
+  });
   svg.addEventListener('keydown', event => { if ((event.key === 'Enter' || event.key === ' ') && event.target instanceof Element) { event.preventDefault(); activate(event.target); } });
   search.addEventListener('input', () => {
     const query = normalize(search.value.trim());
     const matches = query ? people.filter(person => normalize(`${person.name} ${person.vietnameseName ?? ''} ${person.university}`).includes(query)) : [];
     get('network-results').innerHTML = matches.slice(0, 12).map(person => `<button type="button" data-person="${person.id}">${escapeHtml(displayName(person.name))}<small>${escapeHtml(person.university)}</small></button>`).join('') + (query && !matches.length ? '<p>No people with recorded connections match your search.</p>' : matches.length > 12 ? '<p>Showing the first 12 matches. Refine your search to find more.</p>' : '');
   });
-  mode.addEventListener('change', () => { selected = ''; type.value = ''; render(); });
-  pathStart.addEventListener('change', () => { selected = ''; render(); });
-  pathEnd.addEventListener('change', () => { selected = ''; render(); });
-  type.addEventListener('change', render); depth.addEventListener('change', render);
+  root.querySelectorAll<HTMLElement>('[data-mode]').forEach(button => button.addEventListener('click', () => {
+    mode.value = button.dataset.mode!; selected = ''; type.value = ''; search.value = ''; get('network-results').innerHTML = '';
+    get<HTMLDetailsElement>('network-filters').open = false;
+    render();
+  }));
+  root.querySelectorAll<HTMLElement>('[data-type]').forEach(button => button.addEventListener('click', () => { type.value = button.dataset.type!; render(); }));
+  pathStart.addEventListener('input', () => { selected = ''; render(); });
+  pathEnd.addEventListener('input', () => { selected = ''; render(); });
+  get('network-depth').addEventListener('click', () => { depth.value = depth.value === '1' ? '2' : '1'; render(); });
   get('network-clear').addEventListener('click', () => { selected = ''; pathStart.value = ''; pathEnd.value = ''; search.value = ''; get('network-results').innerHTML = ''; render(); });
   for (const view of ['graph', 'table']) get(`network-${view}-toggle`).addEventListener('click', () => {
     get('network-graph-panel').hidden = view !== 'graph'; get('network-table-panel').hidden = view !== 'table';
@@ -241,7 +280,13 @@ export function initGraphExplorer(roster: Roster, database: RelationshipDatabase
   }
   get('network-zoom-in').addEventListener('click', () => scale(1.3));
   get('network-zoom-out').addEventListener('click', () => scale(1 / 1.3));
-  get('network-fit').addEventListener('click', () => { zoom = 1; panX = panY = 0; transform(); });
+  get('network-fit').addEventListener('click', () => {
+    zoom = Math.min(1, svg.viewBox.baseVal.width / graphWidth, svg.viewBox.baseVal.height / graphHeight);
+    panX = (svg.viewBox.baseVal.width - graphWidth * zoom) / 2;
+    panY = (svg.viewBox.baseVal.height - graphHeight * zoom) / 2;
+    transform();
+  });
+  get('network-reset').addEventListener('click', () => { zoom = 1; panX = panY = 0; transform(); });
   let drag: { x: number; y: number; id: string | null; pointerId: number } | null = null;
   const svgPoint = (event: PointerEvent): DOMPoint => new DOMPoint(event.clientX, event.clientY).matrixTransform(svg.getScreenCTM()!.inverse());
   svg.addEventListener('pointerdown', event => {

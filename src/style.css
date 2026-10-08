@@ -3965,7 +3965,7 @@ button.chart-row-btn:hover {
 
 /* Academic connections explorer */
 .connection-explorer { margin-top: 1rem; }
-.connection-controls { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: .75rem; }
+.connection-controls { display: grid; grid-template-columns: 1fr; gap: .75rem; }
 .connection-controls label { display: flex; flex-direction: column; gap: .3rem; font-size: .8rem; color: var(--text-secondary); }
 .connection-controls input, .connection-controls select, .connection-explorer button {
   font: inherit; color: var(--text-primary); background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 5px; padding: .45rem .65rem;
@@ -3977,13 +3977,13 @@ button.chart-row-btn:hover {
 .network-toolbar { display: flex; flex-wrap: wrap; gap: .5rem; margin: .75rem 0; }
 .network-toolbar button[aria-pressed="true"] { background: var(--tag-bg); border-color: var(--bamboo-green); font-weight: 700; }
 .network-help { font-size: .8rem; color: var(--text-muted); margin-bottom: .5rem; }
-.network-canvas { border: 1px solid var(--border-color); border-radius: 8px; overflow: hidden; background: var(--card-bg); }
-#network-svg { display: block; width: 100%; height: 500px; touch-action: none; cursor: grab; }
+.network-canvas { border: 1px solid var(--border-color); border-radius: 8px; overflow: hidden; background: var(--card-bg); height: clamp(620px, 80vh, 900px); }
+#network-svg { display: block; width: 100%; height: 100%; touch-action: none; cursor: grab; }
 #network-svg:active { cursor: grabbing; }
 .network-node { cursor: pointer; }
 .network-node circle { fill: var(--bamboo-green); stroke: var(--card-bg); stroke-width: 2; }
 .network-node.is-selected circle { fill: var(--focus-ring); stroke: var(--text-primary); stroke-width: 3; }
-.network-node text { font: 12px var(--font-body); fill: var(--text-primary); opacity: 0; pointer-events: none; paint-order: stroke; stroke: var(--card-bg); stroke-width: 4px; stroke-linejoin: round; }
+.network-node text { font: 16px var(--font-body); fill: var(--text-primary); opacity: 0; pointer-events: none; paint-order: stroke; stroke: var(--card-bg); stroke-width: 4px; stroke-linejoin: round; }
 .network-node.in-person-view text, .network-node:hover text, .network-node:focus text, .network-node.is-selected text { opacity: 1; }
 .network-node:focus circle { stroke: var(--focus-ring); stroke-width: 4; }
 .network-edge { cursor: pointer; }
@@ -4003,12 +4003,16 @@ button.chart-row-btn:hover {
 .connection-explorer [hidden] { display: none; }
 @media (max-width: 560px) {
   .connection-controls { grid-template-columns: 1fr; }
-  #network-svg { height: 380px; }
+  .network-canvas { height: 560px; }
 }
-.network-mode-label, .connection-path-controls label { display: flex; flex-direction: column; gap: .3rem; font-size: .8rem; color: var(--text-secondary); }
-.network-mode-label { margin-bottom: .5rem; max-width: 300px; }
-.network-mode-label select, .connection-path-controls select { width: 100%; min-width: 0; font: inherit; color: var(--text-primary); background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 5px; padding: .45rem .65rem; }
+.connection-path-controls label { display: flex; flex-direction: column; gap: .3rem; font-size: .8rem; color: var(--text-secondary); }
+.connection-path-controls input { width: 100%; min-width: 0; font: inherit; color: var(--text-primary); background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 5px; padding: .6rem .75rem; }
+.network-filters { margin-top: .75rem; font-size: .85rem; }
+.network-filters summary { cursor: pointer; color: var(--text-secondary); }
+.network-modes { margin-top: 0; }
 .connection-path-controls { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; margin: .75rem 0; }
 #network-path-result ol { padding-left: 1.5rem; }
 #network-path-result li { margin: .5rem 0; }
 @media (max-width: 560px) { .connection-path-controls { grid-template-columns: 1fr; } }
+
+.connection-explorer-section { width: min(1280px, calc(100vw - 3rem)); margin-left: 50%; transform: translateX(-50%); }
