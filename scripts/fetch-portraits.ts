@@ -40,7 +40,8 @@ async function curl(url: string, maxTime: number): Promise<Buffer> {
 }
 function absoluteUrl(value: string, base: string): string { try { return new URL(value, base).href; } catch { return ''; } }
 function cleanUrl(value: string): string { return value.replace(/&amp;/g, '&').replace(/&#x27;|&#39;/g, "'").replace(/&quot;/g, '"'); }
-function normalizedWords(value: string): string[] { return value.normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase().split(/[^a-z0-9]+/).filter(Boolean); }
+// Split camelCase and letter/digit runs so filenames like "12136_LocBui_400x425" yield "loc" and "bui".
+function normalizedWords(value: string): string[] { return value.normalize('NFKD').replace(/[\u0300-\u036f]/g, '').replace(/[a-z](?=[A-Z])|[A-Za-z](?=\d)|\d(?=[A-Za-z])/g, '$& ').toLowerCase().split(/[^a-z0-9]+/).filter(Boolean); }
 function hasWordEvidence(value: string, context: string, minimum = 2): boolean {
   const words = normalizedWords(value).filter((word) => word.length > 1);
   const found = new Set(normalizedWords(context));
