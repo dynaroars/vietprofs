@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-08T14:10:00.000Z",
+  "updatedAt": "2026-10-09T14:19:00.000Z",
   "relationships": [
     {
       "id": "rel-coauthor-vp-0015-vp-0018",
@@ -2516,6 +2516,56 @@
         }
       ],
       "verifiedAt": "2026-10-08T14:10:00.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-doctoral-advisor-vp-0059-vp-1730",
+      "type": "doctoral-advisor",
+      "sourceId": "vp-0059",
+      "targetId": "vp-1730",
+      "sources": [
+        "https://sites.google.com/view/tnguyen65"
+      ],
+      "evidence": "Trinh Tien Nguyen's maintained personal academic site (Short CV) lists 'Ph.D. in Mathematics, Pennsylvania State University (2020) — Advisor: Prof. Toan T. Nguyen'; this matches vp-0059 (Toan T. Nguyen, Professor of Mathematics, Pennsylvania State University).",
+      "works": [],
+      "verifiedAt": "2026-10-09T14:19:00.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-0059-vp-1730",
+      "type": "coauthor",
+      "sourceId": "vp-0059",
+      "targetId": "vp-1730",
+      "sources": [
+        "https://doi.org/10.1007/s00205-018-1266-9",
+        "https://doi.org/10.1137/19M1246602",
+        "https://doi.org/10.1007/s00220-023-04876-6",
+        "https://sites.google.com/view/tnguyen65"
+      ],
+      "evidence": "Crossref records list Toan T. Nguyen and Trinh T. Nguyen as the two authors of three papers on the inviscid limit of the Navier–Stokes equations; identity is supported by the thesis-advisor relationship (Penn State mathematics, fluid dynamics) recorded on Trinh Tien Nguyen's own site.",
+      "works": [
+        {
+          "identifier": "doi:10.1007/s00205-018-1266-9",
+          "title": "The Inviscid Limit of Navier–Stokes Equations for Analytic Data on the Half-Space",
+          "date": "2018-06-12",
+          "url": "https://doi.org/10.1007/s00205-018-1266-9"
+        },
+        {
+          "identifier": "doi:10.1137/19m1246602",
+          "title": "The Inviscid Limit of Navier–Stokes Equations for Vortex-Wave Data on R^2",
+          "date": "2019-01",
+          "url": "https://doi.org/10.1137/19M1246602"
+        },
+        {
+          "identifier": "doi:10.1007/s00220-023-04876-6",
+          "title": "The Inviscid Limit of Navier–Stokes Equations for Locally Near Boundary Analytic Data on an Exterior Circular Domain",
+          "date": "2024-02",
+          "url": "https://doi.org/10.1007/s00220-023-04876-6"
+        }
+      ],
+      "verifiedAt": "2026-10-09T14:19:00.000Z",
       "direct": false,
       "notes": ""
     }

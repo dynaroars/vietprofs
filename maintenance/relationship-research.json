@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-08T14:10:00.000Z",
+  "updatedAt": "2026-10-09T14:19:00.000Z",
   "batches": [
     {
       "batchNumber": 1,
@@ -18058,6 +18058,245 @@
           ],
           "relationshipIds": [],
           "nextAction": "Official profile checked for advisor/mentor/postdoc wording: none naming a roster member. Crossref author-name search (works with <=15 authors) gave only given/family-token namesake matches to roster members at unrelated institutions/fields; none identity-resolved. OpenAlex unavailable (daily rate limit); no grant or patent search completed. Retry coauthor check with OpenAlex, then NSF/NIH/patent searches.",
+          "status": "unresolved",
+          "notes": []
+        }
+      ]
+    },
+    {
+      "batchNumber": 78,
+      "rosterIds": [
+        "vp-1731",
+        "vp-1730",
+        "vp-1729",
+        "vp-1728",
+        "vp-1727",
+        "vp-1726",
+        "vp-1725",
+        "vp-0429",
+        "vp-0428",
+        "vp-0427",
+        "vp-0426",
+        "vp-0425",
+        "vp-0424",
+        "vp-0423",
+        "vp-0422",
+        "vp-0421",
+        "vp-0420",
+        "vp-0419",
+        "vp-0418",
+        "vp-0417"
+      ],
+      "startedAt": "2026-10-09T14:19:00.000Z",
+      "status": "complete",
+      "outcomes": [
+        {
+          "rosterId": "vp-1731",
+          "sources": [
+            "https://www.ncl.ac.uk/business/people/profile/minhnguyen.html"
+          ],
+          "relationshipIds": [],
+          "nextAction": "Official profile/site fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found (page may be blocked or silent). OpenAlex unavailable (daily rate limit); no Crossref/identity-resolved coauthor, grant, or patent evidence completed. Retry with OpenAlex, then NSF/NIH/patent searches.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-1730",
+          "sources": [
+            "https://sites.google.com/view/tnguyen65",
+            "https://math.sjtu.edu.cn/Default/teachershow/tags/MDAwMDAwMDAwMLGulJWHtKF2"
+          ],
+          "relationshipIds": [
+            "rel-doctoral-advisor-vp-0059-vp-1730",
+            "rel-coauthor-vp-0059-vp-1730"
+          ],
+          "nextAction": "PhD advisor Toan T. Nguyen matched roster vp-0059; Crossref shows 3 shared works. Postdoc mentors Igor Kukavica and Chanwoo Kim are not roster members. No grant or patent search completed.",
+          "status": "completed",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-1729",
+          "sources": [
+            "https://researchportalplus.anu.edu.au/en/persons/vinh-lu/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "Official profile/site fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found (page may be blocked or silent). OpenAlex unavailable (daily rate limit); no Crossref/identity-resolved coauthor, grant, or patent evidence completed. Retry with OpenAlex, then NSF/NIH/patent searches.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-1728",
+          "sources": [
+            "https://mot.yamaguchi-u.ac.jp/English/member.html"
+          ],
+          "relationshipIds": [],
+          "nextAction": "Official profile/site fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found (page may be blocked or silent). OpenAlex unavailable (daily rate limit); no Crossref/identity-resolved coauthor, grant, or patent evidence completed. Retry with OpenAlex, then NSF/NIH/patent searches.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-1727",
+          "sources": [
+            "https://kdb.iimc.kyoto-u.ac.jp/profile/en.e8db4f7712816c35.html"
+          ],
+          "relationshipIds": [],
+          "nextAction": "Official profile/site fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found (page may be blocked or silent). OpenAlex unavailable (daily rate limit); no Crossref/identity-resolved coauthor, grant, or patent evidence completed. Retry with OpenAlex, then NSF/NIH/patent searches.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-1726",
+          "sources": [
+            "https://hri.ad.hit-u.ac.jp/html/100002196_profile_en.html"
+          ],
+          "relationshipIds": [],
+          "nextAction": "Official profile/site fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found (page may be blocked or silent). OpenAlex unavailable (daily rate limit); no Crossref/identity-resolved coauthor, grant, or patent evidence completed. Retry with OpenAlex, then NSF/NIH/patent searches.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-1725",
+          "sources": [
+            "https://www.bu.edu/econ/profile/linh-to/",
+            "https://linhtto.github.io/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "Official profile/site fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found (page may be blocked or silent). OpenAlex unavailable (daily rate limit); no Crossref/identity-resolved coauthor, grant, or patent evidence completed. Retry with OpenAlex, then NSF/NIH/patent searches.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0429",
+          "sources": [
+            "https://faculty.mdanderson.org/profiles/thao_bui.html"
+          ],
+          "relationshipIds": [],
+          "nextAction": "Official profile/site fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found (page may be blocked or silent). OpenAlex unavailable (daily rate limit); no Crossref/identity-resolved coauthor, grant, or patent evidence completed. Retry with OpenAlex, then NSF/NIH/patent searches.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0428",
+          "sources": [
+            "https://faculty.mdanderson.org/profiles/phuoc_t__tran.html"
+          ],
+          "relationshipIds": [],
+          "nextAction": "Official profile/site fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found (page may be blocked or silent). OpenAlex unavailable (daily rate limit); no Crossref/identity-resolved coauthor, grant, or patent evidence completed. Retry with OpenAlex, then NSF/NIH/patent searches.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0427",
+          "sources": [
+            "https://www.foxchase.org/minhhuyen-nguyen"
+          ],
+          "relationshipIds": [],
+          "nextAction": "Official profile/site fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found (page may be blocked or silent). OpenAlex unavailable (daily rate limit); no Crossref/identity-resolved coauthor, grant, or patent evidence completed. Retry with OpenAlex, then NSF/NIH/patent searches.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0426",
+          "sources": [
+            "https://public-health.tamu.edu/directory/aurora-le.html",
+            "https://workerhealth.tamu.edu/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "Official profile/site fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found (page may be blocked or silent). OpenAlex unavailable (daily rate limit); no Crossref/identity-resolved coauthor, grant, or patent evidence completed. Retry with OpenAlex, then NSF/NIH/patent searches.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0425",
+          "sources": [
+            "https://directory.education.tamu.edu/view/nguyennguyen",
+            "https://sites.google.com/view/nguyenpnguyen/bio"
+          ],
+          "relationshipIds": [],
+          "nextAction": "Official profile/site fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found (page may be blocked or silent). OpenAlex unavailable (daily rate limit); no Crossref/identity-resolved coauthor, grant, or patent evidence completed. Retry with OpenAlex, then NSF/NIH/patent searches.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0424",
+          "sources": [
+            "https://www.seattleu.edu/directory/profiles/le-xuan-hy-phd.php"
+          ],
+          "relationshipIds": [],
+          "nextAction": "Official profile/site fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found (page may be blocked or silent). OpenAlex unavailable (daily rate limit); no Crossref/identity-resolved coauthor, grant, or patent evidence completed. Retry with OpenAlex, then NSF/NIH/patent searches.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0423",
+          "sources": [
+            "https://www.scu.edu/engineering/faculty/fr-dat-tran-s-j/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "Official profile/site fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found (page may be blocked or silent). OpenAlex unavailable (daily rate limit); no Crossref/identity-resolved coauthor, grant, or patent evidence completed. Retry with OpenAlex, then NSF/NIH/patent searches.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0422",
+          "sources": [
+            "https://www.scu.edu/cas/mathcs/faculty-and-staff/nicholas-tran/tran.html",
+            "https://algoplexity.com/~ntran/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "Official profile/site fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found (page may be blocked or silent). OpenAlex unavailable (daily rate limit); no Crossref/identity-resolved coauthor, grant, or patent evidence completed. Retry with OpenAlex, then NSF/NIH/patent searches.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0421",
+          "sources": [
+            "https://www.sjsu.edu/people/thuy.le/",
+            "https://www.sjsu.edu/ee/resources/laboratories/quantum-computing-and-embedded-systems-Laboratory/index.php"
+          ],
+          "relationshipIds": [],
+          "nextAction": "Official profile/site fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found (page may be blocked or silent). OpenAlex unavailable (daily rate limit); no Crossref/identity-resolved coauthor, grant, or patent evidence completed. Retry with OpenAlex, then NSF/NIH/patent searches.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0420",
+          "sources": [
+            "https://cob.sfsu.edu/directory"
+          ],
+          "relationshipIds": [],
+          "nextAction": "Official profile/site fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found (page may be blocked or silent). OpenAlex unavailable (daily rate limit); no Crossref/identity-resolved coauthor, grant, or patent evidence completed. Retry with OpenAlex, then NSF/NIH/patent searches.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0419",
+          "sources": [
+            "https://sped.sfsu.edu/faculty-and-staff"
+          ],
+          "relationshipIds": [],
+          "nextAction": "Official profile/site fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found (page may be blocked or silent). OpenAlex unavailable (daily rate limit); no Crossref/identity-resolved coauthor, grant, or patent evidence completed. Retry with OpenAlex, then NSF/NIH/patent searches.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0418",
+          "sources": [
+            "https://chem.rutgers.edu/people/teaching-faculty/teaching-faculty-member/1607-le-kim-phuong",
+            "https://sites.rutgers.edu/lbr/people/kim-phuong-le/"
+          ],
+          "relationshipIds": [],
+          "nextAction": "Official profile/site fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found (page may be blocked or silent). OpenAlex unavailable (daily rate limit); no Crossref/identity-resolved coauthor, grant, or patent evidence completed. Retry with OpenAlex, then NSF/NIH/patent searches.",
+          "status": "unresolved",
+          "notes": []
+        },
+        {
+          "rosterId": "vp-0417",
+          "sources": [
+            "https://profiles.rice.edu/faculty/thanh-tran"
+          ],
+          "relationshipIds": [],
+          "nextAction": "Official profile/site fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found (page may be blocked or silent). OpenAlex unavailable (daily rate limit); no Crossref/identity-resolved coauthor, grant, or patent evidence completed. Retry with OpenAlex, then NSF/NIH/patent searches.",
           "status": "unresolved",
           "notes": []
         }
