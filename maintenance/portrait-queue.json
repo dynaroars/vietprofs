@@ -4637,10 +4637,10 @@
     "university": "Weill Cornell Medicine",
     "profileUrl": "https://www.houstonmethodist.org",
     "batch": 24,
-    "status": "pending",
-    "note": "portrait no longer in roster",
+    "status": "fetched",
+    "note": "HIGH-confidence personal_homepage",
     "recoveryBatch": 20,
-    "portraitSource": "https://www.houstonmethodist.org/-/media/images/services-specialties/us-news/us-news-badges/bhhonorroll_cropped_wchm.ashx?h=160&amp;iar=0&amp;mw=1382&amp;w=160&amp;hash=5BBD935831283B4A179E53672D6D1361"
+    "portraitSource": "https://cooke.hmailabs.org/wp-content/uploads/2019/02/Nhat-Tu-Le-255x255.jpg"
   },
   {
     "id": "vp-1392",
@@ -6892,5 +6892,63 @@
     "profileUrl": "https://earth.indiana.edu/directory/faculty/kieu-chanh.html",
     "batch": 43,
     "status": "pending"
+  },
+  {
+    "id": "vp-1731",
+    "name": "Minh Nguyen - Newcastle University",
+    "university": "Newcastle University",
+    "profileUrl": "https://www.ncl.ac.uk/business/people/profile/minhnguyen.html",
+    "batch": 44,
+    "status": "fetched",
+    "portraitSource": "https://includes.ncl.ac.uk/cmswebservices/myimpact/2020ws/picture/picture.php?wk=nubs&pk=minh.nguyen",
+    "note": "HIGH-confidence official_faculty"
+  },
+  {
+    "id": "vp-1727",
+    "name": "Anhduc Tran",
+    "university": "Kyoto University",
+    "profileUrl": "https://kdb.iimc.kyoto-u.ac.jp/profile/en.e8db4f7712816c35.html",
+    "batch": 44,
+    "status": "unresolved"
+  },
+  {
+    "id": "vp-1726",
+    "name": "Thanh Tung Nguyen",
+    "university": "Hitotsubashi University",
+    "profileUrl": "https://hri.ad.hit-u.ac.jp/html/100002196_profile_en.html",
+    "batch": 44,
+    "status": "unresolved"
+  },
+  {
+    "id": "vp-1720",
+    "name": "Long Van Ngo",
+    "university": "McGill University",
+    "profileUrl": "https://www.mcgill.ca/economics/channels/news/memory-our-colleague-ngo-van-long-368496",
+    "batch": 44,
+    "status": "unresolved"
+  },
+  {
+    "id": "vp-1716",
+    "name": "Tony Pham",
+    "university": "University of South Florida",
+    "profileUrl": "https://www.usf.edu/arts-sciences/departments/chemistry/faculty/",
+    "batch": 44,
+    "status": "unresolved"
+  },
+  {
+    "id": "vp-1712",
+    "name": "Duc Nguyen",
+    "university": "Old Dominion University",
+    "profileUrl": "https://www.odu.edu/directory/duc-nguyen",
+    "batch": 44,
+    "status": "unresolved"
+  },
+  {
+    "id": "vp-1710",
+    "name": "Duat Vu",
+    "university": "Missouri State University",
+    "profileUrl": "https://art.missouristate.edu/profile.asp?p=DVu",
+    "batch": 44,
+    "status": "unresolved"
   }
 ]
