@@ -471,6 +471,8 @@ export const HEALTH_SUBFIELDS = [
 // generic keyword to FIELD_RULES below — whenever a department's correct field depends on which
 // institution it's at, not just the department string.
 const FIELD_OVERRIDES = new Map([
+  // Spintronics and magnetic memory devices; the center name has no field keyword.
+  ['Center for Innovative Integrated Electronic Systems|Tohoku University', 'Engineering'],
   // Speech technology (text-to-speech for low-resource languages); campus name has no field keyword.
   ['Campus Fryslân|University of Groningen', 'Computer & Information Sciences'],
   // Leukaemia biology group (RNA-binding proteins); the institute name has no field keyword.
