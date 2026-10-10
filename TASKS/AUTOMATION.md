@@ -62,7 +62,7 @@ Mon–Sat; portraits Mon/Wed/Fri; honors Tue/Thu/Sat. Watch the portraits queue
 | `relationships` | `trig_01EgwQ418znNbFQ95ghg4p5E` | Sonnet 5.5 | `0 14 * * 1-6` | Mon–Sat 10 AM | [Relationships](#academic-relationships-relationships) |
 | `links` | `trig_0162DEq1aGRH3vWrEtpKoNmy` | Sonnet 5.5 | `0 5 * * 1-6` | Mon–Sat 1 AM | [Links](#links-links) |
 | `portraits` | `trig_01D58Azgkh8kdKFBdFNAXox2` | Sonnet 5.5 | `0 11 * * 1,3,5` | Mon/Wed/Fri 7 AM | [Portraits](#portraits-portraits) |
-| `honors` | `trig_012eH5rSZwQw7PXiQPSRj9Wn` | Sonnet 5.5 | `0 11 * * 2,4,6` | Tue/Thu/Sat 7 AM | [Honors & leads](#honors-and-lead-triage-honors) |
+| `honors` | `trig_012eH5rSZwQw7PXiQPSRj9Wn` | Sonnet 5.5 | `0 11 * * 2,4,6` | Tue/Thu/Sat 7 AM | [Honors & degrees](#honors-and-degrees-honors) |
 
 One-time: `review` (`trig_017xbcfAPtZwntWrPBW8W5A6`, Opus 5.5) runs once on 2026-10-26 at 14:00 UTC
 (10 AM ET), after every routine above has run at least four times. It changes nothing and files one
@@ -240,8 +240,8 @@ Follow `TASKS/AUDIT_ISSUES_PRS.md`, including "Independent review". Also read
      `maintenance/` files, "no new candidates found", or nothing filed). Say the likely reason:
      queue exhausted, source blocked, or the playbook re-selecting entries already tried.
   7. Queues running dry: a producer whose remaining work runs out within about 4 weeks at its
-     cap. Check `npx tsx scripts/fetch-portraits.ts --status` (pending portraits), pending leads
-     in `maintenance/hieuphay-leads.json`, and roster ids not yet in a completed batch in
+     cap. Check `npx tsx scripts/fetch-portraits.ts --status` (pending portraits) and roster ids
+     not yet in a completed batch in
      `maintenance/relationship-research.json`.
      Recommend a lower frequency or a new source.
 
@@ -285,8 +285,7 @@ show:
   `TASKS/backfill_linkedin.md` "Verifying without fetching LinkedIn". For a dead link, search the
   name and university fresh before calling it unfixable.
 - **Portrait:** open the stored portrait and compare it with the official page (see the portrait
-  recheck in `ROSTER_MAINTENANCE.md` step 4). Run `npx tsx scripts/find-all-nonhuman-portraits.ts`
-  and `python3 scripts/portrait_faces.py --roster` (`pip install opencv-python-headless pillow numpy`;
+  recheck in `ROSTER_MAINTENANCE.md` step 4). Run `python3 scripts/portrait_faces.py --roster` (`pip install opencv-python-headless pillow numpy`;
   it prints a verdict per portrait; `multiple` and `none` are almost always a group photo, logo, or
   building, but look at the image before removing) at the start and handle flagged entries before
   the id-order rotation. Replace or remove a wrong
@@ -307,12 +306,13 @@ run without OpenCV, because every candidate must pass the one-dominant-face chec
 look at it. In the PR body, give each portrait's id, its source page, and one line on why it was
 accepted. Never replace a portrait protected by `directFields`.
 
-### Honors and lead triage (`honors`)
+### Honors and degrees (`honors`)
 
-Playbooks: `TASKS/audit_facts_and_honors.md` and `TASKS/candidate_intake.md`. Cap: 15-20
-unprocessed leads from `maintenance/hieuphay-leads.json`.
-Leads already on the roster get honor and degree fixes in the batch PR. New eligible people get one
-`New candidate:` Issue each. Ineligible leads are marked resolved in the lead file with the reason.
+Playbook: `TASKS/audit_facts_and_honors.md`. Cap: 20 roster entries, in id order after the highest
+id in the last `[scheduled:honors]` PR, wrapping at the end of the roster, so every entry gets an
+honors and degree pass about every seven months. Fixes to those entries go in the batch PR, with
+every checked entry listed. New eligible people noticed along the way get one `New candidate:`
+Issue each.
 
 ### Discover new faculty (`discover`)
 

@@ -35,8 +35,6 @@
 
 \newcommand{\code}[1]{\texttt{\small #1}}
 \newcommand{\ghrepo}{https://github.com/dynaroars/vietprofs}
-\newcommand{\codelink}[1]{\href{\ghrepo/blob/main/#1}{\code{#1}}}
-\newcommand{\codelinkd}[2]{\href{\ghrepo/blob/main/#1}{\code{#2}}}
 \newcommand{\commitlink}[1]{\href{\ghrepo/commit/#1}{\code{#1}}}
 \newcommand{\vplink}[2]{\href{https://vietprofs.roars.dev/?q=#1}{#2}}
 
@@ -179,7 +177,7 @@ This section outlines who is eligible to appear in VietProfs and why.
 
 \begin{table}[t]
 \centering
-\caption{Accepted appointment tracks and their intent (\codelinkd{ROSTER\_MAINTENANCE.md}{ROSTER\_MAINTENANCE.md}).}
+\caption{Accepted appointment tracks and their intent.}
 \label{tab:tracks}
 \small
 \begin{tabularx}{\linewidth}{@{}lX@{}}
@@ -301,13 +299,13 @@ Every attribute displayed on a profile card (Figure~\ref{fig:home}) serves a spe
 
 \section{Data Model and Curated Attributes}
 \label{sec:model}
-The public source of truth is \codelink{public/data.json}, loaded and queried entirely client-side. Table~\ref{tab:schema} lists the record schema implemented by \code{RosterEntry} in \codelink{src/data.ts}.
+The public source of truth is a single JSON roster file, loaded and queried entirely client-side. Table~\ref{tab:schema} lists the record schema.
 A record contains an immutable \code{vp-} identifier, name, diacritic spelling, current profile URL, university, non-university \code{institutionType}, city, state, country, department, research areas, rank, appointment track, optional education across five credential types, curated honors, optional links, and portrait provenance.
-Each record's \code{lastUpdatedAt} is kept out of the roster file, in \codelink{public/updates.json}, keyed by identifier; the client merges it into the loaded records. The build stamps it automatically whenever a record's stored content changes, so roster edits carry only the facts that changed.
+Each record's \code{lastUpdatedAt} is kept out of the roster file, in a separate file keyed by identifier; the client merges it into the loaded records. The build stamps it automatically whenever a record's stored content changes, so roster edits carry only the facts that changed.
 
 \begin{table}[t]
 \centering
-\caption{Public roster schema (\code{RosterEntry}, \code{src/data.ts}).}
+\caption{Public roster schema.}
 \label{tab:schema}
 \small
 \begin{tabularx}{\linewidth}{@{}l>{\raggedright\arraybackslash}X@{}}
@@ -322,18 +320,18 @@ Education & \code{undergradInstitution}/\code{Year}/\code{Major}, \code{msInstit
 Honors & \code{honors[]}: \code{name}, \code{organization}, \code{category}, \code{year}, \code{source} \\
 Links & \code{websiteUrl} (personal/lab page), \code{scholarUrl} (Google Scholar) \\
 Portrait & \code{portrait} (local WebP path), \code{portraitSource} (provenance URL) \\
-Update time & \code{lastUpdatedAt} (stored in \code{updates.json}, merged in on load) \\
+Update time & \code{lastUpdatedAt} (stored separately, merged in on load) \\
 \bottomrule
 \end{tabularx}
 \end{table}
 
 \subsection{Curated Honors and Awards}
 \label{sec:honors}
-The \code{honors} field is restricted to substantial distinctions, avoiding routine CV padding. Table~\ref{tab:honors} lists the five accepted categories. Both the controller's proposal validator and \codelink{scripts/validate-data.ts}{validate-data.ts} enforce that every stored honor declares one of these categories, together with a name, granting organization, HTTPS provenance URL, and valid calendar year.
+The \code{honors} field is restricted to substantial distinctions, avoiding routine CV padding. Table~\ref{tab:honors} lists the five accepted categories. Both the controller's proposal validator and the data validator enforce that every stored honor declares one of these categories, together with a name, granting organization, HTTPS provenance URL, and valid calendar year.
 
 \begin{table}[t]
 \centering
-\caption{Accepted honor categories (\codelinkd{ROSTER\_MAINTENANCE.md}{ROSTER\_MAINTENANCE.md}).}
+\caption{Accepted honor categories.}
 \label{tab:honors}
 \small
 \begin{tabularx}{\linewidth}{@{}lX@{}}
@@ -363,7 +361,7 @@ Because the directory is designed for regular community use, the web interface i
 Figure~\ref{fig:home} shows the landing page: a search bar with a selectable search scope, three combinable filter dropdowns (location, field of study, and appointment track), dynamic example query chips, and individual scholar cards. Each card displays the scholar's portrait, English and diacritic names, current rank, department, university, location, education history, honors, research tags, and a visible \code{lastUpdatedAt} verification date.
 
 \subsection{Scoped Search and Diacritic Normalization}
-The search bar matches across names, universities, departments, ranks, research tags, honors, and doctoral institutions. To ensure smooth searching, matching is performed against a normalized, diacritic-stripped index (\code{src/data.ts}). A user typing \code{Nguyen} will immediately match \code{Nguy\~{e}n}.
+The search bar matches across names, universities, departments, ranks, research tags, honors, and doctoral institutions. To ensure smooth searching, matching is performed against a normalized, diacritic-stripped index. A user typing \code{Nguyen} will immediately match \code{Nguy\~{e}n}.
 Users can also narrow search queries using a scope dropdown on the left of the search bar, restricting searches to specific attributes such as Name, Rank, Research Area, Honors, University, Department, or PhD Institution (Figure~\ref{fig:search}).
 Filters are automatically synced with the URL query parameters, making any filtered view (e.g., all Computer Science faculty in California) directly bookmarkable and shareable.
 
@@ -384,7 +382,7 @@ Directly below the directory listing, the interface computes dynamic leaderboard
 \label{fig:interesting}
 \end{figure}
 
-Selecting a U.S. location or clicking ``\emph{Show me something interesting}'' reveals an interactive choropleth map of the United States (\code{src/state-grid.ts}, Figure~\ref{fig:interesting}), where tile shading corresponds to faculty counts and clicking a state immediately filters the roster to that region.
+Selecting a U.S. location or clicking ``\emph{Show me something interesting}'' reveals an interactive choropleth map of the United States (Figure~\ref{fig:interesting}), where tile shading corresponds to faculty counts and clicking a state immediately filters the roster to that region.
 
 \subsection{Human Contribution and Corrections Channel}
 \label{sec:submit}
@@ -405,7 +403,7 @@ All submissions are routed to a review queue where our verification pipeline and
 Beyond serving as a practical lookup tool, VietProfs provides interesting empirical visibility into the Vietnamese academic diaspora.
 
 \subsection{Runtime Aggregation and Current Distribution}
-The ``Show me something interesting'' view is computed dynamically at runtime by \code{buildFunFacts} in \codelink{src/data.ts}. Rather than hardcoding static statistics that easily become outdated, all aggregate metrics are recomputed directly from the live dataset whenever a page is rendered.
+The ``Show me something interesting'' view is computed dynamically at runtime. Rather than hardcoding static statistics that easily become outdated, all aggregate metrics are recomputed directly from the live dataset whenever a page is rendered.
 
 Table~\ref{tab:snapshot} summarizes the directory snapshot as of September 2026. The roster includes 1,507 verified scholars across 640 institutions in 34 countries. In the United States (835 records), California (161), Texas (86), New York (46), Massachusetts (39), and Florida (36) host the largest concentrations. The international subset (672 records) is led by Australia (154), France (104), the United Kingdom (94), Canada (85), Japan (54), Singapore (27), Taiwan (27), and Germany (17).
 The five largest broad fields are Health Sciences (321), Business \& Economics (239), Engineering (222), Computer \& Information Sciences (199), and Mathematics (111).
@@ -475,27 +473,27 @@ Figure~\ref{fig:arch} illustrates the system architecture. Candidate discovery a
 \caption{Subsystem inventory and automation boundaries.}
 \label{tab:pipeline}
 \small
-\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.18\linewidth}>{\raggedright\arraybackslash}p{0.39\linewidth}X@{}}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.24\linewidth}X@{}}
 \toprule
-Subsystem & Implementation & Operational Boundary \\
+Subsystem & Operational Boundary \\
 \midrule
-Discovery queries & \codelinkd{scripts/faculty-discovery-queries.ts}{faculty-discovery-queries.ts} & Deterministic query generator; candidate research is agent/human. \\
-Maintenance engine & \codelinkd{scripts/maintain-roster.ts}{maintain-roster.ts} & Unattended controller; invokes LLM agent (Claude/Codex) via CLI. \\
-Proposal validation & Controller + \codelinkd{scripts/validate-data.ts}{validate-data.ts} & Deterministic schema, track, URL, and target-scope enforcement. \\
-Canonical data & \codelinkd{public/data.json}{data.json} & Immutable-ID JSON repository; modified only by validated patches. \\
-Update timestamps & \codelinkd{public/updates.json}{updates.json} & Per-record \code{lastUpdatedAt}, keyed by identifier; stamped by the build when a record changes. \\
-Static profiles & \codelinkd{scripts/generate-profile-pages.ts}{generate-profile-pages.ts} & Deterministic generator creating individual static HTML pages. \\
-Client app & \codelinkd{src/data.ts}{data.ts}, \codelinkd{src/main.ts}{main.ts} & In-browser search, indexing, filtering, and dynamic fact aggregation. \\
+Discovery queries & Deterministic query generator; candidate research is agent/human. \\
+Maintenance engine & Unattended controller; invokes LLM agent (Claude/Codex) via CLI. \\
+Proposal validation & Deterministic schema, track, URL, and target-scope enforcement. \\
+Canonical data & Immutable-ID JSON repository; modified only by validated patches. \\
+Update timestamps & Per-record \code{lastUpdatedAt}, keyed by identifier; stamped by the build when a record changes. \\
+Static profiles & Deterministic generator creating individual static HTML pages. \\
+Client app & In-browser search, indexing, filtering, and dynamic fact aggregation. \\
 \bottomrule
 \end{tabularx}
 \end{table}
 
 \subsection{Controller Execution and Proposal Validation}
-The maintenance controller (\codelink{scripts/maintain-roster.ts}) manages unattended execution batches. It selects stale or unverified records from the verification ledger (\code{--stale-days}, default 365), invokes the research agent with tool access restricted to read-only browsing (\code{WebSearch}, \code{WebFetch}), and receives a structured JSON proposal. Table~\ref{tab:cli} summarizes the controller CLI options.
+The maintenance controller manages unattended execution batches. It selects stale or unverified records from the verification ledger (\code{--stale-days}, default 365), invokes the research agent with tool access restricted to read-only browsing (\code{WebSearch}, \code{WebFetch}), and receives a structured JSON proposal. Table~\ref{tab:cli} summarizes the controller CLI options.
 
 \begin{table}[t]
 \centering
-\caption{Maintenance controller command-line options (\codelink{scripts/maintain-roster.ts}).}
+\caption{Maintenance controller command-line options.}
 \label{tab:cli}
 \small
 \begin{tabularx}{\linewidth}{@{}lX@{}}
@@ -523,13 +521,13 @@ Before applying any change, the controller enforces strict deterministic invaria
 
 \subsection{Independent Review and Resumable Checkpoints}
 When \code{--codex-review} is active, a second model independently reviews proposed patches against web evidence. If rejected, the controller permits up to two bounded revision attempts (\code{MAX\_PROPOSAL\_REVISIONS = 2}). If discrepancies remain, the case is deferred rather than guessed.
-Working state is written to disk (\code{\textasciitilde/.local/state/vietprofs-maintenance/}), allowing long maintenance runs to resume seamlessly across process restarts or rate limits.
+Working state is written to disk, allowing long maintenance runs to resume seamlessly across process restarts or rate limits.
 
 \section{Candidate Discovery and Discovery Economics}
 \label{sec:discovery}
 
 \subsection{Partitioned Open-World Search Sweeps}
-Unbounded search queries like ``find all Vietnamese faculty worldwide'' are intractable for automated web crawlers. VietProfs structures automated candidate discovery by partitioning open search into bounded institution, department, and domain slices using \codelink{scripts/faculty-discovery-queries.ts}.
+Unbounded search queries like ``find all Vietnamese faculty worldwide'' are intractable for automated web crawlers. VietProfs structures automated candidate discovery by partitioning open search into bounded institution, department, and domain slices using a deterministic query generator.
 
 Queries combine institutional domain keywords, faculty directory paths, and Vietnamese surname and given-name tokens, paired with negative filter keywords (\code{-student -postdoctoral -adjunct}) to minimize noise. Discovered leads are deduplicated against the canonical roster before undergoing full evidence verification.
 
@@ -581,17 +579,17 @@ The periodic revalidation workflow executes six sequential checks:
 \item \textbf{Scholar Verification:} Match Google Scholar profiles using publication titles and departmental affiliations.
 \item \textbf{Appointment \& Rank Audit:} Detect promotions, title updates, and track reclassifications.
 \item \textbf{Education \& Honors Backfill:} Extract verified degree institutions, graduation years, and curated major awards.
-\item \textbf{Ledger Update:} Record timestamped verification in \codelink{maintenance/verification.json}.
+\item \textbf{Ledger Update:} Record a timestamped verification in the verification ledger.
 \end{enumerate}
 
 \section{Testing and Validation}
 \label{sec:testing}
 Automated maintenance is protected by a multi-layered test suite executed on every commit and pull request:
 \begin{itemize}
-\item \textbf{Data Invariants (\codelink{scripts/validate-data.ts}):} Re-verifies all schema rules, URL schemes, portrait existence on disk, unique IDs, and synchronization with the verification ledger.
-\item \textbf{Unit Tests (\codelink{test/data.test.ts}, \codelink{test/maintenance-controller.test.ts}):} Tests field-mapping heuristics, search indexing, diacritic handling, dynamic fact generation, and proposal analysis.
-\item \textbf{Route Integrity (\codelink{test/profile-pages.test.ts}):} Verifies static profile page generation and immutable URL stability.
-\item \textbf{End-to-End Smoke Tests (\codelink{test/browser-smoke.test.ts}):} Headless Playwright browser tests verifying search interactions, filter combinations, and submission flows on the built site.
+\item \textbf{Data Invariants:} Re-verifies all schema rules, URL schemes, portrait existence on disk, unique IDs, and synchronization with the verification ledger.
+\item \textbf{Unit Tests:} Tests field-mapping heuristics, search indexing, diacritic handling, dynamic fact generation, and proposal analysis.
+\item \textbf{Route Integrity:} Verifies static profile page generation and immutable URL stability.
+\item \textbf{End-to-End Smoke Tests:} Headless Playwright browser tests verifying search interactions, filter combinations, and submission flows on the built site.
 \end{itemize}
 
 \section{Operational Experience and Evaluation}

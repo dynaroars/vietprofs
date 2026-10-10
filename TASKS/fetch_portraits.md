@@ -10,7 +10,7 @@
 1. **Batching:** Keep going batch after batch in interactive runs; scheduled runs stop at the batch cap in `AGENTS.md`. Skip entries touched by an open portrait PR.
 2. **Routing:** Follow the "Where each kind of change lands" table in `AGENTS.md` (portrait edits → PR; never commit directly to `main`).
 3. **Strict Batch Size (10 Profiles Per Batch), Newest First:** Work in bounded batches of **10 profiles per batch**, selected with `--next=10` (section 4): never-attempted entries first, newest roster id first, because recently added entries have freshly verified profile URLs. Unresolved entries are retried only once no never-attempted entry remains, least recently attempted first.
-4. **Thorough Verification Per Candidate:** For every candidate, inspect the image visually or run statistical analyzers (`python3 scripts/fast_portrait_analyzer.py`), check aspect ratio (0.70–1.55), and confirm single-person headshot identity before accepting.
+4. **Thorough Verification Per Candidate:** For every candidate, open the image and look at it, run the face check (`python3 scripts/portrait_faces.py`), check aspect ratio (0.70–1.55), and confirm single-person headshot identity before accepting.
 5. **Per-Run PR Pipeline:** (commands in section 4)
    - Before the first batch, create one topic branch for the run: `git checkout -b maintenance/portraits-$(date -u +%Y%m%d)` (never reuse an old branch name).
    - After each 10-profile batch: validate (`npm test && npm run build && git diff --check`) and commit it on that branch with `git add public/data.json public/updates.json public/portraits/ maintenance/portrait-provenance.json maintenance/portrait-queue.json` and message `fix(portraits): recover missing portraits (<first id>–<last id>)`.
@@ -47,20 +47,10 @@ Automated web scraping and superficial web search frequently return non-person i
 
 ## 3. Image Inspection & Automated Validation Tools
 
-Before adding or updating any portrait, use both automated pre-screening scripts and visual inspection:
+Before adding or updating any portrait, run the face check and look at the image:
 
-### A. Automated Image Analysis (`scripts/fast_portrait_analyzer.py`)
-Run the Python statistical analyzer to detect flat graphics, logos, and non-skin images:
-```bash
-python3 scripts/fast_portrait_analyzer.py
-```
-- **Skin Tone Ratio (`skin_ratio < 0.01`):** Flags images lacking human skin color in YCbCr space (detects logos, buildings, wordmarks).
-- **Color Count (`num_colors < 150`):** Flags flat vector graphics and logos.
-- **Color Variance (`stddev < 10.0`):** Flags flat silhouettes and monochrome icons.
-
-### A2. Face Check (`scripts/portrait_faces.py`)
-The statistical analyzer cannot tell a headshot from a lab group photo, a building, or a logo
-that contains some skin tone. The face check can: it runs OpenCV's YuNet detector and reports
+### A. Face Check (`scripts/portrait_faces.py`)
+The face check runs OpenCV's YuNet detector and reports
 `ok` (one dominant face), `multiple` (a group), `none` (no face: building, logo, scenery, chart),
 or `tiny` (a person lost in a scene). `fetch-portraits.ts --apply` rejects anything but `ok`.
 ```bash
@@ -72,19 +62,11 @@ Locally, `PORTRAIT_PYTHON=/path/to/venv/bin/python` points the scripts at a Pyth
 A non-`ok` verdict means "look at the image", not "delete": the detector can miss a real face
 (profile view, heavy shadow), so confirm visually before removing a portrait.
 
-### B. Portrait Audit & Cleaning Scripts
-- Find non-human portraits in the roster:
-  ```bash
-  npx tsx scripts/find-all-nonhuman-portraits.ts
-  ```
-- Remove a confirmed non-human portrait by hand, only after looking at the image: delete the
-  file under `public/portraits/`, drop `portrait`/`portraitSource` from the entry (never on an
-  entry whose `directFields` protect them); `npm test` stamps `lastUpdatedAt`. Aspect ratio alone is not
-  evidence — a ratio-only bulk purge once removed 103 valid headshots (#106).
-- Run the full portrait audit suite:
-  ```bash
-  npx tsx scripts/audit-portraits.ts
-  ```
+### B. Removing a Wrong Portrait
+Remove a confirmed non-human or wrong portrait by hand, only after looking at the image: delete the
+file under `public/portraits/`, drop `portrait`/`portraitSource` from the entry (never on an
+entry whose `directFields` protect them); `npm test` stamps `lastUpdatedAt`. Aspect ratio alone is not
+evidence — a ratio-only bulk purge once removed 103 valid headshots (#106).
 
 ### C. Visual Inspection Protocol
 When processing portraits manually or reviewing automated candidates:
@@ -103,7 +85,6 @@ swallows errors.
 git checkout main && git pull --ff-only
 npx tsx scripts/fetch-portraits.ts --status        # syncs the queue with the roster; newestPending = what --next picks
 npx tsx scripts/fetch-portraits.ts --next=10 --apply --retry   # newest never-attempted 10 (retries only when none remain); stores HIGH-confidence candidates
-python3 scripts/fast_portrait_analyzer.py          # flags logos, silhouettes, flat graphics
 python3 scripts/portrait_faces.py $(git status --porcelain public/portraits | awk '{print $2}')   # every added image must be `ok`
 ```
 

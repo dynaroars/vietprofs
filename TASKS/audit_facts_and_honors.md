@@ -1,33 +1,32 @@
 # Credentials, Honors, and Direct Fields Protection (`audit_facts_and_honors.md`)
 
-> **Autonomous Goal Directive (`/goal TASKS/audit_facts_and_honors.md`):**
-> When invoked as `/goal TASKS/audit_facts_and_honors.md`, the agent MUST immediately execute this full credentials and honors auditing workflow without needing any extra prompt text. Work in 15–20 candidate batches (`hieuphay-leads.json`), verify inclusion criteria and degree chronology, submit verified batches as GitHub PRs, and loop until all lead candidates are processed. Per `AGENTS.md`'s "New entries vs. edits" policy: a lead that is a brand-new person (needs a new `vp-####` ID) goes to a GitHub Issue, never a PR; only credential/honors corrections to a person who already has a roster ID belong in a PR.
+> Audit honors and degrees on existing roster entries in rotation. Each run takes the next batch of
+> roster ids, checks every entry's honors and degree fields against official and awarding-body
+> sources, and submits the corrections as one PR. New people noticed along the way go to
+> `New candidate:` Issues (`AGENTS.md` "New entries vs. edits"); this task never assigns an id.
 
 ---
 
-## ⚡ Batching, PR/Issue Submission, and `/goal` Protocol
+## Batching and PR protocol
 
-1. **Routing:** Follow the "Where each kind of change lands" table in `AGENTS.md` (existing-ID edits → PR; new people → Issue; never commit directly to `main`).
-2. **Strict Batch Size (15–20 Candidates Per Batch):** Work in bounded batches of **15–20 candidates per batch** using the lead file (`maintenance/hieuphay-leads.json`).
-3. **Thorough Verification Standard:** Verify full inclusion standard for every candidate: current appointment outside Vietnam, accepted track, non-corporate employer, degree chronology (PhD at least 2 years after undergrad), and honors categorization.
-4. **New-ID vs. Edit Split (per `AGENTS.md`):** A batch's candidates fall into two kinds, and each kind is submitted differently:
-   - **Already on the roster, possibly elsewhere:** run `npm run find-roster-matches -- "<name>" --url ...` first. A hit, including one at a former institution or a retired id, is an edit to that id (or a restore), not a new person (`ROSTER_MAINTENANCE.md` "One person, one ID").
-   - **Brand-new person (needs a new `vp-####` ID):** Do NOT run `assign-profile-ids -- --apply` or add them to `public/data.json` on a branch. File one GitHub Issue per candidate (or a small group) with evidence, source URLs, and proposed fields, and let the owner or `AUDIT_ISSUES_PRS.md` assign the ID.
-   - **Credential/honors correction to an existing roster ID:** Submit via the PR pipeline below.
-5. **Automated PR Submission Pipeline (existing-ID edits only):**
-   After completing each batch's existing-ID edits:
-   - Create batch topic branch: `git checkout -b maintenance/leads-batch-[DISCIPLINE/TIMESTAMP]`
-   - Validate pipeline: `npm test && npm run build && git diff --check`
-   - Commit batch: `git add public/data.json public/updates.json maintenance/hieuphay-leads.json`
-   - Commit message: `git commit -m "fix(roster): resolve candidate leads batch [DISCIPLINE/BATCH_NAME]"`
-   - Push topic branch: `git push origin maintenance/leads-batch-[DISCIPLINE/TIMESTAMP]`
-   - File GitHub PR:
-     ```bash
-     gh pr create --title "Resolve hieuphay leads batch" --body "Verified and corrected 15 candidate leads..."
-     ```
-   - For ambiguous eligibility cases, protected field conflicts, or honors requiring maintainer review (on an existing entry), file GitHub Issues (`gh issue create`).
-   - Return to `main`: `git checkout main`
-6. **Auditing & Merging Delegation:** Do NOT merge the PR yourself. The dedicated audit agent running `TASKS/AUDIT_ISSUES_PRS.md` will review, test, squash-merge, and delete the PR branch.
+1. **Routing:** Follow the "Where each kind of change lands" table in `AGENTS.md` (existing-ID
+   edits → PR; new people → Issue; never commit directly to `main`).
+2. **Batch:** At most 20 roster entries per run, in id order after the highest id listed in the
+   last `[scheduled:honors]` PR, wrapping at the end of the roster. One batch per run; the rotation
+   continues across runs.
+3. **Per entry:** Open the official profile and, where available, the CV or homepage. Search the
+   awarding bodies for honors that meet the bar in section 3 (academies, society fellowships,
+   career awards, major awards, named chairs) and check that each stored honor still has a working
+   HTTPS source naming the person. Check degree fields against section 2. Record only what a source
+   states; leave a field empty rather than guess.
+4. **Protected values:** Never change an honor on an entry whose `directFields` lists `honors`; a
+   conflict goes to an Issue for the owner.
+5. **Submit:** Branch `maintenance/honors-<YYYY-MM-DD>`, run
+   `npm test && npm run build && git diff --check`, commit `public/data.json` and
+   `public/updates.json`, push, and open a PR titled `[scheduled:honors] Honors and degrees
+   (<first id>–<last id>)`. In the body, list every entry checked, including those with no change,
+   so the next run knows where to resume. Do not merge it; the auditor (`TASKS/AUDIT_ISSUES_PRS.md`)
+   reviews and merges.
 
 ---
 

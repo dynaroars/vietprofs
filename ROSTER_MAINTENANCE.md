@@ -381,73 +381,9 @@ roster, independently verify every part of the inclusion standard before adding 
 same data-entry, honors, and field-mapping rules as when reviewing a user-supplied
 link.
 
-### The hieuphay.com economist lead queue
-
-`https://hieuphay.com/ban-do-kinh-te-viet-nam/` ("Bản đồ nghiên cứu kinh tế Việt Nam") is an
-interactive map of ~100,000 economics and social-science papers by Vietnamese-named authors,
-built from OpenAlex. It has no API: the page embeds a gzip+base64 blob directly in a `<script>`
-tag, decompressed client-side into a ~20MB JSON payload and rendered onto a `<canvas>`. That
-payload's `units.researchers.table` already tags each of its ~21,000 researchers with a `loc`
-code (0 = in Vietnam, 1 = diaspora abroad, 2 = foreign/Vietnam-linked, 3 = unknown) and an `econ`
-flag, using a name/location classifier the site's own methodology note says was validated against
-Chinese, Korean, Indian, Thai, and Japanese name samples — the same practice recommended above for
-a Vietnamese-name lexicon. That makes it a large, mostly-free source of `loc==1 & econ==1` leads,
-instead of a manual surname/given-name web-search sweep.
-
-Run `./scripts/extract-hieuphay-leads.ts` to (re-)fetch the page, decode that payload, filter to
-diaspora-abroad economics researchers whose listed institution looks like a university, and
-dedupe against `public/data.json` (by order-independent name-token match, so "Khuong Vu" catches
-an existing "Minh Khuong Vu" and vice versa). It writes/updates `maintenance/hieuphay-leads.json`
-— a flat list of `{ name, inst, country, npapers, cited, status, note, rosterId }` records, sorted
-by citation count as a rough verification priority. Re-running it is safe and idempotent: it
-carries forward the `status`/`note`/`rosterId` of every lead already recorded by name+institution,
-and only ever changes a `pending` lead's status to the heuristic `duplicate` (never overrides a
-human-set `included`/`excluded`/`duplicate`).
-
-**This is a lead queue, not a to-add list.** Every entry needs the same independent verification as
-any other candidate — current university appointment, track, rank, and an official or otherwise
-reliable source — before being added. The first round of 27 leads processed this way (see git
-history around 2026-09-01) turned up, alongside 11 genuine additions: two people already correctly
-in the roster under a different name-token order (a raw lead's "Khuong Vu" was the roster's
-existing "Minh Khuong Vu"); one lead whose "outdated institution" was actually still current and
-correct (do not blindly trust an agent's claim that a person "moved" without checking); and three
-excludable people (a non-academic career move, a primary employer that is not a university, and no
-verifiable faculty appointment at all). Expect a similar mix in every batch — verify, don't assume.
-
-Resuming across sessions (including on a different machine):
-
-1. `git pull`, `npm install`, then optionally `./scripts/extract-hieuphay-leads.ts` to pick up any
-   newer dataset version (harmless if the dataset hasn't changed — it will just report all-zero
-   new leads).
-2. Open `maintenance/hieuphay-leads.json` and take the next batch of `status: "pending"` entries,
-   highest `cited` first (higher-cited researchers are more likely to have an easily verifiable,
-   stable appointment). A batch of 5 candidates per parallel research agent, 3 agents at a time
-   (15 people per round), has worked well: enough to make real progress, small enough that each
-   agent's findings are easy to read and check when it reports back.
-3. For each candidate, verify the full inclusion standard (see "Inclusion standard" above): a
-   current university faculty appointment, in an accepted track, on an official or otherwise
-   reliable source. Watch specifically for: the listed institution being stale (people move); the
-   role being non-academic, visiting, adjunct, or postdoctoral; the same person appearing under
-   multiple leads (split OpenAlex profiles, or a name common enough to collide with an unrelated
-   person); and the person already being in the roster under a name-token order, spelling, or
-   former institution this queue's dedup missed (run `npm run find-roster-matches` as in "One
-   person, one ID" before adding).
-4. For each resolved candidate, update its `maintenance/hieuphay-leads.json` entry: set `status`
-   to `included` (with `rosterId`), `excluded` (with a one-line `note` explaining why), or
-   `duplicate` (with a `note` pointing at the existing roster entry). Then add every `included`
-   candidate to `public/data.json` following the "Data-entry
-   rules" and inclusion standard exactly as for any other addition.
-5. Run the validation checklist (`npm test`, `npm run build`, `git diff --check`), then commit
-   and push. Commit after every batch (roughly every 10-20 resolved candidates) rather than
-   accumulating one giant diff — this is what makes the queue resumable if a session ends
-   mid-batch: the last pushed commit plus `maintenance/hieuphay-leads.json`'s recorded statuses are
-   the entire state a fresh session needs to continue. Push immediately after each commit.
-
 ### Lead triage methodology
 
-#### 1. Systematic Triage & Resolution Playbook
-
-Lead-queue entries (currently `maintenance/hieuphay-leads.json`) are **leads only**: the source does not know faculty status, tenure eligibility, or Vietnamese heritage. Maintainers and automated agents process each candidate queue using the following step-by-step verification standard:
+Entries from an external dataset or lead list are **leads only**: the source does not know faculty status, tenure eligibility, or Vietnamese heritage. Maintainers and automated agents process each candidate queue using the following step-by-step verification standard:
 
 1. **Fast-path Deduplication & Entity Matching:**
    - Check the candidate against the existing roster (`public/data.json`) by canonical name, full diacritic `vietnameseName`, and the lead's recorded name variants, using `npm run find-roster-matches` with every identity URL (see "One person, one ID"). A same-name entry at another institution is a probable move, not a namesake.
@@ -483,27 +419,6 @@ Lead-queue entries (currently `maintenance/hieuphay-leads.json`) are **leads onl
    - **Academic degrees:** Extract explicit degree credentials (`phdInstitution`, `phdYear`, `mdInstitution`, `msInstitution`, `undergradInstitution`, `undergradYear`, `postdocInstitution`) only when explicitly documented in institutional bios or CVs.
    - **Honors & Awards:** Record major academy memberships, fellow titles (e.g., IEEE Fellow, AIAA Fellow, NAI Fellow, ACM Fellow), national orders (e.g., *Légion d'honneur*), and career awards with proper category, year, organization, and HTTPS source URL.
    - **Field Classification & Overrides:** Ensure the candidate's department maps correctly to `FIELD_RULES`. For specialized research labs, foreign institutes, or clinical divisions that do not match default regex rules (e.g. French UMRs, medical service units), add an explicit entry to `FIELD_OVERRIDES` in `src/data.ts`.
-
-#### 2. State Synchronization & Resumable Commit Protocol
-
-To prevent desynchronization between data files and ensure interrupted runs are cleanly resumable:
-
-1. Update `public/data.json` with new entries.
-2. Update the lead file (`maintenance/hieuphay-leads.json`) with updated candidate statuses (`included`, `duplicate`, `excluded`, `unresolved`).
-3. Run immutable ID assignment:
-   ```bash
-   npm run assign-profile-ids -- --apply
-   ```
-4. Run the validation suite:
-   ```bash
-   npm test && npm run build && git diff --check
-   ```
-5. Commit and push each batch immediately after validation:
-   ```bash
-   git add maintenance/hieuphay-leads.json public/data.json scripts/validate-data.ts src/data.ts
-   git commit -m "Resolve <source> leads batch"
-   git push origin main
-   ```
 
 ## One person, one ID
 
@@ -857,7 +772,7 @@ order:
    Also recheck the stored portrait: open the image (Read tool) next to the official page and
    confirm it is a single-person headshot of this person, not a banner, ad, logo, group photo, or
    someone else's picture (a `portraitSource` filename like `taxe26-v2-copie` is a warning sign;
-   `npx tsx scripts/find-all-nonhuman-portraits.ts` lists candidates). If it fails and `portrait`
+   `python3 scripts/portrait_faces.py --roster` flags candidates). If it fails and `portrait`
    is not in `directFields`, replace it from the official page (`TASKS/fetch_portraits.md`
    section 4 rules) or, when none exists, remove `portrait`/`portraitSource` and the file and mark
    the entry unresolved in the portrait ledger and queue so the `portraits` routine refills it. If it is protected,
