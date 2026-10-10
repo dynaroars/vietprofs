@@ -471,6 +471,10 @@ export const HEALTH_SUBFIELDS = [
 // generic keyword to FIELD_RULES below — whenever a department's correct field depends on which
 // institution it's at, not just the department string.
 const FIELD_OVERRIDES = new Map([
+  // Speech technology (text-to-speech for low-resource languages); campus name has no field keyword.
+  ['Campus Fryslân|University of Groningen', 'Computer & Information Sciences'],
+  // Leukaemia biology group (RNA-binding proteins); the institute name has no field keyword.
+  ['Barts Cancer Institute|Queen Mary University of London', 'Biological & Biomedical Sciences'],
   // Speech-language pathology (communication disorders) is a health discipline.
   ['Speech, Language, and Hearing Sciences|San Diego State University', 'Health Sciences'],
   // French department name (entrepreneurship and innovation) carries no English field keyword.
