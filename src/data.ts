@@ -471,6 +471,8 @@ export const HEALTH_SUBFIELDS = [
 // generic keyword to FIELD_RULES below — whenever a department's correct field depends on which
 // institution it's at, not just the department string.
 const FIELD_OVERRIDES = new Map([
+  // Surrey's vision/speech/signal-processing centre; Lecturer in People-centred AI.
+  ['Centre for Vision, Speech and Signal Processing|University of Surrey', 'Computer & Information Sciences'],
   // Optical/laser physics and spectroscopy work (nanoparticle thermometry, molecular
   // spectroscopy); the group name alone carries no field keyword.
   ['Remote Sensing Group, Physical Measurement Laboratory|National Institute of Standards and Technology', 'Physics & Astronomy'],
