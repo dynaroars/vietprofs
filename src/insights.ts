@@ -15,6 +15,7 @@ import {
   buildTrackCounts,
   buildUsObservations,
   countryFlag,
+  type GitHubItem,
   type GitInfo,
   type Roster,
   type StatsHistoryPoint,
@@ -558,6 +559,51 @@ function formatNumber(num: number): string {
   return new Intl.NumberFormat('en-US').format(num);
 }
 
+function renderGitHubLatest(label: string, item: GitHubItem | null): string {
+  if (!item) return '';
+  return `<span>${label}: <a href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer">#${item.number} ${escapeHtml(item.title)}</a> (${escapeHtml(item.state)}, ${formatRosterDate(item.createdAt)})</span>`;
+}
+
+// Codebase size and GitHub activity, written to git-info.json at build time by
+// scripts/build-stats-history.ts.
+function renderComplexityCard(gitInfo: GitInfo | null): string {
+  const codebase = gitInfo?.codebase;
+  if (!codebase) return '';
+  const github = gitInfo.github;
+  const item = (value: string, label: string) => `
+          <div class="html-inventory-item">
+            <strong>${value}</strong>
+            <span>${label}</span>
+          </div>`;
+  return `
+      <div class="html-inventory-card complexity-card">
+        <div class="html-inventory-header">
+          <div>
+            <h3 class="html-inventory-title">Project Complexity</h3>
+            <p class="html-inventory-desc">Tracked source in the repository${gitInfo.firstCommitDate ? ` since ${formatRosterDate(gitInfo.firstCommitDate)}` : ''}; lines of code cover TypeScript, CSS, HTML, Python, and YAML.</p>
+          </div>
+          <strong class="html-inventory-total">${formatNumber(codebase.codeLines)} LoC</strong>
+        </div>
+        <div class="html-inventory-grid">
+          ${item(formatNumber(codebase.trackedFiles), 'Tracked files')}
+          ${item(formatNumber(codebase.codeFiles), 'Code files')}
+          ${item(formatNumber(codebase.testFiles), 'Test files')}
+          ${item(`${codebase.npmScripts} / ${codebase.devDependencies}`, 'npm scripts / dev dependencies')}
+          ${item(formatNumber(codebase.workflows), 'GitHub workflows')}
+          ${gitInfo.contributors ? item(formatNumber(gitInfo.contributors), 'Commit authors') : ''}
+          ${github ? item(`${formatNumber(github.pulls.open)} / ${formatNumber(github.pulls.merged ?? 0)} / ${formatNumber(github.pulls.closed)}`, 'Pull requests: open / merged / closed') : ''}
+          ${github ? item(`${formatNumber(github.issues.open)} / ${formatNumber(github.issues.closed)}`, 'Issues: open / closed') : ''}
+        </div>
+        <nav class="html-standalone-links" aria-label="Lines by language">
+          ${codebase.languages.map((entry) => `<span>${escapeHtml(entry.language)}: ${formatNumber(entry.lines)} lines in ${formatNumber(entry.files)} files</span>`).join('\n          ')}
+        </nav>
+        ${github ? `<div class="html-standalone-links complexity-latest">
+          ${renderGitHubLatest('Latest PR', github.pulls.latest)}
+          ${renderGitHubLatest('Latest issue', github.issues.latest)}
+        </div>` : ''}
+      </div>`;
+}
+
 export function renderHealthPanel(
   roster: Roster,
   baseUrl = '/',
@@ -616,7 +662,9 @@ export function renderHealthPanel(
         </div>
       ` : ''}
 
-      <div class="html-inventory-card">
+      ${renderComplexityCard(gitInfo)}
+
+      <div class="html-inventory-card generated-html-card">
         <div class="html-inventory-header">
           <div>
             <h3 class="html-inventory-title">Generated HTML Inventory</h3>
@@ -645,7 +693,6 @@ export function renderHealthPanel(
         <nav class="html-standalone-links" aria-label="Standalone HTML pages">
           <span>${htmlInventory.standalone} standalone:</span>
           <a href="${baseUrl}index.html">Directory</a>
-          <a href="${baseUrl}faq.html">FAQ</a>
           <a href="${baseUrl}stats.html">Statistics</a>
           <a href="${baseUrl}connections.html">Connections</a>
           <a href="${baseUrl}submit.html">Submit / Update</a>

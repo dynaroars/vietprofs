@@ -589,10 +589,14 @@ test('combined field and location filters link to their static intersection hub'
 test('data health reports the generated HTML inventory and links standalone pages', async () => {
   const page = await context.newPage();
   await page.goto(`${baseUrl}/?view=health`, { waitUntil: 'networkidle' });
-  assert.equal(await textOf(page.locator('.html-inventory-title')), 'Generated HTML Inventory');
-  assert.equal(await page.locator('.html-inventory-item').count(), 4);
-  assert.equal(await page.locator('.html-standalone-links a').count(), 6);
-  assert.match(await textOf(page.locator('.html-inventory-total')), /^\d[\d,]* pages$/);
+  const inventory = page.locator('.generated-html-card');
+  assert.equal(await textOf(inventory.locator('.html-inventory-title')), 'Generated HTML Inventory');
+  assert.equal(await inventory.locator('.html-inventory-item').count(), 4);
+  assert.equal(await inventory.locator('.html-standalone-links a').count(), 5);
+  assert.match(await textOf(inventory.locator('.html-inventory-total')), /^\d[\d,]* pages$/);
+  const complexity = page.locator('.complexity-card');
+  assert.equal(await textOf(complexity.locator('.html-inventory-title')), 'Project Complexity');
+  assert.match(await textOf(complexity.locator('.html-inventory-total')), /^\d[\d,]* LoC$/);
   await page.close();
 });
 

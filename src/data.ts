@@ -177,6 +177,44 @@ export async function loadStatsHistory(): Promise<StatsHistoryPoint[]> {
   }
 }
 
+export interface CodebaseLanguage {
+  language: string;
+  files: number;
+  lines: number;
+}
+
+export interface Codebase {
+  trackedFiles: number;
+  codeFiles: number;
+  codeLines: number;
+  languages: CodebaseLanguage[];
+  testFiles: number;
+  npmScripts: number;
+  devDependencies: number;
+  workflows: number;
+}
+
+export interface GitHubItem {
+  number: number;
+  title: string;
+  url: string;
+  state: string;
+  createdAt: string;
+}
+
+export interface GitHubCounts {
+  open: number;
+  closed: number;
+  merged?: number;
+  latest: GitHubItem | null;
+}
+
+export interface GitHubActivity {
+  pulls: GitHubCounts;
+  issues: GitHubCounts;
+  fetchedAt: string;
+}
+
 export interface GitInfo {
   totalCommits: number;
   latestHash: string;
@@ -184,6 +222,10 @@ export interface GitInfo {
   latestMessage: string;
   branch: string;
   repoUrl: string;
+  contributors?: number;
+  firstCommitDate?: string;
+  codebase?: Codebase;
+  github?: GitHubActivity | null;
 }
 
 export async function loadGitInfo(): Promise<GitInfo | null> {
@@ -835,7 +877,7 @@ export function buildRosterHtmlInventory(roster: Roster): RosterHtmlInventory {
   const intersections = regions.reduce((total, region) => total + fields.filter((field) =>
     hasEnoughPeopleForRosterHub(roster.filter((person) =>
       locationMatches(person, region) && fieldOf(person.department, person.university) === field).length)).length, 0);
-  const standalone = 6;
+  const standalone = 5;
   const profiles = roster.length;
   return {
     standalone,

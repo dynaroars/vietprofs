@@ -1,4 +1,4 @@
-// The SEE ALSO section that closes every standalone page (FAQ, stats, connections, submit, and the
+// The SEE ALSO section that closes every standalone page (stats, connections, submit, and the
 // generated profile pages), so they all link the same destinations. `base` is the path to the site
 // root from the page ("/" for the app pages, "../" for generated profiles); `current` drops the
 // page's own link.
@@ -22,7 +22,7 @@ const LINKS: Array<[Destination, string, string]> = [
   ['insights', 'index.html?view=insights', 'Diaspora Insights &amp; Pathways'],
   ['connections', 'connections.html', 'Academic Connections'],
   ['stats', 'stats.html', 'Visitor Statistics'],
-  ['faq', 'faq.html', 'FAQ'],
+  ['faq', 'https://github.com/dynaroars/vietprofs#faq', 'FAQ'],
   ['submit', 'submit.html', 'Submit / Update'],
   ['github', 'https://github.com/dynaroars/vietprofs', 'GitHub'],
 ];

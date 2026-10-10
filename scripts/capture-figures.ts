@@ -1,6 +1,6 @@
 // Regenerates the paper's screenshot figures from the built site so they cannot drift out of
 // sync with the roster snapshot the manuscript reports. Run `npm run figures` after a roster
-// change, then rebuild paper/paper.pdf and re-copy it to vietprofs.pdf.
+// change, then rebuild paper/paper.pdf and re-copy it to public/vietprofs.pdf.
 //
 // The server/browser setup mirrors test/browser-smoke.test.ts: `vite preview` over the built
 // dist/, driven by headless Chromium.
