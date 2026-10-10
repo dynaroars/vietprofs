@@ -54,7 +54,7 @@ function formatTimestamp(value: string): string {
 function runningHead(): string {
   return `<p class="man-running-head">
     <span>STATS(1)</span>
-    <span class="man-running-title"><a class="man-running-brand" href="${base}index.html" aria-label="VietProfs directory"><img class="brand-logo" src="${base}vietprofs-bamboo-v.svg" alt="" width="20" height="20"><span class="man-running-label">VietProfs Statistics &amp; Insights</span></a></span>
+    <span class="man-running-title"><a class="man-running-brand" href="${base}index.html" aria-label="VietProfs directory"><img class="brand-logo" src="${base}vietprofs-bamboo-v.svg" alt="" width="20" height="20"><span class="man-running-label">Statistics &amp; Insights</span></a></span>
     <span>STATS(1)</span>
   </p>`;
 }

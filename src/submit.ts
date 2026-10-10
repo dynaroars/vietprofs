@@ -53,7 +53,7 @@ function renderShell() {
 
     <main>
       <article class="man-page">
-        <p class="man-running-head"><span>SUBMIT(1)</span><span class="man-running-title"><a class="man-running-brand" href="${import.meta.env.BASE_URL}index.html" aria-label="VietProfs directory"><img class="brand-logo" src="${import.meta.env.BASE_URL}vietprofs-bamboo-v.svg" alt="" width="20" height="20"><span class="man-running-label">VietProfs Submission Manual</span></a></span><span>SUBMIT(1)</span></p>
+        <p class="man-running-head"><span>SUBMIT(1)</span><span class="man-running-title"><a class="man-running-brand" href="${import.meta.env.BASE_URL}index.html" aria-label="VietProfs directory"><img class="brand-logo" src="${import.meta.env.BASE_URL}vietprofs-bamboo-v.svg" alt="" width="20" height="20"><span class="man-running-label">Submission Manual</span></a></span><span>SUBMIT(1)</span></p>
 
         <section class="man-section name-section">
           <h2>NAME</h2>

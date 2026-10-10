@@ -2956,8 +2956,33 @@ button.chart-row-btn:hover {
     margin-left: 0;
   }
 
+  .subpage .man-running-head {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    gap: 0.4rem;
+    align-items: center;
+    font-size: 0.62rem;
+  }
+
+  .subpage .man-running-title,
+  .subpage .man-running-brand {
+    min-width: 0;
+  }
+
+  .subpage .man-running-brand {
+    gap: 0.3rem;
+    min-height: 44px;
+  }
+
   .subpage .man-running-label {
-    display: none;
+    display: inline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .subpage .man-running-brand .brand-logo {
+    width: 1.25em;
+    height: 1.25em;
   }
 
   .subpage .man-running-brand,
