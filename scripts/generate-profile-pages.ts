@@ -302,7 +302,7 @@ function categoryHubPage(config: HubConfig) {
   const title = `${config.categoryTitle} (${config.people.length}) — VietProfs`;
   const ogImage = absoluteUrl('vietprofs-bamboo-v-512.png');
   const ogImageAlt = 'VietProfs bamboo V logo';
-  const sectionLabel = 'VIETPROFS(HUB)';
+  const sectionLabel = 'HUB(7)';
   const rootPrefix = '../'.repeat(config.canonicalPath.split('/').length - 1);
 
   const sortedPeople = [...config.people].sort((a, b) => displayName(a.name).localeCompare(displayName(b.name)));
@@ -393,7 +393,7 @@ function categoryHubPage(config: HubConfig) {
   <div id="app">
     <main>
       <article class="man-page">
-        <p class="man-running-head"><span>${sectionLabel}</span><span class="man-running-title"><a class="man-running-brand" href="${rootPrefix}index.html" aria-label="VietProfs directory"><img class="brand-logo" src="${rootPrefix}vietprofs-bamboo-v.svg" alt="" width="20" height="20"><span class="man-running-label">VietProfs Directory Hub</span></a></span><span>${sectionLabel}</span></p>
+        <p class="man-running-head"><span>${sectionLabel}</span><span class="man-running-title"><a class="man-running-brand" href="${rootPrefix}index.html" aria-label="VietProfs directory"><img class="brand-logo" src="${rootPrefix}vietprofs-bamboo-v.svg" alt="" width="20" height="20"><span class="man-running-label">Directory Hub</span></a></span><span>${sectionLabel}</span></p>
         <section class="man-section name-section">
           <h2>CATEGORY</h2>
           <div class="name-heading">

@@ -327,7 +327,7 @@ Update time & \code{lastUpdatedAt} (stored separately, merged in on load) \\
 
 \subsection{Curated Honors and Awards}
 \label{sec:honors}
-The \code{honors} field is restricted to substantial distinctions, avoiding routine CV padding. Table~\ref{tab:honors} lists the five accepted categories. Both the controller's proposal validator and the data validator enforce that every stored honor declares one of these categories, together with a name, granting organization, HTTPS provenance URL, and valid calendar year.
+The \code{honors} field is restricted to substantial distinctions, avoiding routine CV padding. Table~\ref{tab:honors} lists the five accepted categories. The data validator enforces that every stored honor declares one of these categories, together with a name, granting organization, HTTPS provenance URL, and valid calendar year.
 
 \begin{table}[t]
 \centering
@@ -459,7 +459,7 @@ Keeping a public directory accurate against the open web involves five primary e
 
 \section{System Architecture}
 \label{sec:architecture}
-Figure~\ref{fig:arch} illustrates the system architecture. Candidate discovery and periodic revalidation feed structured evidence to LLM agents. Proposed patches must pass deterministic schema, track, URL, and target-scope validation before the controller mutates the canonical JSON repository. Table~\ref{tab:pipeline} lists the key implementation subsystems.
+Figure~\ref{fig:arch} illustrates the system architecture. Candidate discovery and periodic revalidation feed structured evidence to LLM agents. Proposed patches must pass deterministic schema, track, URL, and target-scope validation before any change is merged into the canonical JSON repository. Table~\ref{tab:pipeline} lists the key implementation subsystems.
 
 \begin{figure}[t]
 \centering
@@ -478,8 +478,9 @@ Figure~\ref{fig:arch} illustrates the system architecture. Candidate discovery a
 Subsystem & Operational Boundary \\
 \midrule
 Discovery queries & Deterministic query generator; candidate research is agent/human. \\
-Maintenance engine & Unattended controller; invokes LLM agent (Claude/Codex) via CLI. \\
-Proposal validation & Deterministic schema, track, URL, and target-scope enforcement. \\
+Maintenance routines & Scheduled LLM agent routines with narrow tasks and per-run caps; they open pull requests and Issues but never merge. \\
+Independent audit & A separate nightly agent re-verifies each pull request and Issue against live sources and merges only when CI passes. \\
+Validation gates & Deterministic schema, track, URL, provenance, and identifier checks run in CI on every change. \\
 Canonical data & Immutable-ID JSON repository; modified only by validated patches. \\
 Update timestamps & Per-record \code{lastUpdatedAt}, keyed by identifier; stamped by the build when a record changes. \\
 Static profiles & Deterministic generator creating individual static HTML pages. \\
@@ -488,40 +489,36 @@ Client app & In-browser search, indexing, filtering, and dynamic fact aggregatio
 \end{tabularx}
 \end{table}
 
-\subsection{Controller Execution and Proposal Validation}
-The maintenance controller manages unattended execution batches. It selects stale or unverified records from the verification ledger (\code{--stale-days}, default 365), invokes the research agent with tool access restricted to read-only browsing (\code{WebSearch}, \code{WebFetch}), and receives a structured JSON proposal. Table~\ref{tab:cli} summarizes the controller CLI options.
+\subsection{Scheduled Routines and Independent Audit}
+Maintenance runs as a small set of scheduled cloud agent routines, each with one narrow task and a per-run cap (Table~\ref{tab:routines}). Agents browse the web for evidence, but their output is only a proposal: an edit to an existing record arrives as a pull request, and a newly found person arrives as an Issue, so no producer can merge its own work or assign a new identifier.
 
 \begin{table}[t]
 \centering
-\caption{Maintenance controller command-line options.}
-\label{tab:cli}
+\caption{Scheduled maintenance routines.}
+\label{tab:routines}
 \small
-\begin{tabularx}{\linewidth}{@{}lX@{}}
+\begin{tabularx}{\linewidth}{@{}llX@{}}
 \toprule
-Flag & Operational Behavior \\
+Routine & Cadence & Task \\
 \midrule
-\code{--limit N} & Process up to $N$ entries in a single batch (default 40). \\
-\code{--total N} & Process up to $N$ entries across consecutive batches, committing after each. \\
-\code{--all} & Full-sweep mode: process all stale entries across the entire directory. \\
-\code{--stale-days N} & Target records whose last full verification is older than $N$ days (default 365). \\
-\code{--name QUERY} & Direct target mode: resolves and processes a specific scholar or field slice. \\
-\code{--dry-run} & Performs research and validation without writing changes to Git or disk. \\
-\code{--codex-review} & Requires an independent second-agent review verdict before applying changes. \\
-\code{--agent A} & Selects the primary research model (\code{claude} default, or \code{codex}). \\
+Links & 6 days/week & Re-check each entry's appointment and links in a rotation over the whole roster. \\
+Portraits & 3 days/week & Fetch missing portraits; each must pass a one-face check and a visual check. \\
+Honors & 3 days/week & Audit honors and degrees on existing entries in a rotation over the roster. \\
+Discovery & 6 days/week & Search bounded institution and field slices for new candidates; files Issues only. \\
+Relationships & 6 days/week & Verify advisor, mentorship, and collaboration links between listed people. \\
+Audit & Nightly & Re-verify other routines' pull requests and Issues; merge or close them. \\
 \bottomrule
 \end{tabularx}
 \end{table}
 
-Before applying any change, the controller enforces strict deterministic invariants:
+Before any change is merged, CI enforces strict deterministic invariants:
 \begin{itemize}
 \item \textbf{Schema Conformance:} Mandatory fields must be present; URLs must be valid HTTP(S); appointment tracks must match the seven accepted values.
-\item \textbf{Target Scoping:} Proposals cannot alter records other than the targeted scholar or reorder the database.
+\item \textbf{Identifier Stability:} Identifiers are immutable, one person keeps one identifier across moves, and a retired identifier is never reused.
 \item \textbf{Provenance Enforcement:} Stored honors must include valid HTTPS sources, accepted categories, and non-future years.
 \end{itemize}
 
-\subsection{Independent Review and Resumable Checkpoints}
-When \code{--codex-review} is active, a second model independently reviews proposed patches against web evidence. If rejected, the controller permits up to two bounded revision attempts (\code{MAX\_PROPOSAL\_REVISIONS = 2}). If discrepancies remain, the case is deferred rather than guessed.
-Working state is written to disk, allowing long maintenance runs to resume seamlessly across process restarts or rate limits.
+The auditor runs separately from the producers and only takes items at least 12 hours old. It re-verifies each claim against live sources instead of trusting the proposal text, and it merges only when CI passes. Ambiguous identity or eligibility, and any conflict with a human-submitted value, is left open for the maintainer rather than guessed.
 
 \section{Candidate Discovery and Discovery Economics}
 \label{sec:discovery}
@@ -579,15 +576,15 @@ The periodic revalidation workflow executes six sequential checks:
 \item \textbf{Scholar Verification:} Match Google Scholar profiles using publication titles and departmental affiliations.
 \item \textbf{Appointment \& Rank Audit:} Detect promotions, title updates, and track reclassifications.
 \item \textbf{Education \& Honors Backfill:} Extract verified degree institutions, graduation years, and curated major awards.
-\item \textbf{Ledger Update:} Record a timestamped verification in the verification ledger.
+\item \textbf{Batch Record:} List every entry checked, including unchanged ones, in the batch's pull request, so the rotation is auditable and the next run resumes where this one stopped.
 \end{enumerate}
 
 \section{Testing and Validation}
 \label{sec:testing}
 Automated maintenance is protected by a multi-layered test suite executed on every commit and pull request:
 \begin{itemize}
-\item \textbf{Data Invariants:} Re-verifies all schema rules, URL schemes, portrait existence on disk, unique IDs, and synchronization with the verification ledger.
-\item \textbf{Unit Tests:} Tests field-mapping heuristics, search indexing, diacritic handling, dynamic fact generation, and proposal analysis.
+\item \textbf{Data Invariants:} Re-verifies all schema rules, URL schemes, portrait existence on disk, unique IDs, and retired identifiers that are never reused.
+\item \textbf{Unit Tests:} Tests field-mapping heuristics, search indexing, diacritic handling, dynamic fact generation, and identity matching.
 \item \textbf{Route Integrity:} Verifies static profile page generation and immutable URL stability.
 \item \textbf{End-to-End Smoke Tests:} Headless Playwright browser tests verifying search interactions, filter combinations, and submission flows on the built site.
 \end{itemize}
@@ -622,7 +619,7 @@ Several intuitive automation shortcuts failed in practice and had to be abandone
 \item \textbf{Surname-Only Filtering:} Inferring diaspora status purely from common surnames creates high false-positive rates (e.g., non-Vietnamese scholars sharing similar romanized names) while missing Vietnamese scholars with non-Vietnamese surnames \cite{mateos2007name}.
 \item \textbf{HTTP Status-Code Liveness (The Soft-404 Fallacy):} Relying purely on HTTP 200 vs.\ 404 status codes to audit profile links fails because modern university content management systems (e.g., Drupal, WordPress) frequently catch deleted or moved faculty URLs and silently redirect them (HTTP 301/302) to generic departmental homepages, admissions portals, or college search directories with a 200 OK status. Automated liveness auditing requires semantic verification---fetching and confirming that the scholar's actual name and affiliation appear on the destination page.
 \item \textbf{Unconstrained Image Scraping for Portraits:} Naive automated image extraction on faculty pages frequently extracts campus building photos, school crests, stock student banners, or headshots of neighboring colleagues in faculty grid layouts. Safe portrait ingestion requires strict aspect-ratio bounding, face detection, and entity caption matching before committing local WebP assets.
-\item \textbf{Overwriting Human Ground-Truth During Automated Sweeps:} When community members or scholars themselves submit verified corrections (e.g., diacritic names, mid-career master's degrees, specialized joint appointments), unattended automated scrapers often subsequently attempt to overwrite these verified facts with stale or stripped web data. Without an explicit, immutable \code{directFields} ledger that permanently shields human-verified attributes from automated mutation, batch revalidation degrades ground-truth data.
+\item \textbf{Overwriting Human Ground-Truth During Automated Sweeps:} When community members or scholars themselves submit facts the web cannot settle (e.g., a diacritic name, an honor, or a portrait), unattended automated scrapers often subsequently attempt to overwrite them with stale or stripped web data. Without an explicit \code{directFields} list that shields these attributes from automated mutation, batch revalidation degrades ground-truth data. Checkable appointment facts are deliberately not shielded: they follow the official profile, so a later move or promotion is still picked up.
 \item \textbf{Honors Inflation from Unfiltered CV Scraping:} Prompting LLMs to extract ``honors and awards'' from personal websites leads to rampant CV inflation: internal departmental travel grants, poster prizes, student mentoring certificates, and routine conference travel stipends. Reliable curation requires restricting honors to a strict, schema-enforced 5-category taxonomy backed by mandatory HTTPS provenance URLs.
 \end{itemize}
 
@@ -631,11 +628,11 @@ Our experience maintaining VietProfs yields ten practical takeaways for agent-ma
 \begin{enumerate}
 \item \textbf{AI Proposes, Determinism Decides:} Restrict LLMs to information retrieval and proposal generation; enforce schema and business invariants using deterministic code.
 \item \textbf{Decouple Candidate Leads from Canonical State:} Route external suggestions and unverified leads into a staging pipeline rather than directly mutating production data.
-\item \textbf{Protect Ground-Truth with Direct-Field Ledgers:} Maintain a dedicated \code{directFields} property on human-submitted records so automated revalidation loops never overwrite manually confirmed facts.
+\item \textbf{Protect Ground-Truth with a Direct-Field List:} Maintain a dedicated \code{directFields} property on human-submitted records so automated revalidation loops never overwrite manually confirmed facts.
 \item \textbf{Perform Semantic Liveness Verification:} Detect soft-404s and generic CMS redirects by asserting that the scholar's name and department still exist on the destination webpage.
 \item \textbf{Compute Aggregate Facts at Runtime:} Never store precomputed summary statistics that can silently become stale when underlying records change.
 \item \textbf{Require Corroboration for Removals:} Never remove an entry based on a broken link alone; demand secondary evidence of departure or retirement.
-\item \textbf{Track a Two-Tiered Verification Ledger:} Distinguish between the date a record was modified and the date it was audited and confirmed unchanged.
+\item \textbf{Separate Producers from Reviewers:} The agent that proposes a change never merges it; an independent auditor re-verifies it later against live sources.
 \item \textbf{Curate Domain Honors Strictly:} Avoid uncurated CV scraping; restrict honors to standardized, comparable award tiers.
 \item \textbf{Partition Open-World Search:} Structure broad searches into narrow, repeatable institution-by-field search slices.
 \item \textbf{Guard Production with End-to-End Tests:} Protect deployment with automated linting, schema validation, and headless browser tests.

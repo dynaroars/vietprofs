@@ -148,7 +148,7 @@ function renderStats(data: BrowserStatsResponse): string {
   const transitionDate = formatDate(data.historicalTransition.newSeriesStartedAt);
   return `<main><article class="man-page stats-man-page">
     ${runningHead()}
-    <section class="man-section name-section"><div class="identity"><div class="identity-details"><div class="name-heading"><h1>VietProfs Visitor Statistics</h1></div>
+    <section class="man-section name-section"><div class="identity"><div class="identity-details"><div class="name-heading"><h1>Visitor Statistics</h1></div>
       <p class="synopsis">Privacy-preserving measurements from browsers that load VietProfs.</p>
       <p class="synopsis stats-snapshot">Last successful snapshot: <time datetime="${escapeHtml(data.generatedAt)}">${escapeHtml(formatTimestamp(data.generatedAt))}</time> <button type="button" id="refresh-stats-btn" class="refresh-stats-btn">Refresh now</button></p>
     </div></div></section>
@@ -165,11 +165,11 @@ function renderStats(data: BrowserStatsResponse): string {
 }
 
 function renderLoading(): string {
-  return `<main><article class="man-page stats-man-page">${runningHead()}<section class="man-section"><h1>VietProfs Visitor Statistics</h1><div class="stats-loading-box"><p>Loading browser statistics…</p></div></section></article></main>`;
+  return `<main><article class="man-page stats-man-page">${runningHead()}<section class="man-section"><h1>Visitor Statistics</h1><div class="stats-loading-box"><p>Loading browser statistics…</p></div></section></article></main>`;
 }
 
 function renderError(message: string): string {
-  return `<main><article class="man-page stats-man-page">${runningHead()}<section class="man-section name-section"><h1>VietProfs Visitor Statistics</h1><p class="synopsis">Privacy-preserving browser measurements.</p></section>
+  return `<main><article class="man-page stats-man-page">${runningHead()}<section class="man-section name-section"><h1>Visitor Statistics</h1><p class="synopsis">Privacy-preserving browser measurements.</p></section>
     <section class="man-section"><h2>VISITOR TRAFFIC</h2><div class="stats-error-box" role="alert"><p class="error-title">Browser statistics are temporarily unavailable.</p><p class="error-detail">${escapeHtml(message)}</p><button type="button" id="retry-btn" class="retry-btn">Retry</button></div></section>${renderSeeAlso(base, 'stats')}</article></main>`;
 }
 
