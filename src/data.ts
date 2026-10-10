@@ -471,6 +471,8 @@ export const HEALTH_SUBFIELDS = [
 // generic keyword to FIELD_RULES below — whenever a department's correct field depends on which
 // institution it's at, not just the department string.
 const FIELD_OVERRIDES = new Map([
+  // York's interdisciplinary Social Science department (international development studies).
+  ['Social Science|York University', 'Social & Behavioral Sciences'],
   // Asian American and critical refugee studies (ethnic studies).
   ['Critical Race and Ethnicity Studies|Augsburg University', 'Social & Behavioral Sciences'],
   // Quantity surveying and construction project management.
