@@ -471,6 +471,26 @@ export const HEALTH_SUBFIELDS = [
 // generic keyword to FIELD_RULES below — whenever a department's correct field depends on which
 // institution it's at, not just the department string.
 const FIELD_OVERRIDES = new Map([
+  // York's interdisciplinary Social Science department (international development studies).
+  ['Social Science|York University', 'Social & Behavioral Sciences'],
+  // Asian American and critical refugee studies (ethnic studies).
+  ['Critical Race and Ethnicity Studies|Augsburg University', 'Social & Behavioral Sciences'],
+  // Quantity surveying and construction project management.
+  ['School of Built Environment|Massey University', 'Engineering'],
+  // Spintronics and magnetic memory devices; the center name has no field keyword.
+  ['Center for Innovative Integrated Electronic Systems|Tohoku University', 'Engineering'],
+  // Speech technology (text-to-speech for low-resource languages); campus name has no field keyword.
+  ['Campus Fryslân|University of Groningen', 'Computer & Information Sciences'],
+  // Leukaemia biology group (RNA-binding proteins); the institute name has no field keyword.
+  ['Barts Cancer Institute|Queen Mary University of London', 'Biological & Biomedical Sciences'],
+  // Speech-language pathology (communication disorders) is a health discipline.
+  ['Speech, Language, and Hearing Sciences|San Diego State University', 'Health Sciences'],
+  // French department name (entrepreneurship and innovation) carries no English field keyword.
+  ["Département d'entrepreneuriat et innovation|HEC Montréal", 'Business & Economics'],
+  // Computational number theory and cryptography; the Augustana unit name is generic.
+  ['Augustana Faculty - Sciences|University of Alberta', 'Mathematics'],
+  // Surrey's vision/speech/signal-processing centre; Lecturer in People-centred AI.
+  ['Centre for Vision, Speech and Signal Processing|University of Surrey', 'Computer & Information Sciences'],
   // Optical/laser physics and spectroscopy work (nanoparticle thermometry, molecular
   // spectroscopy); the group name alone carries no field keyword.
   ['Remote Sensing Group, Physical Measurement Laboratory|National Institute of Standards and Technology', 'Physics & Astronomy'],
