@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import worker, { categoryForPath, normalizePath } from '../worker/index.ts';
+import worker, { categoryForPath, normalizePath } from '../src/worker.ts';
 
 const ctx = { waitUntil: () => {}, passThroughOnException: () => {} };
 

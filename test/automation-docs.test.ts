@@ -5,8 +5,8 @@ import { existsSync, readdirSync, readFileSync } from 'node:fs';
 // Guards the maintenance docs against drift: routines read these files as instructions, so a
 // stale path, npm script, or schedule claim silently breaks a scheduled run.
 
-const automation = readFileSync('docs/AUTOMATION.md', 'utf8');
-const instructionDocs = ['AGENTS.md', 'README.md', 'ROSTER_MAINTENANCE.md', 'docs/AUTOMATION.md', ...readdirSync('TASKS').map((file) => `TASKS/${file}`)];
+const automation = readFileSync('TASKS/AUTOMATION.md', 'utf8');
+const instructionDocs = ['AGENTS.md', 'README.md', 'ROSTER_MAINTENANCE.md', ...readdirSync('TASKS').map((file) => `TASKS/${file}`)];
 const DAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 const DAY_NAMES = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
@@ -85,6 +85,6 @@ test('every scheduled routine has a section and every section a schedule row', (
 
 test('every non-deploy GitHub workflow is documented in AUTOMATION.md', () => {
   for (const file of readdirSync('.github/workflows').filter((name) => name !== 'deploy.yml')) {
-    assert.ok(automation.includes(`.github/workflows/${file}`), `${file} is listed in docs/AUTOMATION.md`);
+    assert.ok(automation.includes(`.github/workflows/${file}`), `${file} is listed in TASKS/AUTOMATION.md`);
   }
 });

@@ -10,8 +10,7 @@
     "includes": [
       "src/**/*.ts",
       "scripts/**/*.ts",
-      "test/**/*.ts",
-      "analysis/**/*.ts"
+      "test/**/*.ts"
     ]
   },
   "formatter": {

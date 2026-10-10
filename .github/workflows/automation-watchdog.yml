@@ -64,7 +64,7 @@ jobs:
           fi
 
           {
-            echo "Watchdog run from $(date -u +%Y-%m-%d) ([workflow run]($run_url)). See \`docs/AUTOMATION.md\`."
+            echo "Watchdog run from $(date -u +%Y-%m-%d) ([workflow run]($run_url)). See \`TASKS/AUTOMATION.md\`."
             echo
             printf '%s' "$problems"
           } > body.md

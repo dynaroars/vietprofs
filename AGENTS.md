@@ -69,7 +69,7 @@ instead of restating it.
 | :--- | :--- |
 | New roster ID (any new `public/data.json` entry) | GitHub Issue, one per candidate |
 | Edit to existing IDs from a `TASKS/` playbook (links, portraits, honors, degrees) | Topic branch + PR; the auditor (`TASKS/AUDIT_ISSUES_PRS.md`) merges |
-| Auditor's own fixes for verified Issues | One `audit-fix/<date>` branch + PR per run; the auditor squash-merges it on green CI (`docs/AUTOMATION.md` "Applying fixes") |
+| Auditor's own fixes for verified Issues | One `audit-fix/<date>` branch + PR per run; the auditor squash-merges it on green CI (`TASKS/AUTOMATION.md` "Applying fixes") |
 | Relationship batches (`public/relationships.json`) | Commit and push to `main` |
 | Conflict with a protected `directFields` value, or anything needing an owner decision | GitHub Issue |
 
@@ -86,7 +86,7 @@ skip entries they already touch. Stop early, without pushing, if `npm test` or `
 fails for a reason you can't fix inside the batch.
 
 Scheduled routines, their cadence, and the producer → auditor handoff are documented in
-[docs/AUTOMATION.md](docs/AUTOMATION.md), which is the source of truth for routine behavior. Any
+[TASKS/AUTOMATION.md](TASKS/AUTOMATION.md), which is the source of truth for routine behavior. Any
 agent that notices an error or lead outside its own task (a stale rank, duplicate entry, missing
 honor, wrong link, or new candidate) files it as a side-finding Issue as described there, instead
 of fixing it in its task PR or dropping it.

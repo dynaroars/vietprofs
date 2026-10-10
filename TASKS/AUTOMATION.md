@@ -92,7 +92,7 @@ the web UI.
 
 ## Conventions for every scheduled run
 
-Every routine prompt says: "Read docs/AUTOMATION.md and follow the section for `<key>`." All of
+Every routine prompt says: "Read TASKS/AUTOMATION.md and follow the section for `<key>`." All of
 them share these rules:
 
 1. **Setup.** Read `AGENTS.md`, then this section and the playbook it names, then the
@@ -342,7 +342,7 @@ out-of-roster advisors or coauthors.
 - **New routine:** add a section and a table row here. Its prompt should be the same pointer the
   others use:
   `You are the scheduled VietProfs agent for routine key "<key>" (github.com/dynaroars/vietprofs).
-  Read docs/AUTOMATION.md and follow "Conventions for every scheduled run", "Side findings", and
+  Read TASKS/AUTOMATION.md and follow "Conventions for every scheduled run", "Side findings", and
   the section for <key>. ...`
 
 ## Troubleshooting

@@ -14,7 +14,7 @@ npm run analyze > /tmp/vietprofs-roster-analysis.json
 npm run figures
 ```
 
-`analysis/analyze-roster.ts` reads `public/data.json` and imports the canonical `fieldOf`, `FIELDS`,
+`scripts/analyze-roster.ts` reads `public/data.json` and imports the canonical `fieldOf`, `FIELDS`,
 and `countBy` implementations from `src/data.ts`. Its field counts therefore match the site rather
 than approximating its taxonomy. `npm run figures` rebuilds the site before capturing the fixed
 manuscript screenshots. Regenerate the analysis, this file's snapshot values, figures, and the

@@ -106,7 +106,7 @@ Before modifying data or closing issues, ensure compliance with repository rules
      Any id the PR doesn't explicitly remove (with a reason and a `maintenance/retired-ids.json` row)
      means a stale overwrite: request changes, don't merge.
 4. **Merge verified PRs** — only after the fresh-`main`+PR combination above passes cleanly, and
-   comment with what you re-verified first (`docs/AUTOMATION.md` convention 10):
+   comment with what you re-verified first (`TASKS/AUTOMATION.md` convention 10):
    ```bash
    gh pr comment <PR_NUMBER> --body "Re-verified <ids> live on <date>; CI green; merged."
    gh pr merge <PR_NUMBER> --squash --delete-branch
@@ -136,7 +136,7 @@ Before modifying data or closing issues, ensure compliance with repository rules
      - Re-run the dedup check from `TASKS/candidate_intake.md` step 1 (`npm run find-roster-matches -- "<name>" --url ...` with every identity URL in the Issue) against the current `public/data.json`; the Issue's "not on the roster" claim may be stale. A hit at another institution is a probable move: if it's the same person, update that entry in place (the Issue's fields become an edit, with owner-asserted ones in `directFields`) and close the Issue naming the existing ID. See `ROSTER_MAINTENANCE.md` "One person, one ID".
      - A retired-ID hit means the person was on the roster before: add them back under that original ID and remove it from `maintenance/retired-ids.json`, instead of assigning a new one.
      - Assign immutable profile IDs for genuinely new people only: `npm run assign-profile-ids -- --apply`.
-     - Scheduled cloud audits add a verified new person themselves on the `audit-fix` branch (standing owner authorization in `AGENTS.md`). Only if the cloud permission check denies the add do they comment "verified, ready for owner" with a ready-to-paste entry and leave the Issue open for a local session (`docs/AUTOMATION.md`, auditor "New-candidate Issues").
+     - Scheduled cloud audits add a verified new person themselves on the `audit-fix` branch (standing owner authorization in `AGENTS.md`). Only if the cloud permission check denies the add do they comment "verified, ready for owner" with a ready-to-paste entry and leave the Issue open for a local session (`TASKS/AUTOMATION.md`, auditor "New-candidate Issues").
      - When adding a new entry locally, also fetch its portrait if the Issue or the verified official profile page has a clear single-person headshot: validate with `identify` (≥120×120, aspect ≤1.55), convert to WebP in `public/portraits/`, set `portrait` and the direct original URL as `portraitSource`. Don't leave it for the `portraits` routine.
 
    - **B. Honors & Award Additions:**
@@ -166,7 +166,7 @@ Before modifying data or closing issues, ensure compliance with repository rules
 ---
 
 ### Step 4: Validate and Land the Fixes Through One PR
-Scheduled audit runs never push to `main` directly (see `docs/AUTOMATION.md` "Applying fixes"; the
+Scheduled audit runs never push to `main` directly (see `TASKS/AUTOMATION.md` "Applying fixes"; the
 cloud permission check blocks it). Make every verified fix on one branch:
 1. **Branch from fresh `main` and commit one Issue at a time:**
    ```bash
@@ -189,7 +189,7 @@ cloud permission check blocks it). Make every verified fix on one branch:
 ---
 
 ### Step 5: Close GitHub Issues
-Every close gets a comment saying what was found and what was done (`docs/AUTOMATION.md`
+Every close gets a comment saying what was found and what was done (`TASKS/AUTOMATION.md`
 convention 10). Issues that the fix PR's `Closes #n` already closed still get a comment with the
 change and its source. Close other resolved issues with a clear summary comment:
 ```bash

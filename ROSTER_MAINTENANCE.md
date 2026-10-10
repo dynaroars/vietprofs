@@ -816,7 +816,7 @@ finding and vetting *new* candidates. This section covers re-verifying *every ex
 `public/data.json`, since profiles go dead, people move institutions, ranks change, and new
 honors accrue over time. Run this when the user asks for a periodic roster refresh.
 
-On a schedule this runs in rotation inside the `links` routine (`docs/AUTOMATION.md`): each run
+On a schedule this runs in rotation inside the `links` routine (`TASKS/AUTOMATION.md`): each run
 takes the next entries in id order and, while it has each person's official profile open, applies
 the checks below and fixes what changed in its PR. A manually requested full pass follows the same
 steps in id order, in small batches (about 20-40 people), committing and pushing each validated

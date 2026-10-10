@@ -12,8 +12,8 @@ Repository documentation:
 - [`AGENTS.md`](./AGENTS.md): instructions for automated contributors, including where each kind of change is submitted.
 - [`TASKS/`](./TASKS/README.md): per-task agent playbooks (discovery, portraits, links, honors, relationships, PR/Issue audit).
 - [`paper/PAPER_NOTES.md`](./paper/PAPER_NOTES.md): reproducible manuscript metrics, claim audit, and publication checklist.
-- [`docs/AUTOMATION.md`](./docs/AUTOMATION.md): scheduled maintenance agents, their cadence, and how the auditor reviews their PRs/Issues.
-- [`docs/VISITOR_STATISTICS.md`](./docs/VISITOR_STATISTICS.md): visitor-statistics methodology and Worker operations.
+- [`TASKS/AUTOMATION.md`](./TASKS/AUTOMATION.md): scheduled maintenance agents, their cadence, and how the auditor reviews their PRs/Issues.
+- [`TASKS/VISITOR_STATISTICS.md`](./TASKS/VISITOR_STATISTICS.md): visitor-statistics methodology and Worker operations.
 
 ## Commands
 
@@ -50,7 +50,7 @@ Vietnamese economists that seeded a batch of entries, and to the many contributo
 LinkedIn and other channels who've suggested corrections and additions.
 
 Scheduled AI routines maintain the roster, each reviewed by an independent nightly auditor; see
-[docs/AUTOMATION.md](./docs/AUTOMATION.md). Existing entries are re-verified in rotation following
+[TASKS/AUTOMATION.md](./TASKS/AUTOMATION.md). Existing entries are re-verified in rotation following
 [ROSTER_MAINTENANCE.md](./ROSTER_MAINTENANCE.md#periodic-full-roster-refresh).
 
 ## FAQ
@@ -132,7 +132,7 @@ In Vietnam, virtually all faculty are Vietnamese, and domestic university direct
 
 **How does VietProfs stay up-to-date?**
 
-Public directories often succumb to "link rot" and data staleness as faculty change universities, get promoted, retire, or update their websites. VietProfs solves this through a continuous **hybrid human-in-the-loop and autonomous AI maintenance system** documented in [`docs/AUTOMATION.md`](./docs/AUTOMATION.md).
+Public directories often succumb to "link rot" and data staleness as faculty change universities, get promoted, retire, or update their websites. VietProfs solves this through a continuous **hybrid human-in-the-loop and autonomous AI maintenance system** documented in [`TASKS/AUTOMATION.md`](./TASKS/AUTOMATION.md).
 
 **What is the core maintenance philosophy?**
 

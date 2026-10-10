@@ -1,7 +1,7 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "vietprofs-stats-api",
-  "main": "worker/index.ts",
+  "main": "src/worker.ts",
   "compatibility_date": "2026-03-01",
   "account_id": "16b8b7083e5362d3fb5fe759d501b174",
   "vars": {

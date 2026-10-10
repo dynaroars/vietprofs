@@ -15,7 +15,7 @@
     "build": "vite build && tsx scripts/generate-profile-pages.ts",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
-    "analyze": "tsx analysis/analyze-roster.ts",
+    "analyze": "tsx scripts/analyze-roster.ts",
     "figures": "npm run build && tsx scripts/capture-figures.ts",
     "validate-data": "tsx scripts/validate-data.ts",
     "check-links": "tsx scripts/check-links.ts",
