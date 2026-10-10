@@ -96,7 +96,7 @@ function profilePage(
   rosterById: ReadonlyMap<string, RosterEntry>,
 ) {
   const sectionNum = TRACK_SECTION[person.track || ''] || 1;
-  const sectionLabel = `VIETPROFS(${sectionNum})`;
+  const sectionLabel = `PROFILE(${sectionNum})`;
   const name = displayName(person.name);
   const nativeName = vietnameseName(person);
   const path = personPath(person.id);
@@ -143,7 +143,7 @@ function profilePage(
     ? `<section class="man-section"><h2>CONNECTIONS</h2><ul class="connection-list">${[...connectionsByPerson.values()].map((group) => {
       const { other } = group[0];
       return `<li class="connection-item"><a class="connection-person" href="../${personPath(other.id)}">${escapeHtml(displayName(other.name))}</a><ul class="connection-relations">${group.map(({ relationship, label }) => `<li class="connection-relation"><span class="connection-kind">${escapeHtml(label)}</span><span class="connection-sources">${relationship.sources.map((source, index) => `<a href="${escapeHtml(source)}" target="_blank" rel="noopener noreferrer">${relationship.sources.length === 1 ? 'Evidence' : `Evidence ${index + 1}`}</a>`).join(' · ')}</span></li>`).join('')}</ul></li>`;
-    }).join('')}</ul><p class="section-note">Only source-verified connections between people in the VietProfs roster are shown.</p></section>`
+    }).join('')}</ul><p class="section-note">Only source-verified connections between people in the roster are shown.</p></section>`
     : '';
   const rawRecord = escapeHtml(JSON.stringify(person, null, 2));
   const editUrl = `../submit.html?edit=${encodeURIComponent(person.id)}`;
@@ -263,7 +263,7 @@ function profilePage(
   <div id="app">
     <main>
       <article class="man-page">
-        <p class="man-running-head"><span>${sectionLabel}</span><span class="man-running-title"><a class="man-running-brand" href="../index.html" aria-label="VietProfs directory"><img class="brand-logo" src="../vietprofs-bamboo-v.svg" alt="" width="20" height="20"><span class="man-running-label">VietProfs Profile Manual</span></a></span><span>${sectionLabel}</span></p>
+        <p class="man-running-head"><span>${sectionLabel}</span><span class="man-running-title"><a class="man-running-brand" href="../index.html" aria-label="VietProfs directory"><img class="brand-logo" src="../vietprofs-bamboo-v.svg" alt="" width="20" height="20"><span class="man-running-label">Profile Manual</span></a></span><span>${sectionLabel}</span></p>
         <section class="man-section name-section"><h2>NAME</h2><div class="identity">${portrait}<div class="identity-details"><div class="name-heading"><div class="name-title"><h1>${escapeHtml(name)}</h1>${favoriteToggle}</div><div class="profile-actions" aria-label="Roster actions"><a class="submission-link" href="${escapeHtml(editUrl)}">Add or update info</a></div></div><p class="native">${escapeHtml(nativeName)} <a class="loc-badge-link" href="${countryTargetUrl}" title="Filter faculty in ${escapeHtml(person.country || 'United States')}"><span class="loc-badge" title="${escapeHtml(person.country || 'United States')}"><span class="country-flag" aria-hidden="true">${countryFlag(person.country)}</span></span></a></p><p class="record-id">${escapeHtml(person.id)}</p></div></div></section>
         <section class="man-section"><h2>SYNOPSIS</h2><p class="synopsis">${escapeHtml(role)}${locationOf(person) ? ` · ${escapeHtml(locationOf(person))}` : ''}</p><div class="tags"><a href="../${fieldPath(personField)}" class="tag" title="Explore ${escapeHtml(personField)} faculty on VietProfs">${escapeHtml(personField)}</a>${person.track ? `<a href="../index.html?track=${encodeURIComponent(person.track)}" class="tag${person.track === 'Emeritus' ? ' tag-emeritus' : person.track === 'Deceased' ? ' tag-deceased' : ''}" title="Filter by ${escapeHtml(person.track)}">${person.track === 'Emeritus' ? '🎓 Emeritus' : person.track === 'Deceased' ? '🏛️ Deceased' : escapeHtml(person.track)}</a>` : ''}${person.institutionType && person.institutionType !== 'University' ? `<a href="../index.html?institutionType=${encodeURIComponent(person.institutionType)}" class="tag" title="Filter by ${escapeHtml(person.institutionType)}">${escapeHtml(person.institutionType)}</a>` : ''}${person.confirmed === false ? '<span class="tag tag-unconfirmed">Unconfirmed</span>' : ''}</div></section>
         ${research}${educationSection}${honors}${connectionSection}${linkSection}
