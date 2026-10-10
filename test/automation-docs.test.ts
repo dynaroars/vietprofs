@@ -33,6 +33,10 @@ const rows: Row[] = [...automation.matchAll(/^\| `([a-z-]+)` \| `trig_\w+` \| [^
 });
 const audit = rows.find((row) => row.key === 'audit');
 
+// Local outputs the docs may name (e.g. maintenance/website-candidates.json) are gitignored, so a
+// fresh clone doesn't have them.
+const gitignored = new Set(readFileSync('.gitignore', 'utf8').split('\n').map((line) => line.trim()));
+
 test('instruction docs only reference files and npm scripts that exist', () => {
   const scripts = JSON.parse(readFileSync('package.json', 'utf8')).scripts as Record<string, string>;
   const missing: string[] = [];
@@ -40,7 +44,7 @@ test('instruction docs only reference files and npm scripts that exist', () => {
     const text = readFileSync(doc, 'utf8');
     for (const [, name] of text.matchAll(/npm run ([a-z0-9:_-]+)/g)) if (!scripts[name]) missing.push(`${doc}: npm run ${name}`);
     for (const [, path] of text.matchAll(/(?<![\w/.-])((?:scripts|maintenance|TASKS|docs|test|src|\.github\/workflows)\/[\w./-]+?\.(?:json|ts|js|py|sh|md|yml))(?!\w)/g)) {
-      if (!existsSync(path)) missing.push(`${doc}: ${path}`);
+      if (!existsSync(path) && !gitignored.has(path)) missing.push(`${doc}: ${path}`);
     }
   }
   assert.deepEqual([...new Set(missing)], []);
