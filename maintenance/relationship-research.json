@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-09T14:19:00.000Z",
+  "updatedAt": "2026-10-10T14:11:38.000Z",
   "batches": [
     {
       "batchNumber": 1,
@@ -18299,6 +18299,240 @@
           "nextAction": "Official profile/site fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found (page may be blocked or silent). OpenAlex unavailable (daily rate limit); no Crossref/identity-resolved coauthor, grant, or patent evidence completed. Retry with OpenAlex, then NSF/NIH/patent searches.",
           "status": "unresolved",
           "notes": []
+        }
+      ]
+    },
+    {
+      "batchNumber": 79,
+      "rosterIds": [
+        "vp-1821",
+        "vp-1820",
+        "vp-1819",
+        "vp-1818",
+        "vp-1817",
+        "vp-1816",
+        "vp-1815",
+        "vp-1814",
+        "vp-1813",
+        "vp-1812",
+        "vp-1811",
+        "vp-1810",
+        "vp-1809",
+        "vp-1808",
+        "vp-1807",
+        "vp-1806",
+        "vp-1805",
+        "vp-1804",
+        "vp-1803",
+        "vp-1802"
+      ],
+      "startedAt": "2026-10-10T14:11:38.000Z",
+      "status": "complete",
+      "outcomes": [
+        {
+          "rosterId": "vp-1821",
+          "sources": [
+            "https://art.unc.edu/person/truong-lien/"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile/site fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found (page may be blocked or silent). OpenAlex unavailable (daily rate limit); no identity-resolved grant or patent evidence completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-1820",
+          "sources": [
+            "https://www.stedwards.edu/directory/department-visual-studies/jimmy-luu"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile/site fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found (page may be blocked or silent). OpenAlex unavailable (daily rate limit); no identity-resolved grant or patent evidence completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-1819",
+          "sources": [
+            "https://profiles.laps.yorku.ca/profiles/ngadao/"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile/site fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found (page may be blocked or silent). OpenAlex unavailable (daily rate limit); no identity-resolved grant or patent evidence completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-1818",
+          "sources": [
+            "https://www.pugetsound.edu/directory/tina-huynh"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile/site fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found (page may be blocked or silent). OpenAlex unavailable (daily rate limit); no identity-resolved grant or patent evidence completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-1817",
+          "sources": [
+            "https://researchprofiles.ku.dk/en/persons/long-nguyen"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile/site fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found (page may be blocked or silent). OpenAlex unavailable (daily rate limit); no identity-resolved grant or patent evidence completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-1816",
+          "sources": [
+            "https://en.em-normandie.com/professors-directory/hoang-hiep-nguyen"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile/site fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found (page may be blocked or silent). OpenAlex unavailable (daily rate limit); no identity-resolved grant or patent evidence completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-1815",
+          "sources": [
+            "https://portal.research.lu.se/en/persons/xuan-son-vu",
+            "https://people.cs.umu.se/sonvx/"
+          ],
+          "relationshipIds": [],
+          "status": "excluded",
+          "notes": [],
+          "nextAction": "Personal site names PhD supervisors Lili Jiang and Erik Elmroth (Umeå) and postdoc host Monowar Bhuyan; find-roster-matches finds none in roster, and no Vietnamese-heritage evidence, so excluded as out-of-roster. No grant/patent search completed."
+        },
+        {
+          "rosterId": "vp-1814",
+          "sources": [
+            "https://mathematics.sc.mahidol.ac.th/people/faculty/man-nguyen/"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile/site fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found (page may be blocked or silent). OpenAlex unavailable (daily rate limit); no identity-resolved grant or patent evidence completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-1813",
+          "sources": [
+            "https://www.augsburg.edu/faculty/ly-thuy-nguyen/"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile/site fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found (page may be blocked or silent). OpenAlex unavailable (daily rate limit); no identity-resolved grant or patent evidence completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-1812",
+          "sources": [
+            "https://www.grinnell.edu/user/phanhai"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile/site fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found (page may be blocked or silent). OpenAlex unavailable (daily rate limit); no identity-resolved grant or patent evidence completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-1811",
+          "sources": [
+            "https://americanstudies.nd.edu/faculty/jennifer-huynh/"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile/site fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found (page may be blocked or silent). OpenAlex unavailable (daily rate limit); no identity-resolved grant or patent evidence completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-1810",
+          "sources": [
+            "https://www.scu.edu/cas/religious-studies/faculty--staff/thao-nguyen-sj/"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile/site fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found (page may be blocked or silent). OpenAlex unavailable (daily rate limit); no identity-resolved grant or patent evidence completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-1809",
+          "sources": [
+            "https://uas.alaska.edu/dir/ntnguyen2.html"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile/site fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found (page may be blocked or silent). OpenAlex unavailable (daily rate limit); no identity-resolved grant or patent evidence completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-1808",
+          "sources": [
+            "https://researchers.adelaide.edu.au/profile/trang.t.le"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile/site fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found (page may be blocked or silent). OpenAlex unavailable (daily rate limit); no identity-resolved grant or patent evidence completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-1807",
+          "sources": [
+            "https://portfolio.jcu.edu.au/researchers/nguyen.thanh"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile/site fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found (page may be blocked or silent). OpenAlex unavailable (daily rate limit); no identity-resolved grant or patent evidence completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-1806",
+          "sources": [
+            "https://experts.griffith.edu.au/10672-lan-nguyen"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile/site fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found (page may be blocked or silent). OpenAlex unavailable (daily rate limit); no identity-resolved grant or patent evidence completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-1805",
+          "sources": [
+            "https://experts.griffith.edu.au/33388-thanh-tam-nguyen"
+          ],
+          "relationshipIds": [
+            "rel-coauthor-vp-1803-vp-1805"
+          ],
+          "status": "completed",
+          "notes": [],
+          "nextAction": "Crossref shows 3 shared Griffith-affiliated works with vp-1803/vp-1805; no mentorship evidence found. No grant or patent search completed."
+        },
+        {
+          "rosterId": "vp-1804",
+          "sources": [
+            "https://www.flinders.edu.au/people/khoa.nguyen"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile/site fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found (page may be blocked or silent). OpenAlex unavailable (daily rate limit); no identity-resolved grant or patent evidence completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-1803",
+          "sources": [
+            "https://experts.griffith.edu.au/9203-henry-nguyen"
+          ],
+          "relationshipIds": [
+            "rel-coauthor-vp-1803-vp-1805"
+          ],
+          "status": "completed",
+          "notes": [],
+          "nextAction": "Crossref shows 3 shared Griffith-affiliated works with vp-1803/vp-1805; no mentorship evidence found. No grant or patent search completed."
+        },
+        {
+          "rosterId": "vp-1802",
+          "sources": [
+            "https://academics.aut.ac.nz/thao.le"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile/site fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found (page may be blocked or silent). OpenAlex unavailable (daily rate limit); no identity-resolved grant or patent evidence completed. Retry with OpenAlex, then NSF/NIH/patent searches."
         }
       ]
     }

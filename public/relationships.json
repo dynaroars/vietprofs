@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-09T14:19:00.000Z",
+  "updatedAt": "2026-10-10T14:11:38.000Z",
   "relationships": [
     {
       "id": "rel-coauthor-vp-0015-vp-0018",
@@ -2566,6 +2566,43 @@
         }
       ],
       "verifiedAt": "2026-10-09T14:19:00.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-1803-vp-1805",
+      "type": "coauthor",
+      "sourceId": "vp-1803",
+      "targetId": "vp-1805",
+      "sources": [
+        "https://doi.org/10.1145/3630635",
+        "https://doi.org/10.1109/icde65706.2026.00182",
+        "https://doi.org/10.1145/3770855.3818104",
+        "https://experts.griffith.edu.au/9203-henry-nguyen",
+        "https://experts.griffith.edu.au/33388-thanh-tam-nguyen"
+      ],
+      "evidence": "Crossref records list Quoc Viet Hung Nguyen and Thanh Tam Nguyen as coauthors of three papers (data mining / Text2SQL) with both authors affiliated with Griffith University, matching both roster entries' Griffith University profiles and computer-science field; the works have 5-7 authors each.",
+      "works": [
+        {
+          "identifier": "doi:10.1145/3630635",
+          "title": "Isomorphic Graph Embedding for Progressive Maximal Frequent Subgraph Mining",
+          "date": "2023-12-19",
+          "url": "https://doi.org/10.1145/3630635"
+        },
+        {
+          "identifier": "doi:10.1109/icde65706.2026.00182",
+          "title": "An Efficient and Effective Evaluator for Text2SQL Models on Unseen and Unlabeled Data",
+          "date": "2026-05",
+          "url": "https://doi.org/10.1109/icde65706.2026.00182"
+        },
+        {
+          "identifier": "doi:10.1145/3770855.3818104",
+          "title": "Learning to Evaluate: Cost-Effective Model Evaluation on Unlabeled Data with Meta-Learning",
+          "date": "2026-08-08",
+          "url": "https://doi.org/10.1145/3770855.3818104"
+        }
+      ],
+      "verifiedAt": "2026-10-10T14:11:38.000Z",
       "direct": false,
       "notes": ""
     }
