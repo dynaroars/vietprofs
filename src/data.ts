@@ -471,6 +471,8 @@ export const HEALTH_SUBFIELDS = [
 // generic keyword to FIELD_RULES below — whenever a department's correct field depends on which
 // institution it's at, not just the department string.
 const FIELD_OVERRIDES = new Map([
+  // Speech-language pathology (communication disorders) is a health discipline.
+  ['Speech, Language, and Hearing Sciences|San Diego State University', 'Health Sciences'],
   // French department name (entrepreneurship and innovation) carries no English field keyword.
   ["Département d'entrepreneuriat et innovation|HEC Montréal", 'Business & Economics'],
   // Computational number theory and cryptography; the Augustana unit name is generic.
