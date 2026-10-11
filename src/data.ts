@@ -513,6 +513,8 @@ export const HEALTH_SUBFIELDS = [
 // generic keyword to FIELD_RULES below — whenever a department's correct field depends on which
 // institution it's at, not just the department string.
 const FIELD_OVERRIDES = new Map([
+  // UiT Narvik building, energy and materials technology (civil/structural engineering).
+  ['Department of Building, Energy and Material Technology|UiT The Arctic University of Norway', 'Engineering'],
   // Polish literature (philology institute name carries no field keyword).
   ['Institute of Polish Philology|University of Wrocław', 'Humanities'],
   // Gachon's Bio-Nano Technology department; this member works in chemical engineering and materials.
