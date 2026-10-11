@@ -37,7 +37,7 @@ so it must be committed manually.
 
 ## Data and contributions
 
-The roster lives in [`public/data.json`](./public/data.json) and is also published on [Hugging Face Datasets](https://huggingface.co/datasets/nguyenthanhvuh/vietprofs). Each active record gets a static
+The roster lives in [`public/data.json`](./public/data.json). Each active record gets a static
 public profile at `people/vp-####.html`, and its immutable `vp-####` `id` is assigned by `npm run
 assign-profile-ids -- --apply` after an entry is added.
 
@@ -241,18 +241,20 @@ All summary statistics, leaderboards, and aggregate metrics are **computed dynam
 
 ### Dataset & Access
 
-**Where can I access the open dataset and academic paper?**
+**Where can I access the roster and academic paper?**
 
 - **Live Directory:** <https://vietprofs.roars.dev>
 - **Academic Paper:** [Read the full paper (PDF)](https://vietprofs.roars.dev/vietprofs.pdf) or on [arXiv (2609.06091)](https://arxiv.org/abs/2609.06091)
 - **GitHub Repository:** [github.com/dynaroars/vietprofs](https://github.com/dynaroars/vietprofs)
-- **Hugging Face Dataset:** [huggingface.co/datasets/nguyenthanhvuh/vietprofs](https://huggingface.co/datasets/nguyenthanhvuh/vietprofs)
 - **Visitor Statistics:** [vietprofs.roars.dev/stats.html](https://vietprofs.roars.dev/stats.html)
 - **Academic Connections:** [vietprofs.roars.dev/connections.html](https://vietprofs.roars.dev/connections.html)
 - **Public Submission Form:** [vietprofs.roars.dev/submit.html](https://vietprofs.roars.dev/submit.html)
 
 ## License
 
-Code and data are licensed under [Creative Commons
-Attribution-NonCommercial-NoDerivatives 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/);
-portraits and the manuscript are not covered. See [`LICENSE`](./LICENSE) for full terms.
+Code is licensed under [Creative Commons
+Attribution-NonCommercial-NoDerivatives 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/).
+The roster data is not openly licensed: you may browse it on the site, cite individual facts, and
+link to it, but copying, scraping, redistributing, or using it for AI training or commercial
+purposes needs written permission. Portraits and the manuscript are not covered. See
+[`LICENSE`](./LICENSE) for full terms.
