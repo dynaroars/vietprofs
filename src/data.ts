@@ -513,6 +513,16 @@ export const HEALTH_SUBFIELDS = [
 // generic keyword to FIELD_RULES below — whenever a department's correct field depends on which
 // institution it's at, not just the department string.
 const FIELD_OVERRIDES = new Map([
+  // Polish literature (philology institute name carries no field keyword).
+  ['Institute of Polish Philology|University of Wrocław', 'Humanities'],
+  // Gachon's Bio-Nano Technology department; this member works in chemical engineering and materials.
+  ['Department of Bio-Nano Technology|Gachon University', 'Engineering'],
+  // Malmö's Department of Urban Studies (urban development, housing policy).
+  ['Department of Urban Studies|Malmö University', 'Social & Behavioral Sciences'],
+  // NYCU's semiconductor college; 2D semiconductor materials and devices.
+  ['International College of Semiconductor Technology|National Yang Ming Chiao Tung University', 'Engineering'],
+  // Polish Academy of Sciences low-temperature institute: superconductivity and magnetism.
+  ['Division of Magnetic Research|Institute of Low Temperature and Structure Research, Polish Academy of Sciences', 'Physics & Astronomy'],
   // SIT's ICT cluster (cybersecurity, networking); the cluster name has no field keyword.
   ['Infocomm Technology Cluster|Singapore Institute of Technology', 'Computer & Information Sciences'],
   // SIT's aviation and aircraft-structures faculty sit in the Business, Communication and Design cluster.
