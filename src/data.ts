@@ -513,6 +513,10 @@ export const HEALTH_SUBFIELDS = [
 // generic keyword to FIELD_RULES below — whenever a department's correct field depends on which
 // institution it's at, not just the department string.
 const FIELD_OVERRIDES = new Map([
+  // SIT's ICT cluster (cybersecurity, networking); the cluster name has no field keyword.
+  ['Infocomm Technology Cluster|Singapore Institute of Technology', 'Computer & Information Sciences'],
+  // SIT's aviation and aircraft-structures faculty sit in the Business, Communication and Design cluster.
+  ['Business, Communication and Design Cluster|Singapore Institute of Technology', 'Engineering'],
   // York's interdisciplinary Social Science department (international development studies).
   ['Social Science|York University', 'Social & Behavioral Sciences'],
   // Asian American and critical refugee studies (ethnic studies).
