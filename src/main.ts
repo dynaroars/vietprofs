@@ -401,6 +401,15 @@ async function init() {
     ['undergrad', uniqueUndergradInstitutions(roster)],
   ]);
   const searchInput = document.getElementById('search') as HTMLInputElement;
+  // The full "Roster last updated <date, time ET>" placeholder doesn't fit a phone-width box.
+  const narrowScreen = window.matchMedia('(max-width: 560px)');
+  const shortBuildLabel = new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: 'numeric', timeZone: 'America/New_York' })
+    .format(new Date(__BUILD_TIMESTAMP__));
+  const applySearchPlaceholder = () => {
+    searchInput.placeholder = narrowScreen.matches ? `Updated ${shortBuildLabel}` : `Roster last updated ${__BUILD_LABEL__}`;
+  };
+  applySearchPlaceholder();
+  narrowScreen.addEventListener('change', applySearchPlaceholder);
   const searchScopeChip = document.getElementById('search-scope-chip') as HTMLButtonElement;
   const searchScopeChipLabel = document.getElementById('search-scope-chip-label') as HTMLElement;
   const searchStateChip = document.getElementById('search-state-chip') as HTMLButtonElement;

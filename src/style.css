@@ -682,6 +682,11 @@ h1 {
     align-self: flex-end;
   }
 
+  /* The buttons stack below the box here, so the desktop right padding only clips the placeholder. */
+  .search-input {
+    padding-right: 0.9rem;
+  }
+
   .search-suggestion-panel {
     width: 100%;
   }
