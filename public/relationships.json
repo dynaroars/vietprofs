@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-10T14:11:38.000Z",
+  "updatedAt": "2026-10-12T14:27:00.000Z",
   "relationships": [
     {
       "id": "rel-coauthor-vp-0015-vp-0018",
@@ -2603,6 +2603,49 @@
         }
       ],
       "verifiedAt": "2026-10-10T14:11:38.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-0516-vp-1949",
+      "type": "coauthor",
+      "sourceId": "vp-0516",
+      "targetId": "vp-1949",
+      "sources": [
+        "https://doi.org/10.1109/icce55644.2022.9852051",
+        "https://doi.org/10.1109/vtc2022-fall57202.2022.10012723",
+        "https://doi.org/10.1109/ssp53291.2023.10208051",
+        "https://doi.org/10.1002/wcm.2317",
+        "https://www.bth.se/om-bth/personer/thi-my-chinh-chu"
+      ],
+      "evidence": "Crossref records list Trung Q. Duong and Thi My Chinh Chu as coauthors of four papers on wireless relaying/NOMA communications, with Chu affiliated with Blekinge Institute of Technology (matching the roster entry's BTH profile, which itself lists a paper coauthored with Duong) and Duong's affiliation shown as Blekinge (2012) and Queen's University Belfast (2022-2023), consistent with the roster entry's wireless-communications field; the works have 2-10 authors each.",
+      "works": [
+        {
+          "identifier": "doi:10.1109/icce55644.2022.9852051",
+          "title": "On Optimal Channel Uses in Ultra-Reliable Short-Packet Relaying Communications",
+          "date": "2022-07-27",
+          "url": "https://doi.org/10.1109/icce55644.2022.9852051"
+        },
+        {
+          "identifier": "doi:10.1109/vtc2022-fall57202.2022.10012723",
+          "title": "NOMA-Based Full-Duplex UAV Network with K-Means Clustering for Disaster Scenario",
+          "date": "2022-09",
+          "url": "https://doi.org/10.1109/vtc2022-fall57202.2022.10012723"
+        },
+        {
+          "identifier": "doi:10.1109/ssp53291.2023.10208051",
+          "title": "Full-Duplex Cooperative NOMA Short-Packet Communications with K-Means Clustering",
+          "date": "2023-07-02",
+          "url": "https://doi.org/10.1109/ssp53291.2023.10208051"
+        },
+        {
+          "identifier": "doi:10.1002/wcm.2317",
+          "title": "Cognitive amplify-and-forward relay networks with beamforming under primary user interference",
+          "date": "2012-10-30",
+          "url": "https://doi.org/10.1002/wcm.2317"
+        }
+      ],
+      "verifiedAt": "2026-10-12T14:27:00.000Z",
       "direct": false,
       "notes": ""
     }
