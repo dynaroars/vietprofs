@@ -131,14 +131,11 @@ export function renderRosterEntry(person: RosterEntry, baseUrl = '/', countryHub
 
   return `
     <div class="entry entry-with-portrait">
-      <div class="entry-side">
-        ${portrait}
-        <div class="entry-links">${locBadge}${profileIcon}${personalSiteIcon}${scholarIcon}${linkedinIcon}</div>
-      </div>
+      ${portrait}
       <div class="entry-content">
         <div class="entry-name-row">
           <a class="entry-name" href="${escapeHtml(`${baseUrl}${personPath(person.id)}`)}">${escapeHtml(visibleName)}</a>
-          <span class="entry-vietnamese-name">(${escapeHtml(nativeName)})</span>${updatedTime}${favoriteToggle}
+          <span class="entry-vietnamese-name">(${escapeHtml(nativeName)})</span> ${locBadge}${profileIcon}${personalSiteIcon}${scholarIcon}${linkedinIcon}${updatedTime}${favoriteToggle}
         </div>
         <div class="entry-meta">${escapeHtml(entryMeta)}</div>
         ${educationDetails.length ? `<div class="entry-details">${educationDetails.map((value) => escapeHtml(value)).join('; ')}</div>` : ''}

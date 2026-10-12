@@ -792,21 +792,6 @@ h1 {
   gap: 0.75rem;
 }
 
-/* The flag and profile links sit under the portrait, using the space beside the card's text. */
-.entry-side {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.45rem;
-}
-
-.entry-links {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.35rem 0.45rem;
-}
-
 .entry .tags {
   padding-right: 0;
 }
