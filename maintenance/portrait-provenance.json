@@ -3634,6 +3634,94 @@
       "identitySignals": [],
       "retrievedAt": "2026-10-09T11:29:03.522Z",
       "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1918": {
+      "name": "Lisa Tran - Utrecht University",
+      "outcome": "found",
+      "pageUrl": "https://www.uu.nl/staff/LTran",
+      "imageUrl": "https://www.uu.nl/medewerkers/RestApi/Public/GetImage?Employee=53788&t=",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-12T03:23:00.160621Z",
+      "note": "official profile headshot; face check ok and reviewed by eye in the 2026-10-12 audit"
+    },
+    "vp-1919": {
+      "name": "Tri Mikael Tran",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-12T03:21:03.084Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1920": {
+      "name": "Anh Dung Tran Le",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-12T03:21:05.482Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1921": {
+      "name": "Dang Mao Nguyen",
+      "outcome": "not_found",
+      "pageUrl": "https://lermab.univ-lorraine.fr/membres-eebi/",
+      "imageUrl": "https://lermab.univ-lorraine.fr/wp-content/uploads/2025/05/4.png",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-12T03:21:08.528Z",
+      "note": "LERMaB member-list image is a plain blue placeholder square (no face); rejected in the 2026-10-12 audit"
+    },
+    "vp-1922": {
+      "name": "Thi Thanh Binh Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-12T03:21:12.363Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1923": {
+      "name": "Anh Tuan Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-12T03:21:24.331Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1924": {
+      "name": "Thi Phuong Linh Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-12T03:21:34.875Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1925": {
+      "name": "Nguyen Dang",
+      "outcome": "found",
+      "pageUrl": "https://www.st-andrews.ac.uk/computer-science/people/nttd",
+      "imageUrl": "https://portal.st-andrews.ac.uk/staff-photos/nttd/medium",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-12T03:23:00.286529Z",
+      "note": "official profile headshot; face check ok and reviewed by eye in the 2026-10-12 audit"
+    },
+    "vp-1926": {
+      "name": "Ngan Vo",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-12T03:21:51.658Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     }
   }
 }
