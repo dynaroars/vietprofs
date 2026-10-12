@@ -783,6 +783,15 @@ const FIELD_OVERRIDES = new Map([
   ['Beckman Institute for Advanced Science and Technology, Illinois Polymer Maker Lab|University of Illinois Urbana-Champaign', 'Chemistry'],
   ['Laboratoire Auscultation, Modélisation, Expérimentation des Infrastructures de Transport (LAMES), Département Matériaux et Structures (MAST)|Université Gustave Eiffel', 'Engineering'],
   ['Laboratoire de Conception, Optimisation et Modélisation des Systèmes (LCOMS)|Université de Lorraine', 'Computer & Information Sciences'],
+  ['Laboratoire des Technologies Innovantes|Université de Picardie Jules Verne', 'Engineering'],
+  ['Laboratoire d\'Études et de Recherche sur le Matériau Bois|Université de Lorraine', 'Engineering'],
+  ['Institute of Scientific and Industrial Research|Osaka University', 'Engineering'],
+  ['Département d\'anglais|Université de Tours', 'Humanities'],
+  ['Laboratoire HeRMA|Université de Poitiers', 'Humanities'],
+  ['Department of Tourism Science|Tokyo Metropolitan University', 'Social & Behavioral Sciences'],
+  ['Bioinformatics Center, Institute for Chemical Research|Kyoto University', 'Computer & Information Sciences'],
+  ['Institute for Core Education|Chiba University of Commerce', 'Business & Economics'],
+  ['Department of Agro-environmental Sciences|Kyushu University', 'Agricultural & Natural Resource Sciences'],
   // Philosopher of science and neuroethicist (PhD in Philosophy); the bioethics center name alone
   // carries no field keyword.
   ['Center for Bioethics and Social Justice|Michigan State University', 'Humanities'],
