@@ -320,6 +320,10 @@ export function regionPath(region: string): string {
   return `regions/${regionSlug(region)}.html`;
 }
 
+export function universityPath(university: string): string {
+  return `universities/${regionSlug(university)}.html`;
+}
+
 export function fieldRegionPath(field: string, region: string): string {
   return `regions/${regionSlug(region)}/${fieldSlug(field)}.html`;
 }

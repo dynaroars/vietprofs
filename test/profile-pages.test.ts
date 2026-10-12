@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import test from 'node:test';
-import { fieldPath, fieldRegionPath, fieldSlug, hasEnoughPeopleForRosterHub, personPath, regionPath, regionSlug, type Roster } from '../src/data.ts';
+import { fieldPath, fieldRegionPath, fieldSlug, hasEnoughPeopleForRosterHub, personPath, regionPath, regionSlug, type Roster, universityPath } from '../src/data.ts';
 
 const roster = JSON.parse(await readFile(new URL('../public/data.json', import.meta.url), 'utf8')) as Roster;
 
@@ -25,6 +25,7 @@ test('discipline and region hub paths generate clean canonical filenames', () =>
     fieldRegionPath('Health Sciences', 'Japan'),
     'regions/japan/health-sciences.html',
   );
+  assert.equal(universityPath('University of California, San Diego'), 'universities/university-of-california-san-diego.html');
   assert.equal(hasEnoughPeopleForRosterHub(2), false);
   assert.equal(hasEnoughPeopleForRosterHub(3), true);
 });
@@ -60,6 +61,9 @@ test('generated profile pages use the same stylesheet source as the directory', 
   assert.match(seeAlso, />SEE ALSO</);
   assert.match(seeAlso, /connections\.html/);
   assert.match(generator, />CONNECTIONS</);
+  assert.match(generator, />SAME UNIVERSITY</);
+  assert.match(generator, />SAME FIELD</);
+  assert.match(generator, /University hub path collision/);
   assert.match(generator, /connectionsFor/);
   assert.match(generator, /public\/relationships\.json/);
   assert.match(seeAlso, /class="links" aria-label="Other VietProfs destinations"/);
