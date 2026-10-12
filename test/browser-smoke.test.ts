@@ -698,7 +698,7 @@ test('profile pages honor dark mode through the shared stylesheet', async () => 
     localStorage.setItem('vietprofs:favorites', JSON.stringify([profileId]));
   }, id);
   await page.goto(`${baseUrl}/people/${id}.html`, { waitUntil: 'networkidle' });
-  assert.equal(await page.locator('link[href="../profile.css"]').count(), 1);
+  assert.equal(await page.locator('link[href^="../profile.css?v="]').count(), 1);
   assert.equal(await page.evaluate(() => getComputedStyle(document.documentElement).colorScheme), 'light dark');
   assert.equal(await page.evaluate(() => getComputedStyle(document.body).backgroundColor), 'rgb(21, 24, 28)');
   assert.equal(await page.locator('.man-page').count(), 1);

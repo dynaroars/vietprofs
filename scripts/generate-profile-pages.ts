@@ -1,6 +1,7 @@
 import { mkdir, readFile, rm, writeFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { execFileSync } from 'node:child_process';
+import { createHash } from 'node:crypto';
 import {
   canonicalRank,
   continentOf,
@@ -54,6 +55,16 @@ const commit = process.env.VITE_GIT_COMMIT || (() => {
     return 'development';
   }
 })();
+
+// profile.css and share.js have fixed names and the host caches them for hours, longer than the
+// pages that use them. A content hash in the query makes a changed file load fresh with the page.
+const assetVersion: Record<'css' | 'share', string> = { css: '', share: '' };
+
+async function loadAssetVersions() {
+  const hash = async (file: string) => createHash('sha256').update(await readFile(resolve(root, 'public', file))).digest('hex').slice(0, 10);
+  assetVersion.css = await hash('profile.css');
+  assetVersion.share = await hash('share.js');
+}
 
 function absoluteUrl(path: string) {
   return `${siteUrl}/${path}`;
@@ -324,7 +335,7 @@ function profilePage(
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../profile.css">
+  <link rel="stylesheet" href="../profile.css?v=${assetVersion.css}">
 </head>
 <body class="subpage">
   <div id="app">
@@ -339,7 +350,7 @@ function profilePage(
       </article>
     </main>
     ${profileScript}
-    <script src="../share.js" defer></script>
+    <script src="../share.js?v=${assetVersion.share}" defer></script>
   </div>
 </body>
 </html>`;
@@ -455,7 +466,7 @@ function categoryHubPage(config: HubConfig) {
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="${rootPrefix}profile.css">
+  <link rel="stylesheet" href="${rootPrefix}profile.css?v=${assetVersion.css}">
 </head>
 <body class="subpage hub-page">
   <div id="app">
@@ -500,13 +511,14 @@ function categoryHubPage(config: HubConfig) {
         </section>
       </article>
     </main>
-    <script src="${rootPrefix}share.js" defer></script>
+    <script src="${rootPrefix}share.js?v=${assetVersion.share}" defer></script>
   </div>
 </body>
 </html>`;
 }
 
 async function main() {
+  await loadAssetVersions();
   const [roster, relationships, retiredIds] = await Promise.all([
     Promise.all([readFile(resolve(root, 'public/data.json'), 'utf8'), readFile(resolve(root, 'public/updates.json'), 'utf8')])
       .then(([data, updates]) => withUpdates(JSON.parse(data) as Roster, JSON.parse(updates) as RosterUpdates)),
