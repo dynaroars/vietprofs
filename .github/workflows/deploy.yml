@@ -12,8 +12,10 @@ permissions:
   pages: write
   id-token: write
 
+# Per-ref group: GitHub keeps one pending run per group, so a shared group let a PR run displace
+# (cancel) a queued main deploy.
 concurrency:
-  group: pages
+  group: pages-${{ github.ref }}
   cancel-in-progress: false
 
 jobs:
