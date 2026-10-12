@@ -3722,6 +3722,108 @@
       "identitySignals": [],
       "retrievedAt": "2026-10-12T03:21:51.658Z",
       "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1927": {
+      "name": "Tuan Dinh Tran",
+      "outcome": "found",
+      "pageUrl": "https://researchers.shiga-u.ac.jp/html/100003280_en.html",
+      "imageUrl": "https://researchers.shiga-u.ac.jp/html/img/100003280",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-12T03:25:02.776906Z",
+      "note": "official profile headshot; face check ok and reviewed by eye in the 2026-10-12 audit"
+    },
+    "vp-1928": {
+      "name": "Yen Khang Nguyen Tran",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-12T03:23:35.344Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1929": {
+      "name": "Thuy Nguyen - Chiba University of Commerce",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-12T03:23:47.362Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1930": {
+      "name": "Dang Khoa Nguyen - Kyushu University",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-12T03:23:49.742Z",
+      "note": "Kyushu profile image has no detectable face (placeholder); 2026-10-12 audit"
+    },
+    "vp-1931": {
+      "name": "Thi Phuong Thao Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-12T03:23:58.787Z",
+      "note": "SANKEN staff photo (staging/assets/staff/4-25_Minamitani-Thao_11.jpg) is a single full-length portrait but 400x599 fails the 0.70 aspect floor; left for a cropped or alternate source (2026-10-12 audit)"
+    },
+    "vp-1932": {
+      "name": "Kim Ngan Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://www.r-info.tohoku.ac.jp/en/43b62b17e50d93204c72d075720744a8.html",
+      "imageUrl": "https://researchmap.jp/KimNgan/avatar.png",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-12T03:25:02.898135Z",
+      "note": "official profile headshot; face check ok and reviewed by eye in the 2026-10-12 audit"
+    },
+    "vp-1933": {
+      "name": "Sanko Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://www.oslomet.no/en/about/employee/sankon/",
+      "imageUrl": "https://gw-oslomet.intark.uh-it.no/ansattbilde/sankon",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-12T03:25:03.058523Z",
+      "note": "official profile headshot; face check ok and reviewed by eye in the 2026-10-12 audit"
+    },
+    "vp-1934": {
+      "name": "Tri Tran",
+      "outcome": "found",
+      "pageUrl": "https://www.univ-tours.fr/annuaire/m-tri-tran",
+      "imageUrl": "https://www.univ-tours.fr/medias/photo/20190722-113955_1761329103648-jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-12T03:25:03.530880Z",
+      "note": "official profile headshot; face check ok and reviewed by eye in the 2026-10-12 audit"
+    },
+    "vp-1935": {
+      "name": "Francois Tran-Van",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-12T03:24:20.180Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1936": {
+      "name": "Nicolas Tran",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-12T03:24:22.202Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     }
   }
 }
