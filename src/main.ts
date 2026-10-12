@@ -40,6 +40,7 @@ import { applyFavoriteToggle, fieldDropdownLabel, renderRosterEntry } from './re
 import { clearPinnedSearches, clearRecentProfiles, loadFavorites, loadPinnedSearches, loadRecentProfiles, toggleFavorite, togglePinnedSearch } from './favorites-store.ts';
 import { openRosterShell } from './roster-shell.ts';
 import { locationForQuery } from './filter-state.ts';
+import { renderShareMenu } from './share.ts';
 import { renderFunFacts, renderGrowthChart, renderHealthPanel, type GrowthMetricKey } from './insights.ts';
 import { deriveRosterStats } from './derived-stats.ts';
 import { normalizeText, parseKeywordQuery as parseKeywordQueryShared } from './search-kit.ts';
@@ -206,6 +207,7 @@ function renderShell() {
     <div class="result-row">
       <div class="header-links">
         <span class="paper-reference"><a class="paper-link" href="${import.meta.env.BASE_URL}vietprofs.pdf" target="_blank" rel="noopener noreferrer">Read the paper</a> (<a class="paper-link" href="https://arxiv.org/abs/2609.06091" target="_blank" rel="noopener noreferrer">arXiv</a>) · <a class="paper-link" href="https://github.com/dynaroars/vietprofs#faq" target="_blank" rel="noopener noreferrer">FAQ</a></span>
+        ${renderShareMenu({ title: 'VietProfs: Vietnamese professors worldwide' })}
         <a class="submission-link" href="submit.html">Add or update info</a>
       </div>
       <p class="result-count" id="result-count" aria-live="polite"></p>

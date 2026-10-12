@@ -79,3 +79,16 @@ test('generated profile pages use the same stylesheet source as the directory', 
   );
   assert.match(generator, /class="name-title"><h1>\$\{escapeHtml\(name\)\}<\/h1>\$\{favoriteToggle\}<\/div>/);
 });
+
+test('share menu links point at the page address with encoded title and URL', async () => {
+  const { renderShareMenu } = await import('../src/share.ts');
+  const html = renderShareMenu({ title: 'Ada & Bob on VietProfs', url: 'https://vietprofs.roars.dev/people/vp-0001.html' });
+  assert.match(html, /data-share-url="https:\/\/vietprofs\.roars\.dev\/people\/vp-0001\.html"/);
+  assert.match(html, /facebook\.com\/sharer\/sharer\.php\?u=https%3A%2F%2Fvietprofs\.roars\.dev%2Fpeople%2Fvp-0001\.html/);
+  assert.match(html, /mailto:\?subject=Ada%20%26%20Bob%20on%20VietProfs/);
+  assert.match(html, /data-share-copy/);
+
+  const dynamic = renderShareMenu({ title: 'VietProfs' });
+  assert.doesNotMatch(dynamic, /data-share-url/);
+  assert.match(dynamic, /href="#" data-share-template/);
+});
