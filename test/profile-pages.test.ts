@@ -95,6 +95,10 @@ test('share menu links point at the page address with encoded title and URL', as
   assert.match(html, /facebook\.com\/sharer\/sharer\.php\?u=https%3A%2F%2Fvietprofs\.roars\.dev%2Fpeople%2Fvp-0001\.html/);
   assert.match(html, /mailto:\?subject=Ada%20%26%20Bob%20on%20VietProfs/);
   assert.match(html, /data-share-copy/);
+  assert.match(html, /x\.com\/intent\/post\?text=Ada%20%26%20Bob%20on%20VietProfs&amp;url=https%3A%2F%2Fvietprofs/);
+  assert.match(html, /bsky\.app\/intent\/compose\?text=/);
+  assert.match(html, /wa\.me\/\?text=/);
+  assert.match(html, /data-share-mastodon/);
 
   const dynamic = renderShareMenu({ title: 'VietProfs' });
   assert.doesNotMatch(dynamic, /data-share-url/);

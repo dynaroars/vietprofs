@@ -50,6 +50,24 @@
       return;
     }
 
+    // Mastodon servers are independent, so ask which one the visitor posts from and remember it.
+    const mastodonLink = clicked.closest('a[data-share-mastodon]');
+    if (mastodonLink) {
+      event.preventDefault();
+      const KEY = 'vietprofs:mastodon-server';
+      let saved = '';
+      try { saved = localStorage.getItem(KEY) || ''; } catch { /* storage blocked */ }
+      const answer = prompt('Your Mastodon server (for example mastodon.social):', saved || 'mastodon.social');
+      const server = (answer || '').trim().replace(/^https?:\/\//i, '').replace(/\/.*$/, '').replace(/^@?[^@\s]*@/, '').toLowerCase();
+      if (!/^[a-z0-9-]+(\.[a-z0-9-]+)+$/.test(server)) return;
+      try { localStorage.setItem(KEY, server); } catch { /* storage blocked */ }
+      const menu = mastodonLink.closest('.share-menu');
+      const { url, title } = target(menu);
+      window.open(`https://${server}/share?text=${encodeURIComponent(`${title} ${url}`)}`, '_blank', 'noopener,noreferrer');
+      menu.open = false;
+      return;
+    }
+
     const copyButton = clicked.closest('[data-share-copy]');
     if (copyButton) {
       await copy(copyButton, target(copyButton.closest('.share-menu')).url);
