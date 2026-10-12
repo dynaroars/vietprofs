@@ -1,20 +1,3 @@
-# Search engines may index the roster. AI-training and bulk-scraping crawlers may not
-# (see LICENSE). Cloudflare also blocks them and rate-limits the data files.
-User-agent: GPTBot
-User-agent: ClaudeBot
-User-agent: anthropic-ai
-User-agent: CCBot
-User-agent: Google-Extended
-User-agent: Applebot-Extended
-User-agent: Bytespider
-User-agent: meta-externalagent
-User-agent: PerplexityBot
-User-agent: cohere-ai
-User-agent: Diffbot
-User-agent: omgili
-User-agent: Timpibot
-Disallow: /
-
 User-agent: *
 Allow: /
 
