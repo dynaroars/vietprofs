@@ -66,6 +66,8 @@ export function formatEducationDetails(person: RosterEntry, { fullLabels = false
   ].filter(Boolean) as string[];
 }
 
+const MAX_CARD_TOPICS = 3;
+
 export function renderRosterEntry(person: RosterEntry, baseUrl = '/', countryHubAvailable = true) {
   const visibleName = displayName(person.name);
   const nativeName = vietnameseName(person);
@@ -74,16 +76,24 @@ export function renderRosterEntry(person: RosterEntry, baseUrl = '/', countryHub
   const healthSubfield = healthSubfieldOf(person);
   const fieldLabel = `${fieldDropdownLabel(personField)}${healthSubfield ? ` (${healthSubfield})` : ''}`;
   const fieldTag = `<a class="tag tag-field tag-link" href="${escapeHtml(`${baseUrl}${fieldPath(personField)}`)}" title="Explore ${escapeHtml(personField)} discipline hub">${escapeHtml(fieldLabel)}</a>`;
-  const trackTag = `<span class="tag tag-track${person.track === 'Emeritus' ? ' tag-emeritus' : person.track === 'Deceased' ? ' tag-deceased' : ''}">${person.track === 'Emeritus' ? '🎓 Emeritus' : person.track === 'Deceased' ? '🏛️ Deceased' : escapeHtml(person.track)}</span>`;
+  // The role line already names Teaching, Clinical, Research, and Emeritus appointments (see
+  // canonicalRank), so the track chip only appears when it adds something.
+  const trackInRole = Boolean(person.track && canonicalRank(person)?.includes(person.track));
+  const trackTag = trackInRole ? '' : `<span class="tag tag-track${person.track === 'Emeritus' ? ' tag-emeritus' : person.track === 'Deceased' ? ' tag-deceased' : ''}">${person.track === 'Emeritus' ? '🎓 Emeritus' : person.track === 'Deceased' ? '🏛️ Deceased' : escapeHtml(person.track)}</span>`;
   const institutionTypeTag = person.institutionType && person.institutionType !== 'University'
     ? `<span class="tag tag-institution-type">${escapeHtml(person.institutionType)}</span>`
     : '';
   const confirmationTag = person.confirmed === false
     ? '<span class="tag tag-unconfirmed" title="Reliable evidence supports this appointment, but an official current institutional profile was unavailable when it was added.">Unconfirmed</span>'
     : '';
-  const topicTags = (person.researchAreas ?? [])
+  // Cards show the first few research areas; the profile page and search cover the rest.
+  const researchAreas = person.researchAreas ?? [];
+  const hiddenAreas = researchAreas.slice(MAX_CARD_TOPICS);
+  const topicTags = researchAreas.slice(0, MAX_CARD_TOPICS)
     .map((area) => `<span class="tag tag-topic">${escapeHtml(area)}</span>`)
-    .join('');
+    .join('') + (hiddenAreas.length
+    ? `<span class="tag tag-topic tag-more" title="${escapeHtml(hiddenAreas.join(', '))}">+${hiddenAreas.length}</span>`
+    : '');
   const honors = (person.honors ?? [])
     .map((honor) => `<a class="honor-link" href="${escapeHtml(honor.source)}" target="_blank" rel="noopener noreferrer">${escapeHtml(honor.name)}${honor.year ? ` (${escapeHtml(String(honor.year))})` : ''}</a>`)
     .join(' · ');
@@ -122,17 +132,16 @@ export function renderRosterEntry(person: RosterEntry, baseUrl = '/', countryHub
   return `
     <div class="entry entry-with-portrait">
       ${portrait}
-      ${favoriteToggle}
       <div class="entry-content">
         <div class="entry-name-row">
           <a class="entry-name" href="${escapeHtml(`${baseUrl}${personPath(person.id)}`)}">${escapeHtml(visibleName)}</a>
-          <span class="entry-vietnamese-name">(${escapeHtml(nativeName)})</span> ${locBadge}${profileIcon}${personalSiteIcon}${scholarIcon}${linkedinIcon}${updatedTime}
+          <span class="entry-vietnamese-name">(${escapeHtml(nativeName)})</span> ${locBadge}${profileIcon}${personalSiteIcon}${scholarIcon}${linkedinIcon}${updatedTime}${favoriteToggle}
         </div>
         <div class="entry-meta">${escapeHtml(entryMeta)}</div>
         ${educationDetails.length ? `<div class="entry-details">${educationDetails.map((value) => escapeHtml(value)).join('; ')}</div>` : ''}
         ${honors ? `<div class="entry-honors"><span class="honors-label">Honors:</span> ${honors}</div>` : ''}
-        <div class="tags">${fieldTag}${trackTag}${institutionTypeTag}${confirmationTag}${topicTags}</div>
       </div>
+      <div class="tags">${fieldTag}${trackTag}${institutionTypeTag}${confirmationTag}${topicTags}</div>
     </div>
   `;
 }
