@@ -125,8 +125,12 @@ function pickRelated(person: RosterEntry, candidates: RosterEntry[], extraScore:
     .map(({ other }) => other);
 }
 
+// Plain bullets, like EDUCATION and HONORS: "Name (rank, department)".
 function relatedList(people: RosterEntry[], detail: (other: RosterEntry) => string) {
-  return `<ul class="hub-roster-list">${people.map((other) => `<li class="hub-roster-item"><a class="hub-person-name" href="../${personPath(other.id)}">${escapeHtml(displayName(other.name))}</a> <span class="hub-person-role">${escapeHtml(detail(other))}</span></li>`).join('')}</ul>`;
+  return `<ul>${people.map((other) => {
+    const text = detail(other);
+    return `<li><a href="../${personPath(other.id)}">${escapeHtml(displayName(other.name))}</a>${text ? ` (${escapeHtml(text)})` : ''}</li>`;
+  }).join('')}</ul>`;
 }
 
 function relatedSections(person: RosterEntry, field: string, context: RelatedContext) {
@@ -214,7 +218,9 @@ function profilePage(
   const connectionSection = connections.length
     ? `<section class="man-section"><h2>CONNECTIONS</h2><ul class="connection-list">${[...connectionsByPerson.values()].map((group) => {
       const { other } = group[0];
-      return `<li class="connection-item"><a class="connection-person" href="../${personPath(other.id)}">${escapeHtml(displayName(other.name))}</a><ul class="connection-relations">${group.map(({ relationship, label }) => `<li class="connection-relation"><span class="connection-kind">${escapeHtml(label)}</span><span class="connection-sources">${relationship.sources.map((source, index) => `<a href="${escapeHtml(source)}" target="_blank" rel="noopener noreferrer">${relationship.sources.length === 1 ? 'Evidence' : `Evidence ${index + 1}`}</a>`).join(' · ')}</span></li>`).join('')}</ul></li>`;
+      // Same bullet format as the other sections: "Name (relationship: evidence; relationship: evidence)".
+      const relations = group.map(({ relationship, label }) => `<span class="connection-kind">${escapeHtml(label)}</span>: <span class="connection-sources">${relationship.sources.map((source, index) => `<a href="${escapeHtml(source)}" target="_blank" rel="noopener noreferrer">${relationship.sources.length === 1 ? 'evidence' : `evidence ${index + 1}`}</a>`).join(', ')}</span>`).join('; ');
+      return `<li class="connection-item"><a class="connection-person" href="../${personPath(other.id)}">${escapeHtml(displayName(other.name))}</a> (${relations})</li>`;
     }).join('')}</ul><p class="section-note">Only source-verified connections between people in the roster are shown.</p></section>`
     : '';
   const rawRecord = escapeHtml(JSON.stringify(person, null, 2));
