@@ -521,8 +521,16 @@ test('filters and submit-form suggestions work', async () => {
   assert.equal(await page.locator('#submit-form').getAttribute('data-editing-id'), tan.id);
   assert.match(await textOf(page.locator('#name-match-notice')), new RegExp(`Editing existing entry\\s+${tan.id}`));
   assert.equal(await page.locator('#name-match-notice a').getAttribute('href'), `./people/${tan.id}.html`);
+  assert.equal(await page.locator('#selfSubmission').isChecked(), false);
   await page.locator('#name').fill('Corrected Tan Minh Nguyen');
   assert.equal(await page.locator('#submit-form').getAttribute('data-editing-id'), tan.id);
+  // Profile pages link here with ?self=1 ("Is this you?") and ?missing=… (fields the entry lacks).
+  const sparse: RosterEntry = await page.evaluate(async () => (await (await fetch('/data.json')).json()).find((person: RosterEntry) => !person.scholarUrl && !person.mdInstitution));
+  await page.goto(`${baseUrl}/submit.html?edit=${encodeURIComponent(sparse.id)}&self=1&missing=scholarUrl,bogus`, { waitUntil: 'networkidle' });
+  assert.equal(await page.locator('#selfSubmission').isChecked(), true);
+  assert.equal(await page.locator('.form-section.field-missing').count(), 1);
+  assert.equal(await page.locator('.form-section.field-missing #scholarUrl').count(), 1);
+  assert.match(await textOf(page.locator('#name-match-notice')), /Not on record yet: Google Scholar/);
   await page.goto(`${baseUrl}/submit.html`, { waitUntil: 'networkidle' });
   await page.locator('input[name="purpose"][value="update"]').check();
   await page.locator('#name').fill('Tan Minh Nguyen');

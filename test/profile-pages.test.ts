@@ -63,6 +63,10 @@ test('generated profile pages use the same stylesheet source as the directory', 
   assert.match(generator, />CONNECTIONS</);
   assert.match(generator, />SAME UNIVERSITY</);
   assert.match(generator, />SAME FIELD</);
+  assert.match(generator, />MISSING</);
+  assert.match(generator, /missingFields\(person\)/);
+  assert.match(generator, />Is this you\?</);
+  assert.match(generator, /&self=1/);
   assert.match(generator, /University hub path collision/);
   assert.match(generator, /connectionsFor/);
   assert.match(generator, /public\/relationships\.json/);
@@ -95,4 +99,13 @@ test('share menu links point at the page address with encoded title and URL', as
   const dynamic = renderShareMenu({ title: 'VietProfs' });
   assert.doesNotMatch(dynamic, /data-share-url/);
   assert.match(dynamic, /href="#" data-share-template/);
+});
+
+test('missing-field prompts skip what an entry already has and gaps that are expected', async () => {
+  const { missingFields } = await import('../src/missing-fields.ts');
+  const base = { id: 'vp-9999', name: 'Test Person', university: 'U', department: 'D', city: 'C', country: 'United States', profileUrl: 'https://example.edu', researchAreas: [], track: 'Tenure-line' } as unknown as Roster[number];
+  assert.deepEqual(missingFields(base), ['vietnameseName', 'phdInstitution', 'phdYear', 'scholarUrl', 'websiteUrl', 'linkedinUrl']);
+  assert.deepEqual(missingFields({ ...base, vietnameseName: 'Tên', phdInstitution: 'MIT', phdYear: 2010, scholarUrl: 'x', websiteUrl: 'y', linkedinUrl: 'z' }), []);
+  assert.deepEqual(missingFields({ ...base, mdInstitution: 'Harvard' }), ['vietnameseName', 'scholarUrl', 'websiteUrl', 'linkedinUrl']);
+  assert.ok(!missingFields({ ...base, track: 'Deceased' }).includes('linkedinUrl'));
 });

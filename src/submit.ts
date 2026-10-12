@@ -1,6 +1,7 @@
 import './style.css';
 import { renderSeeAlso } from './see-also.ts';
 import { FIELDS, fieldOf, INSTITUTION_TYPES, institutionTypeOf, loadRoster, personPath, RANKS, TRACKS, type RosterEntry } from './data.ts';
+import { isRequestableField, REQUESTABLE_FIELDS } from './missing-fields.ts';
 import { escapeHtml } from './utils.ts';
 
 const SUBMISSION_EMAIL = 'root@roars.dev';
@@ -164,6 +165,14 @@ function renderShell() {
             <div class="form-section">
               <label for="profileUrl">Profile or verification link <span class="info-icon" tabindex="0" role="img" aria-label="Why this is required" data-tooltip="We need at least one link (institutional profile, personal site, LinkedIn, etc.) to verify and add this entry.">i</span></label>
               <input id="profileUrl" name="profileUrl" type="url" placeholder="https://… (any link that helps verify this person)" />
+            </div>
+
+            <div class="form-section">
+              <label class="radio-row">
+                <input id="selfSubmission" name="selfSubmission" type="checkbox" />
+                I am this person
+              </label>
+              <p class="form-help">Check this if the entry is about you, so the maintainers know the details come from you.</p>
             </div>
           </section>
 
@@ -378,8 +387,14 @@ function formatValue(value: unknown): string {
   return String(value);
 }
 
-function buildNewEntryBody(entry: SubmissionDraft, notes: string): string {
-  const lines = ['Request: New entry', 'Direct update: yes', '', `Name: ${entry.name}`];
+// Facts the person states about themself are kept unless a source contradicts them, so the body
+// says when the submitter is the person the entry is about.
+function submitterLines(self: boolean): string[] {
+  return self ? ['Submitted by: the person this entry is about'] : [];
+}
+
+function buildNewEntryBody(entry: SubmissionDraft, notes: string, self: boolean): string {
+  const lines = ['Request: New entry', 'Direct update: yes', ...submitterLines(self), '', `Name: ${entry.name}`];
   for (const key of FIELD_ORDER) {
     const value = formatValue(entry[key]);
     if (value) lines.push(`${FIELD_LABELS[key]}: ${value}`);
@@ -403,11 +418,12 @@ function buildBulkSubmissionBody(bulkText: string, entry: SubmissionDraft): stri
   return lines.join('\n');
 }
 
-function buildUpdateBody(matchedEntry: RosterEntry, entry: SubmissionDraft, notes: string): string {
+function buildUpdateBody(matchedEntry: RosterEntry, entry: SubmissionDraft, notes: string, self: boolean): string {
   const nameChanged = Boolean(entry.name) && entry.name !== matchedEntry.name;
   const lines = [
     'Request: Update existing entry',
     'Direct update: yes',
+    ...submitterLines(self),
     '',
     `VietProfs ID: ${matchedEntry.id}`,
     `VietProfs profile: https://vietprofs.roars.dev/${personPath(matchedEntry.id)}`,
@@ -517,6 +533,17 @@ function populateEntry(form: SubmitForm, entry: RosterEntry): void {
   if (radio) radio.checked = true;
 }
 
+// Profile pages link here with ?missing=phdYear,scholarUrl,… for the fields the entry lacks. Only
+// fields that are still empty are highlighted, and the first one is focused.
+function highlightMissing(form: SubmitForm, entry: RosterEntry, requested: string): void {
+  const fields = requested.split(',').filter(isRequestableField).filter((field) => !entry[field]);
+  if (!fields.length) return;
+  for (const field of fields) form[field]?.closest('.form-section')?.classList.add('field-missing');
+  const notice = byId('name-match-notice');
+  notice.append(document.createElement('br'), `Not on record yet: ${fields.map((field) => REQUESTABLE_FIELDS[field]).join(', ')}. Fill in whatever you know.`);
+  form[fields[0]]?.focus();
+}
+
 function updatePortraitPreview(form: SubmitForm, entry: RosterEntry | null): void {
   const preview = form.querySelector('#portrait-preview') as HTMLDivElement | null;
   const image = form.querySelector('#portrait-preview-image') as HTMLImageElement | null;
@@ -624,6 +651,7 @@ function onSubmit(e: SubmitEvent, entriesById: Map<string, RosterEntry> | null, 
     postdocInstitution: form.postdocInstitution.value.trim() || undefined,
   };
 
+  const self = (form.selfSubmission as HTMLInputElement | undefined)?.checked ?? false;
   let title;
   let body;
   if (purpose === 'add' && bulkText) {
@@ -631,10 +659,10 @@ function onSubmit(e: SubmitEvent, entriesById: Map<string, RosterEntry> | null, 
     body = buildBulkSubmissionBody(bulkText, entry);
   } else if (matchedEntry) {
     title = `VietProfs update: ${name}`;
-    body = buildUpdateBody(matchedEntry, entry, bulkText);
+    body = buildUpdateBody(matchedEntry, entry, bulkText, self);
   } else {
     title = `VietProfs submission: ${name}`;
-    body = buildNewEntryBody(entry, bulkText);
+    body = buildNewEntryBody(entry, bulkText, self);
   }
 
   if ((e.submitter as HTMLButtonElement | null)?.value === 'github') {
@@ -774,7 +802,8 @@ async function init() {
       }
     }
 
-    const requestedEdit = new URLSearchParams(window.location.search).get('edit');
+    const params = new URLSearchParams(window.location.search);
+    const requestedEdit = params.get('edit');
     const entryToEdit = requestedEdit && (entriesById?.get(requestedEdit) ?? entriesByName?.get(requestedEdit.toLocaleLowerCase().trim()));
     const lockedEditId = entryToEdit ? entryToEdit.id : '';
     if (entryToEdit) {
@@ -782,6 +811,8 @@ async function init() {
       applyPurpose('update');
       populateEntry(form, entryToEdit);
       checkMatch(entryToEdit.name);
+      if (params.get('self') === '1') byId<HTMLInputElement>('selfSubmission').checked = true;
+      highlightMissing(form, entryToEdit, params.get('missing') ?? '');
     }
 
     function showSuggestions(query: string) {
