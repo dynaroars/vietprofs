@@ -5666,6 +5666,74 @@
       "identitySignals": [],
       "retrievedAt": "2026-10-13T03:45:42.044Z",
       "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2073": {
+      "name": "Xuan Vu",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-13T03:46:10.797Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2074": {
+      "name": "Mai Nguyen - Griffith University",
+      "outcome": "found",
+      "pageUrl": "https://experts.griffith.edu.au/17418-mai-nguyen",
+      "imageUrl": "https://experts.griffith.edu.au/17418-mai-nguyen/thumbnail",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T03:46:32.000Z",
+      "note": "manually verified during 2026-10-13 audit"
+    },
+    "vp-2075": {
+      "name": "Derick Luong",
+      "outcome": "found",
+      "pageUrl": "https://profiles.uts.edu.au/Derick.Luong",
+      "imageUrl": "https://profiles.uts.edu.au/Derick.Luong/thumbnail",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T03:46:33.000Z",
+      "note": "manually verified during 2026-10-13 audit"
+    },
+    "vp-2076": {
+      "name": "Vincent Nguyen - University of Technology Sydney",
+      "outcome": "found",
+      "pageUrl": "https://profiles.uts.edu.au/Vincent.Nguyen",
+      "imageUrl": "https://profiles.uts.edu.au/Vincent.Nguyen/thumbnail",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T03:46:34.000Z",
+      "note": "manually verified during 2026-10-13 audit"
+    },
+    "vp-2077": {
+      "name": "Hung Le",
+      "outcome": "found",
+      "pageUrl": "https://experts.deakin.edu.au/46635-hung-le",
+      "imageUrl": "https://experts.deakin.edu.au/46635-hung-le/thumbnail",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T03:46:21.311Z"
     }
   }
 }
