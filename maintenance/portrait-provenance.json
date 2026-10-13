@@ -3980,6 +3980,96 @@
       ],
       "retrievedAt": "2026-10-12T03:27:04.479Z",
       "note": "KI profile image is a single-person headshot but 240x360 fails the 0.70 aspect floor; 2026-10-12 audit"
+    },
+    "vp-1951": {
+      "name": "Linh Nguyen - University of New South Wales",
+      "outcome": "found",
+      "pageUrl": "https://www.unsw.edu.au/staff/linh-nguyen",
+      "imageUrl": "https://api.research.unsw.edu.au/sites/default/files/images/profile/_43A5163b.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T02:05:47.949Z",
+      "note": "manually verified during owner-session audit"
+    },
+    "vp-1952": {
+      "name": "Trang Doan - Swansea University",
+      "outcome": "not_found",
+      "pageUrl": "https://www.swansea.ac.uk/staff/t.t.doan/",
+      "imageUrl": "https://www.swansea.ac.uk/staff/t.t.doan/fo-none/media/students-studying.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T02:04:06.045Z",
+      "note": "candidate image could not be downloaded"
+    },
+    "vp-1953": {
+      "name": "Thu Phuong Truong",
+      "outcome": "found",
+      "pageUrl": "https://people.wgtn.ac.nz/thuphuong.truong",
+      "imageUrl": "https://people.wgtn.ac.nz/thuphuong.truong/thumbnail",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T02:05:48.869Z",
+      "note": "manually verified during owner-session audit"
+    },
+    "vp-1954": {
+      "name": "Chi Nghia Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-13T02:04:08.607Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1955": {
+      "name": "Thi Kim Thinh Truong",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-13T02:04:10.049Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1956": {
+      "name": "Nguyen Dinh Tuan Vuong",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-13T02:04:11.369Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1957": {
+      "name": "Thi Xuan Trinh Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-13T02:04:12.721Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1958": {
+      "name": "Tan Ngoc Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://prof.sejong.ac.kr/tnnguyen/html/profile.do",
+      "imageUrl": "https://prof.sejong.ac.kr/_res/sejong_temp/tnnguyen/img/main/SKIN20230626120618.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T02:05:50.238Z",
+      "note": "manually verified during owner-session audit"
     }
   }
 }

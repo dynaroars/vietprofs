@@ -796,6 +796,7 @@ const FIELD_OVERRIDES = new Map([
   ['Bioinformatics Center, Institute for Chemical Research|Kyoto University', 'Computer & Information Sciences'],
   ['Institute for Core Education|Chiba University of Commerce', 'Business & Economics'],
   ['Department of Agro-environmental Sciences|Kyushu University', 'Agricultural & Natural Resource Sciences'],
+  ['Institute of Humanities and Social Sciences|University of Tsukuba', 'Business & Economics'],
   // Philosopher of science and neuroethicist (PhD in Philosophy); the bioethics center name alone
   // carries no field keyword.
   ['Center for Bioethics and Social Justice|Michigan State University', 'Humanities'],
