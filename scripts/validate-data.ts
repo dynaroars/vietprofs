@@ -45,6 +45,7 @@ const surnameFirstAllowlist = new Set<string>([
   // (University of Reading) staff profile and on ResearchGate/Google Scholar; Luong is her surname.
   'Doan Pham Minh', // published as "Doan Pham Minh" across official IMT Mines Albi directory and publications; Pham is his surname and Doan is his given name.
   'Vu Thuy Khanh Le-Trilling', // published as "Vu Thuy Khanh Le-Trilling" across University Hospital Essen directory and virology publications.
+  'Nguyen Thai', // UOW Scholars lists him as "Nguyen (Beo) Thai" and Dr Thai; Thai is his surname, Nguyen his given name.
   'Tran Trung Luu', // published as "Tran Trung Luu" / "T. T. Luu" across Nature, HKU directory, and ORCID; Luu is his surname and Tran Trung is his given name.
   'Dinh Ho Tong Minh', // published as "Dinh Ho Tong Minh" across INRAE, IEEE, and Nature; Ho Tong Minh is his compound surname and Dinh is his given name.
   'Chau Trinh-Shevrin', // published as "Chau Trinh-Shevrin" across NYU directory and publications; Trinh-Shevrin is her surname and Chau is her given name.
@@ -252,6 +253,7 @@ for (const [index, person] of roster.entries()) {
 const DISTINCT_PEOPLE = new Set<string>([
   'vp-0972 vp-0973', // Katherine Nguyen (Rheumatology) and Katherine Nguyen Williams (Psychiatry), UC San Diego: separate UCSD profiles
   'vp-0673 vp-1700', // Lan K. Nguyen (Biochemistry) and Lan Nguyen (Accounting), Monash: separate Monash research profiles (#223)
+  'vp-1744 vp-1996', // Thanh Le (Business, Associate Professor) and Thanh Le Hoang (Computing, Lecturer in AI), Wollongong: separate UOW Scholars profiles
 ]);
 const identityOwners = new Map<string, string>();
 const rosterTokens = (roster as RosterEntry[]).map((person) => nameTokens(person.name));
