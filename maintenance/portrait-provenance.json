@@ -5233,6 +5233,110 @@
       ],
       "retrievedAt": "2026-10-13T03:30:24.000Z",
       "note": "manually verified during 2026-10-13 audit"
+    },
+    "vp-2042": {
+      "name": "An Ninh Pham",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-13T03:30:39.555Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2043": {
+      "name": "Rebecca Dang",
+      "outcome": "found",
+      "pageUrl": "https://www.unsw.edu.au/staff/rebecca-dang",
+      "imageUrl": "https://api.research.unsw.edu.au/sites/default/files/images/profile/CURRENT_0.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T03:31:21.000Z",
+      "note": "manually verified during 2026-10-13 audit"
+    },
+    "vp-2044": {
+      "name": "Patrick Vu",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-13T03:30:41.790Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2045": {
+      "name": "Hien Hoang",
+      "outcome": "found",
+      "pageUrl": "https://www.unsw.edu.au/staff/hien-hoang",
+      "imageUrl": "https://api.research.unsw.edu.au/sites/default/files/images/profile/Hoang_Hien-003_portrait.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T03:31:28.000Z",
+      "note": "manually verified during 2026-10-13 audit"
+    },
+    "vp-2046": {
+      "name": "Thu Ngo",
+      "outcome": "found",
+      "pageUrl": "https://www.unsw.edu.au/staff/thu-ngo",
+      "imageUrl": "https://api.research.unsw.edu.au/sites/default/files/images/profile/Thu%20Photo.jpeg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T03:31:30.000Z",
+      "note": "manually verified during 2026-10-13 audit"
+    },
+    "vp-2047": {
+      "name": "Liem Viet Ngo",
+      "outcome": "found",
+      "pageUrl": "https://research.unsw.edu.au/people/associate-professor-liem-viet-ngo",
+      "imageUrl": "https://research.unsw.edu.au/sites/default/files/images/profile/LN%20-%20UNSW%20%282%29_0.png",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T03:31:33.000Z",
+      "note": "manually verified during 2026-10-13 audit"
+    },
+    "vp-2048": {
+      "name": "Duc Huynh",
+      "outcome": "found",
+      "pageUrl": "https://research.monash.edu/en/persons/duc-huynh/",
+      "imageUrl": "https://research.monash.edu/files-asset/766551187/184_Duc_Huynh.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T03:31:37.000Z",
+      "note": "manually verified during 2026-10-13 audit"
+    },
+    "vp-2049": {
+      "name": "Mai Vu - Monash University",
+      "outcome": "found",
+      "pageUrl": "https://research.monash.edu/en/persons/mai-vu/",
+      "imageUrl": "https://research.monash.edu/files-asset/606177675/IMG_5199.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T03:31:40.000Z",
+      "note": "manually verified during 2026-10-13 audit"
     }
   }
 }
