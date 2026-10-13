@@ -5796,6 +5796,73 @@
       ],
       "retrievedAt": "2026-10-13T03:50:23.000Z",
       "note": "manually verified during 2026-10-13 audit"
+    },
+    "vp-2082": {
+      "name": "Christina Do",
+      "outcome": "found",
+      "pageUrl": "https://profiles.curtin.edu.au/5195-christina-do",
+      "imageUrl": "https://profiles.curtin.edu.au/5195-christina-do/thumbnail",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T03:50:54.000Z",
+      "note": "manually verified during 2026-10-13 audit"
+    },
+    "vp-2083": {
+      "name": "Tuyen Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://profiles.newcastle.edu.au/ThiBangTuyen-Nguyen",
+      "imageUrl": "https://profiles.newcastle.edu.au/ThiBangTuyen-Nguyen/thumbnail",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T03:50:56.000Z",
+      "note": "manually verified during 2026-10-13 audit"
+    },
+    "vp-2084": {
+      "name": "Mia Pham",
+      "outcome": "found",
+      "pageUrl": "https://profiles.newcastle.edu.au/Mia-Pham",
+      "imageUrl": "https://profiles.newcastle.edu.au/Mia-Pham/thumbnail",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T03:50:57.000Z",
+      "note": "manually verified during 2026-10-13 audit"
+    },
+    "vp-2085": {
+      "name": "Hanh Dao Tran",
+      "outcome": "found",
+      "pageUrl": "https://www.scu.edu.au/about/contacts/directory/131359/",
+      "imageUrl": "https://researchportal.scu.edu.au/rep/researcherProfileImage?userId=11021502590002368&institution=61SCU_INST&version=1656046759192",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T03:51:00.000Z",
+      "note": "manually verified during 2026-10-13 audit"
+    },
+    "vp-2086": {
+      "name": "Truong Vu",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-13T03:50:45.225Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     }
   }
 }
