@@ -5442,6 +5442,100 @@
       ],
       "retrievedAt": "2026-10-13T03:36:43.000Z",
       "note": "manually verified during 2026-10-13 audit"
+    },
+    "vp-2058": {
+      "name": "Thao Tran Dominy",
+      "outcome": "found",
+      "pageUrl": "https://www.clemson.edu/science/academics/departments/chemistry/about/profiles/thao",
+      "imageUrl": "https://scienceweb.clemson.edu/tranlab/wp-content/uploads/sites/3/2023/05/thao-tran-IMG_0071-4-scaled.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T03:37:28.000Z",
+      "note": "manually verified during 2026-10-13 audit"
+    },
+    "vp-2059": {
+      "name": "Henry Tran",
+      "outcome": "found",
+      "pageUrl": "https://sc.edu/study/colleges_schools/education/faculty-staff/tran_henry.php",
+      "imageUrl": "https://sc.edu/study/colleges_schools/education/faculty-staff/directory_pics/tran_henry2022.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T03:37:03.794Z"
+    },
+    "vp-2060": {
+      "name": "Kim Huynh",
+      "outcome": "found",
+      "pageUrl": "https://politicsir.cass.anu.edu.au/people/dr-kim-huynh",
+      "imageUrl": "https://politicsir.cass.anu.edu.au/files/styles/cass_wide_256_320/public/image/person/2025/3/Huynh%25252C%252520Kim%2525202010%25252003%25252016.jpg?h=4a79a20b&itok=5FGPxS3Z",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T03:37:05.182Z"
+    },
+    "vp-2061": {
+      "name": "Jordan Truong",
+      "outcome": "found",
+      "pageUrl": "https://www.sydney.edu.au/business/about/our-people/academic-staff/jordan-truong.html",
+      "imageUrl": "https://profiles.sydney.edu.au/jordan.truong/thumbnail",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T03:37:30.000Z",
+      "note": "manually verified during 2026-10-13 audit"
+    },
+    "vp-2062": {
+      "name": "Nhiem Tran",
+      "outcome": "found",
+      "pageUrl": "https://www.rmit.edu.au/contact/staff-contacts/academic-staff/t/tran-dr-nhiem",
+      "imageUrl": "https://www.rmit.edu.au/assets/au/en/profile-images/t/nhiem-tran.jpeg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T03:37:15.036Z"
+    },
+    "vp-2063": {
+      "name": "Tiendung Le",
+      "outcome": "found",
+      "pageUrl": "https://www.rmit.edu.au/contact/staff-contacts/academic-staff/l/le-dr-tiendung",
+      "imageUrl": "https://www.rmit.edu.au/assets/au/en/profile-images/l/tiendung-le.jpeg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T03:37:19.320Z"
     }
   }
 }
