@@ -5337,6 +5337,111 @@
       ],
       "retrievedAt": "2026-10-13T03:31:40.000Z",
       "note": "manually verified during 2026-10-13 audit"
+    },
+    "vp-2050": {
+      "name": "Lan P. Luu",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-13T03:36:13.229Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2051": {
+      "name": "Tuyet Mai Ha Hoang",
+      "outcome": "found",
+      "pageUrl": "https://experts.illinois.edu/en/persons/tuyet-mai-ha-hoang/",
+      "imageUrl": "https://experts.illinois.edu/files-asset/545222202/Mai_headshot.JPG",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T03:36:34.000Z",
+      "note": "manually verified during 2026-10-13 audit"
+    },
+    "vp-2052": {
+      "name": "Anh Nhat Tran",
+      "outcome": "found",
+      "pageUrl": "https://scholars.duke.edu/person/anh.tran",
+      "imageUrl": "https://scholars.duke.edu/profile-images/thumbnail500/0490706.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T03:36:37.000Z",
+      "note": "manually verified during 2026-10-13 audit"
+    },
+    "vp-2053": {
+      "name": "Ben Tran",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-13T03:36:20.251Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2054": {
+      "name": "Wellington Pham",
+      "outcome": "found",
+      "pageUrl": "https://www.vumc.org/radiology/person/wellington-pham-phd",
+      "imageUrl": "https://www.vumc.org/radiology/sites/default/files/people/Pham_Wellington.JPG",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T03:36:20.892Z"
+    },
+    "vp-2055": {
+      "name": "Chau Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://scholars.uow.edu.au/chau-nguyen",
+      "imageUrl": "https://scholars.uow.edu.au/chau-nguyen/thumbnail",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T03:36:39.000Z",
+      "note": "manually verified during 2026-10-13 audit"
+    },
+    "vp-2056": {
+      "name": "John Le",
+      "outcome": "found",
+      "pageUrl": "https://scholars.uow.edu.au/john-le",
+      "imageUrl": "https://scholars.uow.edu.au/john-le/thumbnail",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T03:36:41.000Z",
+      "note": "manually verified during 2026-10-13 audit"
+    },
+    "vp-2057": {
+      "name": "Anne Vo",
+      "outcome": "found",
+      "pageUrl": "https://scholars.uow.edu.au/anne-vo",
+      "imageUrl": "https://scholars.uow.edu.au/anne-vo/thumbnail",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T03:36:43.000Z",
+      "note": "manually verified during 2026-10-13 audit"
     }
   }
 }
