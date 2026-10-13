@@ -5046,6 +5046,73 @@
       ],
       "retrievedAt": "2026-10-13T03:24:28.000Z",
       "note": "manually verified during 2026-10-13 audit"
+    },
+    "vp-2029": {
+      "name": "Huong Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://scholars.latrobe.edu.au/h26nguyen",
+      "imageUrl": "https://scholars.latrobe.edu.au/h26nguyen/thumbnail",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T03:25:01.000Z",
+      "note": "manually verified during 2026-10-13 audit"
+    },
+    "vp-2030": {
+      "name": "Phuong Lan Do",
+      "outcome": "found",
+      "pageUrl": "https://scholars.latrobe.edu.au/pldo",
+      "imageUrl": "https://scholars.latrobe.edu.au/pldo/thumbnail",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T03:25:02.000Z",
+      "note": "manually verified during 2026-10-13 audit"
+    },
+    "vp-2031": {
+      "name": "Vinh Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://www.canberra.edu.au/about-uc/faculties/education/staff/dr-vinh-nguyen",
+      "imageUrl": "https://www.canberra.edu.au/__data/assets/image/0007/2386762/Vinh-photo.png",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T03:25:18.000Z",
+      "note": "manually verified during 2026-10-13 audit"
+    },
+    "vp-2032": {
+      "name": "Tu Nguyen-Dumont",
+      "outcome": "found",
+      "pageUrl": "https://research.monash.edu/en/persons/tu-nguyen-2/",
+      "imageUrl": "https://research.monash.edu/files-asset/760505284/Tu_Nguyen-Dumont-0034_copy.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T03:25:20.000Z",
+      "note": "manually verified during 2026-10-13 audit"
+    },
+    "vp-2033": {
+      "name": "Wendy T. Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-13T03:24:54.322Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     }
   }
 }
