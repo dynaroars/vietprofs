@@ -5863,6 +5863,68 @@
       "identitySignals": [],
       "retrievedAt": "2026-10-13T03:50:45.225Z",
       "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2087": {
+      "name": "Allen Tran",
+      "outcome": "found",
+      "pageUrl": "https://www.bucknell.edu/fac-staff/allen-tran",
+      "imageUrl": "https://www.bucknell.edu/sites/default/files/styles/faculty_page_photo/public/libris/C00001GOQFVeT0YE/G0000Szz5oTniLSw/AllenTran861sq.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T03:51:15.095Z"
+    },
+    "vp-2088": {
+      "name": "Nathan Vo",
+      "outcome": "found",
+      "pageUrl": "https://www.wlu.ca/academics/faculties/faculty-of-human-and-social-sciences/faculty-profiles/nathan-vo/index.html",
+      "imageUrl": "https://www.wlu.ca/academics/faculties/faculty-of-human-and-social-sciences/faculty-profiles/nathan-vo/nguyen-nathan-vo.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T03:51:16.482Z"
+    },
+    "vp-2089": {
+      "name": "Son Pham",
+      "outcome": "found",
+      "pageUrl": "https://www.abdn.ac.uk/people/son.pham",
+      "imageUrl": "https://www.abdn.ac.uk/img/200x200/staffpages/uploads/s08sp3/avatar/BnrgO5PuaDPq04KxQ8ZwFYtQxJW2imqbCJknFSRH.jpeg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T03:51:27.000Z",
+      "note": "manually verified during 2026-10-13 audit"
+    },
+    "vp-2090": {
+      "name": "Khoa Dang Hoang",
+      "outcome": "found",
+      "pageUrl": "https://pure.hud.ac.uk/en/persons/khoa-dang-hoang",
+      "imageUrl": "https://pure.hud.ac.uk/files-asset/40973019/image.png",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T03:51:28.000Z",
+      "note": "manually verified during 2026-10-13 audit"
     }
   }
 }
