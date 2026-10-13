@@ -5113,6 +5113,126 @@
       "identitySignals": [],
       "retrievedAt": "2026-10-13T03:24:54.322Z",
       "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2034": {
+      "name": "Hannah Pham",
+      "outcome": "found",
+      "pageUrl": "https://profiles.uts.edu.au/Hannah.Pham",
+      "imageUrl": "https://profiles.uts.edu.au/Hannah.Pham/thumbnail",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T03:30:03.000Z",
+      "note": "manually verified during 2026-10-13 audit"
+    },
+    "vp-2035": {
+      "name": "Thang Bui",
+      "outcome": "found",
+      "pageUrl": "https://researchportalplus.anu.edu.au/en/persons/thang-bui/",
+      "imageUrl": "https://researchportalplus.anu.edu.au/files-asset/146928966/image.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T03:30:06.000Z",
+      "note": "manually verified during 2026-10-13 audit"
+    },
+    "vp-2036": {
+      "name": "Tran Dinh-Le",
+      "outcome": "found",
+      "pageUrl": "https://profiles.uts.edu.au/BaoTran.Dinh-Le",
+      "imageUrl": "https://profiles.uts.edu.au/BaoTran.Dinh-Le/thumbnail",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T03:30:07.000Z",
+      "note": "manually verified during 2026-10-13 audit"
+    },
+    "vp-2037": {
+      "name": "Trung Ngo",
+      "outcome": "found",
+      "pageUrl": "https://profiles.uts.edu.au/Trung.Ngo",
+      "imageUrl": "https://profiles.uts.edu.au/Trung.Ngo/thumbnail",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T03:30:09.000Z",
+      "note": "manually verified during 2026-10-13 audit"
+    },
+    "vp-2038": {
+      "name": "Kim Dang",
+      "outcome": "found",
+      "pageUrl": "https://research.monash.edu/en/persons/kim-dang/",
+      "imageUrl": "https://research.monash.edu/files-asset/789659965/250430_Edu_Portraits_1209_Kim_Dang_LowRes_Blue.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T03:30:10.000Z",
+      "note": "manually verified during 2026-10-13 audit"
+    },
+    "vp-2039": {
+      "name": "Dong Ngoduy",
+      "outcome": "found",
+      "pageUrl": "https://research.monash.edu/en/persons/dong-ngo-duy/",
+      "imageUrl": "https://research.monash.edu/files-asset/441930906/Dong_paper_photo.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T03:30:17.000Z",
+      "note": "manually verified during 2026-10-13 audit"
+    },
+    "vp-2040": {
+      "name": "Laurence Luu",
+      "outcome": "found",
+      "pageUrl": "https://www.unsw.edu.au/staff/laurence-luu",
+      "imageUrl": "https://api.research.unsw.edu.au/sites/default/files/images/profile/Laurence%20Luu.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T03:30:20.000Z",
+      "note": "manually verified during 2026-10-13 audit"
+    },
+    "vp-2041": {
+      "name": "Thanh Nho Do",
+      "outcome": "found",
+      "pageUrl": "https://www.unsw.edu.au/staff/thanh-nho-do",
+      "imageUrl": "https://api.research.unsw.edu.au/sites/default/files/images/profile/Dr%20Do%20-%20UNSW.JPG",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T03:30:24.000Z",
+      "note": "manually verified during 2026-10-13 audit"
     }
   }
 }
