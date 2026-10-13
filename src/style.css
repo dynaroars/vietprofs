@@ -449,7 +449,7 @@ h1 {
   flex: 1;
   width: 100%;
   min-width: 0;
-  padding: 0.6rem 12.5rem 0.6rem 0.9rem;
+  padding: 0.6rem 0.25rem 0.6rem 0.9rem;
   border: 0;
   border-radius: var(--radius-md);
   background: transparent;
@@ -534,21 +534,38 @@ h1 {
   justify-content: center;
   width: 2.75rem;
   height: 2.75rem;
-  border: 1px solid var(--border-color);
-  border-radius: 50%;
-  background: var(--card-bg);
+  padding: 0;
+  border: 0;
+  background: transparent;
   color: var(--text-secondary);
-  font-family: var(--font-mono);
-  font-size: 0.85rem;
-  font-weight: 700;
-  font-style: normal;
   cursor: pointer;
 }
 
-.search-help-btn:hover,
-.search-help-btn[aria-expanded='true'] {
+/* The button keeps a 44px tap target; only the inner circle is drawn inside the search field. */
+.search-help-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.search-help-btn:hover .search-help-icon,
+.search-help-btn[aria-expanded='true'] .search-help-icon {
   color: var(--text-primary);
   background: var(--hover-bg);
+}
+
+.search-help-btn:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: -4px;
+  border-radius: 50%;
 }
 
 .search-help-panel {
@@ -676,15 +693,6 @@ h1 {
     flex-direction: column;
     align-items: stretch;
     gap: 0.5rem;
-  }
-
-  .search-help-btn {
-    align-self: flex-end;
-  }
-
-  /* The buttons stack below the box here, so the desktop right padding only clips the placeholder. */
-  .search-input {
-    padding-right: 0.9rem;
   }
 
   .search-suggestion-panel {

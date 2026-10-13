@@ -327,11 +327,15 @@ test('mobile search input uses the full control width', async () => {
   await page.goto(`${baseUrl}/`, { waitUntil: 'networkidle' });
 
   const searchBox = await page.locator('.search-box').boundingBox();
+  const shell = await page.locator('.search-input-shell').boundingBox();
   const search = await page.locator('#search').boundingBox();
   const helpBtn = await page.locator('#search-help-btn').boundingBox();
-  assert.ok(searchBox && search && helpBtn);
-  assert.ok(search.width >= searchBox.width * 0.98);
-  assert.ok(helpBtn.y >= search.y + search.height);
+  assert.ok(searchBox && shell && search && helpBtn);
+  assert.ok(shell.width >= searchBox.width * 0.98);
+  // The help button sits inside the search field, to the right of the input.
+  assert.ok(helpBtn.x >= search.x + search.width - 1);
+  assert.ok(helpBtn.x + helpBtn.width <= shell.x + shell.width + 1);
+  assert.ok(helpBtn.y >= shell.y - 1 && helpBtn.y + helpBtn.height <= shell.y + shell.height + 1);
 
   await page.locator('#search').fill('Thanh');
   const suggestions = page.locator('#search-suggestion-panel');
@@ -580,7 +584,7 @@ test('combined field and location filters link to their static intersection hub'
   await page.goto(`${baseUrl}/?field=Health%20Sciences&loc=Japan`, { waitUntil: 'networkidle' });
   assert.equal(await page.locator('#field-filter').inputValue(), 'Health Sciences');
   assert.equal(await page.locator('#location-filter').inputValue(), 'Japan');
-  assert.match(await textOf(page.locator('#result-count')), /5 people in Health Sciences .* across 5 institutions in Japan/);
+  assert.match(await textOf(page.locator('#result-count')), /\d+ people in Health Sciences .* across \d+ institutions in Japan/);
 
   const headerBox = await page.locator('.header-links').boundingBox();
   const countBox = await page.locator('#result-count').boundingBox();

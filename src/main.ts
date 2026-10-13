@@ -165,11 +165,11 @@ function renderShell() {
               <span class="search-scope-chip-remove" aria-hidden="true">×</span>
             </button>
             <input id="search" class="search-input" type="search" autocomplete="off" placeholder="Roster last updated ${escapeHtml(__BUILD_LABEL__)}" aria-label="Search" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="search-suggestion-panel" />
+            <button type="button" id="search-help-btn" class="search-help-btn" aria-haspopup="dialog" aria-expanded="false" aria-controls="search-help-panel" aria-label="Search syntax and keyboard help" title="Search syntax and keyboard help"><span class="search-help-icon" aria-hidden="true">?</span></button>
           </div>
           <div id="search-suggestion-panel" class="search-suggestion-panel" role="listbox" hidden></div>
         </div>
         <button type="button" id="pin-search-btn" class="pin-search-btn" aria-pressed="false" title="Pin current search">Pin search</button>
-        <button type="button" id="search-help-btn" class="search-help-btn" aria-haspopup="dialog" aria-expanded="false" aria-controls="search-help-panel" aria-label="Search syntax and keyboard help" title="Search syntax and keyboard help">?</button>
         <div id="search-help-panel" class="search-help-panel" role="dialog" aria-label="Search syntax help" hidden>
           <p><strong>QUERY SYNTAX</strong></p>
           <p>Type a keyword prefix to search one field directly:</p>
