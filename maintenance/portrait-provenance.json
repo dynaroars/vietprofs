@@ -4070,6 +4070,105 @@
       ],
       "retrievedAt": "2026-10-13T02:05:50.238Z",
       "note": "manually verified during owner-session audit"
+    },
+    "vp-1959": {
+      "name": "Thanh-Thuy Nguyen Tu",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-13T02:12:33.772Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1960": {
+      "name": "Claire Thi Lien Tran",
+      "outcome": "found",
+      "pageUrl": "https://www.cessma.org/TRAN-THI-LIEN-Claire",
+      "imageUrl": "https://www.cessma.org/local/cache-vignettes/L261xH300/portrait-claire-tran-2-copie-261x300-af18d.jpg?1687012637",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T02:12:45.978Z"
+    },
+    "vp-1961": {
+      "name": "Thi Thuy Hien Tran",
+      "outcome": "needs_review",
+      "pageUrl": "https://www.gipsa-lab.grenoble-inp.fr/team/thi-thuy-hien-tran/",
+      "imageUrl": "https://www.gipsa-lab.grenoble-inp.fr/wp-content/uploads/2026/04/Pas-dimage-GIPSA.png",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T02:12:47.226Z",
+      "note": "candidate requires visual review before acceptance"
+    },
+    "vp-1962": {
+      "name": "Ngoc Son Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-13T02:12:50.114Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1963": {
+      "name": "Jerome Nguyen-Soenen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-13T02:12:51.817Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1964": {
+      "name": "Trung Dung Tran",
+      "outcome": "found",
+      "pageUrl": "https://www.maastrichtuniversity.nl/td-tran",
+      "imageUrl": "https://www.maastrichtuniversity.nl/sites/default/files/styles/960x1440/public/ppp/70086448/profile.jpg?itok=m5FpWliU",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T02:13:31.664Z",
+      "note": "manually verified during owner-session audit"
+    },
+    "vp-1965": {
+      "name": "Quang Nguyen - University of Westminster",
+      "outcome": "needs_review",
+      "pageUrl": "https://www.westminster.ac.uk/about-us/our-people/directory/nguyen-quang",
+      "imageUrl": "https://www.westminster.ac.uk/sites/default/public-files/styles/profile_380x380_/public/default_images/default_avatar.png?itok=eV6nG4bW",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T02:12:54.527Z",
+      "note": "candidate requires visual review before acceptance"
+    },
+    "vp-1966": {
+      "name": "Nhung Nguyen - Northumbria University",
+      "outcome": "found",
+      "pageUrl": "https://www.northumbria.ac.uk/about-us/our-staff/n/dr,-d-,-nhung-nguyen/",
+      "imageUrl": "https://www.northumbria.ac.uk/-/media/corporate-website/pure/pure-nguyen-nhung-fe66588b-16c4-4c81-a575-3e719c945459.jpg?sc_lang=en&modified=20261012185627&hash=A8A8D23D7C0163316C92ED7594CC1A03",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T02:13:32.679Z",
+      "note": "manually verified during owner-session audit"
     }
   }
 }
