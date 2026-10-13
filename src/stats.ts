@@ -65,7 +65,7 @@ function renderMetrics(data: BrowserStatsResponse): string {
   const cards = [
     ['Browser page views today', formatNumber(data.today.collected ? data.today.pageViews : null), 'In progress · UTC'],
     ['Average daily page views', formatNumber(data.last7Complete.avgPageViews), `${data.last7Complete.days} complete day${data.last7Complete.days === 1 ? '' : 's'}`],
-    ['Browser page views', formatNumber(data.last30Available.pageViews), `${data.last30Available.days} collected day${data.last30Available.days === 1 ? '' : 's'} in the 30-day window`],
+    ['Browser page views', formatNumber(data.last7Complete.pageViews), `${data.last7Complete.days} complete day${data.last7Complete.days === 1 ? '' : 's'}`],
     ['Browser visits', formatNumber(data.last7Complete.visits), `${data.last7Complete.days} complete day${data.last7Complete.days === 1 ? '' : 's'} · not unique people`],
     ['Countries reached', formatNumber(countries), `${data.last7Complete.days} complete day${data.last7Complete.days === 1 ? '' : 's'}`],
   ];
@@ -120,10 +120,9 @@ function renderChart(daily: DailyBrowserStat[]): string {
 
 function renderDailyTable(daily: DailyBrowserStat[]): string {
   return `<details class="stats-secondary-details"><summary><strong>View day-by-day browser traffic</strong></summary>
-    <div class="stats-table-wrapper"><table class="stats-table"><thead><tr><th>Date (UTC)</th><th class="num-col">Page views</th><th class="num-col">Browser visits</th><th>Status</th></tr></thead>
+    <div class="stats-table-wrapper"><table class="stats-table"><thead><tr><th>Date (UTC)</th><th class="num-col">Page views</th><th class="num-col">Browser visits</th></tr></thead>
     <tbody>${[...daily].reverse().map(row => `<tr class="${row.status === 'partial' ? 'partial-row' : ''}">
-      <td><strong>${escapeHtml(formatDate(row.date, true, true))}</strong></td><td class="num-col">${formatNumber(row.pageViews)}</td><td class="num-col">${formatNumber(row.visits)}</td>
-      <td>${row.status === 'partial' ? 'In progress' : row.status === 'missing' ? 'Not collected' : 'Complete'}</td></tr>`).join('')}</tbody></table></div>
+      <td><strong>${escapeHtml(formatDate(row.date, true, true))}</strong>${row.status === 'partial' ? ' (In progress)' : ''}</td><td class="num-col">${formatNumber(row.pageViews)}</td><td class="num-col">${formatNumber(row.visits)}</td></tr>`).join('')}</tbody></table></div>
   </details>`;
 }
 
