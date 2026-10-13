@@ -4711,6 +4711,128 @@
       ],
       "retrievedAt": "2026-10-13T03:17:40.000Z",
       "note": "manually verified during 2026-10-13 audit"
+    },
+    "vp-2007": {
+      "name": "Van Bac Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://www.derby.ac.uk/staff/van-bac-nguyen/",
+      "imageUrl": "https://cdn-derbyacuk.terminalfour.net/media/derbyacuk/staff-profile-images/Van-Bac-Nguyen.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T03:18:04.464Z"
+    },
+    "vp-2008": {
+      "name": "Quang Dan Le",
+      "outcome": "found",
+      "pageUrl": "https://www.derby.ac.uk/staff/le-dan/",
+      "imageUrl": "https://cdn-derbyacuk.terminalfour.net/media/derbyacuk/staff-profile-images/Dr-Le_headshot.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T03:18:29.000Z",
+      "note": "manually verified during 2026-10-13 audit"
+    },
+    "vp-2009": {
+      "name": "Trung Nguyen - Auckland University of Technology",
+      "outcome": "found",
+      "pageUrl": "https://academics.aut.ac.nz/trung.nguyen",
+      "imageUrl": "https://academics.aut.ac.nz/trung.nguyen/thumbnail",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T03:18:31.000Z",
+      "note": "manually verified during 2026-10-13 audit"
+    },
+    "vp-2010": {
+      "name": "Khanh Le - Auckland University of Technology",
+      "outcome": "found",
+      "pageUrl": "https://academics.aut.ac.nz/khanh.le",
+      "imageUrl": "https://academics.aut.ac.nz/khanh.le/thumbnail",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T03:18:32.000Z",
+      "note": "manually verified during 2026-10-13 audit"
+    },
+    "vp-2011": {
+      "name": "Hung Le Pham",
+      "outcome": "found",
+      "pageUrl": "https://people.wgtn.ac.nz/hung.pham",
+      "imageUrl": "https://people.wgtn.ac.nz/hung.pham/thumbnail",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T03:18:34.000Z",
+      "note": "manually verified during 2026-10-13 audit"
+    },
+    "vp-2012": {
+      "name": "Anh Le - Central Queensland University",
+      "outcome": "found",
+      "pageUrl": "https://staff-profiles.cqu.edu.au/home/view/32571",
+      "imageUrl": "https://staff-profiles.cqu.edu.au/files/downloadPhoto/16311/profile.png",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T03:18:37.000Z",
+      "note": "manually verified during 2026-10-13 audit"
+    },
+    "vp-2013": {
+      "name": "Mai Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://staff-profiles.cqu.edu.au/home/view/27470",
+      "imageUrl": "https://staff-profiles.cqu.edu.au/files/downloadPhoto/15324/profile.png",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T03:18:40.000Z",
+      "note": "manually verified during 2026-10-13 audit"
+    },
+    "vp-2014": {
+      "name": "Rose Le",
+      "outcome": "found",
+      "pageUrl": "https://www.keele.ac.uk/psychology/people/rosele/",
+      "imageUrl": "https://www.keele.ac.uk/media/k-web/k-staff-profiles-root/rose-le.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T03:18:20.390Z"
     }
   }
 }
