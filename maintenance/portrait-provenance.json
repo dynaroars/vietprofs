@@ -4938,6 +4938,114 @@
       ],
       "retrievedAt": "2026-10-13T03:20:01.000Z",
       "note": "manually verified during 2026-10-13 audit"
+    },
+    "vp-2022": {
+      "name": "Yen Le",
+      "outcome": "not_found",
+      "pageUrl": "https://researchportalplus.anu.edu.au/en/persons/yen-le/",
+      "imageUrl": "https://researchportalplus.anu.edu.au/files-asset/146963207/YenProfilePhoto1.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T03:24:19.000Z",
+      "note": "official ANU image is a full-length outdoor photo, not a headshot; 2026-10-13 audit"
+    },
+    "vp-2023": {
+      "name": "Lam Bui",
+      "outcome": "found",
+      "pageUrl": "https://staff-profiles.cqu.edu.au/home/view/1204",
+      "imageUrl": "https://staff-profiles.cqu.edu.au/files/downloadPhoto/13455/Dr_Lam_Bui_Senior_Lecturer.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T03:23:58.851Z"
+    },
+    "vp-2024": {
+      "name": "Julie Nguyen",
+      "outcome": "needs_review",
+      "pageUrl": "https://staff-profiles.cqu.edu.au/home/view/1717",
+      "imageUrl": "https://staff-profiles.cqu.edu.au/files/downloadPhoto/12698/FB_IMG_1445805664913_Copy.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T03:24:02.192Z",
+      "note": "candidate requires visual review before acceptance"
+    },
+    "vp-2025": {
+      "name": "Loc Tran",
+      "outcome": "found",
+      "pageUrl": "https://experts.swinburne.edu.au/3291-loc-tran",
+      "imageUrl": "https://experts.swinburne.edu.au/3291-loc-tran/thumbnail",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T03:24:22.000Z",
+      "note": "manually verified during 2026-10-13 audit"
+    },
+    "vp-2026": {
+      "name": "Chanh Tran",
+      "outcome": "found",
+      "pageUrl": "https://scholars.latrobe.edu.au/c2tran",
+      "imageUrl": "https://scholars.latrobe.edu.au/c2tran/thumbnail",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T03:24:24.000Z",
+      "note": "manually verified during 2026-10-13 audit"
+    },
+    "vp-2027": {
+      "name": "Binh Tran",
+      "outcome": "found",
+      "pageUrl": "https://scholars.latrobe.edu.au/b2tran",
+      "imageUrl": "https://scholars.latrobe.edu.au/b2tran/thumbnail",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T03:24:25.000Z",
+      "note": "manually verified during 2026-10-13 audit"
+    },
+    "vp-2028": {
+      "name": "Diem Pham",
+      "outcome": "found",
+      "pageUrl": "https://scholars.latrobe.edu.au/t8pham",
+      "imageUrl": "https://scholars.latrobe.edu.au/t8pham/thumbnail",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T03:24:28.000Z",
+      "note": "manually verified during 2026-10-13 audit"
     }
   }
 }
