@@ -203,7 +203,7 @@ function renderShell() {
             <div class="form-section">
               <label for="portraitSource">Profile picture URL</label>
               <div id="portrait-preview" class="portrait-preview" hidden>
-                <img id="portrait-preview-image" src="" alt="Existing profile picture" width="96" height="96" />
+                <img id="portrait-preview-image" src="" alt="Existing profile picture" width="96" height="120" />
                 <span>Existing picture</span>
               </div>
               <input id="portraitSource" name="portraitSource" type="url" placeholder="https://… (official institutional or personal profile image)" />

@@ -98,8 +98,8 @@ export function renderRosterEntry(person: RosterEntry, baseUrl = '/', countryHub
     .map((honor) => `<a class="honor-link" href="${escapeHtml(honor.source)}" target="_blank" rel="noopener noreferrer">${escapeHtml(honor.name)}${honor.year ? ` (${escapeHtml(String(honor.year))})` : ''}</a>`)
     .join(' · ');
   const portrait = person.portrait
-    ? `<img class="entry-portrait" src="${escapeHtml(`${baseUrl}${person.portrait}`)}" alt="" width="64" height="64" loading="lazy" decoding="async">`
-    : `<img class="entry-portrait entry-portrait-placeholder" src="${escapeHtml(`${baseUrl}default-portrait.svg`)}" alt="" width="64" height="64" loading="lazy" decoding="async">`;
+    ? `<img class="entry-portrait" src="${escapeHtml(`${baseUrl}${person.portrait}`)}" alt="" width="64" height="80" loading="lazy" decoding="async">`
+    : `<img class="entry-portrait entry-portrait-placeholder" src="${escapeHtml(`${baseUrl}default-portrait.svg`)}" alt="" width="64" height="80" loading="lazy" decoding="async">`;
   const educationDetails = formatEducationDetails(person);
   const institutionLabel = person.institutionType && person.institutionType !== 'University' ? 'institution' : 'university';
   const profileSourceLabel = person.confirmed === false ? 'Verification source' : `Official ${institutionLabel} profile`;

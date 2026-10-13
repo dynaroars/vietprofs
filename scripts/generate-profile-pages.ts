@@ -184,8 +184,8 @@ function profilePage(
   const role = [canonicalRank(person), person.department, person.university].filter(Boolean).join(', ');
   const description = `${name} is listed by VietProfs as ${role}.`;
   const portrait = person.portrait
-    ? `<img class="portrait" src="../${escapeHtml(person.portrait)}" alt="Portrait of ${escapeHtml(name)}" width="240" height="240">`
-    : `<img class="portrait portrait-placeholder" src="../default-portrait.svg" alt="No portrait on file yet for ${escapeHtml(name)}" width="240" height="240">`;
+    ? `<img class="portrait" src="../${escapeHtml(person.portrait)}" alt="Portrait of ${escapeHtml(name)}" width="240" height="300">`
+    : `<img class="portrait portrait-placeholder" src="../default-portrait.svg" alt="No portrait on file yet for ${escapeHtml(name)}" width="240" height="300">`;
   const personField = fieldOf(person.department, person.university);
   const research = person.researchAreas?.length
     ? `<section class="man-section"><h2>RESEARCH</h2><ul>${person.researchAreas.map((area) => `<li><a href="../index.html?q=${encodeURIComponent(area)}" class="research-area-link">${escapeHtml(area)}</a></li>`).join('')}</ul></section>`
