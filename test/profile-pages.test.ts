@@ -34,15 +34,16 @@ test('generated profile pages use the same stylesheet source as the directory', 
   const generator = await readFile(new URL('../scripts/generate-profile-pages.ts', import.meta.url), 'utf8');
   const stylesheet = await readFile(new URL('../public/profile.css', import.meta.url), 'utf8');
   const sourceStylesheet = await readFile(new URL('../src/style.css', import.meta.url), 'utf8');
+  const sharedStylesheet = await readFile(new URL('../src/roars-ui.css', import.meta.url), 'utf8');
   assert.match(generator, /<link rel="stylesheet" href="\.\.\/profile\.css\?v=\$\{assetVersion\.css\}">/);
   assert.doesNotMatch(generator, /<style>/);
-  assert.equal(stylesheet, sourceStylesheet);
+  assert.equal(stylesheet, `${sharedStylesheet}\n${sourceStylesheet.replace("@import './roars-ui.css';\n", '')}`);
   assert.match(generator, /class="submission-link"/);
   assert.match(generator, /renderAddFab\(editUrl\)/);
   assert.match(generator, /renderAddFab\(`\$\{rootPrefix\}submit\.html`\)/);
   assert.match(generator, /class="brand-logo" src="\.\.\/vietprofs-bamboo-v\.svg"/);
   assert.match(generator, /rel="icon" type="image\/svg\+xml" href="\.\.\/vietprofs-bamboo-v\.svg"/);
-  assert.match(sourceStylesheet, /:root\s*{[^}]*--bamboo-green: #2e9e64;[^}]*--bamboo-green-hover: #1d7a4c;/s);
+  assert.match(sharedStylesheet, /:root\s*{[^}]*--bamboo-green: #2e9e64;[^}]*--bamboo-green-hover: #1d7a4c;/s);
   assert.match(sourceStylesheet, /\.submission-link\s*{[^}]*background: var\(--bamboo-green\);[^}]*color: #ffffff;/s);
   assert.match(sourceStylesheet, /\.submit-btn\s*{[^}]*background: var\(--bamboo-green\);[^}]*color: #ffffff;/s);
   assert.match(generator, /countryFlag/);

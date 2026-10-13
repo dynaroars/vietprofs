@@ -1,6 +1,6 @@
 /**
  * Shared visitor-traffic view for the /api/stats Worker (src/worker.ts), which serves every roars.dev site.
- * Used by VietProfs' stats page and copied verbatim into cspicks (src/traffic-view.ts): keep it free of
+ * Used by VietProfs' stats page and copied verbatim into cspicks (src/vietprofs/): keep it free of
  * site-specific imports and wording, and pass anything site-specific in through the render options.
  */
 

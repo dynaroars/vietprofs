@@ -170,6 +170,8 @@ async function init(): Promise<void> {
     ]);
     app.innerHTML = renderConnections(roster, database);
     initGraphExplorer(roster, database);
+    // Land ready to type in "Find a person", as the directory does with its search.
+    if (document.activeElement === document.body) document.querySelector<HTMLInputElement>('#network-search')?.focus({ preventScroll: true });
   } catch (error) {
     app.innerHTML = renderError(error instanceof Error ? error.message : 'Unknown error');
     document.getElementById('retry-btn')?.addEventListener('click', () => void init());

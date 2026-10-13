@@ -1031,7 +1031,8 @@ async function init() {
     suggestionPanel.hidden = matches.length === 0;
     searchInput.setAttribute('aria-expanded', String(matches.length > 0));
   }
-  searchInput.addEventListener('focus', showSuggestions);
+  // Focus given on page load highlights the box without opening suggestions.
+  searchInput.addEventListener('focus', () => { if (!searchInput.dataset.quietFocus) showSuggestions(); });
   searchInput.addEventListener('input', () => {
     if (!activeSearchScope) {
       const parsed = parseKeywordQuery(searchInput.value);
@@ -1461,6 +1462,12 @@ async function init() {
   });
 
   update();
+  // Land ready to type, as on cspicks; leave focus alone if the reader already moved it.
+  if (document.activeElement === document.body) {
+    searchInput.dataset.quietFocus = 'true';
+    searchInput.focus({ preventScroll: true });
+    delete searchInput.dataset.quietFocus;
+  }
 
   console.info(`%cVietProfs ${__BUILD_COMMIT__}`, 'color:#2e9e64;font-weight:bold;font-size:16px');
   console.info('The roster is open source: https://github.com/dynaroars/vietprofs');
