@@ -38,7 +38,8 @@ test('generated profile pages use the same stylesheet source as the directory', 
   assert.doesNotMatch(generator, /<style>/);
   assert.equal(stylesheet, sourceStylesheet);
   assert.match(generator, /class="submission-link"/);
-  assert.match(generator, />Add or update info</);
+  assert.match(generator, /renderAddFab\(editUrl\)/);
+  assert.match(generator, /renderAddFab\(`\$\{rootPrefix\}submit\.html`\)/);
   assert.match(generator, /class="brand-logo" src="\.\.\/vietprofs-bamboo-v\.svg"/);
   assert.match(generator, /rel="icon" type="image\/svg\+xml" href="\.\.\/vietprofs-bamboo-v\.svg"/);
   assert.match(sourceStylesheet, /:root\s*{[^}]*--bamboo-green: #2e9e64;[^}]*--bamboo-green-hover: #1d7a4c;/s);

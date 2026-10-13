@@ -5,7 +5,8 @@
 
 type Destination = 'directory' | 'health' | 'insights' | 'connections' | 'stats' | 'faq' | 'submit' | 'github';
 
-const ICONS: Record<Destination, string> = {
+// Also used by the directory's header links, so the same destination always has the same icon.
+export const ICONS: Record<Destination, string> = {
   directory: 'm12 3-9 8h3v10h5v-6h2v6h5V11h3l-9-8Z',
   health: 'M3 12h4l2-6 4 12 2-6h6v2h-4l-4 8-4-11-1 3H3v-2Z',
   insights: 'M4 19V9h3v10H4Zm6 0V4h3v15h-3Zm6 0v-7h3v7h-3Z',

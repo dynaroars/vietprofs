@@ -1,8 +1,9 @@
 import './style.css';
 import './stats-components.css';
 import { initGraphExplorer, renderGraphExplorer } from './connections-graph.ts';
+import { renderAddFab } from './add-fab.ts';
 import { renderSeeAlso } from './see-also.ts';
-import { escapeHtml } from './utils.ts';
+import { escapeHtml, formatLocalTimestamp } from './utils.ts';
 import { displayName, personPath, type Roster, type RosterEntry } from './data.ts';
 import type { AcademicRelationship, RelationshipDatabase, RelationshipType } from './relationships.ts';
 
@@ -28,12 +29,6 @@ const DIRECTIONAL_TYPES = new Set<RelationshipType>([
 
 function formatNumber(value: number): string {
   return new Intl.NumberFormat('en-US').format(value);
-}
-
-function formatTimestamp(value: string): string {
-  const date = new Date(value);
-  if (Number.isNaN(date.getTime())) return 'Unknown time';
-  return `${new Intl.DateTimeFormat('en-US', { dateStyle: 'medium', timeStyle: 'medium', timeZone: 'UTC' }).format(date)} UTC`;
 }
 
 function runningHead(): string {
@@ -136,7 +131,7 @@ function renderConnections(roster: Roster, database: RelationshipDatabase): stri
     ${runningHead()}
     <section class="man-section name-section"><div class="identity"><div class="identity-details"><div class="name-heading"><h1>Academic Connections</h1></div>
       <p class="synopsis">Verified doctoral, postdoctoral, and collaborative links discovered among roster members.</p>
-      <p class="synopsis stats-snapshot">Last updated: <time datetime="${escapeHtml(database.updatedAt)}">${escapeHtml(formatTimestamp(database.updatedAt))}</time></p>
+      <p class="synopsis stats-snapshot">Last updated: <time datetime="${escapeHtml(database.updatedAt)}">${escapeHtml(formatLocalTimestamp(database.updatedAt))}</time></p>
     </div></div></section>
     <section class="man-section"><h2>AT A GLANCE</h2>${renderMetrics(roster, database)}</section>
     ${renderGraphExplorer()}
@@ -147,16 +142,16 @@ function renderConnections(roster: Roster, database: RelationshipDatabase): stri
       <p>Every connection listed here is independently verified against public evidence (advisor pages, dissertations, shared publications, shared grant or patent records) before being added — see each row's source link. Coauthor, grant-collaborator, and patent-coinventor links require multiple independently attributable shared works; advisor and mentor links are directional and verified against an official advisor-side listing where possible. This view only shows connections between two people already on the VietProfs roster.</p>
     </div></section>
     ${renderSeeAlso(base, 'connections')}
-  </article></main>`;
+  </article></main>${renderAddFab(`${base}submit.html`)}`;
 }
 
 function renderLoading(): string {
-  return `<main><article class="man-page stats-man-page">${runningHead()}<section class="man-section"><h1>Academic Connections</h1><div class="stats-loading-box"><p>Loading connections…</p></div></section></article></main>`;
+  return `<main><article class="man-page stats-man-page">${runningHead()}<section class="man-section"><h1>Academic Connections</h1><div class="stats-loading-box"><p>Loading connections…</p></div></section></article></main>${renderAddFab(`${base}submit.html`)}`;
 }
 
 function renderError(message: string): string {
   return `<main><article class="man-page stats-man-page">${runningHead()}<section class="man-section name-section"><h1>Academic Connections</h1><p class="synopsis">Verified academic connections among roster members.</p></section>
-    <section class="man-section"><h2>CONNECTIONS</h2><div class="stats-error-box" role="alert"><p class="error-title">Connections data is temporarily unavailable.</p><p class="error-detail">${escapeHtml(message)}</p><button type="button" id="retry-btn" class="retry-btn">Retry</button></div></section>${renderSeeAlso(base, 'connections')}</article></main>`;
+    <section class="man-section"><h2>CONNECTIONS</h2><div class="stats-error-box" role="alert"><p class="error-title">Connections data is temporarily unavailable.</p><p class="error-detail">${escapeHtml(message)}</p><button type="button" id="retry-btn" class="retry-btn">Retry</button></div></section>${renderSeeAlso(base, 'connections')}</article></main>${renderAddFab(`${base}submit.html`)}`;
 }
 
 async function fetchJson<T>(path: string): Promise<T> {

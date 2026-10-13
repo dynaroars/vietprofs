@@ -13,16 +13,6 @@ const commit = process.env.VITE_GIT_COMMIT || (() => {
     return 'development'
   }
 })()
-const buildTimestamp = process.env.VITE_BUILD_TIME || new Date().toISOString()
-const buildLabel = new Intl.DateTimeFormat('en-US', {
-  year: 'numeric',
-  month: 'short',
-  day: 'numeric',
-  hour: 'numeric',
-  minute: '2-digit',
-  timeZone: 'America/New_York',
-}).format(new Date(buildTimestamp)) + ' ET'
-
 // public/share.js keeps a fixed name and the host caches it for hours; a content hash in the query
 // makes a changed file load fresh (scripts/generate-profile-pages.ts does the same for its pages).
 const shareVersion = createHash('sha256').update(readFileSync(resolve(root, 'public/share.js'))).digest('hex').slice(0, 10)
@@ -33,8 +23,6 @@ export default defineConfig({
   base: './',
   define: {
     __BUILD_COMMIT__: JSON.stringify(commit),
-    __BUILD_TIMESTAMP__: JSON.stringify(buildTimestamp),
-    __BUILD_LABEL__: JSON.stringify(buildLabel),
   },
   plugins: [{
     name: 'version-share-script',

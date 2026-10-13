@@ -1,9 +1,7 @@
 const STORAGE_KEY = 'vietprofs:favorites';
 const RECENT_STORAGE_KEY = 'vietprofs:recent-profiles';
-const PINNED_STORAGE_KEY = 'vietprofs:pinned-searches';
 const PROFILE_ID = /^vp-\d{4}$/;
 const MAX_SAVED_ITEMS = 8;
-const PINNABLE_QUERY_KEYS = ['q', 'state', 'loc', 'field', 'track', 'institutionType', 'sort', 'view'];
 
 function storage() {
   try {
@@ -64,43 +62,6 @@ export function recordRecentProfile(id: string): string[] {
   const next = [id, ...loadRecentProfiles().filter((value) => value !== id)].slice(0, MAX_SAVED_ITEMS);
   storage()?.setItem(RECENT_STORAGE_KEY, JSON.stringify(next));
   return next;
-}
-
-function normalizedPinnedQuery(query: string): string {
-  const params = new URLSearchParams(query);
-  const normalized = new URLSearchParams();
-  for (const key of PINNABLE_QUERY_KEYS) {
-    const value = params.get(key);
-    if (value) normalized.set(key, value);
-  }
-  return normalized.toString();
-}
-
-export function loadPinnedSearches(): string[] {
-  const local = storage();
-  if (!local) return [];
-  try {
-    const parsed = JSON.parse(local.getItem(PINNED_STORAGE_KEY) ?? '');
-    return Array.isArray(parsed)
-      ? [...new Set(parsed.filter((query) => typeof query === 'string').map(normalizedPinnedQuery).filter(Boolean))].slice(0, MAX_SAVED_ITEMS)
-      : [];
-  } catch {
-    return [];
-  }
-}
-
-export function togglePinnedSearch(query: string): boolean {
-  const normalized = normalizedPinnedQuery(query);
-  if (!normalized) return false;
-  const current = loadPinnedSearches();
-  const pinned = !current.includes(normalized);
-  const next = pinned ? [normalized, ...current].slice(0, MAX_SAVED_ITEMS) : current.filter((value) => value !== normalized);
-  storage()?.setItem(PINNED_STORAGE_KEY, JSON.stringify(next));
-  return pinned;
-}
-
-export function clearPinnedSearches(): void {
-  storage()?.removeItem(PINNED_STORAGE_KEY);
 }
 
 export function clearRecentProfiles(): void {

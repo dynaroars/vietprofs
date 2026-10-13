@@ -26,7 +26,7 @@ import {
   uniqueRanks,
   type Roster,
 } from '../src/data.ts';
-import { escapeHtml, formatRosterDate, formatRosterShortDate } from '../src/utils.ts';
+import { escapeHtml, formatRosterDate } from '../src/utils.ts';
 import { formatLocation, renderRosterEntry } from '../src/render.ts';
 import { locationForQuery } from '../src/filter-state.ts';
 
@@ -55,11 +55,9 @@ test('honors have escaped names and source links available to the roster rendere
   }
 });
 
-test('roster update timestamps have compact, stable display dates', () => {
+test('roster dates have a stable UTC display format', () => {
   assert.equal(formatRosterDate('2026-08-26T23:30:00.000Z'), 'Aug 26, 2026');
-  assert.equal(formatRosterShortDate('2026-08-26T23:30:00.000Z'), '8/26/26');
   assert.equal(formatRosterDate('not-a-date'), '');
-  assert.equal(formatRosterShortDate('not-a-date'), '');
 });
 
 test('formatLocation never produces undefined, null, consecutive commas, or duplicate city/country', () => {

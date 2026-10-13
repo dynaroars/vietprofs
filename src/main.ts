@@ -6,7 +6,6 @@ import {
   LOCATION_LABELS,
   LOCATIONS,
   TRACKS,
-  buildFunFacts,
   buildSearchIndex,
   canonicalRank,
   countryFlag,
@@ -37,12 +36,13 @@ import {
 } from './data.ts';
 import { abbreviateInsightText, escapeHtml, formatRosterDate } from './utils.ts';
 import { applyFavoriteToggle, fieldDropdownLabel, renderRosterEntry } from './render.ts';
-import { clearPinnedSearches, clearRecentProfiles, loadFavorites, loadPinnedSearches, loadRecentProfiles, toggleFavorite, togglePinnedSearch } from './favorites-store.ts';
+import { clearRecentProfiles, loadFavorites, loadRecentProfiles, toggleFavorite } from './favorites-store.ts';
 import { openRosterShell } from './roster-shell.ts';
 import { locationForQuery } from './filter-state.ts';
+import { renderAddFab } from './add-fab.ts';
+import { ICONS } from './see-also.ts';
 import { renderShareMenu } from './share.ts';
 import { renderFunFacts, renderGrowthChart, renderHealthPanel, type GrowthMetricKey } from './insights.ts';
-import { deriveRosterStats } from './derived-stats.ts';
 import { normalizeText, parseKeywordQuery as parseKeywordQueryShared } from './search-kit.ts';
 
 const app = document.getElementById('app');
@@ -139,6 +139,15 @@ function parseKeywordQuery(raw: string): { scope: string; query: string } | null
   return parsed ? { scope: parsed.key, query: parsed.query } : null;
 }
 
+const PAPER_ICON = 'M6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Zm7 1.5V9h5.5L13 3.5ZM8 13h8v1.5H8V13Zm0 3.5h8V18H8v-1.5Z';
+const EXTERNAL = ' target="_blank" rel="noopener noreferrer"';
+
+// Header links are icon-only; the label is the accessible name and the hover tooltip.
+function siteNavLink(href: string, label: string, icon: string, attrs = ''): string {
+  const name = escapeHtml(label);
+  return `<a href="${escapeHtml(href)}"${attrs} aria-label="${name}" title="${name}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="${icon}"/></svg></a>`;
+}
+
 function renderShell() {
   app.innerHTML = `
     <header>
@@ -164,12 +173,11 @@ function renderShell() {
               <span id="search-state-chip-label"></span>
               <span class="search-scope-chip-remove" aria-hidden="true">×</span>
             </button>
-            <input id="search" class="search-input" type="search" autocomplete="off" placeholder="Roster last updated ${escapeHtml(__BUILD_LABEL__)}" aria-label="Search" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="search-suggestion-panel" />
+            <input id="search" class="search-input" type="search" autocomplete="off" placeholder="Search by name, field, or university" aria-label="Search" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="search-suggestion-panel" />
             <button type="button" id="search-help-btn" class="search-help-btn" aria-haspopup="dialog" aria-expanded="false" aria-controls="search-help-panel" aria-label="Search syntax and keyboard help" title="Search syntax and keyboard help"><span class="search-help-icon" aria-hidden="true">?</span></button>
           </div>
           <div id="search-suggestion-panel" class="search-suggestion-panel" role="listbox" hidden></div>
         </div>
-        <button type="button" id="pin-search-btn" class="pin-search-btn" aria-pressed="false" title="Pin current search">Pin search</button>
         <div id="search-help-panel" class="search-help-panel" role="dialog" aria-label="Search syntax help" hidden>
           <p><strong>QUERY SYNTAX</strong></p>
           <p>Type a keyword prefix to search one field directly:</p>
@@ -190,29 +198,30 @@ function renderShell() {
       <select id="track-filter" class="field-select track-select" aria-label="Filter by faculty track">
         <option value="all">All Tracks</option>
       </select>
-      <select id="institution-type-filter" class="field-select" aria-label="Filter by institution type">
-        <option value="all">All Institutions</option>
-      </select>
-      <select id="sort-order" class="field-select sort-select" aria-label="Sort academics">
+      <select id="sort-order" class="field-select sort-select" aria-label="Sort order">
         <option value="random">Random order</option>
+        <option value="vp-newest">Most recently added</option>
         <option value="last-name">Last name</option>
         <option value="first-name">First name</option>
-        <option value="recent">Recently modified</option>
-        <option value="vp-newest">Newest Entry</option>
       </select>
     </div>
     <nav class="browser-shelf" id="browser-shelf" aria-label="Saved browser data" hidden></nav>
     <output class="command-output" id="command-output" aria-live="polite" hidden></output>
     <div class="examples" id="examples"></div>
     <div class="result-row">
-      <div class="header-links">
-        <span class="paper-reference"><a class="paper-link" href="${import.meta.env.BASE_URL}vietprofs.pdf" target="_blank" rel="noopener noreferrer">Read the paper</a> (<a class="paper-link" href="https://arxiv.org/abs/2609.06091" target="_blank" rel="noopener noreferrer">arXiv</a>) · <a class="paper-link" href="https://github.com/dynaroars/vietprofs#faq" target="_blank" rel="noopener noreferrer">FAQ</a></span>
-        ${renderShareMenu({ title: 'VietProfs: Vietnamese professors worldwide' })}
-        <a class="submission-link" href="submit.html">Add or update info</a>
-      </div>
       <p class="result-count" id="result-count" aria-live="polite"></p>
+      <nav class="site-nav" aria-label="Site">
+          ${siteNavLink('index.html?view=insights', 'Diaspora Insights & Pathways', ICONS.insights, ' data-view="insights"')}
+          ${siteNavLink('connections.html', 'Academic Connections', ICONS.connections)}
+          ${siteNavLink('stats.html', 'Visitor Statistics', ICONS.stats)}
+          ${siteNavLink('index.html?view=health', 'Data Health & Completeness', ICONS.health, ' data-view="health"')}
+          ${siteNavLink(`${import.meta.env.BASE_URL}vietprofs.pdf`, 'Read the paper (PDF)', PAPER_ICON, EXTERNAL)}
+          ${siteNavLink('https://github.com/dynaroars/vietprofs#faq', 'FAQ', ICONS.faq, EXTERNAL)}
+          ${renderShareMenu({ title: 'VietProfs: Vietnamese professors worldwide' })}
+        </nav>
     </div>
     <div class="roster" id="roster"></div>
+    ${renderAddFab('submit.html')}
     <button type="button" id="back-to-top" class="back-to-top" aria-label="Back to top" title="Back to top" hidden>
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
         <path d="M18 15l-6-6-6 6"/>
@@ -289,10 +298,8 @@ function sortRoster(roster: Roster, order: string): Roster {
     ? byName('last')
     : order === 'first-name'
       ? byName('first')
-      : order === 'recent'
-        ? (a: RosterEntry, b: RosterEntry) => (b.lastUpdatedAt ?? '').localeCompare(a.lastUpdatedAt ?? '')
-        : order === 'vp-newest'
-          ? (a: RosterEntry, b: RosterEntry) => (Number.parseInt(b.id.replace(/\D/g, ''), 10) || 0) - (Number.parseInt(a.id.replace(/\D/g, ''), 10) || 0)
+      : order === 'vp-newest'
+        ? (a: RosterEntry, b: RosterEntry) => (Number.parseInt(b.id.replace(/\D/g, ''), 10) || 0) - (Number.parseInt(a.id.replace(/\D/g, ''), 10) || 0)
         : () => 0;
 
   return [...roster].sort((a, b) => Number(favorites.has(b.id)) - Number(favorites.has(a.id)) || bySelectedOrder(a, b));
@@ -401,12 +408,13 @@ async function init() {
     ['undergrad', uniqueUndergradInstitutions(roster)],
   ]);
   const searchInput = document.getElementById('search') as HTMLInputElement;
-  // The full "Roster last updated <date, time ET>" placeholder doesn't fit a phone-width box.
+  // The full placeholder doesn't fit a phone-width box.
   const narrowScreen = window.matchMedia('(max-width: 560px)');
-  const shortBuildLabel = new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: 'numeric', timeZone: 'America/New_York' })
-    .format(new Date(__BUILD_TIMESTAMP__));
+  const rosterSize = roster.length.toLocaleString('en-US');
   const applySearchPlaceholder = () => {
-    searchInput.placeholder = narrowScreen.matches ? `Updated ${shortBuildLabel}` : `Roster last updated ${__BUILD_LABEL__}`;
+    searchInput.placeholder = narrowScreen.matches
+      ? `Search ${rosterSize} people`
+      : `Search ${rosterSize} people by name, field, or university`;
   };
   applySearchPlaceholder();
   narrowScreen.addEventListener('change', applySearchPlaceholder);
@@ -415,13 +423,11 @@ async function init() {
   const searchStateChip = document.getElementById('search-state-chip') as HTMLButtonElement;
   const searchStateChipLabel = document.getElementById('search-state-chip-label') as HTMLElement;
   const suggestionPanel = document.getElementById('search-suggestion-panel') as HTMLElement;
-  const pinSearchBtn = document.getElementById('pin-search-btn') as HTMLButtonElement;
   const healthLink = document.getElementById('health-link') as HTMLAnchorElement | null;
   const browserShelf = document.getElementById('browser-shelf') as HTMLElement;
   const locationSelect = document.getElementById('location-filter') as HTMLSelectElement;
   const fieldSelect = document.getElementById('field-filter') as HTMLSelectElement;
   const trackSelect = document.getElementById('track-filter') as HTMLSelectElement;
-  const institutionTypeSelect = document.getElementById('institution-type-filter') as HTMLSelectElement;
   const sortSelect = document.getElementById('sort-order') as HTMLSelectElement;
   const filterState = { state: '', insights: false, health: false };
   const commandOutput = document.getElementById('command-output') as HTMLOutputElement;
@@ -490,7 +496,6 @@ async function init() {
       currentLocation: locationSelect.value,
       field: fieldSelect.value,
       track: trackSelect.value,
-      institutionType: institutionTypeSelect.value,
       relationships: relationshipDatabase,
     });
   }
@@ -514,7 +519,6 @@ async function init() {
       `location=${JSON.stringify(locationSelect.value)}`,
       `field=${JSON.stringify(fieldSelect.value)}`,
       `track=${JSON.stringify(trackSelect.value)}`,
-      `institutionType=${JSON.stringify(institutionTypeSelect.value)}`,
       filterState.state ? `state=${JSON.stringify(filterState.state)}` : '',
       `sort=${sortSelect.value}`,
       `matches=${matches}`,
@@ -587,12 +591,11 @@ async function init() {
   const locationOptions = [...countryOptions, ...continentOptions];
   const locationLabel = (loc: string): string => LOCATION_LABELS[loc] || `${countryFlag(loc)} ${loc}`;
 
-  function filtersHaveResults(location: string, field: string, track: string, institutionType = 'all'): boolean {
+  function filtersHaveResults(location: string, field: string, track: string): boolean {
     return roster.some((person) =>
       locationMatches(person, location) &&
       (field === 'all' || fieldOf(person.department, person.university) === field) &&
-      (track === 'all' || person.track === track) &&
-      (institutionType === 'all' || institutionTypeOf(person) === institutionType)
+      (track === 'all' || person.track === track)
     );
   }
 
@@ -606,17 +609,12 @@ async function init() {
   );
   const sortedTracks = [...TRACKS].sort((a, b) => (trackCounts.get(b) ?? 0) - (trackCounts.get(a) ?? 0) || a.localeCompare(b));
 
-  const instTypeCounts = new Map(
-    INSTITUTION_TYPES.map((type) => [type, roster.filter((person) => institutionTypeOf(person) === type).length]),
-  );
-  const sortedInstTypes = [...INSTITUTION_TYPES].sort((a, b) => (instTypeCounts.get(b) ?? 0) - (instTypeCounts.get(a) ?? 0) || a.localeCompare(b));
 
   function updateDropdownCounts() {
     const { scope, query } = effectiveSearch();
     const currentLoc = locationSelect.value || 'World';
     const currentField = fieldSelect.value || 'all';
     const currentTrack = trackSelect.value || 'all';
-    const currentInstType = institutionTypeSelect.value || 'all';
 
     const locationContext = filterRoster(searchIndex, {
       query,
@@ -625,7 +623,6 @@ async function init() {
       location: 'World',
       field: currentField,
       track: currentTrack,
-      institutionType: currentInstType,
       relationships: relationshipDatabase,
     });
     const countryEntries: OptionEntry[] = [];
@@ -653,7 +650,6 @@ async function init() {
       location: locationSelect.value || 'World',
       field: 'all',
       track: currentTrack,
-      institutionType: currentInstType,
       relationships: relationshipDatabase,
     });
     const fieldEntries: OptionEntry[] = [
@@ -674,7 +670,6 @@ async function init() {
       location: locationSelect.value || 'World',
       field: fieldSelect.value || 'all',
       track: 'all',
-      institutionType: currentInstType,
       relationships: relationshipDatabase,
     });
     const trackEntries: OptionEntry[] = [
@@ -688,26 +683,11 @@ async function init() {
     }
     setOptions(trackSelect, trackEntries, currentTrack);
 
-    const instContext = filterRoster(searchIndex, {
-      query,
-      searchScope: scope,
-      state: filterState.state,
-      location: locationSelect.value || 'World',
-      field: fieldSelect.value || 'all',
-      track: trackSelect.value || 'all',
-      institutionType: 'all',
-      relationships: relationshipDatabase,
-    });
-    const instEntries: OptionEntry[] = [
-      { value: 'all', label: `All Institutions (${instContext.length})` },
-    ];
-    for (const type of sortedInstTypes) {
-      const count = instContext.filter((p) => institutionTypeOf(p) === type).length;
-      if (count > 0) {
-        instEntries.push({ value: type, label: `${type} (${count})` });
-      }
+    // A closed dropdown shows only its choice; the counts are for comparing options in the open list.
+    for (const select of [locationSelect, fieldSelect, trackSelect]) {
+      const selected = select.selectedOptions[0];
+      if (selected) selected.textContent = selected.textContent?.replace(/ \([\d,]+\)$/, '') ?? '';
     }
-    setOptions(institutionTypeSelect, instEntries, currentInstType);
   }
 
   function initializeDropdowns() {
@@ -718,34 +698,35 @@ async function init() {
     locationSelect.classList.toggle('is-active', locationSelect.value !== 'World');
     fieldSelect.classList.toggle('is-active', fieldSelect.value !== 'all');
     trackSelect.classList.toggle('is-active', trackSelect.value !== 'all');
-    institutionTypeSelect.classList.toggle('is-active', institutionTypeSelect.value !== 'all');
     sortSelect.classList.toggle('is-active', sortSelect.value !== 'random');
   }
 
-  function setFilterValues({ location, field = 'all', track = 'all', institutionType = 'all' }: { location: string; field?: string; track?: string; institutionType?: string }) {
+  function setFilterValues({ location, field = 'all', track = 'all' }: { location: string; field?: string; track?: string }) {
     const safeLocation = locationOptions.includes(location) && roster.some((person) => locationMatches(person, location))
       ? location
       : 'World';
-    const safeFilters = filtersHaveResults(safeLocation, field, track, institutionType)
-      ? { location: safeLocation, field, track, institutionType }
-      : { location: safeLocation, field: 'all', track: 'all', institutionType: 'all' };
+    const safeFilters = filtersHaveResults(safeLocation, field, track)
+      ? { location: safeLocation, field, track }
+      : { location: safeLocation, field: 'all', track: 'all' };
     locationSelect.value = safeFilters.location;
     fieldSelect.value = safeFilters.field;
     trackSelect.value = safeFilters.track;
-    institutionTypeSelect.value = safeFilters.institutionType;
     updateDropdownHighlights();
   }
 
   const params = new URLSearchParams(window.location.search);
+  // Institution type used to be a dropdown; old links with ?institutionType= become the keyword search.
+  const requestedInstitutionType = params.get('institutionType') ?? '';
   if (params.has('q')) {
     setSearchValue(params.get('q') ?? '');
+  } else if (INSTITUTION_TYPES.some((type) => type === requestedInstitutionType)) {
+    setSearchValue(`${KEYWORD_LABELS.institution}: ${requestedInstitutionType}`);
   }
   const requestedLocation = params.get('loc') ?? params.get('location');
   filterState.state = params.get('state') ?? '';
   const requestedField = params.get('field') ?? '';
   // 'Academic staff' was renamed 'Admin and Staff'; keep old shared links working.
   const requestedTrack = (params.get('track') ?? '').replace(/^Academic staff$/, 'Admin and Staff');
-  const requestedInstitutionType = params.get('institutionType') ?? '';
   const requestedSort = params.get('sort') ?? '';
   let initialLocation = 'World';
   if (requestedLocation && locationOptions.includes(requestedLocation) && roster.some((p) => locationMatches(p, requestedLocation))) {
@@ -764,13 +745,9 @@ async function init() {
   if (TRACKS.some((track) => track === requestedTrack) && roster.some((p) => p.track === requestedTrack)) {
     initialTrack = requestedTrack;
   }
-  let initialInstitutionType = 'all';
-  if (INSTITUTION_TYPES.some((type) => type === requestedInstitutionType)) {
-    initialInstitutionType = requestedInstitutionType;
-  }
   initializeDropdowns();
-  setFilterValues({ location: initialLocation, field: initialField, track: initialTrack, institutionType: initialInstitutionType });
-  if (['random', 'last-name', 'first-name', 'recent', 'vp-newest'].includes(requestedSort)) {
+  setFilterValues({ location: initialLocation, field: initialField, track: initialTrack });
+  if (['random', 'last-name', 'first-name', 'vp-newest'].includes(requestedSort)) {
     sortSelect.value = requestedSort;
   }
 
@@ -782,7 +759,6 @@ async function init() {
     if (locationSelect.value !== 'World') next.set('loc', locationSelect.value);
     if (fieldSelect.value !== 'all') next.set('field', fieldSelect.value);
     if (trackSelect.value !== 'all') next.set('track', trackSelect.value);
-    if (institutionTypeSelect.value !== 'all') next.set('institutionType', institutionTypeSelect.value);
     if (sortSelect.value !== 'random') next.set('sort', sortSelect.value);
     if (filterState.health) next.set('view', 'health');
     else if (filterState.insights) next.set('view', 'insights');
@@ -791,61 +767,36 @@ async function init() {
     window.history.replaceState(null, '', url);
   }
 
-  function pinnedSearchLabel(query: string): string {
-    const params = new URLSearchParams(query);
-    const labels = [
-      params.get('q'),
-      params.get('loc') && `in ${params.get('loc')}`,
-      params.get('field'),
-      params.get('track'),
-      params.get('institutionType'),
-    ].filter(Boolean);
-    return (labels.join(' · ') || 'Saved search').slice(0, 80);
-  }
-
   function renderBrowserShelf() {
-    const currentQuery = window.location.search.slice(1);
-    const pins = loadPinnedSearches();
-    pinSearchBtn.disabled = !currentQuery;
-    pinSearchBtn.classList.toggle('is-pinned', pins.includes(currentQuery));
-    pinSearchBtn.setAttribute('aria-pressed', String(pins.includes(currentQuery)));
-    pinSearchBtn.textContent = pins.includes(currentQuery) ? 'Unpin search' : 'Pin search';
-
     const recent = loadRecentProfiles()
       .map((id) => roster.find((person) => person.id === id))
       .filter((person): person is RosterEntry => Boolean(person));
     browserShelf.replaceChildren();
-    if (!pins.length && !recent.length) {
+    if (!recent.length) {
       browserShelf.hidden = true;
       return;
     }
     browserShelf.hidden = false;
-    const appendGroup = (label: string, clearAction: 'pinned' | 'recent', entries: { href: string; text: string }[]) => {
-      if (!entries.length) return;
-      const group = document.createElement('div');
-      group.className = 'browser-shelf-group';
-      const heading = document.createElement('span');
-      heading.textContent = label;
-      const clearButton = document.createElement('button');
-      clearButton.type = 'button';
-      clearButton.className = 'browser-shelf-clear';
-      clearButton.dataset.clearSaved = clearAction;
-      clearButton.textContent = '×';
-      const clearLabel = clearAction === 'pinned' ? 'Clear pinned searches' : 'Clear recent profiles';
-      clearButton.setAttribute('aria-label', clearLabel);
-      clearButton.title = clearLabel;
-      group.append(heading, document.createTextNode(' '), clearButton);
-      entries.forEach(({ href, text }) => {
-        const link = document.createElement('a');
-        link.className = 'browser-shelf-chip';
-        link.href = href;
-        link.textContent = text;
-        group.append(link);
-      });
-      browserShelf.append(group);
-    };
-    appendGroup('Pinned', 'pinned', pins.map((query) => ({ href: `${window.location.pathname}?${query}`, text: pinnedSearchLabel(query) })));
-    appendGroup('Recent', 'recent', recent.map((person) => ({ href: `${import.meta.env.BASE_URL}${personPath(person.id)}`, text: displayName(person.name) })));
+    const group = document.createElement('div');
+    group.className = 'browser-shelf-group';
+    const heading = document.createElement('span');
+    heading.textContent = 'Recent';
+    const clearButton = document.createElement('button');
+    clearButton.type = 'button';
+    clearButton.className = 'browser-shelf-clear';
+    clearButton.dataset.clearSaved = 'recent';
+    clearButton.textContent = '×';
+    clearButton.setAttribute('aria-label', 'Clear recent profiles');
+    clearButton.title = 'Clear recent profiles';
+    group.append(heading, document.createTextNode(' '), clearButton);
+    recent.forEach((person) => {
+      const link = document.createElement('a');
+      link.className = 'browser-shelf-chip';
+      link.href = `${import.meta.env.BASE_URL}${personPath(person.id)}`;
+      link.textContent = displayName(person.name);
+      group.append(link);
+    });
+    browserShelf.append(group);
   }
 
   function update({ fromSearch = false } = {}) {
@@ -888,7 +839,6 @@ async function init() {
       location: locationSelect.value,
       field: fieldSelect.value,
       track: trackSelect.value,
-      institutionType: institutionTypeSelect.value,
       relationships: relationshipDatabase,
     });
     renderRoster(sortRoster(filtered, sortSelect.value), {
@@ -907,9 +857,16 @@ async function init() {
     renderBrowserShelf();
   }
 
-  pinSearchBtn.addEventListener('click', () => {
-    togglePinnedSearch(window.location.search.slice(1));
-    renderBrowserShelf();
+  // Insights and Health are views of this page, so switch in place instead of reloading 2,000 entries.
+  document.querySelector('.site-nav')?.addEventListener('click', (e) => {
+    const link = (e.target as HTMLElement).closest<HTMLAnchorElement>('a[data-view]');
+    if (!link) return;
+    e.preventDefault();
+    clearSearch();
+    filterState.health = link.dataset.view === 'health';
+    filterState.insights = link.dataset.view === 'insights';
+    update();
+    window.scrollTo({ top: 0 });
   });
 
   healthLink?.addEventListener('click', (e) => {
@@ -924,7 +881,6 @@ async function init() {
   browserShelf.addEventListener('click', (event) => {
     const button = (event.target as HTMLElement).closest<HTMLButtonElement>('[data-clear-saved]');
     if (!button) return;
-    if (button.dataset.clearSaved === 'pinned') clearPinnedSearches();
     if (button.dataset.clearSaved === 'recent') clearRecentProfiles();
     renderBrowserShelf();
   });
@@ -943,10 +899,10 @@ async function init() {
   function runCommand(raw: string): boolean {
     const command = raw.trim().toLocaleLowerCase().replace(/^:/, '');
     if (!command) return false;
-    if (command === 'recent' || command === 'updates' || command === 'recently updated' || command === 'whats new') {
-      sortSelect.value = 'recent';
+    if (command === 'recent' || command === 'new' || command === 'whats new') {
+      sortSelect.value = 'vp-newest';
       update();
-      completeCommand('Displaying faculty sorted by most recently updated.');
+      completeCommand('Displaying faculty sorted by most recently added.');
       return true;
     }
     if (command === 'completeness' || command === 'health' || command === 'audit') {
@@ -1233,11 +1189,6 @@ async function init() {
     filterState.health = false;
     update({ fromSearch: false });
   });
-  institutionTypeSelect.addEventListener('change', () => {
-    filterState.insights = false;
-    filterState.health = false;
-    update({ fromSearch: false });
-  });
   sortSelect.addEventListener('change', () => update({ fromSearch: false }));
 
   document.getElementById('home-link').addEventListener('click', (e) => {
@@ -1309,7 +1260,6 @@ async function init() {
       filterState.health = false;
       fieldSelect.value = 'all';
       trackSelect.value = 'all';
-      institutionTypeSelect.value = 'all';
       update({ fromSearch: true });
     }
   });
@@ -1457,59 +1407,14 @@ async function init() {
   const populatedLocations = locationOptions.filter((location) =>
     !['US', 'World'].includes(location) && filtersHaveResults(location, 'all', 'all')
   );
-  const rosterStats = deriveRosterStats(roster);
+  type Example = { type: 'field' | 'track' | 'loc'; value: string; label: string };
 
-  const healthMetrics = [
-    `${rosterStats.total.toLocaleString('en-US')} Total Faculty Records`,
-    ...rosterStats.completeness.map((c) => `${c.percentage}% ${c.label} completed`),
-  ];
-  const randomHealthMetric = healthMetrics[Math.floor(Math.random() * healthMetrics.length)];
-
-  const funFactsList = buildFunFacts(roster).filter((f) => f && !f.startsWith('No faculty'));
-  const randomFact = funFactsList.length
-    ? funFactsList[Math.floor(Math.random() * funFactsList.length)]
-    : 'Diaspora Insights';
-  const cleanFact = abbreviateInsightText(randomFact.replace(/\.$/, ''));
-  const shortFact = cleanFact.length > 110 ? `${cleanFact.slice(0, 107)}…` : cleanFact;
-
-  const totalInstitutions = new Set(roster.map((person) => person.university)).size;
-  const trafficOptions = [
-    ...(statsHistory.length > 0 ? [`${statsHistory.length} Daily Snapshots`] : []),
-    ...(gitInfo?.totalCommits ? [`${gitInfo.totalCommits.toLocaleString('en-US')} Git Commits`] : []),
-    `${rosterStats.total.toLocaleString('en-US')} Tracked Profiles`,
-    `${totalInstitutions.toLocaleString('en-US')} Host Institutions`,
-    ...(rosterStats.recentUpdatesCount.last30Days > 0
-      ? [`${rosterStats.recentUpdatesCount.last30Days} Updates in 30d`]
-      : [`${rosterStats.recentUpdatesCount.last90Days} Updates in 90d`]),
-  ];
-  const randomTrafficMetric = trafficOptions.length
-    ? trafficOptions[Math.floor(Math.random() * trafficOptions.length)]
-    : `${rosterStats.total.toLocaleString('en-US')} Tracked Profiles`;
-
-  type Example = {
-    type: 'search' | 'field' | 'track' | 'loc' | 'fact' | 'health' | 'stats' | 'connections';
-    value: string;
-    label?: string;
-    icon?: string;
-    targetName?: string;
-  };
-
-  const coreExamples: Example[] = [
-    { type: 'health' as const, value: 'Dataset Health', label: abbreviateInsightText(randomHealthMetric), icon: '💚' },
-    { type: 'stats' as const, value: 'Visitor Traffic', label: abbreviateInsightText(randomTrafficMetric), icon: '📈' },
-    ...(relationshipDatabase?.relationships.length
-      ? [{ type: 'connections' as const, value: 'Academic Connections', label: `${relationshipDatabase.relationships.length.toLocaleString('en-US')} Verified Connections`, icon: '🔗' }]
-      : []),
-    { type: 'fact' as const, value: 'Diaspora Insights', label: shortFact, icon: '💡' },
-  ];
-
-  const categoryExamples: Example[] = shuffle([
-    ...pickRandomUnique(populatedFields, 1).map((value) => ({ type: 'field' as const, value, label: abbreviateInsightText(fieldDropdownLabel(value)), icon: '🔬' })),
-    ...pickRandomUnique(TRACKS.filter((track) => roster.some((person) => person.track === track)), 1).map((value) => ({ type: 'track' as const, value, label: value, icon: '🎓' })),
-    ...pickRandomUnique(populatedLocations, 1).map((value) => ({ type: 'loc' as const, value, label: value, icon: '📍' })),
-  ] as Example[]);
-
-  const examples: Example[] = shuffle([...coreExamples, ...categoryExamples]);
+  // A few plain filter suggestions; facts and stats live in Insights, Health, and Stats.
+  const examples: Example[] = shuffle([
+    ...pickRandomUnique(populatedFields, 1).map((value) => ({ type: 'field' as const, value, label: abbreviateInsightText(fieldDropdownLabel(value)) })),
+    ...pickRandomUnique(TRACKS.filter((track) => roster.some((person) => person.track === track)), 1).map((value) => ({ type: 'track' as const, value, label: value })),
+    ...pickRandomUnique(populatedLocations, 2).map((value) => ({ type: 'loc' as const, value, label: value })),
+  ]);
   const examplesEl = document.getElementById('examples');
   examplesEl.replaceChildren();
   const label = document.createElement('span');
@@ -1519,18 +1424,8 @@ async function init() {
   for (const ex of examples) {
     const button = document.createElement('button');
     button.type = 'button';
-    const chipTypeClass = ex.type === 'fact' ? ' insight-chip'
-      : ex.type === 'health' ? ' health-chip'
-      : ex.type === 'stats' ? ' stats-chip'
-      : ex.type === 'connections' ? ' connections-chip'
-      : '';
-    button.className = `example-chip${chipTypeClass}`;
-    const iconPrefix = ex.icon ? `${ex.icon} ` : '';
-    button.textContent = `${iconPrefix}${ex.label ?? ex.value}`;
-    if (ex.type === 'fact') button.dataset.fact = '1';
-    if (ex.type === 'health') button.dataset.health = '1';
-    if (ex.type === 'stats') button.dataset.stats = '1';
-    if (ex.type === 'connections') button.dataset.connections = '1';
+    button.className = 'example-chip';
+    button.textContent = ex.label;
     if (ex.type === 'field') button.dataset.field = ex.value;
     if (ex.type === 'track') button.dataset.track = ex.value;
     if (ex.type === 'loc') button.dataset.loc = ex.value;
@@ -1540,30 +1435,6 @@ async function init() {
     const btn = (e.target as HTMLElement).closest<HTMLButtonElement>('.example-chip');
     if (!btn) return;
     filterState.state = '';
-    if (btn.dataset.stats) {
-      window.location.href = `${import.meta.env.BASE_URL}stats.html`;
-      return;
-    }
-    if (btn.dataset.connections) {
-      window.location.href = `${import.meta.env.BASE_URL}connections.html`;
-      return;
-    }
-    if (btn.dataset.health) {
-      clearSearch();
-      filterState.health = true;
-      filterState.insights = false;
-      setFilterValues({ location: locationSelect.value });
-      update();
-      return;
-    }
-    if (btn.dataset.fact) {
-      clearSearch();
-      filterState.insights = true;
-      filterState.health = false;
-      setFilterValues({ location: locationSelect.value });
-      update();
-      return;
-    }
     if (btn.dataset.field) {
       clearSearch();
       filterState.insights = false;
@@ -1586,25 +1457,7 @@ async function init() {
       filterState.health = false;
       setFilterValues({ location: btn.dataset.loc });
       update();
-      return;
     }
-    setSearchValue(btn.textContent?.replace(/^[\p{Emoji}\s]+/u, '').trim() ?? '');
-    filterState.insights = false;
-    filterState.health = false;
-    // If the selected search term is not found within the current location filter, widen to
-    // 'World'. Query the shared index once — filtering a one-element array per person built a
-    // throwaway SearchIndex (and WeakMap) for every roster entry on each click.
-    const matchesCurrent = filterRoster(searchIndex, {
-      query: btn.textContent ?? '',
-      location: locationSelect.value,
-    }).length > 0;
-    if (!matchesCurrent) {
-      locationSelect.value = 'World';
-    }
-    fieldSelect.value = 'all';
-    trackSelect.value = 'all';
-    institutionTypeSelect.value = 'all';
-    update();
   });
 
   update();

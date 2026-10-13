@@ -12,7 +12,7 @@ import {
   vietnameseName,
 } from './data.ts';
 import { isFavorite } from './favorites-store.ts';
-import { escapeHtml, formatRosterDate, formatRosterShortDate } from './utils.ts';
+import { escapeHtml } from './utils.ts';
 
 export const SCHOLAR_ICON = '<path d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3Z"/><path d="M5 12.18V16c0 1.66 3.13 3 7 3s7-1.34 7-3v-3.82l-7 3.82-7-3.82Z"/>';
 export const PROFILE_ICON = '<path d="M12 3 3 9v2h18V9L12 3Zm-7 10v6h2v-6H5Zm6 0v6h2v-6h-2Zm6 0v6h2v-6h-2ZM3 21h18v-2H3v2Z"/>';
@@ -97,10 +97,6 @@ export function renderRosterEntry(person: RosterEntry, baseUrl = '/', countryHub
   const honors = (person.honors ?? [])
     .map((honor) => `<a class="honor-link" href="${escapeHtml(honor.source)}" target="_blank" rel="noopener noreferrer">${escapeHtml(honor.name)}${honor.year ? ` (${escapeHtml(String(honor.year))})` : ''}</a>`)
     .join(' · ');
-  const lastUpdatedAt = person.lastUpdatedAt ?? '';
-  const updatedTime = lastUpdatedAt
-    ? `<time class="entry-updated" datetime="${escapeHtml(lastUpdatedAt)}" title="Roster information last updated ${escapeHtml(formatRosterDate(lastUpdatedAt))}"><span>Updated</span> <span>${escapeHtml(formatRosterShortDate(lastUpdatedAt))}</span></time>`
-    : '';
   const portrait = person.portrait
     ? `<img class="entry-portrait" src="${escapeHtml(`${baseUrl}${person.portrait}`)}" alt="" width="64" height="64" loading="lazy" decoding="async">`
     : `<img class="entry-portrait entry-portrait-placeholder" src="${escapeHtml(`${baseUrl}default-portrait.svg`)}" alt="" width="64" height="64" loading="lazy" decoding="async">`;
@@ -135,7 +131,7 @@ export function renderRosterEntry(person: RosterEntry, baseUrl = '/', countryHub
       <div class="entry-content">
         <div class="entry-name-row">
           <a class="entry-name" href="${escapeHtml(`${baseUrl}${personPath(person.id)}`)}">${escapeHtml(visibleName)}</a>
-          <span class="entry-vietnamese-name">(${escapeHtml(nativeName)})</span> ${locBadge}${profileIcon}${personalSiteIcon}${scholarIcon}${linkedinIcon}${updatedTime}${favoriteToggle}
+          <span class="entry-vietnamese-name">(${escapeHtml(nativeName)})</span> ${locBadge}${profileIcon}${personalSiteIcon}${scholarIcon}${linkedinIcon}${favoriteToggle}
         </div>
         <div class="entry-meta">${escapeHtml(entryMeta)}</div>
         ${educationDetails.length ? `<div class="entry-details">${educationDetails.map((value) => escapeHtml(value)).join('; ')}</div>` : ''}

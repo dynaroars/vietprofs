@@ -18,11 +18,14 @@ const rosterDateFormatter = new Intl.DateTimeFormat('en-US', {
   timeZone: 'UTC',
 });
 
-const rosterShortDateFormatter = new Intl.DateTimeFormat('en-US', {
-  month: 'numeric',
+// Exact moments (e.g. the connections snapshot) show in the reader's own time zone; date-only values stay in UTC above.
+const localTimestampFormatter = new Intl.DateTimeFormat('en-US', {
+  month: 'short',
   day: 'numeric',
-  year: '2-digit',
-  timeZone: 'UTC',
+  year: 'numeric',
+  hour: 'numeric',
+  minute: '2-digit',
+  timeZoneName: 'short',
 });
 
 type DateInput = string | number | Date;
@@ -36,9 +39,9 @@ export function formatRosterDate(timestamp: DateInput): string {
   return Number.isNaN(date.valueOf()) ? '' : rosterDateFormatter.format(date);
 }
 
-export function formatRosterShortDate(timestamp: DateInput): string {
+export function formatLocalTimestamp(timestamp: DateInput): string {
   const date = toDate(timestamp);
-  return Number.isNaN(date.valueOf()) ? '' : rosterShortDateFormatter.format(date);
+  return Number.isNaN(date.valueOf()) ? 'Unknown time' : localTimestampFormatter.format(date);
 }
 
 export function showToast(message: string, durationMs = 2500): void {

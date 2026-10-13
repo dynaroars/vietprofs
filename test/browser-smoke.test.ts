@@ -71,15 +71,13 @@ test('directory loads and searching changes the roster', async () => {
   assert.equal(await page.locator('#query-inspector').count(), 0);
   const initial = await page.locator('.entry').count();
   assert.ok(initial > 0);
-  assert.equal(await page.locator('.entry-updated').count(), initial);
-  assert.equal(await page.locator('.entry-name-row > .entry-updated').count(), initial);
+  assert.equal(await page.locator('.entry-updated').count(), 0);
   const personalSiteLinks = page.locator('.personal-site-link');
   assert.ok(await personalSiteLinks.count() > 0);
   assert.match(await attrOf(personalSiteLinks.first(), 'href'), /^https?:\/\//);
   assert.equal(await personalSiteLinks.first().getAttribute('title'), 'Website');
-  const updated = page.locator('.entry-updated').first();
-  assert.match(await textOf(updated), /^Updated \d{1,2}\/\d{1,2}\/\d{2}$/);
-  assert.match(await attrOf(updated, 'datetime'), /^\d{4}-\d{2}-\d{2}T.*Z$/);
+  assert.equal(await page.locator('#site-updated').count(), 0);
+  assert.match(await page.locator('#search').getAttribute('placeholder') ?? '', /^Search [\d,]+ people/);
   const multiCredentialRow = page.locator('.entry-details').filter({ hasText: ';' }).first();
   await multiCredentialRow.waitFor();
   assert.equal(await multiCredentialRow.locator('xpath=..').locator('.entry-details').count(), 1);
@@ -207,25 +205,15 @@ test('clicking a search suggestion fills the search input', async () => {
   await page.close();
 });
 
-test('pinned searches and recently viewed profiles stay in browser storage', async () => {
+test('recently viewed profiles stay in browser storage', async () => {
   const page = await context.newPage();
   await page.goto(`${baseUrl}/`, { waitUntil: 'networkidle' });
-  await page.evaluate(() => {
-    localStorage.removeItem('vietprofs:pinned-searches');
-    localStorage.removeItem('vietprofs:recent-profiles');
-  });
+  await page.evaluate(() => localStorage.removeItem('vietprofs:recent-profiles'));
+  assert.equal(await page.locator('#pin-search-btn').count(), 0);
   const search = page.locator('#search');
   await search.fill('ThanhVu');
   await page.waitForTimeout(250);
-  const pin = page.locator('#pin-search-btn');
-  assert.equal(await pin.isDisabled(), false);
-  await pin.click();
   const shelf = page.locator('#browser-shelf');
-  const pinned = shelf.locator('.browser-shelf-group').filter({ hasText: 'Pinned' }).locator('a');
-  assert.equal(await pinned.count(), 1);
-  assert.match(await attrOf(pinned, 'href'), /q=ThanhVu/);
-  const clearPinned = shelf.locator('button[aria-label="Clear pinned searches"]');
-  assert.equal(await clearPinned.count(), 1);
 
   const profileHref = await page.locator('.entry-name').first().getAttribute('href');
   await page.goto(new URL(profileHref!, `${baseUrl}/`).href, { waitUntil: 'networkidle' });
@@ -235,14 +223,9 @@ test('pinned searches and recently viewed profiles stay in browser storage', asy
   assert.equal(await recent.getAttribute('href'), profileHref);
   const clearRecent = shelf.locator('button[aria-label="Clear recent profiles"]');
   assert.equal(await clearRecent.count(), 1);
-  await clearPinned.click();
-  assert.equal(await shelf.locator('.browser-shelf-group').filter({ hasText: 'Pinned' }).locator('a').count(), 0);
   await clearRecent.click();
   assert.equal(await shelf.isHidden(), true);
-  await page.evaluate(() => {
-    localStorage.removeItem('vietprofs:pinned-searches');
-    localStorage.removeItem('vietprofs:recent-profiles');
-  });
+  await page.evaluate(() => localStorage.removeItem('vietprofs:recent-profiles'));
   await page.close();
 });
 
@@ -372,7 +355,7 @@ test('mobile pages avoid horizontal overflow and provide usable tap targets', as
     await page.setViewportSize({ width, height: 812 });
     await page.goto(`${baseUrl}/`, { waitUntil: 'networkidle' });
     await assertNoOverflow();
-  await assertTapTargets('.submission-link, .example-chip, .entry-name, .personal-site-link, .scholar-link, .profile-link, .favorite-toggle, .search-input, .search-help-btn, .field-select');
+  await assertTapTargets('.add-fab, .example-chip, .entry-name, .personal-site-link, .scholar-link, .profile-link, .favorite-toggle, .search-input, .search-help-btn, .field-select');
   }
 
   await page.setViewportSize({ width: 320, height: 812 });
@@ -422,9 +405,10 @@ test('mobile pages avoid horizontal overflow and provide usable tap targets', as
   await page.goto(`${baseUrl}/stats.html`, { waitUntil: 'networkidle' });
   await assertNoOverflow();
   assert.equal(await page.getByText('MOST REQUESTED PAGES').count(), 0);
-  assert.equal(await page.locator('.browser-metric-card').count(), 4);
+  assert.equal(await page.locator('.browser-metric-card').count(), 2);
   assert.match(await page.locator('.browser-metric-card').first().innerText(), /3 today so far/);
-  assert.match(await page.locator('.privacy-note').innerText(), /browser beacons/i);
+  assert.equal(await page.locator('.privacy-note').count(), 0);
+  assert.doesNotMatch(await page.locator('main').innerText(), /privacy/i);
 
   await page.goto(`${baseUrl}/people/vp-0242.html`, { waitUntil: 'networkidle' });
   await assertNoOverflow();
@@ -477,8 +461,8 @@ test('favorites stay at the top while the directory can be sorted', async () => 
   assert.equal((await first.locator('.entry-name').textContent())?.trim(), name);
   assert.equal(await star.getAttribute('aria-pressed'), 'true');
 
-  await page.locator('#sort-order').selectOption('recent');
-  await page.waitForFunction(() => new URL(window.location.href).searchParams.get('sort') === 'recent');
+  await page.locator('#sort-order').selectOption('vp-newest');
+  await page.waitForFunction(() => new URL(window.location.href).searchParams.get('sort') === 'vp-newest');
   assert.equal((await page.locator('.entry-name').first().textContent())?.trim(), name);
 
   await page.locator('#sort-order').selectOption('last-name');
@@ -580,16 +564,38 @@ test('stale zero-result field URLs fall back to the roster', async () => {
   await page.close();
 });
 
+test('the + button opens the form and the header links switch views in place', async () => {
+  const page = await context.newPage();
+  await page.goto(`${baseUrl}/`, { waitUntil: 'networkidle' });
+  assert.equal(await page.locator('.header-links, .quick-menu').count(), 0);
+  assert.equal(await page.locator('.add-fab').getAttribute('href'), 'submit.html');
+  assert.equal(await page.locator('.add-fab').getAttribute('aria-label'), 'Add or update info');
+  const nav = page.locator('.site-nav');
+  const labels = await nav.locator(':scope > a, .share-toggle').evaluateAll((links) => links.map((link) => link.getAttribute('aria-label')));
+  assert.deepEqual(labels, ['Diaspora Insights & Pathways', 'Academic Connections', 'Visitor Statistics', 'Data Health & Completeness', 'Read the paper (PDF)', 'FAQ', 'Share']);
+  assert.equal(await page.locator('#institution-type-filter').count(), 0);
+  assert.deepEqual(await page.locator('.controls #sort-order option').allInnerTexts(), ['Random order', 'Most recently added', 'Last name', 'First name']);
+  const chips = page.locator('.example-chip');
+  assert.equal(await chips.count(), 4);
+  for (const text of await chips.allInnerTexts()) assert.doesNotMatch(text, /\p{Extended_Pictographic}/u);
+  assert.doesNotMatch(await page.locator('#field-filter option:checked').innerText(), /\(\d/);
+  assert.match(await page.locator('#field-filter option').nth(1).innerText(), /\(\d[\d,]*\)$/);
+  const before = page.url();
+  await nav.locator('a[data-view="insights"]').click();
+  assert.match(page.url(), /view=insights/);
+  assert.notEqual(page.url(), before);
+  assert.equal(await page.locator('.entry').count(), 0);
+  await nav.locator('a[data-view="health"]').click();
+  assert.match(page.url(), /view=health/);
+  await page.close();
+});
+
 test('combined field and location filters link to their static intersection hub', async () => {
   const page = await context.newPage();
   await page.goto(`${baseUrl}/?field=Health%20Sciences&loc=Japan`, { waitUntil: 'networkidle' });
   assert.equal(await page.locator('#field-filter').inputValue(), 'Health Sciences');
   assert.equal(await page.locator('#location-filter').inputValue(), 'Japan');
   assert.match(await textOf(page.locator('#result-count')), /\d+ people in Health Sciences .* across \d+ institutions in Japan/);
-
-  const headerBox = await page.locator('.header-links').boundingBox();
-  const countBox = await page.locator('#result-count').boundingBox();
-  assert.ok(headerBox && countBox && headerBox.y + headerBox.height <= countBox.y);
 
   const fieldHubLink = page.locator('#result-count .result-count-link').first();
   assert.match(await attrOf(fieldHubLink, 'href'), /\/regions\/japan\/health-sciences\.html$/);
@@ -710,7 +716,8 @@ test('profile pages honor dark mode through the shared stylesheet', async () => 
   assert.equal(await page.locator('.man-section').filter({ hasText: 'SYNOPSIS' }).count(), 1);
   assert.match(await textOf(page.locator('.record-id')), /^vp-\d+$/);
   assert.equal(await page.locator('.raw-record').count(), 1);
-  assert.equal(await page.locator('.profile-actions .submission-link').count(), 1);
+  assert.equal(await page.locator('.profile-actions .submission-link').count(), 0);
+  assert.equal(await page.locator('.add-fab').getAttribute('href'), `../submit.html?edit=${id}`);
   assert.equal(await page.locator('.name-heading .profile-actions').count(), 1);
   const seeAlso = page.locator('.man-section').filter({ has: page.locator('h2', { hasText: 'SEE ALSO' }) });
   assert.equal(await seeAlso.locator('nav.links a').count(), 8);
