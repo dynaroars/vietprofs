@@ -63,7 +63,6 @@ export interface BrowserStatsResponse {
 interface RumGroup {
   count?: number;
   sum?: { visits?: number };
-  avg?: { sampleInterval?: number };
   dimensions?: { date?: string; countryName?: string; requestPath?: string };
 }
 
@@ -202,7 +201,7 @@ query BrowserTraffic($accountTag: string!, $hostname: string!, $windowStart: Dat
         orderBy: [date_ASC]
         filter: { date_geq: $windowStart, date_leq: $today, requestHost: $hostname, bot: 0
         ${SUSPECTED_AUTOMATION_FILTER} }
-      ) { count sum { visits } avg { sampleInterval } dimensions { date } }
+      ) { count sum { visits } dimensions { date } }
       countries: rumPageloadEventsAdaptiveGroups(
         limit: 250
         orderBy: [count_DESC]
@@ -239,6 +238,9 @@ export async function queryRum(env: Env, site: SiteConfig, now = new Date()): Pr
   if (result.errors?.length) throw new Error(result.errors.map(error => error.message || 'Unknown GraphQL error').join('; '));
   const account = result.data?.viewer?.accounts?.[0];
   if (!account) throw new Error('Cloudflare returned no matching account data');
+  // Cloudflare can silently return no daily rows for a query it can't serve (as it did on 2026-10-13 when the daily
+  // query also asked for avg { sampleInterval }); treat that as a failure rather than publishing a month of zeros.
+  if (!account.daily?.length && account.countries?.length) throw new Error('Cloudflare returned country data but no daily rows');
 
   const returnedDaily = new Map<string, { pageViews: number; visits: number }>();
   for (const row of account.daily || []) {

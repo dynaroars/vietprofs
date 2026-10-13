@@ -225,6 +225,20 @@ test('demo categories follow the requesting site and add up to the demo total', 
   assert.equal(data.categories.reduce((total: number, row: any) => total + row.pageViews, 0), data.categoryTotal);
 });
 
+test('daily rows missing while other groups have data serves the last snapshot instead of zeros', async () => {
+  const originalFetch = globalThis.fetch;
+  globalThis.fetch = async () => new Response(JSON.stringify({ data: { viewer: { accounts: [{
+    daily: [], countries: [{ count: 9, dimensions: { countryName: 'US' } }], paths: [{ count: 9, dimensions: { requestPath: '/' } }],
+  }] } } }));
+  try {
+    const response = await worker.fetch(new Request('http://localhost/api/stats'), liveEnv(), ctx as any);
+    assert.equal(response.status, 503);
+    assert.match((await response.json() as any).detail, /no daily rows/);
+  } finally {
+    globalThis.fetch = originalFetch;
+  }
+});
+
 test('Worker returns 404 and rejects unsupported methods', async () => {
   assert.equal((await worker.fetch(new Request('http://localhost/unknown'), {}, ctx as any)).status, 404);
   const response = await worker.fetch(new Request('http://localhost/api/stats', { method: 'POST' }), {}, ctx as any);
