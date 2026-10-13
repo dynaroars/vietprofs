@@ -422,7 +422,8 @@ test('mobile pages avoid horizontal overflow and provide usable tap targets', as
   await page.goto(`${baseUrl}/stats.html`, { waitUntil: 'networkidle' });
   await assertNoOverflow();
   assert.equal(await page.getByText('MOST REQUESTED PAGES').count(), 0);
-  assert.ok(await page.locator('.browser-metric-card').count() >= 5);
+  assert.equal(await page.locator('.browser-metric-card').count(), 4);
+  assert.match(await page.locator('.browser-metric-card').first().innerText(), /3 today so far/);
   assert.match(await page.locator('.privacy-note').innerText(), /browser beacons/i);
 
   await page.goto(`${baseUrl}/people/vp-0242.html`, { waitUntil: 'networkidle' });

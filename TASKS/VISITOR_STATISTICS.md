@@ -17,13 +17,14 @@ Those values included crawlers and other automated clients. The old KV archive r
 
 ## Public browser metrics
 
-The Worker queries the account-scoped `rumPageloadEventsAdaptiveGroups` GraphQL dataset for `vietprofs.roars.dev`, with Cloudflare's `bot: 0` filter.
+The Worker queries the account-scoped `rumPageloadEventsAdaptiveGroups` GraphQL dataset with Cloudflare's `bot: 0` filter, for the hostname that requested `/api/stats`.
 
-- **Suspected automated traffic is excluded.** Starting 2026-10-02 a headless mobile-Chrome crawl (about 2,000 page views a day, roughly 10 rotating Pixel/Galaxy/iPhone user agents, flat around the clock, every hit its own visit) passed Cloudflare's `bot: 0` filter because it runs the beacon. All three queries therefore keep mobile Chrome (`userAgentBrowser = ChromeMobile`) only when an external site is the referrer; other browsers are unaffected. This drops about 15% of the pre-October baseline (real direct mobile-Chrome visits), so counts are slightly conservative. Remove the filter (`SUSPECTED_AUTOMATION_FILTER` in `src/worker.ts`) if the crawl stops and you want the full counts back.
-- **Browser page views today** is the RUM page-load count for the current UTC day and is marked in progress.
-- **Average daily browser page views** is the sum over the last seven successfully collected, complete UTC days divided by the number of those days. The current day is excluded.
-- **30-day browser page views** sums collected complete days in the available 30-day query window.
-- **Browser visits** is Cloudflare's RUM `sum.visits`. It is an aggregate session-like measure, not exact people or unique visitors.
+One Worker serves every site in the `roars.dev` zone that is listed in `SITES` in `src/worker.ts`: currently `vietprofs.roars.dev` and `cspicks.roars.dev`, each with its own route in `wrangler.jsonc`. Each site has its own page categories and KV keys; an unknown hostname falls back to VietProfs. The page rendering (`src/traffic-view.ts`) and its styles (`src/stats-components.css`) are shared: cspicks keeps verbatim copies, so copy any change to those two files into `../cspicks/src/` as well.
+
+- **Suspected automated traffic is excluded.** Starting 2026-10-02 a headless mobile-Chrome crawl (about 2,000 page views a day, roughly 10 rotating Pixel/Galaxy/iPhone user agents, flat around the clock, every hit its own visit) passed Cloudflare's `bot: 0` filter because it runs the beacon. All three queries therefore keep mobile Chrome (`userAgentBrowser = ChromeMobile`) only when an external site is the referrer; other browsers are unaffected. This drops about 15% of the pre-October baseline (real direct mobile-Chrome visits), so counts are slightly conservative. Neither RUM nor the zone's HTTP analytics (no ASN on this plan) separate the crawl from those real visitors, so the shortfall is labeled on the page (the visits card and the methodology note) rather than estimated. Remove the filter (`SUSPECTED_AUTOMATION_FILTER` in `src/worker.ts`) if the crawl stops and you want the full counts back.
+- **Average daily page views** is the sum over the last seven successfully collected, complete UTC days divided by the number of those days. The current day is excluded from the average; its in-progress count is shown in the card's detail line ("N today so far").
+- **Browser page views** and **Browser visits** sum the same seven complete days, so the two cards can be compared directly.
+- **Browser visits** is Cloudflare's RUM `sum.visits`: page loads that arrived from another site or directly, not from another page on the same site. It is not a count of people or unique visitors.
 - **Countries reached** groups RUM page views by normalized country code for the last seven complete days.
 - **Page categories** group normalized RUM paths for the same complete-day period. Query strings and fragments are ignored, `/` and `/index.html` are combined. Cloudflare's independently aggregated path and daily totals can differ slightly, so category shares use the path-grouped total and are labeled separately from the overall daily total.
 
@@ -44,13 +45,15 @@ The scheduled Worker refresh stores the new browser series separately:
 - `browser-rum-daily-v1`: browser daily rows
 - `browser-rum-last-success-v1`: complete last successful public response
 
+Those are VietProfs' keys. Other sites append `:<hostname>` (e.g. `browser-rum-daily-v1:cspicks.roars.dev`). The cron refreshes each site in turn, so one site's failure doesn't skip the others.
+
 An API failure does not overwrite either key. The API serves the last successful snapshot with a visible stale-data notice; if no browser snapshot exists, it returns an unavailable response rather than zeros.
 
 ## Deployment and Cloudflare configuration
 
 The GitHub Pages workflow builds and deploys the static page, but it does not deploy the Cloudflare Worker. After changing the Worker:
 
-1. Confirm Web Analytics automatic installation remains enabled for `vietprofs.roars.dev` and all paths.
+1. Confirm Web Analytics automatic installation remains enabled for every hostname in `SITES`, on all paths.
 2. Give the Worker API token **Account Analytics: Read** for the configured account. Keep the token only in the Worker secret `CLOUDFLARE_API_TOKEN`.
 3. Run `npx wrangler deploy` from an authorized environment.
 

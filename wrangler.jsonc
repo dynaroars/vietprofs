@@ -22,6 +22,10 @@
     {
       "pattern": "vietprofs.roars.dev/api/*",
       "zone_name": "roars.dev"
+    },
+    {
+      "pattern": "cspicks.roars.dev/api/*",
+      "zone_name": "roars.dev"
     }
   ],
   "observability": {

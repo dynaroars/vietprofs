@@ -1,4 +1,5 @@
 import './style.css';
+import './stats-components.css';
 import { initGraphExplorer, renderGraphExplorer } from './connections-graph.ts';
 import { renderSeeAlso } from './see-also.ts';
 import { escapeHtml } from './utils.ts';

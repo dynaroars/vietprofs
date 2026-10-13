@@ -179,11 +179,50 @@ test('scheduled refresh writes separate RUM keys and never reads the old raw-req
     });
     await worker.scheduled(null, env, { waitUntil: promise => pending.push(promise), passThroughOnException: () => {} });
     await Promise.all(pending);
-    assert.deepEqual(writtenKeys.sort(), ['browser-rum-daily-v1', 'browser-rum-last-success-v1']);
+    assert.deepEqual(writtenKeys.sort(), [
+      'browser-rum-daily-v1', 'browser-rum-daily-v1:cspicks.roars.dev',
+      'browser-rum-last-success-v1', 'browser-rum-last-success-v1:cspicks.roars.dev',
+    ]);
     assert.ok(!readKeys.includes('hostname-daily-v2'));
   } finally {
     globalThis.fetch = originalFetch;
   }
+});
+
+test('the request hostname selects the site, its hostname filter, KV keys, and page categories', async () => {
+  const originalFetch = globalThis.fetch;
+  let hostname = '';
+  globalThis.fetch = async (_input, init) => {
+    hostname = JSON.parse(String(init?.body)).variables.hostname;
+    return new Response(JSON.stringify({ data: { viewer: { accounts: [{ daily: [], countries: [], paths: [
+      { count: 4, dimensions: { requestPath: '/' } },
+      { count: 3, dimensions: { requestPath: '/schools/mit/index.html' } },
+      { count: 2, dimensions: { requestPath: '/jobs-submit.html' } },
+      { count: 1, dimensions: { requestPath: '/people/vp-0001.html' } },
+    ] }] } } }));
+  };
+  try {
+    const readKeys: string[] = [];
+    const env = liveEnv({ get: async (key: string) => { readKeys.push(key); return null; } });
+    const data = await (await worker.fetch(new Request('https://cspicks.roars.dev/api/stats'), env, ctx as any)).json() as any;
+    assert.equal(hostname, 'cspicks.roars.dev');
+    assert.deepEqual(readKeys, ['browser-rum-daily-v1:cspicks.roars.dev']);
+    const counts = Object.fromEntries(data.categories.map((row: any) => [row.key, row.pageViews]));
+    assert.equal(counts.search, 4);
+    assert.equal(counts.directory, 3);
+    assert.equal(counts.submit, 2);
+    assert.equal(counts.other, 1);
+    await worker.fetch(new Request('https://unknown.example/api/stats'), env, ctx as any);
+    assert.equal(hostname, 'vietprofs.roars.dev');
+  } finally {
+    globalThis.fetch = originalFetch;
+  }
+});
+
+test('demo categories follow the requesting site and add up to the demo total', async () => {
+  const data = await (await worker.fetch(new Request('https://cspicks.roars.dev/api/stats'), {}, ctx as any)).json() as any;
+  assert.equal(data.categories[0].key, 'search');
+  assert.equal(data.categories.reduce((total: number, row: any) => total + row.pageViews, 0), data.categoryTotal);
 });
 
 test('Worker returns 404 and rejects unsupported methods', async () => {

@@ -31,7 +31,7 @@ export interface CountryStat {
 }
 
 export interface CategoryStat {
-  key: 'directory' | 'profiles' | 'submit' | 'statistics' | 'other';
+  key: string;
   label: string;
   pageViews: number;
   pct: number;
@@ -73,18 +73,62 @@ interface RumGraphqlResponse {
 }
 
 const GRAPHQL_ENDPOINT = 'https://api.cloudflare.com/client/v4/graphql';
-const BROWSER_HISTORY_KEY = 'browser-rum-daily-v1';
-const LAST_SUCCESS_KEY = 'browser-rum-last-success-v1';
 const MAX_WINDOW_DAYS = 30;
 const CATEGORY_DAYS = 7;
 
-const CATEGORY_DEFINITIONS: Array<Pick<CategoryStat, 'key' | 'label'>> = [
-  { key: 'directory', label: 'Main directory' },
-  { key: 'profiles', label: 'Professor profiles' },
-  { key: 'submit', label: 'Submit / update' },
-  { key: 'statistics', label: 'Statistics' },
-  { key: 'other', label: 'Other' },
-];
+interface CategoryRule {
+  key: string;
+  label: string;
+  // Tested against the lowercased normalized path; the first match wins and `other` catches the rest.
+  match?: RegExp;
+}
+
+export interface SiteConfig {
+  hostname: string;
+  historyKey: string;
+  lastSuccessKey: string;
+  categories: CategoryRule[];
+}
+
+// One Worker serves /api/stats for every site in the roars.dev zone; the request's hostname picks the site.
+// VietProfs keeps its original KV keys so the archived daily history carries over.
+export const SITES: Record<string, SiteConfig> = {
+  'vietprofs.roars.dev': {
+    hostname: 'vietprofs.roars.dev',
+    historyKey: 'browser-rum-daily-v1',
+    lastSuccessKey: 'browser-rum-last-success-v1',
+    categories: [
+      { key: 'directory', label: 'Main directory', match: /^\/index\.html$/ },
+      { key: 'profiles', label: 'Professor profiles', match: /^\/people\/[^/]+\.html$/ },
+      { key: 'submit', label: 'Submit / update', match: /^\/submit\.html$/ },
+      { key: 'statistics', label: 'Statistics', match: /^\/stats\.html$/ },
+      { key: 'other', label: 'Other' },
+    ],
+  },
+  'cspicks.roars.dev': {
+    hostname: 'cspicks.roars.dev',
+    historyKey: 'browser-rum-daily-v1:cspicks.roars.dev',
+    lastSuccessKey: 'browser-rum-last-success-v1:cspicks.roars.dev',
+    categories: [
+      { key: 'search', label: 'Search', match: /^\/index\.html$/ },
+      { key: 'directory', label: 'University & area pages', match: /^\/(schools|areas)\// },
+      { key: 'simulator', label: 'Simulator', match: /^\/simulator\.html$/ },
+      { key: 'csconfs', label: 'CS Confs', match: /^\/csconfs\.html$/ },
+      { key: 'grants', label: 'Awards & Grants', match: /^\/grants\.html$/ },
+      { key: 'jobs', label: 'US Jobs', match: /^\/jobs\.html$/ },
+      { key: 'nsf', label: 'NSF Funding', match: /^\/nsf\.html$/ },
+      { key: 'submit', label: 'Submit / update', match: /-submit\.html$/ },
+      { key: 'statistics', label: 'Statistics', match: /^\/stats\.html$/ },
+      { key: 'other', label: 'Other' },
+    ],
+  },
+};
+
+const DEFAULT_HOSTNAME = 'vietprofs.roars.dev';
+
+export function siteFor(hostname: string, env: Env): SiteConfig {
+  return SITES[hostname] || SITES[env.CLOUDFLARE_HOSTNAME || DEFAULT_HOSTNAME] || SITES[DEFAULT_HOSTNAME];
+}
 
 function isoDate(date: Date): string {
   return date.toISOString().slice(0, 10);
@@ -117,13 +161,9 @@ export function normalizePath(rawPath: string): string {
   }
 }
 
-export function categoryForPath(rawPath: string): CategoryStat['key'] {
+export function categoryForPath(rawPath: string, site: SiteConfig = SITES[DEFAULT_HOSTNAME]): string {
   const path = normalizePath(rawPath).toLowerCase();
-  if (path === '/index.html') return 'directory';
-  if (/^\/people\/[^/]+\.html$/.test(path)) return 'profiles';
-  if (path === '/submit.html') return 'submit';
-  if (path === '/stats.html') return 'statistics';
-  return 'other';
+  return site.categories.find(rule => rule.match?.test(path))?.key || 'other';
 }
 
 function countryName(code: string): string {
@@ -180,7 +220,7 @@ query BrowserTraffic($accountTag: string!, $hostname: string!, $windowStart: Dat
 }`;
 }
 
-export async function queryRum(env: Env, now = new Date()): Promise<BrowserStatsResponse> {
+export async function queryRum(env: Env, site: SiteConfig, now = new Date()): Promise<BrowserStatsResponse> {
   if (!env.CLOUDFLARE_API_TOKEN || !env.CLOUDFLARE_ACCOUNT_ID) throw new Error('Cloudflare RUM credentials are not configured');
   const today = isoDate(now);
   const lastCompleteDate = shiftDate(today, -1);
@@ -191,7 +231,7 @@ export async function queryRum(env: Env, now = new Date()): Promise<BrowserStats
     headers: { Authorization: `Bearer ${env.CLOUDFLARE_API_TOKEN}`, 'Content-Type': 'application/json' },
     body: JSON.stringify({
       query: buildQuery(),
-      variables: { accountTag: env.CLOUDFLARE_ACCOUNT_ID, hostname: env.CLOUDFLARE_HOSTNAME || 'vietprofs.roars.dev', windowStart, today, categoryStart, lastCompleteDate },
+      variables: { accountTag: env.CLOUDFLARE_ACCOUNT_ID, hostname: site.hostname, windowStart, today, categoryStart, lastCompleteDate },
     }),
   });
   if (!response.ok) throw new Error(`Cloudflare GraphQL returned HTTP ${response.status}`);
@@ -206,7 +246,7 @@ export async function queryRum(env: Env, now = new Date()): Promise<BrowserStats
     if (date) returnedDaily.set(date, { pageViews: row.count || 0, visits: row.sum?.visits || 0 });
   }
   const firstReturnedDate = [...returnedDaily.keys()].sort()[0] || null;
-  const archived = await env.STATS_KV?.get<DailyBrowserStat[]>(BROWSER_HISTORY_KEY, 'json');
+  const archived = await env.STATS_KV?.get<DailyBrowserStat[]>(site.historyKey, 'json');
   const archivedDates = (archived || []).filter(row => row.status !== 'missing').map(row => row.date).sort();
   const measurementStartedAt = [firstReturnedDate, archivedDates[0]].filter((value): value is string => Boolean(value)).sort()[0] || null;
   const daily: DailyBrowserStat[] = dateRange(windowStart, today).map(date => {
@@ -229,18 +269,18 @@ export async function queryRum(env: Env, now = new Date()): Promise<BrowserStats
     return { code, name: countryName(code), flag: countryFlag(code), pageViews, pct: pageViews7 ? Math.round(pageViews / pageViews7 * 1000) / 10 : 0 };
   }).filter(row => row.pageViews > 0);
 
-  const categoryCounts = new Map<CategoryStat['key'], number>(CATEGORY_DEFINITIONS.map(item => [item.key, 0]));
+  const categoryCounts = new Map<string, number>(site.categories.map(item => [item.key, 0]));
   let pathTotal = 0;
   for (const row of account.paths || []) {
     const count = row.count || 0;
     pathTotal += count;
-    const key = categoryForPath(row.dimensions?.requestPath || '');
+    const key = categoryForPath(row.dimensions?.requestPath || '', site);
     categoryCounts.set(key, (categoryCounts.get(key) || 0) + count);
   }
-  const categories = CATEGORY_DEFINITIONS.map(item => ({
-    ...item,
-    pageViews: categoryCounts.get(item.key) || 0,
-    pct: pathTotal ? Math.round((categoryCounts.get(item.key) || 0) / pathTotal * 1000) / 10 : 0,
+  const categories = site.categories.map(({ key, label }) => ({
+    key, label,
+    pageViews: categoryCounts.get(key) || 0,
+    pct: pathTotal ? Math.round((categoryCounts.get(key) || 0) / pathTotal * 1000) / 10 : 0,
   }));
 
   return {
@@ -260,7 +300,7 @@ export async function queryRum(env: Env, now = new Date()): Promise<BrowserStats
   };
 }
 
-function demoResponse(now = new Date()): BrowserStatsResponse {
+function demoResponse(site: SiteConfig, now = new Date()): BrowserStatsResponse {
   const today = isoDate(now);
   const start = shiftDate(today, -9);
   const values = [18, 24, 17, 31, 0, 22, 28, 19, 26, 7];
@@ -269,11 +309,13 @@ function demoResponse(now = new Date()): BrowserStatsResponse {
   const categoryStart = shiftDate(lastCompleteDate, -6);
   const last7 = daily.filter(row => row.date >= categoryStart && row.date <= lastCompleteDate);
   const total = sum(last7.map(row => row.pageViews || 0));
-  const fixedCategories: Array<[CategoryStat['key'], string, number]> = [
-    ['directory', 'Main directory', 72], ['profiles', 'Professor profiles', 50], ['submit', 'Submit / update', 8],
-    ['statistics', 'Statistics', 6], ['other', 'Other', Math.max(0, total - 136)],
-  ];
-  const categories = fixedCategories.map(([key, label, pageViews]) => ({ key, label, pageViews, pct: total ? Math.round(pageViews / total * 1000) / 10 : 0 }));
+  // Split the demo total across the site's categories, halving the share at each step.
+  let remaining = total;
+  const categories = site.categories.map(({ key, label }, index) => {
+    const pageViews = index === site.categories.length - 1 ? remaining : Math.floor(remaining / 2);
+    remaining -= pageViews;
+    return { key, label, pageViews, pct: total ? Math.round(pageViews / total * 1000) / 10 : 0 };
+  });
   const visits = sum(last7.map(row => row.visits || 0));
   return {
     schemaVersion: 3, source: 'cloudflare-rum', generatedAt: now.toISOString(), timezone: 'UTC', status: 'demo', stale: false,
@@ -292,26 +334,35 @@ function jsonResponse(body: unknown, status = 200): Response {
   return new Response(JSON.stringify(body), { status, headers: { 'Content-Type': 'application/json; charset=utf-8', 'Access-Control-Allow-Origin': '*', 'Cache-Control': status === 200 ? 'public, max-age=300' : 'no-store' } });
 }
 
-async function staleResponse(env: Env, error: unknown): Promise<Response> {
-  const snapshot = await env.STATS_KV?.get<BrowserStatsResponse>(LAST_SUCCESS_KEY, 'json');
+async function staleResponse(env: Env, site: SiteConfig, error: unknown): Promise<Response> {
+  const snapshot = await env.STATS_KV?.get<BrowserStatsResponse>(site.lastSuccessKey, 'json');
   if (snapshot?.schemaVersion === 3) {
     return jsonResponse({ ...snapshot, servedAt: new Date().toISOString(), status: 'stale', stale: true, notice: 'Live browser statistics are temporarily unavailable. Showing the last successful snapshot.' });
   }
   return jsonResponse({ error: 'Browser statistics are temporarily unavailable.', detail: error instanceof Error ? error.message : 'Unknown Cloudflare API error' }, 503);
 }
 
-async function fetchStats(env: Env): Promise<Response> {
-  if (!env.CLOUDFLARE_API_TOKEN || !env.CLOUDFLARE_ACCOUNT_ID) return jsonResponse(demoResponse());
-  try { return jsonResponse(await queryRum(env)); } catch (error) { return staleResponse(env, error); }
+async function fetchStats(env: Env, site: SiteConfig): Promise<Response> {
+  if (!env.CLOUDFLARE_API_TOKEN || !env.CLOUDFLARE_ACCOUNT_ID) return jsonResponse(demoResponse(site));
+  try { return jsonResponse(await queryRum(env, site)); } catch (error) { return staleResponse(env, site, error); }
 }
 
-async function archiveSuccessfulSnapshot(env: Env): Promise<void> {
+async function archiveSuccessfulSnapshot(env: Env, site: SiteConfig): Promise<void> {
   if (!env.CLOUDFLARE_API_TOKEN || !env.CLOUDFLARE_ACCOUNT_ID || !env.STATS_KV) return;
-  const snapshot = await queryRum(env);
+  const snapshot = await queryRum(env, site);
   await Promise.all([
-    env.STATS_KV.put(BROWSER_HISTORY_KEY, JSON.stringify(snapshot.daily)),
-    env.STATS_KV.put(LAST_SUCCESS_KEY, JSON.stringify(snapshot)),
+    env.STATS_KV.put(site.historyKey, JSON.stringify(snapshot.daily)),
+    env.STATS_KV.put(site.lastSuccessKey, JSON.stringify(snapshot)),
   ]);
+}
+
+// Sites are archived one after another so one failure does not stop the others; failures still surface in the logs.
+async function archiveAllSites(env: Env): Promise<void> {
+  const failures: unknown[] = [];
+  for (const site of Object.values(SITES)) {
+    try { await archiveSuccessfulSnapshot(env, site); } catch (error) { failures.push(error); }
+  }
+  if (failures.length) throw new AggregateError(failures, `RUM archive failed for ${failures.length} site(s)`);
 }
 
 export default {
@@ -321,9 +372,9 @@ export default {
     if (url.pathname === '/health') return jsonResponse({ status: 'ok', worker: 'vietprofs-stats-api', source: 'cloudflare-rum' });
     if (url.pathname !== '/api/stats') return jsonResponse({ error: 'Not found' }, 404);
     if (request.method !== 'GET') return new Response(JSON.stringify({ error: 'Method not allowed' }), { status: 405, headers: { 'Content-Type': 'application/json', Allow: 'GET, OPTIONS' } });
-    return fetchStats(env);
+    return fetchStats(env, siteFor(url.hostname, env));
   },
   async scheduled(_event: unknown, env: Env, ctx: ExecutionContext): Promise<void> {
-    ctx.waitUntil(archiveSuccessfulSnapshot(env));
+    ctx.waitUntil(archiveAllSites(env));
   },
 };
