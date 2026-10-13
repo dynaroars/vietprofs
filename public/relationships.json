@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-12T14:27:00.000Z",
+  "updatedAt": "2026-10-13T14:12:12.000Z",
   "relationships": [
     {
       "id": "rel-coauthor-vp-0015-vp-0018",
@@ -2646,6 +2646,64 @@
         }
       ],
       "verifiedAt": "2026-10-12T14:27:00.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-0678-vp-2072",
+      "type": "coauthor",
+      "sourceId": "vp-0678",
+      "targetId": "vp-2072",
+      "sources": [
+        "https://doi.org/10.1167/iovs.06-0585",
+        "https://doi.org/10.1155/2013/796362",
+        "https://doi.org/10.1097/opx.0b013e3182826025",
+        "https://doi.org/10.14814/phy2.12507",
+        "https://doi.org/10.1111/opo.12331",
+        "https://doi.org/10.1002/jnr.24685",
+        "https://findanexpert.unimelb.edu.au/profile/5133-bang-bui",
+        "https://findanexpert.unimelb.edu.au/profile/25627-christine-nguyen"
+      ],
+      "evidence": "Crossref records list Christine T. O. Nguyen and Bang V. Bui as coauthors of six papers (2007-2020) on retinal/ocular physiology, both affiliated with the Department of Optometry and Vision Sciences, University of Melbourne (matching both roster profiles); each work has 4-5 authors.",
+      "works": [
+        {
+          "identifier": "doi:10.1167/iovs.06-0585",
+          "title": "Dietary Omega 3 Fatty Acids Decrease Intraocular Pressure with Age by Increasing Aqueous Outflow",
+          "date": "2007-02-01",
+          "url": "https://doi.org/10.1167/iovs.06-0585"
+        },
+        {
+          "identifier": "doi:10.1155/2013/796362",
+          "title": "Identifying Cell Class Specific Losses from Serially Generated Electroretinogram Components",
+          "date": "2013",
+          "url": "https://doi.org/10.1155/2013/796362"
+        },
+        {
+          "identifier": "doi:10.1097/opx.0b013e3182826025",
+          "title": "Increased Susceptibility to Injury in Older Eyes",
+          "date": "2013-03",
+          "url": "https://doi.org/10.1097/opx.0b013e3182826025"
+        },
+        {
+          "identifier": "doi:10.14814/phy2.12507",
+          "title": "The effect of intraocular and intracranial pressure on retinal structure and function in rats",
+          "date": "2015-08",
+          "url": "https://doi.org/10.14814/phy2.12507"
+        },
+        {
+          "identifier": "doi:10.1111/opo.12331",
+          "title": "Reversal of functional loss in a rat model of chronic intraocular pressure elevation",
+          "date": "2016-10-24",
+          "url": "https://doi.org/10.1111/opo.12331"
+        },
+        {
+          "identifier": "doi:10.1002/jnr.24685",
+          "title": "Therapeutic applications of chelating drugs in iron metabolic disorders of the brain and retina",
+          "date": "2020-07-09",
+          "url": "https://doi.org/10.1002/jnr.24685"
+        }
+      ],
+      "verifiedAt": "2026-10-13T14:12:12.000Z",
       "direct": false,
       "notes": ""
     }
