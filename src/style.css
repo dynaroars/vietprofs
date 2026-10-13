@@ -36,8 +36,6 @@ body {
 
 /* One focus ring for the whole site. Controls that sit inside a bordered surface (inputs,
    selects, tiles, list rows) hug it at 1px; free-standing pills and buttons stand off at 2px. */
-.example-chip:focus-visible,
-.field-select:focus,
 .state-tile:focus-visible,
 .ranked-item:focus-visible,
 .form-section input:focus,
@@ -244,14 +242,6 @@ h1 {
   background: var(--hover-bg);
 }
 
-.examples {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.4rem;
-  margin-bottom: 1.25rem;
-}
-
 .browser-shelf {
   display: grid;
   gap: 0.35rem;
@@ -297,27 +287,6 @@ h1 {
 .browser-shelf-chip:focus-visible {
   border-color: var(--bamboo-green);
   color: var(--bamboo-green);
-}
-
-.examples-label {
-  color: var(--text-muted);
-  font-size: var(--text-xs);
-}
-
-.example-chip {
-  background: var(--tag-bg);
-  color: var(--tag-text);
-  border: none;
-  padding: 0.2rem 0.65rem;
-  border-radius: var(--radius-full);
-  font-family: var(--font-body);
-  font-size: var(--text-xs);
-  cursor: pointer;
-}
-
-.example-chip:hover {
-  background: var(--hover-bg);
-  color: var(--text-primary);
 }
 
 .search-scope-chip {
@@ -430,27 +399,6 @@ h1 {
 
 .command-output[hidden] {
   display: none;
-}
-
-.field-select {
-  width: 100%;
-  min-width: 0;
-  padding: 0.55rem 0.65rem;
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius-md);
-  background: var(--card-bg);
-  color: var(--text-primary);
-  font-family: var(--font-body);
-  font-size: var(--text-sm);
-  cursor: pointer;
-  transition: border-color 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease;
-}
-
-.field-select.is-active {
-  border-color: var(--bamboo-green);
-  background-color: color-mix(in srgb, var(--bamboo-green) 12%, var(--card-bg));
-  font-weight: 600;
-  box-shadow: 0 0 0 1px var(--bamboo-green);
 }
 
 .track-select {
@@ -639,7 +587,7 @@ h1 {
 
 .entry-portrait {
   width: 64px;
-  height: 64px;
+  height: 80px;
   border-radius: var(--radius-md);
   object-fit: cover;
   object-position: center top;
@@ -1141,7 +1089,7 @@ a.entry-name:focus-visible {
 
 .subpage .portrait {
   width: 96px;
-  height: 96px;
+  height: 120px;
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
   object-fit: cover;
@@ -2604,10 +2552,11 @@ button.chart-row-btn:hover {
 
 .portrait-preview img {
   width: 96px;
-  height: 96px;
+  height: 120px;
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
   object-fit: cover;
+  object-position: center top;
 }
 
 .correction-suggestions {
@@ -2765,18 +2714,12 @@ button.chart-row-btn:hover {
 
   .submission-link,
   .self-claim-link,
-  .example-chip,
   .ranked-item,
   .search-input,
-  .field-select,
   .form-section input,
   .form-section select,
   .form-section textarea {
     min-height: 44px;
-  }
-
-  .example-chip {
-    min-width: 44px;
   }
 
   .entry-name,
@@ -2901,7 +2844,7 @@ button.chart-row-btn:hover {
 
   .subpage .portrait {
     width: 80px;
-    height: 80px;
+    height: 100px;
   }
 
   .subpage .man-section {
