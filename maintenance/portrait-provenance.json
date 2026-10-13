@@ -4636,6 +4636,81 @@
       "identitySignals": [],
       "retrievedAt": "2026-10-13T03:15:31.619Z",
       "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2002": {
+      "name": "Dang Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://researchers.adelaide.edu.au/profile/dang.nguyen",
+      "imageUrl": "https://researchers.adelaide.edu.au/sites/default/files/styles/profile_large/public/profile-images/27841.jpeg?itok=TElZeV1A",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T03:17:34.000Z",
+      "note": "manually verified during 2026-10-13 audit"
+    },
+    "vp-2003": {
+      "name": "Haley Vu",
+      "outcome": "found",
+      "pageUrl": "https://researchers.adelaide.edu.au/profile/haley.vu",
+      "imageUrl": "https://researchers.adelaide.edu.au/sites/default/files/styles/profile_large/public/profile-images/40175.jpeg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T03:17:37.000Z",
+      "note": "manually verified during 2026-10-13 audit"
+    },
+    "vp-2004": {
+      "name": "Alice Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://www.uwslondon.ac.uk/london-faculty-directory/alice-nguyen/",
+      "imageUrl": "https://www.uwslondon.ac.uk/wp-content/uploads/2024/09/UWS-Alice-Nguyen-02-scaled-e1729092960588.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T03:16:50.917Z"
+    },
+    "vp-2005": {
+      "name": "Doan Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://greatermanchester.ac.uk/our-staff/dr-doan-nguyen",
+      "imageUrl": "https://greatermanchester.ac.uk/assets/Staff/Doan-Nguyen.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T03:17:39.000Z",
+      "note": "manually verified during 2026-10-13 audit"
+    },
+    "vp-2006": {
+      "name": "Hang Pham",
+      "outcome": "found",
+      "pageUrl": "https://people.wgtn.ac.nz/hang.pham",
+      "imageUrl": "https://people.wgtn.ac.nz/hang.pham/thumbnail",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T03:17:40.000Z",
+      "note": "manually verified during 2026-10-13 audit"
     }
   }
 }
