@@ -523,6 +523,10 @@ const FIELD_OVERRIDES = new Map([
   ['Institute of Polish Philology|University of Wrocław', 'Humanities'],
   // Gachon's Bio-Nano Technology department; this member works in chemical engineering and materials.
   ['Department of Bio-Nano Technology|Gachon University', 'Engineering'],
+  // UWA School of Social Sciences; this member works in public policy and public administration.
+  ['School of Social Sciences|The University of Western Australia', 'Social & Behavioral Sciences'],
+  // RMIT's School of Science; this member works in molecular microbiology and the gut microbiome.
+  ['School of Science|RMIT University', 'Biological & Biomedical Sciences'],
   // Malmö's Department of Urban Studies (urban development, housing policy).
   ['Department of Urban Studies|Malmö University', 'Social & Behavioral Sciences'],
   // NYCU's semiconductor college; 2D semiconductor materials and devices.
