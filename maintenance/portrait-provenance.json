@@ -5734,6 +5734,68 @@
         "stored_roster_url"
       ],
       "retrievedAt": "2026-10-13T03:46:21.311Z"
+    },
+    "vp-2078": {
+      "name": "Ha Vu - Deakin University",
+      "outcome": "found",
+      "pageUrl": "https://experts.deakin.edu.au/9079-ha-vu",
+      "imageUrl": "https://experts.deakin.edu.au/9079-ha-vu/thumbnail",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T03:50:00.934Z"
+    },
+    "vp-2079": {
+      "name": "Quan Vu",
+      "outcome": "found",
+      "pageUrl": "https://experts.deakin.edu.au/50760-quan-vu",
+      "imageUrl": "https://experts.deakin.edu.au/50760-quan-vu/thumbnail",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T03:50:05.240Z"
+    },
+    "vp-2080": {
+      "name": "Quoc Phuong Dinh",
+      "outcome": "found",
+      "pageUrl": "https://experts.swinburne.edu.au/1396-quoc-phuong-dinh",
+      "imageUrl": "https://experts.swinburne.edu.au/1396-quoc-phuong-dinh/thumbnail",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T03:50:20.000Z",
+      "note": "manually verified during 2026-10-13 audit"
+    },
+    "vp-2081": {
+      "name": "Thi Thu Hao Van",
+      "outcome": "found",
+      "pageUrl": "https://www.rmit.edu.au/profiles/v/thithuhao-van",
+      "imageUrl": "https://www.rmit.edu.au/assets/au/en/profile-images/v/thithuhao-van.jpeg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T03:50:23.000Z",
+      "note": "manually verified during 2026-10-13 audit"
     }
   }
 }
