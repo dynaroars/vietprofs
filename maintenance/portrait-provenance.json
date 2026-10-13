@@ -4169,6 +4169,89 @@
       ],
       "retrievedAt": "2026-10-13T02:13:32.679Z",
       "note": "manually verified during owner-session audit"
+    },
+    "vp-1967": {
+      "name": "Thi Ngoc Nhu Phan",
+      "outcome": "found",
+      "pageUrl": "https://www.gu.se/om-universitetet/hitta-person/thingocnhuphan",
+      "imageUrl": "https://www.gu.se/sites/default/files/styles/33_10_13_small_1x/public/pop_assets/159acd0b-0b7d-4e3c-aa54-78b45577973e-photo.jpg?h=b1af0b0c&itok=babCBdB5",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T02:17:17.112Z",
+      "note": "manually verified during owner-session audit"
+    },
+    "vp-1968": {
+      "name": "Khoa Nguyen - University of Wollongong",
+      "outcome": "found",
+      "pageUrl": "https://scholars.uow.edu.au/khoa-nguyen",
+      "imageUrl": "https://scholars.uow.edu.au/khoa-nguyen/thumbnail",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T02:17:18.033Z",
+      "note": "manually verified during owner-session audit"
+    },
+    "vp-1969": {
+      "name": "Hoang Huong Le",
+      "outcome": "found",
+      "pageUrl": "https://researchers.cdu.edu.au/en/persons/hoang-huong-le/",
+      "imageUrl": "https://researchers.cdu.edu.au/files-asset/57705227/Huong_avatar_2.jpg?w=600&f=jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T02:17:19.015Z",
+      "note": "manually verified during owner-session audit"
+    },
+    "vp-1970": {
+      "name": "Nhan Le - De Montfort University",
+      "outcome": "found",
+      "pageUrl": "https://www.dmu.ac.uk/about-dmu/academic-staff/business-and-law/nhan-le/nhan-le.aspx",
+      "imageUrl": "https://www.dmu.ac.uk/webimages/About-DMU-images/Academic-Staff/bal/nhan-le.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T02:16:50.946Z"
+    },
+    "vp-1971": {
+      "name": "Minh Hue Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://research.monash.edu/en/persons/minh-hue-nguyen/",
+      "imageUrl": "https://research.monash.edu/files-asset/693629129/250430_Edu_Portraits_0614Minh_Hue_Nguyen_LowRes_Blue.jpg?w=600&f=jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-13T02:17:18.494Z",
+      "note": "manually verified during owner-session audit"
+    },
+    "vp-1972": {
+      "name": "Hoa Briscoe-Tran",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-13T02:16:52.519Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     }
   }
 }
