@@ -6136,6 +6136,29 @@
         "stored_roster_url"
       ],
       "retrievedAt": "2026-10-14T03:22:13.158Z"
+    },
+    "vp-2096": {
+      "name": "Tien Huynh",
+      "outcome": "found",
+      "pageUrl": "https://www.rmit.edu.au/profiles/h/tien-huynh",
+      "imageUrl": "https://www.rmit.edu.au/assets/au/en/profile-images/h/tien-huynh.jpeg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T03:23:36.736Z"
+    },
+    "vp-2097": {
+      "name": "Anne Vu",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-14T03:23:41.223Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     }
   }
 }
