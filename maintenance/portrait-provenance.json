@@ -6427,6 +6427,144 @@
       ],
       "retrievedAt": "2026-10-14T03:26:01.825Z",
       "note": "stored by audit after visual review"
+    },
+    "vp-2117": {
+      "name": "Ignace Lang Tran",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-14T03:26:24.332Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2118": {
+      "name": "Loc Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://math.charlotte.edu/directory/loc-nguyen/",
+      "imageUrl": "https://math.charlotte.edu/wp-content/uploads/sites/909/2023/11/loc.jpeg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T03:27:20.071Z",
+      "note": "stored by audit after visual review"
+    },
+    "vp-2119": {
+      "name": "Huubinh Le",
+      "outcome": "found",
+      "pageUrl": "https://www.southalabama.edu/colleges/mcob/economic_and_finance/le.html",
+      "imageUrl": "https://www.southalabama.edu/colleges/mcob/images/le1.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T03:27:20.079Z",
+      "note": "stored by audit after visual review"
+    },
+    "vp-2120": {
+      "name": "Linh Le",
+      "outcome": "found",
+      "pageUrl": "https://facultyweb.kennesaw.edu/lle13/index.php",
+      "imageUrl": "https://facultyweb.kennesaw.edu/lle13/images/Linh%20Le-4.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T03:26:28.141Z"
+    },
+    "vp-2121": {
+      "name": "Linh Ha Le",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-14T03:26:29.990Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2122": {
+      "name": "Son Le",
+      "outcome": "found",
+      "pageUrl": "https://www.latech.edu/directory/son-le.php",
+      "imageUrl": "https://www.latech.edu/directory/_images/le-son.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T03:26:31.042Z"
+    },
+    "vp-2123": {
+      "name": "Son Le - George Mason University",
+      "outcome": "found",
+      "pageUrl": "https://ece.gmu.edu/profiles/sle29",
+      "imageUrl": "https://ece.gmu.edu/sites/default/files/2026-08/NEW_son_le_square_profile.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T03:26:32.082Z"
+    },
+    "vp-2124": {
+      "name": "Simone P. Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://www.uncw.edu/profiles/n/nguyens",
+      "imageUrl": "https://uncw.edu/media/images/faculty-staff/n/nguyen-simone-simone-nguyen-200310-2-portrait.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T03:26:33.148Z"
+    },
+    "vp-2125": {
+      "name": "Qui Ha Hoang Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://scholars.uncw.edu/display/nguyenq",
+      "imageUrl": "https://uncw.edu/media/images/faculty-staff/n/nguyen-qui-ha-h-qui-ha-nguyen-105307-2-portrait.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T03:27:20.079Z",
+      "note": "stored by audit after visual review"
+    },
+    "vp-2126": {
+      "name": "Thu Annelise Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://www.depts.ttu.edu/research/obesityresearch/faculty/annelise-nguyen.php",
+      "imageUrl": "https://www.depts.ttu.edu/research/obesityresearch/faculty/images/Nguyen_Sept2020.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T03:27:20.080Z",
+      "note": "stored by audit after visual review"
     }
   }
 }
