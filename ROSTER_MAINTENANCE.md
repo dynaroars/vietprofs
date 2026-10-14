@@ -31,6 +31,12 @@ Accepted tracks:
 
 - `Tenure-line`: tenure-track or tenured.
 - `Teaching`: full-time, continuing/permanent non-tenure-track teaching faculty, including stable Professor of Practice and equivalent appointments. Confirm permanence from the university's language, such as “full-time,” “continuing appointment,” “non-tenure-track faculty,” or a named teaching promotion ladder. Do not infer it from the title alone.
+  Named teaching or education career ladders elsewhere count as such a ladder, the same way a US
+  "Associate Professor of Teaching" does: UK "Lecturer (Teaching and Scholarship)", Australian
+  "Education Focused", La Trobe "(TF)", and Melbourne "(Education Specialist)" lecturers in an
+  academic school, and equivalents. Accept them unless the page says fixed-term, casual,
+  sessional, or fractional. The same titles in a central teaching-support or academic-development
+  unit, rather than an academic school, are staff, not `Teaching` faculty.
 - `Research`: a stable, faculty-level or faculty-equivalent research appointment. This includes
   university Research Assistant/Associate/Full Professors, permanent Research Scientists and
   Principal Scientists when equivalence is documented, and any full-time, permanent, doctorate-holding
@@ -89,7 +95,10 @@ funding-agency program officers whose role is not to conduct research. The Offic
 roster entries unless they separately hold a qualifying research appointment.
 
 Exclude adjunct, visiting, postdoctoral, affiliate/courtesy, graduate teaching-assistant,
-industry-only, and other term-limited or part-time appointments. Plain `Instructor` requires
+industry-only, and other term-limited or part-time appointments. The burden is on showing
+full-time: a university post held alongside a clinical or hospital practice (a practising
+clinician, a "conjoint" or "works part time in clinical practice" line) is excluded unless an
+official page shows the university appointment itself is full-time. Plain `Instructor` requires
 case-by-case verification and should not be included from the title alone.
 
 ### Evaluating Research, Clinical, and Practice titles
