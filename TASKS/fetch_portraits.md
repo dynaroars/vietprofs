@@ -105,6 +105,28 @@ git push -u origin HEAD                             # after the run's last batch
 git checkout main
 ```
 
+**Review the MEDIUM candidates too** (up to 10 per run, before the `--next` batches). The script
+stores only HIGH candidates by itself; a MEDIUM one (the photo sits by the person's name on their
+page, but the image URL doesn't carry the name) is logged as `needs_review` and stays missing until
+someone looks at it. Until 2026-10-14 nobody did, so most found photos were never stored.
+
+```bash
+npx tsx scripts/fetch-portraits.ts --review        # needs_review candidates still missing a portrait
+```
+
+For each one, reject it on sight if the URL is a logo, a default or placeholder avatar, or another
+person's name. Otherwise open `pageUrl` and confirm the image is the one beside this person's
+name: the caption or alt text that names them, not a neighboring card, a lab banner, or the page's
+og:image. Then store the accepted ids together:
+
+```bash
+npx tsx scripts/fetch-portraits.ts --store=vp-0001,vp-0002   # size, aspect, and face checks still apply
+```
+
+Open every stored image with the Read tool, as for a batch. A rejected candidate stays
+`needs_review`; mark it `not_found` in `maintenance/portrait-provenance.json` with the reason, so
+`--review` stops listing it.
+
 If the batch added nothing, still commit the ledger/queue updates on the same kind of branch: they
 mark those entries attempted, so the next run moves on instead of repeating them. When a run does more
 than one batch, stay on the first batch's branch: run the next `--next=10` there (the queue now

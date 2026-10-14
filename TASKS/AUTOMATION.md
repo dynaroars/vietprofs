@@ -313,7 +313,8 @@ rows show only URL status codes.
 ### Portraits (`portraits`)
 
 Playbook: `TASKS/fetch_portraits.md` section 4, exactly. Cap: 2 batches of 10, newest roster
-entries first (`--next=10`; the script queues new entries automatically). Old unresolved entries
+entries first (`--next=10`; the script queues new entries automatically), after up to 10
+`needs_review` candidates from `--review` (section 4, "Review the MEDIUM candidates too"). Old unresolved entries
 are retried only once every new entry has been attempted. Run
 `pip install opencv-python-headless pillow numpy` first: `fetch-portraits.ts --apply` refuses to
 run without OpenCV, because every candidate must pass the one-dominant-face check

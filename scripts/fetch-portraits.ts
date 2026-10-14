@@ -170,6 +170,46 @@ if (args.has('--status')) {
   console.log(JSON.stringify({ queue: queue.reduce<Record<string, number>>((counts, item) => { counts[item.status] = (counts[item.status] ?? 0) + 1; return counts; }, {}), provenance: Object.keys(ledger.entries).length, newestPending }, null, 2));
   process.exit(0);
 }
+// --store=vp-0001,vp-0002: store each entry's ledger candidate (a `needs_review` imageUrl) after a
+// person has looked at it next to the page. The size, aspect, and face checks still apply.
+const storeArgument = process.argv.find((arg) => arg.startsWith('--store='));
+if (storeArgument) {
+  if (!(await faceCheckAvailable())) throw new Error(`face check unavailable: run 'pip install opencv-python-headless pillow numpy' (or set PORTRAIT_PYTHON)`);
+  const results: Array<Record<string, unknown>> = [];
+  for (const id of storeArgument.slice('--store='.length).split(',').filter((value) => /^vp-\d{4}$/.test(value))) {
+    const person = people.find((candidate) => candidate.id === id);
+    const entry = ledger.entries[id];
+    if (!person || !entry?.imageUrl) { results.push({ id, result: 'skipped: no ledger candidate' }); continue; }
+    if (person.portrait || person.directFields?.includes('portrait') || person.directFields?.includes('portraitSource')) { results.push({ id, result: 'skipped: has or protects a portrait' }); continue; }
+    const bytes = await fetchImage(entry.imageUrl);
+    if (!bytes) { results.push({ id, result: 'failed: image could not be downloaded' }); continue; }
+    const portrait = join('portraits', `${person.id}-${slug(person.name)}.webp`);
+    const output = join(root, 'public', portrait);
+    const temporary = `${output}.candidate.webp`;
+    try { await archiveImage(bytes, temporary); } catch { results.push({ id, result: 'failed: could not convert' }); continue; }
+    if (!(await isPortraitLike(temporary))) { await unlink(temporary).catch(() => undefined); results.push({ id, result: 'failed: 120x120 or portrait-aspect validation' }); continue; }
+    const face = await faceVerdict(temporary);
+    if (face.verdict !== 'ok') { await unlink(temporary).catch(() => undefined); results.push({ id, result: `failed: face check ${face.verdict} (${face.faces} faces)` }); continue; }
+    await rename(temporary, output);
+    person.portrait = portrait; person.portraitSource = entry.imageUrl;
+    ledger.entries[id] = { ...entry, outcome: 'found', retrievedAt: new Date().toISOString(), note: 'MEDIUM candidate stored after visual review' };
+    const item = queue.find((queued) => queued.id === id);
+    if (item) { item.status = 'fetched'; item.portraitSource = entry.imageUrl; item.note = 'visually reviewed candidate'; }
+    results.push({ id, result: 'stored', portrait });
+  }
+  await writeFile(provenancePath, `${JSON.stringify(ledger, null, 2)}\n`);
+  await writeFile(dataPath, `${JSON.stringify(people, null, 2)}\n`);
+  await writeQueue();
+  console.log(JSON.stringify({ mode: 'store', results }, null, 2));
+  process.exit(0);
+}
+// --review: list `needs_review` candidates for entries still missing a portrait, oldest first.
+if (args.has('--review')) {
+  const missing = new Set(people.filter((person) => !person.portrait).map((person) => person.id));
+  const pending = Object.entries(ledger.entries).filter(([id, entry]) => missing.has(id) && entry.outcome === 'needs_review' && entry.imageUrl).sort(([, a], [, b]) => a.retrievedAt.localeCompare(b.retrievedAt));
+  console.log(JSON.stringify(pending.map(([id, entry]) => ({ id, name: entry.name, pageUrl: entry.pageUrl, imageUrl: entry.imageUrl })), null, 2));
+  process.exit(0);
+}
 const audit = args.has('--sample');
 if (explicitIds) {
   for (const person of people.filter((candidate) => explicitIds.has(candidate.id))) {
