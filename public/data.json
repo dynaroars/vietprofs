@@ -47720,6 +47720,7 @@
   {
     "id": "vp-1940",
     "name": "Thi Ha My Pham",
+    "vietnameseName": "Phạm Thị Ha My",
     "profileUrl": "https://www.wpi-aimr.tohoku.ac.jp/en/research/researcher/pham_thm.html",
     "university": "Tohoku University",
     "city": "Sendai",
@@ -47733,7 +47734,10 @@
       "CO2 Reduction"
     ],
     "portrait": "portraits/vp-1940-thi-ha-my-pham.webp",
-    "portraitSource": "https://www.wpi-aimr.tohoku.ac.jp/en/research/researcher/images/pham_thm.jpg"
+    "portraitSource": "https://www.wpi-aimr.tohoku.ac.jp/en/research/researcher/images/pham_thm.jpg",
+    "directFields": [
+      "vietnameseName"
+    ]
   },
   {
     "id": "vp-1941",
