@@ -6068,6 +6068,74 @@
       "identitySignals": [],
       "retrievedAt": "2026-10-12T11:32:27.668Z",
       "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2091": {
+      "name": "Dat Bao",
+      "outcome": "found",
+      "pageUrl": "https://research.monash.edu/en/persons/dat-bao",
+      "imageUrl": "https://research.monash.edu/files-asset/248145940/datbo.jpg/",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T03:23:11.366Z",
+      "note": "stored by audit after visual review"
+    },
+    "vp-2092": {
+      "name": "Phu Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://research.monash.edu/en/persons/phu-nguyen",
+      "imageUrl": "https://research.monash.edu/files-asset/11283835/ba8e69_b33a14099532489885044f082fed5212.png/",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T03:23:11.374Z",
+      "note": "stored by audit after visual review"
+    },
+    "vp-2093": {
+      "name": "Thang Nguyen - Monash University",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-14T03:21:58.160Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2094": {
+      "name": "Long Pham - Monash University",
+      "outcome": "found",
+      "pageUrl": "https://research.monash.edu/en/persons/long-pham",
+      "imageUrl": "https://research.monash.edu/files-asset/299470797/190822_Monash_staffHeadshots_0027_1_.jpg/",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T03:23:11.374Z",
+      "note": "stored by audit after visual review"
+    },
+    "vp-2095": {
+      "name": "June Tran",
+      "outcome": "found",
+      "pageUrl": "https://www.rmit.edu.au/profiles/t/june-tran",
+      "imageUrl": "https://www.rmit.edu.au/assets/au/en/profile-images/t/june-tran.png",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T03:22:13.158Z"
     }
   }
 }
