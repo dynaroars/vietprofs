@@ -114,7 +114,7 @@ export const SITES: Record<string, SiteConfig> = {
       { key: 'simulator', label: 'Simulator', match: /^\/simulator\.html$/ },
       { key: 'csconfs', label: 'CS Confs', match: /^\/csconfs\.html$/ },
       { key: 'grants', label: 'Awards & Grants', match: /^\/grants\.html$/ },
-      { key: 'jobs', label: 'US Jobs', match: /^\/jobs\.html$/ },
+      { key: 'jobs', label: 'CS Jobs', match: /^\/jobs\.html$/ },
       { key: 'nsf', label: 'NSF Funding', match: /^\/nsf\.html$/ },
       { key: 'submit', label: 'Submit / update', match: /-submit\.html$/ },
       { key: 'statistics', label: 'Statistics', match: /^\/stats\.html$/ },
