@@ -6314,6 +6314,119 @@
       ],
       "retrievedAt": "2026-10-14T03:24:54.145Z",
       "note": "stored by audit after visual review"
+    },
+    "vp-2108": {
+      "name": "Hien Tran - University of Ottawa",
+      "outcome": "found",
+      "pageUrl": "https://telfer.uottawa.ca/en/directory/hien-tran/",
+      "imageUrl": "https://telfer.uottawa.ca/assets/img/crop/5x4v/directory/hien-tran.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T03:25:11.444Z"
+    },
+    "vp-2109": {
+      "name": "Thomas Tran - University of Ottawa",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-14T03:25:13.126Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2110": {
+      "name": "Tuyen Le",
+      "outcome": "found",
+      "pageUrl": "https://www.clemson.edu/cecas/departments/ce/people/faculty/Le.html",
+      "imageUrl": "https://www.clemson.edu/cecas/departments/ce/images/faculty/le.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T03:26:01.817Z",
+      "note": "stored by audit after visual review"
+    },
+    "vp-2111": {
+      "name": "Millian Pham",
+      "outcome": "found",
+      "pageUrl": "https://cla.auburn.edu/directory/millian-pham/",
+      "imageUrl": "https://cla.auburn.edu/media/udqn1lvr/millian-pham.jpg?cc=0,0.06549707602339182,0,0.26783625730994143&width=285&height=285&v=1dd4f67db897f30",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T03:25:14.847Z"
+    },
+    "vp-2112": {
+      "name": "Tuan Vu - Bournemouth University",
+      "outcome": "found",
+      "pageUrl": "https://staffprofiles.bournemouth.ac.uk/display/tvu",
+      "imageUrl": "https://staffprofiles.bournemouth.ac.uk/display/tvu/photo.png",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T03:26:01.824Z",
+      "note": "stored by audit after visual review"
+    },
+    "vp-2113": {
+      "name": "Anh-Thu Le",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-14T03:25:16.522Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2114": {
+      "name": "Thanh Nguyen - University of Alabama at Birmingham",
+      "outcome": "found",
+      "pageUrl": "https://www.uab.edu/engineering/bme/people/faculty/thanh-nguyen-ph-d",
+      "imageUrl": "https://www.uab.edu/engineering/bme/images/photos/faculty/Thanh-Nguyen.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T03:26:01.825Z",
+      "note": "stored by audit after visual review"
+    },
+    "vp-2115": {
+      "name": "Tuan Dang",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-14T03:25:27.680Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2116": {
+      "name": "Phong Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://english.missouri.edu/people/nguyen",
+      "imageUrl": "https://english.missouri.edu/sites/default/files/people-img/pnguyenphoto9760.jpeg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T03:26:01.825Z",
+      "note": "stored by audit after visual review"
     }
   }
 }
