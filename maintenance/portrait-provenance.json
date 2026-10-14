@@ -6565,6 +6565,154 @@
       ],
       "retrievedAt": "2026-10-14T03:27:20.080Z",
       "note": "stored by audit after visual review"
+    },
+    "vp-2127": {
+      "name": "Vu Hoang",
+      "outcome": "found",
+      "pageUrl": "https://sciences.utsa.edu/faculty/profiles/hoang-vu.html",
+      "imageUrl": "https://sciences.utsa.edu/faculty/headshots/hoang-vu.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T03:27:50.228Z"
+    },
+    "vp-2128": {
+      "name": "Luan Vu",
+      "outcome": "found",
+      "pageUrl": "https://sciences.utsa.edu/faculty/profiles/vu-luan.html",
+      "imageUrl": "https://sciences.utsa.edu/faculty/headshots/vu-luan.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T03:27:51.649Z"
+    },
+    "vp-2129": {
+      "name": "An Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://hb2504.utep.edu/Home/Profile?username=mnguyen3",
+      "imageUrl": "https://hb2504.utep.edu/photos/mnguyen3.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T03:28:50.448Z",
+      "note": "stored by audit after visual review"
+    },
+    "vp-2130": {
+      "name": "Joanne M. Tran",
+      "outcome": "found",
+      "pageUrl": "https://www.usm.edu/faculty-directory/profile.php?id=2011801",
+      "imageUrl": "https://www.usm.edu/_resources/digital-measures/faculty-images/joanne-tran.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T03:27:53.589Z"
+    },
+    "vp-2131": {
+      "name": "Yen Pham",
+      "outcome": "found",
+      "pageUrl": "https://coehs.unm.edu/faculty-staff/profiles/pham-yen-kim.html",
+      "imageUrl": "https://coehs.unm.edu/uploads/images/faculty-staff/spcd/pham-yen.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T03:27:56.233Z"
+    },
+    "vp-2132": {
+      "name": "Son Dang",
+      "outcome": "found",
+      "pageUrl": "https://www.ou.edu/mcee/mpge/people/faculty/son-dang",
+      "imageUrl": "https://www.ou.edu/content/mcee/mpge/people/faculty/son-dang/_jcr_content/content/section/par/image_1626559439.img.jpg/1760968988669.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T03:28:06.667Z"
+    },
+    "vp-2133": {
+      "name": "Nhat Q. Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://biz.colostate.edu/about/directory/nqnguyen",
+      "imageUrl": "https://biz.colostate.edu/CMSPages/GetAvatar.aspx?avatarguid=61c5676e-cbcc-4d32-868d-12dee87852b1",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T03:28:50.456Z",
+      "note": "stored by audit after visual review"
+    },
+    "vp-2134": {
+      "name": "Nam H. Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://webapps.utrgv.edu/aa/dm/#/user/namhoang.nguyen",
+      "imageUrl": "https://www.utrgv.edu/rcvcobe/_files/images/faculty/nam-nguyen1.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T03:28:50.456Z",
+      "note": "stored by audit after visual review"
+    },
+    "vp-2135": {
+      "name": "Mai P. Trinh",
+      "outcome": "found",
+      "pageUrl": "https://www.utrgv.edu/rcvcobe/about/meet-faculty-and-staff/index.htm",
+      "imageUrl": "https://www.utrgv.edu/rcvcobe/_files/images/faculty/mai-trinh.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T03:28:16.126Z"
+    },
+    "vp-2136": {
+      "name": "Ursula Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-14T03:28:21.368Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     }
   }
 }
