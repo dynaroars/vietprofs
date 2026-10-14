@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-13T14:12:12.000Z",
+  "updatedAt": "2026-10-14T14:13:12.000Z",
   "batches": [
     {
       "batchNumber": 1,
@@ -18999,6 +18999,237 @@
           "status": "unresolved",
           "notes": [],
           "nextAction": "Crossref author search (affiliation-matched, up to 200 works) found no roster coauthor pair with 2+ shared works. OpenAlex unavailable (daily rate limit); mentorship, grant, and patent evidence not completed. Retry with OpenAlex, then profile/CV, NSF/NIH/patent searches."
+        }
+      ]
+    },
+    {
+      "batchNumber": 82,
+      "rosterIds": [
+        "vp-2138",
+        "vp-2137",
+        "vp-2136",
+        "vp-2135",
+        "vp-2134",
+        "vp-2133",
+        "vp-2132",
+        "vp-2131",
+        "vp-2130",
+        "vp-2129",
+        "vp-2128",
+        "vp-2127",
+        "vp-2126",
+        "vp-2125",
+        "vp-2124",
+        "vp-2123",
+        "vp-2122",
+        "vp-2121",
+        "vp-2120",
+        "vp-2119"
+      ],
+      "startedAt": "2026-10-14T14:10:32.000Z",
+      "status": "complete",
+      "outcomes": [
+        {
+          "rosterId": "vp-2138",
+          "sources": [
+            "https://www.uncfsu.edu/academics/colleges-schools-and-departments/college-of-humanities-and-social-sciences/department-of-intelligence-studies-geospatial-science-political-science-and-history/igph-faculty-and-staff/tran-trung-v"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. Crossref author search (affiliation-matched, up to 200 works) checked for roster coauthor pairs with 2+ shared works: none verified. OpenAlex unavailable (daily rate limit); NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-2137",
+          "sources": [
+            "https://www.sandiego.edu/cas/directory/biography.php?profile_id=13069"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. Crossref author search (affiliation-matched, up to 200 works) checked for roster coauthor pairs with 2+ shared works: none verified. OpenAlex unavailable (daily rate limit); NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-2136",
+          "sources": [
+            "https://faculty.txst.edu/profile/2705080"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. Crossref author search (affiliation-matched, up to 200 works) checked for roster coauthor pairs with 2+ shared works: none verified. OpenAlex unavailable (daily rate limit); NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-2135",
+          "sources": [
+            "https://www.utrgv.edu/rcvcobe/about/meet-faculty-and-staff/index.htm"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. Crossref author search (affiliation-matched, up to 200 works) checked for roster coauthor pairs with 2+ shared works: none verified. OpenAlex unavailable (daily rate limit); NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-2134",
+          "sources": [
+            "https://webapps.utrgv.edu/aa/dm/#/user/namhoang.nguyen"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. Crossref author search (affiliation-matched, up to 200 works) checked for roster coauthor pairs with 2+ shared works: none verified. OpenAlex unavailable (daily rate limit); NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-2133",
+          "sources": [
+            "https://biz.colostate.edu/about/directory/nqnguyen"
+          ],
+          "relationshipIds": [
+            "rel-coauthor-vp-1986-vp-2133"
+          ],
+          "status": "completed",
+          "notes": [],
+          "nextAction": "Verified coauthor edge with vp-1986 via Crossref (2 works, affiliation-matched). OpenAlex unavailable (daily rate limit); grant, patent, and mentorship searches not completed."
+        },
+        {
+          "rosterId": "vp-2132",
+          "sources": [
+            "https://www.ou.edu/mcee/mpge/people/faculty/son-dang"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. Crossref author search (affiliation-matched, up to 200 works) checked for roster coauthor pairs with 2+ shared works: none verified. OpenAlex unavailable (daily rate limit); NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-2131",
+          "sources": [
+            "https://coehs.unm.edu/faculty-staff/profiles/pham-yen-kim.html"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. Crossref author search (affiliation-matched, up to 200 works) checked for roster coauthor pairs with 2+ shared works: none verified. OpenAlex unavailable (daily rate limit); NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-2130",
+          "sources": [
+            "https://www.usm.edu/faculty-directory/profile.php?id=2011801"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. Crossref author search (affiliation-matched, up to 200 works) checked for roster coauthor pairs with 2+ shared works: none verified. OpenAlex unavailable (daily rate limit); NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-2129",
+          "sources": [
+            "https://hb2504.utep.edu/Home/Profile?username=mnguyen3"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. Crossref author search (affiliation-matched, up to 200 works) checked for roster coauthor pairs with 2+ shared works: none verified. OpenAlex unavailable (daily rate limit); NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-2128",
+          "sources": [
+            "https://sciences.utsa.edu/faculty/profiles/vu-luan.html"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. Crossref author search (affiliation-matched, up to 200 works) checked for roster coauthor pairs with 2+ shared works: none verified. OpenAlex unavailable (daily rate limit); NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-2127",
+          "sources": [
+            "https://sciences.utsa.edu/faculty/profiles/hoang-vu.html"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. Crossref author search (affiliation-matched, up to 200 works) checked for roster coauthor pairs with 2+ shared works: none verified. OpenAlex unavailable (daily rate limit); NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-2126",
+          "sources": [
+            "https://www.depts.ttu.edu/research/obesityresearch/faculty/annelise-nguyen.php"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. Crossref author search (affiliation-matched, up to 200 works) checked for roster coauthor pairs with 2+ shared works: none verified. Rejected name-only Crossref match with vp-0260 and vp-1886 (shared works did not include this person). OpenAlex unavailable (daily rate limit); NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-2125",
+          "sources": [
+            "https://scholars.uncw.edu/display/nguyenq"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. Crossref author search (affiliation-matched, up to 200 works) checked for roster coauthor pairs with 2+ shared works: none verified. OpenAlex unavailable (daily rate limit); NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-2124",
+          "sources": [
+            "https://www.uncw.edu/profiles/n/nguyens"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. Crossref author search (affiliation-matched, up to 200 works) checked for roster coauthor pairs with 2+ shared works: none verified. OpenAlex unavailable (daily rate limit); NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-2123",
+          "sources": [
+            "https://ece.gmu.edu/profiles/sle29"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. Crossref author search (affiliation-matched, up to 200 works) checked for roster coauthor pairs with 2+ shared works: none verified. OpenAlex unavailable (daily rate limit); NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-2122",
+          "sources": [
+            "https://www.latech.edu/directory/son-le.php"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. Crossref author search (affiliation-matched, up to 200 works) checked for roster coauthor pairs with 2+ shared works: none verified. OpenAlex unavailable (daily rate limit); NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-2121",
+          "sources": [
+            "https://umwa.memphis.edu/fcv/viewprofile.php?uuid=lle4"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. Crossref author search (affiliation-matched, up to 200 works) checked for roster coauthor pairs with 2+ shared works: none verified. OpenAlex unavailable (daily rate limit); NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-2120",
+          "sources": [
+            "https://facultyweb.kennesaw.edu/lle13/index.php"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. Crossref author search (affiliation-matched, up to 200 works) checked for roster coauthor pairs with 2+ shared works: none verified. OpenAlex unavailable (daily rate limit); NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-2119",
+          "sources": [
+            "https://www.southalabama.edu/colleges/mcob/economic_and_finance/le.html"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. Crossref author search (affiliation-matched, up to 200 works) checked for roster coauthor pairs with 2+ shared works: none verified. OpenAlex unavailable (daily rate limit); NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches."
         }
       ]
     }

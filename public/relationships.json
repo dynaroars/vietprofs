@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-13T14:12:12.000Z",
+  "updatedAt": "2026-10-14T14:13:12.000Z",
   "relationships": [
     {
       "id": "rel-coauthor-vp-0015-vp-0018",
@@ -2704,6 +2704,34 @@
         }
       ],
       "verifiedAt": "2026-10-13T14:12:12.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-1986-vp-2133",
+      "type": "coauthor",
+      "sourceId": "vp-1986",
+      "targetId": "vp-2133",
+      "sources": [
+        "https://doi.org/10.1111/jbfa.12780",
+        "https://doi.org/10.1177/0148558x251395102"
+      ],
+      "evidence": "Crossref records list Tri Tri Nguyen (University of Roehampton) and Nhat Q. Nguyen (Department of Accounting, Colorado State University) as coauthors of two accounting-research articles (2024-2025), each with 3-4 authors; affiliations match both roster profiles.",
+      "works": [
+        {
+          "identifier": "doi:10.1111/jbfa.12780",
+          "title": "Manager sentiment and conditional conservatism",
+          "date": "2024",
+          "url": "https://doi.org/10.1111/jbfa.12780"
+        },
+        {
+          "identifier": "doi:10.1177/0148558x251395102",
+          "title": "Economic Policy Uncertainty and Accounting Reporting Complexity",
+          "date": "2025",
+          "url": "https://doi.org/10.1177/0148558x251395102"
+        }
+      ],
+      "verifiedAt": "2026-10-14T14:13:12.000Z",
       "direct": false,
       "notes": ""
     }
