@@ -527,6 +527,8 @@ const FIELD_OVERRIDES = new Map([
   ['School of Social Sciences|The University of Western Australia', 'Social & Behavioral Sciences'],
   // RMIT's School of Science; this member works in molecular microbiology and the gut microbiome.
   ['School of Science|RMIT University', 'Biological & Biomedical Sciences'],
+  // Fayetteville State's combined department; this member works in geospatial science and remote sensing.
+  ['Department of Intelligence Studies, Geospatial Science, Political Science and History|Fayetteville State University', 'Earth & Environmental Sciences'],
   // Malmö's Department of Urban Studies (urban development, housing policy).
   ['Department of Urban Studies|Malmö University', 'Social & Behavioral Sciences'],
   // NYCU's semiconductor college; 2D semiconductor materials and devices.

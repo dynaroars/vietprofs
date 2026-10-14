@@ -47720,6 +47720,7 @@
   {
     "id": "vp-1940",
     "name": "Thi Ha My Pham",
+    "vietnameseName": "Phạm Thị Ha My",
     "profileUrl": "https://www.wpi-aimr.tohoku.ac.jp/en/research/researcher/pham_thm.html",
     "university": "Tohoku University",
     "city": "Sendai",
@@ -47733,7 +47734,10 @@
       "CO2 Reduction"
     ],
     "portrait": "portraits/vp-1940-thi-ha-my-pham.webp",
-    "portraitSource": "https://www.wpi-aimr.tohoku.ac.jp/en/research/researcher/images/pham_thm.jpg"
+    "portraitSource": "https://www.wpi-aimr.tohoku.ac.jp/en/research/researcher/images/pham_thm.jpg",
+    "directFields": [
+      "vietnameseName"
+    ]
   },
   {
     "id": "vp-1941",
@@ -47848,6 +47852,7 @@
   {
     "id": "vp-1948",
     "name": "Maria Ngoc Thi Huong Pham",
+    "vietnameseName": "Phạm Thị Ngọc Hương",
     "profileUrl": "https://www.odont.uio.no/iko/personer/vit/hmnpham/index.html",
     "university": "University of Oslo",
     "city": "Oslo",
@@ -47860,7 +47865,10 @@
       "Oral Medicine"
     ],
     "portrait": "portraits/vp-1948-maria-ngoc-thi-huong-pham.webp",
-    "portraitSource": "https://www.odont.uio.no/iko/personer/vit/hmnpham/7029440b-aa09-4e96-932e-4fa4d886296f.png"
+    "portraitSource": "https://www.odont.uio.no/iko/personer/vit/hmnpham/7029440b-aa09-4e96-932e-4fa4d886296f.png",
+    "directFields": [
+      "vietnameseName"
+    ]
   },
   {
     "id": "vp-1949",
@@ -50672,5 +50680,1008 @@
     ],
     "portrait": "portraits/vp-2090-khoa-dang-hoang.webp",
     "portraitSource": "https://pure.hud.ac.uk/files-asset/40973019/image.png"
+  },
+  {
+    "id": "vp-2091",
+    "name": "Dat Bao",
+    "profileUrl": "https://research.monash.edu/en/persons/dat-bao",
+    "university": "Monash University",
+    "city": "Melbourne",
+    "state": "Victoria",
+    "country": "Australia",
+    "department": "School of Education and Culture",
+    "rank": "Senior Lecturer",
+    "track": "Tenure-line",
+    "researchAreas": [
+      "Silence Studies",
+      "Creative Pedagogy",
+      "Language Education",
+      "Intercultural Education"
+    ],
+    "portrait": "portraits/vp-2091-dat-bao.webp",
+    "portraitSource": "https://research.monash.edu/files-asset/248145940/datbo.jpg/"
+  },
+  {
+    "id": "vp-2092",
+    "name": "Phu Nguyen",
+    "profileUrl": "https://research.monash.edu/en/persons/phu-nguyen",
+    "university": "Monash University",
+    "city": "Melbourne",
+    "state": "Victoria",
+    "country": "Australia",
+    "department": "Department of Civil and Environmental Engineering",
+    "rank": "Lecturer",
+    "track": "Tenure-line",
+    "researchAreas": [
+      "Computational Mechanics",
+      "Phase-Field Fracture",
+      "Dynamic Fracture",
+      "Machine Learning"
+    ],
+    "phdInstitution": "Delft University of Technology",
+    "portrait": "portraits/vp-2092-phu-nguyen.webp",
+    "portraitSource": "https://research.monash.edu/files-asset/11283835/ba8e69_b33a14099532489885044f082fed5212.png/"
+  },
+  {
+    "id": "vp-2093",
+    "name": "Thang Nguyen - Monash University",
+    "profileUrl": "https://research.monash.edu/en/persons/thang-nguyen",
+    "university": "Monash University",
+    "city": "Melbourne",
+    "state": "Victoria",
+    "country": "Australia",
+    "department": "Department of Civil and Environmental Engineering",
+    "rank": "Lecturer",
+    "track": "Tenure-line",
+    "researchAreas": [
+      "Geotechnical Engineering",
+      "Soil-Structure Interaction",
+      "Particle-Based Simulation"
+    ]
+  },
+  {
+    "id": "vp-2094",
+    "name": "Long Pham - Monash University",
+    "profileUrl": "https://research.monash.edu/en/persons/long-pham",
+    "university": "Monash University",
+    "city": "Melbourne",
+    "state": "Victoria",
+    "country": "Australia",
+    "department": "Department of Banking and Finance",
+    "rank": "Lecturer",
+    "track": "Tenure-line",
+    "researchAreas": [
+      "Finance"
+    ],
+    "portrait": "portraits/vp-2094-long-pham-monash-university.webp",
+    "portraitSource": "https://research.monash.edu/files-asset/299470797/190822_Monash_staffHeadshots_0027_1_.jpg/"
+  },
+  {
+    "id": "vp-2095",
+    "name": "June Tran",
+    "profileUrl": "https://www.rmit.edu.au/profiles/t/june-tran",
+    "university": "RMIT University",
+    "city": "Melbourne",
+    "state": "Victoria",
+    "country": "Australia",
+    "department": "School of Management",
+    "rank": "Lecturer",
+    "track": "Tenure-line",
+    "researchAreas": [
+      "Human Resource Management",
+      "Skilled Migrants",
+      "Graduate Employability",
+      "Higher Education"
+    ],
+    "portrait": "portraits/vp-2095-june-tran.webp",
+    "portraitSource": "https://www.rmit.edu.au/assets/au/en/profile-images/t/june-tran.png"
+  },
+  {
+    "id": "vp-2096",
+    "name": "Tien Huynh",
+    "profileUrl": "https://www.rmit.edu.au/profiles/h/tien-huynh",
+    "university": "RMIT University",
+    "city": "Melbourne",
+    "state": "Victoria",
+    "country": "Australia",
+    "department": "School of Science",
+    "rank": "Associate Professor",
+    "track": "Tenure-line",
+    "researchAreas": [
+      "Environmental Sustainability",
+      "Plant Biology",
+      "Fungal Biomaterials"
+    ],
+    "portrait": "portraits/vp-2096-tien-huynh.webp",
+    "portraitSource": "https://www.rmit.edu.au/assets/au/en/profile-images/h/tien-huynh.jpeg"
+  },
+  {
+    "id": "vp-2097",
+    "name": "Anne Vu",
+    "profileUrl": "https://research-repository.uwa.edu.au/en/persons/anne-vu",
+    "university": "The University of Western Australia",
+    "city": "Perth",
+    "state": "Western Australia",
+    "country": "Australia",
+    "department": "School of Health and Clinical Sciences",
+    "rank": "Lecturer",
+    "track": "Tenure-line",
+    "researchAreas": [
+      "Social Work",
+      "Social Policy"
+    ]
+  },
+  {
+    "id": "vp-2098",
+    "name": "Giang Tran",
+    "profileUrl": "https://uwaterloo.ca/applied-mathematics/profiles/giang-tran",
+    "university": "University of Waterloo",
+    "city": "Waterloo",
+    "state": "Ontario",
+    "country": "Canada",
+    "department": "Department of Applied Mathematics",
+    "rank": "Associate Professor",
+    "track": "Tenure-line",
+    "researchAreas": [
+      "Sparse Modeling",
+      "Sparse Optimization",
+      "Data Science",
+      "Image Processing",
+      "Compressed Sensing"
+    ],
+    "phdInstitution": "University of California, Los Angeles",
+    "phdYear": 2015,
+    "portrait": "portraits/vp-2098-giang-tran.webp",
+    "portraitSource": "https://uwaterloo.ca/applied-mathematics/sites/default/files/uploads/images/3197_colour_web.jpg"
+  },
+  {
+    "id": "vp-2099",
+    "name": "Yet Nguyen",
+    "profileUrl": "https://www.odu.edu/directory/yet-nguyen",
+    "websiteUrl": "http://ntyet.github.io/",
+    "university": "Old Dominion University",
+    "city": "Norfolk",
+    "state": "Virginia",
+    "country": "United States",
+    "department": "Department of Mathematics and Statistics",
+    "rank": "Associate Professor",
+    "track": "Tenure-line",
+    "researchAreas": [
+      "Large-Scale Inference",
+      "Multiple Hypothesis Testing",
+      "Differential Expression Analysis",
+      "Statistical Learning"
+    ],
+    "phdInstitution": "Iowa State University",
+    "phdYear": 2018,
+    "msInstitution": "Iowa State University",
+    "undergradInstitution": "Vietnam National University",
+    "undergradYear": 2007,
+    "portrait": "portraits/vp-2099-yet-nguyen.webp",
+    "portraitSource": "https://www.odu.edu/sites/default/files/images/74cbfd87.jpg"
+  },
+  {
+    "id": "vp-2100",
+    "name": "Sharon Tran",
+    "profileUrl": "https://english.umbc.edu/core-faculty/sharon-tran/",
+    "university": "University of Maryland, Baltimore County",
+    "city": "Baltimore",
+    "state": "Maryland",
+    "country": "United States",
+    "department": "Department of English",
+    "rank": "Associate Professor",
+    "track": "Tenure-line",
+    "researchAreas": [
+      "Asian American Literature",
+      "Cultural Studies",
+      "Feminism",
+      "Queer Theory"
+    ],
+    "phdInstitution": "University of California, Los Angeles",
+    "msInstitution": "University of California, Los Angeles",
+    "portrait": "portraits/vp-2100-sharon-tran.webp",
+    "portraitSource": "https://english.umbc.edu/wp-content/uploads/sites/242/2024/02/S.-Tran-Headshot-276x300.png"
+  },
+  {
+    "id": "vp-2101",
+    "name": "Felice Le-Scherban",
+    "profileUrl": "https://drexel.edu/dornsife/academics/faculty/Felice%20Le-Scherban/",
+    "university": "Drexel University",
+    "city": "Philadelphia",
+    "state": "Pennsylvania",
+    "country": "United States",
+    "department": "Department of Epidemiology and Biostatistics",
+    "rank": "Associate Professor",
+    "track": "Tenure-line",
+    "researchAreas": [
+      "Social Epidemiology",
+      "Health Disparities",
+      "Child Health",
+      "Urban Health"
+    ],
+    "phdInstitution": "University of Michigan",
+    "undergradInstitution": "Brown University",
+    "portrait": "portraits/vp-2101-felice-le-scherban.webp",
+    "portraitSource": "https://drexel.edu/~/media/Images/dornsife/academics/Faculty%20Headshots/Le-Scherban.ashx?h=150&la=en&w=140&hash=A569B88544AC9F630E73A78D6C182BF356424FB8"
+  },
+  {
+    "id": "vp-2102",
+    "name": "Dieu-My T. Tran",
+    "profileUrl": "https://www.unlv.edu/people/dieu-my-tran",
+    "university": "University of Nevada, Las Vegas",
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "country": "United States",
+    "department": "School of Nursing",
+    "rank": "Associate Professor",
+    "track": "Tenure-line",
+    "researchAreas": [
+      "Cardiovascular Risk Reduction",
+      "College Student Health",
+      "Nursing Education"
+    ],
+    "phdInstitution": "University of Nebraska Medical Center",
+    "undergradInstitution": "University of Nebraska Medical Center",
+    "portrait": "portraits/vp-2102-dieu-my-t-tran.webp",
+    "portraitSource": "https://www.unlv.edu/sites/default/files/media/image/2023-02/D74611-006-Dieu-My-Tran-pp.jpg"
+  },
+  {
+    "id": "vp-2103",
+    "name": "Danh Pham",
+    "profileUrl": "https://music.wsu.edu/faculty/wsu-profile/danh.pham/",
+    "university": "Washington State University",
+    "city": "Pullman",
+    "state": "Washington",
+    "country": "United States",
+    "department": "School of Music",
+    "rank": "Professor",
+    "track": "Tenure-line",
+    "researchAreas": [
+      "Conducting",
+      "Wind Ensemble",
+      "Orchestra"
+    ],
+    "portrait": "portraits/vp-2103-danh-pham.webp",
+    "portraitSource": "https://s3.wp.wsu.edu/uploads/sites/908/2024/06/Danh_Pham_FINAL_square-792x792.jpg"
+  },
+  {
+    "id": "vp-2104",
+    "name": "Huy The Nguyen",
+    "profileUrl": "https://www.qmul.ac.uk/maths/profiles/nguyenhthe.html",
+    "websiteUrl": "https://sites.google.com/site/mathnguyenthehuy/home",
+    "university": "Queen Mary University of London",
+    "city": "London",
+    "country": "United Kingdom",
+    "department": "School of Mathematical Sciences",
+    "rank": "Associate Professor",
+    "track": "Tenure-line",
+    "researchAreas": [
+      "Geometric Analysis",
+      "Ricci Flow",
+      "Mean Curvature Flow",
+      "Willmore Surfaces"
+    ],
+    "phdInstitution": "Australian National University",
+    "phdYear": 2008,
+    "portrait": "portraits/vp-2104-huy-the-nguyen.webp",
+    "portraitSource": "https://www.qmul.ac.uk/maths/media/maths/people/staff-photos/Huy-Nguyen.jpg"
+  },
+  {
+    "id": "vp-2105",
+    "name": "Tuan D. Pham",
+    "profileUrl": "https://www.qmul.ac.uk/dentistry/people/profiles/professortuanpham.html",
+    "university": "Queen Mary University of London",
+    "city": "London",
+    "country": "United Kingdom",
+    "department": "Institute of Dentistry",
+    "rank": "Professor",
+    "track": "Tenure-line",
+    "researchAreas": [
+      "Artificial Intelligence",
+      "Medical Imaging",
+      "Dental Diagnostics"
+    ],
+    "phdInstitution": "University of New South Wales",
+    "phdYear": 1995,
+    "portrait": "portraits/vp-2105-tuan-d-pham.webp",
+    "portraitSource": "https://www.qmul.ac.uk/dentistry/media/dentistry/staff/photo-tuanPham-2025.4.jpg"
+  },
+  {
+    "id": "vp-2106",
+    "name": "Vu Tran - University of Reading",
+    "profileUrl": "https://www.icmacentre.ac.uk/people/dr-vu-tran",
+    "university": "University of Reading",
+    "city": "Reading",
+    "country": "United Kingdom",
+    "department": "ICMA Centre, Henley Business School",
+    "rank": "Lecturer",
+    "track": "Tenure-line",
+    "researchAreas": [
+      "Credit Risk",
+      "Credit Ratings",
+      "Market Efficiency",
+      "Social Media in Finance"
+    ],
+    "phdInstitution": "Bangor University"
+  },
+  {
+    "id": "vp-2107",
+    "name": "Quynh Nguyen - Bournemouth University",
+    "profileUrl": "https://staffprofiles.bournemouth.ac.uk/display/qtnguyen",
+    "linkedinUrl": "https://www.linkedin.com/in/quynh-nguyentt",
+    "university": "Bournemouth University",
+    "city": "Poole",
+    "country": "United Kingdom",
+    "department": "Bournemouth University Business School",
+    "rank": "Lecturer",
+    "track": "Tenure-line",
+    "researchAreas": [
+      "Hospitality Management",
+      "Consumer Behaviour",
+      "Tourism Employment"
+    ],
+    "phdInstitution": "Bournemouth University",
+    "phdYear": 2019,
+    "msInstitution": "Bournemouth University",
+    "portrait": "portraits/vp-2107-quynh-nguyen-bournemouth-university.webp",
+    "portraitSource": "https://staffprofiles.bournemouth.ac.uk/display/qtnguyen/photo.png"
+  },
+  {
+    "id": "vp-2108",
+    "name": "Hien Tran - University of Ottawa",
+    "profileUrl": "https://telfer.uottawa.ca/en/directory/hien-tran/",
+    "university": "University of Ottawa",
+    "city": "Ottawa",
+    "state": "Ontario",
+    "country": "Canada",
+    "department": "Telfer School of Management",
+    "rank": "Associate Professor",
+    "track": "Tenure-line",
+    "researchAreas": [
+      "Entrepreneurship",
+      "Strategic Management",
+      "Innovation"
+    ],
+    "phdInstitution": "University of Trento",
+    "undergradInstitution": "Foreign Trade University",
+    "portrait": "portraits/vp-2108-hien-tran-university-of-ottawa.webp",
+    "portraitSource": "https://telfer.uottawa.ca/assets/img/crop/5x4v/directory/hien-tran.jpg"
+  },
+  {
+    "id": "vp-2109",
+    "name": "Thomas Tran - University of Ottawa",
+    "profileUrl": "https://www.uottawa.ca/faculty-engineering/school-electrical-engineering-computer-science/directory/thomas-tran",
+    "university": "University of Ottawa",
+    "city": "Ottawa",
+    "state": "Ontario",
+    "country": "Canada",
+    "department": "School of Electrical Engineering and Computer Science",
+    "rank": "Professor",
+    "track": "Tenure-line",
+    "researchAreas": [
+      "Artificial Intelligence",
+      "Multi-Agent Systems",
+      "Electronic Commerce",
+      "Trust and Reputation Modeling"
+    ],
+    "phdInstitution": "University of Waterloo",
+    "undergradInstitution": "Brandon University",
+    "undergradYear": 1999,
+    "postdocInstitution": "University of Waterloo"
+  },
+  {
+    "id": "vp-2110",
+    "name": "Tuyen Le",
+    "profileUrl": "https://www.clemson.edu/cecas/departments/ce/people/faculty/Le.html",
+    "university": "Clemson University",
+    "city": "Clemson",
+    "state": "South Carolina",
+    "country": "United States",
+    "department": "Glenn Department of Civil Engineering",
+    "rank": "Associate Professor",
+    "track": "Tenure-line",
+    "researchAreas": [
+      "Digital Project Delivery",
+      "Construction Management",
+      "Civil Infrastructure Management"
+    ],
+    "phdInstitution": "Iowa State University",
+    "phdYear": 2017,
+    "msInstitution": "Ho Chi Minh City University of Technology",
+    "undergradInstitution": "Ho Chi Minh City University of Technology",
+    "undergradYear": 2011,
+    "portrait": "portraits/vp-2110-tuyen-le.webp",
+    "portraitSource": "https://www.clemson.edu/cecas/departments/ce/images/faculty/le.jpg"
+  },
+  {
+    "id": "vp-2111",
+    "name": "Millian Pham",
+    "profileUrl": "https://cla.auburn.edu/directory/millian-pham/",
+    "university": "Auburn University",
+    "city": "Auburn",
+    "state": "Alabama",
+    "country": "United States",
+    "department": "Department of Art and Art History",
+    "rank": "Associate Professor",
+    "track": "Tenure-line",
+    "researchAreas": [
+      "Sculpture",
+      "Painting",
+      "Printmaking",
+      "Performance"
+    ],
+    "undergradInstitution": "University of Tulsa",
+    "portrait": "portraits/vp-2111-millian-pham.webp",
+    "portraitSource": "https://cla.auburn.edu/media/udqn1lvr/millian-pham.jpg?cc=0,0.06549707602339182,0,0.26783625730994143&width=285&height=285&v=1dd4f67db897f30"
+  },
+  {
+    "id": "vp-2112",
+    "name": "Tuan Vu - Bournemouth University",
+    "profileUrl": "https://staffprofiles.bournemouth.ac.uk/display/tvu",
+    "university": "Bournemouth University",
+    "city": "Poole",
+    "country": "United Kingdom",
+    "department": "Department of Accounting, Finance and Economics",
+    "rank": "Senior Lecturer",
+    "track": "Tenure-line",
+    "researchAreas": [
+      "Financial Reporting",
+      "Pension Accounting",
+      "Accounting Standards"
+    ],
+    "phdInstitution": "University of Exeter",
+    "phdYear": 2017,
+    "msInstitution": "University of Exeter",
+    "undergradInstitution": "University of Exeter",
+    "undergradYear": 2011,
+    "portrait": "portraits/vp-2112-tuan-vu-bournemouth-university.webp",
+    "portraitSource": "https://staffprofiles.bournemouth.ac.uk/display/tvu/photo.png"
+  },
+  {
+    "id": "vp-2113",
+    "name": "Anh-Thu Le",
+    "profileUrl": "https://physics.uconn.edu/person/thu-le/",
+    "university": "University of Connecticut",
+    "city": "Storrs",
+    "state": "Connecticut",
+    "country": "United States",
+    "department": "Department of Physics",
+    "rank": "Professor",
+    "track": "Tenure-line",
+    "researchAreas": [
+      "Attosecond Physics",
+      "Strong-Field Physics",
+      "High-Harmonic Generation"
+    ],
+    "phdInstitution": "Belarusian State University",
+    "phdYear": 1994,
+    "postdocInstitution": "Memorial University of Newfoundland"
+  },
+  {
+    "id": "vp-2114",
+    "name": "Thanh Nguyen - University of Alabama at Birmingham",
+    "profileUrl": "https://www.uab.edu/engineering/bme/people/faculty/thanh-nguyen-ph-d",
+    "university": "University of Alabama at Birmingham",
+    "city": "Birmingham",
+    "state": "Alabama",
+    "country": "United States",
+    "department": "Department of Biomedical Engineering",
+    "rank": "Assistant Professor",
+    "track": "Tenure-line",
+    "researchAreas": [
+      "Artificial Intelligence",
+      "Visual Analytics",
+      "Bioinformatics"
+    ],
+    "phdInstitution": "Indiana University Purdue University Indianapolis",
+    "phdYear": 2018,
+    "undergradInstitution": "Indiana University Purdue University Indianapolis",
+    "undergradYear": 2012,
+    "portrait": "portraits/vp-2114-thanh-nguyen-university-of-alabama-at-birmingham.webp",
+    "portraitSource": "https://www.uab.edu/engineering/bme/images/photos/faculty/Thanh-Nguyen.jpg"
+  },
+  {
+    "id": "vp-2115",
+    "name": "Tuan Dang",
+    "profileUrl": "https://engineering.uark.edu/electrical-engineering-computer-science/electrical-engineering-faculty/uid/tuand/name/Tuan+Dang/",
+    "websiteUrl": "https://cogniboticslab.org/",
+    "university": "University of Arkansas",
+    "city": "Fayetteville",
+    "state": "Arkansas",
+    "country": "United States",
+    "department": "Department of Electrical Engineering and Computer Science",
+    "rank": "Assistant Professor",
+    "track": "Tenure-line",
+    "researchAreas": [
+      "Cognitive Robotics",
+      "Mapping and Navigation",
+      "Motion Planning"
+    ]
+  },
+  {
+    "id": "vp-2116",
+    "name": "Phong Nguyen",
+    "profileUrl": "https://english.missouri.edu/people/nguyen",
+    "university": "University of Missouri",
+    "city": "Columbia",
+    "state": "Missouri",
+    "country": "United States",
+    "department": "Department of English",
+    "rank": "Professor",
+    "track": "Tenure-line",
+    "researchAreas": [
+      "Creative Writing",
+      "Fiction",
+      "19th-Century American Literature"
+    ],
+    "phdInstitution": "University of Wisconsin-Milwaukee",
+    "phdYear": 2007,
+    "msInstitution": "Emerson College",
+    "undergradInstitution": "Providence College",
+    "undergradYear": 2001,
+    "honors": [
+      {
+        "name": "Miller Family Endowed Chair of Writing",
+        "year": null,
+        "category": "distinguished_professorship",
+        "organization": "University of Missouri",
+        "source": "https://english.missouri.edu/people/nguyen"
+      }
+    ],
+    "portrait": "portraits/vp-2116-phong-nguyen.webp",
+    "portraitSource": "https://english.missouri.edu/sites/default/files/people-img/pnguyenphoto9760.jpeg"
+  },
+  {
+    "id": "vp-2117",
+    "name": "Ignace Lang Tran",
+    "profileUrl": "https://researchportal.hw.ac.uk/en/persons/ignace-lang-tran/",
+    "university": "Heriot-Watt University",
+    "city": "Edinburgh",
+    "country": "United Kingdom",
+    "department": "School of Engineering and Physical Sciences",
+    "rank": "Professor",
+    "track": "Tenure-line",
+    "researchAreas": [
+      "Computational Toxicology",
+      "Particle Toxicology",
+      "Physiologically Based Pharmacokinetic Modelling"
+    ]
+  },
+  {
+    "id": "vp-2118",
+    "name": "Loc Nguyen",
+    "profileUrl": "https://math.charlotte.edu/directory/loc-nguyen/",
+    "university": "University of North Carolina at Charlotte",
+    "city": "Charlotte",
+    "state": "North Carolina",
+    "country": "United States",
+    "department": "Department of Mathematics and Statistics",
+    "rank": "Associate Professor",
+    "track": "Tenure-line",
+    "researchAreas": [
+      "Partial Differential Equations",
+      "Inverse Problems",
+      "Mathematical Physics"
+    ],
+    "portrait": "portraits/vp-2118-loc-nguyen.webp",
+    "portraitSource": "https://math.charlotte.edu/wp-content/uploads/sites/909/2023/11/loc.jpeg"
+  },
+  {
+    "id": "vp-2119",
+    "name": "Huubinh Le",
+    "profileUrl": "https://www.southalabama.edu/colleges/mcob/economic_and_finance/le.html",
+    "university": "University of South Alabama",
+    "city": "Mobile",
+    "state": "Alabama",
+    "country": "United States",
+    "department": "Department of Economics and Finance",
+    "rank": "Associate Professor",
+    "track": "Tenure-line",
+    "researchAreas": [
+      "Real Estate Economics",
+      "Spatial Econometrics",
+      "Financial Economics"
+    ],
+    "phdInstitution": "Kansas State University",
+    "portrait": "portraits/vp-2119-huubinh-le.webp",
+    "portraitSource": "https://www.southalabama.edu/colleges/mcob/images/le1.jpg"
+  },
+  {
+    "id": "vp-2120",
+    "name": "Linh Le",
+    "profileUrl": "https://facultyweb.kennesaw.edu/lle13/index.php",
+    "university": "Kennesaw State University",
+    "city": "Kennesaw",
+    "state": "Georgia",
+    "country": "United States",
+    "department": "Department of Information Technology",
+    "rank": "Assistant Professor",
+    "track": "Tenure-line",
+    "researchAreas": [
+      "Deep Learning",
+      "Machine Learning",
+      "Data Analytics"
+    ],
+    "phdInstitution": "Kennesaw State University",
+    "phdYear": 2019,
+    "msInstitution": "Marshall University",
+    "undergradInstitution": "Hanoi University of Science and Technology",
+    "undergradYear": 2013,
+    "portrait": "portraits/vp-2120-linh-le.webp",
+    "portraitSource": "https://facultyweb.kennesaw.edu/lle13/images/Linh%20Le-4.jpg"
+  },
+  {
+    "id": "vp-2121",
+    "name": "Linh Ha Le",
+    "profileUrl": "https://umwa.memphis.edu/fcv/viewprofile.php?uuid=lle4",
+    "university": "University of Memphis",
+    "city": "Memphis",
+    "state": "Tennessee",
+    "country": "United States",
+    "department": "Kemmons Wilson School of Hospitality and Resort Management",
+    "rank": "Assistant Professor",
+    "track": "Tenure-line",
+    "researchAreas": [
+      "Hospitality Management",
+      "Consumer Behavior",
+      "Technology Adoption"
+    ]
+  },
+  {
+    "id": "vp-2122",
+    "name": "Son Le",
+    "profileUrl": "https://www.latech.edu/directory/son-le.php",
+    "university": "Louisiana Tech University",
+    "city": "Ruston",
+    "state": "Louisiana",
+    "country": "United States",
+    "department": "Department of Management and Sustainable Supply Chain Management",
+    "rank": "Professor",
+    "track": "Tenure-line",
+    "researchAreas": [
+      "Entrepreneurship",
+      "Strategic Management",
+      "Corporate Governance"
+    ],
+    "honors": [
+      {
+        "name": "John Ed Barnes Endowed Professor",
+        "year": null,
+        "category": "distinguished_professorship",
+        "organization": "Louisiana Tech University",
+        "source": "https://www.latech.edu/directory/son-le.php"
+      }
+    ],
+    "portrait": "portraits/vp-2122-son-le.webp",
+    "portraitSource": "https://www.latech.edu/directory/_images/le-son.jpg"
+  },
+  {
+    "id": "vp-2123",
+    "name": "Son Le - George Mason University",
+    "profileUrl": "https://ece.gmu.edu/profiles/sle29",
+    "university": "George Mason University",
+    "city": "Fairfax",
+    "state": "Virginia",
+    "country": "United States",
+    "department": "Department of Electrical and Computer Engineering",
+    "rank": "Associate Professor",
+    "track": "Tenure-line",
+    "researchAreas": [
+      "Semiconductor Materials and Devices",
+      "High-Performance Computing Devices",
+      "Sensing"
+    ],
+    "phdInstitution": "Brown University",
+    "phdYear": 2013,
+    "msInstitution": "Brown University",
+    "undergradInstitution": "Hanoi University of Science and Technology",
+    "undergradYear": 2005,
+    "postdocInstitution": "National Institute of Standards and Technology",
+    "portrait": "portraits/vp-2123-son-le-george-mason-university.webp",
+    "portraitSource": "https://ece.gmu.edu/sites/default/files/2026-08/NEW_son_le_square_profile.jpg"
+  },
+  {
+    "id": "vp-2124",
+    "name": "Simone P. Nguyen",
+    "profileUrl": "https://www.uncw.edu/profiles/n/nguyens",
+    "university": "University of North Carolina Wilmington",
+    "city": "Wilmington",
+    "state": "North Carolina",
+    "country": "United States",
+    "department": "Department of Psychology",
+    "rank": "Professor",
+    "track": "Tenure-line",
+    "researchAreas": [
+      "Cognitive Development",
+      "Conceptual Development",
+      "Categorization"
+    ],
+    "phdInstitution": "University of Illinois Urbana-Champaign",
+    "msInstitution": "University of Illinois Urbana-Champaign",
+    "undergradInstitution": "University of Michigan",
+    "portrait": "portraits/vp-2124-simone-p-nguyen.webp",
+    "portraitSource": "https://uncw.edu/media/images/faculty-staff/n/nguyen-simone-simone-nguyen-200310-2-portrait.jpg"
+  },
+  {
+    "id": "vp-2125",
+    "name": "Qui Ha Hoang Nguyen",
+    "profileUrl": "https://scholars.uncw.edu/display/nguyenq",
+    "university": "University of North Carolina Wilmington",
+    "city": "Wilmington",
+    "state": "North Carolina",
+    "country": "United States",
+    "department": "Film Studies",
+    "rank": "Assistant Professor",
+    "track": "Tenure-line",
+    "researchAreas": [
+      "Vietnamese Cinema",
+      "Southeast Asian Cinemas",
+      "Feminist Media History"
+    ],
+    "portrait": "portraits/vp-2125-qui-ha-hoang-nguyen.webp",
+    "portraitSource": "https://uncw.edu/media/images/faculty-staff/n/nguyen-qui-ha-h-qui-ha-nguyen-105307-2-portrait.jpg"
+  },
+  {
+    "id": "vp-2126",
+    "name": "Thu Annelise Nguyen",
+    "profileUrl": "https://www.depts.ttu.edu/research/obesityresearch/faculty/annelise-nguyen.php",
+    "university": "Texas Tech University",
+    "city": "Lubbock",
+    "state": "Texas",
+    "country": "United States",
+    "department": "School of Veterinary Medicine",
+    "rank": "Professor",
+    "track": "Tenure-line",
+    "researchAreas": [
+      "Toxicology",
+      "Cancer Biology",
+      "Tumor Organoids"
+    ],
+    "phdInstitution": "Texas A&M University",
+    "undergradInstitution": "Texas A&M University",
+    "portrait": "portraits/vp-2126-thu-annelise-nguyen.webp",
+    "portraitSource": "https://www.depts.ttu.edu/research/obesityresearch/faculty/images/Nguyen_Sept2020.jpg"
+  },
+  {
+    "id": "vp-2127",
+    "name": "Vu Hoang",
+    "profileUrl": "https://sciences.utsa.edu/faculty/profiles/hoang-vu.html",
+    "university": "The University of Texas at San Antonio",
+    "city": "San Antonio",
+    "state": "Texas",
+    "country": "United States",
+    "department": "Department of Mathematics",
+    "rank": "Associate Professor",
+    "track": "Tenure-line",
+    "researchAreas": [
+      "Partial Differential Equations",
+      "Fluid Dynamics",
+      "Mathematical Physics"
+    ],
+    "phdInstitution": "Karlsruhe Institute of Technology",
+    "portrait": "portraits/vp-2127-vu-hoang.webp",
+    "portraitSource": "https://sciences.utsa.edu/faculty/headshots/hoang-vu.jpg"
+  },
+  {
+    "id": "vp-2128",
+    "name": "Luan Vu",
+    "profileUrl": "https://sciences.utsa.edu/faculty/profiles/vu-luan.html",
+    "university": "The University of Texas at San Antonio",
+    "city": "San Antonio",
+    "state": "Texas",
+    "country": "United States",
+    "department": "Department of Molecular Microbiology and Immunology",
+    "rank": "Assistant Professor",
+    "track": "Tenure-line",
+    "researchAreas": [
+      "Viral Immunopathogenesis",
+      "Maternal and Infant Immunity",
+      "Respiratory Infection"
+    ],
+    "phdInstitution": "University of Sydney",
+    "portrait": "portraits/vp-2128-luan-vu.webp",
+    "portraitSource": "https://sciences.utsa.edu/faculty/headshots/vu-luan.jpg"
+  },
+  {
+    "id": "vp-2129",
+    "name": "An Nguyen",
+    "profileUrl": "https://hb2504.utep.edu/Home/Profile?username=mnguyen3",
+    "university": "University of Texas at El Paso",
+    "city": "El Paso",
+    "state": "Texas",
+    "country": "United States",
+    "department": "Department of Accounting and Information Systems",
+    "rank": "Assistant Professor",
+    "track": "Tenure-line",
+    "researchAreas": [
+      "Information Systems"
+    ],
+    "portrait": "portraits/vp-2129-an-nguyen.webp",
+    "portraitSource": "https://hb2504.utep.edu/photos/mnguyen3.jpg"
+  },
+  {
+    "id": "vp-2130",
+    "name": "Joanne M. Tran",
+    "profileUrl": "https://www.usm.edu/faculty-directory/profile.php?id=2011801",
+    "university": "University of Southern Mississippi",
+    "city": "Hattiesburg",
+    "state": "Mississippi",
+    "country": "United States",
+    "department": "School of Marketing",
+    "rank": "Associate Professor",
+    "track": "Tenure-line",
+    "researchAreas": [
+      "Consumer Value",
+      "Service Failure and Recovery",
+      "Branding"
+    ],
+    "phdInstitution": "Louisiana Tech University",
+    "undergradInstitution": "University of Southern Mississippi",
+    "portrait": "portraits/vp-2130-joanne-m-tran.webp",
+    "portraitSource": "https://www.usm.edu/_resources/digital-measures/faculty-images/joanne-tran.jpg"
+  },
+  {
+    "id": "vp-2131",
+    "name": "Yen Pham",
+    "profileUrl": "https://coehs.unm.edu/faculty-staff/profiles/pham-yen-kim.html",
+    "university": "University of New Mexico",
+    "city": "Albuquerque",
+    "state": "New Mexico",
+    "country": "United States",
+    "department": "Department of Special Education",
+    "rank": "Associate Professor",
+    "track": "Tenure-line",
+    "researchAreas": [
+      "Secondary Transition",
+      "Adolescents with Disabilities",
+      "Culturally and Linguistically Diverse Learners"
+    ],
+    "phdInstitution": "University of Oregon",
+    "msInstitution": "The City College of New York",
+    "undergradInstitution": "Swarthmore College",
+    "portrait": "portraits/vp-2131-yen-pham.webp",
+    "portraitSource": "https://coehs.unm.edu/uploads/images/faculty-staff/spcd/pham-yen.jpg"
+  },
+  {
+    "id": "vp-2132",
+    "name": "Son Dang",
+    "profileUrl": "https://www.ou.edu/mcee/mpge/people/faculty/son-dang",
+    "university": "University of Oklahoma",
+    "city": "Norman",
+    "state": "Oklahoma",
+    "country": "United States",
+    "department": "Mewbourne School of Petroleum and Geological Engineering",
+    "rank": "Assistant Professor",
+    "track": "Tenure-line",
+    "researchAreas": [
+      "Petrophysics",
+      "Enhanced Oil Recovery",
+      "Geo-Storage",
+      "Material Characterization"
+    ],
+    "phdInstitution": "University of Oklahoma",
+    "msInstitution": "University of Oklahoma",
+    "undergradInstitution": "University of Oklahoma",
+    "portrait": "portraits/vp-2132-son-dang.webp",
+    "portraitSource": "https://www.ou.edu/content/mcee/mpge/people/faculty/son-dang/_jcr_content/content/section/par/image_1626559439.img.jpg/1760968988669.jpg"
+  },
+  {
+    "id": "vp-2133",
+    "name": "Nhat Q. Nguyen",
+    "profileUrl": "https://biz.colostate.edu/about/directory/nqnguyen",
+    "university": "Colorado State University",
+    "city": "Fort Collins",
+    "state": "Colorado",
+    "country": "United States",
+    "department": "Department of Accounting",
+    "rank": "Assistant Professor",
+    "track": "Tenure-line",
+    "researchAreas": [
+      "Capital Markets",
+      "Financial Reporting",
+      "Disclosure"
+    ],
+    "portrait": "portraits/vp-2133-nhat-q-nguyen.webp",
+    "portraitSource": "https://biz.colostate.edu/CMSPages/GetAvatar.aspx?avatarguid=61c5676e-cbcc-4d32-868d-12dee87852b1"
+  },
+  {
+    "id": "vp-2134",
+    "name": "Nam H. Nguyen",
+    "profileUrl": "https://webapps.utrgv.edu/aa/dm/#/user/namhoang.nguyen",
+    "university": "The University of Texas Rio Grande Valley",
+    "city": "Edinburg",
+    "state": "Texas",
+    "country": "United States",
+    "department": "Department of Finance",
+    "rank": "Associate Professor",
+    "track": "Tenure-line",
+    "researchAreas": [
+      "Corporate Finance",
+      "Corporate Governance"
+    ],
+    "portrait": "portraits/vp-2134-nam-h-nguyen.webp",
+    "portraitSource": "https://www.utrgv.edu/rcvcobe/_files/images/faculty/nam-nguyen1.jpg"
+  },
+  {
+    "id": "vp-2135",
+    "name": "Mai P. Trinh",
+    "profileUrl": "https://www.utrgv.edu/rcvcobe/about/meet-faculty-and-staff/index.htm",
+    "university": "The University of Texas Rio Grande Valley",
+    "city": "Edinburg",
+    "state": "Texas",
+    "country": "United States",
+    "department": "Department of Management",
+    "rank": "Assistant Professor",
+    "track": "Tenure-line",
+    "researchAreas": [
+      "Leadership Development",
+      "Organizational Behavior",
+      "Experiential Learning"
+    ],
+    "portrait": "portraits/vp-2135-mai-p-trinh.webp",
+    "portraitSource": "https://www.utrgv.edu/rcvcobe/_files/images/faculty/mai-trinh.jpg"
+  },
+  {
+    "id": "vp-2136",
+    "name": "Ursula Nguyen",
+    "profileUrl": "https://faculty.txst.edu/profile/2705080",
+    "university": "Texas State University",
+    "city": "San Marcos",
+    "state": "Texas",
+    "country": "United States",
+    "department": "Department of Curriculum and Instruction",
+    "rank": "Assistant Professor",
+    "track": "Tenure-line",
+    "researchAreas": [
+      "STEM Education",
+      "Engineering Education"
+    ],
+    "phdInstitution": "University of Texas at Austin",
+    "phdYear": 2023,
+    "undergradInstitution": "University of Texas at Austin",
+    "undergradYear": 2014
+  },
+  {
+    "id": "vp-2137",
+    "name": "Cawa Tran",
+    "profileUrl": "https://www.sandiego.edu/cas/directory/biography.php?profile_id=13069",
+    "university": "University of San Diego",
+    "city": "San Diego",
+    "state": "California",
+    "country": "United States",
+    "department": "Department of Biology",
+    "rank": "Associate Professor",
+    "track": "Tenure-line",
+    "researchAreas": [
+      "Marine Symbiosis",
+      "Host-Microbe Interactions",
+      "Coral Bleaching"
+    ],
+    "phdInstitution": "University of Hawaii at Manoa",
+    "phdYear": 2012,
+    "undergradInstitution": "University of California, Berkeley",
+    "undergradYear": 2004,
+    "postdocInstitution": "Stanford University",
+    "portrait": "portraits/vp-2137-cawa-tran.webp",
+    "portraitSource": "https://www.sandiego.edu/assets/directory/uploads/images/13069.jpg"
+  },
+  {
+    "id": "vp-2138",
+    "name": "Trung V. Tran",
+    "profileUrl": "https://www.uncfsu.edu/academics/colleges-schools-and-departments/college-of-humanities-and-social-sciences/department-of-intelligence-studies-geospatial-science-political-science-and-history/igph-faculty-and-staff/tran-trung-v",
+    "university": "Fayetteville State University",
+    "city": "Fayetteville",
+    "state": "North Carolina",
+    "country": "United States",
+    "department": "Department of Intelligence Studies, Geospatial Science, Political Science and History",
+    "rank": "Associate Professor",
+    "track": "Tenure-line",
+    "researchAreas": [
+      "GIScience",
+      "Remote Sensing",
+      "Land Cover and Land Use Change",
+      "Flood Monitoring"
+    ],
+    "phdInstitution": "University of Oklahoma"
   }
 ]

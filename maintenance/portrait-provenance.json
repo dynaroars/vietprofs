@@ -6068,6 +6068,673 @@
       "identitySignals": [],
       "retrievedAt": "2026-10-12T11:32:27.668Z",
       "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2091": {
+      "name": "Dat Bao",
+      "outcome": "found",
+      "pageUrl": "https://research.monash.edu/en/persons/dat-bao",
+      "imageUrl": "https://research.monash.edu/files-asset/248145940/datbo.jpg/",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T03:23:11.366Z",
+      "note": "stored by audit after visual review"
+    },
+    "vp-2092": {
+      "name": "Phu Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://research.monash.edu/en/persons/phu-nguyen",
+      "imageUrl": "https://research.monash.edu/files-asset/11283835/ba8e69_b33a14099532489885044f082fed5212.png/",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T03:23:11.374Z",
+      "note": "stored by audit after visual review"
+    },
+    "vp-2093": {
+      "name": "Thang Nguyen - Monash University",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-14T03:21:58.160Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2094": {
+      "name": "Long Pham - Monash University",
+      "outcome": "found",
+      "pageUrl": "https://research.monash.edu/en/persons/long-pham",
+      "imageUrl": "https://research.monash.edu/files-asset/299470797/190822_Monash_staffHeadshots_0027_1_.jpg/",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T03:23:11.374Z",
+      "note": "stored by audit after visual review"
+    },
+    "vp-2095": {
+      "name": "June Tran",
+      "outcome": "found",
+      "pageUrl": "https://www.rmit.edu.au/profiles/t/june-tran",
+      "imageUrl": "https://www.rmit.edu.au/assets/au/en/profile-images/t/june-tran.png",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T03:22:13.158Z"
+    },
+    "vp-2096": {
+      "name": "Tien Huynh",
+      "outcome": "found",
+      "pageUrl": "https://www.rmit.edu.au/profiles/h/tien-huynh",
+      "imageUrl": "https://www.rmit.edu.au/assets/au/en/profile-images/h/tien-huynh.jpeg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T03:23:36.736Z"
+    },
+    "vp-2097": {
+      "name": "Anne Vu",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-14T03:23:41.223Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2098": {
+      "name": "Giang Tran",
+      "outcome": "found",
+      "pageUrl": "https://uwaterloo.ca/applied-mathematics/profiles/giang-tran",
+      "imageUrl": "https://uwaterloo.ca/applied-mathematics/sites/default/files/uploads/images/3197_colour_web.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T03:24:54.136Z",
+      "note": "stored by audit after visual review"
+    },
+    "vp-2099": {
+      "name": "Yet Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://www.odu.edu/directory/yet-nguyen",
+      "imageUrl": "https://www.odu.edu/sites/default/files/images/74cbfd87.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T03:24:54.144Z",
+      "note": "stored by audit after visual review"
+    },
+    "vp-2100": {
+      "name": "Sharon Tran",
+      "outcome": "found",
+      "pageUrl": "https://english.umbc.edu/core-faculty/sharon-tran/",
+      "imageUrl": "https://english.umbc.edu/wp-content/uploads/sites/242/2024/02/S.-Tran-Headshot-276x300.png",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T03:24:54.144Z",
+      "note": "stored by audit after visual review"
+    },
+    "vp-2101": {
+      "name": "Felice Le-Scherban",
+      "outcome": "found",
+      "pageUrl": "https://drexel.edu/dornsife/academics/faculty/Felice%20Le-Scherban/",
+      "imageUrl": "https://drexel.edu/~/media/Images/dornsife/academics/Faculty%20Headshots/Le-Scherban.ashx?h=150&la=en&w=140&hash=A569B88544AC9F630E73A78D6C182BF356424FB8",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T03:24:10.690Z"
+    },
+    "vp-2102": {
+      "name": "Dieu-My T. Tran",
+      "outcome": "found",
+      "pageUrl": "https://www.unlv.edu/people/dieu-my-tran",
+      "imageUrl": "https://www.unlv.edu/sites/default/files/media/image/2023-02/D74611-006-Dieu-My-Tran-pp.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T03:24:11.722Z"
+    },
+    "vp-2103": {
+      "name": "Danh Pham",
+      "outcome": "found",
+      "pageUrl": "https://music.wsu.edu/faculty/wsu-profile/danh.pham/",
+      "imageUrl": "https://s3.wp.wsu.edu/uploads/sites/908/2024/06/Danh_Pham_FINAL_square-792x792.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T03:24:13.148Z"
+    },
+    "vp-2104": {
+      "name": "Huy The Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://www.qmul.ac.uk/maths/profiles/nguyenhthe.html",
+      "imageUrl": "https://www.qmul.ac.uk/maths/media/maths/people/staff-photos/Huy-Nguyen.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T03:24:54.144Z",
+      "note": "stored by audit after visual review"
+    },
+    "vp-2105": {
+      "name": "Tuan D. Pham",
+      "outcome": "found",
+      "pageUrl": "https://www.qmul.ac.uk/dentistry/people/profiles/professortuanpham.html",
+      "imageUrl": "https://www.qmul.ac.uk/dentistry/media/dentistry/staff/photo-tuanPham-2025.4.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T03:24:54.145Z",
+      "note": "stored by audit after visual review"
+    },
+    "vp-2106": {
+      "name": "Vu Tran - University of Reading",
+      "outcome": "not_found",
+      "pageUrl": "https://www.icmacentre.ac.uk/people/dr-vu-tran",
+      "imageUrl": "https://assets.henley.ac.uk/v3/peopleImages/_800x418_crop_center-center_82_none/293549/Vu-Tran.jpg?mtime=1582107425",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T03:24:17.816Z",
+      "note": "candidate failed 120x120 or portrait-aspect validation"
+    },
+    "vp-2107": {
+      "name": "Quynh Nguyen - Bournemouth University",
+      "outcome": "found",
+      "pageUrl": "https://staffprofiles.bournemouth.ac.uk/display/qtnguyen",
+      "imageUrl": "https://staffprofiles.bournemouth.ac.uk/display/qtnguyen/photo.png",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T03:24:54.145Z",
+      "note": "stored by audit after visual review"
+    },
+    "vp-2108": {
+      "name": "Hien Tran - University of Ottawa",
+      "outcome": "found",
+      "pageUrl": "https://telfer.uottawa.ca/en/directory/hien-tran/",
+      "imageUrl": "https://telfer.uottawa.ca/assets/img/crop/5x4v/directory/hien-tran.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T03:25:11.444Z"
+    },
+    "vp-2109": {
+      "name": "Thomas Tran - University of Ottawa",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-14T03:25:13.126Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2110": {
+      "name": "Tuyen Le",
+      "outcome": "found",
+      "pageUrl": "https://www.clemson.edu/cecas/departments/ce/people/faculty/Le.html",
+      "imageUrl": "https://www.clemson.edu/cecas/departments/ce/images/faculty/le.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T03:26:01.817Z",
+      "note": "stored by audit after visual review"
+    },
+    "vp-2111": {
+      "name": "Millian Pham",
+      "outcome": "found",
+      "pageUrl": "https://cla.auburn.edu/directory/millian-pham/",
+      "imageUrl": "https://cla.auburn.edu/media/udqn1lvr/millian-pham.jpg?cc=0,0.06549707602339182,0,0.26783625730994143&width=285&height=285&v=1dd4f67db897f30",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T03:25:14.847Z"
+    },
+    "vp-2112": {
+      "name": "Tuan Vu - Bournemouth University",
+      "outcome": "found",
+      "pageUrl": "https://staffprofiles.bournemouth.ac.uk/display/tvu",
+      "imageUrl": "https://staffprofiles.bournemouth.ac.uk/display/tvu/photo.png",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T03:26:01.824Z",
+      "note": "stored by audit after visual review"
+    },
+    "vp-2113": {
+      "name": "Anh-Thu Le",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-14T03:25:16.522Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2114": {
+      "name": "Thanh Nguyen - University of Alabama at Birmingham",
+      "outcome": "found",
+      "pageUrl": "https://www.uab.edu/engineering/bme/people/faculty/thanh-nguyen-ph-d",
+      "imageUrl": "https://www.uab.edu/engineering/bme/images/photos/faculty/Thanh-Nguyen.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T03:26:01.825Z",
+      "note": "stored by audit after visual review"
+    },
+    "vp-2115": {
+      "name": "Tuan Dang",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-14T03:25:27.680Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2116": {
+      "name": "Phong Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://english.missouri.edu/people/nguyen",
+      "imageUrl": "https://english.missouri.edu/sites/default/files/people-img/pnguyenphoto9760.jpeg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T03:26:01.825Z",
+      "note": "stored by audit after visual review"
+    },
+    "vp-2117": {
+      "name": "Ignace Lang Tran",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-14T03:26:24.332Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2118": {
+      "name": "Loc Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://math.charlotte.edu/directory/loc-nguyen/",
+      "imageUrl": "https://math.charlotte.edu/wp-content/uploads/sites/909/2023/11/loc.jpeg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T03:27:20.071Z",
+      "note": "stored by audit after visual review"
+    },
+    "vp-2119": {
+      "name": "Huubinh Le",
+      "outcome": "found",
+      "pageUrl": "https://www.southalabama.edu/colleges/mcob/economic_and_finance/le.html",
+      "imageUrl": "https://www.southalabama.edu/colleges/mcob/images/le1.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T03:27:20.079Z",
+      "note": "stored by audit after visual review"
+    },
+    "vp-2120": {
+      "name": "Linh Le",
+      "outcome": "found",
+      "pageUrl": "https://facultyweb.kennesaw.edu/lle13/index.php",
+      "imageUrl": "https://facultyweb.kennesaw.edu/lle13/images/Linh%20Le-4.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T03:26:28.141Z"
+    },
+    "vp-2121": {
+      "name": "Linh Ha Le",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-14T03:26:29.990Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2122": {
+      "name": "Son Le",
+      "outcome": "found",
+      "pageUrl": "https://www.latech.edu/directory/son-le.php",
+      "imageUrl": "https://www.latech.edu/directory/_images/le-son.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T03:26:31.042Z"
+    },
+    "vp-2123": {
+      "name": "Son Le - George Mason University",
+      "outcome": "found",
+      "pageUrl": "https://ece.gmu.edu/profiles/sle29",
+      "imageUrl": "https://ece.gmu.edu/sites/default/files/2026-08/NEW_son_le_square_profile.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T03:26:32.082Z"
+    },
+    "vp-2124": {
+      "name": "Simone P. Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://www.uncw.edu/profiles/n/nguyens",
+      "imageUrl": "https://uncw.edu/media/images/faculty-staff/n/nguyen-simone-simone-nguyen-200310-2-portrait.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T03:26:33.148Z"
+    },
+    "vp-2125": {
+      "name": "Qui Ha Hoang Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://scholars.uncw.edu/display/nguyenq",
+      "imageUrl": "https://uncw.edu/media/images/faculty-staff/n/nguyen-qui-ha-h-qui-ha-nguyen-105307-2-portrait.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T03:27:20.079Z",
+      "note": "stored by audit after visual review"
+    },
+    "vp-2126": {
+      "name": "Thu Annelise Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://www.depts.ttu.edu/research/obesityresearch/faculty/annelise-nguyen.php",
+      "imageUrl": "https://www.depts.ttu.edu/research/obesityresearch/faculty/images/Nguyen_Sept2020.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T03:27:20.080Z",
+      "note": "stored by audit after visual review"
+    },
+    "vp-2127": {
+      "name": "Vu Hoang",
+      "outcome": "found",
+      "pageUrl": "https://sciences.utsa.edu/faculty/profiles/hoang-vu.html",
+      "imageUrl": "https://sciences.utsa.edu/faculty/headshots/hoang-vu.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T03:27:50.228Z"
+    },
+    "vp-2128": {
+      "name": "Luan Vu",
+      "outcome": "found",
+      "pageUrl": "https://sciences.utsa.edu/faculty/profiles/vu-luan.html",
+      "imageUrl": "https://sciences.utsa.edu/faculty/headshots/vu-luan.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T03:27:51.649Z"
+    },
+    "vp-2129": {
+      "name": "An Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://hb2504.utep.edu/Home/Profile?username=mnguyen3",
+      "imageUrl": "https://hb2504.utep.edu/photos/mnguyen3.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T03:28:50.448Z",
+      "note": "stored by audit after visual review"
+    },
+    "vp-2130": {
+      "name": "Joanne M. Tran",
+      "outcome": "found",
+      "pageUrl": "https://www.usm.edu/faculty-directory/profile.php?id=2011801",
+      "imageUrl": "https://www.usm.edu/_resources/digital-measures/faculty-images/joanne-tran.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T03:27:53.589Z"
+    },
+    "vp-2131": {
+      "name": "Yen Pham",
+      "outcome": "found",
+      "pageUrl": "https://coehs.unm.edu/faculty-staff/profiles/pham-yen-kim.html",
+      "imageUrl": "https://coehs.unm.edu/uploads/images/faculty-staff/spcd/pham-yen.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T03:27:56.233Z"
+    },
+    "vp-2132": {
+      "name": "Son Dang",
+      "outcome": "found",
+      "pageUrl": "https://www.ou.edu/mcee/mpge/people/faculty/son-dang",
+      "imageUrl": "https://www.ou.edu/content/mcee/mpge/people/faculty/son-dang/_jcr_content/content/section/par/image_1626559439.img.jpg/1760968988669.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T03:28:06.667Z"
+    },
+    "vp-2133": {
+      "name": "Nhat Q. Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://biz.colostate.edu/about/directory/nqnguyen",
+      "imageUrl": "https://biz.colostate.edu/CMSPages/GetAvatar.aspx?avatarguid=61c5676e-cbcc-4d32-868d-12dee87852b1",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T03:28:50.456Z",
+      "note": "stored by audit after visual review"
+    },
+    "vp-2134": {
+      "name": "Nam H. Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://webapps.utrgv.edu/aa/dm/#/user/namhoang.nguyen",
+      "imageUrl": "https://www.utrgv.edu/rcvcobe/_files/images/faculty/nam-nguyen1.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T03:28:50.456Z",
+      "note": "stored by audit after visual review"
+    },
+    "vp-2135": {
+      "name": "Mai P. Trinh",
+      "outcome": "found",
+      "pageUrl": "https://www.utrgv.edu/rcvcobe/about/meet-faculty-and-staff/index.htm",
+      "imageUrl": "https://www.utrgv.edu/rcvcobe/_files/images/faculty/mai-trinh.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T03:28:16.126Z"
+    },
+    "vp-2136": {
+      "name": "Ursula Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-14T03:28:21.368Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2137": {
+      "name": "Cawa Tran",
+      "outcome": "found",
+      "pageUrl": "https://www.sandiego.edu/cas/directory/biography.php?profile_id=13069",
+      "imageUrl": "https://www.sandiego.edu/assets/directory/uploads/images/13069.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T03:29:17.425Z",
+      "note": "stored by audit after visual review"
+    },
+    "vp-2138": {
+      "name": "Trung V. Tran",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-14T03:29:26.472Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     }
   }
 }
