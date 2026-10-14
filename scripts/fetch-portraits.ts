@@ -22,6 +22,7 @@ const provenancePath = join(root, 'maintenance/portrait-provenance.json');
 const fixturePath = join(root, 'maintenance/portrait-audit-sample.json');
 const portraitsDir = join(root, 'public/portraits');
 const userAgent = 'VietProfs portrait maintenance (https://vietprofs.roars.dev)';
+const browserUserAgent = `Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130 Safari/537.36 ${userAgent}`;
 const args = new Set(process.argv.slice(2));
 const requestedBatch = Number(process.argv.find((arg) => /^\d+$/.test(arg)) ?? '1');
 const applying = args.has('--apply');
@@ -47,7 +48,14 @@ function hasWordEvidence(value: string, context: string, minimum = 2): boolean {
   const found = new Set(normalizedWords(context));
   return new Set(words.filter((word) => found.has(word))).size >= Math.min(minimum, words.length);
 }
-function hasNameEvidence(name: string, context: string): boolean { return hasWordEvidence(name, context, 2); }
+// Also accept the whole name run together, as in researchmap.jp/nguyenchinghia/avatar.jpg.
+function compact(value: string): string { return normalizedWords(value).join(''); }
+function hasNameEvidence(name: string, context: string): boolean {
+  const words = normalizedWords(name);
+  const runTogether = [words.join(''), [...words.slice(-1), ...words.slice(0, -1)].join('')]; // given-first or surname-first
+  const text = compact(context);
+  return hasWordEvidence(name, context, 2) || runTogether.some((whole) => whole.length >= 10 && text.includes(whole));
+}
 
 function sourcePages(person: Person): Page[] {
   const sources: Array<[string | undefined, SourceType]> = [[person.profileUrl, 'official_faculty'], [person.websiteUrl, 'personal_homepage']];
@@ -74,7 +82,15 @@ function imageCandidates(html: string, page: Page, person: Person): Candidate[] 
     const imageUrl = absoluteUrl(cleanUrl(raw), page.url);
     if (!/^https?:\/\//i.test(imageUrl)) return;
     const low = `${imageUrl} ${context}`.toLowerCase();
-    if (/no[-_ ]?(portrait|photo|image)|place[-_ ]?holder|logo|header|favicon|icon|sprite|gravatar|qr|wordmark|monogram|banner|hero|background|nav|menu|search|arrow|no_photo|nophoto|profile_no_photo|blank|blank_profile|default_profile|profile_placeholder|silhouette/i.test(low)) return;
+    // Frames and scripts (cookie banners, chat widgets) also match the generic src= pattern.
+    if (/\.(?:html?|php|aspx?|js|css)$/i.test(new URL(imageUrl).pathname)) return;
+    // Ad and analytics pixels often carry the page URL (and so the name) in their query string.
+    if (/doubleclick\.net|googleadservices|google-analytics|googletagmanager|googlesyndication|facebook\.com\/tr|bat\.bing\.com|px\.ads\.linkedin|adsrvr\.org|analytics|[/.]pixel/i.test(new URL(imageUrl).hostname + new URL(imageUrl).pathname)) return;
+    // Test the path and markup, not the hostname, and match short words whole: "search" used to
+    // reject every image on researchmap.jp, research.monash.edu, researchers.mq.edu.au, and so on.
+    const screened = `${new URL(imageUrl).pathname} ${context}`.toLowerCase();
+    if (/no[-_ ]?(portrait|photo|image)|place[-_ ]?holder|logo|favicon|sprite|gravatar|wordmark|monogram|banner|silhouette|blank|default[-_ ]?(profile|avatar|image|photo)/i.test(screened)) return;
+    if (/(?<![a-z])(?:header|icons?|qr|hero|background|nav|menu|search|arrow)(?![a-z])/i.test(screened)) return;
     const identity = identitySignals(person, imageUrl, context, page, html);
     if (!identity.includes('name') || identity.length < 2) return;
     let score = 10 + identity.length * 5;
@@ -85,7 +101,7 @@ function imageCandidates(html: string, page: Page, person: Person): Candidate[] 
   for (const match of html.matchAll(/<meta\b[^>]+(?:property|name)=["'](?:og:image|twitter:image)["'][^>]+content=["']([^"']+)["'][^>]*>/gi)) add(match[1], match[0]);
   for (const match of html.matchAll(/<img\b[^>]*\bsrc=["']([^"']+)["'][^>]*>/gi)) add(match[1], match[0]);
   for (const match of html.matchAll(/\b(?:src|data-src|data-image|imageUrl)=["']([^"']+)["']/gi)) add(match[1], match[0]);
-  for (const match of html.matchAll(/\bsrcset=["']([^"']+)["']/gi)) for (const value of match[1].split(',')) add(value.trim().split(/\s+/)[0], match[0]);
+  for (const match of html.matchAll(/\bsrcset=["']([^"']+)["']/gi)) for (const value of match[1].split(/,\s+/)) add(value.trim().split(/\s+/)[0], match[0]);
   for (const match of html.matchAll(/"image"\s*:\s*"([^"]+)"/gi)) add(match[1], match[0]);
   for (const match of html.matchAll(/background-image\s*:\s*url\((?:["']?)([^)'"\s]+)(?:["']?)\)/gi)) add(match[1], match[0]);
   return [...new Map(candidates.sort((a, b) => b.score - a.score).map((candidate) => [candidate.imageUrl, candidate])).values()];
@@ -105,8 +121,44 @@ function confidence(candidate: Candidate): Confidence {
   // against a neighboring card or a page-wide hero image being selected automatically.
   return directSource && corroborated && candidate.identitySignals.includes('stored_roster_url') && candidate.urlHasNameEvidence ? 'HIGH' : 'MEDIUM';
 }
+// Many official profile pages build the photo with JavaScript, so curl sees no <img>. When a stored
+// page exposes no candidate, render it in headless Chromium (Playwright, already a dev dependency)
+// and parse the rendered HTML. One browser is reused for the run; if Chromium isn't installed
+// (`npx playwright install chromium`), the fallback is skipped and the run continues without it.
+type RenderBrowser = { newPage: (options: { userAgent: string }) => Promise<{ goto: (url: string, options: object) => Promise<unknown>; waitForTimeout: (ms: number) => Promise<void>; content: () => Promise<string>; close: () => Promise<void> }>; close: () => Promise<void> };
+let renderBrowser: RenderBrowser | null | undefined;
+let renderedPages = 0;
+async function startBrowser(): Promise<boolean> {
+  if (args.has('--no-render')) return false;
+  if (renderBrowser === undefined) {
+    try { const { chromium } = await import('playwright'); renderBrowser = (await chromium.launch()) as unknown as RenderBrowser; } catch (error) { console.error(`headless fallback unavailable: ${String(error).split('\n')[0]}`); renderBrowser = null; }
+  }
+  return renderBrowser !== null;
+}
+async function renderedHtml(url: string): Promise<string | null> {
+  if (!(await startBrowser())) return null;
+  const page = await (renderBrowser as RenderBrowser).newPage({ userAgent: browserUserAgent });
+  try {
+    await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 30_000 });
+    await page.waitForTimeout(4_000);
+    renderedPages += 1;
+    return await page.content();
+  } catch { return null; } finally { await page.close().catch(() => undefined); }
+}
+async function renderedImage(url: string): Promise<Buffer | null> {
+  if (!(await startBrowser())) return null;
+  const page = await (renderBrowser as RenderBrowser).newPage({ userAgent: browserUserAgent });
+  try {
+    const response = (await page.goto(url, { waitUntil: 'load', timeout: 30_000 })) as { ok: () => boolean; headers: () => Record<string, string>; body: () => Promise<Buffer> } | null;
+    return response?.ok() && /^image\//.test(response.headers()['content-type'] ?? '') ? await response.body() : null;
+  } catch { return null; } finally { await page.close().catch(() => undefined); }
+}
 function slug(value: string): string { return value.normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 100); }
-async function fetchImage(url: string): Promise<Buffer | null> { try { const bytes = await curl(url, 20); return bytes.length >= 1000 && bytes.length <= 15_000_000 ? bytes : null; } catch { return null; } }
+async function fetchImage(url: string): Promise<Buffer | null> {
+  const usable = (bytes: Buffer | null) => (bytes && bytes.length >= 1000 && bytes.length <= 15_000_000 ? bytes : null);
+  try { const bytes = usable(await curl(url, 20)); if (bytes) return bytes; } catch { /* CDNs that block curl often serve a browser */ }
+  return usable(await renderedImage(url));
+}
 async function archiveImage(bytes: Buffer, output: string): Promise<void> {
   const input = `${output}.source${extname(output) || '.bin'}`;
   await writeFile(input, bytes);
@@ -228,7 +280,12 @@ for (const person of selected) {
   const now = new Date().toISOString();
   if (protectedPortrait) { ledger.entries[person.id] = { name: person.name, outcome: 'protected', identitySignals: [], retrievedAt: now, note: 'portrait or portraitSource is protected by directFields' }; report.push({ id: person.id, name: person.name, result: 'protected' }); continue; }
   const candidates: Candidate[] = [];
-  for (const page of sourcePages(person)) try { candidates.push(...imageCandidates((await curl(page.url, 20)).toString('utf8'), page, person)); } catch { /* use another stored page */ }
+  for (const page of sourcePages(person)) {
+    let found: Candidate[] = [];
+    try { found = imageCandidates((await curl(page.url, 20)).toString('utf8'), page, person); } catch { /* blocked or a challenge page: try rendering */ }
+    if (found.length === 0) { const html = await renderedHtml(page.url); if (html) found = imageCandidates(html, page, person); }
+    candidates.push(...found);
+  }
   // Search is a fallback discovery route, never an image source on its own. Avoid it when a
   // stored page already exposed an identity-resolved candidate.
   if (candidates.length === 0) for (const page of await discoveryPages(person)) try { candidates.push(...imageCandidates((await curl(page.url, 20)).toString('utf8'), page, person)); } catch { /* use another discovery route */ }
@@ -262,6 +319,8 @@ for (const person of selected) {
   if (item) { item.status = 'fetched'; item.portraitSource = candidate.imageUrl; item.note = `HIGH-confidence ${candidate.page.sourceType}`; }
   report.push({ id: person.id, name: person.name, result: 'correct portrait found', source: candidate.page.sourceType, confidence: level });
 }
+await renderBrowser?.close().catch(() => undefined);
+if (renderedPages) console.error(`rendered ${renderedPages} page(s) in headless Chromium`);
 await writeFile(provenancePath, `${JSON.stringify(ledger, null, 2)}\n`);
 if (applying) {
   await writeFile(dataPath, `${JSON.stringify(people, null, 2)}\n`);

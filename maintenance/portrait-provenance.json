@@ -29,8 +29,8 @@
       "name": "Hoang Long Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-15T04:05:12.800Z",
-      "note": "Existing asset was a university seal/logo, not a human portrait; removed during non-human image audit."
+      "retrievedAt": "2026-10-14T11:49:34.919Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-0120": {
       "name": "Hoang-Vu Phan",
@@ -75,28 +75,28 @@
       "name": "Uy Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T22:56:39.504Z",
+      "retrievedAt": "2026-10-14T11:49:45.516Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-0402": {
       "name": "Minh Vo",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T22:56:40.941Z",
+      "retrievedAt": "2026-10-14T11:49:52.580Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-0474": {
       "name": "Bau P. Tran",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T22:56:41.180Z",
+      "retrievedAt": "2026-10-14T11:49:52.933Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-0556": {
       "name": "Dinh-Tuan Pham",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T22:56:44.346Z",
+      "retrievedAt": "2026-10-14T11:50:10.788Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-0773": {
@@ -126,35 +126,35 @@
       "name": "Phuong D. Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T22:56:47.792Z",
+      "retrievedAt": "2026-10-14T11:50:37.807Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-0819": {
       "name": "Mylinh T. Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-15T04:07:09.635Z",
+      "retrievedAt": "2026-10-14T11:50:42.919Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-0823": {
       "name": "Tien Hung Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T22:56:48.019Z",
+      "retrievedAt": "2026-10-14T11:50:49.215Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-0826": {
       "name": "Van Tho Tran",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T22:56:48.325Z",
+      "retrievedAt": "2026-10-14T11:50:53.876Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-0830": {
       "name": "Tuan M. Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-15T04:07:41.792Z",
+      "retrievedAt": "2026-10-14T11:51:08.522Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-0843": {
@@ -176,43 +176,11 @@
     },
     "vp-0848": {
       "name": "An Nguyen - City of Hope",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-09-19T22:56:51.143Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
-    },
-    "vp-0849": {
-      "name": "Andrew H. Nguyen",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-09-19T22:56:51.451Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
-    },
-    "vp-0861": {
-      "name": "Thuy-Huynh Nguyen",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-09-19T22:56:51.836Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
-    },
-    "vp-0862": {
-      "name": "Caroline T. Nguyen",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-09-19T22:56:52.426Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
-    },
-    "vp-0874": {
-      "name": "Kimloan Nguyen",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-09-19T22:56:52.927Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
-    },
-    "vp-0880": {
-      "name": "Matthew Thai-Khang Nguyen",
-      "outcome": "not_found",
-      "pageUrl": "https://vivo.weill.cornell.edu/display/cwid-mtn9004",
+      "outcome": "found",
+      "pageUrl": "https://www.cityofhope.org/patients/find-a-doctor/an-nguyen",
+      "imageUrl": "https://cdn.cityofhope.org/media/bios/8d661f3f-8203-4047-a0bb-bf1b0bd7dd33/default/nguyen-an.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
       "identitySignals": [
         "name",
         "institution",
@@ -220,8 +188,51 @@
         "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-09-15T04:20:00.000Z",
-      "note": "Official directory image endpoint returned 404; the page falls back to a generic photo."
+      "retrievedAt": "2026-10-14T11:54:32.655Z"
+    },
+    "vp-0849": {
+      "name": "Andrew H. Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://www.cityofhope.org/patients/find-a-doctor/andrew-nguyen",
+      "imageUrl": "https://cdn.cityofhope.org/media/bios/f4c261d0-c316-473e-81ea-148c37c48192/default/nguyen-andrew.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T11:54:38.275Z"
+    },
+    "vp-0861": {
+      "name": "Thuy-Huynh Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-14T11:51:29.456Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-0862": {
+      "name": "Caroline T. Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-14T11:51:35.323Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-0874": {
+      "name": "Kimloan Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-14T11:51:45.039Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-0880": {
+      "name": "Matthew Thai-Khang Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-14T11:51:55.209Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-0886": {
       "name": "Hanh Nguyen",
@@ -244,28 +255,28 @@
       "name": "Monika Dao Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T22:56:54.945Z",
+      "retrievedAt": "2026-10-14T11:52:00.864Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-0889": {
       "name": "Nathan K. Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T22:56:56.005Z",
+      "retrievedAt": "2026-10-14T11:52:07.531Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-0857": {
       "name": "George Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T22:56:51.607Z",
+      "retrievedAt": "2026-10-14T11:51:24.716Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-0866": {
       "name": "Minh Thu T. Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T22:56:52.612Z",
+      "retrievedAt": "2026-10-14T11:51:39.838Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-0871": {
@@ -333,8 +344,8 @@
         "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-10-09T11:28:36.722Z",
-      "note": "MEDIUM candidate rejected on visual review 2026-10-14: candidate was another staff member's photo (Rachael McDonald)"
+      "retrievedAt": "2026-10-14T11:59:54.723Z",
+      "note": "rejected on visual review 2026-10-14: another staff member's photo (Rachael McDonald)"
     },
     "vp-1183": {
       "name": "Hong-Linh Truong",
@@ -347,14 +358,14 @@
       "name": "Doan Pham Minh",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-09T11:28:40.980Z",
+      "retrievedAt": "2026-10-14T12:03:11.855Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1230": {
       "name": "Toi Van Vo",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-15T04:08:49.327Z",
+      "retrievedAt": "2026-10-14T12:04:11.861Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1357": {
@@ -382,7 +393,7 @@
       "name": "Anh Minh Tang",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-22T14:19:23.316Z",
+      "retrievedAt": "2026-10-14T12:24:39.256Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1482": {
@@ -394,10 +405,19 @@
     },
     "vp-1495": {
       "name": "Phuong Tran Nguyen",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-09-22T14:20:47.147Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://researchprofiles.csumb.edu/en/persons/phuong-nguyen/",
+      "imageUrl": "https://researchprofiles.csumb.edu/files-asset/39702509/phuong_nguyen.jpg/",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T12:30:48.092Z"
     },
     "vp-1501": {
       "name": "Viet Huynh",
@@ -424,63 +444,63 @@
       "name": "Carolyn V. Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T22:56:56.799Z",
+      "retrievedAt": "2026-10-14T11:52:13.949Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-0894": {
       "name": "Von Ta Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T22:56:57.724Z",
+      "retrievedAt": "2026-10-14T11:52:20.548Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-0896": {
       "name": "Thanh Tran - University of South Carolina",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T22:56:58.522Z",
+      "retrievedAt": "2026-10-14T11:52:27.000Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-0897": {
       "name": "Ngoc Lien Minh Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T22:56:58.920Z",
+      "retrievedAt": "2026-10-14T11:52:32.017Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-0901": {
       "name": "Tuan Mai",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T22:56:59.729Z",
+      "retrievedAt": "2026-10-14T11:52:37.902Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-0903": {
       "name": "Phuong Le",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T22:56:59.898Z",
+      "retrievedAt": "2026-10-14T11:52:42.273Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-0906": {
       "name": "Ngoc M. Nguyen-Famulare",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T22:57:01.226Z",
+      "retrievedAt": "2026-10-14T11:54:43.987Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-0908": {
       "name": "Eddie Quan",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T22:57:01.780Z",
+      "retrievedAt": "2026-10-14T11:52:55.378Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-0910": {
       "name": "Nam X. Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T22:57:01.911Z",
+      "retrievedAt": "2026-10-14T11:53:03.297Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-0926": {
@@ -503,7 +523,7 @@
       "name": "Paul C. Dinh",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T22:57:02.623Z",
+      "retrievedAt": "2026-10-14T11:53:07.664Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-0940": {
@@ -526,62 +546,83 @@
       "name": "Linh Hoang Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T22:57:03.733Z",
+      "retrievedAt": "2026-10-14T11:53:13.174Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-0950": {
       "name": "Cuong Nguyen - Lincoln University",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-09-19T22:57:04.343Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://researchers.lincoln.ac.nz/cuong.nguyen",
+      "imageUrl": "https://researchers.lincoln.ac.nz/cuong.nguyen/thumbnail",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T11:53:20.807Z"
     },
     "vp-0964": {
       "name": "Quynh N. Pham",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-09-19T22:57:05.167Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://www.colby.edu/people/people-directory/quynh-n-pham/",
+      "imageUrl": "https://www.colby.edu/cdn-cgi/image/width=320,format=auto,quality=50/https://www.colby.edu/wp-content/uploads/2024/07/ac864fb7240b57ca1c206af3bccaf666_20260929-800x800.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T13:13:10.817Z",
+      "note": "MEDIUM candidate stored after visual review"
     },
     "vp-0966": {
       "name": "Quynh Hoang",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-09-19T22:57:05.346Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
-    },
-    "vp-0971": {
-      "name": "Truc Tran",
-      "outcome": "not_found",
-      "pageUrl": "https://vivo.weill.cornell.edu/display/cwid-ttt4001",
+      "outcome": "found",
+      "pageUrl": "https://le.ac.uk/people/quynh-hoang",
+      "imageUrl": "https://le.ac.uk/-/media/uol/images/people/profiles/h/hoangquynhjpg-2.jpg?cx=0&cy=0&cw=500&ch=500&hash=51E45F087BD5E25DAAE67830956EA376",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
       "identitySignals": [
         "name",
         "institution",
         "department",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-09-15T04:27:00.000Z",
-      "note": "Official directory endpoint returned a generic avatar, not a portrait."
+      "retrievedAt": "2026-10-14T11:54:53.964Z"
+    },
+    "vp-0971": {
+      "name": "Truc Tran",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-14T11:53:40.499Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-0981": {
       "name": "Ba D. Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T22:57:05.633Z",
+      "retrievedAt": "2026-10-14T11:53:45.942Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-0983": {
       "name": "Nguyen H. Tran",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T22:57:05.841Z",
+      "retrievedAt": "2026-10-14T11:55:06.284Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-0984": {
       "name": "Michelle C. Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T22:57:06.046Z",
+      "retrievedAt": "2026-10-14T11:55:11.254Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1231": {
@@ -603,111 +644,141 @@
       "name": "Aivi T. Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T22:57:11.260Z",
+      "retrievedAt": "2026-10-14T11:55:15.579Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-0987": {
       "name": "Nam Hai Pham",
-      "outcome": "not_found",
-      "pageUrl": "https://researchmap.jp/magn?lang=en",
+      "outcome": "found",
+      "pageUrl": "https://magn.ee.eng.isct.ac.jp/lab/member/pham-nam-hai/",
+      "imageUrl": "https://magn.ee.eng.isct.ac.jp/lab/wp-content/uploads/2026/09/Pham-Nam-Hai.png",
+      "sourceType": "personal_homepage",
+      "confidence": "MEDIUM",
       "identitySignals": [
         "name",
-        "institution",
-        "department",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-09-15T04:32:00.000Z",
-      "note": "No person-specific image exposed by inspected official profile."
+      "retrievedAt": "2026-10-14T13:13:12.099Z",
+      "note": "MEDIUM candidate stored after visual review"
     },
     "vp-0989": {
       "name": "Quan Manh Phung",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T22:57:20.676Z",
+      "retrievedAt": "2026-10-14T11:55:30.816Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-0993": {
       "name": "Quoc Hung Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T22:57:23.992Z",
+      "retrievedAt": "2026-10-14T11:55:45.720Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1028": {
       "name": "Hai Anh La",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T22:57:26.091Z",
+      "retrievedAt": "2026-10-14T11:55:53.248Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1031": {
       "name": "Viet Do",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T22:57:26.387Z",
+      "retrievedAt": "2026-10-14T11:55:58.011Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1034": {
       "name": "Minh Quang Dao",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T22:57:28.054Z",
+      "retrievedAt": "2026-10-14T11:56:06.476Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1037": {
       "name": "Anh Nguyet Vu",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-09-19T22:57:30.362Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://profiles.sussex.ac.uk/p316727-anh-vu",
+      "imageUrl": "https://profiles.sussex.ac.uk/p316727-anh-vu/thumbnail",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T11:56:18.131Z"
     },
     "vp-1042": {
       "name": "Lanh Tat Tran",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T22:57:31.106Z",
+      "retrievedAt": "2026-10-14T11:56:24.448Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1045": {
-      "name": "Hao Manh Quach",
+      "name": "Manh Hao Quach",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T22:57:31.704Z",
+      "retrievedAt": "2026-10-14T11:56:29.802Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1049": {
       "name": "Huong Vu",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-09-19T22:57:32.505Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://www.umu.se/en/staff/huong-vu/",
+      "imageUrl": "https://www.umu.se/contentassets/3a122b5d65914165a5359f59b3c56a8b/Profilbild.PNG?v=484215327&width=185&quality=90",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T13:13:13.333Z",
+      "note": "MEDIUM candidate stored after visual review"
     },
     "vp-1051": {
       "name": "Khoa Hoang",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T22:57:44.166Z",
+      "retrievedAt": "2026-10-14T11:56:39.549Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1067": {
       "name": "Huy Chau",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T22:58:01.111Z",
+      "retrievedAt": "2026-10-14T11:56:47.306Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1070": {
       "name": "Ruby (Hong Ngoc) Nguyen",
       "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-09-19T22:58:12.291Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "pageUrl": "https://researchers.adelaide.edu.au/profile/ruby.nguyen",
+      "imageUrl": "https://researchers.adelaide.edu.au/sites/default/files/styles/profile_large/public/profile-images/33335.jpeg?itok=9pOFmujw",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T11:56:58.440Z",
+      "note": "reviewed candidate failed --store checks 2026-10-14: image too small or not portrait-shaped"
     },
     "vp-1072": {
       "name": "Duong Anh Lam Tran",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T22:58:25.183Z",
+      "retrievedAt": "2026-10-14T11:57:05.381Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1074": {
@@ -728,92 +799,114 @@
     },
     "vp-1079": {
       "name": "Bao Tan Huynh",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-09-19T22:58:36.923Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://economics.smu.edu.sg/faculty/profile/6711/huynh-bao-tan",
+      "imageUrl": "https://staffphoto.smu.edu.sg/s/bthuynh/600x400",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T13:13:18.859Z",
+      "note": "MEDIUM candidate stored after visual review"
     },
     "vp-1082": {
       "name": "Huong (Hana) Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T22:58:47.649Z",
+      "retrievedAt": "2026-10-14T11:57:33.939Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1089": {
       "name": "Kiet Tieu",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-09-19T22:58:59.620Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://scholars.uow.edu.au/kiet-tieu",
+      "imageUrl": "https://scholars.uow.edu.au/kiet-tieu/thumbnail",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T11:57:39.563Z"
     },
     "vp-1090": {
       "name": "Thuong Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T22:59:10.727Z",
+      "retrievedAt": "2026-10-14T11:57:47.420Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1092": {
       "name": "Jo (Chau) Vu",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T22:59:21.890Z",
+      "retrievedAt": "2026-10-14T11:57:55.717Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1100": {
       "name": "Anh D. Ngo",
       "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-09-19T22:59:34.566Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
-    },
-    "vp-1108": {
-      "name": "Ellie Luu",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-09-19T22:59:45.342Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
-    },
-    "vp-1110": {
-      "name": "Hang Le",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-09-19T22:59:55.586Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
-    },
-    "vp-1119": {
-      "name": "Uyen T. Nguyen",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:00:06.514Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
-    },
-    "vp-1124": {
-      "name": "Quynh Doan",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:00:16.732Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
-    },
-    "vp-1129": {
-      "name": "Nha Nguyen",
-      "outcome": "not_found",
-      "pageUrl": "https://www.umoncton.ca/notreumoncton/node/27",
+      "pageUrl": "https://nsu.academia.edu/AnhNgo",
+      "imageUrl": "https://c.academia-assets.com/images/s200_no_pic.png",
+      "sourceType": "personal_homepage",
+      "confidence": "MEDIUM",
       "identitySignals": [
         "name",
         "institution",
         "department",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-09-15T04:40:00.000Z",
-      "note": "Official page exposed only generic site imagery."
+      "retrievedAt": "2026-10-14T11:58:05.721Z",
+      "note": "rejected on visual review 2026-10-14: academia.edu no-picture placeholder"
+    },
+    "vp-1108": {
+      "name": "Ellie Luu",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-14T11:58:22.364Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1110": {
+      "name": "Hang Le",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-14T11:58:27.610Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1119": {
+      "name": "Uyen T. Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-14T11:58:34.691Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1124": {
+      "name": "Quynh Doan",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-14T11:58:39.546Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1129": {
+      "name": "Nha Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-14T11:58:48.534Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1130": {
       "name": "Thu Pham-Gia",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-09T11:28:34.388Z",
+      "retrievedAt": "2026-10-14T11:58:58.336Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1136": {
@@ -830,28 +923,28 @@
         "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-09-19T23:00:27.725Z",
+      "retrievedAt": "2026-10-14T11:59:05.324Z",
       "note": "candidate image could not be downloaded"
     },
     "vp-1138": {
       "name": "Ruby Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:00:28.783Z",
+      "retrievedAt": "2026-10-14T11:59:06.240Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1148": {
       "name": "Hao Phan",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:00:38.951Z",
+      "retrievedAt": "2026-10-14T11:59:11.807Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1149": {
       "name": "Amy Pham",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:00:49.587Z",
+      "retrievedAt": "2026-10-14T11:59:18.346Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-0648": {
@@ -890,43 +983,62 @@
       "name": "Hien Trong Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:01:05.100Z",
+      "retrievedAt": "2026-10-14T11:59:27.718Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1158": {
       "name": "Frédéric Pham",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:01:35.292Z",
+      "retrievedAt": "2026-10-14T11:59:33.440Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1160": {
       "name": "Buu-Hoi Nguyen-Phuc",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:01:45.645Z",
+      "retrievedAt": "2026-10-14T11:59:38.802Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1162": {
       "name": "Dong Ngo",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:01:56.116Z",
+      "retrievedAt": "2026-10-14T11:59:44.344Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1173": {
       "name": "Huu Hao Ngo",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:02:06.482Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://profiles.uts.edu.au/HuuHao.Ngo",
+      "imageUrl": "https://profiles.uts.edu.au/HuuHao.Ngo/thumbnail",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T11:59:49.696Z"
     },
     "vp-1175": {
       "name": "Thong Pham - Adelaide University",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:02:17.269Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://researchers.adelaide.edu.au/profile/thong.pham",
+      "imageUrl": "https://researchers.adelaide.edu.au/sites/default/files/styles/profile_large/public/profile-images/40015.jpeg?itok=DDrqfMbD",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T13:13:20.500Z",
+      "note": "MEDIUM candidate stored after visual review"
     },
     "vp-1181": {
       "name": "Brian Kha Tran",
@@ -949,29 +1061,58 @@
       "name": "Thi-Kien Dao",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:02:39.748Z",
+      "retrievedAt": "2026-10-14T11:59:57.794Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1189": {
       "name": "Dung Hoang Duong",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:02:55.430Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://scholars.uow.edu.au/hoang-dung-duong/",
+      "imageUrl": "https://scholars.uow.edu.au/hoang-dung-duong/thumbnail",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T12:00:05.081Z"
     },
     "vp-1191": {
       "name": "Kim-Phuong L. Vu",
       "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:03:06.755Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "pageUrl": "https://www.csulb.edu/college-of-liberal-arts/psychology/faculty-staff",
+      "imageUrl": "https://www.csulb.edu/sites/default/files/styles/wysiwyg_scale115/public/images/2025-11/Media%20%2843%29.jpg?itok=JSiueYZv",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T12:00:18.320Z",
+      "note": "reviewed candidate failed --store checks 2026-10-14: image too small or not portrait-shaped"
     },
     "vp-1193": {
       "name": "Huy P. Phan",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:03:20.154Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://www.une.edu.au/staff-profiles/education/hphan2",
+      "imageUrl": "https://www.une.edu.au/media/media-content/images/profile-images/HPhan2.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T13:13:22.113Z",
+      "note": "MEDIUM candidate stored after visual review"
     },
     "vp-1195": {
       "name": "Vinh N. Dang",
@@ -993,14 +1134,14 @@
       "name": "Long Tien Truong",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:03:30.587Z",
+      "retrievedAt": "2026-10-14T12:00:26.940Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1198": {
       "name": "Lam Thi Mai Huynh",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:03:41.607Z",
+      "retrievedAt": "2026-10-14T12:00:34.736Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1199": {
@@ -1023,43 +1164,52 @@
       "name": "Huong Thanh Bui",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:03:53.449Z",
+      "retrievedAt": "2026-10-14T12:00:50.200Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1202": {
       "name": "Anh Van Vo",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:04:04.550Z",
+      "retrievedAt": "2026-10-14T12:00:58.781Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1203": {
       "name": "Anh-Huy Phan",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:04:14.936Z",
+      "retrievedAt": "2026-10-14T12:01:14.488Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1205": {
       "name": "Tao Pham Dinh",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:04:25.847Z",
+      "retrievedAt": "2026-10-14T12:01:27.092Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1206": {
       "name": "Tuan Kim Vu",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:04:36.249Z",
+      "retrievedAt": "2026-10-14T12:01:37.338Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1207": {
       "name": "The Anh Bui",
       "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:04:46.564Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "pageUrl": "https://researchers.mq.edu.au/en/persons/the-bui/",
+      "imageUrl": "https://researchers.mq.edu.au/en/persons/the-bui/Anh.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T12:01:47.788Z",
+      "note": "candidate image could not be downloaded"
     },
     "vp-1208": {
       "name": "Hoa Huu Phuc Nguyen",
@@ -1081,35 +1231,44 @@
       "name": "Hieu Pham",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:04:57.508Z",
+      "retrievedAt": "2026-10-14T12:01:50.964Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1216": {
       "name": "Phuong Hong Nguyen",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:05:08.083Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://www.ifpri.org/expert/phuong-hong-nguyen",
+      "imageUrl": "https://www.ifpri.org/wp-content/uploads/2024/04/nguyen_phuong.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T12:02:06.477Z"
     },
     "vp-1217": {
       "name": "Hoai-Nam Truong",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:05:18.325Z",
+      "retrievedAt": "2026-10-14T12:02:13.950Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1218": {
       "name": "Bao-Lam Huynh",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:05:28.715Z",
+      "retrievedAt": "2026-10-14T12:02:34.158Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1220": {
       "name": "Anh-Vu Vo",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:05:39.084Z",
+      "retrievedAt": "2026-10-14T12:02:50.805Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1224": {
@@ -1130,79 +1289,107 @@
     },
     "vp-1226": {
       "name": "Toan Trong Tran",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:05:55.073Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://profiles.uts.edu.au/TrongToan.Tran",
+      "imageUrl": "https://profiles.uts.edu.au/TrongToan.Tran/thumbnail",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T12:03:31.006Z"
     },
     "vp-1228": {
       "name": "Thuy-Duong Nguyen-Phan",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:06:06.215Z",
+      "retrievedAt": "2026-10-14T12:03:38.800Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1229": {
       "name": "Nong Van Ngo",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:06:17.003Z",
+      "retrievedAt": "2026-10-14T12:03:54.116Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1232": {
       "name": "Giang Vo-Thanh",
       "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-13T19:00:00.000Z",
-      "note": "Owner reported the stored portrait (https://www.icmmo.universite-paris-saclay.fr/wp-content/uploads/2026/09/Photo-150x150.jpg) was the wrong person; removed. Do not reuse that image."
+      "pageUrl": "https://www.icmmo.universite-paris-saclay.fr/annuaire/giang-vo-thanh/",
+      "imageUrl": "https://www.icmmo.universite-paris-saclay.fr/annuaire/giang-vo-thanh/#",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T12:04:27.186Z",
+      "note": "candidate could not be converted to a local image"
     },
     "vp-1233": {
       "name": "Anh-Thy Bui",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:06:31.801Z",
+      "retrievedAt": "2026-10-14T12:04:40.834Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1236": {
       "name": "Nhan Viet Tran",
       "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:06:45.088Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "pageUrl": "https://computing.fnal.gov/nhan-tran/",
+      "imageUrl": "http://computing.fnal.gov/wp-content/uploads/tran1.png",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T12:05:06.476Z",
+      "note": "reviewed candidate failed --store checks 2026-10-14: image too small or not portrait-shaped"
     },
     "vp-1240": {
       "name": "Kim-Vy Tran",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:07:06.259Z",
+      "retrievedAt": "2026-10-14T12:05:12.717Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1241": {
       "name": "Minh Huynh",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:07:25.314Z",
+      "retrievedAt": "2026-10-14T12:05:33.036Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1250": {
       "name": "Lap Van Dao",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:07:36.907Z",
+      "retrievedAt": "2026-10-14T12:05:51.009Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1252": {
       "name": "Viet Giang Truong",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:07:47.962Z",
+      "retrievedAt": "2026-10-14T12:06:06.336Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1257": {
       "name": "Thuy Le Toan",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:07:59.275Z",
+      "retrievedAt": "2026-10-14T12:06:21.888Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1258": {
@@ -1225,28 +1412,28 @@
       "name": "Trang N. T. Phan",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:08:27.086Z",
+      "retrievedAt": "2026-10-14T12:06:39.219Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1269": {
       "name": "Kien Phan Huy",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:08:38.127Z",
+      "retrievedAt": "2026-10-14T12:07:25.284Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1271": {
       "name": "Khanh Pham",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:08:50.607Z",
+      "retrievedAt": "2026-10-14T12:07:42.406Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1279": {
       "name": "Thao Pham",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-09T11:28:50.383Z",
+      "retrievedAt": "2026-10-14T12:07:52.948Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1280": {
@@ -1269,7 +1456,7 @@
       "name": "Thuy Mai Luu",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-09T11:29:00.440Z",
+      "retrievedAt": "2026-10-14T12:08:12.891Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1283": {
@@ -1292,21 +1479,21 @@
       "name": "Binh An P. Phan",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:09:01.437Z",
+      "retrievedAt": "2026-10-14T12:08:28.616Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1292": {
       "name": "Hong-Ha M. Truong",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:09:12.547Z",
+      "retrievedAt": "2026-10-14T12:08:46.743Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1294": {
       "name": "Cuong J. Bui",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:09:23.481Z",
+      "retrievedAt": "2026-10-14T12:09:20.097Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1298": {
@@ -1327,10 +1514,18 @@
     },
     "vp-1301": {
       "name": "Linh H. Nghiem",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:09:44.150Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://profiles.sydney.edu.au/linh.nghiem",
+      "imageUrl": "https://profiles.sydney.edu.au/linh.nghiem/thumbnail",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T12:09:35.015Z"
     },
     "vp-1305": {
       "name": "Long Doan",
@@ -1353,14 +1548,14 @@
       "name": "Binh Nghiem-Phu",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:10:16.551Z",
+      "retrievedAt": "2026-10-14T12:10:27.632Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1308": {
       "name": "Hien Van Doan",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:10:27.147Z",
+      "retrievedAt": "2026-10-14T12:10:43.053Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1310": {
@@ -1399,119 +1594,172 @@
       "name": "Quang-Van Doan",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:11:53.107Z",
+      "retrievedAt": "2026-10-14T12:12:45.397Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1332": {
       "name": "Luc Duc Phung",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:12:03.970Z",
+      "retrievedAt": "2026-10-14T12:13:04.766Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1337": {
       "name": "Phuong Mai Dinh",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:12:17.269Z",
+      "retrievedAt": "2026-10-14T12:13:21.600Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1339": {
       "name": "Van An Dinh",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:12:47.289Z",
+      "retrievedAt": "2026-10-14T12:14:21.662Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1340": {
       "name": "Dinh Ho Tong Minh",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:12:58.497Z",
+      "retrievedAt": "2026-10-14T12:14:48.902Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1341": {
       "name": "Tan-Phu Vuong",
       "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:13:29.033Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "pageUrl": "https://croma.grenoble-inp.fr/fr/recherche/vuong-tan-phu",
+      "imageUrl": "https://croma.grenoble-inp.fr/medias/photo/tanphu-cv_1540390932723-jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T12:15:48.965Z",
+      "note": "reviewed candidate failed --store checks 2026-10-14: image too small or not portrait-shaped"
     },
     "vp-1342": {
       "name": "Cao Hung Pham",
       "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:13:39.933Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "pageUrl": "https://www.sydney.edu.au/engineering/about/our-people/academic-staff/caohung-pham.html",
+      "imageUrl": "https://www.sydney.edu.au/caohung.pham/thumbnail",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T12:15:51.017Z",
+      "note": "candidate could not be converted to a local image"
     },
     "vp-1344": {
       "name": "Huu Duc Vo",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:13:51.254Z",
+      "retrievedAt": "2026-10-14T12:16:09.739Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1345": {
       "name": "Quoc Lam Vuong",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:14:01.440Z",
+      "retrievedAt": "2026-10-14T12:16:27.807Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1319": {
       "name": "Doan B. Hoang",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:10:38.126Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://profiles.uts.edu.au/Doan.Hoang",
+      "imageUrl": "https://profiles.uts.edu.au/Doan.Hoang/thumbnail",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T12:10:59.293Z"
     },
     "vp-1321": {
       "name": "Nghia Duong-Trung",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:11:09.331Z",
+      "retrievedAt": "2026-10-14T12:11:51.596Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1323": {
       "name": "Cao-Thang Dinh",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:11:19.839Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://smithengineering.queensu.ca/directory/faculty/cao-thang-dinh",
+      "imageUrl": "https://smithengineering.queensu.ca/directory/_images/cao-thang-dinh.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T12:12:12.452Z"
     },
     "vp-1324": {
       "name": "Tu C. Le",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:11:30.039Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://academics.rmit.edu.au/tu-le/",
+      "imageUrl": "https://academics.rmit.edu.au/tu-le/thumbnail",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T12:12:20.739Z"
     },
     "vp-1326": {
       "name": "Doan-Trung Luu",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:11:41.097Z",
+      "retrievedAt": "2026-10-14T12:12:28.625Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1346": {
       "name": "Quoc Viet Phung",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:14:12.186Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://www.ecu.edu.au/schools/engineering/staff/profiles/lecturers/dr-quoc-viet-phung",
+      "imageUrl": "https://www.ecu.edu.au/__data/assets/image/0003/1038567/Dr-Quoc-Viet-Phung.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T12:16:44.055Z"
     },
     "vp-1347": {
       "name": "Kim Dang Phung",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:14:22.548Z",
+      "retrievedAt": "2026-10-14T12:16:45.761Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1348": {
       "name": "Luong-Viet Phung",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:14:33.049Z",
+      "retrievedAt": "2026-10-14T12:17:00.771Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1350": {
@@ -1533,22 +1781,31 @@
       "name": "Anh-Tuan Dinh-Xuan",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:14:44.359Z",
+      "retrievedAt": "2026-10-14T12:17:11.512Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1354": {
       "name": "Hai Phung",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:14:56.880Z",
+      "retrievedAt": "2026-10-14T12:17:32.671Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1355": {
       "name": "Quan V. Vuong",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:15:07.633Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://profiles.uts.edu.au/Quan.Vuong",
+      "imageUrl": "https://profiles.uts.edu.au/Quan.Vuong/thumbnail",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T12:17:50.025Z"
     },
     "vp-1356": {
       "name": "Chau Trinh-Shevrin",
@@ -1587,7 +1844,7 @@
       "name": "Le Mai Tu",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:15:27.747Z",
+      "retrievedAt": "2026-10-14T12:17:52.730Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1368": {
@@ -1610,7 +1867,7 @@
       "name": "Quôc Dinh Nguyên",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:15:38.947Z",
+      "retrievedAt": "2026-10-14T12:18:09.456Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1373": {
@@ -1633,14 +1890,14 @@
       "name": "Trang D. Trinh",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:15:50.441Z",
+      "retrievedAt": "2026-10-14T12:18:26.869Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1375": {
       "name": "Tri A. Dinh",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:16:00.777Z",
+      "retrievedAt": "2026-10-14T12:18:41.919Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1377": {
@@ -1663,56 +1920,56 @@
       "name": "Cat Khanh Vuong",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:16:12.774Z",
+      "retrievedAt": "2026-10-14T12:19:11.432Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1380": {
       "name": "Quoc Vuong Tran",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:16:23.613Z",
+      "retrievedAt": "2026-10-14T12:19:29.570Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1381": {
       "name": "Nhu Khue Vuong",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:16:43.873Z",
+      "retrievedAt": "2026-10-14T12:19:46.635Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1382": {
       "name": "Kiên Kiêu",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-09T11:29:13.903Z",
+      "retrievedAt": "2026-10-14T12:20:05.551Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1388": {
       "name": "Michel Le Van Quyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:16:56.261Z",
+      "retrievedAt": "2026-10-14T12:20:22.755Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1390": {
       "name": "Ngoc Tuan Tran",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:17:07.641Z",
+      "retrievedAt": "2026-10-14T12:20:39.791Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1392": {
       "name": "Dinh Ha Duy Thuy",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:17:20.255Z",
+      "retrievedAt": "2026-10-14T12:21:00.456Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1393": {
       "name": "Chinh Ho",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:17:30.853Z",
+      "retrievedAt": "2026-10-14T12:21:15.984Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1395": {
@@ -1735,14 +1992,14 @@
       "name": "Thuan Thai",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:17:42.422Z",
+      "retrievedAt": "2026-10-14T12:21:33.631Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1397": {
       "name": "Duc Thanh Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:17:52.606Z",
+      "retrievedAt": "2026-10-14T12:21:50.645Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1401": {
@@ -1765,35 +2022,54 @@
       "name": "Cuong Pham",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:18:03.431Z",
+      "retrievedAt": "2026-10-14T12:22:06.499Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1404": {
       "name": "Triet H. M. Le",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:18:13.879Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://researchers.adelaide.edu.au/profile/triet.h.le",
+      "imageUrl": "https://researchers.adelaide.edu.au/sites/default/files/styles/profile_large/public/profile-images/21258.jpeg?itok=roEtHHMK",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T13:13:27.211Z",
+      "note": "MEDIUM candidate stored after visual review"
     },
     "vp-1405": {
       "name": "Cuong Ton-That",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:18:25.531Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://profiles.uts.edu.au/Cuong.Ton-That",
+      "imageUrl": "https://profiles.uts.edu.au/Cuong.Ton-That/thumbnail",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T12:22:30.038Z"
     },
     "vp-1406": {
       "name": "Tuan Hung Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:18:36.239Z",
+      "retrievedAt": "2026-10-14T12:22:32.284Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1407": {
       "name": "Quoc Duy Ho",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:18:47.632Z",
+      "retrievedAt": "2026-10-14T12:22:54.758Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1409": {
@@ -1816,7 +2092,7 @@
       "name": "Lap-Cuong Hua",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T23:18:58.170Z",
+      "retrievedAt": "2026-10-14T12:23:09.845Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1413": {
@@ -1839,28 +2115,28 @@
       "name": "Huong Giang T. Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-22T14:19:13.740Z",
+      "retrievedAt": "2026-10-14T12:23:25.923Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1421": {
       "name": "Hieu Trinh",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-22T14:19:15.085Z",
+      "retrievedAt": "2026-10-14T12:23:41.578Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1422": {
       "name": "Toan Dinh",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-22T14:19:15.648Z",
+      "retrievedAt": "2026-10-14T12:23:57.038Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1423": {
       "name": "Van Thanh Dau",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-22T14:19:18.190Z",
+      "retrievedAt": "2026-10-14T12:24:21.811Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1426": {
@@ -1881,37 +2157,56 @@
     "vp-1434": {
       "name": "Huyen N. Dinh",
       "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-09-22T14:19:30.068Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "pageUrl": "https://research-hub.nlr.gov/en/persons/huyen-dinh/",
+      "imageUrl": "https://research-hub.nlr.gov/en/persons/huyen-dinh/Huyen_Dinh_Huyen_Dinh_edited.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T12:25:03.705Z",
+      "note": "candidate image could not be downloaded"
     },
     "vp-1437": {
       "name": "Quyen Q. Hoang",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-22T14:19:30.292Z",
+      "retrievedAt": "2026-10-14T12:25:05.213Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1438": {
       "name": "Nhu Thao Nguyen Galván",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-22T14:19:30.870Z",
+      "retrievedAt": "2026-10-14T12:25:20.259Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1439": {
       "name": "Thao-Ly T. Phan",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-22T14:19:33.750Z",
+      "retrievedAt": "2026-10-14T12:25:38.237Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1441": {
       "name": "Thi Dan Linh Nguyen-Kim",
       "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-09-22T14:19:34.959Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "pageUrl": "https://www.stadt-zuerich.ch/stadtspital/de/ueber-uns/fachbereiche/radiologie-nuklearmedizin/team/thi-dan-linh-nguyen-kim.html",
+      "imageUrl": "https://s7g10.scene7.com/is/image/zuerich/dan-linh-nguyen-kim?qlt=85&wid=800&fmt=webp-alpha",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T12:25:54.215Z",
+      "note": "candidate failed 120x120 or portrait-aspect validation"
     },
     "vp-1445": {
       "name": "Khanh Duy Trinh",
@@ -1933,21 +2228,21 @@
       "name": "Cam Ha T. Tran",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-22T14:19:37.422Z",
+      "retrievedAt": "2026-10-14T12:25:55.464Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1448": {
       "name": "Thien-Tri Lam",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-22T14:19:38.610Z",
+      "retrievedAt": "2026-10-14T12:26:11.357Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1450": {
       "name": "Thanh Luu",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-22T14:19:39.884Z",
+      "retrievedAt": "2026-10-14T12:26:27.485Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1451": {
@@ -1984,44 +2279,72 @@
     },
     "vp-1453": {
       "name": "Vinh To",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-09-22T14:19:40.241Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://discover.utas.edu.au/Vinh.To",
+      "imageUrl": "https://discover.utas.edu.au/Vinh.To/thumbnail",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T12:26:42.146Z"
     },
     "vp-1455": {
       "name": "Phan Le Ha",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-09-22T14:19:41.318Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://ice.ubd.edu.bn/phan-le-ha/",
+      "imageUrl": "https://ice.ubd.edu.bn/wp-content/uploads/2019/09/Phan-Le-Ha-ICE.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T12:26:49.916Z"
     },
     "vp-1456": {
       "name": "Huong Le",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-22T14:19:44.976Z",
+      "retrievedAt": "2026-10-14T12:27:06.048Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1460": {
       "name": "Vinh-Thong Ta",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-09-22T14:19:47.605Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://www.cranfield.ac.uk/people/dr-vinh-ta-e3586",
+      "imageUrl": "https://www.cranfield.ac.uk/-/media/people/e3586.ashx?w=200",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T13:13:28.166Z",
+      "note": "MEDIUM candidate stored after visual review"
     },
     "vp-1462": {
       "name": "Ngoc-Son Vu",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-22T14:19:48.833Z",
+      "retrievedAt": "2026-10-14T12:27:32.180Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1468": {
       "name": "Minh-Tan Ton-That",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-22T14:19:51.351Z",
+      "retrievedAt": "2026-10-14T12:27:50.202Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1473": {
@@ -2038,22 +2361,31 @@
         "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-10-09T11:29:26.916Z",
+      "retrievedAt": "2026-10-14T12:28:05.522Z",
       "note": "candidate failed 120x120 or portrait-aspect validation"
     },
     "vp-1474": {
       "name": "Bach-Lien Hua",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-22T14:19:55.264Z",
+      "retrievedAt": "2026-10-14T12:28:07.932Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1475": {
       "name": "Kim-Yen Phan-Thien",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-09-22T14:19:56.670Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://profiles.sydney.edu.au/kim-yen.phan-thien",
+      "imageUrl": "https://profiles.sydney.edu.au/kim-yen.phan-thien/thumbnail",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T12:28:24.137Z"
     },
     "vp-1476": {
       "name": "Thu-Hien To",
@@ -2075,28 +2407,38 @@
       "name": "Mai Lan Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-22T14:19:58.021Z",
+      "retrievedAt": "2026-10-14T12:28:26.601Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1479": {
       "name": "Minh-Tan Pham",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-22T14:19:59.336Z",
+      "retrievedAt": "2026-10-14T12:28:50.170Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1480": {
       "name": "Ngoc-Tam Bui",
       "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-09-22T14:20:01.092Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "pageUrl": "https://researchmap.jp/bui-ngoc-tam?lang=en",
+      "imageUrl": "https://researchmap.jp/bui-ngoc-tam/avatar.png",
+      "sourceType": "personal_homepage",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T12:29:10.881Z",
+      "note": "rejected on visual review 2026-10-14: stored image was a grid of many staff headshots"
     },
     "vp-1481": {
       "name": "Thiên-My Dao",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-22T14:20:07.437Z",
+      "retrievedAt": "2026-10-14T12:29:20.690Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1484": {
@@ -2119,28 +2461,28 @@
       "name": "Thi Hà Châu Tran",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-22T14:20:20.415Z",
+      "retrievedAt": "2026-10-14T12:29:49.430Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1491": {
       "name": "Ton An Bui",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-22T14:20:24.563Z",
+      "retrievedAt": "2026-10-14T12:30:09.791Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1493": {
       "name": "Jon Doan",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-22T14:20:35.740Z",
+      "retrievedAt": "2026-10-14T12:30:30.067Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1494": {
       "name": "Marguerite Nguyen",
       "outcome": "not_found",
       "pageUrl": "https://scholars.duke.edu/person/marguerite.nguyen",
-      "imageUrl": "https://scholars.duke.edu/person/marguerite.nguyen?nocache=1790086846693",
+      "imageUrl": "https://scholars.duke.edu/person/marguerite.nguyen?nocache=1791981047792",
       "sourceType": "official_faculty",
       "confidence": "HIGH",
       "identitySignals": [
@@ -2150,7 +2492,7 @@
         "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-09-22T14:20:46.307Z",
+      "retrievedAt": "2026-10-14T12:30:47.539Z",
       "note": "candidate could not be converted to a local image"
     },
     "vp-1497": {
@@ -2169,7 +2511,7 @@
       "name": "Binh P. Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-26T05:40:16.876Z",
+      "retrievedAt": "2026-10-14T12:31:46.440Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1529": {
@@ -2193,7 +2535,7 @@
       "name": "Hieu Trung Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-26T05:40:20.611Z",
+      "retrievedAt": "2026-10-14T12:32:09.372Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1533": {
@@ -2216,36 +2558,44 @@
       "name": "Thai Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-26T05:40:21.705Z",
+      "retrievedAt": "2026-10-14T12:32:29.605Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1555": {
       "name": "Mai Tran",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-26T05:40:22.609Z",
+      "retrievedAt": "2026-10-14T12:33:10.414Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1556": {
       "name": "Trang Dang",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-26T05:40:24.936Z",
+      "retrievedAt": "2026-10-14T12:33:27.303Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1565": {
       "name": "Yen Tran",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-07T11:24:50.449Z",
+      "retrievedAt": "2026-10-14T12:34:03.725Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1567": {
       "name": "Hai Pham",
       "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-07T11:25:02.871Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "pageUrl": "https://www.towson.edu/cbe/facultystaff/profile.html?FacMem=hpham",
+      "imageUrl": "https://webapps.towson.edu/digmeasures/profilePhotos/hpham.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T12:34:36.424Z",
+      "note": "reviewed candidate failed --store checks 2026-10-14: image could not be downloaded"
     },
     "vp-1568": {
       "name": "Hung Cao",
@@ -2274,26 +2624,25 @@
     "vp-1293": {
       "name": "Quan M. Bui",
       "outcome": "not_found",
-      "identitySignals": [
-        "name",
-        "institution",
-        "department",
-        "stored_roster_url"
-      ],
-      "retrievedAt": "2026-09-16T23:56:10.000Z",
-      "note": "Stored asset was a UC San Diego Health wordmark, not a human portrait; removed during non-human image audit."
+      "identitySignals": [],
+      "retrievedAt": "2026-10-14T12:09:05.282Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1365": {
       "name": "Xuan Bich Trinh",
       "outcome": "not_found",
+      "pageUrl": "https://www.uantwerpen.be/en/staff/xuanbich-trinh/",
+      "imageUrl": "https://www.uantwerpen.be/thumb/8e943cfcc130927f22b44c21f79b9178/assets/img/personeel/w400-h400-cc/08280.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
       "identitySignals": [
         "name",
         "institution",
         "department",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-09-16T23:56:10.000Z",
-      "note": "Stored asset was a default silhouette, not a human portrait; removed during non-human image audit."
+      "retrievedAt": "2026-10-14T12:18:09.000Z",
+      "note": "reviewed candidate failed --store checks 2026-10-14: face check found no face"
     },
     "vp-0615": {
       "name": "Nguyen Viet Dang",
@@ -2329,14 +2678,14 @@
       "name": "Duc-Manh Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T22:56:42.317Z",
+      "retrievedAt": "2026-10-14T11:54:19.136Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-0578": {
       "name": "Cuc Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-19T22:56:46.068Z",
+      "retrievedAt": "2026-10-14T11:50:21.014Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1632": {
@@ -2359,7 +2708,7 @@
       "name": "Hien Pham",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-26T04:23:50.616Z",
+      "retrievedAt": "2026-10-14T12:45:17.128Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1634": {
@@ -2389,7 +2738,7 @@
       "name": "Thi Kim Hue Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-26T04:23:54.156Z",
+      "retrievedAt": "2026-10-14T12:45:48.863Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1637": {
@@ -2402,9 +2751,19 @@
     "vp-1638": {
       "name": "Duc Ninh Nguyen",
       "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-09-26T04:23:55.746Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "pageUrl": "https://researchprofiles.ku.dk/en/persons/duc-ninh-nguyen/",
+      "imageUrl": "https://researchprofiles.ku.dk/en/persons/duc-ninh-nguyen/RKD01641_Copy_2_.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T12:46:04.972Z",
+      "note": "candidate image could not be downloaded"
     },
     "vp-1639": {
       "name": "Tri Hien Viet Huynh",
@@ -2430,30 +2789,69 @@
     "vp-1643": {
       "name": "Thien Tran",
       "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-09-26T04:23:56.831Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "pageUrl": "https://scholars.georgiasouthern.edu/en/persons/thien-tran/",
+      "imageUrl": "https://scholars.georgiasouthern.edu/en/persons/thien-tran/1786585201161_771562547374545581_1020123628627378992_328af1a9278411a9c2eddcb2c9d20054_-_Copy.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T12:46:06.129Z",
+      "note": "candidate image could not be downloaded"
     },
     "vp-1644": {
       "name": "Duy Man Pham",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-09-26T04:27:11.881Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://profiles.auckland.ac.nz/man-pham",
+      "imageUrl": "https://profiles.auckland.ac.nz/man-pham/thumbnail",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T12:46:07.094Z"
     },
     "vp-1645": {
       "name": "Tuyen Tran",
       "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-09-26T04:27:13.376Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "pageUrl": "https://www.luc.edu/math/profiles/trantuyen.shtml",
+      "imageUrl": "https://www.luc.edu/media/lucedu/math/facstaffprofilepics/facultyprofilephotos/Tuyen_Tran2.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T12:46:15.329Z",
+      "note": "candidate failed 120x120 or portrait-aspect validation"
     },
     "vp-1646": {
       "name": "Tuyen Trung Truong",
       "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-09-26T04:27:13.990Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "pageUrl": "https://www.mn.uio.no/math/english/people/aca/tuyentt/",
+      "imageUrl": "https://www.mn.uio.no/math/english/research/news-and-events/new-faces/bilder/tuyen-truong.png",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T12:46:15.778Z",
+      "note": "candidate failed 120x120 or portrait-aspect validation"
     },
     "vp-1647": {
       "name": "Huan X. Nguyen",
@@ -2476,42 +2874,60 @@
       "name": "Quang Trung Pham",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-26T04:27:16.319Z",
+      "retrievedAt": "2026-10-14T12:46:18.171Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1650": {
       "name": "Hoa Khanh Dam",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-09-26T04:27:36.720Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://scholars.uow.edu.au/hoa-khanh-dam",
+      "imageUrl": "https://scholars.uow.edu.au/hoa-khanh-dam/thumbnail",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T12:46:34.545Z"
     },
     "vp-1651": {
       "name": "Thi-Phong Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-26T04:27:38.795Z",
+      "retrievedAt": "2026-10-14T12:46:43.093Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1652": {
       "name": "Trang Doan",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-26T04:27:39.739Z",
+      "retrievedAt": "2026-10-14T12:46:58.589Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1653": {
       "name": "Nam Bui",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-09-26T04:27:40.786Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "http://inscylab.org/nambui/",
+      "imageUrl": "http://inscylab.org/nambui/img/NamBui_profimg.jpg",
+      "sourceType": "personal_homepage",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T12:47:14.480Z"
     },
     "vp-1609": {
       "name": "Quang Van Tran",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-26T04:26:16.254Z",
+      "retrievedAt": "2026-10-14T12:40:08.626Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1610": {
@@ -2539,51 +2955,69 @@
     },
     "vp-1589": {
       "name": "Quang D. Nguyen",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-05T11:27:48.059Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://research.uni-mate.hu/w/prof.-dr.-quang-d.-nguyen",
+      "imageUrl": "https://research.uni-mate.hu/documents/10850768/13299734/NguyenDucQuang.jpg/5d6e05a4-24f2-c043-6b75-425edcfc3991?version=1.0&t=1721740511162",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T12:38:15.589Z"
     },
     "vp-1613": {
       "name": "Giang Nguyen Thu",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-26T04:26:22.232Z",
+      "retrievedAt": "2026-10-14T12:40:25.016Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1614": {
       "name": "Khanh Nguyen Gia",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-26T04:26:24.285Z",
+      "retrievedAt": "2026-10-14T12:40:42.716Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1615": {
       "name": "Thien S. Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-26T04:26:35.909Z",
+      "retrievedAt": "2026-10-14T12:41:42.817Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1616": {
       "name": "Vu Nguyen Ha",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-26T04:26:36.395Z",
+      "retrievedAt": "2026-10-14T12:42:02.246Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1617": {
       "name": "Tung Le",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-09-26T04:26:37.533Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://www.up.ac.za/mathematics-and-applied-mathematics/dr-t-tung-le",
+      "imageUrl": "https://drupalwebprod-files.up.ac.za/Public/styles/square_med/public/media/128/image/inline/2403382/tung-le-photo.zp109510.jpg?VersionId=HeLzBwmtmhg.7DUnLotT4ajrT2Rq9MQG&itok=39vrR9cv",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T12:42:18.272Z"
     },
     "vp-1618": {
       "name": "Huong Thuy Thien Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-26T04:26:38.380Z",
+      "retrievedAt": "2026-10-14T12:42:23.967Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1619": {
@@ -2597,49 +3031,66 @@
       "name": "Sanh Van Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-26T04:26:44.365Z",
+      "retrievedAt": "2026-10-14T12:42:48.126Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1621": {
       "name": "Hoach The Nguyen",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-09-26T04:26:49.652Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://www.ku.ac.ae/college-people/nguyen-hoach",
+      "imageUrl": "https://www.ku.ac.ae/wp-content/themes/khalifauniversity/faculty-uploads/Nguyen-The-Hoach_KU-KAIST-JRC.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T12:43:13.765Z"
     },
     "vp-1622": {
       "name": "Hoang Dinh Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-26T04:26:54.363Z",
+      "retrievedAt": "2026-10-14T12:43:25.242Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1624": {
       "name": "Di Nguyen",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-09-26T04:26:55.469Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://people.ucd.ie/di.nguyen",
+      "imageUrl": "https://people.ucd.ie/di.nguyen/thumbnail",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T12:43:44.686Z"
     },
     "vp-1625": {
       "name": "Phuong Lan Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-26T04:26:57.397Z",
+      "retrievedAt": "2026-10-14T12:43:51.109Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1626": {
       "name": "Tai Duc Pham",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-26T04:26:59.568Z",
+      "retrievedAt": "2026-10-14T12:44:06.756Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1583": {
       "name": "Ky Q. Tran",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-07T11:23:28.573Z",
+      "retrievedAt": "2026-10-14T12:37:51.915Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-0638": {
@@ -2653,21 +3104,31 @@
       "name": "Émilie Tran",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-26T04:27:06.928Z",
+      "retrievedAt": "2026-10-14T12:44:39.453Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1630": {
       "name": "Trinh Trung Duong Nguyen",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-09-26T04:27:07.916Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://drug.ku.dk/staff/?pure=en/persons/729949",
+      "imageUrl": "https://www2.adm.ku.dk/selv/pls/prt_www40.hentindhold_cms?p_personid=729949",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T13:13:31.779Z",
+      "note": "MEDIUM candidate stored after visual review"
     },
     "vp-1631": {
       "name": "Minh Son Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-26T04:27:08.939Z",
+      "retrievedAt": "2026-10-14T12:44:59.325Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1654": {
@@ -2691,7 +3152,7 @@
       "name": "Thinh Bui",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-22T22:18:09.843Z",
+      "retrievedAt": "2026-10-14T12:47:22.582Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1656": {
@@ -2747,7 +3208,7 @@
       "name": "Thanh Toan Tran",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-22T22:18:19.114Z",
+      "retrievedAt": "2026-10-14T12:47:38.096Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1660": {
@@ -2798,7 +3259,7 @@
       "name": "Phuong Hoang",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-22T22:18:27.675Z",
+      "retrievedAt": "2026-10-14T12:47:53.360Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1664": {
@@ -2835,7 +3296,7 @@
       "name": "Thai M. Hoang",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-22T22:18:31.561Z",
+      "retrievedAt": "2026-10-14T12:48:19.850Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1667": {
@@ -2887,14 +3348,14 @@
       "name": "Dang Khoa Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-26T05:40:33.473Z",
+      "retrievedAt": "2026-10-14T11:50:30.252Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1566": {
       "name": "Thang Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-09-26T05:40:53.957Z",
+      "retrievedAt": "2026-10-14T12:34:21.150Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1534": {
@@ -2916,14 +3377,14 @@
       "name": "Cam-Tu Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-01T10:08:31.663Z",
+      "retrievedAt": "2026-10-14T11:51:49.968Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1261": {
       "name": "Dinh Quang Truong",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-01T10:08:32.961Z",
+      "retrievedAt": "2026-10-14T12:06:54.830Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1684": {
@@ -2993,29 +3454,48 @@
     "vp-1703": {
       "name": "Giang Hoang",
       "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-01T10:08:55.731Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "pageUrl": "https://research.monash.edu/en/persons/giang-hoang/",
+      "imageUrl": "https://research.monash.edu/en/persons/giang-hoang/GH.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T12:51:28.599Z",
+      "note": "candidate image could not be downloaded"
     },
     "vp-1689": {
       "name": "Duong Katie Pham",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-02T11:22:06.232Z",
+      "retrievedAt": "2026-10-14T12:50:18.504Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1691": {
       "name": "Duy Trong Ngo",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-02T11:22:08.165Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://www.newcastle.edu.au/profile/duy-ngo",
+      "imageUrl": "https://profiles.newcastle.edu.au/Duy-Ngo/thumbnail",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T12:50:35.730Z"
     },
     "vp-1693": {
       "name": "Viet Duc Le",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-02T11:22:09.954Z",
+      "retrievedAt": "2026-10-14T12:50:44.614Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1694": {
@@ -3038,7 +3518,7 @@
       "name": "Tran T. Doan",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-02T11:22:11.495Z",
+      "retrievedAt": "2026-10-14T12:50:59.769Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1697": {
@@ -3060,24 +3540,52 @@
     },
     "vp-1699": {
       "name": "Vuong Thao Tran",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-02T11:22:18.586Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://www.rmit.edu.au/profiles/t/thao-tran2",
+      "imageUrl": "https://www.rmit.edu.au/assets/au/en/profile-images/t/thao-tran2.jpeg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T12:51:20.343Z"
     },
     "vp-1700": {
       "name": "Lan Nguyen - Monash University",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-02T11:22:31.012Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://research.monash.edu/en/persons/lan-nguyen-2/",
+      "imageUrl": "https://research.monash.edu/files-asset/765628048/Lan_cover_photo.jpg/",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T12:51:23.192Z"
     },
     "vp-1701": {
       "name": "Chau Le - University of East Anglia",
       "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-02T11:22:42.759Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "pageUrl": "https://research-portal.uea.ac.uk/en/persons/chau-le/",
+      "imageUrl": "https://research-portal.uea.ac.uk/en/persons/chau-le/Chau_Jul_2022.JPG",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T12:51:25.933Z",
+      "note": "candidate image could not be downloaded"
     },
     "vp-1702": {
       "name": "Thanh Ngo - East Carolina University",
@@ -3093,8 +3601,8 @@
         "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-10-02T11:22:44.890Z",
-      "note": "MEDIUM candidate rejected on visual review 2026-10-14: candidate was the ECU logo"
+      "retrievedAt": "2026-10-14T12:51:27.446Z",
+      "note": "rejected on visual review 2026-10-14: ECU logo"
     },
     "vp-1674": {
       "name": "Tam Nguyen - University of Texas at Arlington",
@@ -3127,49 +3635,74 @@
         "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-10-02T11:22:51.889Z",
-      "note": "MEDIUM candidate rejected on visual review 2026-10-14: candidate was the ERAU default faculty image"
+      "retrievedAt": "2026-10-14T12:48:48.256Z",
+      "note": "rejected on visual review 2026-10-14: ERAU default faculty image"
     },
     "vp-1676": {
       "name": "Justin Hung Nguyen",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-02T11:22:52.704Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://www.ecu.edu.au/schools/business-and-law/faculty/profiles/senior-lecturer/dr-justin-nguyen",
+      "imageUrl": "https://www.ecu.edu.au/__data/assets/image/0004/1054660/cropped.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T13:13:32.533Z",
+      "note": "MEDIUM candidate stored after visual review"
     },
     "vp-1677": {
       "name": "Tan Loc Bui",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-02T11:22:54.306Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://www.susqu.edu/profiles/bui/",
+      "imageUrl": "https://www.susqu.edu/wp-content/uploads/2024/12/12136_LocBui_400x425.rev_.1714414881.webp?ver=1736525379",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T12:48:50.537Z"
     },
     "vp-1678": {
       "name": "Phuc Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-02T11:22:57.973Z",
+      "retrievedAt": "2026-10-14T12:48:57.415Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1680": {
       "name": "Linh Xuan Diep Nguyen",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-02T11:22:58.346Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://le.ac.uk/people/linh-xd-nguyen",
+      "imageUrl": "https://le.ac.uk/-/media/uol/images/people/profiles/n/linh-xd-nguyen--photo/linh-nguyen.jpg?cx=0.47&cy=0.29&cw=500&ch=500&hash=020484364C2DCC091F8E4981F0E5775C",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T12:49:11.859Z"
     },
     "vp-1683": {
       "name": "Kim Tien Ly",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-02T11:22:59.167Z",
+      "retrievedAt": "2026-10-14T12:49:19.358Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1686": {
       "name": "Huu Nhan Duong",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-02T11:23:00.505Z",
+      "retrievedAt": "2026-10-14T12:49:39.945Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1687": {
@@ -3193,7 +3726,7 @@
       "name": "Trong-Thuc Hoang",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-02T11:23:07.543Z",
+      "retrievedAt": "2026-10-14T12:49:56.198Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1598": {
@@ -3231,37 +3764,46 @@
     },
     "vp-1600": {
       "name": "Hoang-Thanh Le",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-05T11:26:41.604Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://hsnsudbury.ca/en/Research/Scientists/Hoang-Thanh-Le",
+      "imageUrl": "https://hsnsudbury.ca/portals/1/Research/Scientists/Le_Thanh.jpg?ver=TYCZmOij33olk_QV_mEX2Q%3d%3d",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T12:38:33.030Z"
     },
     "vp-1601": {
       "name": "Anh Pham - University of Waterloo",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-05T11:26:52.020Z",
+      "retrievedAt": "2026-10-14T12:38:33.955Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1602": {
       "name": "Bach Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-05T11:26:55.027Z",
+      "retrievedAt": "2026-10-14T12:38:51.017Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1603": {
       "name": "Lan Anh Hoang",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-05T11:26:56.701Z",
+      "retrievedAt": "2026-10-14T12:39:07.539Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1604": {
       "name": "Manh Hoang",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-05T11:26:58.355Z",
+      "retrievedAt": "2026-10-14T12:39:22.354Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1605": {
@@ -3284,14 +3826,14 @@
       "name": "Loc Thai Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-05T11:27:04.520Z",
+      "retrievedAt": "2026-10-14T12:39:41.752Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1671": {
       "name": "Thu Phuong Pham",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-05T11:27:07.785Z",
+      "retrievedAt": "2026-10-14T12:48:30.747Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1584": {
@@ -3308,19 +3850,28 @@
         "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-10-09T11:29:30.533Z",
+      "retrievedAt": "2026-10-14T12:38:08.434Z",
       "note": "candidate failed 120x120 or portrait-aspect validation"
     },
     "vp-1585": {
       "name": "Xuan Huy Nguyen",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-05T11:27:45.720Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://profiles.sussex.ac.uk/p427207-xuan-huy-nguyen",
+      "imageUrl": "https://profiles.sussex.ac.uk/p427207-xuan-huy-nguyen/thumbnail",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T12:38:09.361Z"
     },
     "vp-1588": {
       "name": "Gia Huy Pham",
-      "outcome": "needs_review",
+      "outcome": "found",
       "pageUrl": "https://directory.statler.wvu.edu/faculty-staff-directory/gia-huy-pham",
       "imageUrl": "https://directory.statler.wvu.edu/files/ec228ba9-1a91-4b44-abc5-b8370e5eee51/290x290?cb=e07e1935dd1785d5a1b0975d3105d6ef",
       "sourceType": "official_faculty",
@@ -3332,22 +3883,32 @@
         "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-10-05T11:27:47.196Z",
-      "note": "candidate requires visual review before acceptance"
+      "retrievedAt": "2026-10-14T13:13:08.336Z",
+      "note": "MEDIUM candidate stored after visual review"
     },
     "vp-1590": {
       "name": "Quang Chinh Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-05T11:27:49.999Z",
+      "retrievedAt": "2026-10-14T12:38:20.285Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1591": {
       "name": "Duc H. Nguyen",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-05T11:27:50.800Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://www.bristol.ac.uk/people/person/Duc-Nguyen-8b75e851-ce31-4aa6-bce3-0d8756fd998c/",
+      "imageUrl": "https://research-information.bris.ac.uk/ws/files/431420859/2024_AI_upscaled_x2.jpeg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T13:13:30.443Z",
+      "note": "MEDIUM candidate stored after visual review"
     },
     "vp-1592": {
       "name": "Nguyen B. Truong",
@@ -3401,58 +3962,67 @@
     },
     "vp-1597": {
       "name": "Trang K. Nguyen",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-05T11:27:59.449Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://surgery.wustl.edu/people/trang-nguyen/",
+      "imageUrl": "https://surgery.wustl.edu/app/uploads/2024/02/Nguyen-Trang_Surg__06_1400x1930-280x386-1.png",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T12:38:32.403Z"
     },
     "vp-1570": {
       "name": "Lu Trong Khiem Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-07T11:22:48.388Z",
+      "retrievedAt": "2026-10-14T12:34:46.880Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1571": {
       "name": "Phuoc Tai Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-07T11:22:51.261Z",
+      "retrievedAt": "2026-10-14T12:35:06.536Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1573": {
       "name": "Trang Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-07T11:22:53.883Z",
+      "retrievedAt": "2026-10-14T12:35:26.948Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1575": {
       "name": "Thanh Ngoc Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-07T11:22:55.468Z",
+      "retrievedAt": "2026-10-14T12:35:41.910Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1576": {
       "name": "Ngoc Tien Tran",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-07T11:22:57.299Z",
+      "retrievedAt": "2026-10-14T12:35:58.872Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1577": {
       "name": "Minh Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-07T11:22:58.862Z",
+      "retrievedAt": "2026-10-14T12:36:15.458Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1578": {
       "name": "Thinh Xuan Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-07T11:23:24.369Z",
+      "retrievedAt": "2026-10-14T12:37:33.371Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1582": {
@@ -3476,28 +4046,28 @@
       "name": "Duc Thi Luu",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-07T11:24:10.609Z",
+      "retrievedAt": "2026-10-14T12:30:49.198Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1517": {
       "name": "André H. Hoang",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-07T11:24:25.903Z",
+      "retrievedAt": "2026-10-14T12:31:14.396Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1520": {
       "name": "Tung Pham",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-07T11:24:27.648Z",
+      "retrievedAt": "2026-10-14T12:31:30.135Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1539": {
       "name": "Thoa Thieu",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-07T11:24:29.997Z",
+      "retrievedAt": "2026-10-14T12:32:50.044Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1544": {
@@ -3521,7 +4091,7 @@
       "name": "Tuong Vy Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-07T11:24:32.498Z",
+      "retrievedAt": "2026-10-14T12:33:46.556Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1569": {
@@ -3561,7 +4131,7 @@
       "name": "Duc Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-09T11:27:44.226Z",
+      "retrievedAt": "2026-10-14T12:51:30.343Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1716": {
@@ -3585,14 +4155,14 @@
       "name": "Long Van Ngo",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-09T11:27:55.091Z",
+      "retrievedAt": "2026-10-14T12:51:46.200Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1726": {
       "name": "Thanh Tung Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-09T11:27:55.913Z",
+      "retrievedAt": "2026-10-14T12:52:01.162Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1727": {
@@ -3609,8 +4179,8 @@
         "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-10-09T11:27:57.559Z",
-      "note": "MEDIUM candidate rejected on visual review 2026-10-14: candidate was a default.svg placeholder"
+      "retrievedAt": "2026-10-14T12:52:17.852Z",
+      "note": "rejected on visual review 2026-10-14: default.svg placeholder"
     },
     "vp-1731": {
       "name": "Minh Nguyen - Newcastle University",
@@ -3632,14 +4202,14 @@
       "name": "Anh Dinh",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-09T11:29:01.356Z",
+      "retrievedAt": "2026-10-14T12:15:53.564Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1376": {
       "name": "Binh N. Trinh",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-09T11:29:03.522Z",
+      "retrievedAt": "2026-10-14T12:18:56.195Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1918": {
@@ -3661,14 +4231,14 @@
       "name": "Tri Mikael Tran",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-12T03:21:03.084Z",
+      "retrievedAt": "2026-10-14T12:58:56.248Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1920": {
       "name": "Anh Dung Tran Le",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-12T03:21:05.482Z",
+      "retrievedAt": "2026-10-14T12:59:14.079Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1921": {
@@ -3684,28 +4254,28 @@
         "department",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-10-12T03:21:08.528Z",
-      "note": "LERMaB member-list image is a plain blue placeholder square (no face); rejected in the 2026-10-12 audit"
+      "retrievedAt": "2026-10-14T12:59:33.555Z",
+      "note": "reviewed candidate failed --store checks 2026-10-14: image could not be downloaded"
     },
     "vp-1922": {
       "name": "Thi Thanh Binh Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-12T03:21:12.363Z",
+      "retrievedAt": "2026-10-14T12:59:37.186Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1923": {
       "name": "Anh Tuan Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-12T03:21:24.331Z",
+      "retrievedAt": "2026-10-14T12:59:56.652Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1924": {
       "name": "Thi Phuong Linh Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-12T03:21:34.875Z",
+      "retrievedAt": "2026-10-14T13:00:17.364Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1925": {
@@ -3725,10 +4295,19 @@
     },
     "vp-1926": {
       "name": "Ngan Vo",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-12T03:21:51.658Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://experts.exeter.ac.uk/42081-ngan-vo",
+      "imageUrl": "https://experts.exeter.ac.uk/42081-ngan-vo/thumbnail",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T13:00:34.828Z"
     },
     "vp-1927": {
       "name": "Tuan Dinh Tran",
@@ -3749,29 +4328,29 @@
       "name": "Yen Khang Nguyen Tran",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-12T03:23:35.344Z",
+      "retrievedAt": "2026-10-14T13:00:41.211Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1929": {
       "name": "Thuy Nguyen - Chiba University of Commerce",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-12T03:23:47.362Z",
+      "retrievedAt": "2026-10-14T13:00:58.620Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1930": {
       "name": "Dang Khoa Nguyen - Kyushu University",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-12T03:23:49.742Z",
-      "note": "Kyushu profile image has no detectable face (placeholder); 2026-10-12 audit"
+      "retrievedAt": "2026-10-14T13:01:15.523Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1931": {
       "name": "Thi Phuong Thao Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-12T03:23:58.787Z",
-      "note": "SANKEN staff photo (staging/assets/staff/4-25_Minamitani-Thao_11.jpg) is a single full-length portrait but 400x599 fails the 0.70 aspect floor; left for a cropped or alternate source (2026-10-12 audit)"
+      "retrievedAt": "2026-10-14T13:01:32.640Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1932": {
       "name": "Kim Ngan Nguyen",
@@ -3822,28 +4401,28 @@
       "name": "Francois Tran-Van",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-12T03:24:20.180Z",
+      "retrievedAt": "2026-10-14T13:01:50.927Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1936": {
       "name": "Nicolas Tran",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-12T03:24:22.202Z",
+      "retrievedAt": "2026-10-14T13:02:07.785Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1937": {
       "name": "Tuan Nam Ly",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-12T03:25:23.594Z",
+      "retrievedAt": "2026-10-14T13:02:30.076Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1938": {
       "name": "Hoang Anh Pham",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-12T03:25:26.361Z",
+      "retrievedAt": "2026-10-14T13:02:49.210Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1939": {
@@ -3895,35 +4474,35 @@
       "name": "Khac Hung Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-12T03:25:57.799Z",
+      "retrievedAt": "2026-10-14T13:03:05.000Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1943": {
       "name": "Canh Hao Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-12T03:25:59.447Z",
+      "retrievedAt": "2026-10-14T13:03:21.900Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1944": {
       "name": "Thanh Dong Pham",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-12T03:26:00.804Z",
+      "retrievedAt": "2026-10-14T13:03:37.874Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1945": {
       "name": "Thanh Mai Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-12T03:26:02.828Z",
+      "retrievedAt": "2026-10-14T13:03:54.884Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1946": {
       "name": "Ngoc Tran Phan",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-12T03:26:43.954Z",
+      "retrievedAt": "2026-10-14T13:04:13.265Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1947": {
@@ -3938,8 +4517,8 @@
         "department",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-10-12T03:26:53.374Z",
-      "note": "AMU directory shows a generic person.svg placeholder; 2026-10-12 audit"
+      "retrievedAt": "2026-10-14T13:04:30.815Z",
+      "note": "rejected on visual review 2026-10-14: generic person.svg icon"
     },
     "vp-1948": {
       "name": "Maria Ngoc Thi Huong Pham",
@@ -3985,8 +4564,8 @@
         "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-10-12T03:27:04.479Z",
-      "note": "KI profile image is a single-person headshot but 240x360 fails the 0.70 aspect floor; 2026-10-12 audit"
+      "retrievedAt": "2026-10-14T13:04:31.788Z",
+      "note": "candidate failed 120x120 or portrait-aspect validation"
     },
     "vp-1951": {
       "name": "Linh Nguyen - University of New South Wales",
@@ -4005,11 +4584,11 @@
     },
     "vp-1952": {
       "name": "Trang Doan - Swansea University",
-      "outcome": "not_found",
+      "outcome": "found",
       "pageUrl": "https://www.swansea.ac.uk/staff/t.t.doan/",
-      "imageUrl": "https://www.swansea.ac.uk/staff/t.t.doan/fo-none/media/students-studying.jpg",
+      "imageUrl": "https://intranet.swan.ac.uk/staffphoto/photoapi/staff-profile/t.t.doan/",
       "sourceType": "official_faculty",
-      "confidence": "HIGH",
+      "confidence": "MEDIUM",
       "identitySignals": [
         "name",
         "institution",
@@ -4017,8 +4596,8 @@
         "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-10-13T02:04:06.045Z",
-      "note": "candidate image could not be downloaded"
+      "retrievedAt": "2026-10-14T13:13:34.716Z",
+      "note": "MEDIUM candidate stored after visual review"
     },
     "vp-1953": {
       "name": "Thu Phuong Truong",
@@ -4037,30 +4616,38 @@
     },
     "vp-1954": {
       "name": "Chi Nghia Nguyen",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-13T02:04:08.607Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://researchmap.jp/nguyenchinghia?lang=en",
+      "imageUrl": "https://researchmap.jp/nguyenchinghia/avatar.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T13:04:35.843Z"
     },
     "vp-1955": {
       "name": "Thi Kim Thinh Truong",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-13T02:04:10.049Z",
+      "retrievedAt": "2026-10-14T13:04:38.359Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1956": {
       "name": "Nguyen Dinh Tuan Vuong",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-13T02:04:11.369Z",
+      "retrievedAt": "2026-10-14T13:04:55.610Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1957": {
       "name": "Thi Xuan Trinh Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-13T02:04:12.721Z",
+      "retrievedAt": "2026-10-14T13:05:20.710Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1958": {
@@ -4082,7 +4669,7 @@
       "name": "Thanh-Thuy Nguyen Tu",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-13T02:12:33.772Z",
+      "retrievedAt": "2026-10-14T13:05:37.108Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1960": {
@@ -4113,21 +4700,21 @@
         "department",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-10-13T02:12:47.226Z",
-      "note": "MEDIUM candidate rejected on visual review 2026-10-14: candidate was a \"no image\" placeholder"
+      "retrievedAt": "2026-10-14T13:05:56.765Z",
+      "note": "rejected on visual review 2026-10-14: \"no image\" placeholder"
     },
     "vp-1962": {
       "name": "Ngoc Son Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-13T02:12:50.114Z",
+      "retrievedAt": "2026-10-14T13:05:59.024Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1963": {
       "name": "Jerome Nguyen-Soenen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-13T02:12:51.817Z",
+      "retrievedAt": "2026-10-14T13:06:16.296Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1964": {
@@ -4148,19 +4735,9 @@
     "vp-1965": {
       "name": "Quang Nguyen - University of Westminster",
       "outcome": "not_found",
-      "pageUrl": "https://www.westminster.ac.uk/about-us/our-people/directory/nguyen-quang",
-      "imageUrl": "https://www.westminster.ac.uk/sites/default/public-files/styles/profile_380x380_/public/default_images/default_avatar.png?itok=eV6nG4bW",
-      "sourceType": "official_faculty",
-      "confidence": "MEDIUM",
-      "identitySignals": [
-        "name",
-        "institution",
-        "department",
-        "rank",
-        "stored_roster_url"
-      ],
-      "retrievedAt": "2026-10-13T02:12:54.527Z",
-      "note": "MEDIUM candidate rejected on visual review 2026-10-14: candidate was a default avatar"
+      "identitySignals": [],
+      "retrievedAt": "2026-10-14T13:06:33.229Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1966": {
       "name": "Nhung Nguyen - Northumbria University",
@@ -4256,29 +4833,39 @@
     "vp-1972": {
       "name": "Hoa Briscoe-Tran",
       "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-13T02:16:52.519Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "pageUrl": "https://research.monash.edu/en/persons/hoa-tran/",
+      "imageUrl": "https://research.monash.edu/en/persons/hoa-tran/100824ASB-Headshots174.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T13:06:48.791Z",
+      "note": "candidate image could not be downloaded"
     },
     "vp-1973": {
       "name": "Hieu Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-13T02:20:06.234Z",
+      "retrievedAt": "2026-10-14T13:06:51.103Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1974": {
       "name": "Duc Giang Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-13T02:20:06.468Z",
+      "retrievedAt": "2026-10-14T13:07:07.407Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1975": {
       "name": "Phuong Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-13T02:20:06.724Z",
+      "retrievedAt": "2026-10-14T13:07:22.912Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1976": {
@@ -4347,7 +4934,7 @@
       "name": "Anh Tuan Le - University of Warwick",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-13T02:22:53.599Z",
+      "retrievedAt": "2026-10-14T13:07:38.390Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1981": {
@@ -4445,9 +5032,19 @@
     "vp-1987": {
       "name": "Mylinh Nguyen - University of Brighton",
       "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-13T02:26:24.224Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "pageUrl": "https://research.brighton.ac.uk/en/persons/mylinh-nguyen/",
+      "imageUrl": "https://research.brighton.ac.uk/en/persons/mylinh-nguyen/IMG_5401.JPG",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T13:07:54.366Z",
+      "note": "candidate image could not be downloaded"
     },
     "vp-1988": {
       "name": "Lisa Nguyen",
@@ -4634,15 +5231,24 @@
       "name": "Christopher Le",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-13T03:15:28.471Z",
+      "retrievedAt": "2026-10-14T13:07:55.749Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-2001": {
       "name": "Tristan Nguyen",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-13T03:15:31.619Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://www.hs-fresenius.de/lehre/lehrpersonal/tristan-nguyen/",
+      "imageUrl": "https://central.hs-fresenius.de/wp-content/uploads/2021/09/staff_photo_292eacef533fc672e9b1aba015f50a789ff7ef6f.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T13:13:35.575Z",
+      "note": "MEDIUM candidate stored after visual review"
     },
     "vp-2002": {
       "name": "Dang Nguyen",
@@ -4950,16 +5556,18 @@
       "name": "Yen Le",
       "outcome": "not_found",
       "pageUrl": "https://researchportalplus.anu.edu.au/en/persons/yen-le/",
-      "imageUrl": "https://researchportalplus.anu.edu.au/files-asset/146963207/YenProfilePhoto1.jpg",
+      "imageUrl": "https://researchportalplus.anu.edu.au/en/persons/yen-le/YenProfilePhoto1.jpg",
       "sourceType": "official_faculty",
       "confidence": "HIGH",
       "identitySignals": [
-        "exact_name",
-        "same_institution",
+        "name",
+        "institution",
+        "department",
+        "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-10-13T03:24:19.000Z",
-      "note": "official ANU image is a full-length outdoor photo, not a headshot; 2026-10-13 audit"
+      "retrievedAt": "2026-10-14T13:08:21.353Z",
+      "note": "candidate image could not be downloaded"
     },
     "vp-2023": {
       "name": "Lam Bui",
@@ -4979,7 +5587,7 @@
     },
     "vp-2024": {
       "name": "Julie Nguyen",
-      "outcome": "needs_review",
+      "outcome": "not_found",
       "pageUrl": "https://staff-profiles.cqu.edu.au/home/view/1717",
       "imageUrl": "https://staff-profiles.cqu.edu.au/files/downloadPhoto/12698/FB_IMG_1445805664913_Copy.jpg",
       "sourceType": "official_faculty",
@@ -4992,7 +5600,7 @@
         "stored_roster_url"
       ],
       "retrievedAt": "2026-10-13T03:24:02.192Z",
-      "note": "candidate requires visual review before acceptance"
+      "note": "reviewed candidate failed --store checks 2026-10-14: image too small or not portrait-shaped"
     },
     "vp-2025": {
       "name": "Loc Tran",
@@ -5118,7 +5726,7 @@
       "name": "Wendy T. Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-13T03:24:54.322Z",
+      "retrievedAt": "2026-10-14T13:08:23.862Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-2034": {
@@ -5244,9 +5852,19 @@
     "vp-2042": {
       "name": "An Ninh Pham",
       "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-13T03:30:39.555Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "pageUrl": "https://www.unsw.edu.au/staff/an-ninh-pham",
+      "imageUrl": "https://api.research.unsw.edu.au/sites/default/files/images/profile/Pham%2CAnNinh.png",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T13:08:38.796Z",
+      "note": "rejected on visual review 2026-10-14: stored image was a grid of many staff headshots"
     },
     "vp-2043": {
       "name": "Rebecca Dang",
@@ -5266,9 +5884,19 @@
     "vp-2044": {
       "name": "Patrick Vu",
       "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-13T03:30:41.790Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "pageUrl": "https://www.unsw.edu.au/staff/patrick-vu",
+      "imageUrl": "https://api.research.unsw.edu.au/sites/default/files/images/profile/202502_pp_zoomed_0.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T13:08:44.793Z",
+      "note": "reviewed candidate failed --store checks 2026-10-14: image too small or not portrait-shaped"
     },
     "vp-2045": {
       "name": "Hien Hoang",
@@ -5349,7 +5977,7 @@
       "name": "Lan P. Luu",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-13T03:36:13.229Z",
+      "retrievedAt": "2026-10-14T13:08:45.148Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-2051": {
@@ -5386,7 +6014,7 @@
       "name": "Ben Tran",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-13T03:36:20.251Z",
+      "retrievedAt": "2026-10-14T13:08:59.678Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-2054": {
@@ -5671,14 +6299,14 @@
       "name": "Bang Bui",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-13T03:45:42.044Z",
+      "retrievedAt": "2026-10-14T13:09:14.797Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-2073": {
       "name": "Xuan Vu",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-13T03:46:10.797Z",
+      "retrievedAt": "2026-10-14T13:09:29.960Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-2074": {
@@ -5868,7 +6496,7 @@
       "name": "Truong Vu",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-13T03:50:45.225Z",
+      "retrievedAt": "2026-10-14T13:09:44.619Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-2087": {
@@ -5954,119 +6582,127 @@
       "name": "Song Thai Duong Duong",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-12T11:30:36.748Z",
+      "retrievedAt": "2026-10-14T12:54:59.551Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1911": {
       "name": "Gia Phan Le",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-12T11:30:45.471Z",
+      "retrievedAt": "2026-10-14T12:55:28.684Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1912": {
       "name": "Kim Anh Huynh",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-12T11:30:54.169Z",
+      "retrievedAt": "2026-10-14T12:55:57.047Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1913": {
       "name": "Bao Ngoc Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-12T11:31:01.307Z",
+      "retrievedAt": "2026-10-14T12:56:22.429Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1914": {
       "name": "Trong Danh Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-12T11:31:09.215Z",
+      "retrievedAt": "2026-10-14T12:56:48.018Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1915": {
       "name": "Thi Huong Pham",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-12T11:31:16.371Z",
+      "retrievedAt": "2026-10-14T12:57:13.723Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1916": {
       "name": "Phuoc Loc Truong",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-12T11:31:22.797Z",
+      "retrievedAt": "2026-10-14T12:57:39.264Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1917": {
       "name": "Dang Khoa Vo",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-12T11:31:35.100Z",
+      "retrievedAt": "2026-10-14T12:58:10.439Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1887": {
       "name": "Thi Hoa Hong Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-12T11:32:00.905Z",
+      "retrievedAt": "2026-10-14T12:52:19.865Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1895": {
       "name": "Le Khanh Ngan Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-12T11:32:03.098Z",
+      "retrievedAt": "2026-10-14T12:52:36.431Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1898": {
       "name": "Kim Cuong Le",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-12T11:32:06.332Z",
+      "retrievedAt": "2026-10-14T12:52:52.366Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1899": {
       "name": "Ngoc Nha Vi Tran",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-12T11:32:08.442Z",
+      "retrievedAt": "2026-10-14T12:53:08.727Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1900": {
       "name": "Hung Thanh Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-12T11:32:13.059Z",
+      "retrievedAt": "2026-10-14T12:53:29.210Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1902": {
       "name": "Minh Nhut Le",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-12T11:32:16.683Z",
+      "retrievedAt": "2026-10-14T12:53:49.065Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1903": {
       "name": "Quynh-Trang Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-12T11:32:21.761Z",
+      "retrievedAt": "2026-10-14T12:54:14.112Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1904": {
       "name": "Trung Thanh Nguyen - Liverpool John Moores University",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-12T11:32:25.757Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://profiles.ljmu.ac.uk/5755-trung-thanh-nguyen",
+      "imageUrl": "https://profiles.ljmu.ac.uk/5755-trung-thanh-nguyen/thumbnail",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T12:54:37.241Z"
     },
     "vp-1905": {
       "name": "Trang Tran",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-12T11:32:27.668Z",
+      "retrievedAt": "2026-10-14T12:54:43.850Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-2091": {
@@ -6103,7 +6739,7 @@
       "name": "Thang Nguyen - Monash University",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-14T03:21:58.160Z",
+      "retrievedAt": "2026-10-14T13:10:02.768Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-2094": {
@@ -6157,7 +6793,7 @@
       "name": "Anne Vu",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-14T03:23:41.223Z",
+      "retrievedAt": "2026-10-14T13:10:19.330Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-2098": {
@@ -6297,7 +6933,7 @@
         "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-10-14T03:24:17.816Z",
+      "retrievedAt": "2026-10-14T13:10:36.149Z",
       "note": "candidate failed 120x120 or portrait-aspect validation"
     },
     "vp-2107": {
@@ -6335,7 +6971,7 @@
       "name": "Thomas Tran - University of Ottawa",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-14T03:25:13.126Z",
+      "retrievedAt": "2026-10-14T13:10:38.134Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-2110": {
@@ -6388,7 +7024,7 @@
       "name": "Anh-Thu Le",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-14T03:25:16.522Z",
+      "retrievedAt": "2026-10-14T13:10:53.437Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-2114": {
@@ -6409,9 +7045,19 @@
     "vp-2115": {
       "name": "Tuan Dang",
       "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-14T03:25:27.680Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "pageUrl": "https://engineering.uark.edu/electrical-engineering-computer-science/electrical-engineering-faculty/uid/tuand/name/Tuan+Dang/",
+      "imageUrl": "https://campusdata.uark.edu/resources/images/FacultyStaffProfile/tuand.jpg?1791983470547&w=440",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-14T13:11:09.033Z",
+      "note": "reviewed candidate failed --store checks 2026-10-14: image too small or not portrait-shaped"
     },
     "vp-2116": {
       "name": "Phong Nguyen",
@@ -6432,7 +7078,7 @@
       "name": "Ignace Lang Tran",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-14T03:26:24.332Z",
+      "retrievedAt": "2026-10-14T13:11:20.776Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-2118": {
@@ -6485,7 +7131,7 @@
       "name": "Linh Ha Le",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-14T03:26:29.990Z",
+      "retrievedAt": "2026-10-14T13:11:35.634Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-2122": {
@@ -6711,7 +7357,7 @@
       "name": "Ursula Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-14T03:28:21.368Z",
+      "retrievedAt": "2026-10-14T13:11:50.826Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-2137": {
@@ -6733,7 +7379,7 @@
       "name": "Trung V. Tran",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-14T03:29:26.472Z",
+      "retrievedAt": "2026-10-14T13:12:06.013Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     }
   }

@@ -87,8 +87,7 @@ Retired routines (2026-09-27), replaced by the ones above:
 - The link-health sweep became the link-health Action plus `links` and `audit`: `check-links` in
   the cloud sandbox is useless (4,794 of 5,501 URLs returned egress-proxy 403s on 2026-09-21).
 
-`scholar`, `websites`, `overviews`, and `education` are disabled but not deleted; delete them in
-the web UI.
+`scholar`, `websites`, `overviews`, and `education` have been deleted (confirmed 2026-10-14).
 
 ## Conventions for every scheduled run
 
@@ -316,6 +315,8 @@ Playbook: `TASKS/fetch_portraits.md` section 4, exactly. Cap: 2 batches of 10, n
 entries first (`--next=10`; the script queues new entries automatically), after up to 10
 `needs_review` candidates from `--review` (section 4, "Review the MEDIUM candidates too"). Old unresolved entries
 are retried only once every new entry has been attempted. Run
+`npx playwright install chromium` (the script renders JavaScript-built profile pages and fetches
+images that CDNs refuse to curl; without Chromium it skips that fallback) and
 `pip install opencv-python-headless pillow numpy` first: `fetch-portraits.ts --apply` refuses to
 run without OpenCV, because every candidate must pass the one-dominant-face check
 (`scripts/portrait_faces.py`) before it is stored. Open every added image with the Read tool and

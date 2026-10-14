@@ -603,7 +603,7 @@
     "university": "University of California, San Diego",
     "profileUrl": "https://profiles.ucsd.edu/mylinh.nguyen",
     "batch": 3,
-    "status": "pending",
+    "status": "unresolved",
     "note": "portrait no longer in roster",
     "recoveryBatch": 3,
     "portraitSource": "https://profiles.ucsd.edu/framework/images/arrowDown.png"
@@ -654,7 +654,7 @@
     "university": "Northwestern University",
     "profileUrl": "https://www.feinberg.northwestern.edu/sites/obgyn/faculty/profile.html?xid=46373",
     "batch": 4,
-    "status": "pending",
+    "status": "unresolved",
     "note": "portrait no longer in roster",
     "recoveryBatch": 3,
     "portraitSource": "https://deptcommon.fsm.northwestern.edu/images/blank-image-profile.jpg"
@@ -706,9 +706,10 @@
     "university": "City of Hope",
     "profileUrl": "https://www.cityofhope.org/patients/find-a-doctor/an-nguyen",
     "batch": 4,
-    "status": "unresolved",
-    "note": "profile page exposed no image candidate",
-    "recoveryBatch": 4
+    "status": "fetched",
+    "note": "HIGH-confidence official_faculty",
+    "recoveryBatch": 4,
+    "portraitSource": "https://cdn.cityofhope.org/media/bios/8d661f3f-8203-4047-a0bb-bf1b0bd7dd33/default/nguyen-an.jpg"
   },
   {
     "id": "vp-0849",
@@ -716,9 +717,10 @@
     "university": "City of Hope",
     "profileUrl": "https://www.cityofhope.org/patients/find-a-doctor/andrew-nguyen",
     "batch": 4,
-    "status": "unresolved",
-    "note": "profile page exposed no image candidate",
-    "recoveryBatch": 4
+    "status": "fetched",
+    "note": "HIGH-confidence official_faculty",
+    "recoveryBatch": 4,
+    "portraitSource": "https://cdn.cityofhope.org/media/bios/f4c261d0-c316-473e-81ea-148c37c48192/default/nguyen-andrew.jpg"
   },
   {
     "id": "vp-0855",
@@ -825,7 +827,7 @@
     "university": "Weill Cornell Medicine",
     "profileUrl": "https://vivo.weill.cornell.edu/display/cwid-mtn9004",
     "batch": 4,
-    "status": "pending",
+    "status": "unresolved",
     "note": "portrait no longer in roster",
     "recoveryBatch": 4,
     "portraitSource": "https://vivo.weill.cornell.edu/images/DirectoryGenericPhoto.png"
@@ -1114,9 +1116,10 @@
     "university": "Lincoln University",
     "profileUrl": "https://researchers.lincoln.ac.nz/cuong.nguyen",
     "batch": 6,
-    "status": "unresolved",
-    "note": "profile page had no downloadable portrait image",
-    "recoveryBatch": 5
+    "status": "fetched",
+    "note": "HIGH-confidence official_faculty",
+    "recoveryBatch": 5,
+    "portraitSource": "https://researchers.lincoln.ac.nz/cuong.nguyen/thumbnail"
   },
   {
     "id": "vp-0958",
@@ -1144,9 +1147,10 @@
     "university": "University of San Francisco",
     "profileUrl": "https://www.usfca.edu/faculty/quynh-pham",
     "batch": 6,
-    "status": "unresolved",
-    "note": "profile page exposed no image candidate",
-    "recoveryBatch": 6
+    "status": "fetched",
+    "note": "visually reviewed candidate",
+    "recoveryBatch": 6,
+    "portraitSource": "https://www.colby.edu/cdn-cgi/image/width=320,format=auto,quality=50/https://www.colby.edu/wp-content/uploads/2024/07/ac864fb7240b57ca1c206af3bccaf666_20260929-800x800.jpg"
   },
   {
     "id": "vp-0966",
@@ -1154,9 +1158,10 @@
     "university": "University of Leicester",
     "profileUrl": "https://le.ac.uk/people/quynh-hoang",
     "batch": 6,
-    "status": "unresolved",
-    "note": "profile page exposed no image candidate",
-    "recoveryBatch": 6
+    "status": "fetched",
+    "note": "HIGH-confidence official_faculty",
+    "recoveryBatch": 6,
+    "portraitSource": "https://le.ac.uk/-/media/uol/images/people/profiles/h/hoangquynhjpg-2.jpg?cx=0&cy=0&cw=500&ch=500&hash=51E45F087BD5E25DAAE67830956EA376"
   },
   {
     "id": "vp-0978",
@@ -1244,10 +1249,10 @@
     "university": "Institute of Science Tokyo",
     "profileUrl": "https://researchmap.jp/magn?lang=en",
     "batch": 7,
-    "status": "pending",
-    "note": "portrait no longer in roster",
+    "status": "fetched",
+    "note": "visually reviewed candidate",
     "recoveryBatch": 6,
-    "portraitSource": "https://researchmap.jp/magn/avatar.png"
+    "portraitSource": "https://magn.ee.eng.isct.ac.jp/lab/wp-content/uploads/2026/09/Pham-Nam-Hai.png"
   },
   {
     "id": "vp-0989",
@@ -1521,9 +1526,10 @@
     "university": "University of Sussex",
     "profileUrl": "https://profiles.sussex.ac.uk/p316727-anh-vu",
     "batch": 8,
-    "status": "unresolved",
-    "note": "profile page exposed no image candidate",
-    "recoveryBatch": 7
+    "status": "fetched",
+    "note": "HIGH-confidence official_faculty",
+    "recoveryBatch": 7,
+    "portraitSource": "https://profiles.sussex.ac.uk/p316727-anh-vu/thumbnail"
   },
   {
     "id": "vp-1039",
@@ -1613,9 +1619,10 @@
     "university": "University of Aberdeen",
     "profileUrl": "https://www.abdn.ac.uk/business/people/profiles/huong.vu",
     "batch": 8,
-    "status": "unresolved",
-    "note": "profile page exposed no image candidate",
-    "recoveryBatch": 7
+    "status": "fetched",
+    "note": "visually reviewed candidate",
+    "recoveryBatch": 7,
+    "portraitSource": "https://www.umu.se/contentassets/3a122b5d65914165a5359f59b3c56a8b/Profilbild.PNG?v=484215327&width=185&quality=90"
   },
   {
     "id": "vp-1050",
@@ -1893,9 +1900,10 @@
     "university": "Singapore Management University",
     "profileUrl": "https://economics.smu.edu.sg/faculty/profile/6711/huynh-bao-tan",
     "batch": 10,
-    "status": "unresolved",
-    "note": "profile page exposed no image candidate",
-    "recoveryBatch": 8
+    "status": "fetched",
+    "note": "visually reviewed candidate",
+    "recoveryBatch": 8,
+    "portraitSource": "https://staffphoto.smu.edu.sg/s/bthuynh/600x400"
   },
   {
     "id": "vp-1081",
@@ -1969,9 +1977,10 @@
     "university": "University of Wollongong",
     "profileUrl": "https://scholars.uow.edu.au/kiet-tieu",
     "batch": 10,
-    "status": "unresolved",
-    "note": "profile page exposed no image candidate",
-    "recoveryBatch": 8
+    "status": "fetched",
+    "note": "HIGH-confidence official_faculty",
+    "recoveryBatch": 8,
+    "portraitSource": "https://scholars.uow.edu.au/kiet-tieu/thumbnail"
   },
   {
     "id": "vp-1090",
@@ -2262,7 +2271,7 @@
     "university": "Université de Moncton",
     "profileUrl": "https://www.umoncton.ca/notreumoncton/node/27",
     "batch": 12,
-    "status": "pending",
+    "status": "unresolved",
     "note": "portrait no longer in roster",
     "recoveryBatch": 9,
     "portraitSource": "https://www.umoncton.ca/notreumoncton/themes/custom/umoncton-theme-d8/images/default@mobile3x.jpg"
@@ -2507,9 +2516,10 @@
     "university": "University of Technology Sydney",
     "profileUrl": "https://profiles.uts.edu.au/HuuHao.Ngo",
     "batch": 13,
-    "status": "unresolved",
-    "note": "profile page exposed no image candidate",
-    "recoveryBatch": 11
+    "status": "fetched",
+    "note": "HIGH-confidence official_faculty",
+    "recoveryBatch": 11,
+    "portraitSource": "https://profiles.uts.edu.au/HuuHao.Ngo/thumbnail"
   },
   {
     "id": "vp-1175",
@@ -2517,9 +2527,10 @@
     "university": "Adelaide University",
     "profileUrl": "https://researchers.adelaide.edu.au/profile/thong.pham",
     "batch": 13,
-    "status": "unresolved",
-    "note": "profile page exposed no image candidate",
-    "recoveryBatch": 11
+    "status": "fetched",
+    "note": "visually reviewed candidate",
+    "recoveryBatch": 11,
+    "portraitSource": "https://researchers.adelaide.edu.au/sites/default/files/styles/profile_large/public/profile-images/40015.jpeg?itok=DDrqfMbD"
   },
   {
     "id": "vp-1176",
@@ -2630,9 +2641,10 @@
     "university": "University of Wollongong",
     "profileUrl": "https://scholars.uow.edu.au/hoang-dung-duong/",
     "batch": 14,
-    "status": "unresolved",
-    "note": "profile page exposed no image candidate",
-    "recoveryBatch": 11
+    "status": "fetched",
+    "note": "HIGH-confidence official_faculty",
+    "recoveryBatch": 11,
+    "portraitSource": "https://scholars.uow.edu.au/hoang-dung-duong/thumbnail"
   },
   {
     "id": "vp-1191",
@@ -2659,9 +2671,10 @@
     "university": "University of New England",
     "profileUrl": "https://www.une.edu.au/staff-profiles/education/hphan2",
     "batch": 14,
-    "status": "unresolved",
-    "note": "profile page exposed no image candidate",
-    "recoveryBatch": 11
+    "status": "fetched",
+    "note": "visually reviewed candidate",
+    "recoveryBatch": 11,
+    "portraitSource": "https://www.une.edu.au/media/media-content/images/profile-images/HPhan2.jpg"
   },
   {
     "id": "vp-1194",
@@ -2890,9 +2903,10 @@
     "university": "International Food Policy Research Institute",
     "profileUrl": "https://www.ifpri.org/expert/phuong-hong-nguyen",
     "batch": 15,
-    "status": "unresolved",
-    "note": "profile page exposed no image candidate",
-    "recoveryBatch": 12
+    "status": "fetched",
+    "note": "HIGH-confidence official_faculty",
+    "recoveryBatch": 12,
+    "portraitSource": "https://www.ifpri.org/wp-content/uploads/2024/04/nguyen_phuong.jpg"
   },
   {
     "id": "vp-1217",
@@ -2993,9 +3007,10 @@
     "university": "University of Technology Sydney",
     "profileUrl": "https://profiles.uts.edu.au/ToanTrong.Tran",
     "batch": 16,
-    "status": "unresolved",
-    "note": "profile page exposed no image candidate",
-    "recoveryBatch": 13
+    "status": "fetched",
+    "note": "HIGH-confidence official_faculty",
+    "recoveryBatch": 13,
+    "portraitSource": "https://profiles.uts.edu.au/TrongToan.Tran/thumbnail"
   },
   {
     "id": "vp-1227",
@@ -3749,9 +3764,10 @@
     "university": "The University of Sydney",
     "profileUrl": "https://profiles.sydney.edu.au/linh.nghiem",
     "batch": 20,
-    "status": "unresolved",
-    "note": "profile page exposed no image candidate",
-    "recoveryBatch": 16
+    "status": "fetched",
+    "note": "HIGH-confidence official_faculty",
+    "recoveryBatch": 16,
+    "portraitSource": "https://profiles.sydney.edu.au/linh.nghiem/thumbnail"
   },
   {
     "id": "vp-1302",
@@ -3918,9 +3934,10 @@
     "university": "University of Technology Sydney",
     "profileUrl": "https://profiles.uts.edu.au/Doan.Hoang",
     "batch": 20,
-    "status": "unresolved",
-    "note": "profile page exposed no image candidate",
-    "recoveryBatch": 17
+    "status": "fetched",
+    "note": "HIGH-confidence official_faculty",
+    "recoveryBatch": 17,
+    "portraitSource": "https://profiles.uts.edu.au/Doan.Hoang/thumbnail"
   },
   {
     "id": "vp-1320",
@@ -3958,9 +3975,10 @@
     "university": "Queen's University",
     "profileUrl": "https://chemeng.queensu.ca/people/faculty/cao-thang-dinh.html",
     "batch": 21,
-    "status": "unresolved",
-    "note": "profile page exposed no image candidate",
-    "recoveryBatch": 17
+    "status": "fetched",
+    "note": "HIGH-confidence official_faculty",
+    "recoveryBatch": 17,
+    "portraitSource": "https://smithengineering.queensu.ca/directory/_images/cao-thang-dinh.jpg"
   },
   {
     "id": "vp-1324",
@@ -3968,9 +3986,10 @@
     "university": "RMIT University",
     "profileUrl": "https://academics.rmit.edu.au/tu-le/",
     "batch": 21,
-    "status": "unresolved",
-    "note": "profile page exposed no image candidate",
-    "recoveryBatch": 17
+    "status": "fetched",
+    "note": "HIGH-confidence official_faculty",
+    "recoveryBatch": 17,
+    "portraitSource": "https://academics.rmit.edu.au/tu-le/thumbnail"
   },
   {
     "id": "vp-1325",
@@ -4185,9 +4204,10 @@
     "university": "Edith Cowan University",
     "profileUrl": "https://www.ecu.edu.au/schools/engineering/staff/profiles/lecturers/dr-quoc-viet-phung",
     "batch": 22,
-    "status": "unresolved",
-    "note": "profile page exposed no image candidate",
-    "recoveryBatch": 18
+    "status": "fetched",
+    "note": "HIGH-confidence official_faculty",
+    "recoveryBatch": 18,
+    "portraitSource": "https://www.ecu.edu.au/__data/assets/image/0003/1038567/Dr-Quoc-Viet-Phung.jpg"
   },
   {
     "id": "vp-1347",
@@ -4275,9 +4295,10 @@
     "university": "University of Technology Sydney",
     "profileUrl": "https://profiles.uts.edu.au/Quan.Vuong",
     "batch": 22,
-    "status": "unresolved",
-    "note": "profile page exposed no image candidate",
-    "recoveryBatch": 19
+    "status": "fetched",
+    "note": "HIGH-confidence official_faculty",
+    "recoveryBatch": 19,
+    "portraitSource": "https://profiles.uts.edu.au/Quan.Vuong/thumbnail"
   },
   {
     "id": "vp-1356",
@@ -4761,9 +4782,10 @@
     "university": "University of Adelaide",
     "profileUrl": "https://researchers.adelaide.edu.au/profile/triet.h.le",
     "batch": 25,
-    "status": "unresolved",
-    "note": "profile page exposed no image candidate",
-    "recoveryBatch": 21
+    "status": "fetched",
+    "note": "visually reviewed candidate",
+    "recoveryBatch": 21,
+    "portraitSource": "https://researchers.adelaide.edu.au/sites/default/files/styles/profile_large/public/profile-images/21258.jpeg?itok=roEtHHMK"
   },
   {
     "id": "vp-1405",
@@ -4771,9 +4793,10 @@
     "university": "University of Technology Sydney",
     "profileUrl": "https://profiles.uts.edu.au/Cuong.Ton-That",
     "batch": 25,
-    "status": "unresolved",
-    "note": "profile page exposed no image candidate",
-    "recoveryBatch": 21
+    "status": "fetched",
+    "note": "HIGH-confidence official_faculty",
+    "recoveryBatch": 21,
+    "portraitSource": "https://profiles.uts.edu.au/Cuong.Ton-That/thumbnail"
   },
   {
     "id": "vp-1406",
@@ -5263,9 +5286,10 @@
     "university": "University of Tasmania",
     "profileUrl": "https://discover.utas.edu.au/Vinh.To",
     "batch": 27,
-    "status": "unresolved",
-    "note": "profile page exposed no image candidate",
-    "recoveryBatch": 23
+    "status": "fetched",
+    "note": "HIGH-confidence official_faculty",
+    "recoveryBatch": 23,
+    "portraitSource": "https://discover.utas.edu.au/Vinh.To/thumbnail"
   },
   {
     "id": "vp-1454",
@@ -5284,9 +5308,10 @@
     "university": "Universiti Brunei Darussalam",
     "profileUrl": "https://shbie.ubd.edu.bn/academic-staff/prof-dr-phan-le-ha/",
     "batch": 27,
-    "status": "unresolved",
-    "note": "profile page exposed no image candidate",
-    "recoveryBatch": 23
+    "status": "fetched",
+    "note": "HIGH-confidence official_faculty",
+    "recoveryBatch": 23,
+    "portraitSource": "https://ice.ubd.edu.bn/wp-content/uploads/2019/09/Phan-Le-Ha-ICE.jpg"
   },
   {
     "id": "vp-1456",
@@ -5336,9 +5361,10 @@
     "university": "Edge Hill University",
     "profileUrl": "https://www.edgehill.ac.uk/person/vinh-thong-ta/",
     "batch": 27,
-    "status": "unresolved",
-    "note": "profile page exposed no image candidate",
-    "recoveryBatch": 23
+    "status": "fetched",
+    "note": "visually reviewed candidate",
+    "recoveryBatch": 23,
+    "portraitSource": "https://www.cranfield.ac.uk/-/media/people/e3586.ashx?w=200"
   },
   {
     "id": "vp-1461",
@@ -5491,9 +5517,10 @@
     "university": "The University of Sydney",
     "profileUrl": "https://profiles.sydney.edu.au/kim-yen.phan-thien",
     "batch": 28,
-    "status": "unresolved",
-    "note": "profile page exposed no image candidate",
-    "recoveryBatch": 24
+    "status": "fetched",
+    "note": "HIGH-confidence official_faculty",
+    "recoveryBatch": 24,
+    "portraitSource": "https://profiles.sydney.edu.au/kim-yen.phan-thien/thumbnail"
   },
   {
     "id": "vp-1476",
@@ -5544,7 +5571,7 @@
     "profileUrl": "https://researchmap.jp/buitam/?lang=en",
     "batch": 28,
     "status": "unresolved",
-    "note": "profile page exposed no image candidate",
+    "note": "grid image rejected on visual review",
     "recoveryBatch": 24
   },
   {
@@ -5685,10 +5712,10 @@
     "university": "California State University, Monterey Bay",
     "profileUrl": "https://csumb.edu/hcom/phuong-nguyen/",
     "batch": 30,
-    "status": "unresolved",
-    "note": "fetched by parallel portrait scout",
+    "status": "fetched",
+    "note": "HIGH-confidence official_faculty",
     "recoveryBatch": 1,
-    "portraitSource": "https://csumb.edu/media/csumb/legacy/legacy-site-images/ucomm-news-library/BC06-RegionalUniversities-West-2025.png"
+    "portraitSource": "https://researchprofiles.csumb.edu/files-asset/39702509/phuong_nguyen.jpg/"
   },
   {
     "id": "vp-1496",
@@ -5810,7 +5837,9 @@
     "university": "University of Auckland",
     "profileUrl": "https://profiles.auckland.ac.nz/man-pham",
     "batch": 32,
-    "status": "unresolved"
+    "status": "fetched",
+    "portraitSource": "https://profiles.auckland.ac.nz/man-pham/thumbnail",
+    "note": "HIGH-confidence official_faculty"
   },
   {
     "id": "vp-1645",
@@ -5852,7 +5881,9 @@
     "university": "University of Wollongong",
     "profileUrl": "https://scholars.uow.edu.au/hoa-khanh-dam",
     "batch": 32,
-    "status": "unresolved"
+    "status": "fetched",
+    "portraitSource": "https://scholars.uow.edu.au/hoa-khanh-dam/thumbnail",
+    "note": "HIGH-confidence official_faculty"
   },
   {
     "id": "vp-1651",
@@ -5876,7 +5907,9 @@
     "university": "University of Colorado Denver",
     "profileUrl": "https://engineering.ucdenver.edu/departments/electrical-engineering/people",
     "batch": 32,
-    "status": "unresolved"
+    "status": "fetched",
+    "portraitSource": "http://inscylab.org/nambui/img/NamBui_profimg.jpg",
+    "note": "HIGH-confidence personal_homepage"
   },
   {
     "id": "vp-1609",
@@ -5934,7 +5967,9 @@
     "university": "University of Pretoria",
     "profileUrl": "https://www.up.ac.za/mathematics-and-applied-mathematics/dr-t-tung-le",
     "batch": 32,
-    "status": "unresolved"
+    "status": "fetched",
+    "portraitSource": "https://drupalwebprod-files.up.ac.za/Public/styles/square_med/public/media/128/image/inline/2403382/tung-le-photo.zp109510.jpg?VersionId=HeLzBwmtmhg.7DUnLotT4ajrT2Rq9MQG&itok=39vrR9cv",
+    "note": "HIGH-confidence official_faculty"
   },
   {
     "id": "vp-1618",
@@ -5968,7 +6003,9 @@
     "university": "Khalifa University",
     "profileUrl": "https://www.ku.ac.ae/college-people/dr-hoach-the-nguyen",
     "batch": 32,
-    "status": "unresolved"
+    "status": "fetched",
+    "portraitSource": "https://www.ku.ac.ae/wp-content/themes/khalifauniversity/faculty-uploads/Nguyen-The-Hoach_KU-KAIST-JRC.jpg",
+    "note": "HIGH-confidence official_faculty"
   },
   {
     "id": "vp-1622",
@@ -5984,7 +6021,9 @@
     "university": "University College Dublin",
     "profileUrl": "https://people.ucd.ie/di.nguyen",
     "batch": 32,
-    "status": "unresolved"
+    "status": "fetched",
+    "portraitSource": "https://people.ucd.ie/di.nguyen/thumbnail",
+    "note": "HIGH-confidence official_faculty"
   },
   {
     "id": "vp-1625",
@@ -6026,7 +6065,9 @@
     "university": "University of Copenhagen",
     "profileUrl": "https://ncm.ku.dk/staff/?pure=en/persons/598007",
     "batch": 32,
-    "status": "unresolved"
+    "status": "fetched",
+    "portraitSource": "https://www2.adm.ku.dk/selv/pls/prt_www40.hentindhold_cms?p_personid=729949",
+    "note": "visually reviewed candidate"
   },
   {
     "id": "vp-1631",
@@ -6290,7 +6331,9 @@
     "university": "The University of Newcastle",
     "profileUrl": "https://www.newcastle.edu.au/profile/duy-ngo",
     "batch": 35,
-    "status": "unresolved"
+    "status": "fetched",
+    "portraitSource": "https://profiles.newcastle.edu.au/Duy-Ngo/thumbnail",
+    "note": "HIGH-confidence official_faculty"
   },
   {
     "id": "vp-1690",
@@ -6360,7 +6403,9 @@
     "university": "University of Leicester",
     "profileUrl": "https://le.ac.uk/people/linh-xd-nguyen",
     "batch": 36,
-    "status": "unresolved"
+    "status": "fetched",
+    "portraitSource": "https://le.ac.uk/-/media/uol/images/people/profiles/n/linh-xd-nguyen--photo/linh-nguyen.jpg?cx=0.47&cy=0.29&cw=500&ch=500&hash=020484364C2DCC091F8E4981F0E5775C",
+    "note": "HIGH-confidence official_faculty"
   },
   {
     "id": "vp-1678",
@@ -6376,7 +6421,9 @@
     "university": "Susquehanna University",
     "profileUrl": "https://www.susqu.edu/profiles/bui/",
     "batch": 36,
-    "status": "unresolved"
+    "status": "fetched",
+    "portraitSource": "https://www.susqu.edu/wp-content/uploads/2024/12/12136_LocBui_400x425.rev_.1714414881.webp?ver=1736525379",
+    "note": "HIGH-confidence official_faculty"
   },
   {
     "id": "vp-1676",
@@ -6384,7 +6431,9 @@
     "university": "Edith Cowan University",
     "profileUrl": "https://www.ecu.edu.au/schools/business-and-law/faculty/profiles/senior-lecturer/dr-justin-nguyen",
     "batch": 36,
-    "status": "unresolved"
+    "status": "fetched",
+    "portraitSource": "https://www.ecu.edu.au/__data/assets/image/0004/1054660/cropped.jpg",
+    "note": "visually reviewed candidate"
   },
   {
     "id": "vp-1675",
@@ -6478,7 +6527,9 @@
     "university": "NOSM University",
     "profileUrl": "https://hsnsudbury.ca/en/Research/Scientists/Hoang-Thanh-Le",
     "batch": 37,
-    "status": "unresolved"
+    "status": "fetched",
+    "portraitSource": "https://hsnsudbury.ca/portals/1/Research/Scientists/Le_Thanh.jpg?ver=TYCZmOij33olk_QV_mEX2Q%3d%3d",
+    "note": "HIGH-confidence official_faculty"
   },
   {
     "id": "vp-1599",
@@ -6506,7 +6557,9 @@
     "university": "Washington University in St. Louis",
     "profileUrl": "https://surgery.wustl.edu/people/trang-nguyen/",
     "batch": 37,
-    "status": "unresolved"
+    "status": "fetched",
+    "portraitSource": "https://surgery.wustl.edu/app/uploads/2024/02/Nguyen-Trang_Surg__06_1400x1930-280x386-1.png",
+    "note": "HIGH-confidence official_faculty"
   },
   {
     "id": "vp-1595",
@@ -6554,7 +6607,9 @@
     "university": "University of Bristol",
     "profileUrl": "https://www.bristol.ac.uk/people/person/Duc-Nguyen-172557ca-0830-4e5c-a5d6-a05eac22f1c8/",
     "batch": 38,
-    "status": "unresolved"
+    "status": "fetched",
+    "portraitSource": "https://research-information.bris.ac.uk/ws/files/431420859/2024_AI_upscaled_x2.jpeg",
+    "note": "visually reviewed candidate"
   },
   {
     "id": "vp-1590",
@@ -6570,7 +6625,9 @@
     "university": "Hungarian University of Agriculture and Life Sciences",
     "profileUrl": "https://uni-mate.hu/en/en-directory-staff/-/telepules/budapest/g/nguyen.quang.d/nguyen.quang.d/",
     "batch": 38,
-    "status": "unresolved"
+    "status": "fetched",
+    "portraitSource": "https://research.uni-mate.hu/documents/10850768/13299734/NguyenDucQuang.jpg/5d6e05a4-24f2-c043-6b75-425edcfc3991?version=1.0&t=1721740511162",
+    "note": "HIGH-confidence official_faculty"
   },
   {
     "id": "vp-1588",
@@ -6578,7 +6635,9 @@
     "university": "West Virginia University",
     "profileUrl": "https://statler.wvu.edu/faculty-staff/gia-huy-pham",
     "batch": 38,
-    "status": "unresolved"
+    "status": "fetched",
+    "portraitSource": "https://directory.statler.wvu.edu/files/ec228ba9-1a91-4b44-abc5-b8370e5eee51/290x290?cb=e07e1935dd1785d5a1b0975d3105d6ef",
+    "note": "visually reviewed candidate"
   },
   {
     "id": "vp-0623",
@@ -6596,7 +6655,9 @@
     "university": "University of Sussex",
     "profileUrl": "https://profiles.sussex.ac.uk/p427207-xuan-huy-nguyen",
     "batch": 38,
-    "status": "unresolved"
+    "status": "fetched",
+    "portraitSource": "https://profiles.sussex.ac.uk/p427207-xuan-huy-nguyen/thumbnail",
+    "note": "HIGH-confidence official_faculty"
   },
   {
     "id": "vp-1584",
@@ -6740,7 +6801,7 @@
     "university": "Weill Cornell Medicine",
     "profileUrl": "https://vivo.weill.cornell.edu/display/cwid-ttt4001",
     "batch": 40,
-    "status": "pending"
+    "status": "unresolved"
   },
   {
     "id": "vp-0027",
@@ -6748,7 +6809,7 @@
     "university": "University of Louisville",
     "profileUrl": "https://engineering.louisville.edu/faculty/hoang-long-nguyen/",
     "batch": 40,
-    "status": "pending"
+    "status": "unresolved"
   },
   {
     "id": "vp-1694",
@@ -6790,7 +6851,9 @@
     "university": "Monash University",
     "profileUrl": "https://research.monash.edu/en/persons/lan-nguyen-2/",
     "batch": 42,
-    "status": "unresolved"
+    "status": "fetched",
+    "portraitSource": "https://research.monash.edu/files-asset/765628048/Lan_cover_photo.jpg/",
+    "note": "HIGH-confidence official_faculty"
   },
   {
     "id": "vp-1699",
@@ -6798,7 +6861,9 @@
     "university": "RMIT University",
     "profileUrl": "https://www.rmit.edu.au/profiles/t/thao-tran2",
     "batch": 42,
-    "status": "unresolved"
+    "status": "fetched",
+    "portraitSource": "https://www.rmit.edu.au/assets/au/en/profile-images/t/thao-tran2.jpeg",
+    "note": "HIGH-confidence official_faculty"
   },
   {
     "id": "vp-1698",
@@ -6980,7 +7045,9 @@
     "university": "University of Exeter",
     "profileUrl": "https://experts.exeter.ac.uk/42081-ngan-vo",
     "batch": 45,
-    "status": "unresolved"
+    "status": "fetched",
+    "portraitSource": "https://experts.exeter.ac.uk/42081-ngan-vo/thumbnail",
+    "note": "HIGH-confidence official_faculty"
   },
   {
     "id": "vp-1925",
@@ -7136,7 +7203,9 @@
     "university": "Liverpool John Moores University",
     "profileUrl": "https://profiles.ljmu.ac.uk/5755-trung-thanh-nguyen",
     "batch": 46,
-    "status": "unresolved"
+    "status": "fetched",
+    "portraitSource": "https://profiles.ljmu.ac.uk/5755-trung-thanh-nguyen/thumbnail",
+    "note": "HIGH-confidence official_faculty"
   },
   {
     "id": "vp-1903",
@@ -7883,7 +7952,9 @@
     "university": "Tohoku University",
     "profileUrl": "https://researchmap.jp/nguyenchinghia?lang=en",
     "batch": 57,
-    "status": "unresolved"
+    "status": "fetched",
+    "portraitSource": "https://researchmap.jp/nguyenchinghia/avatar.jpg",
+    "note": "HIGH-confidence official_faculty"
   },
   {
     "id": "vp-1953",
@@ -7900,7 +7971,9 @@
     "university": "Swansea University",
     "profileUrl": "https://www.swansea.ac.uk/staff/t.t.doan/",
     "batch": 57,
-    "status": "pending"
+    "status": "fetched",
+    "portraitSource": "https://intranet.swan.ac.uk/staffphoto/photoapi/staff-profile/t.t.doan/",
+    "note": "visually reviewed candidate"
   },
   {
     "id": "vp-1951",
@@ -8273,7 +8346,9 @@
     "university": "Hochschule Fresenius",
     "profileUrl": "https://www.hs-fresenius.de/lehre/lehrpersonal/tristan-nguyen/",
     "batch": 64,
-    "status": "unresolved"
+    "status": "fetched",
+    "portraitSource": "https://central.hs-fresenius.de/wp-content/uploads/2021/09/staff_photo_292eacef533fc672e9b1aba015f50a789ff7ef6f.jpg",
+    "note": "visually reviewed candidate"
   },
   {
     "id": "vp-2000",
@@ -8721,7 +8796,8 @@
     "university": "University of New South Wales",
     "profileUrl": "https://www.unsw.edu.au/staff/an-ninh-pham",
     "batch": 71,
-    "status": "unresolved"
+    "status": "unresolved",
+    "note": "grid image rejected on visual review"
   },
   {
     "id": "vp-2057",

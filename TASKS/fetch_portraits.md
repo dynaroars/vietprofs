@@ -83,6 +83,7 @@ swallows errors.
 
 ```bash
 git checkout main && git pull --ff-only
+npx playwright install chromium                    # once per session: headless fallback for JavaScript-built pages and curl-blocked images
 npx tsx scripts/fetch-portraits.ts --status        # syncs the queue with the roster; newestPending = what --next picks
 npx tsx scripts/fetch-portraits.ts --next=10 --apply --retry   # newest never-attempted 10 (retries only when none remain); stores HIGH-confidence candidates
 python3 scripts/portrait_faces.py $(git status --porcelain public/portraits | awk '{print $2}')   # every added image must be `ok`
