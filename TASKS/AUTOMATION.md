@@ -170,6 +170,10 @@ Follow `TASKS/AUDIT_ISSUES_PRS.md`, including "Independent review". Also read
   Every night, when several open PRs touch the same file (usually `public/data.json` or a
   maintenance file), merge the oldest first, then rebase each remaining PR onto `main`,
   regenerate the shared file, and re-test before merging it.
+- `[scheduled:links]` PRs: merge one whose only change is `maintenance/links-rotation.json`, as
+  long as its per-entry table shows real checks (spot-check 3 "confirmed" rows live). If the
+  table is missing or shows only URL status codes, close the PR and say why. The next run then
+  repeats those ids.
 - New-candidate Issues: re-run the dedup (`npm run find-roster-matches` with the name and every
   identity URL in the Issue) against current `public/data.json`. If it hits the same person
   (often at a former institution), update that entry in place and close the Issue with its id; a
@@ -261,9 +265,18 @@ Follow `TASKS/AUDIT_ISSUES_PRS.md`, including "Independent review". Also read
 Playbooks: "Periodic full-roster refresh" steps 1-4 in `ROSTER_MAINTENANCE.md`, plus
 `TASKS/verify_websites_and_labs.md`, `TASKS/check_google_scholar.md`, `TASKS/backfill_linkedin.md`,
 and "Periodic link-health sweep". Cap: 2 batches of 15 entries. Handle entries from the open
-link-health report Issue first, then continue in id order after the highest id in the last
-`[scheduled:links]` PR, wrapping at the end of the roster. That rotation reaches every entry, not
-only ones missing a link, so each person is re-checked about every six months.
+link-health report Issue first, then continue in id order from `nextId` in
+`maintenance/links-rotation.json`, wrapping at the end of the roster. That rotation reaches every
+entry, not only ones missing a link, so each person is re-checked about every six months.
+
+**Every run opens a PR, even when no entry changed.** The PR sets `nextId` to the id after the
+last entry it fully checked, `updatedAt` to today, and `lastPr` to the previous links PR number.
+Without that PR the rotation doesn't advance and the next run repeats the same ids (this happened
+2026-10-03 to 10-14: one PR in 12 days). An entry counts as checked only when every bullet below
+was done for it. A URL-status pass (fetching links and reading HTTP codes) is not a check. If you
+run short of time, stop the batch early and set `nextId` to the first entry you didn't finish; a
+PR covering 8 entries properly beats one claiming 30. An entry whose official page is blocked
+still counts once you've searched for an alternate official source; list it as blocked.
 
 For each entry, open the official profile, homepage, and Scholar once and settle everything they
 show:
@@ -292,8 +305,10 @@ show:
   unprotected portrait in the PR; for a protected one file `Likely wrong portrait: <name> (<vp-id>)`.
 - **Honors and degrees** noticed on those pages go in side findings, not this PR.
 
-In the PR body, list each entry with what was checked and what changed, including entries checked
-with no change, so the rotation is visible.
+In the PR body, put one table row per entry, including entries checked with no change, with these
+columns: id, appointment (confirmed / changed / blocked), profile and website, Scholar, LinkedIn,
+portrait, and the source URL used. The auditor rejects a links PR without that table, and one whose
+rows show only URL status codes.
 
 ### Portraits (`portraits`)
 
