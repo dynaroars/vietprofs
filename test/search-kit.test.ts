@@ -83,3 +83,41 @@ test('createCommandHandler handles built-in Easter egg commands', () => {
 
   assert.equal(handler('unrecognized_command_123'), false);
 });
+
+test('createCommandHandler supports site extras, disabled built-ins, custom uname, and a help controller', () => {
+  let lastOutput = '';
+  const fakeOutputEl = {
+    set textContent(val: string) {
+      lastOutput = val;
+    },
+    get textContent() {
+      return lastOutput;
+    },
+    hidden: true,
+  } as unknown as HTMLElement;
+  const calls: string[] = [];
+  let resets = 0;
+
+  const handler = createCommandHandler({
+    siteName: 'VietProfs',
+    aboutText: 'about text',
+    commandOutputEl: fakeOutputEl,
+    getSearch: () => ({ resetScope: () => { resets += 1; } }),
+    help: { show: () => calls.push('help shown') },
+    unameText: () => 'custom uname',
+    disabledCommands: ['about', 'stats'],
+    extraCommands: { recent: () => calls.push('recent'), whoami: () => calls.push('site whoami') },
+  });
+
+  assert.equal(handler('recent'), true);
+  assert.equal(handler('WHOAMI'), true, 'extras take precedence over built-ins');
+  assert.deepEqual(calls, ['recent', 'site whoami']);
+  assert.equal(handler('about'), false, 'disabled built-ins fall through to a normal search');
+  assert.equal(handler('stats'), false);
+  assert.equal(handler('uname -a'), true);
+  assert.equal(lastOutput, 'custom uname');
+  assert.equal(handler('help'), true);
+  assert.equal(calls.at(-1), 'help shown');
+  assert.ok(resets >= 2, 'completed commands reset the search scope');
+  assert.equal(handler('toString'), false, 'inherited object keys are not commands');
+});

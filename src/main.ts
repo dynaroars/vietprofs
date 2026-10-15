@@ -43,7 +43,18 @@ import { renderAddFab } from './add-fab.ts';
 import { ICONS } from './see-also.ts';
 import { renderShareMenu } from './share.ts';
 import { renderFunFacts, renderGrowthChart, renderHealthPanel, type GrowthMetricKey } from './insights.ts';
-import { normalizeText, parseKeywordQuery as parseKeywordQueryShared } from './search-kit.ts';
+import {
+  createCommandHandler,
+  createSearchController,
+  focusQuietly,
+  hideCommandOutput as hideCommandOutputEl,
+  parseKeywordQuery as parseKeywordQueryShared,
+  restoreCrtTheme,
+  setupKeyboardShortcuts,
+  setupSearchHelp,
+  showCommandOutput as showCommandOutputEl,
+} from './search-kit.ts';
+import { setupBackToTop } from './back-to-top.ts';
 
 const app = document.getElementById('app');
 
@@ -58,14 +69,6 @@ function shuffle<T>(values: readonly T[]): T[] {
 
 function pickRandomUnique<T>(values: readonly T[], count: number): T[] {
   return shuffle([...new Set(values)]).slice(0, count);
-}
-
-function debounce<Args extends unknown[]>(fn: (...args: Args) => void, delayMs: number): (...args: Args) => void {
-  let timer: ReturnType<typeof setTimeout>;
-  return (...args: Args) => {
-    clearTimeout(timer);
-    timer = setTimeout(() => fn(...args), delayMs);
-  };
 }
 
 // Keyword prefixes let the single search box target one field directly (e.g. "Name: Nguyen"),
@@ -434,18 +437,29 @@ async function init() {
   let queryPlan = '';
   let keyboardSelectedIndex = -1;
   let currentGrowthMetric: GrowthMetricKey = 'count';
-  let activeSearchScope: string | null = null;
-
-  function renderSearchScopeChip() {
-    searchScopeChip.hidden = !activeSearchScope;
-    if (!activeSearchScope) {
-      searchScopeChipLabel.textContent = '';
-      return;
-    }
-    const label = KEYWORD_LABELS[activeSearchScope];
-    searchScopeChipLabel.textContent = `${KEYWORD_ICONS[activeSearchScope]} ${label}`;
-    searchScopeChip.setAttribute('aria-label', `Remove ${label} search scope`);
-  }
+  // Search box: a typed/pasted "Keyword: value" prefix becomes a removable scope chip
+  // (createSearchController in the shared search-kit), with an in-page suggestion listbox.
+  // An in-page listbox rather than a native <datalist>: browser-owned datalist popups can
+  // flicker or close while the debounced search results update, especially in Chromium.
+  const search = createSearchController({
+    input: searchInput,
+    scopeChip: searchScopeChip,
+    scopeChipLabel: searchScopeChipLabel,
+    suggestionPanel,
+    keywordMeta: Object.fromEntries(Object.entries(KEYWORD_LABELS)
+      .map(([scope, label]) => [scope, { label, icon: KEYWORD_ICONS[scope] }])),
+    resolveKey: (key) => KEYWORD_ALIASES[key],
+    // Free text completes over everything filterRoster searches; scopes without their own list
+    // (e.g. Connection) fall back to the same combined list.
+    getSuggestions: (key) => suggestionSources.get(key) ?? suggestionValues,
+    unscopedKey: 'all',
+    showAllWhenEmpty: 20,
+    formatQuery: (_key, label, query) => `${label}:${query ? ` ${query}` : ''}`,
+    debounceMs: 150,
+    onChange: () => update({ fromSearch: true }),
+    onClear: () => hideCommandOutput(),
+    onCommand: (raw) => runCommand(raw),
+  });
 
   function renderStateFilterChip() {
     searchStateChip.hidden = !filterState.state;
@@ -458,10 +472,7 @@ async function init() {
   }
 
   function setSearchValue(raw: string) {
-    const parsed = parseKeywordQuery(raw);
-    activeSearchScope = parsed?.scope ?? null;
-    searchInput.value = parsed?.query ?? raw;
-    renderSearchScopeChip();
+    search.setSearchValue(raw);
   }
 
   function clearSearch() {
@@ -469,15 +480,12 @@ async function init() {
   }
 
   function searchQueryValue() {
-    const query = searchInput.value.trim();
-    return activeSearchScope
-      ? `${KEYWORD_LABELS[activeSearchScope]}:${query ? ` ${query}` : ''}`
-      : query;
+    return search.searchQueryValue();
   }
 
-  // A "Keyword: value" prefix typed or pasted into the free-text box becomes a visible scope
-  // chip. The chip remains the source of truth until the user removes it.
+  // The scope chip remains the source of truth until the user removes it.
   function effectiveSearch() {
+    const activeSearchScope = search.activeScope();
     if (activeSearchScope) {
       return { scope: activeSearchScope, query: searchInput.value, isKeyword: true };
     }
@@ -501,13 +509,11 @@ async function init() {
   }
 
   function showCommandOutput(message: string) {
-    commandOutput.textContent = message;
-    commandOutput.hidden = false;
+    showCommandOutputEl(commandOutput, message);
   }
 
   function hideCommandOutput() {
-    commandOutput.hidden = true;
-    commandOutput.textContent = '';
+    hideCommandOutputEl(commandOutput);
   }
 
   function renderQueryPlan(matches: number, mode = 'roster') {
@@ -896,192 +902,79 @@ async function init() {
     update();
   }
 
-  function runCommand(raw: string): boolean {
-    const command = raw.trim().toLocaleLowerCase().replace(/^:/, '');
-    if (!command) return false;
-    if (command === 'recent' || command === 'new' || command === 'whats new') {
-      sortSelect.value = 'vp-newest';
-      update();
-      completeCommand('Displaying faculty sorted by most recently added.');
-      return true;
-    }
-    if (command === 'completeness' || command === 'health' || command === 'audit') {
-      clearSearch();
-      filterState.health = true;
-      filterState.insights = false;
-      update();
-      completeCommand('Displaying dataset health, metadata completeness, and verification metrics.');
-      return true;
-    }
-    if (command === 'insights' || command === 'facts' || command === 'diaspora' || command === 'pathways') {
-      clearSearch();
-      filterState.insights = true;
-      filterState.health = false;
-      update();
-      completeCommand('Displaying diaspora insights and macro statistics.');
-      return true;
-    }
-    if (command === 'sudo vietprofs') {
-      clearSearch();
-      hideSuggestions();
-      hideCommandOutput();
-      update();
-      openRosterShell(searchIndex);
-      return true;
-    }
-    if (command === 'help') {
-      hideSuggestions();
-      searchHelpPanel.hidden = false;
-      searchHelpBtn.setAttribute('aria-expanded', 'true');
-      completeCommand('help: query prefixes, shortcuts, and commands are listed above');
-      return true;
-    }
-    if (command === 'visitor stats' || command === 'traffic') {
-      window.location.href = `${import.meta.env.BASE_URL}stats.html`;
-      return true;
-    }
-    if (command === 'query plan') {
-      completeCommand(`query plan: ${queryPlan}`);
-      return true;
-    }
-    if (command === 'whoami') {
-      completeCommand('VietProfs — an open, community-maintained index of the Vietnamese academic diaspora.');
-      return true;
-    }
-    if (command === 'uname -a') {
-      completeCommand(`VietProfs static-web TypeScript/Vite build ${__BUILD_COMMIT__} browser/${navigator.platform || 'unknown'}`);
-      return true;
-    }
-    if (command === 'sudo find professor' || command === 'sudo find faculty') {
-      completeCommand('Permission granted. Academic credentials still require independent verification.');
-      return true;
-    }
-    if (command === 'fortune') {
-      const fortune = ACADEMIC_FORTUNES[Math.floor(Math.random() * ACADEMIC_FORTUNES.length)];
-      completeCommand(`fortune: ${fortune}`);
-      return true;
-    }
-    if (command === '/dev/random' || command === 'random') {
+  const searchHelp = setupSearchHelp({
+    btn: document.getElementById('search-help-btn') as HTMLButtonElement,
+    panel: document.getElementById('search-help-panel') as HTMLElement,
+    onBeforeToggle: () => search.close(),
+  });
+
+  function showRecent() {
+    sortSelect.value = 'vp-newest';
+    update();
+    completeCommand('Displaying faculty sorted by most recently added.');
+  }
+  function showHealth() {
+    clearSearch();
+    filterState.health = true;
+    filterState.insights = false;
+    update();
+    completeCommand('Displaying dataset health, metadata completeness, and verification metrics.');
+  }
+  function showInsights() {
+    clearSearch();
+    filterState.insights = true;
+    filterState.health = false;
+    update();
+    completeCommand('Displaying diaspora insights and macro statistics.');
+  }
+  function openShell() {
+    clearSearch();
+    search.close();
+    hideCommandOutput();
+    update();
+    openRosterShell(searchIndex);
+  }
+  function openVisitorStats() {
+    window.location.href = `${import.meta.env.BASE_URL}stats.html`;
+  }
+
+  // The shared help/whoami/uname/fortune/theme crt/clear command set, plus VietProfs' own views.
+  const runCommand = createCommandHandler({
+    siteName: 'VietProfs',
+    aboutText: 'VietProfs — an open, community-maintained index of the Vietnamese academic diaspora.',
+    input: searchInput,
+    getSearch: () => search,
+    commandOutputEl: commandOutput,
+    help: searchHelp,
+    onUpdate: () => update({ fromSearch: true }),
+    getQueryPlan: () => queryPlan,
+    facts: ACADEMIC_FORTUNES,
+    unameText: () => `VietProfs static-web TypeScript/Vite build ${__BUILD_COMMIT__} browser/${navigator.platform || 'unknown'}`,
+    // Shared aliases VietProfs doesn't offer; these words stay ordinary searches here.
+    disabledCommands: ['about', 'build', 'built', 'build it', 'version', 'stats', 'status', 'sudo find student'],
+    onRandom: () => {
       const person = roster[Math.floor(Math.random() * roster.length)];
       window.location.href = `${import.meta.env.BASE_URL}${personPath(person.id)}`;
-      return true;
-    }
-    if (command === 'theme crt') {
-      const enabled = document.documentElement.classList.toggle('crt-mode');
-      localStorage.setItem('vietprofs:crt', enabled ? '1' : '0');
-      completeCommand(`crt theme ${enabled ? 'enabled' : 'disabled'}; reduced-motion preferences are respected`);
-      return true;
-    }
-    if (command === 'clear' || command === 'reset') {
-      resetDirectory();
-      return true;
-    }
-    return false;
-  }
-
-  if (localStorage.getItem('vietprofs:crt') === '1') document.documentElement.classList.add('crt-mode');
-
-  // Use an in-page listbox rather than a native <datalist>. Browser-owned datalist popups
-  // can flicker or close while the debounced search results update, especially in Chromium.
-  let activeSuggestion = -1;
-  function hideSuggestions() {
-    activeSuggestion = -1;
-    suggestionPanel.hidden = true;
-    suggestionPanel.replaceChildren();
-    searchInput.setAttribute('aria-expanded', 'false');
-  }
-  function showSuggestions() {
-    const { scope, query: scopedQuery, isKeyword } = effectiveSearch();
-    const rawQuery = scopedQuery.trim();
-    const query = rawQuery.toLocaleLowerCase();
-    const selectedScope = scope !== 'all' ? scope : undefined;
-    const keywordValues = selectedScope ? suggestionSources.get(selectedScope) : undefined;
-    if (!query && !(keywordValues && keywordValues.length <= 20)) {
-      hideSuggestions();
-      return;
-    }
-    const source = keywordValues ?? suggestionValues;
-    const sourceQuery = normalizeText(rawQuery);
-    const matches = source
-      .filter((value) => normalizeText(value).includes(sourceQuery))
-      .sort((a, b) => {
-        const aStarts = normalizeText(a).startsWith(sourceQuery);
-        const bStarts = normalizeText(b).startsWith(sourceQuery);
-        return Number(bStarts) - Number(aStarts) || a.localeCompare(b);
-      })
-      .slice(0, 8);
-    suggestionPanel.replaceChildren(...matches.map((value, index) => {
-      const option = document.createElement('button');
-      option.type = 'button';
-      option.className = 'search-suggestion';
-      option.role = 'option';
-      option.textContent = value;
-      option.dataset.index = String(index);
-      // Keep focus on the search input until the click has selected this option.
-      // Otherwise its blur handler can hide the list before a mouse click arrives.
-      option.addEventListener('mousedown', (event) => event.preventDefault());
-      option.addEventListener('click', () => {
-        setSearchValue(isKeyword ? `${KEYWORD_LABELS[scope] ?? scope}: ${value}` : value);
-        hideSuggestions();
-        update({ fromSearch: true });
-      });
-      return option;
-    }));
-    activeSuggestion = -1;
-    suggestionPanel.hidden = matches.length === 0;
-    searchInput.setAttribute('aria-expanded', String(matches.length > 0));
-  }
-  // Focus given on page load highlights the box without opening suggestions.
-  searchInput.addEventListener('focus', () => { if (!searchInput.dataset.quietFocus) showSuggestions(); });
-  searchInput.addEventListener('input', () => {
-    if (!activeSearchScope) {
-      const parsed = parseKeywordQuery(searchInput.value);
-      if (parsed) {
-        activeSearchScope = parsed.scope;
-        searchInput.value = parsed.query;
-        renderSearchScopeChip();
-      }
-    }
-    showSuggestions();
+    },
+    resetDirectory,
+    extraCommands: {
+      recent: showRecent,
+      new: showRecent,
+      'whats new': showRecent,
+      completeness: showHealth,
+      health: showHealth,
+      audit: showHealth,
+      insights: showInsights,
+      facts: showInsights,
+      diaspora: showInsights,
+      pathways: showInsights,
+      'sudo vietprofs': openShell,
+      'visitor stats': openVisitorStats,
+      traffic: openVisitorStats,
+    },
   });
-  searchInput.addEventListener('keydown', (event) => {
-    const options = [...suggestionPanel.querySelectorAll<HTMLButtonElement>('.search-suggestion')];
-    if (event.key === 'Escape') {
-      hideSuggestions();
-      if (searchInput.value || activeSearchScope) {
-        event.preventDefault();
-        clearSearch();
-        hideCommandOutput();
-        update({ fromSearch: true });
-      }
-      return;
-    }
-    if (event.key === 'Enter' && runCommand(searchQueryValue())) {
-      event.preventDefault();
-      return;
-    }
-    if (!options.length || !['ArrowDown', 'ArrowUp', 'Enter'].includes(event.key)) return;
-    if (event.key === 'Enter' && activeSuggestion >= 0) {
-      event.preventDefault();
-      options[activeSuggestion].click();
-      return;
-    }
-    if (event.key === 'ArrowDown') activeSuggestion = (activeSuggestion + 1) % options.length;
-    if (event.key === 'ArrowUp') activeSuggestion = (activeSuggestion - 1 + options.length) % options.length;
-    options.forEach((option, index) => option.setAttribute('aria-selected', String(index === activeSuggestion)));
-    event.preventDefault();
-  });
-  searchInput.addEventListener('blur', () => setTimeout(hideSuggestions, 150));
 
-  searchInput.addEventListener('input', debounce(() => update({ fromSearch: true }), 150));
-
-  searchScopeChip.addEventListener('click', () => {
-    activeSearchScope = null;
-    renderSearchScopeChip();
-    hideSuggestions();
-    searchInput.focus();
-    update({ fromSearch: true });
-  });
+  restoreCrtTheme('VietProfs');
 
   searchStateChip.addEventListener('click', () => {
     filterState.state = '';
@@ -1089,89 +982,36 @@ async function init() {
     update();
   });
 
-  const searchHelpBtn = document.getElementById('search-help-btn') as HTMLButtonElement;
-  const searchHelpPanel = document.getElementById('search-help-panel') as HTMLElement;
-  function hideSearchHelp() {
-    searchHelpPanel.hidden = true;
-    searchHelpBtn.setAttribute('aria-expanded', 'false');
-  }
-  searchHelpBtn.addEventListener('click', (e) => {
-    e.stopPropagation();
-    const willShow = searchHelpPanel.hidden;
-    hideSuggestions();
-    searchHelpPanel.hidden = !willShow;
-    searchHelpBtn.setAttribute('aria-expanded', String(willShow));
-  });
-  document.addEventListener('click', (e) => {
-    if (!searchHelpPanel.hidden && !searchHelpPanel.contains(e.target as Node) && e.target !== searchHelpBtn) {
-      hideSearchHelp();
-    }
-  });
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-      if (!searchHelpPanel.hidden) {
-        hideSearchHelp();
-      } else if (filterState.insights || filterState.health || filterState.state) {
+  // j/k (or arrows) move, Enter opens, f favorites, r random, / search, ? help, and Escape steps
+  // back: close help → leave insights/health/state filter → blur search → clear search.
+  setupKeyboardShortcuts({
+    input: searchInput,
+    help: searchHelp,
+    getItemElements: () => [...document.querySelectorAll<HTMLElement>('.entry')],
+    getSelectedIndex: () => keyboardSelectedIndex,
+    setSelectedIndex: (index) => { keyboardSelectedIndex = index; },
+    selectedClass: 'entry-keyboard-selected',
+    nextKeys: ['j', 'ArrowDown'],
+    prevKeys: ['k', 'ArrowUp'],
+    isNavigable: () => currentRoster.length > 0 || document.querySelectorAll('.entry').length > 0,
+    onEnter: (selected) => selected.querySelector<HTMLAnchorElement>('.entry-name')?.click(),
+    onSecondary: (selected) => selected.querySelector<HTMLButtonElement>('.favorite-toggle')?.click(),
+    onRandom: () => runCommand('/dev/random'),
+    escape: {
+      onEscape: () => {
+        if (!(filterState.insights || filterState.health || filterState.state)) return false;
         filterState.insights = false;
         filterState.health = false;
         filterState.state = '';
         update();
-      } else if (document.activeElement === searchInput) {
-        searchInput.blur();
-        hideSuggestions();
-      } else if (searchInput.value) {
+        return true;
+      },
+      closeSuggestions: () => search.close(),
+      clearSearch: () => {
         clearSearch();
         update();
-      }
-    }
-    const target = e.target as HTMLElement;
-    const typing = target.matches('input, textarea, select, [contenteditable="true"]');
-    if (e.key === '/' && !typing) {
-      e.preventDefault();
-      searchInput.focus();
-      showSuggestions();
-      return;
-    }
-    if (e.key === '?' && !typing) {
-      e.preventDefault();
-      searchHelpBtn.click();
-      return;
-    }
-    if (typing || e.metaKey || e.ctrlKey || e.altKey) return;
-    const entries = [...document.querySelectorAll<HTMLElement>('.entry')];
-    if ((e.key === 'j' || e.key === 'k' || e.key === 'ArrowDown' || e.key === 'ArrowUp') && (currentRoster.length || document.querySelectorAll('.entry').length)) {
-      e.preventDefault();
-      const currentEntries = document.querySelectorAll<HTMLElement>('.entry');
-      currentEntries[keyboardSelectedIndex]?.classList.remove('entry-keyboard-selected');
-      if (e.key === 'j' || e.key === 'ArrowDown') {
-        const nextIndex = keyboardSelectedIndex + 1;
-        const updatedEntries = document.querySelectorAll<HTMLElement>('.entry');
-        keyboardSelectedIndex = updatedEntries.length ? nextIndex % updatedEntries.length : -1;
-      } else {
-        const updatedEntries = document.querySelectorAll<HTMLElement>('.entry');
-        keyboardSelectedIndex = updatedEntries.length ? (keyboardSelectedIndex - 1 + updatedEntries.length) % updatedEntries.length : -1;
-      }
-      const updatedEntries = document.querySelectorAll<HTMLElement>('.entry');
-      const selected = updatedEntries[keyboardSelectedIndex];
-      selected?.classList.add('entry-keyboard-selected');
-      selected?.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
-      return;
-    }
-    const selected = entries[keyboardSelectedIndex];
-    if (e.key === 'Enter' && selected) {
-      e.preventDefault();
-      selected.querySelector<HTMLAnchorElement>('.entry-name')?.click();
-      return;
-    }
-    if (e.key === 'f' && selected) {
-      e.preventDefault();
-      selected.querySelector<HTMLButtonElement>('.favorite-toggle')?.click();
-      return;
-    }
-    if (e.key === 'r') {
-      e.preventDefault();
-      runCommand('/dev/random');
-    }
+      },
+    },
   });
 
   locationSelect.addEventListener('change', () => {
@@ -1392,17 +1232,7 @@ async function init() {
     document.querySelectorAll('.world-map-country.is-hovered, .world-map-pin.is-hovered').forEach((el) => el.classList.remove('is-hovered'));
   });
 
-  const backToTopBtn = document.getElementById('back-to-top');
-  window.addEventListener(
-    'scroll',
-    () => {
-      backToTopBtn.hidden = window.scrollY <= 300;
-    },
-    { passive: true },
-  );
-  backToTopBtn.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
+  setupBackToTop(document.getElementById('back-to-top'));
 
   const populatedFields = FIELDS.filter((field) => filtersHaveResults('World', field, 'all'));
   const populatedLocations = locationOptions.filter((location) =>
@@ -1464,9 +1294,7 @@ async function init() {
   update();
   // Land ready to type, as on cspicks; leave focus alone if the reader already moved it.
   if (document.activeElement === document.body) {
-    searchInput.dataset.quietFocus = 'true';
-    searchInput.focus({ preventScroll: true });
-    delete searchInput.dataset.quietFocus;
+    focusQuietly(searchInput);
   }
 
   console.info(`%cVietProfs ${__BUILD_COMMIT__}`, 'color:#2e9e64;font-weight:bold;font-size:16px');
