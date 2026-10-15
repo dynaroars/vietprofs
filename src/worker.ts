@@ -30,6 +30,13 @@ export interface CountryStat {
   pct: number;
 }
 
+/** One browser, operating system, or device type and its share of the 7-day browser page views. */
+export interface BreakdownStat {
+  name: string;
+  pageViews: number;
+  pct: number;
+}
+
 export interface CategoryStat {
   key: string;
   label: string;
@@ -57,17 +64,21 @@ export interface BrowserStatsResponse {
   categoryTotal: number;
   categoryPeriod: { startDate: string; endDate: string; days: number };
   historicalTransition: { newSeriesStartedAt: string | null; oldSeriesRetainedInternally: true };
+  /** Same 7 days as `countries`; absent when Cloudflare didn't answer the separate breakdown query. */
+  browsers?: BreakdownStat[];
+  operatingSystems?: BreakdownStat[];
+  devices?: BreakdownStat[];
   isDemo?: boolean;
 }
 
 interface RumGroup {
   count?: number;
   sum?: { visits?: number };
-  dimensions?: { date?: string; countryName?: string; requestPath?: string };
+  dimensions?: { date?: string; countryName?: string; requestPath?: string; userAgentBrowser?: string; userAgentOS?: string; deviceType?: string };
 }
 
 interface RumGraphqlResponse {
-  data?: { viewer?: { accounts?: Array<{ daily?: RumGroup[]; countries?: RumGroup[]; paths?: RumGroup[] }> } };
+  data?: { viewer?: { accounts?: Array<{ daily?: RumGroup[]; countries?: RumGroup[]; paths?: RumGroup[]; browsers?: RumGroup[]; systems?: RumGroup[]; devices?: RumGroup[] }> } };
   errors?: Array<{ message?: string }>;
 }
 
@@ -219,6 +230,67 @@ query BrowserTraffic($accountTag: string!, $hostname: string!, $windowStart: Dat
 }`;
 }
 
+// Browsers, operating systems, and device types over the same 7 complete days as countries. A separate request,
+// so a problem with these dimensions can never take down the main traffic numbers.
+function buildBreakdownQuery(): string {
+  const group = (alias: string, dimension: string) => `
+      ${alias}: rumPageloadEventsAdaptiveGroups(
+        limit: 50
+        orderBy: [count_DESC]
+        filter: { date_geq: $categoryStart, date_leq: $lastCompleteDate, requestHost: $hostname, bot: 0
+        ${SUSPECTED_AUTOMATION_FILTER} }
+      ) { count dimensions { ${dimension} } }`;
+  return `
+query BrowserBreakdown($accountTag: string!, $hostname: string!, $categoryStart: Date!, $lastCompleteDate: Date!) {
+  viewer {
+    accounts(filter: { accountTag: $accountTag }) {${group('browsers', 'userAgentBrowser')}${group('systems', 'userAgentOS')}${group('devices', 'deviceType')}
+    }
+  }
+}`;
+}
+
+const BREAKDOWN_LABELS: Record<string, string> = {
+  ChromeMobile: 'Chrome (mobile)', MobileSafari: 'Safari (mobile)', FirefoxMobile: 'Firefox (mobile)', EdgeMobile: 'Edge (mobile)',
+  SamsungBrowser: 'Samsung Internet', MacOSX: 'macOS', MacOS: 'macOS', ChromeOS: 'ChromeOS',
+  desktop: 'Desktop', mobile: 'Mobile', tablet: 'Tablet', smarttv: 'Smart TV', console: 'Console', wearable: 'Wearable',
+};
+
+function breakdown(rows: RumGroup[] | undefined, dimension: 'userAgentBrowser' | 'userAgentOS' | 'deviceType'): BreakdownStat[] {
+  const counts = new Map<string, number>();
+  for (const row of rows || []) {
+    const raw = row.dimensions?.[dimension] || '';
+    const name = BREAKDOWN_LABELS[raw] || raw || 'Unknown';
+    counts.set(name, (counts.get(name) || 0) + (row.count || 0));
+  }
+  const total = sum([...counts.values()]);
+  return [...counts].filter(([, pageViews]) => pageViews > 0).sort((a, b) => b[1] - a[1])
+    .map(([name, pageViews]) => ({ name, pageViews, pct: total ? Math.round(pageViews / total * 1000) / 10 : 0 }));
+}
+
+async function queryBreakdowns(env: Env, site: SiteConfig, categoryStart: string, lastCompleteDate: string) {
+  try {
+    const response = await fetch(GRAPHQL_ENDPOINT, {
+      method: 'POST',
+      headers: { Authorization: `Bearer ${env.CLOUDFLARE_API_TOKEN}`, 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        query: buildBreakdownQuery(),
+        variables: { accountTag: env.CLOUDFLARE_ACCOUNT_ID, hostname: site.hostname, categoryStart, lastCompleteDate },
+      }),
+    });
+    if (!response.ok) return {};
+    const result = await response.json() as RumGraphqlResponse;
+    const account = result.errors?.length ? undefined : result.data?.viewer?.accounts?.[0];
+    if (!account?.browsers?.length) return {};
+    return {
+      browsers: breakdown(account.browsers, 'userAgentBrowser'),
+      operatingSystems: breakdown(account.systems, 'userAgentOS'),
+      devices: breakdown(account.devices, 'deviceType'),
+    };
+  } catch {
+    return {};
+  }
+}
+
 export async function queryRum(env: Env, site: SiteConfig, now = new Date()): Promise<BrowserStatsResponse> {
   if (!env.CLOUDFLARE_API_TOKEN || !env.CLOUDFLARE_ACCOUNT_ID) throw new Error('Cloudflare RUM credentials are not configured');
   const today = isoDate(now);
@@ -284,6 +356,7 @@ export async function queryRum(env: Env, site: SiteConfig, now = new Date()): Pr
     pageViews: categoryCounts.get(key) || 0,
     pct: pathTotal ? Math.round((categoryCounts.get(key) || 0) / pathTotal * 1000) / 10 : 0,
   }));
+  const breakdowns = await queryBreakdowns(env, site, categoryStart, lastCompleteDate);
 
   return {
     schemaVersion: 3, source: 'cloudflare-rum', generatedAt: now.toISOString(), timezone: 'UTC', status: 'ok', stale: false,
@@ -299,6 +372,7 @@ export async function queryRum(env: Env, site: SiteConfig, now = new Date()): Pr
     daily, countries, categories, categoryTotal: pathTotal,
     categoryPeriod: { startDate: categoryStart, endDate: lastCompleteDate, days: last7.length },
     historicalTransition: { newSeriesStartedAt: measurementStartedAt, oldSeriesRetainedInternally: true },
+    ...breakdowns,
   };
 }
 
@@ -328,6 +402,9 @@ function demoResponse(site: SiteConfig, now = new Date()): BrowserStatsResponse 
     last30Available: { pageViews: sum(daily.slice(0, -1).map(row => row.pageViews || 0)), visits: sum(daily.slice(0, -1).map(row => row.visits || 0)), days: 9 },
     daily, countries: [{ code: 'US', name: 'United States', flag: '🇺🇸', pageViews: total, pct: 100 }], categories, categoryTotal: total,
     categoryPeriod: { startDate: categoryStart, endDate: lastCompleteDate, days: 7 },
+    browsers: [{ name: 'Chrome', pageViews: total, pct: 100 }],
+    operatingSystems: [{ name: 'Linux', pageViews: total, pct: 100 }],
+    devices: [{ name: 'Desktop', pageViews: total, pct: 100 }],
     historicalTransition: { newSeriesStartedAt: start, oldSeriesRetainedInternally: true },
   };
 }

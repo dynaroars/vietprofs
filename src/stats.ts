@@ -3,7 +3,7 @@ import './stats-components.css';
 import { renderAddFab } from './add-fab.ts';
 import { renderSeeAlso } from './see-also.ts';
 import {
-  type BrowserStatsResponse, fetchTrafficStats, formatTimestamp, renderCategories, renderChart, renderCountries,
+  type BrowserStatsResponse, fetchTrafficStats, formatTimestamp, renderCategories, renderChart, renderCountries, renderTechnology,
   renderDailyTable, renderLoadError, renderMetrics, renderNotice,
 } from './traffic-view.ts';
 import { escapeHtml } from './utils.ts';
@@ -29,6 +29,7 @@ function renderStats(data: BrowserStatsResponse): string {
     <section class="man-section"><h2>AT A GLANCE</h2>${renderMetrics(data)}</section>
     <section class="man-section"><h2>DAILY BROWSER TRAFFIC</h2>${renderChart(data.daily)}${renderDailyTable(data.daily)}</section>
     <section class="man-section"><h2>COUNTRIES REACHED</h2>${renderCountries(data)}</section>
+    ${renderTechnology(data) ? `<section class="man-section"><h2>BROWSERS AND DEVICES</h2>${renderTechnology(data)}</section>` : ''}
     <section class="man-section"><h2>PAGE CATEGORIES</h2>${renderCategories(data)}</section>
     ${renderSeeAlso(base, 'stats')}
   </article></main>${renderAddFab(`${base}submit.html`)}`;

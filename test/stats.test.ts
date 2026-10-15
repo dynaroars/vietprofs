@@ -245,3 +245,51 @@ test('Worker returns 404 and rejects unsupported methods', async () => {
   assert.equal(response.status, 405);
   assert.equal(response.headers.get('Allow'), 'GET, OPTIONS');
 });
+
+test('browser, operating system, and device breakdowns come from a separate query and never break the main stats', async () => {
+  const originalFetch = globalThis.fetch;
+  const queries: string[] = [];
+  globalThis.fetch = async (_input, init) => {
+    const body = JSON.parse(String(init?.body));
+    queries.push(body.query);
+    const { lastCompleteDate } = body.variables;
+    if (/BrowserBreakdown/.test(body.query)) {
+      return new Response(JSON.stringify({ data: { viewer: { accounts: [{
+        browsers: [{ count: 30, dimensions: { userAgentBrowser: 'Chrome' } }, { count: 10, dimensions: { userAgentBrowser: 'ChromeMobile' } }],
+        systems: [{ count: 25, dimensions: { userAgentOS: 'Linux' } }, { count: 15, dimensions: { userAgentOS: 'MacOSX' } }],
+        devices: [{ count: 40, dimensions: { deviceType: 'desktop' } }],
+      }] } } }), { headers: { 'Content-Type': 'application/json' } });
+    }
+    return new Response(JSON.stringify({ data: { viewer: { accounts: [{
+      daily: [{ count: 40, sum: { visits: 20 }, dimensions: { date: lastCompleteDate } }], countries: [], paths: [],
+    }] } } }), { headers: { 'Content-Type': 'application/json' } });
+  };
+  try {
+    const data = await (await worker.fetch(new Request('http://localhost/api/stats'), liveEnv(), ctx as any)).json() as any;
+    assert.equal(queries.length, 2);
+    assert.match(queries[1]!, /userAgentBrowser[\s\S]*userAgentOS[\s\S]*deviceType/);
+    assert.equal((queries[1]!.match(/userAgentBrowser_neq: "ChromeMobile"/g) || []).length, 3, 'same automation filter as the main stats');
+    assert.deepEqual(data.browsers, [{ name: 'Chrome', pageViews: 30, pct: 75 }, { name: 'Chrome (mobile)', pageViews: 10, pct: 25 }]);
+    assert.deepEqual(data.operatingSystems.map((row: any) => row.name), ['Linux', 'macOS']);
+    assert.deepEqual(data.devices, [{ name: 'Desktop', pageViews: 40, pct: 100 }]);
+  } finally {
+    globalThis.fetch = originalFetch;
+  }
+
+  globalThis.fetch = async (_input, init) => {
+    const body = JSON.parse(String(init?.body));
+    if (/BrowserBreakdown/.test(body.query)) return new Response(JSON.stringify({ errors: [{ message: 'unknown field' }] }), { headers: { 'Content-Type': 'application/json' } });
+    return new Response(JSON.stringify({ data: { viewer: { accounts: [{
+      daily: [{ count: 5, sum: { visits: 3 }, dimensions: { date: body.variables.lastCompleteDate } }], countries: [], paths: [],
+    }] } } }), { headers: { 'Content-Type': 'application/json' } });
+  };
+  try {
+    const response = await worker.fetch(new Request('http://localhost/api/stats'), liveEnv(), ctx as any);
+    const data = await response.json() as any;
+    assert.equal(response.status, 200);
+    assert.equal(data.status, 'ok');
+    assert.equal(data.browsers, undefined);
+  } finally {
+    globalThis.fetch = originalFetch;
+  }
+});
