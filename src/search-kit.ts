@@ -21,10 +21,10 @@ export function parseKeywordQuery(
 ): { key: string; query: string } | null {
   const match = raw.match(/^\s*([^:]{1,24}?)\s*:\s*(.*)$/s);
   if (!match) return null;
-  const typed = match[1].toLowerCase().replace(/[^a-z0-9]/g, '');
+  const typed = (match[1] ?? '').toLowerCase().replace(/[^a-z0-9]/g, '');
   const key = resolveKey(typed);
   if (!key) return null;
-  let query = match[2].trim();
+  let query = (match[2] ?? '').trim();
   if ((query.startsWith('"') && query.endsWith('"')) || (query.startsWith("'") && query.endsWith("'"))) {
     query = query.slice(1, -1).trim();
   }
@@ -48,7 +48,7 @@ export function sample<T>(items: readonly T[], count: number): T[] {
   const arr = items.slice();
   for (let i = arr.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
-    [arr[i], arr[j]] = [arr[j], arr[i]];
+    [arr[i], arr[j]] = [arr[j] as T, arr[i] as T];
   }
   return arr.slice(0, count);
 }
@@ -217,9 +217,10 @@ export function createSearchController(opts: SearchControllerOptions): SearchCon
       return;
     }
     if (e.key === 'Enter') {
-      if (activeSuggestion >= 0 && options[activeSuggestion]) {
+      const active = activeSuggestion >= 0 ? options[activeSuggestion] : undefined;
+      if (active) {
         e.preventDefault();
-        options[activeSuggestion].click();
+        active.click();
         return;
       }
       if (onCommand && onCommand(searchQueryValue())) {
@@ -436,7 +437,7 @@ export function setupKeyboardShortcuts(opts: KeyboardShortcutOptions) {
 
     if ((e.key === 'j' || e.key === 'k') && items.length) {
       e.preventDefault();
-      if (currIdx >= 0 && items[currIdx]) items[currIdx].classList.remove(selectedClass);
+      items[currIdx]?.classList.remove(selectedClass);
       currIdx = e.key === 'j' ? (currIdx + 1) % items.length : (currIdx - 1 + items.length) % items.length;
       if (opts.setSelectedIndex) opts.setSelectedIndex(currIdx);
       const selected = items[currIdx];
