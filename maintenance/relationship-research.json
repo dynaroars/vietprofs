@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-14T14:13:12.000Z",
+  "updatedAt": "2026-10-15T14:12:41.000Z",
   "batches": [
     {
       "batchNumber": 1,
@@ -19232,6 +19232,246 @@
           "nextAction": "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. Crossref author search (affiliation-matched, up to 200 works) checked for roster coauthor pairs with 2+ shared works: none verified. OpenAlex unavailable (daily rate limit); NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches."
         }
       ]
+    },
+    {
+      "batchNumber": 83,
+      "rosterIds": [
+        "vp-2148",
+        "vp-2147",
+        "vp-2146",
+        "vp-2145",
+        "vp-2144",
+        "vp-2143",
+        "vp-2142",
+        "vp-2141",
+        "vp-2140",
+        "vp-2139",
+        "vp-2118",
+        "vp-2117",
+        "vp-2116",
+        "vp-2115",
+        "vp-2114",
+        "vp-2113",
+        "vp-2112",
+        "vp-2111",
+        "vp-2110",
+        "vp-2109"
+      ],
+      "startedAt": "2026-10-15T14:12:41.000Z",
+      "completedAt": "2026-10-15T14:12:41.000Z",
+      "status": "complete",
+      "outcomes": [
+        {
+          "rosterId": "vp-2148",
+          "sources": [
+            "https://pureportal.coventry.ac.uk/en/persons/thai-nguyen"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. Crossref author search (affiliation-matched) checked for roster coauthor pairs with 2+ shared works: none verified. OpenAlex unavailable (HTTP 429 rate limit); NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-2147",
+          "sources": [
+            "https://findanexpert.unimelb.edu.au/profile/960270-vi-truong"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. Crossref author search (affiliation-matched) checked for roster coauthor pairs with 2+ shared works: none verified. OpenAlex unavailable (HTTP 429 rate limit); NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches. Rejected: Crossref author 'Vi Khanh Truong' (nanomaterials, coauthor Nhiem Tran vp-2062) does not match Vi Truong, School of Computing and Information Systems, University of Melbourne (field mismatch)."
+        },
+        {
+          "rosterId": "vp-2146",
+          "sources": [
+            "https://scholars.latrobe.edu.au/h2do"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. Crossref author search (affiliation-matched) checked for roster coauthor pairs with 2+ shared works: none verified. OpenAlex unavailable (HTTP 429 rate limit); NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-2145",
+          "sources": [
+            "https://scholars.latrobe.edu.au/tltran"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. Crossref author search (affiliation-matched) checked for roster coauthor pairs with 2+ shared works: none verified. OpenAlex unavailable (HTTP 429 rate limit); NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-2144",
+          "sources": [
+            "https://www.ncl.ac.uk/business/people/profile/tamdinh.html"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. Crossref author search (affiliation-matched) checked for roster coauthor pairs with 2+ shared works: none verified. OpenAlex unavailable (HTTP 429 rate limit); NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-2143",
+          "sources": [
+            "https://profiles.sydney.edu.au/tina.huynh"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. Crossref author search (affiliation-matched) checked for roster coauthor pairs with 2+ shared works: none verified. OpenAlex unavailable (HTTP 429 rate limit); NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-2142",
+          "sources": [
+            "https://profiles.sydney.edu.au/huy.vu"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. Crossref author search (affiliation-matched) checked for roster coauthor pairs with 2+ shared works: none verified. OpenAlex unavailable (HTTP 429 rate limit); NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-2141",
+          "sources": [
+            "https://www.loyola.edu/academics/chemistry/faculty/nguyen-theresa.html"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. Crossref author search (affiliation-matched) checked for roster coauthor pairs with 2+ shared works: none verified. OpenAlex unavailable (HTTP 429 rate limit); NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-2140",
+          "sources": [
+            "https://www.sdsmt.edu/about/directory/nguyen_haiden.html"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. Crossref author search (affiliation-matched) checked for roster coauthor pairs with 2+ shared works: none verified. OpenAlex unavailable (HTTP 429 rate limit); NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-2139",
+          "sources": [
+            "https://dr.ntu.edu.sg/entities/person/9cf2a152-e139-4d98-b6ad-82a4168c3a4d"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. Crossref author search (affiliation-matched) checked for roster coauthor pairs with 2+ shared works: none verified. OpenAlex unavailable (HTTP 429 rate limit); NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-2118",
+          "sources": [
+            "https://math.charlotte.edu/directory/loc-nguyen/"
+          ],
+          "relationshipIds": [
+            "rel-coauthor-vp-0107-vp-2118",
+            "rel-coauthor-vp-1760-vp-2118"
+          ],
+          "status": "verified",
+          "notes": [
+            "Coauthor edge(s) verified via Crossref with affiliation-matched authors."
+          ],
+          "nextAction": "Lead: Minh-Binh Tran (vp-0064) shares one work (doi:10.1088/1361-6420/ae98ad, 2026) with vp-2118 and vp-1760; need a second qualifying work. Advisor/mentor wording and grant/patent searches not completed; OpenAlex 429."
+        },
+        {
+          "rosterId": "vp-2117",
+          "sources": [
+            "https://researchportal.hw.ac.uk/en/persons/ignace-lang-tran/"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. Crossref author search (affiliation-matched) checked for roster coauthor pairs with 2+ shared works: none verified. OpenAlex unavailable (HTTP 429 rate limit); NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-2116",
+          "sources": [
+            "https://english.missouri.edu/people/nguyen"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. Crossref author search (affiliation-matched) checked for roster coauthor pairs with 2+ shared works: none verified. OpenAlex unavailable (HTTP 429 rate limit); NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-2115",
+          "sources": [
+            "https://engineering.uark.edu/electrical-engineering-computer-science/electrical-engineering-faculty/uid/tuand/name/Tuan+Dang/"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. Crossref author search (affiliation-matched) checked for roster coauthor pairs with 2+ shared works: none verified. OpenAlex unavailable (HTTP 429 rate limit); NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-2114",
+          "sources": [
+            "https://www.uab.edu/engineering/bme/people/faculty/thanh-nguyen-ph-d"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. Crossref author search (affiliation-matched) checked for roster coauthor pairs with 2+ shared works: none verified. OpenAlex unavailable (HTTP 429 rate limit); NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-2113",
+          "sources": [
+            "https://physics.uconn.edu/person/thu-le/"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. Crossref author search (affiliation-matched) checked for roster coauthor pairs with 2+ shared works: none verified. OpenAlex unavailable (HTTP 429 rate limit); NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches. Lead: one shared work with Tran Trung Luu (vp-1335), doi:10.1103/physrevlett.130.153201 (PRL 2023); need a second qualifying work."
+        },
+        {
+          "rosterId": "vp-2112",
+          "sources": [
+            "https://staffprofiles.bournemouth.ac.uk/display/tvu"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. Crossref author search (affiliation-matched) checked for roster coauthor pairs with 2+ shared works: none verified. OpenAlex unavailable (HTTP 429 rate limit); NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-2111",
+          "sources": [
+            "https://cla.auburn.edu/directory/millian-pham/"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. Crossref author search (affiliation-matched) checked for roster coauthor pairs with 2+ shared works: none verified. OpenAlex unavailable (HTTP 429 rate limit); NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-2110",
+          "sources": [
+            "https://www.clemson.edu/cecas/departments/ce/people/faculty/Le.html"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. Crossref author search (affiliation-matched) checked for roster coauthor pairs with 2+ shared works: none verified. OpenAlex unavailable (HTTP 429 rate limit); NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-2109",
+          "sources": [
+            "https://www.uottawa.ca/faculty-engineering/school-electrical-engineering-computer-science/directory/thomas-tran"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. Crossref author search (affiliation-matched) checked for roster coauthor pairs with 2+ shared works: none verified. OpenAlex unavailable (HTTP 429 rate limit); NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        }
+      ],
+      "verifiedRelationshipIds": [
+        "rel-coauthor-vp-0107-vp-2118",
+        "rel-coauthor-vp-1760-vp-2118"
+      ],
+      "notes": "Selected next 20 unprocessed IDs in descending order (vp-2148..vp-2139, vp-2118..vp-2109; vp-2119..2138 done in earlier batches). OpenAlex rate-limited (429); used official profiles and Crossref."
     }
   ],
   "earlyOutcomes": [

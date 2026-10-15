@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-14T14:13:12.000Z",
+  "updatedAt": "2026-10-15T14:12:41.000Z",
   "relationships": [
     {
       "id": "rel-coauthor-vp-0015-vp-0018",
@@ -2732,6 +2732,98 @@
         }
       ],
       "verifiedAt": "2026-10-14T14:13:12.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-0107-vp-2118",
+      "type": "coauthor",
+      "sourceId": "vp-0107",
+      "targetId": "vp-2118",
+      "sources": [
+        "https://doi.org/10.1515/jiip-2017-0047",
+        "https://doi.org/10.3934/ipi.2018021",
+        "https://doi.org/10.1137/18m1168303",
+        "https://doi.org/10.1016/j.camwa.2022.10.021"
+      ],
+      "evidence": "Crossref records list Dinh-Liem Nguyen (Department of Mathematics, Kansas State University) and Loc H. Nguyen (Department of Mathematics and Statistics, University of North Carolina at Charlotte) as coauthors of four inverse-problems articles (2017-2022), each with 2-4 authors; affiliations and research area match both roster profiles.",
+      "works": [
+        {
+          "identifier": "doi:10.1515/jiip-2017-0047",
+          "title": "Imaging of buried objects from multi-frequency experimental data using a globally convergent inversion method",
+          "date": "2017",
+          "url": "https://doi.org/10.1515/jiip-2017-0047"
+        },
+        {
+          "identifier": "doi:10.3934/ipi.2018021",
+          "title": "A globally convergent numerical method for a 3D coefficient inverse problem with a single measurement of multi-frequency data",
+          "date": "2018",
+          "url": "https://doi.org/10.3934/ipi.2018021"
+        },
+        {
+          "identifier": "doi:10.1137/18m1168303",
+          "title": "A Coefficient Inverse Problem with a Single Measurement of Phaseless Scattering Data",
+          "date": "2019",
+          "url": "https://doi.org/10.1137/18m1168303"
+        },
+        {
+          "identifier": "doi:10.1016/j.camwa.2022.10.021",
+          "title": "The Carleman-based contraction principle to reconstruct the potential of nonlinear hyperbolic equations",
+          "date": "2022",
+          "url": "https://doi.org/10.1016/j.camwa.2022.10.021"
+        }
+      ],
+      "verifiedAt": "2026-10-15T14:12:41.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-1760-vp-2118",
+      "type": "coauthor",
+      "sourceId": "vp-1760",
+      "targetId": "vp-2118",
+      "sources": [
+        "https://www.csulb.edu/mathematics-statistics/page/thuy-le-phd",
+        "https://doi.org/10.1007/s10915-022-01846-3",
+        "https://doi.org/10.1515/jiip-2020-0028",
+        "https://doi.org/10.1016/j.cam.2024.115827",
+        "https://doi.org/10.1137/19m1299487",
+        "https://doi.org/10.1088/1361-6420/ac50b8"
+      ],
+      "evidence": "Thuy T. Le's official CSULB Mathematics and Statistics profile lists publications coauthored with Loc H. Nguyen; Crossref records (2020 affiliation: Department of Mathematics and Statistics, University of North Carolina at Charlotte for both) confirm five retained articles with 2-3 authors in the same inverse-problems area.",
+      "works": [
+        {
+          "identifier": "doi:10.1007/s10915-022-01846-3",
+          "title": "The Gradient Descent Method for the Convexification to Solve Boundary Value Problems of Quasi-Linear PDEs and a Coefficient Inverse Problem",
+          "date": "2022",
+          "url": "https://doi.org/10.1007/s10915-022-01846-3"
+        },
+        {
+          "identifier": "doi:10.1515/jiip-2020-0028",
+          "title": "A convergent numerical method to recover the initial condition of nonlinear parabolic equations from lateral Cauchy data",
+          "date": "2020",
+          "url": "https://doi.org/10.1515/jiip-2020-0028"
+        },
+        {
+          "identifier": "doi:10.1016/j.cam.2024.115827",
+          "title": "The Carleman-Newton method to globally reconstruct the initial condition for nonlinear parabolic equations",
+          "date": "2024",
+          "url": "https://doi.org/10.1016/j.cam.2024.115827"
+        },
+        {
+          "identifier": "doi:10.1137/19m1299487",
+          "title": "Numerical Solution of a Linearized Travel Time Tomography Problem With Incomplete Data",
+          "date": "2020",
+          "url": "https://doi.org/10.1137/19m1299487"
+        },
+        {
+          "identifier": "doi:10.1088/1361-6420/ac50b8",
+          "title": "Carleman contraction mapping for a 1D inverse scattering problem with experimental time-dependent data",
+          "date": "2022",
+          "url": "https://doi.org/10.1088/1361-6420/ac50b8"
+        }
+      ],
+      "verifiedAt": "2026-10-15T14:12:41.000Z",
       "direct": false,
       "notes": ""
     }
