@@ -7500,6 +7500,111 @@
       "identitySignals": [],
       "retrievedAt": "2026-10-14T11:22:00.409Z",
       "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2139": {
+      "name": "Hung Ho",
+      "outcome": "found",
+      "pageUrl": "https://dr.ntu.edu.sg/entities/person/9cf2a152-e139-4d98-b6ad-82a4168c3a4d",
+      "imageUrl": "https://dr.ntu.edu.sg/server/api/core/bitstreams/7c2c99e6-fb3d-4dcc-af48-2f90dbd48255/content",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-15T03:18:08.000Z",
+      "note": "manually verified during scheduled audit 2026-10-15"
+    },
+    "vp-2140": {
+      "name": "Haiden Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://www.sdsmt.edu/about/directory/nguyen_haiden.html",
+      "imageUrl": "https://www.sdsmt.edu/about/assets/photos-about/adirectory_photos/nguyen_haiden.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-15T03:19:54.000Z",
+      "note": "manually verified during scheduled audit 2026-10-15"
+    },
+    "vp-2142": {
+      "name": "Huy Vu",
+      "outcome": "found",
+      "pageUrl": "https://profiles.sydney.edu.au/huy.vu",
+      "imageUrl": "https://profiles.sydney.edu.au/huy.vu/thumbnail",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-15T03:20:46.000Z",
+      "note": "manually verified during scheduled audit 2026-10-15"
+    },
+    "vp-2143": {
+      "name": "Tina Huynh - The University of Sydney",
+      "outcome": "found",
+      "pageUrl": "https://profiles.sydney.edu.au/tina.huynh",
+      "imageUrl": "https://profiles.sydney.edu.au/tina.huynh/thumbnail",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-15T03:20:46.000Z",
+      "note": "manually verified during scheduled audit 2026-10-15"
+    },
+    "vp-2145": {
+      "name": "Thi Tran - La Trobe University",
+      "outcome": "found",
+      "pageUrl": "https://scholars.latrobe.edu.au/tltran",
+      "imageUrl": "https://scholars.latrobe.edu.au/tltran/thumbnail",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-15T03:20:55.000Z",
+      "note": "manually verified during scheduled audit 2026-10-15"
+    },
+    "vp-2146": {
+      "name": "Hung Quang Do",
+      "outcome": "found",
+      "pageUrl": "https://scholars.latrobe.edu.au/h2do",
+      "imageUrl": "https://scholars.latrobe.edu.au/h2do/thumbnail",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-15T03:20:55.000Z",
+      "note": "manually verified during scheduled audit 2026-10-15"
+    },
+    "vp-2147": {
+      "name": "Vi Truong",
+      "outcome": "found",
+      "pageUrl": "https://findanexpert.unimelb.edu.au/profile/960270-vi-truong",
+      "imageUrl": "https://pictures.staff.unimelb.edu.au/fae/index_eis.php?cid=86cElUCUXh1eqzxTfFOKtKpSvwaZHw5vAUEDXLW1gfM%3D&h=4irm2hLp607TeBOdH4rGDVk%2FcstFOvAnpfZCVqXiVyE%3D",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-15T03:20:55.000Z",
+      "note": "manually verified during scheduled audit 2026-10-15"
     }
   }
 }
