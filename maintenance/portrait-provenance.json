@@ -7530,6 +7530,36 @@
       ],
       "retrievedAt": "2026-10-15T03:19:54.000Z",
       "note": "manually verified during scheduled audit 2026-10-15"
+    },
+    "vp-2142": {
+      "name": "Huy Vu",
+      "outcome": "found",
+      "pageUrl": "https://profiles.sydney.edu.au/huy.vu",
+      "imageUrl": "https://profiles.sydney.edu.au/huy.vu/thumbnail",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-15T03:20:46.000Z",
+      "note": "manually verified during scheduled audit 2026-10-15"
+    },
+    "vp-2143": {
+      "name": "Tina Huynh - The University of Sydney",
+      "outcome": "found",
+      "pageUrl": "https://profiles.sydney.edu.au/tina.huynh",
+      "imageUrl": "https://profiles.sydney.edu.au/tina.huynh/thumbnail",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-15T03:20:46.000Z",
+      "note": "manually verified during scheduled audit 2026-10-15"
     }
   }
 }
