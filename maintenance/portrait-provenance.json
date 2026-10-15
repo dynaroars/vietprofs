@@ -7560,6 +7560,51 @@
       ],
       "retrievedAt": "2026-10-15T03:20:46.000Z",
       "note": "manually verified during scheduled audit 2026-10-15"
+    },
+    "vp-2145": {
+      "name": "Thi Tran - La Trobe University",
+      "outcome": "found",
+      "pageUrl": "https://scholars.latrobe.edu.au/tltran",
+      "imageUrl": "https://scholars.latrobe.edu.au/tltran/thumbnail",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-15T03:20:55.000Z",
+      "note": "manually verified during scheduled audit 2026-10-15"
+    },
+    "vp-2146": {
+      "name": "Hung Quang Do",
+      "outcome": "found",
+      "pageUrl": "https://scholars.latrobe.edu.au/h2do",
+      "imageUrl": "https://scholars.latrobe.edu.au/h2do/thumbnail",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-15T03:20:55.000Z",
+      "note": "manually verified during scheduled audit 2026-10-15"
+    },
+    "vp-2147": {
+      "name": "Vi Truong",
+      "outcome": "found",
+      "pageUrl": "https://findanexpert.unimelb.edu.au/profile/960270-vi-truong",
+      "imageUrl": "https://pictures.staff.unimelb.edu.au/fae/index_eis.php?cid=86cElUCUXh1eqzxTfFOKtKpSvwaZHw5vAUEDXLW1gfM%3D&h=4irm2hLp607TeBOdH4rGDVk%2FcstFOvAnpfZCVqXiVyE%3D",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-15T03:20:55.000Z",
+      "note": "manually verified during scheduled audit 2026-10-15"
     }
   }
 }
