@@ -7515,6 +7515,21 @@
       ],
       "retrievedAt": "2026-10-15T03:18:08.000Z",
       "note": "manually verified during scheduled audit 2026-10-15"
+    },
+    "vp-2140": {
+      "name": "Haiden Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://www.sdsmt.edu/about/directory/nguyen_haiden.html",
+      "imageUrl": "https://www.sdsmt.edu/about/assets/photos-about/adirectory_photos/nguyen_haiden.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-15T03:19:54.000Z",
+      "note": "manually verified during scheduled audit 2026-10-15"
     }
   }
 }
