@@ -7620,6 +7620,21 @@
       ],
       "retrievedAt": "2026-10-16T03:15:29.263Z",
       "note": "manually verified during scheduled audit 2026-10-16"
+    },
+    "vp-2150": {
+      "name": "Candice Huynh",
+      "outcome": "found",
+      "pageUrl": "https://www.cpp.edu/faculty/candicehuynh/index.shtml",
+      "imageUrl": "https://www.cpp.edu/faculty/candicehuynh/candicehuynh.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-16T03:15:45.981Z",
+      "note": "manually verified during scheduled audit 2026-10-16"
     }
   }
 }
