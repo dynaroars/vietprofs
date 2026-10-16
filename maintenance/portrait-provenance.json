@@ -7605,6 +7605,21 @@
       ],
       "retrievedAt": "2026-10-15T03:20:55.000Z",
       "note": "manually verified during scheduled audit 2026-10-15"
+    },
+    "vp-2149": {
+      "name": "Van H. Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://www.lawrence.edu/people/van-nguyen/",
+      "imageUrl": "https://www.lawrence.edu/wp-content/uploads/2022/09/34-260x300.jpeg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-16T03:15:29.263Z",
+      "note": "manually verified during scheduled audit 2026-10-16"
     }
   }
 }
