@@ -7605,6 +7605,66 @@
       ],
       "retrievedAt": "2026-10-15T03:20:55.000Z",
       "note": "manually verified during scheduled audit 2026-10-15"
+    },
+    "vp-2149": {
+      "name": "Van H. Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://www.lawrence.edu/people/van-nguyen/",
+      "imageUrl": "https://www.lawrence.edu/wp-content/uploads/2022/09/34-260x300.jpeg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-16T03:15:29.263Z",
+      "note": "manually verified during scheduled audit 2026-10-16"
+    },
+    "vp-2150": {
+      "name": "Candice Huynh",
+      "outcome": "found",
+      "pageUrl": "https://www.cpp.edu/faculty/candicehuynh/index.shtml",
+      "imageUrl": "https://www.cpp.edu/faculty/candicehuynh/candicehuynh.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-16T03:15:45.981Z",
+      "note": "manually verified during scheduled audit 2026-10-16"
+    },
+    "vp-2152": {
+      "name": "Duc M. Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://www.amherst.edu/people/facstaff/dnguyen",
+      "imageUrl": "https://wsgapps.aws.amherst.edu/directory-photo/image.php?id=5005792&original=1&image=1",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-16T03:16:18.461Z",
+      "note": "manually verified during scheduled audit 2026-10-16"
+    },
+    "vp-2153": {
+      "name": "Hung Phan",
+      "outcome": "found",
+      "pageUrl": "https://www.uml.edu/profile/hung_phan",
+      "imageUrl": "https://www.uml.edu/Images/Phan-Hung-800_tcm18-325921.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-16T03:16:35.240Z",
+      "note": "manually verified during scheduled audit 2026-10-16"
     }
   }
 }
