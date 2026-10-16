@@ -7635,6 +7635,21 @@
       ],
       "retrievedAt": "2026-10-16T03:15:45.981Z",
       "note": "manually verified during scheduled audit 2026-10-16"
+    },
+    "vp-2152": {
+      "name": "Duc M. Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://www.amherst.edu/people/facstaff/dnguyen",
+      "imageUrl": "https://wsgapps.aws.amherst.edu/directory-photo/image.php?id=5005792&original=1&image=1",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-16T03:16:18.461Z",
+      "note": "manually verified during scheduled audit 2026-10-16"
     }
   }
 }
