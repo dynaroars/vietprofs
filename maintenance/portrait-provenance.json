@@ -4564,7 +4564,7 @@
         "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-10-14T13:04:31.788Z",
+      "retrievedAt": "2026-10-16T11:07:26.700Z",
       "note": "candidate failed 120x120 or portrait-aspect validation"
     },
     "vp-1951": {
@@ -6933,7 +6933,7 @@
         "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-10-14T13:10:36.149Z",
+      "retrievedAt": "2026-10-16T11:07:29.063Z",
       "note": "candidate failed 120x120 or portrait-aspect validation"
     },
     "vp-2107": {
@@ -7409,12 +7409,12 @@
         "department",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-10-14T11:22:12.223Z",
+      "retrievedAt": "2026-10-16T11:07:20.939Z",
       "note": "candidate failed 120x120 or portrait-aspect validation"
     },
     "vp-1879": {
       "name": "Tien Son Nguyen",
-      "outcome": "needs_review",
+      "outcome": "found",
       "pageUrl": "https://liu.se/en/employee/nguso90",
       "imageUrl": "https://liu.se/-/media/employeeimages/90/employee_image_nguso90.jpeg?as=1&w=300&h=300&cr=1&crw=300&crh=300&bc=%23ffffff&hash=373D00347E54F02F855BE528E7E32992",
       "sourceType": "official_faculty",
@@ -7426,8 +7426,8 @@
         "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-10-14T11:20:33.857Z",
-      "note": "candidate requires visual review before acceptance"
+      "retrievedAt": "2026-10-16T11:06:20.510Z",
+      "note": "MEDIUM candidate stored after visual review"
     },
     "vp-1884": {
       "name": "Thi Thu Sinh Tran",
@@ -7445,7 +7445,7 @@
     },
     "vp-1886": {
       "name": "Hoai Viet Nguyen",
-      "outcome": "needs_review",
+      "outcome": "found",
       "pageUrl": "https://www.th-koeln.de/personen/viet.nguyen/",
       "imageUrl": "https://www.th-koeln.de/pseimg/c87b9cfb844ceb807e8afe728772c57fc7349ad3.png",
       "sourceType": "official_faculty",
@@ -7456,8 +7456,8 @@
         "department",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-10-14T11:20:46.979Z",
-      "note": "candidate requires visual review before acceptance"
+      "retrievedAt": "2026-10-16T11:06:22.287Z",
+      "note": "MEDIUM candidate stored after visual review"
     },
     "vp-1868": {
       "name": "Chau Dinh Nguyen",
@@ -7665,6 +7665,144 @@
       ],
       "retrievedAt": "2026-10-16T03:16:35.240Z",
       "note": "manually verified during scheduled audit 2026-10-16"
+    },
+    "vp-1865": {
+      "name": "The Vu Mai",
+      "outcome": "not_found",
+      "pageUrl": "https://sejong.elsevierpure.com/en/persons/the-vu-mai/",
+      "imageUrl": "https://sejong.elsevierpure.com/en/persons/the-vu-mai/615453.JPG",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-16T11:07:16.855Z",
+      "note": "candidate image could not be downloaded"
+    },
+    "vp-1866": {
+      "name": "Van Tien Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-16T11:04:53.371Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1867": {
+      "name": "Thi-Van Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-16T11:05:11.246Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2141": {
+      "name": "Theresa P.T. Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-16T11:05:38.114Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2144": {
+      "name": "Tam Duc Dinh",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-16T11:05:46.389Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2148": {
+      "name": "Thai Nguyen - Coventry University",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-16T11:05:55.689Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2151": {
+      "name": "Tuan Nguyen - Central College",
+      "outcome": "not_found",
+      "pageUrl": "https://central.edu/faculty/tuan-nguyen/",
+      "imageUrl": "https://photosapi.central.edu/photos/fac/?name=nguyentu",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-16T11:06:04.918Z",
+      "note": "candidate requires visual review before acceptance",
+      "reason": "Alt text names Tuan Nguyen but the photo API image fails the 120x120/aspect validation; left missing."
+    },
+    "vp-1855": {
+      "name": "Hung Nguyen-Dang",
+      "outcome": "needs_review",
+      "pageUrl": "https://www.am.uliege.be/cms/c_3482665/fr/am-repertoire?uid=u000274",
+      "imageUrl": "https://www.am.uliege.be/cms/c_3482665/fr/plugins/WebServiceTrombiPlugin/images/profile.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-16T11:06:31.101Z",
+      "note": "candidate requires visual review before acceptance"
+    },
+    "vp-1856": {
+      "name": "Frédéric Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-16T11:06:38.871Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1857": {
+      "name": "Bich Lien Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-16T11:06:46.000Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1859": {
+      "name": "Fryderyk Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://ifp.uwr.edu.pl/pracownicy/fryderyk-nguyen/",
+      "imageUrl": "https://ifp.uwr.edu.pl/wp-content/uploads/sites/213/2026/01/Fryderyk-Nguyen.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-16T11:06:56.411Z"
+    },
+    "vp-1860": {
+      "name": "Thanh-Ngo Nguyen",
+      "outcome": "not_found",
+      "pageUrl": "https://kis.pwr.edu.pl/en/structure/division-of-information-systems/computational-collective-intelligence-group",
+      "imageUrl": "https://staff-ksi.pwr.edu.pl/photos/thanh_ngo_nguyen.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-16T11:07:01.701Z",
+      "note": "candidate failed 120x120 or portrait-aspect validation"
+    },
+    "vp-1861": {
+      "name": "Petr Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-16T11:07:04.297Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     }
   }
 }
