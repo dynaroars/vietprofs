@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-15T14:12:41.000Z",
+  "updatedAt": "2026-10-16T14:25:00.000Z",
   "batches": [
     {
       "batchNumber": 1,
@@ -19472,6 +19472,241 @@
         "rel-coauthor-vp-1760-vp-2118"
       ],
       "notes": "Selected next 20 unprocessed IDs in descending order (vp-2148..vp-2139, vp-2118..vp-2109; vp-2119..2138 done in earlier batches). OpenAlex rate-limited (429); used official profiles and Crossref."
+    },
+    {
+      "batchNumber": 84,
+      "rosterIds": [
+        "vp-2153",
+        "vp-2152",
+        "vp-2151",
+        "vp-2150",
+        "vp-2149",
+        "vp-2108",
+        "vp-2107",
+        "vp-2106",
+        "vp-2105",
+        "vp-2104",
+        "vp-2103",
+        "vp-2102",
+        "vp-2101",
+        "vp-2100",
+        "vp-2099",
+        "vp-2098",
+        "vp-2097",
+        "vp-2096",
+        "vp-2095",
+        "vp-2094"
+      ],
+      "startedAt": "2026-10-16T14:15:00.000Z",
+      "completedAt": "2026-10-16T14:25:00.000Z",
+      "status": "complete",
+      "outcomes": [
+        {
+          "rosterId": "vp-2153",
+          "sources": [
+            "https://www.uml.edu/profile/hung_phan",
+            "https://faculty.uml.edu/hung_phan/"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile and personal site fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. Personal site/profile list PhD (Wayne State) and BS (Can Tho) without naming advisors. OpenAlex unavailable (HTTP 429 rate limit); Crossref/NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-2152",
+          "sources": [
+            "https://www.amherst.edu/people/facstaff/dnguyen",
+            "https://sites.google.com/view/ducmnguyen/"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile and personal site fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. Personal site lists PhD/MA (Toronto) without naming advisors. OpenAlex unavailable (HTTP 429 rate limit); Crossref/NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-2151",
+          "sources": [
+            "https://central.edu/faculty/tuan-nguyen/"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. OpenAlex unavailable (HTTP 429 rate limit); Crossref/NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-2150",
+          "sources": [
+            "https://www.cpp.edu/faculty/candicehuynh/index.shtml"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. OpenAlex unavailable (HTTP 429 rate limit); Crossref/NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-2149",
+          "sources": [
+            "https://www.lawrence.edu/people/van-nguyen/",
+            "https://sites.google.com/view/vanhn/home"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile and personal site fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. OpenAlex unavailable (HTTP 429 rate limit); Crossref/NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-2108",
+          "sources": [
+            "https://telfer.uottawa.ca/en/directory/hien-tran/"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. OpenAlex unavailable (HTTP 429 rate limit); Crossref/NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-2107",
+          "sources": [
+            "https://staffprofiles.bournemouth.ac.uk/display/qtnguyen"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. OpenAlex unavailable (HTTP 429 rate limit); Crossref/NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-2106",
+          "sources": [
+            "https://www.icmacentre.ac.uk/people/dr-vu-tran"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. OpenAlex unavailable (HTTP 429 rate limit); Crossref/NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-2105",
+          "sources": [
+            "https://www.qmul.ac.uk/dentistry/people/profiles/professortuanpham.html"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. OpenAlex unavailable (HTTP 429 rate limit); Crossref/NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-2104",
+          "sources": [
+            "https://www.qmul.ac.uk/maths/profiles/nguyenhthe.html",
+            "https://sites.google.com/site/mathnguyenthehuy/home"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile and personal site fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. Personal site names PhD supervisor Ben Andrews (ANU); not in roster, not recorded. OpenAlex unavailable (HTTP 429 rate limit); Crossref/NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-2103",
+          "sources": [
+            "https://music.wsu.edu/faculty/wsu-profile/danh.pham/"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. OpenAlex unavailable (HTTP 429 rate limit); Crossref/NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-2102",
+          "sources": [
+            "https://www.unlv.edu/people/dieu-my-tran"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. OpenAlex unavailable (HTTP 429 rate limit); Crossref/NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-2101",
+          "sources": [
+            "https://drexel.edu/dornsife/academics/faculty/Felice%20Le-Scherban/"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. OpenAlex unavailable (HTTP 429 rate limit); Crossref/NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-2100",
+          "sources": [
+            "https://english.umbc.edu/core-faculty/sharon-tran/"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. OpenAlex unavailable (HTTP 429 rate limit); Crossref/NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-2099",
+          "sources": [
+            "https://www.odu.edu/directory/yet-nguyen",
+            "http://ntyet.github.io/"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile and personal site fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. Personal site names PhD advisor Dan Nettleton (Iowa State); find-roster-matches: no roster match, not recorded (out-of-roster, not Vietnamese-roster-eligible lead). OpenAlex unavailable (HTTP 429 rate limit); Crossref/NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-2098",
+          "sources": [
+            "https://uwaterloo.ca/applied-mathematics/profiles/giang-tran"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. OpenAlex unavailable (HTTP 429 rate limit); Crossref/NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-2097",
+          "sources": [
+            "https://research-repository.uwa.edu.au/en/persons/anne-vu"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. OpenAlex unavailable (HTTP 429 rate limit); Crossref/NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-2096",
+          "sources": [
+            "https://www.rmit.edu.au/profiles/h/tien-huynh"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. OpenAlex unavailable (HTTP 429 rate limit); Crossref/NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-2095",
+          "sources": [
+            "https://www.rmit.edu.au/profiles/t/june-tran"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. OpenAlex unavailable (HTTP 429 rate limit); Crossref/NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-2094",
+          "sources": [
+            "https://research.monash.edu/en/persons/long-pham"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. OpenAlex unavailable (HTTP 429 rate limit); Crossref/NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        }
+      ]
     }
   ],
   "earlyOutcomes": [
