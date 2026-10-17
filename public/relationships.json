@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-15T14:12:41.000Z",
+  "updatedAt": "2026-10-17T14:10:00.000Z",
   "relationships": [
     {
       "id": "rel-coauthor-vp-0015-vp-0018",
@@ -2824,6 +2824,50 @@
         }
       ],
       "verifiedAt": "2026-10-15T14:12:41.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-2055-vp-2056",
+      "type": "coauthor",
+      "sourceId": "vp-2055",
+      "targetId": "vp-2056",
+      "sources": [
+        "https://scholars.uow.edu.au/chau-nguyen",
+        "https://scholars.uow.edu.au/john-le",
+        "https://doi.org/10.3390/ai6080174",
+        "https://doi.org/10.3390/knowledge6030013",
+        "https://doi.org/10.1007/978-981-95-4969-6_8",
+        "https://doi.org/10.3390/jcp6040116"
+      ],
+      "evidence": "Crossref records for four 2025-2026 works list Chau Nguyen (ORCID 0000-0001-9489-2035) and John Le (ORCID 0000-0003-0019-0345), both with School of Computing and Information Technology (Institute of Cybersecurity and Cryptology), University of Wollongong affiliations matching their roster entries; a preprint version of one article was deduplicated.",
+      "works": [
+        {
+          "identifier": "doi:10.3390/ai6080174",
+          "title": "Phishing Attacks in the Age of Generative Artificial Intelligence: A Systematic Review of Human Factors",
+          "date": "2025",
+          "url": "https://doi.org/10.3390/ai6080174"
+        },
+        {
+          "identifier": "doi:10.3390/knowledge6030013",
+          "title": "Augmenting Large Language Models with External Data Sources: A Systematic Review of Methodologies, Performance Metrics, and Information Fidelity",
+          "date": "2026",
+          "url": "https://doi.org/10.3390/knowledge6030013"
+        },
+        {
+          "identifier": "doi:10.1007/978-981-95-4969-6_8",
+          "title": "LAPEFT: A Lexicon-Enhanced Approach to Parameter-Efficient Fine-Tuning for Financial News Sentiment Classification",
+          "date": "2025",
+          "url": "https://doi.org/10.1007/978-981-95-4969-6_8"
+        },
+        {
+          "identifier": "doi:10.3390/jcp6040116",
+          "title": "Digital Forensics and Phishing Defense: A Literature Review and Gap Analysis",
+          "date": "2026",
+          "url": "https://doi.org/10.3390/jcp6040116"
+        }
+      ],
+      "verifiedAt": "2026-10-17T14:10:00.000Z",
       "direct": false,
       "notes": ""
     }

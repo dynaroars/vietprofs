@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-16T14:25:00.000Z",
+  "updatedAt": "2026-10-17T14:10:00.000Z",
   "batches": [
     {
       "batchNumber": 1,
@@ -19707,6 +19707,257 @@
           "nextAction": "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. OpenAlex unavailable (HTTP 429 rate limit); Crossref/NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches."
         }
       ]
+    },
+    {
+      "batchNumber": 85,
+      "rosterIds": [
+        "vp-2154",
+        "vp-2093",
+        "vp-2092",
+        "vp-2091",
+        "vp-2070",
+        "vp-2069",
+        "vp-2068",
+        "vp-2067",
+        "vp-2066",
+        "vp-2065",
+        "vp-2064",
+        "vp-2063",
+        "vp-2062",
+        "vp-2061",
+        "vp-2060",
+        "vp-2059",
+        "vp-2058",
+        "vp-2057",
+        "vp-2056",
+        "vp-2055"
+      ],
+      "startedAt": "2026-10-17T13:50:00.000Z",
+      "completedAt": "2026-10-17T14:10:00.000Z",
+      "status": "complete",
+      "outcomes": [
+        {
+          "rosterId": "vp-2154",
+          "sources": [
+            "https://www.csulb.edu/college-of-liberal-arts/asian-and-asian-american-studies/faculty-and-staff"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "CSULB department faculty directory lists no advisor wording for this person; no roster counterparty found. OpenAlex 429; Crossref/NSF/NIH/patent not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-2093",
+          "sources": [
+            "https://research.monash.edu/en/persons/thang-nguyen"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Monash trio (vp-2091..2093) pairwise Crossref coauthor check: no qualifying shared works."
+          ],
+          "nextAction": "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. Crossref searched only for same-institution roster pairs in this batch; OpenAlex unavailable (HTTP 429). NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-2092",
+          "sources": [
+            "https://research.monash.edu/en/persons/phu-nguyen"
+          ],
+          "relationshipIds": [],
+          "status": "excluded",
+          "notes": [
+            "Profile states PhD supervision by Prof. Lambertus Johannes Sluys (TU Delft); find-roster-matches finds no roster match, so the advisor is out of roster.",
+            "Monash trio (vp-2091..2093) pairwise Crossref coauthor check: no qualifying shared works."
+          ],
+          "nextAction": "Excluded advisor edge (out-of-roster). Other sources not completed."
+        },
+        {
+          "rosterId": "vp-2091",
+          "sources": [
+            "https://research.monash.edu/en/persons/dat-bao"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Monash trio (vp-2091..2093) pairwise Crossref coauthor check: no qualifying shared works."
+          ],
+          "nextAction": "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. Crossref searched only for same-institution roster pairs in this batch; OpenAlex unavailable (HTTP 429). NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-2070",
+          "sources": [
+            "https://about.uq.edu.au/experts/29912"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. Crossref searched only for same-institution roster pairs in this batch; OpenAlex unavailable (HTTP 429). NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-2069",
+          "sources": [
+            "https://profiles.uts.edu.au/Thuy.Pham"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. Crossref searched only for same-institution roster pairs in this batch; OpenAlex unavailable (HTTP 429). NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-2068",
+          "sources": [
+            "https://profiles.uts.edu.au/LamDinh.Nguyen"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. Crossref searched only for same-institution roster pairs in this batch; OpenAlex unavailable (HTTP 429). NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-2067",
+          "sources": [
+            "https://researchprofiles.canberra.edu.au/en/persons/benjamin-vu/"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. Crossref searched only for same-institution roster pairs in this batch; OpenAlex unavailable (HTTP 429). NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-2066",
+          "sources": [
+            "https://nursing.ouhsc.edu/about/faculty-directory/profile-details/anna-nguyen-phd-rn-cpn"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. Crossref searched only for same-institution roster pairs in this batch; OpenAlex unavailable (HTTP 429). NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-2065",
+          "sources": [
+            "https://www.newhaven.edu/faculty-staff-profiles/alvin-tran.php",
+            "https://newhaven.edu/research/labs-groups/weembody-lab.php"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. Crossref searched only for same-institution roster pairs in this batch; OpenAlex unavailable (HTTP 429). NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-2064",
+          "sources": [
+            "https://www.unthealth.edu/tcom/public-health/dr-uyen-sa-d-t-nguyen.html"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. Crossref searched only for same-institution roster pairs in this batch; OpenAlex unavailable (HTTP 429). NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-2063",
+          "sources": [
+            "https://www.rmit.edu.au/contact/staff-contacts/academic-staff/l/le-dr-tiendung"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. Crossref searched only for same-institution roster pairs in this batch; OpenAlex unavailable (HTTP 429). NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-2062",
+          "sources": [
+            "https://www.rmit.edu.au/contact/staff-contacts/academic-staff/t/tran-dr-nhiem"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. Crossref searched only for same-institution roster pairs in this batch; OpenAlex unavailable (HTTP 429). NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-2061",
+          "sources": [
+            "https://www.sydney.edu.au/business/about/our-people/academic-staff/jordan-truong.html"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile fetch failed (no HTTP response through proxy); retry. OpenAlex 429."
+        },
+        {
+          "rosterId": "vp-2060",
+          "sources": [
+            "https://politicsir.cass.anu.edu.au/people/dr-kim-huynh"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. Crossref searched only for same-institution roster pairs in this batch; OpenAlex unavailable (HTTP 429). NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-2059",
+          "sources": [
+            "https://sc.edu/study/colleges_schools/education/faculty-staff/tran_henry.php"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. Crossref searched only for same-institution roster pairs in this batch; OpenAlex unavailable (HTTP 429). NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-2058",
+          "sources": [
+            "https://www.clemson.edu/science/academics/departments/chemistry/about/profiles/thao",
+            "https://scienceweb.clemson.edu/tranlab/"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. Crossref searched only for same-institution roster pairs in this batch; OpenAlex unavailable (HTTP 429). NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-2057",
+          "sources": [
+            "https://scholars.uow.edu.au/anne-vo"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [],
+          "nextAction": "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found. Crossref searched only for same-institution roster pairs in this batch; OpenAlex unavailable (HTTP 429). NSF/NIH/patent searches not completed. Retry with OpenAlex, then NSF/NIH/patent searches."
+        },
+        {
+          "rosterId": "vp-2056",
+          "sources": [
+            "https://scholars.uow.edu.au/john-le"
+          ],
+          "relationshipIds": [
+            "rel-coauthor-vp-2055-vp-2056"
+          ],
+          "status": "completed",
+          "notes": [
+            "Verified coauthor pair vp-2055/vp-2056 via Crossref/ORCID (4 retained works, preprint deduplicated). Official UOW profile pages are script-rendered and exposed no advisor wording."
+          ],
+          "nextAction": "NSF/NIH/patent and mentorship searches not completed; retry with OpenAlex."
+        },
+        {
+          "rosterId": "vp-2055",
+          "sources": [
+            "https://scholars.uow.edu.au/chau-nguyen"
+          ],
+          "relationshipIds": [
+            "rel-coauthor-vp-2055-vp-2056"
+          ],
+          "status": "completed",
+          "notes": [
+            "Verified coauthor pair vp-2055/vp-2056 via Crossref/ORCID (4 retained works, preprint deduplicated). Official UOW profile pages are script-rendered and exposed no advisor wording."
+          ],
+          "nextAction": "NSF/NIH/patent and mentorship searches not completed; retry with OpenAlex."
+        }
+      ],
+      "verifiedRelationshipIds": [
+        "rel-coauthor-vp-2055-vp-2056"
+      ],
+      "notes": "Selected next 20 unprocessed IDs in descending order (vp-2154, vp-2093..vp-2091, vp-2070..vp-2055). OpenAlex rate-limited (429); used official profiles and Crossref (with mailto). Pairwise same-institution Crossref coauthor checks (Monash, UTS, RMIT, UOW) found one verified pair."
     }
   ],
   "earlyOutcomes": [
