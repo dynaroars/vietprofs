@@ -7803,6 +7803,21 @@
       "identitySignals": [],
       "retrievedAt": "2026-10-16T11:07:04.297Z",
       "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2154": {
+      "name": "Ann Thuy-Ling Tran",
+      "outcome": "found",
+      "pageUrl": "https://www.csulb.edu/college-of-liberal-arts/asian-and-asian-american-studies/faculty-and-staff",
+      "imageUrl": "https://www.csulb.edu/sites/default/files/images/2026-06/Ann-Thuy-Ling-Tran_Profile-Pic.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-17T03:13:31.000Z",
+      "note": "manually verified during scheduled audit 2026-10-17"
     }
   }
 }
