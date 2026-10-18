@@ -617,6 +617,9 @@ const FIELD_OVERRIDES = new Map([
   // Generic Speech-Language-Hearing-style department name, but this specific appointment's
   // primary focus (per its own official listing) is multilingual/English education.
   ['Linguistics and Communication Disorders|Queens College, City University of New York', 'Education'],
+  // English, writing, and TESOL faculty; the bare "communication" keyword would otherwise send it to
+  // Social & Behavioral Sciences.
+  ['Humanities and Communication|Embry-Riddle Aeronautical University', 'Humanities'],
   // Contains "History", which would otherwise be caught by the Humanities rule below before ever
   // reaching Arts & Design's own keywords.
   ['History of Art and Visual Culture|California College of the Arts', 'Arts & Design'],
