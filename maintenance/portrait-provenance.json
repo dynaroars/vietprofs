@@ -7818,6 +7818,21 @@
       ],
       "retrievedAt": "2026-10-17T03:13:31.000Z",
       "note": "manually verified during scheduled audit 2026-10-17"
+    },
+    "vp-2155": {
+      "name": "Mai Truong",
+      "outcome": "found",
+      "pageUrl": "https://www.marquette.edu/political-science/directory/mai-truong.php",
+      "imageUrl": "https://www.marquette.edu/political-science/directory/images/mai-truong.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-18T03:14:33.021Z",
+      "note": "manually verified during scheduled audit 2026-10-18"
     }
   }
 }
