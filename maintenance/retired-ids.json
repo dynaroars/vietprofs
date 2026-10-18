@@ -1,10 +1,24 @@
 {
+  "vp-0003": {
+    "replacedBy": null,
+    "retiredAt": "2026-10-01",
+    "name": "Tri Dao",
+    "university": "Princeton University",
+    "reason": "No longer an eligible appointment: the official Princeton CS profile (cs.princeton.edu/people/profile/td8762) and faculty listing give his title as Visiting Research Scholar and say he was \"previously an assistant professor\" at Princeton; he is chief scientist of Together AI. His own pages (tridao.me, dao-lab.ai) still say Assistant Professor. Owner-approved removal (#247). Re-add through a candidate Issue if a current tenure-line appointment turns up."
+  },
   "vp-0414": {
     "replacedBy": "vp-0020",
     "retiredAt": "2026-09-13",
     "name": "Truong Tran",
     "university": "Pennsylvania State University",
     "reason": "Duplicate of vp-0020; merged in c6b2ab9."
+  },
+  "vp-0435": {
+    "replacedBy": null,
+    "retiredAt": "2026-09-27",
+    "name": "Ngoc Tran",
+    "university": "The University of Texas at Austin",
+    "reason": "Left academia: her own site (princengoc.github.io/about.html) says her academic career ended in 2022 and she has since worked at the Chicago Trading Company; the UT Austin math profile is gone (#198)."
   },
   "vp-0701": {
     "replacedBy": null,
@@ -61,6 +75,13 @@
     "name": "Vanessa Pham",
     "university": "University of Wisconsin-Madison",
     "reason": "Removed: stale entry, no current appointment (01ec1bd)."
+  },
+  "vp-0881": {
+    "replacedBy": null,
+    "retiredAt": "2026-09-27",
+    "name": "De Tran",
+    "university": "Stanford University",
+    "reason": "No longer at Stanford: profiles.stanford.edu, med.stanford.edu, and stanfordhealthcare.org pages all return 404 and he is absent from the Primary Care and Population Health directory; current listings place him in private practice in Santa Clara (#198). Re-add through a candidate Issue if a current academic appointment turns up."
   },
   "vp-1044": {
     "replacedBy": null,
@@ -489,32 +510,18 @@
     "university": "Wayne State University",
     "reason": "Duplicate created 2026-09-24 when Tin Nguyen moved Auburn -> Wayne State (#208, #212); original id restored."
   },
-  "vp-0435": {
-    "replacedBy": null,
-    "retiredAt": "2026-09-27",
-    "name": "Ngoc Tran",
-    "university": "The University of Texas at Austin",
-    "reason": "Left academia: her own site (princengoc.github.io/about.html) says her academic career ended in 2022 and she has since worked at the Chicago Trading Company; the UT Austin math profile is gone (#198)."
-  },
-  "vp-0881": {
-    "replacedBy": null,
-    "retiredAt": "2026-09-27",
-    "name": "De Tran",
-    "university": "Stanford University",
-    "reason": "No longer at Stanford: profiles.stanford.edu, med.stanford.edu, and stanfordhealthcare.org pages all return 404 and he is absent from the Primary Care and Population Health directory; current listings place him in private practice in Santa Clara (#198). Re-add through a candidate Issue if a current academic appointment turns up."
-  },
-  "vp-0003": {
-    "replacedBy": null,
-    "retiredAt": "2026-10-01",
-    "name": "Tri Dao",
-    "university": "Princeton University",
-    "reason": "No longer an eligible appointment: the official Princeton CS profile (cs.princeton.edu/people/profile/td8762) and faculty listing give his title as Visiting Research Scholar and say he was \"previously an assistant professor\" at Princeton; he is chief scientist of Together AI. His own pages (tridao.me, dao-lab.ai) still say Assistant Professor. Owner-approved removal (#247). Re-add through a candidate Issue if a current tenure-line appointment turns up."
-  },
   "vp-1705": {
     "replacedBy": null,
     "retiredAt": "2026-10-10",
     "name": "Susan Tran",
     "university": "DePaul University",
     "reason": "Removed on owner direction: the owner reports she is married to a Tran and is not Viet diaspora, so she does not meet the inclusion standard (2026-10-10 owner request). Re-add through a candidate Issue if new evidence of eligibility turns up."
+  },
+  "vp-1870": {
+    "replacedBy": "vp-0593",
+    "retiredAt": "2026-10-18",
+    "name": "Huyen Nguyen - King's College London",
+    "university": "King's College London",
+    "reason": "Duplicate of vp-0593: the KCL profile says Huyen Nguyen was an Assistant Professor at Friedrich Schiller University Jena and the Halle Institute before joining King's College London; both entries list a 2019 Nottingham PhD. Merged by audit 2026-10-18."
   }
 }
