@@ -17779,7 +17779,7 @@
     "city": "London",
     "country": "United Kingdom",
     "department": "Department of Accounting and Financial Management",
-    "rank": "Associate Professor",
+    "rank": "Senior Lecturer",
     "track": "Tenure-line",
     "profileUrl": "https://www.kcl.ac.uk/people/huyen-nguyen",
     "scholarUrl": "https://scholar.google.com/citations?user=19JCwWQAAAAJ",
@@ -17793,7 +17793,10 @@
     "phdInstitution": "University of Nottingham",
     "phdYear": 2019,
     "portrait": "portraits/0593-huyen-nguyen-king-s-college-london.webp",
-    "portraitSource": "https://kclpure.kcl.ac.uk/portal/files-asset/360341211/unnamed.jpg/"
+    "portraitSource": "https://kclpure.kcl.ac.uk/portal/files-asset/360341211/unnamed.jpg/",
+    "undergradInstitution": "Foreign Trade University",
+    "undergradYear": 2011,
+    "msInstitution": "Bangor University"
   },
   {
     "id": "vp-0594",
@@ -46609,29 +46612,6 @@
     ]
   },
   {
-    "id": "vp-1870",
-    "name": "Huyen Ngoc Phuong Nguyen",
-    "vietnameseName": "Nguyễn Ngọc Phương Huyền",
-    "profileUrl": "https://www.uni-jena.de/en/58894/professorin-nguyen",
-    "university": "Friedrich Schiller University Jena",
-    "city": "Jena",
-    "country": "Germany",
-    "department": "Faculty of Economics and Business Administration",
-    "rank": "Assistant Professor",
-    "track": "Tenure-line",
-    "researchAreas": [
-      "Empirical Banking",
-      "Financial Regulation",
-      "Sustainable Finance",
-      "Housing Markets"
-    ],
-    "undergradInstitution": "Foreign Trade University",
-    "undergradYear": 2011,
-    "msInstitution": "Bangor University",
-    "phdInstitution": "University of Nottingham",
-    "phdYear": 2019
-  },
-  {
     "id": "vp-1871",
     "name": "Hoang Ly Nguyen",
     "vietnameseName": "Nguyễn Hoàng Ly",
@@ -52151,5 +52131,107 @@
     "rank": "Assistant Professor",
     "portrait": "portraits/vp-2154-ann-thuy-ling-tran.webp",
     "portraitSource": "https://www.csulb.edu/sites/default/files/images/2026-06/Ann-Thuy-Ling-Tran_Profile-Pic.jpg"
+  },
+  {
+    "id": "vp-2155",
+    "name": "Mai Truong",
+    "profileUrl": "https://www.marquette.edu/political-science/directory/mai-truong.php",
+    "websiteUrl": "https://maitruong.me/",
+    "university": "Marquette University",
+    "city": "Milwaukee",
+    "state": "Wisconsin",
+    "country": "United States",
+    "researchAreas": [
+      "Comparative Politics",
+      "Authoritarian Politics",
+      "Social Movements and Protests",
+      "Southeast Asian Politics",
+      "Political Methodology"
+    ],
+    "track": "Tenure-line",
+    "department": "Political Science",
+    "rank": "Assistant Professor",
+    "phdYear": 2022,
+    "phdInstitution": "University of Arizona",
+    "portraitSource": "https://www.marquette.edu/political-science/directory/images/mai-truong.jpg",
+    "portrait": "portraits/vp-2155-mai-truong.webp"
+  },
+  {
+    "id": "vp-2156",
+    "name": "Phuong Tran - Embry-Riddle Aeronautical University",
+    "profileUrl": "https://erau.edu/faculty/Phuong.Tran2",
+    "university": "Embry-Riddle Aeronautical University",
+    "city": "Daytona Beach",
+    "state": "Florida",
+    "country": "United States",
+    "researchAreas": [
+      "Teaching English as a Second Language",
+      "Rhetoric and Composition"
+    ],
+    "track": "Tenure-line",
+    "department": "Humanities and Communication",
+    "rank": "Assistant Professor",
+    "phdInstitution": "Purdue University",
+    "msInstitution": "Ball State University",
+    "portraitSource": "https://webforms.erau.edu/common/services/peoplesearch/img/TRANP2.jpg",
+    "portrait": "portraits/vp-2156-phuong-tran-embry-riddle-aeronautical-university.webp"
+  },
+  {
+    "id": "vp-2157",
+    "name": "Andrea Hoa Pham",
+    "profileUrl": "https://languages.ufl.edu/directory/andrea-pham/",
+    "websiteUrl": "https://people.clas.ufl.edu/apham/",
+    "university": "University of Florida",
+    "city": "Gainesville",
+    "state": "Florida",
+    "country": "United States",
+    "researchAreas": [
+      "Vietnamese Linguistics",
+      "Phonetics and Phonology",
+      "Sound Change",
+      "Vietnamese Dialectology",
+      "Language and Gender"
+    ],
+    "track": "Tenure-line",
+    "department": "Languages, Literatures and Cultures",
+    "rank": "Professor",
+    "phdInstitution": "University of Toronto",
+    "msInstitution": "University of Toronto",
+    "portraitSource": "https://languages.ufl.edu/wp-content/uploads/sites/238/Andrea-Pham-e1742399757550.jpg",
+    "portrait": "portraits/vp-2157-andrea-hoa-pham.webp"
+  },
+  {
+    "id": "vp-2158",
+    "name": "Evyn Le Espiritu Gandhi",
+    "profileUrl": "https://asianam.ucla.edu/person/evyn-le-espiritu-gandhi/",
+    "university": "University of California, Los Angeles",
+    "city": "Los Angeles",
+    "state": "California",
+    "country": "United States",
+    "researchAreas": [
+      "Critical Refugee Studies",
+      "Comparative Ethnic Studies",
+      "Settler Colonial Studies",
+      "Transpacific Studies",
+      "Asian American Studies"
+    ],
+    "track": "Tenure-line",
+    "department": "Asian American Studies",
+    "rank": "Associate Professor",
+    "phdYear": 2018,
+    "phdInstitution": "University of California, Berkeley",
+    "undergradInstitution": "Pomona College",
+    "undergradYear": 2013,
+    "honors": [
+      {
+        "name": "ACLS Open Access Book Prize in History (for Archipelago of Resettlement: Vietnamese Refugee Settlers and Decolonization across Guam and Israel-Palestine)",
+        "year": 2025,
+        "category": "major_award",
+        "organization": "American Council of Learned Societies",
+        "source": "https://asianam.ucla.edu/person/evyn-le-espiritu-gandhi/"
+      }
+    ],
+    "portraitSource": "https://asianam.ucla.edu/wp-content/uploads/2019/07/Evyn_6-1.jpg",
+    "portrait": "portraits/vp-2158-evyn-le-espiritu-gandhi.webp"
   }
 ]

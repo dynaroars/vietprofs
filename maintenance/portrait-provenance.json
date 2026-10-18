@@ -7473,7 +7473,7 @@
       "retrievedAt": "2026-10-14T11:21:23.565Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
-    "vp-1870": {
+    "vp-0593": {
       "name": "Huyen Ngoc Phuong Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
@@ -7818,6 +7818,66 @@
       ],
       "retrievedAt": "2026-10-17T03:13:31.000Z",
       "note": "manually verified during scheduled audit 2026-10-17"
+    },
+    "vp-2155": {
+      "name": "Mai Truong",
+      "outcome": "found",
+      "pageUrl": "https://www.marquette.edu/political-science/directory/mai-truong.php",
+      "imageUrl": "https://www.marquette.edu/political-science/directory/images/mai-truong.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-18T03:14:33.021Z",
+      "note": "manually verified during scheduled audit 2026-10-18"
+    },
+    "vp-2156": {
+      "name": "Phuong Tran - Embry-Riddle Aeronautical University",
+      "outcome": "found",
+      "pageUrl": "https://erau.edu/faculty/Phuong.Tran2",
+      "imageUrl": "https://webforms.erau.edu/common/services/peoplesearch/img/TRANP2.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-18T03:15:43.190Z",
+      "note": "manually verified during scheduled audit 2026-10-18"
+    },
+    "vp-2157": {
+      "name": "Andrea Hoa Pham",
+      "outcome": "found",
+      "pageUrl": "https://languages.ufl.edu/directory/andrea-pham/",
+      "imageUrl": "https://languages.ufl.edu/wp-content/uploads/sites/238/Andrea-Pham-e1742399757550.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-18T03:16:07.615Z",
+      "note": "manually verified during scheduled audit 2026-10-18"
+    },
+    "vp-2158": {
+      "name": "Evyn Le Espiritu Gandhi",
+      "outcome": "found",
+      "pageUrl": "https://asianam.ucla.edu/person/evyn-le-espiritu-gandhi/",
+      "imageUrl": "https://asianam.ucla.edu/wp-content/uploads/2019/07/Evyn_6-1.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "exact_name",
+        "same_institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-18T03:16:32.225Z",
+      "note": "manually verified during scheduled audit 2026-10-18"
     }
   }
 }
