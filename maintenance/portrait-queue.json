@@ -7451,7 +7451,9 @@
     "university": "Sunway University",
     "profileUrl": "https://sunwayuniversity.edu.my/school-of-hospitality-and-tourism-management/staff-profiles/dr-riley-pham-xuan-quyet",
     "batch": 50,
-    "status": "pending"
+    "status": "fetched",
+    "portraitSource": "https://sunwayuniversity.edu.my/sites/default/files/styles/three_by_four/public/staff-images/2026/riley_pham_xuan_quyet.jpg.jpg?itok=s6q-3a8g",
+    "note": "HIGH-confidence official_faculty"
   },
   {
     "id": "vp-1849",
@@ -7459,7 +7461,7 @@
     "university": "Yuan Ze University",
     "profileUrl": "https://www.cm.yzu.edu.tw/EN/Page/Faculty.aspx?ItemId=283#quoc-tuan-le",
     "batch": 50,
-    "status": "pending"
+    "status": "unresolved"
   },
   {
     "id": "vp-1848",
@@ -7467,7 +7469,7 @@
     "university": "Yuan Ze University",
     "profileUrl": "https://www.cm.yzu.edu.tw/EN/Page/Faculty.aspx?ItemId=283#thi-thanh-huyen-tran",
     "batch": 50,
-    "status": "pending"
+    "status": "unresolved"
   },
   {
     "id": "vp-1846",
@@ -9665,5 +9667,15 @@
     "profileUrl": "https://www.loyola.edu/academics/chemistry/faculty/nguyen-theresa.html",
     "batch": 90,
     "status": "unresolved"
+  },
+  {
+    "id": "vp-2159",
+    "name": "Nho Luong",
+    "university": "University of Oklahoma Health Sciences",
+    "profileUrl": "https://medicine.ouhsc.edu/directory/details/nho-luong-phd",
+    "batch": 91,
+    "status": "fetched",
+    "portraitSource": "https://medicine.ouhsc.edu/Portals/1365/EasyDNNNews/76286/images/Nho-portrait-300-350-c-T-97.jpg",
+    "note": "visually reviewed candidate"
   }
 ]
