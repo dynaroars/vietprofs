@@ -4564,7 +4564,7 @@
         "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-10-19T11:06:06.925Z",
+      "retrievedAt": "2026-10-19T11:08:19.112Z",
       "note": "candidate failed 120x120 or portrait-aspect validation"
     },
     "vp-1951": {
@@ -6933,7 +6933,7 @@
         "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-10-19T11:06:10.096Z",
+      "retrievedAt": "2026-10-19T11:08:21.854Z",
       "note": "candidate failed 120x120 or portrait-aspect validation"
     },
     "vp-2107": {
@@ -7409,7 +7409,7 @@
         "department",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-10-19T11:06:02.485Z",
+      "retrievedAt": "2026-10-19T11:08:17.228Z",
       "note": "candidate failed 120x120 or portrait-aspect validation"
     },
     "vp-1879": {
@@ -7680,7 +7680,7 @@
         "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-10-19T11:05:57.394Z",
+      "retrievedAt": "2026-10-19T11:08:13.424Z",
       "note": "candidate image could not be downloaded"
     },
     "vp-1866": {
@@ -7794,7 +7794,7 @@
         "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-10-19T11:05:54.845Z",
+      "retrievedAt": "2026-10-19T11:08:10.820Z",
       "note": "candidate failed 120x120 or portrait-aspect validation"
     },
     "vp-1861": {
@@ -7923,7 +7923,7 @@
         "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-10-19T11:05:48.519Z",
+      "retrievedAt": "2026-10-19T11:08:08.431Z",
       "note": "candidate failed 120x120 or portrait-aspect validation"
     },
     "vp-2159": {
@@ -7942,6 +7942,44 @@
       ],
       "retrievedAt": "2026-10-19T11:06:32.457Z",
       "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-1843": {
+      "name": "Thi Kim Anh Tran",
+      "outcome": "needs_review",
+      "pageUrl": "https://uni.dongseo.ac.kr/ic/index.php?pCode=MN2000133",
+      "imageUrl": "https://uni.dongseo.ac.kr/_Data/UnivProfessor/0fefe4f70137f619b23e60aea761fe6c.png",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-19T11:07:00.109Z",
+      "note": "candidate requires visual review before acceptance"
+    },
+    "vp-1844": {
+      "name": "Hong-Chuong Tran",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-19T11:07:03.562Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1845": {
+      "name": "Dinh-Phuc Tran",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-19T11:07:28.702Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1846": {
+      "name": "Ngan Thi Kim Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-19T11:07:47.987Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     }
   }
 }
