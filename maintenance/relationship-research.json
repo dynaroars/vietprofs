@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-17T14:10:00.000Z",
+  "updatedAt": "2026-10-19T14:35:00.000Z",
   "batches": [
     {
       "batchNumber": 1,
@@ -19958,6 +19958,286 @@
         "rel-coauthor-vp-2055-vp-2056"
       ],
       "notes": "Selected next 20 unprocessed IDs in descending order (vp-2154, vp-2093..vp-2091, vp-2070..vp-2055). OpenAlex rate-limited (429); used official profiles and Crossref (with mailto). Pairwise same-institution Crossref coauthor checks (Monash, UTS, RMIT, UOW) found one verified pair."
+    },
+    {
+      "batchNumber": 86,
+      "rosterIds": [
+        "vp-2159",
+        "vp-2158",
+        "vp-2157",
+        "vp-2156",
+        "vp-2155",
+        "vp-2054",
+        "vp-2053",
+        "vp-2052",
+        "vp-2051",
+        "vp-2050",
+        "vp-2049",
+        "vp-2048",
+        "vp-2047",
+        "vp-2046",
+        "vp-2045",
+        "vp-2044",
+        "vp-2043",
+        "vp-2042",
+        "vp-2041",
+        "vp-2040"
+      ],
+      "startedAt": "2026-10-19T14:10:00.000Z",
+      "completedAt": "2026-10-19T14:35:00.000Z",
+      "status": "complete",
+      "outcomes": [
+        {
+          "rosterId": "vp-2159",
+          "sources": [
+            "https://medicine.ouhsc.edu/directory/details/nho-luong-phd"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-2158",
+          "sources": [
+            "https://asianam.ucla.edu/person/evyn-le-espiritu-gandhi/"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-2157",
+          "sources": [
+            "https://languages.ufl.edu/directory/andrea-pham/"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-2156",
+          "sources": [
+            "https://erau.edu/faculty/Phuong.Tran2"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-2155",
+          "sources": [
+            "https://www.marquette.edu/political-science/directory/mai-truong.php"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-2054",
+          "sources": [
+            "https://www.vumc.org/radiology/person/wellington-pham-phd"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-2053",
+          "sources": [
+            "https://as.vanderbilt.edu/asian-studies/bio/-ben-tran/"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-2052",
+          "sources": [
+            "https://scholars.duke.edu/person/anh.tran"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-2051",
+          "sources": [
+            "https://experts.illinois.edu/en/persons/tuyet-mai-ha-hoang/"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-2050",
+          "sources": [
+            "https://experts.umn.edu/en/persons/lan-p-luu/"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-2049",
+          "sources": [
+            "https://research.monash.edu/en/persons/mai-vu/"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found.",
+            "Same-institution roster pairwise Crossref coauthor check: no qualifying shared works (one Crossref hit for vp-2042/vp-2046 rejected as namesakes: different given names and fields)."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-2048",
+          "sources": [
+            "https://research.monash.edu/en/persons/duc-huynh/"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found.",
+            "Same-institution roster pairwise Crossref coauthor check: no qualifying shared works (one Crossref hit for vp-2042/vp-2046 rejected as namesakes: different given names and fields)."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-2047",
+          "sources": [
+            "https://research.unsw.edu.au/people/associate-professor-liem-viet-ngo"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found.",
+            "Same-institution roster pairwise Crossref coauthor check: no qualifying shared works (one Crossref hit for vp-2042/vp-2046 rejected as namesakes: different given names and fields)."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-2046",
+          "sources": [
+            "https://www.unsw.edu.au/staff/thu-ngo"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found.",
+            "Same-institution roster pairwise Crossref coauthor check: no qualifying shared works (one Crossref hit for vp-2042/vp-2046 rejected as namesakes: different given names and fields)."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-2045",
+          "sources": [
+            "https://www.unsw.edu.au/staff/hien-hoang"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found.",
+            "Same-institution roster pairwise Crossref coauthor check: no qualifying shared works (one Crossref hit for vp-2042/vp-2046 rejected as namesakes: different given names and fields)."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-2044",
+          "sources": [
+            "https://www.unsw.edu.au/staff/patrick-vu"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found.",
+            "Same-institution roster pairwise Crossref coauthor check: no qualifying shared works (one Crossref hit for vp-2042/vp-2046 rejected as namesakes: different given names and fields)."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-2043",
+          "sources": [
+            "https://www.unsw.edu.au/staff/rebecca-dang"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found.",
+            "Same-institution roster pairwise Crossref coauthor check: no qualifying shared works (one Crossref hit for vp-2042/vp-2046 rejected as namesakes: different given names and fields)."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-2042",
+          "sources": [
+            "https://www.unsw.edu.au/staff/an-ninh-pham"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found.",
+            "Same-institution roster pairwise Crossref coauthor check: no qualifying shared works (one Crossref hit for vp-2042/vp-2046 rejected as namesakes: different given names and fields)."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-2041",
+          "sources": [
+            "https://www.unsw.edu.au/staff/thanh-nho-do"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found.",
+            "Same-institution roster pairwise Crossref coauthor check: no qualifying shared works (one Crossref hit for vp-2042/vp-2046 rejected as namesakes: different given names and fields)."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-2040",
+          "sources": [
+            "https://www.unsw.edu.au/staff/laurence-luu"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found.",
+            "Same-institution roster pairwise Crossref coauthor check: no qualifying shared works (one Crossref hit for vp-2042/vp-2046 rejected as namesakes: different given names and fields)."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        }
+      ]
     }
   ],
   "earlyOutcomes": [
