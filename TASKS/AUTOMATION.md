@@ -118,6 +118,9 @@ them share these rules:
 10. **Every close gets a comment.** Never close a PR or Issue, or merge a PR, without a comment
    saying what was found and what was done: the change and its source, or the reason for
    rejecting it. A `Closes #n` line or a commit message alone doesn't count.
+11. **Small steps for data edits.** Write a roster edit as a script in the scratchpad and run it as
+   its own command. Don't combine branch creation, the data edit, and the push in one command; the
+   permission check may deny a bundled command (it did on 2026-10-20).
 
 ## Side findings
 
@@ -327,7 +330,9 @@ accepted. Never replace a portrait protected by `directFields`.
 
 Playbook: `TASKS/audit_facts_and_honors.md`. Cap: 20 roster entries, in id order after the highest
 id in the last `[scheduled:honors]` PR, wrapping at the end of the roster, so every entry gets an
-honors and degree pass about every seven months. Fixes to those entries go in the batch PR, with
+honors and degree pass about every seven months. If that PR lists entries as not checked, start the
+batch with those, then continue after its range. List any entries you don't check in your own PR
+the same way. Fixes to those entries go in the batch PR, with
 every checked entry listed. New eligible people noticed along the way get one `New candidate:`
 Issue each.
 
