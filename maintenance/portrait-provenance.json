@@ -4564,7 +4564,7 @@
         "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-10-16T11:07:26.700Z",
+      "retrievedAt": "2026-10-19T11:08:19.112Z",
       "note": "candidate failed 120x120 or portrait-aspect validation"
     },
     "vp-1951": {
@@ -6933,7 +6933,7 @@
         "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-10-16T11:07:29.063Z",
+      "retrievedAt": "2026-10-19T11:08:21.854Z",
       "note": "candidate failed 120x120 or portrait-aspect validation"
     },
     "vp-2107": {
@@ -7409,7 +7409,7 @@
         "department",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-10-16T11:07:20.939Z",
+      "retrievedAt": "2026-10-19T11:08:17.228Z",
       "note": "candidate failed 120x120 or portrait-aspect validation"
     },
     "vp-1879": {
@@ -7680,7 +7680,7 @@
         "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-10-16T11:07:16.855Z",
+      "retrievedAt": "2026-10-19T11:08:13.424Z",
       "note": "candidate image could not be downloaded"
     },
     "vp-1866": {
@@ -7738,7 +7738,7 @@
     },
     "vp-1855": {
       "name": "Hung Nguyen-Dang",
-      "outcome": "needs_review",
+      "outcome": "not_found",
       "pageUrl": "https://www.am.uliege.be/cms/c_3482665/fr/am-repertoire?uid=u000274",
       "imageUrl": "https://www.am.uliege.be/cms/c_3482665/fr/plugins/WebServiceTrombiPlugin/images/profile.jpg",
       "sourceType": "official_faculty",
@@ -7750,7 +7750,7 @@
         "stored_roster_url"
       ],
       "retrievedAt": "2026-10-16T11:06:31.101Z",
-      "note": "candidate requires visual review before acceptance"
+      "note": "rejected on review: imageUrl is the generic WebServiceTrombiPlugin profile.jpg placeholder (serves HTML, not a photo)"
     },
     "vp-1856": {
       "name": "Frédéric Nguyen",
@@ -7794,7 +7794,7 @@
         "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-10-16T11:07:01.701Z",
+      "retrievedAt": "2026-10-19T11:08:10.820Z",
       "note": "candidate failed 120x120 or portrait-aspect validation"
     },
     "vp-1861": {
@@ -7878,6 +7878,108 @@
       ],
       "retrievedAt": "2026-10-18T03:16:32.225Z",
       "note": "manually verified during scheduled audit 2026-10-18"
+    },
+    "vp-1848": {
+      "name": "Thi Thanh Huyen Tran",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-19T11:05:02.869Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1849": {
+      "name": "Quoc Tuan Le",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-19T11:05:27.749Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1851": {
+      "name": "Riley Pham",
+      "outcome": "found",
+      "pageUrl": "https://sunwayuniversity.edu.my/school-of-hospitality-and-tourism-management/staff-profiles/dr-riley-pham-xuan-quyet",
+      "imageUrl": "https://sunwayuniversity.edu.my/sites/default/files/styles/three_by_four/public/staff-images/2026/riley_pham_xuan_quyet.jpg.jpg?itok=s6q-3a8g",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-19T11:05:44.845Z"
+    },
+    "vp-1854": {
+      "name": "Andy Khanh Xuan Nguyen",
+      "outcome": "not_found",
+      "pageUrl": "https://www.oulu.fi/en/researchers/andy-nguyen",
+      "imageUrl": "https://media-cdn.oulu.fi/styles/open_graph/s3/images/AndyNguyenProfile.jpg?itok=ocT27Hu1",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-19T11:08:08.431Z",
+      "note": "candidate failed 120x120 or portrait-aspect validation"
+    },
+    "vp-2159": {
+      "name": "Nho Luong",
+      "outcome": "found",
+      "pageUrl": "https://medicine.ouhsc.edu/directory/details/nho-luong-phd",
+      "imageUrl": "https://medicine.ouhsc.edu/Portals/1365/EasyDNNNews/76286/images/Nho-portrait-300-350-c-T-97.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-19T11:06:32.457Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-1843": {
+      "name": "Thi Kim Anh Tran",
+      "outcome": "needs_review",
+      "pageUrl": "https://uni.dongseo.ac.kr/ic/index.php?pCode=MN2000133",
+      "imageUrl": "https://uni.dongseo.ac.kr/_Data/UnivProfessor/0fefe4f70137f619b23e60aea761fe6c.png",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-19T11:07:00.109Z",
+      "note": "candidate requires visual review before acceptance"
+    },
+    "vp-1844": {
+      "name": "Hong-Chuong Tran",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-19T11:07:03.562Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1845": {
+      "name": "Dinh-Phuc Tran",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-19T11:07:28.702Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1846": {
+      "name": "Ngan Thi Kim Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-19T11:07:47.987Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     }
   }
 }
