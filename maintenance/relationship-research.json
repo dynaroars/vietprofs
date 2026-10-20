@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-19T14:35:00.000Z",
+  "updatedAt": "2026-10-20T14:30:00.000Z",
   "batches": [
     {
       "batchNumber": 1,
@@ -20234,6 +20234,277 @@
           "notes": [
             "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found.",
             "Same-institution roster pairwise Crossref coauthor check: no qualifying shared works (one Crossref hit for vp-2042/vp-2046 rejected as namesakes: different given names and fields)."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        }
+      ]
+    },
+    {
+      "batchNumber": 87,
+      "rosterIds": [
+        "vp-2160",
+        "vp-2039",
+        "vp-2038",
+        "vp-2037",
+        "vp-2036",
+        "vp-2035",
+        "vp-2034",
+        "vp-2033",
+        "vp-2032",
+        "vp-2031",
+        "vp-2030",
+        "vp-2029",
+        "vp-2028",
+        "vp-2027",
+        "vp-2026",
+        "vp-2025",
+        "vp-2024",
+        "vp-2023",
+        "vp-2022",
+        "vp-2021"
+      ],
+      "startedAt": "2026-10-20T14:10:00.000Z",
+      "completedAt": "2026-10-20T14:30:00.000Z",
+      "status": "complete",
+      "outcomes": [
+        {
+          "rosterId": "vp-2160",
+          "sources": [
+            "https://lsa.umich.edu/math/people/faculty/linh-truong.html",
+            "https://public.websites.umich.edu/~tlinh/"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Profile and website returned HTTP 403 (egress/bot block); not verified."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-2039",
+          "sources": [
+            "https://research.monash.edu/en/persons/dong-ngo-duy/"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-2038",
+          "sources": [
+            "https://research.monash.edu/en/persons/kim-dang/"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official Monash profile names PhD supervisor Russell Cross and master's thesis supervisor Frances Christie; neither is in the roster."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-2037",
+          "sources": [
+            "https://profiles.uts.edu.au/Trung.Ngo"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-2036",
+          "sources": [
+            "https://profiles.uts.edu.au/BaoTran.Dinh-Le"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-2035",
+          "sources": [
+            "https://researchportalplus.anu.edu.au/en/persons/thang-bui/"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official ANU profile names doctoral supervisor Richard Turner and adviser Carl Rasmussen; neither is in the roster."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-2034",
+          "sources": [
+            "https://profiles.uts.edu.au/Hannah.Pham"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-2033",
+          "sources": [
+            "https://experts.umn.edu/en/persons/wendy-t-nguyen/"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-2032",
+          "sources": [
+            "https://research.monash.edu/en/persons/tu-nguyen-2/"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-2031",
+          "sources": [
+            "https://www.canberra.edu.au/about-uc/faculties/education/staff/dr-vinh-nguyen"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-2030",
+          "sources": [
+            "https://scholars.latrobe.edu.au/pldo"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "La Trobe scholar profile is JavaScript-rendered; no text retrievable."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-2029",
+          "sources": [
+            "https://scholars.latrobe.edu.au/h26nguyen"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "La Trobe scholar profile is JavaScript-rendered; no text retrievable."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-2028",
+          "sources": [
+            "https://scholars.latrobe.edu.au/t8pham"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "La Trobe scholar profile is JavaScript-rendered; no text retrievable."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-2027",
+          "sources": [
+            "https://scholars.latrobe.edu.au/b2tran"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "La Trobe scholar profile is JavaScript-rendered; no text retrievable."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-2026",
+          "sources": [
+            "https://scholars.latrobe.edu.au/c2tran"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "La Trobe scholar profile is JavaScript-rendered; no text retrievable."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-2025",
+          "sources": [
+            "https://experts.swinburne.edu.au/3291-loc-tran"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Swinburne experts profile is JavaScript-rendered; no text retrievable."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-2024",
+          "sources": [
+            "https://staff-profiles.cqu.edu.au/home/view/1717"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-2023",
+          "sources": [
+            "https://staff-profiles.cqu.edu.au/home/view/1204"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-2022",
+          "sources": [
+            "https://researchportalplus.anu.edu.au/en/persons/yen-le/"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-2021",
+          "sources": [
+            "https://research-repository.uwa.edu.au/en/persons/hang-duong"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found."
           ],
           "nextAction": "OpenAlex unavailable (HTTP 429); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
         }
