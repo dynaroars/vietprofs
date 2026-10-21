@@ -7535,7 +7535,7 @@
     "university": "Gachon University",
     "profileUrl": "https://www.gachon.ac.kr/eng/12758/subview.do#quyet-van-le",
     "batch": 51,
-    "status": "pending"
+    "status": "unresolved"
   },
   {
     "id": "vp-1836",
@@ -7543,7 +7543,7 @@
     "university": "Curtin University",
     "profileUrl": "https://profiles.curtin.edu.au/5016-ba-tuong-vo",
     "batch": 51,
-    "status": "pending"
+    "status": "unresolved"
   },
   {
     "id": "vp-1835",
@@ -7551,7 +7551,9 @@
     "university": "Deakin University",
     "profileUrl": "https://experts.deakin.edu.au/42790-thuong-hoang/professional",
     "batch": 51,
-    "status": "pending"
+    "status": "fetched",
+    "portraitSource": "https://experts.deakin.edu.au/42790-thuong-hoang/thumbnail",
+    "note": "HIGH-confidence official_faculty"
   },
   {
     "id": "vp-1831",
@@ -7559,7 +7561,9 @@
     "university": "Singapore Institute of Technology",
     "profileUrl": "https://www.singaporetech.edu.sg/directory/faculty/nguyen-hoang",
     "batch": 51,
-    "status": "pending"
+    "status": "fetched",
+    "portraitSource": "https://www.singaporetech.edu.sg/directory/sites/directory/files/styles/profile_picture/public/profile-picture/NguyenTheHoang.JPG?itok=TfXXvze5",
+    "note": "HIGH-confidence official_faculty"
   },
   {
     "id": "vp-1830",
@@ -7567,7 +7571,9 @@
     "university": "Singapore Institute of Technology",
     "profileUrl": "https://www.singaporetech.edu.sg/directory/faculty/tram-truong-huu",
     "batch": 51,
-    "status": "pending"
+    "status": "fetched",
+    "portraitSource": "https://www.singaporetech.edu.sg/directory/sites/directory/files/styles/profile_picture/public/profile-picture/A102384%20Tram%20Truong%20Huu.jpg?itok=K28K0Fvj",
+    "note": "HIGH-confidence official_faculty"
   },
   {
     "id": "vp-1829",

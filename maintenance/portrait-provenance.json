@@ -6923,7 +6923,7 @@
         "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-10-21T11:03:51.803Z",
+      "retrievedAt": "2026-10-21T11:05:24.493Z",
       "note": "candidate failed 120x120 or portrait-aspect validation"
     },
     "vp-2107": {
@@ -7399,7 +7399,7 @@
         "department",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-10-21T11:03:41.161Z",
+      "retrievedAt": "2026-10-21T11:05:19.086Z",
       "note": "candidate failed 120x120 or portrait-aspect validation"
     },
     "vp-1879": {
@@ -7670,7 +7670,7 @@
         "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-10-21T11:03:37.028Z",
+      "retrievedAt": "2026-10-21T11:05:15.796Z",
       "note": "candidate image could not be downloaded"
     },
     "vp-1866": {
@@ -7784,7 +7784,7 @@
         "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-10-21T11:03:34.305Z",
+      "retrievedAt": "2026-10-21T11:05:13.296Z",
       "note": "candidate failed 120x120 or portrait-aspect validation"
     },
     "vp-1861": {
@@ -7913,7 +7913,7 @@
         "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-10-21T11:03:28.825Z",
+      "retrievedAt": "2026-10-21T11:05:10.199Z",
       "note": "candidate failed 120x120 or portrait-aspect validation"
     },
     "vp-2159": {
@@ -7997,6 +7997,68 @@
       "outcome": "not_found",
       "identitySignals": [],
       "retrievedAt": "2026-10-21T11:03:54.807Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1830": {
+      "name": "Tram Truong-Huu",
+      "outcome": "found",
+      "pageUrl": "https://www.singaporetech.edu.sg/directory/faculty/tram-truong-huu",
+      "imageUrl": "https://www.singaporetech.edu.sg/directory/sites/directory/files/styles/profile_picture/public/profile-picture/A102384%20Tram%20Truong%20Huu.jpg?itok=K28K0Fvj",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-21T11:04:19.797Z"
+    },
+    "vp-1831": {
+      "name": "Hoang The Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://www.singaporetech.edu.sg/directory/faculty/nguyen-hoang",
+      "imageUrl": "https://www.singaporetech.edu.sg/directory/sites/directory/files/styles/profile_picture/public/profile-picture/NguyenTheHoang.JPG?itok=TfXXvze5",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-21T11:04:35.087Z"
+    },
+    "vp-1835": {
+      "name": "Thuong Hoang",
+      "outcome": "found",
+      "pageUrl": "https://experts.deakin.edu.au/42790-thuong-hoang/professional",
+      "imageUrl": "https://experts.deakin.edu.au/42790-thuong-hoang/thumbnail",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-21T11:04:42.470Z"
+    },
+    "vp-1836": {
+      "name": "Ba-Tuong Vo",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-21T11:04:46.112Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1839": {
+      "name": "Quyet Van Le",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-21T11:04:55.519Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     }
   }
