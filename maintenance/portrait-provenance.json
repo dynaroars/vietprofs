@@ -4553,19 +4553,9 @@
     "vp-1950": {
       "name": "Thuy Tran - Karolinska Institutet",
       "outcome": "not_found",
-      "pageUrl": "https://ki.se/en/people/thuy-tran",
-      "imageUrl": "https://ki.se/profile-image/thuy-tran",
-      "sourceType": "official_faculty",
-      "confidence": "HIGH",
-      "identitySignals": [
-        "name",
-        "institution",
-        "department",
-        "rank",
-        "stored_roster_url"
-      ],
-      "retrievedAt": "2026-10-19T11:08:19.112Z",
-      "note": "candidate failed 120x120 or portrait-aspect validation"
+      "identitySignals": [],
+      "retrievedAt": "2026-10-21T11:03:45.192Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1951": {
       "name": "Linh Nguyen - University of New South Wales",
@@ -6933,7 +6923,7 @@
         "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-10-19T11:08:21.854Z",
+      "retrievedAt": "2026-10-21T11:03:51.803Z",
       "note": "candidate failed 120x120 or portrait-aspect validation"
     },
     "vp-2107": {
@@ -7409,7 +7399,7 @@
         "department",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-10-19T11:08:17.228Z",
+      "retrievedAt": "2026-10-21T11:03:41.161Z",
       "note": "candidate failed 120x120 or portrait-aspect validation"
     },
     "vp-1879": {
@@ -7680,7 +7670,7 @@
         "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-10-19T11:08:13.424Z",
+      "retrievedAt": "2026-10-21T11:03:37.028Z",
       "note": "candidate image could not be downloaded"
     },
     "vp-1866": {
@@ -7794,7 +7784,7 @@
         "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-10-19T11:08:10.820Z",
+      "retrievedAt": "2026-10-21T11:03:34.305Z",
       "note": "candidate failed 120x120 or portrait-aspect validation"
     },
     "vp-1861": {
@@ -7923,7 +7913,7 @@
         "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-10-19T11:08:08.431Z",
+      "retrievedAt": "2026-10-21T11:03:28.825Z",
       "note": "candidate failed 120x120 or portrait-aspect validation"
     },
     "vp-2159": {
@@ -7945,7 +7935,7 @@
     },
     "vp-1843": {
       "name": "Thi Kim Anh Tran",
-      "outcome": "needs_review",
+      "outcome": "found",
       "pageUrl": "https://uni.dongseo.ac.kr/ic/index.php?pCode=MN2000133",
       "imageUrl": "https://uni.dongseo.ac.kr/_Data/UnivProfessor/0fefe4f70137f619b23e60aea761fe6c.png",
       "sourceType": "official_faculty",
@@ -7957,8 +7947,8 @@
         "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-10-19T11:07:00.109Z",
-      "note": "candidate requires visual review before acceptance"
+      "retrievedAt": "2026-10-21T11:02:12.765Z",
+      "note": "MEDIUM candidate stored after visual review"
     },
     "vp-1844": {
       "name": "Hong-Chuong Tran",
@@ -7979,6 +7969,34 @@
       "outcome": "not_found",
       "identitySignals": [],
       "retrievedAt": "2026-10-19T11:07:47.987Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1840": {
+      "name": "Quang Nhat Tran",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-21T11:02:16.421Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1841": {
+      "name": "Thien Tri Tran",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-21T11:02:32.702Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1842": {
+      "name": "Phan Khanh Thinh Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-21T11:03:14.218Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2160": {
+      "name": "Linh Truong",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-21T11:03:54.807Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     }
   }
