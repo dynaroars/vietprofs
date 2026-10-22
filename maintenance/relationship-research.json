@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-21T14:35:00.000Z",
+  "updatedAt": "2026-10-22T14:30:00.000Z",
   "batches": [
     {
       "batchNumber": 1,
@@ -20770,6 +20770,276 @@
           "rosterId": "vp-2003",
           "sources": [
             "https://researchers.adelaide.edu.au/profile/haley.vu"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found (name-substring hits were short-name false positives)."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        }
+      ]
+    },
+    {
+      "batchNumber": 89,
+      "rosterIds": [
+        "vp-2163",
+        "vp-2002",
+        "vp-2001",
+        "vp-2000",
+        "vp-1999",
+        "vp-1998",
+        "vp-1997",
+        "vp-1996",
+        "vp-1995",
+        "vp-1994",
+        "vp-1993",
+        "vp-1992",
+        "vp-1991",
+        "vp-1990",
+        "vp-1989",
+        "vp-1988",
+        "vp-1987",
+        "vp-1986",
+        "vp-1985",
+        "vp-1984"
+      ],
+      "startedAt": "2026-10-22T14:10:00.000Z",
+      "completedAt": "2026-10-22T14:30:00.000Z",
+      "status": "complete",
+      "outcomes": [
+        {
+          "rosterId": "vp-2163",
+          "sources": [
+            "https://lptm.cyu.fr/version-francaise/effectifs-et-organigramme/annuaire"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found (name-substring hits were short-name false positives)."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-2002",
+          "sources": [
+            "https://researchers.adelaide.edu.au/profile/dang.nguyen"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found (name-substring hits were short-name false positives)."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-2001",
+          "sources": [
+            "https://www.hs-fresenius.de/lehre/lehrpersonal/tristan-nguyen/"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found (name-substring hits were short-name false positives)."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-2000",
+          "sources": [
+            "https://www.inn.no/finn-en-ansatt/christopher-le.html"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found (name-substring hits were short-name false positives)."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1999",
+          "sources": [
+            "https://www.tuj.ac.jp/directory/quan-minh-tran"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found (name-substring hits were short-name false positives)."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1998",
+          "sources": [
+            "https://profiles.uts.edu.au/thomas.do"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found (name-substring hits were short-name false positives)."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1997",
+          "sources": [
+            "https://researchers.mq.edu.au/en/persons/ha-vu/"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found (name-substring hits were short-name false positives)."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1996",
+          "sources": [
+            "https://scholars.uow.edu.au/thanh-le-hoang"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile returned no usable content (blocked or JS-rendered); no advisor/mentor wording could be checked."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1995",
+          "sources": [
+            "https://scholars.uow.edu.au/nguyen-thai"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found (name-substring hits were short-name false positives)."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1994",
+          "sources": [
+            "https://discover.utas.edu.au/O.Nguyen"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile returned no usable content (blocked or JS-rendered); no advisor/mentor wording could be checked."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1993",
+          "sources": [
+            "https://discover.utas.edu.au/V.Tran"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile returned no usable content (blocked or JS-rendered); no advisor/mentor wording could be checked."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1992",
+          "sources": [
+            "https://www.unisc.edu.au/people/dr-nguyen-hong-nguyen"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found (name-substring hits were short-name false positives)."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1991",
+          "sources": [
+            "https://www.unisc.edu.au/people/dr-trong-tran"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found (name-substring hits were short-name false positives)."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1990",
+          "sources": [
+            "https://academics.aut.ac.nz/kien.tran"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile returned no usable content (blocked or JS-rendered); no advisor/mentor wording could be checked."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1989",
+          "sources": [
+            "https://academics.aut.ac.nz/thuy.tien.nguyen"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile returned no usable content (blocked or JS-rendered); no advisor/mentor wording could be checked."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1988",
+          "sources": [
+            "https://academics.aut.ac.nz/lisa.nguyen"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile returned no usable content (blocked or JS-rendered); no advisor/mentor wording could be checked."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1987",
+          "sources": [
+            "https://research.brighton.ac.uk/en/persons/mylinh-nguyen/"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found (name-substring hits were short-name false positives)."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1986",
+          "sources": [
+            "https://pure.roehampton.ac.uk/portal/en/persons/tri-tri-nguyen/"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found (name-substring hits were short-name false positives)."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1985",
+          "sources": [
+            "https://www.northumbria.ac.uk/about-us/our-staff/n/hoang-nguyen/"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and checked for advisor, mentor, postdoc, or thesis wording naming a roster member: none found (name-substring hits were short-name false positives)."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1984",
+          "sources": [
+            "https://www.flinders.edu.au/people/amy.trang.nguyen"
           ],
           "relationshipIds": [],
           "status": "unresolved",
