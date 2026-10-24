@@ -8105,10 +8105,18 @@
     },
     "vp-1790": {
       "name": "Nhien Nguyen",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-23T11:03:22.223Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://www.ntnu.edu/employees/nhien.nguyen",
+      "imageUrl": "https://backends.it.ntnu.no/user-profile-service/rest/files/5e69f40e-14f1-38f3-90cf-cded6dff73c4",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-24T03:14:31.487Z",
+      "note": "MEDIUM candidate stored after visual review"
     },
     "vp-1791": {
       "name": "Duc Nguyen - The University of Manchester",
