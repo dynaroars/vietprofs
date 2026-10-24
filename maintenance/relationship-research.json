@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-23T14:40:00.000Z",
+  "updatedAt": "2026-10-24T14:30:00.000Z",
   "batches": [
     {
       "batchNumber": 1,
@@ -21318,6 +21318,281 @@
           ],
           "nextAction": "OpenAlex unavailable (HTTP 429); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
         }
+      ]
+    },
+    {
+      "batchNumber": 91,
+      "rosterIds": [
+        "vp-1966",
+        "vp-1965",
+        "vp-1964",
+        "vp-1963",
+        "vp-1962",
+        "vp-1961",
+        "vp-1960",
+        "vp-1959",
+        "vp-1958",
+        "vp-1957",
+        "vp-1956",
+        "vp-1955",
+        "vp-1954",
+        "vp-1953",
+        "vp-1952",
+        "vp-1951",
+        "vp-1930",
+        "vp-1929",
+        "vp-1928",
+        "vp-1927"
+      ],
+      "startedAt": "2026-10-24T14:00:00.000Z",
+      "completedAt": "2026-10-24T14:30:00.000Z",
+      "status": "complete",
+      "outcomes": [
+        {
+          "rosterId": "vp-1966",
+          "sources": [
+            "https://www.northumbria.ac.uk/about-us/our-staff/n/dr,-d-,-nhung-nguyen/"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording within proximity of any roster member name: none found."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429 free-budget exhausted); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1965",
+          "sources": [
+            "https://www.westminster.ac.uk/about-us/our-people/directory/nguyen-quang"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording within proximity of any roster member name: none found."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429 free-budget exhausted); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1964",
+          "sources": [
+            "https://www.maastrichtuniversity.nl/td-tran"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording within proximity of any roster member name: none found."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429 free-budget exhausted); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1963",
+          "sources": [
+            "https://www.univ-nantes.fr/jerome-nguyen-soenen-1"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording within proximity of any roster member name: none found."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429 free-budget exhausted); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1962",
+          "sources": [
+            "https://www.univ-nantes.fr/ngoc-son-nguyen"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording within proximity of any roster member name: none found."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429 free-budget exhausted); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1961",
+          "sources": [
+            "https://www.gipsa-lab.grenoble-inp.fr/team/thi-thuy-hien-tran/"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetch failed (connection reset)."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429 free-budget exhausted); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1960",
+          "sources": [
+            "https://www.cessma.org/TRAN-THI-LIEN-Claire"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording within proximity of any roster member name: none found."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429 free-budget exhausted); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1959",
+          "sources": [
+            "https://www.metis.upmc.fr/fr/node/48"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetch failed (connection reset)."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429 free-budget exhausted); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1958",
+          "sources": [
+            "https://prof.sejong.ac.kr/tnnguyen/html/profile.do"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording within proximity of any roster member name: none found."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429 free-budget exhausted); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1957",
+          "sources": [
+            "https://seeds.office.hiroshima-u.ac.jp/profile/en.d7e9f54cf06d397e520e17560c007669.html"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetch timed out."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429 free-budget exhausted); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1956",
+          "sources": [
+            "https://trios.tsukuba.ac.jp/en/researcher/0000004993",
+            "https://nguyen-vuong.webnode.page/"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording within proximity of any roster member name: none found. Personal site also scanned: none found."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429 free-budget exhausted); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1955",
+          "sources": [
+            "https://hyoka.ofc.kyushu-u.ac.jp/html/100026314_en.html"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording within proximity of any roster member name: none found."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429 free-budget exhausted); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1954",
+          "sources": [
+            "https://researchmap.jp/nguyenchinghia?lang=en"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile returned HTTP 403 (not read)."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429 free-budget exhausted); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1953",
+          "sources": [
+            "https://people.wgtn.ac.nz/thuphuong.truong"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile returned only a near-empty shell (no content read)."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429 free-budget exhausted); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1952",
+          "sources": [
+            "https://www.swansea.ac.uk/staff/t.t.doan/"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording within proximity of any roster member name: none found."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429 free-budget exhausted); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1951",
+          "sources": [
+            "https://www.unsw.edu.au/staff/linh-nguyen"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording within proximity of any roster member name: none found."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429 free-budget exhausted); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1930",
+          "sources": [
+            "https://hyoka.ofc.kyushu-u.ac.jp/html/100021721_en.html"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording within proximity of any roster member name: none found."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429 free-budget exhausted); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1929",
+          "sources": [
+            "https://portal.cuc.ac.jp/kg/japanese/researchersHtml/002132/002132_Researcher.html"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording within proximity of any roster member name: none found."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429 free-budget exhausted); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1928",
+          "sources": [
+            "https://www.natural.shimane-u.ac.jp/about/kyoin_eng/kankyo.html"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording within proximity of any roster member name: none found."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429 free-budget exhausted); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1927",
+          "sources": [
+            "https://researchers.shiga-u.ac.jp/html/100003280_en.html"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording within proximity of any roster member name: none found."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429 free-budget exhausted); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        }
+      ],
+      "verifiedRelationshipIds": [],
+      "notes": [
+        "No edges verified this batch; all 20 IDs unresolved (profile scan only; OpenAlex rate-limited)."
       ]
     }
   ],
