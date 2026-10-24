@@ -6923,7 +6923,7 @@
         "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-10-21T11:05:24.493Z",
+      "retrievedAt": "2026-10-23T11:04:34.291Z",
       "note": "candidate failed 120x120 or portrait-aspect validation"
     },
     "vp-2107": {
@@ -7399,7 +7399,7 @@
         "department",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-10-21T11:05:19.086Z",
+      "retrievedAt": "2026-10-23T11:04:32.465Z",
       "note": "candidate failed 120x120 or portrait-aspect validation"
     },
     "vp-1879": {
@@ -7670,7 +7670,7 @@
         "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-10-21T11:05:15.796Z",
+      "retrievedAt": "2026-10-23T11:04:29.251Z",
       "note": "candidate image could not be downloaded"
     },
     "vp-1866": {
@@ -7784,7 +7784,7 @@
         "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-10-21T11:05:13.296Z",
+      "retrievedAt": "2026-10-23T11:04:26.844Z",
       "note": "candidate failed 120x120 or portrait-aspect validation"
     },
     "vp-1861": {
@@ -7913,7 +7913,7 @@
         "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-10-21T11:05:10.199Z",
+      "retrievedAt": "2026-10-23T11:04:22.456Z",
       "note": "candidate failed 120x120 or portrait-aspect validation"
     },
     "vp-2159": {
@@ -8059,6 +8059,86 @@
       "outcome": "not_found",
       "identitySignals": [],
       "retrievedAt": "2026-10-21T11:04:55.519Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1804": {
+      "name": "Tuan-Khoa Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-23T11:01:47.427Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1815": {
+      "name": "Xuan-Son Vu",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-23T11:01:59.910Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1822": {
+      "name": "Van Le",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-23T11:02:17.156Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1829": {
+      "name": "Duy Hung Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-23T11:02:24.712Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2163": {
+      "name": "Trong Tuong Truong",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-23T11:03:01.767Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1789": {
+      "name": "Manh Linh Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-23T11:03:15.568Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1790": {
+      "name": "Nhien Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-23T11:03:22.223Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1791": {
+      "name": "Duc Nguyen - The University of Manchester",
+      "outcome": "not_found",
+      "pageUrl": "https://www.alliancembs.manchester.ac.uk/research/international-business-group/",
+      "imageUrl": "https://www.alliancembs.manchester.ac.uk/external-content/duc.nguyen.webp",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-23T11:03:32.825Z",
+      "note": "candidate failed 120x120 or portrait-aspect validation"
+    },
+    "vp-1794": {
+      "name": "Duong Dinh Tran",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-23T11:03:35.242Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1796": {
+      "name": "Viet Hai Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-23T11:04:05.640Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     }
   }
