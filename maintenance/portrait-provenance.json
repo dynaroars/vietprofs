@@ -8148,6 +8148,21 @@
       "identitySignals": [],
       "retrievedAt": "2026-10-23T11:04:05.640Z",
       "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2170": {
+      "name": "Nhat Pham",
+      "outcome": "found",
+      "pageUrl": "https://profiles.cardiff.ac.uk/staff/phamn",
+      "imageUrl": "https://profiles-cardiff.imgix.net/attachments/7444?w=200&h=200&auto=format&crop=faces&fit=crop&q=90",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "owner_submission"
+      ],
+      "retrievedAt": "2026-10-25T22:29:29.000Z",
+      "note": "owner direct submission; visually reviewed"
     }
   }
 }
