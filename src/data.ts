@@ -815,6 +815,8 @@ const FIELD_OVERRIDES = new Map([
   // Philosopher of science and neuroethicist (PhD in Philosophy); the bioethics center name alone
   // carries no field keyword.
   ['Center for Bioethics and Social Justice|Michigan State University', 'Humanities'],
+  // ANU's combined School of Medicine and Psychology; this member is a social/health psychologist.
+  ['School of Medicine and Psychology|Australian National University', 'Social & Behavioral Sciences'],
 ]);
 
 // Buckets granular `department` values into the broad fields above. Order matters, and is not
