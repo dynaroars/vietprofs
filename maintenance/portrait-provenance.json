@@ -7389,7 +7389,7 @@
         "department",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-10-26T11:08:34.054Z",
+      "retrievedAt": "2026-10-26T11:09:56.688Z",
       "note": "candidate failed 120x120 or portrait-aspect validation"
     },
     "vp-1879": {
@@ -7660,7 +7660,7 @@
         "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-10-26T11:08:28.140Z",
+      "retrievedAt": "2026-10-26T11:09:53.531Z",
       "note": "candidate image could not be downloaded"
     },
     "vp-1866": {
@@ -7774,7 +7774,7 @@
         "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-10-26T11:08:25.600Z",
+      "retrievedAt": "2026-10-26T11:09:51.052Z",
       "note": "candidate failed 120x120 or portrait-aspect validation"
     },
     "vp-1861": {
@@ -7903,7 +7903,7 @@
         "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-10-26T11:08:20.642Z",
+      "retrievedAt": "2026-10-26T11:09:48.537Z",
       "note": "candidate failed 120x120 or portrait-aspect validation"
     },
     "vp-2159": {
@@ -8122,7 +8122,7 @@
         "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-10-26T11:08:18.321Z",
+      "retrievedAt": "2026-10-26T11:09:46.254Z",
       "note": "candidate failed 120x120 or portrait-aspect validation"
     },
     "vp-1794": {
@@ -8179,7 +8179,7 @@
     },
     "vp-1778": {
       "name": "Phi Nguyen",
-      "outcome": "needs_review",
+      "outcome": "found",
       "pageUrl": "https://mscs.uic.edu/profiles/pknguyen/",
       "imageUrl": "https://mscs.uic.edu/wp-content/uploads/sites/247/2026/09/pknguyen_redsized_20260112_205404-157x180.",
       "sourceType": "official_faculty",
@@ -8190,8 +8190,8 @@
         "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-10-26T11:08:08.341Z",
-      "note": "candidate requires visual review before acceptance"
+      "retrievedAt": "2026-10-26T11:10:10.976Z",
+      "note": "MEDIUM candidate stored after visual review"
     },
     "vp-1786": {
       "name": "Le Anh Nguyen Long",
@@ -8199,6 +8199,81 @@
       "identitySignals": [],
       "retrievedAt": "2026-10-26T11:08:10.797Z",
       "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1745": {
+      "name": "Le Chung Tran",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-26T11:09:12.414Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1746": {
+      "name": "Anh Pham - Queen's University Belfast",
+      "outcome": "not_found",
+      "pageUrl": "https://pure.qub.ac.uk/en/persons/anh-pham",
+      "imageUrl": "https://pure.qub.ac.uk/en/persons/Anh_Pham_x800.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-26T11:09:33.186Z",
+      "note": "candidate image could not be downloaded"
+    },
+    "vp-1756": {
+      "name": "Ha Tran",
+      "outcome": "not_found",
+      "pageUrl": "https://apps.ualberta.ca/directory/person/htran2",
+      "imageUrl": "https://apps.ualberta.ca/profile/photo/htran2",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-26T11:09:36.850Z",
+      "note": "candidate is a default SVG placeholder avatar (image/svg+xml), not a photo"
+    },
+    "vp-1767": {
+      "name": "Ngoc Uyen Nhi Nguyen",
+      "outcome": "not_found",
+      "pageUrl": "https://health.usf.edu/medicine/internalmedicine/cardiology/faculty/ngocuyennhinguyen",
+      "imageUrl": "https://cloud.usf.edu/FacultyDirectory/api/get/profile/ngocuyennhinguyen/photo/profile",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-26T11:09:43.784Z",
+      "note": "candidate failed 120x120 or portrait-aspect validation"
+    },
+    "vp-1768": {
+      "name": "Nick Nguyen",
+      "outcome": "not_found",
+      "pageUrl": "https://www.usf.edu/business/about/bios/nguyen-nguyen-nick.aspx",
+      "imageUrl": "https://www.usf.edu/business/images/about/headshots/nguyen-nguyen-nick-100x100.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-26T11:09:45.102Z",
+      "note": "candidate failed 120x120 or portrait-aspect validation"
     }
   }
 }
