@@ -6912,19 +6912,9 @@
     "vp-2106": {
       "name": "Vu Tran - University of Reading",
       "outcome": "not_found",
-      "pageUrl": "https://www.icmacentre.ac.uk/people/dr-vu-tran",
-      "imageUrl": "https://assets.henley.ac.uk/v3/peopleImages/_800x418_crop_center-center_82_none/293549/Vu-Tran.jpg?mtime=1582107425",
-      "sourceType": "official_faculty",
-      "confidence": "HIGH",
-      "identitySignals": [
-        "name",
-        "institution",
-        "department",
-        "rank",
-        "stored_roster_url"
-      ],
-      "retrievedAt": "2026-10-23T11:04:34.291Z",
-      "note": "candidate failed 120x120 or portrait-aspect validation"
+      "identitySignals": [],
+      "retrievedAt": "2026-10-26T11:08:37.490Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-2107": {
       "name": "Quynh Nguyen - Bournemouth University",
@@ -7399,7 +7389,7 @@
         "department",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-10-23T11:04:32.465Z",
+      "retrievedAt": "2026-10-26T11:08:34.054Z",
       "note": "candidate failed 120x120 or portrait-aspect validation"
     },
     "vp-1879": {
@@ -7670,7 +7660,7 @@
         "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-10-23T11:04:29.251Z",
+      "retrievedAt": "2026-10-26T11:08:28.140Z",
       "note": "candidate image could not be downloaded"
     },
     "vp-1866": {
@@ -7784,7 +7774,7 @@
         "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-10-23T11:04:26.844Z",
+      "retrievedAt": "2026-10-26T11:08:25.600Z",
       "note": "candidate failed 120x120 or portrait-aspect validation"
     },
     "vp-1861": {
@@ -7913,7 +7903,7 @@
         "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-10-23T11:04:22.456Z",
+      "retrievedAt": "2026-10-26T11:08:20.642Z",
       "note": "candidate failed 120x120 or portrait-aspect validation"
     },
     "vp-2159": {
@@ -8132,7 +8122,7 @@
         "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-10-23T11:03:32.825Z",
+      "retrievedAt": "2026-10-26T11:08:18.321Z",
       "note": "candidate failed 120x120 or portrait-aspect validation"
     },
     "vp-1794": {
@@ -8163,6 +8153,52 @@
       ],
       "retrievedAt": "2026-10-25T22:29:29.000Z",
       "note": "owner direct submission; visually reviewed"
+    },
+    "vp-1772": {
+      "name": "Tuy Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://eng.famu.fsu.edu/ece/people/nguyen",
+      "imageUrl": "https://eng.famu.fsu.edu/sites/default/files/styles/200x270/public/images/ece/People/tuy-nguyen-7459-SH-200x270.jpg?itok=_VLLwSoA",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-26T11:07:57.299Z"
+    },
+    "vp-1774": {
+      "name": "Phuc Cong Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-26T11:08:03.140Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1778": {
+      "name": "Phi Nguyen",
+      "outcome": "needs_review",
+      "pageUrl": "https://mscs.uic.edu/profiles/pknguyen/",
+      "imageUrl": "https://mscs.uic.edu/wp-content/uploads/sites/247/2026/09/pknguyen_redsized_20260112_205404-157x180.",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-26T11:08:08.341Z",
+      "note": "candidate requires visual review before acceptance"
+    },
+    "vp-1786": {
+      "name": "Le Anh Nguyen Long",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-10-26T11:08:10.797Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     }
   }
 }
