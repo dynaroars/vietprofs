@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-24T14:30:00.000Z",
+  "updatedAt": "2026-10-26T14:30:00.000Z",
   "batches": [
     {
       "batchNumber": 1,
@@ -21593,6 +21593,285 @@
       "verifiedRelationshipIds": [],
       "notes": [
         "No edges verified this batch; all 20 IDs unresolved (profile scan only; OpenAlex rate-limited)."
+      ]
+    },
+    {
+      "batchNumber": 92,
+      "rosterIds": [
+        "vp-2170",
+        "vp-2169",
+        "vp-2168",
+        "vp-2167",
+        "vp-1926",
+        "vp-1925",
+        "vp-1924",
+        "vp-1923",
+        "vp-1922",
+        "vp-1921",
+        "vp-1920",
+        "vp-1919",
+        "vp-1918",
+        "vp-1917",
+        "vp-1916",
+        "vp-1915",
+        "vp-1914",
+        "vp-1913",
+        "vp-1912",
+        "vp-1911"
+      ],
+      "startedAt": "2026-10-26T14:12:00.000Z",
+      "completedAt": "2026-10-26T14:30:00.000Z",
+      "status": "complete",
+      "outcomes": [
+        {
+          "rosterId": "vp-2170",
+          "sources": [
+            "https://profiles.cardiff.ac.uk/staff/phamn",
+            "https://www.agilecps.org/home"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Cardiff profile and lab site fetched: only visiting PhD student mentions, none a roster member."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429 free-budget exhausted); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-2169",
+          "sources": [
+            "https://psychology.sonoma.edu/faculty-staff/teresa-nguyen",
+            "https://sites.google.com/sonoma.edu/teresanguyen/home"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording near any roster member name: none found."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429 free-budget exhausted); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-2168",
+          "sources": [
+            "https://psychology.osu.edu/people/nguyen.2025",
+            "https://u.osu.edu/nguyenneuropsychology/"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile and lab site fetched: no roster-member advisor/mentor wording."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429 free-budget exhausted); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-2167",
+          "sources": [
+            "https://researchportalplus.anu.edu.au/en/persons/ho-huynh/",
+            "https://hophihuynh.com/"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official ANU profile and personal site fetched: no roster-member advisor/mentor wording."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429 free-budget exhausted); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1926",
+          "sources": [
+            "https://experts.exeter.ac.uk/42081-ngan-vo"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official Exeter profile returned only a JS shell page (no content read)."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429 free-budget exhausted); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1925",
+          "sources": [
+            "https://www.st-andrews.ac.uk/computer-science/people/nttd",
+            "https://ndangtt.github.io/"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "PhD supervision list on official profile names Tai Nguyen and Tianchen Wu (current students, not roster faculty; Phuoc Tai Nguyen vp-1571 is a Masaryk mathematician, a different person). Personal site names PhD advisors Patrick De Causmaecker and Thomas Stützle (not roster members per find-roster-matches)."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429 free-budget exhausted); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1924",
+          "sources": [
+            "https://mse-r.ntust.edu.tw/p/426-1019-40.php?Lang=zh-tw"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording near any roster member name: none found."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429 free-budget exhausted); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1923",
+          "sources": [
+            "https://me.lhu.edu.tw/p/412-1013-85.php?Lang=zh-tw"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording near any roster member name: none found."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429 free-budget exhausted); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1922",
+          "sources": [
+            "https://acc.cyut.edu.tw/p/404-1027-9586.php?Lang=zh-tw"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording near any roster member name: none found."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429 free-budget exhausted); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1921",
+          "sources": [
+            "https://lermab.univ-lorraine.fr/membres-eebi/"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording near any roster member name: none found."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429 free-budget exhausted); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1920",
+          "sources": [
+            "https://www.u-picardie.fr/lti/laboratoire-eco-materiaux-habitat-soutenable/"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording near any roster member name: none found."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429 free-budget exhausted); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1919",
+          "sources": [
+            "https://www.klu.org/faculty-research/faculty/resident-faculty/tri-mikael-tran"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording near any roster member name: none found."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429 free-budget exhausted); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1918",
+          "sources": [
+            "https://www.uu.nl/staff/LTran"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording near any roster member name: none found."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429 free-budget exhausted); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1917",
+          "sources": [
+            "https://www.gachon.ac.kr/eng/12818/subview.do#dang-khoa-vo"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording near any roster member name: none found."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429 free-budget exhausted); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1916",
+          "sources": [
+            "https://www.gachon.ac.kr/eng/12759/subview.do#phuoc-loc-truong"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording near any roster member name: none found."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429 free-budget exhausted); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1915",
+          "sources": [
+            "https://www.gachon.ac.kr/eng/12764/subview.do#thi-huong-pham"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording near any roster member name: none found."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429 free-budget exhausted); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1914",
+          "sources": [
+            "https://www.gachon.ac.kr/eng/12764/subview.do#trong-danh-nguyen"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording near any roster member name: none found."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429 free-budget exhausted); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1913",
+          "sources": [
+            "https://www.gachon.ac.kr/eng/12771/subview.do#bao-ngoc-nguyen"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording near any roster member name: none found."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429 free-budget exhausted); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1912",
+          "sources": [
+            "https://www.gachon.ac.kr/eng/12764/subview.do#kim-anh-huynh"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording near any roster member name: none found."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429 free-budget exhausted); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1911",
+          "sources": [
+            "https://www.gachon.ac.kr/eng/12775/subview.do#gia-phan-le"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording near any roster member name: none found."
+          ],
+          "nextAction": "OpenAlex unavailable (HTTP 429 free-budget exhausted); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        }
+      ],
+      "verifiedRelationshipIds": [],
+      "notes": [
+        "No new edges verified. Batch includes vp-2167–vp-2170, added after batch 91 started."
       ]
     }
   ],
