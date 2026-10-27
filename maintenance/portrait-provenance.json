@@ -8274,6 +8274,55 @@
       ],
       "retrievedAt": "2026-10-26T11:09:45.102Z",
       "note": "candidate failed 120x120 or portrait-aspect validation"
+    },
+    "vp-2171": {
+      "name": "Amanda Tran",
+      "outcome": "found",
+      "pageUrl": "https://www.ketchum.edu/directory/amanda-tran",
+      "imageUrl": "https://www.ketchum.edu/sites/default/files/styles/profile_image/public/2025-12/TRAN_Amanda-5.jpg?h=6e22a160",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-27T03:24:55.121Z"
+    },
+    "vp-2172": {
+      "name": "Dustin Le",
+      "outcome": "found",
+      "pageUrl": "https://blogs.chapman.edu/pharmacy/2025/05/29/dustin-le-joins-chapman-university-school-of-pharmacy-as-an-assistant-professor/",
+      "imageUrl": "https://blogs.chapman.edu/pharmacy/wp-content/uploads/sites/65/2025/05/A649A7AC-F730-44ED-8E78-E19592801F21_1_201_a.jpeg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-27T03:26:26.378Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-2173": {
+      "name": "Ellie Phuong Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://lecom.edu/faculty/ellie-nguyen/",
+      "imageUrl": "https://lecom.edu/content/uploads/2026/06/Ellie-Nguyen.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-27T03:26:52.282Z"
     }
   }
 }
