@@ -8274,6 +8274,22 @@
       ],
       "retrievedAt": "2026-10-26T11:09:45.102Z",
       "note": "candidate failed 120x120 or portrait-aspect validation"
+    },
+    "vp-2171": {
+      "name": "Amanda Tran",
+      "outcome": "found",
+      "pageUrl": "https://www.ketchum.edu/directory/amanda-tran",
+      "imageUrl": "https://www.ketchum.edu/sites/default/files/styles/profile_image/public/2025-12/TRAN_Amanda-5.jpg?h=6e22a160",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-27T03:24:55.121Z"
     }
   }
 }
