@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-17T14:10:00.000Z",
+  "updatedAt": "2026-10-27T14:16:00.000Z",
   "relationships": [
     {
       "id": "rel-coauthor-vp-0015-vp-0018",
@@ -2868,6 +2868,57 @@
         }
       ],
       "verifiedAt": "2026-10-17T14:10:00.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-0566-vp-1899",
+      "type": "coauthor",
+      "sourceId": "vp-0566",
+      "targetId": "vp-1899",
+      "sources": [
+        "https://en.uit.no/ansatte/vi.n.tran",
+        "https://uit.no/ansatte/phuong.hoai.ha",
+        "https://doi.org/10.1007/978-981-97-4985-0_25",
+        "https://doi.org/10.1109/PADSW.2018.8644966",
+        "https://doi.org/10.1109/ISPASS.2016.7482088",
+        "https://doi.org/10.1109/SAMOS.2016.7818329",
+        "https://doi.org/10.1109/ICPADS.2016.0138"
+      ],
+      "evidence": "The official UiT publication list of Ngoc Nha Vi Tran (vp-1899) lists five works, each with a DOI and a Munin repository handle, that name Hoai Phuong Ha (vp-0566) as coauthor; both roster entries hold UiT The Arctic University of Norway appointments and the works are in the same energy-efficient/embedded computing area (Arctic Green Computing Group). DOIs resolve at doi.org.",
+      "works": [
+        {
+          "identifier": "doi:10.1007/978-981-97-4985-0_25",
+          "title": "Interpretable Fuzzy Embedded Neural Network for Multivariate Time-Series Forecasting",
+          "date": "2024",
+          "url": "https://doi.org/10.1007/978-981-97-4985-0_25"
+        },
+        {
+          "identifier": "doi:10.1109/PADSW.2018.8644966",
+          "title": "REOH: Using Probabilistic Network for Runtime Energy Optimization of Heterogeneous Systems",
+          "date": "2018",
+          "url": "https://doi.org/10.1109/PADSW.2018.8644966"
+        },
+        {
+          "identifier": "doi:10.1109/ISPASS.2016.7482088",
+          "title": "RTHpower: Accurate Fine-grained Power Models for Predicting Race-to-halt Effect on Ultra-low Power Embedded Systems",
+          "date": "2016",
+          "url": "https://doi.org/10.1109/ISPASS.2016.7482088"
+        },
+        {
+          "identifier": "doi:10.1109/SAMOS.2016.7818329",
+          "title": "Power models supporting energy-efficient co-design on ultra-low power embedded systems",
+          "date": "2016",
+          "url": "https://doi.org/10.1109/SAMOS.2016.7818329"
+        },
+        {
+          "identifier": "doi:10.1109/ICPADS.2016.0138",
+          "title": "ICE: A General and Validated Energy Complexity Model for Multithreaded Algorithms",
+          "date": "2016",
+          "url": "https://doi.org/10.1109/ICPADS.2016.0138"
+        }
+      ],
+      "verifiedAt": "2026-10-27T14:16:00.000Z",
       "direct": false,
       "notes": ""
     }

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-26T14:30:00.000Z",
+  "updatedAt": "2026-10-27T14:16:00.000Z",
   "batches": [
     {
       "batchNumber": 1,
@@ -21872,6 +21872,281 @@
       "verifiedRelationshipIds": [],
       "notes": [
         "No new edges verified. Batch includes vp-2167–vp-2170, added after batch 91 started."
+      ]
+    },
+    {
+      "batchNumber": 93,
+      "rosterIds": [
+        "vp-2173",
+        "vp-2172",
+        "vp-2171",
+        "vp-1910",
+        "vp-1909",
+        "vp-1908",
+        "vp-1907",
+        "vp-1906",
+        "vp-1905",
+        "vp-1904",
+        "vp-1903",
+        "vp-1902",
+        "vp-1901",
+        "vp-1900",
+        "vp-1899",
+        "vp-1898",
+        "vp-1897",
+        "vp-1896",
+        "vp-1895",
+        "vp-1894"
+      ],
+      "startedAt": "2026-10-27T14:16:00.000Z",
+      "completedAt": "2026-10-27T14:16:00.000Z",
+      "status": "complete",
+      "outcomes": [
+        {
+          "rosterId": "vp-2173",
+          "sources": [
+            "https://lecom.edu/faculty/ellie-nguyen/"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for any roster member name: no mentorship evidence found.",
+            "Name hits (Phuong Nguyen, Huong Nguyen) were substring noise, not roster members."
+          ],
+          "nextAction": "OpenAlex and Crossref returned HTTP 429 (free budget exhausted); NSF/NIH/patent searches and genealogy/CV leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-2172",
+          "sources": [
+            "https://www.chapman.edu/our-faculty/dustin-le.aspx"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for any roster member name: no mentorship evidence found."
+          ],
+          "nextAction": "OpenAlex and Crossref returned HTTP 429 (free budget exhausted); NSF/NIH/patent searches and genealogy/CV leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-2171",
+          "sources": [
+            "https://www.ketchum.edu/directory/amanda-tran"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for any roster member name: no mentorship evidence found."
+          ],
+          "nextAction": "OpenAlex and Crossref returned HTTP 429 (free budget exhausted); NSF/NIH/patent searches and genealogy/CV leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1910",
+          "sources": [
+            "https://www.gachon.ac.kr/eng/12773/subview.do"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for any roster member name: no mentorship evidence found."
+          ],
+          "nextAction": "OpenAlex and Crossref returned HTTP 429 (free budget exhausted); NSF/NIH/patent searches and genealogy/CV leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1909",
+          "sources": [
+            "https://www.coventry.ac.uk/london/study/staff-directory/accounting-finance-and-economics/dr-chi-tran/"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for any roster member name: no mentorship evidence found."
+          ],
+          "nextAction": "OpenAlex and Crossref returned HTTP 429 (free budget exhausted); NSF/NIH/patent searches and genealogy/CV leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1908",
+          "sources": [
+            "https://www.gre.ac.uk/people/rep/faculty-of-business/truc-nguyen"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for any roster member name: no mentorship evidence found."
+          ],
+          "nextAction": "OpenAlex and Crossref returned HTTP 429 (free budget exhausted); NSF/NIH/patent searches and genealogy/CV leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1907",
+          "sources": [
+            "https://www.gre.ac.uk/people/rep/faculty-of-business/thu-nguyen"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for any roster member name: no mentorship evidence found."
+          ],
+          "nextAction": "OpenAlex and Crossref returned HTTP 429 (free budget exhausted); NSF/NIH/patent searches and genealogy/CV leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1906",
+          "sources": [
+            "https://www.mdx.ac.uk/about-us/our-people/staff-directory/dr-quang-nguyen/"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for any roster member name: no mentorship evidence found.",
+            "Page 'quang nguyen' hit is the person's own name, not vp-1965."
+          ],
+          "nextAction": "OpenAlex and Crossref returned HTTP 429 (free budget exhausted); NSF/NIH/patent searches and genealogy/CV leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1905",
+          "sources": [
+            "https://people.uwe.ac.uk/Person/TrangTran"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for any roster member name: no mentorship evidence found."
+          ],
+          "nextAction": "OpenAlex and Crossref returned HTTP 429 (free budget exhausted); NSF/NIH/patent searches and genealogy/CV leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1904",
+          "sources": [
+            "https://profiles.ljmu.ac.uk/5755-trung-thanh-nguyen"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for any roster member name: no mentorship evidence found."
+          ],
+          "nextAction": "OpenAlex and Crossref returned HTTP 429 (free budget exhausted); NSF/NIH/patent searches and genealogy/CV leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1903",
+          "sources": [
+            "https://ba.cycu.edu.tw/%E5%B8%AB%E8%B3%87%E4%BB%8B%E7%B4%B9/%E5%B0%88%E4%BB%BB%E5%B8%AB%E8%B3%87/%E9%98%AE%E7%93%8A%E5%A6%9D/"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for any roster member name: no mentorship evidence found."
+          ],
+          "nextAction": "OpenAlex and Crossref returned HTTP 429 (free budget exhausted); NSF/NIH/patent searches and genealogy/CV leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1902",
+          "sources": [
+            "https://nano.pknu.ac.kr/nano/1876?action=view&no=19401754"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for any roster member name: no mentorship evidence found."
+          ],
+          "nextAction": "OpenAlex and Crossref returned HTTP 429 (free budget exhausted); NSF/NIH/patent searches and genealogy/CV leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1901",
+          "sources": [
+            "https://www.ntnu.no/ansatte/olavtoai"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for any roster member name: no mentorship evidence found."
+          ],
+          "nextAction": "OpenAlex and Crossref returned HTTP 429 (free budget exhausted); NSF/NIH/patent searches and genealogy/CV leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1900",
+          "sources": [
+            "https://en.uit.no/ansatte/hung.thanh.nguyen"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for any roster member name: no mentorship evidence found."
+          ],
+          "nextAction": "OpenAlex and Crossref returned HTTP 429 (free budget exhausted); NSF/NIH/patent searches and genealogy/CV leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1899",
+          "sources": [
+            "https://en.uit.no/ansatte/vi.n.tran"
+          ],
+          "relationshipIds": [
+            "rel-coauthor-vp-0566-vp-1899"
+          ],
+          "status": "completed",
+          "notes": [
+            "Official UiT publication list names vp-0566 (Hoai Phuong Ha) as coauthor on 5 DOI-bearing works: coauthor edge recorded.",
+            "The 2024 fuzzy-network paper also names vp-0013 (Hung Manh La) alongside vp-0566 and vp-1899, but only one shared work was found per pair (two required); lead for vp-0013/vp-0566 and vp-0013/vp-1899 needs OpenAlex/Crossref to find a second work."
+          ],
+          "nextAction": "Retry OpenAlex for second shared works with vp-0013; check NSF/NIH/patents."
+        },
+        {
+          "rosterId": "vp-1898",
+          "sources": [
+            "https://portal.research.lu.se/en/persons/kim-cuong-le/"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for any roster member name: no mentorship evidence found."
+          ],
+          "nextAction": "OpenAlex and Crossref returned HTTP 429 (free budget exhausted); NSF/NIH/patent searches and genealogy/CV leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1897",
+          "sources": [
+            "https://portal.research.lu.se/en/persons/265b3615-1a71-4cff-88aa-1c218f4bf5f1"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for any roster member name: no mentorship evidence found."
+          ],
+          "nextAction": "OpenAlex and Crossref returned HTTP 429 (free budget exhausted); NSF/NIH/patent searches and genealogy/CV leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1896",
+          "sources": [
+            "https://www.uantwerpen.be/en/staff/alex-bvd-nguyen_29291/"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for any roster member name: no mentorship evidence found."
+          ],
+          "nextAction": "OpenAlex and Crossref returned HTTP 429 (free budget exhausted); NSF/NIH/patent searches and genealogy/CV leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1895",
+          "sources": [
+            "https://www.strath.ac.uk/staff/nguyenle_khanh_nganms/"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for any roster member name: no mentorship evidence found."
+          ],
+          "nextAction": "OpenAlex and Crossref returned HTTP 429 (free budget exhausted); NSF/NIH/patent searches and genealogy/CV leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1894",
+          "sources": [
+            "https://pure.southwales.ac.uk/en/persons/hai-nguyen"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for any roster member name: no mentorship evidence found."
+          ],
+          "nextAction": "OpenAlex and Crossref returned HTTP 429 (free budget exhausted); NSF/NIH/patent searches and genealogy/CV leads not completed. Retry later."
+        }
       ]
     }
   ],
