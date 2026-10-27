@@ -8307,6 +8307,22 @@
       ],
       "retrievedAt": "2026-10-27T03:26:26.378Z",
       "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-2173": {
+      "name": "Ellie Phuong Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://lecom.edu/faculty/ellie-nguyen/",
+      "imageUrl": "https://lecom.edu/content/uploads/2026/06/Ellie-Nguyen.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-10-27T03:26:52.282Z"
     }
   }
 }
