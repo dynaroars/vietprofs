@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-27T14:16:00.000Z",
+  "updatedAt": "2026-10-28T14:30:00.000Z",
   "batches": [
     {
       "batchNumber": 1,
@@ -22146,6 +22146,277 @@
             "Official profile fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for any roster member name: no mentorship evidence found."
           ],
           "nextAction": "OpenAlex and Crossref returned HTTP 429 (free budget exhausted); NSF/NIH/patent searches and genealogy/CV leads not completed. Retry later."
+        }
+      ]
+    },
+    {
+      "batchNumber": 94,
+      "rosterIds": [
+        "vp-2175",
+        "vp-2174",
+        "vp-1893",
+        "vp-1892",
+        "vp-1891",
+        "vp-1890",
+        "vp-1889",
+        "vp-1888",
+        "vp-1887",
+        "vp-1886",
+        "vp-1885",
+        "vp-1884",
+        "vp-1883",
+        "vp-1882",
+        "vp-1881",
+        "vp-1880",
+        "vp-1879",
+        "vp-1878",
+        "vp-1877",
+        "vp-1876"
+      ],
+      "startedAt": "2026-10-28T14:30:00.000Z",
+      "completedAt": "2026-10-28T14:30:00.000Z",
+      "status": "complete",
+      "outcomes": [
+        {
+          "rosterId": "vp-2175",
+          "sources": [
+            "https://llu.edu/academics/faculty/dinh-sophia"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording: no roster-member counterparty or qualifying mentorship evidence found."
+          ],
+          "nextAction": "OpenAlex returned HTTP 429 (free daily budget exhausted); Crossref/NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-2174",
+          "sources": [
+            "https://llu.edu/academics/faculty/tran-huyentran"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording: no roster-member counterparty or qualifying mentorship evidence found."
+          ],
+          "nextAction": "OpenAlex returned HTTP 429 (free daily budget exhausted); Crossref/NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1893",
+          "sources": [
+            "https://research-portal.st-andrews.ac.uk/en/persons/thanh-bui"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording: no roster-member counterparty or qualifying mentorship evidence found."
+          ],
+          "nextAction": "OpenAlex returned HTTP 429 (free daily budget exhausted); Crossref/NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1892",
+          "sources": [
+            "https://researchportal.hw.ac.uk/en/persons/yen-tran"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording: no roster-member counterparty or qualifying mentorship evidence found."
+          ],
+          "nextAction": "OpenAlex returned HTTP 429 (free daily budget exhausted); Crossref/NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1891",
+          "sources": [
+            "https://www.uib.no/en/persons/Quynh.Le"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording: no roster-member counterparty or qualifying mentorship evidence found."
+          ],
+          "nextAction": "OpenAlex returned HTTP 429 (free daily budget exhausted); Crossref/NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1890",
+          "sources": [
+            "https://pro.univ-lille.fr/viet-anh-nguyen/"
+          ],
+          "relationshipIds": [],
+          "status": "excluded",
+          "notes": [
+            "Official profile fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording: no roster-member counterparty or qualifying mentorship evidence found.",
+            "Profile names doctoral director El Hassan Youssfi (Université de Provence); find-roster-matches returned no roster match, so the advisor is out of roster and no edge is recorded. Not a Vietnamese-heritage lead."
+          ],
+          "nextAction": "None for the advisor edge; coauthor/grant checks still pending."
+        },
+        {
+          "rosterId": "vp-1889",
+          "sources": [
+            "https://www.ba.scu.edu.tw/%E5%B8%AB%E8%B3%87%E9%99%A3%E5%AE%B9/%E8%8C%83%E6%80%9D%E7%BE%8Epham-xuan-ban-mai-2/"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording: no roster-member counterparty or qualifying mentorship evidence found."
+          ],
+          "nextAction": "OpenAlex returned HTTP 429 (free daily budget exhausted); Crossref/NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1888",
+          "sources": [
+            "https://cptft.mcut.edu.tw/p/405-1019-60553,c10019.php?Lang=zh-tw"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording: no roster-member counterparty or qualifying mentorship evidence found."
+          ],
+          "nextAction": "OpenAlex returned HTTP 429 (free daily budget exhausted); Crossref/NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1887",
+          "sources": [
+            "https://www.muni.cz/en/people/245764-thi-hoa-hong-nguyen"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording: no roster-member counterparty or qualifying mentorship evidence found."
+          ],
+          "nextAction": "OpenAlex returned HTTP 429 (free daily budget exhausted); Crossref/NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1886",
+          "sources": [
+            "https://www.th-koeln.de/personen/viet.nguyen/"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording: no roster-member counterparty or qualifying mentorship evidence found."
+          ],
+          "nextAction": "OpenAlex returned HTTP 429 (free daily budget exhausted); Crossref/NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1885",
+          "sources": [
+            "https://www.intibs.pl/o-instytucie/pracownicy.html?view=worker&group=OBM&id=155"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording: no roster-member counterparty or qualifying mentorship evidence found."
+          ],
+          "nextAction": "OpenAlex returned HTTP 429 (free daily budget exhausted); Crossref/NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1884",
+          "sources": [
+            "https://www.management.fju.edu.tw/en/faculty/detail.php"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording: no roster-member counterparty or qualifying mentorship evidence found."
+          ],
+          "nextAction": "OpenAlex returned HTTP 429 (free daily budget exhausted); Crossref/NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1883",
+          "sources": [
+            "https://www.nycu.edu.tw/icst/en/app/artwebsite/view?module=artwebsite&id=35964&serno=633ae537-a000-4cec-85e5-1105fcaa3668"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording: no roster-member counterparty or qualifying mentorship evidence found."
+          ],
+          "nextAction": "OpenAlex returned HTTP 429 (free daily budget exhausted); Crossref/NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1882",
+          "sources": [
+            "https://www.maynoothuniversity.ie/people/chau-minh-nguyen"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording: no roster-member counterparty or qualifying mentorship evidence found."
+          ],
+          "nextAction": "OpenAlex returned HTTP 429 (free daily budget exhausted); Crossref/NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1881",
+          "sources": [
+            "https://www.tudublin.ie/explore/faculties-and-schools/business/business-technology-retail-supply-chain/people/dr-thoa-pham.php"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording: no roster-member counterparty or qualifying mentorship evidence found."
+          ],
+          "nextAction": "OpenAlex returned HTTP 429 (free daily budget exhausted); Crossref/NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1880",
+          "sources": [
+            "https://mau.se/en/persons/hoai.anh.tran/"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording: no roster-member counterparty or qualifying mentorship evidence found."
+          ],
+          "nextAction": "OpenAlex returned HTTP 429 (free daily budget exhausted); Crossref/NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1879",
+          "sources": [
+            "https://liu.se/en/employee/nguso90"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording: no roster-member counterparty or qualifying mentorship evidence found."
+          ],
+          "nextAction": "OpenAlex returned HTTP 429 (free daily budget exhausted); Crossref/NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1878",
+          "sources": [
+            "https://www.umu.se/en/staff/truong-nguyen/"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording: no roster-member counterparty or qualifying mentorship evidence found."
+          ],
+          "nextAction": "OpenAlex returned HTTP 429 (free daily budget exhausted); Crossref/NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1877",
+          "sources": [
+            "https://www.hdba.de/hochschule/organisation/lehrende/profil/profil-nguyen/"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording: no roster-member counterparty or qualifying mentorship evidence found."
+          ],
+          "nextAction": "OpenAlex returned HTTP 429 (free daily budget exhausted); Crossref/NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1876",
+          "sources": [
+            "https://www.hok.ac.at/en/bachelor/drone-engineering-ft/team-2944"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording: no roster-member counterparty or qualifying mentorship evidence found."
+          ],
+          "nextAction": "OpenAlex returned HTTP 429 (free daily budget exhausted); Crossref/NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
         }
       ]
     }
