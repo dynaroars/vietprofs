@@ -51,8 +51,9 @@ that its output is 12+ hours old at the next night's audit. Producers are spread
 `public/data.json` overlap: portraits and honors alternate days, and links finishes hours before
 either. Producers run Mon–Sat, so every run is audited the following night; Sunday has no
 producers, so the Sun audit takes Saturday's output, overflow past the nightly caps, and the
-automation-health check. Frequencies (changed 2026-09-29): discovery, relationships, and links
-Mon–Sat; portraits Mon/Wed/Fri; honors Tue/Thu/Sat. Watch the portraits queue
+automation-health check. Frequencies (changed 2026-09-29; portraits cut to weekly 2026-10-29,
+after the setup review in #475): discovery, relationships, and links Mon–Sat; portraits Wed;
+honors Tue/Thu/Sat. Watch the portraits queue
 (`npx tsx scripts/fetch-portraits.ts --status`). Keep new routines inside the 04:00–15:00 window.
 
 | Key | Routine id | Model | Cron (UTC) | ET | Section |
@@ -61,7 +62,7 @@ Mon–Sat; portraits Mon/Wed/Fri; honors Tue/Thu/Sat. Watch the portraits queue
 | `discover` | `trig_01R9AeywUniWNP3iK8XDw9ju` | Sonnet 5.5 | `0 8 * * 1-6` | Mon–Sat 4 AM | [Discovery](#discover-new-faculty-discover) |
 | `relationships` | `trig_01EgwQ418znNbFQ95ghg4p5E` | Sonnet 5.5 | `0 14 * * 1-6` | Mon–Sat 10 AM | [Relationships](#academic-relationships-relationships) |
 | `links` | `trig_0162DEq1aGRH3vWrEtpKoNmy` | Sonnet 5.5 | `0 5 * * 1-6` | Mon–Sat 1 AM | [Links](#links-links) |
-| `portraits` | `trig_01D58Azgkh8kdKFBdFNAXox2` | Sonnet 5.5 | `0 11 * * 1,3,5` | Mon/Wed/Fri 7 AM | [Portraits](#portraits-portraits) |
+| `portraits` | `trig_01D58Azgkh8kdKFBdFNAXox2` | Sonnet 5.5 | `0 11 * * 3` | Wed 7 AM | [Portraits](#portraits-portraits) |
 | `honors` | `trig_012eH5rSZwQw7PXiQPSRj9Wn` | Sonnet 5.5 | `0 11 * * 2,4,6` | Tue/Thu/Sat 7 AM | [Honors & degrees](#honors-and-degrees-honors) |
 
 One-time: `review` (`trig_017xbcfAPtZwntWrPBW8W5A6`, Opus 5.5) runs once on 2026-10-26 at 14:00 UTC
@@ -74,7 +75,7 @@ Outside the cloud:
 | What | Where | When | Notes |
 | :-- | :-- | :-- | :-- |
 | Link-health report | GitHub Action `.github/workflows/link-health.yml` | 1st of month, 08:00 UTC; manual via `gh workflow run link-health.yml` | Opens or comments on the "Link-health report (automated)" Issue. No model involved. |
-| Automation watchdog | GitHub Action `.github/workflows/automation-watchdog.yml` | Mon and Thu 12:00 UTC; manual via `gh workflow run automation-watchdog.yml` | Opens or comments on one "Automation watchdog (automated)" Issue when a PR has been open more than 5 days (auditor stopped or PR stuck) or nothing `[scheduled:*]` appeared in 4 days (routines stopped); closes it when checks pass. No model involved. |
+| Automation watchdog | GitHub Action `.github/workflows/automation-watchdog.yml` | Mon and Thu 12:00 UTC; manual via `gh workflow run automation-watchdog.yml` | Opens or comments on one "Automation watchdog (automated)" Issue when a PR has been open more than 5 days (auditor stopped or PR stuck) or a producer has had no output of its own for about two cron cycles (discover, links, relationships 4 days; honors 6; portraits 15; keep these in step with the Schedule table); closes it when checks pass. No model involved. |
 | Branch cleanup | GitHub Action `.github/workflows/delete-pr-branches.yml` | Whenever a PR is merged or closed; sweep Mondays 13:00 UTC; manual via `gh workflow run delete-pr-branches.yml` | Deletes a PR's branch once all its PRs are closed, because cloud agents can't delete branches. Keeps `main`, branches with an open PR, and branches that never had a PR. No model involved. |
 
 Retired routines (2026-09-27), replaced by the ones above:
@@ -205,6 +206,9 @@ Follow `TASKS/AUDIT_ISSUES_PRS.md`, including "Independent review". Also read
   one ID").
 - Needs an owner decision (protected `directFields` conflict, ambiguous identity or eligibility,
   unverifiable from the cloud): comment with findings and a recommendation, and leave it open.
+  After that, skip it on later runs unless someone commented or edited it since your last comment;
+  re-checking with no new input only repeats the same comment (the Sunday health check still
+  lists ones older than 14 days).
 - Tracking Issues such as the link-health report: work up to 10 entries, post a progress comment,
   and leave it open while entries remain. When every entry is resolved (fixed, or re-checked live
   and confirmed healthy), close it with a comment listing the outcome of each entry. Entries that

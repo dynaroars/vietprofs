@@ -59,7 +59,7 @@ Record a verified `coauthor` relationship only when:
 
 Use the factual display concept `coauthored N works`; do not turn coauthorship into an unsupported claim about friendship, mentorship, research dependence, or the importance of the collaboration. Exclude corrections, errata, acknowledgments, editorial-board lists, and records where either author identity remains ambiguous. Retain each work's identifier, title, date, and URL in `public/relationships.json`'s `works` array for evidence and validation purposes, but individual roster profile pages only need to show the coauthor count (`Coauthor · N shared works`) and evidence links — they must not render the individual paper titles.
 
-OpenAlex, Crossref, ORCID, PubMed, DBLP, and Google Scholar may be used for discovery. Automated author IDs can be split, merged, or assigned to namesakes, so verify each mapping with multiple identity signals: official profile or publication list, full-name variants, current or historical affiliation, research area, coauthors, ORCID, and work titles.
+OpenAlex, Crossref, ORCID, PubMed, DBLP, and Google Scholar may be used for discovery. Send OpenAlex requests through its polite pool: add `mailto=$OPENALEX_MAILTO` (and `api_key=$OPENALEX_API_KEY` when that is set) to every `api.openalex.org` URL; anonymous requests share a small daily budget and returned HTTP 429 for six runs in October 2026. Automated author IDs can be split, merged, or assigned to namesakes, so verify each mapping with multiple identity signals: official profile or publication list, full-name variants, current or historical affiliation, research area, coauthors, ORCID, and work titles.
 
 ### Grant collaborator
 

@@ -1,7 +1,7 @@
 name: Automation watchdog
 
 # Model-free check that the scheduled cloud routines are still working. It can't see the routines,
-# only their GitHub output: producers stopping shows up as no new scheduled work, and the auditor
+# only their GitHub output: a producer stopping shows up as no new output of its own, and the auditor
 # stopping shows up as PRs left open. Keeps one Issue open while something is wrong.
 
 on:
@@ -24,13 +24,11 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
           STALE_PR_DAYS: 5
-          QUIET_DAYS: 4
         run: |
           set -euo pipefail
           title="Automation watchdog (automated)"
           run_url="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
           pr_cutoff=$(date -u -d "-${STALE_PR_DAYS} days" +%Y-%m-%dT%H:%M:%SZ)
-          quiet_cutoff=$(date -u -d "-${QUIET_DAYS} days" +%Y-%m-%dT%H:%M:%SZ)
           problems=""
 
           # The auditor runs nightly and takes PRs older than 12 hours, so none should sit this long.
@@ -42,16 +40,30 @@ jobs:
             problems+="$stale"$'\n\n'
           fi
 
-          # Any producer PR/Issue, or a relationships commit on main, counts as the routines being alive.
-          scheduled=$(gh search prs --repo "$GH_REPO" "scheduled" --created ">=${quiet_cutoff:0:10}" --limit 100 --json title \
-            --jq '[.[] | select(.title | startswith("[scheduled:"))] | length')
-          scheduled_issues=$(gh search issues --repo "$GH_REPO" "scheduled" --created ">=${quiet_cutoff:0:10}" --limit 100 --json title \
-            --jq '[.[] | select(.title | startswith("[scheduled:"))] | length')
-          rel_commits=$(gh api "repos/$GH_REPO/commits?sha=main&since=$quiet_cutoff&per_page=100" \
-            --jq '[.[] | select(.commit.message | startswith("data(relationships)"))] | length')
-          if [ "$scheduled" -eq 0 ] && [ "$scheduled_issues" -eq 0 ] && [ "$rel_commits" -eq 0 ]; then
-            problems+="### No scheduled output in ${QUIET_DAYS} days"$'\n'
-            problems+="No \`[scheduled:*]\` PR or Issue and no \`data(relationships)\` commit since ${quiet_cutoff:0:10}. The cloud routines have likely stopped; check https://claude.ai/code/routines and the environment."$'\n\n'
+          # Each producer must show output (a [scheduled:<key>] PR or Issue; for relationships, a
+          # data(relationships) commit on main) within about two of its cron cycles. A single global
+          # clock missed the 12-day links stall in October because other routines kept resetting it.
+          # Days per key; keep in step with the Schedule table in TASKS/AUTOMATION.md.
+          declare -A window=([discover]=4 [links]=4 [relationships]=4 [honors]=6 [portraits]=15)
+          since=$(date -u -d "-15 days" +%Y-%m-%d)
+          gh search prs --repo "$GH_REPO" "scheduled" --created ">=$since" --limit 200 --json title,createdAt > prs.json
+          gh search issues --repo "$GH_REPO" "scheduled" --created ">=$since" --limit 200 --json title,createdAt > issues.json
+          gh api "repos/$GH_REPO/commits?sha=main&since=$(date -u -d "-${window[relationships]} days" +%Y-%m-%dT%H:%M:%SZ)&per_page=100" \
+            --jq '[.[] | select(.commit.message | startswith("data(relationships)")) | .commit.committer.date]' > rel.json
+          quiet=""
+          for key in "${!window[@]}"; do
+            cutoff=$(date -u -d "-${window[$key]} days" +%Y-%m-%dT%H:%M:%SZ)
+            if [ "$key" = relationships ]; then
+              count=$(jq --arg c "$cutoff" '[.[] | select(. >= $c)] | length' rel.json)
+            else
+              count=$(jq -s --arg p "[scheduled:$key]" --arg c "$cutoff" '[.[][] | select((.title | startswith($p)) and .createdAt >= $c)] | length' prs.json issues.json)
+            fi
+            if [ "$count" -eq 0 ]; then quiet+="- \`$key\`: no output since ${cutoff:0:10} (${window[$key]} days)"$'\n'; fi
+          done
+          if [ -n "$quiet" ]; then
+            problems+="### Routines with no output for about two cron cycles"$'\n'
+            problems+="Check the run logs for these routines (\`RemoteTrigger get_run_log\`) and https://claude.ai/code/routines."$'\n\n'
+            problems+="$quiet"$'\n'
           fi
 
           existing=$(gh issue list --state open --search "\"$title\" in:title" --json number --jq '.[0].number // empty')
