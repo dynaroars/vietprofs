@@ -30,6 +30,12 @@ jobs:
           node-version: 24
           cache: npm
       - run: npm ci
+      # Producer PRs must never change a protected directFields value (AGENTS.md "Direct updates").
+      # The auditor's own PRs carry owner/Issue direct updates, so they are exempt.
+      - if: github.event_name == 'pull_request' && startsWith(github.event.pull_request.title, '[scheduled:') && !startsWith(github.event.pull_request.title, '[scheduled:audit]')
+        run: npx tsx scripts/check-protected-fields.ts "origin/$BASE_REF"
+        env:
+          BASE_REF: ${{ github.base_ref }}
       # build-stats-history reads PR/Issue counts from the GitHub search API for the health panel.
       - run: npm test
         env:

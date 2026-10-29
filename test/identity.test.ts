@@ -8,6 +8,8 @@ test('names match across order, diacritics, initials, and disambiguation suffixe
   assert.ok(namesMatch(nameTokens('Phuc Thanh Nguyen'), nameTokens('Thanh Phúc Nguyễn')));
   assert.ok(namesMatch(nameTokens('Huy T. Tran'), nameTokens('Huy Trong Tran')));
   assert.ok(!namesMatch(nameTokens('Khanh Nguyen'), nameTokens('Nguyen P. Nguyen')));
+  assert.ok(namesMatch(nameTokens('Nguyen Nguyen'), nameTokens('Nguyen P. Nguyen')));
+  assert.ok(!namesMatch(nameTokens('Nguyen Nguyen'), nameTokens('Tin Nguyen')));
 });
 
 test('identity URLs compare by Scholar user, LinkedIn slug, and normalized address', () => {

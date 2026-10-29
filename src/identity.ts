@@ -18,9 +18,11 @@ export function identityKey(url: string): string {
 }
 
 // Same person unless ruled out: identical token sets, or one name's tokens contain the other's
-// surname plus at least one given-name token ("Tin Nguyen" vs "Tin Chi Nguyen").
+// surname plus at least one given-name token ("Tin Nguyen" vs "Tin Chi Nguyen"). Identical sets
+// cover repeated-surname names that reduce to one token ("Nguyen Nguyen" vs "Nguyen P. Nguyen").
 export function namesMatch(a: string[], b: string[]): boolean {
   if (!a.length || !b.length) return false;
+  if (a.length === b.length && a.every((token) => b.includes(token))) return true;
   const [short, long] = a.length <= b.length ? [a, b] : [b, a];
   return short.length >= 2 && short.every((token) => long.includes(token));
 }

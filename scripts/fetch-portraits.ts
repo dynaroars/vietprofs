@@ -88,7 +88,8 @@ function imageCandidates(html: string, page: Page, person: Person): Candidate[] 
     if (/doubleclick\.net|googleadservices|google-analytics|googletagmanager|googlesyndication|facebook\.com\/tr|bat\.bing\.com|px\.ads\.linkedin|adsrvr\.org|analytics|[/.]pixel/i.test(new URL(imageUrl).hostname + new URL(imageUrl).pathname)) return;
     // Test the path and markup, not the hostname, and match short words whole: "search" used to
     // reject every image on researchmap.jp, research.monash.edu, researchers.mq.edu.au, and so on.
-    const screened = `${new URL(imageUrl).pathname} ${context}`.toLowerCase();
+    // Drop event handlers first: Pure portals put a "no-portrait" fallback in every photo's onerror.
+    const screened = `${new URL(imageUrl).pathname} ${context.replace(/\son[a-z]+=(["'])[\s\S]*?\1/gi, '')}`.toLowerCase();
     if (/no[-_ ]?(portrait|photo|image)|place[-_ ]?holder|logo|favicon|sprite|gravatar|wordmark|monogram|banner|silhouette|blank|default[-_ ]?(profile|avatar|image|photo)/i.test(screened)) return;
     if (/(?<![a-z])(?:header|icons?|qr|hero|background|nav|menu|search|arrow)(?![a-z])/i.test(screened)) return;
     const identity = identitySignals(person, imageUrl, context, page, html);
@@ -102,7 +103,9 @@ function imageCandidates(html: string, page: Page, person: Person): Candidate[] 
   for (const match of html.matchAll(/<img\b[^>]*\bsrc=["']([^"']+)["'][^>]*>/gi)) add(match[1], match[0]);
   for (const match of html.matchAll(/\b(?:src|data-src|data-image|imageUrl)=["']([^"']+)["']/gi)) add(match[1], match[0]);
   for (const match of html.matchAll(/\bsrcset=["']([^"']+)["']/gi)) for (const value of match[1].split(/,\s+/)) add(value.trim().split(/\s+/)[0], match[0]);
-  for (const match of html.matchAll(/"image"\s*:\s*"([^"]+)"/gi)) add(match[1], match[0]);
+  // JSON values are only usable as absolute or root-relative URLs: a bare filename such as Pure's
+  // "image" : "u1147545.jpg" isn't relative to the page and resolves to a path that doesn't exist.
+  for (const match of html.matchAll(/"image"\s*:\s*"([^"]+)"/gi)) if (/^(?:https?:)?\//i.test(match[1])) add(match[1], match[0]);
   for (const match of html.matchAll(/background-image\s*:\s*url\((?:["']?)([^)'"\s]+)(?:["']?)\)/gi)) add(match[1], match[0]);
   return [...new Map(candidates.sort((a, b) => b.score - a.score).map((candidate) => [candidate.imageUrl, candidate])).values()];
 }
