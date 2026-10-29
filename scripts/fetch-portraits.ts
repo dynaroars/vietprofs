@@ -295,21 +295,24 @@ for (const person of selected) {
   const entry: ProvenanceEntry = { name: person.name, outcome: level === 'HIGH' ? 'found' : 'needs_review', pageUrl: candidate.page.url, imageUrl: candidate.imageUrl, sourceType: candidate.page.sourceType, confidence: level, identitySignals: candidate.identitySignals, retrievedAt: now };
   if (!applying || level !== 'HIGH' || (person.portrait && !replaceExisting)) { ledger.entries[person.id] = { ...entry, outcome: level === 'HIGH' ? 'needs_review' : entry.outcome, note: applying ? 'candidate requires visual review before acceptance' : 'dry run; rerun with --apply after review' }; if (applying) { const item = queue.find((queued) => queued.id === person.id); if (item) item.status = 'unresolved'; } report.push({ id: person.id, name: person.name, result: ledger.entries[person.id].outcome, source: candidate.page.sourceType, confidence: level }); continue; }
   const bytes = await fetchImage(candidate.imageUrl);
-  if (!bytes) { ledger.entries[person.id] = { ...entry, outcome: 'not_found', note: 'candidate image could not be downloaded' }; report.push({ id: person.id, name: person.name, result: 'not_found', source: candidate.page.sourceType, confidence: level }); continue; }
+  // Every not_found outcome marks the queue item attempted, so --next moves on to other entries.
+  const markUnresolved = () => { const queued = queue.find((item) => item.id === person.id); if (queued) queued.status = 'unresolved'; };
+  if (!bytes) { ledger.entries[person.id] = { ...entry, outcome: 'not_found', note: 'candidate image could not be downloaded' }; markUnresolved(); report.push({ id: person.id, name: person.name, result: 'not_found', source: candidate.page.sourceType, confidence: level }); continue; }
   const portrait = join('portraits', `${person.id}-${slug(person.name)}.webp`);
   const output = join(root, 'public', portrait);
   const temporary = `${output}.candidate.webp`;
   try { await archiveImage(bytes, temporary); } catch {
     ledger.entries[person.id] = { ...entry, outcome: 'not_found', note: 'candidate could not be converted to a local image' };
+    markUnresolved();
     report.push({ id: person.id, name: person.name, result: 'not_found', source: candidate.page.sourceType, confidence: level });
     continue;
   }
-  if (!(await isPortraitLike(temporary))) { await unlink(temporary).catch(() => undefined); ledger.entries[person.id] = { ...entry, outcome: 'not_found', note: 'candidate failed 120x120 or portrait-aspect validation' }; report.push({ id: person.id, name: person.name, result: 'not_found', source: candidate.page.sourceType, confidence: level }); continue; }
+  if (!(await isPortraitLike(temporary))) { await unlink(temporary).catch(() => undefined); ledger.entries[person.id] = { ...entry, outcome: 'not_found', note: 'candidate failed 120x120 or portrait-aspect validation' }; markUnresolved(); report.push({ id: person.id, name: person.name, result: 'not_found', source: candidate.page.sourceType, confidence: level }); continue; }
   const face = await faceVerdict(temporary);
   if (face.verdict !== 'ok') {
     await unlink(temporary).catch(() => undefined);
     ledger.entries[person.id] = { ...entry, outcome: 'not_found', note: `candidate failed face check: ${face.verdict} (${face.faces} faces)${face.error ? ` ${face.error}` : ''}` };
-    const queued = queue.find((item) => item.id === person.id); if (queued) queued.status = 'unresolved';
+    markUnresolved();
     report.push({ id: person.id, name: person.name, result: 'not_found', source: candidate.page.sourceType, confidence: level, faceCheck: face.verdict });
     continue;
   }
