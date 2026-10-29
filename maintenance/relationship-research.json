@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-28T14:30:00.000Z",
+  "updatedAt": "2026-10-29T14:11:21.000Z",
   "batches": [
     {
       "batchNumber": 1,
@@ -22417,6 +22417,287 @@
             "Official profile fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording: no roster-member counterparty or qualifying mentorship evidence found."
           ],
           "nextAction": "OpenAlex returned HTTP 429 (free daily budget exhausted); Crossref/NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        }
+      ]
+    },
+    {
+      "batchNumber": 95,
+      "rosterIds": [
+        "vp-2177",
+        "vp-2176",
+        "vp-1875",
+        "vp-1874",
+        "vp-1873",
+        "vp-1872",
+        "vp-1871",
+        "vp-1869",
+        "vp-1868",
+        "vp-1867",
+        "vp-1866",
+        "vp-1865",
+        "vp-1864",
+        "vp-1863",
+        "vp-1862",
+        "vp-1861",
+        "vp-1860",
+        "vp-1859",
+        "vp-1858",
+        "vp-1857"
+      ],
+      "startedAt": "2026-10-29T14:08:04.000Z",
+      "completedAt": "2026-10-29T14:11:21.000Z",
+      "status": "complete",
+      "outcomes": [
+        {
+          "rosterId": "vp-2177",
+          "sources": [
+            "https://olemiss.edu/profiles/leth",
+            "https://home.olemiss.edu/~leth/"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile/homepage fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for roster-member names: no qualifying mentorship evidence.",
+            "Crossref author search (name + affiliation, top 100 works) checked for roster-name coauthors; hits Trung Le / Tung Pham / Thanh-Toan Do came from machine-learning papers by a namesake, not the mathematician Thai Hoang Le (rejected provider mapping: field mismatch)."
+          ],
+          "nextAction": "Crossref search done; OpenAlex returned HTTP 429, NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-2176",
+          "sources": [
+            "https://olemiss.edu/profiles/dxnguyen"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile/homepage fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for roster-member names: no qualifying mentorship evidence."
+          ],
+          "nextAction": "Crossref search done; OpenAlex returned HTTP 429, NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1875",
+          "sources": [
+            "http://wm.umg.edu.pl/rada-ds-dydaktycznych"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile/homepage fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for roster-member names: no qualifying mentorship evidence.",
+            "Crossref author search (name + affiliation, top 100 works) checked for roster-name coauthors; hits were namesakes in unrelated fields (rejected: no identity signal)."
+          ],
+          "nextAction": "Crossref search done; OpenAlex returned HTTP 429, NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1874",
+          "sources": [
+            "https://pure.lib.cgu.edu.tw/en/persons/nguyen-phuoc-long/"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile/homepage fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for roster-member names: no qualifying mentorship evidence."
+          ],
+          "nextAction": "Crossref search done; OpenAlex returned HTTP 429, NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1873",
+          "sources": [
+            "https://www.gachon.ac.kr/eng/12759/subview.do",
+            "https://sites.google.com/view/vinhtran88/homepage"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile/homepage fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for roster-member names: no qualifying mentorship evidence."
+          ],
+          "nextAction": "Crossref search done; OpenAlex returned HTTP 429, NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1872",
+          "sources": [
+            "https://www.gachon.ac.kr/eng/12770/subview.do"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile/homepage fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for roster-member names: no qualifying mentorship evidence.",
+            "Crossref author search (name + affiliation, top 100 works) checked for roster-name coauthors; hits were namesakes in civil engineering, chemistry or unrelated fields (rejected)."
+          ],
+          "nextAction": "Crossref search done; OpenAlex returned HTTP 429, NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1871",
+          "sources": [
+            "https://www.gachon.ac.kr/eng/12773/subview.do"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile/homepage fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for roster-member names: no qualifying mentorship evidence."
+          ],
+          "nextAction": "Crossref search done (Crossref 429 for this member); OpenAlex returned HTTP 429, NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1869",
+          "sources": [
+            "http://math.bme.hu/~nxk/"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile/homepage fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for roster-member names: no qualifying mentorship evidence."
+          ],
+          "nextAction": "Crossref search done; OpenAlex returned HTTP 429, NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1868",
+          "sources": [
+            "https://www.geofizyka.agh.edu.pl/emerytowani_pracownicy/"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile/homepage fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for roster-member names: no qualifying mentorship evidence."
+          ],
+          "nextAction": "Crossref search done; OpenAlex returned HTTP 429, NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1867",
+          "sources": [
+            "https://csie.asia.edu.tw/en/associate_professors_2"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile/homepage fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for roster-member names: no qualifying mentorship evidence."
+          ],
+          "nextAction": "Crossref search done (Crossref 429 for this member); OpenAlex returned HTTP 429, NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1866",
+          "sources": [
+            "https://www.math.ntu.edu.tw/en/entity_people/entity_people/21734",
+            "https://sites.google.com/view/vtnguyen230/home"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile/homepage fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for roster-member names: no qualifying mentorship evidence."
+          ],
+          "nextAction": "Crossref search done (Crossref 429 for this member); OpenAlex returned HTTP 429, NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1865",
+          "sources": [
+            "https://sejong.elsevierpure.com/en/persons/the-vu-mai/"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile/homepage fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for roster-member names: no qualifying mentorship evidence."
+          ],
+          "nextAction": "Crossref search done; OpenAlex returned HTTP 429, NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1864",
+          "sources": [
+            "https://vbn.aau.dk/en/persons/tungkvt/",
+            "https://tungk.github.io/"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile/homepage fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for roster-member names: no qualifying mentorship evidence.",
+            "Crossref author search (name + affiliation, top 100 works) checked for roster-name coauthors; Huy Le on three shared works is at FPT Software AI Center, not vp-1771 Huy Le (UT San Antonio, Management); rejected as namesake. No other roster coauthor."
+          ],
+          "nextAction": "Crossref search done; OpenAlex returned HTTP 429, NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1863",
+          "sources": [
+            "https://www.ul.ie/business/le-tram-nguyen"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile/homepage fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for roster-member names: no qualifying mentorship evidence."
+          ],
+          "nextAction": "Crossref search done; OpenAlex returned HTTP 429, NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1862",
+          "sources": [
+            "https://www.dcu.ie/business-school/people/anh-vu"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile/homepage fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for roster-member names: no qualifying mentorship evidence."
+          ],
+          "nextAction": "Crossref search done; OpenAlex returned HTTP 429, NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1861",
+          "sources": [
+            "https://www.jcu.cz/en/university/staff/person?identita=NGUYEN_Petr_11499"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile/homepage fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for roster-member names: no qualifying mentorship evidence."
+          ],
+          "nextAction": "Crossref search done; OpenAlex returned HTTP 429, NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1860",
+          "sources": [
+            "https://kis.pwr.edu.pl/en/structure/division-of-information-systems/computational-collective-intelligence-group"
+          ],
+          "relationshipIds": [
+            "rel-coauthor-vp-0531-vp-1860"
+          ],
+          "status": "verified",
+          "notes": [
+            "Official profile/homepage fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for roster-member names: no qualifying mentorship evidence.",
+            "Group page lists Ngoc Thanh Nguyen (vp-0531) as head; three Crossref works (2017, 2019, 2020) name both: coauthor edge recorded. No explicit PhD-advisor statement found, so no advisor edge."
+          ],
+          "nextAction": "Check CV/dissertation record for an explicit PhD advisor; NSF/NIH/patent searches not applicable."
+        },
+        {
+          "rosterId": "vp-1859",
+          "sources": [
+            "https://ifp.uwr.edu.pl/pracownicy/fryderyk-nguyen/"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile/homepage fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for roster-member names: no qualifying mentorship evidence."
+          ],
+          "nextAction": "Crossref search done; OpenAlex returned HTTP 429, NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1858",
+          "sources": [
+            "https://ucrisportal.univie.ac.at/en/persons/ulrich-tran/"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile/homepage fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for roster-member names: no qualifying mentorship evidence."
+          ],
+          "nextAction": "Crossref search done; OpenAlex returned HTTP 429, NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1857",
+          "sources": [
+            "https://corsidilaurea.uniroma1.it/it/users/bichliennguyenuniroma1it"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile/homepage fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for roster-member names: no qualifying mentorship evidence."
+          ],
+          "nextAction": "Crossref search done; OpenAlex returned HTTP 429, NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
         }
       ]
     }

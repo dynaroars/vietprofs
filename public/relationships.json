@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-27T14:16:00.000Z",
+  "updatedAt": "2026-10-29T14:11:21.000Z",
   "relationships": [
     {
       "id": "rel-coauthor-vp-0015-vp-0018",
@@ -2919,6 +2919,42 @@
         }
       ],
       "verifiedAt": "2026-10-27T14:16:00.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-0531-vp-1860",
+      "type": "coauthor",
+      "sourceId": "vp-0531",
+      "targetId": "vp-1860",
+      "sources": [
+        "https://kis.pwr.edu.pl/en/structure/division-of-information-systems/computational-collective-intelligence-group",
+        "https://doi.org/10.1109/INISTA.2017.8001174",
+        "https://doi.org/10.1109/SMC.2019.8914208",
+        "https://doi.org/10.1007/978-3-030-55789-8_70"
+      ],
+      "evidence": "Crossref author lists for three DOI-registered works name Thanh-Ngo Nguyen (vp-1860) and Ngoc Thanh Nguyen / Ngoc-Thanh Nguyen (vp-0531) as coauthors. Identity signals: the official Wrocław University of Science and Technology Computational Collective Intelligence Group page lists both (Ngoc Thanh Nguyen as head, Thanh-Ngo Nguyen as assistant professor), both roster entries hold Wrocław Department of Applied Informatics appointments, and the works are in the group's data-mining area. The same-named Ngoc Thanh Nguyen at Nanyang Technological University (vp-1575) is a different roster entry and was not matched.",
+      "works": [
+        {
+          "identifier": "doi:10.1109/INISTA.2017.8001174",
+          "title": "An improved algorithm for mining frequent Inter-transaction patterns",
+          "date": "2017-07",
+          "url": "https://doi.org/10.1109/INISTA.2017.8001174"
+        },
+        {
+          "identifier": "doi:10.1109/SMC.2019.8914208",
+          "title": "An Efficient Algorithm for Mining Frequent Closed Inter- Transaction Patterns",
+          "date": "2019-10",
+          "url": "https://doi.org/10.1109/SMC.2019.8914208"
+        },
+        {
+          "identifier": "doi:10.1007/978-3-030-55789-8_70",
+          "title": "A Fast Algorithm for Mining Closed Inter-transaction Patterns",
+          "date": "2020",
+          "url": "https://doi.org/10.1007/978-3-030-55789-8_70"
+        }
+      ],
+      "verifiedAt": "2026-10-29T14:11:21.000Z",
       "direct": false,
       "notes": ""
     }
