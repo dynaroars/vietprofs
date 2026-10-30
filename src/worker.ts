@@ -12,6 +12,8 @@ export interface Env {
   CLOUDFLARE_API_TOKEN?: string;
   CLOUDFLARE_ACCOUNT_ID?: string;
   CLOUDFLARE_HOSTNAME?: string;
+  /** Fine-grained token with Issues read/write on every site's repo; without it, health problems only reach the logs. */
+  GITHUB_TOKEN?: string;
   STATS_KV?: KVNamespace;
 }
 
@@ -103,6 +105,8 @@ export interface SiteConfig {
   hostname: string;
   historyKey: string;
   lastSuccessKey: string;
+  /** GitHub repository that receives this site's stats-health Issues. */
+  repo: string;
   categories: CategoryRule[];
 }
 
@@ -113,6 +117,7 @@ export const SITES: Record<string, SiteConfig> = {
     hostname: 'vietprofs.roars.dev',
     historyKey: 'browser-rum-daily-v1',
     lastSuccessKey: 'browser-rum-last-success-v1',
+    repo: 'dynaroars/vietprofs',
     categories: [
       { key: 'directory', label: 'Main directory', match: /^\/index\.html$/ },
       { key: 'profiles', label: 'Professor profiles', match: /^\/people\/[^/]+\.html$/ },
@@ -125,6 +130,7 @@ export const SITES: Record<string, SiteConfig> = {
     hostname: 'cspicks.roars.dev',
     historyKey: 'browser-rum-daily-v1:cspicks.roars.dev',
     lastSuccessKey: 'browser-rum-last-success-v1:cspicks.roars.dev',
+    repo: 'dynaroars/cspicks',
     categories: [
       { key: 'search', label: 'Search', match: /^\/index\.html$/ },
       { key: 'directory', label: 'University & area pages', match: /^\/(schools|areas)\// },
@@ -271,13 +277,19 @@ const SUSPECT_VISIT_RATIO = 0.85;
 
 /** Dates whose page views are far above the window's median and that are nearly all single-page visits. */
 export function flagSuspectedDays(daily: DailyBrowserStat[]): string[] {
-  const baseline = median(daily.filter(row => row.status === 'complete').map(row => row.pageViews || 0));
-  if (baseline === null || daily.filter(row => row.status === 'complete').length < SUSPECT_MIN_BASELINE_DAYS) return [];
-  return daily.filter(row => {
-    const pageViews = row.pageViews || 0;
-    return row.status !== 'missing' && pageViews >= SUSPECT_MIN_PAGE_VIEWS && pageViews > SUSPECT_MEDIAN_MULTIPLE * baseline
-      && (row.visits || 0) >= SUSPECT_VISIT_RATIO * pageViews;
-  }).map(row => row.date);
+  return daily.filter(row => isBurst(row, burstBaseline(daily)) && (row.visits || 0) >= SUSPECT_VISIT_RATIO * (row.pageViews || 0))
+    .map(row => row.date);
+}
+
+/** The median daily page views that bursts are measured against, or null without enough complete days. */
+function burstBaseline(daily: DailyBrowserStat[]): number | null {
+  const complete = daily.filter(row => row.status === 'complete');
+  return complete.length < SUSPECT_MIN_BASELINE_DAYS ? null : median(complete.map(row => row.pageViews || 0));
+}
+
+function isBurst(row: DailyBrowserStat, baseline: number | null, multiple = SUSPECT_MEDIAN_MULTIPLE): boolean {
+  const pageViews = row.pageViews || 0;
+  return baseline !== null && row.status !== 'missing' && pageViews >= SUSPECT_MIN_PAGE_VIEWS && pageViews > multiple * baseline;
 }
 
 function median(values: number[]): number | null {
@@ -522,13 +534,103 @@ async function fetchStats(env: Env, site: SiteConfig): Promise<Response> {
   try { return jsonResponse(await queryRum(env, site)); } catch (error) { return staleResponse(env, site, error); }
 }
 
+export interface HealthProblem {
+  /** Stable per kind of problem, so a still-open Issue with the same title is not filed again. */
+  title: string;
+  body: string;
+}
+
+// The daily refresh runs once a day; a snapshot this old means at least the last refresh failed too.
+const STALE_SNAPSHOT_HOURS = 36;
+const MIN_TYPICAL_PAGE_VIEWS = 10;
+const NEAR_MISS_MEDIAN_MULTIPLE = 2;
+const NEAR_MISS_VISIT_RATIO = 0.6;
+const COUNTRY_SHARE_ALERT = 50;
+const COUNTRY_SHARE_JUMP = 20;
+
+/** Problems in a fresh snapshot that the automatic flagging cannot settle, compared with the snapshot stored before it. */
+export function healthProblems(site: SiteConfig, snapshot: BrowserStatsResponse, previous: BrowserStatsResponse | null): HealthProblem[] {
+  const host = site.hostname;
+  const problems: HealthProblem[] = [];
+  const yesterday = snapshot.daily.find(row => row.date === snapshot.coverage.lastCompleteDate);
+  const others = snapshot.daily.filter(row => row.status === 'complete' && !row.suspected && row !== yesterday);
+  const typical = median(others.map(row => row.pageViews || 0));
+  if (yesterday?.status === 'complete' && yesterday.pageViews === 0 && typical !== null && typical >= MIN_TYPICAL_PAGE_VIEWS) {
+    problems.push({
+      title: `Visitor stats (${host}): no page views recorded`,
+      body: `Cloudflare recorded no browser page views for ${host} on ${yesterday.date} (UTC); a typical day has ${typical}. The Web Analytics beacon may have stopped loading: check that automatic installation is still enabled for this hostname.`,
+    });
+  }
+  // A burst just under the suspected-day threshold: probably a crawler that the stats are still counting.
+  if (yesterday && !yesterday.suspected && isBurst(yesterday, burstBaseline(snapshot.daily), NEAR_MISS_MEDIAN_MULTIPLE)
+    && (yesterday.visits || 0) >= NEAR_MISS_VISIT_RATIO * (yesterday.pageViews || 0)) {
+    problems.push({
+      title: `Visitor stats (${host}): possible unflagged crawler`,
+      body: `${yesterday.date} (UTC) had ${yesterday.pageViews} page views and ${yesterday.visits} visits: a burst well above the usual volume, mostly single-page visits, but under the suspected-automation threshold, so it still counts. Check where it came from (country, OS, referrer in Cloudflare Web Analytics) and decide whether to tune the SUSPECT_* constants in src/worker.ts or block the source at the edge.`,
+    });
+  }
+  const top = snapshot.countries[0];
+  const before = previous?.countries.find(country => country.code === top?.code)?.pct ?? 0;
+  if (previous && top && top.pct >= COUNTRY_SHARE_ALERT && top.pct - before >= COUNTRY_SHARE_JUMP) {
+    problems.push({
+      title: `Visitor stats (${host}): sudden country shift`,
+      body: `${top.name} went from ${before}% to ${top.pct}% of the last 7 days' browser page views between two daily refreshes. A sudden jump like this has so far meant a crawler. Check its OS, browser, and referrer in Cloudflare Web Analytics.`,
+    });
+  }
+  return problems;
+}
+
+/** A refresh failure is only a problem once the last good snapshot is old, so one transient error files nothing. */
+export function refreshFailure(site: SiteConfig, error: unknown, previous: BrowserStatsResponse | null, now = new Date()): HealthProblem[] {
+  const last = previous ? Date.parse(previous.generatedAt) : NaN;
+  if (Number.isFinite(last) && now.getTime() - last < STALE_SNAPSHOT_HOURS * 3600_000) return [];
+  return [{
+    title: `Visitor stats (${site.hostname}): refresh failing`,
+    body: `The daily refresh of ${site.hostname}'s visitor statistics failed: ${error instanceof Error ? error.message : String(error)}. ${previous ? `The stats page has been showing the snapshot from ${previous.generatedAt}.` : 'There is no earlier snapshot, so the stats page shows an error.'} Check the Worker logs (npx wrangler tail) and the CLOUDFLARE_API_TOKEN secret.`,
+  }];
+}
+
+const GITHUB_API = 'https://api.github.com';
+export const HEALTH_LABEL = 'visitor-stats';
+
+/** Opens one Issue per problem in the site's repo, skipping problems that already have an open Issue. */
+async function reportProblems(env: Env, site: SiteConfig, problems: HealthProblem[]): Promise<void> {
+  if (!problems.length) return;
+  if (!env.GITHUB_TOKEN) {
+    for (const problem of problems) console.warn(`${problem.title}: ${problem.body}`);
+    return;
+  }
+  const headers = {
+    Authorization: `Bearer ${env.GITHUB_TOKEN}`, Accept: 'application/vnd.github+json',
+    'User-Agent': 'vietprofs-stats-api', 'X-GitHub-Api-Version': '2022-11-28',
+  };
+  const listed = await fetch(`${GITHUB_API}/repos/${site.repo}/issues?state=open&labels=${HEALTH_LABEL}&per_page=100`, { headers });
+  if (!listed.ok) throw new Error(`GitHub issue list returned HTTP ${listed.status}`);
+  const open = new Set((await listed.json() as Array<{ title: string }>).map(issue => issue.title));
+  for (const problem of problems.filter(item => !open.has(item.title))) {
+    const created = await fetch(`${GITHUB_API}/repos/${site.repo}/issues`, {
+      method: 'POST', headers: { ...headers, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ title: problem.title, body: `${problem.body}\n\nFiled automatically by the stats Worker's daily health check (TASKS/VISITOR_STATISTICS.md).`, labels: [HEALTH_LABEL] }),
+    });
+    if (!created.ok) throw new Error(`GitHub issue create returned HTTP ${created.status}`);
+  }
+}
+
 async function archiveSuccessfulSnapshot(env: Env, site: SiteConfig): Promise<void> {
   if (!env.CLOUDFLARE_API_TOKEN || !env.CLOUDFLARE_ACCOUNT_ID || !env.STATS_KV) return;
-  const snapshot = await queryRum(env, site);
+  const previous = await env.STATS_KV.get<BrowserStatsResponse>(site.lastSuccessKey, 'json');
+  let snapshot: BrowserStatsResponse;
+  try {
+    snapshot = await queryRum(env, site);
+  } catch (error) {
+    await reportProblems(env, site, refreshFailure(site, error, previous)).catch(issueError => console.error(issueError));
+    throw error;
+  }
   await Promise.all([
     env.STATS_KV.put(site.historyKey, JSON.stringify(snapshot.daily)),
     env.STATS_KV.put(site.lastSuccessKey, JSON.stringify(snapshot)),
   ]);
+  await reportProblems(env, site, healthProblems(site, snapshot, previous)).catch(issueError => console.error(issueError));
 }
 
 // Sites are archived one after another so one failure does not stop the others; failures still surface in the logs.

@@ -49,12 +49,33 @@ Those are VietProfs' keys. Other sites append `:<hostname>` (e.g. `browser-rum-d
 
 An API failure does not overwrite either key. The API serves the last successful snapshot with a visible stale-data notice; if no browser snapshot exists, it returns an unavailable response rather than zeros.
 
+## Daily health check
+
+After each site's daily refresh (cron `15 1 * * *`), the Worker checks the fresh snapshot against the one stored before it and opens a GitHub Issue, labeled `visitor-stats`, in the site's repo (`repo` in `SITES`) for each problem below. A problem whose Issue is still open is not filed again; close the Issue once it is handled.
+
+- **Refresh failing:** the refresh failed and the last good snapshot is more than 36 hours old (so one transient error files nothing).
+- **No page views recorded:** yesterday had zero page views while a typical day has at least 10, which usually means the beacon stopped loading.
+- **Possible unflagged crawler:** yesterday was more than twice the window's median, with at least 60% single-page visits, but under the suspected-day threshold, so it still counts (Oct 19 and Oct 25, 2026 would have triggered it).
+- **Sudden country shift:** the top country holds at least 50% of the 7-day page views, up 20 points or more since the previous refresh.
+
+Filing needs the Worker secret `GITHUB_TOKEN`: a fine-grained GitHub token limited to the site repos with **Issues: Read and write** and nothing else. Without it, problems only go to the Worker logs (`npx wrangler tail`). The scheduled auditor leaves `visitor-stats` Issues for the owner.
+
+## Edge rule against data-center crawlers
+
+The Singapore crawl of Oct 15–29, 2026 came from Tencent Cloud (AS132203) and Alibaba Cloud (AS45102) addresses, cycling through about 30 old Windows Chrome versions, with no referrer. A zone custom rule (Security → WAF → Custom rules) named `Challenge cloud-network page loads` serves those networks a Managed Challenge:
+
+```
+(ip.src.asnum in {132203 45102} and http.host in {"vietprofs.roars.dev" "cspicks.roars.dev"})
+```
+
+A person on one of those networks (e.g. through a VPN) passes the challenge; a headless crawler usually doesn't, so it never runs the beacon. Search-engine crawlers use their own networks and are not affected. Security → Events shows how often it fires. To find the network behind a new burst, group zone `httpRequestsAdaptiveGroups` by `clientIP` for that day and look the addresses up (`whois -h whois.cymru.com " -v <ip>"`); RUM data has no IPs or networks.
+
 ## Deployment and Cloudflare configuration
 
 The GitHub Pages workflow builds and deploys the static page, but it does not deploy the Cloudflare Worker. After changing the Worker:
 
 1. Confirm Web Analytics automatic installation remains enabled for every hostname in `SITES`, on all paths.
-2. Give the Worker API token **Account Analytics: Read** for the configured account. Keep the token only in the Worker secret `CLOUDFLARE_API_TOKEN`.
+2. Give the Worker API token **Account Analytics: Read** for the configured account. Keep the token only in the Worker secret `CLOUDFLARE_API_TOKEN`. The optional `GITHUB_TOKEN` secret (see "Daily health check") is set the same way: `npx wrangler secret put GITHUB_TOKEN`.
 3. Run `npx wrangler deploy` from an authorized environment.
 
 The account/zone configuration is read from `wrangler.jsonc`; credentials must never be committed.
