@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-29T14:11:21.000Z",
+  "updatedAt": "2026-10-30T14:09:37.000Z",
   "batches": [
     {
       "batchNumber": 1,
@@ -22698,6 +22698,288 @@
             "Official profile/homepage fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for roster-member names: no qualifying mentorship evidence."
           ],
           "nextAction": "Crossref search done; OpenAlex returned HTTP 429, NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        }
+      ]
+    },
+    {
+      "batchNumber": 96,
+      "rosterIds": [
+        "vp-2180",
+        "vp-2179",
+        "vp-2178",
+        "vp-1856",
+        "vp-1855",
+        "vp-1854",
+        "vp-1853",
+        "vp-1852",
+        "vp-1851",
+        "vp-1850",
+        "vp-1849",
+        "vp-1848",
+        "vp-1847",
+        "vp-1846",
+        "vp-1845",
+        "vp-1844",
+        "vp-1843",
+        "vp-1842",
+        "vp-1841",
+        "vp-1840"
+      ],
+      "startedAt": "2026-10-30T14:09:37.000Z",
+      "completedAt": "2026-10-30T14:09:37.000Z",
+      "status": "complete",
+      "outcomes": [
+        {
+          "rosterId": "vp-2180",
+          "sources": [
+            "https://trios.tsukuba.ac.jp/en/researcher/0000003872",
+            "https://www.sk.tsukuba.ac.jp/~tuan/"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile/homepage fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for roster-member names: no qualifying mentorship evidence."
+          ],
+          "nextAction": "OpenAlex returned HTTP 429 (no OPENALEX_MAILTO configured); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-2179",
+          "sources": [
+            "https://nsuok.edu/directory/profiles/vutran.aspx"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile/homepage fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for roster-member names: no qualifying mentorship evidence."
+          ],
+          "nextAction": "OpenAlex returned HTTP 429 (no OPENALEX_MAILTO configured); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-2178",
+          "sources": [
+            "https://www.muw.edu/pfs/faculty/dr-andrew-nguyen/",
+            "https://andrewtpham.org"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile/homepage fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for roster-member names: no qualifying mentorship evidence."
+          ],
+          "nextAction": "OpenAlex returned HTTP 429 (no OPENALEX_MAILTO configured); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1856",
+          "sources": [
+            "https://www.uee.uliege.be/cms/c_3483040/en/uee-repertoire?uid=u185739"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile/homepage fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for roster-member names: no qualifying mentorship evidence.",
+            "Crossref pair check vs vp-1855 (ULiège): no shared works found."
+          ],
+          "nextAction": "OpenAlex returned HTTP 429 (no OPENALEX_MAILTO configured); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1855",
+          "sources": [
+            "https://www.am.uliege.be/cms/c_3482665/fr/am-repertoire?uid=u000274"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile/homepage fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for roster-member names: no qualifying mentorship evidence.",
+            "Crossref pair check vs vp-1856: no shared works found."
+          ],
+          "nextAction": "OpenAlex returned HTTP 429 (no OPENALEX_MAILTO configured); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1854",
+          "sources": [
+            "https://www.oulu.fi/en/researchers/andy-nguyen"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile/homepage fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for roster-member names: no qualifying mentorship evidence."
+          ],
+          "nextAction": "OpenAlex returned HTTP 429 (no OPENALEX_MAILTO configured); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1853",
+          "sources": [
+            "https://mathematics.sc.mahidol.ac.th/people/faculty/bui-phuoc-minh/"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile/homepage fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for roster-member names: no qualifying mentorship evidence."
+          ],
+          "nextAction": "OpenAlex returned HTTP 429 (no OPENALEX_MAILTO configured); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1852",
+          "sources": [
+            "https://ee.eng.chula.ac.th/hoang-luong/"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile/homepage fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for roster-member names: no qualifying mentorship evidence."
+          ],
+          "nextAction": "OpenAlex returned HTTP 429 (no OPENALEX_MAILTO configured); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1851",
+          "sources": [
+            "https://sunwayuniversity.edu.my/school-of-hospitality-and-tourism-management/staff-profiles/dr-riley-pham-xuan-quyet"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile/homepage fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for roster-member names: no qualifying mentorship evidence."
+          ],
+          "nextAction": "OpenAlex returned HTTP 429 (no OPENALEX_MAILTO configured); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1850",
+          "sources": [
+            "https://en.mcut.edu.tw/p/405-1051-51695,c6565.php?Lang=en"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile/homepage fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for roster-member names: no qualifying mentorship evidence."
+          ],
+          "nextAction": "OpenAlex returned HTTP 429 (no OPENALEX_MAILTO configured); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1849",
+          "sources": [
+            "https://www.cm.yzu.edu.tw/EN/Page/Faculty.aspx?ItemId=283#quoc-tuan-le"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile/homepage fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for roster-member names: no qualifying mentorship evidence.",
+            "Crossref pair check vs vp-1848: the only shared-surname hit was a paper with Thi Xuan Anh Tran, a different person (rejected: given-name mismatch)."
+          ],
+          "nextAction": "OpenAlex returned HTTP 429 (no OPENALEX_MAILTO configured); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1848",
+          "sources": [
+            "https://www.cm.yzu.edu.tw/EN/Page/Faculty.aspx?ItemId=283#thi-thanh-huyen-tran"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile/homepage fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for roster-member names: no qualifying mentorship evidence.",
+            "Crossref pair check vs vp-1849: only hit was Thi Xuan Anh Tran, a different person (rejected)."
+          ],
+          "nextAction": "OpenAlex returned HTTP 429 (no OPENALEX_MAILTO configured); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1847",
+          "sources": [
+            "https://eeweb.cycu.edu.tw/portfolio-item/%E9%98%AE%E6%B0%8F%E9%9D%92%E5%AE%89-nguyen-thi-thanh-an/"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile/homepage fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for roster-member names: no qualifying mentorship evidence."
+          ],
+          "nextAction": "OpenAlex returned HTTP 429 (no OPENALEX_MAILTO configured); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1846",
+          "sources": [
+            "https://www.nutrition.ntnu.edu.tw/index.php/en/faculty_en/thi-kim-ngan-nguyen_en/"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile/homepage fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for roster-member names: no qualifying mentorship evidence."
+          ],
+          "nextAction": "OpenAlex returned HTTP 429 (no OPENALEX_MAILTO configured); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1845",
+          "sources": [
+            "https://me1.ntut.edu.tw/p/404-1062-146631.php?Lang=en"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile/homepage fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for roster-member names: no qualifying mentorship evidence.",
+            "Crossref pair check vs vp-1844: no shared works found."
+          ],
+          "nextAction": "OpenAlex returned HTTP 429 (no OPENALEX_MAILTO configured); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1844",
+          "sources": [
+            "https://academic.ntut.edu.tw/17262/17263/teacheren?id=9664"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile/homepage fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for roster-member names: no qualifying mentorship evidence.",
+            "Crossref pair check vs vp-1845 (same department): no shared works found."
+          ],
+          "nextAction": "OpenAlex returned HTTP 429 (no OPENALEX_MAILTO configured); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1843",
+          "sources": [
+            "https://uni.dongseo.ac.kr/ic/index.php?pCode=MN2000133"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile/homepage fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for roster-member names: no qualifying mentorship evidence."
+          ],
+          "nextAction": "OpenAlex returned HTTP 429 (no OPENALEX_MAILTO configured); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1842",
+          "sources": [
+            "https://www.gachon.ac.kr/eng/12758/subview.do#phan-khanh-thinh-nguyen"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile/homepage fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for roster-member names: no qualifying mentorship evidence.",
+            "Crossref pair check vs vp-1840 and vp-1841: no shared works found."
+          ],
+          "nextAction": "OpenAlex returned HTTP 429 (no OPENALEX_MAILTO configured); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1841",
+          "sources": [
+            "https://www.gachon.ac.kr/eng/12758/subview.do#thien-tri-tran",
+            "https://sites.google.com/view/gcbmel/main"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile/homepage fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for roster-member names: no qualifying mentorship evidence.",
+            "Crossref pair check vs vp-1840 and vp-1842 (same Gachon department): no shared works found."
+          ],
+          "nextAction": "OpenAlex returned HTTP 429 (no OPENALEX_MAILTO configured); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1840",
+          "sources": [
+            "https://www.gachon.ac.kr/eng/12758/subview.do#quang-nhat-tran"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile/homepage fetched and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for roster-member names: no qualifying mentorship evidence.",
+            "Crossref pair check vs vp-1841 and vp-1842: no shared works found."
+          ],
+          "nextAction": "OpenAlex returned HTTP 429 (no OPENALEX_MAILTO configured); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
         }
       ]
     }
