@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import worker, { categoryForPath, normalizePath } from '../src/worker.ts';
+import worker, { categoryForPath, flagSuspectedDays, normalizePath } from '../src/worker.ts';
 
 const ctx = { waitUntil: () => {}, passThroughOnException: () => {} };
 
@@ -289,6 +289,72 @@ test('browser, operating system, and device breakdowns come from a separate quer
     assert.equal(response.status, 200);
     assert.equal(data.status, 'ok');
     assert.equal(data.browsers, undefined);
+  } finally {
+    globalThis.fetch = originalFetch;
+  }
+});
+
+// Daily page views and visits for 2026-10-01..2026-10-29 as the live Worker reported them on 2026-10-30.
+const OCTOBER_2026 = [
+  [50, 40], [180, 90], [160, 90], [100, 70], [170, 90], [70, 20], [460, 230], [800, 240], [280, 170], [220, 120],
+  [80, 40], [250, 60], [230, 190], [180, 90], [1190, 1150], [5130, 5010], [1840, 1690], [1190, 1180], [540, 510], [40, 20],
+  [140, 100], [120, 90], [80, 30], [100, 30], [390, 310], [120, 100], [50, 40], [30, 10], [870, 810],
+];
+
+test('suspected-day flagging catches the October 2026 crawler bursts but not ordinary busy days', () => {
+  const daily = OCTOBER_2026.map(([pageViews, visits], index) => ({
+    date: `2026-10-${String(index + 1).padStart(2, '0')}`, pageViews, visits, status: 'complete' as const,
+  }));
+  assert.deepEqual(flagSuspectedDays(daily), ['2026-10-15', '2026-10-16', '2026-10-17', '2026-10-18', '2026-10-19', '2026-10-29']);
+  assert.deepEqual(flagSuspectedDays(daily.slice(0, 6)), [], 'too few days for a baseline');
+});
+
+test('suspected days are left out of the summary, countries, paths, and breakdowns', async () => {
+  const originalFetch = globalThis.fetch;
+  const queries: Array<{ query: string; variables: Record<string, string> }> = [];
+  globalThis.fetch = async (_input, init) => {
+    const body = JSON.parse(String(init?.body));
+    queries.push(body);
+    if (/BrowserTrafficKeptDays/.test(body.query)) {
+      return new Response(JSON.stringify({ data: { viewer: { accounts: [{
+        countries: [{ count: 300, dimensions: { countryName: 'US' } }], paths: [{ count: 300, dimensions: { requestPath: '/' } }],
+      }] } } }));
+    }
+    if (/BrowserBreakdown/.test(body.query)) {
+      return new Response(JSON.stringify({ data: { viewer: { accounts: [{ browsers: [{ count: 300, dimensions: { userAgentBrowser: 'Firefox' } }], systems: [], devices: [] }] } } }));
+    }
+    const { today } = body.variables;
+    // 14 ordinary days of 50 page views, with a crawler burst four days ago.
+    const daily = Array.from({ length: 14 }, (_, index) => {
+      const date = shift(today, index - 14);
+      const burst = date === shift(today, -4);
+      return { count: burst ? 2000 : 50, sum: { visits: burst ? 1990 : 25 }, dimensions: { date } };
+    });
+    return new Response(JSON.stringify({ data: { viewer: { accounts: [{
+      daily, countries: [{ count: 2300, dimensions: { countryName: 'SG' } }], paths: [{ count: 2300, dimensions: { requestPath: '/' } }],
+    }] } } }));
+  };
+  try {
+    const data = await (await worker.fetch(new Request('http://localhost/api/stats'), liveEnv(), ctx as any)).json() as any;
+    const burst = shift(data.today.date, -4);
+    assert.deepEqual(data.daily.filter((row: any) => row.suspected).map((row: any) => row.date), [burst]);
+    assert.deepEqual(data.last7Complete.excludedDays, [burst]);
+    assert.equal(data.last7Complete.days, 6);
+    assert.equal(data.last7Complete.pageViews, 300);
+    assert.equal(data.last7Complete.medianPageViews, 50);
+    assert.equal(data.last7Complete.avgPageViews, 50);
+    assert.deepEqual(data.countries.map((row: any) => [row.code, row.pct]), [['US', 100]]);
+    assert.equal(data.categoryTotal, 300);
+    assert.deepEqual(data.browsers.map((row: any) => row.name), ['Firefox']);
+
+    const kept = queries.find(body => /BrowserTrafficKeptDays/.test(body.query))!;
+    const breakdown = queries.find(body => /BrowserBreakdown/.test(body.query))!;
+    const yesterday = shift(data.today.date, -1);
+    for (const body of [kept, breakdown]) {
+      assert.match(body.query, new RegExp(`\\{ date_geq: "${shift(yesterday, -6)}", date_leq: "${shift(burst, -1)}" \\} \\{ date_geq: "${shift(burst, 1)}", date_leq: "${yesterday}" \\}`));
+      assert.doesNotMatch(body.query, /\$categoryStart|\$lastCompleteDate/, 'no unused GraphQL variables');
+      assert.deepEqual(Object.keys(body.variables).sort(), ['accountTag', 'hostname']);
+    }
   } finally {
     globalThis.fetch = originalFetch;
   }

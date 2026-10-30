@@ -20,6 +20,8 @@ export interface DailyBrowserStat {
   pageViews: number | null;
   visits: number | null;
   status: 'complete' | 'partial' | 'missing';
+  /** Flagged by `flagSuspectedDays`: shown, but left out of every summary and 7-day breakdown. */
+  suspected?: true;
 }
 
 export interface CountryStat {
@@ -56,7 +58,11 @@ export interface BrowserStatsResponse {
   measurementStartedAt: string | null;
   coverage: { firstDate: string | null; lastCompleteDate: string; completeDays7: number; availableDays30: number };
   today: { date: string; pageViews: number | null; visits: number | null; complete: false; collected: boolean };
-  last7Complete: { pageViews: number; visits: number; days: number; avgPageViews: number | null; avgVisits: number | null };
+  /** Totals, averages, and the median cover only the days not flagged as suspected; `excludedDays` lists the flagged ones. */
+  last7Complete: {
+    pageViews: number; visits: number; days: number; avgPageViews: number | null; avgVisits: number | null;
+    medianPageViews?: number | null; excludedDays?: string[];
+  };
   last30Available: { pageViews: number; visits: number; days: number };
   daily: DailyBrowserStat[];
   countries: CountryStat[];
@@ -202,6 +208,31 @@ const SUSPECTED_AUTOMATION_FILTER = `OR: [
           { AND: [{ refererHost_neq: "" }, { refererHost_neq: $hostname }] }
         ]`;
 
+// Inclusive UTC date ranges for the 7-day groups; null means the whole $categoryStart..$lastCompleteDate period.
+type DateRanges = Array<[start: string, end: string]> | null;
+
+// The 7-day groups' filter. Leaving out suspected days splits the period into ranges; both the ranges and the
+// automation filter are OR lists, so they go into one AND.
+function periodFilter(ranges: DateRanges): string {
+  if (!ranges) return `filter: { date_geq: $categoryStart, date_leq: $lastCompleteDate, requestHost: $hostname, bot: 0
+        ${SUSPECTED_AUTOMATION_FILTER} }`;
+  const kept = ranges.map(([start, end]) => `{ date_geq: "${start}", date_leq: "${end}" }`).join(' ');
+  return `filter: { requestHost: $hostname, bot: 0
+        AND: [{ ${SUSPECTED_AUTOMATION_FILTER} }, { OR: [${kept}] }] }`;
+}
+
+const PERIOD_GROUPS = (ranges: DateRanges) => `
+      countries: rumPageloadEventsAdaptiveGroups(
+        limit: 250
+        orderBy: [count_DESC]
+        ${periodFilter(ranges)}
+      ) { count dimensions { countryName } }
+      paths: rumPageloadEventsAdaptiveGroups(
+        limit: 5000
+        orderBy: [count_DESC]
+        ${periodFilter(ranges)}
+      ) { count dimensions { requestPath } }`;
+
 function buildQuery(): string {
   return `
 query BrowserTraffic($accountTag: string!, $hostname: string!, $windowStart: Date!, $today: Date!, $categoryStart: Date!, $lastCompleteDate: Date!) {
@@ -212,36 +243,73 @@ query BrowserTraffic($accountTag: string!, $hostname: string!, $windowStart: Dat
         orderBy: [date_ASC]
         filter: { date_geq: $windowStart, date_leq: $today, requestHost: $hostname, bot: 0
         ${SUSPECTED_AUTOMATION_FILTER} }
-      ) { count sum { visits } dimensions { date } }
-      countries: rumPageloadEventsAdaptiveGroups(
-        limit: 250
-        orderBy: [count_DESC]
-        filter: { date_geq: $categoryStart, date_leq: $lastCompleteDate, requestHost: $hostname, bot: 0
-        ${SUSPECTED_AUTOMATION_FILTER} }
-      ) { count dimensions { countryName } }
-      paths: rumPageloadEventsAdaptiveGroups(
-        limit: 5000
-        orderBy: [count_DESC]
-        filter: { date_geq: $categoryStart, date_leq: $lastCompleteDate, requestHost: $hostname, bot: 0
-        ${SUSPECTED_AUTOMATION_FILTER} }
-      ) { count dimensions { requestPath } }
+      ) { count sum { visits } dimensions { date } }${PERIOD_GROUPS(null)}
     }
   }
 }`;
 }
 
+// Countries and paths again, without the suspected days; only asked for when the 7-day period has some.
+function buildKeptDaysQuery(ranges: Array<[string, string]>): string {
+  return `
+query BrowserTrafficKeptDays($accountTag: string!, $hostname: string!) {
+  viewer {
+    accounts(filter: { accountTag: $accountTag }) {${PERIOD_GROUPS(ranges)}
+    }
+  }
+}`;
+}
+
+// A crawler that runs the analytics beacon gets past both Cloudflare's `bot: 0` and SUSPECTED_AUTOMATION_FILTER.
+// The ones seen so far (mobile Chrome from 2026-10-02; desktop Chrome from Singapore, 2026-10-15 to 2026-10-19 and
+// 2026-10-29) arrived in bursts several times the usual daily volume in which nearly every page view was its own
+// visit; ordinary days run about one visit per two page views. Flag such days instead of writing a filter per crawler.
+const SUSPECT_MIN_BASELINE_DAYS = 7;
+const SUSPECT_MIN_PAGE_VIEWS = 100;
+const SUSPECT_MEDIAN_MULTIPLE = 2.5;
+const SUSPECT_VISIT_RATIO = 0.85;
+
+/** Dates whose page views are far above the window's median and that are nearly all single-page visits. */
+export function flagSuspectedDays(daily: DailyBrowserStat[]): string[] {
+  const baseline = median(daily.filter(row => row.status === 'complete').map(row => row.pageViews || 0));
+  if (baseline === null || daily.filter(row => row.status === 'complete').length < SUSPECT_MIN_BASELINE_DAYS) return [];
+  return daily.filter(row => {
+    const pageViews = row.pageViews || 0;
+    return row.status !== 'missing' && pageViews >= SUSPECT_MIN_PAGE_VIEWS && pageViews > SUSPECT_MEDIAN_MULTIPLE * baseline
+      && (row.visits || 0) >= SUSPECT_VISIT_RATIO * pageViews;
+  }).map(row => row.date);
+}
+
+function median(values: number[]): number | null {
+  if (!values.length) return null;
+  const sorted = [...values].sort((a, b) => a - b);
+  const middle = Math.floor(sorted.length / 2);
+  return sorted.length % 2 ? sorted[middle]! : (sorted[middle - 1]! + sorted[middle]!) / 2;
+}
+
+/** The dates of `period` not in `excluded`, as contiguous inclusive ranges. */
+function keptRanges(period: string[], excluded: Set<string>): Array<[string, string]> {
+  const ranges: Array<[string, string]> = [];
+  for (const date of period) {
+    if (excluded.has(date)) continue;
+    const last = ranges.at(-1);
+    if (last && shiftDate(last[1], 1) === date) last[1] = date;
+    else ranges.push([date, date]);
+  }
+  return ranges;
+}
+
 // Browsers, operating systems, and device types over the same 7 complete days as countries. A separate request,
 // so a problem with these dimensions can never take down the main traffic numbers.
-function buildBreakdownQuery(): string {
+function buildBreakdownQuery(ranges: DateRanges): string {
   const group = (alias: string, dimension: string) => `
       ${alias}: rumPageloadEventsAdaptiveGroups(
         limit: 50
         orderBy: [count_DESC]
-        filter: { date_geq: $categoryStart, date_leq: $lastCompleteDate, requestHost: $hostname, bot: 0
-        ${SUSPECTED_AUTOMATION_FILTER} }
+        ${periodFilter(ranges)}
       ) { count dimensions { ${dimension} } }`;
   return `
-query BrowserBreakdown($accountTag: string!, $hostname: string!, $categoryStart: Date!, $lastCompleteDate: Date!) {
+query BrowserBreakdown($accountTag: string!, $hostname: string!${ranges ? '' : ', $categoryStart: Date!, $lastCompleteDate: Date!'}) {
   viewer {
     accounts(filter: { accountTag: $accountTag }) {${group('browsers', 'userAgentBrowser')}${group('systems', 'userAgentOS')}${group('devices', 'deviceType')}
     }
@@ -267,14 +335,14 @@ function breakdown(rows: RumGroup[] | undefined, dimension: 'userAgentBrowser' |
     .map(([name, pageViews]) => ({ name, pageViews, pct: total ? Math.round(pageViews / total * 1000) / 10 : 0 }));
 }
 
-async function queryBreakdowns(env: Env, site: SiteConfig, categoryStart: string, lastCompleteDate: string) {
+async function queryBreakdowns(env: Env, site: SiteConfig, categoryStart: string, lastCompleteDate: string, ranges: DateRanges) {
   try {
     const response = await fetch(GRAPHQL_ENDPOINT, {
       method: 'POST',
       headers: { Authorization: `Bearer ${env.CLOUDFLARE_API_TOKEN}`, 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        query: buildBreakdownQuery(),
-        variables: { accountTag: env.CLOUDFLARE_ACCOUNT_ID, hostname: site.hostname, categoryStart, lastCompleteDate },
+        query: buildBreakdownQuery(ranges),
+        variables: { accountTag: env.CLOUDFLARE_ACCOUNT_ID, hostname: site.hostname, ...(ranges ? {} : { categoryStart, lastCompleteDate }) },
       }),
     });
     if (!response.ok) return {};
@@ -289,6 +357,22 @@ async function queryBreakdowns(env: Env, site: SiteConfig, categoryStart: string
   } catch {
     return {};
   }
+}
+
+async function queryKeptDays(env: Env, site: SiteConfig, ranges: Array<[string, string]>): Promise<{ countries?: RumGroup[]; paths?: RumGroup[] }> {
+  // Every day of the period was flagged: there is nothing left to group.
+  if (!ranges.length) return {};
+  const response = await fetch(GRAPHQL_ENDPOINT, {
+    method: 'POST',
+    headers: { Authorization: `Bearer ${env.CLOUDFLARE_API_TOKEN}`, 'Content-Type': 'application/json' },
+    body: JSON.stringify({ query: buildKeptDaysQuery(ranges), variables: { accountTag: env.CLOUDFLARE_ACCOUNT_ID, hostname: site.hostname } }),
+  });
+  if (!response.ok) throw new Error(`Cloudflare GraphQL returned HTTP ${response.status}`);
+  const result = await response.json() as RumGraphqlResponse;
+  if (result.errors?.length) throw new Error(result.errors.map(error => error.message || 'Unknown GraphQL error').join('; '));
+  const account = result.data?.viewer?.accounts?.[0];
+  if (!account) throw new Error('Cloudflare returned no matching account data');
+  return account;
 }
 
 export async function queryRum(env: Env, site: SiteConfig, now = new Date()): Promise<BrowserStatsResponse> {
@@ -328,8 +412,12 @@ export async function queryRum(env: Env, site: SiteConfig, now = new Date()): Pr
     if (!measurementStartedAt || date < measurementStartedAt) return { date, pageViews: null, visits: null, status: 'missing' };
     return { date, pageViews: row?.pageViews ?? 0, visits: row?.visits ?? 0, status: date === today ? 'partial' : 'complete' };
   });
+  const suspected = new Set(flagSuspectedDays(daily));
+  for (const row of daily) if (suspected.has(row.date)) row.suspected = true;
 
-  const complete = daily.filter(row => row.status === 'complete');
+  const complete = daily.filter(row => row.status === 'complete' && !row.suspected);
+  const period = dateRange(categoryStart, lastCompleteDate);
+  const excludedDays = period.filter(date => suspected.has(date));
   const last7 = complete.filter(row => row.date >= categoryStart && row.date <= lastCompleteDate);
   const todayRow = daily.find(row => row.date === today)!;
   const pageViews7 = sum(last7.map(row => row.pageViews || 0));
@@ -337,7 +425,11 @@ export async function queryRum(env: Env, site: SiteConfig, now = new Date()): Pr
   const pageViews30 = sum(complete.map(row => row.pageViews || 0));
   const visits30 = sum(complete.map(row => row.visits || 0));
 
-  const countries = (account.countries || []).map(row => {
+  // With suspected days in the period, countries and paths come from a second query that leaves them out.
+  const ranges = excludedDays.length ? keptRanges(period, suspected) : null;
+  const groups = ranges ? await queryKeptDays(env, site, ranges) : account;
+
+  const countries = (groups.countries || []).map(row => {
     const code = (row.dimensions?.countryName || '').toUpperCase();
     const pageViews = row.count || 0;
     return { code, name: countryName(code), flag: countryFlag(code), pageViews, pct: pageViews7 ? Math.round(pageViews / pageViews7 * 1000) / 10 : 0 };
@@ -345,7 +437,7 @@ export async function queryRum(env: Env, site: SiteConfig, now = new Date()): Pr
 
   const categoryCounts = new Map<string, number>(site.categories.map(item => [item.key, 0]));
   let pathTotal = 0;
-  for (const row of account.paths || []) {
+  for (const row of groups.paths || []) {
     const count = row.count || 0;
     pathTotal += count;
     const key = categoryForPath(row.dimensions?.requestPath || '', site);
@@ -356,7 +448,7 @@ export async function queryRum(env: Env, site: SiteConfig, now = new Date()): Pr
     pageViews: categoryCounts.get(key) || 0,
     pct: pathTotal ? Math.round((categoryCounts.get(key) || 0) / pathTotal * 1000) / 10 : 0,
   }));
-  const breakdowns = await queryBreakdowns(env, site, categoryStart, lastCompleteDate);
+  const breakdowns = ranges?.length === 0 ? {} : await queryBreakdowns(env, site, categoryStart, lastCompleteDate, ranges);
 
   return {
     schemaVersion: 3, source: 'cloudflare-rum', generatedAt: now.toISOString(), timezone: 'UTC', status: 'ok', stale: false,
@@ -367,6 +459,7 @@ export async function queryRum(env: Env, site: SiteConfig, now = new Date()): Pr
       pageViews: pageViews7, visits: visits7, days: last7.length,
       avgPageViews: last7.length ? Math.round(pageViews7 / last7.length * 10) / 10 : null,
       avgVisits: last7.length ? Math.round(visits7 / last7.length * 10) / 10 : null,
+      medianPageViews: median(last7.map(row => row.pageViews || 0)), excludedDays,
     },
     last30Available: { pageViews: pageViews30, visits: visits30, days: complete.length },
     daily, countries, categories, categoryTotal: pathTotal,
@@ -398,7 +491,10 @@ function demoResponse(site: SiteConfig, now = new Date()): BrowserStatsResponse 
     measurementStartedAt: start, isDemo: true,
     coverage: { firstDate: start, lastCompleteDate, completeDays7: 7, availableDays30: 9 },
     today: { date: today, pageViews: 7, visits: 4, complete: false, collected: true },
-    last7Complete: { pageViews: total, visits, days: 7, avgPageViews: Math.round(total / 7 * 10) / 10, avgVisits: Math.round(visits / 7 * 10) / 10 },
+    last7Complete: {
+      pageViews: total, visits, days: 7, avgPageViews: Math.round(total / 7 * 10) / 10, avgVisits: Math.round(visits / 7 * 10) / 10,
+      medianPageViews: median(last7.map(row => row.pageViews || 0)), excludedDays: [],
+    },
     last30Available: { pageViews: sum(daily.slice(0, -1).map(row => row.pageViews || 0)), visits: sum(daily.slice(0, -1).map(row => row.visits || 0)), days: 9 },
     daily, countries: [{ code: 'US', name: 'United States', flag: '🇺🇸', pageViews: total, pct: 100 }], categories, categoryTotal: total,
     categoryPeriod: { startDate: categoryStart, endDate: lastCompleteDate, days: 7 },
