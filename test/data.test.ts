@@ -138,17 +138,6 @@ test('roster is a non-empty array', () => {
   assert.ok(roster.length > 0);
 });
 
-test('generated stats-history.json is a non-decreasing-date time series ending at the current roster size', () => {
-  const history: { date: string; count: number }[] = JSON.parse(readFileSync(join(__dirname, '../public/stats-history.json'), 'utf8'));
-  assert.ok(history.length > 0);
-  for (const point of history) {
-    assert.match(point.date, /^\d{4}-\d{2}-\d{2}$/);
-    assert.ok(Number.isInteger(point.count) && point.count > 0);
-  }
-  for (let i = 1; i < history.length; i++) assert.ok(history[i].date > history[i - 1].date);
-  assert.equal(history[history.length - 1].count, roster.length);
-});
-
 test('health subfields are the only derived field subdivisions', () => {
   for (const person of roster) {
     const subfield = healthSubfieldOf(person);

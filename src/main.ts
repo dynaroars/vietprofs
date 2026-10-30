@@ -1,5 +1,4 @@
 import './style.css';
-import { ACADEMIC_FORTUNES } from './roster-constants.ts';
 import {
   FIELDS,
   INSTITUTION_TYPES,
@@ -16,10 +15,8 @@ import {
   filterRoster,
   hasEnoughPeopleForRosterHub,
   institutionTypeOf,
-  loadGitInfo,
   loadRelationships,
   loadRoster,
-  loadStatsHistory,
   locationMatches,
   personPath,
   regionPath,
@@ -34,25 +31,22 @@ import {
   type Roster,
   type RosterEntry,
 } from './data.ts';
-import { abbreviateInsightText, escapeHtml, formatRosterDate } from './utils.ts';
+import { abbreviateInsightText, escapeHtml } from './utils.ts';
 import { applyFavoriteToggle, fieldDropdownLabel, renderRosterEntry } from './render.ts';
 import { clearRecentProfiles, loadFavorites, loadRecentProfiles, toggleFavorite } from './favorites-store.ts';
-import { openRosterShell } from './roster-shell.ts';
 import { locationForQuery } from './filter-state.ts';
 import { renderAddFab } from './add-fab.ts';
 import { ICONS } from './see-also.ts';
 import { renderShareMenu } from './share.ts';
-import { renderFunFacts, renderGrowthChart, renderHealthPanel, type GrowthMetricKey } from './insights.ts';
+import { renderFunFacts, renderHealthPanel } from './insights.ts';
 import {
   createCommandHandler,
   createSearchController,
   focusQuietly,
   hideCommandOutput as hideCommandOutputEl,
   parseKeywordQuery as parseKeywordQueryShared,
-  restoreCrtTheme,
   setupKeyboardShortcuts,
   setupSearchHelp,
-  showCommandOutput as showCommandOutputEl,
 } from './search-kit.ts';
 import { setupBackToTop } from './back-to-top.ts';
 
@@ -190,7 +184,7 @@ function renderShell() {
           <p><strong>KEYBOARD</strong></p>
           <p><code>/</code> search · <code>j</code>/<code>k</code> move · <code>Enter</code> open · <code>f</code> favorite · <code>r</code> random · <code>Esc</code> clear</p>
           <p><strong>COMMANDS</strong></p>
-          <p><code>help</code> · <code>recent</code> · <code>query plan</code> · <code>whoami</code> · <code>uname -a</code> · <code>fortune</code> · <code>/dev/random</code> · <code>theme crt</code></p>
+          <p><code>help</code> · <code>query plan</code> · <code>clear</code></p>
         </div>
       </div>
       <select id="location-filter" class="field-select location-select" aria-label="Filter by location">
@@ -367,8 +361,6 @@ async function init() {
   ])];
   const availableRegionHubs = new Set(regionHubCandidates.filter((region) =>
     hasEnoughPeopleForRosterHub(filterRoster(roster, { location: region }).length)));
-  const statsHistory = await loadStatsHistory();
-  const gitInfo = await loadGitInfo();
 
   // Matches everything filterRoster actually searches over (name, university, city, state, country,
   // department, rank, research areas, degree institutions, and honors) so a suggestion always yields at least one result.
@@ -434,7 +426,6 @@ async function init() {
   const commandOutput = document.getElementById('command-output') as HTMLOutputElement;
   let queryPlan = '';
   let keyboardSelectedIndex = -1;
-  let currentGrowthMetric: GrowthMetricKey = 'count';
   // Search box: a typed/pasted "Keyword: value" prefix becomes a removable scope chip
   // (createSearchController in the shared search-kit), with an in-page suggestion listbox.
   // An in-page listbox rather than a native <datalist>: browser-owned datalist popups can
@@ -506,10 +497,6 @@ async function init() {
     });
   }
 
-  function showCommandOutput(message: string) {
-    showCommandOutputEl(commandOutput, message);
-  }
-
   function hideCommandOutput() {
     hideCommandOutputEl(commandOutput);
   }
@@ -527,12 +514,6 @@ async function init() {
       `sort=${sortSelect.value}`,
       `matches=${matches}`,
     ].filter(Boolean).join('  ');
-  }
-
-  function completeCommand(message: string) {
-    clearSearch();
-    showCommandOutput(message);
-    update({ fromSearch: true });
   }
 
   function optionElement(value: string, label: string): HTMLOptionElement {
@@ -820,7 +801,7 @@ async function init() {
         countEl.textContent = 'Dataset health, metadata completeness, and verification metrics:';
       }
       if (rosterEl) {
-        rosterEl.innerHTML = renderHealthPanel(roster, import.meta.env.BASE_URL, gitInfo, true, statsHistory, currentGrowthMetric);
+        rosterEl.innerHTML = renderHealthPanel(roster, import.meta.env.BASE_URL, true);
       }
       renderQueryPlan(roster.length, 'health');
       syncUrl();
@@ -906,68 +887,16 @@ async function init() {
     onBeforeToggle: () => search.close(),
   });
 
-  function showRecent() {
-    sortSelect.value = 'vp-newest';
-    update();
-    completeCommand('Displaying faculty sorted by most recently added.');
-  }
-  function showHealth() {
-    clearSearch();
-    filterState.health = true;
-    filterState.insights = false;
-    update();
-    completeCommand('Displaying dataset health, metadata completeness, and verification metrics.');
-  }
-  function showInsights() {
-    clearSearch();
-    filterState.insights = true;
-    filterState.health = false;
-    update();
-    completeCommand('Displaying diaspora insights and macro statistics.');
-  }
-  function openShell() {
-    clearSearch();
-    search.close();
-    hideCommandOutput();
-    update();
-    openRosterShell(searchIndex);
-  }
-
-  // The shared help/whoami/uname/fortune/theme crt/clear command set, plus VietProfs' own views.
+  // The shared help / query plan / clear commands; every other input is a search.
   const runCommand = createCommandHandler({
-    siteName: 'VietProfs',
-    aboutText: 'VietProfs — an open, community-maintained index of the Vietnamese academic diaspora.',
     input: searchInput,
     getSearch: () => search,
     commandOutputEl: commandOutput,
     help: searchHelp,
     onUpdate: () => update({ fromSearch: true }),
     getQueryPlan: () => queryPlan,
-    facts: ACADEMIC_FORTUNES,
-    unameText: () => `VietProfs static-web TypeScript/Vite build ${__BUILD_COMMIT__} browser/${navigator.platform || 'unknown'}`,
-    // Shared aliases VietProfs doesn't offer; these words stay ordinary searches here.
-    disabledCommands: ['about', 'build', 'built', 'build it', 'version', 'stats', 'status', 'sudo find student'],
-    onRandom: () => {
-      const person = roster[Math.floor(Math.random() * roster.length)];
-      window.location.href = `${import.meta.env.BASE_URL}${personPath(person.id)}`;
-    },
     resetDirectory,
-    extraCommands: {
-      recent: showRecent,
-      new: showRecent,
-      'whats new': showRecent,
-      completeness: showHealth,
-      health: showHealth,
-      audit: showHealth,
-      insights: showInsights,
-      facts: showInsights,
-      diaspora: showInsights,
-      pathways: showInsights,
-      'sudo vietprofs': openShell,
-    },
   });
-
-  restoreCrtTheme('VietProfs');
 
   searchStateChip.addEventListener('click', () => {
     filterState.state = '';
@@ -1075,15 +1004,6 @@ async function init() {
       update();
       return;
     }
-    const growthMetricBtn = target.closest<HTMLButtonElement>('.growth-metric-btn');
-    if (growthMetricBtn && growthMetricBtn.dataset.metric) {
-      currentGrowthMetric = growthMetricBtn.dataset.metric as GrowthMetricKey;
-      const growthSection = document.getElementById('growth-section');
-      if (growthSection) {
-        growthSection.outerHTML = renderGrowthChart(statsHistory, currentGrowthMetric);
-      }
-      return;
-    }
     const rankedItem = target.closest<HTMLButtonElement>('.ranked-item');
     if (rankedItem && rankedItem.dataset.search) {
       const rankedScope = rankedItem.dataset.scope;
@@ -1098,29 +1018,10 @@ async function init() {
     }
   });
 
-  // mousemove fires continuously while the pointer is over the insights dashboard, so the chart's
-  // serialized point list is parsed once per <svg> element and cached against it rather than on
-  // every event. The chart is re-rendered (new element) whenever the metric changes.
-  type GrowthPoint = [number, string, number, string?, string?];
-  const growthPointsCache = new WeakMap<SVGSVGElement, GrowthPoint[]>();
-  function growthPointsOf(svg: SVGSVGElement): GrowthPoint[] {
-    const cached = growthPointsCache.get(svg);
-    if (cached) return cached;
-    let parsed: GrowthPoint[] = [];
-    try {
-      parsed = JSON.parse(svg.dataset.points || '[]') as GrowthPoint[];
-    } catch {
-      parsed = [];
-    }
-    growthPointsCache.set(svg, parsed);
-    return parsed;
-  }
-
-  // World map hover tooltip & highlight + Growth chart crosshairs
+  // World map hover tooltip & highlight
   document.getElementById('roster').addEventListener('mousemove', (e) => {
     const target = e.target as HTMLElement;
 
-    // 1. World Map & Chips hover
     const mapSection = target.closest<HTMLElement>('.world-map-section');
     document.querySelectorAll<HTMLElement>('.world-map-section').forEach((sec) => {
       if (sec !== mapSection) {
@@ -1177,50 +1078,8 @@ async function init() {
         if (tooltip) tooltip.setAttribute('hidden', '');
       }
     }
-
-    // 2. Growth chart hover
-    const svg = target.closest?.('.growth-chart') as SVGSVGElement | null;
-    document.querySelectorAll<SVGSVGElement>('.growth-chart').forEach((el) => {
-      if (el !== svg) {
-        el.querySelector('.growth-crosshair')?.setAttribute('hidden', '');
-        el.parentElement?.querySelector('.growth-tooltip')?.setAttribute('hidden', '');
-      }
-    });
-    if (!svg) return;
-    const points = growthPointsOf(svg);
-    if (!points.length) return;
-    const rect = svg.getBoundingClientRect();
-    const vbWidth = svg.viewBox.baseVal.width || 640;
-    const x = ((e.clientX - rect.left) / rect.width) * vbWidth;
-    let nearest = points[0];
-    let bestDist = Math.abs(points[0][0] - x);
-    for (const p of points) {
-      const d = Math.abs(p[0] - x);
-      if (d < bestDist) {
-        bestDist = d;
-        nearest = p;
-      }
-    }
-    const [nx, date, val, unit, pluralUnit] = nearest;
-    const unitLabel = val === 1 ? (unit || svg.dataset.unit || 'item') : (pluralUnit || svg.dataset.plural || 'items');
-    const crosshair = svg.querySelector<SVGLineElement>('.growth-crosshair');
-    if (crosshair) {
-      crosshair.setAttribute('x1', String(nx));
-      crosshair.setAttribute('x2', String(nx));
-      crosshair.removeAttribute('hidden');
-    }
-    const tooltip = svg.parentElement?.querySelector<HTMLElement>('.growth-tooltip');
-    if (tooltip) {
-      tooltip.textContent = `${formatRosterDate(`${date}T00:00:00Z`)}: ${val.toLocaleString()} ${unitLabel}`;
-      tooltip.removeAttribute('hidden');
-      tooltip.style.left = `${(nx / vbWidth) * 100}%`;
-    }
   });
   document.getElementById('roster').addEventListener('mouseleave', () => {
-    document.querySelectorAll<SVGSVGElement>('.growth-chart').forEach((el) => {
-      el.querySelector('.growth-crosshair')?.setAttribute('hidden', '');
-      el.parentElement?.querySelector('.growth-tooltip')?.setAttribute('hidden', '');
-    });
     document.querySelectorAll<HTMLElement>('.world-map-tooltip').forEach((el) => el.setAttribute('hidden', ''));
     document.querySelectorAll('.world-map-country.is-hovered, .world-map-pin.is-hovered').forEach((el) => el.classList.remove('is-hovered'));
   });
@@ -1292,7 +1151,6 @@ async function init() {
 
   console.info(`%cVietProfs ${__BUILD_COMMIT__}`, 'color:#2e9e64;font-weight:bold;font-size:16px');
   console.info('The roster is open source: https://github.com/dynaroars/vietprofs');
-  console.info('Try typing “help”, “fortune”, or “uname -a” into search.');
 }
 
 init();

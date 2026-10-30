@@ -2,7 +2,7 @@
 // sync with the roster snapshot the manuscript reports. Run `npm run figures` after a roster
 // change, then rebuild paper/paper.pdf and re-copy it to public/vietprofs.pdf.
 //
-// The server/browser setup mirrors test/browser-smoke.test.ts: `vite preview` over the built
+// The server/browser setup mirrors test/browser-smoke.e2e.ts: `vite preview` over the built
 // dist/, driven by headless Chromium.
 import { spawn } from 'node:child_process';
 import { createRequire } from 'node:module';

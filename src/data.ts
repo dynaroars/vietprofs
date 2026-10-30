@@ -163,82 +163,6 @@ export async function loadRelationships(): Promise<RelationshipDatabase> {
   return relationshipsCached;
 }
 
-// A build-time-generated daily time series of total roster size (see scripts/build-stats-history.ts).
-// It's a nice-to-have chart, not core roster content, so a fetch failure returns an empty
-// series rather than breaking the page.
-export async function loadStatsHistory(): Promise<StatsHistoryPoint[]> {
-  try {
-    const cacheBuster = typeof __BUILD_COMMIT__ !== 'undefined' && __BUILD_COMMIT__ ? `?v=${__BUILD_COMMIT__}` : '';
-    const res = await fetch(`${import.meta.env.BASE_URL}stats-history.json${cacheBuster}`);
-    if (!res.ok) return [];
-    return await res.json();
-  } catch {
-    return [];
-  }
-}
-
-export interface CodebaseLanguage {
-  language: string;
-  files: number;
-  lines: number;
-}
-
-export interface Codebase {
-  trackedFiles: number;
-  codeFiles: number;
-  codeLines: number;
-  languages: CodebaseLanguage[];
-  testFiles: number;
-  npmScripts: number;
-  devDependencies: number;
-  workflows: number;
-}
-
-export interface GitHubItem {
-  number: number;
-  title: string;
-  url: string;
-  state: string;
-  createdAt: string;
-}
-
-export interface GitHubCounts {
-  open: number;
-  closed: number;
-  merged?: number;
-  latest: GitHubItem | null;
-}
-
-export interface GitHubActivity {
-  pulls: GitHubCounts;
-  issues: GitHubCounts;
-  fetchedAt: string;
-}
-
-export interface GitInfo {
-  totalCommits: number;
-  latestHash: string;
-  latestDate: string;
-  latestMessage: string;
-  branch: string;
-  repoUrl: string;
-  contributors?: number;
-  firstCommitDate?: string;
-  codebase?: Codebase;
-  github?: GitHubActivity | null;
-}
-
-export async function loadGitInfo(): Promise<GitInfo | null> {
-  try {
-    const cacheBuster = typeof __BUILD_COMMIT__ !== 'undefined' && __BUILD_COMMIT__ ? `?v=${__BUILD_COMMIT__}` : '';
-    const res = await fetch(`${import.meta.env.BASE_URL}git-info.json${cacheBuster}`);
-    if (!res.ok) return null;
-    return await res.json();
-  } catch {
-    return null;
-  }
-}
-
 // filter(Boolean) doesn't narrow `(string | undefined)[]` to `string[]`, and every unique*()
 // helper needs exactly that, so the narrowing predicate lives here once.
 function isPresent(value: string | undefined | null): value is string {
@@ -1007,16 +931,6 @@ export function buildTopCountries(roster: Roster, limit = 8): [string, number][]
 export function buildTrackCounts(roster: Roster): [string, number][] {
   const counts = new Map(countBy(roster, (p) => p.track));
   return TRACKS.map((track): [string, number] => [track, counts.get(track) ?? 0]).filter(([, count]) => count > 0);
-}
-
-export interface StatsHistoryPoint {
-  date: string;
-  count: number;
-  institutions?: number;
-  countries?: number;
-  portraits?: number;
-  honors?: number;
-  codeLines?: number;
 }
 
 function stripDiacritics(s: string): string {

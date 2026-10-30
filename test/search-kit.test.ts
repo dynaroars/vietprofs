@@ -45,46 +45,7 @@ test('sample and shuffle array helpers preserve elements and length', () => {
   assert.deepEqual([...shuffled].sort(), [...items].sort());
 });
 
-test('createCommandHandler handles built-in Easter egg commands', () => {
-  let lastOutput = '';
-  let updated = false;
-
-  const fakeOutputEl = {
-    set textContent(val: string) {
-      lastOutput = val;
-    },
-    get textContent() {
-      return lastOutput;
-    },
-    hidden: true,
-  } as unknown as HTMLElement;
-
-  const handler = createCommandHandler({
-    siteName: 'VietProfs',
-    aboutText: 'VietProfs is a directory of Vietnamese faculty outside Vietnam.',
-    commandOutputEl: fakeOutputEl,
-    onUpdate: () => {
-      updated = true;
-    },
-    getStats: () => '1484 profiles',
-    getQueryPlan: () => 'mode=roster matches=10',
-    facts: ['Fact 1', 'Fact 2'],
-  });
-
-  assert.equal(handler('whoami'), true);
-  assert.equal(lastOutput, 'VietProfs is a directory of Vietnamese faculty outside Vietnam.');
-  assert.equal(updated, true);
-
-  assert.equal(handler('stats'), true);
-  assert.equal(lastOutput, 'stats: 1484 profiles');
-
-  assert.equal(handler('query plan'), true);
-  assert.equal(lastOutput, 'query plan: mode=roster matches=10');
-
-  assert.equal(handler('unrecognized_command_123'), false);
-});
-
-test('createCommandHandler supports site extras, disabled built-ins, custom uname, and a help controller', () => {
+test('createCommandHandler runs only help, query plan, and clear; every other word is a search', () => {
   let lastOutput = '';
   const fakeOutputEl = {
     set textContent(val: string) {
@@ -97,27 +58,28 @@ test('createCommandHandler supports site extras, disabled built-ins, custom unam
   } as unknown as HTMLElement;
   const calls: string[] = [];
   let resets = 0;
+  let updated = false;
 
   const handler = createCommandHandler({
-    siteName: 'VietProfs',
-    aboutText: 'about text',
     commandOutputEl: fakeOutputEl,
     getSearch: () => ({ resetScope: () => { resets += 1; } }),
     help: { show: () => calls.push('help shown') },
-    unameText: () => 'custom uname',
-    disabledCommands: ['about', 'stats'],
-    extraCommands: { recent: () => calls.push('recent'), whoami: () => calls.push('site whoami') },
+    onUpdate: () => {
+      updated = true;
+    },
+    getQueryPlan: () => 'mode=roster matches=10',
+    resetDirectory: () => calls.push('reset'),
   });
 
-  assert.equal(handler('recent'), true);
-  assert.equal(handler('WHOAMI'), true, 'extras take precedence over built-ins');
-  assert.deepEqual(calls, ['recent', 'site whoami']);
-  assert.equal(handler('about'), false, 'disabled built-ins fall through to a normal search');
-  assert.equal(handler('stats'), false);
-  assert.equal(handler('uname -a'), true);
-  assert.equal(lastOutput, 'custom uname');
-  assert.equal(handler('help'), true);
+  assert.equal(handler('query plan'), true);
+  assert.equal(lastOutput, 'query plan: mode=roster matches=10');
+  assert.equal(updated, true);
+  assert.equal(handler('HELP'), true);
   assert.equal(calls.at(-1), 'help shown');
   assert.ok(resets >= 2, 'completed commands reset the search scope');
-  assert.equal(handler('toString'), false, 'inherited object keys are not commands');
+  assert.equal(handler('clear'), true);
+  assert.equal(calls.at(-1), 'reset');
+  for (const word of ['health', 'random', 'reset', 'stats', 'fortune', 'whoami', 'theme crt', 'recent', 'toString', '']) {
+    assert.equal(handler(word), false, `"${word}" stays an ordinary search`);
+  }
 });

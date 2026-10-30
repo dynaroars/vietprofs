@@ -1,0 +1,51 @@
+name: Browser tests
+
+# Playwright smoke tests (test/browser-smoke.e2e.ts) for code and page changes. Roster, portrait,
+# relationship, maintenance, and docs-only changes skip this workflow, so routine data pushes and
+# data PRs never wait on it; it also never blocks the Pages deploy, which is a separate workflow.
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - 'public/data.json'
+      - 'public/updates.json'
+      - 'public/relationships.json'
+      - 'public/portraits/**'
+      - 'maintenance/**'
+      - 'paper/**'
+      - 'TASKS/**'
+      - '**.md'
+  pull_request:
+    branches: [main]
+    paths-ignore:
+      - 'public/data.json'
+      - 'public/updates.json'
+      - 'public/relationships.json'
+      - 'public/portraits/**'
+      - 'maintenance/**'
+      - 'paper/**'
+      - 'TASKS/**'
+      - '**.md'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: browser-tests-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  browser-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:e2e

@@ -13,7 +13,6 @@ body {
   line-height: 1.6;
 }
 
-.site-subtitle,
 .command-output,
 .record-id,
 .roster-metadata,
@@ -48,7 +47,6 @@ body {
 .icon-link:focus-visible,
 .submission-link:focus-visible,
 .self-claim-link:focus-visible,
-.paper-link:focus-visible,
 .favorite-toggle:focus-visible,
 .back-to-top:focus-visible,
 .info-icon:focus-visible,
@@ -66,25 +64,6 @@ h1 {
   font-size: var(--text-3xl);
   font-weight: 800;
   letter-spacing: -0.02em;
-}
-
-.subtitle-row {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.5rem;
-  margin-top: 0.35rem;
-}
-
-.site-subtitle {
-  margin: 0;
-  color: var(--text-secondary);
-  font-size: var(--text-sm);
-}
-
-.site-subtitle span:first-child {
-  color: var(--bamboo-green);
 }
 
 .roars-link::before {
@@ -336,10 +315,6 @@ h1 {
   gap: 0.75rem;
 }
 
-.entry .tags {
-  padding-right: 0;
-}
-
 .entry-name-row .favorite-toggle {
   position: static;
   margin-left: auto;
@@ -386,7 +361,6 @@ a.entry-name:focus-visible {
 }
 
 .personal-site-link,
-.lab-site-link,
 .scholar-link,
 .linkedin-link,
 .profile-link,
@@ -401,8 +375,6 @@ a.entry-name:focus-visible {
 
 .personal-site-link:hover,
 .personal-site-link:focus-visible,
-.lab-site-link:hover,
-.lab-site-link:focus-visible,
 .scholar-link:hover,
 .scholar-link:focus-visible,
 .linkedin-link:hover,
@@ -415,7 +387,6 @@ a.entry-name:focus-visible {
 }
 
 .personal-site-link svg,
-.lab-site-link svg,
 .scholar-link svg,
 .linkedin-link svg,
 .profile-link svg {
@@ -483,14 +454,6 @@ a.entry-name:focus-visible {
   text-decoration: underline;
   text-decoration-color: color-mix(in srgb, currentColor 45%, transparent);
   text-underline-offset: 0.15em;
-}
-
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.35rem;
-  margin-top: 0.4rem;
-  padding-right: var(--star-gutter);
 }
 
 .share-menu {
@@ -697,26 +660,6 @@ a.entry-name:focus-visible {
   overflow-wrap: anywhere;
 }
 
-/* Deliberately optional: enable with the hidden `theme crt` search command. */
-.crt-mode {
-  --bg-color: #07100b;
-  --card-bg: #0b1710;
-  --text-primary: #b8ffd0;
-  --text-secondary: #83d99f;
-  --text-muted: #57966b;
-  --border-color: #20472d;
-  --hover-bg: #102719;
-  --tag-bg: #102319;
-  --tag-text: #8beaab;
-  --accent: #55d68b;
-  --focus-ring: #55d68b;
-}
-
-.crt-mode body {
-  background-image: repeating-linear-gradient(0deg, rgb(0 0 0 / 11%) 0, rgb(0 0 0 / 11%) 1px, transparent 1px, transparent 4px);
-  text-shadow: 0 0 0.35rem rgb(85 214 139 / 18%);
-}
-
 /* Static profile pages receive this same stylesheet through the build sync script. */
 .subpage #app {
   padding-top: 2.5rem;
@@ -752,14 +695,12 @@ a.entry-name:focus-visible {
   line-height: 1.35;
 }
 
-.subpage .man-running-head a,
-.subpage .man-footer-line a {
+.subpage .man-running-head a {
   color: inherit;
   text-decoration: none;
 }
 
-.subpage .man-running-head a:hover,
-.subpage .man-footer-line a:hover {
+.subpage .man-running-head a:hover {
   color: var(--text-primary);
   text-decoration: underline;
 }
@@ -795,7 +736,6 @@ a.entry-name:focus-visible {
 }
 
 .subpage .section-note { color: var(--text-muted); font-size: 0.86rem; }
-.subpage .work-type, .subpage .work-date { color: var(--text-muted); font-size: 0.9em; }
 
 .subpage .man-section h2 {
   color: var(--text-primary);
@@ -903,13 +843,6 @@ a.entry-name:focus-visible {
 
 .subpage .man-section li + li {
   margin-top: 0.3rem;
-}
-
-.subpage .tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  margin-top: 0.5rem;
 }
 
 .subpage .tag {
@@ -1140,12 +1073,6 @@ a.entry-name:focus-visible {
   box-shadow: 0 0 0 2px color-mix(in srgb, var(--bamboo-green) 25%, transparent);
 }
 
-.subpage .man-footer-line {
-  margin-top: 0.5rem;
-  font-family: var(--font-mono);
-  font-size: var(--text-xs);
-}
-
 /* Insights Dashboard & Visualizations */
 .insights-dashboard {
   display: flex;
@@ -1272,15 +1199,6 @@ a.entry-name:focus-visible {
 .state-tile.heat-4 {
   background: var(--accent-color);
   color: #fff;
-}
-
-.country-name {
-  font-size: var(--text-xs);
-  font-weight: 600;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 100%;
 }
 
 /* ==========================================================================
@@ -1917,110 +1835,6 @@ button.chart-row-btn:hover {
   transition: width 0.3s ease;
 }
 
-/* Project & Roster Growth Line Chart */
-.growth-metrics-bar {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 0.85rem;
-}
-
-.growth-metric-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  padding: 0.4rem 0.75rem;
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius-full);
-  background: var(--card-bg);
-  color: var(--text-secondary);
-  font-family: var(--font-body);
-  font-size: var(--text-xs);
-  cursor: pointer;
-  transition: all 0.15s ease;
-}
-
-.growth-metric-btn:hover {
-  background: var(--hover-bg);
-  color: var(--text-primary);
-}
-
-.growth-metric-btn.is-active {
-  background: color-mix(in srgb, var(--bamboo-green) 12%, var(--card-bg));
-  border-color: var(--bamboo-green);
-  color: var(--text-primary);
-  font-weight: 600;
-  box-shadow: 0 0 0 1px var(--bamboo-green);
-}
-
-.growth-metric-val {
-  font-weight: 700;
-  color: var(--text-primary);
-}
-
-.growth-metric-badge {
-  display: inline-block;
-  font-size: 0.7rem;
-  padding: 0.05rem 0.35rem;
-  border-radius: var(--radius-full);
-  background: var(--tag-bg);
-  color: var(--bamboo-green);
-  font-weight: 700;
-}
-
-.growth-chart-wrap {
-  position: relative;
-  background: transparent;
-  border: none;
-  padding: 0.5rem 0;
-}
-
-.growth-chart {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.growth-area {
-  fill: color-mix(in srgb, var(--accent-color) 12%, transparent);
-  stroke: none;
-}
-
-.growth-line {
-  fill: none;
-  stroke: var(--accent-color);
-  stroke-width: 2;
-  stroke-linejoin: round;
-  stroke-linecap: round;
-}
-
-.growth-dot {
-  fill: var(--card-bg);
-  stroke: var(--accent-color);
-  stroke-width: 1.5;
-}
-
-.growth-crosshair {
-  stroke: var(--text-muted);
-  stroke-width: 1;
-  stroke-dasharray: 3 3;
-}
-
-.growth-tooltip {
-  position: absolute;
-  top: 0.25rem;
-  transform: translateX(-50%);
-  background: var(--text-primary);
-  color: var(--card-bg);
-  font-size: var(--text-xs);
-  font-weight: 600;
-  padding: 0.25rem 0.55rem;
-  border-radius: var(--radius-sm);
-  white-space: nowrap;
-  pointer-events: none;
-  z-index: 1;
-}
-
 .fun-facts {
   list-style: none;
   border-top: 1px solid var(--border-color);
@@ -2433,7 +2247,6 @@ button.chart-row-btn:hover {
   }
 
   .personal-site-link,
-  .lab-site-link,
   .scholar-link,
   .linkedin-link,
   .profile-link,
@@ -2607,83 +2420,6 @@ button.chart-row-btn:hover {
   }
 }
 
-/* GitHub Status Card */
-.github-status-card {
-  margin-top: 0.75rem;
-  margin-bottom: 0.75rem;
-  padding: 0.85rem 1.1rem;
-  background: var(--tag-bg, rgba(22, 163, 74, 0.05));
-  border: none;
-  border-left: 3px solid var(--bamboo-green, #16a34a);
-  border-radius: var(--radius-sm, 6px);
-}
-
-.github-status-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 0.65rem;
-  padding-bottom: 0.45rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-}
-
-.github-status-title {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: var(--text-sm, 0.875rem);
-  color: var(--text-primary);
-}
-
-.github-icon {
-  flex-shrink: 0;
-}
-
-.github-repo-link {
-  font-size: var(--text-xs, 0.75rem);
-  font-weight: 600;
-  color: var(--bamboo-green, #16a34a);
-  text-decoration: none;
-}
-
-.github-repo-link:hover {
-  text-decoration: underline;
-}
-
-.github-metrics-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
-  gap: 1rem;
-}
-
-.github-metric-item {
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-}
-
-.github-metric-label {
-  font-size: var(--text-xs, 0.75rem);
-  color: var(--text-muted, #64748b);
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  font-weight: 600;
-}
-
-.github-metric-value {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--text-primary);
-}
-
-.github-metric-sub {
-  font-size: var(--text-xs, 0.75rem);
-  color: var(--text-secondary, #475569);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
 /* System Health & Completeness */
 .completeness-grid {
   display: grid;
@@ -2773,75 +2509,6 @@ button.chart-row-btn:hover {
 }
 
 /* Diaspora Pathways & Generations */
-.pathways-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-  margin-top: 1rem;
-}
-
-@media (max-width: 768px) {
-  .pathways-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-.pathway-block h3, .generations-container h3 {
-  font-size: var(--text-sm, 0.875rem);
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  margin-bottom: 0.25rem;
-  color: var(--text-primary);
-}
-
-.generations-container {
-  margin-top: 1.75rem;
-}
-
-.generations-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 0.75rem;
-  margin-top: 0.75rem;
-}
-
-.generation-card {
-  padding: 0.75rem 0.85rem;
-  background: var(--tag-bg, rgba(0, 0, 0, 0.03));
-  border: none;
-  border-radius: var(--radius-sm, 6px);
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.generation-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-}
-
-.generation-decade {
-  font-weight: 700;
-  font-size: var(--text-sm, 0.875rem);
-}
-
-.generation-count {
-  font-family: var(--font-mono);
-  font-size: 1.1rem;
-  color: var(--accent-color, #2563eb);
-}
-
-.generation-range {
-  font-size: var(--text-xs, 0.75rem);
-  color: var(--text-muted);
-}
-
-.generation-pct {
-  font-size: var(--text-xs, 0.75rem);
-  color: var(--text-secondary);
-  margin-top: 0.2rem;
-}
 
 /* Insights Category Structure */
 .insights-category {
