@@ -1180,13 +1180,13 @@ test('favorites report storage failures without breaking profile controls', asyn
   }
 });
 
-test('profile sharing copies the canonical URL with visible confirmation', async () => {
+test('hub sharing copies the canonical URL with visible confirmation', async () => {
   const shareContext = await browser.newContext({
     permissions: ['clipboard-read', 'clipboard-write'],
   });
   try {
     const page = await shareContext.newPage();
-    await page.goto(`${baseUrl}/people/vp-0001.html?from=search#name`, {
+    await page.goto(`${baseUrl}/fields/arts-and-design.html?from=search#top`, {
       waitUntil: 'networkidle',
     });
     await page.evaluate(() => {
@@ -1201,7 +1201,7 @@ test('profile sharing copies the canonical URL with visible confirmation', async
     );
     assert.equal(
       await page.evaluate(() => navigator.clipboard.readText()),
-      'https://vietprofs.roars.dev/people/vp-0001.html',
+      'https://vietprofs.roars.dev/fields/arts-and-design.html',
     );
     assert.equal(await button.getAttribute('aria-label'), 'Link copied!');
     assert.equal(await button.getAttribute('aria-live'), 'polite');
@@ -1251,6 +1251,9 @@ test('sharing uses native Share, copies the current URL, and handles cancellatio
   assert.equal(await page.locator('body').getAttribute('data-copied-url'), page.url());
 
   await page.goto(`${baseUrl}/people/vp-0001.html`, { waitUntil: 'networkidle' });
+  assert.equal(await page.locator('.share-toggle').count(), 0);
+
+  await page.goto(`${baseUrl}/fields/arts-and-design.html`, { waitUntil: 'networkidle' });
   await page.evaluate(() => {
     Object.defineProperty(navigator, 'share', { value: undefined });
     Object.defineProperty(navigator, 'clipboard', {
@@ -1265,7 +1268,7 @@ test('sharing uses native Share, copies the current URL, and handles cancellatio
   const clickPromise = page.getByRole('button', { name: 'Share', exact: true }).click();
   const dialog = await dialogPromise;
   assert.equal(dialog.type(), 'prompt');
-  assert.equal(dialog.defaultValue(), 'https://vietprofs.roars.dev/people/vp-0001.html');
+  assert.equal(dialog.defaultValue(), 'https://vietprofs.roars.dev/fields/arts-and-design.html');
   await dialog.dismiss();
   await clickPromise;
   await page.close();
