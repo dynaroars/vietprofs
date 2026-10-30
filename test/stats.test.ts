@@ -400,7 +400,7 @@ test('scheduled refresh files one labeled Issue per new problem and skips ones a
   globalThis.fetch = async (input, init) => {
     const url = String(input);
     if (url.startsWith('https://api.github.com/')) {
-      assert.equal((init?.headers as Record<string, string>).Authorization, 'Bearer gh-test');
+      assert.equal((init!.headers as Record<string, string>).Authorization, 'Bearer gh-test');
       const repo = url.match(/repos\/([^/]+\/[^/]+)\/issues/)![1]!;
       if (init?.method === 'POST') {
         created.push({ repo, ...JSON.parse(String(init.body)) });
