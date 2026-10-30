@@ -53,7 +53,7 @@ VietProfs also owns the reusable UI baseline for sibling projects such as `../cs
 `src/roars-ui.css` holds shared tokens and components; `src/search-kit.ts` and
 `src/back-to-top.ts` supply shared behavior. Keep these independent of roster data and
 VietProfs page layouts. CS Picks vendors them unchanged through its
-`npm run sync:vietprofs-ui` command. Add reusable styling here first, preserve existing
+`npm --prefix ../cspicks run sync:vietprofs-ui` command. Add reusable styling here first, preserve existing
 selectors and tokens, and keep project-specific overrides in the consuming project.
 
 

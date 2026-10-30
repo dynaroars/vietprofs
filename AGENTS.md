@@ -16,7 +16,7 @@ shared behavior in `src/search-kit.ts` and `src/back-to-top.ts` free of project-
 and DOM assumptions. Keep VietProfs layouts and feature styles in its other CSS files.
 Prefer extending these shared components over copying styles into each project. Preserve
 shared selectors, tokens, and APIs when cleaning up; check consumers before removing them.
-CS Picks vendors these files verbatim with its `npm run sync:vietprofs-ui`; update them in
+CS Picks vendors these files verbatim with its `npm --prefix ../cspicks run sync:vietprofs-ui`; update them in
 VietProfs first, then sync and verify consumers when rolling out a shared change.
 
 ## Direct updates
