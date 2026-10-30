@@ -371,45 +371,6 @@ test('mobile pages avoid horizontal overflow and provide usable tap targets', as
   assert.equal(await page.locator('.info-icon').evaluate((element) => getComputedStyle(element, '::after').visibility), 'visible');
   await assertNoOverflow();
 
-  await page.route('**/api/stats**', async route => route.fulfill({
-    contentType: 'application/json',
-    body: JSON.stringify({
-      schemaVersion: 3,
-      source: 'cloudflare-rum',
-      generatedAt: '2026-09-22T12:00:00.000Z',
-      timezone: 'UTC',
-      status: 'ok',
-      stale: false,
-      measurementStartedAt: '2026-09-15',
-      coverage: { firstDate: '2026-09-15', lastCompleteDate: '2026-09-21', completeDays7: 7, availableDays30: 7 },
-      today: { date: '2026-09-22', pageViews: 3, visits: 2, complete: false, collected: true },
-      last7Complete: { pageViews: 70, visits: 35, days: 7, avgPageViews: 10, avgVisits: 5 },
-      last30Available: { pageViews: 70, visits: 35, days: 7 },
-      daily: [
-        { date: '2026-09-21', pageViews: 10, visits: 5, status: 'complete' },
-        { date: '2026-09-22', pageViews: 3, visits: 2, status: 'partial' },
-      ],
-      countries: [{ code: 'US', name: 'United States', flag: '🇺🇸', pageViews: 70, pct: 100 }],
-      categories: [
-        { key: 'directory', label: 'Main directory', pageViews: 40, pct: 57.1 },
-        { key: 'profiles', label: 'Professor profiles', pageViews: 20, pct: 28.6 },
-        { key: 'submit', label: 'Submit / update', pageViews: 3, pct: 4.3 },
-        { key: 'statistics', label: 'Statistics', pageViews: 2, pct: 2.9 },
-        { key: 'other', label: 'Other', pageViews: 5, pct: 7.1 },
-      ],
-      categoryTotal: 70,
-      categoryPeriod: { startDate: '2026-09-15', endDate: '2026-09-21', days: 7 },
-      historicalTransition: { newSeriesStartedAt: '2026-09-15', oldSeriesRetainedInternally: true },
-    }),
-  }));
-  await page.goto(`${baseUrl}/stats.html`, { waitUntil: 'networkidle' });
-  await assertNoOverflow();
-  assert.equal(await page.getByText('MOST REQUESTED PAGES').count(), 0);
-  assert.equal(await page.locator('.browser-metric-card').count(), 2);
-  assert.match(await page.locator('.browser-metric-card').first().innerText(), /3 today so far/);
-  assert.equal(await page.locator('.privacy-note').count(), 0);
-  assert.doesNotMatch(await page.locator('main').innerText(), /privacy/i);
-
   await page.goto(`${baseUrl}/people/vp-0242.html`, { waitUntil: 'networkidle' });
   await assertNoOverflow();
   await assertTapTargets('.man-running-brand, .profile-actions a, .links a');
@@ -572,7 +533,7 @@ test('the + button opens the form and the header links switch views in place', a
   assert.equal(await page.locator('.add-fab').getAttribute('aria-label'), 'Add or update info');
   const nav = page.locator('.site-nav');
   const labels = await nav.locator(':scope > a, .share-toggle').evaluateAll((links) => links.map((link) => link.getAttribute('aria-label')));
-  assert.deepEqual(labels, ['Diaspora Insights & Pathways', 'Academic Connections', 'Visitor Statistics', 'Data Health & Completeness', 'Read the paper (PDF)', 'FAQ', 'Share']);
+  assert.deepEqual(labels, ['Diaspora Insights & Pathways', 'Academic Connections', 'Data Health & Completeness', 'Read the paper (PDF)', 'Share']);
   assert.equal(await page.locator('#institution-type-filter').count(), 0);
   assert.deepEqual(await page.locator('.controls #sort-order option').allInnerTexts(), ['Random order', 'Most recently added', 'Last name', 'First name']);
   const chips = page.locator('.example-chip');
@@ -611,7 +572,7 @@ test('data health reports the generated HTML inventory and links standalone page
   const inventory = page.locator('.generated-html-card');
   assert.equal(await textOf(inventory.locator('.html-inventory-title')), 'Generated HTML Inventory');
   assert.equal(await inventory.locator('.html-inventory-item').count(), 4);
-  assert.equal(await inventory.locator('.html-standalone-links a').count(), 5);
+  assert.equal(await inventory.locator('.html-standalone-links a').count(), 4);
   assert.match(await textOf(inventory.locator('.html-inventory-total')), /^\d[\d,]* pages$/);
   const complexity = page.locator('.complexity-card');
   assert.equal(await textOf(complexity.locator('.html-inventory-title')), 'Project Complexity');
@@ -720,7 +681,7 @@ test('profile pages honor dark mode through the shared stylesheet', async () => 
   assert.equal(await page.locator('.add-fab').getAttribute('href'), `../submit.html?edit=${id}`);
   assert.equal(await page.locator('.name-heading .profile-actions').count(), 1);
   const seeAlso = page.locator('.man-section').filter({ has: page.locator('h2', { hasText: 'SEE ALSO' }) });
-  assert.equal(await seeAlso.locator('nav.links a').count(), 8);
+  assert.equal(await seeAlso.locator('nav.links a').count(), 6);
   assert.equal(await seeAlso.locator('a[href="../connections.html"]').count(), 1);
   assert.equal(await page.locator('footer.man-footer').count(), 0);
   const profileStar = page.locator('.name-title .favorite-toggle');

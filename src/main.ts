@@ -190,7 +190,7 @@ function renderShell() {
           <p><strong>KEYBOARD</strong></p>
           <p><code>/</code> search · <code>j</code>/<code>k</code> move · <code>Enter</code> open · <code>f</code> favorite · <code>r</code> random · <code>Esc</code> clear</p>
           <p><strong>COMMANDS</strong></p>
-          <p><code>help</code> · <code>recent</code> · <code>visitor stats</code> · <code>query plan</code> · <code>whoami</code> · <code>uname -a</code> · <code>fortune</code> · <code>/dev/random</code> · <code>theme crt</code></p>
+          <p><code>help</code> · <code>recent</code> · <code>query plan</code> · <code>whoami</code> · <code>uname -a</code> · <code>fortune</code> · <code>/dev/random</code> · <code>theme crt</code></p>
         </div>
       </div>
       <select id="location-filter" class="field-select location-select" aria-label="Filter by location">
@@ -216,10 +216,8 @@ function renderShell() {
       <nav class="site-nav" aria-label="Site">
           ${siteNavLink('index.html?view=insights', 'Diaspora Insights & Pathways', ICONS.insights, ' data-view="insights"')}
           ${siteNavLink('connections.html', 'Academic Connections', ICONS.connections)}
-          ${siteNavLink('stats.html', 'Visitor Statistics', ICONS.stats)}
           ${siteNavLink('index.html?view=health', 'Data Health & Completeness', ICONS.health, ' data-view="health"')}
           ${siteNavLink(`${import.meta.env.BASE_URL}vietprofs.pdf`, 'Read the paper (PDF)', PAPER_ICON, EXTERNAL)}
-          ${siteNavLink('https://github.com/dynaroars/vietprofs#faq', 'FAQ', ICONS.faq, EXTERNAL)}
           ${renderShareMenu({ title: 'VietProfs: Vietnamese professors worldwide' })}
         </nav>
     </div>
@@ -934,9 +932,6 @@ async function init() {
     update();
     openRosterShell(searchIndex);
   }
-  function openVisitorStats() {
-    window.location.href = `${import.meta.env.BASE_URL}stats.html`;
-  }
 
   // The shared help/whoami/uname/fortune/theme crt/clear command set, plus VietProfs' own views.
   const runCommand = createCommandHandler({
@@ -969,8 +964,6 @@ async function init() {
       diaspora: showInsights,
       pathways: showInsights,
       'sudo vietprofs': openShell,
-      'visitor stats': openVisitorStats,
-      traffic: openVisitorStats,
     },
   });
 

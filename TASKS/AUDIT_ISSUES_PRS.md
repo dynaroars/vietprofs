@@ -33,9 +33,6 @@ therefore:
 In scheduled runs, handle at most 5 PRs and 20 Issues per run, oldest first, and leave the rest
 for the next run.
 
-Issues labeled `visitor-stats` come from the stats Worker's daily health check
-(`TASKS/VISITOR_STATISTICS.md`), not from the roster. Leave them for the owner.
-
 ---
 
 ## ⚡ Batching & `/goal` Protocol

@@ -1,6 +1,5 @@
 /*
- * Shared statistics components: metric cards, tables, the daily chart, notices, and loading/error boxes.
- * Used by VietProfs' stats and connections pages and copied verbatim into cspicks (src/stats-components.css).
+ * Statistics components for the connections page: metric cards, tables, notes, and loading/error boxes.
  * Colors come from the host page's CSS variables, with fallbacks for any it does not define.
  */
 
@@ -8,21 +7,6 @@
   margin: 0.9rem 0 1.25rem;
   color: var(--text-secondary);
   font-size: 0.88rem;
-}
-
-.refresh-stats-btn {
-  margin-left: 0.65rem;
-  padding: 0.28rem 0.55rem;
-  border: 1px solid var(--border-color);
-  border-radius: 4px;
-  background: var(--card-bg);
-  color: inherit;
-  cursor: pointer;
-  font: inherit;
-}
-
-.refresh-stats-btn:hover {
-  border-color: var(--accent);
 }
 
 .browser-metric-grid {
@@ -56,77 +40,9 @@
   color: var(--text-primary);
 }
 
-.stats-status-notice {
-  margin: 1rem 0;
-  padding: 0.8rem 1rem;
-  border-left: 4px solid var(--accent-color, #2563eb);
-  background: var(--tag-bg, rgba(37, 99, 235, 0.06));
-  font-size: var(--text-sm, 0.875rem);
-}
-
-.stats-status-warning {
-  border-left-color: #d97706;
-}
-
 .stat-sub {
   font-size: 0.7rem;
   color: var(--text-muted, #64748b);
-}
-
-.stats-chart-container {
-  margin-top: 0.75rem;
-  padding: 1.25rem;
-  background: var(--tag-bg, rgba(255, 255, 255, 0.03));
-  border: 1px solid var(--border-color, #e2e8f0);
-  border-radius: var(--radius-sm, 4px);
-}
-
-.chart-legend {
-  display: flex;
-  gap: 1.25rem;
-  margin-bottom: 0.75rem;
-  font-family: var(--font-mono);
-  font-size: var(--text-xs, 0.75rem);
-  color: var(--text-muted);
-}
-
-.legend-item {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-}
-
-.legend-dot {
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  border-radius: 2px;
-}
-
-.legend-dot.dot-views {
-  background: var(--accent-dim, #60a5fa);
-}
-
-.legend-dot.dot-suspected {
-  background: transparent;
-  border: 2px solid #d97706;
-  border-radius: 50%;
-}
-
-.stats-svg {
-  width: 100%;
-  height: auto;
-  overflow: visible;
-}
-
-.stats-svg .path-views {
-  stroke: var(--accent-dim, #60a5fa);
-}
-
-.stats-svg .point-suspected {
-  fill: none;
-  stroke: #d97706;
-  stroke-width: 2;
 }
 
 .stats-table-wrapper {
@@ -163,18 +79,6 @@
   white-space: nowrap;
 }
 
-.country-cell {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-weight: 500;
-}
-
-.flag-icon {
-  font-size: 1.1rem;
-  line-height: 1;
-}
-
 .privacy-note {
   padding: 1rem 1.25rem;
   background: var(--tag-bg, rgba(255, 255, 255, 0.03));
@@ -191,10 +95,6 @@
 
 .privacy-note li {
   margin-bottom: 0.35rem;
-}
-
-.partial-row {
-  opacity: 0.85;
 }
 
 .stats-secondary-details summary {
@@ -246,41 +146,7 @@
 }
 
 @media (max-width: 560px) {
-  .stats-chart-container,
   .privacy-note {
     padding: 0.85rem;
   }
-
-  .stats-chart-container {
-    overflow-x: hidden;
-  }
-}
-
-/* Browser / operating system / device tables (renderTechnology), side by side when there is room. The three
-   tables share fixed column widths and never wrap, so their columns and rows line up. */
-.traffic-technology {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
-  gap: 1rem;
-  align-items: start;
-}
-
-.traffic-technology .stats-table {
-  width: 100%;
-  table-layout: fixed;
-}
-
-.traffic-technology .stats-table th,
-.traffic-technology .stats-table td {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.traffic-technology .stats-table th:first-child {
-  width: 50%;
-}
-
-.traffic-technology .stats-table th.num-col {
-  width: 25%;
 }

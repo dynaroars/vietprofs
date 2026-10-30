@@ -2607,46 +2607,6 @@ button.chart-row-btn:hover {
   }
 }
 
-/* Visitor Statistics Page Styles */
-.stats-highlight-banner {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 1rem 1.25rem;
-  margin: 1.25rem 0 1.75rem 0;
-  background: var(--tag-bg, rgba(37, 99, 235, 0.06));
-  border: 1px solid var(--border-color, #e2e8f0);
-  border-left: 4px solid var(--accent-color, #2563eb);
-  border-radius: var(--radius-sm, 4px);
-}
-
-.stats-highlight-banner .highlight-text {
-  margin: 0;
-  font-size: 1.05rem;
-  line-height: 1.4;
-  color: var(--text-primary);
-}
-
-.stats-highlight-banner .demo-badge {
-  font-family: var(--font-mono);
-  font-size: var(--text-xs, 0.75rem);
-  padding: 0.2rem 0.5rem;
-  border-radius: var(--radius-sm);
-  background: #f59e0b;
-  color: #000;
-  font-weight: 600;
-  white-space: nowrap;
-}
-
-@media (max-width: 560px) {
-  .stats-highlight-banner {
-    padding: 0.85rem;
-  }
-}
-
-
 /* GitHub Status Card */
 .github-status-card {
   margin-top: 0.75rem;

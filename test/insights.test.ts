@@ -74,14 +74,14 @@ test('renderHealthPanel renders complete health dashboard HTML without undefined
   assert.ok(html.includes('dynaroars/vietprofs'));
   assert.ok(html.includes('abc1234'));
   assert.ok(html.includes('Generated HTML Inventory'));
-  assert.ok(html.includes('7 pages'));
+  assert.ok(html.includes('6 pages'));
   assert.ok(html.includes('Project Complexity'));
   assert.ok(html.includes('20,000 LoC'));
   assert.ok(html.includes('TypeScript: 15,000 lines in 60 files'));
   assert.ok(html.includes('1 / 82 / 137'));
   assert.ok(html.includes('11 / 185'));
   assert.match(html, /href="https:\/\/github\.com\/dynaroars\/vietprofs\/pull\/332"/);
-  assert.match(html, /href="\/stats\.html"/);
+  assert.doesNotMatch(html, /href="\/stats\.html"/);
   assert.match(html, /href="\/connections\.html"/);
   assert.match(html, /href="\/submit\.html"/);
   assert.match(html, /href="\/404\.html"/);
