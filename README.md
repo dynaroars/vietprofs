@@ -51,11 +51,11 @@ coordinates and roster data are excluded from formatting. Shared styles live in 
 `src/roars-ui.css`; directory, submission, and connection styles load only on their own pages.
 Generated profiles and hubs use the shared styles in `public/profile.css`.
 
-VietProfs also owns the reusable UI baseline for sibling projects such as `../cspicks`.
+VietProfs also owns the reusable UI baseline for sibling projects `../cspicks` and `../people`.
 `src/roars-ui.css` holds shared tokens and components; `src/search-kit.ts` and
 `src/back-to-top.ts` supply shared behavior. Keep these independent of roster data and
-VietProfs page layouts. CS Picks vendors them unchanged through its
-`npm --prefix ../cspicks run sync:vietprofs-ui` command. Add reusable styling here first, preserve existing
+VietProfs page layouts. CS Picks and the GMU CS directory vendor them unchanged through
+`npm --prefix ../cspicks run sync:vietprofs-ui` and `npm --prefix ../people run sync:vietprofs-ui`. Add reusable styling here first, preserve existing
 selectors and tokens, and keep project-specific overrides in the consuming project.
 
 
