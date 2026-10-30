@@ -513,7 +513,9 @@ test('data health reports the generated HTML inventory and links standalone page
   assert.equal(await inventory.locator('.html-inventory-item').count(), 4);
   assert.equal(await inventory.locator('.html-standalone-links a').count(), 4);
   assert.match(await textOf(inventory.locator('.html-inventory-total')), /^\d[\d,]* pages$/);
-  assert.equal(await page.locator('.complexity-card, .github-status-card, .growth-chart').count(), 0);
+  assert.equal(await page.locator('.complexity-card').count(), 1);
+  assert.match(await textOf(page.locator('.complexity-card .html-inventory-total')), /[\d,]+ LoC/);
+  assert.equal(await page.locator('.github-status-card, .growth-chart').count(), 0);
   await page.close();
 });
 

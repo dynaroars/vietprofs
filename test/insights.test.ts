@@ -56,3 +56,52 @@ test('renderHealthPanel renders the roster health dashboard without undefined or
   assert.ok(!html.includes('null'), 'health panel contains null');
   assert.ok(!html.includes('NaN'), 'health panel contains NaN');
 });
+
+test('project complexity renders repository metrics and escapes latest item links', () => {
+  const gitInfo = {
+    branch: 'main',
+    latestHash: 'abc1234',
+    latestDate: '2026-09-12T12:00:00.000Z',
+    latestMessage: 'feat: updates',
+    totalCommits: 1100,
+    repoUrl: 'https://github.com/dynaroars/vietprofs',
+    contributors: 3,
+    firstCommitDate: '2026-08-15T12:00:00.000Z',
+    codebase: {
+      trackedFiles: 1500,
+      codeFiles: 70,
+      codeLines: 20000,
+      languages: [{ language: 'TypeScript', files: 60, lines: 15000 }],
+      testFiles: 14,
+      npmScripts: 25,
+      devDependencies: 8,
+      workflows: 4,
+    },
+    github: {
+      pulls: { open: 1, closed: 137, merged: 82, latest: { number: 332, title: 'Triage leads', url: 'https://github.com/dynaroars/vietprofs/pull/332', state: 'open', createdAt: '2026-10-10T11:03:27Z' } },
+      issues: { open: 11, closed: 185, latest: null },
+      fetchedAt: '2026-10-10T15:00:00.000Z',
+    },
+  };
+
+  gitInfo.github.pulls.latest.title = '<script> & PR';
+  const html = renderHealthPanel(sampleRoster, '/', true, {
+    ...gitInfo,
+    github: { ...gitInfo.github, issues: { ...gitInfo.github.issues, latest: {
+      number: 333, title: 'Roster correction', url: 'https://github.com/dynaroars/vietprofs/issues/333',
+      state: 'closed', createdAt: '2026-10-10T11:03:27Z',
+    } } },
+  });
+  assert.match(html, /20,000 LoC/);
+  assert.match(html, /1,100<\/strong>\s*<span>Commits/);
+  assert.match(html, /TypeScript: 15,000 lines in 60 files/);
+  assert.match(html, /1 \/ 82 \/ 137/);
+  assert.match(html, /11 \/ 185/);
+  assert.match(html, /href="https:\/\/github.com\/dynaroars\/vietprofs\/pull\/332"/);
+  assert.match(html, /&lt;script&gt; &amp; PR/);
+  assert.match(html, /Latest issue: <a href="https:\/\/github.com\/dynaroars\/vietprofs\/issues\/333"/);
+  assert.doesNotMatch(html, /growth-chart|github-status-card|undefined|NaN/);
+  const offline = renderHealthPanel(sampleRoster, '/', true, { ...gitInfo, github: null });
+  assert.match(offline, /20,000 LoC/);
+  assert.doesNotMatch(offline, /Latest PR|Latest issue|Pull requests:/);
+});

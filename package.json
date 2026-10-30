@@ -10,8 +10,8 @@
   },
   "scripts": {
     "dev": "vite",
-    "predev": "npm run assign-profile-ids && npm run sync-profile-css && tsx scripts/generate-profile-pages.ts --dev",
-    "prebuild": "npm run assign-profile-ids && npm run sync-profile-css",
+    "predev": "npm run assign-profile-ids && npm run sync-profile-css && npm run build-project-stats && tsx scripts/generate-profile-pages.ts --dev",
+    "prebuild": "npm run assign-profile-ids && npm run sync-profile-css && npm run build-project-stats",
     "build": "vite build && tsx scripts/generate-profile-pages.ts && tsx scripts/slim-public-data.ts",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
@@ -26,6 +26,7 @@
     "find-roster-matches": "tsx scripts/find-roster-matches.ts",
     "stamp-updates": "tsx scripts/stamp-updates.ts",
     "sync-profile-css": "tsx scripts/sync-profile-css.ts",
+    "build-project-stats": "tsx scripts/build-project-stats.ts",
     "pretest": "npm run stamp-updates && npm run sync-profile-css",
     "test": "npm run validate-data && npm run typecheck && tsx --test 'test/*.test.ts'",
     "lint": "biome lint src scripts test",

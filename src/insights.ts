@@ -18,7 +18,8 @@ import {
   type Roster,
 } from './data.ts';
 import { STATE_GRID } from './state-grid.ts';
-import { abbreviateInsightText, escapeHtml } from './utils.ts';
+import type { GitInfo, GitHubItem } from './project-stats.ts';
+import { abbreviateInsightText, escapeHtml, formatRosterDate } from './utils.ts';
 import { renderWorldMap } from './world-map.ts';
 import { deriveRosterStats, type DerivedRosterStats } from './derived-stats.ts';
 
@@ -422,10 +423,57 @@ function formatNumber(num: number): string {
   return new Intl.NumberFormat('en-US').format(num);
 }
 
+function renderGitHubLatest(label: string, item: GitHubItem | null): string {
+  if (!item) return '';
+  return `<span>${label}: <a href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer">#${item.number} ${escapeHtml(item.title)}</a> (${escapeHtml(item.state)}, ${formatRosterDate(item.createdAt)})</span>`;
+}
+
+// Current repository metrics share the generated-page inventory layout.
+function renderComplexityCard(gitInfo: GitInfo | null): string {
+  const codebase = gitInfo?.codebase;
+  if (!codebase) return '';
+  const github = gitInfo.github;
+  const item = (value: string, label: string) => `
+          <div class="html-inventory-item">
+            <strong>${value}</strong>
+            <span>${label}</span>
+          </div>`;
+  return `
+      <div class="html-inventory-card complexity-card">
+        <div class="html-inventory-header">
+          <div>
+            <h3 class="html-inventory-title">Project Complexity</h3>
+            <p class="html-inventory-desc">Tracked source in the repository${gitInfo.firstCommitDate ? ` since ${formatRosterDate(gitInfo.firstCommitDate)}` : ''}; lines of code cover TypeScript, CSS, HTML, Python, and YAML.</p>
+          </div>
+          <strong class="html-inventory-total">${formatNumber(codebase.codeLines)} LoC</strong>
+        </div>
+        <div class="html-inventory-grid">
+          ${item(formatNumber(codebase.trackedFiles), 'Tracked files')}
+          ${item(formatNumber(codebase.codeFiles), 'Code files')}
+          ${item(formatNumber(codebase.testFiles), 'Test files')}
+          ${item(`${codebase.npmScripts} / ${codebase.devDependencies}`, 'npm scripts / dev dependencies')}
+          ${item(formatNumber(codebase.workflows), 'GitHub workflows')}
+          ${gitInfo.totalCommits !== undefined ? item(formatNumber(gitInfo.totalCommits), 'Commits') : ''}
+          ${gitInfo.contributors !== undefined ? item(formatNumber(gitInfo.contributors), 'Commit authors') : ''}
+          ${github ? item(`${formatNumber(github.pulls.open)} / ${formatNumber(github.pulls.merged ?? 0)} / ${formatNumber(github.pulls.closed)}`, 'Pull requests: open / merged / closed') : ''}
+          ${github ? item(`${formatNumber(github.issues.open)} / ${formatNumber(github.issues.closed)}`, 'Issues: open / closed') : ''}
+        </div>
+        <nav class="html-standalone-links" aria-label="Lines by language">
+          ${codebase.languages.map((entry) => `<span>${escapeHtml(entry.language)}: ${formatNumber(entry.lines)} lines in ${formatNumber(entry.files)} files</span>`).join('\n          ')}
+        </nav>
+        ${github ? `<div class="html-standalone-links complexity-latest">
+          <span>GitHub snapshot: ${formatRosterDate(github.fetchedAt)}</span>
+          ${renderGitHubLatest('Latest PR', github.pulls.latest)}
+          ${renderGitHubLatest('Latest issue', github.issues.latest)}
+        </div>` : ''}
+      </div>`;
+}
+
 export function renderHealthPanel(
   roster: Roster,
   baseUrl = '/',
   includeHeader = false,
+  gitInfo: GitInfo | null = null,
 ): string {
   const stats: DerivedRosterStats = deriveRosterStats(roster);
   const htmlInventory = buildRosterHtmlInventory(roster);
@@ -445,6 +493,8 @@ export function renderHealthPanel(
           </p>
         </div>
       ` : ''}
+
+      ${renderComplexityCard(gitInfo)}
 
       <div class="html-inventory-card generated-html-card">
         <div class="html-inventory-header">

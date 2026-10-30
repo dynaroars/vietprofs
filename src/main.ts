@@ -1,4 +1,5 @@
 import './style.css';
+import { loadProjectStats } from './project-stats.ts';
 import {
   FIELDS,
   INSTITUTION_TYPES,
@@ -361,6 +362,8 @@ async function init() {
   ])];
   const availableRegionHubs = new Set(regionHubCandidates.filter((region) =>
     hasEnoughPeopleForRosterHub(filterRoster(roster, { location: region }).length)));
+
+  const projectStats = await loadProjectStats();
 
   // Matches everything filterRoster actually searches over (name, university, city, state, country,
   // department, rank, research areas, degree institutions, and honors) so a suggestion always yields at least one result.
@@ -801,7 +804,7 @@ async function init() {
         countEl.textContent = 'Dataset health, metadata completeness, and verification metrics:';
       }
       if (rosterEl) {
-        rosterEl.innerHTML = renderHealthPanel(roster, import.meta.env.BASE_URL, true);
+        rosterEl.innerHTML = renderHealthPanel(roster, import.meta.env.BASE_URL, true, projectStats);
       }
       renderQueryPlan(roster.length, 'health');
       syncUrl();
