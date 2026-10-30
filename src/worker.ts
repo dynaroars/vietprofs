@@ -648,7 +648,9 @@ export default {
     const url = new URL(request.url);
     if (request.method === 'OPTIONS') return new Response(null, { status: 204, headers: { 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, OPTIONS' } });
     if (url.pathname === '/health') return jsonResponse({ status: 'ok', worker: 'vietprofs-stats-api', source: 'cloudflare-rum' });
-    if (url.pathname !== '/api/stats' && url.pathname !== '/api/health') return jsonResponse({ error: 'Not found' }, 404);
+    // The workers.dev address exists only so the health Action can bypass the zone's bot challenge.
+    const workersDev = url.hostname.endsWith('.workers.dev');
+    if (url.pathname !== '/api/health' && (workersDev || url.pathname !== '/api/stats')) return jsonResponse({ error: 'Not found' }, 404);
     if (request.method !== 'GET') return new Response(JSON.stringify({ error: 'Method not allowed' }), { status: 405, headers: { 'Content-Type': 'application/json', Allow: 'GET, OPTIONS' } });
     if (url.pathname === '/api/health') return healthReport(env);
     return fetchStats(env, siteFor(url.hostname, env));

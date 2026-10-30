@@ -424,3 +424,9 @@ test('the scheduled refresh stores each site\'s problems and /api/health serves 
     globalThis.fetch = originalFetch;
   }
 });
+
+test('the workers.dev address serves only /api/health', async () => {
+  const env = liveEnv();
+  assert.equal((await worker.fetch(new Request('https://vietprofs-stats-api.example.workers.dev/api/stats'), env, ctx as any)).status, 404);
+  assert.equal((await worker.fetch(new Request('https://vietprofs-stats-api.example.workers.dev/api/health'), env, ctx as any)).status, 200);
+});

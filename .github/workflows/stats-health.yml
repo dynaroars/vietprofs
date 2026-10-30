@@ -22,7 +22,8 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
-          HEALTH_URL: https://vietprofs.roars.dev/api/health
+          # The Worker's workers.dev address: roars.dev challenges GitHub's runners (HTTP 403).
+          HEALTH_URL: https://vietprofs-stats-api.nguyenthanhvuh.workers.dev/api/health
         run: |
           set -euo pipefail
           run_url="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
@@ -39,13 +40,11 @@ jobs:
               while read -r number; do gh issue close "$number" --comment "Cleared on $(date -u +%Y-%m-%d) ([workflow run]($run_url))."; done
           }
 
-          # Cloudflare challenges clients that don't look like a browser.
-          if ! curl -fsS -m 30 -A 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0 Safari/537.36' \
-              -H 'Accept: application/json' "$HEALTH_URL" -o health.json || ! jq -e '.sites' health.json > /dev/null; then
+          if ! curl -fsS -m 30 "$HEALTH_URL" -o health.json || ! jq -e '.sites' health.json > /dev/null; then
             echo "Could not read $HEALTH_URL"
             if ! is_open "$unreachable"; then
               gh issue create --label visitor-stats --title "$unreachable" \
-                --body "The daily health check could not read $HEALTH_URL (Worker not deployed, down, or Cloudflare challenged the runner).$footer"
+                --body "The daily health check could not read $HEALTH_URL (Worker not deployed or down, or its workers.dev address switched off).$footer"
             fi
             exit 1
           fi

@@ -51,13 +51,13 @@ An API failure does not overwrite either key. The API serves the last successful
 
 ## Daily health check
 
-After each site's daily refresh (cron `15 1 * * *`), the Worker checks the fresh snapshot against the one stored before it and stores the problems below under `stats-health-v1:<hostname>`. `GET /api/health` serves every site's problems. The **Visitor stats health** GitHub Action (`.github/workflows/stats-health.yml`, daily at 03:00 UTC, model-free, using the workflow's own token) reads it and opens one Issue per problem, labeled `visitor-stats`, in this repo (cspicks problems included; the title names the site). A problem whose Issue is still open is not filed again; close the Issue once it is handled. "Refresh failing" and "health endpoint unreachable" Issues close themselves when the state clears.
+After each site's daily refresh (cron `15 1 * * *`), the Worker checks the fresh snapshot against the one stored before it and stores the problems below under `stats-health-v1:<hostname>`. `GET /api/health` serves every site's problems. The **Visitor stats health** GitHub Action reads it from the Worker's own address, `https://vietprofs-stats-api.nguyenthanhvuh.workers.dev/api/health` (`workers_dev` in `wrangler.jsonc`; that address serves nothing else), because the `roars.dev` zone answers GitHub's runners with a bot challenge (HTTP 403). The Action (`.github/workflows/stats-health.yml`, daily at 03:00 UTC, model-free, using the workflow's own token) opens one Issue per problem, labeled `visitor-stats`, in this repo (cspicks problems included; the title names the site). A problem whose Issue is still open is not filed again; close the Issue once it is handled. "Refresh failing" and "health endpoint unreachable" Issues close themselves when the state clears.
 
 - **Refresh failing:** the last good snapshot is more than 36 hours old, judged when `/api/health` is read, so a refresh that stopped running altogether still shows (one transient error files nothing).
 - **No page views recorded:** yesterday had zero page views while a typical day has at least 10, which usually means the beacon stopped loading.
 - **Possible unflagged crawler:** yesterday was more than twice the window's median, with at least 60% single-page visits, but under the suspected-day threshold, so it still counts (Oct 19 and Oct 25, 2026 would have triggered it).
 - **Sudden country shift:** the top country holds at least 50% of the 7-day page views, up 20 points or more since the previous refresh.
-- **Health endpoint unreachable** (filed by the Action itself): `/api/health` could not be read, e.g. the Worker is down or Cloudflare challenged the runner.
+- **Health endpoint unreachable** (filed by the Action itself): `/api/health` could not be read, e.g. the Worker is down or its workers.dev address was switched off.
 
 No secrets are involved. The scheduled auditor leaves `visitor-stats` Issues for the owner.
 
