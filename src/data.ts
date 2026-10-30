@@ -659,6 +659,9 @@ const FIELD_OVERRIDES = new Map([
   // "Mathematical" would otherwise win the Mathematics rule before Engineering, but this
   // appointment sits in Shizuoka's Faculty of Engineering (communications / systems).
   ['Department of Mathematical and Systems Engineering|Shizuoka University', 'Engineering'],
+  // Tsukuba's policy and planning sciences department; this member works in queueing theory
+  // and operations research.
+  ['Department of Policy and Planning Sciences|University of Tsukuba', 'Statistics & Data Science'],
   // The executive-dean office is the administrative home of a mathematician whose research
   // areas are fractional calculus, stochastic processes, and financial mathematics.
   ['Office of the Executive Dean, Science|Queensland University of Technology', 'Mathematics'],
