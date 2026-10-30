@@ -12,7 +12,9 @@
 // update to anyone's record: run it with SCHEMA_MIGRATION=1 npm test so nothing is stamped.
 //
 // It also keeps updates.json in step with the roster: new ids get a date, retired ids lose
-// theirs, and a lastUpdatedAt found in data.json (the old layout) is moved over.
+// theirs, and a lastUpdatedAt found in data.json (the old layout) is moved over. A university is
+// the default institution type, so an explicit `"institutionType": "University"` is dropped
+// (ROSTER_MAINTENANCE.md); that cleanup is not a content change and stamps nothing.
 import { execFileSync } from 'node:child_process';
 import { readFile, writeFile } from 'node:fs/promises';
 import type { RosterEntry, RosterUpdates } from '../src/data.ts';
@@ -39,7 +41,8 @@ function content(person: RosterEntry): string {
     }
     return value;
   };
-  return JSON.stringify(sorted(Object.fromEntries(Object.entries(record).filter(([key]) => !IGNORED.has(key)))));
+  const kept = Object.entries(record).filter(([key, value]) => !IGNORED.has(key) && !(key === 'institutionType' && value === 'University'));
+  return JSON.stringify(sorted(Object.fromEntries(kept)));
 }
 
 const rosterText = await readFile(rosterFile, 'utf8');
@@ -54,6 +57,11 @@ for (const person of roster) {
   if (person.lastUpdatedAt === undefined) continue;
   current[person.id] ??= person.lastUpdatedAt;
   delete person.lastUpdatedAt;
+  rosterChanged = true;
+}
+for (const person of roster) {
+  if (person.institutionType !== 'University') continue;
+  delete person.institutionType;
   rosterChanged = true;
 }
 

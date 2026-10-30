@@ -128,7 +128,8 @@ goes on the `Admin and Staff` track; center directors and other administrative r
 ### Institution type
 
 The `university` field retains the canonical name of the employing institution for compatibility.
-For a university, omit `institutionType` (legacy records therefore mean `University`). For every
+For a university, omit `institutionType` (a missing value means `University`; `npm test` drops an
+explicit `University`, so writing it is harmless). For every
 eligible non-university employer, set `institutionType` to `Public research institute` or
 `Independent nonprofit research institute`. These labels are displayed publicly and must not be
 used for corporate laboratories. Non-university entries must use the `Research` track.
@@ -686,20 +687,6 @@ canonical-roster fact.
 When changing the observation logic, add tests for the underlying calculation and for empty or
 small filtered rosters. Run `npm test`, `npm run test:e2e`, `npm run build`, and `git diff --check` before submitting
 the change.
-
-### Roster growth chart
-
-The "Show me something interesting" view's growth-over-time chart is the one place that
-satisfies the Git-history exception above: `scripts/build-stats-history.ts` walks `git log` for
-`public/data.json`, keeps the last commit of each UTC day, and writes total roster size per day to
-the build-generated (gitignored) `public/stats-history.json`, consumed by `renderGrowthChart` in
-`src/main.ts`. It runs as part of `predev`/`prebuild`/`pretest`, so it always reflects whatever git
-history is actually present in the current checkout — a shallow clone (a sandboxed agent checkout,
-or CI without `fetch-depth: 0`) yields a short or single-point series rather than a failure. The
-deploy workflow (`.github/workflows/deploy.yml`) uses `fetch-depth: 0` specifically so the
-production build gets full history. Do not commit `public/stats-history.json` itself, and do not
-extend it to chart per-country/per-field history without also reconciling that with the
-no-historical-trend rule above.
 
 ## Fields
 
