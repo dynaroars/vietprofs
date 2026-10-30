@@ -16,10 +16,12 @@ Repository documentation:
 ## Commands
 
 ```bash
-npm install
+npm ci
 npm run dev       # start the Vite development server
 npm run build     # build the production site to dist/
 npm run preview   # preview the production build
+npm run format    # format source, styles, tests, and configuration
+npm run lint      # check formatting and lint rules
 npm run typecheck # check TypeScript modules
 npm test          # validate data and run unit/UI tests
 npm run test:e2e  # run browser smoke tests
@@ -39,6 +41,21 @@ in `src/`). `npm run build-stats-history` reconstructs daily snapshots from loca
 on dev/build; it makes no network requests and does not run during unit tests. Full history
 is needed to show the complete timeline. Counts describe the repository's archive, not
 historical changes in the academic population.
+
+Scripts and tests run directly on Node 24; `npm run typecheck` checks their TypeScript types.
+Biome enforces two-space indentation, single quotes, and semicolons. CSS specificity ordering
+is not linted because shared components intentionally use more specific overrides. Generated map
+coordinates and roster data are excluded from formatting. Shared styles live in `src/style.css` and
+`src/roars-ui.css`; directory, submission, and connection styles load only on their own pages.
+Generated profiles and hubs use the shared styles in `public/profile.css`.
+
+VietProfs also owns the reusable UI baseline for sibling projects such as `../cspicks`.
+`src/roars-ui.css` holds shared tokens and components; `src/search-kit.ts` and
+`src/back-to-top.ts` supply shared behavior. Keep these independent of roster data and
+VietProfs page layouts. CS Picks vendors them unchanged through its
+`npm run sync:vietprofs-ui` command. Add reusable styling here first, preserve existing
+selectors and tokens, and keep project-specific overrides in the consuming project.
+
 
 ## Data and contributions
 

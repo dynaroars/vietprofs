@@ -54,7 +54,7 @@ producers, so the Sun audit takes Saturday's output, overflow past the nightly c
 automation-health check. Frequencies (changed 2026-09-29; portraits cut to weekly 2026-10-29,
 after the setup review in #475): discovery, relationships, and links Mon–Sat; portraits Wed;
 honors Tue/Thu/Sat. Watch the portraits queue
-(`npx tsx scripts/fetch-portraits.ts --status`). Keep new routines inside the 04:00–15:00 window.
+(`node scripts/fetch-portraits.ts --status`). Keep new routines inside the 04:00–15:00 window.
 
 | Key | Routine id | Model | Cron (UTC) | ET | Section |
 | :-- | :-- | :-- | :-- | :-- | :-- |
@@ -251,7 +251,7 @@ Follow `TASKS/AUDIT_ISSUES_PRS.md`, including "Independent review". Also read
      `maintenance/` files, "no new candidates found", or nothing filed). Say the likely reason:
      queue exhausted, source blocked, or the playbook re-selecting entries already tried.
   7. Queues running dry: a producer whose remaining work runs out within about 4 weeks at its
-     cap. Check `npx tsx scripts/fetch-portraits.ts --status` (pending portraits) and roster ids
+     cap. Check `node scripts/fetch-portraits.ts --status` (pending portraits) and roster ids
      not yet in a completed batch in
      `maintenance/relationship-research.json`.
      Recommend a lower frequency or a new source.

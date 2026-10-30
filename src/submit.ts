@@ -1,6 +1,17 @@
 import './style.css';
+import './submit.css';
 import { renderSeeAlso } from './see-also.ts';
-import { FIELDS, fieldOf, INSTITUTION_TYPES, institutionTypeOf, loadRoster, personPath, RANKS, TRACKS, type RosterEntry } from './data.ts';
+import {
+  FIELDS,
+  fieldOf,
+  INSTITUTION_TYPES,
+  institutionTypeOf,
+  loadRoster,
+  personPath,
+  RANKS,
+  TRACKS,
+  type RosterEntry,
+} from './data.ts';
 import { isRequestableField, REQUESTABLE_FIELDS } from './missing-fields.ts';
 import { escapeHtml } from './utils.ts';
 
@@ -394,7 +405,13 @@ function submitterLines(self: boolean): string[] {
 }
 
 function buildNewEntryBody(entry: SubmissionDraft, notes: string, self: boolean): string {
-  const lines = ['Request: New entry', 'Direct update: yes', ...submitterLines(self), '', `Name: ${entry.name}`];
+  const lines = [
+    'Request: New entry',
+    'Direct update: yes',
+    ...submitterLines(self),
+    '',
+    `Name: ${entry.name}`,
+  ];
   for (const key of FIELD_ORDER) {
     const value = formatValue(entry[key]);
     if (value) lines.push(`${FIELD_LABELS[key]}: ${value}`);
@@ -407,18 +424,30 @@ function buildNewEntryBody(entry: SubmissionDraft, notes: string, self: boolean)
 // the maintainer distinguish fields the submitter actually asserted (direct) from details found
 // later while researching the submission.
 function buildBulkSubmissionBody(bulkText: string, entry: SubmissionDraft): string {
-  const lines = ['Request: New entry submission', 'Direct update: yes', '', 'Submitted information:', bulkText];
+  const lines = [
+    'Request: New entry submission',
+    'Direct update: yes',
+    '',
+    'Submitted information:',
+    bulkText,
+  ];
   const structuredLines: string[] = [];
   if (entry.name) structuredLines.push(`Name: ${entry.name}`);
   for (const key of FIELD_ORDER) {
     const value = formatValue(entry[key]);
     if (value) structuredLines.push(`${FIELD_LABELS[key]}: ${value}`);
   }
-  if (structuredLines.length) lines.push('', 'Additional structured details for one person:', ...structuredLines);
+  if (structuredLines.length)
+    lines.push('', 'Additional structured details for one person:', ...structuredLines);
   return lines.join('\n');
 }
 
-function buildUpdateBody(matchedEntry: RosterEntry, entry: SubmissionDraft, notes: string, self: boolean): string {
+function buildUpdateBody(
+  matchedEntry: RosterEntry,
+  entry: SubmissionDraft,
+  notes: string,
+  self: boolean,
+): string {
   const nameChanged = Boolean(entry.name) && entry.name !== matchedEntry.name;
   const lines = [
     'Request: Update existing entry',
@@ -442,11 +471,12 @@ function buildUpdateBody(matchedEntry: RosterEntry, entry: SubmissionDraft, note
   // untyped view rather than claiming RosterEntry has every SubmissionDraft key.
   const matchedRecord = matchedEntry as unknown as Record<string, unknown>;
   for (const key of FIELD_ORDER) {
-    const oldValue = key === 'field'
-      ? fieldOf(matchedEntry.department, matchedEntry.university)
-      : key === 'institutionType'
-      ? institutionTypeOf(matchedEntry)
-      : formatValue(matchedRecord[key]);
+    const oldValue =
+      key === 'field'
+        ? fieldOf(matchedEntry.department, matchedEntry.university)
+        : key === 'institutionType'
+          ? institutionTypeOf(matchedEntry)
+          : formatValue(matchedRecord[key]);
     const newValue = formatValue(entry[key]);
     if (oldValue !== newValue) {
       changes.push(`- ${FIELD_LABELS[key]}: ${oldValue || '(none)'} → ${newValue || '(removed)'}`);
@@ -457,7 +487,10 @@ function buildUpdateBody(matchedEntry: RosterEntry, entry: SubmissionDraft, note
   return lines.join('\n');
 }
 
-function buildConnectionBody(form: SubmitForm, entriesById: Map<string, RosterEntry> | null): string {
+function buildConnectionBody(
+  form: SubmitForm,
+  entriesById: Map<string, RosterEntry> | null,
+): string {
   const relationshipLabels: Record<string, string> = {
     'doctoral-advisor': 'Doctoral advisor / advisee',
     'masters-advisor': "Master's thesis advisor / advisee",
@@ -490,13 +523,21 @@ function buildConnectionBody(form: SubmitForm, entriesById: Map<string, RosterEn
 
 function validateConnectionEvidence(form: SubmitForm): boolean {
   const worksInput = form.connectionWorks as HTMLTextAreaElement;
-  const works = worksInput.value.split('\n').map((line) => line.trim()).filter(Boolean);
-  const minimumWorks = form.connectionType.value === 'coauthor' ? 2
-    : ['grant-collaborator', 'patent-coinventor'].includes(form.connectionType.value) ? 1
-      : 0;
-  worksInput.setCustomValidity(minimumWorks > 0 && works.length < minimumWorks
-    ? `Add at least ${minimumWorks} qualifying ${minimumWorks === 1 ? 'work or record' : 'shared works'}, one per line.`
-    : '');
+  const works = worksInput.value
+    .split('\n')
+    .map((line) => line.trim())
+    .filter(Boolean);
+  const minimumWorks =
+    form.connectionType.value === 'coauthor'
+      ? 2
+      : ['grant-collaborator', 'patent-coinventor'].includes(form.connectionType.value)
+        ? 1
+        : 0;
+  worksInput.setCustomValidity(
+    minimumWorks > 0 && works.length < minimumWorks
+      ? `Add at least ${minimumWorks} qualifying ${minimumWorks === 1 ? 'work or record' : 'shared works'}, one per line.`
+      : '',
+  );
   return form.reportValidity();
 }
 
@@ -529,18 +570,26 @@ function populateEntry(form: SubmitForm, entry: RosterEntry): void {
   form.mdInstitution.value = entry.mdInstitution ?? '';
   form.researchAreas.value = entry.researchAreas ? entry.researchAreas.join(', ') : '';
   const trackValue = entry.track ?? '';
-  const radio = form.querySelector(`input[name="track"][value="${trackValue}"]`) as HTMLInputElement | null;
+  const radio = form.querySelector(
+    `input[name="track"][value="${trackValue}"]`,
+  ) as HTMLInputElement | null;
   if (radio) radio.checked = true;
 }
 
 // Profile pages link here with ?missing=phdYear,scholarUrl,… for the fields the entry lacks. Only
 // fields that are still empty are highlighted, and the first one is focused.
 function highlightMissing(form: SubmitForm, entry: RosterEntry, requested: string): void {
-  const fields = requested.split(',').filter(isRequestableField).filter((field) => !entry[field]);
+  const fields = requested
+    .split(',')
+    .filter(isRequestableField)
+    .filter((field) => !entry[field]);
   if (!fields.length) return;
   for (const field of fields) form[field]?.closest('.form-section')?.classList.add('field-missing');
   const notice = byId('name-match-notice');
-  notice.append(document.createElement('br'), `Not on record yet: ${fields.map((field) => REQUESTABLE_FIELDS[field]).join(', ')}. Fill in whatever you know.`);
+  notice.append(
+    document.createElement('br'),
+    `Not on record yet: ${fields.map((field) => REQUESTABLE_FIELDS[field]).join(', ')}. Fill in whatever you know.`,
+  );
   form[fields[0]]?.focus();
 }
 
@@ -563,7 +612,10 @@ function findMatchedEntry(
   entriesByName: Map<string, RosterEntry> | null,
   name: string,
 ): RosterEntry | undefined {
-  return entriesById?.get(form.dataset.editingId ?? '') ?? entriesByName?.get(name.toLocaleLowerCase().trim());
+  return (
+    entriesById?.get(form.dataset.editingId ?? '') ??
+    entriesByName?.get(name.toLocaleLowerCase().trim())
+  );
 }
 
 function clearAutoPopulatedEntry(form: SubmitForm): void {
@@ -576,10 +628,17 @@ function clearAutoPopulatedEntry(form: SubmitForm): void {
 }
 
 function getPurpose(): string {
-  return (document.querySelector('input[name="purpose"]:checked') as HTMLInputElement | null)?.value ?? 'add';
+  return (
+    (document.querySelector('input[name="purpose"]:checked') as HTMLInputElement | null)?.value ??
+    'add'
+  );
 }
 
-function onSubmit(e: SubmitEvent, entriesById: Map<string, RosterEntry> | null, entriesByName: Map<string, RosterEntry> | null): void {
+function onSubmit(
+  e: SubmitEvent,
+  entriesById: Map<string, RosterEntry> | null,
+  entriesByName: Map<string, RosterEntry> | null,
+): void {
   e.preventDefault();
   const form = e.target as unknown as SubmitForm;
   const purpose = getPurpose();
@@ -608,7 +667,9 @@ function onSubmit(e: SubmitEvent, entriesById: Map<string, RosterEntry> | null, 
   }
 
   if (purpose === 'add' && !bulkText && !name) {
-    form.bulkInput.setCustomValidity('Paste at least a name or link, or enter one person’s details below.');
+    form.bulkInput.setCustomValidity(
+      'Paste at least a name or link, or enter one person’s details below.',
+    );
     form.bulkInput.reportValidity();
     return;
   }
@@ -704,7 +765,8 @@ function applyPurpose(purpose: string): void {
   optionalDetails.hidden = isConnection;
   connectionSection.hidden = !isConnection;
   requiredSection.classList.toggle('single-entry-details', isAdd);
-  requiredSection.hidden = isConnection || (isAdd && !requiredSection.classList.contains('expanded'));
+  requiredSection.hidden =
+    isConnection || (isAdd && !requiredSection.classList.contains('expanded'));
   requiredHeading.textContent = isAdd ? 'This person' : 'Required';
   requiredDescription.textContent = isAdd
     ? "You've filled in one person's full details directly, instead of pasting text above."
@@ -720,7 +782,13 @@ function applyPurpose(purpose: string): void {
     : 'e.g. Moved to a new university, updated title, corrected spelling, etc.';
   nameInput.required = isUpdate;
   profileUrlInput.required = isUpdate;
-  for (const id of ['connectionPersonA', 'connectionPersonB', 'connectionType', 'connectionEvidence', 'connectionSources']) {
+  for (const id of [
+    'connectionPersonA',
+    'connectionPersonB',
+    'connectionType',
+    'connectionEvidence',
+    'connectionSources',
+  ]) {
     byId<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>(id).required = isConnection;
   }
 }
@@ -772,17 +840,25 @@ async function init() {
     const connectionType = byId<HTMLSelectElement>('connectionType');
     const connectionTypeHelp = byId<HTMLParagraphElement>('connection-type-help');
     const connectionTypeHelpText: Record<string, string> = {
-      'doctoral-advisor': 'Use an official dissertation or university record that names the doctoral advisor. Put the advisor first.',
-      'masters-advisor': 'Use a thesis or university record that names the master’s thesis advisor. Put the advisor first; course supervision alone is not enough.',
-      'undergraduate-advisor': 'Use a thesis or university record that names the undergraduate thesis advisor. Put the advisor first; course supervision alone is not enough.',
-      'postdoctoral-mentor': 'Use a source that explicitly identifies the postdoctoral mentor or advisor. Put the mentor first; a shared lab or institution alone is not enough.',
-      coauthor: 'Provide at least two qualifying shared scholarly works and sources that identify both authors.',
-      'grant-collaborator': 'Provide one funded award record from NSF, NIH, or another relevant funder that names both people in joint award-leadership roles, such as PI/co-PI or multiple PD/PI.',
-      'patent-coinventor': 'Provide one patent record that names both people as co-inventors on the same patent.',
+      'doctoral-advisor':
+        'Use an official dissertation or university record that names the doctoral advisor. Put the advisor first.',
+      'masters-advisor':
+        'Use a thesis or university record that names the master’s thesis advisor. Put the advisor first; course supervision alone is not enough.',
+      'undergraduate-advisor':
+        'Use a thesis or university record that names the undergraduate thesis advisor. Put the advisor first; course supervision alone is not enough.',
+      'postdoctoral-mentor':
+        'Use a source that explicitly identifies the postdoctoral mentor or advisor. Put the mentor first; a shared lab or institution alone is not enough.',
+      coauthor:
+        'Provide at least two qualifying shared scholarly works and sources that identify both authors.',
+      'grant-collaborator':
+        'Provide one funded award record from NSF, NIH, or another relevant funder that names both people in joint award-leadership roles, such as PI/co-PI or multiple PD/PI.',
+      'patent-coinventor':
+        'Provide one patent record that names both people as co-inventors on the same patent.',
     };
     connectionType.addEventListener('change', () => {
-      connectionTypeHelp.textContent = connectionTypeHelpText[connectionType.value]
-        ?? 'Choose the connection type supported by the source. Advisor and mentor relationships are directional; the first person should be the advisor or mentor.';
+      connectionTypeHelp.textContent =
+        connectionTypeHelpText[connectionType.value] ??
+        'Choose the connection type supported by the source. Advisor and mentor relationships are directional; the first person should be the advisor or mentor.';
     });
     let matchingEntries: RosterEntry[] = [];
 
@@ -792,7 +868,9 @@ async function init() {
     }
 
     function checkMatch(name: string) {
-      const entry = entriesById?.get(form.dataset.editingId ?? '') ?? entriesByName?.get(name.toLocaleLowerCase().trim());
+      const entry =
+        entriesById?.get(form.dataset.editingId ?? '') ??
+        entriesByName?.get(name.toLocaleLowerCase().trim());
       if (entry) {
         const profileUrl = `${import.meta.env.BASE_URL}${personPath(entry.id)}`;
         matchNotice.innerHTML = `Editing existing entry <strong>${escapeHtml(entry.id)}</strong> · <a href="${escapeHtml(profileUrl)}">View permanent profile</a><br><strong>${escapeHtml(entry.name)}</strong> · ${escapeHtml(entry.university)} · ${escapeHtml(entry.department)}. Details pre-filled for editing.`;
@@ -804,10 +882,15 @@ async function init() {
 
     const params = new URLSearchParams(window.location.search);
     const requestedEdit = params.get('edit');
-    const entryToEdit = requestedEdit && (entriesById?.get(requestedEdit) ?? entriesByName?.get(requestedEdit.toLocaleLowerCase().trim()));
+    const entryToEdit =
+      requestedEdit &&
+      (entriesById?.get(requestedEdit) ??
+        entriesByName?.get(requestedEdit.toLocaleLowerCase().trim()));
     const lockedEditId = entryToEdit ? entryToEdit.id : '';
     if (entryToEdit) {
-      (document.querySelector('input[name="purpose"][value="update"]') as HTMLInputElement).checked = true;
+      (
+        document.querySelector('input[name="purpose"][value="update"]') as HTMLInputElement
+      ).checked = true;
       applyPurpose('update');
       populateEntry(form, entryToEdit);
       checkMatch(entryToEdit.name);
@@ -848,7 +931,11 @@ async function init() {
     nameInput.addEventListener('input', () => {
       const query = nameInput.value.trim().toLocaleLowerCase();
       const boundEntry = entriesById?.get(form.dataset.editingId ?? '');
-      if (boundEntry && form.dataset.editingId !== lockedEditId && boundEntry.name.toLocaleLowerCase() !== query) {
+      if (
+        boundEntry &&
+        form.dataset.editingId !== lockedEditId &&
+        boundEntry.name.toLocaleLowerCase() !== query
+      ) {
         clearAutoPopulatedEntry(form);
         delete form.dataset.editingId;
       }
@@ -864,7 +951,9 @@ async function init() {
     });
 
     suggestions.addEventListener('click', (event) => {
-      const button = (event.target as HTMLElement | null)?.closest<HTMLButtonElement>('.correction-suggestion');
+      const button = (event.target as HTMLElement | null)?.closest<HTMLButtonElement>(
+        '.correction-suggestion',
+      );
       if (!button) return;
       const entry = matchingEntries[Number(button.dataset.index)];
       if (!entry) return;

@@ -1,4 +1,4 @@
-#!/usr/bin/env -S npx --no-install tsx
+#!/usr/bin/env node
 
 /**
  * Checks URLs and portraits in the roster for reachability, redirects, soft 404s, and content validity.
@@ -84,15 +84,19 @@ const checkPortraitsOnly = args.includes('--portraits');
 // Collect URLs
 let entries: UrlEntry[] = [];
 for (const person of roster) {
-  if (targetId && !person.id.toLowerCase().includes(targetId) && !person.name.toLowerCase().includes(targetId)) {
+  if (
+    targetId &&
+    !person.id.toLowerCase().includes(targetId) &&
+    !person.name.toLowerCase().includes(targetId)
+  ) {
     continue;
   }
 
   const fieldsToCheck = checkPortraitsOnly
     ? ['portraitSource']
     : targetField
-    ? [targetField]
-    : ['profileUrl', 'websiteUrl', 'scholarUrl', 'linkedinUrl', 'portraitSource'];
+      ? [targetField]
+      : ['profileUrl', 'websiteUrl', 'scholarUrl', 'linkedinUrl', 'portraitSource'];
 
   for (const field of fieldsToCheck) {
     if (person[field]) {
@@ -103,7 +107,12 @@ for (const person of roster) {
   if (!checkPortraitsOnly && (!targetField || targetField === 'honors')) {
     for (const honor of person.honors ?? []) {
       if (honor.source) {
-        entries.push({ id: person.id, name: person.name, field: `honor "${honor.name}"`, url: honor.source });
+        entries.push({
+          id: person.id,
+          name: person.name,
+          field: `honor "${honor.name}"`,
+          url: honor.source,
+        });
       }
     }
   }
@@ -116,17 +125,25 @@ if (limit && limit > 0) {
 // Check local portrait files if portrait auditing requested
 if (checkPortraitsOnly || !targetField) {
   for (const person of roster) {
-    if (targetId && !person.id.toLowerCase().includes(targetId) && !person.name.toLowerCase().includes(targetId)) {
+    if (
+      targetId &&
+      !person.id.toLowerCase().includes(targetId) &&
+      !person.name.toLowerCase().includes(targetId)
+    ) {
       continue;
     }
     if (person.portrait) {
       const localPath = resolve('public', person.portrait);
       if (!existsSync(localPath)) {
-        console.error(`🚨 [Missing File] ${person.name} (${person.id}): Local portrait not found at public/${person.portrait}`);
+        console.error(
+          `🚨 [Missing File] ${person.name} (${person.id}): Local portrait not found at public/${person.portrait}`,
+        );
       } else {
         const stats = statSync(localPath);
         if (stats.size < 500) {
-          console.error(`⚠️  [Suspicious File] ${person.name} (${person.id}): Local portrait file is unusually small (${stats.size} bytes)`);
+          console.error(
+            `⚠️  [Suspicious File] ${person.name} (${person.id}): Local portrait file is unusually small (${stats.size} bytes)`,
+          );
         }
       }
     }
@@ -145,7 +162,8 @@ process.on('uncaughtException', (error: NodeJS.ErrnoException) => {
   process.exit(1);
 });
 
-const USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36';
+const USER_AGENT =
+  'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36';
 
 const SOFT_404_PATTERNS = [
   /<title>[^<]*(404|not found|page not found|error|access denied|does not exist)[^<]*<\/title>/i,
@@ -205,7 +223,13 @@ async function checkOne(entry: UrlEntry): Promise<CheckResult> {
       try {
         const origPath = new URL(entry.url).pathname;
         const finalPath = new URL(finalUrl).pathname;
-        if (origPath.length > 5 && (finalPath === '/' || finalPath === '/faculty' || finalPath === '/people' || finalPath === '/directory')) {
+        if (
+          origPath.length > 5 &&
+          (finalPath === '/' ||
+            finalPath === '/faculty' ||
+            finalPath === '/people' ||
+            finalPath === '/directory')
+        ) {
           warning = `Redirected to generic root directory (${finalUrl}) - likely retired profile`;
         }
       } catch {}
@@ -241,7 +265,11 @@ async function checkOne(entry: UrlEntry): Promise<CheckResult> {
             const firstName = tokens[0];
             const lowerText = text.toLowerCase();
 
-            if (lastName && !lowerText.includes(lastName.toLowerCase()) && !lowerText.includes(firstName.toLowerCase())) {
+            if (
+              lastName &&
+              !lowerText.includes(lastName.toLowerCase()) &&
+              !lowerText.includes(firstName.toLowerCase())
+            ) {
               warning = `Page does not mention name "${entry.name}" (possible wrong link or generic page)`;
             }
           }
@@ -260,7 +288,7 @@ async function checkOne(entry: UrlEntry): Promise<CheckResult> {
   } catch (err: unknown) {
     const errorMsg = err instanceof Error ? err.message : String(err);
     const code = (err as { cause?: { code?: string } })?.cause?.code;
-    const errorDetail = errorMsg.includes('aborted') ? 'Request timeout' : code ?? errorMsg;
+    const errorDetail = errorMsg.includes('aborted') ? 'Request timeout' : (code ?? errorMsg);
     return {
       ...entry,
       status: 'ERROR',
@@ -273,7 +301,11 @@ async function checkOne(entry: UrlEntry): Promise<CheckResult> {
   }
 }
 
-async function runPool<T, R>(items: T[], concurrency: number, fn: (item: T) => Promise<R>): Promise<R[]> {
+async function runPool<T, R>(
+  items: T[],
+  concurrency: number,
+  fn: (item: T) => Promise<R>,
+): Promise<R[]> {
   const results: R[] = [];
   let index = 0;
   let done = 0;
@@ -294,7 +326,9 @@ async function runPool<T, R>(items: T[], concurrency: number, fn: (item: T) => P
   return results;
 }
 
-console.log(`🔍 Checking ${entries.length} URLs (concurrency ${CONCURRENCY}, timeout ${TIMEOUT_MS}ms)...`);
+console.log(
+  `🔍 Checking ${entries.length} URLs (concurrency ${CONCURRENCY}, timeout ${TIMEOUT_MS}ms)...`,
+);
 const results = await runPool(entries, CONCURRENCY, checkOne);
 
 const broken = results.filter((r) => !r.ok && !r.unverifiable);
@@ -311,7 +345,9 @@ console.log(`   🔒 Could not check (blocked/rate-limited/timeout): ${unverifia
 if (broken.length > 0) {
   console.log(`🚨 BROKEN LINKS (${broken.length}):`);
   for (const b of broken) {
-    console.log(`  - [${b.id}] ${b.name} (${b.field}): Status ${b.status} ${b.errorDetail ? `(${b.errorDetail})` : ''}\n    ${b.url}`);
+    console.log(
+      `  - [${b.id}] ${b.name} (${b.field}): Status ${b.status} ${b.errorDetail ? `(${b.errorDetail})` : ''}\n    ${b.url}`,
+    );
   }
   console.log();
 }
@@ -319,7 +355,9 @@ if (broken.length > 0) {
 if (warnings.length > 0) {
   console.log(`⚠️  WARNINGS & SOFT 404s (${warnings.length}):`);
   for (const w of warnings) {
-    console.log(`  - [${w.id}] ${w.name} (${w.field}): ${w.warning}\n    URL: ${w.url}${w.redirectUrl ? `\n    Redirected To: ${w.redirectUrl}` : ''}`);
+    console.log(
+      `  - [${w.id}] ${w.name} (${w.field}): ${w.warning}\n    URL: ${w.url}${w.redirectUrl ? `\n    Redirected To: ${w.redirectUrl}` : ''}`,
+    );
   }
   console.log();
 }
@@ -328,11 +366,15 @@ if (unverifiable.length > 0) {
   const byHost = new Map<string, number>();
   for (const u of unverifiable) {
     let host = u.url;
-    try { host = new URL(u.url).host; } catch {}
+    try {
+      host = new URL(u.url).host;
+    } catch {}
     byHost.set(host, (byHost.get(host) ?? 0) + 1);
   }
   const top = [...byHost.entries()].sort((a, b) => b[1] - a[1]).slice(0, 15);
-  console.log(`🔒 COULD NOT CHECK (${unverifiable.length}; not evidence of a dead link). Top hosts:`);
+  console.log(
+    `🔒 COULD NOT CHECK (${unverifiable.length}; not evidence of a dead link). Top hosts:`,
+  );
   for (const [host, count] of top) console.log(`  - ${host}: ${count}`);
   console.log();
 }

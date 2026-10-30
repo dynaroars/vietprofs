@@ -1,9 +1,21 @@
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import test from 'node:test';
-import { fieldPath, fieldRegionPath, fieldSlug, hasEnoughPeopleForRosterHub, personPath, regionPath, regionSlug, type Roster, universityPath } from '../src/data.ts';
+import {
+  fieldPath,
+  fieldRegionPath,
+  fieldSlug,
+  hasEnoughPeopleForRosterHub,
+  personPath,
+  regionPath,
+  regionSlug,
+  type Roster,
+  universityPath,
+} from '../src/data.ts';
 
-const roster = JSON.parse(await readFile(new URL('../public/data.json', import.meta.url), 'utf8')) as Roster;
+const roster = JSON.parse(
+  await readFile(new URL('../public/data.json', import.meta.url), 'utf8'),
+) as Roster;
 
 test('every roster entry has a unique, immutable static profile path', () => {
   const ids = roster.map((person) => person.id);
@@ -16,36 +28,59 @@ test('every roster entry has a unique, immutable static profile path', () => {
 
 test('discipline and region hub paths generate clean canonical filenames', () => {
   assert.equal(fieldSlug('Computer & Information Sciences'), 'computer-and-information-sciences');
-  assert.equal(fieldPath('Computer & Information Sciences'), 'fields/computer-and-information-sciences.html');
+  assert.equal(
+    fieldPath('Computer & Information Sciences'),
+    'fields/computer-and-information-sciences.html',
+  );
   assert.equal(regionSlug('North America'), 'north-america');
   assert.equal(regionPath('North America'), 'regions/north-america.html');
   assert.equal(regionSlug('United States'), 'united-states');
   assert.equal(regionPath('United States'), 'regions/united-states.html');
+  assert.equal(fieldRegionPath('Health Sciences', 'Japan'), 'regions/japan/health-sciences.html');
   assert.equal(
-    fieldRegionPath('Health Sciences', 'Japan'),
-    'regions/japan/health-sciences.html',
+    universityPath('University of California, San Diego'),
+    'universities/university-of-california-san-diego.html',
   );
-  assert.equal(universityPath('University of California, San Diego'), 'universities/university-of-california-san-diego.html');
   assert.equal(hasEnoughPeopleForRosterHub(2), false);
   assert.equal(hasEnoughPeopleForRosterHub(3), true);
 });
 
-test('generated profile pages use the same stylesheet source as the directory', async () => {
-  const generator = await readFile(new URL('../scripts/generate-profile-pages.ts', import.meta.url), 'utf8');
+test('generated profile pages use shared styles without page-specific CSS', async () => {
+  const generator = await readFile(
+    new URL('../scripts/generate-profile-pages.ts', import.meta.url),
+    'utf8',
+  );
   const stylesheet = await readFile(new URL('../public/profile.css', import.meta.url), 'utf8');
   const sourceStylesheet = await readFile(new URL('../src/style.css', import.meta.url), 'utf8');
   const sharedStylesheet = await readFile(new URL('../src/roars-ui.css', import.meta.url), 'utf8');
-  assert.match(generator, /<link rel="stylesheet" href="\.\.\/profile\.css\?v=\$\{assetVersion\.css\}">/);
+  assert.match(
+    generator,
+    /<link rel="stylesheet" href="\.\.\/profile\.css\?v=\$\{assetVersion\.css\}">/,
+  );
   assert.doesNotMatch(generator, /<style>/);
-  assert.equal(stylesheet, `${sharedStylesheet}\n${sourceStylesheet.replace("@import './roars-ui.css';\n", '')}`);
+  assert.equal(
+    stylesheet,
+    `${sharedStylesheet}\n${sourceStylesheet.replace("@import './roars-ui.css';\n", '')}`,
+  );
   assert.match(generator, /class="submission-link"/);
   assert.match(generator, /renderAddFab\(editUrl\)/);
   assert.match(generator, /renderAddFab\(`\$\{rootPrefix\}submit\.html`\)/);
   assert.match(generator, /class="brand-logo" src="\.\.\/vietprofs-bamboo-v\.svg"/);
   assert.match(generator, /rel="icon" type="image\/svg\+xml" href="\.\.\/vietprofs-bamboo-v\.svg"/);
-  assert.match(sharedStylesheet, /:root\s*{[^}]*--bamboo-green: #2e9e64;[^}]*--bamboo-green-hover: #1d7a4c;/s);
-  assert.match(sourceStylesheet, /\.submission-link\s*{[^}]*background: var\(--bamboo-green\);[^}]*color: #ffffff;/s);
-  assert.match(sourceStylesheet, /\.submit-btn\s*{[^}]*background: var\(--bamboo-green\);[^}]*color: #ffffff;/s);
+  assert.match(
+    sharedStylesheet,
+    /:root\s*{[^}]*--bamboo-green: #2e9e64;[^}]*--bamboo-green-hover: #1d7a4c;/s,
+  );
+  assert.match(
+    sourceStylesheet,
+    /\.submission-link\s*{[^}]*background: var\(--bamboo-green\);[^}]*color: #ffffff;/s,
+  );
+  const submitStylesheet = await readFile(new URL('../src/submit.css', import.meta.url), 'utf8');
+  assert.doesNotMatch(stylesheet, /\.growth-chart|\.submit-form|\.network-toolbar/);
+  assert.match(
+    submitStylesheet,
+    /\.submit-btn\s*{[^}]*background: var\(--bamboo-green\);[^}]*color: #ffffff;/s,
+  );
   assert.match(generator, /countryFlag/);
   assert.match(generator, /class="loc-badge"/);
   assert.match(generator, /class="country-flag"/);
@@ -78,40 +113,75 @@ test('generated profile pages use the same stylesheet source as the directory', 
   assert.match(generator, /view raw record/);
   assert.doesNotMatch(generator, /Report stale record/);
   assert.match(generator, /<span>\$\{sectionLabel\}<\/span>/);
-  assert.doesNotMatch(generator, /<span><a href="\.\.\/index\.html">\$\{sectionLabel\}<\/a><\/span>/);
+  assert.doesNotMatch(
+    generator,
+    /<span><a href="\.\.\/index\.html">\$\{sectionLabel\}<\/a><\/span>/,
+  );
   assert.doesNotMatch(generator, /SELECTED WORK/);
   assert.doesNotMatch(generator, /RECENT WORK/);
   assert.doesNotMatch(generator, /<footer>/);
   assert.doesNotMatch(generator, /man-footer-line/);
   assert.ok(
     generator.indexOf('class="profile-actions"') < generator.indexOf('class="native"'),
-    'profile actions should appear alongside the person\'s name',
+    "profile actions should appear alongside the person's name",
   );
-  assert.match(generator, /class="name-title"><h1>\$\{escapeHtml\(name\)\}<\/h1>\$\{favoriteToggle\}<\/div>/);
+  assert.match(
+    generator,
+    /class="name-title"><h1>\$\{escapeHtml\(name\)\}<\/h1>\$\{favoriteToggle\}<\/div>/,
+  );
 });
 
-test('share menu links point at the page address with encoded title and URL', async () => {
+test('share buttons preserve escaped fixed addresses and titles', async () => {
   const { renderShareMenu } = await import('../src/share.ts');
-  const html = renderShareMenu({ title: 'Ada & Bob on VietProfs', url: 'https://vietprofs.roars.dev/people/vp-0001.html' });
+  const html = renderShareMenu({
+    title: 'Ada & Bob on VietProfs',
+    url: 'https://vietprofs.roars.dev/people/vp-0001.html',
+  });
   assert.match(html, /data-share-url="https:\/\/vietprofs\.roars\.dev\/people\/vp-0001\.html"/);
-  assert.match(html, /facebook\.com\/sharer\/sharer\.php\?u=https%3A%2F%2Fvietprofs\.roars\.dev%2Fpeople%2Fvp-0001\.html/);
-  assert.match(html, /mailto:\?subject=Ada%20%26%20Bob%20on%20VietProfs/);
-  assert.match(html, /data-share-copy/);
-  assert.match(html, /x\.com\/intent\/post\?text=Ada%20%26%20Bob%20on%20VietProfs&amp;url=https%3A%2F%2Fvietprofs/);
-  assert.match(html, /bsky\.app\/intent\/compose\?text=/);
-  assert.match(html, /wa\.me\/\?text=/);
-  assert.match(html, /data-share-mastodon/);
-
-  const dynamic = renderShareMenu({ title: 'VietProfs' });
-  assert.doesNotMatch(dynamic, /data-share-url/);
-  assert.match(dynamic, /href="#" data-share-template/);
+  assert.match(html, /data-share-title="Ada &amp; Bob on VietProfs"/);
+  assert.match(html, /<button type="button" class="share-toggle"/);
+  assert.doesNotMatch(html, /<details|facebook|mastodon/);
+  assert.doesNotMatch(renderShareMenu({ title: 'VietProfs' }), /data-share-url/);
 });
 
 test('missing-field prompts skip what an entry already has and gaps that are expected', async () => {
   const { missingFields } = await import('../src/missing-fields.ts');
-  const base = { id: 'vp-9999', name: 'Test Person', university: 'U', department: 'D', city: 'C', country: 'United States', profileUrl: 'https://example.edu', researchAreas: [], track: 'Tenure-line' } as unknown as Roster[number];
-  assert.deepEqual(missingFields(base), ['vietnameseName', 'phdInstitution', 'phdYear', 'scholarUrl', 'websiteUrl', 'linkedinUrl']);
-  assert.deepEqual(missingFields({ ...base, vietnameseName: 'Tên', phdInstitution: 'MIT', phdYear: 2010, scholarUrl: 'x', websiteUrl: 'y', linkedinUrl: 'z' }), []);
-  assert.deepEqual(missingFields({ ...base, mdInstitution: 'Harvard' }), ['vietnameseName', 'scholarUrl', 'websiteUrl', 'linkedinUrl']);
+  const base = {
+    id: 'vp-9999',
+    name: 'Test Person',
+    university: 'U',
+    department: 'D',
+    city: 'C',
+    country: 'United States',
+    profileUrl: 'https://example.edu',
+    researchAreas: [],
+    track: 'Tenure-line',
+  } as unknown as Roster[number];
+  assert.deepEqual(missingFields(base), [
+    'vietnameseName',
+    'phdInstitution',
+    'phdYear',
+    'scholarUrl',
+    'websiteUrl',
+    'linkedinUrl',
+  ]);
+  assert.deepEqual(
+    missingFields({
+      ...base,
+      vietnameseName: 'Tên',
+      phdInstitution: 'MIT',
+      phdYear: 2010,
+      scholarUrl: 'x',
+      websiteUrl: 'y',
+      linkedinUrl: 'z',
+    }),
+    [],
+  );
+  assert.deepEqual(missingFields({ ...base, mdInstitution: 'Harvard' }), [
+    'vietnameseName',
+    'scholarUrl',
+    'websiteUrl',
+    'linkedinUrl',
+  ]);
   assert.ok(!missingFields({ ...base, track: 'Deceased' }).includes('linkedinUrl'));
 });

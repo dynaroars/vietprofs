@@ -1,11 +1,16 @@
 import './style.css';
+import './connections.css';
 import './stats-components.css';
 import { initGraphExplorer, renderGraphExplorer } from './connections-graph.ts';
 import { renderAddFab } from './add-fab.ts';
 import { renderSeeAlso } from './see-also.ts';
 import { escapeHtml, formatLocalTimestamp } from './utils.ts';
 import { displayName, personPath, type Roster, type RosterEntry } from './data.ts';
-import type { AcademicRelationship, RelationshipDatabase, RelationshipType } from './relationships.ts';
+import type {
+  AcademicRelationship,
+  RelationshipDatabase,
+  RelationshipType,
+} from './relationships.ts';
 
 const app = document.getElementById('app')!;
 const base = import.meta.env.BASE_URL;
@@ -39,7 +44,6 @@ function runningHead(): string {
   </p>`;
 }
 
-
 interface Edge {
   relationship: AcademicRelationship;
   source: RosterEntry;
@@ -62,16 +66,36 @@ function renderMetrics(roster: Roster, database: RelationshipDatabase): string {
   }
   const typeCount = new Set(database.relationships.map((relationship) => relationship.type)).size;
   const cards = [
-    ['Verified connections', formatNumber(database.relationships.length), `${typeCount} relationship type${typeCount === 1 ? '' : 's'}`],
-    ['People with a connection', formatNumber(connected.size), `of ${formatNumber(roster.length)} roster entries`],
-    ['Doctoral advising links', formatNumber(database.relationships.filter((r) => r.type === 'doctoral-advisor').length), 'Advisor → advisee, roster-to-roster'],
-    ['Coauthor links', formatNumber(database.relationships.filter((r) => r.type === 'coauthor').length), 'Two or more shared works'],
+    [
+      'Verified connections',
+      formatNumber(database.relationships.length),
+      `${typeCount} relationship type${typeCount === 1 ? '' : 's'}`,
+    ],
+    [
+      'People with a connection',
+      formatNumber(connected.size),
+      `of ${formatNumber(roster.length)} roster entries`,
+    ],
+    [
+      'Doctoral advising links',
+      formatNumber(database.relationships.filter((r) => r.type === 'doctoral-advisor').length),
+      'Advisor → advisee, roster-to-roster',
+    ],
+    [
+      'Coauthor links',
+      formatNumber(database.relationships.filter((r) => r.type === 'coauthor').length),
+      'Two or more shared works',
+    ],
   ];
-  return `<div class="browser-metric-grid">${cards.map(([label, value, detail]) => `<article class="browser-metric-card">
+  return `<div class="browser-metric-grid">${cards
+    .map(
+      ([label, value, detail]) => `<article class="browser-metric-card">
     <p class="browser-metric-label">${escapeHtml(label)}</p>
     <p class="browser-metric-value">${escapeHtml(value)}</p>
     <p class="browser-metric-detail">${escapeHtml(detail)}</p>
-  </article>`).join('')}</div>`;
+  </article>`,
+    )
+    .join('')}</div>`;
 }
 
 function renderTypeBreakdown(database: RelationshipDatabase): string {
@@ -110,19 +134,26 @@ function renderAllConnections(roster: Roster, database: RelationshipDatabase): s
     const target = byId.get(relationship.targetId);
     return source && target ? [{ relationship, source, target }] : [];
   });
-  edges.sort((a, b) =>
-    TYPE_LABELS[a.relationship.type].localeCompare(TYPE_LABELS[b.relationship.type]) ||
-    a.source.name.localeCompare(b.source.name));
-  if (!edges.length) return '<p class="no-data">No verified connections have been recorded yet.</p>';
+  edges.sort(
+    (a, b) =>
+      TYPE_LABELS[a.relationship.type].localeCompare(TYPE_LABELS[b.relationship.type]) ||
+      a.source.name.localeCompare(b.source.name),
+  );
+  if (!edges.length)
+    return '<p class="no-data">No verified connections have been recorded yet.</p>';
   return `<details class="stats-secondary-details"><summary><strong>View all ${formatNumber(edges.length)} verified connections</strong></summary>
     <div class="stats-table-wrapper"><table class="stats-table"><thead><tr><th>Type</th><th>From</th><th></th><th>To</th><th>Evidence</th></tr></thead>
-    <tbody>${edges.map(({ relationship, source, target }) => `<tr>
+    <tbody>${edges
+      .map(
+        ({ relationship, source, target }) => `<tr>
       <td>${escapeHtml(TYPE_LABELS[relationship.type])}</td>
       <td>${personLink(source)}</td>
       <td>${edgeArrow(relationship)}</td>
       <td>${personLink(target)}</td>
       <td><a href="${escapeHtml(relationship.sources[0])}" target="_blank" rel="noopener noreferrer">source</a></td>
-    </tr>`).join('')}</tbody></table></div>
+    </tr>`,
+      )
+      .join('')}</tbody></table></div>
   </details>`;
 }
 
@@ -155,7 +186,8 @@ function renderError(message: string): string {
 }
 
 async function fetchJson<T>(path: string): Promise<T> {
-  const cacheBuster = typeof __BUILD_COMMIT__ !== 'undefined' && __BUILD_COMMIT__ ? `?v=${__BUILD_COMMIT__}` : '';
+  const cacheBuster =
+    typeof __BUILD_COMMIT__ !== 'undefined' && __BUILD_COMMIT__ ? `?v=${__BUILD_COMMIT__}` : '';
   const response = await fetch(`${base}${path}${cacheBuster}`);
   if (!response.ok) throw new Error(`Failed to load ${path}: ${response.status}`);
   return response.json() as Promise<T>;
@@ -171,7 +203,8 @@ async function init(): Promise<void> {
     app.innerHTML = renderConnections(roster, database);
     initGraphExplorer(roster, database);
     // Land ready to type in "Find a person", as the directory does with its search.
-    if (document.activeElement === document.body) document.querySelector<HTMLInputElement>('#network-search')?.focus({ preventScroll: true });
+    if (document.activeElement === document.body)
+      document.querySelector<HTMLInputElement>('#network-search')?.focus({ preventScroll: true });
   } catch (error) {
     app.innerHTML = renderError(error instanceof Error ? error.message : 'Unknown error');
     document.getElementById('retry-btn')?.addEventListener('click', () => void init());

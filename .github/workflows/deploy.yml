@@ -33,7 +33,7 @@ jobs:
       # Producer PRs must never change a protected directFields value (AGENTS.md "Direct updates").
       # The auditor's own PRs carry owner/Issue direct updates, so they are exempt.
       - if: github.event_name == 'pull_request' && startsWith(github.event.pull_request.title, '[scheduled:') && !startsWith(github.event.pull_request.title, '[scheduled:audit]')
-        run: npx tsx scripts/check-protected-fields.ts "origin/$BASE_REF"
+        run: node scripts/check-protected-fields.ts "origin/$BASE_REF"
         env:
           BASE_REF: ${{ github.base_ref }}
       - run: npm run lint

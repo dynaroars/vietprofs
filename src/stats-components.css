@@ -1,6 +1,6 @@
 /*
  * Statistics components for the connections page: metric cards, tables, notes, and loading/error boxes.
- * Colors come from the host page's CSS variables, with fallbacks for any it does not define.
+ * Uses the shared design tokens from roars-ui.css.
  */
 
 .stats-snapshot {
@@ -18,17 +18,16 @@
 .browser-metric-card {
   min-width: 0;
   padding: 0.9rem 1rem;
-  background: var(--tag-bg, rgba(255, 255, 255, 0.03));
-  border: 1px solid var(--border-color, #e2e8f0);
-  border-radius: var(--radius-sm, 4px);
+  background: var(--tag-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
 }
 
 .browser-metric-label,
-
 .browser-metric-detail {
   margin: 0;
-  color: var(--text-muted, #64748b);
-  font-size: var(--text-xs, 0.75rem);
+  color: var(--text-muted);
+  font-size: var(--text-xs);
 }
 
 .browser-metric-value {
@@ -42,7 +41,7 @@
 
 .stat-sub {
   font-size: 0.7rem;
-  color: var(--text-muted, #64748b);
+  color: var(--text-muted);
 }
 
 .stats-table-wrapper {
@@ -53,22 +52,22 @@
 .stats-table {
   width: 100%;
   border-collapse: collapse;
-  font-size: var(--text-sm, 0.875rem);
+  font-size: var(--text-sm);
 }
 
 .stats-table th {
   text-align: left;
   font-family: var(--font-mono);
-  font-size: var(--text-xs, 0.75rem);
+  font-size: var(--text-xs);
   text-transform: uppercase;
   color: var(--text-muted);
-  border-bottom: 2px solid var(--border-color, #e2e8f0);
+  border-bottom: 2px solid var(--border-color);
   padding: 0.5rem 0.5rem;
 }
 
 .stats-table td {
   padding: 0.6rem 0.5rem;
-  border-bottom: 1px solid var(--border-color, #e2e8f0);
+  border-bottom: 1px solid var(--border-color);
   vertical-align: middle;
 }
 
@@ -81,10 +80,10 @@
 
 .privacy-note {
   padding: 1rem 1.25rem;
-  background: var(--tag-bg, rgba(255, 255, 255, 0.03));
-  border: 1px solid var(--border-color, #e2e8f0);
-  border-radius: var(--radius-sm, 4px);
-  font-size: var(--text-sm, 0.875rem);
+  background: var(--tag-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-sm);
   line-height: 1.6;
 }
 
@@ -99,7 +98,7 @@
 
 .stats-secondary-details summary {
   cursor: pointer;
-  font-size: var(--text-sm, 0.875rem);
+  font-size: var(--text-sm);
   color: var(--text-muted);
   padding: 0.25rem 0;
 }
@@ -108,12 +107,13 @@
   color: var(--text-color);
 }
 
-.stats-error-box, .stats-loading-box {
+.stats-error-box,
+.stats-loading-box {
   padding: 2rem;
   text-align: center;
-  background: var(--tag-bg, rgba(255, 255, 255, 0.03));
-  border: 1px solid var(--border-color, #e2e8f0);
-  border-radius: var(--radius-sm, 4px);
+  background: var(--tag-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
   margin-top: 1rem;
 }
 
@@ -125,19 +125,19 @@
 }
 
 .stats-error-box .error-detail {
-  font-size: var(--text-sm, 0.875rem);
+  font-size: var(--text-sm);
   color: var(--text-muted);
   margin-bottom: 1rem;
 }
 
 .retry-btn {
   font-family: var(--font-mono);
-  font-size: var(--text-xs, 0.75rem);
+  font-size: var(--text-xs);
   padding: 0.5rem 1rem;
-  background: var(--accent-color, #2563eb);
+  background: var(--accent-color);
   color: #fff;
   border: none;
-  border-radius: var(--radius-sm, 4px);
+  border-radius: var(--radius-sm);
   cursor: pointer;
 }
 

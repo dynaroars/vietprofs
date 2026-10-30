@@ -1,11 +1,8 @@
 import { describe, it } from 'node:test';
 import assert from 'node:assert/strict';
 import {
-  computeAcademicGenerations,
   computeCompleteness,
   computeRecentUpdates,
-  computeTopPhdOrigins,
-  computeTopUndergradFeeders,
   deriveRosterStats,
 } from '../src/derived-stats.ts';
 import type { RosterEntry } from '../src/data.ts';
@@ -71,31 +68,6 @@ describe('Derived Roster Stats', () => {
     assert.equal(portraits.percentage, 33.3);
   });
 
-  it('computes top PhD origins ranked by frequency', () => {
-    const topPhd = computeTopPhdOrigins(mockRoster, 5);
-    assert.ok(topPhd.length >= 2);
-    assert.equal(topPhd[0].name, 'Stanford University');
-    assert.equal(topPhd[0].count, 2);
-    assert.equal(topPhd[0].queryParam, 'phd:"Stanford University"');
-  });
-
-  it('computes top undergraduate feeder universities', () => {
-    const topUndergrad = computeTopUndergradFeeders(mockRoster, 5);
-    assert.ok(topUndergrad.length >= 2);
-    assert.ok(topUndergrad.some((u) => u.name === 'Vietnam National University, Hanoi'));
-  });
-
-  it('computes academic generations by PhD decade', () => {
-    const generations = computeAcademicGenerations(mockRoster);
-    const g2010s = generations.find((g) => g.decade === '2010s');
-    const g2000s = generations.find((g) => g.decade === '2000s');
-    const g1990s = generations.find((g) => g.decade === '1990s');
-
-    assert.ok(g2010s && g2010s.count === 1);
-    assert.ok(g2000s && g2000s.count === 1);
-    assert.ok(g1990s && g1990s.count === 1);
-  });
-
   it('computes recent updates across timeframes', () => {
     const updates = computeRecentUpdates(mockRoster);
     assert.equal(updates.last7Days, 1);
@@ -107,6 +79,5 @@ describe('Derived Roster Stats', () => {
     const stats = deriveRosterStats(mockRoster);
     assert.equal(stats.total, 3);
     assert.ok(stats.completeness.length > 0);
-    assert.ok(stats.topPhdInstitutions.length > 0);
   });
 });

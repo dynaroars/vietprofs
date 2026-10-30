@@ -16,7 +16,10 @@ let browser: Browser;
 let context: BrowserContext;
 let baseUrl: string;
 
-type TextSource = { textContent(): Promise<string | null>; getAttribute(name: string): Promise<string | null> };
+type TextSource = {
+  textContent(): Promise<string | null>;
+  getAttribute(name: string): Promise<string | null>;
+};
 
 async function textOf(locator: TextSource): Promise<string> {
   const value = await locator.textContent();
@@ -73,23 +76,26 @@ test('directory loads and searching changes the roster', async () => {
   assert.ok(initial > 0);
   assert.equal(await page.locator('.entry-updated').count(), 0);
   const personalSiteLinks = page.locator('.personal-site-link');
-  assert.ok(await personalSiteLinks.count() > 0);
+  assert.ok((await personalSiteLinks.count()) > 0);
   assert.match(await attrOf(personalSiteLinks.first(), 'href'), /^https?:\/\//);
   assert.equal(await personalSiteLinks.first().getAttribute('title'), 'Website');
   assert.equal(await page.locator('#site-updated').count(), 0);
-  assert.match(await page.locator('#search').getAttribute('placeholder') ?? '', /^Search [\d,]+ people/);
+  assert.match(
+    (await page.locator('#search').getAttribute('placeholder')) ?? '',
+    /^Search [\d,]+ people/,
+  );
   const multiCredentialRow = page.locator('.entry-details').filter({ hasText: ';' }).first();
   await multiCredentialRow.waitFor();
   assert.equal(await multiCredentialRow.locator('xpath=..').locator('.entry-details').count(), 1);
   await page.locator('#search').fill('Thanh');
   const searchSuggestions = page.locator('#search-suggestion-panel .search-suggestion');
   await searchSuggestions.first().waitFor();
-  assert.ok(await searchSuggestions.count() > 0);
+  assert.ok((await searchSuggestions.count()) > 0);
   await page.locator('#search').press('Escape');
   assert.equal(await page.locator('#search-suggestion-panel').isHidden(), true);
   await page.locator('#search').fill('University: Pennsylvania State University');
   await page.waitForTimeout(250);
-  assert.ok(await page.locator('.entry').count() > 0);
+  assert.ok((await page.locator('.entry').count()) > 0);
   const pennStateMeta = await page.locator('.entry-meta').allTextContents();
   assert.ok(pennStateMeta.every((text) => text.includes('Penn State')));
   assert.ok(pennStateMeta.every((text) => !text.includes('Pennsylvania State University')));
@@ -99,7 +105,10 @@ test('directory loads and searching changes the roster', async () => {
   assert.equal(await page.locator('.entry').count(), 1);
   assert.match(await textOf(page.locator('.entry-meta')), /George Mason Univ\./);
   assert.doesNotMatch(await textOf(page.locator('.entry-meta')), /George Mason University/);
-  assert.match(await textOf(page.locator('.entry-details')), /MS: Penn State; Undergrad: Penn State, 2003/);
+  assert.match(
+    await textOf(page.locator('.entry-details')),
+    /MS: Penn State; Undergrad: Penn State, 2003/,
+  );
   await page.locator('#search').fill('Nguyen');
   await page.waitForTimeout(250);
   assert.ok((await page.locator('.entry').count()) > 0);
@@ -130,7 +139,7 @@ test('search suggestions remain visible while results update', async () => {
   // The debounced roster update must not close or recreate the suggestion panel.
   await page.waitForTimeout(300);
   assert.equal(await panel.isHidden(), false);
-  assert.ok(await suggestions.count() > 0);
+  assert.ok((await suggestions.count()) > 0);
 
   await page.close();
 });
@@ -185,7 +194,10 @@ test('keyboard navigation and the query plan command work without leaving the di
   await page.reload({ waitUntil: 'networkidle' });
 
   await page.keyboard.press('/');
-  assert.equal(await page.locator('#search').evaluate((element) => element === document.activeElement), true);
+  assert.equal(
+    await page.locator('#search').evaluate((element) => element === document.activeElement),
+    true,
+  );
   await page.locator('#search').fill('query plan');
   await page.locator('#search').press('Enter');
   assert.match(await textOf(page.locator('#command-output')), /query plan: .*matches=\d+/);
@@ -205,17 +217,29 @@ test('undergraduate institution keyword prefix filters the roster and persists i
   const search = page.locator('#search');
 
   await search.fill('Ugrad: Boise State University');
-  await page.waitForFunction(() => new URL(window.location.href).searchParams.get('q') === 'Ugrad: Boise State University');
+  await page.waitForFunction(
+    () => new URL(window.location.href).searchParams.get('q') === 'Ugrad: Boise State University',
+  );
   assert.match(await page.locator('#search-scope-chip').innerText(), /Ugrad/);
   assert.equal(await search.inputValue(), 'Boise State University');
 
-  const expectedCount = await page.evaluate(async () => (
-    await (await fetch('/data.json')).json()
-  ).filter((person: RosterEntry) => person.undergradInstitution?.includes('Boise State University')).length);
+  const expectedCount = await page.evaluate(
+    async () =>
+      (await (await fetch('/data.json')).json()).filter((person: RosterEntry) =>
+        person.undergradInstitution?.includes('Boise State University'),
+      ).length,
+  );
   assert.ok(expectedCount > 0);
-  await page.waitForFunction((count) => document.querySelectorAll('.entry').length === count, expectedCount);
+  await page.waitForFunction(
+    (count) => document.querySelectorAll('.entry').length === count,
+    expectedCount,
+  );
   assert.equal(await page.locator('.entry').count(), expectedCount);
-  assert.ok((await page.locator('.entry-details').allTextContents()).every((text) => text.includes('Undergrad: Boise State')));
+  assert.ok(
+    (await page.locator('.entry-details').allTextContents()).every((text) =>
+      text.includes('Undergrad: Boise State'),
+    ),
+  );
 
   await page.reload({ waitUntil: 'networkidle' });
   assert.match(await page.locator('#search-scope-chip').innerText(), /Ugrad/);
@@ -231,15 +255,19 @@ test('awards keyword becomes a removable Honors search scope chip', async () => 
   const chip = page.locator('#search-scope-chip');
 
   await search.fill('Awards: NSF CAREER Award');
-  await page.waitForFunction(() => new URL(window.location.href).searchParams.get('q') === 'Honors: NSF CAREER Award');
+  await page.waitForFunction(
+    () => new URL(window.location.href).searchParams.get('q') === 'Honors: NSF CAREER Award',
+  );
   assert.match(await chip.innerText(), /🏅 Honors/);
   assert.equal(await search.inputValue(), 'NSF CAREER Award');
-  assert.ok(await page.locator('.entry').count() > 0);
+  assert.ok((await page.locator('.entry').count()) > 0);
 
   await chip.click();
   assert.equal(await chip.isHidden(), true);
   assert.equal(await search.inputValue(), 'NSF CAREER Award');
-  await page.waitForFunction(() => new URL(window.location.href).searchParams.get('q') === 'NSF CAREER Award');
+  await page.waitForFunction(
+    () => new URL(window.location.href).searchParams.get('q') === 'NSF CAREER Award',
+  );
   await page.close();
 });
 
@@ -271,22 +299,32 @@ test('mobile search input uses the full control width', async () => {
 test('mobile pages avoid horizontal overflow and provide usable tap targets', async () => {
   const page = await context.newPage();
   const assertNoOverflow = async () => {
-    assert.equal(await page.evaluate(() => document.documentElement.scrollWidth), await page.evaluate(() => document.documentElement.clientWidth));
+    assert.equal(
+      await page.evaluate(() => document.documentElement.scrollWidth),
+      await page.evaluate(() => document.documentElement.clientWidth),
+    );
   };
   const assertTapTargets = async (selector: string) => {
-    const undersized = await page.locator(selector).evaluateAll((elements) => elements
-      .filter((element) => {
-        const style = getComputedStyle(element);
-        const rect = element.getBoundingClientRect();
-        // getClientRects() is empty when the element or an ancestor (e.g. a `hidden` form
-        // section) isn't rendered at all, so there is nothing to tap.
-        return element.getClientRects().length > 0 && style.display !== 'none' && style.visibility !== 'hidden' && (rect.width < 44 || rect.height < 44);
-      })
-      .map((element) => ({
-        selector: `${element.tagName.toLowerCase()}#${element.id}.${String(element.className).replace(/\s+/g, '.')}`,
-        width: element.getBoundingClientRect().width,
-        height: element.getBoundingClientRect().height,
-      })));
+    const undersized = await page.locator(selector).evaluateAll((elements) =>
+      elements
+        .filter((element) => {
+          const style = getComputedStyle(element);
+          const rect = element.getBoundingClientRect();
+          // getClientRects() is empty when the element or an ancestor (e.g. a `hidden` form
+          // section) isn't rendered at all, so there is nothing to tap.
+          return (
+            element.getClientRects().length > 0 &&
+            style.display !== 'none' &&
+            style.visibility !== 'hidden' &&
+            (rect.width < 44 || rect.height < 44)
+          );
+        })
+        .map((element) => ({
+          selector: `${element.tagName.toLowerCase()}#${element.id}.${String(element.className).replace(/\s+/g, '.')}`,
+          width: element.getBoundingClientRect().width,
+          height: element.getBoundingClientRect().height,
+        })),
+    );
     assert.deepEqual(undersized, []);
   };
 
@@ -294,7 +332,9 @@ test('mobile pages avoid horizontal overflow and provide usable tap targets', as
     await page.setViewportSize({ width, height: 812 });
     await page.goto(`${baseUrl}/`, { waitUntil: 'networkidle' });
     await assertNoOverflow();
-  await assertTapTargets('.add-fab, .example-chip, .entry-name, .personal-site-link, .scholar-link, .profile-link, .favorite-toggle, .search-input, .search-help-btn, .field-select');
+    await assertTapTargets(
+      '.add-fab, .example-chip, .entry-name, .personal-site-link, .scholar-link, .profile-link, .favorite-toggle, .search-input, .search-help-btn, .field-select',
+    );
   }
 
   await page.setViewportSize({ width: 320, height: 812 });
@@ -305,9 +345,16 @@ test('mobile pages avoid horizontal overflow and provide usable tap targets', as
   await page.goto(`${baseUrl}/submit.html`, { waitUntil: 'networkidle' });
   await page.locator('#add-mode-details-toggle').click();
   await assertNoOverflow();
-  await assertTapTargets(".form-section input[type='text'], .form-section input[type='url'], .form-section input[type='number'], .form-section select, .form-section textarea, .radio-row, .link-button, .info-icon");
+  await assertTapTargets(
+    ".form-section input[type='text'], .form-section input[type='url'], .form-section input[type='number'], .form-section select, .form-section textarea, .radio-row, .link-button, .info-icon",
+  );
   await page.locator('.info-icon').click();
-  assert.equal(await page.locator('.info-icon').evaluate((element) => getComputedStyle(element, '::after').visibility), 'visible');
+  assert.equal(
+    await page
+      .locator('.info-icon')
+      .evaluate((element) => getComputedStyle(element, '::after').visibility),
+    'visible',
+  );
   await assertNoOverflow();
 
   await page.goto(`${baseUrl}/people/vp-0242.html`, { waitUntil: 'networkidle' });
@@ -319,7 +366,9 @@ test('mobile pages avoid horizontal overflow and provide usable tap targets', as
 test('directory renders the complete result list without lazy-scroll batches', async () => {
   const page = await context.newPage();
   await page.goto(`${baseUrl}/`, { waitUntil: 'networkidle' });
-  const expected = await page.evaluate(async () => (await (await fetch('/data.json')).json()).length);
+  const expected = await page.evaluate(
+    async () => (await (await fetch('/data.json')).json()).length,
+  );
   assert.equal(await page.locator('.entry').count(), expected);
   assert.equal(await page.locator('#roster-sentinel').count(), 0);
   await page.close();
@@ -328,21 +377,34 @@ test('directory renders the complete result list without lazy-scroll batches', a
 test('every roster card exposes its official profile link', async () => {
   const page = await context.newPage();
   await page.goto(`${baseUrl}/`, { waitUntil: 'networkidle' });
-  while (await page.locator('#roster-sentinel').count() > 0) {
+  while ((await page.locator('#roster-sentinel').count()) > 0) {
     await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
     await page.waitForTimeout(50);
   }
   const entryCount = await page.locator('.entry').count();
   const profileLinks = page.locator('.profile-link');
   assert.equal(await profileLinks.count(), entryCount);
-  assert.ok(await profileLinks.evaluateAll((links: HTMLAnchorElement[]) => links.every((link) => (
-    /^(Official (university|institution) profile|Verification source)$/.test(link.getAttribute('title') || '')
-      && / (official (university|institution) profile|verification source)$/.test(link.getAttribute('aria-label') || '')
-      && /^https?:\/\//.test(link.href)
-  ))));
+  assert.ok(
+    await profileLinks.evaluateAll((links: HTMLAnchorElement[]) =>
+      links.every(
+        (link) =>
+          /^(Official (university|institution) profile|Verification source)$/.test(
+            link.getAttribute('title') || '',
+          ) &&
+          / (official (university|institution) profile|verification source)$/.test(
+            link.getAttribute('aria-label') || '',
+          ) &&
+          /^https?:\/\//.test(link.href),
+      ),
+    ),
+  );
   const [actualUrls, expectedUrls] = await Promise.all([
     profileLinks.evaluateAll((links: HTMLAnchorElement[]) => links.map((link) => link.href).sort()),
-    page.evaluate(async () => (await (await fetch('/data.json')).json()).map((person: RosterEntry) => new URL(person.profileUrl ?? '').href).sort()),
+    page.evaluate(async () =>
+      (await (await fetch('/data.json')).json())
+        .map((person: RosterEntry) => new URL(person.profileUrl ?? '').href)
+        .sort(),
+    ),
   ]);
   assert.deepEqual(actualUrls, expectedUrls);
   await page.close();
@@ -362,11 +424,15 @@ test('favorites stay at the top while the directory can be sorted', async () => 
   assert.equal(await star.getAttribute('aria-pressed'), 'true');
 
   await page.locator('#sort-order').selectOption('vp-newest');
-  await page.waitForFunction(() => new URL(window.location.href).searchParams.get('sort') === 'vp-newest');
+  await page.waitForFunction(
+    () => new URL(window.location.href).searchParams.get('sort') === 'vp-newest',
+  );
   assert.equal((await page.locator('.entry-name').first().textContent())?.trim(), name);
 
   await page.locator('#sort-order').selectOption('last-name');
-  await page.waitForFunction(() => new URL(window.location.href).searchParams.get('sort') === 'last-name');
+  await page.waitForFunction(
+    () => new URL(window.location.href).searchParams.get('sort') === 'last-name',
+  );
   assert.equal((await page.locator('.entry-name').first().textContent())?.trim(), name);
   await page.close();
 });
@@ -377,7 +443,9 @@ test('local faculty portraits render and load', async () => {
   const portrait = page.locator('.entry-portrait:not(.entry-portrait-placeholder)').first();
   await portrait.waitFor();
   assert.match(await attrOf(portrait, 'src'), /\/portraits\/.*\.webp$/);
-  assert.ok(await portrait.evaluate((image: HTMLImageElement) => image.complete && image.naturalWidth > 0));
+  assert.ok(
+    await portrait.evaluate((image: HTMLImageElement) => image.complete && image.naturalWidth > 0),
+  );
   await page.close();
 });
 
@@ -402,24 +470,46 @@ test('filters and submit-form suggestions work', async () => {
   assert.ok((await page.locator('.correction-suggestion').count()) > 0);
   await page.locator('.correction-suggestion').first().click();
   assert.notEqual(await page.locator('#profileUrl').inputValue(), '');
-  const tan: RosterEntry = await page.evaluate(async () => (await (await fetch('/data.json')).json()).find((person: RosterEntry) => person.name === 'Tan Minh Nguyen'));
+  const tan: RosterEntry = await page.evaluate(async () =>
+    (await (await fetch('/data.json')).json()).find(
+      (person: RosterEntry) => person.name === 'Tan Minh Nguyen',
+    ),
+  );
   assert.match(tan.id, /^vp-\d+$/);
-  await page.goto(`${baseUrl}/submit.html?edit=${encodeURIComponent(tan.id)}`, { waitUntil: 'networkidle' });
+  await page.goto(`${baseUrl}/submit.html?edit=${encodeURIComponent(tan.id)}`, {
+    waitUntil: 'networkidle',
+  });
   assert.equal(await page.locator('#name').inputValue(), 'Tan Minh Nguyen');
   assert.equal(await page.locator('#university').inputValue(), 'National University of Singapore');
   assert.equal(await page.locator('#submit-form').getAttribute('data-editing-id'), tan.id);
-  assert.match(await textOf(page.locator('#name-match-notice')), new RegExp(`Editing existing entry\\s+${tan.id}`));
-  assert.equal(await page.locator('#name-match-notice a').getAttribute('href'), `./people/${tan.id}.html`);
+  assert.match(
+    await textOf(page.locator('#name-match-notice')),
+    new RegExp(`Editing existing entry\\s+${tan.id}`),
+  );
+  assert.equal(
+    await page.locator('#name-match-notice a').getAttribute('href'),
+    `./people/${tan.id}.html`,
+  );
   assert.equal(await page.locator('#selfSubmission').isChecked(), false);
   await page.locator('#name').fill('Corrected Tan Minh Nguyen');
   assert.equal(await page.locator('#submit-form').getAttribute('data-editing-id'), tan.id);
   // Profile pages link here with ?self=1 ("Is this you?") and ?missing=… (fields the entry lacks).
-  const sparse: RosterEntry = await page.evaluate(async () => (await (await fetch('/data.json')).json()).find((person: RosterEntry) => !person.scholarUrl && !person.mdInstitution));
-  await page.goto(`${baseUrl}/submit.html?edit=${encodeURIComponent(sparse.id)}&self=1&missing=scholarUrl,bogus`, { waitUntil: 'networkidle' });
+  const sparse: RosterEntry = await page.evaluate(async () =>
+    (await (await fetch('/data.json')).json()).find(
+      (person: RosterEntry) => !person.scholarUrl && !person.mdInstitution,
+    ),
+  );
+  await page.goto(
+    `${baseUrl}/submit.html?edit=${encodeURIComponent(sparse.id)}&self=1&missing=scholarUrl,bogus`,
+    { waitUntil: 'networkidle' },
+  );
   assert.equal(await page.locator('#selfSubmission').isChecked(), true);
   assert.equal(await page.locator('.form-section.field-missing').count(), 1);
   assert.equal(await page.locator('.form-section.field-missing #scholarUrl').count(), 1);
-  assert.match(await textOf(page.locator('#name-match-notice')), /Not on record yet: Google Scholar/);
+  assert.match(
+    await textOf(page.locator('#name-match-notice')),
+    /Not on record yet: Google Scholar/,
+  );
   await page.goto(`${baseUrl}/submit.html`, { waitUntil: 'networkidle' });
   await page.locator('input[name="purpose"][value="update"]').check();
   await page.locator('#name').fill('Tan Minh Nguyen');
@@ -449,7 +539,16 @@ test('submit form defaults to bulk add mode and toggles to single-entry details'
   assert.equal(await page.locator('#add-mode-details-help').isVisible(), false);
   assert.equal(await page.locator('#required-section').isVisible(), true);
   // Update order: Required, then the notes, then Optional details. Back to the top for adding.
-  const order = () => page.evaluate(() => [...document.querySelectorAll('#submit-form > section:not([hidden]), #submit-form > details:not([hidden])')].map((el) => el.id).filter(Boolean));
+  const order = () =>
+    page.evaluate(() =>
+      [
+        ...document.querySelectorAll(
+          '#submit-form > section:not([hidden]), #submit-form > details:not([hidden])',
+        ),
+      ]
+        .map((el) => el.id)
+        .filter(Boolean),
+    );
   assert.deepEqual(await order(), ['required-section', 'add-mode-section', 'optional-details']);
   assert.equal(await page.locator('#add-mode-heading').innerText(), 'WHAT CHANGED');
   await page.locator('input[name="purpose"][value="add"]').check();
@@ -471,13 +570,27 @@ test('the + button opens the form and the header links switch views in place', a
   assert.equal(await page.locator('.add-fab').getAttribute('href'), 'submit.html');
   assert.equal(await page.locator('.add-fab').getAttribute('aria-label'), 'Add or update info');
   const nav = page.locator('.site-nav');
-  const labels = await nav.locator(':scope > a, .share-toggle').evaluateAll((links) => links.map((link) => link.getAttribute('aria-label')));
-  assert.deepEqual(labels, ['Diaspora Insights & Pathways', 'Academic Connections', 'Data Health & Completeness', 'Read the paper (PDF)', 'Share']);
+  const labels = await nav
+    .locator(':scope > a, .share-toggle')
+    .evaluateAll((links) => links.map((link) => link.getAttribute('aria-label')));
+  assert.deepEqual(labels, [
+    'Diaspora Insights & Pathways',
+    'Academic Connections',
+    'Data Health & Completeness',
+    'Read the paper (PDF)',
+    'Share',
+  ]);
   assert.equal(await page.locator('#institution-type-filter').count(), 0);
-  assert.deepEqual(await page.locator('.controls #sort-order option').allInnerTexts(), ['Random order', 'Most recently added', 'Last name', 'First name']);
+  assert.deepEqual(await page.locator('.controls #sort-order option').allInnerTexts(), [
+    'Random order',
+    'Most recently added',
+    'Last name',
+    'First name',
+  ]);
   const chips = page.locator('.example-chip');
   assert.equal(await chips.count(), 4);
-  for (const text of await chips.allInnerTexts()) assert.doesNotMatch(text, /\p{Extended_Pictographic}/u);
+  for (const text of await chips.allInnerTexts())
+    assert.doesNotMatch(text, /\p{Extended_Pictographic}/u);
   assert.doesNotMatch(await page.locator('#field-filter option:checked').innerText(), /\(\d/);
   assert.match(await page.locator('#field-filter option').nth(1).innerText(), /\(\d[\d,]*\)$/);
   const before = page.url();
@@ -495,7 +608,10 @@ test('combined field and location filters link to their static intersection hub'
   await page.goto(`${baseUrl}/?field=Health%20Sciences&loc=Japan`, { waitUntil: 'networkidle' });
   assert.equal(await page.locator('#field-filter').inputValue(), 'Health Sciences');
   assert.equal(await page.locator('#location-filter').inputValue(), 'Japan');
-  assert.match(await textOf(page.locator('#result-count')), /\d+ people in Health Sciences .* across \d+ institutions in Japan/);
+  assert.match(
+    await textOf(page.locator('#result-count')),
+    /\d+ people in Health Sciences .* across \d+ institutions in Japan/,
+  );
 
   const fieldHubLink = page.locator('#result-count .result-count-link').first();
   assert.match(await attrOf(fieldHubLink, 'href'), /\/regions\/japan\/health-sciences\.html$/);
@@ -509,7 +625,10 @@ test('data health reports the generated HTML inventory and links standalone page
   const page = await context.newPage();
   await page.goto(`${baseUrl}/?view=health`, { waitUntil: 'networkidle' });
   const inventory = page.locator('.generated-html-card');
-  assert.equal(await textOf(inventory.locator('.html-inventory-title')), 'Generated HTML Inventory');
+  assert.equal(
+    await textOf(inventory.locator('.html-inventory-title')),
+    'Generated HTML Inventory',
+  );
   assert.equal(await inventory.locator('.html-inventory-item').count(), 4);
   assert.equal(await inventory.locator('.html-standalone-links a').count(), 4);
   assert.match(await textOf(inventory.locator('.html-inventory-total')), /^\d[\d,]* pages$/);
@@ -543,27 +662,48 @@ test('filter choices stay stable and stale filters recover', async () => {
   assert.equal(await fieldOptions.filter({ hasText: 'Health' }).count(), 1);
   assert.equal(await fieldOptions.filter({ hasText: 'Law' }).count(), 1);
   assert.equal(await trackOptions.filter({ hasText: 'Tenure-line' }).count(), 1);
-  assert.equal(await page.locator('#field-filter option[value="Earth & Environmental Sciences"]').count(), 1);
+  assert.equal(
+    await page.locator('#field-filter option[value="Earth & Environmental Sciences"]').count(),
+    1,
+  );
   await page.locator('#field-filter').selectOption('Biological & Biomedical Sciences');
   assert.ok((await page.locator('.entry').count()) > 0);
   assert.equal(await page.locator('#track-filter option[value="Tenure-line"]').count(), 1);
   assert.equal(await page.locator('#track-filter option[value="Teaching"]').count(), 0);
-  assert.equal(await page.locator('#field-filter option[value="Earth & Environmental Sciences"]').count(), 1);
+  assert.equal(
+    await page.locator('#field-filter option[value="Earth & Environmental Sciences"]').count(),
+    1,
+  );
   const locationLabels = await page.locator('#location-filter option').allTextContents();
   assert.ok(locationLabels.every((label) => label.trim().length > 0));
   await page.locator('#location-filter').selectOption('World');
   await page.locator('#field-filter').selectOption('Physics & Astronomy');
   await page.locator('#track-filter').selectOption('Emeritus');
-  assert.equal(await page.locator('#field-filter').evaluate((el) => el.classList.contains('is-active')), true);
-  assert.equal(await page.locator('#track-filter').evaluate((el) => el.classList.contains('is-active')), true);
-  assert.equal(await page.locator('#location-filter').evaluate((el) => el.classList.contains('is-active')), false);
+  assert.equal(
+    await page.locator('#field-filter').evaluate((el) => el.classList.contains('is-active')),
+    true,
+  );
+  assert.equal(
+    await page.locator('#track-filter').evaluate((el) => el.classList.contains('is-active')),
+    true,
+  );
+  assert.equal(
+    await page.locator('#location-filter').evaluate((el) => el.classList.contains('is-active')),
+    false,
+  );
   assert.equal(await page.locator('#location-filter option[value="US"]').count(), 1);
   await page.locator('#home-link').click();
   assert.equal(await page.locator('#location-filter').inputValue(), 'World');
   assert.equal(await page.locator('#field-filter').inputValue(), 'all');
   assert.equal(await page.locator('#track-filter').inputValue(), 'all');
-  assert.equal(await page.locator('#field-filter').evaluate((el) => el.classList.contains('is-active')), false);
-  assert.equal(await page.locator('#track-filter').evaluate((el) => el.classList.contains('is-active')), false);
+  assert.equal(
+    await page.locator('#field-filter').evaluate((el) => el.classList.contains('is-active')),
+    false,
+  );
+  assert.equal(
+    await page.locator('#track-filter').evaluate((el) => el.classList.contains('is-active')),
+    false,
+  );
   assert.ok((await page.locator('.entry').count()) > 0);
   await page.goto(`${baseUrl}/?state=Vermont&loc=US`, { waitUntil: 'networkidle' });
   assert.match(page.url(), /state=Vermont/);
@@ -574,7 +714,10 @@ test('filter choices stay stable and stale filters recover', async () => {
   assert.doesNotMatch(page.url(), /state=/);
   for (const selector of ['.example-chip[data-field]', '.example-chip[data-loc]']) {
     await page.locator(selector).first().click();
-    assert.ok((await page.locator('.entry').count()) > 0, `${selector} should always produce roster results`);
+    assert.ok(
+      (await page.locator('.entry').count()) > 0,
+      `${selector} should always produce roster results`,
+    );
   }
   await page.goto(`${baseUrl}/?loc=Antarctica`, { waitUntil: 'networkidle' });
   assert.equal(await page.locator('#location-filter').inputValue(), 'World');
@@ -582,7 +725,9 @@ test('filter choices stay stable and stale filters recover', async () => {
   await page.goto(`${baseUrl}/?loc=South%20America`, { waitUntil: 'networkidle' });
   assert.equal(await page.locator('#location-filter').inputValue(), 'South America');
   assert.ok((await page.locator('.entry').count()) > 0);
-  await page.goto(`${baseUrl}/?loc=France&field=Law%20%26%20Public%20Affairs&track=Teaching`, { waitUntil: 'networkidle' });
+  await page.goto(`${baseUrl}/?loc=France&field=Law%20%26%20Public%20Affairs&track=Teaching`, {
+    waitUntil: 'networkidle',
+  });
   assert.equal(await page.locator('#location-filter').inputValue(), 'France');
   assert.equal(await page.locator('#field-filter').inputValue(), 'all');
   assert.equal(await page.locator('#track-filter').inputValue(), 'all');
@@ -598,7 +743,10 @@ test('interesting view shows World alone, or the selected region plus World', as
   await page.goto(`${baseUrl}/?loc=France&view=insights`, { waitUntil: 'networkidle' });
   assert.equal(await page.locator('.insights-section-block').count(), 2);
   assert.equal(await page.locator('.insights-badge').filter({ hasText: 'France' }).count(), 1);
-  assert.equal(await page.locator('.insights-badge').filter({ hasText: 'DIASPORA INSIGHTS' }).count(), 1);
+  assert.equal(
+    await page.locator('.insights-badge').filter({ hasText: 'DIASPORA INSIGHTS' }).count(),
+    1,
+  );
   await page.locator('#location-filter').selectOption('World');
   assert.equal(await page.locator('.insights-section-block').count(), 0);
   assert.ok((await page.locator('.entry').count()) > 0);
@@ -615,8 +763,14 @@ test('profile pages honor dark mode through the shared stylesheet', async () => 
   }, id);
   await page.goto(`${baseUrl}/people/${id}.html`, { waitUntil: 'networkidle' });
   assert.equal(await page.locator('link[href^="../profile.css?v="]').count(), 1);
-  assert.equal(await page.evaluate(() => getComputedStyle(document.documentElement).colorScheme), 'light dark');
-  assert.equal(await page.evaluate(() => getComputedStyle(document.body).backgroundColor), 'rgb(21, 24, 28)');
+  assert.equal(
+    await page.evaluate(() => getComputedStyle(document.documentElement).colorScheme),
+    'light dark',
+  );
+  assert.equal(
+    await page.evaluate(() => getComputedStyle(document.body).backgroundColor),
+    'rgb(21, 24, 28)',
+  );
   assert.equal(await page.locator('.man-page').count(), 1);
   assert.equal(await page.locator('.man-section').filter({ hasText: 'SYNOPSIS' }).count(), 1);
   assert.match(await textOf(page.locator('.record-id')), /^vp-\d+$/);
@@ -624,7 +778,13 @@ test('profile pages honor dark mode through the shared stylesheet', async () => 
   assert.equal(await page.locator('.profile-actions .submission-link').count(), 0);
   assert.equal(await page.locator('.add-fab').getAttribute('href'), `../submit.html?edit=${id}`);
   assert.equal(await page.locator('.name-heading .profile-actions').count(), 1);
-  const seeAlso = page.locator('.man-section').filter({ has: page.locator('h2', { hasText: 'SEE ALSO' }) });
+  assert.equal(
+    await page.locator('.native .loc-badge-link').evaluate((link) => getComputedStyle(link).color),
+    'rgb(148, 163, 184)',
+  );
+  const seeAlso = page
+    .locator('.man-section')
+    .filter({ has: page.locator('h2', { hasText: 'SEE ALSO' }) });
   assert.equal(await seeAlso.locator('nav.links a').count(), 6);
   assert.equal(await seeAlso.locator('a[href="../connections.html"]').count(), 1);
   assert.equal(await page.locator('footer.man-footer').count(), 0);
@@ -642,10 +802,14 @@ test('verified academic connections render on both linked profiles', async () =>
     ['vp-0018', 'vp-0015', 'Ngan Hoang Le'],
   ]) {
     await page.goto(`${baseUrl}/people/${id}.html`, { waitUntil: 'networkidle' });
-    const connections = page.locator('.man-section').filter({ has: page.locator('h2', { hasText: 'CONNECTIONS' }) });
+    const connections = page
+      .locator('.man-section')
+      .filter({ has: page.locator('h2', { hasText: 'CONNECTIONS' }) });
     assert.equal(await connections.count(), 1);
     // Scope to this pair: either person may gain further connections over time.
-    const item = connections.locator('.connection-item').filter({ has: page.locator(`a.connection-person[href="../people/${linkedId}.html"]`) });
+    const item = connections
+      .locator('.connection-item')
+      .filter({ has: page.locator(`a.connection-person[href="../people/${linkedId}.html"]`) });
     assert.equal(await item.count(), 1);
     assert.equal(await item.locator('.connection-person').textContent(), linkedName);
     assert.equal(await item.locator('.connection-kind').textContent(), 'Coauthor · 2 shared works');
@@ -664,16 +828,28 @@ test('main directory and profile pages meet core WCAG accessibility standards', 
     .withTags(['wcag2a', 'wcag2aa'])
     .disableRules(['color-contrast'])
     .analyze();
-  const severeViolations = directoryResults.violations.filter((v: any) => v.impact === 'critical' || v.impact === 'serious');
-  assert.equal(severeViolations.length, 0, `Directory has severe a11y violations: ${JSON.stringify(severeViolations, null, 2)}`);
+  const severeViolations = directoryResults.violations.filter(
+    (v: any) => v.impact === 'critical' || v.impact === 'serious',
+  );
+  assert.equal(
+    severeViolations.length,
+    0,
+    `Directory has severe a11y violations: ${JSON.stringify(severeViolations, null, 2)}`,
+  );
 
   await page.goto(`${baseUrl}/people/vp-0001.html`, { waitUntil: 'networkidle' });
   const profileResults = await new AxeBuilder({ page })
     .withTags(['wcag2a', 'wcag2aa'])
     .disableRules(['color-contrast'])
     .analyze();
-  const profileViolations = profileResults.violations.filter((v: any) => v.impact === 'critical' || v.impact === 'serious');
-  assert.equal(profileViolations.length, 0, `Profile page has severe a11y violations: ${JSON.stringify(profileViolations, null, 2)}`);
+  const profileViolations = profileResults.violations.filter(
+    (v: any) => v.impact === 'critical' || v.impact === 'serious',
+  );
+  assert.equal(
+    profileViolations.length,
+    0,
+    `Profile page has severe a11y violations: ${JSON.stringify(profileViolations, null, 2)}`,
+  );
   await page.close();
 });
 
@@ -681,8 +857,10 @@ test('connections explorer filters verified edges, focuses people, and exposes e
   const page = await context.newPage();
   await page.goto(`${baseUrl}/connections.html`, { waitUntil: 'networkidle' });
   const response = await page.request.get(`${baseUrl}/relationships.json`);
-  const database = await response.json() as { relationships: { sourceId: string; targetId: string; type: string }[] };
-  const ids = new Set(database.relationships.flatMap(edge => [edge.sourceId, edge.targetId]));
+  const database = (await response.json()) as {
+    relationships: { sourceId: string; targetId: string; type: string }[];
+  };
+  const ids = new Set(database.relationships.flatMap((edge) => [edge.sourceId, edge.targetId]));
   assert.equal(await page.locator('#connection-explorer select').count(), 0);
   assert.equal(await page.locator('#network-filters').getAttribute('open'), null);
   assert.equal(await page.locator('.network-node').count(), ids.size);
@@ -694,32 +872,48 @@ test('connections explorer filters verified edges, focuses people, and exposes e
   const firstId = await firstNode.getAttribute('data-person');
   await firstNode.hover();
   const activeLabel = page.locator(`#network-labels [data-label="${firstId}"]`);
-  assert.equal(await activeLabel.evaluate(label => getComputedStyle(label).opacity), '1');
-  assert.ok(await activeLabel.evaluate(label => label === label.parentElement!.lastElementChild));
-  assert.ok(await page.locator('#network-labels').evaluate(layer => layer === layer.parentElement!.lastElementChild));
-  assert.equal(await page.locator('#network-labels').evaluate(layer => getComputedStyle(layer).pointerEvents), 'none');
+  assert.equal(await activeLabel.evaluate((label) => getComputedStyle(label).opacity), '1');
+  assert.ok(await activeLabel.evaluate((label) => label === label.parentElement!.lastElementChild));
+  assert.ok(
+    await page
+      .locator('#network-labels')
+      .evaluate((layer) => layer === layer.parentElement!.lastElementChild),
+  );
+  assert.equal(
+    await page
+      .locator('#network-labels')
+      .evaluate((layer) => getComputedStyle(layer).pointerEvents),
+    'none',
+  );
   await page.mouse.move(0, 0);
-  assert.equal(await activeLabel.evaluate(label => getComputedStyle(label).opacity), '0');
+  assert.equal(await activeLabel.evaluate((label) => getComputedStyle(label).opacity), '0');
   await firstNode.focus();
-  assert.equal(await activeLabel.evaluate(label => getComputedStyle(label).opacity), '1');
+  assert.equal(await activeLabel.evaluate((label) => getComputedStyle(label).opacity), '1');
   await page.keyboard.press('Enter');
   assert.equal(await page.locator('.network-node.is-selected').count(), 1);
-  assert.ok(await page.locator('.network-node.is-selected').evaluate(node => node === document.activeElement));
+  assert.ok(
+    await page
+      .locator('.network-node.is-selected')
+      .evaluate((node) => node === document.activeElement),
+  );
   assert.match(await textOf(page.locator('#network-summary')), /Network of/);
   await page.locator('#network-depth').click();
   await page.locator('#network-clear').click();
   await page.locator('#network-filters summary').click();
   await page.locator('[data-type="doctoral-advisor"]').click();
-  assert.equal(await page.locator('.network-edge').count(), database.relationships.filter(edge => edge.type === 'doctoral-advisor').length);
-  assert.ok(await page.locator('.network-edge path[marker-end]').count() > 0);
+  assert.equal(
+    await page.locator('.network-edge').count(),
+    database.relationships.filter((edge) => edge.type === 'doctoral-advisor').length,
+  );
+  assert.ok((await page.locator('.network-edge path[marker-end]').count()) > 0);
 
   await page.locator('#network-table-toggle').click();
   assert.ok(await page.locator('#network-table-panel').isVisible());
   await page.locator('#network-table-panel button').first().click();
-  assert.ok(await page.locator('#network-details a[target="_blank"]').count() > 0);
+  assert.ok((await page.locator('#network-details a[target="_blank"]').count()) > 0);
   await page.locator('[data-type=""]').click();
   await page.locator('#network-search').fill('nguyen');
-  assert.ok(await page.locator('#network-results button').count() > 0);
+  assert.ok((await page.locator('#network-results button').count()) > 0);
   await page.locator('#network-results button').first().click();
   await page.locator('#network-graph-toggle').click();
   await page.locator('#network-zoom-in').click();
@@ -736,21 +930,53 @@ test('connections explorer filters verified edges, focuses people, and exposes e
 
 test('lineage and path views preserve advisor directions, show evidence, and handle missing paths', async () => {
   const page = await context.newPage();
-  const roster = await (await page.request.get(`${baseUrl}/data.json`)).json() as RosterEntry[];
+  const roster = (await (await page.request.get(`${baseUrl}/data.json`)).json()) as RosterEntry[];
   const [a, b, c, isolated] = roster;
   const edges = [
     { id: 'lineage-a-b', sourceId: a.id, targetId: b.id, type: 'doctoral-advisor' },
     { id: 'lineage-b-c', sourceId: b.id, targetId: c.id, type: 'masters-advisor' },
-  ].map(edge => ({ ...edge, sources: ['https://example.org/evidence'], evidence: 'Verified mentorship evidence', works: [], notes: '', direct: false }));
-  await page.route('**/relationships.json*', route => route.fulfill({ json: { version: 1, updatedAt: '2026-10-01T00:00:00.000Z', relationships: edges } }));
+  ].map((edge) => ({
+    ...edge,
+    sources: ['https://example.org/evidence'],
+    evidence: 'Verified mentorship evidence',
+    works: [],
+    notes: '',
+    direct: false,
+  }));
+  await page.route('**/relationships.json*', (route) =>
+    route.fulfill({
+      json: { version: 1, updatedAt: '2026-10-01T00:00:00.000Z', relationships: edges },
+    }),
+  );
   await page.goto(`${baseUrl}/connections.html`, { waitUntil: 'networkidle' });
   await page.locator('#network-mode-lineage').click();
-  const positions = await page.locator('.network-node').evaluateAll(nodes => nodes.map(node => ({ id: node.getAttribute('data-person'), y: Number(node.getAttribute('transform')!.split(' ')[1].replace(')', '')) })));
-  assert.ok(positions.find(node => node.id === a.id)!.y < positions.find(node => node.id === b.id)!.y);
-  assert.ok(positions.find(node => node.id === b.id)!.y < positions.find(node => node.id === c.id)!.y);
+  const positions = await page.locator('.network-node').evaluateAll((nodes) =>
+    nodes.map((node) => ({
+      id: node.getAttribute('data-person'),
+      y: Number(node.getAttribute('transform')!.split(' ')[1].replace(')', '')),
+    })),
+  );
+  assert.ok(
+    positions.find((node) => node.id === a.id)!.y < positions.find((node) => node.id === b.id)!.y,
+  );
+  assert.ok(
+    positions.find((node) => node.id === b.id)!.y < positions.find((node) => node.id === c.id)!.y,
+  );
   await page.locator('#network-mode-path').click();
-  await page.locator('#network-path-start').fill(await page.locator(`#network-people option[value$="(${c.id})"]`).getAttribute('value') as string);
-  await page.locator('#network-path-end').fill(await page.locator(`#network-people option[value$="(${a.id})"]`).getAttribute('value') as string);
+  await page
+    .locator('#network-path-start')
+    .fill(
+      (await page
+        .locator(`#network-people option[value$="(${c.id})"]`)
+        .getAttribute('value')) as string,
+    );
+  await page
+    .locator('#network-path-end')
+    .fill(
+      (await page
+        .locator(`#network-people option[value$="(${a.id})"]`)
+        .getAttribute('value')) as string,
+    );
   assert.match(await textOf(page.locator('#network-summary')), /2 steps/);
   assert.equal(await page.locator('#network-path-result li').count(), 3);
   assert.match(await textOf(page.locator('#network-path-result button').first()), /←/);
@@ -760,13 +986,83 @@ test('lineage and path views preserve advisor directions, show evidence, and han
   await page.locator('[data-type="doctoral-advisor"]').click();
   assert.match(await textOf(page.locator('#network-summary')), /No path is recorded/);
   await page.locator('[data-type=""]').click();
-  await page.locator('#network-path-end').fill(await page.locator(`#network-people option[value$="(${isolated.id})"]`).getAttribute('value') as string);
+  await page
+    .locator('#network-path-end')
+    .fill(
+      (await page
+        .locator(`#network-people option[value$="(${isolated.id})"]`)
+        .getAttribute('value')) as string,
+    );
   assert.equal(await page.locator('.network-edge').count(), 0);
-  await page.locator('#network-path-end').fill(await page.locator(`#network-people option[value$="(${c.id})"]`).getAttribute('value') as string);
+  await page
+    .locator('#network-path-end')
+    .fill(
+      (await page
+        .locator(`#network-people option[value$="(${c.id})"]`)
+        .getAttribute('value')) as string,
+    );
   assert.match(await textOf(page.locator('#network-summary')), /two different people/);
   await page.setViewportSize({ width: 375, height: 812 });
   assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth));
   await page.locator('#network-clear').click();
   assert.match(await textOf(page.locator('#network-summary')), /Choose two people/);
+  await page.close();
+});
+
+test('sharing uses native Share, copies the current URL, and handles cancellation and clipboard failures', async () => {
+  const page = await context.newPage();
+  await page.goto(`${baseUrl}/?loc=France`, { waitUntil: 'networkidle' });
+  await page.evaluate(() => {
+    Object.defineProperty(navigator, 'share', {
+      configurable: true,
+      value: async (data: ShareData) => {
+        document.body.dataset.sharedUrl = data.url;
+      },
+    });
+  });
+  await page.getByRole('button', { name: 'Share', exact: true }).click();
+  assert.equal(await page.locator('body').getAttribute('data-shared-url'), page.url());
+  await page.evaluate(() => {
+    Object.defineProperty(navigator, 'clipboard', {
+      configurable: true,
+      value: {
+        writeText: async (url: string) => {
+          document.body.dataset.copiedUrl = url;
+        },
+      },
+    });
+    Object.defineProperty(navigator, 'share', {
+      configurable: true,
+      value: async () => {
+        throw new DOMException('Cancelled', 'AbortError');
+      },
+    });
+    delete document.body.dataset.sharedUrl;
+  });
+  await page.getByRole('button', { name: 'Share', exact: true }).click();
+  assert.equal(await page.locator('body').getAttribute('data-copied-url'), null);
+  await page.evaluate(() => Object.defineProperty(navigator, 'share', { value: undefined }));
+  await page.getByRole('button', { name: 'Share', exact: true }).click();
+  await page.waitForFunction(() => Boolean(document.body.dataset.copiedUrl));
+  assert.equal(await page.locator('body').getAttribute('data-copied-url'), page.url());
+
+  await page.goto(`${baseUrl}/people/vp-0001.html`, { waitUntil: 'networkidle' });
+  await page.evaluate(() => {
+    Object.defineProperty(navigator, 'share', { value: undefined });
+    Object.defineProperty(navigator, 'clipboard', {
+      value: {
+        writeText: async () => {
+          throw new Error('Denied');
+        },
+      },
+    });
+  });
+  const dialogPromise = page.waitForEvent('dialog');
+  const clickPromise = page.getByRole('button', { name: 'Share', exact: true }).click();
+  const dialog = await dialogPromise;
+  assert.equal(dialog.type(), 'prompt');
+  assert.equal(dialog.defaultValue(), 'https://vietprofs.roars.dev/people/vp-0001.html');
+  await dialog.dismiss();
+  await clickPromise;
   await page.close();
 });

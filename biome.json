@@ -1,5 +1,5 @@
 {
-  "$schema": "https://biomejs.dev/schemas/2.5.13/schema.json",
+  "$schema": "https://biomejs.dev/schemas/2.5.14/schema.json",
   "vcs": {
     "enabled": true,
     "clientKind": "git",
@@ -9,14 +9,30 @@
     "ignoreUnknown": true,
     "includes": [
       "src/**/*.ts",
+      "src/**/*.css",
       "scripts/**/*.ts",
-      "test/**/*.ts"
+      "test/**/*.ts",
+      "public/share.js",
+      "vite.config.ts",
+      "biome.json",
+      "package.json",
+      "tsconfig.json",
+      "!src/world-map-data.ts"
     ]
   },
   "formatter": {
-    "enabled": false
+    "enabled": true,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineWidth": 100
   },
-  "assist": { "actions": { "source": { "organizeImports": "off" } } },
+  "assist": {
+    "actions": {
+      "source": {
+        "organizeImports": "off"
+      }
+    }
+  },
   "linter": {
     "enabled": true,
     "rules": {
@@ -31,16 +47,28 @@
       },
       "style": {
         "useConst": "error",
-        "noNonNullAssertion": "off"
+        "noNonNullAssertion": "off",
+        "noDescendingSpecificity": "off"
       },
       "complexity": {
         "noForEach": "off",
         "useOptionalChain": "off"
       },
       "correctness": {
-        "noUnusedVariables": "warn",
-        "noUnusedImports": "warn"
+        "noUnusedVariables": "error",
+        "noUnusedImports": "error"
       }
+    }
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "single",
+      "semicolons": "always"
+    }
+  },
+  "css": {
+    "formatter": {
+      "quoteStyle": "single"
     }
   }
 }

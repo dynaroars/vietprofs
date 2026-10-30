@@ -1,4 +1,5 @@
 import './style.css';
+import './directory.css';
 import { loadStatsHistory } from './stats-history.ts';
 import {
   FIELDS,
@@ -34,12 +35,22 @@ import {
 } from './data.ts';
 import { abbreviateInsightText, escapeHtml, formatRosterDate } from './utils.ts';
 import { applyFavoriteToggle, fieldDropdownLabel, renderRosterEntry } from './render.ts';
-import { clearRecentProfiles, loadFavorites, loadRecentProfiles, toggleFavorite } from './favorites-store.ts';
+import {
+  clearRecentProfiles,
+  loadFavorites,
+  loadRecentProfiles,
+  toggleFavorite,
+} from './favorites-store.ts';
 import { locationForQuery } from './filter-state.ts';
 import { renderAddFab } from './add-fab.ts';
 import { ICONS } from './see-also.ts';
 import { renderShareMenu } from './share.ts';
-import { renderFunFacts, renderGrowthChart, renderHealthPanel, type GrowthMetricKey } from './insights.ts';
+import {
+  renderFunFacts,
+  renderGrowthChart,
+  renderHealthPanel,
+  type GrowthMetricKey,
+} from './insights.ts';
 import {
   createCommandHandler,
   createSearchController,
@@ -137,7 +148,8 @@ function parseKeywordQuery(raw: string): { scope: string; query: string } | null
   return parsed ? { scope: parsed.key, query: parsed.query } : null;
 }
 
-const PAPER_ICON = 'M6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Zm7 1.5V9h5.5L13 3.5ZM8 13h8v1.5H8V13Zm0 3.5h8V18H8v-1.5Z';
+const PAPER_ICON =
+  'M6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Zm7 1.5V9h5.5L13 3.5ZM8 13h8v1.5H8V13Zm0 3.5h8V18H8v-1.5Z';
 const EXTERNAL = ' target="_blank" rel="noopener noreferrer"';
 
 // Header links are icon-only; the label is the accessible name and the hover tooltip.
@@ -180,7 +192,12 @@ function renderShell() {
           <p><strong>QUERY SYNTAX</strong></p>
           <p>Type a keyword prefix to search one field directly:</p>
           <ul>
-            ${Object.entries(KEYWORD_LABELS).map(([scope, label]) => `<li><code>${escapeHtml(label)}:</code> ${escapeHtml(KEYWORD_EXAMPLES[scope] ?? '')}</li>`).join('')}
+            ${Object.entries(KEYWORD_LABELS)
+              .map(
+                ([scope, label]) =>
+                  `<li><code>${escapeHtml(label)}:</code> ${escapeHtml(KEYWORD_EXAMPLES[scope] ?? '')}</li>`,
+              )
+              .join('')}
           </ul>
           <p><strong>KEYBOARD</strong></p>
           <p><code>/</code> search · <code>j</code>/<code>k</code> move · <code>Enter</code> open · <code>f</code> favorite · <code>r</code> random · <code>Esc</code> clear</p>
@@ -232,39 +249,50 @@ function renderShell() {
 const TRACK_INFO: Record<string, { label: string; tooltip: string }> = {
   'Tenure-line': {
     label: 'tenure-line',
-    tooltip: 'On the tenure track or already tenured — not adjunct, visiting, teaching-only, research-track, or emeritus.',
+    tooltip:
+      'On the tenure track or already tenured — not adjunct, visiting, teaching-only, research-track, or emeritus.',
   },
   Teaching: {
     label: 'teaching-track',
-    tooltip: 'A full-time, continuing/permanent non-tenure-track teaching appointment — not adjunct, visiting, postdoctoral, or affiliate.',
+    tooltip:
+      'A full-time, continuing/permanent non-tenure-track teaching appointment — not adjunct, visiting, postdoctoral, or affiliate.',
   },
   Research: {
     label: 'research-track',
-    tooltip: 'A stable faculty or faculty-equivalent research appointment — not a postdoctoral, visiting, or other temporary research role.',
+    tooltip:
+      'A stable faculty or faculty-equivalent research appointment — not a postdoctoral, visiting, or other temporary research role.',
   },
   Clinical: {
     label: 'clinical-track',
-    tooltip: 'A stable clinical faculty appointment — not adjunct, visiting, or other temporary clinical work.',
+    tooltip:
+      'A stable clinical faculty appointment — not adjunct, visiting, or other temporary clinical work.',
   },
   'Admin and Staff': {
     label: 'admin-and-staff',
-    tooltip: 'A senior academic leader (dean, provost, president) without a faculty rank on another track, or a faculty-status or senior permanent academic librarian or archivist — not an ordinary staff or temporary role.',
+    tooltip:
+      'A senior academic leader (dean, provost, president) without a faculty rank on another track, or a faculty-status or senior permanent academic librarian or archivist — not an ordinary staff or temporary role.',
   },
   Emeritus: {
     label: 'emeritus',
-    tooltip: 'A formally conferred emeritus title after a tenure-line career — not just retirement without the conferred title.',
+    tooltip:
+      'A formally conferred emeritus title after a tenure-line career — not just retirement without the conferred title.',
   },
   Deceased: {
     label: 'deceased',
-    tooltip: 'Deceased or historical scholars who held a qualifying university faculty or eligible research-institute appointment outside Vietnam.',
+    tooltip:
+      'Deceased or historical scholars who held a qualifying university faculty or eligible research-institute appointment outside Vietnam.',
   },
 };
 
 function trackQualifier(roster: Roster): string {
-  const tracks = new Set(roster.map((p) => p.track).filter((track): track is string => Boolean(track)));
+  const tracks = new Set(
+    roster.map((p) => p.track).filter((track): track is string => Boolean(track)),
+  );
   if (tracks.size !== 1) return '';
   const info = TRACK_INFO[[...tracks][0] ?? ''];
-  return info ? ` <span class="term" tabindex="0" data-tooltip="${escapeHtml(info.tooltip)}">${info.label}</span>` : '';
+  return info
+    ? ` <span class="term" tabindex="0" data-tooltip="${escapeHtml(info.tooltip)}">${info.label}</span>`
+    : '';
 }
 
 interface RenderOptions {
@@ -288,32 +316,48 @@ function namePart(person: RosterEntry, part: 'first' | 'last'): string {
 function sortRoster(roster: Roster, order: string): Roster {
   const favorites = new Set(loadFavorites());
   const byName = (part: 'first' | 'last') => (a: RosterEntry, b: RosterEntry) =>
-    namePart(a, part).localeCompare(namePart(b, part), 'en', { sensitivity: 'base' })
-      || displayName(a.name).localeCompare(displayName(b.name), 'en', { sensitivity: 'base' });
-  const bySelectedOrder = order === 'last-name'
-    ? byName('last')
-    : order === 'first-name'
-      ? byName('first')
-      : order === 'vp-newest'
-        ? (a: RosterEntry, b: RosterEntry) => (Number.parseInt(b.id.replace(/\D/g, ''), 10) || 0) - (Number.parseInt(a.id.replace(/\D/g, ''), 10) || 0)
-        : () => 0;
+    namePart(a, part).localeCompare(namePart(b, part), 'en', { sensitivity: 'base' }) ||
+    displayName(a.name).localeCompare(displayName(b.name), 'en', { sensitivity: 'base' });
+  const bySelectedOrder =
+    order === 'last-name'
+      ? byName('last')
+      : order === 'first-name'
+        ? byName('first')
+        : order === 'vp-newest'
+          ? (a: RosterEntry, b: RosterEntry) =>
+              (Number.parseInt(b.id.replace(/\D/g, ''), 10) || 0) -
+              (Number.parseInt(a.id.replace(/\D/g, ''), 10) || 0)
+          : () => 0;
 
-  return [...roster].sort((a, b) => Number(favorites.has(b.id)) - Number(favorites.has(a.id)) || bySelectedOrder(a, b));
+  return [...roster].sort(
+    (a, b) => Number(favorites.has(b.id)) - Number(favorites.has(a.id)) || bySelectedOrder(a, b),
+  );
 }
 
 let currentRoster: Roster = [];
 
-function renderRoster(roster: Roster, { field, location, hasIntersectionHub = false, hasLocationHub = false, availableRegionHubs = new Set<string>() }: RenderOptions = {}) {
+function renderRoster(
+  roster: Roster,
+  {
+    field,
+    location,
+    hasIntersectionHub = false,
+    hasLocationHub = false,
+    availableRegionHubs = new Set<string>(),
+  }: RenderOptions = {},
+) {
   const rosterEl = document.getElementById('roster');
   const countEl = document.getElementById('result-count');
   const institutions = new Set(roster.map((p) => p.university)).size;
   const isFieldFiltered = Boolean(field && field !== 'all');
   const isLocationFiltered = Boolean(location && location !== 'World');
-  const locationTargetName = location === 'US' ? 'United States' : location ?? 'United States';
+  const locationTargetName = location === 'US' ? 'United States' : (location ?? 'United States');
   const fieldTarget = isFieldFiltered
-    ? `${import.meta.env.BASE_URL}${hasIntersectionHub && isLocationFiltered
-      ? fieldRegionPath(field as string, locationTargetName)
-      : fieldPath(field as string)}`
+    ? `${import.meta.env.BASE_URL}${
+        hasIntersectionHub && isLocationFiltered
+          ? fieldRegionPath(field as string, locationTargetName)
+          : fieldPath(field as string)
+      }`
     : '';
   const fieldPhrase = isFieldFiltered
     ? ` in <a class="result-count-link" href="${fieldTarget}" title="Open ${escapeHtml(field as string)}${hasIntersectionHub && isLocationFiltered ? ` in ${escapeHtml(locationTargetName)}` : ''} hub">${escapeHtml(field as string)} ↗</a>`
@@ -321,10 +365,16 @@ function renderRoster(roster: Roster, { field, location, hasIntersectionHub = fa
   const locationTarget = isLocationFiltered
     ? `${import.meta.env.BASE_URL}${regionPath(locationTargetName)}`
     : '';
-  const rawLocationName = location === 'US' ? 'the United States' : location === 'World' || !location ? 'the World' : location;
-  const locationPhrase = isLocationFiltered && hasLocationHub
-    ? `<a class="result-count-link" href="${locationTarget}" title="Open ${escapeHtml(rawLocationName)} region hub">${escapeHtml(rawLocationName)} ↗</a>`
-    : escapeHtml(rawLocationName);
+  const rawLocationName =
+    location === 'US'
+      ? 'the United States'
+      : location === 'World' || !location
+        ? 'the World'
+        : location;
+  const locationPhrase =
+    isLocationFiltered && hasLocationHub
+      ? `<a class="result-count-link" href="${locationTarget}" title="Open ${escapeHtml(rawLocationName)} region hub">${escapeHtml(rawLocationName)} ↗</a>`
+      : escapeHtml(rawLocationName);
   const peopleLabel = roster.length === 1 ? 'person' : 'people';
   countEl.innerHTML = `${roster.length}${trackQualifier(roster)} ${peopleLabel}${fieldPhrase} across ${institutions} institution${institutions === 1 ? '' : 's'} in ${locationPhrase}.`;
 
@@ -335,10 +385,19 @@ function renderRoster(roster: Roster, { field, location, hasIntersectionHub = fa
     return;
   }
 
-  rosterEl.innerHTML = roster.map((person) => {
-    const countryTarget = person.country && !['United States', 'US', 'USA'].includes(person.country) ? person.country : 'United States';
-    return renderRosterEntry(person, import.meta.env.BASE_URL, availableRegionHubs.has(countryTarget));
-  }).join('');
+  rosterEl.innerHTML = roster
+    .map((person) => {
+      const countryTarget =
+        person.country && !['United States', 'US', 'USA'].includes(person.country)
+          ? person.country
+          : 'United States';
+      return renderRosterEntry(
+        person,
+        import.meta.env.BASE_URL,
+        availableRegionHubs.has(countryTarget),
+      );
+    })
+    .join('');
 }
 
 async function init() {
@@ -356,12 +415,19 @@ async function init() {
   }
   const relationshipDatabase = await loadRelationships();
   const searchIndex = buildSearchIndex(roster);
-  const regionHubCandidates = [...new Set([
-    ...LOCATIONS.filter((location) => location !== 'World').map((location) => location === 'US' ? 'United States' : location),
-    ...uniqueCountries(roster),
-  ])];
-  const availableRegionHubs = new Set(regionHubCandidates.filter((region) =>
-    hasEnoughPeopleForRosterHub(filterRoster(roster, { location: region }).length)));
+  const regionHubCandidates = [
+    ...new Set([
+      ...LOCATIONS.filter((location) => location !== 'World').map((location) =>
+        location === 'US' ? 'United States' : location,
+      ),
+      ...uniqueCountries(roster),
+    ]),
+  ];
+  const availableRegionHubs = new Set(
+    regionHubCandidates.filter((region) =>
+      hasEnoughPeopleForRosterHub(filterRoster(roster, { location: region }).length),
+    ),
+  );
 
   // Matches everything filterRoster actually searches over (name, university, city, state, country,
   // department, rank, research areas, degree institutions, and honors) so a suggestion always yields at least one result.
@@ -369,7 +435,10 @@ async function init() {
     ...new Set([
       ...roster.flatMap((p) => {
         const name = displayName(p.name);
-        const withoutInitials = name.replace(/\b[A-Z]\.\s*/g, '').replace(/\s+/g, ' ').trim();
+        const withoutInitials = name
+          .replace(/\b[A-Z]\.\s*/g, '')
+          .replace(/\s+/g, ' ')
+          .trim();
         return [name, withoutInitials];
       }),
       ...roster.map((p) => p.university),
@@ -383,20 +452,51 @@ async function init() {
       ...uniqueUndergradInstitutions(roster),
     ]),
   ].sort();
-  const nameSuggestionValues = [...new Set(roster.flatMap((p) => {
-    const name = displayName(p.name);
-    const withoutInitials = name.replace(/\b[A-Z]\.\s*/g, '').replace(/\s+/g, ' ').trim();
-    return [name, withoutInitials];
-  }))].sort();
+  const nameSuggestionValues = [
+    ...new Set(
+      roster.flatMap((p) => {
+        const name = displayName(p.name);
+        const withoutInitials = name
+          .replace(/\b[A-Z]\.\s*/g, '')
+          .replace(/\s+/g, ' ')
+          .trim();
+        return [name, withoutInitials];
+      }),
+    ),
+  ].sort();
   const suggestionSources = new Map<string, string[]>([
     ['name', nameSuggestionValues],
-    ['rank', [...new Set([...uniqueRanks(roster), ...roster.map((p) => canonicalRank(p) ?? '')].filter(Boolean))].sort()],
-    ['field', FIELDS.filter((field) => roster.some((p) => fieldOf(p.department, p.university) === field))],
+    [
+      'rank',
+      [
+        ...new Set(
+          [...uniqueRanks(roster), ...roster.map((p) => canonicalRank(p) ?? '')].filter(Boolean),
+        ),
+      ].sort(),
+    ],
+    [
+      'field',
+      FIELDS.filter((field) => roster.some((p) => fieldOf(p.department, p.university) === field)),
+    ],
     ['track', TRACKS.filter((track) => roster.some((p) => p.track === track))],
     ['research', uniqueResearchAreas(roster)],
-    ['honors', [...new Set(roster.flatMap((p) => (p.honors ?? []).flatMap((honor) => [honor.name, honor.organization ?? ''])).filter(Boolean))].sort()],
+    [
+      'honors',
+      [
+        ...new Set(
+          roster
+            .flatMap((p) =>
+              (p.honors ?? []).flatMap((honor) => [honor.name, honor.organization ?? '']),
+            )
+            .filter(Boolean),
+        ),
+      ].sort(),
+    ],
     ['university', [...new Set(roster.map((p) => p.university))].sort()],
-    ['institution', INSTITUTION_TYPES.filter((type) => roster.some((p) => institutionTypeOf(p) === type))],
+    [
+      'institution',
+      INSTITUTION_TYPES.filter((type) => roster.some((p) => institutionTypeOf(p) === type)),
+    ],
     ['department', uniqueDepartments(roster)],
     ['phd', uniquePhdInstitutions(roster)],
     ['undergrad', uniqueUndergradInstitutions(roster)],
@@ -438,8 +538,12 @@ async function init() {
     scopeChip: searchScopeChip,
     scopeChipLabel: searchScopeChipLabel,
     suggestionPanel,
-    keywordMeta: Object.fromEntries(Object.entries(KEYWORD_LABELS)
-      .map(([scope, label]) => [scope, { label, icon: KEYWORD_ICONS[scope] }])),
+    keywordMeta: Object.fromEntries(
+      Object.entries(KEYWORD_LABELS).map(([scope, label]) => [
+        scope,
+        { label, icon: KEYWORD_ICONS[scope] },
+      ]),
+    ),
     resolveKey: (key) => KEYWORD_ALIASES[key],
     // Free text completes over everything filterRoster searches; scopes without their own list
     // (e.g. Connection) fall back to the same combined list.
@@ -516,7 +620,9 @@ async function init() {
       filterState.state ? `state=${JSON.stringify(filterState.state)}` : '',
       `sort=${sortSelect.value}`,
       `matches=${matches}`,
-    ].filter(Boolean).join('  ');
+    ]
+      .filter(Boolean)
+      .join('  ');
   }
 
   function optionElement(value: string, label: string): HTMLOptionElement {
@@ -526,13 +632,21 @@ async function init() {
     return option;
   }
 
-  function setOptions(select: HTMLSelectElement, entries: OptionEntry[], selectedValue: string): void {
+  function setOptions(
+    select: HTMLSelectElement,
+    entries: OptionEntry[],
+    selectedValue: string,
+  ): void {
     select.replaceChildren(...entries.map(({ value, label }) => optionElement(value, label)));
     select.value = selectedValue;
     if (select.selectedIndex < 0) select.selectedIndex = 0;
   }
 
-  function setLocationOptions(countryEntries: OptionEntry[], continentEntries: OptionEntry[], selectedValue: string): void {
+  function setLocationOptions(
+    countryEntries: OptionEntry[],
+    continentEntries: OptionEntry[],
+    selectedValue: string,
+  ): void {
     const groups: [string, OptionEntry[]][] = [
       ['By country/region', countryEntries],
       ['By continent', continentEntries],
@@ -542,13 +656,17 @@ async function init() {
       .map(([label, entries]) => {
         const group = document.createElement('optgroup');
         group.label = label;
-        group.append(...entries.map(({ value, label: optionLabel }) => optionElement(value, optionLabel)));
+        group.append(
+          ...entries.map(({ value, label: optionLabel }) => optionElement(value, optionLabel)),
+        );
         return group;
       });
     locationSelect.replaceChildren(...groupElements);
     locationSelect.value = selectedValue;
     if (locationSelect.selectedIndex < 0) {
-      const worldOption = locationSelect.querySelector('option[value="World"]') as HTMLOptionElement | null;
+      const worldOption = locationSelect.querySelector(
+        'option[value="World"]',
+      ) as HTMLOptionElement | null;
       if (worldOption) {
         locationSelect.value = 'World';
       } else {
@@ -565,38 +683,58 @@ async function init() {
     ...countryLocations.filter((country) => !['United States', 'US', 'USA'].includes(country)),
   ].filter((country) => roster.some((person) => locationMatches(person, country)));
   const countryCounts = new Map(
-    countryOptions.map((country) => [country, roster.filter((person) => locationMatches(person, country)).length]),
+    countryOptions.map((country) => [
+      country,
+      roster.filter((person) => locationMatches(person, country)).length,
+    ]),
   );
-  countryOptions.sort((a, b) => (countryCounts.get(b) ?? 0) - (countryCounts.get(a) ?? 0) || a.localeCompare(b));
-  const continentOptions = LOCATIONS.filter((loc) => loc !== 'US' && (loc === 'World' || roster.some((person) => locationMatches(person, loc))));
+  countryOptions.sort(
+    (a, b) => (countryCounts.get(b) ?? 0) - (countryCounts.get(a) ?? 0) || a.localeCompare(b),
+  );
+  const continentOptions = LOCATIONS.filter(
+    (loc) =>
+      loc !== 'US' && (loc === 'World' || roster.some((person) => locationMatches(person, loc))),
+  );
   const continentCounts = new Map(
     continentOptions.map((continent) => [
       continent,
-      continent === 'World' ? roster.length : roster.filter((person) => locationMatches(person, continent)).length,
+      continent === 'World'
+        ? roster.length
+        : roster.filter((person) => locationMatches(person, continent)).length,
     ]),
   );
-  continentOptions.sort((a, b) => (continentCounts.get(b) ?? 0) - (continentCounts.get(a) ?? 0) || a.localeCompare(b));
+  continentOptions.sort(
+    (a, b) => (continentCounts.get(b) ?? 0) - (continentCounts.get(a) ?? 0) || a.localeCompare(b),
+  );
   const locationOptions = [...countryOptions, ...continentOptions];
-  const locationLabel = (loc: string): string => LOCATION_LABELS[loc] || `${countryFlag(loc)} ${loc}`;
+  const locationLabel = (loc: string): string =>
+    LOCATION_LABELS[loc] || `${countryFlag(loc)} ${loc}`;
 
   function filtersHaveResults(location: string, field: string, track: string): boolean {
-    return roster.some((person) =>
-      locationMatches(person, location) &&
-      (field === 'all' || fieldOf(person.department, person.university) === field) &&
-      (track === 'all' || person.track === track)
+    return roster.some(
+      (person) =>
+        locationMatches(person, location) &&
+        (field === 'all' || fieldOf(person.department, person.university) === field) &&
+        (track === 'all' || person.track === track),
     );
   }
 
   const fieldCounts = new Map(
-    FIELDS.map((field) => [field, roster.filter((person) => fieldOf(person.department, person.university) === field).length]),
+    FIELDS.map((field) => [
+      field,
+      roster.filter((person) => fieldOf(person.department, person.university) === field).length,
+    ]),
   );
-  const sortedFields = [...FIELDS].sort((a, b) => (fieldCounts.get(b) ?? 0) - (fieldCounts.get(a) ?? 0) || a.localeCompare(b));
+  const sortedFields = [...FIELDS].sort(
+    (a, b) => (fieldCounts.get(b) ?? 0) - (fieldCounts.get(a) ?? 0) || a.localeCompare(b),
+  );
 
   const trackCounts = new Map(
     TRACKS.map((track) => [track, roster.filter((person) => person.track === track).length]),
   );
-  const sortedTracks = [...TRACKS].sort((a, b) => (trackCounts.get(b) ?? 0) - (trackCounts.get(a) ?? 0) || a.localeCompare(b));
-
+  const sortedTracks = [...TRACKS].sort(
+    (a, b) => (trackCounts.get(b) ?? 0) - (trackCounts.get(a) ?? 0) || a.localeCompare(b),
+  );
 
   function updateDropdownCounts() {
     const { scope, query } = effectiveSearch();
@@ -622,11 +760,15 @@ async function init() {
     }
     const continentEntries: OptionEntry[] = [];
     for (const continent of continentOptions) {
-      const count = continent === 'World'
-        ? locationContext.length
-        : locationContext.filter((p) => locationMatches(p, continent)).length;
+      const count =
+        continent === 'World'
+          ? locationContext.length
+          : locationContext.filter((p) => locationMatches(p, continent)).length;
       if (continent === 'World' || count > 0) {
-        continentEntries.push({ value: continent, label: `${locationLabel(continent)} (${count})` });
+        continentEntries.push({
+          value: continent,
+          label: `${locationLabel(continent)} (${count})`,
+        });
       }
     }
     setLocationOptions(countryEntries, continentEntries, currentLoc);
@@ -644,7 +786,9 @@ async function init() {
       { value: 'all', label: `All Fields (${fieldContext.length})` },
     ];
     for (const field of sortedFields) {
-      const count = fieldContext.filter((p) => fieldOf(p.department, p.university) === field).length;
+      const count = fieldContext.filter(
+        (p) => fieldOf(p.department, p.university) === field,
+      ).length;
       if (count > 0) {
         fieldEntries.push({ value: field, label: `${fieldDropdownLabel(field)} (${count})` });
       }
@@ -689,10 +833,20 @@ async function init() {
     sortSelect.classList.toggle('is-active', sortSelect.value !== 'random');
   }
 
-  function setFilterValues({ location, field = 'all', track = 'all' }: { location: string; field?: string; track?: string }) {
-    const safeLocation = locationOptions.includes(location) && roster.some((person) => locationMatches(person, location))
-      ? location
-      : 'World';
+  function setFilterValues({
+    location,
+    field = 'all',
+    track = 'all',
+  }: {
+    location: string;
+    field?: string;
+    track?: string;
+  }) {
+    const safeLocation =
+      locationOptions.includes(location) &&
+      roster.some((person) => locationMatches(person, location))
+        ? location
+        : 'World';
     const safeFilters = filtersHaveResults(safeLocation, field, track)
       ? { location: safeLocation, field, track }
       : { location: safeLocation, field: 'all', track: 'all' };
@@ -717,20 +871,31 @@ async function init() {
   const requestedTrack = (params.get('track') ?? '').replace(/^Academic staff$/, 'Admin and Staff');
   const requestedSort = params.get('sort') ?? '';
   let initialLocation = 'World';
-  if (requestedLocation && locationOptions.includes(requestedLocation) && roster.some((p) => locationMatches(p, requestedLocation))) {
+  if (
+    requestedLocation &&
+    locationOptions.includes(requestedLocation) &&
+    roster.some((p) => locationMatches(p, requestedLocation))
+  ) {
     initialLocation = requestedLocation;
   } else if (params.has('q')) {
     autoSelectLocationForQuery();
     initialLocation = locationSelect.value;
   }
   let initialField = 'all';
-  if (FIELDS.includes(requestedField) && roster.some((p) => fieldOf(p.department, p.university) === requestedField)) {
+  if (
+    FIELDS.includes(requestedField) &&
+    roster.some((p) => fieldOf(p.department, p.university) === requestedField)
+  ) {
     initialField = requestedField;
   }
   filterState.health = params.get('view') === 'health';
-  filterState.insights = !filterState.health && (params.get('view') === 'insights' || requestedField === 'interesting');
+  filterState.insights =
+    !filterState.health && (params.get('view') === 'insights' || requestedField === 'interesting');
   let initialTrack = 'all';
-  if (TRACKS.some((track) => track === requestedTrack) && roster.some((p) => p.track === requestedTrack)) {
+  if (
+    TRACKS.some((track) => track === requestedTrack) &&
+    roster.some((p) => p.track === requestedTrack)
+  ) {
     initialTrack = requestedTrack;
   }
   initializeDropdowns();
@@ -804,7 +969,13 @@ async function init() {
         countEl.textContent = 'Dataset health, metadata completeness, and verification metrics:';
       }
       if (rosterEl) {
-        rosterEl.innerHTML = renderHealthPanel(roster, import.meta.env.BASE_URL, true, statsHistory, currentGrowthMetric);
+        rosterEl.innerHTML = renderHealthPanel(
+          roster,
+          import.meta.env.BASE_URL,
+          true,
+          statsHistory,
+          currentGrowthMetric,
+        );
       }
       renderQueryPlan(roster.length, 'health');
       syncUrl();
@@ -832,11 +1003,17 @@ async function init() {
     renderRoster(sortRoster(filtered, sortSelect.value), {
       field: fieldSelect.value,
       location: locationSelect.value,
-      hasIntersectionHub: fieldSelect.value !== 'all'
-        && locationSelect.value !== 'World'
-        && hasEnoughPeopleForRosterHub(filterRoster(roster, { field: fieldSelect.value, location: locationSelect.value }).length),
-      hasLocationHub: locationSelect.value !== 'World'
-        && availableRegionHubs.has(locationSelect.value === 'US' ? 'United States' : locationSelect.value),
+      hasIntersectionHub:
+        fieldSelect.value !== 'all' &&
+        locationSelect.value !== 'World' &&
+        hasEnoughPeopleForRosterHub(
+          filterRoster(roster, { field: fieldSelect.value, location: locationSelect.value }).length,
+        ),
+      hasLocationHub:
+        locationSelect.value !== 'World' &&
+        availableRegionHubs.has(
+          locationSelect.value === 'US' ? 'United States' : locationSelect.value,
+        ),
       availableRegionHubs,
     });
     keyboardSelectedIndex = -1;
@@ -914,13 +1091,16 @@ async function init() {
     help: searchHelp,
     getItemElements: () => [...document.querySelectorAll<HTMLElement>('.entry')],
     getSelectedIndex: () => keyboardSelectedIndex,
-    setSelectedIndex: (index) => { keyboardSelectedIndex = index; },
+    setSelectedIndex: (index) => {
+      keyboardSelectedIndex = index;
+    },
     selectedClass: 'entry-keyboard-selected',
     nextKeys: ['j', 'ArrowDown'],
     prevKeys: ['k', 'ArrowUp'],
     isNavigable: () => currentRoster.length > 0 || document.querySelectorAll('.entry').length > 0,
     onEnter: (selected) => selected.querySelector<HTMLAnchorElement>('.entry-name')?.click(),
-    onSecondary: (selected) => selected.querySelector<HTMLButtonElement>('.favorite-toggle')?.click(),
+    onSecondary: (selected) =>
+      selected.querySelector<HTMLButtonElement>('.favorite-toggle')?.click(),
     onRandom: () => runCommand('/dev/random'),
     escape: {
       onEscape: () => {
@@ -997,7 +1177,9 @@ async function init() {
       update();
       return;
     }
-    const worldMapItem = target.closest<HTMLElement>('.world-map-country, .world-map-pin, .world-map-chip');
+    const worldMapItem = target.closest<HTMLElement>(
+      '.world-map-country, .world-map-pin, .world-map-chip',
+    );
     if (worldMapItem?.dataset.country) {
       const country = worldMapItem.dataset.country;
       clearSearch();
@@ -1019,9 +1201,11 @@ async function init() {
     const rankedItem = target.closest<HTMLButtonElement>('.ranked-item');
     if (rankedItem && rankedItem.dataset.search) {
       const rankedScope = rankedItem.dataset.scope;
-      setSearchValue(rankedScope && KEYWORD_LABELS[rankedScope]
-        ? `${KEYWORD_LABELS[rankedScope]}: ${rankedItem.dataset.search}`
-        : rankedItem.dataset.search);
+      setSearchValue(
+        rankedScope && KEYWORD_LABELS[rankedScope]
+          ? `${KEYWORD_LABELS[rankedScope]}: ${rankedItem.dataset.search}`
+          : rankedItem.dataset.search,
+      );
       filterState.insights = false;
       filterState.health = false;
       fieldSelect.value = 'all';
@@ -1063,19 +1247,23 @@ async function init() {
     if (mapSection) {
       const mapWrap = mapSection.querySelector<HTMLElement>('.world-map-svg-wrap');
       const tooltip = mapSection.querySelector<HTMLElement>('.world-map-tooltip');
-      const countryEl = target.closest<HTMLElement | SVGElement>('.world-map-country, .world-map-pin, .world-map-chip');
+      const countryEl = target.closest<HTMLElement | SVGElement>(
+        '.world-map-country, .world-map-pin, .world-map-chip',
+      );
       if (countryEl && countryEl.dataset.country) {
         const { country, count, flag, share } = countryEl.dataset;
         const numCount = parseInt(count || '0', 10);
         const isOrigin = country === 'Vietnam';
 
-        mapSection.querySelectorAll('.world-map-country, .world-map-pin, .world-map-chip').forEach((el) => {
-          if (el.getAttribute('data-country') === country) {
-            el.classList.add('is-hovered');
-          } else {
-            el.classList.remove('is-hovered');
-          }
-        });
+        mapSection
+          .querySelectorAll('.world-map-country, .world-map-pin, .world-map-chip')
+          .forEach((el) => {
+            if (el.getAttribute('data-country') === country) {
+              el.classList.add('is-hovered');
+            } else {
+              el.classList.remove('is-hovered');
+            }
+          });
 
         if (tooltip && mapWrap) {
           tooltip.innerHTML = `
@@ -1083,16 +1271,20 @@ async function init() {
               <span class="tooltip-flag">${flag || '🌐'}</span>
               <span class="tooltip-title">${escapeHtml(country)}</span>
             </div>
-            ${isOrigin ? `
+            ${
+              isOrigin
+                ? `
               <div class="tooltip-stat"><strong>Origin</strong> of Vietnamese diaspora</div>
               <div class="tooltip-action">Heritage &amp; roots</div>
-            ` : `
+            `
+                : `
               <div class="tooltip-stat">
                 <strong>${numCount.toLocaleString()}</strong> ${numCount === 1 ? 'person' : 'people'}
                 ${share ? `<span class="tooltip-share">(${share}% of diaspora)</span>` : ''}
               </div>
               <div class="tooltip-action">Click to filter roster by ${escapeHtml(country)}</div>
-            `}
+            `
+            }
           `;
           tooltip.removeAttribute('hidden');
           const wrapRect = mapWrap.getBoundingClientRect();
@@ -1104,7 +1296,9 @@ async function init() {
           tooltip.style.top = `${top}px`;
         }
       } else {
-        mapSection.querySelectorAll('.is-hovered').forEach((el) => el.classList.remove('is-hovered'));
+        mapSection
+          .querySelectorAll('.is-hovered')
+          .forEach((el) => el.classList.remove('is-hovered'));
         if (tooltip) tooltip.setAttribute('hidden', '');
       }
     }
@@ -1132,7 +1326,8 @@ async function init() {
       }
     }
     const [nx, date, val, unit, pluralUnit] = nearest;
-    const unitLabel = val === 1 ? (unit || svg.dataset.unit || 'item') : (pluralUnit || svg.dataset.plural || 'items');
+    const unitLabel =
+      val === 1 ? unit || svg.dataset.unit || 'item' : pluralUnit || svg.dataset.plural || 'items';
     const crosshair = svg.querySelector<SVGLineElement>('.growth-crosshair');
     if (crosshair) {
       crosshair.setAttribute('x1', String(nx));
@@ -1152,23 +1347,38 @@ async function init() {
       el.parentElement?.querySelector('.growth-tooltip')?.setAttribute('hidden', '');
     });
 
-    document.querySelectorAll<HTMLElement>('.world-map-tooltip').forEach((el) => el.setAttribute('hidden', ''));
-    document.querySelectorAll('.world-map-country.is-hovered, .world-map-pin.is-hovered').forEach((el) => el.classList.remove('is-hovered'));
+    document
+      .querySelectorAll<HTMLElement>('.world-map-tooltip')
+      .forEach((el) => el.setAttribute('hidden', ''));
+    document
+      .querySelectorAll('.world-map-country.is-hovered, .world-map-pin.is-hovered')
+      .forEach((el) => el.classList.remove('is-hovered'));
   });
 
   setupBackToTop(document.getElementById('back-to-top'));
 
   const populatedFields = FIELDS.filter((field) => filtersHaveResults('World', field, 'all'));
-  const populatedLocations = locationOptions.filter((location) =>
-    !['US', 'World'].includes(location) && filtersHaveResults(location, 'all', 'all')
+  const populatedLocations = locationOptions.filter(
+    (location) => !['US', 'World'].includes(location) && filtersHaveResults(location, 'all', 'all'),
   );
   type Example = { type: 'field' | 'track' | 'loc'; value: string; label: string };
 
   // A few plain filter suggestions; facts and stats live in Insights, Health, and Stats.
   const examples: Example[] = shuffle([
-    ...pickRandomUnique(populatedFields, 1).map((value) => ({ type: 'field' as const, value, label: abbreviateInsightText(fieldDropdownLabel(value)) })),
-    ...pickRandomUnique(TRACKS.filter((track) => roster.some((person) => person.track === track)), 1).map((value) => ({ type: 'track' as const, value, label: value })),
-    ...pickRandomUnique(populatedLocations, 2).map((value) => ({ type: 'loc' as const, value, label: value })),
+    ...pickRandomUnique(populatedFields, 1).map((value) => ({
+      type: 'field' as const,
+      value,
+      label: abbreviateInsightText(fieldDropdownLabel(value)),
+    })),
+    ...pickRandomUnique(
+      TRACKS.filter((track) => roster.some((person) => person.track === track)),
+      1,
+    ).map((value) => ({ type: 'track' as const, value, label: value })),
+    ...pickRandomUnique(populatedLocations, 2).map((value) => ({
+      type: 'loc' as const,
+      value,
+      label: value,
+    })),
   ]);
   const examplesEl = document.getElementById('examples');
   examplesEl.replaceChildren();

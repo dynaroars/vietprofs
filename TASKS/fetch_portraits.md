@@ -84,8 +84,8 @@ swallows errors.
 ```bash
 git checkout main && git pull --ff-only
 npx playwright install chromium                    # once per session: headless fallback for JavaScript-built pages and curl-blocked images
-npx tsx scripts/fetch-portraits.ts --status        # syncs the queue with the roster; newestPending = what --next picks
-npx tsx scripts/fetch-portraits.ts --next=10 --apply --retry   # newest never-attempted 10 (retries only when none remain); stores HIGH-confidence candidates
+node scripts/fetch-portraits.ts --status        # syncs the queue with the roster; newestPending = what --next picks
+node scripts/fetch-portraits.ts --next=10 --apply --retry   # newest never-attempted 10 (retries only when none remain); stores HIGH-confidence candidates
 python3 scripts/portrait_faces.py $(git status --porcelain public/portraits | awk '{print $2}')   # every added image must be `ok`
 ```
 
@@ -112,7 +112,7 @@ page, but the image URL doesn't carry the name) is logged as `needs_review` and 
 someone looks at it. Until 2026-10-14 nobody did, so most found photos were never stored.
 
 ```bash
-npx tsx scripts/fetch-portraits.ts --review        # needs_review candidates still missing a portrait
+node scripts/fetch-portraits.ts --review        # needs_review candidates still missing a portrait
 ```
 
 For each one, reject it on sight if the URL is a logo, a default or placeholder avatar, or another
@@ -121,7 +121,7 @@ name: the caption or alt text that names them, not a neighboring card, a lab ban
 og:image. Then store the accepted ids together:
 
 ```bash
-npx tsx scripts/fetch-portraits.ts --store=vp-0001,vp-0002   # size, aspect, and face checks still apply
+node scripts/fetch-portraits.ts --store=vp-0001,vp-0002   # size, aspect, and face checks still apply
 ```
 
 Open every stored image with the Read tool, as for a batch. A rejected candidate stays

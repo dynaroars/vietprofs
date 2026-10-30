@@ -8,6 +8,17 @@ This repository is **VietProfs**: a roster of Vietnamese and Vietnamese-diaspora
 
 Interesting-facts output must follow the roster-only, reproducible-observation rules in `README.md` and `ROSTER_MAINTENANCE.md`; qualified signals such as “the roster suggests” are allowed when supported by explicit comparisons, but do not invent claims or infer prestige, demographics, causation, growth, or migration paths from current counts.
 
+## Shared UI across projects
+
+VietProfs is the source of truth for the shared look used by sibling projects such as
+`../cspicks`. Put reusable design tokens and component styles in `src/roars-ui.css`, and keep
+shared behavior in `src/search-kit.ts` and `src/back-to-top.ts` free of project-specific data
+and DOM assumptions. Keep VietProfs layouts and feature styles in its other CSS files.
+Prefer extending these shared components over copying styles into each project. Preserve
+shared selectors, tokens, and APIs when cleaning up; check consumers before removing them.
+CS Picks vendors these files verbatim with its `npm run sync:vietprofs-ui`; update them in
+VietProfs first, then sync and verify consumers when rolling out a shared change.
+
 ## Direct updates
 
 Information explicitly supplied by the repository owner, or in a GitHub issue, email, or similar
