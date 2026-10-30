@@ -63,3 +63,26 @@ test('clearing recent profiles removes them all', () => {
   clearRecentProfiles();
   assert.deepEqual(loadRecentProfiles(), []);
 });
+
+test('favorites expose failed writes while optional recent history tolerates them', () => {
+  localStorage.setItem('vietprofs:favorites', '["vp-0001"]');
+  localStorage.setItem('vietprofs:recent-profiles', '["vp-0001"]');
+  localStorage.setItem = () => {
+    throw new Error('Storage quota exceeded');
+  };
+  assert.throws(() => toggleFavorite('vp-0002'), /quota/);
+  assert.deepEqual(loadFavorites(), ['vp-0001']);
+  assert.deepEqual(recordRecentProfile('vp-0002'), ['vp-0001']);
+});
+
+test('unavailable browser storage never reports a favorite as saved', () => {
+  Object.defineProperty(globalThis, 'localStorage', {
+    configurable: true,
+    get() {
+      throw new Error('Storage blocked');
+    },
+  });
+  assert.deepEqual(loadFavorites(), []);
+  assert.throws(() => toggleFavorite('vp-0001'), /unavailable/);
+  assert.doesNotThrow(() => recordRecentProfile('vp-0001'));
+});

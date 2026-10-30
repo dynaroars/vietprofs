@@ -1471,7 +1471,7 @@ function scopedValuesFor(person: RosterEntry, scope: string): (string | undefine
     case 'honors':
       return (person.honors ?? []).flatMap((honor) => [honor.name, honor.organization]);
     case 'phd':
-      return [person.phdInstitution];
+      return [person.phdInstitution, person.phdYear?.toString()];
     case 'undergrad':
       return [person.undergradInstitution];
     case 'country':
@@ -1482,6 +1482,12 @@ function scopedValuesFor(person: RosterEntry, scope: string): (string | undefine
 }
 
 function matchesSearchScope(person: RosterEntry, scope: string, target: string): boolean {
+  if (scope === 'phd' && /^\d{3}0s$/.test(target)) {
+    return (
+      Boolean(person.phdYear) &&
+      Math.floor(person.phdYear! / 10) * 10 === Number.parseInt(target, 10)
+    );
+  }
   return scopedValuesFor(person, scope).some(
     (value) => Boolean(value) && stripDiacritics(value!.toLowerCase()).includes(target),
   );

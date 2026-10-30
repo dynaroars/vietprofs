@@ -42,6 +42,25 @@ const relationships: RelationshipDatabase = JSON.parse(
   readFileSync(join(__dirname, '../public/relationships.json'), 'utf8'),
 );
 
+test('PhD searches match cohort boundaries, individual years, and institutions', () => {
+  const sample = [1999, 2000, 2009, 2010, undefined].map((phdYear, index) => ({
+    ...roster[0],
+    id: `vp-${index}`,
+    phdYear,
+    phdInstitution: 'Example University',
+  }));
+  assert.deepEqual(
+    filterRoster(sample, { searchScope: 'phd', query: '2000s' }).map((person) => person.phdYear),
+    [2000, 2009],
+  );
+  assert.deepEqual(
+    filterRoster(sample, { searchScope: 'phd', query: '2010' }).map((person) => person.phdYear),
+    [2010],
+  );
+  assert.equal(filterRoster(sample, { searchScope: 'phd', query: 'Example University' }).length, 5);
+  assert.equal(filterRoster(sample, { searchScope: 'phd', query: '1980s' }).length, 0);
+});
+
 test('public relationship database is valid and connects roster IDs only', () => {
   assert.deepEqual(validateRelationshipDatabase(relationships, roster), []);
   assert.ok(relationships.relationships.length > 0);

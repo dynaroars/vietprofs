@@ -5,5 +5,5 @@ const SHARE_ICON =
 
 // Fixed addresses are used on generated pages; the directory shares its current filters.
 export function renderShareMenu({ title, url }: { title: string; url?: string }): string {
-  return `<button type="button" class="share-toggle" data-share-title="${escapeHtml(title)}"${url ? ` data-share-url="${escapeHtml(url)}"` : ''} aria-label="Share" title="Share this page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="${SHARE_ICON}"/></svg><span>Share</span></button>`;
+  return `<button type="button" class="share-toggle" data-share-title="${escapeHtml(title)}"${url ? ` data-share-url="${escapeHtml(url)}"` : ''} aria-label="Share" aria-live="polite" title="Share this page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="${SHARE_ICON}"/></svg><span>Share</span></button>`;
 }

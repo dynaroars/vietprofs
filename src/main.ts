@@ -33,7 +33,7 @@ import {
   type Roster,
   type RosterEntry,
 } from './data.ts';
-import { abbreviateInsightText, escapeHtml, formatRosterDate } from './utils.ts';
+import { abbreviateInsightText, escapeHtml, formatRosterDate, showToast } from './utils.ts';
 import { applyFavoriteToggle, fieldDropdownLabel, renderRosterEntry } from './render.ts';
 import {
   clearRecentProfiles,
@@ -842,6 +842,7 @@ async function init() {
     field?: string;
     track?: string;
   }) {
+    if (['United States', 'USA'].includes(location)) location = 'US';
     const safeLocation =
       locationOptions.includes(location) &&
       roster.some((person) => locationMatches(person, location))
@@ -1046,7 +1047,11 @@ async function init() {
   browserShelf.addEventListener('click', (event) => {
     const button = (event.target as HTMLElement).closest<HTMLButtonElement>('[data-clear-saved]');
     if (!button) return;
-    if (button.dataset.clearSaved === 'recent') clearRecentProfiles();
+    try {
+      if (button.dataset.clearSaved === 'recent') clearRecentProfiles();
+    } catch {
+      showToast('Recent profiles could not be cleared. Allow browser storage and try again.');
+    }
     renderBrowserShelf();
   });
 
@@ -1101,7 +1106,18 @@ async function init() {
     onEnter: (selected) => selected.querySelector<HTMLAnchorElement>('.entry-name')?.click(),
     onSecondary: (selected) =>
       selected.querySelector<HTMLButtonElement>('.favorite-toggle')?.click(),
-    onRandom: () => runCommand('/dev/random'),
+    onRandom: () => {
+      const entries = [...document.querySelectorAll<HTMLElement>('.entry')];
+      if (!entries.length) {
+        showToast('No profiles to choose from. Open the directory first.');
+        return;
+      }
+      entries[keyboardSelectedIndex]?.classList.remove('entry-keyboard-selected');
+      keyboardSelectedIndex = Math.floor(Math.random() * entries.length);
+      const selected = entries[keyboardSelectedIndex];
+      selected.classList.add('entry-keyboard-selected');
+      selected.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+    },
     escape: {
       onEscape: () => {
         if (!(filterState.insights || filterState.health || filterState.state)) return false;
@@ -1148,7 +1164,11 @@ async function init() {
     const target = e.target as HTMLElement;
     const favorite = target.closest<HTMLButtonElement>('.favorite-toggle');
     if (favorite?.dataset.id) {
-      applyFavoriteToggle(favorite, toggleFavorite(favorite.dataset.id));
+      try {
+        applyFavoriteToggle(favorite, toggleFavorite(favorite.dataset.id));
+      } catch {
+        showToast('Favorites could not be saved. Allow browser storage and try again.');
+      }
       return;
     }
     const tile = target.closest<HTMLButtonElement>('.state-tile');
@@ -1164,6 +1184,7 @@ async function init() {
     const breakdownItem = target.closest<HTMLButtonElement>('.ranked-item');
     if (breakdownItem?.dataset.filter && breakdownItem.dataset.value) {
       clearSearch();
+      filterState.state = '';
       filterState.insights = false;
       filterState.health = false;
       const { filter, value } = breakdownItem.dataset;
@@ -1182,7 +1203,12 @@ async function init() {
     );
     if (worldMapItem?.dataset.country) {
       const country = worldMapItem.dataset.country;
+      if (worldMapItem.dataset.count === '0') {
+        showToast(`No roster entries are listed in ${country}.`);
+        return;
+      }
       clearSearch();
+      filterState.state = '';
       filterState.insights = false;
       filterState.health = false;
       setFilterValues({ location: country });
@@ -1198,7 +1224,7 @@ async function init() {
       }
       return;
     }
-    const rankedItem = target.closest<HTMLButtonElement>('.ranked-item');
+    const rankedItem = target.closest<HTMLButtonElement>('[data-search]');
     if (rankedItem && rankedItem.dataset.search) {
       const rankedScope = rankedItem.dataset.scope;
       setSearchValue(
@@ -1212,6 +1238,17 @@ async function init() {
       trackSelect.value = 'all';
       update({ fromSearch: true });
     }
+  });
+
+  document.getElementById('roster').addEventListener('keydown', (event) => {
+    if (event.key !== 'Enter' && event.key !== ' ') return;
+    const country = (event.target as Element).closest<SVGElement>(
+      '.world-map-country, .world-map-pin',
+    );
+    if (!country) return;
+    event.preventDefault();
+    event.stopPropagation();
+    country.dispatchEvent(new MouseEvent('click', { bubbles: true }));
   });
 
   // mousemove fires continuously while the pointer is over the insights dashboard, so the chart's

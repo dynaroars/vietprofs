@@ -295,7 +295,44 @@ function profilePage(
   const shareMenu = renderShareMenu({ title: `${name} on VietProfs`, url: canonicalUrl });
   const favoriteLabel = 'Add to favorites';
   const favoriteToggle = `<button type="button" class="favorite-toggle profile-favorite-toggle" data-id="${escapeHtml(person.id)}" data-name="${escapeHtml(name)}" aria-pressed="false" aria-label="${favoriteLabel}" title="${favoriteLabel}"><svg viewBox="0 0 24 24" aria-hidden="true">${STAR_ICON}</svg></button>`;
-  const profileScript = `<script type="module">const KEY='vietprofs:favorites',RECENT_KEY='vietprofs:recent-profiles',id=${JSON.stringify(person.id)},valid=(value)=>typeof value==='string'&&/^vp-\\d{4}$/.test(value),load=(key)=>{try{const value=JSON.parse(localStorage.getItem(key)||'[]');return Array.isArray(value)?value.filter(valid):[]}catch{return[]}};localStorage.setItem(RECENT_KEY,JSON.stringify([id,...load(RECENT_KEY).filter((value)=>value!==id)].slice(0,8)));const button=document.querySelector('.favorite-toggle[data-id]');if(button){const save=(values)=>localStorage.setItem(KEY,JSON.stringify(values));const apply=(favorited)=>{button.classList.toggle('is-favorite',favorited);button.setAttribute('aria-pressed',favorited?'true':'false');const label=favorited?'Remove from favorites':'Add to favorites';button.setAttribute('aria-label',label);button.title=label;};apply(load(KEY).includes(id));button.addEventListener('click',()=>{const current=load(KEY);const next=current.includes(id)?current.filter((value)=>value!==id):[...current,id];save(next);apply(next.includes(id));});}</script>`;
+  const profileScript = `<script type="module">
+const KEY = 'vietprofs:favorites', RECENT_KEY = 'vietprofs:recent-profiles', id = ${JSON.stringify(person.id)};
+const valid = (value) => typeof value === 'string' && /^vp-\\d{4}$/.test(value);
+const load = (key) => {
+  try {
+    const value = JSON.parse(localStorage.getItem(key) || '[]');
+    return Array.isArray(value) ? value.filter(valid) : [];
+  } catch { return []; }
+};
+try {
+  localStorage.setItem(RECENT_KEY, JSON.stringify([id, ...load(RECENT_KEY).filter((value) => value !== id)].slice(0, 8)));
+} catch { /* Recent history is optional when browser storage is unavailable. */ }
+const button = document.querySelector('.favorite-toggle[data-id]');
+if (button) {
+  const status = document.getElementById('profile-save-status');
+  const apply = (favorited) => {
+    button.classList.toggle('is-favorite', favorited);
+    button.setAttribute('aria-pressed', String(favorited));
+    const label = favorited ? 'Remove from favorites' : 'Add to favorites';
+    button.setAttribute('aria-label', label);
+    button.title = label;
+  };
+  apply(load(KEY).includes(id));
+  button.addEventListener('click', () => {
+    const current = load(KEY);
+    const next = current.includes(id) ? current.filter((value) => value !== id) : [...current, id];
+    try {
+      localStorage.setItem(KEY, JSON.stringify(next));
+      apply(next.includes(id));
+      status.textContent = '';
+      status.hidden = true;
+    } catch {
+      status.hidden = false;
+      status.textContent = 'Favorites could not be saved. Allow browser storage and try again.';
+    }
+  });
+}
+</script>`;
   const sameAs = [
     person.profileUrl,
     person.websiteUrl,
@@ -420,7 +457,7 @@ function profilePage(
     <main>
       <article class="man-page">
         <p class="man-running-head"><span>${sectionLabel}</span><span class="man-running-title"><a class="man-running-brand" href="../index.html" aria-label="VietProfs directory"><img class="brand-logo" src="../vietprofs-bamboo-v.svg" alt="" width="20" height="20"><span class="man-running-label">Profile Manual</span></a></span><span>${sectionLabel}</span></p>
-        <section class="man-section name-section"><h2>NAME</h2><div class="identity profile-identity">${portrait}<div class="identity-details"><div class="name-heading"><div class="name-title"><h1>${escapeHtml(name)}</h1>${favoriteToggle}</div><div class="profile-actions" aria-label="Roster actions">${shareMenu}<a class="self-claim-link" href="${escapeHtml(selfUrl)}">Is this you?</a></div></div><p class="native">${escapeHtml(nativeName)} <a class="loc-badge-link" href="${countryTargetUrl}" title="Filter faculty in ${escapeHtml(person.country || 'United States')}"><span class="loc-badge" title="${escapeHtml(person.country || 'United States')}"><span class="country-flag" aria-hidden="true">${countryFlag(person.country)}</span></span></a></p><p class="record-id">${escapeHtml(person.id)}</p></div></div></section>
+        <section class="man-section name-section"><h2>NAME</h2><div class="identity profile-identity">${portrait}<div class="identity-details"><div class="name-heading"><div class="name-title"><h1>${escapeHtml(name)}</h1>${favoriteToggle}</div><div class="profile-actions" aria-label="Roster actions">${shareMenu}<a class="self-claim-link" href="${escapeHtml(selfUrl)}">Is this you?</a></div></div><p id="profile-save-status" role="status" hidden></p><p class="native">${escapeHtml(nativeName)} <a class="loc-badge-link" href="${countryTargetUrl}" title="Filter faculty in ${escapeHtml(person.country || 'United States')}"><span class="loc-badge" title="${escapeHtml(person.country || 'United States')}"><span class="country-flag" aria-hidden="true">${countryFlag(person.country)}</span></span></a></p><p class="record-id">${escapeHtml(person.id)}</p></div></div></section>
         <section class="man-section"><h2>SYNOPSIS</h2><p class="synopsis">${escapeHtml(role)}${locationOf(person) ? ` · ${escapeHtml(locationOf(person))}` : ''}</p><div class="tags"><a href="../${fieldPath(personField)}" class="tag" title="Explore ${escapeHtml(personField)} faculty on VietProfs">${escapeHtml(personField)}</a>${person.track ? `<a href="../index.html?track=${encodeURIComponent(person.track)}" class="tag${person.track === 'Emeritus' ? ' tag-emeritus' : person.track === 'Deceased' ? ' tag-deceased' : ''}" title="Filter by ${escapeHtml(person.track)}">${person.track === 'Emeritus' ? '🎓 Emeritus' : person.track === 'Deceased' ? '🏛️ Deceased' : escapeHtml(person.track)}</a>` : ''}${person.institutionType && person.institutionType !== 'University' ? `<a href="../index.html?institutionType=${encodeURIComponent(person.institutionType)}" class="tag" title="Filter by ${escapeHtml(person.institutionType)}">${escapeHtml(person.institutionType)}</a>` : ''}${person.confirmed === false ? '<span class="tag tag-unconfirmed">Unconfirmed</span>' : ''}</div></section>
         ${research}${educationSection}${honors}${connectionSection}${relatedSections(person, personField, related)}${linkSection}${missingSection}
         <section class="man-section"><h2>ROSTER METADATA</h2><dl class="roster-metadata"><div><dt>record</dt><dd>${escapeHtml(person.id)}</dd></div><div><dt>confirmation</dt><dd>${person.confirmed === false ? 'Unconfirmed — reliable non-official evidence' : 'Confirmed'}</dd></div><div><dt>last verified</dt><dd>${escapeHtml(formatRosterDate(person.lastUpdatedAt || ''))}</dd></div><div><dt>build</dt><dd><a href="https://github.com/dynaroars/vietprofs/commit/${escapeHtml(commit)}">${escapeHtml(commit)}</a></dd></div></dl><details class="raw-record"><summary>view raw record</summary><pre><code>${rawRecord}</code></pre></details></section>

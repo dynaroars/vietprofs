@@ -1009,6 +1009,210 @@ test('lineage and path views preserve advisor directions, show evidence, and han
   await page.close();
 });
 
+test('decade chart buttons show the matching PhD cohort', async () => {
+  const page = await context.newPage();
+  try {
+    await page.goto(`${baseUrl}/?view=insights`, { waitUntil: 'networkidle' });
+    const row = page.locator('.chart-row-btn').first();
+    const decade = Number.parseInt(await attrOf(row, 'data-search'), 10);
+    const roster = (await (await page.request.get(`${baseUrl}/data.json`)).json()) as RosterEntry[];
+    const expected = roster
+      .filter((person) => person.phdYear && Math.floor(person.phdYear / 10) * 10 === decade)
+      .map((person) => person.id)
+      .sort();
+    await row.locator('.chart-label').click();
+    await page.locator('.entry').first().waitFor({ timeout: 3000 });
+    assert.deepEqual(
+      (
+        await page
+          .locator('.entry .favorite-toggle')
+          .evaluateAll((buttons) => buttons.map((button) => button.getAttribute('data-id')))
+      ).sort(),
+      expected,
+    );
+    await page.reload({ waitUntil: 'networkidle' });
+    assert.equal(await page.locator('.entry').count(), expected.length);
+  } finally {
+    await page.close();
+  }
+});
+
+test('map country controls filter by mouse and keyboard and explain empty countries', async () => {
+  const page = await context.newPage();
+  try {
+    await page.goto(`${baseUrl}/?view=insights`, { waitUntil: 'networkidle' });
+    await page.locator('.world-map-chip[data-country="United States"]').click();
+    assert.equal(await page.locator('#location-filter').inputValue(), 'US');
+    for (const key of ['Enter', 'Space']) {
+      await page.goto(`${baseUrl}/?view=insights&state=Vermont&loc=US`, {
+        waitUntil: 'networkidle',
+      });
+      await page.locator('#map-country-fr').focus();
+      await page.keyboard.press(key);
+      assert.equal(await page.locator('#location-filter').inputValue(), 'France');
+      assert.doesNotMatch(page.url(), /state=/);
+      assert.ok((await page.locator('.entry').count()) > 0);
+    }
+    await page.goto(`${baseUrl}/?view=insights`, { waitUntil: 'networkidle' });
+    await page.locator('.is-origin-pin').click();
+    assert.match(await textOf(page.getByRole('status')), /No roster entries.*Vietnam/);
+    assert.match(page.url(), /view=insights/);
+  } finally {
+    await page.close();
+  }
+});
+
+test('random shortcut selects a profile from the current results', async () => {
+  const page = await context.newPage();
+  try {
+    await page.addInitScript(() => localStorage.removeItem('vietprofs:favorites'));
+    await page.goto(`${baseUrl}/?loc=France`, { waitUntil: 'networkidle' });
+    const before = page.url();
+    await page.locator('#search').blur();
+    await page.keyboard.press('r');
+    const selected = page.locator('.entry-keyboard-selected');
+    assert.equal(await selected.count(), 1);
+    assert.equal(page.url(), before);
+    await page.keyboard.press('f');
+    assert.equal(await selected.locator('.favorite-toggle').getAttribute('aria-pressed'), 'true');
+    await selected.locator('.favorite-toggle').click();
+  } finally {
+    await page.close();
+  }
+});
+
+test('submission validation recovers after editing and switching modes', async () => {
+  const page = await context.newPage();
+  try {
+    await page.goto(`${baseUrl}/submit.html`, { waitUntil: 'networkidle' });
+    await page.evaluate(() => {
+      window.open = (url) => {
+        document.body.dataset.submissionUrl = String(url);
+        return null;
+      };
+    });
+    const submit = page.getByRole('button', { name: 'Submit as a GitHub issue' });
+    await submit.click();
+    assert.equal(
+      await page
+        .locator('#bulkInput')
+        .evaluate((input: HTMLTextAreaElement) => input.validity.customError),
+      true,
+    );
+    await page.locator('#bulkInput').fill('Test candidate — https://example.edu/profile');
+    assert.equal(
+      await page
+        .locator('#bulkInput')
+        .evaluate((input: HTMLTextAreaElement) => input.validity.customError),
+      false,
+    );
+    await submit.click();
+    assert.match(await attrOf(page.locator('body'), 'data-submission-url'), /github\.com/);
+
+    await page.locator('input[name="purpose"][value="connection"]').check();
+    const ids = await page
+      .locator('#connectionPersonA option')
+      .evaluateAll((options: HTMLOptionElement[]) =>
+        options.map((option) => option.value).filter(Boolean),
+      );
+    await page.locator('#connectionPersonA').selectOption(ids[0]);
+    await page.locator('#connectionPersonB').selectOption(ids[1]);
+    await page.locator('#connectionType').selectOption('coauthor');
+    await page.locator('#connectionEvidence').fill('Both people are named on these works.');
+    await page.locator('#connectionSources').fill('https://example.edu/evidence');
+    await page.locator('#connectionWorks').fill('First paper');
+    await submit.click();
+    assert.equal(
+      await page
+        .locator('#connectionWorks')
+        .evaluate((input: HTMLTextAreaElement) => input.validity.customError),
+      true,
+    );
+    await page.locator('#connectionWorks').fill('First paper\nSecond paper');
+    await submit.click();
+    assert.match(
+      new URL(await attrOf(page.locator('body'), 'data-submission-url')).searchParams.get('body') ??
+        '',
+      /Review proposed academic connection/,
+    );
+    await page.locator('#connectionWorks').fill('One paper');
+    await submit.click();
+    await page.locator('input[name="purpose"][value="add"]').check();
+    assert.equal(
+      await page.locator('#submit-form').evaluate((form: HTMLFormElement) => form.checkValidity()),
+      true,
+    );
+  } finally {
+    await page.close();
+  }
+});
+
+test('favorites report storage failures without breaking profile controls', async () => {
+  for (const failure of ['quota', 'blocked']) {
+    const page = await context.newPage();
+    const errors: string[] = [];
+    page.on('pageerror', (error) => errors.push(error.message));
+    try {
+      await page.addInitScript((mode) => {
+        if (mode === 'quota')
+          Storage.prototype.setItem = () => {
+            throw new DOMException('Full', 'QuotaExceededError');
+          };
+        else
+          Object.defineProperty(window, 'localStorage', {
+            get() {
+              throw new DOMException('Blocked', 'SecurityError');
+            },
+          });
+      }, failure);
+      await page.goto(`${baseUrl}/people/vp-0001.html`, { waitUntil: 'networkidle' });
+      assert.deepEqual(errors, []);
+      await page.locator('.favorite-toggle').click();
+      assert.equal(await page.locator('.favorite-toggle').getAttribute('aria-pressed'), 'false');
+      assert.match(await textOf(page.getByRole('status')), /Favorites could not be saved/);
+      await page.goto(`${baseUrl}/?q=ThanhVu`, { waitUntil: 'networkidle' });
+      await page.locator('.favorite-toggle').click();
+      assert.match(await textOf(page.getByRole('status')), /Favorites could not be saved/);
+      assert.deepEqual(errors, []);
+    } finally {
+      await page.close();
+    }
+  }
+});
+
+test('profile sharing copies the canonical URL with visible confirmation', async () => {
+  const shareContext = await browser.newContext({
+    permissions: ['clipboard-read', 'clipboard-write'],
+  });
+  try {
+    const page = await shareContext.newPage();
+    await page.goto(`${baseUrl}/people/vp-0001.html?from=search#name`, {
+      waitUntil: 'networkidle',
+    });
+    await page.evaluate(() => {
+      Object.defineProperty(navigator, 'share', { value: undefined });
+      return navigator.clipboard.writeText('');
+    });
+    const button = page.locator('.share-toggle');
+    // Exercise the delegated handler when the click lands on the icon itself.
+    await button.locator('svg path').click();
+    await page.waitForFunction(
+      () => document.querySelector('.share-toggle span')?.textContent === 'Link copied!',
+    );
+    assert.equal(
+      await page.evaluate(() => navigator.clipboard.readText()),
+      'https://vietprofs.roars.dev/people/vp-0001.html',
+    );
+    assert.equal(await button.getAttribute('aria-label'), 'Link copied!');
+    assert.equal(await button.getAttribute('aria-live'), 'polite');
+    await page.getByRole('button', { name: 'Share', exact: true }).waitFor();
+    assert.equal(await button.innerText(), 'Share');
+    assert.equal(await button.getAttribute('title'), 'Share this page');
+  } finally {
+    await shareContext.close();
+  }
+});
+
 test('sharing uses native Share, copies the current URL, and handles cancellation and clipboard failures', async () => {
   const page = await context.newPage();
   await page.goto(`${baseUrl}/?loc=France`, { waitUntil: 'networkidle' });

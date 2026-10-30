@@ -751,12 +751,24 @@ function applyPurpose(purpose: string): void {
   const bulkCriteria = byId('bulk-criteria');
   const bulkLabel = byId('bulkInput-label');
   const bulkInput = byId<HTMLTextAreaElement>('bulkInput');
+  for (const id of ['bulkInput', 'connectionPersonB', 'connectionWorks']) {
+    byId<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>(id).setCustomValidity('');
+  }
   const bulkHelp = byId('add-mode-details-help');
   const nameInput = byId<HTMLInputElement>('name');
   const profileUrlInput = byId<HTMLInputElement>('profileUrl');
   const isAdd = purpose === 'add';
   const isConnection = purpose === 'connection';
   const isUpdate = !isAdd && !isConnection;
+  for (const section of [addModeSection, requiredSection, optionalDetails, connectionSection]) {
+    section
+      .querySelectorAll<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>(
+        'input, textarea, select',
+      )
+      .forEach((input) => {
+        input.disabled = section === connectionSection ? !isConnection : isConnection;
+      });
+  }
   addModeSection.hidden = isConnection;
   // Updating an entry: identify it first (Required), then say what changed (Notes), then the
   // optional details. Adding: the paste box leads the form.
@@ -820,6 +832,16 @@ async function init() {
   let entriesById: Map<string, RosterEntry> | null = null;
 
   form.addEventListener('submit', (e: SubmitEvent) => onSubmit(e, entriesById, entriesByName));
+  form.addEventListener('input', (event: Event) => {
+    const input = event.target;
+    if (
+      input instanceof HTMLInputElement ||
+      input instanceof HTMLTextAreaElement ||
+      input instanceof HTMLSelectElement
+    ) {
+      input.setCustomValidity('');
+    }
+  });
 
   try {
     const roster = await loadRoster();
@@ -856,6 +878,7 @@ async function init() {
         'Provide one patent record that names both people as co-inventors on the same patent.',
     };
     connectionType.addEventListener('change', () => {
+      byId<HTMLTextAreaElement>('connectionWorks').setCustomValidity('');
       connectionTypeHelp.textContent =
         connectionTypeHelpText[connectionType.value] ??
         'Choose the connection type supported by the source. Advisor and mentor relationships are directional; the first person should be the advisor or mentor.';

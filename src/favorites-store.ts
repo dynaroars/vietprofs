@@ -25,7 +25,9 @@ export function loadFavorites(): string[] {
 
 export function saveFavorites(ids: string[]): string[] {
   const unique = [...new Set(ids.filter((id) => typeof id === 'string' && PROFILE_ID.test(id)))];
-  storage()?.setItem(STORAGE_KEY, JSON.stringify(unique));
+  const local = storage();
+  if (!local) throw new Error('Browser storage is unavailable');
+  local.setItem(STORAGE_KEY, JSON.stringify(unique));
   return unique;
 }
 
@@ -66,7 +68,11 @@ export function recordRecentProfile(id: string): string[] {
     0,
     MAX_SAVED_ITEMS,
   );
-  storage()?.setItem(RECENT_STORAGE_KEY, JSON.stringify(next));
+  try {
+    storage()?.setItem(RECENT_STORAGE_KEY, JSON.stringify(next));
+  } catch {
+    return loadRecentProfiles();
+  }
   return next;
 }
 
