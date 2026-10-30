@@ -49,20 +49,29 @@ const peopleDir = resolve(output, 'people');
 const fieldsDir = resolve(output, 'fields');
 const regionsDir = resolve(output, 'regions');
 const universitiesDir = resolve(output, 'universities');
-const commit = process.env.VITE_GIT_COMMIT || (() => {
-  try {
-    return execFileSync('git', ['rev-parse', '--short=8', 'HEAD'], { cwd: root, encoding: 'utf8' }).trim();
-  } catch {
-    return 'development';
-  }
-})();
+const commit =
+  process.env.VITE_GIT_COMMIT ||
+  (() => {
+    try {
+      return execFileSync('git', ['rev-parse', '--short=8', 'HEAD'], {
+        cwd: root,
+        encoding: 'utf8',
+      }).trim();
+    } catch {
+      return 'development';
+    }
+  })();
 
 // profile.css and share.js have fixed names and the host caches them for hours, longer than the
 // pages that use them. A content hash in the query makes a changed file load fresh with the page.
 const assetVersion: Record<'css' | 'share', string> = { css: '', share: '' };
 
 async function loadAssetVersions() {
-  const hash = async (file: string) => createHash('sha256').update(await readFile(resolve(root, 'public', file))).digest('hex').slice(0, 10);
+  const hash = async (file: string) =>
+    createHash('sha256')
+      .update(await readFile(resolve(root, 'public', file)))
+      .digest('hex')
+      .slice(0, 10);
   assetVersion.css = await hash('profile.css');
   assetVersion.share = await hash('share.js');
 }
@@ -90,7 +99,13 @@ function redirectPage(from: string, to: RosterEntry) {
 }
 
 function locationOf(person: RosterEntry) {
-  return [person.city, person.state, person.country && !['United States', 'US', 'USA'].includes(person.country) ? person.country : '']
+  return [
+    person.city,
+    person.state,
+    person.country && !['United States', 'US', 'USA'].includes(person.country)
+      ? person.country
+      : '',
+  ]
     .filter(Boolean)
     .join(', ');
 }
@@ -117,10 +132,18 @@ function sharedAreaCount(a: RosterEntry, b: RosterEntry) {
   return (b.researchAreas ?? []).filter((area) => areas.has(area.toLowerCase())).length;
 }
 
-function pickRelated(person: RosterEntry, candidates: RosterEntry[], extraScore: (other: RosterEntry) => number) {
+function pickRelated(
+  person: RosterEntry,
+  candidates: RosterEntry[],
+  extraScore: (other: RosterEntry) => number,
+) {
   return candidates
     .filter((other) => other.id !== person.id)
-    .map((other) => ({ other, score: extraScore(other) * 100 + sharedAreaCount(person, other), tie: pairHash(person.id, other.id) }))
+    .map((other) => ({
+      other,
+      score: extraScore(other) * 100 + sharedAreaCount(person, other),
+      tie: pairHash(person.id, other.id),
+    }))
     .sort((a, b) => b.score - a.score || a.tie - b.tie)
     .slice(0, RELATED_LIMIT)
     .map(({ other }) => other);
@@ -128,20 +151,28 @@ function pickRelated(person: RosterEntry, candidates: RosterEntry[], extraScore:
 
 // Plain bullets, like EDUCATION and HONORS: "Name (rank, department)".
 function relatedList(people: RosterEntry[], detail: (other: RosterEntry) => string) {
-  return `<ul>${people.map((other) => {
-    const text = detail(other);
-    return `<li><a href="../${personPath(other.id)}">${escapeHtml(displayName(other.name))}</a>${text ? ` (${escapeHtml(text)})` : ''}</li>`;
-  }).join('')}</ul>`;
+  return `<ul>${people
+    .map((other) => {
+      const text = detail(other);
+      return `<li><a href="../${personPath(other.id)}">${escapeHtml(displayName(other.name))}</a>${text ? ` (${escapeHtml(text)})` : ''}</li>`;
+    })
+    .join('')}</ul>`;
 }
 
 function relatedSections(person: RosterEntry, field: string, context: RelatedContext) {
   const universityPeople = context.byUniversity.get(person.university) ?? [];
-  const sameUniversity = pickRelated(person, universityPeople, (other) => Number(Boolean(person.department) && other.department === person.department));
+  const sameUniversity = pickRelated(person, universityPeople, (other) =>
+    Number(Boolean(person.department) && other.department === person.department),
+  );
   const universityLink = context.universityHubs.has(person.university)
     ? `<p class="section-note"><a href="../${universityPath(person.university)}">All ${universityPeople.length} at ${escapeHtml(person.university)}</a></p>`
     : '';
-  const fieldPeople = (context.byField.get(field) ?? []).filter((other) => other.university !== person.university);
-  const sameField = pickRelated(person, fieldPeople, (other) => Number((other.country || 'United States') === (person.country || 'United States')));
+  const fieldPeople = (context.byField.get(field) ?? []).filter(
+    (other) => other.university !== person.university,
+  );
+  const sameField = pickRelated(person, fieldPeople, (other) =>
+    Number((other.country || 'United States') === (person.country || 'United States')),
+  );
   const fieldLink = context.fieldHubs.has(field)
     ? `<p class="section-note"><a href="../${fieldPath(field)}">All ${(context.byField.get(field) ?? []).length} in ${escapeHtml(field)}</a></p>`
     : '';
@@ -157,12 +188,12 @@ function relatedSections(person: RosterEntry, field: string, context: RelatedCon
 
 const TRACK_SECTION: Record<string, number> = {
   'Tenure-line': 1,
-  'Teaching': 2,
-  'Research': 3,
-  'Clinical': 4,
+  Teaching: 2,
+  Research: 3,
+  Clinical: 4,
   'Admin and Staff': 5,
-  'Emeritus': 6,
-  'Deceased': 7,
+  Emeritus: 6,
+  Deceased: 7,
 };
 
 function profilePage(
@@ -179,9 +210,13 @@ function profilePage(
   const path = personPath(person.id);
   const canonicalUrl = absoluteUrl(path);
   const title = `${name} — VietProfs`;
-  const ogImage = person.portrait ? absoluteUrl(person.portrait) : absoluteUrl('vietprofs-bamboo-v-512.png');
+  const ogImage = person.portrait
+    ? absoluteUrl(person.portrait)
+    : absoluteUrl('vietprofs-bamboo-v-512.png');
   const ogImageAlt = person.portrait ? `Portrait of ${name}` : 'VietProfs bamboo V logo';
-  const role = [canonicalRank(person), person.department, person.university].filter(Boolean).join(', ');
+  const role = [canonicalRank(person), person.department, person.university]
+    .filter(Boolean)
+    .join(', ');
   const description = `${name} is listed by VietProfs as ${role}.`;
   const portrait = person.portrait
     ? `<img class="portrait" src="../${escapeHtml(person.portrait)}" alt="Portrait of ${escapeHtml(name)}" width="240" height="300">`
@@ -198,7 +233,16 @@ function profilePage(
     ? `<section class="man-section"><h2>HONORS</h2><ul>${person.honors.map((honor) => `<li>${honor.source ? `<a href="${escapeHtml(honor.source)}" rel="noopener noreferrer">` : ''}${escapeHtml(honor.name)}${honor.year ? ` (${honor.year})` : ''}${honor.source ? '</a>' : ''}</li>`).join('')}</ul></section>`
     : '';
   const links = [
-    person.profileUrl && { label: person.confirmed === false ? 'Verification source' : person.institutionType && person.institutionType !== 'University' ? 'Official institution profile' : 'Official university profile', href: person.profileUrl, icon: PROFILE_ICON },
+    person.profileUrl && {
+      label:
+        person.confirmed === false
+          ? 'Verification source'
+          : person.institutionType && person.institutionType !== 'University'
+            ? 'Official institution profile'
+            : 'Official university profile',
+      href: person.profileUrl,
+      icon: PROFILE_ICON,
+    },
     person.websiteUrl && { label: 'Website', href: person.websiteUrl, icon: PERSONAL_SITE_ICON },
     person.scholarUrl && { label: 'Google Scholar', href: person.scholarUrl, icon: SCHOLAR_ICON },
     person.linkedinUrl && { label: 'LinkedIn', href: person.linkedinUrl, icon: LINKEDIN_ICON },
@@ -208,8 +252,14 @@ function profilePage(
     : '';
   const connections = connectionsFor(person.id, relationships)
     .map((connection) => ({ ...connection, other: rosterById.get(connection.otherId) }))
-    .filter((connection): connection is typeof connection & { other: RosterEntry } => Boolean(connection.other))
-    .sort((a, b) => displayName(a.other.name).localeCompare(displayName(b.other.name)) || a.label.localeCompare(b.label));
+    .filter((connection): connection is typeof connection & { other: RosterEntry } =>
+      Boolean(connection.other),
+    )
+    .sort(
+      (a, b) =>
+        displayName(a.other.name).localeCompare(displayName(b.other.name)) ||
+        a.label.localeCompare(b.label),
+    );
   const connectionsByPerson = new Map<string, typeof connections>();
   for (const connection of connections) {
     const group = connectionsByPerson.get(connection.otherId) ?? [];
@@ -217,12 +267,23 @@ function profilePage(
     connectionsByPerson.set(connection.otherId, group);
   }
   const connectionSection = connections.length
-    ? `<section class="man-section"><h2>CONNECTIONS</h2><ul class="connection-list">${[...connectionsByPerson.values()].map((group) => {
-      const { other } = group[0];
-      // Same bullet format as the other sections: "Name (relationship: evidence; relationship: evidence)".
-      const relations = group.map(({ relationship, label }) => `<span class="connection-kind">${escapeHtml(label)}</span>: <span class="connection-sources">${relationship.sources.map((source, index) => `<a href="${escapeHtml(source)}" target="_blank" rel="noopener noreferrer">${relationship.sources.length === 1 ? 'evidence' : `evidence ${index + 1}`}</a>`).join(', ')}</span>`).join('; ');
-      return `<li class="connection-item"><a class="connection-person" href="../${personPath(other.id)}">${escapeHtml(displayName(other.name))}</a> (${relations})</li>`;
-    }).join('')}</ul><p class="section-note">Only source-verified connections between people in the roster are shown.</p></section>`
+    ? `<section class="man-section"><h2>CONNECTIONS</h2><ul class="connection-list">${[
+        ...connectionsByPerson.values(),
+      ]
+        .map((group) => {
+          const { other } = group[0];
+          // Same bullet format as the other sections: "Name (relationship: evidence; relationship: evidence)".
+          const relations = group
+            .map(
+              ({ relationship, label }) =>
+                `<span class="connection-kind">${escapeHtml(label)}</span>: <span class="connection-sources">${relationship.sources.map((source, index) => `<a href="${escapeHtml(source)}" target="_blank" rel="noopener noreferrer">${relationship.sources.length === 1 ? 'evidence' : `evidence ${index + 1}`}</a>`).join(', ')}</span>`,
+            )
+            .join('; ');
+          return `<li class="connection-item"><a class="connection-person" href="../${personPath(other.id)}">${escapeHtml(displayName(other.name))}</a> (${relations})</li>`;
+        })
+        .join(
+          '',
+        )}</ul><p class="section-note">Only source-verified connections between people in the roster are shown.</p></section>`
     : '';
   const rawRecord = escapeHtml(JSON.stringify(person, null, 2));
   const editUrl = `../submit.html?edit=${encodeURIComponent(person.id)}`;
@@ -244,7 +305,10 @@ function profilePage(
 
   const alumniOf = [
     person.phdInstitution && { '@type': 'EducationalOrganization', name: person.phdInstitution },
-    person.undergradInstitution && { '@type': 'EducationalOrganization', name: person.undergradInstitution },
+    person.undergradInstitution && {
+      '@type': 'EducationalOrganization',
+      name: person.undergradInstitution,
+    },
     person.msInstitution && { '@type': 'EducationalOrganization', name: person.msInstitution },
   ].filter(Boolean);
 
@@ -261,12 +325,16 @@ function profilePage(
         worksFor: {
           '@type': 'EducationalOrganization',
           name: person.university,
-          ...(person.department ? { department: { '@type': 'Organization', name: person.department } } : {}),
+          ...(person.department
+            ? { department: { '@type': 'Organization', name: person.department } }
+            : {}),
         },
         affiliation: {
           '@type': 'EducationalOrganization',
           name: person.university,
-          ...(person.department ? { department: { '@type': 'Organization', name: person.department } } : {}),
+          ...(person.department
+            ? { department: { '@type': 'Organization', name: person.department } }
+            : {}),
         },
         ...(person.researchAreas?.length ? { knowsAbout: person.researchAreas } : {}),
         ...(person.honors?.length ? { award: person.honors.map((h) => h.name) } : {}),
@@ -300,7 +368,10 @@ function profilePage(
     ],
   });
 
-  const countryTarget = person.country && !['United States', 'US', 'USA'].includes(person.country) ? person.country : 'United States';
+  const countryTarget =
+    person.country && !['United States', 'US', 'USA'].includes(person.country)
+      ? person.country
+      : 'United States';
   const countryTargetUrl = availableCountryHubs.has(countryTarget)
     ? `../${regionPath(countryTarget)}`
     : `../index.html?loc=${encodeURIComponent(countryTarget === 'United States' ? 'US' : countryTarget)}`;
@@ -378,7 +449,14 @@ interface HubConfig {
   region?: string;
 }
 
-const COUNTRIES_WITH_ARTICLE = new Set(['United States', 'United Kingdom', 'Netherlands', 'Philippines', 'Czech Republic', 'United Arab Emirates']);
+const COUNTRIES_WITH_ARTICLE = new Set([
+  'United States',
+  'United Kingdom',
+  'Netherlands',
+  'Philippines',
+  'Czech Republic',
+  'United Arab Emirates',
+]);
 
 function withArticle(region: string) {
   return COUNTRIES_WITH_ARTICLE.has(region) ? `the ${region}` : region;
@@ -392,7 +470,9 @@ function categoryHubPage(config: HubConfig) {
   const sectionLabel = 'HUB(7)';
   const rootPrefix = '../'.repeat(config.canonicalPath.split('/').length - 1);
 
-  const sortedPeople = [...config.people].sort((a, b) => displayName(a.name).localeCompare(displayName(b.name)));
+  const sortedPeople = [...config.people].sort((a, b) =>
+    displayName(a.name).localeCompare(displayName(b.name)),
+  );
   const uniqueUniversities = new Set(config.people.map((p) => p.university).filter(Boolean));
 
   const jsonLd = JSON.stringify({
@@ -420,22 +500,48 @@ function categoryHubPage(config: HubConfig) {
           { '@type': 'ListItem', position: 1, name: 'VietProfs', item: `${siteUrl}/` },
           // Intersection hubs sit under their discipline hub; other hubs have no intermediate
           // page, so they hang directly off the home page.
-          ...(config.field ? [{ '@type': 'ListItem', position: 2, name: config.field, item: absoluteUrl(fieldPath(config.field)) }] : []),
-          { '@type': 'ListItem', position: config.field ? 3 : 2, name: config.categoryName, item: canonicalUrl },
+          ...(config.field
+            ? [
+                {
+                  '@type': 'ListItem',
+                  position: 2,
+                  name: config.field,
+                  item: absoluteUrl(fieldPath(config.field)),
+                },
+              ]
+            : []),
+          {
+            '@type': 'ListItem',
+            position: config.field ? 3 : 2,
+            name: config.categoryName,
+            item: canonicalUrl,
+          },
         ],
       },
     ],
   });
 
-  const rosterItems = sortedPeople.map((person) => {
-    const name = displayName(person.name);
-    const native = vietnameseName(person);
-    const role = [canonicalRank(person), person.department, config.categoryType === 'Institution' ? '' : person.university].filter(Boolean).join(', ');
-    const flag = person.country ? `<span class="country-flag" title="${escapeHtml(person.country)}">${countryFlag(person.country)}</span>` : '';
-    return `<li class="hub-roster-item"><a class="hub-person-name" href="${rootPrefix}${personPath(person.id)}">${escapeHtml(name)}</a>${native && native !== name ? ` <span class="hub-person-native">(${escapeHtml(native)})</span>` : ''} <span class="hub-person-role">${escapeHtml(role)}</span> ${flag}</li>`;
-  }).join('\n            ');
+  const rosterItems = sortedPeople
+    .map((person) => {
+      const name = displayName(person.name);
+      const native = vietnameseName(person);
+      const role = [
+        canonicalRank(person),
+        person.department,
+        config.categoryType === 'Institution' ? '' : person.university,
+      ]
+        .filter(Boolean)
+        .join(', ');
+      const flag = person.country
+        ? `<span class="country-flag" title="${escapeHtml(person.country)}">${countryFlag(person.country)}</span>`
+        : '';
+      return `<li class="hub-roster-item"><a class="hub-person-name" href="${rootPrefix}${personPath(person.id)}">${escapeHtml(name)}</a>${native && native !== name ? ` <span class="hub-person-native">(${escapeHtml(native)})</span>` : ''} <span class="hub-person-role">${escapeHtml(role)}</span> ${flag}</li>`;
+    })
+    .join('\n            ');
 
-  const crossLinks = config.otherCategories.map((c) => `<a class="hub-crosslink" href="${rootPrefix}${c.path}">${escapeHtml(c.label)}</a>`).join('\n            ');
+  const crossLinks = config.otherCategories
+    .map((c) => `<a class="hub-crosslink" href="${rootPrefix}${c.path}">${escapeHtml(c.label)}</a>`)
+    .join('\n            ');
 
   return `<!doctype html>
 <!--
@@ -529,14 +635,23 @@ function categoryHubPage(config: HubConfig) {
 async function main() {
   await loadAssetVersions();
   const [roster, relationships, retiredIds] = await Promise.all([
-    Promise.all([readFile(resolve(root, 'public/data.json'), 'utf8'), readFile(resolve(root, 'public/updates.json'), 'utf8')])
-      .then(([data, updates]) => withUpdates(JSON.parse(data) as Roster, JSON.parse(updates) as RosterUpdates)),
-    readFile(resolve(root, 'public/relationships.json'), 'utf8').then((value) => JSON.parse(value) as RelationshipDatabase),
-    readFile(resolve(root, 'maintenance/retired-ids.json'), 'utf8').then((value) => JSON.parse(value) as Record<string, { replacedBy: string | null }>),
+    Promise.all([
+      readFile(resolve(root, 'public/data.json'), 'utf8'),
+      readFile(resolve(root, 'public/updates.json'), 'utf8'),
+    ]).then(([data, updates]) =>
+      withUpdates(JSON.parse(data) as Roster, JSON.parse(updates) as RosterUpdates),
+    ),
+    readFile(resolve(root, 'public/relationships.json'), 'utf8').then(
+      (value) => JSON.parse(value) as RelationshipDatabase,
+    ),
+    readFile(resolve(root, 'maintenance/retired-ids.json'), 'utf8').then(
+      (value) => JSON.parse(value) as Record<string, { replacedBy: string | null }>,
+    ),
   ]);
   const ids = new Set<string>();
   for (const person of roster) {
-    if (!person.id || ids.has(person.id)) throw new Error(`Profile ID is missing or duplicated: ${person.name}`);
+    if (!person.id || ids.has(person.id))
+      throw new Error(`Profile ID is missing or duplicated: ${person.name}`);
     ids.add(person.id);
   }
   const relationshipErrors = validateRelationshipDatabase(relationships, roster);
@@ -549,9 +664,11 @@ async function main() {
     const country = person.country || 'United States';
     countryCounts[country] = (countryCounts[country] || 0) + 1;
   }
-  const availableCountryHubs = new Set(Object.entries(countryCounts)
-    .filter(([, count]) => hasEnoughPeopleForRosterHub(count))
-    .map(([country]) => country));
+  const availableCountryHubs = new Set(
+    Object.entries(countryCounts)
+      .filter(([, count]) => hasEnoughPeopleForRosterHub(count))
+      .map(([country]) => country),
+  );
   const rosterById = new Map(roster.map((person) => [person.id, person]));
 
   await Promise.all([
@@ -564,7 +681,8 @@ async function main() {
   const byUniversity = new Map<string, RosterEntry[]>();
   const byField = new Map<string, RosterEntry[]>();
   for (const person of roster) {
-    if (person.university) byUniversity.set(person.university, [...(byUniversity.get(person.university) ?? []), person]);
+    if (person.university)
+      byUniversity.set(person.university, [...(byUniversity.get(person.university) ?? []), person]);
     const field = fieldOf(person.department, person.university);
     byField.set(field, [...(byField.get(field) ?? []), person]);
   }
@@ -575,26 +693,38 @@ async function main() {
   for (const university of universityHubNames) {
     const path = universityPath(university);
     const clash = universitySlugs.get(path);
-    if (clash) throw new Error(`University hub path collision: "${university}" and "${clash}" both map to ${path}`);
+    if (clash)
+      throw new Error(
+        `University hub path collision: "${university}" and "${clash}" both map to ${path}`,
+      );
     universitySlugs.set(path, university);
   }
   const related: RelatedContext = {
     byUniversity,
     byField,
     universityHubs: new Set(universityHubNames),
-    fieldHubs: new Set(FIELDS.filter((field) => hasEnoughPeopleForRosterHub(byField.get(field)?.length ?? 0))),
+    fieldHubs: new Set(
+      FIELDS.filter((field) => hasEnoughPeopleForRosterHub(byField.get(field)?.length ?? 0)),
+    ),
   };
 
   // 1. Generate individual profile pages
-  await Promise.all(roster.map(async (person) => {
-    const outputFile = resolve(output, personPath(person.id));
-    await mkdir(dirname(outputFile), { recursive: true });
-    await writeFile(outputFile, profilePage(person, availableCountryHubs, relationships, rosterById, related));
-  }));
-  await Promise.all(Object.entries(retiredIds).map(async ([id, { replacedBy }]) => {
-    const target = replacedBy && rosterById.get(replacedBy);
-    if (target) await writeFile(resolve(output, personPath(id)), redirectPage(id, target));
-  }));
+  await Promise.all(
+    roster.map(async (person) => {
+      const outputFile = resolve(output, personPath(person.id));
+      await mkdir(dirname(outputFile), { recursive: true });
+      await writeFile(
+        outputFile,
+        profilePage(person, availableCountryHubs, relationships, rosterById, related),
+      );
+    }),
+  );
+  await Promise.all(
+    Object.entries(retiredIds).map(async ([id, { replacedBy }]) => {
+      const target = replacedBy && rosterById.get(replacedBy);
+      if (target) await writeFile(resolve(output, personPath(id)), redirectPage(id, target));
+    }),
+  );
 
   // 2. Generate Discipline Hub pages
   const fieldHubs: HubConfig[] = FIELDS.map((field) => {
@@ -620,20 +750,22 @@ async function main() {
 
   // 3. Generate Region Hub pages
   const continents = [...ROSTER_CONTINENTS];
-  const continentHubs: HubConfig[] = continents.map((continent) => {
-    const people = roster.filter((p) => continentOf(p.country) === continent);
-    return {
-      categoryType: 'Region' as const,
-      categoryName: continent,
-      categoryTitle: `Vietnamese Professors in ${continent}`,
-      categorySubtitle: `Vietnamese Academic Diaspora in ${continent}`,
-      description: `Directory of ${people.length} Vietnamese and Vietnamese-diaspora professors teaching and researching across ${continent}.`,
-      people,
-      canonicalPath: regionPath(continent),
-      interactiveUrl: `index.html?loc=${encodeURIComponent(continent)}`,
-      otherCategories: [],
-    };
-  }).filter((hub) => hasEnoughPeopleForRosterHub(hub.people.length));
+  const continentHubs: HubConfig[] = continents
+    .map((continent) => {
+      const people = roster.filter((p) => continentOf(p.country) === continent);
+      return {
+        categoryType: 'Region' as const,
+        categoryName: continent,
+        categoryTitle: `Vietnamese Professors in ${continent}`,
+        categorySubtitle: `Vietnamese Academic Diaspora in ${continent}`,
+        description: `Directory of ${people.length} Vietnamese and Vietnamese-diaspora professors teaching and researching across ${continent}.`,
+        people,
+        canonicalPath: regionPath(continent),
+        interactiveUrl: `index.html?loc=${encodeURIComponent(continent)}`,
+        otherCategories: [],
+      };
+    })
+    .filter((hub) => hasEnoughPeopleForRosterHub(hub.people.length));
 
   for (const continentHub of continentHubs) {
     continentHub.otherCategories = continentHubs
@@ -641,21 +773,25 @@ async function main() {
       .map((hub) => ({ label: hub.categoryName, path: hub.canonicalPath }));
   }
 
-  const allCountries = Object.keys(countryCounts).sort((a, b) => countryCounts[b] - countryCounts[a] || a.localeCompare(b));
-  const countryHubs: HubConfig[] = allCountries.map((country) => {
-    const people = roster.filter((p) => (personCountry(p) === country));
-    return {
-      categoryType: 'Region' as const,
-      categoryName: country,
-      categoryTitle: `Vietnamese Professors in ${withArticle(country)}`,
-      categorySubtitle: `Vietnamese Academic Diaspora in ${withArticle(country)}`,
-      description: `Directory of ${people.length} Vietnamese and Vietnamese-diaspora professors at universities in ${withArticle(country)}.`,
-      people,
-      canonicalPath: regionPath(country),
-      interactiveUrl: `index.html?loc=${encodeURIComponent(country === 'United States' ? 'US' : country)}`,
-      otherCategories: [],
-    };
-  }).filter((hub) => hasEnoughPeopleForRosterHub(hub.people.length));
+  const allCountries = Object.keys(countryCounts).sort(
+    (a, b) => countryCounts[b] - countryCounts[a] || a.localeCompare(b),
+  );
+  const countryHubs: HubConfig[] = allCountries
+    .map((country) => {
+      const people = roster.filter((p) => personCountry(p) === country);
+      return {
+        categoryType: 'Region' as const,
+        categoryName: country,
+        categoryTitle: `Vietnamese Professors in ${withArticle(country)}`,
+        categorySubtitle: `Vietnamese Academic Diaspora in ${withArticle(country)}`,
+        description: `Directory of ${people.length} Vietnamese and Vietnamese-diaspora professors at universities in ${withArticle(country)}.`,
+        people,
+        canonicalPath: regionPath(country),
+        interactiveUrl: `index.html?loc=${encodeURIComponent(country === 'United States' ? 'US' : country)}`,
+        otherCategories: [],
+      };
+    })
+    .filter((hub) => hasEnoughPeopleForRosterHub(hub.people.length));
 
   for (const countryHub of countryHubs) {
     countryHub.otherCategories = countryHubs
@@ -672,46 +808,64 @@ async function main() {
   // site does not publish a large grid of thin pages that add little beyond a person profile.
   const intersectionHubs: HubConfig[] = [...continentHubs, ...countryHubs].flatMap((regionHub) =>
     fieldHubs.flatMap((fieldHub) => {
-      const people = roster.filter((person) =>
-        fieldOf(person.department, person.university) === fieldHub.categoryName
-        && (regionHub.categoryName === personCountry(person) || continentOf(person.country) === regionHub.categoryName));
+      const people = roster.filter(
+        (person) =>
+          fieldOf(person.department, person.university) === fieldHub.categoryName &&
+          (regionHub.categoryName === personCountry(person) ||
+            continentOf(person.country) === regionHub.categoryName),
+      );
       if (!hasEnoughPeopleForRosterHub(people.length)) return [];
       const field = fieldHub.categoryName;
       const region = regionHub.categoryName;
-      return [{
-        categoryType: 'Discipline × Region' as const,
-        categoryName: `${field} in ${region}`,
-        categoryTitle: `Vietnamese ${field} Professors in ${withArticle(region)}`,
-        categorySubtitle: `Vietnamese Professors & Scholars in ${field} in ${withArticle(region)}`,
-        description: `Directory of ${people.length} Vietnamese and Vietnamese-diaspora professors in ${field} at universities and eligible research institutions in ${withArticle(region)}.`,
-        people,
-        canonicalPath: fieldRegionPath(field, region),
-        interactiveUrl: `index.html?field=${encodeURIComponent(field)}&loc=${encodeURIComponent(region === 'United States' ? 'US' : region)}`,
-        otherCategories: [
-          { label: `All ${field} faculty`, path: fieldPath(field) },
-          { label: `All faculty in ${region}`, path: regionPath(region) },
-        ],
-        field,
-        region,
-      }];
-    }));
+      return [
+        {
+          categoryType: 'Discipline × Region' as const,
+          categoryName: `${field} in ${region}`,
+          categoryTitle: `Vietnamese ${field} Professors in ${withArticle(region)}`,
+          categorySubtitle: `Vietnamese Professors & Scholars in ${field} in ${withArticle(region)}`,
+          description: `Directory of ${people.length} Vietnamese and Vietnamese-diaspora professors in ${field} at universities and eligible research institutions in ${withArticle(region)}.`,
+          people,
+          canonicalPath: fieldRegionPath(field, region),
+          interactiveUrl: `index.html?field=${encodeURIComponent(field)}&loc=${encodeURIComponent(region === 'United States' ? 'US' : region)}`,
+          otherCategories: [
+            { label: `All ${field} faculty`, path: fieldPath(field) },
+            { label: `All faculty in ${region}`, path: regionPath(region) },
+          ],
+          field,
+          region,
+        },
+      ];
+    }),
+  );
 
   // Make every intersection discoverable through both of its parent category pages.
   for (const fieldHub of fieldHubs) {
-    fieldHub.otherCategories.push(...intersectionHubs
-      .filter((hub) => hub.field === fieldHub.categoryName)
-      .map((hub) => ({ label: `${fieldHub.categoryName} in ${hub.region}`, path: hub.canonicalPath })));
+    fieldHub.otherCategories.push(
+      ...intersectionHubs
+        .filter((hub) => hub.field === fieldHub.categoryName)
+        .map((hub) => ({
+          label: `${fieldHub.categoryName} in ${hub.region}`,
+          path: hub.canonicalPath,
+        })),
+    );
   }
   for (const regionHub of [...continentHubs, ...countryHubs]) {
-    regionHub.otherCategories.push(...intersectionHubs
-      .filter((hub) => hub.region === regionHub.categoryName)
-      .map((hub) => ({ label: `${hub.field} in ${regionHub.categoryName}`, path: hub.canonicalPath })));
+    regionHub.otherCategories.push(
+      ...intersectionHubs
+        .filter((hub) => hub.region === regionHub.categoryName)
+        .map((hub) => ({
+          label: `${hub.field} in ${regionHub.categoryName}`,
+          path: hub.canonicalPath,
+        })),
+    );
   }
 
   // University hubs link to the field and country hubs their people belong to.
   const universityHubs: HubConfig[] = universityHubNames.map((university) => {
     const people = byUniversity.get(university)!;
-    const fieldLinks = [...new Set(people.map((person) => fieldOf(person.department, person.university)))]
+    const fieldLinks = [
+      ...new Set(people.map((person) => fieldOf(person.department, person.university))),
+    ]
       .filter((field) => related.fieldHubs.has(field))
       .sort((a, b) => a.localeCompare(b))
       .map((field) => ({ label: field, path: fieldPath(field) }));
@@ -731,19 +885,37 @@ async function main() {
     };
   });
 
-  await Promise.all([...fieldHubs, ...continentHubs, ...countryHubs, ...intersectionHubs, ...universityHubs].map(async (hub) => {
-    const outputFile = resolve(output, hub.canonicalPath);
-    await mkdir(dirname(outputFile), { recursive: true });
-    await writeFile(outputFile, categoryHubPage(hub));
-  }));
+  await Promise.all(
+    [...fieldHubs, ...continentHubs, ...countryHubs, ...intersectionHubs, ...universityHubs].map(
+      async (hub) => {
+        const outputFile = resolve(output, hub.canonicalPath);
+        await mkdir(dirname(outputFile), { recursive: true });
+        await writeFile(outputFile, categoryHubPage(hub));
+      },
+    ),
+  );
 
   if (!development) {
-    const hubUrls = [...fieldHubs, ...continentHubs, ...countryHubs, ...intersectionHubs, ...universityHubs].map((hub) => `  <url>\n    <loc>${absoluteUrl(hub.canonicalPath)}</loc>\n    <changefreq>weekly</changefreq>\n    <priority>${hub.categoryType === 'Discipline × Region' || hub.categoryType === 'Institution' ? '0.7' : '0.8'}</priority>\n  </url>`);
-    const profileUrls = roster.map((person) => `  <url>\n    <loc>${absoluteUrl(personPath(person.id))}</loc>${person.lastUpdatedAt ? `\n    <lastmod>${person.lastUpdatedAt.slice(0, 10)}</lastmod>` : ''}\n    <changefreq>monthly</changefreq>\n    <priority>0.7</priority>\n  </url>`);
+    const hubUrls = [
+      ...fieldHubs,
+      ...continentHubs,
+      ...countryHubs,
+      ...intersectionHubs,
+      ...universityHubs,
+    ].map(
+      (hub) =>
+        `  <url>\n    <loc>${absoluteUrl(hub.canonicalPath)}</loc>\n    <changefreq>weekly</changefreq>\n    <priority>${hub.categoryType === 'Discipline × Region' || hub.categoryType === 'Institution' ? '0.7' : '0.8'}</priority>\n  </url>`,
+    );
+    const profileUrls = roster.map(
+      (person) =>
+        `  <url>\n    <loc>${absoluteUrl(personPath(person.id))}</loc>${person.lastUpdatedAt ? `\n    <lastmod>${person.lastUpdatedAt.slice(0, 10)}</lastmod>` : ''}\n    <changefreq>monthly</changefreq>\n    <priority>0.7</priority>\n  </url>`,
+    );
     const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url>\n    <loc>${siteUrl}/</loc>\n    <changefreq>daily</changefreq>\n    <priority>1.0</priority>\n  </url>\n  <url>\n    <loc>${siteUrl}/submit.html</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.5</priority>\n  </url>\n${hubUrls.join('\n')}\n${profileUrls.join('\n')}\n</urlset>\n`;
     await writeFile(resolve(output, 'sitemap.xml'), sitemap);
   }
-  console.log(`Generated ${roster.length} profile pages, ${fieldHubs.length} field hubs, ${continentHubs.length + countryHubs.length} region hubs, ${intersectionHubs.length} field-region hubs, and ${universityHubs.length} university hubs${development ? ' for development.' : ' and sitemap entries.'}`);
+  console.log(
+    `Generated ${roster.length} profile pages, ${fieldHubs.length} field hubs, ${continentHubs.length + countryHubs.length} region hubs, ${intersectionHubs.length} field-region hubs, and ${universityHubs.length} university hubs${development ? ' for development.' : ' and sitemap entries.'}`,
+  );
 }
 
 await main();

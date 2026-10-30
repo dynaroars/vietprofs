@@ -14,22 +14,32 @@ import { readdir, readFile, writeFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import type { RosterEntry } from '../src/data.ts';
 
-type RetiredIds = Record<string, { replacedBy: string | null; retiredAt: string; name: string; university: string; reason: string }>;
+type RetiredIds = Record<
+  string,
+  { replacedBy: string | null; retiredAt: string; name: string; university: string; reason: string }
+>;
 
 const args = process.argv.slice(2);
 const apply = args.includes('--apply');
-const option = (flag: string) => { const index = args.indexOf(flag); return index >= 0 ? args[index + 1] : undefined; };
+const option = (flag: string) => {
+  const index = args.indexOf(flag);
+  return index >= 0 ? args[index + 1] : undefined;
+};
 const retiredArg = args.find((arg) => /^vp-\d{4,}$/.test(arg));
 const keptArg = option('--into');
 const reasonArg = option('--reason');
 if (!retiredArg || !keptArg || !/^vp-\d{4,}$/.test(keptArg) || !reasonArg) {
-  throw new Error('usage: npm run retire-profile-id -- <retired-id> --into <kept-id> --reason "..." [--apply]');
+  throw new Error(
+    'usage: npm run retire-profile-id -- <retired-id> --into <kept-id> --reason "..." [--apply]',
+  );
 }
 const retired: string = retiredArg;
 const kept: string = keptArg;
 const reason: string = reasonArg;
 if (Number(kept.slice(3)) > Number(retired.slice(3))) {
-  console.warn(`warning: keeping the newer id ${kept}; keep the older id unless it is itself retired.`);
+  console.warn(
+    `warning: keeping the newer id ${kept}; keep the older id unless it is itself retired.`,
+  );
 }
 
 const rosterFile = resolve('public/data.json');
@@ -39,7 +49,10 @@ const retiredIds: RetiredIds = JSON.parse(await readFile(retiredFile, 'utf8'));
 const ledgersOnly = args.includes('--ledgers-only'); // replay reference rewrites after a manual roster edit
 const retiredEntry = ledgersOnly ? undefined : roster.find((person) => person.id === retired);
 const keptEntry = roster.find((person) => person.id === kept);
-if (!ledgersOnly && retiredEntry && keptEntry) throw new Error(`${retired} and ${kept} are both in the roster: merge ${retired}'s unique sourced fields into ${kept}, delete ${retired}, then rerun.`);
+if (!ledgersOnly && retiredEntry && keptEntry)
+  throw new Error(
+    `${retired} and ${kept} are both in the roster: merge ${retired}'s unique sourced fields into ${kept}, delete ${retired}, then rerun.`,
+  );
 const restoring = ledgersOnly ? args.includes('--restore') : Boolean(retiredEntry);
 const person = (retiredEntry ?? keptEntry) as RosterEntry;
 if (!person) throw new Error(`${kept} is not in the roster`);
@@ -49,14 +62,23 @@ if (!person) throw new Error(`${kept} is not in the roster`);
 // id's records win. Drop the stale side, then rename whatever the retired id still owns.
 const stale = restoring ? kept : retired;
 const byId = (a: string, b: string) => Number(a.slice(3)) - Number(b.slice(3));
-const isId = (value: unknown): value is string => typeof value === 'string' && /^vp-\d{4,}$/.test(value);
-const ownedBy = (value: unknown, id: string) => value === id
-  || (Boolean(value) && typeof value === 'object' && !Array.isArray(value) && ['id', 'rosterId'].some((key) => (value as Record<string, unknown>)[key] === id));
+const isId = (value: unknown): value is string =>
+  typeof value === 'string' && /^vp-\d{4,}$/.test(value);
+const ownedBy = (value: unknown, id: string) =>
+  value === id ||
+  (Boolean(value) &&
+    typeof value === 'object' &&
+    !Array.isArray(value) &&
+    ['id', 'rosterId'].some((key) => (value as Record<string, unknown>)[key] === id));
 
 function drop(value: unknown): unknown {
   if (Array.isArray(value)) return value.filter((item) => !ownedBy(item, stale)).map(drop);
   if (value && typeof value === 'object') {
-    return Object.fromEntries(Object.entries(value as Record<string, unknown>).filter(([key]) => key !== stale).map(([key, child]) => [key, drop(child)]));
+    return Object.fromEntries(
+      Object.entries(value as Record<string, unknown>)
+        .filter(([key]) => key !== stale)
+        .map(([key, child]) => [key, drop(child)]),
+    );
   }
   return value;
 }
@@ -65,21 +87,32 @@ function rename(value: unknown): unknown {
   if (value === retired) return kept;
   if (Array.isArray(value)) {
     const items = value.map(rename);
-    const wasSorted = items.length > 1 && value.every(isId) && value.every((item, index) => index === 0 || byId(value[index - 1], item) <= 0);
+    const wasSorted =
+      items.length > 1 &&
+      value.every(isId) &&
+      value.every((item, index) => index === 0 || byId(value[index - 1], item) <= 0);
     return wasSorted ? (items as string[]).sort(byId) : items;
   }
   if (value && typeof value === 'object') {
-    const entries = Object.entries(value as Record<string, unknown>).map(([key, child]) => [key === retired ? kept : key, rename(child)] as const);
+    const entries = Object.entries(value as Record<string, unknown>).map(
+      ([key, child]) => [key === retired ? kept : key, rename(child)] as const,
+    );
     const original = Object.keys(value as Record<string, unknown>);
-    const wasSorted = original.length > 1 && original.every(isId) && original.every((key, index) => index === 0 || byId(original[index - 1], key) <= 0);
+    const wasSorted =
+      original.length > 1 &&
+      original.every(isId) &&
+      original.every((key, index) => index === 0 || byId(original[index - 1], key) <= 0);
     return Object.fromEntries(wasSorted ? [...entries].sort(([a], [b]) => byId(a, b)) : entries);
   }
   return value;
 }
 
-const files = [resolve('public/relationships.json'), ...(await readdir('maintenance'))
-  .filter((file) => file.endsWith('.json') && file !== 'retired-ids.json')
-  .map((file) => resolve('maintenance', file))];
+const files = [
+  resolve('public/relationships.json'),
+  ...(await readdir('maintenance'))
+    .filter((file) => file.endsWith('.json') && file !== 'retired-ids.json')
+    .map((file) => resolve('maintenance', file)),
+];
 const changed: string[] = [];
 const writes: Array<[string, string]> = [];
 for (const file of files) {
@@ -101,11 +134,22 @@ if (restoring && !ledgersOnly) {
   writes.push([rosterFile, `${JSON.stringify(roster, null, 2)}\n`]);
 }
 delete retiredIds[kept];
-retiredIds[retired] = { replacedBy: kept, retiredAt: new Date().toISOString().slice(0, 10), name: person.name, university: person.university, reason };
-writes.push([retiredFile, `${JSON.stringify(Object.fromEntries(Object.entries(retiredIds).sort(([a], [b]) => byId(a, b))), null, 2)}\n`]);
+retiredIds[retired] = {
+  replacedBy: kept,
+  retiredAt: new Date().toISOString().slice(0, 10),
+  name: person.name,
+  university: person.university,
+  reason,
+};
+writes.push([
+  retiredFile,
+  `${JSON.stringify(Object.fromEntries(Object.entries(retiredIds).sort(([a], [b]) => byId(a, b))), null, 2)}\n`,
+]);
 
 console.log(`${restoring ? 'restore' : 'merge'}: ${retired} -> ${kept} (${person.name})`);
-console.log(`references rewritten in: ${changed.map((file) => file.replace(`${process.cwd()}/`, '')).join(', ') || 'none'}`);
+console.log(
+  `references rewritten in: ${changed.map((file) => file.replace(`${process.cwd()}/`, '')).join(', ') || 'none'}`,
+);
 if (apply) {
   for (const [file, text] of writes) await writeFile(file, text);
   console.log('applied');

@@ -4,12 +4,43 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
-import { FIELDS, LOCATIONS, HEALTH_SUBFIELDS, canonicalRank, displayName, displayUniversity, fieldOf, healthSubfieldOf, continentOf, locationMatches, buildFunFacts, buildAwardsFunFacts, buildInternationalObservations, buildLocationObservations, filterRoster, looksSurnameFirst, buildFieldCounts, buildTopCountries, buildTrackCounts, buildTopUndergradInstitutions, buildPhdToFacultyPairings, type Roster, type RosterEntry } from '../src/data.ts';
-import { connectionsFor, relationshipId, validateRelationshipDatabase, type RelationshipDatabase } from '../src/relationships.ts';
+import {
+  FIELDS,
+  LOCATIONS,
+  HEALTH_SUBFIELDS,
+  canonicalRank,
+  displayName,
+  displayUniversity,
+  fieldOf,
+  healthSubfieldOf,
+  continentOf,
+  locationMatches,
+  buildFunFacts,
+  buildAwardsFunFacts,
+  buildInternationalObservations,
+  buildLocationObservations,
+  filterRoster,
+  looksSurnameFirst,
+  buildFieldCounts,
+  buildTopCountries,
+  buildTrackCounts,
+  buildTopUndergradInstitutions,
+  buildPhdToFacultyPairings,
+  type Roster,
+  type RosterEntry,
+} from '../src/data.ts';
+import {
+  connectionsFor,
+  relationshipId,
+  validateRelationshipDatabase,
+  type RelationshipDatabase,
+} from '../src/relationships.ts';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const roster: Roster = JSON.parse(readFileSync(join(__dirname, '../public/data.json'), 'utf8'));
-const relationships: RelationshipDatabase = JSON.parse(readFileSync(join(__dirname, '../public/relationships.json'), 'utf8'));
+const relationships: RelationshipDatabase = JSON.parse(
+  readFileSync(join(__dirname, '../public/relationships.json'), 'utf8'),
+);
 
 test('public relationship database is valid and connects roster IDs only', () => {
   assert.deepEqual(validateRelationshipDatabase(relationships, roster), []);
@@ -22,53 +53,75 @@ test('relationship database validates normalized roster-internal edges', () => {
   const database: RelationshipDatabase = {
     version: 1,
     updatedAt: '2026-09-21T00:00:00.000Z',
-    relationships: [{
-      id: relationshipId('doctoral-advisor', sourceId, targetId),
-      type: 'doctoral-advisor',
-      sourceId,
-      targetId,
-      sources: ['https://example.edu/dissertation'],
-      evidence: 'An official dissertation record names the advisor.',
-      works: [],
-      verifiedAt: '2026-09-21T00:00:00.000Z',
-      direct: false,
-      notes: '',
-    }],
+    relationships: [
+      {
+        id: relationshipId('doctoral-advisor', sourceId, targetId),
+        type: 'doctoral-advisor',
+        sourceId,
+        targetId,
+        sources: ['https://example.edu/dissertation'],
+        evidence: 'An official dissertation record names the advisor.',
+        works: [],
+        verifiedAt: '2026-09-21T00:00:00.000Z',
+        direct: false,
+        notes: '',
+      },
+    ],
   };
   assert.deepEqual(validateRelationshipDatabase(database, roster), []);
   assert.equal(connectionsFor(sourceId, database)[0].label, 'Doctoral advisee');
   assert.equal(connectionsFor(targetId, database)[0].label, 'Doctoral advisor');
   database.relationships[0].type = 'coauthor';
-  assert.ok(validateRelationshipDatabase(database, roster).some((error) => /require at least 2 works/.test(error)));
+  assert.ok(
+    validateRelationshipDatabase(database, roster).some((error) =>
+      /require at least 2 works/.test(error),
+    ),
+  );
 });
 
 test('grant-collaborator and patent-coinventor relationships validate like coauthor but need only one shared item', () => {
   const sourceId = roster[0].id;
   const targetId = roster[1].id;
-  const work = { identifier: 'nsf:1234567', title: 'Collaborative Research: Example', date: '2024', url: 'https://www.nsf.gov/awardsearch/showAward?AWD_ID=1234567' };
+  const work = {
+    identifier: 'nsf:1234567',
+    title: 'Collaborative Research: Example',
+    date: '2024',
+    url: 'https://www.nsf.gov/awardsearch/showAward?AWD_ID=1234567',
+  };
   const database: RelationshipDatabase = {
     version: 1,
     updatedAt: '2026-09-21T00:00:00.000Z',
-    relationships: [{
-      id: relationshipId('grant-collaborator', sourceId, targetId),
-      type: 'grant-collaborator',
-      sourceId,
-      targetId,
-      sources: ['https://www.nsf.gov/awardsearch/showAward?AWD_ID=1234567'],
-      evidence: 'The official NSF award page lists both as PI/co-PI.',
-      works: [work],
-      verifiedAt: '2026-09-21T00:00:00.000Z',
-      direct: false,
-      notes: '',
-    }],
+    relationships: [
+      {
+        id: relationshipId('grant-collaborator', sourceId, targetId),
+        type: 'grant-collaborator',
+        sourceId,
+        targetId,
+        sources: ['https://www.nsf.gov/awardsearch/showAward?AWD_ID=1234567'],
+        evidence: 'The official NSF award page lists both as PI/co-PI.',
+        works: [work],
+        verifiedAt: '2026-09-21T00:00:00.000Z',
+        direct: false,
+        notes: '',
+      },
+    ],
   };
   assert.deepEqual(validateRelationshipDatabase(database, roster), []);
   assert.equal(connectionsFor(sourceId, database)[0].label, 'Grant collaborator · 1 shared award');
 
   database.relationships[0] = { ...database.relationships[0], works: [] };
-  assert.ok(validateRelationshipDatabase(database, roster).some((error) => /require at least 1 work/.test(error)));
+  assert.ok(
+    validateRelationshipDatabase(database, roster).some((error) =>
+      /require at least 1 work/.test(error),
+    ),
+  );
 
-  const patentWork = { identifier: 'us:11223344', title: 'Example patent', date: '2023', url: 'https://patents.google.com/patent/US11223344' };
+  const patentWork = {
+    identifier: 'us:11223344',
+    title: 'Example patent',
+    date: '2023',
+    url: 'https://patents.google.com/patent/US11223344',
+  };
   database.relationships[0] = {
     ...database.relationships[0],
     id: relationshipId('patent-coinventor', sourceId, targetId),
@@ -81,8 +134,10 @@ test('grant-collaborator and patent-coinventor relationships validate like coaut
 });
 
 test('reviewed portraits use local WebP files with source provenance', () => {
-  const portraits = roster.filter((person): person is RosterEntry & { portrait: string; portraitSource: string } =>
-    Boolean(person.portrait && person.portraitSource));
+  const portraits = roster.filter(
+    (person): person is RosterEntry & { portrait: string; portraitSource: string } =>
+      Boolean(person.portrait && person.portraitSource),
+  );
   assert.ok(portraits.length > 400, 'expected broad portrait coverage across the roster');
   for (const person of portraits) {
     assert.match(person.portrait, /^portraits\/[a-z0-9][a-z0-9.-]*\.webp$/);
@@ -92,7 +147,9 @@ test('reviewed portraits use local WebP files with source provenance', () => {
 });
 
 test('portrait audit fixture is reproducible and covers the required risk groups', () => {
-  const fixture = JSON.parse(readFileSync(join(__dirname, '../maintenance/portrait-audit-sample.json'), 'utf8')) as {
+  const fixture = JSON.parse(
+    readFileSync(join(__dirname, '../maintenance/portrait-audit-sample.json'), 'utf8'),
+  ) as {
     version: number;
     knownGood: string[];
     missing: string[];
@@ -107,14 +164,33 @@ test('portrait audit fixture is reproducible and covers the required risk groups
   assert.ok(fixture.knownBad.length >= 10);
   assert.ok(fixture.blocked.length > 0);
   assert.ok(fixture.commonNames.length > 0);
-  for (const id of Object.values(fixture).flatMap((value) => Array.isArray(value) ? value : [])) assert.ok(ids.has(id), `fixture references unknown ID ${id}`);
-  for (const id of fixture.missing) assert.equal(roster.find((person) => person.id === id)?.portrait, undefined, `${id} is not currently missing a portrait`);
+  for (const id of Object.values(fixture).flatMap((value) => (Array.isArray(value) ? value : [])))
+    assert.ok(ids.has(id), `fixture references unknown ID ${id}`);
+  for (const id of fixture.missing)
+    assert.equal(
+      roster.find((person) => person.id === id)?.portrait,
+      undefined,
+      `${id} is not currently missing a portrait`,
+    );
 });
 
 test('portrait provenance is ID-keyed and records reproducible identity evidence', () => {
-  const ledger = JSON.parse(readFileSync(join(__dirname, '../maintenance/portrait-provenance.json'), 'utf8')) as {
+  const ledger = JSON.parse(
+    readFileSync(join(__dirname, '../maintenance/portrait-provenance.json'), 'utf8'),
+  ) as {
     version: number;
-    entries: Record<string, { outcome: string; retrievedAt: string; identitySignals: string[]; pageUrl?: string; imageUrl?: string; sourceType?: string; confidence?: string }>;
+    entries: Record<
+      string,
+      {
+        outcome: string;
+        retrievedAt: string;
+        identitySignals: string[];
+        pageUrl?: string;
+        imageUrl?: string;
+        sourceType?: string;
+        confidence?: string;
+      }
+    >;
   };
   const ids = new Set(roster.map((person) => person.id));
   assert.equal(ledger.version, 1);
@@ -126,7 +202,15 @@ test('portrait provenance is ID-keyed and records reproducible identity evidence
     if (entry.outcome === 'found' || entry.outcome === 'needs_review') {
       assert.match(entry.pageUrl ?? '', /^https?:\/\//);
       assert.match(entry.imageUrl ?? '', /^https?:\/\//);
-      assert.ok(['official_faculty', 'personal_homepage', 'lab_site', 'university_news', 'authoritative_academic'].includes(entry.sourceType ?? ''));
+      assert.ok(
+        [
+          'official_faculty',
+          'personal_homepage',
+          'lab_site',
+          'university_news',
+          'authoritative_academic',
+        ].includes(entry.sourceType ?? ''),
+      );
       assert.ok(['HIGH', 'MEDIUM', 'LOW'].includes(entry.confidence ?? ''));
       assert.ok(entry.identitySignals.length >= 2);
     }
@@ -203,7 +287,10 @@ test('JAIST Knowledge Science and Osaka SANKEN reasoning lab map to computing', 
 });
 
 test('Information Studies defaults to computing but UCLA GSEIS stays Education', () => {
-  assert.equal(fieldOf('Information Studies', 'University of California, Los Angeles'), 'Education');
+  assert.equal(
+    fieldOf('Information Studies', 'University of California, Los Angeles'),
+    'Education',
+  );
   // Same bare department string elsewhere is genuinely ambiguous without knowing the school, so
   // it falls into the catch-all rather than being guessed.
   assert.equal(fieldOf('Information Studies'), 'Computer & Information Sciences');
@@ -212,7 +299,10 @@ test('Information Studies defaults to computing but UCLA GSEIS stays Education',
 });
 
 test('university libraries map to Computer & Information Sciences', () => {
-  assert.equal(fieldOf('University Libraries', 'Stony Brook University'), 'Computer & Information Sciences');
+  assert.equal(
+    fieldOf('University Libraries', 'Stony Brook University'),
+    'Computer & Information Sciences',
+  );
 });
 
 test('FIELDS is alphabetically ordered with the Others catch-all last', () => {
@@ -259,13 +349,22 @@ test('rank labels combine the stored career level with the track', () => {
   assert.equal(canonicalRank({ track: 'Tenure-line', rank: 'Professor' }), 'Professor');
   assert.equal(canonicalRank({ track: 'Tenure-line', rank: 'Lecturer' }), 'Lecturer');
   assert.equal(canonicalRank({ track: 'Tenure-line', rank: 'Senior Lecturer' }), 'Senior Lecturer');
-  assert.equal(canonicalRank({ track: 'Clinical', rank: 'Assistant Professor' }), 'Assistant Clinical Professor');
+  assert.equal(
+    canonicalRank({ track: 'Clinical', rank: 'Assistant Professor' }),
+    'Assistant Clinical Professor',
+  );
   assert.equal(canonicalRank({ track: 'Clinical', rank: 'Professor' }), 'Clinical Professor');
-  assert.equal(canonicalRank({ track: 'Teaching', rank: 'Associate Professor' }), 'Associate Teaching Professor');
+  assert.equal(
+    canonicalRank({ track: 'Teaching', rank: 'Associate Professor' }),
+    'Associate Teaching Professor',
+  );
   assert.equal(canonicalRank({ track: 'Teaching', rank: 'Senior Lecturer' }), 'Senior Lecturer');
   assert.equal(canonicalRank({ track: 'Teaching' }), 'Teaching');
   assert.equal(canonicalRank({ track: 'Research', rank: 'Researcher' }), 'Researcher');
-  assert.equal(canonicalRank({ track: 'Research', rank: 'Assistant Professor' }), 'Assistant Research Professor');
+  assert.equal(
+    canonicalRank({ track: 'Research', rank: 'Assistant Professor' }),
+    'Assistant Research Professor',
+  );
   assert.equal(canonicalRank({ track: 'Emeritus', rank: 'Professor' }), 'Professor Emeritus');
   assert.equal(canonicalRank({ track: 'Emeritus' }), 'Emeritus');
 });
@@ -298,7 +397,10 @@ test('Ethnic and area studies map to Social & Behavioral Sciences, not Humanitie
 test('"History of Art and Visual Culture" at CCA maps to Arts & Design, not Humanities', () => {
   // Bare "History" would otherwise win via the Humanities rule; the override keys on the
   // specific department+university pair rather than a generic "art history" regex.
-  assert.equal(fieldOf('History of Art and Visual Culture', 'California College of the Arts'), 'Arts & Design');
+  assert.equal(
+    fieldOf('History of Art and Visual Culture', 'California College of the Arts'),
+    'Arts & Design',
+  );
 });
 
 test('buildFunFacts returns a non-empty list of fact strings covering the roster', () => {
@@ -319,20 +421,52 @@ test('buildFunFacts reports structural roster observations rather than name-base
 
 test('field-balance observations name the fields computed from their input', () => {
   const sample = [
-    ...Array.from({ length: 4 }, (_, index) => ({ id: `hist-${index}`, name: `Historian ${index}`, university: `U${index}`, department: 'History', country: 'France' })),
-    ...Array.from({ length: 4 }, (_, index) => ({ id: `law-${index}`, name: `Lawyer ${index}`, university: `L${index}`, department: 'Law', country: 'France' })),
-    ...Array.from({ length: 4 }, (_, index) => ({ id: `art-${index}`, name: `Artist ${index}`, university: `A${index}`, department: 'Music', country: 'France' })),
+    ...Array.from({ length: 4 }, (_, index) => ({
+      id: `hist-${index}`,
+      name: `Historian ${index}`,
+      university: `U${index}`,
+      department: 'History',
+      country: 'France',
+    })),
+    ...Array.from({ length: 4 }, (_, index) => ({
+      id: `law-${index}`,
+      name: `Lawyer ${index}`,
+      university: `L${index}`,
+      department: 'Law',
+      country: 'France',
+    })),
+    ...Array.from({ length: 4 }, (_, index) => ({
+      id: `art-${index}`,
+      name: `Artist ${index}`,
+      university: `A${index}`,
+      department: 'Music',
+      country: 'France',
+    })),
   ];
   // Equal counts are ordered alphabetically so the wording is stable across roster edits.
-  const fact = buildInternationalObservations(sample).find((value) => value.includes('closely represented'));
+  const fact = buildInternationalObservations(sample).find((value) =>
+    value.includes('closely represented'),
+  );
   assert.ok(fact, 'expected a "closely represented" observation');
   assert.match(fact, /Arts & Design \(4\).*Humanities \(4\).*Law & Public Affairs \(4\)/);
 });
 
 test('location observations do not silently remove United States entries from a continent', () => {
   const sample = [
-    { id: 'us-1', name: 'US Person', university: 'US University', department: 'History', country: 'United States' },
-    { id: 'ca-1', name: 'Canada Person', university: 'Canada University', department: 'History', country: 'Canada' },
+    {
+      id: 'us-1',
+      name: 'US Person',
+      university: 'US University',
+      department: 'History',
+      country: 'United States',
+    },
+    {
+      id: 'ca-1',
+      name: 'Canada Person',
+      university: 'Canada University',
+      department: 'History',
+      country: 'Canada',
+    },
   ];
   assert.match(buildLocationObservations(sample, 'North America')[0], /^2 entries/);
 });
@@ -350,19 +484,29 @@ test('buildAwardsFunFacts reports major award categories and NSF CAREER holders'
   assert.ok(facts.some((f) => /NSF CAREER Award holders: \d+ across the database/.test(f)));
   assert.ok(facts.some((f) => /PECASE recipients: \d+ across the database/.test(f)));
   assert.ok(facts.some((f) => /MacArthur Fellows: \d+; Fields Medalists: \d+/.test(f)));
-  assert.ok(facts.some((f) => /Marquee honors represented: .*Fields Medal \(\d+\).*MacArthur Fellow \(\d+\)/.test(f)));
+  assert.ok(
+    facts.some((f) =>
+      /Marquee honors represented: .*Fields Medal \(\d+\).*MacArthur Fellow \(\d+\)/.test(f),
+    ),
+  );
   assert.ok(facts.some((f) => /national-academy/.test(f)));
 });
 
 test('buildFieldCounts sums to the roster size and sorts descending', () => {
   const counts = buildFieldCounts(roster);
-  assert.equal(counts.reduce((sum, [, c]) => sum + c, 0), roster.length);
+  assert.equal(
+    counts.reduce((sum, [, c]) => sum + c, 0),
+    roster.length,
+  );
   for (let i = 1; i < counts.length; i++) assert.ok(counts[i - 1][1] >= counts[i][1]);
   assert.ok(counts.every(([field]) => FIELDS.includes(field)));
 });
 
 test('buildTopCountries defaults a missing country to United States and respects the limit', () => {
-  const withMissingCountry = [{ ...roster[0], country: undefined }, { ...roster[1], country: 'Elsewhere' }];
+  const withMissingCountry = [
+    { ...roster[0], country: undefined },
+    { ...roster[1], country: 'Elsewhere' },
+  ];
   const counts = buildTopCountries(withMissingCountry, 1);
   assert.equal(counts.length, 1);
   assert.ok(counts[0][0] === 'United States' || counts[0][0] === 'Elsewhere');
@@ -373,7 +517,10 @@ test('buildTopCountries defaults a missing country to United States and respects
 
 test('buildTrackCounts covers every track present and omits empty ones', () => {
   const counts = buildTrackCounts(roster);
-  assert.equal(counts.reduce((sum, [, c]) => sum + c, 0), roster.length);
+  assert.equal(
+    counts.reduce((sum, [, c]) => sum + c, 0),
+    roster.length,
+  );
   assert.ok(counts.every(([, count]) => count > 0));
   const tracksSeen = new Set(roster.map((p) => p.track));
   assert.equal(counts.length, tracksSeen.size);
@@ -403,11 +550,31 @@ test('search is diacritic-insensitive in both directions', () => {
 });
 
 test('state filter matches the exact state, by full name or postal abbreviation', () => {
-  const people = (entries: Partial<RosterEntry>[]) => entries.map((entry, index) => ({ id: `vp-${index}`, name: `P ${index}`, university: 'U', ...entry }) as RosterEntry);
-  const sample = people([{ state: 'Virginia' }, { state: 'West Virginia' }, { state: 'Nevada' }, { state: 'Pennsylvania' }, { state: 'VA' }, { state: 'WA', country: 'Australia' }]);
-  assert.deepEqual(filterRoster(sample, { state: 'Virginia' }).map((p) => p.id), ['vp-0', 'vp-4']);
-  assert.deepEqual(filterRoster(sample, { state: 'VA' }).map((p) => p.id), ['vp-0', 'vp-4']);
-  assert.deepEqual(filterRoster(sample, { state: 'Washington' }).map((p) => p.id), []);
+  const people = (entries: Partial<RosterEntry>[]) =>
+    entries.map(
+      (entry, index) =>
+        ({ id: `vp-${index}`, name: `P ${index}`, university: 'U', ...entry }) as RosterEntry,
+    );
+  const sample = people([
+    { state: 'Virginia' },
+    { state: 'West Virginia' },
+    { state: 'Nevada' },
+    { state: 'Pennsylvania' },
+    { state: 'VA' },
+    { state: 'WA', country: 'Australia' },
+  ]);
+  assert.deepEqual(
+    filterRoster(sample, { state: 'Virginia' }).map((p) => p.id),
+    ['vp-0', 'vp-4'],
+  );
+  assert.deepEqual(
+    filterRoster(sample, { state: 'VA' }).map((p) => p.id),
+    ['vp-0', 'vp-4'],
+  );
+  assert.deepEqual(
+    filterRoster(sample, { state: 'Washington' }).map((p) => p.id),
+    [],
+  );
 });
 
 test('search matches on simplified rank, not just name/university/location/area', () => {
@@ -417,29 +584,68 @@ test('search matches on simplified rank, not just name/university/location/area'
 });
 
 test('scoped search restricts results to the requested roster attribute', () => {
-  const tai = filterRoster(roster, { query: 'Tai Tan Mai', searchScope: 'name', location: 'World' });
+  const tai = filterRoster(roster, {
+    query: 'Tai Tan Mai',
+    searchScope: 'name',
+    location: 'World',
+  });
   assert.equal(tai.length, 1);
   assert.equal(tai[0].name, 'Tai Tan Mai');
 
-  const professors = filterRoster(roster, { query: 'Professor', searchScope: 'rank', location: 'World' });
+  const professors = filterRoster(roster, {
+    query: 'Professor',
+    searchScope: 'rank',
+    location: 'World',
+  });
   assert.ok(professors.length > 0);
-  assert.ok(professors.every((person) => /professor/i.test(person.rank || '') || /professor/i.test(canonicalRank(person) ?? '')));
+  assert.ok(
+    professors.every(
+      (person) =>
+        /professor/i.test(person.rank || '') || /professor/i.test(canonicalRank(person) ?? ''),
+    ),
+  );
 
-  const engineering = filterRoster(roster, { query: 'Engineering', searchScope: 'field', location: 'World' });
+  const engineering = filterRoster(roster, {
+    query: 'Engineering',
+    searchScope: 'field',
+    location: 'World',
+  });
   assert.ok(engineering.length > 0);
-  assert.ok(engineering.every((person) => fieldOf(person.department, person.university) === 'Engineering'));
+  assert.ok(
+    engineering.every((person) => fieldOf(person.department, person.university) === 'Engineering'),
+  );
 
-  const research = filterRoster(roster, { query: 'Machine Learning', searchScope: 'research', location: 'World' });
+  const research = filterRoster(roster, {
+    query: 'Machine Learning',
+    searchScope: 'research',
+    location: 'World',
+  });
   assert.ok(research.length > 0);
-  assert.ok(research.every((person) => person.researchAreas?.some((area) => /machine learning/i.test(area))));
+  assert.ok(
+    research.every((person) =>
+      person.researchAreas?.some((area) => /machine learning/i.test(area)),
+    ),
+  );
 
-  const honors = filterRoster(roster, { query: 'NSF CAREER', searchScope: 'honors', location: 'World' });
+  const honors = filterRoster(roster, {
+    query: 'NSF CAREER',
+    searchScope: 'honors',
+    location: 'World',
+  });
   assert.ok(honors.length > 0);
-  assert.ok(honors.every((person) => person.honors?.some((honor) => /NSF CAREER/i.test(honor.name))));
+  assert.ok(
+    honors.every((person) => person.honors?.some((honor) => /NSF CAREER/i.test(honor.name))),
+  );
 
-  const undergrads = filterRoster(roster, { query: 'Boise State University', searchScope: 'undergrad', location: 'World' });
+  const undergrads = filterRoster(roster, {
+    query: 'Boise State University',
+    searchScope: 'undergrad',
+    location: 'World',
+  });
   assert.ok(undergrads.length > 0);
-  assert.ok(undergrads.every((person) => /Boise State University/i.test(person.undergradInstitution ?? '')));
+  assert.ok(
+    undergrads.every((person) => /Boise State University/i.test(person.undergradInstitution ?? '')),
+  );
 });
 
 test('searching an honor name lists professors who hold that honor', () => {
@@ -456,24 +662,41 @@ test('connection keyword search finds connected roster members by relationship t
   // Expected sets come from public/relationships.json, so a new relationship batch doesn't need a
   // test edit; the fixed ids below pin a few known people to each scope.
   const rosterIds = new Set(roster.map((person) => person.id));
-  const idsOf = (types: string[]) => new Set(relationships.relationships
-    .filter((relationship) => types.includes(relationship.type))
-    .flatMap((relationship) => [relationship.sourceId, relationship.targetId])
-    .filter((id) => rosterIds.has(id)));
-  const search = (query: string) => new Set(filterRoster(roster, { query, searchScope: 'connection', relationships }).map((person) => person.id));
+  const idsOf = (types: string[]) =>
+    new Set(
+      relationships.relationships
+        .filter((relationship) => types.includes(relationship.type))
+        .flatMap((relationship) => [relationship.sourceId, relationship.targetId])
+        .filter((id) => rosterIds.has(id)),
+    );
+  const search = (query: string) =>
+    new Set(
+      filterRoster(roster, { query, searchScope: 'connection', relationships }).map(
+        (person) => person.id,
+      ),
+    );
 
   const connected = search('');
-  assert.deepEqual(connected, idsOf([...new Set(relationships.relationships.map((relationship) => relationship.type))]));
-  for (const id of ['vp-0004', 'vp-0015', 'vp-0062', 'vp-0531', 'vp-1860']) assert.ok(connected.has(id), `${id} is connected`);
+  assert.deepEqual(
+    connected,
+    idsOf([...new Set(relationships.relationships.map((relationship) => relationship.type))]),
+  );
+  for (const id of ['vp-0004', 'vp-0015', 'vp-0062', 'vp-0531', 'vp-1860'])
+    assert.ok(connected.has(id), `${id} is connected`);
 
   const coauthors = search('co-author');
   assert.deepEqual(coauthors, idsOf(['coauthor']));
-  for (const id of ['vp-0015', 'vp-0018', 'vp-0531', 'vp-1860']) assert.ok(coauthors.has(id), `${id} is a coauthor`);
+  for (const id of ['vp-0015', 'vp-0018', 'vp-0531', 'vp-1860'])
+    assert.ok(coauthors.has(id), `${id} is a coauthor`);
   assert.ok(!coauthors.has('vp-0004'), 'vp-0004 has only advisor relationships');
 
   const mentors = search('mentor/advise');
-  assert.deepEqual(mentors, idsOf(['doctoral-advisor', 'masters-advisor', 'undergraduate-advisor', 'postdoctoral-mentor']));
-  for (const id of ['vp-0004', 'vp-0062', 'vp-1730']) assert.ok(mentors.has(id), `${id} is in an advising relationship`);
+  assert.deepEqual(
+    mentors,
+    idsOf(['doctoral-advisor', 'masters-advisor', 'undergraduate-advisor', 'postdoctoral-mentor']),
+  );
+  for (const id of ['vp-0004', 'vp-0062', 'vp-1730'])
+    assert.ok(mentors.has(id), `${id} is in an advising relationship`);
 });
 
 test('searching a name without middle initials still finds the professor', () => {
@@ -493,8 +716,13 @@ test('a two-word name search does not match terms scattered across unrelated fie
       person.university,
       person.department,
       ...(person.researchAreas ?? []),
-    ].filter((value): value is string => Boolean(value)).map((value) => value.toLowerCase());
-    assert.ok(fields.some((field) => field.includes('quan') && field.includes('nguyen')), `${person.name} matched without both terms in one field`);
+    ]
+      .filter((value): value is string => Boolean(value))
+      .map((value) => value.toLowerCase());
+    assert.ok(
+      fields.some((field) => field.includes('quan') && field.includes('nguyen')),
+      `${person.name} matched without both terms in one field`,
+    );
   }
 });
 
@@ -520,8 +748,14 @@ test('institution type is searchable and independently filterable', () => {
     track: 'Research',
   };
   const sample = [roster[0], instituteEntry];
-  assert.deepEqual(filterRoster(sample, { institutionType: 'Independent nonprofit research institute' }), [instituteEntry]);
-  assert.deepEqual(filterRoster(sample, { query: 'nonprofit research institute', searchScope: 'institution' }), [instituteEntry]);
+  assert.deepEqual(
+    filterRoster(sample, { institutionType: 'Independent nonprofit research institute' }),
+    [instituteEntry],
+  );
+  assert.deepEqual(
+    filterRoster(sample, { query: 'nonprofit research institute', searchScope: 'institution' }),
+    [instituteEntry],
+  );
 });
 
 test('duplicate-name university suffixes are hidden from display', () => {
@@ -608,7 +842,16 @@ test('locationMatches filters by an exact country for the country dropdown', () 
 });
 
 test('unique helpers never contain undefined or null values', async () => {
-  const { uniqueStates, uniqueCities, uniqueDepartments, uniqueCountries, uniqueResearchAreas, uniquePhdInstitutions, uniqueUndergradInstitutions, uniqueRanks } = await import('../src/data.ts');
+  const {
+    uniqueStates,
+    uniqueCities,
+    uniqueDepartments,
+    uniqueCountries,
+    uniqueResearchAreas,
+    uniquePhdInstitutions,
+    uniqueUndergradInstitutions,
+    uniqueRanks,
+  } = await import('../src/data.ts');
   const states = uniqueStates(roster);
   const cities = uniqueCities(roster);
   const depts = uniqueDepartments(roster);
@@ -618,8 +861,18 @@ test('unique helpers never contain undefined or null values', async () => {
   const undergrads = uniqueUndergradInstitutions(roster);
   const ranks = uniqueRanks(roster);
 
-  const allNonEmptyStrings = (values: string[]) => values.every((value) => typeof value === 'string' && value.length > 0);
-  for (const [label, values] of Object.entries({ states, cities, depts, countries, areas, phds, undergrads, ranks })) {
+  const allNonEmptyStrings = (values: string[]) =>
+    values.every((value) => typeof value === 'string' && value.length > 0);
+  for (const [label, values] of Object.entries({
+    states,
+    cities,
+    depts,
+    countries,
+    areas,
+    phds,
+    undergrads,
+    ranks,
+  })) {
     assert.ok(allNonEmptyStrings(values), `${label} contained a null, undefined, or empty entry`);
   }
 });
@@ -645,12 +898,17 @@ test('escapeHtml safely handles undefined, null, and special characters', async 
   assert.equal(escapeHtml(undefined), '');
   assert.equal(escapeHtml(null), '');
   assert.equal(escapeHtml(''), '');
-  assert.equal(escapeHtml('Hello & <World> "quotes"'), 'Hello &amp; &lt;World&gt; &quot;quotes&quot;');
+  assert.equal(
+    escapeHtml('Hello & <World> "quotes"'),
+    'Hello &amp; &lt;World&gt; &quot;quotes&quot;',
+  );
 });
 
 test('roster data strictly satisfies roster.schema.json', async () => {
   const { readFileSync } = await import('node:fs');
-  const schema = JSON.parse(readFileSync(new URL('../public/roster.schema.json', import.meta.url), 'utf8'));
+  const schema = JSON.parse(
+    readFileSync(new URL('../public/roster.schema.json', import.meta.url), 'utf8'),
+  );
   assert.equal(schema.type, 'array');
   assert.ok(schema.items.properties.id);
   assert.ok(schema.items.properties.name);
@@ -661,7 +919,10 @@ test('roster data strictly satisfies roster.schema.json', async () => {
     assert.ok(person.name && typeof person.name === 'string');
     assert.ok(person.university && typeof person.university === 'string');
     if (person.track) {
-      assert.ok(schema.items.properties.track.enum.includes(person.track), `Unknown track ${person.track} for ${person.name}`);
+      assert.ok(
+        schema.items.properties.track.enum.includes(person.track),
+        `Unknown track ${person.track} for ${person.name}`,
+      );
     }
   }
 });

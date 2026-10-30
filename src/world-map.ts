@@ -28,57 +28,64 @@ export function renderWorldMap(roster: Roster, selectedLocation?: string): strin
 
   // Alphabetical tie-break so the pin and chip order stays put across reloads (main.ts shuffles
   // the roster on load).
-  const sortedCountries = [...counts.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+  const sortedCountries = [...counts.entries()].sort(
+    (a, b) => b[1] - a[1] || a[0].localeCompare(b[0]),
+  );
   const total = roster.length || 1;
 
   // Build SVG country paths
-  const countryElements = Object.entries(WORLD_MAP_SVG_PATHS).map(([iso, pathData]) => {
-    const countryName = ISO_TO_COUNTRY_NAME[iso] || iso.toUpperCase();
-    const count = counts.get(countryName) ?? 0;
-    const tier = densityHeatTier(count);
-    const flag = countryFlag(countryName);
-    const isOrigin = iso === 'vn';
-    const isSelected = selectedLocation && (selectedLocation === countryName || selectedLocation === iso);
-    const pct = total > 0 ? Math.round((count / total) * 100) : 0;
-    const label = isOrigin
-      ? 'Vietnam: Origin of the diaspora'
-      : `${flag} ${countryName}: ${count} ${count === 1 ? 'person' : 'people'} (${pct}%)`;
+  const countryElements = Object.entries(WORLD_MAP_SVG_PATHS)
+    .map(([iso, pathData]) => {
+      const countryName = ISO_TO_COUNTRY_NAME[iso] || iso.toUpperCase();
+      const count = counts.get(countryName) ?? 0;
+      const tier = densityHeatTier(count);
+      const flag = countryFlag(countryName);
+      const isOrigin = iso === 'vn';
+      const isSelected =
+        selectedLocation && (selectedLocation === countryName || selectedLocation === iso);
+      const pct = total > 0 ? Math.round((count / total) * 100) : 0;
+      const label = isOrigin
+        ? 'Vietnam: Origin of the diaspora'
+        : `${flag} ${countryName}: ${count} ${count === 1 ? 'person' : 'people'} (${pct}%)`;
 
-    const commonAttrs = `id="map-country-${iso}" class="world-map-country heat-${tier}${isOrigin ? ' is-origin' : ''}${isSelected ? ' is-selected' : ''}" data-country="${escapeHtml(countryName)}" data-code="${iso}" data-count="${count}" data-flag="${flag}" data-tier="${tier}" data-share="${pct}" role="button" tabindex="0" aria-label="${escapeHtml(label)}"`;
+      const commonAttrs = `id="map-country-${iso}" class="world-map-country heat-${tier}${isOrigin ? ' is-origin' : ''}${isSelected ? ' is-selected' : ''}" data-country="${escapeHtml(countryName)}" data-code="${iso}" data-count="${count}" data-flag="${flag}" data-tier="${tier}" data-share="${pct}" role="button" tabindex="0" aria-label="${escapeHtml(label)}"`;
 
-    if (pathData.type === 'path' && pathData.d) {
-      return `<path ${commonAttrs} d="${pathData.d}"><title>${escapeHtml(label)}</title></path>`;
-    }
+      if (pathData.type === 'path' && pathData.d) {
+        return `<path ${commonAttrs} d="${pathData.d}"><title>${escapeHtml(label)}</title></path>`;
+      }
 
-    if (pathData.type === 'group' && pathData.subPaths) {
-      const subPathsHtml = pathData.subPaths
-        .map((sp) => `<path class="${sp.isMainland ? 'mainland' : ''}" d="${sp.d}" />`)
-        .join('');
-      return `<g ${commonAttrs}>${subPathsHtml}<title>${escapeHtml(label)}</title></g>`;
-    }
+      if (pathData.type === 'group' && pathData.subPaths) {
+        const subPathsHtml = pathData.subPaths
+          .map((sp) => `<path class="${sp.isMainland ? 'mainland' : ''}" d="${sp.d}" />`)
+          .join('');
+        return `<g ${commonAttrs}>${subPathsHtml}<title>${escapeHtml(label)}</title></g>`;
+      }
 
-    return '';
-  }).join('');
+      return '';
+    })
+    .join('');
 
   // Build Pin Badges on countries with counts
-  const pinsHtml = sortedCountries.map(([countryName, count]) => {
-    const coords = COUNTRY_PIN_COORDS[countryName];
-    if (!coords) return '';
-    const tier = densityHeatTier(count);
-    const flag = countryFlag(countryName);
-    const pct = Math.round((count / total) * 100);
-    const label = `${flag} ${countryName}: ${count} ${count === 1 ? 'person' : 'people'} (${pct}%)`;
-    const numDigits = String(count).length;
-    const badgeWidth = Math.max(22, numDigits * 8 + 12);
-    const badgeHalf = badgeWidth / 2;
+  const pinsHtml = sortedCountries
+    .map(([countryName, count]) => {
+      const coords = COUNTRY_PIN_COORDS[countryName];
+      if (!coords) return '';
+      const tier = densityHeatTier(count);
+      const flag = countryFlag(countryName);
+      const pct = Math.round((count / total) * 100);
+      const label = `${flag} ${countryName}: ${count} ${count === 1 ? 'person' : 'people'} (${pct}%)`;
+      const numDigits = String(count).length;
+      const badgeWidth = Math.max(22, numDigits * 8 + 12);
+      const badgeHalf = badgeWidth / 2;
 
-    return `
+      return `
       <g class="world-map-pin heat-${tier}" data-country="${escapeHtml(countryName)}" data-count="${count}" data-flag="${flag}" data-share="${pct}" transform="translate(${coords.x}, ${coords.y})" role="button" tabindex="0" aria-label="${escapeHtml(label)}">
         <rect class="pin-badge-bg" x="-${badgeHalf}" y="-8" width="${badgeWidth}" height="16" rx="8" />
         <text class="pin-badge-text" text-anchor="middle" y="3.5">${count}</text>
       </g>
     `;
-  }).join('');
+    })
+    .join('');
 
   // Vietnam Origin Pin
   const vnCoords = COUNTRY_PIN_COORDS.Vietnam || { x: 662, y: 490 };
@@ -91,11 +98,12 @@ export function renderWorldMap(roster: Roster, selectedLocation?: string): strin
   `;
 
   // Host Countries Quick Chips
-  const quickChips = sortedCountries.map(([countryName, count]) => {
-    const tier = densityHeatTier(count);
-    const flag = countryFlag(countryName);
-    const pct = total > 0 ? Math.round((count / total) * 100) : 0;
-    return `
+  const quickChips = sortedCountries
+    .map(([countryName, count]) => {
+      const tier = densityHeatTier(count);
+      const flag = countryFlag(countryName);
+      const pct = total > 0 ? Math.round((count / total) * 100) : 0;
+      return `
       <button type="button" class="world-map-chip heat-${tier}" data-filter="country" data-value="${escapeHtml(countryName)}" data-country="${escapeHtml(countryName)}" data-count="${count}" data-flag="${flag}" data-share="${pct}" title="Filter by ${escapeHtml(countryName)}: ${count} ${count === 1 ? 'person' : 'people'} (${pct}%)">
         <span class="chip-flag" aria-hidden="true">${flag}</span>
         <span class="chip-name">${escapeHtml(countryName)}</span>
@@ -103,7 +111,8 @@ export function renderWorldMap(roster: Roster, selectedLocation?: string): strin
         <span class="chip-share">(${pct}%)</span>
       </button>
     `;
-  }).join('');
+    })
+    .join('');
 
   return `
     <div class="insights-section world-map-section" id="world-map-section">

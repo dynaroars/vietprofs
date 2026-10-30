@@ -22,32 +22,50 @@ interface LocationForQueryOptions {
   relationships?: RelationshipDatabase;
 }
 
-export function locationForQuery(roster: Roster, searchIndex: Roster | SearchIndex, {
-  query,
-  currentLocation,
-  searchScope = 'all',
-  state = '',
-  field = 'all',
-  track = 'all',
-  institutionType = 'all',
-  relationships,
-}: LocationForQueryOptions): string {
+export function locationForQuery(
+  roster: Roster,
+  searchIndex: Roster | SearchIndex,
+  {
+    query,
+    currentLocation,
+    searchScope = 'all',
+    state = '',
+    field = 'all',
+    track = 'all',
+    institutionType = 'all',
+    relationships,
+  }: LocationForQueryOptions,
+): string {
   const value = query.trim();
   if (!value) return currentLocation;
   const normalized = value.toLocaleLowerCase();
-  const isCountryQuery = uniqueCountries(roster).some((country) =>
-    country.toLocaleLowerCase() === normalized
-    || (normalized === 'uk' && country === 'United Kingdom')
-    || (normalized === 'usa' && country === 'United States')
+  const isCountryQuery = uniqueCountries(roster).some(
+    (country) =>
+      country.toLocaleLowerCase() === normalized ||
+      (normalized === 'uk' && country === 'United Kingdom') ||
+      (normalized === 'usa' && country === 'United States'),
   );
-  const exactInternationalUniversity = roster.some((person) =>
-    person.university?.toLocaleLowerCase() === normalized
-    && (person.country || 'United States') !== 'United States'
+  const exactInternationalUniversity = roster.some(
+    (person) =>
+      person.university?.toLocaleLowerCase() === normalized &&
+      (person.country || 'United States') !== 'United States',
   );
-  if (isCountryQuery || CONTINENT_QUERIES.has(normalized) || exactInternationalUniversity) return 'World';
+  if (isCountryQuery || CONTINENT_QUERIES.has(normalized) || exactInternationalUniversity)
+    return 'World';
 
-  const filters = { query: value, searchScope, state, field, track, institutionType, relationships };
-  const matchesCurrent = filterRoster(searchIndex, { ...filters, location: currentLocation }).length;
+  const filters = {
+    query: value,
+    searchScope,
+    state,
+    field,
+    track,
+    institutionType,
+    relationships,
+  };
+  const matchesCurrent = filterRoster(searchIndex, {
+    ...filters,
+    location: currentLocation,
+  }).length;
   const matchesWorld = filterRoster(searchIndex, { ...filters, location: 'World' }).length;
   return matchesCurrent === 0 && matchesWorld > 0 ? 'World' : currentLocation;
 }

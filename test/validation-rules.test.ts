@@ -54,7 +54,10 @@ test('validateEducationChronology rejects inverted degrees and impossible interv
 
 test('validateInstitutionFormat flags degree prefixes prepended to institutions', () => {
   assert.equal(validateInstitutionFormat('Stanford University', 'phdInstitution'), null);
-  assert.equal(validateInstitutionFormat('Massachusetts Institute of Technology', 'phdInstitution'), null);
+  assert.equal(
+    validateInstitutionFormat('Massachusetts Institute of Technology', 'phdInstitution'),
+    null,
+  );
 
   assert.match(
     validateInstitutionFormat('Ph.D. in Mathematics Indiana University', 'msInstitution') ?? '',
@@ -71,8 +74,17 @@ test('validateInstitutionFormat flags degree prefixes prepended to institutions'
 });
 
 test('validateExternalUrl validates Google Scholar citation profiles', () => {
-  assert.equal(validateExternalUrl('https://scholar.google.com/citations?user=NKqpSVkAAAAJ', 'scholarUrl'), null);
-  assert.equal(validateExternalUrl('https://scholar.google.com.vn/citations?hl=en&user=NKqpSVkAAAAJ', 'scholarUrl'), null);
+  assert.equal(
+    validateExternalUrl('https://scholar.google.com/citations?user=NKqpSVkAAAAJ', 'scholarUrl'),
+    null,
+  );
+  assert.equal(
+    validateExternalUrl(
+      'https://scholar.google.com.vn/citations?hl=en&user=NKqpSVkAAAAJ',
+      'scholarUrl',
+    ),
+    null,
+  );
 
   // Search queries instead of profile
   assert.match(
@@ -81,15 +93,22 @@ test('validateExternalUrl validates Google Scholar citation profiles', () => {
   );
   // Non-https
   assert.match(
-    validateExternalUrl('http://scholar.google.com/citations?user=NKqpSVkAAAAJ', 'scholarUrl') ?? '',
+    validateExternalUrl('http://scholar.google.com/citations?user=NKqpSVkAAAAJ', 'scholarUrl') ??
+      '',
     /must be a Google Scholar citation profile URL/,
   );
 });
 
 test('validateExternalUrl validates LinkedIn personal profiles', () => {
-  assert.equal(validateExternalUrl('https://www.linkedin.com/in/duy-le-98695551/', 'linkedinUrl'), null);
+  assert.equal(
+    validateExternalUrl('https://www.linkedin.com/in/duy-le-98695551/', 'linkedinUrl'),
+    null,
+  );
   assert.equal(validateExternalUrl('https://linkedin.com/in/tatranvhn', 'linkedinUrl'), null);
-  assert.equal(validateExternalUrl('https://www.linkedin.com/in/thái-sơn-hoàng-3b330294/', 'linkedinUrl'), null);
+  assert.equal(
+    validateExternalUrl('https://www.linkedin.com/in/thái-sơn-hoàng-3b330294/', 'linkedinUrl'),
+    null,
+  );
 
   // Company page
   assert.match(
@@ -98,7 +117,10 @@ test('validateExternalUrl validates LinkedIn personal profiles', () => {
   );
   // Search URL
   assert.match(
-    validateExternalUrl('https://www.linkedin.com/search/results/all/?keywords=test', 'linkedinUrl') ?? '',
+    validateExternalUrl(
+      'https://www.linkedin.com/search/results/all/?keywords=test',
+      'linkedinUrl',
+    ) ?? '',
     /must be a direct LinkedIn personal profile URL/,
   );
 });

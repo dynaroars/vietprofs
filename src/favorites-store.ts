@@ -46,7 +46,10 @@ function savedProfileIds(key: string): string[] {
   try {
     const parsed = JSON.parse(local.getItem(key) ?? '');
     return Array.isArray(parsed)
-      ? [...new Set(parsed.filter((id) => typeof id === 'string' && PROFILE_ID.test(id)))].slice(0, MAX_SAVED_ITEMS)
+      ? [...new Set(parsed.filter((id) => typeof id === 'string' && PROFILE_ID.test(id)))].slice(
+          0,
+          MAX_SAVED_ITEMS,
+        )
       : [];
   } catch {
     return [];
@@ -59,7 +62,10 @@ export function loadRecentProfiles(): string[] {
 
 export function recordRecentProfile(id: string): string[] {
   if (!PROFILE_ID.test(id)) return loadRecentProfiles();
-  const next = [id, ...loadRecentProfiles().filter((value) => value !== id)].slice(0, MAX_SAVED_ITEMS);
+  const next = [id, ...loadRecentProfiles().filter((value) => value !== id)].slice(
+    0,
+    MAX_SAVED_ITEMS,
+  );
   storage()?.setItem(RECENT_STORAGE_KEY, JSON.stringify(next));
   return next;
 }

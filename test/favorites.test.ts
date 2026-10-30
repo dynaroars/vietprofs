@@ -1,6 +1,14 @@
 import { test, beforeEach } from 'node:test';
 import assert from 'node:assert/strict';
-import { clearRecentProfiles, isFavorite, loadFavorites, loadRecentProfiles, recordRecentProfile, saveFavorites, toggleFavorite } from '../src/favorites-store.ts';
+import {
+  clearRecentProfiles,
+  isFavorite,
+  loadFavorites,
+  loadRecentProfiles,
+  recordRecentProfile,
+  saveFavorites,
+  toggleFavorite,
+} from '../src/favorites-store.ts';
 
 function installMemoryStorage() {
   const data = new Map<string, string>();

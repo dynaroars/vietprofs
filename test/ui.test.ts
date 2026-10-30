@@ -38,7 +38,9 @@ test('all countries in roster map to recognized continents', () => {
     const country = p.country || 'United States';
     const continent = continentOf(country);
     assert.ok(
-      ['North America', 'South America', 'Asia', 'Australasia', 'Europe', 'Africa'].includes(continent),
+      ['North America', 'South America', 'Asia', 'Australasia', 'Europe', 'Africa'].includes(
+        continent,
+      ),
       `Country "${country}" for "${p.name}" mapped to invalid continent "${continent}"`,
     );
   }
@@ -73,7 +75,11 @@ test('formatLocation never produces undefined, null, consecutive commas, or dupl
     // Check no duplicate tokens like "Singapore, Singapore" or "Hong Kong, Hong Kong"
     const parts = loc.split(', ').map((s) => s.trim());
     const uniqueParts = new Set(parts);
-    assert.equal(uniqueParts.size, parts.length, `Location contains duplicate parts for ${p.name}: "${loc}"`);
+    assert.equal(
+      uniqueParts.size,
+      parts.length,
+      `Location contains duplicate parts for ${p.name}: "${loc}"`,
+    );
   }
 });
 
@@ -90,7 +96,10 @@ test('buildFunFacts produces valid strings across every continent and empty rost
       assert.ok(!f.includes('null'), `Fact contains null for location "${loc}": "${f}"`);
       assert.ok(!f.includes('NaN'), `Fact contains NaN for location "${loc}": "${f}"`);
       assert.ok(!f.includes('Infinity'), `Fact contains Infinity for location "${loc}": "${f}"`);
-      assert.ok(!f.includes('[object Object]'), `Fact contains [object Object] for location "${loc}": "${f}"`);
+      assert.ok(
+        !f.includes('[object Object]'),
+        `Fact contains [object Object] for location "${loc}": "${f}"`,
+      );
     }
   }
 
@@ -145,7 +154,10 @@ test('full HTML roster rendering produces clean HTML with no undefined/null/NaN 
     assert.ok(!html.includes('undefined'), `Rendered HTML contains undefined for ${p.name}`);
     assert.ok(!html.includes('null'), `Rendered HTML contains null for ${p.name}`);
     assert.ok(!html.includes('NaN'), `Rendered HTML contains NaN for ${p.name}`);
-    assert.ok(!html.includes('[object Object]'), `Rendered HTML contains [object Object] for ${p.name}`);
+    assert.ok(
+      !html.includes('[object Object]'),
+      `Rendered HTML contains [object Object] for ${p.name}`,
+    );
   }
 
   for (const loc of ['US', 'World', 'Asia', 'Europe']) {
@@ -162,13 +174,16 @@ test('full HTML roster rendering produces clean HTML with no undefined/null/NaN 
 });
 
 test('multiple education credentials share one semicolon-separated row', () => {
-  const person = roster.find((entry) => [
-    entry.postdocInstitution,
-    entry.phdInstitution || entry.phdYear,
-    entry.msInstitution,
-    entry.undergradInstitution || entry.undergradYear,
-    entry.mdInstitution,
-  ].filter(Boolean).length > 1);
+  const person = roster.find(
+    (entry) =>
+      [
+        entry.postdocInstitution,
+        entry.phdInstitution || entry.phdYear,
+        entry.msInstitution,
+        entry.undergradInstitution || entry.undergradYear,
+        entry.mdInstitution,
+      ].filter(Boolean).length > 1,
+  );
   assert.ok(person, 'expected a roster entry with multiple education credentials');
   const credentials = [
     person.postdocInstitution && 'Postdoc',
@@ -254,7 +269,8 @@ test('authoritative full Vietnamese names preserve accent marks and Vietnamese o
 
 test('auto-select location logic widens to World when searching for international countries or faculty', () => {
   const index = buildSearchIndex(roster);
-  const select = (query: string) => locationForQuery(roster, index, { query, currentLocation: 'US' });
+  const select = (query: string) =>
+    locationForQuery(roster, index, { query, currentLocation: 'US' });
   assert.equal(select('France'), 'World');
   assert.equal(select('Australia'), 'World');
   assert.equal(select('Japan'), 'World');

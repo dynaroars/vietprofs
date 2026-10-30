@@ -1,21 +1,29 @@
-import { defineConfig } from 'vite'
-import { resolve } from 'node:path'
-import { fileURLToPath } from 'node:url'
-import { execFileSync } from 'node:child_process'
-import { createHash } from 'node:crypto'
-import { readFileSync } from 'node:fs'
+import { defineConfig } from 'vite';
+import { resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { execFileSync } from 'node:child_process';
+import { createHash } from 'node:crypto';
+import { readFileSync } from 'node:fs';
 
-const root = fileURLToPath(new URL('.', import.meta.url))
-const commit = process.env.VITE_GIT_COMMIT || (() => {
-  try {
-    return execFileSync('git', ['rev-parse', '--short=8', 'HEAD'], { cwd: root, encoding: 'utf8' }).trim()
-  } catch {
-    return 'development'
-  }
-})()
+const root = fileURLToPath(new URL('.', import.meta.url));
+const commit =
+  process.env.VITE_GIT_COMMIT ||
+  (() => {
+    try {
+      return execFileSync('git', ['rev-parse', '--short=8', 'HEAD'], {
+        cwd: root,
+        encoding: 'utf8',
+      }).trim();
+    } catch {
+      return 'development';
+    }
+  })();
 // public/share.js keeps a fixed name and the host caches it for hours; a content hash in the query
 // makes a changed file load fresh (scripts/generate-profile-pages.ts does the same for its pages).
-const shareVersion = createHash('sha256').update(readFileSync(resolve(root, 'public/share.js'))).digest('hex').slice(0, 10)
+const shareVersion = createHash('sha256')
+  .update(readFileSync(resolve(root, 'public/share.js')))
+  .digest('hex')
+  .slice(0, 10);
 
 export default defineConfig({
   // Relative base so the build works under a GitHub Pages project path
@@ -24,10 +32,13 @@ export default defineConfig({
   define: {
     __BUILD_COMMIT__: JSON.stringify(commit),
   },
-  plugins: [{
-    name: 'version-share-script',
-    transformIndexHtml: (html) => html.replace('src="./share.js"', `src="./share.js?v=${shareVersion}"`),
-  }],
+  plugins: [
+    {
+      name: 'version-share-script',
+      transformIndexHtml: (html) =>
+        html.replace('src="./share.js"', `src="./share.js?v=${shareVersion}"`),
+    },
+  ],
   build: {
     rollupOptions: {
       input: {
@@ -37,4 +48,4 @@ export default defineConfig({
       },
     },
   },
-})
+});

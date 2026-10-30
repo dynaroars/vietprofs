@@ -24,6 +24,7 @@ export function missingFields(person: RosterEntry): RequestableField[] {
   const skip = new Set<RequestableField>();
   if (person.mdInstitution && !person.phdInstitution) skip.add('phdInstitution').add('phdYear');
   if (person.track === 'Deceased') skip.add('linkedinUrl');
-  return (Object.keys(REQUESTABLE_FIELDS) as RequestableField[])
-    .filter((field) => !skip.has(field) && !person[field]);
+  return (Object.keys(REQUESTABLE_FIELDS) as RequestableField[]).filter(
+    (field) => !skip.has(field) && !person[field],
+  );
 }

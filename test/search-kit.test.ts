@@ -16,7 +16,8 @@ test('normalizeText strips diacritics and converts to lowercase', () => {
 });
 
 test('parseKeywordQuery parses recognized keyword prefixes with raw and quoted queries', () => {
-  const resolveKey = (k: string) => (['university', 'field', 'research', 'connection'].includes(k) ? k : null);
+  const resolveKey = (k: string) =>
+    ['university', 'field', 'research', 'connection'].includes(k) ? k : null;
 
   assert.equal(parseKeywordQuery('random search string', resolveKey), null);
   assert.equal(parseKeywordQuery('unknown: query', resolveKey), null);
@@ -62,7 +63,11 @@ test('createCommandHandler runs only help, query plan, and clear; every other wo
 
   const handler = createCommandHandler({
     commandOutputEl: fakeOutputEl,
-    getSearch: () => ({ resetScope: () => { resets += 1; } }),
+    getSearch: () => ({
+      resetScope: () => {
+        resets += 1;
+      },
+    }),
     help: { show: () => calls.push('help shown') },
     onUpdate: () => {
       updated = true;
@@ -79,7 +84,18 @@ test('createCommandHandler runs only help, query plan, and clear; every other wo
   assert.ok(resets >= 2, 'completed commands reset the search scope');
   assert.equal(handler('clear'), true);
   assert.equal(calls.at(-1), 'reset');
-  for (const word of ['health', 'random', 'reset', 'stats', 'fortune', 'whoami', 'theme crt', 'recent', 'toString', '']) {
+  for (const word of [
+    'health',
+    'random',
+    'reset',
+    'stats',
+    'fortune',
+    'whoami',
+    'theme crt',
+    'recent',
+    'toString',
+    '',
+  ]) {
     assert.equal(handler(word), false, `"${word}" stays an ordinary search`);
   }
 });

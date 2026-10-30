@@ -80,8 +80,15 @@ async function currentMetrics(): Promise<Omit<StatsPoint, 'date'>> {
   const countries = new Set(roster.map((p) => p.country || 'United States').filter(Boolean)).size;
   const portraits = roster.filter((p) => p.portrait || p.portraitSource).length;
   const honors = roster.reduce((acc, p) => acc + (p.honors ? p.honors.length : 0), 0);
-  const files = git(['ls-files', '--cached', '--others', '--exclude-standard', 'src/']).trim().split('\n').filter((file) => /\.(ts|css|html)$/.test(file));
-  const codeLines = (await Promise.all(files.map((file) => readFile(resolve(root, file), 'utf8').then(countLines, () => 0)))).reduce((sum, lines) => sum + lines, 0);
+  const files = git(['ls-files', '--cached', '--others', '--exclude-standard', 'src/'])
+    .trim()
+    .split('\n')
+    .filter((file) => /\.(ts|css|html)$/.test(file));
+  const codeLines = (
+    await Promise.all(
+      files.map((file) => readFile(resolve(root, file), 'utf8').then(countLines, () => 0)),
+    )
+  ).reduce((sum, lines) => sum + lines, 0);
   return { count, institutions, countries, portraits, honors, codeLines };
 }
 
@@ -89,7 +96,14 @@ async function main() {
   const points: StatsPoint[] = [];
 
   try {
-    const log = git(['log', '--first-parent', '--format=%H %cI', '--', 'public/data.json', 'src/']).trim();
+    const log = git([
+      'log',
+      '--first-parent',
+      '--format=%H %cI',
+      '--',
+      'public/data.json',
+      'src/',
+    ]).trim();
     const commits = log
       .split('\n')
       .filter(Boolean)
@@ -108,17 +122,22 @@ async function main() {
         const roster = JSON.parse(content) as RosterEntrySnapshot[];
         const count = roster.length;
         const institutions = new Set(roster.map((p) => p.university).filter(Boolean)).size;
-        const countries = new Set(roster.map((p) => p.country || 'United States').filter(Boolean)).size;
+        const countries = new Set(roster.map((p) => p.country || 'United States').filter(Boolean))
+          .size;
         const portraits = roster.filter((p) => p.portrait || p.portraitSource).length;
         const honors = roster.reduce((acc, p) => acc + (p.honors ? p.honors.length : 0), 0);
         const codeLines = countSrcLinesAtCommit(hash);
         points.push({ date, count, institutions, countries, portraits, honors, codeLines });
       } catch (err) {
-        console.warn(`build-stats-history: error parsing snapshot at ${date} (${hash}): ${(err as Error).message}`);
+        console.warn(
+          `build-stats-history: error parsing snapshot at ${date} (${hash}): ${(err as Error).message}`,
+        );
       }
     }
   } catch (err) {
-    console.warn(`build-stats-history: git history unavailable (${(err as Error).message}); falling back to current snapshot.`);
+    console.warn(
+      `build-stats-history: git history unavailable (${(err as Error).message}); falling back to current snapshot.`,
+    );
   }
 
   const today = new Date().toISOString().slice(0, 10);
@@ -129,8 +148,13 @@ async function main() {
     Object.assign(points[points.length - 1], latest);
   }
 
-  await writeFile(resolve(root, 'public/stats-history.json'), `${JSON.stringify(points, null, 2)}\n`);
-  console.log(`build-stats-history: wrote ${points.length} snapshot(s) to public/stats-history.json`);
+  await writeFile(
+    resolve(root, 'public/stats-history.json'),
+    `${JSON.stringify(points, null, 2)}\n`,
+  );
+  console.log(
+    `build-stats-history: wrote ${points.length} snapshot(s) to public/stats-history.json`,
+  );
 }
 
 await main();

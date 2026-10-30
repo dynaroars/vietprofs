@@ -26,7 +26,13 @@ const updatesFile = 'public/updates.json';
 
 function committed<T>(file: string): T | null {
   try {
-    return JSON.parse(execFileSync('git', ['show', `${ref}:${file}`], { encoding: 'utf8', maxBuffer: 1 << 30, stdio: ['ignore', 'pipe', 'ignore'] }));
+    return JSON.parse(
+      execFileSync('git', ['show', `${ref}:${file}`], {
+        encoding: 'utf8',
+        maxBuffer: 1 << 30,
+        stdio: ['ignore', 'pipe', 'ignore'],
+      }),
+    );
   } catch {
     return null; // no git history (e.g. a tarball build), or the file didn't exist at ref
   }
@@ -37,11 +43,17 @@ function content(person: RosterEntry): string {
   const sorted = (value: unknown): unknown => {
     if (Array.isArray(value)) return value.map(sorted);
     if (value && typeof value === 'object') {
-      return Object.fromEntries(Object.keys(value).sort().map((key) => [key, sorted((value as Record<string, unknown>)[key])]));
+      return Object.fromEntries(
+        Object.keys(value)
+          .sort()
+          .map((key) => [key, sorted((value as Record<string, unknown>)[key])]),
+      );
     }
     return value;
   };
-  const kept = Object.entries(record).filter(([key, value]) => !IGNORED.has(key) && !(key === 'institutionType' && value === 'University'));
+  const kept = Object.entries(record).filter(
+    ([key, value]) => !IGNORED.has(key) && !(key === 'institutionType' && value === 'University'),
+  );
   return JSON.stringify(sorted(Object.fromEntries(kept)));
 }
 
@@ -69,12 +81,19 @@ const baseRoster = process.env.SCHEMA_MIGRATION ? null : committed<RosterEntry[]
 const stamped: string[] = [];
 if (baseRoster) {
   // Before updates.json existed, the committed dates were inside data.json.
-  const baseUpdates: RosterUpdates = committed<RosterUpdates>(updatesFile)
-    ?? Object.fromEntries(baseRoster.filter((person) => person.lastUpdatedAt).map((person) => [person.id, person.lastUpdatedAt as string]));
+  const baseUpdates: RosterUpdates =
+    committed<RosterUpdates>(updatesFile) ??
+    Object.fromEntries(
+      baseRoster
+        .filter((person) => person.lastUpdatedAt)
+        .map((person) => [person.id, person.lastUpdatedAt as string]),
+    );
   const before = new Map(baseRoster.map((person) => [person.id, person]));
   for (const person of roster) {
     const old = before.get(person.id);
-    const changed = !old ? !current[person.id] : content(old) !== content(person) && current[person.id] === baseUpdates[person.id];
+    const changed = !old
+      ? !current[person.id]
+      : content(old) !== content(person) && current[person.id] === baseUpdates[person.id];
     if (!changed) continue;
     current[person.id] = now;
     stamped.push(person.id);
@@ -82,10 +101,16 @@ if (baseRoster) {
 }
 
 const updates: RosterUpdates = {};
-for (const id of roster.map((person) => person.id).filter(Boolean).sort()) updates[id] = current[id] ?? now;
+for (const id of roster
+  .map((person) => person.id)
+  .filter(Boolean)
+  .sort())
+  updates[id] = current[id] ?? now;
 const updatesOut = `${JSON.stringify(updates, null, 2)}\n`;
 if (updatesOut !== updatesText) await writeFile(updatesFile, updatesOut);
 if (rosterChanged) await writeFile(rosterFile, `${JSON.stringify(roster, null, 2)}\n`);
 if (stamped.length) {
-  console.log(`stamp-updates: stamped ${stamped.length} changed ${stamped.length === 1 ? 'entry' : 'entries'} (${stamped.slice(0, 10).join(', ')}${stamped.length > 10 ? ', ...' : ''})`);
+  console.log(
+    `stamp-updates: stamped ${stamped.length} changed ${stamped.length === 1 ? 'entry' : 'entries'} (${stamped.slice(0, 10).join(', ')}${stamped.length > 10 ? ', ...' : ''})`,
+  );
 }

@@ -58,8 +58,16 @@ export interface PersonConnection {
 const UTC_TIMESTAMP_PATTERN = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$/;
 const DATE_PATTERN = /^\d{4}(?:-\d{2}(?:-\d{2})?)?$/;
 const RELATIONSHIP_KEYS = new Set([
-  'id', 'type', 'sourceId', 'targetId', 'sources', 'evidence', 'works',
-  'verifiedAt', 'direct', 'notes',
+  'id',
+  'type',
+  'sourceId',
+  'targetId',
+  'sources',
+  'evidence',
+  'works',
+  'verifiedAt',
+  'direct',
+  'notes',
 ]);
 const WORK_KEYS = new Set(['identifier', 'title', 'date', 'url']);
 const DATABASE_KEYS = new Set(['version', 'updatedAt', 'relationships']);
@@ -79,11 +87,7 @@ function isCanonicalTimestamp(value: unknown): value is string {
   return !Number.isNaN(parsed.valueOf()) && parsed.toISOString() === value;
 }
 
-export function relationshipId(
-  type: RelationshipType,
-  sourceId: string,
-  targetId: string,
-): string {
+export function relationshipId(type: RelationshipType, sourceId: string, targetId: string): string {
   return `rel-${type}-${sourceId}-${targetId}`;
 }
 
@@ -93,14 +97,17 @@ export function validateRelationshipDatabase(
   now = Date.now(),
 ): string[] {
   const errors: string[] = [];
-  if (!value || typeof value !== 'object' || Array.isArray(value)) return ['database must be an object'];
+  if (!value || typeof value !== 'object' || Array.isArray(value))
+    return ['database must be an object'];
   const database = value as Partial<RelationshipDatabase>;
   for (const key of Object.keys(value)) {
     if (!DATABASE_KEYS.has(key)) errors.push(`database has unsupported field ${key}`);
   }
   if (database.version !== 1) errors.push('version must be 1');
-  if (!isCanonicalTimestamp(database.updatedAt)) errors.push('updatedAt must be a canonical UTC ISO timestamp');
-  else if (new Date(database.updatedAt).valueOf() > now) errors.push('updatedAt must not be in the future');
+  if (!isCanonicalTimestamp(database.updatedAt))
+    errors.push('updatedAt must be a canonical UTC ISO timestamp');
+  else if (new Date(database.updatedAt).valueOf() > now)
+    errors.push('updatedAt must not be in the future');
   if (!Array.isArray(database.relationships)) return [...errors, 'relationships must be an array'];
 
   const rosterIds = new Set(roster.map((person) => person.id));
@@ -121,13 +128,23 @@ export function validateRelationshipDatabase(
       continue;
     }
     const type = relationship.type as RelationshipType;
-    if (!rosterIds.has(relationship.sourceId ?? '')) errors.push(`${label} has unknown sourceId ${relationship.sourceId}`);
-    if (!rosterIds.has(relationship.targetId ?? '')) errors.push(`${label} has unknown targetId ${relationship.targetId}`);
-    if (relationship.sourceId === relationship.targetId) errors.push(`${label} must connect two different people`);
-    if (type in SYMMETRIC_TYPE_MIN_WORKS && String(relationship.sourceId).localeCompare(String(relationship.targetId)) >= 0) {
+    if (!rosterIds.has(relationship.sourceId ?? ''))
+      errors.push(`${label} has unknown sourceId ${relationship.sourceId}`);
+    if (!rosterIds.has(relationship.targetId ?? ''))
+      errors.push(`${label} has unknown targetId ${relationship.targetId}`);
+    if (relationship.sourceId === relationship.targetId)
+      errors.push(`${label} must connect two different people`);
+    if (
+      type in SYMMETRIC_TYPE_MIN_WORKS &&
+      String(relationship.sourceId).localeCompare(String(relationship.targetId)) >= 0
+    ) {
       errors.push(`${label} ${type} IDs must be in ascending lexical order`);
     }
-    const expectedId = relationshipId(type, relationship.sourceId ?? '', relationship.targetId ?? '');
+    const expectedId = relationshipId(
+      type,
+      relationship.sourceId ?? '',
+      relationship.targetId ?? '',
+    );
     if (relationship.id !== expectedId) errors.push(`${label} id must be ${expectedId}`);
     if (typeof relationship.id === 'string') {
       if (recordIds.has(relationship.id)) errors.push(`${label} duplicates id ${relationship.id}`);
@@ -137,14 +154,21 @@ export function validateRelationshipDatabase(
     if (edgeKeys.has(edgeKey)) errors.push(`${label} duplicates an existing edge`);
     edgeKeys.add(edgeKey);
 
-    if (!Array.isArray(relationship.sources) || relationship.sources.length === 0 || relationship.sources.some((source) => !isHttpsUrl(source))) {
+    if (
+      !Array.isArray(relationship.sources) ||
+      relationship.sources.length === 0 ||
+      relationship.sources.some((source) => !isHttpsUrl(source))
+    ) {
       errors.push(`${label} sources must contain at least one HTTPS URL`);
     } else if (new Set(relationship.sources).size !== relationship.sources.length) {
       errors.push(`${label} sources must not contain duplicates`);
     }
-    if (typeof relationship.evidence !== 'string' || !relationship.evidence.trim()) errors.push(`${label} must include evidence`);
-    if (!isCanonicalTimestamp(relationship.verifiedAt)) errors.push(`${label} verifiedAt must be a canonical UTC ISO timestamp`);
-    else if (new Date(relationship.verifiedAt).valueOf() > now) errors.push(`${label} verifiedAt must not be in the future`);
+    if (typeof relationship.evidence !== 'string' || !relationship.evidence.trim())
+      errors.push(`${label} must include evidence`);
+    if (!isCanonicalTimestamp(relationship.verifiedAt))
+      errors.push(`${label} verifiedAt must be a canonical UTC ISO timestamp`);
+    else if (new Date(relationship.verifiedAt).valueOf() > now)
+      errors.push(`${label} verifiedAt must not be in the future`);
     if (typeof relationship.direct !== 'boolean') errors.push(`${label} direct must be a boolean`);
     if (typeof relationship.notes !== 'string') errors.push(`${label} notes must be a string`);
 
@@ -154,9 +178,12 @@ export function validateRelationshipDatabase(
     }
     const minWorks = SYMMETRIC_TYPE_MIN_WORKS[type];
     if (minWorks !== undefined && relationship.works.length < minWorks) {
-      errors.push(`${label} ${type} records require at least ${minWorks} work${minWorks === 1 ? '' : 's'}`);
+      errors.push(
+        `${label} ${type} records require at least ${minWorks} work${minWorks === 1 ? '' : 's'}`,
+      );
     }
-    if (minWorks === undefined && relationship.works.length !== 0) errors.push(`${label} mentorship records must have an empty works array`);
+    if (minWorks === undefined && relationship.works.length !== 0)
+      errors.push(`${label} mentorship records must have an empty works array`);
     const workIdentifiers = new Set<string>();
     for (const [workIndex, rawWork] of relationship.works.entries()) {
       const workLabel = `${label} work ${workIndex + 1}`;
@@ -168,11 +195,15 @@ export function validateRelationshipDatabase(
         if (!WORK_KEYS.has(key)) errors.push(`${workLabel} has unsupported field ${key}`);
       }
       const work = rawWork as Partial<RelationshipWork>;
-      if (typeof work.identifier !== 'string' || !work.identifier.trim()) errors.push(`${workLabel} must include an identifier`);
-      else if (workIdentifiers.has(work.identifier)) errors.push(`${workLabel} duplicates identifier ${work.identifier}`);
+      if (typeof work.identifier !== 'string' || !work.identifier.trim())
+        errors.push(`${workLabel} must include an identifier`);
+      else if (workIdentifiers.has(work.identifier))
+        errors.push(`${workLabel} duplicates identifier ${work.identifier}`);
       else workIdentifiers.add(work.identifier);
-      if (typeof work.title !== 'string' || !work.title.trim()) errors.push(`${workLabel} must include a title`);
-      if (typeof work.date !== 'string' || !DATE_PATTERN.test(work.date)) errors.push(`${workLabel} date must be YYYY, YYYY-MM, or YYYY-MM-DD`);
+      if (typeof work.title !== 'string' || !work.title.trim())
+        errors.push(`${workLabel} must include a title`);
+      if (typeof work.date !== 'string' || !DATE_PATTERN.test(work.date))
+        errors.push(`${workLabel} date must be YYYY, YYYY-MM, or YYYY-MM-DD`);
       if (!isHttpsUrl(work.url)) errors.push(`${workLabel} url must use HTTPS`);
     }
   }
@@ -182,7 +213,8 @@ export function validateRelationshipDatabase(
       if (!isCanonicalTimestamp(relationship?.verifiedAt)) return newest;
       return Math.max(newest, new Date(relationship.verifiedAt).valueOf());
     }, 0);
-    if (updatedAt < newestVerification) errors.push('updatedAt must not precede the newest relationship verification');
+    if (updatedAt < newestVerification)
+      errors.push('updatedAt must not precede the newest relationship verification');
   }
   return errors;
 }
@@ -194,23 +226,34 @@ export function connectionsFor(
   return database.relationships.flatMap((relationship) => {
     if (relationship.sourceId !== personId && relationship.targetId !== personId) return [];
     const isSource = relationship.sourceId === personId;
-    const label = relationship.type === 'doctoral-advisor'
-      ? (isSource ? 'Doctoral advisee' : 'Doctoral advisor')
-      : relationship.type === 'masters-advisor'
-        ? (isSource ? "Master's advisee" : "Master's advisor")
-        : relationship.type === 'undergraduate-advisor'
-          ? (isSource ? 'Undergraduate advisee' : 'Undergraduate thesis advisor')
-          : relationship.type === 'postdoctoral-mentor'
-            ? (isSource ? 'Postdoctoral mentee' : 'Postdoctoral mentor')
-            : relationship.type === 'grant-collaborator'
-              ? `Grant collaborator · ${relationship.works.length} shared award${relationship.works.length === 1 ? '' : 's'}`
-              : relationship.type === 'patent-coinventor'
-                ? `Patent co-inventor · ${relationship.works.length} shared patent${relationship.works.length === 1 ? '' : 's'}`
-                : `Coauthor · ${relationship.works.length} shared works`;
-    return [{
-      relationship,
-      otherId: isSource ? relationship.targetId : relationship.sourceId,
-      label,
-    }];
+    const label =
+      relationship.type === 'doctoral-advisor'
+        ? isSource
+          ? 'Doctoral advisee'
+          : 'Doctoral advisor'
+        : relationship.type === 'masters-advisor'
+          ? isSource
+            ? "Master's advisee"
+            : "Master's advisor"
+          : relationship.type === 'undergraduate-advisor'
+            ? isSource
+              ? 'Undergraduate advisee'
+              : 'Undergraduate thesis advisor'
+            : relationship.type === 'postdoctoral-mentor'
+              ? isSource
+                ? 'Postdoctoral mentee'
+                : 'Postdoctoral mentor'
+              : relationship.type === 'grant-collaborator'
+                ? `Grant collaborator · ${relationship.works.length} shared award${relationship.works.length === 1 ? '' : 's'}`
+                : relationship.type === 'patent-coinventor'
+                  ? `Patent co-inventor · ${relationship.works.length} shared patent${relationship.works.length === 1 ? '' : 's'}`
+                  : `Coauthor · ${relationship.works.length} shared works`;
+    return [
+      {
+        relationship,
+        otherId: isSource ? relationship.targetId : relationship.sourceId,
+        label,
+      },
+    ];
   });
 }

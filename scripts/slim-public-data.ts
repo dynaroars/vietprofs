@@ -13,12 +13,16 @@ async function rewrite(file: string, transform: (value: unknown) => unknown) {
   const before = await readFile(path, 'utf8');
   const after = JSON.stringify(transform(JSON.parse(before)));
   await writeFile(path, after);
-  console.log(`Slimmed dist/${file}: ${Math.round(before.length / 1024)} KB -> ${Math.round(after.length / 1024)} KB`);
+  console.log(
+    `Slimmed dist/${file}: ${Math.round(before.length / 1024)} KB -> ${Math.round(after.length / 1024)} KB`,
+  );
 }
 
-await rewrite('data.json', (roster) => (roster as Roster).map((person) => {
-  const shipped: Record<string, unknown> = { ...person };
-  for (const field of UNSHIPPED_FIELDS) delete shipped[field];
-  return shipped;
-}));
+await rewrite('data.json', (roster) =>
+  (roster as Roster).map((person) => {
+    const shipped: Record<string, unknown> = { ...person };
+    for (const field of UNSHIPPED_FIELDS) delete shipped[field];
+    return shipped;
+  }),
+);
 await rewrite('relationships.json', (database) => database);

@@ -50,14 +50,12 @@ export type Roster = RosterEntry[];
 export type RosterUpdates = Record<string, string>;
 
 export function withUpdates(roster: Roster, updates: RosterUpdates): Roster {
-  return roster.map((person) => (updates[person.id] ? { ...person, lastUpdatedAt: updates[person.id] } : person));
+  return roster.map((person) =>
+    updates[person.id] ? { ...person, lastUpdatedAt: updates[person.id] } : person,
+  );
 }
 
-import {
-  COUNTRY_FLAGS,
-  COUNTRY_TO_CONTINENT,
-  TRACKS,
-} from './roster-constants.ts';
+import { COUNTRY_FLAGS, COUNTRY_TO_CONTINENT, TRACKS } from './roster-constants.ts';
 import type { RelationshipDatabase } from './relationships.ts';
 export {
   COUNTRY_FLAGS,
@@ -136,7 +134,8 @@ export function buildSearchIndex(roster: Roster): SearchIndex {
 
 export async function loadRoster(): Promise<Roster> {
   if (cached) return cached;
-  const cacheBuster = typeof __BUILD_COMMIT__ !== 'undefined' && __BUILD_COMMIT__ ? `?v=${__BUILD_COMMIT__}` : '';
+  const cacheBuster =
+    typeof __BUILD_COMMIT__ !== 'undefined' && __BUILD_COMMIT__ ? `?v=${__BUILD_COMMIT__}` : '';
   const [res, updates] = await Promise.all([
     fetch(`${import.meta.env.BASE_URL}data.json${cacheBuster}`),
     // Update dates are optional decoration: the directory still works without them.
@@ -152,7 +151,8 @@ export async function loadRoster(): Promise<Roster> {
 
 export async function loadRelationships(): Promise<RelationshipDatabase> {
   if (relationshipsCached) return relationshipsCached;
-  const cacheBuster = typeof __BUILD_COMMIT__ !== 'undefined' && __BUILD_COMMIT__ ? `?v=${__BUILD_COMMIT__}` : '';
+  const cacheBuster =
+    typeof __BUILD_COMMIT__ !== 'undefined' && __BUILD_COMMIT__ ? `?v=${__BUILD_COMMIT__}` : '';
   try {
     const res = await fetch(`${import.meta.env.BASE_URL}relationships.json${cacheBuster}`);
     if (!res.ok) throw new Error(`Failed to load relationships.json: ${res.status}`);
@@ -253,7 +253,14 @@ export function fieldRegionPath(field: string, region: string): string {
 }
 
 export const MIN_ROSTER_HUB_SIZE = 3;
-export const ROSTER_CONTINENTS = ['North America', 'Europe', 'Australasia', 'Asia', 'South America', 'Africa'] as const;
+export const ROSTER_CONTINENTS = [
+  'North America',
+  'Europe',
+  'Australasia',
+  'Asia',
+  'South America',
+  'Africa',
+] as const;
 
 export function hasEnoughPeopleForRosterHub(memberCount: number): boolean {
   return memberCount >= MIN_ROSTER_HUB_SIZE;
@@ -266,9 +273,11 @@ export function canonicalRank(person: Pick<RosterEntry, 'track' | 'rank'>): stri
   const { rank, track } = person;
   if (track === 'Emeritus') return rank ? `${rank} Emeritus` : 'Emeritus';
   if (!rank) return track;
-  const qualifier = track === 'Teaching' || track === 'Clinical' || track === 'Research' ? track : '';
+  const qualifier =
+    track === 'Teaching' || track === 'Clinical' || track === 'Research' ? track : '';
   if (qualifier && rank === 'Professor') return `${qualifier} Professor`;
-  if (qualifier && (rank === 'Assistant Professor' || rank === 'Associate Professor')) return rank.replace(' Professor', ` ${qualifier} Professor`);
+  if (qualifier && (rank === 'Assistant Professor' || rank === 'Associate Professor'))
+    return rank.replace(' Professor', ` ${qualifier} Professor`);
   return rank;
 }
 
@@ -277,42 +286,152 @@ export function canonicalRank(person: Pick<RosterEntry, 'track' | 'rank'>): stri
 // surname diacritics. A record may provide `vietnameseName` when an authoritative source gives
 // the person's complete Vietnamese name; otherwise initials are deliberately preserved.
 const VIETNAMESE_SURNAMES = new Map([
-  ['Bui', 'Bùi'], ['Cao', 'Cao'], ['Chau', 'Châu'], ['Dang', 'Đặng'], ['Dao', 'Đào'],
-  ['Dinh', 'Đinh'], ['Do', 'Đỗ'], ['Doan', 'Đoàn'], ['Duong', 'Dương'], ['Ha', 'Hà'],
-  ['Ho', 'Hồ'], ['Hoang', 'Hoàng'], ['Huynh', 'Huỳnh'], ['Lam', 'Lâm'], ['Le', 'Lê'],
-  ['Ly', 'Lý'], ['Mai', 'Mai'], ['Ngo', 'Ngô'], ['Nguyen', 'Nguyễn'], ['Pham', 'Phạm'],
-  ['Phan', 'Phan'], ['Ta', 'Tạ'], ['To', 'Tô'], ['Tran', 'Trần'], ['Trinh', 'Trịnh'], ['Truong', 'Trương'],
-  ['Vo', 'Võ'], ['Vu', 'Vũ'], ['Vuong', 'Vương'],
+  ['Bui', 'Bùi'],
+  ['Cao', 'Cao'],
+  ['Chau', 'Châu'],
+  ['Dang', 'Đặng'],
+  ['Dao', 'Đào'],
+  ['Dinh', 'Đinh'],
+  ['Do', 'Đỗ'],
+  ['Doan', 'Đoàn'],
+  ['Duong', 'Dương'],
+  ['Ha', 'Hà'],
+  ['Ho', 'Hồ'],
+  ['Hoang', 'Hoàng'],
+  ['Huynh', 'Huỳnh'],
+  ['Lam', 'Lâm'],
+  ['Le', 'Lê'],
+  ['Ly', 'Lý'],
+  ['Mai', 'Mai'],
+  ['Ngo', 'Ngô'],
+  ['Nguyen', 'Nguyễn'],
+  ['Pham', 'Phạm'],
+  ['Phan', 'Phan'],
+  ['Ta', 'Tạ'],
+  ['To', 'Tô'],
+  ['Tran', 'Trần'],
+  ['Trinh', 'Trịnh'],
+  ['Truong', 'Trương'],
+  ['Vo', 'Võ'],
+  ['Vu', 'Vũ'],
+  ['Vuong', 'Vương'],
 ]);
 
 // Hoisted to module scope: this runs once per rendered entry, and rebuilding a ~100-entry Map
 // on every call showed up in profile/list rendering.
 const VIETNAMESE_GIVEN_NAME_MARKS = new Map([
-  ['Anh', 'Anh'], ['Bach', 'Bạch'], ['Bao', 'Bảo'], ['Bich', 'Bích'], ['Binh', 'Bình'],
-  ['Chinh', 'Chính'], ['Chung', 'Chung'], ['Cuong', 'Cường'], ['Dat', 'Đạt'], ['Danh', 'Danh'],
-  ['Dam', 'Đàm'], ['Dau', 'Đậu'], ['Diep', 'Diệp'], ['Diem', 'Diễm'], ['Dien', 'Điền'],
-  ['Dinh', 'Đình'], ['Doan', 'Đoàn'], ['Duc', 'Đức'], ['Duy', 'Duy'], ['Giao', 'Giao'],
-  ['Giang', 'Giang'], ['Hai', 'Hải'], ['Han', 'Hân'], ['Hanh', 'Hạnh'], ['Hang', 'Hằng'], ['Hau', 'Hậu'], ['Ha', 'Hà'],
-  ['Hieu', 'Hiếu'], ['Hiep', 'Hiệp'], ['Hien', 'Hiền'], ['Hoai', 'Hoài'], ['Hoa', 'Hoa'],
-  ['Hong', 'Hồng'], ['Hoang', 'Hoàng'], ['Hop', 'Hợp'], ['Huong', 'Hương'], ['Huyen', 'Huyền'], ['Huu', 'Hữu'],
-  ['Khai', 'Khải'], ['Khanh', 'Khánh'], ['Khang', 'Khang'], ['Khiem', 'Khiêm'], ['Khoa', 'Khoa'],
-  ['Khuong', 'Khương'], ['Kieu', 'Kiều'], ['Lan', 'Lan'], ['Lap', 'Lập'], ['Lien', 'Liên'],
-  ['Liem', 'Liêm'], ['Linh', 'Linh'], ['Loan', 'Loan'], ['Loi', 'Lợi'], ['Long', 'Long'],
-  ['Luan', 'Luân'], ['Mai', 'Mai'], ['Manh', 'Mạnh'], ['Minh', 'Minh'], ['Ngan', 'Ngân'],
-  ['Nghia', 'Nghĩa'], ['Nghiem', 'Nghiêm'], ['Ngoc', 'Ngọc'], ['Nhung', 'Nhung'], ['Nhu', 'Như'],
-  ['Nhat', 'Nhật'], ['Phat', 'Phát'], ['Phu', 'Phú'], ['Phuc', 'Phúc'],
-  ['Phuong', 'Phương'], ['Phuoc', 'Phước'], ['Phong', 'Phong'], ['Quang', 'Quang'], ['Quan', 'Quân'],
-  ['Quoc', 'Quốc'], ['Quyen', 'Quyền'], ['Quynh', 'Quỳnh'], ['Sang', 'Sáng'], ['Son', 'Sơn'],
-  ['Tai', 'Tài'], ['Tam', 'Tâm'], ['Tan', 'Tân'], ['Thang', 'Thắng'], ['Thao', 'Thảo'],
-  ['Thien', 'Thiện'], ['Thinh', 'Thịnh'], ['Tho', 'Thọ'], ['Thai', 'Thái'], ['Thuan', 'Thuận'], ['Thuc', 'Thức'],
-  ['Tien', 'Tiến'], ['Toan', 'Toàn'], ['Tram', 'Trâm'], ['Trieu', 'Triều'], ['Trong', 'Trọng'],
-  ['Trung', 'Trung'], ['Truong', 'Trường'], ['Tuan', 'Tuấn'], ['Tung', 'Tùng'], ['Tuyen', 'Tuyền'],
-  ['Uyen', 'Uyên'], ['Vi', 'Vi'], ['Viet', 'Việt'], ['Vinh', 'Vinh'], ['Vu', 'Vũ'],
-  ['Xuan', 'Xuân'], ['Yen', 'Yến'],
+  ['Anh', 'Anh'],
+  ['Bach', 'Bạch'],
+  ['Bao', 'Bảo'],
+  ['Bich', 'Bích'],
+  ['Binh', 'Bình'],
+  ['Chinh', 'Chính'],
+  ['Chung', 'Chung'],
+  ['Cuong', 'Cường'],
+  ['Dat', 'Đạt'],
+  ['Danh', 'Danh'],
+  ['Dam', 'Đàm'],
+  ['Dau', 'Đậu'],
+  ['Diep', 'Diệp'],
+  ['Diem', 'Diễm'],
+  ['Dien', 'Điền'],
+  ['Dinh', 'Đình'],
+  ['Doan', 'Đoàn'],
+  ['Duc', 'Đức'],
+  ['Duy', 'Duy'],
+  ['Giao', 'Giao'],
+  ['Giang', 'Giang'],
+  ['Hai', 'Hải'],
+  ['Han', 'Hân'],
+  ['Hanh', 'Hạnh'],
+  ['Hang', 'Hằng'],
+  ['Hau', 'Hậu'],
+  ['Ha', 'Hà'],
+  ['Hieu', 'Hiếu'],
+  ['Hiep', 'Hiệp'],
+  ['Hien', 'Hiền'],
+  ['Hoai', 'Hoài'],
+  ['Hoa', 'Hoa'],
+  ['Hong', 'Hồng'],
+  ['Hoang', 'Hoàng'],
+  ['Hop', 'Hợp'],
+  ['Huong', 'Hương'],
+  ['Huyen', 'Huyền'],
+  ['Huu', 'Hữu'],
+  ['Khai', 'Khải'],
+  ['Khanh', 'Khánh'],
+  ['Khang', 'Khang'],
+  ['Khiem', 'Khiêm'],
+  ['Khoa', 'Khoa'],
+  ['Khuong', 'Khương'],
+  ['Kieu', 'Kiều'],
+  ['Lan', 'Lan'],
+  ['Lap', 'Lập'],
+  ['Lien', 'Liên'],
+  ['Liem', 'Liêm'],
+  ['Linh', 'Linh'],
+  ['Loan', 'Loan'],
+  ['Loi', 'Lợi'],
+  ['Long', 'Long'],
+  ['Luan', 'Luân'],
+  ['Mai', 'Mai'],
+  ['Manh', 'Mạnh'],
+  ['Minh', 'Minh'],
+  ['Ngan', 'Ngân'],
+  ['Nghia', 'Nghĩa'],
+  ['Nghiem', 'Nghiêm'],
+  ['Ngoc', 'Ngọc'],
+  ['Nhung', 'Nhung'],
+  ['Nhu', 'Như'],
+  ['Nhat', 'Nhật'],
+  ['Phat', 'Phát'],
+  ['Phu', 'Phú'],
+  ['Phuc', 'Phúc'],
+  ['Phuong', 'Phương'],
+  ['Phuoc', 'Phước'],
+  ['Phong', 'Phong'],
+  ['Quang', 'Quang'],
+  ['Quan', 'Quân'],
+  ['Quoc', 'Quốc'],
+  ['Quyen', 'Quyền'],
+  ['Quynh', 'Quỳnh'],
+  ['Sang', 'Sáng'],
+  ['Son', 'Sơn'],
+  ['Tai', 'Tài'],
+  ['Tam', 'Tâm'],
+  ['Tan', 'Tân'],
+  ['Thang', 'Thắng'],
+  ['Thao', 'Thảo'],
+  ['Thien', 'Thiện'],
+  ['Thinh', 'Thịnh'],
+  ['Tho', 'Thọ'],
+  ['Thai', 'Thái'],
+  ['Thuan', 'Thuận'],
+  ['Thuc', 'Thức'],
+  ['Tien', 'Tiến'],
+  ['Toan', 'Toàn'],
+  ['Tram', 'Trâm'],
+  ['Trieu', 'Triều'],
+  ['Trong', 'Trọng'],
+  ['Trung', 'Trung'],
+  ['Truong', 'Trường'],
+  ['Tuan', 'Tuấn'],
+  ['Tung', 'Tùng'],
+  ['Tuyen', 'Tuyền'],
+  ['Uyen', 'Uyên'],
+  ['Vi', 'Vi'],
+  ['Viet', 'Việt'],
+  ['Vinh', 'Vinh'],
+  ['Vu', 'Vũ'],
+  ['Xuan', 'Xuân'],
+  ['Yen', 'Yến'],
 ]);
 
 function vietnameseGivenNames(value: string): string {
-  return value.replace(/\b[A-Za-z]+\b/g, (token) => VIETNAMESE_GIVEN_NAME_MARKS.get(token) ?? token);
+  return value.replace(
+    /\b[A-Za-z]+\b/g,
+    (token) => VIETNAMESE_GIVEN_NAME_MARKS.get(token) ?? token,
+  );
 }
 
 function surnameKey(token: string): string {
@@ -342,13 +461,19 @@ export function vietnameseName(person: RosterEntry): string {
   // Some Vietnamese sources publish family name first. For the roster's readable
   // parenthetical form, move an initial Nguyễn to the final family-name position.
   if (firstKey === 'Nguyen' && lastKey !== 'Nguyen') {
-    return vietnameseGivenNames(`${tokens.slice(1).join(' ')} ${VIETNAMESE_SURNAMES.get('Nguyen')}`);
+    return vietnameseGivenNames(
+      `${tokens.slice(1).join(' ')} ${VIETNAMESE_SURNAMES.get('Nguyen')}`,
+    );
   }
   if (VIETNAMESE_SURNAMES.has(firstKey) && !VIETNAMESE_SURNAMES.has(lastKey)) {
-    return vietnameseGivenNames(`${VIETNAMESE_SURNAMES.get(firstKey)} ${tokens.slice(1).join(' ')}`);
+    return vietnameseGivenNames(
+      `${VIETNAMESE_SURNAMES.get(firstKey)} ${tokens.slice(1).join(' ')}`,
+    );
   }
   if (VIETNAMESE_SURNAMES.has(lastKey)) {
-    return vietnameseGivenNames(`${VIETNAMESE_SURNAMES.get(lastKey)} ${tokens.slice(0, -1).reverse().join(' ')}`);
+    return vietnameseGivenNames(
+      `${VIETNAMESE_SURNAMES.get(lastKey)} ${tokens.slice(0, -1).reverse().join(' ')}`,
+    );
   }
   return vietnameseGivenNames(current);
 }
@@ -384,7 +509,11 @@ export function continentOf(country?: string | null): string {
 export function locationMatches(person: Pick<RosterEntry, 'country'>, location?: string): boolean {
   if (!location || location === 'World' || location === 'all') return true;
   const country = person.country || 'United States';
-  if (location.toLowerCase() === 'us' || location.toLowerCase() === 'united states' || location.toLowerCase() === 'usa') {
+  if (
+    location.toLowerCase() === 'us' ||
+    location.toLowerCase() === 'united states' ||
+    location.toLowerCase() === 'usa'
+  ) {
     return country === 'United States' || country === 'US' || country === 'USA';
   }
   // Country names are also valid location values for the country-based dropdown. Keep
@@ -442,9 +571,15 @@ export const HEALTH_SUBFIELDS = [
 // institution it's at, not just the department string.
 const FIELD_OVERRIDES = new Map([
   // Cal Poly Pomona's Technology and Operations Department (College of Business Administration).
-  ['Technology and Operations|California State Polytechnic University, Pomona', 'Business & Economics'],
+  [
+    'Technology and Operations|California State Polytechnic University, Pomona',
+    'Business & Economics',
+  ],
   // UiT Narvik building, energy and materials technology (civil/structural engineering).
-  ['Department of Building, Energy and Material Technology|UiT The Arctic University of Norway', 'Engineering'],
+  [
+    'Department of Building, Energy and Material Technology|UiT The Arctic University of Norway',
+    'Engineering',
+  ],
   // Polish literature (philology institute name carries no field keyword).
   ['Institute of Polish Philology|University of Wrocław', 'Humanities'],
   // Gachon's Bio-Nano Technology department; this member works in chemical engineering and materials.
@@ -454,15 +589,27 @@ const FIELD_OVERRIDES = new Map([
   // RMIT's School of Science; this member works in molecular microbiology and the gut microbiome.
   ['School of Science|RMIT University', 'Biological & Biomedical Sciences'],
   // Fayetteville State's combined department; this member works in geospatial science and remote sensing.
-  ['Department of Intelligence Studies, Geospatial Science, Political Science and History|Fayetteville State University', 'Earth & Environmental Sciences'],
+  [
+    'Department of Intelligence Studies, Geospatial Science, Political Science and History|Fayetteville State University',
+    'Earth & Environmental Sciences',
+  ],
   // Malmö's Department of Urban Studies (urban development, housing policy).
   ['Department of Urban Studies|Malmö University', 'Social & Behavioral Sciences'],
   // NYCU's semiconductor college; 2D semiconductor materials and devices.
-  ['International College of Semiconductor Technology|National Yang Ming Chiao Tung University', 'Engineering'],
+  [
+    'International College of Semiconductor Technology|National Yang Ming Chiao Tung University',
+    'Engineering',
+  ],
   // Polish Academy of Sciences low-temperature institute: superconductivity and magnetism.
-  ['Division of Magnetic Research|Institute of Low Temperature and Structure Research, Polish Academy of Sciences', 'Physics & Astronomy'],
+  [
+    'Division of Magnetic Research|Institute of Low Temperature and Structure Research, Polish Academy of Sciences',
+    'Physics & Astronomy',
+  ],
   // SIT's ICT cluster (cybersecurity, networking); the cluster name has no field keyword.
-  ['Infocomm Technology Cluster|Singapore Institute of Technology', 'Computer & Information Sciences'],
+  [
+    'Infocomm Technology Cluster|Singapore Institute of Technology',
+    'Computer & Information Sciences',
+  ],
   // SIT's aviation and aircraft-structures faculty sit in the Business, Communication and Design cluster.
   ['Business, Communication and Design Cluster|Singapore Institute of Technology', 'Engineering'],
   // York's interdisciplinary Social Science department (international development studies).
@@ -484,63 +631,114 @@ const FIELD_OVERRIDES = new Map([
   // Computational number theory and cryptography; the Augustana unit name is generic.
   ['Augustana Faculty - Sciences|University of Alberta', 'Mathematics'],
   // Surrey's vision/speech/signal-processing centre; Lecturer in People-centred AI.
-  ['Centre for Vision, Speech and Signal Processing|University of Surrey', 'Computer & Information Sciences'],
+  [
+    'Centre for Vision, Speech and Signal Processing|University of Surrey',
+    'Computer & Information Sciences',
+  ],
   // Optical/laser physics and spectroscopy work (nanoparticle thermometry, molecular
   // spectroscopy); the group name alone carries no field keyword.
-  ['Remote Sensing Group, Physical Measurement Laboratory|National Institute of Standards and Technology', 'Physics & Astronomy'],
+  [
+    'Remote Sensing Group, Physical Measurement Laboratory|National Institute of Standards and Technology',
+    'Physics & Astronomy',
+  ],
   // Computational condensed-matter physics (PhD in Physics, ETH Zurich); the directorate name
   // alone carries no field keyword.
-  ['Physical and Computational Sciences Directorate|Pacific Northwest National Laboratory', 'Physics & Astronomy'],
+  [
+    'Physical and Computational Sciences Directorate|Pacific Northwest National Laboratory',
+    'Physics & Astronomy',
+  ],
   // Aerospace-engineering PhD applied to offshore wind turbine CFD; the center name alone
   // carries no field keyword.
-  ['Center for Energy Conversion and Storage Systems|National Laboratory of the Rockies', 'Engineering'],
+  [
+    'Center for Energy Conversion and Storage Systems|National Laboratory of the Rockies',
+    'Engineering',
+  ],
   // Social epidemiologist; the NIH intramural program name alone carries no field keyword.
   ['NIH Intramural Research Program|National Institute of Nursing Research', 'Health Sciences'],
   // Astrophysicist (galaxy formation, cosmological simulations) stationed at NASA Goddard; the
   // consortium/center name alone carries no field keyword.
-  ['CRESST II, stationed at NASA Goddard Space Flight Center|University of Maryland, Baltimore County', 'Physics & Astronomy'],
+  [
+    'CRESST II, stationed at NASA Goddard Space Flight Center|University of Maryland, Baltimore County',
+    'Physics & Astronomy',
+  ],
   // Electrical-engineering PhD, power-systems modeling and grid optimization; the group name
   // alone carries no field keyword.
   ['Grid and Electricity Infrastructure|Oak Ridge National Laboratory', 'Engineering'],
   // Planetary geochemistry (icy worlds, clathrate hydrates, astrobiology); the group name alone
   // carries no field keyword.
-  ['Planetary Science, Laboratory Studies Group|NASA Jet Propulsion Laboratory', 'Earth & Environmental Sciences'],
+  [
+    'Planetary Science, Laboratory Studies Group|NASA Jet Propulsion Laboratory',
+    'Earth & Environmental Sciences',
+  ],
   // Atomic/trapped-ion physicist (PhD Physics, Georgia Tech); the group name alone carries no
   // field keyword.
   ['Atomic Clock Technology Group|NASA Jet Propulsion Laboratory', 'Physics & Astronomy'],
   // Synchrotron X-ray physicist (PhD Physics, National University of Singapore); the beamline
   // name alone carries no field keyword.
-  ['HEX Beamline, National Synchrotron Light Source II|Brookhaven National Laboratory', 'Physics & Astronomy'],
+  [
+    'HEX Beamline, National Synchrotron Light Source II|Brookhaven National Laboratory',
+    'Physics & Astronomy',
+  ],
   ["École d'actuariat|Université Laval", 'Mathematics'],
   ['E.T.S.I. Aeronáutica y del Espacio|Universidad Politécnica de Madrid', 'Engineering'],
   ['Accelerator Directorate|SLAC National Accelerator Laboratory', 'Physics & Astronomy'],
-  ['Direction Europe et International|CNRS (Centre National de la Recherche Scientifique)', 'Biological & Biomedical Sciences'],
-  ['Centre de Recherche sur l\'Inflammation|CNRS (Centre National de la Recherche Scientifique)', 'Biological & Biomedical Sciences'],
-  ['Institut de Biosciences et Biotechnologies d\'Aix-Marseille|CNRS (Centre National de la Recherche Scientifique)', 'Biological & Biomedical Sciences'],
-  ['Centre d\'Immunologie de Marseille-Luminy (CIML)|CNRS (Centre National de la Recherche Scientifique)', 'Biological & Biomedical Sciences'],
+  [
+    'Direction Europe et International|CNRS (Centre National de la Recherche Scientifique)',
+    'Biological & Biomedical Sciences',
+  ],
+  [
+    "Centre de Recherche sur l'Inflammation|CNRS (Centre National de la Recherche Scientifique)",
+    'Biological & Biomedical Sciences',
+  ],
+  [
+    "Institut de Biosciences et Biotechnologies d'Aix-Marseille|CNRS (Centre National de la Recherche Scientifique)",
+    'Biological & Biomedical Sciences',
+  ],
+  [
+    "Centre d'Immunologie de Marseille-Luminy (CIML)|CNRS (Centre National de la Recherche Scientifique)",
+    'Biological & Biomedical Sciences',
+  ],
   ['Faculté de Santé|Université Paris Cité', 'Health Sciences'],
   ['Faculty of Science and Technology|Middlesex University', 'Computer & Information Sciences'],
-  ['Istituto per le Applicazioni del Calcolo "Mauro Picone"|National Research Council of Italy', 'Mathematics'],
+  [
+    'Istituto per le Applicazioni del Calcolo "Mauro Picone"|National Research Council of Italy',
+    'Mathematics',
+  ],
   ['HAMK Bio|Häme University of Applied Sciences', 'Agricultural & Natural Resource Sciences'],
   ['Information Studies|University of California, Los Angeles', 'Education'],
-  ['Institute of Humanities and Social Sciences|University of Tsukuba', 'Earth & Environmental Sciences'],
+  [
+    'Institute of Humanities and Social Sciences|University of Tsukuba',
+    'Earth & Environmental Sciences',
+  ],
   // These new research appointments have department or center names whose disciplinary home
   // is clearer from their official university context than from the generic words alone.
   ['Anesthesia|Indiana University School of Medicine', 'Health Sciences'],
-  ['Biostatistics and Health Data Science|Indiana University School of Medicine', 'Statistics & Data Science'],
+  [
+    'Biostatistics and Health Data Science|Indiana University School of Medicine',
+    'Statistics & Data Science',
+  ],
   ['National Center for Asphalt Technology|Auburn University', 'Engineering'],
   // Photonics/microtechnology research department; neither "microtechnology" nor "nanoscience"
   // matches the Engineering regex's "nanotechnology" keyword.
-  ['Department of Microtechnology and Nanoscience (MC2)|Chalmers University of Technology', 'Engineering'],
+  [
+    'Department of Microtechnology and Nanoscience (MC2)|Chalmers University of Technology',
+    'Engineering',
+  ],
   // Digital-communication-engineering appointment; "Mathematics" in the department's combined
   // name would otherwise win the Mathematics keyword match ahead of Engineering.
   ['Design Engineering and Mathematics|Middlesex University', 'Engineering'],
   // Computational-neuroscience research center; no Biological & Biomedical Sciences keyword in
   // the center's own name, so it would otherwise fall through to Others.
-  ['Center for Brain, Mind and KANSEI Sciences Research|Hiroshima University', 'Biological & Biomedical Sciences'],
+  [
+    'Center for Brain, Mind and KANSEI Sciences Research|Hiroshima University',
+    'Biological & Biomedical Sciences',
+  ],
   // Generic Speech-Language-Hearing-style department name, but this specific appointment's
   // primary focus (per its own official listing) is multilingual/English education.
-  ['Linguistics and Communication Disorders|Queens College, City University of New York', 'Education'],
+  [
+    'Linguistics and Communication Disorders|Queens College, City University of New York',
+    'Education',
+  ],
   // English, writing, and TESOL faculty; the bare "communication" keyword would otherwise send it to
   // Social & Behavioral Sciences.
   ['Humanities and Communication|Embry-Riddle Aeronautical University', 'Humanities'],
@@ -554,7 +752,10 @@ const FIELD_OVERRIDES = new Map([
   // Combined department, but her research areas (Statistical Geometry, Experimental Design,
   // Causal Inference) are statistics, not mathematics — the generic Mathematics rule would
   // otherwise win since it's checked first.
-  ['Department of Mathematics and Statistics|University of Saskatchewan', 'Statistics & Data Science'],
+  [
+    'Department of Mathematics and Statistics|University of Saskatchewan',
+    'Statistics & Data Science',
+  ],
   // "Great Texts Program" is Baylor Honors College's great-books curriculum — the department
   // string alone gives no field signal, but Jonathan Tran's own title ("Associate Professor of
   // Theology in the Great Texts Program") and George W. Baines Chair of Religion put him
@@ -593,17 +794,29 @@ const FIELD_OVERRIDES = new Map([
   ['Institute of Marine Sciences|Shantou University', 'Agricultural & Natural Resource Sciences'],
   // JAIST Knowledge Science houses this materials-informatics / data-driven-AI appointment;
   // the school name itself has no computing keyword.
-  ['School of Knowledge Science|Japan Advanced Institute of Science and Technology', 'Computer & Information Sciences'],
+  [
+    'School of Knowledge Science|Japan Advanced Institute of Science and Technology',
+    'Computer & Information Sciences',
+  ],
   // Osaka SANKEN lab is statistical causal inference / ML; the institute name would otherwise
   // fall through as Others.
-  ['SANKEN, Department of Reasoning for Intelligence|Osaka University', 'Computer & Information Sciences'],
+  [
+    'SANKEN, Department of Reasoning for Intelligence|Osaka University',
+    'Computer & Information Sciences',
+  ],
   // Generic interdisciplinary-institute name gives no field signal, but Le Bin Ho's own research
   // (quantum information, open quantum systems) is squarely Physics & Astronomy.
-  ['Frontier Research Institute for Interdisciplinary Sciences|Tohoku University', 'Physics & Astronomy'],
+  [
+    'Frontier Research Institute for Interdisciplinary Sciences|Tohoku University',
+    'Physics & Astronomy',
+  ],
   // Program name reads more clinical than agricultural, but Thu Dung Doan's own research
   // (livestock vaccine development) is animal science, which already buckets under Agricultural
   // & Natural Resource Sciences elsewhere in this taxonomy.
-  ['International Degree Program in Animal Vaccine Technology|National Pingtung University of Science and Technology', 'Agricultural & Natural Resource Sciences'],
+  [
+    'International Degree Program in Animal Vaccine Technology|National Pingtung University of Science and Technology',
+    'Agricultural & Natural Resource Sciences',
+  ],
   // "Administrative Studies" alone reads as public administration, but Phuong-Anh Nguyen's own
   // title and research (Finance) put her in York's business school.
   ['School of Administrative Studies|York University', 'Business & Economics'],
@@ -615,9 +828,15 @@ const FIELD_OVERRIDES = new Map([
   // ETIS (Équipes Traitement de l'Information et Systèmes) is CY Cergy Paris's information processing / CS lab.
   ['ETIS Laboratory|CY Cergy Paris Université', 'Computer & Information Sciences'],
   // ISMO (Institut des Sciences Moléculaires d'Orsay) is a joint CNRS / Université Paris-Saclay molecular physics and chemistry lab.
-  ["Institut des Sciences Moléculaires d'Orsay (ISMO) / Université Paris-Saclay|CNRS (Centre National de la Recherche Scientifique)", 'Physics & Astronomy'],
+  [
+    "Institut des Sciences Moléculaires d'Orsay (ISMO) / Université Paris-Saclay|CNRS (Centre National de la Recherche Scientifique)",
+    'Physics & Astronomy',
+  ],
   // NRC Automotive and Surface Transportation Research Centre is materials and automotive engineering.
-  ['Automotive and Surface Transportation Research Centre|National Research Council Canada', 'Engineering'],
+  [
+    'Automotive and Surface Transportation Research Centre|National Research Council Canada',
+    'Engineering',
+  ],
   // Bare "Social Sciences" gives no field signal, but Van Tho Tran's own research (international
   // and development economics) is Business & Economics.
   ['Social Sciences|Waseda University', 'Business & Economics'],
@@ -638,33 +857,75 @@ const FIELD_OVERRIDES = new Map([
   // Nhung Nghiem's appointment is administratively housed in a genomics department, but her own
   // title ("Associate Professor of Health Economics") and research (health economics, public
   // health modelling) are Business & Economics, not biology.
-  ['Department of Genome Sciences, John Curtin School of Medical Research|Australian National University', 'Business & Economics'],
+  [
+    'Department of Genome Sciences, John Curtin School of Medical Research|Australian National University',
+    'Business & Economics',
+  ],
   // SnT (Interdisciplinary Centre for Security, Reliability and Trust) is Luxembourg's computer science/cybersecurity research centre.
-  ['Interdisciplinary Centre for Security, Reliability and Trust|University of Luxembourg', 'Computer & Information Sciences'],
+  [
+    'Interdisciplinary Centre for Security, Reliability and Trust|University of Luxembourg',
+    'Computer & Information Sciences',
+  ],
   ['Laboratory for Energy Systems Analysis|Paul Scherrer Institute', 'Engineering'],
   ['School of Aviation|Massey University', 'Engineering'],
-  ['Faculty of Humanities and Social Sciences|University of Tsukuba', 'Social & Behavioral Sciences'],
-  ['College of Asia Pacific Studies|Ritsumeikan Asia Pacific University', 'Social & Behavioral Sciences'],
-  ['UMR Agroécologie|INRAE (Institut National de Recherche pour l\u0027Agriculture, l\u0027Alimentation et l\u0027Environnement)', 'Agricultural & Natural Resource Sciences'],
-  ['Department of Nematology|University of California, Riverside', 'Agricultural & Natural Resource Sciences'],
+  [
+    'Faculty of Humanities and Social Sciences|University of Tsukuba',
+    'Social & Behavioral Sciences',
+  ],
+  [
+    'College of Asia Pacific Studies|Ritsumeikan Asia Pacific University',
+    'Social & Behavioral Sciences',
+  ],
+  [
+    'UMR Agroécologie|INRAE (Institut National de Recherche pour l\u0027Agriculture, l\u0027Alimentation et l\u0027Environnement)',
+    'Agricultural & Natural Resource Sciences',
+  ],
+  [
+    'Department of Nematology|University of California, Riverside',
+    'Agricultural & Natural Resource Sciences',
+  ],
   ['Centre RAPSODEE|IMT Mines Albi', 'Engineering'],
-  ['CSIRO Manufacturing|CSIRO (Commonwealth Scientific and Industrial Research Organisation)', 'Engineering'],
+  [
+    'CSIRO Manufacturing|CSIRO (Commonwealth Scientific and Industrial Research Organisation)',
+    'Engineering',
+  ],
   ['Data61, Quantum Systems Team|CSIRO', 'Computer & Information Sciences'],
   ['Data61, Cyber Security and Privacy|CSIRO', 'Computer & Information Sciences'],
   ['Data61, Privacy Technology Group|CSIRO', 'Computer & Information Sciences'],
   ['Center for Low-temperature Plasma Sciences|Nagoya University', 'Physics & Astronomy'],
-  ['Institut des Sciences Moléculaires|CNRS (Centre National de la Recherche Scientifique)', 'Chemistry'],
+  [
+    'Institut des Sciences Moléculaires|CNRS (Centre National de la Recherche Scientifique)',
+    'Chemistry',
+  ],
   ['Lurie Family Imaging Center|Dana-Farber Cancer Institute', 'Health Sciences'],
   ['Institut des Sciences de la Terre|Université Grenoble Alpes', 'Earth & Environmental Sciences'],
-  ['Structural Studies Division|MRC Laboratory of Molecular Biology', 'Biological & Biomedical Sciences'],
+  [
+    'Structural Studies Division|MRC Laboratory of Molecular Biology',
+    'Biological & Biomedical Sciences',
+  ],
   ['Nishina Center for Accelerator-Based Science|RIKEN', 'Physics & Astronomy'],
-  ['Centre for Atom Optics and Ultrafast Spectroscopy|Swinburne University of Technology', 'Physics & Astronomy'],
-  ['Light-Matter Interactions for Quantum Technologies Unit|Okinawa Institute of Science and Technology', 'Physics & Astronomy'],
-  ['National Center for Computational Sciences|Oak Ridge National Laboratory', 'Computer & Information Sciences'],
-  ['Centre d\u0027Études Spatiales de la Biosphère|CNRS (Centre National de la Recherche Scientifique)', 'Earth & Environmental Sciences'],
+  [
+    'Centre for Atom Optics and Ultrafast Spectroscopy|Swinburne University of Technology',
+    'Physics & Astronomy',
+  ],
+  [
+    'Light-Matter Interactions for Quantum Technologies Unit|Okinawa Institute of Science and Technology',
+    'Physics & Astronomy',
+  ],
+  [
+    'National Center for Computational Sciences|Oak Ridge National Laboratory',
+    'Computer & Information Sciences',
+  ],
+  [
+    'Centre d\u0027Études Spatiales de la Biosphère|CNRS (Centre National de la Recherche Scientifique)',
+    'Earth & Environmental Sciences',
+  ],
   ['WMG|University of Warwick', 'Engineering'],
   ['Laboratoire de Mécanique, Multiphysique, Multiéchelle|Centrale Lille Institut', 'Engineering'],
-  ['Laboratoire Modélisation et Simulation Multi Echelle|Université Paris-Est Créteil', 'Engineering'],
+  [
+    'Laboratoire Modélisation et Simulation Multi Echelle|Université Paris-Est Créteil',
+    'Engineering',
+  ],
   ['LIST3N|Université de Technologie de Troyes', 'Engineering'],
   ['FEMTO-ST Institute|Supmicrotech-ENSMM', 'Engineering'],
   ['Space Vehicles Directorate|Air Force Research Laboratory', 'Engineering'],
@@ -680,70 +941,184 @@ const FIELD_OVERRIDES = new Map([
   ['Laboratoire MIVEGEC|Institut de Recherche pour le Développement', 'Health Sciences'],
   ['Institute for Virology|University of Duisburg-Essen', 'Health Sciences'],
   ['School of Mathematics and Statistics|The University of Sydney', 'Statistics & Data Science'],
-  ['Department of Animal and Aquatic Sciences|Chiang Mai University', 'Agricultural & Natural Resource Sciences'],
-  ['Educational Technology Lab|German Research Center for Artificial Intelligence', 'Computer & Information Sciences'],
-  ['Institute of Chemistry for Life and Health Sciences (Chimie ParisTech - PSL)|CNRS (Centre National de la Recherche Scientifique)', 'Chemistry'],
-  ['Biochimie et Physiologie Moléculaire des Plantes (BPMP)|CNRS (Centre National de la Recherche Scientifique)', 'Biological & Biomedical Sciences'],
-  ['Water Resources Management Group|Wageningen University & Research', 'Earth & Environmental Sciences'],
-  ['Plant Pathology and Host Plant Resistance Group|International Rice Research Institute', 'Agricultural & Natural Resource Sciences'],
+  [
+    'Department of Animal and Aquatic Sciences|Chiang Mai University',
+    'Agricultural & Natural Resource Sciences',
+  ],
+  [
+    'Educational Technology Lab|German Research Center for Artificial Intelligence',
+    'Computer & Information Sciences',
+  ],
+  [
+    'Institute of Chemistry for Life and Health Sciences (Chimie ParisTech - PSL)|CNRS (Centre National de la Recherche Scientifique)',
+    'Chemistry',
+  ],
+  [
+    'Biochimie et Physiologie Moléculaire des Plantes (BPMP)|CNRS (Centre National de la Recherche Scientifique)',
+    'Biological & Biomedical Sciences',
+  ],
+  [
+    'Water Resources Management Group|Wageningen University & Research',
+    'Earth & Environmental Sciences',
+  ],
+  [
+    'Plant Pathology and Host Plant Resistance Group|International Rice Research Institute',
+    'Agricultural & Natural Resource Sciences',
+  ],
   ['Center for Computational Sciences|University of Tsukuba', 'Earth & Environmental Sciences'],
-  ['Laboratoire d\u0027Optique Appliquée (LOA)|CNRS (Centre National de la Recherche Scientifique)', 'Physics & Astronomy'],
-  ['Laboratoire de Physique Théorique|CNRS (Centre National de la Recherche Scientifique)', 'Physics & Astronomy'],
-  ['UMR TETIS|INRAE (Institut National de Recherche pour l\u0027Agriculture, l\u0027Alimentation et l\u0027Environnement)', 'Earth & Environmental Sciences'],
-  ['Centre de radiofréquences, optique et micro-nanoélectronique des Alpes (CROMA)|Institut polytechnique de Grenoble', 'Engineering'],
-  ['Département de chirurgie, Faculté de médecine et des sciences de la santé|Université de Sherbrooke', 'Health Sciences'],
-  ['Center for Oncological Research (CORE) & Antwerp University Hospital (UZA)|University of Antwerp', 'Health Sciences'],
+  [
+    'Laboratoire d\u0027Optique Appliquée (LOA)|CNRS (Centre National de la Recherche Scientifique)',
+    'Physics & Astronomy',
+  ],
+  [
+    'Laboratoire de Physique Théorique|CNRS (Centre National de la Recherche Scientifique)',
+    'Physics & Astronomy',
+  ],
+  [
+    'UMR TETIS|INRAE (Institut National de Recherche pour l\u0027Agriculture, l\u0027Alimentation et l\u0027Environnement)',
+    'Earth & Environmental Sciences',
+  ],
+  [
+    'Centre de radiofréquences, optique et micro-nanoélectronique des Alpes (CROMA)|Institut polytechnique de Grenoble',
+    'Engineering',
+  ],
+  [
+    'Département de chirurgie, Faculté de médecine et des sciences de la santé|Université de Sherbrooke',
+    'Health Sciences',
+  ],
+  [
+    'Center for Oncological Research (CORE) & Antwerp University Hospital (UZA)|University of Antwerp',
+    'Health Sciences',
+  ],
   ['Department of Virology II|National Institute of Infectious Diseases', 'Health Sciences'],
   ['Department of Virology II|Japan Institute for Health Security (JIHS)', 'Health Sciences'],
-  ['Department of Medical and Surgical Gynecology, Mayo Clinic Florida|Mayo Clinic Alix School of Medicine', 'Health Sciences'],
-  ['Institute for Infocomm Research (I2R)|Agency for Science, Technology and Research', 'Computer & Information Sciences'],
+  [
+    'Department of Medical and Surgical Gynecology, Mayo Clinic Florida|Mayo Clinic Alix School of Medicine',
+    'Health Sciences',
+  ],
+  [
+    'Institute for Infocomm Research (I2R)|Agency for Science, Technology and Research',
+    'Computer & Information Sciences',
+  ],
   ['Department of Physiology, Cochin Hospital|Université Paris Cité', 'Health Sciences'],
-  ['Laboratoire d\'Imagerie Biomédicale (LIB)|Inserm (Institut National de la Santé et de la Recherche Médicale)', 'Biological & Biomedical Sciences'],
-  ['MaIAGE (Mathématiques et Informatique Appliquées du Génome à l\'Environnement)|INRAE (Institut National de Recherche pour l\'Agriculture, l\'Alimentation et l\'Environnement)', 'Mathematics'],
+  [
+    "Laboratoire d'Imagerie Biomédicale (LIB)|Inserm (Institut National de la Santé et de la Recherche Médicale)",
+    'Biological & Biomedical Sciences',
+  ],
+  [
+    "MaIAGE (Mathématiques et Informatique Appliquées du Génome à l'Environnement)|INRAE (Institut National de Recherche pour l'Agriculture, l'Alimentation et l'Environnement)",
+    'Mathematics',
+  ],
   ['Wyant College of Optical Sciences|University of Arizona', 'Physics & Astronomy'],
   ['Chemical Sciences Division|National Institute of Standards and Technology', 'Chemistry'],
   ['Laboratoire Navier|École des Ponts ParisTech', 'Engineering'],
   ['Laboratoire Vibrations Acoustique|INSA Lyon', 'Engineering'],
-  ['CEA Tech / LITEN|Commissariat à l\'Énergie Atomique et aux Énergies Alternatives', 'Engineering'],
-  ['Environmental Engineering and Management, Department of Water Resources and Environmental Engineering|Asian Institute of Technology', 'Earth & Environmental Sciences'],
-  ['Département d\'études urbaines et touristiques|Université du Québec à Montréal', 'Earth & Environmental Sciences'],
-  ['Laboratoire Interuniversitaire des Systèmes Atmosphériques (LISA)|Université Paris-Est Créteil', 'Physics & Astronomy'],
-  ['Department of Animal and Aquacultural Sciences, Faculty of Biosciences|Norwegian University of Life Sciences', 'Agricultural & Natural Resource Sciences'],
-  ['Laboratoire Auscultation et Modélisation des Structures (LAMES), Département Matériaux et Structures (MAST)|Université Gustave Eiffel', 'Engineering'],
-  ['Laboratoire des Matériaux Composites pour la Construction (LMC2)|Université Claude Bernard Lyon 1', 'Engineering'],
-  ['Interdisciplinary Centre for Security, Reliability and Trust (SnT)|University of Luxembourg', 'Computer & Information Sciences'],
-  ['Institute of Software Technology|Graz University of Technology', 'Computer & Information Sciences'],
-  ['Institute of Strategic Planning and Policy Studies|University of the Philippines Los Baños', 'Law & Public Affairs'],
+  [
+    "CEA Tech / LITEN|Commissariat à l'Énergie Atomique et aux Énergies Alternatives",
+    'Engineering',
+  ],
+  [
+    'Environmental Engineering and Management, Department of Water Resources and Environmental Engineering|Asian Institute of Technology',
+    'Earth & Environmental Sciences',
+  ],
+  [
+    "Département d'études urbaines et touristiques|Université du Québec à Montréal",
+    'Earth & Environmental Sciences',
+  ],
+  [
+    'Laboratoire Interuniversitaire des Systèmes Atmosphériques (LISA)|Université Paris-Est Créteil',
+    'Physics & Astronomy',
+  ],
+  [
+    'Department of Animal and Aquacultural Sciences, Faculty of Biosciences|Norwegian University of Life Sciences',
+    'Agricultural & Natural Resource Sciences',
+  ],
+  [
+    'Laboratoire Auscultation et Modélisation des Structures (LAMES), Département Matériaux et Structures (MAST)|Université Gustave Eiffel',
+    'Engineering',
+  ],
+  [
+    'Laboratoire des Matériaux Composites pour la Construction (LMC2)|Université Claude Bernard Lyon 1',
+    'Engineering',
+  ],
+  [
+    'Interdisciplinary Centre for Security, Reliability and Trust (SnT)|University of Luxembourg',
+    'Computer & Information Sciences',
+  ],
+  [
+    'Institute of Software Technology|Graz University of Technology',
+    'Computer & Information Sciences',
+  ],
+  [
+    'Institute of Strategic Planning and Policy Studies|University of the Philippines Los Baños',
+    'Law & Public Affairs',
+  ],
   ['Automation & Control Institute (ACIN)|TU Wien', 'Engineering'],
   ['Faculty of Social Sciences|HSE University', 'Social & Behavioral Sciences'],
-  ['Department of Engineering Technology and Construction Management|University of North Carolina at Charlotte', 'Engineering'],
-  ['Laboratoire Plasma et Conversion d\'Énergie (LAPLACE), ENSEEIHT|Toulouse INP', 'Engineering'],
-  ['Service d\'Ophtalmologie, CHU Amiens-Picardie|Université de Picardie Jules Verne', 'Health Sciences'],
+  [
+    'Department of Engineering Technology and Construction Management|University of North Carolina at Charlotte',
+    'Engineering',
+  ],
+  ["Laboratoire Plasma et Conversion d'Énergie (LAPLACE), ENSEEIHT|Toulouse INP", 'Engineering'],
+  [
+    "Service d'Ophtalmologie, CHU Amiens-Picardie|Université de Picardie Jules Verne",
+    'Health Sciences',
+  ],
   ['Center for Advanced Intelligence Project (AIP)|RIKEN', 'Computer & Information Sciences'],
   ['Research Centre for Global Learning|Coventry University', 'Education'],
-  ['Department of Asian and North African Studies|Ca\u0027 Foscari University of Venice', 'Humanities'],
-  ['Beckman Institute for Advanced Science and Technology, Illinois Polymer Maker Lab|University of Illinois Urbana-Champaign', 'Chemistry'],
-  ['Laboratoire Auscultation, Modélisation, Expérimentation des Infrastructures de Transport (LAMES), Département Matériaux et Structures (MAST)|Université Gustave Eiffel', 'Engineering'],
-  ['Laboratoire de Conception, Optimisation et Modélisation des Systèmes (LCOMS)|Université de Lorraine', 'Computer & Information Sciences'],
+  [
+    'Department of Asian and North African Studies|Ca\u0027 Foscari University of Venice',
+    'Humanities',
+  ],
+  [
+    'Beckman Institute for Advanced Science and Technology, Illinois Polymer Maker Lab|University of Illinois Urbana-Champaign',
+    'Chemistry',
+  ],
+  [
+    'Laboratoire Auscultation, Modélisation, Expérimentation des Infrastructures de Transport (LAMES), Département Matériaux et Structures (MAST)|Université Gustave Eiffel',
+    'Engineering',
+  ],
+  [
+    'Laboratoire de Conception, Optimisation et Modélisation des Systèmes (LCOMS)|Université de Lorraine',
+    'Computer & Information Sciences',
+  ],
   ['Laboratoire des Technologies Innovantes|Université de Picardie Jules Verne', 'Engineering'],
-  ['Laboratoire d\'Études et de Recherche sur le Matériau Bois|Université de Lorraine', 'Engineering'],
+  [
+    "Laboratoire d'Études et de Recherche sur le Matériau Bois|Université de Lorraine",
+    'Engineering',
+  ],
   ['Institute of Scientific and Industrial Research|Osaka University', 'Engineering'],
-  ['Département d\'anglais|Université de Tours', 'Humanities'],
+  ["Département d'anglais|Université de Tours", 'Humanities'],
   ['Laboratoire HeRMA|Université de Poitiers', 'Humanities'],
   ['Department of Tourism Science|Tokyo Metropolitan University', 'Social & Behavioral Sciences'],
-  ['Bioinformatics Center, Institute for Chemical Research|Kyoto University', 'Computer & Information Sciences'],
+  [
+    'Bioinformatics Center, Institute for Chemical Research|Kyoto University',
+    'Computer & Information Sciences',
+  ],
   ['Institute for Core Education|Chiba University of Commerce', 'Business & Economics'],
-  ['Department of Agro-environmental Sciences|Kyushu University', 'Agricultural & Natural Resource Sciences'],
+  [
+    'Department of Agro-environmental Sciences|Kyushu University',
+    'Agricultural & Natural Resource Sciences',
+  ],
   ['Institute of Humanities and Social Sciences|University of Tsukuba', 'Business & Economics'],
   ['GIPSA-lab (UMR 5216), Phonetics|Université Grenoble Alpes', 'Humanities'],
   ['Département de Médecine Générale|Nantes Université', 'Health Sciences'],
-  ['School of Science, Technology and Engineering, Organic Chemistry|University of the Sunshine Coast', 'Chemistry'],
-  ['School of Science, Technology and Engineering, Genetics|University of the Sunshine Coast', 'Biological & Biomedical Sciences'],
+  [
+    'School of Science, Technology and Engineering, Organic Chemistry|University of the Sunshine Coast',
+    'Chemistry',
+  ],
+  [
+    'School of Science, Technology and Engineering, Genetics|University of the Sunshine Coast',
+    'Biological & Biomedical Sciences',
+  ],
   // Philosopher of science and neuroethicist (PhD in Philosophy); the bioethics center name alone
   // carries no field keyword.
   ['Center for Bioethics and Social Justice|Michigan State University', 'Humanities'],
   // ANU's combined School of Medicine and Psychology; this member is a social/health psychologist.
-  ['School of Medicine and Psychology|Australian National University', 'Social & Behavioral Sciences'],
+  [
+    'School of Medicine and Psychology|Australian National University',
+    'Social & Behavioral Sciences',
+  ],
 ]);
 
 // Buckets granular `department` values into the broad fields above. Order matters, and is not
@@ -777,7 +1152,8 @@ const FIELD_RULES = [
   // keyword below — so it doesn't get caught by that instead.
   {
     field: 'Health Sciences',
-    match: /health|medicine|medical sciences|surgery|nursing|public health|epidemiology|pharma|psychiatry|pathology|dermatology|biomedical sciences|cardiovascular|p(?:a)?ediatric|neurology|ophthalmology|family practice|physician assistant|kinesiology|exercise science|sport science|veterinary|nutrition|dietetics|audiology|speech-language pathology|communication sciences and disorders|anatom|toxicology|dentistry|dental|orthodont|dentisterie|radiology|radiolog|optometry|vision science|anesthes|orthop(?:a)?edi|digestive|gastroenterolog|hepatolog|endocrin|diabetes|metabolism/i,
+    match:
+      /health|medicine|medical sciences|surgery|nursing|public health|epidemiology|pharma|psychiatry|pathology|dermatology|biomedical sciences|cardiovascular|p(?:a)?ediatric|neurology|ophthalmology|family practice|physician assistant|kinesiology|exercise science|sport science|veterinary|nutrition|dietetics|audiology|speech-language pathology|communication sciences and disorders|anatom|toxicology|dentistry|dental|orthodont|dentisterie|radiology|radiolog|optometry|vision science|anesthes|orthop(?:a)?edi|digestive|gastroenterolog|hepatolog|endocrin|diabetes|metabolism/i,
   },
   // Business terms are specific enough (accounting, marketing, entrepreneurship, ...) that
   // false-positive risk is low; "management" is the one generic-sounding term here, which is
@@ -785,44 +1161,76 @@ const FIELD_RULES = [
   // rule are checked first for the science-flavored "X Management" department names that exist.
   {
     field: 'Business & Economics',
-    match: /business|economic|\bfinanc(?:e|ial|es)\b|accounting|marketing|management|entrepreneurship|\binsurance\b|real estate|human resource|industrial relations|organi[zs]ation|work and organi[zs]ation|supply chain|\blogistics\b|\bMBA\b/i,
+    match:
+      /business|economic|\bfinanc(?:e|ial|es)\b|accounting|marketing|management|entrepreneurship|\binsurance\b|real estate|human resource|industrial relations|organi[zs]ation|work and organi[zs]ation|supply chain|\blogistics\b|\bMBA\b/i,
   },
-  { field: 'Computer & Information Sciences', match: /computer science|computing|informati(?:cs?|que)|information science|information studies|information systems|information technology|cybersecurity|\bIST\b|\bCIS\b|librar(?:y|ies)|machine learning|artificial intelligence|natural language processing|multimedia/i },
+  {
+    field: 'Computer & Information Sciences',
+    match:
+      /computer science|computing|informati(?:cs?|que)|information science|information studies|information systems|information technology|cybersecurity|\bIST\b|\bCIS\b|librar(?:y|ies)|machine learning|artificial intelligence|natural language processing|multimedia/i,
+  },
   // Stem match (not just "mathematics") so "Mathematical Sciences" — UT Dallas's actual
   // department name — lands here too, without fabricating a different department string.
   { field: 'Mathematics', match: /mathematic|mathématiq|géométrie/i },
-  { field: 'Statistics & Data Science', match: /statistics|biostatistics|operations research|decision sciences|data science/i },
+  {
+    field: 'Statistics & Data Science',
+    match: /statistics|biostatistics|operations research|decision sciences|data science/i,
+  },
   // "materials science" alone (no "engineering" in the name) still lands here — combined
   // "Materials Science and Engineering" departments already match the bare "engineering" term.
-  { field: 'Engineering', match: /engineering|génie|genie|materials(?: science)?|aviation science|aeronautic|astronautic|aerospace|electrical communication|mechatronic|nanotechnology|nanotechnologie|microsystem/i },
+  {
+    field: 'Engineering',
+    match:
+      /engineering|génie|genie|materials(?: science)?|aviation science|aeronautic|astronautic|aerospace|electrical communication|mechatronic|nanotechnology|nanotechnologie|microsystem/i,
+  },
   { field: 'Physics & Astronomy', match: /physics|physique|astronomy|astrophysi/i },
   { field: 'Chemistry', match: /chemistry|chimie/i },
   {
     field: 'Biological & Biomedical Sciences',
-    match: /biology|biologie|biological sciences|life science|neuroscience|plant pathology|genetics|genomic|oncology|microbiology|immunology|molecular|cell biology|ecology|entomology|physiolog/i,
+    match:
+      /biology|biologie|biological sciences|life science|neuroscience|plant pathology|genetics|genomic|oncology|microbiology|immunology|molecular|cell biology|ecology|entomology|physiolog/i,
   },
   // Agricultural & Natural Resource Sciences precedes Earth & Environmental Sciences so a combined
   // department name like "Agricultural and Environmental Sciences" (Doc Lap Tran, Tennessee State)
   // lands with agriculture rather than being caught by the bare "environmental" keyword below.
   {
     field: 'Agricultural & Natural Resource Sciences',
-    match: /agricultur|agronomy|food science|natural resources|plant science|horticulture|animal science|soil science|forestry|wildlife|fisheries/i,
+    match:
+      /agricultur|agronomy|food science|natural resources|plant science|horticulture|animal science|soil science|forestry|wildlife|fisheries/i,
   },
-  { field: 'Earth & Environmental Sciences', match: /environmental|earth|geology|geoscience|geography|oceanography|atmospheric/i },
+  {
+    field: 'Earth & Environmental Sciences',
+    match: /environmental|earth|geology|geoscience|geography|oceanography|atmospheric/i,
+  },
   // Non-business/non-science fields are matched after the rules above, so departments that read
   // as both (e.g. "Geography and Environmental Studies") keep the science bucket they already
   // had. Education precedes Social & Behavioral Sciences so "Educational Psychology" lands in
   // Education.
   // "curriculum (and|&) instruction" so a department that spells it with an ampersand (Texas
   // Tech's "Curriculum & Instruction") matches too, not just the spelled-out "and" form.
-  { field: 'Education', match: /education|curriculum (and|&) (instruction|teaching)|teaching and learning/i },
-  { field: 'Law & Public Affairs', match: /\blaw\b|legal studies|public policy|public affairs|public administration|criminal justice|criminology|urban (studies and )?planning|regional planning|city planning/i },
+  {
+    field: 'Education',
+    match: /education|curriculum (and|&) (instruction|teaching)|teaching and learning/i,
+  },
+  {
+    field: 'Law & Public Affairs',
+    match:
+      /\blaw\b|legal studies|public policy|public affairs|public administration|criminal justice|criminology|urban (studies and )?planning|regional planning|city planning/i,
+  },
   {
     field: 'Social & Behavioral Sciences',
-    match: /sociology|psycholog(?:y|ical)|anthropology|political science|\bpolitics\b|social work|human services|child and adolescent development|communication|international relations|ethnic studies|american studies|ethnicity,? race|asian studies|asian american studies|asian-pacific studies|asian pacific studies|asian and middle eastern studies|middle eastern studies|global and international studies|global studies|international studies|gender,? and sexuality studies|women's,? gender|women's studies|social and cultural analysis|journalism|human development|family studies|gerontology|media and culture|media and communication|southeast asia/i,
+    match:
+      /sociology|psycholog(?:y|ical)|anthropology|political science|\bpolitics\b|social work|human services|child and adolescent development|communication|international relations|ethnic studies|american studies|ethnicity,? race|asian studies|asian american studies|asian-pacific studies|asian pacific studies|asian and middle eastern studies|middle eastern studies|global and international studies|global studies|international studies|gender,? and sexuality studies|women's,? gender|women's studies|social and cultural analysis|journalism|human development|family studies|gerontology|media and culture|media and communication|southeast asia/i,
   },
-  { field: 'Humanities', match: /history|philosophy|english|literature|linguistics|languages|letters and cultures|classics|great books|religio|theolog|divinity/i },
-  { field: 'Arts & Design', match: /\barts?\b|design|music|theat|dance|film|cinema|photograph|architecture/i },
+  {
+    field: 'Humanities',
+    match:
+      /history|philosophy|english|literature|linguistics|languages|letters and cultures|classics|great books|religio|theolog|divinity/i,
+  },
+  {
+    field: 'Arts & Design',
+    match: /\barts?\b|design|music|theat|dance|film|cinema|photograph|architecture/i,
+  },
   // A department that matches none of the established broad disciplines is grouped under Others.
 ];
 
@@ -844,13 +1252,28 @@ export interface RosterHtmlInventory {
 
 export function buildRosterHtmlInventory(roster: Roster): RosterHtmlInventory {
   const fields = FIELDS.filter((field) =>
-    hasEnoughPeopleForRosterHub(roster.filter((person) => fieldOf(person.department, person.university) === field).length));
+    hasEnoughPeopleForRosterHub(
+      roster.filter((person) => fieldOf(person.department, person.university) === field).length,
+    ),
+  );
   const countries = [...new Set(roster.map((person) => person.country || 'United States'))];
   const regions = [...ROSTER_CONTINENTS, ...countries].filter((region) =>
-    hasEnoughPeopleForRosterHub(roster.filter((person) => locationMatches(person, region)).length));
-  const intersections = regions.reduce((total, region) => total + fields.filter((field) =>
-    hasEnoughPeopleForRosterHub(roster.filter((person) =>
-      locationMatches(person, region) && fieldOf(person.department, person.university) === field).length)).length, 0);
+    hasEnoughPeopleForRosterHub(roster.filter((person) => locationMatches(person, region)).length),
+  );
+  const intersections = regions.reduce(
+    (total, region) =>
+      total +
+      fields.filter((field) =>
+        hasEnoughPeopleForRosterHub(
+          roster.filter(
+            (person) =>
+              locationMatches(person, region) &&
+              fieldOf(person.department, person.university) === field,
+          ).length,
+        ),
+      ).length,
+    0,
+  );
   const standalone = 4;
   const profiles = roster.length;
   return {
@@ -869,9 +1292,12 @@ export function healthSubfieldOf(person: RosterEntry): string | null {
   if (/nursing/i.test(text)) return 'Nursing';
   if (/pharma|pharmac/i.test(text)) return 'Pharmacy';
   if (/dentist|dental|orthodont|oral health/i.test(text)) return 'Dentistry';
-  if (/public health|epidemiolog|health management|health policy/i.test(text)) return 'Public Health';
-  if (/medical education|nursing education|teaching medicine/i.test(text)) return 'Medical Education';
-  if (/biomedical|pathology|immunology|molecular|genomic|oncology|cell biology/i.test(text)) return 'Biomedical Research';
+  if (/public health|epidemiolog|health management|health policy/i.test(text))
+    return 'Public Health';
+  if (/medical education|nursing education|teaching medicine/i.test(text))
+    return 'Medical Education';
+  if (/biomedical|pathology|immunology|molecular|genomic|oncology|cell biology/i.test(text))
+    return 'Biomedical Research';
   return 'Clinical Medicine';
 }
 
@@ -908,7 +1334,11 @@ export function buildTopUndergradInstitutions(roster: Roster, limit = 8): [strin
 const PAIRING_SEPARATOR = '\u0000';
 
 export function buildPhdToFacultyPairings(roster: Roster, limit = 6): [string, string, number][] {
-  return countBy(roster, (p) => (p.phdInstitution ? `${p.phdInstitution}${PAIRING_SEPARATOR}${p.country || 'United States'}` : undefined))
+  return countBy(roster, (p) =>
+    p.phdInstitution
+      ? `${p.phdInstitution}${PAIRING_SEPARATOR}${p.country || 'United States'}`
+      : undefined,
+  )
     .slice(0, limit)
     .map(([key, count]): [string, string, number] => {
       const [phdInstitution, country] = key.split(PAIRING_SEPARATOR);
@@ -930,7 +1360,9 @@ export function buildTopCountries(roster: Roster, limit = 8): [string, number][]
 
 export function buildTrackCounts(roster: Roster): [string, number][] {
   const counts = new Map(countBy(roster, (p) => p.track));
-  return TRACKS.map((track): [string, number] => [track, counts.get(track) ?? 0]).filter(([, count]) => count > 0);
+  return TRACKS.map((track): [string, number] => [track, counts.get(track) ?? 0]).filter(
+    ([, count]) => count > 0,
+  );
 }
 
 function stripDiacritics(s: string): string {
@@ -938,16 +1370,57 @@ function stripDiacritics(s: string): string {
 }
 
 export const STATE_ABBR: Record<string, string> = {
-  Alabama: 'AL', Alaska: 'AK', Arizona: 'AZ', Arkansas: 'AR', California: 'CA', Colorado: 'CO',
-  Connecticut: 'CT', 'District of Columbia': 'DC', Delaware: 'DE', Florida: 'FL', Georgia: 'GA', Hawaii: 'HI',
-  Idaho: 'ID', Illinois: 'IL', Indiana: 'IN', Iowa: 'IA', Kansas: 'KS', Kentucky: 'KY',
-  Louisiana: 'LA', Maine: 'ME', Maryland: 'MD', Massachusetts: 'MA', Michigan: 'MI',
-  Minnesota: 'MN', Mississippi: 'MS', Missouri: 'MO', Montana: 'MT', Nebraska: 'NE',
-  Nevada: 'NV', 'New Hampshire': 'NH', 'New Jersey': 'NJ', 'New Mexico': 'NM', 'New York': 'NY',
-  'North Carolina': 'NC', 'North Dakota': 'ND', Ohio: 'OH', Oklahoma: 'OK', Oregon: 'OR',
-  Pennsylvania: 'PA', 'Rhode Island': 'RI', 'South Carolina': 'SC', 'South Dakota': 'SD',
-  Tennessee: 'TN', Texas: 'TX', Utah: 'UT', Vermont: 'VT', Virginia: 'VA', Washington: 'WA',
-  'West Virginia': 'WV', Wisconsin: 'WI', Wyoming: 'WY',
+  Alabama: 'AL',
+  Alaska: 'AK',
+  Arizona: 'AZ',
+  Arkansas: 'AR',
+  California: 'CA',
+  Colorado: 'CO',
+  Connecticut: 'CT',
+  'District of Columbia': 'DC',
+  Delaware: 'DE',
+  Florida: 'FL',
+  Georgia: 'GA',
+  Hawaii: 'HI',
+  Idaho: 'ID',
+  Illinois: 'IL',
+  Indiana: 'IN',
+  Iowa: 'IA',
+  Kansas: 'KS',
+  Kentucky: 'KY',
+  Louisiana: 'LA',
+  Maine: 'ME',
+  Maryland: 'MD',
+  Massachusetts: 'MA',
+  Michigan: 'MI',
+  Minnesota: 'MN',
+  Mississippi: 'MS',
+  Missouri: 'MO',
+  Montana: 'MT',
+  Nebraska: 'NE',
+  Nevada: 'NV',
+  'New Hampshire': 'NH',
+  'New Jersey': 'NJ',
+  'New Mexico': 'NM',
+  'New York': 'NY',
+  'North Carolina': 'NC',
+  'North Dakota': 'ND',
+  Ohio: 'OH',
+  Oklahoma: 'OK',
+  Oregon: 'OR',
+  Pennsylvania: 'PA',
+  'Rhode Island': 'RI',
+  'South Carolina': 'SC',
+  'South Dakota': 'SD',
+  Tennessee: 'TN',
+  Texas: 'TX',
+  Utah: 'UT',
+  Vermont: 'VT',
+  Virginia: 'VA',
+  Washington: 'WA',
+  'West Virginia': 'WV',
+  Wisconsin: 'WI',
+  Wyoming: 'WY',
 };
 
 const STATE_NAME_BY_ABBR = new Map(Object.entries(STATE_ABBR).map(([name, abbr]) => [abbr, name]));
@@ -959,7 +1432,6 @@ export function canonicalState(state: string | undefined, country?: string): str
   if (!state || (country && !['United States', 'US', 'USA'].includes(country))) return state;
   return STATE_NAME_BY_ABBR.get(state.trim().toUpperCase()) ?? state;
 }
-
 
 interface FilterOptions {
   query?: string;
@@ -980,42 +1452,63 @@ interface FilterOptions {
 // canonicalRank/fieldOf and two flatMaps for all 1,400+ entries on every debounced keystroke.
 function scopedValuesFor(person: RosterEntry, scope: string): (string | undefined)[] {
   switch (scope) {
-    case 'name': return [displayName(person.name)];
-    case 'university': return [person.university];
-    case 'institution': return [person.university, institutionTypeOf(person)];
-    case 'department': return [person.department];
-    case 'field': return [fieldOf(person.department, person.university)];
-    case 'track': return [person.track];
-    case 'rank': return [person.rank, canonicalRank(person)];
-    case 'research': return person.researchAreas ?? [];
-    case 'honors': return (person.honors ?? []).flatMap((honor) => [honor.name, honor.organization]);
-    case 'phd': return [person.phdInstitution];
-    case 'undergrad': return [person.undergradInstitution];
-    case 'country': return [person.country];
-    default: return [];
+    case 'name':
+      return [displayName(person.name)];
+    case 'university':
+      return [person.university];
+    case 'institution':
+      return [person.university, institutionTypeOf(person)];
+    case 'department':
+      return [person.department];
+    case 'field':
+      return [fieldOf(person.department, person.university)];
+    case 'track':
+      return [person.track];
+    case 'rank':
+      return [person.rank, canonicalRank(person)];
+    case 'research':
+      return person.researchAreas ?? [];
+    case 'honors':
+      return (person.honors ?? []).flatMap((honor) => [honor.name, honor.organization]);
+    case 'phd':
+      return [person.phdInstitution];
+    case 'undergrad':
+      return [person.undergradInstitution];
+    case 'country':
+      return [person.country];
+    default:
+      return [];
   }
 }
 
 function matchesSearchScope(person: RosterEntry, scope: string, target: string): boolean {
-  return scopedValuesFor(person, scope)
-    .some((value) => Boolean(value) && stripDiacritics(value!.toLowerCase()).includes(target));
+  return scopedValuesFor(person, scope).some(
+    (value) => Boolean(value) && stripDiacritics(value!.toLowerCase()).includes(target),
+  );
 }
 
-function matchesRelationshipScope(person: RosterEntry, query: string, database?: RelationshipDatabase): boolean {
+function matchesRelationshipScope(
+  person: RosterEntry,
+  query: string,
+  database?: RelationshipDatabase,
+): boolean {
   if (!database) return false;
-  const connected = database.relationships.filter((relationship) =>
-    relationship.sourceId === person.id || relationship.targetId === person.id,
+  const connected = database.relationships.filter(
+    (relationship) => relationship.sourceId === person.id || relationship.targetId === person.id,
   );
   if (!query.trim()) return connected.length > 0;
   const normalized = query.replace(/[^a-z0-9]/gi, '').toLowerCase();
   if (['mentor', 'mentorship', 'advise', 'advisor', 'mentoradvise'].includes(normalized)) {
-    return connected.some((relationship) =>
-      relationship.type === 'doctoral-advisor'
-      || relationship.type === 'masters-advisor'
-      || relationship.type === 'undergraduate-advisor'
-      || relationship.type === 'postdoctoral-mentor');
+    return connected.some(
+      (relationship) =>
+        relationship.type === 'doctoral-advisor' ||
+        relationship.type === 'masters-advisor' ||
+        relationship.type === 'undergraduate-advisor' ||
+        relationship.type === 'postdoctoral-mentor',
+    );
   }
-  if (normalized === 'coauthor') return connected.some((relationship) => relationship.type === 'coauthor');
+  if (normalized === 'coauthor')
+    return connected.some((relationship) => relationship.type === 'coauthor');
   if (['grant', 'nsf', 'grantcollaborator'].includes(normalized)) {
     return connected.some((relationship) => relationship.type === 'grant-collaborator');
   }
@@ -1025,7 +1518,22 @@ function matchesRelationshipScope(person: RosterEntry, query: string, database?:
   return false;
 }
 
-export function filterRoster(roster: Roster | SearchIndex, { query = '', location, field, track, institutionType, university, phdInstitution, state, country, searchScope = 'all', relationships }: FilterOptions = {}): Roster {
+export function filterRoster(
+  roster: Roster | SearchIndex,
+  {
+    query = '',
+    location,
+    field,
+    track,
+    institutionType,
+    university,
+    phdInstitution,
+    state,
+    country,
+    searchScope = 'all',
+    relationships,
+  }: FilterOptions = {},
+): Roster {
   const index = Array.isArray(roster) ? buildSearchIndex(roster) : roster;
   let result = index.roster;
 
@@ -1056,22 +1564,32 @@ export function filterRoster(roster: Roster | SearchIndex, { query = '', locatio
   }
   if (university) {
     const norm = stripDiacritics(university.trim().toLowerCase());
-    result = result.filter((p) => p.university && stripDiacritics(p.university.toLowerCase()).includes(norm));
+    result = result.filter(
+      (p) => p.university && stripDiacritics(p.university.toLowerCase()).includes(norm),
+    );
   }
   if (phdInstitution) {
     const norm = stripDiacritics(phdInstitution.trim().toLowerCase());
-    result = result.filter((p) => p.phdInstitution && stripDiacritics(p.phdInstitution.toLowerCase()).includes(norm));
+    result = result.filter(
+      (p) => p.phdInstitution && stripDiacritics(p.phdInstitution.toLowerCase()).includes(norm),
+    );
   }
   if (state) {
     // Exact match on the canonical name: a substring test let "Virginia" match West Virginia
     // and "VA" match Nevada or Pennsylvania.
     const norm = stripDiacritics((canonicalState(state) ?? '').trim().toLowerCase());
-    result = result.filter((p) => p.state !== undefined && stripDiacritics((canonicalState(p.state, p.country) ?? '').toLowerCase()) === norm);
+    result = result.filter(
+      (p) =>
+        p.state !== undefined &&
+        stripDiacritics((canonicalState(p.state, p.country) ?? '').toLowerCase()) === norm,
+    );
   }
 
   if (searchScope !== 'all') {
-    if (searchScope === 'connection') return result.filter((person) => matchesRelationshipScope(person, query, relationships));
-    if (!query.trim()) return searchScope === 'honors' ? result.filter((p) => p.honors?.length) : result;
+    if (searchScope === 'connection')
+      return result.filter((person) => matchesRelationshipScope(person, query, relationships));
+    if (!query.trim())
+      return searchScope === 'honors' ? result.filter((p) => p.honors?.length) : result;
     const target = stripDiacritics(query.trim().toLowerCase());
     return result.filter((person) => matchesSearchScope(person, searchScope, target));
   }
@@ -1083,11 +1601,16 @@ export function filterRoster(roster: Roster | SearchIndex, { query = '', locatio
   // When a query matches one or more honor names, prefer those exact honor matches over
   // incidental words in source URLs or biographies (e.g. "IEEE Fellow" should not match a
   // Gordon Bell source merely because that source mentions IEEE).
-  const honorMatches = result.filter((p) => (p.honors || []).some((honor) => {
-    const honorName = stripDiacritics((honor.name || '').toLowerCase());
-    const awardQuery = /award|fellow|prize|grant|medal|academy|fellowship|career|professorship|honor|honour/.test(target);
-    return honorName === target || (awardQuery && honorName.includes(target));
-  }));
+  const honorMatches = result.filter((p) =>
+    (p.honors || []).some((honor) => {
+      const honorName = stripDiacritics((honor.name || '').toLowerCase());
+      const awardQuery =
+        /award|fellow|prize|grant|medal|academy|fellowship|career|professorship|honor|honour/.test(
+          target,
+        );
+      return honorName === target || (awardQuery && honorName.includes(target));
+    }),
+  );
   if (honorMatches.length > 0) return honorMatches;
 
   return result.filter((p) => {
@@ -1100,7 +1623,10 @@ export function filterRoster(roster: Roster | SearchIndex, { query = '', locatio
     // "Nguyen" name plus an unrelated "Quantum ..." research area both contain "quan", so a
     // cross-field check wrongly matched the query "quan nguyen" for that person).
     const terms = target.split(/\s+/).filter(Boolean);
-    return terms.length > 1 && fieldTexts.some((fieldText) => terms.every((term) => fieldText.includes(term)));
+    return (
+      terms.length > 1 &&
+      fieldTexts.some((fieldText) => terms.every((term) => fieldText.includes(term)))
+    );
   });
 }
 
@@ -1113,20 +1639,27 @@ export function displayName(name: string): string {
 // Ties break alphabetically so leaderboards and the offline analysis report stay stable
 // across roster edits that only change record order. Generic over T so it can tally roster
 // entries by a derived key or tally a flat list (e.g. honor names) equally well.
-export function countBy<T>(roster: readonly T[], getKey: (item: T) => string | undefined): [string, number][] {
+export function countBy<T>(
+  roster: readonly T[],
+  getKey: (item: T) => string | undefined,
+): [string, number][] {
   const counts = new Map<string, number>();
   for (const p of roster) {
     const key = getKey(p);
     if (!key) continue;
     counts.set(key, (counts.get(key) ?? 0) + 1);
   }
-  return [...counts.entries()].sort((a, b) => b[1] - a[1] || String(a[0]).localeCompare(String(b[0])));
+  return [...counts.entries()].sort(
+    (a, b) => b[1] - a[1] || String(a[0]).localeCompare(String(b[0])),
+  );
 }
 
 function honorHolderCount(roster: Roster | null | undefined, honorName: string): number {
-  return new Set((roster ?? [])
-    .filter((p) => (p.honors ?? []).some((honor) => honor.name === honorName))
-    .map((p) => p.id)).size;
+  return new Set(
+    (roster ?? [])
+      .filter((p) => (p.honors ?? []).some((honor) => honor.name === honorName))
+      .map((p) => p.id),
+  ).size;
 }
 
 const MARQUEE_HONORS = [
@@ -1149,18 +1682,26 @@ export function buildAwardsFunFacts(roster: Roster | null | undefined): string[]
 
   const honored = allRoster.filter((p) => (p.honors || []).length > 0).length;
   const usRoster = allRoster.filter((p) => (p.country || 'United States') === 'United States');
-  const academyHolders = new Set(allRoster
-    .filter((p) => (p.honors ?? []).some((honor) => honor.category === 'academy'))
-    .map((p) => p.id)).size;
-  const fellowHolders = new Set(allRoster
-    .filter((p) => (p.honors ?? []).some((honor) => honor.category === 'fellow'))
-    .map((p) => p.id)).size;
+  const academyHolders = new Set(
+    allRoster
+      .filter((p) => (p.honors ?? []).some((honor) => honor.category === 'academy'))
+      .map((p) => p.id),
+  ).size;
+  const fellowHolders = new Set(
+    allRoster
+      .filter((p) => (p.honors ?? []).some((honor) => honor.category === 'fellow'))
+      .map((p) => p.id),
+  ).size;
 
-  const honorCounts = countBy(allRoster.flatMap((p) => (p.honors || []).map((honor) => honor.name)), (name) => name);
+  const honorCounts = countBy(
+    allRoster.flatMap((p) => (p.honors || []).map((honor) => honor.name)),
+    (name) => name,
+  );
   const commonHonors = honorCounts.slice(0, 5);
-  const marqueeHonors = MARQUEE_HONORS
-    .map((name): [string, number] => [name, honorHolderCount(allRoster, name)])
-    .filter(([, count]) => count > 0);
+  const marqueeHonors = MARQUEE_HONORS.map((name): [string, number] => [
+    name,
+    honorHolderCount(allRoster, name),
+  ]).filter(([, count]) => count > 0);
   const facts: string[] = [];
   const nsfHolders = honorHolderCount(allRoster, 'NSF CAREER Award');
   const usNsfHolders = honorHolderCount(usRoster, 'NSF CAREER Award');
@@ -1172,25 +1713,41 @@ export function buildAwardsFunFacts(roster: Roster | null | undefined): string[]
     ['Nobel Prize winners', honorHolderCount(allRoster, 'Nobel Prize')] as [string, number],
   ].filter(([, count]) => count > 0);
 
-  if (honored > 0) facts.push(`${honored} of ${allRoster.length} professors have at least one recorded major honor or award.`);
+  if (honored > 0)
+    facts.push(
+      `${honored} of ${allRoster.length} professors have at least one recorded major honor or award.`,
+    );
   if (nsfHolders > 0) {
-    facts.push(`NSF CAREER Award holders: ${nsfHolders} across the database (${usNsfHolders} currently in the U.S. roster).`);
+    facts.push(
+      `NSF CAREER Award holders: ${nsfHolders} across the database (${usNsfHolders} currently in the U.S. roster).`,
+    );
   }
   if (pecaseHolders > 0) {
-    facts.push(`PECASE recipients: ${pecaseHolders} across the database (${usPecaseHolders} currently in the U.S. roster).`);
+    facts.push(
+      `PECASE recipients: ${pecaseHolders} across the database (${usPecaseHolders} currently in the U.S. roster).`,
+    );
   }
   if (signatureHonors.length) {
     facts.push(`${signatureHonors.map(([name, count]) => `${name}: ${count}`).join('; ')}.`);
   }
   if (marqueeHonors.length) {
-    facts.push(`Marquee honors represented: ${marqueeHonors.map(([name, count]) => `${name} (${count})`).join(', ')}.`);
+    facts.push(
+      `Marquee honors represented: ${marqueeHonors.map(([name, count]) => `${name} (${count})`).join(', ')}.`,
+    );
   }
 
   const academyFacts: string[] = [];
-  if (academyHolders > 0) academyFacts.push(`${academyHolders} national-academy or equivalent academy distinction${academyHolders === 1 ? '' : 's'}`);
-  if (fellowHolders > 0) academyFacts.push(`${fellowHolders} major-society fellowship${fellowHolders === 1 ? '' : 's'}`);
+  if (academyHolders > 0)
+    academyFacts.push(
+      `${academyHolders} national-academy or equivalent academy distinction${academyHolders === 1 ? '' : 's'}`,
+    );
+  if (fellowHolders > 0)
+    academyFacts.push(`${fellowHolders} major-society fellowship${fellowHolders === 1 ? '' : 's'}`);
   if (academyFacts.length) facts.push(`${academyFacts.join(' and ')} recorded in the roster.`);
-  if (commonHonors.length) facts.push(`Most frequently recorded honors: ${commonHonors.map(([name, count]) => `${name} (${count})`).join(', ')}.`);
+  if (commonHonors.length)
+    facts.push(
+      `Most frequently recorded honors: ${commonHonors.map(([name, count]) => `${name} (${count})`).join(', ')}.`,
+    );
 
   return facts;
 }
@@ -1207,7 +1764,7 @@ function observationUniversities(roster: Roster): [string, number][] {
 }
 
 function observationFields(roster: Roster): [string, number][] {
-  return countBy(roster, (p) => p.department ? fieldOf(p.department, p.university) : 'Others');
+  return countBy(roster, (p) => (p.department ? fieldOf(p.department, p.university) : 'Others'));
 }
 
 function observationDepartmentSpread(roster: Roster): [string, number][] {
@@ -1232,7 +1789,10 @@ function observationSameFieldClusters(roster: Roster): [[string, string], number
     groups.set(key, (groups.get(key) ?? 0) + 1);
   }
   return [...groups.entries()]
-    .map(([key, count]): [[string, string], number] => [key.split('\u0000') as [string, string], count])
+    .map(([key, count]): [[string, string], number] => [
+      key.split('\u0000') as [string, string],
+      count,
+    ])
     .filter(([, count]) => count >= 3)
     .sort((a, b) => b[1] - a[1] || String(a[0][0]).localeCompare(String(b[0][0])));
 }
@@ -1245,60 +1805,121 @@ function addRosterObservations(facts: string[], roster: Roster, label: string): 
   const sameField = observationSameFieldClusters(roster)[0];
 
   if (universities[0]?.[1] >= 3) {
-    facts.push(`${universities[0][0]} has the largest concentration in this ${label} roster: ${universities[0][1]} entries.`);
+    facts.push(
+      `${universities[0][0]} has the largest concentration in this ${label} roster: ${universities[0][1]} entries.`,
+    );
   }
   const wideDepartment = departments.find(([, count]) => count >= 5);
   if (wideDepartment) {
-    facts.push(`${wideDepartment[0]} spans ${wideDepartment[1]} distinct departments in this ${label} roster.`);
+    facts.push(
+      `${wideDepartment[0]} spans ${wideDepartment[1]} distinct departments in this ${label} roster.`,
+    );
   }
   if (sameField) {
-    facts.push(`The largest same-institution, same-field cluster is ${sameField[1]} entries at ${sameField[0][0]} in ${sameField[0][1]}.`);
+    facts.push(
+      `The largest same-institution, same-field cluster is ${sameField[1]} entries at ${sameField[0][0]} in ${sameField[0][1]}.`,
+    );
   }
-  if (fields.length >= 4 && fields[0][1] - fields[3][1] <= Math.max(3, Math.round(roster.length * 0.03))) {
-    facts.push(`The four largest broad fields are tightly grouped: ${fields.slice(0, 4).map(([field, count]) => `${field} (${count})`).join(', ')}.`);
+  if (
+    fields.length >= 4 &&
+    fields[0][1] - fields[3][1] <= Math.max(3, Math.round(roster.length * 0.03))
+  ) {
+    facts.push(
+      `The four largest broad fields are tightly grouped: ${fields
+        .slice(0, 4)
+        .map(([field, count]) => `${field} (${count})`)
+        .join(', ')}.`,
+    );
   }
 }
 
 export function buildUsObservations(roster: Roster | null | undefined): string[] {
   const usRoster = (roster || []).filter((p) => (p.country || 'United States') === 'United States');
-  if (usRoster.length === 0) return ['No United States faculty currently listed under the active filter selection.'];
-  const facts = [`${usRoster.length} U.S. entries across ${new Set(usRoster.map((p) => p.university)).size} institutions.`];
+  if (usRoster.length === 0)
+    return ['No United States faculty currently listed under the active filter selection.'];
+  const facts = [
+    `${usRoster.length} U.S. entries across ${new Set(usRoster.map((p) => p.university)).size} institutions.`,
+  ];
   const places = countBy(usRoster, (p) => canonicalState(p.state, p.country));
   if (places.length >= 2 && places[0][1] + places[1][1] >= usRoster.length * 0.2) {
-    facts.push(`${places[0][0]} and ${places[1][0]} together contain ${observationShare(places[0][1] + places[1][1], usRoster.length)} of U.S. entries.`);
+    facts.push(
+      `${places[0][0]} and ${places[1][0]} together contain ${observationShare(places[0][1] + places[1][1], usRoster.length)} of U.S. entries.`,
+    );
   }
   const teaching = usRoster.filter((p) => p.track === 'Teaching').length;
-  if (teaching >= 5) facts.push(`Teaching-track faculty make up ${observationShare(teaching, usRoster.length)} of the U.S. roster.`);
+  if (teaching >= 5)
+    facts.push(
+      `Teaching-track faculty make up ${observationShare(teaching, usRoster.length)} of the U.S. roster.`,
+    );
   addRosterObservations(facts, usRoster, 'U.S.');
   return facts;
 }
 
 export function buildInternationalObservations(roster: Roster | null | undefined): string[] {
-  const international = (roster || []).filter((p) => (p.country || 'United States') !== 'United States');
-  if (international.length === 0) return ['No international diaspora faculty currently listed under the active filter selection.'];
-  const facts = [`${international.length} international entries across ${new Set(international.map((p) => p.university)).size} institutions in ${new Set(international.map((p) => p.country)).size} countries.`];
+  const international = (roster || []).filter(
+    (p) => (p.country || 'United States') !== 'United States',
+  );
+  if (international.length === 0)
+    return [
+      'No international diaspora faculty currently listed under the active filter selection.',
+    ];
+  const facts = [
+    `${international.length} international entries across ${new Set(international.map((p) => p.university)).size} institutions in ${new Set(international.map((p) => p.country)).size} countries.`,
+  ];
   const countries = countBy(international, (p) => p.country);
-  if (countries.length) facts.push(`The largest international country groups are ${countries.slice(0, 3).map(([country, count]) => `${country} (${count})`).join(', ')}.`);
+  if (countries.length)
+    facts.push(
+      `The largest international country groups are ${countries
+        .slice(0, 3)
+        .map(([country, count]) => `${country} (${count})`)
+        .join(', ')}.`,
+    );
   const cities = countBy(international, (p) => p.city);
-  if (cities.length >= 2 && cities[0][1] >= 5) facts.push(`The largest international city clusters are ${cities.slice(0, 3).map(([city, count]) => `${city} (${count})`).join(', ')}.`);
+  if (cities.length >= 2 && cities[0][1] >= 5)
+    facts.push(
+      `The largest international city clusters are ${cities
+        .slice(0, 3)
+        .map(([city, count]) => `${city} (${count})`)
+        .join(', ')}.`,
+    );
   const fields = observationFields(international);
-  if (fields.length >= 3 && fields[0][1] - fields[2][1] <= Math.max(3, Math.round(international.length * 0.04))) {
-    facts.push(`The three largest broad fields are closely represented internationally: ${fields.slice(0, 3).map(([field, count]) => `${field} (${count})`).join(', ')}.`);
+  if (
+    fields.length >= 3 &&
+    fields[0][1] - fields[2][1] <= Math.max(3, Math.round(international.length * 0.04))
+  ) {
+    facts.push(
+      `The three largest broad fields are closely represented internationally: ${fields
+        .slice(0, 3)
+        .map(([field, count]) => `${field} (${count})`)
+        .join(', ')}.`,
+    );
   }
   addRosterObservations(facts, international, 'international');
   return facts;
 }
 
-export function buildLocationObservations(roster: Roster | null | undefined, label = 'selected'): string[] {
+export function buildLocationObservations(
+  roster: Roster | null | undefined,
+  label = 'selected',
+): string[] {
   const selected = roster || [];
-  if (selected.length === 0) return ['No faculty currently listed under the active location selection.'];
+  if (selected.length === 0)
+    return ['No faculty currently listed under the active location selection.'];
   const countries = new Set(selected.map((person) => person.country || 'United States')).size;
   const facts = [
     `${selected.length} entries across ${new Set(selected.map((person) => person.university)).size} institutions in ${countries} countr${countries === 1 ? 'y' : 'ies'}.`,
   ];
   const fields = observationFields(selected);
-  if (fields.length >= 3 && fields[0][1] - fields[2][1] <= Math.max(3, Math.round(selected.length * 0.04))) {
-    facts.push(`The three largest broad fields are closely represented: ${fields.slice(0, 3).map(([field, count]) => `${field} (${count})`).join(', ')}.`);
+  if (
+    fields.length >= 3 &&
+    fields[0][1] - fields[2][1] <= Math.max(3, Math.round(selected.length * 0.04))
+  ) {
+    facts.push(
+      `The three largest broad fields are closely represented: ${fields
+        .slice(0, 3)
+        .map(([field, count]) => `${field} (${count})`)
+        .join(', ')}.`,
+    );
   }
   addRosterObservations(facts, selected, label);
   return facts;

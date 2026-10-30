@@ -3,8 +3,23 @@ import assert from 'node:assert/strict';
 import { connectionPath, lineageLayout } from '../src/connection-layouts.ts';
 import type { AcademicRelationship } from '../src/relationships.ts';
 
-function edge(a: string, b: string, type: AcademicRelationship['type'] = 'doctoral-advisor'): AcademicRelationship {
-  return { id: `${type}-${a}-${b}`, type, sourceId: a, targetId: b, sources: [], evidence: '', works: [], verifiedAt: '', direct: false, notes: '' };
+function edge(
+  a: string,
+  b: string,
+  type: AcademicRelationship['type'] = 'doctoral-advisor',
+): AcademicRelationship {
+  return {
+    id: `${type}-${a}-${b}`,
+    type,
+    sourceId: a,
+    targetId: b,
+    sources: [],
+    evidence: '',
+    works: [],
+    verifiedAt: '',
+    direct: false,
+    notes: '',
+  };
 }
 
 test('paths take the shortest route and retain mentorship direction when traversing backwards', () => {
@@ -18,7 +33,12 @@ test('paths take the shortest route and retain mentorship direction when travers
 });
 
 test('lineage places multiple advisors above their shared advisee and preserves deeper generations', () => {
-  const result = lineageLayout([edge('a', 'c'), edge('b', 'c'), edge('c', 'd'), edge('a', 'c', 'masters-advisor')]);
+  const result = lineageLayout([
+    edge('a', 'c'),
+    edge('b', 'c'),
+    edge('c', 'd'),
+    edge('a', 'c', 'masters-advisor'),
+  ]);
   assert.equal(result.hasCycle, false);
   assert.equal(result.points.get('a')!.y, result.points.get('b')!.y);
   assert.ok(result.points.get('a')!.y < result.points.get('c')!.y);

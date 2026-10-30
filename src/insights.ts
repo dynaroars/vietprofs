@@ -186,7 +186,11 @@ export function renderDecadesChart(roster: Roster): string {
   `;
 }
 
-export function renderTopFacultyHubs(subRoster: Roster, title = 'Top Faculty Hubs', desc = 'Universities with the most Vietnamese faculty; click to search.'): string {
+export function renderTopFacultyHubs(
+  subRoster: Roster,
+  title = 'Top Faculty Hubs',
+  desc = 'Universities with the most Vietnamese faculty; click to search.',
+): string {
   const topUnis = buildTopUniversities(subRoster, 8);
   if (!topUnis.length) return '';
   const maxUni = topUnis[0] ? topUnis[0][1] : 1;
@@ -271,7 +275,13 @@ export function renderDistributionCharts(subRoster: Roster): string {
   return `<div class="insights-grid">${fieldCard}${trackCard}</div>`;
 }
 
-export type GrowthMetricKey = 'count' | 'institutions' | 'countries' | 'portraits' | 'honors' | 'codeLines';
+export type GrowthMetricKey =
+  | 'count'
+  | 'institutions'
+  | 'countries'
+  | 'portraits'
+  | 'honors'
+  | 'codeLines';
 
 export interface GrowthMetricConfig {
   key: GrowthMetricKey;
@@ -339,7 +349,10 @@ function formatChange(delta: number, suffix: string): string {
   return `${delta >= 0 ? '+' : ''}${delta.toLocaleString()}${suffix}`;
 }
 
-export function renderGrowthChart(history: StatsHistoryPoint[], activeMetric: GrowthMetricKey = 'count'): string {
+export function renderGrowthChart(
+  history: StatsHistoryPoint[],
+  activeMetric: GrowthMetricKey = 'count',
+): string {
   if (history.length < 2) return '';
   const metric = GROWTH_METRICS[activeMetric] ?? GROWTH_METRICS.count;
   const values = history.map((p) => {
@@ -357,25 +370,45 @@ export function renderGrowthChart(history: StatsHistoryPoint[], activeMetric: Gr
   const dates = history.map((point) => Date.parse(`${point.date}T00:00:00Z`));
   const duration = Math.max(1, dates[dates.length - 1] - dates[0]);
   const xFor = (i: number) => padX + ((dates[i] - dates[0]) / duration) * (width - padX * 2);
-  const yFor = (val: number) => padTop + (1 - (val - minVal) / range) * (height - padTop - padBottom);
-  const linePoints = values.map((val, i) => `${xFor(i).toFixed(1)},${yFor(val).toFixed(1)}`).join(' ');
+  const yFor = (val: number) =>
+    padTop + (1 - (val - minVal) / range) * (height - padTop - padBottom);
+  const linePoints = values
+    .map((val, i) => `${xFor(i).toFixed(1)},${yFor(val).toFixed(1)}`)
+    .join(' ');
   const areaPoints = `${padX},${(height - padBottom).toFixed(1)} ${linePoints} ${(width - padX).toFixed(1)},${(height - padBottom).toFixed(1)}`;
   const first = history[0];
   const last = history[history.length - 1];
   const firstVal = values[0];
   const lastVal = values[values.length - 1];
   const dots = history
-    .map((p, i) => `<circle class="growth-dot" cx="${xFor(i).toFixed(1)}" cy="${yFor(values[i]).toFixed(1)}" r="2.5" data-date="${escapeHtml(p.date)}" data-count="${values[i]}"></circle>`)
+    .map(
+      (p, i) =>
+        `<circle class="growth-dot" cx="${xFor(i).toFixed(1)}" cy="${yFor(values[i]).toFixed(1)}" r="2.5" data-date="${escapeHtml(p.date)}" data-count="${values[i]}"></circle>`,
+    )
     .join('');
-  const pointsData = escapeHtml(JSON.stringify(history.map((p, i) => [xFor(i), p.date, values[i], metric.unit, metric.pluralUnit])));
+  const pointsData = escapeHtml(
+    JSON.stringify(
+      history.map((p, i) => [xFor(i), p.date, values[i], metric.unit, metric.pluralUnit]),
+    ),
+  );
 
-  const metricKeys: GrowthMetricKey[] = ['count', 'institutions', 'countries', 'portraits', 'honors', 'codeLines'];
+  const metricKeys: GrowthMetricKey[] = [
+    'count',
+    'institutions',
+    'countries',
+    'portraits',
+    'honors',
+    'codeLines',
+  ];
   const metricButtons = metricKeys
     .map((key) => {
       const cfg = GROWTH_METRICS[key];
       const cur = last[key] ?? last.count;
       const init = first[key] ?? first.count;
-      const pctChange = init > 0 ? formatChange(Math.round(((cur - init) / init) * 100), '%') : formatChange(cur - init, '');
+      const pctChange =
+        init > 0
+          ? formatChange(Math.round(((cur - init) / init) * 100), '%')
+          : formatChange(cur - init, '');
       const isActive = key === activeMetric;
       return `
         <button type="button" class="growth-metric-btn${isActive ? ' is-active' : ''}" data-metric="${key}" aria-pressed="${isActive}">
@@ -416,11 +449,16 @@ export function renderFunFacts(
   const rosterEl = document.getElementById('roster');
   const countEl = document.getElementById('result-count');
   if (countEl) {
-    countEl.textContent = 'Insights and patterns for the selected location and the worldwide diaspora:';
+    countEl.textContent =
+      'Insights and patterns for the selected location and the worldwide diaspora:';
   }
 
-  const worldUsRoster = fullRoster.filter((p) => (p.country || 'United States') === 'United States');
-  const worldInternationalRoster = fullRoster.filter((p) => (p.country || 'United States') !== 'United States');
+  const worldUsRoster = fullRoster.filter(
+    (p) => (p.country || 'United States') === 'United States',
+  );
+  const worldInternationalRoster = fullRoster.filter(
+    (p) => (p.country || 'United States') !== 'United States',
+  );
   const selectedIsWorld = selectedLocation === 'World';
   const selectedRoster = selectedIsWorld ? fullRoster : visibleRoster;
   const selectedIsUs = selectedLocation === 'US';
@@ -429,14 +467,21 @@ export function renderFunFacts(
     : buildLocationObservations(selectedRoster, selectedLocationLabel);
   const selectedAwardsFacts = buildAwardsFunFacts(selectedRoster);
 
-  const worldFacts = [...buildUsObservations(worldUsRoster), ...buildInternationalObservations(fullRoster), ...buildQualifiedObservations(fullRoster)];
+  const worldFacts = [
+    ...buildUsObservations(worldUsRoster),
+    ...buildInternationalObservations(fullRoster),
+    ...buildQualifiedObservations(fullRoster),
+  ];
   const worldAwardsFacts = buildAwardsFunFacts(fullRoster);
 
-  const formatList = (facts: string[]) => facts.map((f) => `<li>${escapeHtml(abbreviateInsightText(f))}</li>`).join('');
+  const formatList = (facts: string[]) =>
+    facts.map((f) => `<li>${escapeHtml(abbreviateInsightText(f))}</li>`).join('');
 
   const selectedUniversities = new Set(selectedRoster.map((p) => p.university)).size;
 
-  const selectedSection = selectedIsWorld ? '' : `
+  const selectedSection = selectedIsWorld
+    ? ''
+    : `
       <!-- REGIONAL SECTION -->
       <section class="insights-section-block">
         <div class="insights-section-header">
@@ -571,7 +616,9 @@ export function renderHealthPanel(
 
   return `
     <div class="health-panel-dashboard">
-      ${includeHeader ? `
+      ${
+        includeHeader
+          ? `
         <div class="health-panel-header">
           <div class="health-badge-row">
             <span class="insights-badge">📊 System Health &amp; Maintenance</span>
@@ -583,7 +630,9 @@ export function renderHealthPanel(
             This section tracks generated pages and metadata completeness.
           </p>
         </div>
-      ` : ''}
+      `
+          : ''
+      }
 
       <div class="html-inventory-card generated-html-card">
         <div class="html-inventory-header">
@@ -621,7 +670,9 @@ export function renderHealthPanel(
       </div>
 
       <div class="completeness-grid">
-        ${stats.completeness.map((m) => `
+        ${stats.completeness
+          .map(
+            (m) => `
           <div class="completeness-card">
             <div class="completeness-header">
               <span class="completeness-label">${escapeHtml(m.label)}</span>
@@ -635,24 +686,34 @@ export function renderHealthPanel(
               <span class="completeness-desc">${escapeHtml(m.description)}</span>
             </div>
           </div>
-        `).join('')}
+        `,
+          )
+          .join('')}
       </div>
 
-      ${stats.recentUpdatesCount.last30Days > 0 ? `
+      ${
+        stats.recentUpdatesCount.last30Days > 0
+          ? `
         <div class="recent-updates-badge">
           <span class="pulse-dot" aria-hidden="true"></span>
           <span><strong>${formatNumber(stats.recentUpdatesCount.last30Days)} profiles</strong> actively updated or verified in the past 30 days (${formatNumber(stats.recentUpdatesCount.last7Days)} this week).</span>
           <a class="recent-updates-link" href="${baseUrl}?sort=recent">Browse recently updated →</a>
         </div>
-      ` : ''}
+      `
+          : ''
+      }
 
-      ${statsHistory.length > 1 ? `
+      ${
+        statsHistory.length > 1
+          ? `
         <div class="health-growth-section">
           <h3 class="insights-category-title">Project &amp; Archive Growth History</h3>
           <p class="insights-caption">Daily repository snapshots; these counts describe the archive, not changes in the academic population.</p>
           ${renderGrowthChart(statsHistory, activeGrowthMetric)}
         </div>
-      ` : ''}
+      `
+          : ''
+      }
 
     </div>
   `;

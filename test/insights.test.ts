@@ -1,6 +1,11 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { renderHealthPanel, renderGrowthChart, relativeHeatTier, calculationBasis } from '../src/insights.ts';
+import {
+  renderHealthPanel,
+  renderGrowthChart,
+  relativeHeatTier,
+  calculationBasis,
+} from '../src/insights.ts';
 import type { RosterEntry } from '../src/data.ts';
 
 const sampleRoster: RosterEntry[] = [
@@ -56,7 +61,6 @@ test('renderHealthPanel renders the roster health dashboard without undefined or
   assert.ok(!html.includes('null'), 'health panel contains null');
   assert.ok(!html.includes('NaN'), 'health panel contains NaN');
 });
-
 
 test('growth history switches metrics, handles declining code size, and spaces points by date', () => {
   const history = [

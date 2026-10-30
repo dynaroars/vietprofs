@@ -10,7 +10,8 @@ export interface StatsHistoryPoint {
 
 export async function loadStatsHistory(): Promise<StatsHistoryPoint[]> {
   try {
-    const cacheBuster = typeof __BUILD_COMMIT__ !== 'undefined' && __BUILD_COMMIT__ ? `?v=${__BUILD_COMMIT__}` : '';
+    const cacheBuster =
+      typeof __BUILD_COMMIT__ !== 'undefined' && __BUILD_COMMIT__ ? `?v=${__BUILD_COMMIT__}` : '';
     const res = await fetch(`${import.meta.env.BASE_URL}stats-history.json${cacheBuster}`);
     if (!res.ok) return [];
     return await res.json();
@@ -18,4 +19,3 @@ export async function loadStatsHistory(): Promise<StatsHistoryPoint[]> {
     return [];
   }
 }
-

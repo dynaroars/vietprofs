@@ -63,7 +63,11 @@ function fail(file: string, message: string): never {
 
 function validateTimestamp(file: string, value: string, label: string, field: string): void {
   const timestamp = new Date(value);
-  if (!UTC_TIMESTAMP_PATTERN.test(value) || Number.isNaN(timestamp.valueOf()) || timestamp.toISOString() !== value) {
+  if (
+    !UTC_TIMESTAMP_PATTERN.test(value) ||
+    Number.isNaN(timestamp.valueOf()) ||
+    timestamp.toISOString() !== value
+  ) {
     fail(file, `${label} ${field} must be a canonical UTC ISO timestamp`);
   }
   if (timestamp.valueOf() > Date.now()) fail(file, `${label} ${field} must not be in the future`);
@@ -73,18 +77,28 @@ const [roster, relationships] = await Promise.all([
   readFile(rosterFile, 'utf8').then(JSON.parse),
   readFile(relationshipsFile, 'utf8').then(JSON.parse),
 ]);
-if (!Array.isArray(roster) || roster.length === 0) fail(rosterFile, 'must contain a non-empty array');
+if (!Array.isArray(roster) || roster.length === 0)
+  fail(rosterFile, 'must contain a non-empty array');
 const rosterIds = new Set((roster as Array<{ id: string }>).map((person) => person.id));
 
 // Retired ids stay retired: a merged duplicate points at the entry that absorbed it, and a person
 // who comes back gets the original id restored (npm run retire-profile-id), not a fresh one.
 const retiredFile = resolve('maintenance/retired-ids.json');
-const retiredIds = JSON.parse(await readFile(retiredFile, 'utf8')) as Record<string, { replacedBy: string | null; name: string; reason: string }>;
+const retiredIds = JSON.parse(await readFile(retiredFile, 'utf8')) as Record<
+  string,
+  { replacedBy: string | null; name: string; reason: string }
+>;
 for (const [id, record] of Object.entries(retiredIds)) {
   if (!/^vp-\d{4,}$/.test(id)) fail(retiredFile, `invalid id ${id}`);
-  if (rosterIds.has(id)) fail(retiredFile, `${id} is back in the roster; remove it from retired-ids.json when restoring an id`);
-  if (record.replacedBy !== null && !rosterIds.has(record.replacedBy)) fail(retiredFile, `${id} points at ${record.replacedBy}, which is not in the roster`);
-  if (typeof record.name !== 'string' || typeof record.reason !== 'string' || !record.reason.trim()) fail(retiredFile, `${id} needs a name and a reason`);
+  if (rosterIds.has(id))
+    fail(
+      retiredFile,
+      `${id} is back in the roster; remove it from retired-ids.json when restoring an id`,
+    );
+  if (record.replacedBy !== null && !rosterIds.has(record.replacedBy))
+    fail(retiredFile, `${id} points at ${record.replacedBy}, which is not in the roster`);
+  if (typeof record.name !== 'string' || typeof record.reason !== 'string' || !record.reason.trim())
+    fail(retiredFile, `${id} needs a name and a reason`);
 }
 
 // updates.json holds each entry's lastUpdatedAt, keyed by id and written by stamp-updates.ts.
@@ -92,12 +106,15 @@ for (const [id, record] of Object.entries(retiredIds)) {
 const updatesFile = resolve('public/updates.json');
 const updates: Record<string, string> = JSON.parse(await readFile(updatesFile, 'utf8'));
 const updateIds = Object.keys(updates);
-if (updateIds.join() !== [...updateIds].sort().join()) fail(updatesFile, 'keys must be sorted by id; run npm run stamp-updates');
+if (updateIds.join() !== [...updateIds].sort().join())
+  fail(updatesFile, 'keys must be sorted by id; run npm run stamp-updates');
 for (const id of updateIds) {
-  if (!rosterIds.has(id)) fail(updatesFile, `${id} is not in the roster; run npm run stamp-updates`);
+  if (!rosterIds.has(id))
+    fail(updatesFile, `${id} is not in the roster; run npm run stamp-updates`);
   validateTimestamp(updatesFile, updates[id], id, 'timestamp');
 }
-for (const id of rosterIds) if (!(id in updates)) fail(updatesFile, `${id} has no timestamp; run npm run stamp-updates`);
+for (const id of rosterIds)
+  if (!(id in updates)) fail(updatesFile, `${id} has no timestamp; run npm run stamp-updates`);
 
 const names = new Set<string>();
 const ids = new Set<string>();
@@ -110,49 +127,73 @@ for (const [index, person] of roster.entries()) {
   const label = `entry ${index + 1}`;
   if (!person || typeof person !== 'object') fail(rosterFile, `${label} must be an object`);
   for (const field of Object.keys(person)) {
-    if (!allowedRosterFields.has(field)) fail(rosterFile, `${label} has unsupported field ${field}`);
+    if (!allowedRosterFields.has(field))
+      fail(rosterFile, `${label} has unsupported field ${field}`);
   }
   for (const field of REQUIRED_ROSTER_STRINGS) {
-    if (typeof person[field] !== 'string' || !person[field].trim()) fail(rosterFile, `${label} has invalid ${field}`);
+    if (typeof person[field] !== 'string' || !person[field].trim())
+      fail(rosterFile, `${label} has invalid ${field}`);
   }
   if (!/^vp-\d{4,}$/.test(person.id)) fail(rosterFile, `${label} has invalid id ${person.id}`);
   // `id` leads every record so the raw view on a profile page and roster diffs stay consistent.
   // Cheap to satisfy: JSON.stringify preserves insertion order, so anything that parses the
   // roster and writes it back keeps this automatically.
-  if (Object.keys(person)[0] !== 'id') fail(rosterFile, `${label} (${person.id}) must list id as its first field`);
-  if (!/^https?:\/\//.test(person.profileUrl)) fail(rosterFile, `${label} profileUrl must use HTTP(S)`);
+  if (Object.keys(person)[0] !== 'id')
+    fail(rosterFile, `${label} (${person.id}) must list id as its first field`);
+  if (!/^https?:\/\//.test(person.profileUrl))
+    fail(rosterFile, `${label} profileUrl must use HTTP(S)`);
   // Confirmed is the default; only an unconfirmed record (no official current profile) says so.
-  if (person.confirmed !== undefined && person.confirmed !== false) fail(rosterFile, `${label} confirmed may only be false; omit it for a confirmed record`);
+  if (person.confirmed !== undefined && person.confirmed !== false)
+    fail(rosterFile, `${label} confirmed may only be false; omit it for a confirmed record`);
   if (person.websiteUrl !== undefined) {
-    if (!/^https?:\/\//.test(person.websiteUrl)) fail(rosterFile, `${label} websiteUrl must use HTTP(S)`);
-    if (person.websiteUrl === person.profileUrl) fail(rosterFile, `${label} websiteUrl must differ from profileUrl`);
+    if (!/^https?:\/\//.test(person.websiteUrl))
+      fail(rosterFile, `${label} websiteUrl must use HTTP(S)`);
+    if (person.websiteUrl === person.profileUrl)
+      fail(rosterFile, `${label} websiteUrl must differ from profileUrl`);
     if (websiteUrls.has(person.websiteUrl)) {
-      fail(rosterFile, `${label} duplicates websiteUrl ${person.websiteUrl} with ${websiteUrls.get(person.websiteUrl)}`);
+      fail(
+        rosterFile,
+        `${label} duplicates websiteUrl ${person.websiteUrl} with ${websiteUrls.get(person.websiteUrl)}`,
+      );
     }
     websiteUrls.set(person.websiteUrl, person.name);
   }
   if (person.scholarUrl !== undefined) {
     const scholarErr = validateExternalUrl(person.scholarUrl, 'scholarUrl');
     if (scholarErr) fail(rosterFile, `${label} ${scholarErr}`);
-    if (scholarUrls.has(person.scholarUrl)) fail(rosterFile, `${label} duplicates scholarUrl ${person.scholarUrl} — a Google Scholar profile belongs to one person; this usually means a placeholder/wrong ID got copied across a batch`);
+    if (scholarUrls.has(person.scholarUrl))
+      fail(
+        rosterFile,
+        `${label} duplicates scholarUrl ${person.scholarUrl} — a Google Scholar profile belongs to one person; this usually means a placeholder/wrong ID got copied across a batch`,
+      );
     scholarUrls.add(person.scholarUrl);
   }
   if (person.linkedinUrl !== undefined) {
     const linkedinErr = validateExternalUrl(person.linkedinUrl, 'linkedinUrl');
     if (linkedinErr) fail(rosterFile, `${label} ${linkedinErr}`);
-    if (linkedinUrls.has(person.linkedinUrl)) fail(rosterFile, `${label} duplicates linkedinUrl ${person.linkedinUrl} — a LinkedIn profile belongs to one person; this usually means a placeholder/wrong ID got copied across a batch`);
+    if (linkedinUrls.has(person.linkedinUrl))
+      fail(
+        rosterFile,
+        `${label} duplicates linkedinUrl ${person.linkedinUrl} — a LinkedIn profile belongs to one person; this usually means a placeholder/wrong ID got copied across a batch`,
+      );
     linkedinUrls.add(person.linkedinUrl);
   }
   if (looksSurnameFirst(person.name) && !surnameFirstAllowlist.has(person.name)) {
-    fail(rosterFile, `${label} name "${person.name}" looks stored surname-first (Vietnamese order) instead of "First (Middle) Last" — reorder it, or if the first token is genuinely this person's given name, add it to surnameFirstAllowlist in scripts/validate-data.ts with a note on how you confirmed it`);
+    fail(
+      rosterFile,
+      `${label} name "${person.name}" looks stored surname-first (Vietnamese order) instead of "First (Middle) Last" — reorder it, or if the first token is genuinely this person's given name, add it to surnameFirstAllowlist in scripts/validate-data.ts with a note on how you confirmed it`,
+    );
   }
   if ((person.portrait === undefined) !== (person.portraitSource === undefined)) {
     fail(rosterFile, `${label} portrait and portraitSource must be provided together`);
   }
   if (person.portrait !== undefined) {
-    if (!/^portraits\/[a-z0-9][a-z0-9.-]*\.webp$/.test(person.portrait)) fail(rosterFile, `${label} has invalid portrait path`);
-    if (!/^https?:\/\//.test(person.portraitSource)) fail(rosterFile, `${label} portraitSource must be an HTTP(S) URL`);
-    if (portraits.has(person.portrait)) fail(rosterFile, `${label} duplicates portrait ${person.portrait}`);
+    if (!/^portraits\/[a-z0-9][a-z0-9.-]*\.webp$/.test(person.portrait))
+      fail(rosterFile, `${label} has invalid portrait path`);
+    if (!/^https?:\/\//.test(person.portraitSource))
+      fail(rosterFile, `${label} portraitSource must be an HTTP(S) URL`);
+    if (portraits.has(person.portrait))
+      fail(rosterFile, `${label} duplicates portrait ${person.portrait}`);
     try {
       await access(resolve('public', person.portrait));
     } catch {
@@ -167,40 +208,81 @@ for (const [index, person] of roster.entries()) {
       const honorLabel = `${label} honor ${honorIndex + 1}`;
       if (!honor || typeof honor !== 'object') fail(rosterFile, `${honorLabel} must be an object`);
       for (const field of Object.keys(honor)) {
-        if (!allowedHonorFields.has(field)) fail(rosterFile, `${honorLabel} has unsupported field ${field}`);
+        if (!allowedHonorFields.has(field))
+          fail(rosterFile, `${honorLabel} has unsupported field ${field}`);
       }
       for (const field of ['name', 'organization', 'source']) {
-        if (typeof honor[field] !== 'string' || !honor[field].trim()) fail(rosterFile, `${honorLabel} has invalid ${field}`);
+        if (typeof honor[field] !== 'string' || !honor[field].trim())
+          fail(rosterFile, `${honorLabel} has invalid ${field}`);
       }
-      if (!allowedHonorCategories.has(honor.category)) fail(rosterFile, `${honorLabel} has unsupported category ${honor.category}`);
+      if (!allowedHonorCategories.has(honor.category))
+        fail(rosterFile, `${honorLabel} has unsupported category ${honor.category}`);
       // Honors always carry a `year` key; `null` records an award whose year is unknown.
-      if (!Object.hasOwn(honor, 'year')) fail(rosterFile, `${honorLabel} must set year (use null when unknown)`);
-      if (honor.year !== null && (!Number.isInteger(honor.year) || honor.year < 1900 || honor.year > CURRENT_YEAR)) {
-        fail(rosterFile, `${honorLabel} has invalid year (expected an integer 1900-${CURRENT_YEAR}, or null when unknown)`);
+      if (!Object.hasOwn(honor, 'year'))
+        fail(rosterFile, `${honorLabel} must set year (use null when unknown)`);
+      if (
+        honor.year !== null &&
+        (!Number.isInteger(honor.year) || honor.year < 1900 || honor.year > CURRENT_YEAR)
+      ) {
+        fail(
+          rosterFile,
+          `${honorLabel} has invalid year (expected an integer 1900-${CURRENT_YEAR}, or null when unknown)`,
+        );
       }
-      if (!/^https:\/\//.test(honor.source)) fail(rosterFile, `${honorLabel} source must use HTTPS`);
+      if (!/^https:\/\//.test(honor.source))
+        fail(rosterFile, `${honorLabel} source must use HTTPS`);
       const honorKey = `${honor.name}|${honor.year ?? 'unknown'}|${honor.organization}`;
-      if (honorNames.has(honorKey)) fail(rosterFile, `${honorLabel} duplicates an honor for ${person.name}`);
+      if (honorNames.has(honorKey))
+        fail(rosterFile, `${honorLabel} duplicates an honor for ${person.name}`);
       honorNames.add(honorKey);
     }
   }
-  if (!allowedTracks.has(person.track)) fail(rosterFile, `${label} has unsupported track ${person.track}`);
+  if (!allowedTracks.has(person.track))
+    fail(rosterFile, `${label} has unsupported track ${person.track}`);
   if (person.rank !== undefined && !(RANKS as readonly string[]).includes(person.rank)) {
-    fail(rosterFile, `${label} has unsupported rank ${JSON.stringify(person.rank)}: use one of ${RANKS.join(', ')} (the track carries Clinical/Teaching/Research; the exact title stays on the profile)`);
+    fail(
+      rosterFile,
+      `${label} has unsupported rank ${JSON.stringify(person.rank)}: use one of ${RANKS.join(', ')} (the track carries Clinical/Teaching/Research; the exact title stays on the profile)`,
+    );
   }
-  if (person.institutionType !== undefined && !allowedInstitutionTypes.has(person.institutionType)) {
+  if (
+    person.institutionType !== undefined &&
+    !allowedInstitutionTypes.has(person.institutionType)
+  ) {
     fail(rosterFile, `${label} has unsupported institutionType ${person.institutionType}`);
   }
-  if (person.institutionType !== undefined && person.institutionType !== 'University' && !['Research', 'Emeritus', 'Deceased'].includes(person.track)) {
-    fail(rosterFile, `${label} non-university institutionType requires the Research, Emeritus, or Deceased track`);
+  if (
+    person.institutionType !== undefined &&
+    person.institutionType !== 'University' &&
+    !['Research', 'Emeritus', 'Deceased'].includes(person.track)
+  ) {
+    fail(
+      rosterFile,
+      `${label} non-university institutionType requires the Research, Emeritus, or Deceased track`,
+    );
   }
-  if (!Array.isArray(person.researchAreas) || person.researchAreas.length === 0) fail(rosterFile, `${label} needs researchAreas`);
-  if (person.state !== undefined && typeof person.state !== 'string') fail(rosterFile, `${label} state must be a string`);
-  if (typeof person.state === 'string' && canonicalState(person.state, person.country) !== person.state) {
-    fail(rosterFile, `${label} state must be the full U.S. state name (${canonicalState(person.state, person.country)}), not ${person.state}`);
+  if (!Array.isArray(person.researchAreas) || person.researchAreas.length === 0)
+    fail(rosterFile, `${label} needs researchAreas`);
+  if (person.state !== undefined && typeof person.state !== 'string')
+    fail(rosterFile, `${label} state must be a string`);
+  if (
+    typeof person.state === 'string' &&
+    canonicalState(person.state, person.country) !== person.state
+  ) {
+    fail(
+      rosterFile,
+      `${label} state must be the full U.S. state name (${canonicalState(person.state, person.country)}), not ${person.state}`,
+    );
   }
-  if (person.country !== undefined && typeof person.country !== 'string') fail(rosterFile, `${label} country must be a string`);
-  const institutionFields = ['phdInstitution', 'undergradInstitution', 'msInstitution', 'mdInstitution', 'postdocInstitution'];
+  if (person.country !== undefined && typeof person.country !== 'string')
+    fail(rosterFile, `${label} country must be a string`);
+  const institutionFields = [
+    'phdInstitution',
+    'undergradInstitution',
+    'msInstitution',
+    'mdInstitution',
+    'postdocInstitution',
+  ];
   for (const field of institutionFields) {
     if (person[field] !== undefined) {
       if (typeof person[field] !== 'string' || !person[field].trim()) {
@@ -212,7 +294,10 @@ for (const [index, person] of roster.entries()) {
   }
   const yearFields = ['phdYear', 'undergradYear'];
   for (const field of yearFields) {
-    if (person[field] !== undefined && (!Number.isInteger(person[field]) || person[field] < 1900 || person[field] > CURRENT_YEAR)) {
+    if (
+      person[field] !== undefined &&
+      (!Number.isInteger(person[field]) || person[field] < 1900 || person[field] > CURRENT_YEAR)
+    ) {
       fail(rosterFile, `${label} has invalid ${field}`);
     }
   }
@@ -227,21 +312,37 @@ for (const [index, person] of roster.entries()) {
     const directFields = new Set<string>();
     for (const field of person.directFields) {
       if (typeof field !== 'string' || !PROTECTABLE_FIELDS.has(field)) {
-        fail(rosterFile, `${label} has invalid direct field ${JSON.stringify(field)}: only ${[...PROTECTABLE_FIELDS].join(', ')} can be protected`);
+        fail(
+          rosterFile,
+          `${label} has invalid direct field ${JSON.stringify(field)}: only ${[...PROTECTABLE_FIELDS].join(', ')} can be protected`,
+        );
       }
-      if (person[field] === undefined || person[field] === null || (typeof person[field] === 'string' && !person[field].trim())) {
-        fail(rosterFile, `${label} (${person.id}) lists "${field}" in directFields but the field value is missing or empty`);
+      if (
+        person[field] === undefined ||
+        person[field] === null ||
+        (typeof person[field] === 'string' && !person[field].trim())
+      ) {
+        fail(
+          rosterFile,
+          `${label} (${person.id}) lists "${field}" in directFields but the field value is missing or empty`,
+        );
       }
       if (directFields.has(field)) fail(rosterFile, `${label} duplicates direct field ${field}`);
       directFields.add(field);
     }
-    if (!person.directFields.every((field: string, index: number, fields: string[]) => index === 0 || fields[index - 1].localeCompare(field) < 0)) {
+    if (
+      !person.directFields.every(
+        (field: string, index: number, fields: string[]) =>
+          index === 0 || fields[index - 1].localeCompare(field) < 0,
+      )
+    ) {
       fail(rosterFile, `${label} directFields must be sorted`);
     }
   }
   if (names.has(person.name)) fail(rosterFile, `duplicate name: ${person.name}`);
   if (ids.has(person.id)) fail(rosterFile, `duplicate id: ${person.id}`);
-  if (profileUrls.has(person.profileUrl)) fail(rosterFile, `duplicate profileUrl: ${person.profileUrl}`);
+  if (profileUrls.has(person.profileUrl))
+    fail(rosterFile, `duplicate profileUrl: ${person.profileUrl}`);
   names.add(person.name);
   ids.add(person.id);
   profileUrls.add(person.profileUrl);
@@ -265,18 +366,30 @@ for (const [index, person] of (roster as RosterEntry[]).entries()) {
     const key = identityKey(value);
     const owner = identityOwners.get(key);
     if (owner && owner !== person.id && !DISTINCT_PEOPLE.has([owner, person.id].sort().join(' '))) {
-      fail(rosterFile, `${person.id} and ${owner} share ${field} ${key}: probably one person entered twice; merge into the older id (npm run retire-profile-id)`);
+      fail(
+        rosterFile,
+        `${person.id} and ${owner} share ${field} ${key}: probably one person entered twice; merge into the older id (npm run retire-profile-id)`,
+      );
     }
     identityOwners.set(key, person.id);
   }
   for (let other = 0; other < index; other += 1) {
     const earlier = (roster as RosterEntry[])[other];
-    if (earlier.university !== person.university || !namesMatch(rosterTokens[index], rosterTokens[other])) continue;
+    if (
+      earlier.university !== person.university ||
+      !namesMatch(rosterTokens[index], rosterTokens[other])
+    )
+      continue;
     if (DISTINCT_PEOPLE.has([earlier.id, person.id].sort().join(' '))) continue;
-    fail(rosterFile, `${earlier.id} "${earlier.name}" and ${person.id} "${person.name}" look like one person at ${person.university}: merge into the older id, or add the pair to DISTINCT_PEOPLE with how you confirmed they differ`);
+    fail(
+      rosterFile,
+      `${earlier.id} "${earlier.name}" and ${person.id} "${person.name}" look like one person at ${person.university}: merge into the older id, or add the pair to DISTINCT_PEOPLE with how you confirmed they differ`,
+    );
   }
 }
 
 const relationshipErrors = validateRelationshipDatabase(relationships, roster);
 if (relationshipErrors.length) fail(relationshipsFile, relationshipErrors.join('; '));
-console.log(`Validated ${roster.length} roster entries and ${relationships.relationships.length} academic relationships.`);
+console.log(
+  `Validated ${roster.length} roster entries and ${relationships.relationships.length} academic relationships.`,
+);

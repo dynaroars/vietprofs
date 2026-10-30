@@ -40,9 +40,13 @@ async function waitForServer(url: string) {
   throw new Error(`Timed out waiting for ${url}`);
 }
 
-const server = spawn('npm', ['run', 'preview', '--', '--host', '127.0.0.1', '--port', String(port)], {
-  stdio: 'ignore',
-});
+const server = spawn(
+  'npm',
+  ['run', 'preview', '--', '--host', '127.0.0.1', '--port', String(port)],
+  {
+    stdio: 'ignore',
+  },
+);
 let browser;
 
 try {

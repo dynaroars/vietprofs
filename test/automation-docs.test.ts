@@ -6,7 +6,12 @@ import { existsSync, readdirSync, readFileSync } from 'node:fs';
 // stale path, npm script, or schedule claim silently breaks a scheduled run.
 
 const automation = readFileSync('TASKS/AUTOMATION.md', 'utf8');
-const instructionDocs = ['AGENTS.md', 'README.md', 'ROSTER_MAINTENANCE.md', ...readdirSync('TASKS').map((file) => `TASKS/${file}`)];
+const instructionDocs = [
+  'AGENTS.md',
+  'README.md',
+  'ROSTER_MAINTENANCE.md',
+  ...readdirSync('TASKS').map((file) => `TASKS/${file}`),
+];
 const DAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 const DAY_NAMES = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
@@ -26,24 +31,50 @@ function namesDay(et: string, day: number): boolean {
   });
 }
 
-type Row = { key: string; cron: string; et: string; minute: number; hour: number; weekdays: number[] | null };
-const rows: Row[] = [...automation.matchAll(/^\| `([a-z-]+)` \| `trig_\w+` \| [^|]+ \| `([^`]+)` \| ([^|]+) \|/gm)].map(([, key, cron, et]) => {
+type Row = {
+  key: string;
+  cron: string;
+  et: string;
+  minute: number;
+  hour: number;
+  weekdays: number[] | null;
+};
+const rows: Row[] = [
+  ...automation.matchAll(/^\| `([a-z-]+)` \| `trig_\w+` \| [^|]+ \| `([^`]+)` \| ([^|]+) \|/gm),
+].map(([, key, cron, et]) => {
   const [minute, hour, , , dow] = cron.split(' ');
-  return { key, cron, et: et.trim(), minute: Number(minute), hour: Number(hour), weekdays: dow === '*' ? null : dow.split(',').flatMap(expandDays) };
+  return {
+    key,
+    cron,
+    et: et.trim(),
+    minute: Number(minute),
+    hour: Number(hour),
+    weekdays: dow === '*' ? null : dow.split(',').flatMap(expandDays),
+  };
 });
 const audit = rows.find((row) => row.key === 'audit');
 
 // Local outputs the docs may name (e.g. maintenance/website-candidates.json) are gitignored, so a
 // fresh clone doesn't have them.
-const gitignored = new Set(readFileSync('.gitignore', 'utf8').split('\n').map((line) => line.trim()));
+const gitignored = new Set(
+  readFileSync('.gitignore', 'utf8')
+    .split('\n')
+    .map((line) => line.trim()),
+);
 
 test('instruction docs only reference files and npm scripts that exist', () => {
-  const scripts = JSON.parse(readFileSync('package.json', 'utf8')).scripts as Record<string, string>;
+  const scripts = JSON.parse(readFileSync('package.json', 'utf8')).scripts as Record<
+    string,
+    string
+  >;
   const missing: string[] = [];
   for (const doc of instructionDocs) {
     const text = readFileSync(doc, 'utf8');
-    for (const [, name] of text.matchAll(/npm run ([a-z0-9:_-]+)/g)) if (!scripts[name]) missing.push(`${doc}: npm run ${name}`);
-    for (const [, path] of text.matchAll(/(?<![\w/.-])((?:scripts|maintenance|TASKS|docs|test|src|\.github\/workflows)\/[\w./-]+?\.(?:json|ts|js|py|sh|md|yml))(?!\w)/g)) {
+    for (const [, name] of text.matchAll(/npm run ([a-z0-9:_-]+)/g))
+      if (!scripts[name]) missing.push(`${doc}: npm run ${name}`);
+    for (const [, path] of text.matchAll(
+      /(?<![\w/.-])((?:scripts|maintenance|TASKS|docs|test|src|\.github\/workflows)\/[\w./-]+?\.(?:json|ts|js|py|sh|md|yml))(?!\w)/g,
+    )) {
       if (!existsSync(path) && !gitignored.has(path)) missing.push(`${doc}: ${path}`);
     }
   }
@@ -58,7 +89,10 @@ test('the AUTOMATION.md schedule keeps every audit ahead of the producers', () =
   assert.ok(audit.hour * 60 + audit.minute < 4 * 60, 'the audit runs before 04:00 UTC');
   for (const row of rows.filter((candidate) => candidate !== audit)) {
     const start = row.hour * 60 + row.minute;
-    assert.ok(start >= 4 * 60 && start <= 15 * 60, `${row.key} starts between 04:00 and 15:00 UTC (${row.cron})`);
+    assert.ok(
+      start >= 4 * 60 && start <= 15 * 60,
+      `${row.key} starts between 04:00 and 15:00 UTC (${row.cron})`,
+    );
   }
 });
 
@@ -69,7 +103,11 @@ test('each schedule row states its ET time and weekdays to match the UTC cron', 
     assert.ok(row.et.includes(time), `${row.key}: ET column "${row.et}" should say ${time}`);
     if (row.weekdays) {
       const shift = row.hour < 4 ? 6 : 0; // before 04:00 UTC it is still the previous day in ET
-      for (const day of row.weekdays) assert.ok(namesDay(row.et, (day + shift) % 7), `${row.key}: ET column "${row.et}" should name ${DAYS[(day + shift) % 7]}`);
+      for (const day of row.weekdays)
+        assert.ok(
+          namesDay(row.et, (day + shift) % 7),
+          `${row.key}: ET column "${row.et}" should name ${DAYS[(day + shift) % 7]}`,
+        );
     }
   }
 });
@@ -78,17 +116,25 @@ test('the auditor health check runs on a day the audit is scheduled', () => {
   assert.ok(audit, 'Schedule table has an audit row');
   const auditDays = audit.weekdays ?? [0, 1, 2, 3, 4, 5, 6];
   for (const [, day] of automation.matchAll(/\((\w+day) runs only/g)) {
-    assert.ok(auditDays.includes(DAY_NAMES.indexOf(day)), `"${day} runs only" must be an audit day (UTC cron ${audit.cron})`);
+    assert.ok(
+      auditDays.includes(DAY_NAMES.indexOf(day)),
+      `"${day} runs only" must be an audit day (UTC cron ${audit.cron})`,
+    );
   }
 });
 
 test('every scheduled routine has a section and every section a schedule row', () => {
-  const sections = [...automation.matchAll(/^### .+ \(`([a-z-]+)`\)$/gm)].map(([, key]) => key).sort();
+  const sections = [...automation.matchAll(/^### .+ \(`([a-z-]+)`\)$/gm)]
+    .map(([, key]) => key)
+    .sort();
   assert.deepEqual(sections, rows.map((row) => row.key).sort());
 });
 
 test('every non-deploy GitHub workflow is documented in AUTOMATION.md', () => {
   for (const file of readdirSync('.github/workflows').filter((name) => name !== 'deploy.yml')) {
-    assert.ok(automation.includes(`.github/workflows/${file}`), `${file} is listed in TASKS/AUTOMATION.md`);
+    assert.ok(
+      automation.includes(`.github/workflows/${file}`),
+      `${file} is listed in TASKS/AUTOMATION.md`,
+    );
   }
 });

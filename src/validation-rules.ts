@@ -3,11 +3,14 @@
  * Prevents hallucinated chronology, parser pollution, and invalid external profile links.
  */
 
-export const VALID_SCHOLAR_URL_PATTERN = /^https:\/\/scholar\.google\.[a-z.]+\/citations\?.*user=[a-zA-Z0-9_-]{8,}/;
-export const VALID_LINKEDIN_URL_PATTERN = /^https:\/\/(www\.)?linkedin\.com\/in\/[\p{L}\p{N}%_.-]+\/?$/u;
+export const VALID_SCHOLAR_URL_PATTERN =
+  /^https:\/\/scholar\.google\.[a-z.]+\/citations\?.*user=[a-zA-Z0-9_-]{8,}/;
+export const VALID_LINKEDIN_URL_PATTERN =
+  /^https:\/\/(www\.)?linkedin\.com\/in\/[\p{L}\p{N}%_.-]+\/?$/u;
 
 // Suspicious prefixes where a parser or LLM accidentally prepended the degree name into the institution field
-const POLLUTED_INSTITUTION_PREFIX = /^(ph\.?d\.?|doctor(ate)?|b\.?[sa]\.?|bachelor('s)?|m\.?[sa]\.?|master('s)?)\s+(in|of|from)\s+/i;
+const POLLUTED_INSTITUTION_PREFIX =
+  /^(ph\.?d\.?|doctor(ate)?|b\.?[sa]\.?|bachelor('s)?|m\.?[sa]\.?|master('s)?)\s+(in|of|from)\s+/i;
 
 /**
  * Validates the chronological sanity of education fields.
@@ -24,7 +27,9 @@ export function validateEducationChronology(person: {
     if (phdYear < undergradYear) {
       errors.push(`phdYear (${phdYear}) cannot precede undergradYear (${undergradYear})`);
     } else if (phdYear - undergradYear < 2) {
-      errors.push(`interval between undergradYear (${undergradYear}) and phdYear (${phdYear}) is less than 2 years`);
+      errors.push(
+        `interval between undergradYear (${undergradYear}) and phdYear (${phdYear}) is less than 2 years`,
+      );
     }
   }
   return errors;
@@ -43,7 +48,10 @@ export function validateInstitutionFormat(institution: string, fieldName: string
 /**
  * Validates external profile links (Scholar, LinkedIn).
  */
-export function validateExternalUrl(url: string, field: 'scholarUrl' | 'linkedinUrl'): string | null {
+export function validateExternalUrl(
+  url: string,
+  field: 'scholarUrl' | 'linkedinUrl',
+): string | null {
   if (field === 'scholarUrl') {
     if (!VALID_SCHOLAR_URL_PATTERN.test(url)) {
       return 'scholarUrl must be a Google Scholar citation profile URL (https://scholar.google.com/citations?user=...)';

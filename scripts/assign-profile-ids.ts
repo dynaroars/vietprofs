@@ -7,7 +7,9 @@ const apply = process.argv.includes('--apply');
 const roster: RosterEntry[] = JSON.parse(await readFile(rosterFile, 'utf8'));
 // Retired ids (merged duplicates, removed people) are never handed out again: their old public
 // pages redirect to the kept entry, and a returning person gets their original id back.
-const retired = Object.keys(JSON.parse(await readFile(resolve('maintenance/retired-ids.json'), 'utf8')));
+const retired = Object.keys(
+  JSON.parse(await readFile(resolve('maintenance/retired-ids.json'), 'utf8')),
+);
 const ids = new Set<string>([...roster.map((person) => person.id).filter(Boolean), ...retired]);
 let next = Math.max(0, ...[...ids].map((id) => Number(id.slice(3))).filter(Number.isFinite)) + 1;
 
@@ -28,11 +30,15 @@ function withAssignedId(person: RosterEntry): RosterEntry {
   return { id: nextId(), ...rest };
 }
 
-const updated: RosterEntry[] = roster.map((person) => (person.id ? person : withAssignedId(person)));
+const updated: RosterEntry[] = roster.map((person) =>
+  person.id ? person : withAssignedId(person),
+);
 const added = updated.filter((_, index: number) => !roster[index]?.id).length;
 if (!apply) {
   if (added > 0) {
-    throw new Error(`${added} roster entries need profile IDs. Run npm run assign-profile-ids -- --apply, then commit the assigned IDs.`);
+    throw new Error(
+      `${added} roster entries need profile IDs. Run npm run assign-profile-ids -- --apply, then commit the assigned IDs.`,
+    );
   }
   console.log('All roster entries have immutable profile IDs.');
 } else {

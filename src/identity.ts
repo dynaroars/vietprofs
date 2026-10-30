@@ -2,8 +2,14 @@
 // (scripts/find-roster-matches.ts). They decide when two records are probably the same person.
 
 export function nameTokens(name: string): string[] {
-  const tokens = name.split(' - ')[0].normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[đĐ]/g, 'd').toLowerCase()
-    .split(/[^a-z]+/).filter((token) => token.length > 1);
+  const tokens = name
+    .split(' - ')[0]
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[đĐ]/g, 'd')
+    .toLowerCase()
+    .split(/[^a-z]+/)
+    .filter((token) => token.length > 1);
   return [...new Set(tokens)];
 }
 
@@ -12,7 +18,11 @@ export function identityKey(url: string): string {
   if (scholar) return `scholar:${scholar[1]}`;
   const linkedin = url.match(/linkedin\.com\/in\/([^/?#]+)/i);
   if (linkedin) return `linkedin:${decodeURIComponent(linkedin[1]).toLowerCase()}`;
-  const [path, query = ''] = url.toLowerCase().replace(/^https?:\/\/(www\.)?/, '').replace(/#.*$/, '').split('?');
+  const [path, query = ''] = url
+    .toLowerCase()
+    .replace(/^https?:\/\/(www\.)?/, '')
+    .replace(/#.*$/, '')
+    .split('?');
   const base = path.replace(/\/(index\.html?|home)?$/, '').replace(/\/+$/, '');
   return query ? `${base}?${query}` : base;
 }
