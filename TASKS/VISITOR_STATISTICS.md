@@ -61,15 +61,9 @@ After each site's daily refresh (cron `15 1 * * *`), the Worker checks the fresh
 
 No secrets are involved. The scheduled auditor leaves `visitor-stats` Issues for the owner.
 
-## Optional edge rule against data-center crawlers
+## Identifying a crawler
 
-Not required: suspected-day flagging already keeps such bursts out of the summary numbers. The rule only stops a crawler from loading pages at all. Wrangler's login cannot manage WAF rules, so it is a dashboard step. The Singapore crawl of Oct 15–29, 2026 came from Tencent Cloud (AS132203) and Alibaba Cloud (AS45102) addresses, cycling through about 30 old Windows Chrome versions, with no referrer. A zone custom rule (Security → WAF → Custom rules) named `Challenge cloud-network page loads` serves those networks a Managed Challenge:
-
-```
-(ip.src.asnum in {132203 45102} and http.host in {"vietprofs.roars.dev" "cspicks.roars.dev"})
-```
-
-A person on one of those networks (e.g. through a VPN) passes the challenge; a headless crawler usually doesn't, so it never runs the beacon. Search-engine crawlers use their own networks and are not affected. Security → Events shows how often it fires. To find the network behind a new burst, group zone `httpRequestsAdaptiveGroups` by `clientIP` for that day and look the addresses up (`whois -h whois.cymru.com " -v <ip>"`); RUM data has no IPs or networks.
+The site does not block crawlers (an owner decision of 2026-10-12: crawlers, including AI search bots, should be able to fetch every page), so a crawler that runs the beacon is handled in the statistics only, by suspected-day flagging. To see where a burst came from, group the zone's `httpRequestsAdaptiveGroups` by `userAgent` and `clientIP` for that day and look the addresses up (`whois -h whois.cymru.com " -v <ip>"`); RUM data has no IPs or networks. The Oct 15–29, 2026 Singapore burst came from Tencent Cloud (AS132203) and Alibaba Cloud (AS45102) addresses cycling through about 30 old Windows Chrome versions, with no referrer.
 
 ## Deployment and Cloudflare configuration
 

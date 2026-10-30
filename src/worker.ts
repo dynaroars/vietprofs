@@ -560,7 +560,7 @@ export function healthProblems(site: SiteConfig, snapshot: BrowserStatsResponse,
     && (yesterday.visits || 0) >= NEAR_MISS_VISIT_RATIO * (yesterday.pageViews || 0)) {
     problems.push({
       title: `Visitor stats (${host}): possible unflagged crawler`,
-      body: `${yesterday.date} (UTC) had ${yesterday.pageViews} page views and ${yesterday.visits} visits: a burst well above the usual volume, mostly single-page visits, but under the suspected-automation threshold, so it still counts. Check where it came from (country, OS, referrer in Cloudflare Web Analytics) and decide whether to tune the SUSPECT_* constants in src/worker.ts or block the source at the edge.`,
+      body: `${yesterday.date} (UTC) had ${yesterday.pageViews} page views and ${yesterday.visits} visits: a burst well above the usual volume, mostly single-page visits, but under the suspected-automation threshold, so it still counts. Check where it came from (country, OS, referrer in Cloudflare Web Analytics) and decide whether to tune the SUSPECT_* constants in src/worker.ts.`,
     });
   }
   const top = snapshot.countries[0];
