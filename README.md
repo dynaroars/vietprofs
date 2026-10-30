@@ -43,8 +43,10 @@ is needed to show the complete timeline. Counts describe the repository's archiv
 historical changes in the academic population.
 
 Scripts and tests run directly on Node 24; `npm run typecheck` checks their TypeScript types.
-Biome enforces two-space indentation, single quotes, and semicolons. CSS specificity ordering
-is not linted because shared components intentionally use more specific overrides. Generated map
+Biome formats with two-space indentation, single quotes, and semicolons; `npm test` applies it
+automatically, so CI lint never fails on formatting alone. Unused code is a warning, not an error.
+CSS specificity ordering is not linted because shared components intentionally use more specific
+overrides. Generated map
 coordinates and roster data are excluded from formatting. Shared styles live in `src/style.css` and
 `src/roars-ui.css`; directory, submission, and connection styles load only on their own pages.
 Generated profiles and hubs use the shared styles in `public/profile.css`.

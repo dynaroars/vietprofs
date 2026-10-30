@@ -27,7 +27,7 @@
     "stamp-updates": "node scripts/stamp-updates.ts",
     "sync-profile-css": "node scripts/sync-profile-css.ts",
     "build-stats-history": "node scripts/build-stats-history.ts",
-    "pretest": "npm run stamp-updates && npm run sync-profile-css",
+    "pretest": "npm run stamp-updates && npm run sync-profile-css && npm run format",
     "test": "npm run validate-data && npm run typecheck && node --test 'test/*.test.ts'",
     "lint": "biome check .",
     "test:e2e": "npm run build && node --test test/browser-smoke.e2e.ts",

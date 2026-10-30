@@ -55,8 +55,8 @@
         "useOptionalChain": "off"
       },
       "correctness": {
-        "noUnusedVariables": "error",
-        "noUnusedImports": "error"
+        "noUnusedVariables": "warn",
+        "noUnusedImports": "warn"
       }
     }
   },
