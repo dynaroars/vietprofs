@@ -182,6 +182,7 @@ test('scheduled refresh writes separate RUM keys and never reads the old raw-req
     assert.deepEqual(writtenKeys.sort(), [
       'browser-rum-daily-v1', 'browser-rum-daily-v1:cspicks.roars.dev',
       'browser-rum-last-success-v1', 'browser-rum-last-success-v1:cspicks.roars.dev',
+      'stats-health-v1:cspicks.roars.dev', 'stats-health-v1:vietprofs.roars.dev',
     ]);
     assert.ok(!readKeys.includes('hostname-daily-v2'));
   } finally {
@@ -384,41 +385,41 @@ test('health check reports a silent beacon, a near-miss burst, and a sudden coun
   assert.deepEqual(healthProblems(site, snapshotWith(ordinary, [['US', 71]]), snapshotWith(ordinary, [['US', 69]])), [], 'steady leader');
 });
 
-test('one failed refresh files nothing; a snapshot older than a day and a half does', () => {
+test('one failed refresh reports nothing; a snapshot older than a day and a half does', () => {
   const site = SITES['cspicks.roars.dev']!;
   const previous = snapshotWith([[1, 1]]);
-  assert.deepEqual(refreshFailure(site, new Error('HTTP 500'), previous, new Date('2026-10-31T01:15:00Z')), []);
-  const [problem] = refreshFailure(site, new Error('HTTP 500'), previous, new Date('2026-11-01T01:15:00Z'));
+  assert.deepEqual(refreshFailure(site, previous, 'HTTP 500', new Date('2026-10-31T01:15:00Z')), []);
+  const [problem] = refreshFailure(site, previous, 'HTTP 500', new Date('2026-11-01T01:15:00Z'));
   assert.equal(problem!.title, 'Visitor stats (cspicks.roars.dev): refresh failing');
-  assert.match(problem!.body, /HTTP 500/);
-  assert.equal(refreshFailure(site, new Error('x'), null).length, 1);
+  assert.match(problem!.body, /since 2026-10-30T01:15:00Z; the last attempt failed with: HTTP 500/);
+  assert.equal(refreshFailure(site, null).length, 1);
 });
 
-test('scheduled refresh files one labeled Issue per new problem and skips ones already open', async () => {
+test('the scheduled refresh stores each site\'s problems and /api/health serves them with the refresh age', async () => {
   const originalFetch = globalThis.fetch;
-  const created: Array<{ repo: string; title: string; labels: string[] }> = [];
-  globalThis.fetch = async (input, init) => {
-    const url = String(input);
-    if (url.startsWith('https://api.github.com/')) {
-      assert.equal((init!.headers as Record<string, string>).Authorization, 'Bearer gh-test');
-      const repo = url.match(/repos\/([^/]+\/[^/]+)\/issues/)![1]!;
-      if (init?.method === 'POST') {
-        created.push({ repo, ...JSON.parse(String(init.body)) });
-        return new Response('{}', { status: 201 });
-      }
-      assert.match(url, /state=open&labels=visitor-stats/);
-      return new Response(JSON.stringify(repo === 'dynaroars/cspicks' ? [{ title: 'Visitor stats (cspicks.roars.dev): refresh failing' }] : []));
-    }
-    return new Response('down', { status: 503 });
+  const store = new Map<string, unknown>();
+  const kv = { get: async (key: string) => store.get(key) ?? null, put: async (key: string, value: string) => { store.set(key, JSON.parse(value)); } };
+  globalThis.fetch = async (_input, init) => {
+    const body = JSON.parse(String(init?.body));
+    if (body.variables.hostname === 'cspicks.roars.dev') return new Response('down', { status: 503 });
+    const { lastCompleteDate } = body.variables;
+    // Ten ordinary days, then yesterday at 0: the beacon looks broken.
+    const daily = Array.from({ length: 11 }, (_, index) => ({ count: index === 10 ? 0 : 80, sum: { visits: index === 10 ? 0 : 40 }, dimensions: { date: shift(lastCompleteDate, index - 10) } }));
+    return new Response(JSON.stringify({ data: { viewer: { accounts: [{ daily, countries: [], paths: [] }] } } }));
   };
   try {
     const pending: Promise<unknown>[] = [];
-    const env = { ...liveEnv(), GITHUB_TOKEN: 'gh-test' };
-    await worker.scheduled(null, env, { waitUntil: promise => pending.push(promise), passThroughOnException: () => {} });
-    await assert.rejects(Promise.all(pending), /RUM archive failed for 2 site/);
-    assert.deepEqual(created.map(issue => [issue.repo, issue.title, issue.labels]), [
-      ['dynaroars/vietprofs', 'Visitor stats (vietprofs.roars.dev): refresh failing', ['visitor-stats']],
-    ]);
+    await worker.scheduled(null, liveEnv(kv), { waitUntil: promise => pending.push(promise), passThroughOnException: () => {} });
+    await assert.rejects(Promise.all(pending), /RUM archive failed for 1 site/);
+    const response = await worker.fetch(new Request('https://vietprofs.roars.dev/api/health'), liveEnv(kv), ctx as any);
+    assert.equal(response.headers.get('Cache-Control'), 'no-store');
+    const report = await response.json() as any;
+    const titles = Object.fromEntries(report.sites.map((site: any) => [site.hostname, site.problems.map((problem: any) => problem.title)]));
+    assert.deepEqual(titles, {
+      'vietprofs.roars.dev': ['Visitor stats (vietprofs.roars.dev): no page views recorded'],
+      'cspicks.roars.dev': ['Visitor stats (cspicks.roars.dev): refresh failing'],
+    });
+    assert.match(report.sites[1].problems[0].body, /HTTP 503/);
   } finally {
     globalThis.fetch = originalFetch;
   }

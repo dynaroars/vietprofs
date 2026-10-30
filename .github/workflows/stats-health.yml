@@ -1,0 +1,67 @@
+name: Visitor stats health
+
+# Model-free check of the stats Worker (src/worker.ts). After its 01:15 UTC refresh the Worker stores each
+# site's problems and serves them at /api/health; this files one `visitor-stats` Issue per problem, skipping
+# any whose Issue is still open. See "Daily health check" in TASKS/VISITOR_STATISTICS.md.
+
+on:
+  schedule:
+    - cron: '0 3 * * *' # daily, after the Worker's 01:15 UTC refresh
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  health:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: File an Issue for each new stats problem
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          HEALTH_URL: https://vietprofs.roars.dev/api/health
+        run: |
+          set -euo pipefail
+          run_url="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          footer=$'\n\n'"Filed by the [visitor stats health check]($run_url) (\`TASKS/VISITOR_STATISTICS.md\`)."
+          unreachable="Visitor stats: health endpoint unreachable"
+          # Problems that describe an ongoing state; their Issues close themselves once the state clears.
+          ongoing_suffix="refresh failing"
+
+          open_titles=$(gh issue list --state open --label visitor-stats --limit 100 --json title --jq '.[].title')
+          is_open() { grep -Fxq -- "$1" <<< "$open_titles"; }
+          close_titled() {
+            gh issue list --state open --label visitor-stats --limit 100 --json number,title |
+              jq -r --arg t "$1" '.[] | select(.title == $t) | .number' |
+              while read -r number; do gh issue close "$number" --comment "Cleared on $(date -u +%Y-%m-%d) ([workflow run]($run_url))."; done
+          }
+
+          # Cloudflare challenges clients that don't look like a browser.
+          if ! curl -fsS -m 30 -A 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0 Safari/537.36' \
+              -H 'Accept: application/json' "$HEALTH_URL" -o health.json || ! jq -e '.sites' health.json > /dev/null; then
+            echo "Could not read $HEALTH_URL"
+            if ! is_open "$unreachable"; then
+              gh issue create --label visitor-stats --title "$unreachable" \
+                --body "The daily health check could not read $HEALTH_URL (Worker not deployed, down, or Cloudflare challenged the runner).$footer"
+            fi
+            exit 1
+          fi
+          if is_open "$unreachable"; then close_titled "$unreachable"; fi
+
+          jq -c '.sites[].problems[]' health.json > problems.jsonl
+          while read -r problem; do
+            title=$(jq -r .title <<< "$problem")
+            if is_open "$title"; then echo "Already open: $title"; continue; fi
+            echo "Filing: $title"
+            gh issue create --label visitor-stats --title "$title" --body "$(jq -r .body <<< "$problem")$footer"
+          done < problems.jsonl
+
+          # Close refresh-failing Issues for sites that refresh again.
+          current=$(jq -r '.sites[].problems[].title' health.json)
+          { grep -F -- "$ongoing_suffix" <<< "$open_titles" || true; } | while read -r title; do
+            grep -Fxq -- "$title" <<< "$current" || close_titled "$title"
+          done
+          echo "Checked $(jq '.sites | length' health.json) sites; $(wc -l < problems.jsonl) problem(s)."

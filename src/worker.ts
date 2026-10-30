@@ -12,8 +12,6 @@ export interface Env {
   CLOUDFLARE_API_TOKEN?: string;
   CLOUDFLARE_ACCOUNT_ID?: string;
   CLOUDFLARE_HOSTNAME?: string;
-  /** Fine-grained token with Issues read/write on every site's repo; without it, health problems only reach the logs. */
-  GITHUB_TOKEN?: string;
   STATS_KV?: KVNamespace;
 }
 
@@ -105,8 +103,6 @@ export interface SiteConfig {
   hostname: string;
   historyKey: string;
   lastSuccessKey: string;
-  /** GitHub repository that receives this site's stats-health Issues. */
-  repo: string;
   categories: CategoryRule[];
 }
 
@@ -117,7 +113,6 @@ export const SITES: Record<string, SiteConfig> = {
     hostname: 'vietprofs.roars.dev',
     historyKey: 'browser-rum-daily-v1',
     lastSuccessKey: 'browser-rum-last-success-v1',
-    repo: 'dynaroars/vietprofs',
     categories: [
       { key: 'directory', label: 'Main directory', match: /^\/index\.html$/ },
       { key: 'profiles', label: 'Professor profiles', match: /^\/people\/[^/]+\.html$/ },
@@ -130,7 +125,6 @@ export const SITES: Record<string, SiteConfig> = {
     hostname: 'cspicks.roars.dev',
     historyKey: 'browser-rum-daily-v1:cspicks.roars.dev',
     lastSuccessKey: 'browser-rum-last-success-v1:cspicks.roars.dev',
-    repo: 'dynaroars/cspicks',
     categories: [
       { key: 'search', label: 'Search', match: /^\/index\.html$/ },
       { key: 'directory', label: 'University & area pages', match: /^\/(schools|areas)\// },
@@ -580,57 +574,64 @@ export function healthProblems(site: SiteConfig, snapshot: BrowserStatsResponse,
   return problems;
 }
 
-/** A refresh failure is only a problem once the last good snapshot is old, so one transient error files nothing. */
-export function refreshFailure(site: SiteConfig, error: unknown, previous: BrowserStatsResponse | null, now = new Date()): HealthProblem[] {
+/** A failing refresh is only a problem once the last good snapshot is old, so one transient error reports nothing. */
+export function refreshFailure(site: SiteConfig, previous: BrowserStatsResponse | null, lastError?: string, now = new Date()): HealthProblem[] {
   const last = previous ? Date.parse(previous.generatedAt) : NaN;
   if (Number.isFinite(last) && now.getTime() - last < STALE_SNAPSHOT_HOURS * 3600_000) return [];
   return [{
     title: `Visitor stats (${site.hostname}): refresh failing`,
-    body: `The daily refresh of ${site.hostname}'s visitor statistics failed: ${error instanceof Error ? error.message : String(error)}. ${previous ? `The stats page has been showing the snapshot from ${previous.generatedAt}.` : 'There is no earlier snapshot, so the stats page shows an error.'} Check the Worker logs (npx wrangler tail) and the CLOUDFLARE_API_TOKEN secret.`,
+    body: `${site.hostname}'s visitor statistics have not refreshed ${previous ? `since ${previous.generatedAt}` : 'successfully yet'}${lastError ? `; the last attempt failed with: ${lastError}` : ''}. Check the Worker logs (npx wrangler tail), its cron trigger, and the CLOUDFLARE_API_TOKEN secret.`,
   }];
 }
 
-const GITHUB_API = 'https://api.github.com';
-export const HEALTH_LABEL = 'visitor-stats';
+interface HealthRecord {
+  checkedAt: string;
+  problems: HealthProblem[];
+  error?: string;
+}
 
-/** Opens one Issue per problem in the site's repo, skipping problems that already have an open Issue. */
-async function reportProblems(env: Env, site: SiteConfig, problems: HealthProblem[]): Promise<void> {
-  if (!problems.length) return;
-  if (!env.GITHUB_TOKEN) {
-    for (const problem of problems) console.warn(`${problem.title}: ${problem.body}`);
-    return;
-  }
-  const headers = {
-    Authorization: `Bearer ${env.GITHUB_TOKEN}`, Accept: 'application/vnd.github+json',
-    'User-Agent': 'vietprofs-stats-api', 'X-GitHub-Api-Version': '2022-11-28',
-  };
-  const listed = await fetch(`${GITHUB_API}/repos/${site.repo}/issues?state=open&labels=${HEALTH_LABEL}&per_page=100`, { headers });
-  if (!listed.ok) throw new Error(`GitHub issue list returned HTTP ${listed.status}`);
-  const open = new Set((await listed.json() as Array<{ title: string }>).map(issue => issue.title));
-  for (const problem of problems.filter(item => !open.has(item.title))) {
-    const created = await fetch(`${GITHUB_API}/repos/${site.repo}/issues`, {
-      method: 'POST', headers: { ...headers, 'Content-Type': 'application/json' },
-      body: JSON.stringify({ title: problem.title, body: `${problem.body}\n\nFiled automatically by the stats Worker's daily health check (TASKS/VISITOR_STATISTICS.md).`, labels: [HEALTH_LABEL] }),
-    });
-    if (!created.ok) throw new Error(`GitHub issue create returned HTTP ${created.status}`);
-  }
+function healthKey(site: SiteConfig): string {
+  return `stats-health-v1:${site.hostname}`;
 }
 
 async function archiveSuccessfulSnapshot(env: Env, site: SiteConfig): Promise<void> {
   if (!env.CLOUDFLARE_API_TOKEN || !env.CLOUDFLARE_ACCOUNT_ID || !env.STATS_KV) return;
   const previous = await env.STATS_KV.get<BrowserStatsResponse>(site.lastSuccessKey, 'json');
+  const checkedAt = new Date().toISOString();
   let snapshot: BrowserStatsResponse;
   try {
     snapshot = await queryRum(env, site);
   } catch (error) {
-    await reportProblems(env, site, refreshFailure(site, error, previous)).catch(issueError => console.error(issueError));
+    const record: HealthRecord = { checkedAt, problems: [], error: error instanceof Error ? error.message : String(error) };
+    await env.STATS_KV.put(healthKey(site), JSON.stringify(record));
     throw error;
   }
+  const record: HealthRecord = { checkedAt, problems: healthProblems(site, snapshot, previous) };
   await Promise.all([
     env.STATS_KV.put(site.historyKey, JSON.stringify(snapshot.daily)),
     env.STATS_KV.put(site.lastSuccessKey, JSON.stringify(snapshot)),
+    env.STATS_KV.put(healthKey(site), JSON.stringify(record)),
   ]);
-  await reportProblems(env, site, healthProblems(site, snapshot, previous)).catch(issueError => console.error(issueError));
+}
+
+/**
+ * Every site's open problems, for the daily GitHub Action that files them as Issues
+ * (.github/workflows/stats-health.yml). Refresh age is judged now, so a refresh that stopped running still shows.
+ */
+async function healthReport(env: Env, now = new Date()): Promise<Response> {
+  const sites = await Promise.all(Object.values(SITES).map(async site => {
+    const [previous, record] = await Promise.all([
+      env.STATS_KV?.get<BrowserStatsResponse>(site.lastSuccessKey, 'json') ?? null,
+      env.STATS_KV?.get<HealthRecord>(healthKey(site), 'json') ?? null,
+    ]);
+    return {
+      hostname: site.hostname, checkedAt: record?.checkedAt ?? null,
+      problems: [...(record?.problems || []), ...refreshFailure(site, previous ?? null, record?.error, now)],
+    };
+  }));
+  return new Response(JSON.stringify({ generatedAt: now.toISOString(), sites }), {
+    headers: { 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'no-store' },
+  });
 }
 
 // Sites are archived one after another so one failure does not stop the others; failures still surface in the logs.
@@ -647,8 +648,9 @@ export default {
     const url = new URL(request.url);
     if (request.method === 'OPTIONS') return new Response(null, { status: 204, headers: { 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, OPTIONS' } });
     if (url.pathname === '/health') return jsonResponse({ status: 'ok', worker: 'vietprofs-stats-api', source: 'cloudflare-rum' });
-    if (url.pathname !== '/api/stats') return jsonResponse({ error: 'Not found' }, 404);
+    if (url.pathname !== '/api/stats' && url.pathname !== '/api/health') return jsonResponse({ error: 'Not found' }, 404);
     if (request.method !== 'GET') return new Response(JSON.stringify({ error: 'Method not allowed' }), { status: 405, headers: { 'Content-Type': 'application/json', Allow: 'GET, OPTIONS' } });
+    if (url.pathname === '/api/health') return healthReport(env);
     return fetchStats(env, siteFor(url.hostname, env));
   },
   async scheduled(_event: unknown, env: Env, ctx: ExecutionContext): Promise<void> {
