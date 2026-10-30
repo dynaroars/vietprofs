@@ -1,5 +1,5 @@
 import './style.css';
-import { loadProjectStats } from './project-stats.ts';
+import { loadStatsHistory } from './stats-history.ts';
 import {
   FIELDS,
   INSTITUTION_TYPES,
@@ -32,14 +32,14 @@ import {
   type Roster,
   type RosterEntry,
 } from './data.ts';
-import { abbreviateInsightText, escapeHtml } from './utils.ts';
+import { abbreviateInsightText, escapeHtml, formatRosterDate } from './utils.ts';
 import { applyFavoriteToggle, fieldDropdownLabel, renderRosterEntry } from './render.ts';
 import { clearRecentProfiles, loadFavorites, loadRecentProfiles, toggleFavorite } from './favorites-store.ts';
 import { locationForQuery } from './filter-state.ts';
 import { renderAddFab } from './add-fab.ts';
 import { ICONS } from './see-also.ts';
 import { renderShareMenu } from './share.ts';
-import { renderFunFacts, renderHealthPanel } from './insights.ts';
+import { renderFunFacts, renderGrowthChart, renderHealthPanel, type GrowthMetricKey } from './insights.ts';
 import {
   createCommandHandler,
   createSearchController,
@@ -363,8 +363,6 @@ async function init() {
   const availableRegionHubs = new Set(regionHubCandidates.filter((region) =>
     hasEnoughPeopleForRosterHub(filterRoster(roster, { location: region }).length)));
 
-  const projectStats = await loadProjectStats();
-
   // Matches everything filterRoster actually searches over (name, university, city, state, country,
   // department, rank, research areas, degree institutions, and honors) so a suggestion always yields at least one result.
   const suggestionValues = [
@@ -427,6 +425,8 @@ async function init() {
   const sortSelect = document.getElementById('sort-order') as HTMLSelectElement;
   const filterState = { state: '', insights: false, health: false };
   const commandOutput = document.getElementById('command-output') as HTMLOutputElement;
+  const statsHistory = await loadStatsHistory();
+  let currentGrowthMetric: GrowthMetricKey = 'count';
   let queryPlan = '';
   let keyboardSelectedIndex = -1;
   // Search box: a typed/pasted "Keyword: value" prefix becomes a removable scope chip
@@ -804,7 +804,7 @@ async function init() {
         countEl.textContent = 'Dataset health, metadata completeness, and verification metrics:';
       }
       if (rosterEl) {
-        rosterEl.innerHTML = renderHealthPanel(roster, import.meta.env.BASE_URL, true, projectStats);
+        rosterEl.innerHTML = renderHealthPanel(roster, import.meta.env.BASE_URL, true, statsHistory, currentGrowthMetric);
       }
       renderQueryPlan(roster.length, 'health');
       syncUrl();
@@ -1007,6 +1007,15 @@ async function init() {
       update();
       return;
     }
+    const growthMetricBtn = target.closest<HTMLButtonElement>('.growth-metric-btn');
+    if (growthMetricBtn && growthMetricBtn.dataset.metric) {
+      currentGrowthMetric = growthMetricBtn.dataset.metric as GrowthMetricKey;
+      const growthSection = document.getElementById('growth-section');
+      if (growthSection) {
+        growthSection.outerHTML = renderGrowthChart(statsHistory, currentGrowthMetric);
+      }
+      return;
+    }
     const rankedItem = target.closest<HTMLButtonElement>('.ranked-item');
     if (rankedItem && rankedItem.dataset.search) {
       const rankedScope = rankedItem.dataset.scope;
@@ -1021,7 +1030,25 @@ async function init() {
     }
   });
 
-  // World map hover tooltip & highlight
+  // mousemove fires continuously while the pointer is over the insights dashboard, so the chart's
+  // serialized point list is parsed once per <svg> element and cached against it rather than on
+  // every event. The chart is re-rendered (new element) whenever the metric changes.
+  type GrowthPoint = [number, string, number, string?, string?];
+  const growthPointsCache = new WeakMap<SVGSVGElement, GrowthPoint[]>();
+  function growthPointsOf(svg: SVGSVGElement): GrowthPoint[] {
+    const cached = growthPointsCache.get(svg);
+    if (cached) return cached;
+    let parsed: GrowthPoint[] = [];
+    try {
+      parsed = JSON.parse(svg.dataset.points || '[]') as GrowthPoint[];
+    } catch {
+      parsed = [];
+    }
+    growthPointsCache.set(svg, parsed);
+    return parsed;
+  }
+
+  // World map hover tooltip & highlight, plus growth chart crosshairs
   document.getElementById('roster').addEventListener('mousemove', (e) => {
     const target = e.target as HTMLElement;
 
@@ -1081,8 +1108,50 @@ async function init() {
         if (tooltip) tooltip.setAttribute('hidden', '');
       }
     }
+    // Growth chart hover
+    const svg = target.closest?.('.growth-chart') as SVGSVGElement | null;
+    document.querySelectorAll<SVGSVGElement>('.growth-chart').forEach((el) => {
+      if (el !== svg) {
+        el.querySelector('.growth-crosshair')?.setAttribute('hidden', '');
+        el.parentElement?.querySelector('.growth-tooltip')?.setAttribute('hidden', '');
+      }
+    });
+    if (!svg) return;
+    const points = growthPointsOf(svg);
+    if (!points.length) return;
+    const rect = svg.getBoundingClientRect();
+    const vbWidth = svg.viewBox.baseVal.width || 640;
+    const x = ((e.clientX - rect.left) / rect.width) * vbWidth;
+    let nearest = points[0];
+    let bestDist = Math.abs(points[0][0] - x);
+    for (const p of points) {
+      const d = Math.abs(p[0] - x);
+      if (d < bestDist) {
+        bestDist = d;
+        nearest = p;
+      }
+    }
+    const [nx, date, val, unit, pluralUnit] = nearest;
+    const unitLabel = val === 1 ? (unit || svg.dataset.unit || 'item') : (pluralUnit || svg.dataset.plural || 'items');
+    const crosshair = svg.querySelector<SVGLineElement>('.growth-crosshair');
+    if (crosshair) {
+      crosshair.setAttribute('x1', String(nx));
+      crosshair.setAttribute('x2', String(nx));
+      crosshair.removeAttribute('hidden');
+    }
+    const tooltip = svg.parentElement?.querySelector<HTMLElement>('.growth-tooltip');
+    if (tooltip) {
+      tooltip.textContent = `${formatRosterDate(`${date}T00:00:00Z`)}: ${val.toLocaleString()} ${unitLabel}`;
+      tooltip.removeAttribute('hidden');
+      tooltip.style.left = `${(nx / vbWidth) * 100}%`;
+    }
   });
   document.getElementById('roster').addEventListener('mouseleave', () => {
+    document.querySelectorAll<SVGSVGElement>('.growth-chart').forEach((el) => {
+      el.querySelector('.growth-crosshair')?.setAttribute('hidden', '');
+      el.parentElement?.querySelector('.growth-tooltip')?.setAttribute('hidden', '');
+    });
+
     document.querySelectorAll<HTMLElement>('.world-map-tooltip').forEach((el) => el.setAttribute('hidden', ''));
     document.querySelectorAll('.world-map-country.is-hovered, .world-map-pin.is-hovered').forEach((el) => el.classList.remove('is-hovered'));
   });

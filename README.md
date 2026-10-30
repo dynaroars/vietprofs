@@ -33,11 +33,12 @@ run analyze` and `npm run figures` to refresh its snapshot values and screenshot
 paper.tex`), and copy the result to `public/vietprofs.pdf` — that copy isn't built in CI,
 so it must be committed manually.
 
-The health view includes a current Project Complexity snapshot (source lines, files, commits,
-contributors, and GitHub PR/Issue counts and latest links). `npm run build-project-stats`
-refreshes it automatically on dev/build, without walking historical roster snapshots or running
-network requests during unit tests. GitHub requests use `GITHUB_TOKEN`/`GH_TOKEN` or local `gh`
-authentication; if unavailable, the last successful GitHub snapshot is kept with its date.
+The health view includes an interactive Project & Archive Growth History graph: roster size,
+institutions, countries, portraits, honors, and application source lines (TypeScript, CSS, HTML
+in `src/`). `npm run build-stats-history` reconstructs daily snapshots from local Git history
+on dev/build; it makes no network requests and does not run during unit tests. Full history
+is needed to show the complete timeline. Counts describe the repository's archive, not
+historical changes in the academic population.
 
 ## Data and contributions
 

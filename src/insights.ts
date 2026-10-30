@@ -17,9 +17,9 @@ import {
   countryFlag,
   type Roster,
 } from './data.ts';
+import type { StatsHistoryPoint } from './stats-history.ts';
 import { STATE_GRID } from './state-grid.ts';
-import type { GitInfo, GitHubItem } from './project-stats.ts';
-import { abbreviateInsightText, escapeHtml, formatRosterDate } from './utils.ts';
+import { abbreviateInsightText, escapeHtml } from './utils.ts';
 import { renderWorldMap } from './world-map.ts';
 import { deriveRosterStats, type DerivedRosterStats } from './derived-stats.ts';
 
@@ -271,6 +271,142 @@ export function renderDistributionCharts(subRoster: Roster): string {
   return `<div class="insights-grid">${fieldCard}${trackCard}</div>`;
 }
 
+export type GrowthMetricKey = 'count' | 'institutions' | 'countries' | 'portraits' | 'honors' | 'codeLines';
+
+export interface GrowthMetricConfig {
+  key: GrowthMetricKey;
+  label: string;
+  icon: string;
+  unit: string;
+  pluralUnit: string;
+  description: string;
+}
+
+export const GROWTH_METRICS: Record<GrowthMetricKey, GrowthMetricConfig> = {
+  count: {
+    key: 'count',
+    label: 'Roster Size',
+    icon: '👥',
+    unit: 'person',
+    pluralUnit: 'people',
+    description: 'Total academics on record',
+  },
+  institutions: {
+    key: 'institutions',
+    label: 'Institutions',
+    icon: '🏛️',
+    unit: 'institution',
+    pluralUnit: 'institutions',
+    description: 'Distinct universities and research institutes represented',
+  },
+  countries: {
+    key: 'countries',
+    label: 'Countries',
+    icon: '🌐',
+    unit: 'country',
+    pluralUnit: 'countries',
+    description: 'Distinct countries and territories with diaspora faculty',
+  },
+  portraits: {
+    key: 'portraits',
+    label: 'Portraits',
+    icon: '🖼️',
+    unit: 'portrait',
+    pluralUnit: 'portraits',
+    description: 'Faculty portraits collected and archived',
+  },
+  honors: {
+    key: 'honors',
+    label: 'Honors & Awards',
+    icon: '🏆',
+    unit: 'honor',
+    pluralUnit: 'honors',
+    description: 'Major scholarly honors, awards, fellowships, and chairs',
+  },
+  codeLines: {
+    key: 'codeLines',
+    label: 'Codebase (LOC)',
+    icon: '💻',
+    unit: 'source line',
+    pluralUnit: 'source lines',
+    description: 'Application source code lines in src/ (TypeScript, CSS, HTML)',
+  },
+};
+
+// A metric can fall (codeLines after a refactor), so the sign comes from the value rather than
+// being hardcoded — `+${-12}%` rendered as "+-12%".
+function formatChange(delta: number, suffix: string): string {
+  return `${delta >= 0 ? '+' : ''}${delta.toLocaleString()}${suffix}`;
+}
+
+export function renderGrowthChart(history: StatsHistoryPoint[], activeMetric: GrowthMetricKey = 'count'): string {
+  if (history.length < 2) return '';
+  const metric = GROWTH_METRICS[activeMetric] ?? GROWTH_METRICS.count;
+  const values = history.map((p) => {
+    const val = p[activeMetric];
+    return typeof val === 'number' ? val : p.count;
+  });
+  const width = 640;
+  const height = 180;
+  const padX = 8;
+  const padTop = 14;
+  const padBottom = 28;
+  const minVal = Math.min(...values);
+  const maxVal = Math.max(...values);
+  const range = Math.max(1, maxVal - minVal);
+  const dates = history.map((point) => Date.parse(`${point.date}T00:00:00Z`));
+  const duration = Math.max(1, dates[dates.length - 1] - dates[0]);
+  const xFor = (i: number) => padX + ((dates[i] - dates[0]) / duration) * (width - padX * 2);
+  const yFor = (val: number) => padTop + (1 - (val - minVal) / range) * (height - padTop - padBottom);
+  const linePoints = values.map((val, i) => `${xFor(i).toFixed(1)},${yFor(val).toFixed(1)}`).join(' ');
+  const areaPoints = `${padX},${(height - padBottom).toFixed(1)} ${linePoints} ${(width - padX).toFixed(1)},${(height - padBottom).toFixed(1)}`;
+  const first = history[0];
+  const last = history[history.length - 1];
+  const firstVal = values[0];
+  const lastVal = values[values.length - 1];
+  const dots = history
+    .map((p, i) => `<circle class="growth-dot" cx="${xFor(i).toFixed(1)}" cy="${yFor(values[i]).toFixed(1)}" r="2.5" data-date="${escapeHtml(p.date)}" data-count="${values[i]}"></circle>`)
+    .join('');
+  const pointsData = escapeHtml(JSON.stringify(history.map((p, i) => [xFor(i), p.date, values[i], metric.unit, metric.pluralUnit])));
+
+  const metricKeys: GrowthMetricKey[] = ['count', 'institutions', 'countries', 'portraits', 'honors', 'codeLines'];
+  const metricButtons = metricKeys
+    .map((key) => {
+      const cfg = GROWTH_METRICS[key];
+      const cur = last[key] ?? last.count;
+      const init = first[key] ?? first.count;
+      const pctChange = init > 0 ? formatChange(Math.round(((cur - init) / init) * 100), '%') : formatChange(cur - init, '');
+      const isActive = key === activeMetric;
+      return `
+        <button type="button" class="growth-metric-btn${isActive ? ' is-active' : ''}" data-metric="${key}" aria-pressed="${isActive}">
+          <span class="growth-metric-icon">${cfg.icon}</span>
+          <span class="growth-metric-label">${cfg.label}</span>
+          <span class="growth-metric-val">${cur.toLocaleString()}</span>
+          <span class="growth-metric-badge">${pctChange}</span>
+        </button>
+      `;
+    })
+    .join('');
+
+  return `
+    <div class="insights-section" id="growth-section">
+      <p class="insights-caption">${escapeHtml(metric.description)}, from ${escapeHtml(first.date)} (${firstVal.toLocaleString()} ${firstVal === 1 ? metric.unit : metric.pluralUnit}) to ${escapeHtml(last.date)} (${lastVal.toLocaleString()} ${lastVal === 1 ? metric.unit : metric.pluralUnit}); click any metric to switch dimension.</p>
+      <div class="growth-metrics-bar" role="group" aria-label="Growth dimensions">
+        ${metricButtons}
+      </div>
+      <div class="growth-chart-wrap">
+        <svg class="growth-chart" viewBox="0 0 ${width} ${height}" data-points="${pointsData}" data-metric="${metric.key}" data-unit="${metric.unit}" data-plural="${metric.pluralUnit}" data-height="${height}" data-pad-bottom="${padBottom}" role="img" aria-label="Line chart of ${escapeHtml(metric.label)} over time">
+          <polygon class="growth-area" points="${areaPoints}"></polygon>
+          <polyline class="growth-line" points="${linePoints}"></polyline>
+          ${dots}
+          <line class="growth-crosshair" x1="0" y1="${padTop}" x2="0" y2="${height - padBottom}" hidden></line>
+        </svg>
+        <div class="growth-tooltip" hidden></div>
+      </div>
+    </div>
+  `;
+}
+
 export function renderFunFacts(
   visibleRoster: Roster,
   selectedLocationLabel: string,
@@ -423,57 +559,12 @@ function formatNumber(num: number): string {
   return new Intl.NumberFormat('en-US').format(num);
 }
 
-function renderGitHubLatest(label: string, item: GitHubItem | null): string {
-  if (!item) return '';
-  return `<span>${label}: <a href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer">#${item.number} ${escapeHtml(item.title)}</a> (${escapeHtml(item.state)}, ${formatRosterDate(item.createdAt)})</span>`;
-}
-
-// Current repository metrics share the generated-page inventory layout.
-function renderComplexityCard(gitInfo: GitInfo | null): string {
-  const codebase = gitInfo?.codebase;
-  if (!codebase) return '';
-  const github = gitInfo.github;
-  const item = (value: string, label: string) => `
-          <div class="html-inventory-item">
-            <strong>${value}</strong>
-            <span>${label}</span>
-          </div>`;
-  return `
-      <div class="html-inventory-card complexity-card">
-        <div class="html-inventory-header">
-          <div>
-            <h3 class="html-inventory-title">Project Complexity</h3>
-            <p class="html-inventory-desc">Tracked source in the repository${gitInfo.firstCommitDate ? ` since ${formatRosterDate(gitInfo.firstCommitDate)}` : ''}; lines of code cover TypeScript, CSS, HTML, Python, and YAML.</p>
-          </div>
-          <strong class="html-inventory-total">${formatNumber(codebase.codeLines)} LoC</strong>
-        </div>
-        <div class="html-inventory-grid">
-          ${item(formatNumber(codebase.trackedFiles), 'Tracked files')}
-          ${item(formatNumber(codebase.codeFiles), 'Code files')}
-          ${item(formatNumber(codebase.testFiles), 'Test files')}
-          ${item(`${codebase.npmScripts} / ${codebase.devDependencies}`, 'npm scripts / dev dependencies')}
-          ${item(formatNumber(codebase.workflows), 'GitHub workflows')}
-          ${gitInfo.totalCommits !== undefined ? item(formatNumber(gitInfo.totalCommits), 'Commits') : ''}
-          ${gitInfo.contributors !== undefined ? item(formatNumber(gitInfo.contributors), 'Commit authors') : ''}
-          ${github ? item(`${formatNumber(github.pulls.open)} / ${formatNumber(github.pulls.merged ?? 0)} / ${formatNumber(github.pulls.closed)}`, 'Pull requests: open / merged / closed') : ''}
-          ${github ? item(`${formatNumber(github.issues.open)} / ${formatNumber(github.issues.closed)}`, 'Issues: open / closed') : ''}
-        </div>
-        <nav class="html-standalone-links" aria-label="Lines by language">
-          ${codebase.languages.map((entry) => `<span>${escapeHtml(entry.language)}: ${formatNumber(entry.lines)} lines in ${formatNumber(entry.files)} files</span>`).join('\n          ')}
-        </nav>
-        ${github ? `<div class="html-standalone-links complexity-latest">
-          <span>GitHub snapshot: ${formatRosterDate(github.fetchedAt)}</span>
-          ${renderGitHubLatest('Latest PR', github.pulls.latest)}
-          ${renderGitHubLatest('Latest issue', github.issues.latest)}
-        </div>` : ''}
-      </div>`;
-}
-
 export function renderHealthPanel(
   roster: Roster,
   baseUrl = '/',
   includeHeader = false,
-  gitInfo: GitInfo | null = null,
+  statsHistory: StatsHistoryPoint[] = [],
+  activeGrowthMetric: GrowthMetricKey = 'count',
 ): string {
   const stats: DerivedRosterStats = deriveRosterStats(roster);
   const htmlInventory = buildRosterHtmlInventory(roster);
@@ -493,8 +584,6 @@ export function renderHealthPanel(
           </p>
         </div>
       ` : ''}
-
-      ${renderComplexityCard(gitInfo)}
 
       <div class="html-inventory-card generated-html-card">
         <div class="html-inventory-header">
@@ -554,6 +643,14 @@ export function renderHealthPanel(
           <span class="pulse-dot" aria-hidden="true"></span>
           <span><strong>${formatNumber(stats.recentUpdatesCount.last30Days)} profiles</strong> actively updated or verified in the past 30 days (${formatNumber(stats.recentUpdatesCount.last7Days)} this week).</span>
           <a class="recent-updates-link" href="${baseUrl}?sort=recent">Browse recently updated →</a>
+        </div>
+      ` : ''}
+
+      ${statsHistory.length > 1 ? `
+        <div class="health-growth-section">
+          <h3 class="insights-category-title">Project &amp; Archive Growth History</h3>
+          <p class="insights-caption">Daily repository snapshots; these counts describe the archive, not changes in the academic population.</p>
+          ${renderGrowthChart(statsHistory, activeGrowthMetric)}
         </div>
       ` : ''}
 

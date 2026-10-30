@@ -42,6 +42,8 @@ jobs:
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0 # growth chart reconstructs daily snapshots from Git history
       - uses: actions/setup-node@v5
         with:
           node-version: 24
