@@ -56,6 +56,11 @@ after the setup review in #475): discovery, relationships, and links Mon–Sat; 
 honors Tue/Thu/Sat. Watch the portraits queue
 (`node scripts/fetch-portraits.ts --status`). Keep new routines inside the 04:00–15:00 window.
 
+The same usage limit is shared with CS Picks (`../cspicks/docs/AUTOMATION.md`, 16:00–02:00 UTC)
+and the GMU CS directory (`../people/TASKS/AUTOMATION.md`), whose weekly producers use the Sunday
+slots VietProfs leaves free (05:00, 08:00, 11:00, 14:00 UTC) and whose Opus audit runs Monday
+10:30 UTC. Don't add VietProfs routines on Sunday daytime or Monday 09:00–12:00 without moving those.
+
 | Key | Routine id | Model | Cron (UTC) | ET | Section |
 | :-- | :-- | :-- | :-- | :-- | :-- |
 | `audit` | `trig_01GeWQmgtoeJtaf7E2LsA7BA` | Opus 5.5 | `0 3 * * *` | Daily 11 PM (previous day) | [Auditor](#auditor-audit) |
