@@ -6,6 +6,7 @@
   // vietprofs-stats-api.nguyenthanhvuh.workers.dev serves only /api/health, for the stats-health GitHub Action:
   // the roars.dev zone challenges GitHub's runners before a request reaches the Worker.
   "workers_dev": true,
+  "preview_urls": false,
   "account_id": "16b8b7083e5362d3fb5fe759d501b174",
   "vars": {
     "CLOUDFLARE_ACCOUNT_ID": "16b8b7083e5362d3fb5fe759d501b174",
