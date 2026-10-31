@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-30T14:09:37.000Z",
+  "updatedAt": "2026-10-31T14:09:18.000Z",
   "batches": [
     {
       "batchNumber": 1,
@@ -22980,6 +22980,296 @@
             "Crossref pair check vs vp-1841 and vp-1842: no shared works found."
           ],
           "nextAction": "OpenAlex returned HTTP 429 (no OPENALEX_MAILTO configured); NSF/NIH/patent searches and external CV/genealogy leads not completed. Retry later."
+        }
+      ]
+    },
+    {
+      "batchNumber": 97,
+      "rosterIds": [
+        "vp-1839",
+        "vp-1838",
+        "vp-1837",
+        "vp-1836",
+        "vp-1835",
+        "vp-1834",
+        "vp-1833",
+        "vp-1832",
+        "vp-1831",
+        "vp-1830",
+        "vp-1829",
+        "vp-1828",
+        "vp-1827",
+        "vp-1826",
+        "vp-1825",
+        "vp-1824",
+        "vp-1823",
+        "vp-1822",
+        "vp-1801",
+        "vp-1800"
+      ],
+      "startedAt": "2026-10-31T14:09:18.000Z",
+      "completedAt": "2026-10-31T14:09:18.000Z",
+      "status": "complete",
+      "outcomes": [
+        {
+          "rosterId": "vp-1839",
+          "sources": [
+            "https://www.gachon.ac.kr/eng/12758/subview.do"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile/homepage fetched where reachable and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for roster-member names: no qualifying mentorship evidence."
+          ],
+          "nextAction": "OpenAlex returned HTTP 429 (OPENALEX_MAILTO unset) and Crossref was rate limited after a few queries; CV, genealogy, NSF/NIH/patent searches not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1838",
+          "sources": [
+            "https://khainb.com/cv/",
+            "https://artsci.tamu.edu/statistics/contact/profiles/khai-nguyen.html"
+          ],
+          "relationshipIds": [
+            "rel-doctoral-advisor-vp-0100-vp-1838",
+            "rel-coauthor-vp-0100-vp-1838"
+          ],
+          "status": "verified",
+          "notes": [
+            "CV names Nhat Ho (vp-0100) and Peter Müller (not in roster) as Ph.D. advisors: doctoral-advisor edge recorded for Nhat Ho. DataCite lists four arXiv preprints with Nhat Ho: coauthor edge recorded. Hung Bui (VinAI residency) is an industry supervisor, not a degree advisor, so no edge."
+          ],
+          "nextAction": "Check NSF/NIH/patent records; other roster coauthors on the publication list (Hai Nguyen, Tung Pham, Dang Nguyen) are unverified name matches only."
+        },
+        {
+          "rosterId": "vp-1837",
+          "sources": [
+            "https://profiles.curtin.edu.au/3596-bangu-vo"
+          ],
+          "relationshipIds": [
+            "rel-coauthor-vp-1836-vp-1837"
+          ],
+          "status": "verified",
+          "notes": [
+            "Official profile requires JavaScript or returned no text, so it could not be scanned. Crossref (49 journal articles with both names) gives four qualifying shared works: coauthor edge recorded. No source explicitly naming a doctoral advisor was reached, so no advisor edge."
+          ],
+          "nextAction": "Check UWA/Curtin thesis records for an explicit doctoral advisor statement; NSF/NIH/patent searches not completed."
+        },
+        {
+          "rosterId": "vp-1836",
+          "sources": [
+            "https://profiles.curtin.edu.au/5016-ba-tuong-vo"
+          ],
+          "relationshipIds": [
+            "rel-coauthor-vp-1836-vp-1837"
+          ],
+          "status": "verified",
+          "notes": [
+            "Official profile requires JavaScript or returned no text, so it could not be scanned. Crossref (49 journal articles with both names) gives four qualifying shared works: coauthor edge recorded. No source explicitly naming a doctoral advisor was reached, so no advisor edge."
+          ],
+          "nextAction": "Check UWA/Curtin thesis records for an explicit doctoral advisor statement; NSF/NIH/patent searches not completed."
+        },
+        {
+          "rosterId": "vp-1835",
+          "sources": [
+            "https://experts.deakin.edu.au/42790-thuong-hoang/professional"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile/homepage fetched where reachable and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for roster-member names: no qualifying mentorship evidence."
+          ],
+          "nextAction": "OpenAlex returned HTTP 429 (OPENALEX_MAILTO unset) and Crossref was rate limited after a few queries; CV, genealogy, NSF/NIH/patent searches not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1834",
+          "sources": [
+            "https://www.concordia.ca/faculty/raymond-le-van-mao.html"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile/homepage fetched where reachable and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for roster-member names: no qualifying mentorship evidence."
+          ],
+          "nextAction": "OpenAlex returned HTTP 429 (OPENALEX_MAILTO unset) and Crossref was rate limited after a few queries; CV, genealogy, NSF/NIH/patent searches not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1833",
+          "sources": [
+            "https://expertise.uwo.ca/1267-timothy-nguyen"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile requires JavaScript or returned no text, so it could not be scanned.",
+            "Official profile/homepage fetched where reachable and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for roster-member names: no qualifying mentorship evidence."
+          ],
+          "nextAction": "OpenAlex returned HTTP 429 (OPENALEX_MAILTO unset) and Crossref was rate limited after a few queries; CV, genealogy, NSF/NIH/patent searches not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1832",
+          "sources": [
+            "https://experts.mcmaster.ca/people/nguyj11"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile/homepage fetched where reachable and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for roster-member names: no qualifying mentorship evidence."
+          ],
+          "nextAction": "OpenAlex returned HTTP 429 (OPENALEX_MAILTO unset) and Crossref was rate limited after a few queries; CV, genealogy, NSF/NIH/patent searches not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1831",
+          "sources": [
+            "https://www.singaporetech.edu.sg/directory/faculty/nguyen-hoang"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile requires JavaScript or returned no text, so it could not be scanned.",
+            "Official profile/homepage fetched where reachable and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for roster-member names: no qualifying mentorship evidence.",
+            "Crossref pair check with the other Singapore Institute of Technology roster member found no shared works."
+          ],
+          "nextAction": "OpenAlex returned HTTP 429 (OPENALEX_MAILTO unset) and Crossref was rate limited after a few queries; CV, genealogy, NSF/NIH/patent searches not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1830",
+          "sources": [
+            "https://www.singaporetech.edu.sg/directory/faculty/tram-truong-huu",
+            "https://sites.google.com/site/htrtruong"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile/homepage fetched where reachable and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for roster-member names: no qualifying mentorship evidence.",
+            "Crossref pair check with the other Singapore Institute of Technology roster member found no shared works."
+          ],
+          "nextAction": "OpenAlex returned HTTP 429 (OPENALEX_MAILTO unset) and Crossref was rate limited after a few queries; CV, genealogy, NSF/NIH/patent searches not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1829",
+          "sources": [
+            "https://www.siit.tu.ac.th/page_bx.php?cid=106&cno=71&show="
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile requires JavaScript or returned no text, so it could not be scanned.",
+            "Official profile/homepage fetched where reachable and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for roster-member names: no qualifying mentorship evidence."
+          ],
+          "nextAction": "OpenAlex returned HTTP 429 (OPENALEX_MAILTO unset) and Crossref was rate limited after a few queries; CV, genealogy, NSF/NIH/patent searches not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1828",
+          "sources": [
+            "https://prof.sejong.ac.kr/xuanmung/html/profile.do"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile/homepage fetched where reachable and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for roster-member names: no qualifying mentorship evidence."
+          ],
+          "nextAction": "OpenAlex returned HTTP 429 (OPENALEX_MAILTO unset) and Crossref was rate limited after a few queries; CV, genealogy, NSF/NIH/patent searches not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1827",
+          "sources": [
+            "https://www.chrichmond.org/find-a-provider/trang-le/"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile requires JavaScript or returned no text, so it could not be scanned.",
+            "Official profile/homepage fetched where reachable and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for roster-member names: no qualifying mentorship evidence."
+          ],
+          "nextAction": "OpenAlex returned HTTP 429 (OPENALEX_MAILTO unset) and Crossref was rate limited after a few queries; CV, genealogy, NSF/NIH/patent searches not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1826",
+          "sources": [
+            "https://www.csulb.edu/college-of-natural-sciences-and-mathematics/article/new-faculty-cnsm"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile/homepage fetched where reachable and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for roster-member names: no qualifying mentorship evidence."
+          ],
+          "nextAction": "OpenAlex returned HTTP 429 (OPENALEX_MAILTO unset) and Crossref was rate limited after a few queries; CV, genealogy, NSF/NIH/patent searches not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1825",
+          "sources": [
+            "https://www.etsmtl.ca/etudier-a-lets/corps-enseignant/dbang"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile/homepage fetched where reachable and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for roster-member names: no qualifying mentorship evidence."
+          ],
+          "nextAction": "OpenAlex returned HTTP 429 (OPENALEX_MAILTO unset) and Crossref was rate limited after a few queries; CV, genealogy, NSF/NIH/patent searches not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1824",
+          "sources": [
+            "https://experts.swinburne.edu.au/1329-viet-le"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile requires JavaScript or returned no text, so it could not be scanned.",
+            "Official profile/homepage fetched where reachable and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for roster-member names: no qualifying mentorship evidence.",
+            "Crossref pair check with the other Swinburne roster member found no shared works."
+          ],
+          "nextAction": "OpenAlex returned HTTP 429 (OPENALEX_MAILTO unset) and Crossref was rate limited after a few queries; CV, genealogy, NSF/NIH/patent searches not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1823",
+          "sources": [
+            "https://experts.swinburne.edu.au/1918-jeremy-nguyen"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile requires JavaScript or returned no text, so it could not be scanned.",
+            "Official profile/homepage fetched where reachable and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for roster-member names: no qualifying mentorship evidence.",
+            "Crossref pair check with the other Swinburne roster member found no shared works."
+          ],
+          "nextAction": "OpenAlex returned HTTP 429 (OPENALEX_MAILTO unset) and Crossref was rate limited after a few queries; CV, genealogy, NSF/NIH/patent searches not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1822",
+          "sources": [
+            "https://www.newcastle.edu.au/profile/van-le"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile requires JavaScript or returned no text, so it could not be scanned.",
+            "Official profile/homepage fetched where reachable and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for roster-member names: no qualifying mentorship evidence."
+          ],
+          "nextAction": "OpenAlex returned HTTP 429 (OPENALEX_MAILTO unset) and Crossref was rate limited after a few queries; CV, genealogy, NSF/NIH/patent searches not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1801",
+          "sources": [
+            "https://www.massey.ac.nz/massey/expertise/profile.cfm?stref=359222"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile/homepage fetched where reachable and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for roster-member names: no qualifying mentorship evidence."
+          ],
+          "nextAction": "OpenAlex returned HTTP 429 (OPENALEX_MAILTO unset) and Crossref was rate limited after a few queries; CV, genealogy, NSF/NIH/patent searches not completed. Retry later."
+        },
+        {
+          "rosterId": "vp-1800",
+          "sources": [
+            "https://www.massey.ac.nz/massey/expertise/profile.cfm?stref=403912"
+          ],
+          "relationshipIds": [],
+          "status": "unresolved",
+          "notes": [
+            "Official profile/homepage fetched where reachable and scanned for advisor, mentor, postdoc, thesis, or co-inventor wording and for roster-member names: no qualifying mentorship evidence."
+          ],
+          "nextAction": "OpenAlex returned HTTP 429 (OPENALEX_MAILTO unset) and Crossref was rate limited after a few queries; CV, genealogy, NSF/NIH/patent searches not completed. Retry later."
         }
       ]
     }

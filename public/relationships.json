@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-30T14:09:37.000Z",
+  "updatedAt": "2026-10-31T14:09:18.000Z",
   "relationships": [
     {
       "id": "rel-coauthor-vp-0015-vp-0018",
@@ -2955,6 +2955,107 @@
         }
       ],
       "verifiedAt": "2026-10-29T14:11:21.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-doctoral-advisor-vp-0100-vp-1838",
+      "type": "doctoral-advisor",
+      "sourceId": "vp-0100",
+      "targetId": "vp-1838",
+      "sources": [
+        "https://khainb.com/cv/"
+      ],
+      "evidence": "Khai Nguyen's maintained academic CV (khainb.com/cv), listed on his roster entry as his personal site, states under the Ph.D. in Statistics at the University of Texas at Austin, dissertation 'Sliced Optimal Transport in Bayesian Statistics': 'Advised by Professor Nhat Ho and Professor Peter Müller'. Nhat Ho is vp-0100 (UT Austin Statistics and Data Sciences). Peter Müller is not a roster entry.",
+      "works": [],
+      "verifiedAt": "2026-10-31T14:09:18.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-0100-vp-1838",
+      "type": "coauthor",
+      "sourceId": "vp-0100",
+      "targetId": "vp-1838",
+      "sources": [
+        "https://khainb.com/",
+        "https://arxiv.org/abs/2305.00402",
+        "https://arxiv.org/abs/2304.13586",
+        "https://arxiv.org/abs/2309.11713",
+        "https://arxiv.org/abs/2404.15378"
+      ],
+      "evidence": "DataCite records for four arXiv preprints list Khai Nguyen and Nhat Ho as authors. Identity signals: the titles appear on Khai Nguyen's official personal publication list as papers with Nhat Ho (ICLR/NeurIPS), both work on sliced Wasserstein / optimal transport, and Nhat Ho is named as his Ph.D. advisor at UT Austin.",
+      "works": [
+        {
+          "identifier": "doi:10.48550/arxiv.2304.13586",
+          "title": "Energy-Based Sliced Wasserstein Distance",
+          "date": "2023-04",
+          "url": "https://arxiv.org/abs/2304.13586"
+        },
+        {
+          "identifier": "doi:10.48550/arxiv.2305.00402",
+          "title": "Sliced Wasserstein Estimation with Control Variates",
+          "date": "2023-05",
+          "url": "https://arxiv.org/abs/2305.00402"
+        },
+        {
+          "identifier": "doi:10.48550/arxiv.2309.11713",
+          "title": "Quasi-Monte Carlo for 3D Sliced Wasserstein",
+          "date": "2023-09",
+          "url": "https://arxiv.org/abs/2309.11713"
+        },
+        {
+          "identifier": "doi:10.48550/arxiv.2404.15378",
+          "title": "Hierarchical Hybrid Sliced Wasserstein: A Scalable Metric for Heterogeneous Joint Distributions",
+          "date": "2024-04",
+          "url": "https://arxiv.org/abs/2404.15378"
+        }
+      ],
+      "verifiedAt": "2026-10-31T14:09:18.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-1836-vp-1837",
+      "type": "coauthor",
+      "sourceId": "vp-1836",
+      "targetId": "vp-1837",
+      "sources": [
+        "https://profiles.curtin.edu.au/5016-ba-tuong-vo",
+        "https://profiles.curtin.edu.au/3596-bangu-vo",
+        "https://doi.org/10.1109/tsp.2013.2259822",
+        "https://doi.org/10.1109/tsp.2014.2364014",
+        "https://doi.org/10.1109/tsp.2019.2928953",
+        "https://doi.org/10.1109/tsp.2024.3472068"
+      ],
+      "evidence": "Crossref author lists for four IEEE Transactions on Signal Processing works name Ba-Tuong Vo (vp-1836) and Ba-Ngu Vo (vp-1837). Identity signals: both roster entries hold Curtin University appointments with official Curtin profiles, and the works are in the labeled random finite set / multi-object tracking area of both researchers.",
+      "works": [
+        {
+          "identifier": "doi:10.1109/tsp.2013.2259822",
+          "title": "Labeled Random Finite Sets and Multi-Object Conjugate Priors",
+          "date": "2013",
+          "url": "https://doi.org/10.1109/tsp.2013.2259822"
+        },
+        {
+          "identifier": "doi:10.1109/tsp.2014.2364014",
+          "title": "Labeled Random Finite Sets and the Bayes Multi-Target Tracking Filter",
+          "date": "2014",
+          "url": "https://doi.org/10.1109/tsp.2014.2364014"
+        },
+        {
+          "identifier": "doi:10.1109/tsp.2019.2928953",
+          "title": "A Multi-Scan Labeled Random Finite Set Model for Multi-Object State Estimation",
+          "date": "2019",
+          "url": "https://doi.org/10.1109/tsp.2019.2928953"
+        },
+        {
+          "identifier": "doi:10.1109/tsp.2024.3472068",
+          "title": "An Overview of Multi-Object Estimation via Labeled Random Finite Set",
+          "date": "2024",
+          "url": "https://doi.org/10.1109/tsp.2024.3472068"
+        }
+      ],
+      "verifiedAt": "2026-10-31T14:09:18.000Z",
       "direct": false,
       "notes": ""
     }
