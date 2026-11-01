@@ -6,6 +6,7 @@ import {
   sample,
   shuffle,
   createCommandHandler,
+  rankMatches,
 } from '../src/search-kit.ts';
 
 test('normalizeText strips diacritics and converts to lowercase', () => {
@@ -98,4 +99,16 @@ test('createCommandHandler runs only help, query plan, and clear; every other wo
   ]) {
     assert.equal(handler(word), false, `"${word}" stays an ordinary search`);
   }
+});
+
+test('rankMatches keeps every match, ranking word starts (including after hyphens) before inner substrings', () => {
+  const names = ['Tuan Phung-Duc', 'Dinh Phung', 'Phung Dao', 'Aphung Tran', 'Hieu Phung'];
+  assert.deepEqual(rankMatches(names, 'phùng'), [
+    'Phung Dao',
+    'Dinh Phung',
+    'Hieu Phung',
+    'Tuan Phung-Duc',
+    'Aphung Tran',
+  ]);
+  assert.deepEqual(rankMatches(names, 'duc'), ['Tuan Phung-Duc']);
 });

@@ -544,6 +544,8 @@ async function init() {
       ]),
     ),
     resolveKey: (key) => KEYWORD_ALIASES[key],
+    // A common surname matches dozens of names; the panel scrolls, so list enough to reach them.
+    maxSuggestions: 50,
     // Free text completes over everything filterRoster searches; scopes without their own list
     // (e.g. Connection) fall back to the same combined list.
     getSuggestions: (key) => suggestionSources.get(key) ?? suggestionValues,
