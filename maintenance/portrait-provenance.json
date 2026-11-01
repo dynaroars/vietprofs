@@ -8602,6 +8602,112 @@
       "identitySignals": [],
       "retrievedAt": "2026-11-01T16:57:22.243Z",
       "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2204": {
+      "name": "Baotran N. Vo",
+      "outcome": "found",
+      "pageUrl": "https://www.ucihealth.org/clinicians/baotran-vo-1356661235",
+      "imageUrl": "https://cdn-images.kyruus.com/providermatch/ucihealth/photos/orig/vo-baotran-1356661235.png",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T17:00:07.532Z"
+    },
+    "vp-2205": {
+      "name": "Duy Ha Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-01T17:00:09.289Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2206": {
+      "name": "Tri Pham",
+      "outcome": "found",
+      "pageUrl": "https://research.nu.edu.kz/en/persons/tri-pham/",
+      "imageUrl": "https://research.nu.edu.kz/files-asset/42634257/UsernameServlet.jpeg?w=160&f=jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T17:00:33.858Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-2207": {
+      "name": "Trung V. Phan",
+      "outcome": "found",
+      "pageUrl": "https://www.pitzer.edu/trung-average-v-phan",
+      "imageUrl": "https://www.pitzer.edu/sites/default/files/styles/768x1052/public/2025-09/768x1052-TrP.jpg?h=e9d2da78&itok=AF-Gszu_",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T17:00:34.328Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-2208": {
+      "name": "Thuan Dinh Do",
+      "outcome": "found",
+      "pageUrl": "https://www.mountunion.edu/dr-thuan-dinh-do",
+      "imageUrl": "https://www.mountunion.edu/Contact%20Headshots/do_thuan_2026.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T17:00:22.800Z"
+    },
+    "vp-2209": {
+      "name": "Thuy T. Do",
+      "outcome": "found",
+      "pageUrl": "https://www.luther.edu/faculty/thuy-do",
+      "imageUrl": "https://www.luther.edu/wp-content/uploads/2022/10/thuy-do-image.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T17:00:24.740Z"
+    },
+    "vp-2210": {
+      "name": "Tina Tran",
+      "outcome": "needs_review",
+      "pageUrl": "https://pharmacy.temple.edu/tinatran",
+      "imageUrl": "https://pharmacy.temple.edu/sites/pharmacy/files/styles/tu_image_style_thumbnail/public/temple/profiles/Tran.jpg?h=e04ec49e&itok=m6UL3m3m",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T17:00:25.090Z",
+      "note": "candidate requires visual review before acceptance"
     }
   }
 }

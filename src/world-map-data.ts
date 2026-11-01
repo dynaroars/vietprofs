@@ -52,6 +52,7 @@ export const ISO_TO_COUNTRY_NAME: Record<string, string> = {
   "sa": "Saudi Arabia",
   "ae": "United Arab Emirates",
   "qa": "Qatar",
+  "kz": "Kazakhstan",
   "il": "Israel",
   "eg": "Egypt",
   "za": "South Africa",
