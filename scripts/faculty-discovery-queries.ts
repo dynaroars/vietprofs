@@ -22,7 +22,10 @@ if (!university || !field) {
 const site = domain ? `site:${domain}` : '';
 // Surnames only by default. Huynh, Duong, Truong, Dang, Ngo, Mai, and Dao were added after a
 // roster token-frequency scan showed they are common Vietnamese surnames missing from the
-// original ten-name list, not just given-name components.
+// original ten-name list, not just given-name components. Trinh, Quach, Nghiem, Trieu, and
+// Ton-That were added after the 2026-11 audit of discover Issues #503-#512, where every
+// candidate found under them (13 in all) was verified and added; as Vietnamese romanizations
+// they rarely collide with Chinese spellings of the same names (Guo/Kwok, Zhao/Chiu).
 const surnames = [
   'Nguyen',
   'Tran',
@@ -41,6 +44,11 @@ const surnames = [
   'Ngo',
   'Mai',
   'Dao',
+  'Trinh',
+  'Quach',
+  'Nghiem',
+  'Trieu',
+  'Ton-That',
 ];
 // Common Vietnamese given/middle-name tokens. These produce more false positives than a surname
 // search (they match any person with that token anywhere in their name, not just as a family

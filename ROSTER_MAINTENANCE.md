@@ -149,7 +149,7 @@ Use all relevant candidate sources:
 - linked person pages, including opaque directory URLs such as `/profile/tn294`;
 - official institutional news, research-center, lab, grant, and award pages;
 - personal academic homepages, Google Sites, lab pages, CVs, Google Scholar, and reputable conference profiles; mark the entry unconfirmed if these are the best available current-appointment evidence; and
-- broad search-engine queries using the institution, field, Vietnamese surnames (`Nguyen`, `Tran`, `Le`, `Pham`, `Vo`, `Vu`, `Bui`, `Do`, `Phan`, `Lai`, `Huynh`, `Duong`, `Truong`, `Dang`, `Ngo`, `Mai`, `Dao`), and common Vietnamese given names.
+- broad search-engine queries using the institution, field, Vietnamese surnames (`Nguyen`, `Tran`, `Le`, `Pham`, `Vo`, `Vu`, `Bui`, `Do`, `Phan`, `Lai`, `Huynh`, `Duong`, `Truong`, `Dang`, `Ngo`, `Mai`, `Dao`, `Trinh`, `Quach`, `Nghiem`, `Trieu`, `Ton-That`), and common Vietnamese given names.
 
 Do not depend on URL shape, visible diacritics, or a faculty page being linked from a department homepage. A research mention, dissertation-supervision link, coauthorship, student page, or grant page is a lead—not proof of a current faculty appointment.
 
@@ -337,6 +337,30 @@ treat a specific untested token's yield, and a specific field's yield, as unprov
 found a genuinely new person, not just a not-yet-fully-documented one.
 
 Every result still requires the appointment, track, and source-quality checks above.
+
+An audited 100-candidate discovery run (Issues #503–#512, verified live 2026-11-01) gives
+per-channel acceptance rates, not just raw finds. 74 were added, 18 rejected, 1 was already listed
+under a shorter name (vp-1851), and 7 could not be confirmed (Issue #513). By channel:
+
+- **Lower-frequency surnames** (`Trinh`, `Quach`, `Nghiem`, `Trieu`, `Ton-That`): 13 of 13
+  accepted, so they are now in the query generator.
+- **Regional and teaching-focused U.S. universities** (Sam Houston State, East Texas A&M,
+  Cleveland State, Shenandoah, Yeshiva, Mount Union, Luther, Pitzer): all accepted.
+- **European, Japanese, and other non-U.S. universities and institutes**: about three in four
+  accepted. The misses were grant-funded group leaders, research fellows, fixed-term Japanese
+  posts (特任), institute posts whose permanence could not be shown, and one Vietnam-based director.
+- **U.S. medical schools whose faculty are employed by the university or its health system**
+  (UC campuses, Stanford, WashU, Baylor College of Medicine, UNLV, MCW): nearly all accepted on
+  their Clinical/HS Clinical or plain professorial titles. Use the faculty profile system
+  (`profiles.<campus>.edu`, Stanford Profiles); its title line is authoritative.
+- **Canadian and Australian hospital-based physicians**: 0 of 9 accepted. Their university titles
+  sat alongside hospital practice, and no page showed a full-time university appointment. U.S.
+  private-practice physicians with volunteer clinical titles failed the same way.
+
+The run's Issues also needed corrections. About one candidate in ten had a wrong rank, institution,
+research area, or education history. Most proposed `vietnameseName` values had diacritics
+reconstructed without a source, so none were applied. Treat a discovery Issue's fields as leads to
+re-check, and prefer the channels above where acceptance was high.
 
 ### Reviewing user-supplied links
 
