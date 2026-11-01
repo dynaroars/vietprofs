@@ -584,6 +584,13 @@ const FIELD_OVERRIDES = new Map([
   ['Institute of Polish Philology|University of Wrocław', 'Humanities'],
   // UT Austin's political science department is named Government.
   ['Department of Government|The University of Texas at Austin', 'Social & Behavioral Sciences'],
+  // HKUST's social-science division (political science appointment).
+  [
+    'Division of Social Science|Hong Kong University of Science and Technology',
+    'Social & Behavioral Sciences',
+  ],
+  // San Jose State speech-language pathology.
+  ['Communicative Disorders & Sciences|San Jose State University', 'Health Sciences'],
   // Sorbonne's applied-mathematics laboratory (the lab name carries no field keyword).
   ['Laboratoire Jacques-Louis Lions|Sorbonne Université', 'Mathematics'],
   // UiT fishery college; this appointment is in environmental and resource economics.
