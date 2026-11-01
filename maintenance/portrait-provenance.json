@@ -27,10 +27,17 @@
     },
     "vp-0027": {
       "name": "Hoang Long Nguyen",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-14T11:49:34.919Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "identitySignals": [
+        "name",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T18:26:42.000Z",
+      "note": "2026-11-01 Chromium scan of stored profile/homepage: photo name-matched by alt text, filename, or adjacent name; looked at, face-cropped, face-checked",
+      "imageUrl": "https://profiles.louisville.edu/l.nguyen/thumbnail",
+      "confidence": "HIGH",
+      "pageUrl": "https://engineering.louisville.edu/faculty/hoang-long-nguyen/",
+      "sourceType": "official_faculty"
     },
     "vp-0120": {
       "name": "Hoang-Vu Phan",
@@ -222,10 +229,17 @@
     },
     "vp-0862": {
       "name": "Caroline T. Nguyen",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-14T11:51:35.323Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "identitySignals": [
+        "name",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T18:26:42.000Z",
+      "note": "2026-11-01 Chromium scan of stored profile/homepage: photo name-matched by alt text, filename, or adjacent name; looked at, face-cropped, face-checked",
+      "imageUrl": "https://researcherprofiles.org/profile/Modules/CustomViewPersonGeneralInfo/PhotoHandler.ashx?NodeID=191003",
+      "confidence": "HIGH",
+      "pageUrl": "https://keck.usc.edu/faculty-search/caroline-t-nguyen/",
+      "sourceType": "official_faculty"
     },
     "vp-0874": {
       "name": "Kimloan Nguyen",
@@ -346,20 +360,17 @@
     },
     "vp-1176": {
       "name": "Tuan Anh Nguyen - Swinburne University of Technology",
-      "outcome": "not_found",
+      "outcome": "found",
       "pageUrl": "https://www.swinburne.edu.au/research/institutes/iverson-health-innovation/team/",
-      "imageUrl": "https://www.swinburne.edu.au/content/dam/media/staff/Rachael-McDonald.jpg/_jcr_content/renditions/cq5dam.web.256.144.jpeg",
+      "imageUrl": "https://www.swinburne.edu.au/content/dam/media/staff/TuanAnhNguyen.jpg/_jcr_content/renditions/cq5dam.web.1280.1280.jpeg",
       "sourceType": "official_faculty",
-      "confidence": "MEDIUM",
+      "confidence": "HIGH",
       "identitySignals": [
         "name",
-        "institution",
-        "department",
-        "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-10-14T11:59:54.723Z",
-      "note": "rejected on visual review 2026-10-14: another staff member's photo (Rachael McDonald)"
+      "retrievedAt": "2026-11-01T18:26:42.000Z",
+      "note": "2026-11-01 Chromium scan of stored profile/homepage: photo name-matched by alt text, filename, or adjacent name; looked at, face-cropped, face-checked"
     },
     "vp-1183": {
       "name": "Hong-Linh Truong",
@@ -370,10 +381,17 @@
     },
     "vp-1225": {
       "name": "Doan Pham Minh",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-14T12:03:11.855Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "identitySignals": [
+        "name",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T18:26:42.000Z",
+      "note": "2026-11-01 Chromium scan of stored profile/homepage: photo name-matched by alt text, filename, or adjacent name; looked at, face-cropped, face-checked",
+      "imageUrl": "https://rapsodee.mines-albi.fr/sites/rps/files/styles/trombi_240x240/public/2023-10/Phamminh.png?itok=m4uVwTVg",
+      "confidence": "HIGH",
+      "pageUrl": "https://rapsodee.mines-albi.fr",
+      "sourceType": "official_faculty"
     },
     "vp-1230": {
       "name": "Toi Van Vo",
@@ -484,10 +502,17 @@
     },
     "vp-0901": {
       "name": "Tuan Mai",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-14T11:52:37.902Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "identitySignals": [
+        "name",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T18:26:42.000Z",
+      "note": "2026-11-01 Chromium scan of stored profile/homepage: photo name-matched by alt text, filename, or adjacent name; looked at, face-cropped, face-checked",
+      "imageUrl": "https://researcherprofiles.org/profile/Modules/CustomViewPersonGeneralInfo/PhotoHandler.ashx?NodeID=427562198",
+      "confidence": "HIGH",
+      "pageUrl": "https://keck.usc.edu/faculty-search/tuan-mai/",
+      "sourceType": "official_faculty"
     },
     "vp-0903": {
       "name": "Phuong Le",
@@ -512,10 +537,17 @@
     },
     "vp-0910": {
       "name": "Nam X. Nguyen",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-14T11:53:03.297Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "identitySignals": [
+        "name",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T18:26:42.000Z",
+      "note": "2026-11-01 Chromium scan of stored profile/homepage: photo name-matched by alt text, filename, or adjacent name; looked at, face-cropped, face-checked",
+      "imageUrl": "https://researcherprofiles.org/profile/Modules/CustomViewPersonGeneralInfo/PhotoHandler.ashx?NodeID=176678",
+      "confidence": "HIGH",
+      "pageUrl": "https://keck.usc.edu/faculty-search/nam-x-nguyen/",
+      "sourceType": "official_faculty"
     },
     "vp-0926": {
       "name": "Thi Hong Tran",
@@ -627,24 +659,45 @@
     },
     "vp-0981": {
       "name": "Ba D. Nguyen",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-14T11:53:45.942Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "identitySignals": [
+        "name",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T18:26:42.000Z",
+      "note": "2026-11-01 Chromium scan of stored profile/homepage: photo name-matched by alt text, filename, or adjacent name; looked at, face-cropped, face-checked; fetched from the Wayback Machine copy (live site blocked automated access)",
+      "imageUrl": "https://www.mayoclinic.org/-/media/kcms/employees/2018/06/16/21/29/ba-nguyen-10544305.jpg",
+      "confidence": "HIGH",
+      "pageUrl": "https://www.mayoclinic.org/biographies/nguyen-ba-d-m-d/bio-20053834",
+      "sourceType": "official_faculty"
     },
     "vp-0983": {
       "name": "Nguyen H. Tran",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-14T11:55:06.284Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "identitySignals": [
+        "name",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T18:26:42.000Z",
+      "note": "2026-11-01 Chromium scan of stored profile/homepage: photo name-matched by alt text, filename, or adjacent name; looked at, face-cropped, face-checked; fetched from the Wayback Machine copy (live site blocked automated access)",
+      "imageUrl": "https://www.mayo.edu/-/media/kcms/employees/2019/08/26/20/50/nguyen-tran-15820513.jpg",
+      "confidence": "HIGH",
+      "pageUrl": "https://www.mayo.edu/research/faculty/tran-nguyen-h-m-d/bio-20537785",
+      "sourceType": "official_faculty"
     },
     "vp-0984": {
       "name": "Michelle C. Nguyen",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-14T11:55:11.254Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "identitySignals": [
+        "name",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T18:26:42.000Z",
+      "note": "2026-11-01 Chromium scan of stored profile/homepage: photo name-matched by alt text, filename, or adjacent name; looked at, face-cropped, face-checked; fetched from the Wayback Machine copy (live site blocked automated access)",
+      "imageUrl": "https://www.mayoclinic.org/-/media/kcms/employees/2021/09/15/11/19/michelle-nguyen-30083091.jpg",
+      "confidence": "HIGH",
+      "pageUrl": "https://www.mayoclinic.org/biographies/nguyen-michelle-c-m-d/bio-20520642",
+      "sourceType": "official_faculty"
     },
     "vp-1231": {
       "name": "Thanh-Tuan Bui",
@@ -663,10 +716,17 @@
     },
     "vp-0985": {
       "name": "Aivi T. Nguyen",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-14T11:55:15.579Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "identitySignals": [
+        "name",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T18:26:42.000Z",
+      "note": "2026-11-01 Chromium scan of stored profile/homepage: photo name-matched by alt text, filename, or adjacent name; looked at, face-cropped, face-checked; fetched from the Wayback Machine copy (live site blocked automated access)",
+      "imageUrl": "https://www.mayo.edu/-/media/kcms/employees/2021/06/03/16/49/aivi-nguyen-21678219.jpg",
+      "confidence": "HIGH",
+      "pageUrl": "https://www.mayo.edu/research/faculty/nguyen-aivi-t-m-d/bio-20585981",
+      "sourceType": "official_faculty"
     },
     "vp-0987": {
       "name": "Nam Hai Pham",
@@ -1267,10 +1327,17 @@
     },
     "vp-1215": {
       "name": "Hieu Pham",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-14T12:01:50.964Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "identitySignals": [
+        "name",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T18:26:42.000Z",
+      "note": "2026-11-01 Chromium scan of stored profile/homepage: photo name-matched by alt text, filename, or adjacent name; looked at, face-cropped, face-checked",
+      "imageUrl": "https://www.uah.edu/images/fsdir/portrait/1886/hieu-pham-720.jpg",
+      "confidence": "HIGH",
+      "pageUrl": "https://www.uah.edu/business/faculty-staff/hieu-pham",
+      "sourceType": "official_faculty"
     },
     "vp-1216": {
       "name": "Phuong Hong Nguyen",
@@ -1304,10 +1371,17 @@
     },
     "vp-1220": {
       "name": "Anh-Vu Vo",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-14T12:02:50.805Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "identitySignals": [
+        "name",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T18:26:42.000Z",
+      "note": "2026-11-01 Chromium scan of stored profile/homepage: photo name-matched by alt text, filename, or adjacent name; looked at, face-cropped, face-checked",
+      "imageUrl": "https://people.ucd.ie/anhvu.vo/thumbnail",
+      "confidence": "HIGH",
+      "pageUrl": "https://people.ucd.ie/anhvu.vo",
+      "sourceType": "official_faculty"
     },
     "vp-1224": {
       "name": "Phuong Nguyen-Tri",
@@ -1350,10 +1424,17 @@
     },
     "vp-1229": {
       "name": "Nong Van Ngo",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-14T12:03:54.116Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "identitySignals": [
+        "name",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T18:26:42.000Z",
+      "note": "2026-11-01 Chromium scan of stored profile/homepage: photo name-matched by alt text, filename, or adjacent name; looked at, face-cropped, face-checked",
+      "imageUrl": "https://profs.provost.nagoya-u.ac.jp/html/img/100010344",
+      "confidence": "HIGH",
+      "pageUrl": "https://profs.provost.nagoya-u.ac.jp/html/100010344_en.html",
+      "sourceType": "official_faculty"
     },
     "vp-1232": {
       "name": "Giang Vo-Thanh",
@@ -1373,10 +1454,17 @@
     },
     "vp-1233": {
       "name": "Anh-Thy Bui",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-14T12:04:40.834Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "identitySignals": [
+        "name",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T18:26:42.000Z",
+      "note": "2026-11-01 Chromium scan of stored profile/homepage: photo name-matched by alt text, filename, or adjacent name; looked at, face-cropped, face-checked",
+      "imageUrl": "https://www.loma.cnrs.fr/wp-content/uploads/2021/01/Capture-3.png",
+      "confidence": "HIGH",
+      "pageUrl": "https://www.loma.cnrs.fr/ngoc-anh-thy-bui/",
+      "sourceType": "personal_homepage"
     },
     "vp-1236": {
       "name": "Nhan Viet Tran",
@@ -1397,10 +1485,17 @@
     },
     "vp-1240": {
       "name": "Kim-Vy Tran",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-14T12:05:12.717Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "identitySignals": [
+        "name",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T18:26:42.000Z",
+      "note": "2026-11-01 Chromium scan of stored profile/homepage: photo name-matched by alt text, filename, or adjacent name; looked at, face-cropped, face-checked; fetched from the Wayback Machine copy (live site blocked automated access)",
+      "imageUrl": "https://astronomy.fas.harvard.edu/sites/g/files/omnuum6286/files/styles/hwp_4_5__480x600/public/astronomy/files/202209-vy-small.jpg?itok=H5S3QRcK",
+      "confidence": "HIGH",
+      "pageUrl": "https://astronomy.fas.harvard.edu/people/kim-vy-tran",
+      "sourceType": "official_faculty"
     },
     "vp-1241": {
       "name": "Minh Huynh",
@@ -1462,10 +1557,17 @@
     },
     "vp-1271": {
       "name": "Khanh Pham",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-11-01T17:27:12.627Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "identitySignals": [
+        "name",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T18:26:42.000Z",
+      "note": "2026-11-01 Chromium scan of stored profile/homepage: photo name-matched by alt text, filename, or adjacent name; looked at, face-cropped, face-checked; fetched from the Wayback Machine copy (live site blocked automated access)",
+      "imageUrl": "https://media.defense.gov/2022/Feb/18/2002942067/2000/2000/0/220216-F-F3963-1010.JPG",
+      "confidence": "HIGH",
+      "pageUrl": "https://www.afrl.af.mil/News/Article-Display/Article/2940752/afrl-aerospace-engineer-receives-international-recognition/",
+      "sourceType": "official_faculty"
     },
     "vp-1279": {
       "name": "Thao Pham",
@@ -1707,10 +1809,17 @@
     },
     "vp-1344": {
       "name": "Huu Duc Vo",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-14T12:16:09.739Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "identitySignals": [
+        "name",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T18:26:42.000Z",
+      "note": "2026-11-01 Chromium scan of stored profile/homepage: photo name-matched by alt text, filename, or adjacent name; looked at, face-cropped, face-checked",
+      "imageUrl": "https://www.polymtl.ca/expertises/sites/expertises.lxpolywebprod.polymtl.ca/files/pvo_314.jpg",
+      "confidence": "HIGH",
+      "pageUrl": "https://www.polymtl.ca/expertises/en/vo-huu-duc",
+      "sourceType": "official_faculty"
     },
     "vp-1345": {
       "name": "Quoc Lam Vuong",
@@ -2014,10 +2123,17 @@
     },
     "vp-1393": {
       "name": "Chinh Ho",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-14T12:21:15.984Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "identitySignals": [
+        "name",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T18:26:42.000Z",
+      "note": "2026-11-01 Chromium scan of stored profile/homepage: photo name-matched by alt text, filename, or adjacent name; looked at, face-cropped, face-checked",
+      "imageUrl": "https://profiles.sydney.edu.au/quoc.ho/thumbnail",
+      "confidence": "HIGH",
+      "pageUrl": "https://profiles.sydney.edu.au/quoc.ho",
+      "sourceType": "official_faculty"
     },
     "vp-1395": {
       "name": "Huyen Le",
@@ -2037,10 +2153,17 @@
     },
     "vp-1396": {
       "name": "Thuan Thai",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-14T12:21:33.631Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "identitySignals": [
+        "name",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T18:26:42.000Z",
+      "note": "2026-11-01 Chromium scan of stored profile/homepage: photo name-matched by alt text, filename, or adjacent name; looked at, face-cropped, face-checked; fetched from the Wayback Machine copy (live site blocked automated access)",
+      "imageUrl": "https://www.notredame.edu.au/resources/images/staff/sydney-school-staff/education/Thuan-Thai_280x200.jpg",
+      "confidence": "HIGH",
+      "pageUrl": "https://www.notredame.edu.au/about/schools/sydney/education/school-staff/thuan-thai",
+      "sourceType": "official_faculty"
     },
     "vp-1397": {
       "name": "Duc Thanh Nguyen",
@@ -2107,17 +2230,17 @@
     },
     "vp-1406": {
       "name": "Tuan Hung Nguyen",
-      "outcome": "not_found",
+      "outcome": "found",
       "pageUrl": "https://www.fris.tohoku.ac.jp/en/researcher/creative_onetime/nguyentuanhung.html",
-      "imageUrl": "https://www.fris.tohoku.ac.jp/en/researcher/creative_onetime/media/images/Researcher/creative/NGUYEN/nguyentuan.jpg",
+      "imageUrl": "https://www.fris.tohoku.ac.jp/media/images/Researcher/creative/NGUYEN/nguyentuan.jpg",
       "sourceType": "official_faculty",
-      "confidence": "MEDIUM",
+      "confidence": "HIGH",
       "identitySignals": [
         "name",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-11-01T17:16:08.293Z",
-      "note": "2026-11-01 deep audit: name-matched candidate failed --store checks (image could not be downloaded)"
+      "retrievedAt": "2026-11-01T18:26:42.000Z",
+      "note": "2026-11-01 Chromium scan of stored profile/homepage: photo name-matched by alt text, filename, or adjacent name; looked at, face-cropped, face-checked"
     },
     "vp-1407": {
       "name": "Quoc Duy Ho",
@@ -2174,10 +2297,17 @@
     },
     "vp-1421": {
       "name": "Hieu Trinh",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-14T12:23:41.578Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "identitySignals": [
+        "name",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T18:26:42.000Z",
+      "note": "2026-11-01 Chromium scan of stored profile/homepage: photo name-matched by alt text, filename, or adjacent name; looked at, face-cropped, face-checked; fetched from the Wayback Machine copy (live site blocked automated access)",
+      "imageUrl": "https://www.deakin.edu.au/media/data-sources/profiles-images/web-profile-image/?src=8370.jpg",
+      "confidence": "HIGH",
+      "pageUrl": "https://www.deakin.edu.au/about-deakin/people/hieu-trinh",
+      "sourceType": "official_faculty"
     },
     "vp-1422": {
       "name": "Toan Dinh",
@@ -2275,10 +2405,17 @@
     },
     "vp-1447": {
       "name": "Cam Ha T. Tran",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-14T12:25:55.464Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "identitySignals": [
+        "name",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T18:26:42.000Z",
+      "note": "2026-11-01 Chromium scan of stored profile/homepage: photo name-matched by alt text, filename, or adjacent name; looked at, face-cropped, face-checked",
+      "imageUrl": "https://med.unr.edu/med/images/Directory/T/Thai%20Tran-Cam%20Ha.jpg",
+      "confidence": "HIGH",
+      "pageUrl": "https://med.unr.edu/directory/cam-ha-tran",
+      "sourceType": "official_faculty"
     },
     "vp-1448": {
       "name": "Thien-Tri Lam",
@@ -2461,10 +2598,17 @@
     },
     "vp-1477": {
       "name": "Mai Lan Nguyen",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-14T12:28:26.601Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "identitySignals": [
+        "name",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T18:26:42.000Z",
+      "note": "2026-11-01 Chromium scan of stored profile/homepage: photo name-matched by alt text, filename, or adjacent name; looked at, face-cropped, face-checked",
+      "imageUrl": "https://pagespro.univ-gustave-eiffel.fr/uploads/pics/nguyen_mai_lan_-_copie.jpg",
+      "confidence": "HIGH",
+      "pageUrl": "https://pagespro.univ-gustave-eiffel.fr/mai-lan-nguyen",
+      "sourceType": "official_faculty"
     },
     "vp-1479": {
       "name": "Minh-Tan Pham",
@@ -2678,10 +2822,17 @@
     },
     "vp-1293": {
       "name": "Quan M. Bui",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-14T12:09:05.282Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "identitySignals": [
+        "name",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T18:26:42.000Z",
+      "note": "2026-11-01 Chromium scan of stored profile/homepage: photo name-matched by alt text, filename, or adjacent name; looked at, face-cropped, face-checked",
+      "imageUrl": "https://dyn.mktgcdn.com/p/uho1X6zPMNHLX2w_tQ76NUA2jCHl5LesH12CLJ-Eslo/width=500,height=500,format=webp",
+      "confidence": "HIGH",
+      "pageUrl": "https://providers.ucsd.edu/details/1831553718/cardiology-transplantation",
+      "sourceType": "official_faculty"
     },
     "vp-1365": {
       "name": "Xuan Bich Trinh",
@@ -2736,10 +2887,17 @@
     },
     "vp-0578": {
       "name": "Cuc Nguyen",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-14T11:50:21.014Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "identitySignals": [
+        "name",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T18:26:42.000Z",
+      "note": "2026-11-01 Chromium scan of stored profile/homepage: photo name-matched by alt text, filename, or adjacent name; looked at, face-cropped, face-checked",
+      "imageUrl": "https://pictures.staff.unimelb.edu.au/fae/index_eis.php?cid=86cElUCUXh1eqzxTfFOKtKpSvwaZHw5vAUEDXLW1gfM%3D&h=WoskalrqQXPdpoQ%2Bvs%2FVE0uVu9wMcn7Uc6TIPBD9Wdc%3D",
+      "confidence": "HIGH",
+      "pageUrl": "https://findanexpert.unimelb.edu.au/profile/18768-cuc-nguyen",
+      "sourceType": "official_faculty"
     },
     "vp-1632": {
       "name": "Pham Tue Hung Tran",
@@ -3047,10 +3205,17 @@
     },
     "vp-1616": {
       "name": "Vu Nguyen Ha",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-14T12:42:02.246Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "identitySignals": [
+        "name",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T18:26:42.000Z",
+      "note": "2026-11-01 Chromium scan of stored profile/homepage: photo name-matched by alt text, filename, or adjacent name; looked at, face-cropped, face-checked",
+      "imageUrl": "https://www.uni.lu/en/person-image/NTAwNDM5MzhfX1Z1IE5ndXllbiBIQQ==--1536x1536",
+      "confidence": "HIGH",
+      "pageUrl": "https://www.uni.lu/snt-en/people/vu-nguyen-ha/",
+      "sourceType": "official_faculty"
     },
     "vp-1617": {
       "name": "Tung Le",
@@ -3136,10 +3301,17 @@
     },
     "vp-1625": {
       "name": "Phuong Lan Nguyen",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-14T12:43:51.109Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "identitySignals": [
+        "name",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T18:26:42.000Z",
+      "note": "2026-11-01 Chromium scan of stored profile/homepage: photo name-matched by alt text, filename, or adjacent name; looked at, face-cropped, face-checked",
+      "imageUrl": "https://mmuexpert.mmu.edu.my/images/staff/1001033681.jpg",
+      "confidence": "HIGH",
+      "pageUrl": "https://mmuexpert.mmu.edu.my/nguyenthiphuonglan",
+      "sourceType": "official_faculty"
     },
     "vp-1626": {
       "name": "Tai Duc Pham",
@@ -4306,10 +4478,17 @@
     },
     "vp-1376": {
       "name": "Binh N. Trinh",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-14T12:18:56.195Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "identitySignals": [
+        "name",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T18:26:42.000Z",
+      "note": "2026-11-01 Chromium scan of stored profile/homepage: photo name-matched by alt text, filename, or adjacent name; looked at, face-cropped, face-checked; fetched from the Wayback Machine copy (live site blocked automated access)",
+      "imageUrl": "https://surgery.ucsf.edu/sites/default/files/styles/max_1300x1300/public/2023-06/dr-binh-trinh-md-380-1440x784-2x_0.jpg.webp?itok=5VB5UMJ6",
+      "confidence": "HIGH",
+      "pageUrl": "https://surgery.ucsf.edu/bio/binh-n-trinh",
+      "sourceType": "official_faculty"
     },
     "vp-1918": {
       "name": "Lisa Tran - Utrecht University",
@@ -4370,10 +4549,17 @@
     },
     "vp-1923": {
       "name": "Anh Tuan Nguyen",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-14T12:59:56.652Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "identitySignals": [
+        "name",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T18:26:42.000Z",
+      "note": "2026-11-01 Chromium scan of stored profile/homepage: photo name-matched by alt text, filename, or adjacent name; looked at, face-cropped, face-checked",
+      "imageUrl": "https://me.lhu.edu.tw/var/file/13/1013/img/863965147.jpg",
+      "confidence": "HIGH",
+      "pageUrl": "https://me.lhu.edu.tw/p/412-1013-85.php?Lang=zh-tw",
+      "sourceType": "official_faculty"
     },
     "vp-1924": {
       "name": "Thi Phuong Linh Nguyen",
@@ -4745,17 +4931,31 @@
     },
     "vp-1955": {
       "name": "Thi Kim Thinh Truong",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-14T13:04:38.359Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "identitySignals": [
+        "name",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T18:26:42.000Z",
+      "note": "2026-11-01 Chromium scan of stored profile/homepage: photo name-matched by alt text, filename, or adjacent name; looked at, face-cropped, face-checked",
+      "imageUrl": "https://hyoka.ofc.kyushu-u.ac.jp/html/img/100026314",
+      "confidence": "HIGH",
+      "pageUrl": "https://hyoka.ofc.kyushu-u.ac.jp/html/100026314_en.html",
+      "sourceType": "official_faculty"
     },
     "vp-1956": {
       "name": "Nguyen Dinh Tuan Vuong",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-14T13:04:55.610Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "identitySignals": [
+        "name",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T18:26:42.000Z",
+      "note": "2026-11-01 Chromium scan of stored profile/homepage: photo name-matched by alt text, filename, or adjacent name; looked at, face-cropped, face-checked",
+      "imageUrl": "https://trios.tsukuba.ac.jp/en/researchers/pictures/0000004993",
+      "confidence": "HIGH",
+      "pageUrl": "https://trios.tsukuba.ac.jp/en/researcher/0000004993",
+      "sourceType": "official_faculty"
     },
     "vp-1957": {
       "name": "Thi Xuan Trinh Nguyen",
@@ -6144,10 +6344,17 @@
     },
     "vp-2053": {
       "name": "Ben Tran",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-14T13:08:59.678Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "identitySignals": [
+        "name",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T18:26:42.000Z",
+      "note": "2026-11-01 Chromium scan of stored profile/homepage: photo name-matched by alt text, filename, or adjacent name; looked at, face-cropped, face-checked",
+      "imageUrl": "https://as.vanderbilt.edu/photos/asianstudies/people/image.php/ASIAN-Tran-Headshot.jpg?width=175&image=https://as.vanderbilt.edu/photos/asianstudies/people/ASIAN-Tran-Headshot.jpg",
+      "confidence": "HIGH",
+      "pageUrl": "https://as.vanderbilt.edu/asian-studies/bio/-ben-tran/",
+      "sourceType": "official_faculty"
     },
     "vp-2054": {
       "name": "Wellington Pham",
@@ -7067,10 +7274,17 @@
     },
     "vp-2106": {
       "name": "Vu Tran - University of Reading",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-26T11:08:37.490Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "identitySignals": [
+        "name",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T18:26:42.000Z",
+      "note": "2026-11-01 Chromium scan of stored profile/homepage: photo name-matched by alt text, filename, or adjacent name; looked at, face-cropped, face-checked",
+      "imageUrl": "https://henley.imgix.net/v3/peopleImages/Vu-Tran.JPG?auto=compress%2Cformat&fit=max&fm=webp&q=80&ratio=5472%2F3648&w=640",
+      "confidence": "HIGH",
+      "pageUrl": "https://www.icmacentre.ac.uk/people/dr-vu-tran",
+      "sourceType": "official_faculty"
     },
     "vp-2107": {
       "name": "Quynh Nguyen - Bournemouth University",
@@ -7158,10 +7372,17 @@
     },
     "vp-2113": {
       "name": "Anh-Thu Le",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-14T13:10:53.437Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "identitySignals": [
+        "name",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T18:26:42.000Z",
+      "note": "2026-11-01 Chromium scan of stored profile/homepage: photo name-matched by alt text, filename, or adjacent name; looked at, face-cropped, face-checked",
+      "imageUrl": "https://physics.media.uconn.edu/wp-content/uploads/sites/2234/2021/08/AT-Le_photo-150x150-1.jpg",
+      "confidence": "HIGH",
+      "pageUrl": "https://physics.uconn.edu/person/thu-le/",
+      "sourceType": "official_faculty"
     },
     "vp-2114": {
       "name": "Thanh Nguyen - University of Alabama at Birmingham",
@@ -7860,10 +8081,17 @@
     },
     "vp-2144": {
       "name": "Tam Duc Dinh",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-16T11:05:46.389Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "identitySignals": [
+        "name",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T18:26:42.000Z",
+      "note": "2026-11-01 Chromium scan of stored profile/homepage: photo name-matched by alt text, filename, or adjacent name; looked at, face-cropped, face-checked",
+      "imageUrl": "https://includes.ncl.ac.uk/cmswebservices/myimpact/2020ws/picture/picture.php?wk=newcastleuniversity&pk=tam.dinh",
+      "confidence": "HIGH",
+      "pageUrl": "https://www.ncl.ac.uk/business/people/profile/tamdinh.html",
+      "sourceType": "official_faculty"
     },
     "vp-2148": {
       "name": "Thai Nguyen - Coventry University",
@@ -8120,10 +8348,17 @@
     },
     "vp-1845": {
       "name": "Dinh-Phuc Tran",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-19T11:07:28.702Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "identitySignals": [
+        "name",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T18:26:42.000Z",
+      "note": "2026-11-01 Chromium scan of stored profile/homepage: photo name-matched by alt text, filename, or adjacent name; looked at, face-cropped, face-checked",
+      "imageUrl": "https://me1.ntut.edu.tw/var/file/62/1062/pictures/528/m/mcen200x700_large31628_335612426882.png",
+      "confidence": "HIGH",
+      "pageUrl": "https://me1.ntut.edu.tw/p/404-1062-146631.php?Lang=en",
+      "sourceType": "official_faculty"
     },
     "vp-1846": {
       "name": "Ngan Thi Kim Nguyen",
@@ -8259,17 +8494,31 @@
     },
     "vp-1822": {
       "name": "Van Le",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-23T11:02:17.156Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "identitySignals": [
+        "name",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T18:26:42.000Z",
+      "note": "2026-11-01 Chromium scan of stored profile/homepage: photo name-matched by alt text, filename, or adjacent name; looked at, face-cropped, face-checked",
+      "imageUrl": "https://profiles.newcastle.edu.au/Van-Le/thumbnail",
+      "confidence": "HIGH",
+      "pageUrl": "https://www.newcastle.edu.au/profile/van-le",
+      "sourceType": "official_faculty"
     },
     "vp-1829": {
       "name": "Duy Hung Nguyen",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-23T11:02:24.712Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "identitySignals": [
+        "name",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T18:26:42.000Z",
+      "note": "2026-11-01 Chromium scan of stored profile/homepage: photo name-matched by alt text, filename, or adjacent name; looked at, face-cropped, face-checked; fetched from the Wayback Machine copy (live site blocked automated access)",
+      "imageUrl": "https://www.siit.tu.ac.th/images/webpage/Nguyen-Duy-Hung2.jpg",
+      "confidence": "HIGH",
+      "pageUrl": "https://www.siit.tu.ac.th/page_bx.php?cid=106&cno=71&show=",
+      "sourceType": "official_faculty"
     },
     "vp-2163": {
       "name": "Trong Tuong Truong",
@@ -8326,10 +8575,17 @@
     },
     "vp-1796": {
       "name": "Viet Hai Nguyen",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-23T11:04:05.640Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "identitySignals": [
+        "name",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T18:26:42.000Z",
+      "note": "2026-11-01 Chromium scan of stored profile/homepage: photo name-matched by alt text, filename, or adjacent name; looked at, face-cropped, face-checked",
+      "imageUrl": "https://iubm.cycu.edu.tw/wp-content/uploads/elementor/thumbs/%E9%98%AE%E6%B5%B7%E8%B6%8A_0-1-rspje289al1e4axf0em8csnevonq5vplb922rjusb4.png",
+      "confidence": "HIGH",
+      "pageUrl": "https://iubm.cycu.edu.tw/en/introduction/faculty/",
+      "sourceType": "official_faculty"
     },
     "vp-2170": {
       "name": "Nhat Pham",
@@ -8640,10 +8896,17 @@
     },
     "vp-2189": {
       "name": "Xuan-Thang Vu",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-11-01T17:34:20.369Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "identitySignals": [
+        "name",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T18:26:42.000Z",
+      "note": "2026-11-01 Chromium scan of stored profile/homepage: photo name-matched by alt text, filename, or adjacent name; looked at, face-cropped, face-checked",
+      "imageUrl": "https://www.iwe1.rwth-aachen.de/global/show_picture.asp?id=aaaaaaaabdubvcl&clip=top,438,438&w2=438&h2=438&q=75",
+      "confidence": "HIGH",
+      "pageUrl": "https://www.iwe1.rwth-aachen.de/go/id/sxumf/",
+      "sourceType": "official_faculty"
     },
     "vp-2190": {
       "name": "Thy Pham",
@@ -8668,20 +8931,17 @@
     },
     "vp-2192": {
       "name": "Hai Van Nguyen",
-      "outcome": "not_found",
+      "outcome": "found",
       "pageUrl": "https://mun.ca/pharmacy/research/dr-hai-van-nguyen/",
-      "imageUrl": "https://t.co/i/adsct?bci=3&dv=America%2FNew_York%26en-US%26Google%20Inc.%26Linux%20x86_64%26255%261280%26720%2624%2624%261280%26720%260%26na%261&eci=2&event_id=1fff389e-b038-4229-97dd-582844c43b4f&events=%5B%5B%22pageview%22%2C%7B%7D%5D%5D&integration=advertiser&p_id=Twitter&p_user_id=0&pl_id=c05c6ede-e2de-4339-800b-1496971888f1&tw_ch_fvl=Not%3AA-Brand%2F8.0.0.0%2CChromium%2F156.0.8078.4%2CHeadlessChrome%2F156.0.8078.4&tw_document_href=https%3A%2F%2Fmun.ca%2Fpharmacy%2Fresearch%2Fdr-hai-van-nguyen%2F&tw_engaged_ms=3&tw_iframe_status=0&tw_order_quantity=0&tw_pid_src=1&tw_sale_amount=0&tw_session_count=1&tw_session_id=1793551948798-741554705&tw_session_start=1&twpid=tw.1793551948798.807064689622858616&txn_id=o0k3k&type=javascript&version=2.4.12",
+      "imageUrl": "https://mun.ca/pharmacy/media/production/memorial/academic/school-of-pharmacy/media-library/images/content/VH_Nguyen_Aug15_16_060-420x279--stratum_web_optimized_jpg--.webp?id=8661241056b6b9ffb46f0ebf27ce7a9e&x-stratum-cacheable-asset=1",
       "sourceType": "official_faculty",
       "confidence": "HIGH",
       "identitySignals": [
         "name",
-        "institution",
-        "department",
-        "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-11-01T16:52:27.807Z",
-      "note": "candidate image could not be downloaded"
+      "retrievedAt": "2026-11-01T18:26:42.000Z",
+      "note": "2026-11-01 Chromium scan of stored profile/homepage: photo name-matched by alt text, filename, or adjacent name; looked at, face-cropped, face-checked"
     },
     "vp-2193": {
       "name": "Quan Nguyen - University of Saskatchewan",
@@ -8771,10 +9031,17 @@
     },
     "vp-2200": {
       "name": "Phong T. Le",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-11-01T16:57:06.675Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "identitySignals": [
+        "name",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T18:26:42.000Z",
+      "note": "2026-11-01 Chromium scan of stored profile/homepage: photo name-matched by alt text, filename, or adjacent name; looked at, face-cropped, face-checked",
+      "imageUrl": "https://www.luc.edu/media/stritchschoolofmedicine/departmentofcancerbiology/images/facultyimages/phong%201000x%202026.jpg",
+      "confidence": "HIGH",
+      "pageUrl": "https://www.luc.edu/stritch/cancerbiology/research/ourfaculty/profiles/lephongt.shtml",
+      "sourceType": "official_faculty"
     },
     "vp-2201": {
       "name": "Bao Do",
@@ -8895,17 +9162,17 @@
     },
     "vp-2210": {
       "name": "Tina Tran",
-      "outcome": "not_found",
+      "outcome": "found",
       "pageUrl": "https://pharmacy.temple.edu/tinatran",
-      "imageUrl": "https://pharmacy.temple.edu/sites/pharmacy/files/styles/tu_image_style_thumbnail/public/temple/profiles/Tran.jpg?h=e04ec49e&itok=m6UL3m3m",
+      "imageUrl": "https://pharmacy.temple.edu/sites/pharmacy/files/styles/tu_image_style_profile/public/temple/profiles/Tran.jpg?h=e04ec49e&itok=OHzs2pRY&v=205804",
       "sourceType": "official_faculty",
-      "confidence": "MEDIUM",
+      "confidence": "HIGH",
       "identitySignals": [
         "name",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-11-01T17:16:08.295Z",
-      "note": "2026-11-01 deep audit: name-matched candidate failed --store checks (120x120 or portrait-aspect validation)"
+      "retrievedAt": "2026-11-01T18:26:42.000Z",
+      "note": "2026-11-01 Chromium scan of stored profile/homepage: photo name-matched by alt text, filename, or adjacent name; looked at, face-cropped, face-checked"
     },
     "vp-2211": {
       "name": "Toan Nguyen-Mau",
@@ -8953,10 +9220,17 @@
     },
     "vp-2215": {
       "name": "Son Bui",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-11-01T17:02:56.232Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "identitySignals": [
+        "name",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T18:26:42.000Z",
+      "note": "2026-11-01 Chromium scan of stored profile/homepage: photo name-matched by alt text, filename, or adjacent name; looked at, face-cropped, face-checked",
+      "imageUrl": "https://www.etamu.edu/wp-content/uploads/2026/05/studio-session-086-550x550.jpg",
+      "confidence": "HIGH",
+      "pageUrl": "https://www.etamu.edu/people/son-bui/",
+      "sourceType": "official_faculty"
     },
     "vp-2216": {
       "name": "Phong Ngo",
@@ -9527,17 +9801,17 @@
     },
     "vp-1335": {
       "name": "Tran Trung Luu",
-      "outcome": "not_found",
-      "pageUrl": "https://www.physics.hku.hk/people/academic_staff/",
-      "imageUrl": "https://www.physics.hku.hk/img/trans.png",
-      "sourceType": "personal_homepage",
-      "confidence": "MEDIUM",
+      "outcome": "found",
+      "pageUrl": "https://www.physics.hku.hk/people/academic/7330",
+      "imageUrl": "https://www.physics.hku.hk/cache/img/15b4010b8a135c6763b6bf08716bc44d.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
       "identitySignals": [
         "name",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-11-01T17:16:08.292Z",
-      "note": "2026-11-01 deep audit: name-matched candidate failed --store checks (image could not be downloaded)"
+      "retrievedAt": "2026-11-01T18:26:42.000Z",
+      "note": "2026-11-01 Chromium scan of stored profile/homepage: photo name-matched by alt text, filename, or adjacent name; looked at, face-cropped, face-checked"
     },
     "vp-1399": {
       "name": "Quoc-Tuan Vien",
@@ -9665,10 +9939,17 @@
     },
     "vp-2251": {
       "name": "Jeannie Tran",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-11-01T17:37:33.339Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "identitySignals": [
+        "name",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T18:26:42.000Z",
+      "note": "2026-11-01 Chromium scan of stored profile/homepage: photo name-matched by alt text, filename, or adjacent name; looked at, face-cropped, face-checked",
+      "imageUrl": "https://researcherprofiles.org/profile/Modules/CustomViewPersonGeneralInfo/PhotoHandler.ashx?NodeID=225489225&cachekey=9733c118-e80c-4296-b83a-d352fae45d39",
+      "confidence": "HIGH",
+      "pageUrl": "https://profiles.ucsf.edu/jeannie.tran",
+      "sourceType": "official_faculty"
     },
     "vp-2252": {
       "name": "Michele Pham",
@@ -9705,24 +9986,45 @@
     },
     "vp-2254": {
       "name": "Trung Hoang Minh Pham",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-11-01T17:37:40.917Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "identitySignals": [
+        "name",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T18:26:42.000Z",
+      "note": "2026-11-01 Chromium scan of stored profile/homepage: photo name-matched by alt text, filename, or adjacent name; looked at, face-cropped, face-checked",
+      "imageUrl": "https://profiles.stanford.edu/proxy/api/cap/profiles/64225/resources/profilephoto/350x350.1691300281207.jpg",
+      "confidence": "HIGH",
+      "pageUrl": "https://profiles.stanford.edu/trung-pham",
+      "sourceType": "official_faculty"
     },
     "vp-2255": {
       "name": "David Vu",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-11-01T17:37:47.478Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "identitySignals": [
+        "name",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T18:26:42.000Z",
+      "note": "2026-11-01 Chromium scan of stored profile/homepage: photo name-matched by alt text, filename, or adjacent name; looked at, face-cropped, face-checked",
+      "imageUrl": "https://profiles.stanford.edu/proxy/api/cap/profiles/17541/resources/profilephoto/350x350.1509499351422.jpg",
+      "confidence": "HIGH",
+      "pageUrl": "https://profiles.stanford.edu/david-vu",
+      "sourceType": "official_faculty"
     },
     "vp-2256": {
       "name": "Kenneth Tran - Stanford University",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-11-01T17:37:54.390Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "identitySignals": [
+        "name",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T18:26:42.000Z",
+      "note": "2026-11-01 Chromium scan of stored profile/homepage: photo name-matched by alt text, filename, or adjacent name; looked at, face-cropped, face-checked",
+      "imageUrl": "https://profiles.stanford.edu/proxy/api/cap/profiles/140238/resources/profilephoto/350x350.1692119864350.jpg",
+      "confidence": "HIGH",
+      "pageUrl": "https://profiles.stanford.edu/kenneth-tran",
+      "sourceType": "official_faculty"
     },
     "vp-2257": {
       "name": "Annie Nguyen",
@@ -9740,6 +10042,48 @@
       ],
       "retrievedAt": "2026-11-01T18:05:24.000Z",
       "note": "2026-11-01 visual review: name-matched photo on the stored profile page; refetched (larger size or browser session) and face-cropped to pass the aspect check"
+    },
+    "vp-0963": {
+      "name": "Tran Nguyen Templeton",
+      "outcome": "found",
+      "imageUrl": "https://www.tc.columbia.edu/faculty/ttn2114/faculty-profile/TranTempleton-final.jpeg",
+      "confidence": "HIGH",
+      "retrievedAt": "2026-11-01T18:26:42.000Z",
+      "note": "2026-11-01 Chromium scan of stored profile/homepage: photo name-matched by alt text, filename, or adjacent name; looked at, face-cropped, face-checked",
+      "pageUrl": "https://www.tc.columbia.edu/faculty/ttn2114/",
+      "sourceType": "official_faculty",
+      "identitySignals": [
+        "name",
+        "stored_roster_url"
+      ]
+    },
+    "vp-1288": {
+      "name": "Lan Vu",
+      "outcome": "found",
+      "imageUrl": "https://pedsurglab.ucsf.edu/sites/default/files/styles/max_1300x1300/public/2023-10/Dr-Lan-Vu.jpg.webp?itok=mQLHd8VN",
+      "confidence": "HIGH",
+      "retrievedAt": "2026-11-01T18:26:42.000Z",
+      "note": "2026-11-01 Chromium scan of stored profile/homepage: photo name-matched by alt text, filename, or adjacent name; looked at, face-cropped, face-checked",
+      "pageUrl": "https://pedsurglab.ucsf.edu/bio/lan-vu-md",
+      "sourceType": "personal_homepage",
+      "identitySignals": [
+        "name",
+        "stored_roster_url"
+      ]
+    },
+    "vp-1467": {
+      "name": "Minh-Huong Ha-Thi",
+      "outcome": "found",
+      "imageUrl": "https://www.ismo.universite-paris-saclay.fr/wp-content/uploads/2023/12/PhotoID.016.jpeg",
+      "confidence": "HIGH",
+      "retrievedAt": "2026-11-01T18:26:42.000Z",
+      "note": "2026-11-01 Chromium scan of stored profile/homepage: photo name-matched by alt text, filename, or adjacent name; looked at, face-cropped, face-checked",
+      "pageUrl": "https://www.ismo.universite-paris-saclay.fr/systemae-team-members-2/",
+      "sourceType": "personal_homepage",
+      "identitySignals": [
+        "name",
+        "stored_roster_url"
+      ]
     }
   }
 }
