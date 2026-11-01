@@ -582,6 +582,18 @@ const FIELD_OVERRIDES = new Map([
   ],
   // Polish literature (philology institute name carries no field keyword).
   ['Institute of Polish Philology|University of Wrocław', 'Humanities'],
+  // Sorbonne's applied-mathematics laboratory (the lab name carries no field keyword).
+  ['Laboratoire Jacques-Louis Lions|Sorbonne Université', 'Mathematics'],
+  // UiT fishery college; this appointment is in environmental and resource economics.
+  [
+    'Norwegian College of Fishery Science|UiT The Arctic University of Norway',
+    'Business & Economics',
+  ],
+  // IPPT PAN computational biophysics and soft-matter department.
+  [
+    'Department of Biosystems and Soft Matter|Institute of Fundamental Technological Research, Polish Academy of Sciences',
+    'Physics & Astronomy',
+  ],
   // Gachon's Bio-Nano Technology department; this member works in chemical engineering and materials.
   ['Department of Bio-Nano Technology|Gachon University', 'Engineering'],
   // UWA School of Social Sciences; this member works in public policy and public administration.

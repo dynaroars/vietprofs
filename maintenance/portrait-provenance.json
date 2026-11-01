@@ -8372,6 +8372,98 @@
       "imageUrl": "https://www.muw.edu/pfs/wp-content/uploads/sites/23/2026/09/Dr.-Pham-HS-150x150.jpg",
       "sourceType": "official_faculty",
       "confidence": "MEDIUM"
+    },
+    "vp-2183": {
+      "name": "Hoai-Minh Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-01T16:44:21.384Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2184": {
+      "name": "Dat Tran",
+      "outcome": "found",
+      "pageUrl": "https://liu.se/en/employee/dattr18",
+      "imageUrl": "https://liu.se/-/media/employeeimages/18/employee_image_dattr18.jpeg?as=1&w=300&h=300&cr=1&crw=300&crh=300&bc=%23ffffff&hash=02D6ABCF8540250736CCFE8A334BF0B0",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T16:46:46.915Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-2185": {
+      "name": "Thuy Pham",
+      "outcome": "found",
+      "pageUrl": "https://en.uit.no/ansatte/person?p_document_id=76687&p_dimension_id=156422",
+      "imageUrl": "https://en.uit.no/Content/535161/cache=20222601170733/transformation=kompJpgHighUtlistingLowComp/selfie%20in%20swiftlet%20island.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T16:46:48.205Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-2186": {
+      "name": "Mai Suan Li",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-01T16:45:03.696Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2187": {
+      "name": "Truong Co Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://www.ippt.pan.pl/en/staff/?osoba=conguyen",
+      "imageUrl": "https://www.ippt.pan.pl/images/ludzie/nguyen_truong_co.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T16:45:12.998Z"
+    },
+    "vp-2188": {
+      "name": "San Vu Ngoc",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-01T16:45:15.792Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2189": {
+      "name": "Xuan-Thang Vu",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-01T16:46:06.523Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2190": {
+      "name": "Thy Pham",
+      "outcome": "not_found",
+      "pageUrl": "https://www.universiteitleiden.nl/en/staffmembers/thy-pham",
+      "imageUrl": "https://www.universiteitleiden.nl/binaries/content/gallery/ul2/portraits/law/privaatrecht/thy-pham.jpeg/thy-pham.jpeg/d600x315",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T16:46:38.115Z",
+      "note": "candidate failed 120x120 or portrait-aspect validation"
     }
   }
 }
