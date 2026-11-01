@@ -857,53 +857,67 @@ async function init() {
     updateDropdownHighlights();
   }
 
-  const params = new URLSearchParams(window.location.search);
-  // Institution type used to be a dropdown; old links with ?institutionType= become the keyword search.
-  const requestedInstitutionType = params.get('institutionType') ?? '';
-  if (params.has('q')) {
-    setSearchValue(params.get('q') ?? '');
-  } else if (INSTITUTION_TYPES.some((type) => type === requestedInstitutionType)) {
-    setSearchValue(`${KEYWORD_LABELS.institution}: ${requestedInstitutionType}`);
+  // Restores the directory from a URL, both on load and when Back/Forward returns to an entry.
+  function applyUrlState(params: URLSearchParams) {
+    // Institution type used to be a dropdown; old links with ?institutionType= become the keyword search.
+    const requestedInstitutionType = params.get('institutionType') ?? '';
+    if (params.has('q')) {
+      setSearchValue(params.get('q') ?? '');
+    } else if (INSTITUTION_TYPES.some((type) => type === requestedInstitutionType)) {
+      setSearchValue(`${KEYWORD_LABELS.institution}: ${requestedInstitutionType}`);
+    } else {
+      clearSearch();
+    }
+    const requestedLocation = params.get('loc') ?? params.get('location');
+    filterState.state = params.get('state') ?? '';
+    const requestedField = params.get('field') ?? '';
+    // 'Academic staff' was renamed 'Admin and Staff'; keep old shared links working.
+    const requestedTrack = (params.get('track') ?? '').replace(
+      /^Academic staff$/,
+      'Admin and Staff',
+    );
+    const requestedSort = params.get('sort') ?? '';
+    let initialLocation = 'World';
+    if (
+      requestedLocation &&
+      locationOptions.includes(requestedLocation) &&
+      roster.some((p) => locationMatches(p, requestedLocation))
+    ) {
+      initialLocation = requestedLocation;
+    } else if (params.has('q')) {
+      autoSelectLocationForQuery();
+      initialLocation = locationSelect.value;
+    }
+    let initialField = 'all';
+    if (
+      FIELDS.includes(requestedField) &&
+      roster.some((p) => fieldOf(p.department, p.university) === requestedField)
+    ) {
+      initialField = requestedField;
+    }
+    filterState.health = params.get('view') === 'health';
+    filterState.insights =
+      !filterState.health &&
+      (params.get('view') === 'insights' || requestedField === 'interesting');
+    let initialTrack = 'all';
+    if (
+      TRACKS.some((track) => track === requestedTrack) &&
+      roster.some((p) => p.track === requestedTrack)
+    ) {
+      initialTrack = requestedTrack;
+    }
+    setFilterValues({ location: initialLocation, field: initialField, track: initialTrack });
+    sortSelect.value = ['random', 'last-name', 'first-name', 'vp-newest'].includes(requestedSort)
+      ? requestedSort
+      : 'random';
   }
-  const requestedLocation = params.get('loc') ?? params.get('location');
-  filterState.state = params.get('state') ?? '';
-  const requestedField = params.get('field') ?? '';
-  // 'Academic staff' was renamed 'Admin and Staff'; keep old shared links working.
-  const requestedTrack = (params.get('track') ?? '').replace(/^Academic staff$/, 'Admin and Staff');
-  const requestedSort = params.get('sort') ?? '';
-  let initialLocation = 'World';
-  if (
-    requestedLocation &&
-    locationOptions.includes(requestedLocation) &&
-    roster.some((p) => locationMatches(p, requestedLocation))
-  ) {
-    initialLocation = requestedLocation;
-  } else if (params.has('q')) {
-    autoSelectLocationForQuery();
-    initialLocation = locationSelect.value;
-  }
-  let initialField = 'all';
-  if (
-    FIELDS.includes(requestedField) &&
-    roster.some((p) => fieldOf(p.department, p.university) === requestedField)
-  ) {
-    initialField = requestedField;
-  }
-  filterState.health = params.get('view') === 'health';
-  filterState.insights =
-    !filterState.health && (params.get('view') === 'insights' || requestedField === 'interesting');
-  let initialTrack = 'all';
-  if (
-    TRACKS.some((track) => track === requestedTrack) &&
-    roster.some((p) => p.track === requestedTrack)
-  ) {
-    initialTrack = requestedTrack;
-  }
+
   initializeDropdowns();
-  setFilterValues({ location: initialLocation, field: initialField, track: initialTrack });
-  if (['random', 'last-name', 'first-name', 'vp-newest'].includes(requestedSort)) {
-    sortSelect.value = requestedSort;
-  }
+  applyUrlState(new URLSearchParams(window.location.search));
+
+  const viewOf = (search: string) => new URLSearchParams(search).get('view') ?? '';
+  // The first sync only normalizes the landing URL (e.g. legacy ?field=interesting); it never adds an entry.
+  let historyReady = false;
 
   function syncUrl() {
     const next = new URLSearchParams();
@@ -918,8 +932,20 @@ async function init() {
     else if (filterState.insights) next.set('view', 'insights');
     const query = next.toString();
     const url = `${window.location.pathname}${query ? `?${query}` : ''}`;
-    window.history.replaceState(null, '', url);
+    // Switching between the roster, Insights, and Health is a navigation the Back button should
+    // undo; filter and search edits within a view only rewrite the current entry.
+    if (historyReady && viewOf(window.location.search) !== viewOf(query)) {
+      window.history.pushState(null, '', url);
+    } else {
+      window.history.replaceState(null, '', url);
+    }
+    historyReady = true;
   }
+
+  window.addEventListener('popstate', () => {
+    applyUrlState(new URLSearchParams(window.location.search));
+    update();
+  });
 
   function renderBrowserShelf() {
     const recent = loadRecentProfiles()

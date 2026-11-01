@@ -600,6 +600,16 @@ test('the + button opens the form and the header links switch views in place', a
   assert.equal(await page.locator('.entry').count(), 0);
   await nav.locator('a[data-view="health"]').click();
   assert.match(page.url(), /view=health/);
+  // Each view switch is a history entry, so Back retraces them and restores the roster.
+  await page.goBack();
+  assert.match(page.url(), /view=insights/);
+  assert.equal(await page.locator('.entry').count(), 0);
+  await page.goBack();
+  assert.equal(page.url(), before);
+  await page.locator('.entry').first().waitFor();
+  await page.goForward();
+  assert.match(page.url(), /view=insights/);
+  assert.equal(await page.locator('.entry').count(), 0);
   await page.close();
 });
 
