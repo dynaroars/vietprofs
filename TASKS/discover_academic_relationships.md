@@ -119,7 +119,12 @@ Every public relationship record uses immutable roster IDs and must be verified 
 
 For the symmetric types (`coauthor`, `grant-collaborator`, `patent-coinventor`), store the two IDs in ascending lexical order, use that same order in the deterministic `id`, and populate `works` with the retained item identifiers, titles, dates, and source URLs — `coauthor` requires at least two, `grant-collaborator` and `patent-coinventor` require at least one. For directional mentorship (`doctoral-advisor`, `masters-advisor`, `undergraduate-advisor`, `postdoctoral-mentor`), `sourceId` is always the advisor or mentor, `targetId` is the advisee or postdoctoral researcher, and `works` stays empty.
 
-Do not write `unresolved`, `candidate`, or `excluded` records to the public database. Those are not established relationships. If resumable research state is needed, create `maintenance/relationship-research.json` containing only provider identity mappings, processed batch IDs, rejected candidates, unresolved leads, and next actions. It must never be loaded by the public site or described as roster relationship data.
+Do not write `unresolved`, `candidate`, or `excluded` records to the public database. Those are not established relationships. Resumable research state lives in `maintenance/relationship-research.json`, which must never be loaded by the public site or described as roster relationship data. Its layout (version 2), one record per line:
+
+- `batches`: keyed by batch number, `{ "status", "startedAt", "completedAt", "notes"? }`; an open batch also lists its `rosterIds`.
+- `people`: keyed by roster ID, one outcome per person. A completed outcome is only `{ "batch", "status": "completed" }`, because its edges and their evidence are in `public/relationships.json`. An `unresolved` or `excluded` outcome adds `sources` (what was checked), `nextAction` (the lead and what to try next, kept short and specific), and optional `notes`.
+
+`npm test` runs `npm run normalize-maintenance`, which rewrites the file in this layout and folds in a batch written the old way (a `batches` array with per-batch `outcomes`). The prose of completed outcomes before the switch, including notes on out-of-roster advisors, is in git history: `git show 0f45755:maintenance/relationship-research.json`.
 
 ### Relationship review handoff
 
@@ -138,7 +143,7 @@ Process 20 roster members per batch in stable descending ID order, starting at t
 
 ### Step 1: Establish the batch
 
-Record the batch number, roster IDs, start timestamp, and status in `maintenance/relationship-research.json`. Check the complete public relationship database and non-public research state before searching so relationships and provider mappings are not duplicated.
+Add the batch to `batches` in `maintenance/relationship-research.json` with its roster IDs, start timestamp, and status. Check the complete public relationship database and non-public research state before searching so relationships and provider mappings are not duplicated.
 
 ### Step 2: Search mentorship evidence
 
@@ -175,7 +180,7 @@ Before closing a batch:
 - confirm symmetric pairs are stored once;
 - confirm every verified coauthor edge has at least two qualifying works, and every verified grant-collaborator or patent-coinventor edge has at least one;
 - confirm no spouse, family, demographic, or inferred personal information appears; and
-- give every roster ID a completed, unresolved, or excluded batch outcome.
+- give every roster ID a completed, unresolved, or excluded outcome under `people`.
 
 Mark the batch complete only after these checks. Continue with the next unprocessed batch when the goal invocation calls for complete-roster coverage.
 

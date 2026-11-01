@@ -91,10 +91,11 @@ python3 scripts/portrait_faces.py $(git status --porcelain public/portraits | aw
 
 Then open every portrait this batch added (`git status --porcelain public/portraits/`) and look at
 it against the section 2 rejection rules. For any that fail, remove that entry's `portrait` and
-`portraitSource` from `public/data.json`, delete the image file, and mark the entry unresolved in
-both `maintenance/portrait-provenance.json` (outcome `not_found`, with the rejection reason) and
-`maintenance/portrait-queue.json` (status `unresolved`). Otherwise the queue sync re-queues it as
-new and the next run fetches the same image again. Only then:
+`portraitSource` from `public/data.json`, delete the image file, and mark the entry `not_found` in
+`maintenance/portrait-provenance.json` with the rejection reason. The queue sync then re-queues it
+as `unresolved`, so the next run doesn't fetch the same image again. (`maintenance/portrait-queue.json`
+lists only the work left: `{ id, batch, status, note? }` for pending and unresolved entries.)
+Only then:
 
 ```bash
 npm test && npm run build && git diff --check

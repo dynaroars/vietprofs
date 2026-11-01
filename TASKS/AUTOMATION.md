@@ -257,8 +257,7 @@ Follow `TASKS/AUDIT_ISSUES_PRS.md`, including "Independent review". Also read
      queue exhausted, source blocked, or the playbook re-selecting entries already tried.
   7. Queues running dry: a producer whose remaining work runs out within about 4 weeks at its
      cap. Check `node scripts/fetch-portraits.ts --status` (pending portraits) and roster ids
-     not yet in a completed batch in
-     `maintenance/relationship-research.json`.
+     with no outcome under `people` in `maintenance/relationship-research.json`.
      Recommend a lower frequency or a new source.
 
   Item 8 catches data problems that pass every test:

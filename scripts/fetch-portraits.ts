@@ -2,6 +2,11 @@ import { mkdir, readFile, rename, unlink, writeFile } from 'node:fs/promises';
 import { extname, join, resolve } from 'node:path';
 import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
+import {
+  formatPortraitQueue,
+  PORTRAIT_QUEUE_FILE,
+  type PortraitQueueItem as QueueItem,
+} from './maintenance-logs.ts';
 
 type Person = {
   id: string;
@@ -14,12 +19,6 @@ type Person = {
   portrait?: string;
   portraitSource?: string;
   directFields?: string[];
-};
-type QueueItem = Pick<Person, 'id' | 'name' | 'university' | 'profileUrl'> & {
-  batch: number;
-  status: 'pending' | 'fetched' | 'unresolved';
-  portraitSource?: string;
-  note?: string;
 };
 type SourceType = 'official_faculty' | 'personal_homepage' | 'lab_site' | 'authoritative_academic';
 type Confidence = 'HIGH' | 'MEDIUM' | 'LOW';
@@ -56,7 +55,7 @@ type Candidate = {
 const execFileAsync = promisify(execFile);
 const root = resolve('.');
 const dataPath = join(root, 'public/data.json');
-const queuePath = join(root, 'maintenance/portrait-queue.json');
+const queuePath = join(root, PORTRAIT_QUEUE_FILE);
 const provenancePath = join(root, 'maintenance/portrait-provenance.json');
 const fixturePath = join(root, 'maintenance/portrait-audit-sample.json');
 const portraitsDir = join(root, 'public/portraits');
@@ -424,26 +423,22 @@ async function loadQueue(people: Person[]): Promise<QueueItem[]> {
       .filter((person) => !person.portrait)
       .map((person, index) => ({
         id: person.id,
-        name: person.name,
-        university: person.university,
-        profileUrl: person.profileUrl,
         batch: Math.floor(index / 20) + 1,
         status: 'pending',
       }));
   }
 }
-// Keep the queue aligned with the roster: entries added after the queue was built are enqueued
-// as pending, entries that gained a portrait elsewhere are marked fetched, entries whose portrait
-// was removed are re-queued, and entries no longer in the roster are dropped.
-function syncQueue(queue: QueueItem[], people: Person[]): QueueItem[] {
+// Keep the queue aligned with the roster: entries that gained a portrait are marked fetched (and
+// leave the file on write), entries no longer in the roster are dropped, and anyone else missing a
+// portrait is enqueued: as unresolved when the ledger shows an earlier attempt (e.g. a portrait a
+// reviewer rejected and marked not_found), so --next doesn't fetch the same image again.
+function syncQueue(queue: QueueItem[], people: Person[], ledger: ProvenanceLedger): QueueItem[] {
   const byId = new Map(people.map((person) => [person.id, person]));
   const synced = queue.filter((item) => byId.has(item.id));
   for (const item of synced) {
     const person = byId.get(item.id) as Person;
     if (person.portrait && item.status !== 'fetched') {
       item.status = 'fetched';
-      item.portraitSource = person.portraitSource;
-      item.note = 'portrait present in roster';
     } else if (!person.portrait && item.status === 'fetched') {
       item.status = 'pending';
       item.note = 'portrait no longer in roster';
@@ -457,11 +452,8 @@ function syncQueue(queue: QueueItem[], people: Person[]): QueueItem[] {
   added.forEach((person, index) =>
     synced.push({
       id: person.id,
-      name: person.name,
-      university: person.university,
-      profileUrl: person.profileUrl,
       batch: nextBatch + Math.floor(index / 10),
-      status: 'pending',
+      status: ledger.entries[person.id] ? 'unresolved' : 'pending',
     }),
   );
   return synced;
@@ -491,10 +483,10 @@ async function auditIds(): Promise<Set<string>> {
 }
 
 const people = JSON.parse(await readFile(dataPath, 'utf8')) as Person[];
-const queue = syncQueue(await loadQueue(people), people);
 const ledger = await loadLedger();
+const queue = syncQueue(await loadQueue(people), people, ledger);
 async function writeQueue() {
-  await writeFile(queuePath, `${JSON.stringify(queue, null, 2)}\n`);
+  await writeFile(queuePath, formatPortraitQueue(queue));
 }
 if (args.has('--status')) {
   if (args.has('--sync')) await writeQueue();
@@ -582,11 +574,7 @@ if (storeArgument) {
       note: 'MEDIUM candidate stored after visual review',
     };
     const item = queue.find((queued) => queued.id === id);
-    if (item) {
-      item.status = 'fetched';
-      item.portraitSource = entry.imageUrl;
-      item.note = 'visually reviewed candidate';
-    }
+    if (item) item.status = 'fetched';
     results.push({ id, result: 'stored', portrait });
   }
   await writeFile(provenancePath, `${JSON.stringify(ledger, null, 2)}\n`);
@@ -619,14 +607,7 @@ const audit = args.has('--sample');
 if (explicitIds) {
   for (const person of people.filter((candidate) => explicitIds.has(candidate.id))) {
     if (!queue.some((item) => item.id === person.id))
-      queue.push({
-        id: person.id,
-        name: person.name,
-        university: person.university,
-        profileUrl: person.profileUrl,
-        batch: requestedBatch,
-        status: 'pending',
-      });
+      queue.push({ id: person.id, batch: requestedBatch, status: 'pending' });
   }
 }
 const selectedIds = audit
@@ -825,11 +806,7 @@ for (const person of selected) {
   person.portraitSource = candidate.imageUrl;
   ledger.entries[person.id] = entry;
   const item = queue.find((queued) => queued.id === person.id);
-  if (item) {
-    item.status = 'fetched';
-    item.portraitSource = candidate.imageUrl;
-    item.note = `HIGH-confidence ${candidate.page.sourceType}`;
-  }
+  if (item) item.status = 'fetched';
   report.push({
     id: person.id,
     name: person.name,
