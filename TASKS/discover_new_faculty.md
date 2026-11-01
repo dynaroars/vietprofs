@@ -19,6 +19,10 @@ Expand roster coverage by finding qualified Vietnamese and Vietnamese-diaspora s
    - Exclude adjunct, visiting, postdoctoral, graduate student, industry-only (e.g. Microsoft Research without university appointment), and temporary positions.
 2. **Data Fields Required**:
    - `name`, `university`, `country`, `rank`, `track`, `department`, `field`, `profileUrl`, `keywords`, `confirmed`.
+   - Propose `vietnameseName` only when a source spells it with diacritics (cite that source). Never
+     reconstruct diacritics or middle names from the published name: it is a protected field, so a
+     guess that gets merged is hard to undo. Use the exact `track` and `rank` values from
+     `ROSTER_MAINTENANCE.md` (`Tenure-line`, `Clinical`, …), not "tenured" or "clinical".
 3. **Verification Protocol**:
    - Official institutional profile page: omit `confirmed` (the default).
    - Identity-resolved public page (lab site, personal site, Google Scholar) sets `"confirmed": false` (Unconfirmed).
