@@ -582,6 +582,8 @@ const FIELD_OVERRIDES = new Map([
   ],
   // Polish literature (philology institute name carries no field keyword).
   ['Institute of Polish Philology|University of Wrocław', 'Humanities'],
+  // UT Austin's political science department is named Government.
+  ['Department of Government|The University of Texas at Austin', 'Social & Behavioral Sciences'],
   // Sorbonne's applied-mathematics laboratory (the lab name carries no field keyword).
   ['Laboratoire Jacques-Louis Lions|Sorbonne Université', 'Mathematics'],
   // UiT fishery college; this appointment is in environmental and resource economics.
