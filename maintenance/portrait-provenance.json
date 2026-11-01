@@ -132,9 +132,16 @@
     "vp-0819": {
       "name": "Mylinh T. Nguyen",
       "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-14T11:50:42.919Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "pageUrl": "https://profiles.ucsd.edu/mylinh.nguyen",
+      "imageUrl": "https://profiles.ucsd.edu/profile/Modules/CustomViewPersonGeneralInfo/PhotoHandler.ashx?NodeID=182738",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T17:25:28.429Z",
+      "note": "2026-11-01 deep audit: own-page profile photo failed --store checks (image could not be downloaded)"
     },
     "vp-0823": {
       "name": "Tien Hung Nguyen",
@@ -2628,16 +2635,15 @@
       "name": "Hai Pham",
       "outcome": "not_found",
       "pageUrl": "https://www.towson.edu/cbe/facultystaff/profile.html?FacMem=hpham",
-      "imageUrl": "https://webapps.towson.edu/digmeasures/profilePhotos/hpham.jpg",
+      "imageUrl": "https://webapps.towson.edu/digmeasures/profilePhotos/",
       "sourceType": "official_faculty",
       "confidence": "MEDIUM",
       "identitySignals": [
         "name",
-        "institution",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-10-14T12:34:36.424Z",
-      "note": "reviewed candidate failed --store checks 2026-10-14: image could not be downloaded"
+      "retrievedAt": "2026-11-01T17:25:28.433Z",
+      "note": "2026-11-01 deep audit: own-page profile photo failed --store checks (image could not be downloaded)"
     },
     "vp-1568": {
       "name": "Hung Cao",
@@ -2792,15 +2798,15 @@
       "name": "Duc Ninh Nguyen",
       "outcome": "not_found",
       "pageUrl": "https://researchprofiles.ku.dk/en/persons/duc-ninh-nguyen/",
-      "imageUrl": "https://researchprofiles.ku.dk/files-asset/210938156/RKD01641_Copy_2_.jpg?w=160&f=jpg",
+      "imageUrl": "https://researchprofiles.ku.dk/files-asset/210938156/RKD01641_Copy_2_.jpg/",
       "sourceType": "official_faculty",
       "confidence": "MEDIUM",
       "identitySignals": [
         "name",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-11-01T17:16:08.293Z",
-      "note": "2026-11-01 deep audit: name-matched candidate failed --store checks (120x120 or portrait-aspect validation)"
+      "retrievedAt": "2026-11-01T17:25:28.433Z",
+      "note": "2026-11-01 deep audit: own-page profile photo failed --store checks (120x120 or portrait-aspect validation)"
     },
     "vp-1639": {
       "name": "Tri Hien Viet Huynh",
@@ -2901,9 +2907,16 @@
     "vp-1649": {
       "name": "Quang Trung Pham",
       "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-14T12:46:18.171Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "pageUrl": "https://seeds.office.hiroshima-u.ac.jp/profile/en.be8341600c5bf06d520e17560c007669.html",
+      "imageUrl": "https://seeds.office.hiroshima-u.ac.jp/profile/image/portrait/be8341600c5bf06d520e17560c007669.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T17:25:28.433Z",
+      "note": "2026-11-01 deep audit: own-page profile photo failed --store checks (image could not be downloaded)"
     },
     "vp-1650": {
       "name": "Hoa Khanh Dam",
@@ -3625,20 +3638,17 @@
     },
     "vp-1701": {
       "name": "Chau Le - University of East Anglia",
-      "outcome": "not_found",
+      "outcome": "found",
       "pageUrl": "https://research-portal.uea.ac.uk/en/persons/chau-le/",
-      "imageUrl": "https://research-portal.uea.ac.uk/en/persons/chau-le/Chau_Jul_2022.JPG",
+      "imageUrl": "https://research-portal.uea.ac.uk/files-asset/230833872/Chau_Jul_2022.JPG/",
       "sourceType": "official_faculty",
-      "confidence": "HIGH",
+      "confidence": "MEDIUM",
       "identitySignals": [
         "name",
-        "institution",
-        "department",
-        "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-10-14T12:51:25.933Z",
-      "note": "candidate image could not be downloaded"
+      "retrievedAt": "2026-11-01T17:25:34.769Z",
+      "note": "MEDIUM candidate stored after visual review"
     },
     "vp-1702": {
       "name": "Thanh Ngo - East Carolina University",
@@ -3744,9 +3754,16 @@
     "vp-1683": {
       "name": "Kim Tien Ly",
       "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-14T12:49:19.358Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "pageUrl": "https://kimtienly.github.io/",
+      "imageUrl": "https://kimtienly.github.io/assets/profile_photo.JPG",
+      "sourceType": "personal_homepage",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T17:25:28.433Z",
+      "note": "2026-11-01 deep audit: own-page profile photo failed --store checks (120x120 or portrait-aspect validation)"
     },
     "vp-1686": {
       "name": "Huu Nhan Duong",
@@ -4736,9 +4753,16 @@
     "vp-1957": {
       "name": "Thi Xuan Trinh Nguyen",
       "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-14T13:05:20.710Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "pageUrl": "https://seeds.office.hiroshima-u.ac.jp/profile/en.d7e9f54cf06d397e520e17560c007669.html",
+      "imageUrl": "https://seeds.office.hiroshima-u.ac.jp/profile/image/portrait/d7e9f54cf06d397e520e17560c007669.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T17:25:28.434Z",
+      "note": "2026-11-01 deep audit: own-page profile photo failed --store checks (image could not be downloaded)"
     },
     "vp-1958": {
       "name": "Tan Ngoc Nguyen",
@@ -5650,20 +5674,17 @@
     },
     "vp-2022": {
       "name": "Yen Le",
-      "outcome": "not_found",
+      "outcome": "found",
       "pageUrl": "https://researchportalplus.anu.edu.au/en/persons/yen-le/",
-      "imageUrl": "https://researchportalplus.anu.edu.au/en/persons/yen-le/YenProfilePhoto1.jpg",
+      "imageUrl": "https://researchportalplus.anu.edu.au/files-asset/146963207/YenProfilePhoto1.jpg/",
       "sourceType": "official_faculty",
-      "confidence": "HIGH",
+      "confidence": "MEDIUM",
       "identitySignals": [
         "name",
-        "institution",
-        "department",
-        "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-10-14T13:08:21.353Z",
-      "note": "candidate image could not be downloaded"
+      "retrievedAt": "2026-11-01T17:25:41.078Z",
+      "note": "MEDIUM candidate stored after visual review"
     },
     "vp-2023": {
       "name": "Lam Bui",
@@ -5683,17 +5704,17 @@
     },
     "vp-2024": {
       "name": "Julie Nguyen",
-      "outcome": "not_found",
+      "outcome": "found",
       "pageUrl": "https://staff-profiles.cqu.edu.au/home/view/1717",
-      "imageUrl": "https://staff-profiles.cqu.edu.au/files/downloadPhoto/12698/FB_IMG_1445805664913_Copy.jpg",
+      "imageUrl": "https://staff-profiles.cqu.edu.au/files/downloadPortraitPhoto/12120/FB_IMG_1563440722023.jpg",
       "sourceType": "official_faculty",
       "confidence": "MEDIUM",
       "identitySignals": [
         "name",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-11-01T17:16:08.294Z",
-      "note": "2026-11-01 deep audit: name-matched candidate failed --store checks (120x120 or portrait-aspect validation)"
+      "retrievedAt": "2026-11-01T17:25:43.056Z",
+      "note": "MEDIUM candidate stored after visual review"
     },
     "vp-2025": {
       "name": "Loc Tran",
@@ -6754,17 +6775,17 @@
     },
     "vp-1898": {
       "name": "Kim Cuong Le",
-      "outcome": "not_found",
+      "outcome": "found",
       "pageUrl": "https://portal.research.lu.se/en/persons/kim-cuong-le/",
-      "imageUrl": "https://portal.research.lu.se/files-asset/145652206/IMG_1114_min.JPG?w=160&f=jpg",
+      "imageUrl": "https://portal.research.lu.se/files-asset/145652206/IMG_1114_min.JPG/",
       "sourceType": "official_faculty",
       "confidence": "MEDIUM",
       "identitySignals": [
         "name",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-11-01T17:16:08.294Z",
-      "note": "2026-11-01 deep audit: name-matched candidate failed --store checks (120x120 or portrait-aspect validation)"
+      "retrievedAt": "2026-11-01T17:25:38.045Z",
+      "note": "MEDIUM candidate stored after visual review"
     },
     "vp-1899": {
       "name": "Ngoc Nha Vi Tran",
@@ -8201,17 +8222,17 @@
     },
     "vp-1815": {
       "name": "Xuan-Son Vu",
-      "outcome": "not_found",
+      "outcome": "found",
       "pageUrl": "https://portal.research.lu.se/en/persons/xuan-son-vu/",
-      "imageUrl": "https://portal.research.lu.se/files-asset/207727077/Sonvx.png?w=160&f=jpg",
+      "imageUrl": "https://portal.research.lu.se/files-asset/207727077/Sonvx.png/",
       "sourceType": "official_faculty",
       "confidence": "MEDIUM",
       "identitySignals": [
         "name",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-11-01T17:16:08.293Z",
-      "note": "2026-11-01 deep audit: name-matched candidate failed --store checks (120x120 or portrait-aspect validation)"
+      "retrievedAt": "2026-11-01T17:25:37.062Z",
+      "note": "MEDIUM candidate stored after visual review"
     },
     "vp-1822": {
       "name": "Van Le",
@@ -8364,17 +8385,17 @@
     },
     "vp-1746": {
       "name": "Anh Pham - Queen's University Belfast",
-      "outcome": "not_found",
+      "outcome": "found",
       "pageUrl": "https://pure.qub.ac.uk/en/persons/anh-pham/",
-      "imageUrl": "https://pure.qub.ac.uk/files-asset/681595129/Anh_Pham_x800.jpg?w=160&f=jpg",
+      "imageUrl": "https://pure.qub.ac.uk/files-asset/681595129/Anh_Pham_x800.jpg/",
       "sourceType": "official_faculty",
       "confidence": "MEDIUM",
       "identitySignals": [
         "name",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-11-01T17:16:08.293Z",
-      "note": "2026-11-01 deep audit: name-matched candidate failed --store checks (120x120 or portrait-aspect validation)"
+      "retrievedAt": "2026-11-01T17:25:35.613Z",
+      "note": "MEDIUM candidate stored after visual review"
     },
     "vp-1756": {
       "name": "Ha Tran",
@@ -8558,11 +8579,18 @@
       "note": "MEDIUM candidate stored after visual review"
     },
     "vp-2186": {
-      "name": "Mai Suan Li",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-11-01T16:45:03.696Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "name": "Suan Li Mai",
+      "outcome": "found",
+      "pageUrl": "http://info.ifpan.edu.pl/~masli/masli.html",
+      "imageUrl": "http://info.ifpan.edu.pl/~masli/images/people/li.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T17:25:45.372Z",
+      "note": "MEDIUM candidate stored after visual review"
     },
     "vp-2187": {
       "name": "Truong Co Nguyen",
@@ -8742,9 +8770,16 @@
     "vp-2203": {
       "name": "Khoa B. Nguyen",
       "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-11-01T16:57:22.243Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "pageUrl": "https://profiles.ucla.edu/khoa.nguyen",
+      "imageUrl": "https://profiles.ucla.edu/profile/Modules/CustomViewPersonGeneralInfo/PhotoHandler.ashx?NodeID=522931175",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T17:25:28.434Z",
+      "note": "2026-11-01 deep audit: own-page profile photo failed --store checks (image could not be downloaded)"
     },
     "vp-2204": {
       "name": "Baotran N. Vo",
@@ -9204,9 +9239,16 @@
     "vp-2238": {
       "name": "Khoa Nguyen - Western University",
       "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-11-01T17:10:28.387Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "pageUrl": "https://www.math.uwo.ca/faculty/nguyen/index.html",
+      "imageUrl": "https://www.math.uwo.ca/people/MC115x150.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T17:25:28.434Z",
+      "note": "2026-11-01 deep audit: own-page profile photo failed --store checks (120x120 or portrait-aspect validation)"
     },
     "vp-2239": {
       "name": "Tan T. Nguyen",
