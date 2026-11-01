@@ -712,17 +712,17 @@
     },
     "vp-1031": {
       "name": "Viet Do",
-      "outcome": "not_found",
+      "outcome": "found",
       "pageUrl": "https://research.monash.edu/en/persons/minh-do/",
       "imageUrl": "https://research.monash.edu/files-asset/749429/profile+photo/",
       "sourceType": "official_faculty",
-      "confidence": "MEDIUM",
+      "confidence": "HIGH",
       "identitySignals": [
         "name",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-11-01T17:35:57.732Z",
-      "note": "2026-11-01 deep audit: own-page profile photo failed --store checks (120x120 or portrait-aspect validation)"
+      "retrievedAt": "2026-11-01T18:05:24.000Z",
+      "note": "2026-11-01 visual review: name-matched photo on the stored profile page; refetched (larger size or browser session) and face-cropped to pass the aspect check"
     },
     "vp-1034": {
       "name": "Minh Quang Dao",
@@ -801,17 +801,17 @@
     },
     "vp-1070": {
       "name": "Ruby (Hong Ngoc) Nguyen",
-      "outcome": "not_found",
+      "outcome": "found",
       "pageUrl": "https://researchers.adelaide.edu.au/profile/ruby.nguyen",
       "imageUrl": "https://researchers.adelaide.edu.au/sites/default/files/styles/profile_large/public/profile-images/33335.jpeg?itok=Q3CEqCM-",
       "sourceType": "official_faculty",
-      "confidence": "MEDIUM",
+      "confidence": "HIGH",
       "identitySignals": [
         "name",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-11-01T17:16:17.208Z",
-      "note": "2026-11-01 deep audit: name-matched candidate failed --store checks (120x120 or portrait-aspect validation)"
+      "retrievedAt": "2026-11-01T18:06:17.000Z",
+      "note": "2026-11-01 visual review: name-matched photo on the stored profile page; refetched (larger size or browser session) and face-cropped to pass the aspect check"
     },
     "vp-1072": {
       "name": "Duong Anh Lam Tran",
@@ -1125,17 +1125,17 @@
     },
     "vp-1191": {
       "name": "Kim-Phuong L. Vu",
-      "outcome": "not_found",
+      "outcome": "found",
       "pageUrl": "https://www.csulb.edu/college-of-liberal-arts/psychology/faculty-staff",
-      "imageUrl": "https://www.csulb.edu/sites/default/files/styles/wysiwyg_scale115/public/images/2025-11/Media%20%2843%29.jpg?itok=JSiueYZv",
+      "imageUrl": "https://www.csulb.edu/sites/default/files/images/2025-11/Media%20%2843%29.jpg",
       "sourceType": "official_faculty",
-      "confidence": "MEDIUM",
+      "confidence": "HIGH",
       "identitySignals": [
         "name",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-11-01T17:16:17.213Z",
-      "note": "2026-11-01 deep audit: name-matched candidate failed --store checks (120x120 or portrait-aspect validation)"
+      "retrievedAt": "2026-11-01T18:06:17.000Z",
+      "note": "2026-11-01 visual review: name-matched photo on the stored profile page; refetched (larger size or browser session) and face-cropped to pass the aspect check"
     },
     "vp-1193": {
       "name": "Huy P. Phan",
@@ -1515,31 +1515,31 @@
     },
     "vp-1290": {
       "name": "Binh An P. Phan",
-      "outcome": "not_found",
+      "outcome": "found",
       "pageUrl": "https://profiles.ucsf.edu/binhan.phan",
       "imageUrl": "https://researcherprofiles.org/profile/Modules/CustomViewPersonGeneralInfo/PhotoHandler.ashx?NodeID=176433&cachekey=7318a704-b75f-4582-97da-a45bca267df6",
       "sourceType": "official_faculty",
-      "confidence": "MEDIUM",
+      "confidence": "HIGH",
       "identitySignals": [
         "name",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-11-01T17:16:08.292Z",
-      "note": "2026-11-01 deep audit: name-matched candidate failed --store checks (120x120 or portrait-aspect validation)"
+      "retrievedAt": "2026-11-01T18:05:24.000Z",
+      "note": "2026-11-01 visual review: name-matched photo on the stored profile page; refetched (larger size or browser session) and face-cropped to pass the aspect check"
     },
     "vp-1292": {
       "name": "Hong-Ha M. Truong",
-      "outcome": "not_found",
+      "outcome": "found",
       "pageUrl": "https://profiles.ucsf.edu/hong-ha.truong",
       "imageUrl": "https://researcherprofiles.org/profile/Modules/CustomViewPersonGeneralInfo/PhotoHandler.ashx?NodeID=172880&cachekey=10df89c3-87e4-4d6a-93bd-2f680535efc4",
       "sourceType": "official_faculty",
-      "confidence": "MEDIUM",
+      "confidence": "HIGH",
       "identitySignals": [
         "name",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-11-01T17:16:08.292Z",
-      "note": "2026-11-01 deep audit: name-matched candidate failed --store checks (120x120 or portrait-aspect validation)"
+      "retrievedAt": "2026-11-01T18:05:24.000Z",
+      "note": "2026-11-01 visual review: name-matched photo on the stored profile page; refetched (larger size or browser session) and face-cropped to pass the aspect check"
     },
     "vp-1294": {
       "name": "Cuong J. Bui",
@@ -2245,17 +2245,17 @@
     },
     "vp-1441": {
       "name": "Thi Dan Linh Nguyen-Kim",
-      "outcome": "not_found",
+      "outcome": "found",
       "pageUrl": "https://www.stadt-zuerich.ch/stadtspital/de/ueber-uns/fachbereiche/radiologie-nuklearmedizin/team/thi-dan-linh-nguyen-kim.html",
       "imageUrl": "https://s7g10.scene7.com/is/image/zuerich/dan-linh-nguyen-kim?qlt=85&wid=800&fmt=webp-alpha",
       "sourceType": "official_faculty",
-      "confidence": "MEDIUM",
+      "confidence": "HIGH",
       "identitySignals": [
         "name",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-11-01T17:16:08.293Z",
-      "note": "2026-11-01 deep audit: name-matched candidate failed --store checks (120x120 or portrait-aspect validation)"
+      "retrievedAt": "2026-11-01T18:05:24.000Z",
+      "note": "2026-11-01 visual review: name-matched photo on the stored profile page; refetched (larger size or browser session) and face-cropped to pass the aspect check"
     },
     "vp-1445": {
       "name": "Khanh Duy Trinh",
@@ -2803,17 +2803,17 @@
     },
     "vp-1638": {
       "name": "Duc Ninh Nguyen",
-      "outcome": "not_found",
+      "outcome": "found",
       "pageUrl": "https://researchprofiles.ku.dk/en/persons/duc-ninh-nguyen/",
       "imageUrl": "https://researchprofiles.ku.dk/files-asset/210938156/RKD01641_Copy_2_.jpg/",
       "sourceType": "official_faculty",
-      "confidence": "MEDIUM",
+      "confidence": "HIGH",
       "identitySignals": [
         "name",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-11-01T17:25:28.433Z",
-      "note": "2026-11-01 deep audit: own-page profile photo failed --store checks (120x120 or portrait-aspect validation)"
+      "retrievedAt": "2026-11-01T18:05:24.000Z",
+      "note": "2026-11-01 visual review: name-matched photo on the stored profile page; refetched (larger size or browser session) and face-cropped to pass the aspect check"
     },
     "vp-1639": {
       "name": "Tri Hien Viet Huynh",
@@ -2868,17 +2868,17 @@
     },
     "vp-1645": {
       "name": "Tuyen Tran",
-      "outcome": "not_found",
+      "outcome": "found",
       "pageUrl": "https://www.luc.edu/math/profiles/trantuyen.shtml",
       "imageUrl": "https://www.luc.edu/media/lucedu/math/facstaffprofilepics/facultyprofilephotos/Tuyen_Tran2.jpg",
       "sourceType": "official_faculty",
-      "confidence": "MEDIUM",
+      "confidence": "HIGH",
       "identitySignals": [
         "name",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-11-01T17:16:08.293Z",
-      "note": "2026-11-01 deep audit: name-matched candidate failed --store checks (120x120 or portrait-aspect validation)"
+      "retrievedAt": "2026-11-01T18:05:24.000Z",
+      "note": "2026-11-01 visual review: name-matched photo on the stored profile page; refetched (larger size or browser session) and face-cropped to pass the aspect check"
     },
     "vp-1646": {
       "name": "Tuyen Trung Truong",
@@ -3760,17 +3760,17 @@
     },
     "vp-1683": {
       "name": "Kim Tien Ly",
-      "outcome": "not_found",
+      "outcome": "found",
       "pageUrl": "https://kimtienly.github.io/",
       "imageUrl": "https://kimtienly.github.io/assets/profile_photo.JPG",
       "sourceType": "personal_homepage",
-      "confidence": "MEDIUM",
+      "confidence": "HIGH",
       "identitySignals": [
         "name",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-11-01T17:25:28.433Z",
-      "note": "2026-11-01 deep audit: own-page profile photo failed --store checks (120x120 or portrait-aspect validation)"
+      "retrievedAt": "2026-11-01T18:05:24.000Z",
+      "note": "2026-11-01 visual review: name-matched photo on the stored profile page; refetched (larger size or browser session) and face-cropped to pass the aspect check"
     },
     "vp-1686": {
       "name": "Huu Nhan Duong",
@@ -3926,17 +3926,17 @@
     },
     "vp-1584": {
       "name": "Kim Hong Nguyen",
-      "outcome": "not_found",
+      "outcome": "found",
       "pageUrl": "https://uwaterloo.ca/communication-arts/profiles/kim-hong-nguyen",
       "imageUrl": "https://uwaterloo.ca/communication-arts/sites/default/files/uploads/images/nguyen-kim-7.jpg",
       "sourceType": "official_faculty",
-      "confidence": "MEDIUM",
+      "confidence": "HIGH",
       "identitySignals": [
         "name",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-11-01T17:16:17.213Z",
-      "note": "2026-11-01 deep audit: name-matched candidate failed --store checks (120x120 or portrait-aspect validation)"
+      "retrievedAt": "2026-11-01T18:06:17.000Z",
+      "note": "2026-11-01 visual review: name-matched photo on the stored profile page; refetched (larger size or browser session) and face-cropped to pass the aspect check"
     },
     "vp-1585": {
       "name": "Xuan Huy Nguyen",
@@ -4451,17 +4451,17 @@
     },
     "vp-1931": {
       "name": "Thi Phuong Thao Nguyen",
-      "outcome": "not_found",
+      "outcome": "found",
       "pageUrl": "https://www.sanken.osaka-u.ac.jp/en/organization/nnc/nnc04.html",
       "imageUrl": "https://www.sanken.osaka-u.ac.jp/staging/assets/staff/4-25_Minamitani-Thao_11.jpg",
       "sourceType": "official_faculty",
-      "confidence": "MEDIUM",
+      "confidence": "HIGH",
       "identitySignals": [
         "name",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-11-01T17:16:08.294Z",
-      "note": "2026-11-01 deep audit: name-matched candidate failed --store checks (120x120 or portrait-aspect validation)"
+      "retrievedAt": "2026-11-01T18:05:24.000Z",
+      "note": "2026-11-01 visual review: name-matched photo on the stored profile page; refetched (larger size or browser session) and face-cropped to pass the aspect check"
     },
     "vp-1932": {
       "name": "Kim Ngan Nguyen",
@@ -4669,17 +4669,17 @@
     },
     "vp-1950": {
       "name": "Thuy Tran - Karolinska Institutet",
-      "outcome": "not_found",
+      "outcome": "found",
       "pageUrl": "https://ki.se/en/people/thuy-tran",
       "imageUrl": "https://ki.se/profile-image/thuy-tran",
       "sourceType": "official_faculty",
-      "confidence": "MEDIUM",
+      "confidence": "HIGH",
       "identitySignals": [
         "name",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-11-01T17:16:08.294Z",
-      "note": "2026-11-01 deep audit: name-matched candidate failed --store checks (120x120 or portrait-aspect validation)"
+      "retrievedAt": "2026-11-01T18:05:24.000Z",
+      "note": "2026-11-01 visual review: name-matched photo on the stored profile page; refetched (larger size or browser session) and face-cropped to pass the aspect check"
     },
     "vp-1951": {
       "name": "Linh Nguyen - University of New South Wales",
@@ -7180,11 +7180,11 @@
     },
     "vp-2115": {
       "name": "Tuan Dang",
-      "outcome": "not_found",
+      "outcome": "found",
       "pageUrl": "https://engineering.uark.edu/electrical-engineering-computer-science/electrical-engineering-faculty/uid/tuand/name/Tuan+Dang/",
       "imageUrl": "https://campusdata.uark.edu/resources/images/FacultyStaffProfile/tuand.jpg?1791983470547&w=440",
       "sourceType": "official_faculty",
-      "confidence": "MEDIUM",
+      "confidence": "HIGH",
       "identitySignals": [
         "name",
         "institution",
@@ -7192,8 +7192,8 @@
         "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-10-14T13:11:09.033Z",
-      "note": "reviewed candidate failed --store checks 2026-10-14: image too small or not portrait-shaped"
+      "retrievedAt": "2026-11-01T18:05:24.000Z",
+      "note": "2026-11-01 visual review: name-matched photo on the stored profile page; refetched (larger size or browser session) and face-cropped to pass the aspect check"
     },
     "vp-2116": {
       "name": "Phong Nguyen",
@@ -7548,17 +7548,17 @@
     },
     "vp-1876": {
       "name": "Ngoc Thinh Nguyen",
-      "outcome": "not_found",
+      "outcome": "found",
       "pageUrl": "https://www.hok.ac.at/en/bachelor/drone-engineering-ft/team-2944",
       "imageUrl": "https://www.hok.ac.at/bilder/portraet/13014/image-thumb__13014___auto_492f76b20bde5bca47e98babd856cecb/ma-nguyen-ngoc-thinh.8725e8fd.jpg",
       "sourceType": "official_faculty",
-      "confidence": "MEDIUM",
+      "confidence": "HIGH",
       "identitySignals": [
         "name",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-11-01T17:16:08.294Z",
-      "note": "2026-11-01 deep audit: name-matched candidate failed --store checks (120x120 or portrait-aspect validation)"
+      "retrievedAt": "2026-11-01T18:05:24.000Z",
+      "note": "2026-11-01 visual review: name-matched photo on the stored profile page; refetched (larger size or browser session) and face-cropped to pass the aspect check"
     },
     "vp-1879": {
       "name": "Tien Son Nguyen",
@@ -8065,17 +8065,17 @@
     },
     "vp-1854": {
       "name": "Andy Khanh Xuan Nguyen",
-      "outcome": "not_found",
+      "outcome": "found",
       "pageUrl": "https://www.oulu.fi/en/researchers/andy-khanh-nguyen",
       "imageUrl": "https://media-cdn.oulu.fi/styles/main_image/s3/images/AndyNguyenProfile.jpg?itok=-5e62qHW",
       "sourceType": "official_faculty",
-      "confidence": "MEDIUM",
+      "confidence": "HIGH",
       "identitySignals": [
         "name",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-11-01T17:16:08.294Z",
-      "note": "2026-11-01 deep audit: name-matched candidate failed --store checks (120x120 or portrait-aspect validation)"
+      "retrievedAt": "2026-11-01T18:05:24.000Z",
+      "note": "2026-11-01 visual review: name-matched photo on the stored profile page; refetched (larger size or browser session) and face-cropped to pass the aspect check"
     },
     "vp-2159": {
       "name": "Nho Luong",
@@ -8439,17 +8439,17 @@
     },
     "vp-1767": {
       "name": "Ngoc Uyen Nhi Nguyen",
-      "outcome": "not_found",
+      "outcome": "found",
       "pageUrl": "https://health.usf.edu/medicine/internalmedicine/cardiology/faculty/ngocuyennhinguyen",
       "imageUrl": "https://cloud.usf.edu/FacultyDirectory/api/get/profile/ngocuyennhinguyen/photo/profile",
       "sourceType": "official_faculty",
-      "confidence": "MEDIUM",
+      "confidence": "HIGH",
       "identitySignals": [
         "name",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-11-01T17:16:08.293Z",
-      "note": "2026-11-01 deep audit: name-matched candidate failed --store checks (120x120 or portrait-aspect validation)"
+      "retrievedAt": "2026-11-01T18:05:24.000Z",
+      "note": "2026-11-01 visual review: name-matched photo on the stored profile page; refetched (larger size or browser session) and face-cropped to pass the aspect check"
     },
     "vp-1768": {
       "name": "Nick Nguyen",
@@ -8939,17 +8939,17 @@
     },
     "vp-2214": {
       "name": "Phuong Hoan Le",
-      "outcome": "not_found",
+      "outcome": "found",
       "pageUrl": "https://www.eur.nl/en/people/phuong-hoan-le",
       "imageUrl": "https://www.eur.nl/sites/corporate/files/styles/profile/public/externals/703a343ee6233726de22e95c3731d818.jpg.avif?itok=9e9B1MZv&v=1793532200",
       "sourceType": "official_faculty",
-      "confidence": "MEDIUM",
+      "confidence": "HIGH",
       "identitySignals": [
         "name",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-11-01T17:16:08.295Z",
-      "note": "2026-11-01 deep audit: name-matched candidate failed --store checks (could not convert)"
+      "retrievedAt": "2026-11-01T18:05:24.000Z",
+      "note": "2026-11-01 visual review: name-matched photo on the stored profile page; refetched (larger size or browser session) and face-cropped to pass the aspect check"
     },
     "vp-2215": {
       "name": "Son Bui",
@@ -9184,17 +9184,17 @@
     },
     "vp-2232": {
       "name": "T. Hang Nghiem-Rao",
-      "outcome": "not_found",
+      "outcome": "found",
       "pageUrl": "https://fcd.mcw.edu/?faculty/view/name/T_Hang_Nghiem-Rao_MD/id/4743",
       "imageUrl": "https://fcd.mcw.edu/?faculty/pic/&name=T_Hang_Nghiem-Rao_MD&h=160&w=110&zc=1&q=100&src=facultyimages/7a2df88294c371f5877ddbe0d40cd35e.4743.jpg",
       "sourceType": "official_faculty",
-      "confidence": "MEDIUM",
+      "confidence": "HIGH",
       "identitySignals": [
         "name",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-11-01T17:16:08.295Z",
-      "note": "2026-11-01 deep audit: name-matched candidate failed --store checks (120x120 or portrait-aspect validation)"
+      "retrievedAt": "2026-11-01T18:05:24.000Z",
+      "note": "2026-11-01 visual review: name-matched photo on the stored profile page; refetched (larger size or browser session) and face-cropped to pass the aspect check"
     },
     "vp-2233": {
       "name": "Hieu H. Ton-That",
@@ -9282,11 +9282,11 @@
     },
     "vp-2240": {
       "name": "Steve Nguyen",
-      "outcome": "not_found",
+      "outcome": "found",
       "pageUrl": "https://profiles.ucsd.edu/steve.nguyen",
       "imageUrl": "https://researcherprofiles.org/profile/Modules/CustomViewPersonGeneralInfo/PhotoHandler.ashx?NodeID=144361575&cachekey=5fefc4a6-ddb1-439b-ba87-64bcd50a9fa6",
       "sourceType": "official_faculty",
-      "confidence": "MEDIUM",
+      "confidence": "HIGH",
       "identitySignals": [
         "name",
         "institution",
@@ -9294,8 +9294,8 @@
         "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-11-01T17:14:22.173Z",
-      "note": "2026-11-01: profile thumbnail failed --store checks (120x120 or portrait-aspect validation)"
+      "retrievedAt": "2026-11-01T18:05:24.000Z",
+      "note": "2026-11-01 visual review: name-matched photo on the stored profile page; refetched (larger size or browser session) and face-cropped to pass the aspect check"
     },
     "vp-2241": {
       "name": "Thuy Tran - University of California, Irvine",
@@ -9471,17 +9471,17 @@
     },
     "vp-1131": {
       "name": "Nhan Nguyen",
-      "outcome": "not_found",
+      "outcome": "found",
       "pageUrl": "https://www.oulu.fi/en/researchers/nhan-nguyen",
       "imageUrl": "https://media-cdn.oulu.fi/styles/main_image/s3/images/NhanNguyenProfile.jpg?itok=vTL7Zp1H",
       "sourceType": "official_faculty",
-      "confidence": "MEDIUM",
+      "confidence": "HIGH",
       "identitySignals": [
         "name",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-11-01T17:16:08.292Z",
-      "note": "2026-11-01 deep audit: name-matched candidate failed --store checks (120x120 or portrait-aspect validation)"
+      "retrievedAt": "2026-11-01T18:05:24.000Z",
+      "note": "2026-11-01 visual review: name-matched photo on the stored profile page; refetched (larger size or browser session) and face-cropped to pass the aspect check"
     },
     "vp-1223": {
       "name": "Cuong Pham-Huu",
@@ -9499,17 +9499,17 @@
     },
     "vp-1299": {
       "name": "Nicole Ngo-Giang-Huong",
-      "outcome": "not_found",
+      "outcome": "found",
       "pageUrl": "https://www.ird.fr/thailande/presentation",
       "imageUrl": "https://www.ird.fr/sites/ird_fr/files/inline-images/Photo%20Nicole%20Ngo-Giang-Huong.png",
       "sourceType": "official_faculty",
-      "confidence": "MEDIUM",
+      "confidence": "HIGH",
       "identitySignals": [
         "name",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-11-01T17:16:08.292Z",
-      "note": "2026-11-01 deep audit: name-matched candidate failed --store checks (120x120 or portrait-aspect validation)"
+      "retrievedAt": "2026-11-01T18:05:24.000Z",
+      "note": "2026-11-01 visual review: name-matched photo on the stored profile page; refetched (larger size or browser session) and face-cropped to pass the aspect check"
     },
     "vp-1309": {
       "name": "Quoc C. Vuong",
@@ -9541,17 +9541,17 @@
     },
     "vp-1399": {
       "name": "Quoc-Tuan Vien",
-      "outcome": "not_found",
+      "outcome": "found",
       "pageUrl": "https://www.mdx.ac.uk/about-us/our-people/staff-directory/dr-quoc-tuan-vien/",
       "imageUrl": "https://repository.mdx.ac.uk/download/09bfe5edafc75e3414903568f8085b73a784849473790077741694853a4acef2/21011/webdisplay/quoctuan_vien.jpg",
       "sourceType": "official_faculty",
-      "confidence": "MEDIUM",
+      "confidence": "HIGH",
       "identitySignals": [
         "name",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-11-01T17:16:08.293Z",
-      "note": "2026-11-01 deep audit: name-matched candidate failed --store checks (image could not be downloaded)"
+      "retrievedAt": "2026-11-01T18:05:24.000Z",
+      "note": "2026-11-01 visual review: name-matched photo on the stored profile page; refetched (larger size or browser session) and face-cropped to pass the aspect check"
     },
     "vp-1458": {
       "name": "Huy Phung",
@@ -9618,7 +9618,7 @@
     },
     "vp-2247": {
       "name": "Nini Tran",
-      "outcome": "not_found",
+      "outcome": "found",
       "pageUrl": "https://dentistry.ucla.edu/people/nini-tran-dds-phd",
       "imageUrl": "https://dentistry.ucla.edu/sites/default/files/styles/sf_social_share/public/media/images/profile-NiniTran.jpg.webp?itok=hFK0gCsy",
       "sourceType": "official_faculty",
@@ -9630,8 +9630,8 @@
         "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-11-01T17:37:17.551Z",
-      "note": "candidate failed 120x120 or portrait-aspect validation"
+      "retrievedAt": "2026-11-01T18:06:17.000Z",
+      "note": "2026-11-01 visual review: name-matched photo on the stored profile page; refetched (larger size or browser session) and face-cropped to pass the aspect check"
     },
     "vp-2248": {
       "name": "Linh Tran - University of California, Los Angeles",
@@ -9672,11 +9672,11 @@
     },
     "vp-2252": {
       "name": "Michele Pham",
-      "outcome": "not_found",
+      "outcome": "found",
       "pageUrl": "https://profiles.ucsf.edu/michele.pham",
       "imageUrl": "https://researcherprofiles.org/profile/Modules/CustomViewPersonGeneralInfo/PhotoHandler.ashx?NodeID=24787888&cachekey=44744342-0bfd-4f6a-a3f4-60665b0550ce",
       "sourceType": "official_faculty",
-      "confidence": "MEDIUM",
+      "confidence": "HIGH",
       "identitySignals": [
         "name",
         "institution",
@@ -9684,8 +9684,8 @@
         "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-11-01T17:37:39.857Z",
-      "note": "2026-11-01: profile thumbnail failed --store checks (120x120 or portrait-aspect validation)"
+      "retrievedAt": "2026-11-01T18:05:24.000Z",
+      "note": "2026-11-01 visual review: name-matched photo on the stored profile page; refetched (larger size or browser session) and face-cropped to pass the aspect check"
     },
     "vp-2253": {
       "name": "Thoha Pham",
@@ -9726,11 +9726,11 @@
     },
     "vp-2257": {
       "name": "Annie Nguyen",
-      "outcome": "not_found",
+      "outcome": "found",
       "pageUrl": "https://profiles.ucsd.edu/annie.l.nguyen",
       "imageUrl": "https://researcherprofiles.org/profile/Modules/CustomViewPersonGeneralInfo/PhotoHandler.ashx?NodeID=372655442&cachekey=12590d6f-c994-463d-8529-bbb94a655065",
       "sourceType": "official_faculty",
-      "confidence": "MEDIUM",
+      "confidence": "HIGH",
       "identitySignals": [
         "name",
         "institution",
@@ -9738,8 +9738,8 @@
         "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-11-01T17:47:00.501Z",
-      "note": "2026-11-01: profile thumbnail failed --store checks (120x120 or portrait-aspect validation)"
+      "retrievedAt": "2026-11-01T18:05:24.000Z",
+      "note": "2026-11-01 visual review: name-matched photo on the stored profile page; refetched (larger size or browser session) and face-cropped to pass the aspect check"
     }
   }
 }
