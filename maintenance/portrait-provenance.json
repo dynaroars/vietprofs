@@ -713,9 +713,16 @@
     "vp-1031": {
       "name": "Viet Do",
       "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-14T11:55:58.011Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "pageUrl": "https://research.monash.edu/en/persons/minh-do/",
+      "imageUrl": "https://research.monash.edu/files-asset/749429/profile+photo/",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T17:35:57.732Z",
+      "note": "2026-11-01 deep audit: own-page profile photo failed --store checks (120x120 or portrait-aspect validation)"
     },
     "vp-1034": {
       "name": "Minh Quang Dao",
@@ -1218,7 +1225,7 @@
       "name": "Tao Pham Dinh",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-14T12:01:27.092Z",
+      "retrievedAt": "2026-11-01T17:26:21.817Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1206": {
@@ -1443,7 +1450,7 @@
       "name": "Trang N. T. Phan",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-14T12:06:39.219Z",
+      "retrievedAt": "2026-11-01T17:26:22.461Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1269": {
@@ -1457,7 +1464,7 @@
       "name": "Khanh Pham",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-14T12:07:42.406Z",
+      "retrievedAt": "2026-11-01T17:27:12.627Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1279": {
@@ -1600,7 +1607,7 @@
       "name": "Hien Van Doan",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-14T12:10:43.053Z",
+      "retrievedAt": "2026-11-01T17:27:17.342Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1310": {
@@ -1653,7 +1660,7 @@
       "name": "Phuong Mai Dinh",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-14T12:13:21.600Z",
+      "retrievedAt": "2026-11-01T17:28:15.631Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1339": {
@@ -1667,7 +1674,7 @@
       "name": "Dinh Ho Tong Minh",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-14T12:14:48.902Z",
+      "retrievedAt": "2026-11-01T17:29:05.787Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1341": {
@@ -1799,7 +1806,7 @@
       "name": "Luong-Viet Phung",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-14T12:17:00.771Z",
+      "retrievedAt": "2026-11-01T17:29:55.950Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1350": {
@@ -2386,7 +2393,7 @@
       "name": "Minh-Tan Ton-That",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-14T12:27:50.202Z",
+      "retrievedAt": "2026-11-01T17:30:46.131Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1473": {
@@ -3907,7 +3914,7 @@
       "name": "Loc Thai Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-14T12:39:41.752Z",
+      "retrievedAt": "2026-11-01T17:31:37.165Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1671": {
@@ -3968,7 +3975,7 @@
       "name": "Quang Chinh Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-14T12:38:20.285Z",
+      "retrievedAt": "2026-11-01T17:31:36.305Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1591": {
@@ -4783,7 +4790,7 @@
       "name": "Thanh-Thuy Nguyen Tu",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-14T13:05:37.108Z",
+      "retrievedAt": "2026-11-01T17:32:40.037Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1960": {
@@ -7830,10 +7837,19 @@
     },
     "vp-1867": {
       "name": "Thi-Van Nguyen",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-16T11:05:11.246Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://csie.asia.edu.tw/en/associate_professors_2",
+      "imageUrl": "https://csie.asia.edu.tw/uploads/member_profile/avatar/65ba4865063ca21733725b41/thumb_THI-VAN_NGUYEN_0.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T17:32:27.337Z"
     },
     "vp-2141": {
       "name": "Theresa P.T. Nguyen",
@@ -8612,14 +8628,14 @@
       "name": "San Vu Ngoc",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-11-01T16:45:15.792Z",
+      "retrievedAt": "2026-11-01T17:33:30.191Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-2189": {
       "name": "Xuan-Thang Vu",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-11-01T16:46:06.523Z",
+      "retrievedAt": "2026-11-01T17:34:20.369Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-2190": {
@@ -8687,7 +8703,7 @@
       "name": "Ha Thu Vu",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-11-01T16:52:39.925Z",
+      "retrievedAt": "2026-11-01T17:34:51.265Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-2196": {
@@ -9585,6 +9601,13 @@
       ],
       "retrievedAt": "2026-11-01T17:17:36.614Z",
       "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-1333": {
+      "name": "Kim Ta Phuoc",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-01T17:27:25.477Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     }
   }
 }
