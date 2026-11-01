@@ -517,7 +517,6 @@ async function init() {
   const searchStateChip = document.getElementById('search-state-chip') as HTMLButtonElement;
   const searchStateChipLabel = document.getElementById('search-state-chip-label') as HTMLElement;
   const suggestionPanel = document.getElementById('search-suggestion-panel') as HTMLElement;
-  const healthLink = document.getElementById('health-link') as HTMLAnchorElement | null;
   const browserShelf = document.getElementById('browser-shelf') as HTMLElement;
   const locationSelect = document.getElementById('location-filter') as HTMLSelectElement;
   const fieldSelect = document.getElementById('field-filter') as HTMLSelectElement;
@@ -915,6 +914,8 @@ async function init() {
   initializeDropdowns();
   applyUrlState(new URLSearchParams(window.location.search));
 
+  const DIRECTORY_TITLE = document.title;
+  const SITE_TITLE = 'VietProfs';
   const viewOf = (search: string) => new URLSearchParams(search).get('view') ?? '';
   // The first sync only normalizes the landing URL (e.g. legacy ?field=interesting); it never adds an entry.
   let historyReady = false;
@@ -940,6 +941,12 @@ async function init() {
       window.history.replaceState(null, '', url);
     }
     historyReady = true;
+    // Set after the history call so each entry (and bookmark) carries its own view's title.
+    document.title = filterState.health
+      ? `Data Health & Completeness — ${SITE_TITLE}`
+      : filterState.insights
+        ? `Diaspora Insights & Pathways — ${SITE_TITLE}`
+        : DIRECTORY_TITLE;
   }
 
   window.addEventListener('popstate', () => {
@@ -1050,24 +1057,16 @@ async function init() {
   }
 
   // Insights and Health are views of this page, so switch in place instead of reloading 2,000 entries.
-  document.querySelector('.site-nav')?.addEventListener('click', (e) => {
+  document.querySelector<HTMLElement>('.site-nav')?.addEventListener('click', (e) => {
     const link = (e.target as HTMLElement).closest<HTMLAnchorElement>('a[data-view]');
-    if (!link) return;
+    // Modified or middle clicks keep the browser's open-in-new-tab/window behavior.
+    if (!link || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
     e.preventDefault();
     clearSearch();
     filterState.health = link.dataset.view === 'health';
     filterState.insights = link.dataset.view === 'insights';
     update();
     window.scrollTo({ top: 0 });
-  });
-
-  healthLink?.addEventListener('click', (e) => {
-    e.preventDefault();
-    filterState.health = !filterState.health;
-    if (filterState.health) {
-      filterState.insights = false;
-    }
-    update();
   });
 
   browserShelf.addEventListener('click', (event) => {

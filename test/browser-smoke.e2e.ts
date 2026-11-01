@@ -594,8 +594,17 @@ test('the + button opens the form and the header links switch views in place', a
   assert.doesNotMatch(await page.locator('#field-filter option:checked').innerText(), /\(\d/);
   assert.match(await page.locator('#field-filter option').nth(1).innerText(), /\(\d[\d,]*\)$/);
   const before = page.url();
+  const directoryTitle = await page.title();
+  // A modified click is left to the browser (new tab), so this page stays on the roster.
+  const [newTab] = await Promise.all([
+    context.waitForEvent('page'),
+    nav.locator('a[data-view="insights"]').click({ modifiers: ['ControlOrMeta'] }),
+  ]);
+  await newTab.close();
+  assert.equal(page.url(), before);
   await nav.locator('a[data-view="insights"]').click();
   assert.match(page.url(), /view=insights/);
+  assert.match(await page.title(), /^Diaspora Insights & Pathways — VietProfs$/);
   assert.notEqual(page.url(), before);
   assert.equal(await page.locator('.entry').count(), 0);
   await nav.locator('a[data-view="health"]').click();
@@ -607,6 +616,7 @@ test('the + button opens the form and the header links switch views in place', a
   await page.goBack();
   assert.equal(page.url(), before);
   await page.locator('.entry').first().waitFor();
+  assert.equal(await page.title(), directoryTitle);
   await page.goForward();
   assert.match(page.url(), /view=insights/);
   assert.equal(await page.locator('.entry').count(), 0);
