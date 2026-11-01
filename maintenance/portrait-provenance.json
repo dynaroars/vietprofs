@@ -9716,6 +9716,23 @@
       "identitySignals": [],
       "retrievedAt": "2026-11-01T17:37:54.390Z",
       "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2257": {
+      "name": "Annie Nguyen",
+      "outcome": "not_found",
+      "pageUrl": "https://profiles.ucsd.edu/annie.l.nguyen",
+      "imageUrl": "https://researcherprofiles.org/profile/Modules/CustomViewPersonGeneralInfo/PhotoHandler.ashx?NodeID=372655442&cachekey=12590d6f-c994-463d-8529-bbb94a655065",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T17:47:00.501Z",
+      "note": "2026-11-01: profile thumbnail failed --store checks (120x120 or portrait-aspect validation)"
     }
   }
 }

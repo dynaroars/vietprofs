@@ -98,7 +98,15 @@ Exclude adjunct, visiting, postdoctoral, affiliate/courtesy, graduate teaching-a
 industry-only, and other term-limited or part-time appointments. The burden is on showing
 full-time: a university post held alongside a clinical or hospital practice (a practising
 clinician, a "conjoint" or "works part time in clinical practice" line) is excluded unless an
-official page shows the university appointment itself is full-time. Plain `Instructor` requires
+official page shows the university appointment itself is full-time. Physicians employed by the
+university or its own health system (the UC campuses, Stanford, WashU, Baylor College of
+Medicine, and similar) qualify on their Clinical, HS Clinical, or plain professorial titles,
+including those who practise at an affiliated VA hospital. Canadian and Australian hospital-based
+physicians, and U.S. physicians in private practice, need an official page showing a full-time
+university appointment (owner decision, 2026-11-01). The University of California's salaried
+*Adjunct Professor* series is an exception to the adjunct exclusion: it counts on the `Research`
+(or `Teaching`) track at its stated level, except for fixed-term training posts such as UCLA
+Chemistry's Boyer/Cram/Libby teacher-scholar adjuncts. Plain `Instructor` requires
 case-by-case verification and should not be included from the title alone.
 
 ### Evaluating Research, Clinical, and Practice titles
