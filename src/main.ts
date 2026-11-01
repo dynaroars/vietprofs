@@ -1469,7 +1469,9 @@ async function init() {
   }
 
   console.info(`%cVietProfs ${__BUILD_COMMIT__}`, 'color:#2e9e64;font-weight:bold;font-size:16px');
-  console.info('The roster is open source: https://github.com/dynaroars/vietprofs');
+  console.info(
+    'Source code: https://github.com/dynaroars/vietprofs (roster data: all rights reserved, see LICENSE)',
+  );
 }
 
 init();
