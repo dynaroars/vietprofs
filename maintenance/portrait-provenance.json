@@ -9034,6 +9034,52 @@
       ],
       "retrievedAt": "2026-11-01T17:08:16.447Z",
       "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-2236": {
+      "name": "Adrien Nguyen-Huu",
+      "outcome": "found",
+      "pageUrl": "https://www.cee-m.fr/member/nguyen-huu-adrien/",
+      "imageUrl": "https://www.cee-m.fr/wp-content/uploads/2018/01/nguyen-huu.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T17:10:26.660Z"
+    },
+    "vp-2237": {
+      "name": "Dang Khoa Nguyen - University of Calgary",
+      "outcome": "found",
+      "pageUrl": "https://profiles.ucalgary.ca/dang-khoa-nguyen",
+      "imageUrl": "https://profiles.ucalgary.ca/sites/default/files/styles/ucws_profile_picture/public/Dang%2520Khoa%2520Nguyen.jpg?itok=4MasX8Gj",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T17:10:27.818Z"
+    },
+    "vp-2238": {
+      "name": "Khoa Nguyen - Western University",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-01T17:10:28.387Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2239": {
+      "name": "Tan T. Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-01T17:10:33.794Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     }
   }
 }
