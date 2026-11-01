@@ -3,21 +3,27 @@
   "title": "VietProfs Roster Schema",
   "description": "Schema for the Vietnamese and diaspora faculty roster (public/data.json)",
   "type": "array",
+  "minItems": 1,
   "items": {
     "type": "object",
     "required": [
       "id",
       "name",
-      "university"
+      "profileUrl",
+      "university",
+      "city",
+      "department",
+      "track",
+      "researchAreas"
     ],
     "properties": {
       "id": {
         "type": "string",
-        "pattern": "^vp-[0-9]{4}$",
+        "pattern": "^vp-[0-9]{4,}$",
         "description": "Immutable zero-padded 4-digit unique identifier"
       },
       "name": {
-        "type": "string",
+        "$ref": "#/$defs/nonEmptyString",
         "description": "Full name in Latin/Western format (Given-name-first)"
       },
       "vietnameseName": {
@@ -25,15 +31,19 @@
         "description": "Authoritative native name with Vietnamese diacritics (Surname-first)"
       },
       "university": {
-        "type": "string",
+        "$ref": "#/$defs/nonEmptyString",
         "description": "Canonical institution name"
       },
       "institutionType": {
-        "type": "string",
-        "description": "Type of institution (e.g. University, Research Institute)"
+        "enum": [
+          "University",
+          "Public research institute",
+          "Independent nonprofit research institute"
+        ],
+        "description": "Omitted for a university; otherwise the kind of research institute"
       },
       "city": {
-        "type": "string",
+        "$ref": "#/$defs/nonEmptyString",
         "description": "City of primary campus / appointment"
       },
       "state": {
@@ -45,7 +55,7 @@
         "description": "Country of institution"
       },
       "department": {
-        "type": "string",
+        "$ref": "#/$defs/nonEmptyString",
         "description": "Academic department, school, division, or laboratory"
       },
       "rank": {
@@ -82,67 +92,63 @@
       },
       "researchAreas": {
         "type": "array",
+        "minItems": 1,
         "items": {
           "type": "string"
         },
         "description": "Primary scholarly fields and research topics"
       },
       "profileUrl": {
-        "type": "string",
-        "format": "uri",
+        "$ref": "#/$defs/httpUrl",
         "description": "Official university faculty profile or directory link"
       },
       "websiteUrl": {
-        "type": "string",
-        "format": "uri",
+        "$ref": "#/$defs/httpUrl",
         "description": "Personal homepage, or the lab site when there is none"
       },
       "scholarUrl": {
         "type": "string",
-        "format": "uri",
         "description": "Google Scholar citation profile URL"
       },
       "linkedinUrl": {
         "type": "string",
-        "format": "uri",
         "description": "LinkedIn personal profile URL"
       },
       "portrait": {
         "type": "string",
-        "pattern": "^portraits/[0-9]{4}-.+\\.webp$",
+        "pattern": "^portraits/[a-z0-9][a-z0-9.-]*\\.webp$",
         "description": "Relative path to optimized WebP portrait file"
       },
       "portraitSource": {
-        "type": "string",
-        "format": "uri",
+        "$ref": "#/$defs/httpUrl",
         "description": "Public source URL where portrait was obtained"
       },
       "postdocInstitution": {
-        "type": "string",
+        "$ref": "#/$defs/nonEmptyString",
         "description": "Postdoctoral training institution"
       },
       "undergradInstitution": {
-        "type": "string",
+        "$ref": "#/$defs/nonEmptyString",
         "description": "Undergraduate alma mater"
       },
       "undergradYear": {
-        "type": "integer",
+        "$ref": "#/$defs/year",
         "description": "Undergraduate graduation year"
       },
       "msInstitution": {
-        "type": "string",
+        "$ref": "#/$defs/nonEmptyString",
         "description": "Master's degree institution"
       },
       "phdInstitution": {
-        "type": "string",
+        "$ref": "#/$defs/nonEmptyString",
         "description": "PhD / Doctoral degree institution"
       },
       "phdYear": {
-        "type": "integer",
+        "$ref": "#/$defs/year",
         "description": "PhD completion year"
       },
       "mdInstitution": {
-        "type": "string",
+        "$ref": "#/$defs/nonEmptyString",
         "description": "Medical degree institution"
       },
       "honors": {
@@ -150,26 +156,43 @@
         "items": {
           "type": "object",
           "required": [
-            "name"
+            "name",
+            "organization",
+            "category",
+            "year",
+            "source"
           ],
+          "additionalProperties": false,
           "properties": {
             "name": {
-              "type": "string"
+              "$ref": "#/$defs/nonEmptyString"
             },
             "organization": {
-              "type": "string"
+              "$ref": "#/$defs/nonEmptyString"
             },
             "category": {
-              "type": "string"
+              "enum": [
+                "academy",
+                "fellow",
+                "career_award",
+                "major_award",
+                "distinguished_professorship"
+              ]
             },
             "year": {
-              "type": [
-                "integer",
-                "null"
+              "description": "null when the year is unknown",
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/year"
+                },
+                {
+                  "type": "null"
+                }
               ]
             },
             "source": {
-              "type": "string"
+              "type": "string",
+              "pattern": "^https://"
             }
           }
         },
@@ -177,11 +200,42 @@
       },
       "directFields": {
         "type": "array",
+        "minItems": 1,
+        "uniqueItems": true,
         "items": {
-          "type": "string"
+          "enum": [
+            "honors",
+            "name",
+            "portrait",
+            "portraitSource",
+            "vietnameseName"
+          ]
         },
-        "description": "Fields directly asserted by repository owner or community submission"
+        "description": "Protected fields set by an owner or submitted direct update (sorted)"
       }
+    },
+    "additionalProperties": false,
+    "dependentRequired": {
+      "portrait": [
+        "portraitSource"
+      ],
+      "portraitSource": [
+        "portrait"
+      ]
+    }
+  },
+  "$defs": {
+    "nonEmptyString": {
+      "type": "string",
+      "pattern": "\\S"
+    },
+    "httpUrl": {
+      "type": "string",
+      "pattern": "^https?://"
+    },
+    "year": {
+      "type": "integer",
+      "minimum": 1900
     }
   }
 }

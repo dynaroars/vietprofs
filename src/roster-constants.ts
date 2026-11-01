@@ -29,61 +29,6 @@ export const INSTITUTION_TYPES = [
   'Independent nonprofit research institute',
 ] as const;
 
-export const HONOR_CATEGORIES = [
-  'academy',
-  'fellow',
-  'career_award',
-  'major_award',
-  'distinguished_professorship',
-] as const;
-
-export const REQUIRED_ROSTER_STRINGS = [
-  'id',
-  'name',
-  'profileUrl',
-  'university',
-  'city',
-  'department',
-] as const;
-
-export const ROSTER_FIELDS = [
-  ...REQUIRED_ROSTER_STRINGS,
-  'directFields',
-  'institutionType',
-  'websiteUrl',
-  'scholarUrl',
-  'linkedinUrl',
-  'confirmed',
-  'state',
-  'country',
-  'rank',
-  'track',
-  'vietnameseName',
-  'researchAreas',
-  'honors',
-  'portrait',
-  'portraitSource',
-  'postdocInstitution',
-  'phdInstitution',
-  'phdYear',
-  'mdInstitution',
-  'msInstitution',
-  'undergradInstitution',
-  'undergradYear',
-] as const;
-
-// Only facts the web can't settle stay protected after an owner submission. Appointment facts,
-// degrees, and links go stale when people move, so the current official page wins for those.
-export const PROTECTABLE_FIELDS = new Set<string>([
-  'name',
-  'vietnameseName',
-  'honors',
-  'portrait',
-  'portraitSource',
-]);
-
-export const HONOR_FIELDS = ['name', 'organization', 'category', 'year', 'source'] as const;
-
 export const UTC_TIMESTAMP_PATTERN = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$/;
 
 export const LOCATIONS: string[] = [

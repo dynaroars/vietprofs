@@ -924,26 +924,12 @@ test('escapeHtml safely handles undefined, null, and special characters', async 
 });
 
 test('roster data strictly satisfies roster.schema.json', async () => {
-  const { readFileSync } = await import('node:fs');
+  const { Ajv2020 } = await import('ajv/dist/2020.js');
   const schema = JSON.parse(
     readFileSync(new URL('../public/roster.schema.json', import.meta.url), 'utf8'),
   );
-  assert.equal(schema.type, 'array');
-  assert.ok(schema.items.properties.id);
-  assert.ok(schema.items.properties.name);
-  assert.ok(schema.items.properties.university);
-
-  for (const person of roster) {
-    assert.match(person.id, /^vp-\d{4,}$/, `Invalid ID format for ${person.name}`);
-    assert.ok(person.name && typeof person.name === 'string');
-    assert.ok(person.university && typeof person.university === 'string');
-    if (person.track) {
-      assert.ok(
-        schema.items.properties.track.enum.includes(person.track),
-        `Unknown track ${person.track} for ${person.name}`,
-      );
-    }
-  }
+  const validate = new Ajv2020({ allErrors: true }).compile(schema);
+  assert.ok(validate(roster), JSON.stringify(validate.errors?.slice(0, 5)));
 });
 
 test('landmark and marquee faculty maintain their verified major honors', () => {
