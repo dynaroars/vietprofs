@@ -9275,7 +9275,7 @@
     },
     "vp-2240": {
       "name": "Steve Nguyen",
-      "outcome": "needs_review",
+      "outcome": "not_found",
       "pageUrl": "https://profiles.ucsd.edu/steve.nguyen",
       "imageUrl": "https://researcherprofiles.org/profile/Modules/CustomViewPersonGeneralInfo/PhotoHandler.ashx?NodeID=144361575&cachekey=5fefc4a6-ddb1-439b-ba87-64bcd50a9fa6",
       "sourceType": "official_faculty",
@@ -9288,7 +9288,7 @@
         "stored_roster_url"
       ],
       "retrievedAt": "2026-11-01T17:14:22.173Z",
-      "note": "candidate requires visual review before acceptance"
+      "note": "2026-11-01: profile thumbnail failed --store checks (120x120 or portrait-aspect validation)"
     },
     "vp-2241": {
       "name": "Thuy Tran - University of California, Irvine",
@@ -9607,6 +9607,114 @@
       "outcome": "not_found",
       "identitySignals": [],
       "retrievedAt": "2026-11-01T17:27:25.477Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2247": {
+      "name": "Nini Tran",
+      "outcome": "not_found",
+      "pageUrl": "https://dentistry.ucla.edu/people/nini-tran-dds-phd",
+      "imageUrl": "https://dentistry.ucla.edu/sites/default/files/styles/sf_social_share/public/media/images/profile-NiniTran.jpg.webp?itok=hFK0gCsy",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T17:37:17.551Z",
+      "note": "candidate failed 120x120 or portrait-aspect validation"
+    },
+    "vp-2248": {
+      "name": "Linh Tran - University of California, Los Angeles",
+      "outcome": "found",
+      "pageUrl": "https://www.uclahealth.org/cancer/members/linh-tran",
+      "imageUrl": "https://www.uclahealth.org/sites/default/files/styles/portrait_3x4_008000_240x320/public/images/9e/linh-tran-phd.jpg?f=4555b4b6&itok=8N1lOXUc",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T17:37:18.421Z"
+    },
+    "vp-2249": {
+      "name": "Nam Tran - University of California, Davis",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-01T17:37:18.785Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2250": {
+      "name": "Johnson Tran",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-01T17:37:28.032Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2251": {
+      "name": "Jeannie Tran",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-01T17:37:33.339Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2252": {
+      "name": "Michele Pham",
+      "outcome": "not_found",
+      "pageUrl": "https://profiles.ucsf.edu/michele.pham",
+      "imageUrl": "https://researcherprofiles.org/profile/Modules/CustomViewPersonGeneralInfo/PhotoHandler.ashx?NodeID=24787888&cachekey=44744342-0bfd-4f6a-a3f4-60665b0550ce",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T17:37:39.857Z",
+      "note": "2026-11-01: profile thumbnail failed --store checks (120x120 or portrait-aspect validation)"
+    },
+    "vp-2253": {
+      "name": "Thoha Pham",
+      "outcome": "found",
+      "pageUrl": "https://anesthesia.ucsf.edu/people/thoha-pham",
+      "imageUrl": "https://anesthesia.ucsf.edu/sites/anesthesia.ucsf.edu/files/styles/profile_250x330/public/2024-06/thoha-pham.jpg?itok=vMDzqSKt",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T17:37:40.538Z"
+    },
+    "vp-2254": {
+      "name": "Trung Hoang Minh Pham",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-01T17:37:40.917Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2255": {
+      "name": "David Vu",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-01T17:37:47.478Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2256": {
+      "name": "Kenneth Tran - Stanford University",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-01T17:37:54.390Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     }
   }
