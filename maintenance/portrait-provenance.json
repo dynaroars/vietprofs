@@ -8464,6 +8464,84 @@
       ],
       "retrievedAt": "2026-11-01T16:46:38.115Z",
       "note": "candidate failed 120x120 or portrait-aspect validation"
+    },
+    "vp-2191": {
+      "name": "Thanh-Mai Vu",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-01T16:52:24.757Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2192": {
+      "name": "Hai Van Nguyen",
+      "outcome": "not_found",
+      "pageUrl": "https://mun.ca/pharmacy/research/dr-hai-van-nguyen/",
+      "imageUrl": "https://t.co/i/adsct?bci=3&dv=America%2FNew_York%26en-US%26Google%20Inc.%26Linux%20x86_64%26255%261280%26720%2624%2624%261280%26720%260%26na%261&eci=2&event_id=1fff389e-b038-4229-97dd-582844c43b4f&events=%5B%5B%22pageview%22%2C%7B%7D%5D%5D&integration=advertiser&p_id=Twitter&p_user_id=0&pl_id=c05c6ede-e2de-4339-800b-1496971888f1&tw_ch_fvl=Not%3AA-Brand%2F8.0.0.0%2CChromium%2F156.0.8078.4%2CHeadlessChrome%2F156.0.8078.4&tw_document_href=https%3A%2F%2Fmun.ca%2Fpharmacy%2Fresearch%2Fdr-hai-van-nguyen%2F&tw_engaged_ms=3&tw_iframe_status=0&tw_order_quantity=0&tw_pid_src=1&tw_sale_amount=0&tw_session_count=1&tw_session_id=1793551948798-741554705&tw_session_start=1&twpid=tw.1793551948798.807064689622858616&txn_id=o0k3k&type=javascript&version=2.4.12",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T16:52:27.807Z",
+      "note": "candidate image could not be downloaded"
+    },
+    "vp-2193": {
+      "name": "Quan Nguyen - University of Saskatchewan",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-01T16:52:32.888Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2194": {
+      "name": "Quan Nguyen - Thompson Rivers University",
+      "outcome": "found",
+      "pageUrl": "https://www.tru.ca/science/departments/compsci/people.html",
+      "imageUrl": "https://www.tru.ca/__shared/templates/science_headshots/img-quan-nguyen.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T16:52:38.569Z"
+    },
+    "vp-2195": {
+      "name": "Ha Thu Vu",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-01T16:52:39.925Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2196": {
+      "name": "Quang Trung Le",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-01T16:53:30.628Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2197": {
+      "name": "Krisztina Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://www.btk.elte.hu/en/staff/krisztina-nguyen",
+      "imageUrl": "https://sta.elte.hu/feltoltes/portre_5fb04c9051018.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T16:53:44.369Z",
+      "note": "MEDIUM candidate stored after visual review"
     }
   }
 }
