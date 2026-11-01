@@ -810,6 +810,11 @@ const FIELD_OVERRIDES = new Map([
     'School of Knowledge Science|Japan Advanced Institute of Science and Technology',
     'Computer & Information Sciences',
   ],
+  // JAIST's research area for reasoning, knowledge fusion, and data clustering.
+  [
+    'Co-creative Intelligence Research Area|Japan Advanced Institute of Science and Technology',
+    'Computer & Information Sciences',
+  ],
   // Osaka SANKEN lab is statistical causal inference / ML; the institute name would otherwise
   // fall through as Others.
   [

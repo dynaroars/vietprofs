@@ -8708,6 +8708,100 @@
       ],
       "retrievedAt": "2026-11-01T17:00:25.090Z",
       "note": "candidate requires visual review before acceptance"
+    },
+    "vp-2211": {
+      "name": "Toan Nguyen-Mau",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-01T17:02:36.952Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2212": {
+      "name": "Thi Hong Phuong Vu",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-01T17:02:43.324Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2213": {
+      "name": "Kim Thang Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://datamove.imag.fr/kimthang.nguyen/",
+      "imageUrl": "https://datamove.imag.fr/kimthang.nguyen/Images/thang.png",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T17:02:53.909Z"
+    },
+    "vp-2214": {
+      "name": "Phuong Hoan Le",
+      "outcome": "needs_review",
+      "pageUrl": "https://www.eur.nl/en/people/phuong-hoan-le",
+      "imageUrl": "https://www.eur.nl/sites/corporate/files/styles/profile/public/externals/703a343ee6233726de22e95c3731d818.jpg.avif?itok=9e9B1MZv&v=1793532200",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T17:02:55.225Z",
+      "note": "candidate requires visual review before acceptance"
+    },
+    "vp-2215": {
+      "name": "Son Bui",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-01T17:02:56.232Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2216": {
+      "name": "Phong Ngo",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-01T17:03:01.059Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2217": {
+      "name": "Robert Phuong Ngo",
+      "outcome": "found",
+      "pageUrl": "https://facultyprofile.csuohio.edu/en/persons/robert-ngo/",
+      "imageUrl": "https://facultyprofile.csuohio.edu/files-asset/28205267/photo.png?w=160&f=jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T17:03:12.806Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-2218": {
+      "name": "Phat Tan Dang",
+      "outcome": "found",
+      "pageUrl": "https://faculty.uci.edu/profile/?facultyId=6855",
+      "imageUrl": "https://faculty.uci.edu/get_image?facultyId=6855",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T17:03:13.348Z",
+      "note": "MEDIUM candidate stored after visual review"
     }
   }
 }
