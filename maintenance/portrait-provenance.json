@@ -8542,6 +8542,66 @@
       ],
       "retrievedAt": "2026-11-01T16:53:44.369Z",
       "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-2198": {
+      "name": "Robert Pham Xuan",
+      "outcome": "found",
+      "pageUrl": "https://www.fsv.uni-jena.de/27016/professur-inklusion-und-heterogenitaet-im-bildungssystem",
+      "imageUrl": "https://www.fsv.uni-jena.de/fsvmedia/174097/robert-pham-xuanatuni-jena-de.webp?height=412&width=320",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T16:56:59.085Z"
+    },
+    "vp-2199": {
+      "name": "Phong Le",
+      "outcome": "found",
+      "pageUrl": "https://www.st-andrews.ac.uk/computer-science/people/pl200/",
+      "imageUrl": "https://portal.st-andrews.ac.uk/staff-photos/pl200/medium",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T16:57:32.171Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-2200": {
+      "name": "Phong T. Le",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-01T16:57:06.675Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2201": {
+      "name": "Bao Do",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-01T16:57:11.539Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2202": {
+      "name": "Duy Nguyen - Yeshiva University",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-01T16:57:17.610Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2203": {
+      "name": "Khoa B. Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-01T16:57:22.243Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     }
   }
 }
