@@ -436,7 +436,7 @@ a.entry-name:focus-visible {
   display: inline-flex;
   align-items: center;
   padding: 0.25rem 0.65rem;
-  background: var(--bg-hover);
+  background: var(--hover-bg);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-full);
   font-size: var(--text-xs);
@@ -462,21 +462,20 @@ a.entry-name:focus-visible {
   user-select: none;
 }
 
+/* Heat-tier colours shared by the map countries and the legend: light value, then dark. */
+.world-map-section {
+  --map-heat-0: light-dark(#e2e8f0, #161b22);
+  --map-heat-1: light-dark(#a7f3d0, #064e3b);
+  --map-heat-2: light-dark(#34d399, #059669);
+  --map-heat-3: #10b981;
+  --map-heat-4: light-dark(#d97706, #f59e0b);
+}
+
 .world-map-ocean {
-  fill: rgba(0, 0, 0, 0.18);
-}
-
-:root[data-theme='light'] .world-map-ocean,
-[data-theme='light'] .world-map-ocean {
-  fill: #f1f5f9;
-}
-
-:root[data-theme='dark'] .world-map-ocean,
-[data-theme='dark'] .world-map-ocean {
-  fill: #0d1117;
+  fill: light-dark(#f1f5f9, rgba(0, 0, 0, 0.18));
 }
 .world-map-country {
-  stroke: rgba(255, 255, 255, 0.14);
+  stroke: light-dark(#cbd5e1, rgba(255, 255, 255, 0.14));
   stroke-width: 0.6;
   stroke-linejoin: round;
   transition:
@@ -486,55 +485,21 @@ a.entry-name:focus-visible {
   cursor: pointer;
   outline: none;
 }
-
-:root[data-theme='light'] .world-map-country,
-[data-theme='light'] .world-map-country {
-  stroke: #cbd5e1;
-}
 .world-map-country.heat-0 {
-  fill: #161b22;
+  fill: var(--map-heat-0);
   cursor: default;
 }
-
-:root[data-theme='light'] .world-map-country.heat-0,
-[data-theme='light'] .world-map-country.heat-0 {
-  fill: #e2e8f0;
-}
-
 .world-map-country.heat-1 {
-  fill: #064e3b;
+  fill: var(--map-heat-1);
 }
-
-:root[data-theme='light'] .world-map-country.heat-1,
-[data-theme='light'] .world-map-country.heat-1 {
-  fill: #a7f3d0;
-}
-
 .world-map-country.heat-2 {
-  fill: #059669;
+  fill: var(--map-heat-2);
 }
-
-:root[data-theme='light'] .world-map-country.heat-2,
-[data-theme='light'] .world-map-country.heat-2 {
-  fill: #34d399;
-}
-
 .world-map-country.heat-3 {
-  fill: #10b981;
+  fill: var(--map-heat-3);
 }
-
-:root[data-theme='light'] .world-map-country.heat-3,
-[data-theme='light'] .world-map-country.heat-3 {
-  fill: #10b981;
-}
-
 .world-map-country.heat-4 {
-  fill: #f59e0b;
-}
-
-:root[data-theme='light'] .world-map-country.heat-4,
-[data-theme='light'] .world-map-country.heat-4 {
-  fill: #d97706;
+  fill: var(--map-heat-4);
 }
 .world-map-country.is-origin {
   fill: #dc2626;
@@ -564,63 +529,33 @@ a.entry-name:focus-visible {
 }
 
 .pin-badge-bg {
-  fill: #1e293b;
-  stroke: #475569;
+  fill: light-dark(#ffffff, #1e293b);
+  stroke: light-dark(#94a3b8, #475569);
   stroke-width: 1.2;
 }
 
 .world-map-pin.heat-1 .pin-badge-bg {
-  fill: #064e3b;
-  stroke: #34d399;
+  fill: light-dark(#ecfdf5, #064e3b);
+  stroke: light-dark(#059669, #34d399);
 }
 
 .world-map-pin.heat-2 .pin-badge-bg {
-  fill: #065f46;
-  stroke: #6ee7b7;
+  fill: light-dark(#d1fae5, #065f46);
+  stroke: light-dark(#047857, #6ee7b7);
 }
 
 .world-map-pin.heat-3 .pin-badge-bg {
-  fill: #047857;
-  stroke: #a7f3d0;
+  fill: light-dark(#a7f3d0, #047857);
+  stroke: light-dark(#065f46, #a7f3d0);
 }
 
 .world-map-pin.heat-4 .pin-badge-bg {
-  fill: #78350f;
-  stroke: #fbbf24;
-}
-
-:root[data-theme='light'] .pin-badge-bg,
-[data-theme='light'] .pin-badge-bg {
-  fill: #ffffff;
-  stroke: #94a3b8;
-}
-
-:root[data-theme='light'] .world-map-pin.heat-1 .pin-badge-bg,
-[data-theme='light'] .world-map-pin.heat-1 .pin-badge-bg {
-  fill: #ecfdf5;
-  stroke: #059669;
-}
-
-:root[data-theme='light'] .world-map-pin.heat-2 .pin-badge-bg,
-[data-theme='light'] .world-map-pin.heat-2 .pin-badge-bg {
-  fill: #d1fae5;
-  stroke: #047857;
-}
-
-:root[data-theme='light'] .world-map-pin.heat-3 .pin-badge-bg,
-[data-theme='light'] .world-map-pin.heat-3 .pin-badge-bg {
-  fill: #a7f3d0;
-  stroke: #065f46;
-}
-
-:root[data-theme='light'] .world-map-pin.heat-4 .pin-badge-bg,
-[data-theme='light'] .world-map-pin.heat-4 .pin-badge-bg {
-  fill: #fef3c7;
-  stroke: #d97706;
+  fill: light-dark(#fef3c7, #78350f);
+  stroke: light-dark(#d97706, #fbbf24);
 }
 
 .pin-badge-text {
-  fill: #ffffff;
+  fill: light-dark(#0f172a, #ffffff);
   font-family: var(--font-body);
   font-size: 8.5px;
   font-weight: 700;
@@ -628,14 +563,8 @@ a.entry-name:focus-visible {
   pointer-events: none;
 }
 
-:root[data-theme='light'] .pin-badge-text,
-[data-theme='light'] .pin-badge-text {
-  fill: #0f172a;
-}
-
-:root[data-theme='light'] .world-map-pin.heat-4 .pin-badge-text,
-[data-theme='light'] .world-map-pin.heat-4 .pin-badge-text {
-  fill: #78350f;
+.world-map-pin.heat-4 .pin-badge-text {
+  fill: light-dark(#78350f, #ffffff);
 }
 
 .world-map-pin:hover,
@@ -759,49 +688,23 @@ a.entry-name:focus-visible {
   width: 10px;
   height: 10px;
   border-radius: 2px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-:root[data-theme='light'] .legend-color,
-[data-theme='light'] .legend-color {
-  border-color: rgba(0, 0, 0, 0.15);
+  border: 1px solid light-dark(rgba(0, 0, 0, 0.15), rgba(255, 255, 255, 0.2));
 }
 
 .legend-cell.heat-0 .legend-color {
-  background: #161b22;
+  background: var(--map-heat-0);
 }
 .legend-cell.heat-1 .legend-color {
-  background: #064e3b;
+  background: var(--map-heat-1);
 }
 .legend-cell.heat-2 .legend-color {
-  background: #059669;
+  background: var(--map-heat-2);
 }
 .legend-cell.heat-3 .legend-color {
-  background: #10b981;
+  background: var(--map-heat-3);
 }
 .legend-cell.heat-4 .legend-color {
-  background: #f59e0b;
-}
-
-:root[data-theme='light'] .legend-cell.heat-0 .legend-color,
-[data-theme='light'] .legend-cell.heat-0 .legend-color {
-  background: #e2e8f0;
-}
-:root[data-theme='light'] .legend-cell.heat-1 .legend-color,
-[data-theme='light'] .legend-cell.heat-1 .legend-color {
-  background: #a7f3d0;
-}
-:root[data-theme='light'] .legend-cell.heat-2 .legend-color,
-[data-theme='light'] .legend-cell.heat-2 .legend-color {
-  background: #34d399;
-}
-:root[data-theme='light'] .legend-cell.heat-3 .legend-color,
-[data-theme='light'] .legend-cell.heat-3 .legend-color {
-  background: #10b981;
-}
-:root[data-theme='light'] .legend-cell.heat-4 .legend-color,
-[data-theme='light'] .legend-cell.heat-4 .legend-color {
-  background: #d97706;
+  background: var(--map-heat-4);
 }
 
 .legend-cell.is-origin-legend .origin-color {

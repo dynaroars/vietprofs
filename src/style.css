@@ -286,15 +286,6 @@ h1 {
   color: var(--favorite-hover);
 }
 
-[data-theme='light'] .tag-track.tag-emeritus,
-:root[data-theme='light'] .tag-track.tag-emeritus,
-[data-theme='light'] .tag.tag-emeritus,
-:root[data-theme='light'] .tag.tag-emeritus {
-  background: #fef3c7;
-  border-color: #d97706;
-  color: #92400e;
-}
-
 .tag-track.tag-deceased,
 .tag.tag-deceased {
   background: #f1f5f9;
@@ -302,14 +293,6 @@ h1 {
   color: #334155;
 }
 
-[data-theme='light'] .tag-track.tag-deceased,
-:root[data-theme='light'] .tag-track.tag-deceased,
-[data-theme='light'] .tag.tag-deceased,
-:root[data-theme='light'] .tag.tag-deceased {
-  background: #f1f5f9;
-  border-color: #64748b;
-  color: #334155;
-}
 .subpage #app {
   padding-top: 2.5rem;
   padding-bottom: 3.5rem;
