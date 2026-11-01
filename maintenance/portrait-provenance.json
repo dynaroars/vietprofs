@@ -8948,6 +8948,92 @@
         "stored_roster_url"
       ],
       "retrievedAt": "2026-11-01T17:05:14.029Z"
+    },
+    "vp-2229": {
+      "name": "Diep Ca",
+      "outcome": "found",
+      "pageUrl": "https://www.su.edu/faculty-staff/faculty/diep-ca/",
+      "imageUrl": "https://www.su.edu/faculty-staff/wp-content/uploads/sites/2/2014/07/Diep-Ca.png",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T17:07:51.260Z"
+    },
+    "vp-2230": {
+      "name": "Monica M. Trieu",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-01T17:07:51.639Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2231": {
+      "name": "Van T. Nghiem",
+      "outcome": "found",
+      "pageUrl": "https://www.uab.edu/soph/home/about/faculty/nghiem-van-t",
+      "imageUrl": "https://www.uab.edu/soph/home/images/photos/staff/van-nghiem.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T17:07:57.011Z"
+    },
+    "vp-2232": {
+      "name": "T. Hang Nghiem-Rao",
+      "outcome": "not_found",
+      "pageUrl": "https://fcd.mcw.edu/?faculty/view/name/T_Hang_Nghiem-Rao_MD/id/4743",
+      "imageUrl": "https://fcd.mcw.edu/?faculty/pic/&name=T_Hang_Nghiem-Rao_MD&h=160&w=110&zc=1&q=100&src=facultyimages/7a2df88294c371f5877ddbe0d40cd35e.4743.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T17:07:58.143Z",
+      "note": "candidate failed 120x120 or portrait-aspect validation"
+    },
+    "vp-2233": {
+      "name": "Hieu H. Ton-That",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-01T17:07:58.874Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2234": {
+      "name": "Linh T. B. Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-01T17:08:03.580Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2235": {
+      "name": "Hanh (Blue) Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://www.southampton.ac.uk/people/65gkjr/doctor-blue-nguyen",
+      "imageUrl": "https://www.southampton.ac.uk/sites/default/files/styles/max_1300x1300/public/staff/thhn1n17-21775.jpg.webp?h=4ffd8fc4&itok=451wXxkd",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T17:08:16.447Z",
+      "note": "MEDIUM candidate stored after visual review"
     }
   }
 }
