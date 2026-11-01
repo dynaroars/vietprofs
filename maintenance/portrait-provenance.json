@@ -8162,10 +8162,17 @@
     },
     "vp-2160": {
       "name": "Linh Truong",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-21T11:03:54.807Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://public.websites.umich.edu/~tlinh/",
+      "imageUrl": "https://public.websites.umich.edu/~tlinh/Linh_IAS.jpg",
+      "sourceType": "personal_homepage",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-01T18:00:00.000Z",
+      "note": "2026-11-01 owner lead: homepage (Cloudflare-gated) labels it 'Photo of Linh Truong' (Dan Komoda / IAS); fetched via Wayback 20240428175045; cropped to exclude background busts"
     },
     "vp-1830": {
       "name": "Tram Truong-Huu",
