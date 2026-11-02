@@ -584,6 +584,7 @@ test('the + button opens the form and the header links switch views in place', a
   assert.deepEqual(await page.locator('.controls #sort-order option').allInnerTexts(), [
     'Random order',
     'Most recently added',
+    'Most recently updated',
     'Last name',
     'First name',
   ]);
@@ -660,6 +661,35 @@ test('data health reports the generated HTML inventory and links standalone page
   await chart.hover();
   assert.equal(await page.locator('.growth-tooltip').isVisible(), true);
   assert.match(await textOf(page.locator('.growth-tooltip')), /source lines/);
+  await page.close();
+});
+
+test('health recent-updates link opens the directory sorted by update date', async () => {
+  const page = await context.newPage();
+  await page.goto(`${baseUrl}/?view=health`, { waitUntil: 'networkidle' });
+  await page.evaluate(() => localStorage.removeItem('vietprofs:favorites'));
+  await page.locator('.recent-updates-link').click();
+  await page.locator('.entry').first().waitFor();
+  assert.equal(await page.locator('#sort-order').inputValue(), 'recent');
+  assert.equal(new URL(page.url()).searchParams.get('sort'), 'recent');
+  const updates = await page.evaluate(async () => (await fetch('/updates.json')).json());
+  const ids = await page.locator('.entry-name').evaluateAll((links) =>
+    links.map((link) =>
+      (link.getAttribute('href') ?? '')
+        .split('/')
+        .at(-1)!
+        .replace(/\.html$/, ''),
+    ),
+  );
+  assert.ok(ids.length > 1);
+  const dates = ids.map((id) => Date.parse(updates[id] ?? '') || 0);
+  assert.ok(dates[0] > 0, 'the sorted entries must match the updates data');
+  assert.deepEqual(
+    dates,
+    [...dates].sort((a, b) => b - a),
+  );
+  await page.reload({ waitUntil: 'networkidle' });
+  assert.equal(await page.locator('#sort-order').inputValue(), 'recent');
   await page.close();
 });
 

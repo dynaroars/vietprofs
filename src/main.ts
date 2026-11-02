@@ -216,6 +216,7 @@ function renderShell() {
       <select id="sort-order" class="field-select sort-select" aria-label="Sort order">
         <option value="random">Random order</option>
         <option value="vp-newest">Most recently added</option>
+        <option value="recent">Most recently updated</option>
         <option value="last-name">Last name</option>
         <option value="first-name">First name</option>
       </select>
@@ -327,7 +328,11 @@ function sortRoster(roster: Roster, order: string): Roster {
           ? (a: RosterEntry, b: RosterEntry) =>
               (Number.parseInt(b.id.replace(/\D/g, ''), 10) || 0) -
               (Number.parseInt(a.id.replace(/\D/g, ''), 10) || 0)
-          : () => 0;
+          : order === 'recent'
+            ? (a: RosterEntry, b: RosterEntry) =>
+                (Date.parse(b.lastUpdatedAt ?? '') || 0) -
+                  (Date.parse(a.lastUpdatedAt ?? '') || 0) || byName('last')(a, b)
+            : () => 0;
 
   return [...roster].sort(
     (a, b) => Number(favorites.has(b.id)) - Number(favorites.has(a.id)) || bySelectedOrder(a, b),
@@ -908,7 +913,9 @@ async function init() {
       initialTrack = requestedTrack;
     }
     setFilterValues({ location: initialLocation, field: initialField, track: initialTrack });
-    sortSelect.value = ['random', 'last-name', 'first-name', 'vp-newest'].includes(requestedSort)
+    sortSelect.value = ['random', 'last-name', 'first-name', 'vp-newest', 'recent'].includes(
+      requestedSort,
+    )
       ? requestedSort
       : 'random';
   }
