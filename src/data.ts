@@ -934,6 +934,7 @@ const FIELD_OVERRIDES = new Map([
     'Centre for Atom Optics and Ultrafast Spectroscopy|Swinburne University of Technology',
     'Physics & Astronomy',
   ],
+  ['Optical Sciences Centre|Swinburne University of Technology', 'Physics & Astronomy'],
   [
     'Light-Matter Interactions for Quantum Technologies Unit|Okinawa Institute of Science and Technology',
     'Physics & Astronomy',
