@@ -1,62 +1,8 @@
 # VietProfs
 
-[VietProfs](https://vietprofs.roars.dev) is a searchable, community-maintained directory of Vietnamese and Vietnamese-diaspora academics at universities and eligible public or nonprofit research institutes worldwide, covering tenure-line, teaching, research, and clinical faculty (see [`ROSTER_MAINTENANCE.md`](./ROSTER_MAINTENANCE.md) for exact eligibility). [Read the paper](https://vietprofs.roars.dev/vietprofs.pdf) ([arXiv](https://arxiv.org/abs/2609.06091)) describing the project — the site's copy is kept current; the arXiv listing is a versioned snapshot.
+[VietProfs](https://vietprofs.roars.dev) is a searchable, AI and community-maintained directory of Vietnamese and Vietnamese-diaspora academics at universities and eligible public or nonprofit research institutes worldwide, covering tenure-line, teaching, research, and clinical faculty (see [`ROSTER_MAINTENANCE.md`](./ROSTER_MAINTENANCE.md) for exact eligibility). [Read the paper](https://vietprofs.roars.dev/vietprofs.pdf) ([arXiv](https://arxiv.org/abs/2609.06091)) describing the project — the site's copy is kept current; the arXiv listing is a versioned snapshot.
 
 This site is maintained by users all around the world (e.g., [submitting new or editing existing entries](https://vietprofs.roars.dev/submit.html)) _and_ AI bots that continuously validate and update the directory database. The site itself documents its search, filters, and keyboard shortcuts (press `?` there for help).
-
-Repository documentation:
-
-- [`README.md`](./README.md): project overview, commands, and operating instructions.
-- [`ROSTER_MAINTENANCE.md`](./ROSTER_MAINTENANCE.md): authoritative eligibility, evidence, and roster-editing policy.
-- [`AGENTS.md`](./AGENTS.md): instructions for automated contributors, including where each kind of change is submitted.
-- [`TASKS/`](./TASKS/README.md): per-task agent playbooks (discovery, portraits, links, honors, relationships, PR/Issue audit).
-- [`paper/PAPER_NOTES.md`](./paper/PAPER_NOTES.md): reproducible manuscript metrics, claim audit, and publication checklist.
-- [`TASKS/AUTOMATION.md`](./TASKS/AUTOMATION.md): scheduled maintenance agents, their cadence, and how the auditor reviews their PRs/Issues.
-
-## Commands
-
-```bash
-npm ci
-npm run dev       # start the Vite development server
-npm run build     # build the production site to dist/
-npm run preview   # preview the production build
-npm run format    # format source, styles, tests, and configuration
-npm run lint      # check formatting and lint rules
-npm run typecheck # check TypeScript modules
-npm test          # validate data and run unit/UI tests
-npm run test:e2e  # run browser smoke tests
-npm run analyze   # print snapshot counts for paper/PAPER_NOTES.md and the paper
-npm run figures   # rebuild and recapture the paper's screenshot figures
-```
-
-The manuscript source lives under [`paper/`](./paper/). After a roster change it cites, run `npm
-run analyze` and `npm run figures` to refresh its snapshot values and screenshots, update
-`paper/PAPER_NOTES.md`/`paper/paper.tex` accordingly, rebuild the PDF (`cd paper && latexmk -pdf
-paper.tex`), and copy the result to `public/vietprofs.pdf` — that copy isn't built in CI,
-so it must be committed manually.
-
-The health view includes an interactive Project & Archive Growth History graph: roster size,
-institutions, countries, portraits, honors, and application source lines (TypeScript, CSS, HTML
-in `src/`). `npm run build-stats-history` reconstructs daily snapshots from local Git history
-on dev/build; it makes no network requests and does not run during unit tests. Full history
-is needed to show the complete timeline. Counts describe the repository's archive, not
-historical changes in the academic population.
-
-Scripts and tests run directly on Node 24; `npm run typecheck` checks their TypeScript types.
-Biome formats with two-space indentation, single quotes, and semicolons; `npm test` applies it
-automatically, so CI lint never fails on formatting alone. Unused code is a warning, not an error.
-CSS specificity ordering is not linted because shared components intentionally use more specific
-overrides. Generated map
-coordinates and roster data are excluded from formatting. Shared styles live in `src/style.css` and
-`src/roars-ui.css`; directory, submission, and connection styles load only on their own pages.
-Generated profiles and hubs use the shared styles in `public/profile.css`.
-
-VietProfs also owns the reusable UI baseline for sibling projects `../cspicks` and `../people`.
-`src/roars-ui.css` holds shared tokens and components; `src/search-kit.ts` and
-`src/back-to-top.ts` supply shared behavior. Keep these independent of roster data and
-VietProfs page layouts. CS Picks and the GMU CS directory vendor them unchanged through
-`npm --prefix ../cspicks run sync:vietprofs-ui` and `npm --prefix ../people run sync:vietprofs-ui`. Add reusable styling here first, preserve existing
-selectors and tokens, and keep project-specific overrides in the consuming project.
 
 
 ## Data and contributions
