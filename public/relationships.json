@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-31T14:09:18.000Z",
+  "updatedAt": "2026-11-03T14:09:28.000Z",
   "relationships": [
     {
       "id": "rel-coauthor-vp-0015-vp-0018",
@@ -3058,6 +3058,21 @@
       "verifiedAt": "2026-10-31T14:09:18.000Z",
       "direct": false,
       "notes": ""
+    },
+    {
+      "id": "rel-doctoral-advisor-vp-0482-vp-2220",
+      "type": "doctoral-advisor",
+      "sourceId": "vp-0482",
+      "targetId": "vp-2220",
+      "sources": [
+        "https://profiles.howard.edu/minh-tam-trinh",
+        "https://mqtrinh.github.io/"
+      ],
+      "evidence": "The official Howard University profile for Minh-Tam Trinh (vp-2220) states he received his PhD in 2020 from the University of Chicago, advised by Châu Ngô and Victor Ginzburg; Châu Ngô matches Bao Chau Ngo (vp-0482), a mathematician formerly at the University of Chicago.",
+      "works": [],
+      "verifiedAt": "2026-11-03T14:09:28.000Z",
+      "direct": false,
+      "notes": "Co-advisor Victor Ginzburg is not in the roster."
     }
   ]
 }
