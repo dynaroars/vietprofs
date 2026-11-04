@@ -1277,6 +1277,31 @@ const FIELD_OVERRIDES = new Map([
     'École d’économie de la Sorbonne, Centre d’économie de la Sorbonne (CES, UMR 8174)|Université Paris 1 Panthéon-Sorbonne',
     'Business & Economics',
   ],
+  [
+    'Département de Lettres, Faculté des lettres, langues et sciences humaines; Lettres, Idées, Savoirs (LIS)|Université Paris-Est Créteil',
+    'Humanities',
+  ],
+  ['Faculté de droit|Paris-Panthéon-Assas University', 'Law & Public Affairs'],
+  [
+    'Centre de Recherche Droit Dauphine (CR2D), École Droit Dauphine|Université Paris Dauphine - PSL',
+    'Law & Public Affairs',
+  ],
+  [
+    'Faculté de Droit et des sciences économiques, Centre de droit économique et du développement Yves Serra (CDED YS)|Université de Perpignan Via Domitia',
+    'Law & Public Affairs',
+  ],
+  [
+    'IUT de Villetaneuse; Laboratoire de Traitement et de Transport de l’Information (L2TI), Institut Galilée|Université Sorbonne Paris Nord',
+    'Engineering',
+  ],
+  [
+    'Éco-anthropologie (UMR 7206), Anthropologie génétique|CNRS (Centre National de la Recherche Scientifique)',
+    'Biological & Biomedical Sciences',
+  ],
+  [
+    'Algorithmic Foundations and Cryptography|CISPA Helmholtz Center for Information Security',
+    'Computer & Information Sciences',
+  ],
 ]);
 
 // Buckets granular `department` values into the broad fields above. Order matters, and is not
