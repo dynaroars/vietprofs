@@ -10681,6 +10681,126 @@
         "stored_roster_url"
       ],
       "retrievedAt": "2026-11-04T21:51:33.678Z"
+    },
+    "vp-2298": {
+      "name": "Katrina Luong",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-04T21:53:13.581Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2299": {
+      "name": "Trang Bui - University of Texas Health Science Center at San Antonio",
+      "outcome": "found",
+      "pageUrl": "https://directory.uthscsa.edu/academics/profile/buit1",
+      "imageUrl": "https://directory.uthscsa.edu/sites/directory/files/bui-labcoat-med-322x450.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T21:53:58.716Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-2300": {
+      "name": "Jennifer Duong",
+      "outcome": "found",
+      "pageUrl": "https://profiles.ucsf.edu/jennifer.duong",
+      "imageUrl": "https://researcherprofiles.org/profile/Modules/CustomViewPersonGeneralInfo/PhotoHandler.ashx?NodeID=460685461&cachekey=13a99df9-0f2f-46bc-8106-0c36707b4f61",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T21:53:59.185Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-2301": {
+      "name": "Jonathan Anh Quan Duong",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-04T21:53:19.838Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2302": {
+      "name": "Julie Huynh",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-04T21:53:24.699Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2303": {
+      "name": "DoQuyen Huynh",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-04T21:53:36.955Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2304": {
+      "name": "Tammy Duong",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-04T21:53:43.269Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2305": {
+      "name": "Julie L. Le",
+      "outcome": "needs_review",
+      "pageUrl": "https://profiles.ucsd.edu/julie.le",
+      "imageUrl": "https://researcherprofiles.org/profile/Modules/CustomViewPersonGeneralInfo/PhotoHandler.ashx?NodeID=193459&cachekey=14ccd39e-0f8c-4d66-9de6-902aca2758e3",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T21:53:49.308Z",
+      "note": "candidate requires visual review before acceptance"
+    },
+    "vp-2306": {
+      "name": "Ngoc Nhu Tran",
+      "outcome": "not_found",
+      "pageUrl": "https://stanfordhealthcare.org/doctors/t/ngoc-tran.html",
+      "imageUrl": "https://stanfordhealthcare.org/content/dam/SHC/doctors-medicalstaff/t/tran-ngoc.png",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T21:53:49.661Z",
+      "note": "candidate image could not be downloaded"
+    },
+    "vp-2307": {
+      "name": "Chinh Duy Le",
+      "outcome": "found",
+      "pageUrl": "https://faculty.uci.edu/profile/?facultyId=5204",
+      "imageUrl": "https://faculty.uci.edu/get_image?facultyId=5204",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T21:54:00.096Z",
+      "note": "MEDIUM candidate stored after visual review"
     }
   }
 }
