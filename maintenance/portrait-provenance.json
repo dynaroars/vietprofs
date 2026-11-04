@@ -13446,6 +13446,117 @@
       ],
       "retrievedAt": "2026-11-04T22:48:35.698Z",
       "note": "candidate requires visual review before acceptance"
+    },
+    "vp-2510": {
+      "name": "Duc Duy Pham",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-04T22:50:55.727Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2511": {
+      "name": "Thao Dang",
+      "outcome": "found",
+      "pageUrl": "https://www.hs-esslingen.de/personen/thao-dang",
+      "imageUrl": "https://www.hs-esslingen.de/fileadmin/_processed_/c/9/csm_thao_dang_eb5b2e57a0.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T22:51:08.250Z"
+    },
+    "vp-2512": {
+      "name": "Thi Chiem Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-04T22:51:09.621Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2513": {
+      "name": "Ngoc Bich Ly Le",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-04T22:51:28.454Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2514": {
+      "name": "Duy Tho Pham",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-04T22:51:51.559Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2515": {
+      "name": "Trong Quyen Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-04T22:52:11.198Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2516": {
+      "name": "Thi Mai Tran",
+      "outcome": "found",
+      "pageUrl": "https://pro.univ-lille.fr/thi-mai-tran/",
+      "imageUrl": "https://pro.univ-lille.fr/fileadmin/_processed_/3/4/csm_thi_mai_tran_41689763bb.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T22:53:07.488Z"
+    },
+    "vp-2517": {
+      "name": "Bien Do Bui",
+      "outcome": "found",
+      "pageUrl": "https://sedyl.cnrs.fr/membres/membres-du-laboratoire/",
+      "imageUrl": "https://sedyl.cnrs.fr/wp-content/uploads/2022/04/Bien-Do-Bui.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T22:53:08.727Z"
+    },
+    "vp-2518": {
+      "name": "Luc-Sy Tran",
+      "outcome": "found",
+      "pageUrl": "https://pro.univ-lille.fr/luc-sy-tran",
+      "imageUrl": "https://pro.univ-lille.fr/fileadmin/_processed_/4/d/csm_luc-sy_tran_91c33e8d89.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T22:53:22.341Z"
+    },
+    "vp-2519": {
+      "name": "Hong-Quan Do",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-04T22:53:23.537Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2520": {
+      "name": "Kim Huynh-Besancenot",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-04T22:53:41.447Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     }
   }
 }

@@ -1213,6 +1213,16 @@ const FIELD_OVERRIDES = new Map([
     "Cryptography, De Vinci Research Center|École Supérieure d'Ingénieurs Léonard de Vinci",
     'Computer & Information Sciences',
   ],
+  ['Department of Peace Studies|Payap University', 'Social & Behavioral Sciences'],
+  ['Centre for Textile Science and Technology (2C2T)|University of Minho', 'Engineering'],
+  [
+    'Institut national supérieur du professorat et de l’éducation (INSPÉ)|Université de Picardie Jules Verne',
+    'Education',
+  ],
+  [
+    'DRIVE Laboratory — Mobilité, Énergie, Environnement et Propulsion|Université Bourgogne Europe',
+    'Engineering',
+  ],
 ]);
 
 // Buckets granular `department` values into the broad fields above. Order matters, and is not
