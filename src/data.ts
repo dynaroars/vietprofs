@@ -1304,6 +1304,10 @@ const FIELD_OVERRIDES = new Map([
   ],
   ["Faculté de droit et science politique, GREDEG|Université Côte d'Azur", 'Law & Public Affairs'],
   ['UFR SITEC, LEME — Energy Science and Technology|Université Paris Nanterre', 'Engineering'],
+  [
+    'Sciences économiques, sociales et de gestion, AgroToulouse (ENSAT)|Toulouse INP',
+    'Agricultural & Natural Resource Sciences',
+  ],
 ]);
 
 // Buckets granular `department` values into the broad fields above. Order matters, and is not

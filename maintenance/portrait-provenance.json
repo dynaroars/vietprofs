@@ -14410,6 +14410,67 @@
         "stored_roster_url"
       ],
       "retrievedAt": "2026-11-04T23:27:08.673Z"
+    },
+    "vp-2591": {
+      "name": "Huyen Le - University of the West of England",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-04T23:28:33.469Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2592": {
+      "name": "Thuy Luyen",
+      "outcome": "not_found",
+      "pageUrl": "https://www.sunderland.ac.uk/about/academic-staff/thuy-luyen",
+      "imageUrl": "https://www.sunderland.ac.uk/image-library/imported/staff-profiles/thuy-luyen.x13e05bdc.jpg?w=1200&h=1800&crop=1200,630,0,332",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T23:28:49.214Z",
+      "note": "candidate failed 120x120 or portrait-aspect validation"
+    },
+    "vp-2593": {
+      "name": "Geneviève Thi-Dieu-Phuong Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-04T23:28:50.412Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2594": {
+      "name": "Thi Thanh Huyen Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-04T23:29:13.711Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2595": {
+      "name": "Sébastien Tran",
+      "outcome": "found",
+      "pageUrl": "https://www.audencia.com/en/faculte-recherche/corps-professoral/cv-tran",
+      "imageUrl": "https://www.audencia.com/sites/default/files/styles/cvpicture/public/2024-02/TRAN-Sebastien-120124_FSE8571.jpg-1200px.JPG.webp?h=10d202d3&itok=VkiFnn9t",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T23:29:34.012Z"
+    },
+    "vp-2596": {
+      "name": "Rey Dang",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-04T23:29:34.627Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     }
   }
 }
