@@ -1192,6 +1192,19 @@ const FIELD_OVERRIDES = new Map([
     'Institute of Innovation, Science and Sustainability|Federation University Australia',
     'Business & Economics',
   ],
+  ['R&D Disposal|Belgian Nuclear Research Centre (SCK CEN)', 'Engineering'],
+  [
+    'M2iSH, UMR 1071|Inserm (Institut National de la Sant\u00e9 et de la Recherche M\u00e9dicale)',
+    'Biological & Biomedical Sciences',
+  ],
+  [
+    'Leukemia and Niche Dynamics, Institut Cochin|Inserm (Institut National de la Sant\u00e9 et de la Recherche M\u00e9dicale)',
+    'Biological & Biomedical Sciences',
+  ],
+  [
+    'Laboratory of Pathogens and Host Immunity (LPHI), Mechanisms of Normal and Pathological Inflammation|CNRS (Centre National de la Recherche Scientifique)',
+    'Biological & Biomedical Sciences',
+  ],
 ]);
 
 // Buckets granular `department` values into the broad fields above. Order matters, and is not
