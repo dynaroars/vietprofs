@@ -12666,6 +12666,111 @@
       "identitySignals": [],
       "retrievedAt": "2026-11-04T22:25:41.786Z",
       "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2446": {
+      "name": "Le Thao Chi Vu",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-04T22:28:24.350Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2447": {
+      "name": "Thi Hoa Duong",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-04T22:28:31.044Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2448": {
+      "name": "Katie Nguyen - The Hang Seng University of Hong Kong",
+      "outcome": "not_found",
+      "pageUrl": "https://sbus.hsu.edu.hk/biography/dr-katie-nguyen/",
+      "imageUrl": "https://sbus.hsu.edu.hk/wp-content/uploads/2025/06/stock-photo-university-students-in-cooperation-with-their-assignment-at-library-group-of-young-people-sitting-513707488-1024x683.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T22:28:37.909Z",
+      "note": "candidate failed face check: multiple (2 faces)"
+    },
+    "vp-2449": {
+      "name": "Cam-Tu Nguyen - Nanjing University",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-04T22:28:44.263Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2450": {
+      "name": "Quoc-Hung Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-04T22:28:52.200Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2451": {
+      "name": "Lien Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-04T22:28:58.297Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2452": {
+      "name": "Uyen Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-04T22:29:06.372Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2453": {
+      "name": "Arthur Nguyen",
+      "outcome": "not_found",
+      "pageUrl": "https://www.nimec.fr/annuaire-cultures-identites-et-consommation/name/arthur-nguyen/",
+      "imageUrl": "https://www.nimec.fr/wp-content/uploads/connections-images/arthur-nguyen/449434859_10219793352944400_3157510835442700933_n-673276005b3a1d045e8c339d3b75b39f.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T22:29:23.032Z",
+      "note": "rejected on visual review: face cropped off at the top of the frame"
+    },
+    "vp-2454": {
+      "name": "Phuong Thao Bui-Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-04T22:29:24.781Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2455": {
+      "name": "Vincent Nguyen - University of Orléans",
+      "outcome": "found",
+      "pageUrl": "https://nhuvan.github.io/",
+      "imageUrl": "https://nhuvan.github.io/images/avatar.jpg",
+      "sourceType": "personal_homepage",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T22:30:17.427Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-2456": {
+      "name": "Laurent Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-04T22:29:39.429Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     }
   }
 }
