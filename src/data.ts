@@ -1157,6 +1157,11 @@ const FIELD_OVERRIDES = new Map([
     'Social & Behavioral Sciences',
   ],
   ['Foundational Medical Studies|Oakland University', 'Health Sciences'],
+  ['Periodontics|University of Texas Health Science Center at San Antonio', 'Health Sciences'],
+  [
+    'Occupational Science and Occupational Therapy|University of Southern California',
+    'Health Sciences',
+  ],
 ]);
 
 // Buckets granular `department` values into the broad fields above. Order matters, and is not

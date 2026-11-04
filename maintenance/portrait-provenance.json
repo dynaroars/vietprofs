@@ -10389,6 +10389,152 @@
       ],
       "retrievedAt": "2026-11-04T21:45:05.045Z",
       "note": "candidate failed 120x120 or portrait-aspect validation"
+    },
+    "vp-2279": {
+      "name": "Nicole Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://clj.uic.edu/profiles/nicole-nguyen/",
+      "imageUrl": "https://clj.uic.edu/wp-content/uploads/sites/289/2022/08/Nguyen-headshot-157x180.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T21:48:57.625Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-2280": {
+      "name": "Stephanie Campos-Bui",
+      "outcome": "found",
+      "pageUrl": "https://www.law.berkeley.edu/our-faculty/faculty-profiles/stephanie-campos-bui/",
+      "imageUrl": "https://www.law.berkeley.edu/wp-content/uploads/2016/07/StephanieCamposBui_square.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T21:48:23.131Z"
+    },
+    "vp-2281": {
+      "name": "Christina C Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://communication.northwestern.edu/faculty/christina-c-nguyen.html",
+      "imageUrl": "https://communication.northwestern.edu/images/faculty/christina_c_nguyen.png",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T21:48:25.074Z"
+    },
+    "vp-2282": {
+      "name": "Nhat-Dang Do",
+      "outcome": "found",
+      "pageUrl": "https://nhatdangdo.com/",
+      "imageUrl": "https://nhatdangdo.com/wp-content/uploads/2021/04/cropped-cropped-headshot_small.jpg",
+      "sourceType": "personal_homepage",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T21:48:26.046Z"
+    },
+    "vp-2283": {
+      "name": "Diana K. Nguyen",
+      "outcome": "needs_review",
+      "pageUrl": "https://dentistry.ucsf.edu/about/faculty/diana-nguyen",
+      "imageUrl": "https://dentistry.ucsf.edu/sites/default/files/2026-02/faculty_avatar_1.png",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T21:48:33.432Z",
+      "note": "candidate requires visual review before acceptance"
+    },
+    "vp-2284": {
+      "name": "Carol Ann Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://directory.uthscsa.edu/academics/profile/nguyenc",
+      "imageUrl": "https://directory.uthscsa.edu/sites/directory/files/nguyencarol5.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T21:48:58.067Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-2285": {
+      "name": "Linh Nguyen - University of Nevada, Las Vegas",
+      "outcome": "found",
+      "pageUrl": "https://www.unlv.edu/people/linh-nguyen",
+      "imageUrl": "https://www.unlv.edu/sites/default/files/media/image/2022-11/D73292-065-Linh-Nguyen.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T21:48:33.748Z"
+    },
+    "vp-2286": {
+      "name": "Cecilia Tran",
+      "outcome": "found",
+      "pageUrl": "https://chan.usc.edu/people/faculty/Cecilia_Tran",
+      "imageUrl": "https://chan.usc.edu/uploads/chan-faculty/Cecilia_Tran_headshot.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T21:48:39.421Z"
+    },
+    "vp-2287": {
+      "name": "Paul Tran",
+      "outcome": "found",
+      "pageUrl": "https://www.hpu.edu/faculty/cla/paul-tran.html",
+      "imageUrl": "https://www.hpu.edu/faculty/images/gchs-faculty/paul-tran.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T21:48:41.038Z"
     }
   }
 }
