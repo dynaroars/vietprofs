@@ -1164,6 +1164,7 @@ const FIELD_OVERRIDES = new Map([
   ],
   ['French and Italian|Northwestern University', 'Humanities'],
   ['Clinical and Administrative Sciences|California Northstate University', 'Health Sciences'],
+  ['Otolaryngology|Baylor College of Medicine', 'Health Sciences'],
 ]);
 
 // Buckets granular `department` values into the broad fields above. Order matters, and is not

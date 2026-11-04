@@ -12394,6 +12394,130 @@
       "identitySignals": [],
       "retrievedAt": "2026-11-04T22:18:11.112Z",
       "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2424": {
+      "name": "Huy Brandon Tran",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-04T22:21:31.413Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2425": {
+      "name": "Amy Dao Huynh-Tran",
+      "outcome": "needs_review",
+      "pageUrl": "https://www.bcm.edu/people-search/amy-huynh-tran-23386",
+      "imageUrl": "https://www.bcm.edu/sites/default/files/profile_photos/huynhtran-amy-564e93a7c460.jpeg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T22:21:42.200Z",
+      "note": "candidate requires visual review before acceptance"
+    },
+    "vp-2426": {
+      "name": "Kim-Lan Tran Czelusta",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-04T22:21:49.574Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2427": {
+      "name": "Tran Bao Locke",
+      "outcome": "found",
+      "pageUrl": "https://www.bcm.edu/people-search/tran-locke-65046",
+      "imageUrl": "https://www.bcm.edu/sites/default/files/profile_photos/locke-tran-f326c0486fb2.jpeg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T22:22:00.433Z"
+    },
+    "vp-2428": {
+      "name": "Christine Thanh Chau Pham",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-04T22:22:20.600Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2429": {
+      "name": "Khoa Van Pham",
+      "outcome": "not_found",
+      "pageUrl": "https://www.bcm.edu/people-search/khoa-pham-28637",
+      "imageUrl": "https://www.bcm.edu/sites/default/files/profile_photos/pham-khoa-ffedb1f0c84a.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T22:22:28.275Z",
+      "note": "candidate failed 120x120 or portrait-aspect validation"
+    },
+    "vp-2430": {
+      "name": "Michelle V Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://www.bcm.edu/people-search/michelle-nguyen-116166",
+      "imageUrl": "https://www.bcm.edu/sites/default/files/profile_photos/nguyen-michelle-0b11be9645dc.jpeg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T22:22:39.784Z"
+    },
+    "vp-2431": {
+      "name": "Tam Dan Pham",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-04T22:22:56.106Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2432": {
+      "name": "Huy Linh Dao",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-04T22:23:02.797Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2433": {
+      "name": "Mai Anh Doan",
+      "outcome": "found",
+      "pageUrl": "https://www.ufv.ca/communication/meet-faculty-sessional-instructors/doan-mai-anh.htm",
+      "imageUrl": "https://www.ufv.ca/media/assets/communications/cmns-photos/Mai-Anh-Doan-crop-FINAL.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T22:23:16.312Z"
+    },
+    "vp-2434": {
+      "name": "Van Chuyen Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-04T22:23:17.325Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     }
   }
 }

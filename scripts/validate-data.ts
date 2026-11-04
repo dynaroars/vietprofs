@@ -25,6 +25,7 @@ const schemaFile = resolve('public/roster.schema.json');
 // faculty pages, or an explicit maiden-name pattern) — see the git history for the check —
 // are allowlisted so the test doesn't force a wrong "fix" on them.
 const surnameFirstAllowlist = new Set<string>([
+  'Tran Bao Locke', // BCM people-search lists "Tran Locke" (Otolaryngology); Locke is the surname and Tran the given name
   'Le Anh Nguyen Long', // University of Twente Pure profile lists "Le Anh Nguyen Long"; she publishes as "Nguyen Long, L. A." (surname Nguyen Long)
   'Mai Thi Thanh Thai', // HEC Montréal's faculty directory lists her as "Thai, Mai Thi Thanh"; Thai is her surname
   'Hoang Mai Luong', // Chulalongkorn EE profile gives Thai "ฮวาง มาย เลื่อง" (Hoang Mai Luong) and email hoang.l@chula.ac.th; Luong is his surname
