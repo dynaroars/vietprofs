@@ -11699,6 +11699,185 @@
       "identitySignals": [],
       "retrievedAt": "2026-11-04T22:04:28.246Z",
       "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2376": {
+      "name": "Emmeline Missy Tran",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-04T22:06:09.014Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2377": {
+      "name": "Elaine Nguyen",
+      "outcome": "not_found",
+      "pageUrl": "https://www.isu.edu/pharmacy/center-for-advancing-pharmacy-practice-and-research-excellence/leadership/",
+      "imageUrl": "https://www.isu.edu/media/libraries/pharmacy/directory/headshots/Portrait-Elaine-Nguyen.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T22:06:14.498Z",
+      "note": "candidate failed 120x120 or portrait-aspect validation"
+    },
+    "vp-2378": {
+      "name": "Nina S. Huynh",
+      "outcome": "found",
+      "pageUrl": "https://pharmacy.uic.edu/profiles/nsivan2/",
+      "imageUrl": "https://pharmacy.uic.edu/wp-content/uploads/sites/138/2026/03/profile202603261744323971-157x180.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T22:06:49.227Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-2379": {
+      "name": "Derek Huynh",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-04T22:06:15.492Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2380": {
+      "name": "Hoai-An Truong",
+      "outcome": "found",
+      "pageUrl": "https://www.umes.edu/pharmacy/department-directory/hoai-an-truong/",
+      "imageUrl": "https://www.umes.edu/pharmacy/wp-content/uploads/sites/96/2021/09/Truong-Hoai-An-271x300.jpeg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T22:06:24.853Z"
+    },
+    "vp-2381": {
+      "name": "Mabel H. Truong",
+      "outcome": "found",
+      "pageUrl": "https://www.uh.edu/pharmacy/about-us/directory-home/pptr-faculty/mabel-truong/",
+      "imageUrl": "https://www.uh.edu/pharmacy/_images/directory-faculty/truong-mabel.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T22:06:25.464Z"
+    },
+    "vp-2382": {
+      "name": "Richard H. Dang",
+      "outcome": "not_found",
+      "pageUrl": "https://mann.usc.edu/faculty/richard-h-dang/",
+      "imageUrl": "https://mann.usc.edu/wp-content/uploads/2021/01/richard-h-dang-pharmd-aph-bcacp-c6812309-300x200.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T22:06:26.416Z",
+      "note": "rejected on visual review: event photo with two people, not a headshot"
+    },
+    "vp-2383": {
+      "name": "Tyler Bui",
+      "outcome": "not_found",
+      "pageUrl": "https://pharmacy.ufl.edu/profile/bui-tyler/",
+      "imageUrl": "https://directory.ufhealth.org/bui-tyler/files/profile-photo",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T22:06:27.163Z",
+      "note": "candidate failed 120x120 or portrait-aspect validation"
+    },
+    "vp-2384": {
+      "name": "Huan Mark Nguyen",
+      "outcome": "needs_review",
+      "pageUrl": "https://www.westernu.edu/bios/?bio=mnguyen3",
+      "imageUrl": "https://www.westernu.edu/media/westernu/images/staff/mnguyen3.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T22:06:28.087Z",
+      "note": "candidate requires visual review before acceptance"
+    },
+    "vp-2385": {
+      "name": "David Q. Pham",
+      "outcome": "needs_review",
+      "pageUrl": "https://www.westernu.edu/bios/?bio=dqpham",
+      "imageUrl": "https://www.westernu.edu/media/westernu/images/staff/dqpham.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T22:06:29.510Z",
+      "note": "candidate requires visual review before acceptance"
+    },
+    "vp-2386": {
+      "name": "Rebecca Tran",
+      "outcome": "found",
+      "pageUrl": "https://www.westernu.edu/bios/?bio=rebeccatran",
+      "imageUrl": "https://www.westernu.edu/media/westernu/images/staff/rebeccatran.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T22:06:30.899Z"
+    },
+    "vp-2387": {
+      "name": "Quang A. Le",
+      "outcome": "found",
+      "pageUrl": "https://www.westernu.edu/bios/?bio=qle",
+      "imageUrl": "https://www.westernu.edu/media/westernu/images/staff/qle.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T22:06:49.854Z",
+      "note": "MEDIUM candidate stored after visual review"
     }
   }
 }
