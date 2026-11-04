@@ -13557,6 +13557,136 @@
       "identitySignals": [],
       "retrievedAt": "2026-11-04T22:53:41.447Z",
       "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2521": {
+      "name": "Quoc-Thai Huynh",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-04T22:59:07.087Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2522": {
+      "name": "Chloé Phan-Labays",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-04T22:59:24.471Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2523": {
+      "name": "Gilles Phan",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-04T22:59:42.003Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2524": {
+      "name": "Ton Duc Do",
+      "outcome": "found",
+      "pageUrl": "https://research.nu.edu.kz/en/persons/ton-duc-do/",
+      "imageUrl": "https://research.nu.edu.kz/files-asset/77051237/Ton_Do_2022_ver2.png?w=160&f=jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T23:00:03.612Z"
+    },
+    "vp-2525": {
+      "name": "Anh Tu Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://research.nu.edu.kz/en/persons/anh-tu-nguyen/",
+      "imageUrl": "https://research.nu.edu.kz/files-asset/17157398/SmartSelect_20191018_090546_Gallery.jpg?w=160&f=jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T23:01:51.389Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-2526": {
+      "name": "Kim Lan Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-04T23:00:08.698Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2527": {
+      "name": "Minh Anh Truong",
+      "outcome": "needs_review",
+      "pageUrl": "https://kdb.iimc.kyoto-u.ac.jp/profile/en.17b2269008f28661.html",
+      "imageUrl": "https://researchmap.jp/29986/avatar.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T23:00:26.096Z",
+      "note": "candidate requires visual review before acceptance"
+    },
+    "vp-2528": {
+      "name": "Trang Thanh Tran",
+      "outcome": "found",
+      "pageUrl": "https://www.icla.ygu.ac.jp/en/trang-thanh-tran/",
+      "imageUrl": "https://cdn-iladmmn.nitrocdn.com/aciWdZcdHdInbvtActghvFpQnufgBrwN/assets/images/optimized/rev-61a09c3/www.icla.ygu.ac.jp/wp-content/uploads/2025/09/ThrangThanhTran.png",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T23:00:44.705Z"
+    },
+    "vp-2529": {
+      "name": "Anne Réach-Ngo",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-04T23:00:50.152Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2530": {
+      "name": "Charles Truong",
+      "outcome": "found",
+      "pageUrl": "https://charles.doffy.net",
+      "imageUrl": "https://res.cloudinary.com/allen-cld01/image/upload/f_webp,q_auto,w_300,h_300,c_fill,g_face,q_auto:best/fac-poc/uTXXNNlWVtV1wE0njLbM0kRbR9i2/uL6Gm5qzsgkDqAPL",
+      "sourceType": "personal_homepage",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T23:01:51.580Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-2531": {
+      "name": "Fabien Truong",
+      "outcome": "not_found",
+      "pageUrl": "https://www.fabientruong.com/",
+      "imageUrl": "https://www.fabientruong.com/wp-content/uploads/FabienTruongPortrait.png",
+      "sourceType": "personal_homepage",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T23:01:20.793Z",
+      "note": "rejected on visual review: magazine/book cover image with text overlay, not a headshot"
     }
   }
 }

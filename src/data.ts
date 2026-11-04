@@ -1223,6 +1223,11 @@ const FIELD_OVERRIDES = new Map([
     'DRIVE Laboratory — Mobilité, Énergie, Environnement et Propulsion|Université Bourgogne Europe',
     'Engineering',
   ],
+  ['Center for Glocal Strategy|Otaru University of Commerce', 'Business & Economics'],
+  [
+    'Institut de recherche en Langues et Littératures Européennes (ILLE)|University of Haute-Alsace',
+    'Humanities',
+  ],
 ]);
 
 // Buckets granular `department` values into the broad fields above. Order matters, and is not
