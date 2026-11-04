@@ -10316,6 +10316,79 @@
       ],
       "retrievedAt": "2026-11-04T03:19:04.584Z",
       "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-2274": {
+      "name": "My Hanh (Theresa) Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://www.sandiego.edu/nursing/about/directory/biography.php?profile_id=17361",
+      "imageUrl": "https://www.sandiego.edu/assets/directory/uploads/images/17361.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T21:45:23.334Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-2275": {
+      "name": "Kim Tran",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-04T21:44:50.085Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2276": {
+      "name": "Quang D. Tran",
+      "outcome": "not_found",
+      "pageUrl": "https://www.slu.edu/arts-and-sciences/psychology/faculty/tran-quang.php",
+      "imageUrl": "https://www.slu.edu/nursing/faculty/-img/tran-quang-420-min.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T21:45:04.521Z",
+      "note": "candidate failed 120x120 or portrait-aspect validation"
+    },
+    "vp-2277": {
+      "name": "Christina V. Tran",
+      "outcome": "found",
+      "pageUrl": "https://www.roseman.edu/research-faculty/directory/christina-v-tran-dvm/",
+      "imageUrl": "https://www.roseman.edu/app/uploads/2026/02/tran-christina-marketing.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T21:44:58.608Z"
+    },
+    "vp-2278": {
+      "name": "Ngan Nguyen - Oakland University",
+      "outcome": "not_found",
+      "pageUrl": "https://www.oakland.edu/medicine/directories/faculty-and-staff/Ngan-Nguyen/",
+      "imageUrl": "https://www.oakland.edu/media/Oakland/Assets/OUWB/images/faculty-staff/Nguyen-Ngan.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T21:45:05.045Z",
+      "note": "candidate failed 120x120 or portrait-aspect validation"
     }
   }
 }
