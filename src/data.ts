@@ -1119,6 +1119,10 @@ const FIELD_OVERRIDES = new Map([
   ['Laboratoire HeRMA|Université de Poitiers', 'Humanities'],
   ['Department of Tourism Science|Tokyo Metropolitan University', 'Social & Behavioral Sciences'],
   [
+    'Global Affairs|George Mason University Korea',
+    'Social & Behavioral Sciences',
+  ],
+  [
     'African American and African Studies|The Ohio State University',
     'Social & Behavioral Sciences',
   ],
