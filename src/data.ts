@@ -1169,10 +1169,10 @@ const FIELD_OVERRIDES = new Map([
     'Singapore Institute of Manufacturing Technology (SIMTech)|Agency for Science, Technology and Research',
     'Engineering',
   ],
-  ['IUT de Colmar; CREGO \u2014 CERMAB|University of Haute-Alsace', 'Business & Economics'],
-  ["UFR de Lettres; Grammatica|Universit\u00e9 d'Artois", 'Humanities'],
+  ['IUT de Colmar; CREGO — CERMAB|University of Haute-Alsace', 'Business & Economics'],
+  ["UFR de Lettres; Grammatica|Université d'Artois", 'Humanities'],
   [
-    'Paul Painlev\u00e9 Laboratory \u2014 Numerical Analysis and Partial Differential Equations|University of Lille',
+    'Paul Painlevé Laboratory — Numerical Analysis and Partial Differential Equations|University of Lille',
     'Mathematics',
   ],
   [
@@ -1194,16 +1194,24 @@ const FIELD_OVERRIDES = new Map([
   ],
   ['R&D Disposal|Belgian Nuclear Research Centre (SCK CEN)', 'Engineering'],
   [
-    'M2iSH, UMR 1071|Inserm (Institut National de la Sant\u00e9 et de la Recherche M\u00e9dicale)',
+    'M2iSH, UMR 1071|Inserm (Institut National de la Santé et de la Recherche Médicale)',
     'Biological & Biomedical Sciences',
   ],
   [
-    'Leukemia and Niche Dynamics, Institut Cochin|Inserm (Institut National de la Sant\u00e9 et de la Recherche M\u00e9dicale)',
+    'Leukemia and Niche Dynamics, Institut Cochin|Inserm (Institut National de la Santé et de la Recherche Médicale)',
     'Biological & Biomedical Sciences',
   ],
   [
     'Laboratory of Pathogens and Host Immunity (LPHI), Mechanisms of Normal and Pathological Inflammation|CNRS (Centre National de la Recherche Scientifique)',
     'Biological & Biomedical Sciences',
+  ],
+  [
+    "Soil–Plant–Atmosphere Interactions (ISPA), BIONET|INRAE (Institut National de Recherche pour l'Agriculture, l'Alimentation et l'Environnement)",
+    'Agricultural & Natural Resource Sciences',
+  ],
+  [
+    "Cryptography, De Vinci Research Center|École Supérieure d'Ingénieurs Léonard de Vinci",
+    'Computer & Information Sciences',
   ],
 ]);
 
