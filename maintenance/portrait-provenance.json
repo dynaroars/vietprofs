@@ -13687,6 +13687,146 @@
       ],
       "retrievedAt": "2026-11-04T23:01:20.793Z",
       "note": "rejected on visual review: magazine/book cover image with text overlay, not a headshot"
+    },
+    "vp-2532": {
+      "name": "Thi Hang Truong",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-04T23:07:35.241Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2533": {
+      "name": "Hugo Nguyen",
+      "outcome": "needs_review",
+      "pageUrl": "https://www.uu.se/en/contact-and-organisation/staff?query=N96-1480",
+      "imageUrl": "https://www.uu.se/images/200.5c92f2ac195d2427ab9a878/1743104767840/N96-1480.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T23:07:56.221Z",
+      "note": "candidate requires visual review before acceptance"
+    },
+    "vp-2534": {
+      "name": "Thanh Viet Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://www.unak.is/english/moya/ugla/staff/thanh-viet-nguyen",
+      "imageUrl": "https://ugla.unak.is/pub/unak/haskolaborgarar/mynd/th/thanh_viet_nguyen_9758cacef5514c64b8d899ccf1b9ced8_o1000x1000.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T23:07:58.234Z"
+    },
+    "vp-2535": {
+      "name": "Thang Pham - Amsterdam UMC",
+      "outcome": "found",
+      "pageUrl": "https://pure.amsterdamumc.nl/en/persons/thang-pham/",
+      "imageUrl": "https://pure.amsterdamumc.nl/files-asset/101957105/thang01r.jpg?w=160&f=jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T23:09:44.834Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-2536": {
+      "name": "Nicolas Pham",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-04T23:08:05.681Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2537": {
+      "name": "Cong Truc Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-04T23:08:21.500Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2538": {
+      "name": "Ngac Ky Nguyen",
+      "outcome": "not_found",
+      "pageUrl": "https://l2ep.univ-lille.fr/fiche-individuelle/?var=78",
+      "imageUrl": "https://l2ep.univ-lille.fr/intranet_l2ep2/public/uploads/avatars/78_NGUYEN_Ngac%20Ky.jpeg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T23:08:41.749Z",
+      "note": "candidate failed 120x120 or portrait-aspect validation"
+    },
+    "vp-2539": {
+      "name": "Aurélie Viet Ha Tran Vu",
+      "outcome": "found",
+      "pageUrl": "https://lirsa.cnam.fr/le-laboratoire/membres/aurelie-viet-ha-tran-vu--1366656.kjsp?RH=1337076011992",
+      "imageUrl": "https://lirsa.cnam.fr/medias/photo/tran-vu_1671032613344-png?ID_FICHE=34088",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T23:08:42.823Z"
+    },
+    "vp-2540": {
+      "name": "Thao Tran - Université de Pau et des Pays de l’Adour",
+      "outcome": "not_found",
+      "pageUrl": "https://tree.univ-pau.fr/fr/organisation/membres/cv-ttran6-fr.html",
+      "imageUrl": "https://tree.univ-pau.fr/_object/ametys%253Aplugins/contentio/ametys%253Acontents/cv-ttran6-fr/_attribute/illustration/image/thao_crop630x1200.jpg?objectId=content://06da1659-1f40-4a80-a150-7611cadcacd8",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T23:08:44.173Z",
+      "note": "candidate failed 120x120 or portrait-aspect validation"
+    },
+    "vp-2541": {
+      "name": "Jessica Tran The",
+      "outcome": "found",
+      "pageUrl": "https://nimh.unicaen.fr/fr/personnes/doctorants/name/jessica-tran-the/",
+      "imageUrl": "https://nimh.unicaen.fr/wp-content/uploads/connections-images/jessica-tran-the/Photo-CV-copie-6e7a622bc8bd80944b34b10ff7cd0508.png",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T23:08:45.503Z"
+    },
+    "vp-2542": {
+      "name": "Thi-My-Anh Neildez-Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-04T23:08:47.312Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     }
   }
 }

@@ -1228,6 +1228,38 @@ const FIELD_OVERRIDES = new Map([
     'Institut de recherche en Langues et Littératures Européennes (ILLE)|University of Haute-Alsace',
     'Humanities',
   ],
+  [
+    'Thai Language Program, Faculty of Humanities and Social Sciences|Lampang Rajabhat University',
+    'Humanities',
+  ],
+  [
+    'Faculty of Natural Resource Sciences|University of Akureyri',
+    'Agricultural & Natural Resource Sciences',
+  ],
+  [
+    'Théories et pratiques de la conception architecturale urbaine|École nationale supérieure d’architecture de Versailles',
+    'Arts & Design',
+  ],
+  [
+    'Laboratoire de Modélisation et Simulation Multi Échelle (MSME), IUT de Marne-la-Vallée|Université Gustave Eiffel',
+    'Engineering',
+  ],
+  [
+    'Laboratoire d’Électrotechnique et d’Électronique de Puissance de Lille (L2EP), Équipe Commande|Arts et Métiers Institute of Technology',
+    'Engineering',
+  ],
+  [
+    'EPN 10 Comptabilité Contrôle Audit, LIRSA|Conservatoire National des Arts et Métiers',
+    'Business & Economics',
+  ],
+  [
+    'Géographie, Laboratoire TREE (UMR 6031)|Université de Pau et des Pays de l’Adour',
+    'Earth & Environmental Sciences',
+  ],
+  [
+    'Psychologie clinique et psychopathologie, UMR-S 1077 NIMH|Université de Caen Normandie',
+    'Social & Behavioral Sciences',
+  ],
 ]);
 
 // Buckets granular `department` values into the broad fields above. Order matters, and is not
