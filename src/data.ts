@@ -1118,18 +1118,12 @@ const FIELD_OVERRIDES = new Map([
   ["Département d'anglais|Université de Tours", 'Humanities'],
   ['Laboratoire HeRMA|Université de Poitiers', 'Humanities'],
   ['Department of Tourism Science|Tokyo Metropolitan University', 'Social & Behavioral Sciences'],
-  [
-    'Global Affairs|George Mason University Korea',
-    'Social & Behavioral Sciences',
-  ],
+  ['Global Affairs|George Mason University Korea', 'Social & Behavioral Sciences'],
   [
     'African American and African Studies|The Ohio State University',
     'Social & Behavioral Sciences',
   ],
-  [
-    'Counseling|University of Nebraska at Omaha',
-    'Education',
-  ],
+  ['Counseling|University of Nebraska at Omaha', 'Education'],
   [
     'College of Sustainability and Tourism|Ritsumeikan Asia Pacific University',
     'Social & Behavioral Sciences',
