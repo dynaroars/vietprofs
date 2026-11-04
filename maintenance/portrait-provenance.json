@@ -12074,6 +12074,166 @@
       ],
       "retrievedAt": "2026-11-04T22:09:21.561Z",
       "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-2400": {
+      "name": "An Vo",
+      "outcome": "not_found",
+      "pageUrl": "https://www.westernu.edu/bios/?bio=an.vo",
+      "imageUrl": "https://www.westernu.edu/media/westernu/images/staff/an.vo.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T22:10:27.679Z",
+      "note": "candidate failed 120x120 or portrait-aspect validation"
+    },
+    "vp-2401": {
+      "name": "Do Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://www.sco.edu/meet-our-faculty",
+      "imageUrl": "https://www.sco.edu/assets/2330/nguyen-do.png",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T22:10:29.422Z"
+    },
+    "vp-2402": {
+      "name": "Thuy-Lan Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://optometry.nova.edu/people/nguyen-thuy.html",
+      "imageUrl": "https://www.nova.edu/_resources/images/optometry-images-300x375/nguyen-thuy-lan-headshot-300x375.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T22:10:31.531Z"
+    },
+    "vp-2403": {
+      "name": "Anh V. Bui",
+      "outcome": "found",
+      "pageUrl": "https://www.neco.edu/academics/faculty/anh-bui/",
+      "imageUrl": "https://www.neco.edu/wp-content/uploads/2023/09/BUI280.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T22:11:14.822Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-2404": {
+      "name": "Franklin Bui",
+      "outcome": "found",
+      "pageUrl": "https://www.sunyopt.edu/faculty-members/franklin-bui/",
+      "imageUrl": "https://www.sunyopt.edu/wp-content/uploads/2020/04/FranklinBui.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T22:10:37.697Z"
+    },
+    "vp-2405": {
+      "name": "Kent Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-04T22:10:38.480Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2406": {
+      "name": "Jacqueline Dinh Hoan My Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-04T22:10:43.122Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2407": {
+      "name": "Carolyn P. Huynh",
+      "outcome": "found",
+      "pageUrl": "https://dentistry.uth.edu/directory/profile/carolyn-p-huynh",
+      "imageUrl": "https://dentistry.uth.edu/directory/headshots/huynh-carolyn-profile.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T22:10:47.609Z"
+    },
+    "vp-2408": {
+      "name": "Tiffany Pham",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-04T22:10:48.245Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2409": {
+      "name": "Nelly Huynh",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-04T22:10:53.464Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2410": {
+      "name": "John T. Pham",
+      "outcome": "found",
+      "pageUrl": "https://osteopathic-medicine.uiw.edu/directory/alphabetical-listing/1-pham-john.html",
+      "imageUrl": "https://osteopathic-medicine.uiw.edu/_imgs/_imgs-faculty-staff/dean-pham-2024-2025.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T22:11:15.097Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-2411": {
+      "name": "Jonathan Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://www.msm.edu/about_us/FacultyDirectory/Surgery/JonathanNguyen/index.php",
+      "imageUrl": "https://www.msm.edu/about_us/FacultyDirectory/Surgery/images/2024-headshots/JNguyen.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T22:11:15.385Z",
+      "note": "MEDIUM candidate stored after visual review"
     }
   }
 }
