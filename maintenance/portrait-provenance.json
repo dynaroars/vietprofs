@@ -12771,6 +12771,78 @@
       "identitySignals": [],
       "retrievedAt": "2026-11-04T22:29:39.429Z",
       "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2457": {
+      "name": "Le Mong Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-04T22:32:00.522Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2458": {
+      "name": "Quynh-Lien Duong",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-04T22:32:09.029Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2459": {
+      "name": "Thi Thu Hoai Tran",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-04T22:32:18.867Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2460": {
+      "name": "Trung Tran",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-04T22:32:25.008Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2461": {
+      "name": "Yen-Maï Tran-Gervat",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-04T22:32:31.022Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2462": {
+      "name": "Olivia Bui-Xuan",
+      "outcome": "found",
+      "pageUrl": "https://www.univ-evry.fr/toute-lactualite/actualites-recherche/portraits/olivia-bui-xuan-lutter-contre-toutes-les-formes-dinegalites.html",
+      "imageUrl": "https://www.univ-evry.fr/fileadmin/_processed_/2/5/csm_photo_OliviaBuiXuan_2020_4e8369468c.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T22:33:21.179Z"
+    },
+    "vp-2463": {
+      "name": "Ngoc Nhi Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-04T22:33:23.060Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2464": {
+      "name": "Duc Khiem Huynh",
+      "outcome": "found",
+      "pageUrl": "https://www.th-brandenburg.de/mitarbeiterseiten/fbi/professoren/duc-khiem-huynh/",
+      "imageUrl": "https://www.th-brandenburg.de/fileadmin/_processed_/f/6/csm_Huynh_Duc_Khiem_www_9b3d66f4dc.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T22:33:27.773Z"
     }
   }
 }
