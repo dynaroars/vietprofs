@@ -1260,6 +1260,23 @@ const FIELD_OVERRIDES = new Map([
     'Psychologie clinique et psychopathologie, UMR-S 1077 NIMH|Université de Caen Normandie',
     'Social & Behavioral Sciences',
   ],
+  [
+    'UFR Sciences du Langage, de l’Homme et de la Société (SLHS), ELLIADD, Discours, Dispositifs, Sociétés|Université Marie et Louis Pasteur',
+    'Humanities',
+  ],
+  ['IGR-IAE Rennes, CREM (UMR CNRS 6211)|Université de Rennes', 'Business & Economics'],
+  [
+    'École d’histoire de la Sorbonne (UFR 09), Institut d’Histoire Moderne et Contemporaine (IHMC, UMR 8066)|Université Paris 1 Panthéon-Sorbonne',
+    'Humanities',
+  ],
+  [
+    'École d’Urbanisme de Paris, Lab’URBA|Université Gustave Eiffel',
+    'Social & Behavioral Sciences',
+  ],
+  [
+    'École d’économie de la Sorbonne, Centre d’économie de la Sorbonne (CES, UMR 8174)|Université Paris 1 Panthéon-Sorbonne',
+    'Business & Economics',
+  ],
 ]);
 
 // Buckets granular `department` values into the broad fields above. Order matters, and is not

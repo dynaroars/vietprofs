@@ -25,6 +25,8 @@ const schemaFile = resolve('public/roster.schema.json');
 // faculty pages, or an explicit maiden-name pattern) — see the git history for the check —
 // are allowlisted so the test doesn't force a wrong "fix" on them.
 const surnameFirstAllowlist = new Set<string>([
+  'Hoang La', // his IUT Orsay page gives "Hoang La" and the address firstname.lastname@universite-paris-saclay.fr; La is his surname
+  'Le Nguyen Hoang', // Télécom Paris profile publishes "Lê Nguyên Hoang" in Western order; Hoang is his surname (EPFL/Science4All)
   'Mai Nguyen-Chi', // LPHI Montpellier team page lists "Mai Nguyen-Chi" (CNRS DR2); Nguyen-Chi is her compound surname and Mai her given name
   'Tran Bao Locke', // BCM people-search lists "Tran Locke" (Otolaryngology); Locke is the surname and Tran the given name
   'Le Anh Nguyen Long', // University of Twente Pure profile lists "Le Anh Nguyen Long"; she publishes as "Nguyen Long, L. A." (surname Nguyen Long)

@@ -13827,6 +13827,169 @@
       "identitySignals": [],
       "retrievedAt": "2026-11-04T23:08:47.312Z",
       "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2543": {
+      "name": "Minh Phong Bui",
+      "outcome": "needs_review",
+      "pageUrl": "https://compalg.inf.elte.hu/en/content/staff.t.44378",
+      "imageUrl": "https://compalg.inf.elte.hu/en/content/media/97/16/14ca2fbf58932492afedbcda3aadfcd2f35b2e075e7a1b29d5407833fe5b/BuiMinP_compalg.png",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T23:11:12.197Z",
+      "note": "candidate requires visual review before acceptance"
+    },
+    "vp-2544": {
+      "name": "Hiep Quang Luong",
+      "outcome": "found",
+      "pageUrl": "https://urc.ugent.be/author/hiep-luong/",
+      "imageUrl": "https://urc.ugent.be/author/hiep-luong/avatar_hu69a32ee507d5b3a94ba38a184198e4b5_544040_270x270_fill_q90_lanczos_center.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T23:11:13.415Z"
+    },
+    "vp-2545": {
+      "name": "Van Hien Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-04T23:11:24.551Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2546": {
+      "name": "Duong Hung Pham",
+      "outcome": "not_found",
+      "pageUrl": "https://www.irit.fr/~Duong-Hung.Pham/",
+      "imageUrl": "https://www.irit.fr/~Duong-Hung.Pham/wp-content/uploads/sites/27/2020/02/2017-02-01.jpg",
+      "sourceType": "personal_homepage",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T23:11:39.851Z",
+      "note": "rejected on visual review: candid side-view photo at a laptop, face not clearly shown"
+    },
+    "vp-2547": {
+      "name": "Hoang La",
+      "outcome": "found",
+      "pageUrl": "https://hoang-la-e7596d.gitpages.iut-orsay.fr/",
+      "imageUrl": "https://hoang-la-e7596d.gitpages.iut-orsay.fr/build/small-profile-09d1c7c795b89f90219692ebf08a4a17.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T23:11:49.729Z"
+    },
+    "vp-2548": {
+      "name": "Le Nguyen Hoang",
+      "outcome": "found",
+      "pageUrl": "https://www.telecom-paris.fr/le-nguyen-hoang?l=en",
+      "imageUrl": "https://www.telecom-paris.fr/wp-content-EvDsK19/uploads/2026/09/Le-Nguyen-Hoang-page-perso.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T23:11:50.831Z"
+    },
+    "vp-2549": {
+      "name": "Danh Thành Do-Hurinville",
+      "outcome": "needs_review",
+      "pageUrl": "https://do-hurinville.over-blog.com/article-35290484.html",
+      "imageUrl": "https://image.over-blog.com/MWwOngJgJdjMrgFUJgJeqqbl1wE=/400x260/smart/filters:no_upscale()/https%3A%2F%2Fassets.over-blog.com%2Ft%2Fcedistic%2Fcamera.png",
+      "sourceType": "personal_homepage",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T23:12:01.073Z",
+      "note": "candidate requires visual review before acceptance"
+    },
+    "vp-2550": {
+      "name": "Thi Le Hoa Vo",
+      "outcome": "found",
+      "pageUrl": "https://www.igr.univ-rennes.fr/fr/enseignant/thi-le-hoa-vo/",
+      "imageUrl": "https://www.igr.univ-rennes.fr/wp-content/uploads/2020/03/IGR-defweb-41-768x960.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T23:13:38.597Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-2551": {
+      "name": "Paul Vo-Ha",
+      "outcome": "found",
+      "pageUrl": "https://ihmc.ens.psl.eu/VO-HA-Paul",
+      "imageUrl": "https://ihmc.ens.psl.eu/IMG/jpg/vo-ha-paul.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T23:12:04.943Z"
+    },
+    "vp-2552": {
+      "name": "Rani Dang",
+      "outcome": "not_found",
+      "pageUrl": "https://univ-cotedazur.fr/rani-dang",
+      "imageUrl": "https://univ-cotedazur.fr/medias/photo/dang-rani-1_1711449171035-jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T23:12:12.542Z",
+      "note": "candidate failed 120x120 or portrait-aspect validation"
+    },
+    "vp-2553": {
+      "name": "Hélène Dang Vu",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-04T23:12:23.009Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2554": {
+      "name": "Ai-Thu Dang",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-04T23:12:46.106Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     }
   }
 }
