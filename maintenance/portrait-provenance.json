@@ -14109,6 +14109,135 @@
       "identitySignals": [],
       "retrievedAt": "2026-11-04T23:17:41.164Z",
       "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2567": {
+      "name": "Lemy Duong-Godefroy",
+      "outcome": "found",
+      "pageUrl": "https://univ-cotedazur.fr/lemy-godefroy",
+      "imageUrl": "https://univ-cotedazur.fr/medias/photo/godefroy-lemy_1616093349710-jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T23:20:59.308Z"
+    },
+    "vp-2568": {
+      "name": "Stéphane Ngo-Mai",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-04T23:21:02.079Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2569": {
+      "name": "Mai Anh Ngo",
+      "outcome": "needs_review",
+      "pageUrl": "https://univ-cotedazur.fr/mai-anh-ngo",
+      "imageUrl": "https://univ-cotedazur.fr/medias/photo/portrait-onm-002-_1620302086244-jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T23:21:21.716Z",
+      "note": "candidate requires visual review before acceptance"
+    },
+    "vp-2570": {
+      "name": "Céline Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-04T23:21:28.407Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2571": {
+      "name": "Le Hung Tran",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-04T23:21:44.760Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2572": {
+      "name": "Hoc Khiem Trieu",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-04T23:22:01.970Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2573": {
+      "name": "Pascal Nguyen",
+      "outcome": "not_found",
+      "pageUrl": "https://www.montpellier-management.fr/enseignant/pascal-nguyen/",
+      "imageUrl": "https://www.montpellier-management.fr/wp-content/uploads/2025/03/Pascal-Nguyen-1.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T23:22:31.591Z",
+      "note": "candidate failed 120x120 or portrait-aspect validation"
+    },
+    "vp-2574": {
+      "name": "Khanh-Hung Tran",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-04T23:22:33.792Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2575": {
+      "name": "Thanh Tam Nguyen-Huu",
+      "outcome": "not_found",
+      "pageUrl": "https://en.em-normandie.com/professors-directory/thanh-tam-nguyen-huu",
+      "imageUrl": "https://en.em-normandie.com/sites/default/files/styles/104_104/public/2022-08/thanh-tam-nguyen-huu.jpg?itok=SM1EmOEL",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T23:22:49.957Z",
+      "note": "candidate failed 120x120 or portrait-aspect validation"
+    },
+    "vp-2576": {
+      "name": "Christian Nguyen - Université de Toulon",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-04T23:22:50.962Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2577": {
+      "name": "Nguyen-Thi Dang",
+      "outcome": "not_found",
+      "pageUrl": "https://nguyenthi-dang.perso.math.cnrs.fr/english.html",
+      "imageUrl": "https://nguyenthi-dang.perso.math.cnrs.fr/photo.jpg",
+      "sourceType": "personal_homepage",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T23:23:12.378Z",
+      "note": "candidate failed 120x120 or portrait-aspect validation"
+    },
+    "vp-2578": {
+      "name": "Huu-Khoa Tran",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-04T23:23:14.463Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     }
   }
 }

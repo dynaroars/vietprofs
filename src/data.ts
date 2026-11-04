@@ -1302,6 +1302,8 @@ const FIELD_OVERRIDES = new Map([
     'Algorithmic Foundations and Cryptography|CISPA Helmholtz Center for Information Security',
     'Computer & Information Sciences',
   ],
+  ["Faculté de droit et science politique, GREDEG|Université Côte d'Azur", 'Law & Public Affairs'],
+  ['UFR SITEC, LEME — Energy Science and Technology|Université Paris Nanterre', 'Engineering'],
 ]);
 
 // Buckets granular `department` values into the broad fields above. Order matters, and is not
