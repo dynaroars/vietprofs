@@ -298,6 +298,7 @@ const DISTINCT_PEOPLE = new Set<string>([
   'vp-0972 vp-0973', // Katherine Nguyen (Rheumatology) and Katherine Nguyen Williams (Psychiatry), UC San Diego: separate UCSD profiles
   'vp-0673 vp-1700', // Lan K. Nguyen (Biochemistry) and Lan Nguyen (Accounting), Monash: separate Monash research profiles (#223)
   'vp-1744 vp-1996', // Thanh Le (Business, Associate Professor) and Thanh Le Hoang (Computing, Lecturer in AI), Wollongong: separate UOW Scholars profiles
+  'vp-2322 vp-2323', // David Quang-Nam Pham (Anesthesiology) and Nam Pham (Endocrinology, MD PhD), UT Southwestern: separate UTSW profiles 182203 and 94529
 ]);
 const identityOwners = new Map<string, string>();
 const rosterTokens = (roster as RosterEntry[]).map((person) => nameTokens(person.name));
