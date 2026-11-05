@@ -580,6 +580,15 @@ person independently; never run a generic image scraper blindly across the roste
    page. Use it or its search result only to discover alternate official institutional pages, a
    department directory, a personal homepage, or another page that references the same image.
    A block alone is never sufficient reason to accept an unverified search image or to give up.
+5. **Fetch politely; don't get around access controls.** Ordinary requests are fine: a normal
+   browser User-Agent, a `Referer` header, and a headless browser (Playwright) for pages built
+   with JavaScript. Don't solve CAPTCHAs or Cloudflare/CrowdSec challenges, spoof browser TLS
+   fingerprints, rotate proxies, or scrape LinkedIn or Google Scholar while logged in, and don't
+   adopt tools whose purpose is bot-check evasion. When a site is down, under maintenance, or
+   blocks us, use an alternate official source or its Wayback Machine copy
+   (`scripts/wayback.ts`); otherwise the item stays open. An archived copy shows what a page held
+   on the snapshot date. It can recover a portrait URL for review or show where someone moved,
+   but it never confirms a current appointment.
 
 Before saving an image, require at least two matching identity signals and prefer three: an exact
 or near-exact full name; the same university/institute; the same department, research area, or
@@ -853,6 +862,10 @@ than on every change. A shared/invalid Scholar ID copied across a batch of entri
 mode this caught once already (see git history); `npm test` now blocks a duplicate `scholarUrl`
 across two different people as a permanent regression check, but a URL can still go dead on its own
 later, which only this sweep catches.
+
+Every broken or uncheckable URL is also looked up in the Wayback Machine (`--no-wayback` skips
+this), and the report gives the most recent archived copy. Use that snapshot to see what the page
+held and to search for where the person moved. It is not evidence that the link is still right.
 
 When it reports a broken URL, don't just delete the field — visit the person's other stored URLs
 or search for their current page first, since a moved/renamed page is far more common than a
