@@ -105,7 +105,12 @@ them share these rules:
    `ROSTER_MAINTENANCE.md` sections the playbook cites. Run `npm ci` (not `npm install`). Work
    sequentially; don't spawn subagents. Use the GitHub MCP tools when `gh` is missing.
 2. **Caps.** Stay within the section's batch cap, then stop. Before starting, list open PRs and
-   Issues titled `[scheduled:<key>]` and skip entries they already touch.
+   Issues titled `[scheduled:<key>]` and skip entries they already touch. The cap is also the
+   target: work through it unless a source is actually blocked or the queue is empty. A thin
+   search result is not a reason to stop; move to the next slice, channel, or entry. Every step the
+   section lists is part of a check (skipping Scholar, LinkedIn, or the portrait recheck leaves the
+   entry unchecked). Runs through 2026-11-05 often ended after about 2 minutes with half the cap
+   unused; the summary must say why if a run stops short of its cap.
 3. **Titles.** Every PR and Issue title starts with `[scheduled:<key>]`.
 4. **Boundaries.** Producers never merge PRs and never push to `main` (relationships excepted).
    They never add a person to `public/data.json` or assign an id. New people always go in an
@@ -120,8 +125,9 @@ them share these rules:
 8. **Summary.** End with entries processed, changes made, PR/Issue links, side findings filed,
    entries skipped with reasons, and any egress blocks.
 9. **No follow-ups.** Once your PR/Issues are open, stop. Don't schedule check-ins, reminders,
-   wakeups, or re-armed routines to watch CI or the PR; the auditor handles review. If CI fails,
-   note it in the PR and leave it for the auditor.
+   wakeups, or re-armed routines to watch CI or the PR, and don't subscribe to PR activity (each
+   event wakes the finished session again); the auditor handles review. If CI fails, note it in the
+   PR and leave it for the auditor.
 10. **Every close gets a comment.** Never close a PR or Issue, or merge a PR, without a comment
    saying what was found and what was done: the change and its source, or the reason for
    rejecting it. A `Closes #n` line or a commit message alone doesn't count.
@@ -311,11 +317,19 @@ show:
   `TASKS/backfill_linkedin.md` "Verifying without fetching LinkedIn". For a dead link, search the
   name and university fresh before calling it unfixable.
 - **Portrait:** open the stored portrait and compare it with the official page (see the portrait
-  recheck in `ROSTER_MAINTENANCE.md` step 4). Run `python3 scripts/portrait_faces.py --roster` (`pip install opencv-python-headless pillow numpy`;
-  it prints a verdict per portrait; `multiple` and `none` are almost always a group photo, logo, or
+  recheck in `ROSTER_MAINTENANCE.md` step 4). Run `python3 scripts/portrait_faces.py --roster` (install with
+  `python3 -m pip install opencv-python-headless numpy && python3 -m pip install --force-reinstall --ignore-installed pillow`: the sandbox's system Pillow is broken and
+  shadows a plain `pip install`, found 2026-11-01; it prints a verdict per portrait; `multiple` and `none` are almost always a group photo, logo, or
   building, but look at the image before removing) at the start and handle flagged entries before
   the id-order rotation. Replace or remove a wrong
   unprotected portrait in the PR; for a protected one file `Likely wrong portrait: <name> (<vp-id>)`.
+- **Missing portrait:** for batch entries with no `portrait`, run
+  `node scripts/fetch-portraits.ts --ids=<those ids> --apply` after the face-check setup above. It
+  stores HIGH candidates that pass the size, aspect, and one-face checks; open each stored image and
+  compare it with the official page before keeping it. For a MEDIUM (`needs_review`) candidate,
+  look at it next to the page and store it with `--store=<id>` only if it is clearly that person.
+  Commit `public/portraits/`, `public/data.json`, and the portrait ledger files with the batch, and
+  give each new portrait a row note (source page, why accepted).
 - **Honors and degrees** noticed on those pages go in side findings, not this PR.
 
 In the PR body, put one table row per entry, including entries checked with no change, with these
@@ -325,13 +339,18 @@ rows show only URL status codes.
 
 ### Portraits (`portraits`)
 
-Playbook: `TASKS/fetch_portraits.md` section 4, exactly. Cap: 2 batches of 10, newest roster
-entries first (`--next=10`; the script queues new entries automatically), after up to 10
-`needs_review` candidates from `--review` (section 4, "Review the MEDIUM candidates too"). Old unresolved entries
-are retried only once every new entry has been attempted. Run
+Playbook: `TASKS/fetch_portraits.md` section 4, exactly. Order (changed 2026-11-05): up to 10
+`needs_review` candidates from `--review` (section 4, "Review the MEDIUM candidates too"), then
+batch 1, `--next=10` (newest roster entries never attempted; the script queues new entries
+automatically), then batch 2, `--refused=10` (entries whose photo was found but refused by the old
+0.70 aspect minimum or another size check; each leaves that set after one retry). Don't run
+`--retry` on old unresolved entries: blind retries found nothing (#991 went 0 for 10), and the
+`links` rotation now fills missing portraits from each entry's live official page. When `--next`
+and `--refused` both come back empty, say so in the summary; the Sunday audit then recommends
+retiring this routine or cutting it to monthly. Run
 `npx playwright install chromium` (the script renders JavaScript-built profile pages and fetches
 images that CDNs refuse to curl; without Chromium it skips that fallback) and
-`pip install opencv-python-headless pillow numpy` first: `fetch-portraits.ts --apply` refuses to
+`python3 -m pip install opencv-python-headless numpy && python3 -m pip install --force-reinstall --ignore-installed pillow` first (the force-reinstall replaces the sandbox's broken system Pillow): `fetch-portraits.ts --apply` refuses to
 run without OpenCV, because every candidate must pass the one-dominant-face check
 (`scripts/portrait_faces.py`) before it is stored. Open every added image with the Read tool and
 look at it. In the PR body, give each portrait's id, its source page, and one line on why it was

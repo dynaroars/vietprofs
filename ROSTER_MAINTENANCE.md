@@ -640,7 +640,7 @@ unless the scholar can be reliably isolated. Filter known placeholder patterns s
 image that visibly contains one person, is reasonably high resolution (roughly 200×200px when
 available), originates on an identity-resolved page, and has a stable direct JPEG, PNG, or WebP
 URL. Preserve the existing validation floor: use ImageMagick (`identify`) to require at least
-120×120px and a portrait aspect ratio (width/height) no greater than 1.55. Convert an approved
+120×120px and a portrait aspect ratio (width/height) between 0.60 and 1.55. Convert an approved
 headshot to WebP in `public/portraits/` and store the direct original image URL in
 `portraitSource`.
 

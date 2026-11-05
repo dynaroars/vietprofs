@@ -71,6 +71,12 @@ const replaceExisting = args.has('--replace');
 const retry = args.has('--retry');
 const nextArgument = process.argv.find((arg) => arg.startsWith('--next='));
 const nextCount = nextArgument ? Number(nextArgument.slice('--next='.length)) : 0;
+const refusedArgument = process.argv.find((arg) => arg.startsWith('--refused='));
+const refusedCount = refusedArgument ? Number(refusedArgument.slice('--refused='.length)) : 0;
+// Attempts whose image was found but refused by the size/aspect gate (before 2026-11-05 the
+// minimum aspect was 0.70, which rejected ordinary 2:3 headshots). A retry rewrites the note, so
+// each entry leaves this set after one more attempt.
+const REFUSED_NOTE = /portrait-aspect|aspect.*minimum|failed --store checks/i;
 const explicitIdsArgument = process.argv.find((arg) => arg.startsWith('--ids='));
 const explicitIds = explicitIdsArgument
   ? new Set(
@@ -428,7 +434,7 @@ async function isPortraitLike(output: string): Promise<boolean> {
   try {
     const { stdout } = await execFileAsync('identify', ['-format', '%w %h', output]);
     const [width, height] = stdout.trim().split(/\s+/).map(Number);
-    return width >= 120 && height >= 120 && width / height >= 0.7 && width / height <= 1.55;
+    return width >= 120 && height >= 120 && width / height >= 0.6 && width / height <= 1.55;
   } catch {
     return false;
   }
@@ -543,7 +549,7 @@ const storeArgument = process.argv.find((arg) => arg.startsWith('--store='));
 if (storeArgument) {
   if (!(await faceCheckAvailable()))
     throw new Error(
-      `face check unavailable: run 'pip install opencv-python-headless pillow numpy' (or set PORTRAIT_PYTHON)`,
+      `face check unavailable: run 'python3 -m pip install opencv-python-headless numpy && python3 -m pip install --force-reinstall --ignore-installed pillow' (or set PORTRAIT_PYTHON)`,
     );
   const results: Array<Record<string, unknown>> = [];
   for (const id of storeArgument
@@ -635,9 +641,28 @@ if (explicitIds) {
       queue.push({ id: person.id, batch: requestedBatch, status: 'pending' });
   }
 }
+const refusedIds =
+  refusedCount > 0
+    ? new Set(
+        people
+          .filter(
+            (person) =>
+              !person.portrait && REFUSED_NOTE.test(String(ledger.entries[person.id]?.note ?? '')),
+          )
+          .slice(0, refusedCount)
+          .map((person) => person.id),
+      )
+    : null;
+if (refusedIds) {
+  for (const id of refusedIds) {
+    if (!queue.some((item) => item.id === id))
+      queue.push({ id, batch: requestedBatch, status: 'pending' });
+  }
+}
 const selectedIds = audit
   ? await auditIds()
   : (explicitIds ??
+    refusedIds ??
     (nextCount > 0 ? nextIds(queue, ledger, nextCount) : null) ??
     new Set(
       queue
@@ -654,7 +679,7 @@ const selected = people.filter(
 await mkdir(portraitsDir, { recursive: true });
 if (applying && !(await faceCheckAvailable()))
   throw new Error(
-    `face check unavailable: run 'pip install opencv-python-headless pillow numpy' (or set PORTRAIT_PYTHON to a Python that has them); refusing to store portraits unchecked`,
+    `face check unavailable: run 'python3 -m pip install opencv-python-headless numpy && python3 -m pip install --force-reinstall --ignore-installed pillow' (or set PORTRAIT_PYTHON to a Python that has them); refusing to store portraits unchecked`,
   );
 const report: Array<Record<string, unknown>> = [];
 for (const person of selected) {

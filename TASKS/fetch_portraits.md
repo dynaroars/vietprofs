@@ -9,8 +9,8 @@
 
 1. **Batching:** Keep going batch after batch in interactive runs; scheduled runs stop at the batch cap in `AGENTS.md`. Skip entries touched by an open portrait PR.
 2. **Routing:** Follow the "Where each kind of change lands" table in `AGENTS.md` (portrait edits → PR; never commit directly to `main`).
-3. **Strict Batch Size (10 Profiles Per Batch), Newest First:** Work in bounded batches of **10 profiles per batch**, selected with `--next=10` (section 4): never-attempted entries first, newest roster id first, because recently added entries have freshly verified profile URLs. Unresolved entries are retried only once no never-attempted entry remains, least recently attempted first.
-4. **Thorough Verification Per Candidate:** For every candidate, open the image and look at it, run the face check (`python3 scripts/portrait_faces.py`), check aspect ratio (0.70–1.55), and confirm single-person headshot identity before accepting.
+3. **Strict Batch Size (10 Profiles Per Batch), Newest First:** Work in bounded batches of **10 profiles per batch**, selected with `--next=10` (section 4): never-attempted entries first, newest roster id first, because recently added entries have freshly verified profile URLs. The second batch is `--refused=10`: entries whose photo was found but refused by the size/aspect gate (the minimum aspect was 0.70 until 2026-11-05). Don't use `--retry` on old unresolved entries in scheduled runs; the `links` rotation fills missing portraits from live official pages instead.
+4. **Thorough Verification Per Candidate:** For every candidate, open the image and look at it, run the face check (`python3 scripts/portrait_faces.py`), check aspect ratio (0.60–1.55), and confirm single-person headshot identity before accepting.
 5. **Per-Run PR Pipeline:** (commands in section 4)
    - Before the first batch, create one topic branch for the run: `git checkout -b maintenance/portraits-$(date -u +%Y%m%d)` (never reuse an old branch name).
    - After each 10-profile batch: validate (`npm test && npm run build && git diff --check`) and commit it on that branch with `git add public/data.json public/updates.json public/portraits/ maintenance/portrait-provenance.json maintenance/portrait-queue.json` and message `fix(portraits): recover missing portraits (<first id>–<last id>)`.
@@ -54,7 +54,7 @@ The face check runs OpenCV's YuNet detector and reports
 `ok` (one dominant face), `multiple` (a group), `none` (no face: building, logo, scenery, chart),
 or `tiny` (a person lost in a scene). `fetch-portraits.ts --apply` rejects anything but `ok`.
 ```bash
-pip install opencv-python-headless pillow numpy       # once per environment
+python3 -m pip install opencv-python-headless numpy && python3 -m pip install --force-reinstall --ignore-installed pillow   # once per environment (cloud: replaces the broken system Pillow)
 python3 scripts/portrait_faces.py public/portraits/a.webp ...   # specific images
 python3 scripts/portrait_faces.py --roster                      # every stored portrait (~15 s)
 ```
@@ -72,7 +72,7 @@ evidence — a ratio-only bulk purge once removed 103 valid headshots (#106).
 When processing portraits manually or reviewing automated candidates:
 - Open the downloaded image with your image-capable file reader (e.g. Claude Code's Read tool) and look at it.
 - Confirm the image displays a single, clearly identifiable human face matching the scholar's identity.
-- Verify aspect ratio (width/height ratio must be between **0.70 and 1.55**).
+- Verify aspect ratio (width/height ratio must be between **0.60 and 1.55**; a 2:3 headshot (0.67) is fine, since cards crop with `object-fit: cover`).
 
 ---
 
@@ -85,7 +85,9 @@ swallows errors.
 git checkout main && git pull --ff-only
 npx playwright install chromium                    # once per session: headless fallback for JavaScript-built pages and curl-blocked images
 node scripts/fetch-portraits.ts --status        # syncs the queue with the roster; newestPending = what --next picks
-node scripts/fetch-portraits.ts --next=10 --apply --retry   # newest never-attempted 10 (retries only when none remain); stores HIGH-confidence candidates
+node scripts/fetch-portraits.ts --next=10 --apply      # newest never-attempted 10; stores HIGH-confidence candidates
+node scripts/fetch-portraits.ts --refused=10 --apply   # 10 entries whose photo was refused by the old size/aspect gate
+node scripts/fetch-portraits.ts --ids=vp-0123,vp-0456 --apply   # specific entries (the links rotation uses this)
 python3 scripts/portrait_faces.py $(git status --porcelain public/portraits | awk '{print $2}')   # every added image must be `ok`
 ```
 
