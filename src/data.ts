@@ -1156,6 +1156,158 @@ const FIELD_OVERRIDES = new Map([
     'School of Medicine and Psychology|Australian National University',
     'Social & Behavioral Sciences',
   ],
+  ['Foundational Medical Studies|Oakland University', 'Health Sciences'],
+  ['Periodontics|University of Texas Health Science Center at San Antonio', 'Health Sciences'],
+  [
+    'Occupational Science and Occupational Therapy|University of Southern California',
+    'Health Sciences',
+  ],
+  ['French and Italian|Northwestern University', 'Humanities'],
+  ['Clinical and Administrative Sciences|California Northstate University', 'Health Sciences'],
+  ['Otolaryngology|Baylor College of Medicine', 'Health Sciences'],
+  [
+    'Singapore Institute of Manufacturing Technology (SIMTech)|Agency for Science, Technology and Research',
+    'Engineering',
+  ],
+  ['IUT de Colmar; CREGO — CERMAB|University of Haute-Alsace', 'Business & Economics'],
+  ["UFR de Lettres; Grammatica|Université d'Artois", 'Humanities'],
+  [
+    'Paul Painlevé Laboratory — Numerical Analysis and Partial Differential Equations|University of Lille',
+    'Mathematics',
+  ],
+  [
+    "Department of Asia, Africa and the Mediterranean|University of Naples L'Orientale",
+    'Humanities',
+  ],
+  ['Institute of Creativity and Innovation|University for the Creative Arts', 'Arts & Design'],
+  [
+    'Department of Oil and Gas Field Development and Operation|Empress Catherine II Saint Petersburg Mining University',
+    'Engineering',
+  ],
+  [
+    'Department of Flight Navigation and Information-Measuring Complexes (305)|Moscow Aviation Institute',
+    'Engineering',
+  ],
+  [
+    'Institute of Innovation, Science and Sustainability|Federation University Australia',
+    'Business & Economics',
+  ],
+  ['R&D Disposal|Belgian Nuclear Research Centre (SCK CEN)', 'Engineering'],
+  [
+    'M2iSH, UMR 1071|Inserm (Institut National de la Santé et de la Recherche Médicale)',
+    'Biological & Biomedical Sciences',
+  ],
+  [
+    'Leukemia and Niche Dynamics, Institut Cochin|Inserm (Institut National de la Santé et de la Recherche Médicale)',
+    'Biological & Biomedical Sciences',
+  ],
+  [
+    'Laboratory of Pathogens and Host Immunity (LPHI), Mechanisms of Normal and Pathological Inflammation|CNRS (Centre National de la Recherche Scientifique)',
+    'Biological & Biomedical Sciences',
+  ],
+  [
+    "Soil–Plant–Atmosphere Interactions (ISPA), BIONET|INRAE (Institut National de Recherche pour l'Agriculture, l'Alimentation et l'Environnement)",
+    'Agricultural & Natural Resource Sciences',
+  ],
+  [
+    "Cryptography, De Vinci Research Center|École Supérieure d'Ingénieurs Léonard de Vinci",
+    'Computer & Information Sciences',
+  ],
+  ['Department of Peace Studies|Payap University', 'Social & Behavioral Sciences'],
+  ['Centre for Textile Science and Technology (2C2T)|University of Minho', 'Engineering'],
+  [
+    'Institut national supérieur du professorat et de l’éducation (INSPÉ)|Université de Picardie Jules Verne',
+    'Education',
+  ],
+  [
+    'DRIVE Laboratory — Mobilité, Énergie, Environnement et Propulsion|Université Bourgogne Europe',
+    'Engineering',
+  ],
+  ['Center for Glocal Strategy|Otaru University of Commerce', 'Business & Economics'],
+  [
+    'Institut de recherche en Langues et Littératures Européennes (ILLE)|University of Haute-Alsace',
+    'Humanities',
+  ],
+  [
+    'Thai Language Program, Faculty of Humanities and Social Sciences|Lampang Rajabhat University',
+    'Humanities',
+  ],
+  [
+    'Faculty of Natural Resource Sciences|University of Akureyri',
+    'Agricultural & Natural Resource Sciences',
+  ],
+  [
+    'Théories et pratiques de la conception architecturale urbaine|École nationale supérieure d’architecture de Versailles',
+    'Arts & Design',
+  ],
+  [
+    'Laboratoire de Modélisation et Simulation Multi Échelle (MSME), IUT de Marne-la-Vallée|Université Gustave Eiffel',
+    'Engineering',
+  ],
+  [
+    'Laboratoire d’Électrotechnique et d’Électronique de Puissance de Lille (L2EP), Équipe Commande|Arts et Métiers Institute of Technology',
+    'Engineering',
+  ],
+  [
+    'EPN 10 Comptabilité Contrôle Audit, LIRSA|Conservatoire National des Arts et Métiers',
+    'Business & Economics',
+  ],
+  [
+    'Géographie, Laboratoire TREE (UMR 6031)|Université de Pau et des Pays de l’Adour',
+    'Earth & Environmental Sciences',
+  ],
+  [
+    'Psychologie clinique et psychopathologie, UMR-S 1077 NIMH|Université de Caen Normandie',
+    'Social & Behavioral Sciences',
+  ],
+  [
+    'UFR Sciences du Langage, de l’Homme et de la Société (SLHS), ELLIADD, Discours, Dispositifs, Sociétés|Université Marie et Louis Pasteur',
+    'Humanities',
+  ],
+  ['IGR-IAE Rennes, CREM (UMR CNRS 6211)|Université de Rennes', 'Business & Economics'],
+  [
+    'École d’histoire de la Sorbonne (UFR 09), Institut d’Histoire Moderne et Contemporaine (IHMC, UMR 8066)|Université Paris 1 Panthéon-Sorbonne',
+    'Humanities',
+  ],
+  [
+    'École d’Urbanisme de Paris, Lab’URBA|Université Gustave Eiffel',
+    'Social & Behavioral Sciences',
+  ],
+  [
+    'École d’économie de la Sorbonne, Centre d’économie de la Sorbonne (CES, UMR 8174)|Université Paris 1 Panthéon-Sorbonne',
+    'Business & Economics',
+  ],
+  [
+    'Département de Lettres, Faculté des lettres, langues et sciences humaines; Lettres, Idées, Savoirs (LIS)|Université Paris-Est Créteil',
+    'Humanities',
+  ],
+  ['Faculté de droit|Paris-Panthéon-Assas University', 'Law & Public Affairs'],
+  [
+    'Centre de Recherche Droit Dauphine (CR2D), École Droit Dauphine|Université Paris Dauphine - PSL',
+    'Law & Public Affairs',
+  ],
+  [
+    'Faculté de Droit et des sciences économiques, Centre de droit économique et du développement Yves Serra (CDED YS)|Université de Perpignan Via Domitia',
+    'Law & Public Affairs',
+  ],
+  [
+    'IUT de Villetaneuse; Laboratoire de Traitement et de Transport de l’Information (L2TI), Institut Galilée|Université Sorbonne Paris Nord',
+    'Engineering',
+  ],
+  [
+    'Éco-anthropologie (UMR 7206), Anthropologie génétique|CNRS (Centre National de la Recherche Scientifique)',
+    'Biological & Biomedical Sciences',
+  ],
+  [
+    'Algorithmic Foundations and Cryptography|CISPA Helmholtz Center for Information Security',
+    'Computer & Information Sciences',
+  ],
+  ["Faculté de droit et science politique, GREDEG|Université Côte d'Azur", 'Law & Public Affairs'],
+  ['UFR SITEC, LEME — Energy Science and Technology|Université Paris Nanterre', 'Engineering'],
+  [
+    'Sciences économiques, sociales et de gestion, AgroToulouse (ENSAT)|Toulouse INP',
+    'Agricultural & Natural Resource Sciences',
+  ],
 ]);
 
 // Buckets granular `department` values into the broad fields above. Order matters, and is not

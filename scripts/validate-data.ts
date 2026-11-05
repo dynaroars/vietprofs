@@ -25,6 +25,11 @@ const schemaFile = resolve('public/roster.schema.json');
 // faculty pages, or an explicit maiden-name pattern) — see the git history for the check —
 // are allowlisted so the test doesn't force a wrong "fix" on them.
 const surnameFirstAllowlist = new Set<string>([
+  'Nguyen-Thi Dang', // IMO Orsay member page lists Nguyen-Thi Dang (Maîtresse de conférences); she publishes as "Nguyen-Thi Dang" with Dang as surname
+  'Hoang La', // his IUT Orsay page gives "Hoang La" and the address firstname.lastname@universite-paris-saclay.fr; La is his surname
+  'Le Nguyen Hoang', // Télécom Paris profile publishes "Lê Nguyên Hoang" in Western order; Hoang is his surname (EPFL/Science4All)
+  'Mai Nguyen-Chi', // LPHI Montpellier team page lists "Mai Nguyen-Chi" (CNRS DR2); Nguyen-Chi is her compound surname and Mai her given name
+  'Tran Bao Locke', // BCM people-search lists "Tran Locke" (Otolaryngology); Locke is the surname and Tran the given name
   'Le Anh Nguyen Long', // University of Twente Pure profile lists "Le Anh Nguyen Long"; she publishes as "Nguyen Long, L. A." (surname Nguyen Long)
   'Mai Thi Thanh Thai', // HEC Montréal's faculty directory lists her as "Thai, Mai Thi Thanh"; Thai is her surname
   'Hoang Mai Luong', // Chulalongkorn EE profile gives Thai "ฮวาง มาย เลื่อง" (Hoang Mai Luong) and email hoang.l@chula.ac.th; Luong is his surname
@@ -298,6 +303,9 @@ const DISTINCT_PEOPLE = new Set<string>([
   'vp-0972 vp-0973', // Katherine Nguyen (Rheumatology) and Katherine Nguyen Williams (Psychiatry), UC San Diego: separate UCSD profiles
   'vp-0673 vp-1700', // Lan K. Nguyen (Biochemistry) and Lan Nguyen (Accounting), Monash: separate Monash research profiles (#223)
   'vp-1744 vp-1996', // Thanh Le (Business, Associate Professor) and Thanh Le Hoang (Computing, Lecturer in AI), Wollongong: separate UOW Scholars profiles
+  'vp-2322 vp-2323', // David Quang-Nam Pham (Anesthesiology) and Nam Pham (Endocrinology, MD PhD), UT Southwestern: separate UTSW profiles 182203 and 94529
+  'vp-0129 vp-2340', // Tran N. H. Nguyen (Biomedical Engineering, PhD) and Tran T. Nguyen (Hospital Medicine, MD), UT Southwestern: separate UTSW profiles
+  'vp-2416 vp-2417', // Hong Loan Nguyen (General Internal Medicine) and Loan T. Nguyen (Pediatrics Hospital Medicine), Baylor College of Medicine: separate BCM profiles 27617 and 27539
 ]);
 const identityOwners = new Map<string, string>();
 const rosterTokens = (roster as RosterEntry[]).map((person) => nameTokens(person.name));
