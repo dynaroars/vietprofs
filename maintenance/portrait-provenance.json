@@ -14688,6 +14688,34 @@
       ],
       "retrievedAt": "2026-11-05T04:02:42.526Z",
       "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-2615": {
+      "name": "Thu Trang Vu",
+      "outcome": "needs_review",
+      "pageUrl": "https://www.tuj.ac.jp/directory/vu-thu-trang",
+      "imageUrl": "https://www.tuj.ac.jp/sites/japan/files/styles/tu_image_style_thumbnail/public/temple/profiles/Vu-Thu-Trang_0.jpg?h=d59d6d48&itok=uN04yq9a",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-05T04:12:13.577606Z"
+    },
+    "vp-2618": {
+      "name": "Thang Pham",
+      "outcome": "needs_review",
+      "pageUrl": "https://imis.xidian.edu.cn/info/1017/1932.htm",
+      "imageUrl": "https://imis.xidian.edu.cn/__local/D/3E/FB/8FEF73C0B810822E2E6647DFE14_0F33C098_AF80.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-05T04:12:13.577617Z"
     }
   }
 }

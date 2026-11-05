@@ -591,6 +591,10 @@ const FIELD_OVERRIDES = new Map([
   ],
   // San Jose State speech-language pathology.
   ['Communicative Disorders & Sciences|San Jose State University', 'Health Sciences'],
+  // TU Dresden Chair of Robotics (Faculty of Electrical and Computer Engineering).
+  ['Institute of Automation Technology (Chair of Robotics)|TU Dresden', 'Engineering'],
+  // Sorbonne Paris Nord LSPM plasma process engineering.
+  ['LSPM (Plasma and Multiphase Processes, 3PE)|Université Sorbonne Paris Nord', 'Engineering'],
   // Charles Sturt podiatry (School of Allied Health, Exercise and Sports Sciences).
   ['Podiatry|Charles Sturt University', 'Health Sciences'],
   // Sorbonne's applied-mathematics laboratory (the lab name carries no field keyword).
