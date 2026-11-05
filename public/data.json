@@ -8726,7 +8726,8 @@
     "country": "United States",
     "portrait": "portraits/256-khoa-nguyen-university-of-florida.webp",
     "portraitSource": "https://directory.ufhealth.org/nguyen-khoa-3/files/profile-photo",
-    "undergradYear": 2013
+    "undergradYear": 2011,
+    "undergradInstitution": "University of California, Davis"
   },
   {
     "id": "vp-0255",
@@ -30591,10 +30592,10 @@
   {
     "id": "vp-1115",
     "name": "Tracy T. Nguyen",
-    "profileUrl": "https://www.sunyopt.edu/clinical-education/",
-    "university": "SUNY College of Optometry",
-    "city": "New York",
-    "state": "New York",
+    "profileUrl": "https://optometry.indiana.edu/people/faculty-current/nguyen-tracy.html",
+    "university": "Indiana University Bloomington",
+    "city": "Bloomington",
+    "state": "Indiana",
     "country": "United States",
     "researchAreas": [
       "Corneal Physiology",
@@ -47288,25 +47289,6 @@
     ]
   },
   {
-    "id": "vp-1901",
-    "name": "Olav Toai Duc Nguyen",
-    "vietnameseName": "Nguyễn Đức Toại",
-    "profileUrl": "https://www.ntnu.no/ansatte/olavtoai",
-    "university": "Norwegian University of Science and Technology",
-    "city": "Trondheim",
-    "country": "Norway",
-    "department": "Department of Clinical and Molecular Medicine",
-    "rank": "Associate Professor",
-    "track": "Tenure-line",
-    "researchAreas": [
-      "Lung Cancer Risk Prediction",
-      "Cancer Biomarkers",
-      "Oncology"
-    ],
-    "portrait": "portraits/vp-1901-olav-toai-duc-nguyen.webp",
-    "portraitSource": "https://backends.it.ntnu.no/user-profile-service/rest/files/947cb9b3-b41f-3132-8386-cf389aa46e1e"
-  },
-  {
     "id": "vp-1902",
     "name": "Minh Nhut Le",
     "vietnameseName": "Lê Minh Nhựt",
@@ -61720,5 +61702,81 @@
     "undergradInstitution": "University of California, Santa Barbara",
     "portrait": "portraits/vp-2598-thomas-t-nguyen-st-thomas-university.webp",
     "portraitSource": "https://www.stu.edu/wp-content/uploads/2025/04/Thomas-Nguyen_Web-200x250-1.jpg"
+  },
+  {
+    "id": "vp-2599",
+    "name": "Trung (Tim) Nguyen",
+    "profileUrl": "https://fresno.ucsf.edu/tim-nguyen-nguyen",
+    "university": "University of California, San Francisco",
+    "city": "Fresno",
+    "state": "California",
+    "country": "United States",
+    "department": "Obstetrics and Gynecology (Gynecologic Oncology), UCSF Fresno",
+    "rank": "Associate Professor",
+    "track": "Clinical",
+    "researchAreas": [
+      "Gynecologic Oncology",
+      "Minimally Invasive Surgery",
+      "Robotic Surgery"
+    ],
+    "undergradInstitution": "Rutgers University",
+    "linkedinUrl": "https://www.linkedin.com/in/trung-tim-nguyen-do-mba-cpxp-515aa413b",
+    "portrait": "portraits/vp-2599-trung-tim-nguyen.webp",
+    "portraitSource": "https://fresno.ucsf.edu/sites/g/files/tkssra17341/files/styles/180x180/public/2023-01/Nguyen_Tim.png?h=b4e301e9&itok=BPzWlBUd"
+  },
+  {
+    "id": "vp-2600",
+    "name": "Jamie Nguyen",
+    "profileUrl": "https://profiles.utsouthwestern.edu/profile/238795/jamie-nguyen.html",
+    "university": "University of Texas Southwestern Medical Center",
+    "city": "Dallas",
+    "state": "Texas",
+    "country": "United States",
+    "department": "Psychiatry (Psychology)",
+    "rank": "Assistant Professor",
+    "track": "Clinical",
+    "researchAreas": [
+      "Clinical Child Psychology",
+      "Suicide Prevention",
+      "Depression"
+    ],
+    "phdInstitution": "Southern Methodist University",
+    "linkedinUrl": "https://www.linkedin.com/in/jamie-nguyen-phd-737b3188"
+  },
+  {
+    "id": "vp-2601",
+    "name": "Dieu Truong",
+    "profileUrl": "https://profiles.utsouthwestern.edu/profile/244811/dieu-truong.html",
+    "university": "University of Texas Southwestern Medical Center",
+    "city": "Dallas",
+    "state": "Texas",
+    "country": "United States",
+    "department": "Psychiatry (Psychology)",
+    "rank": "Assistant Professor",
+    "track": "Clinical",
+    "researchAreas": [
+      "Autism",
+      "School Psychology",
+      "Pediatric Psychology"
+    ],
+    "phdInstitution": "University of Houston"
+  },
+  {
+    "id": "vp-2602",
+    "name": "Thao P. Nguyen",
+    "profileUrl": "https://shileyeye.ucsd.edu/profile/thao-p-nguyen",
+    "university": "University of California, San Diego",
+    "city": "La Jolla",
+    "state": "California",
+    "country": "United States",
+    "department": "Ophthalmology (Shiley Eye Institute)",
+    "rank": "Assistant Professor",
+    "track": "Clinical",
+    "researchAreas": [
+      "Cornea",
+      "Anterior Segment",
+      "Cataract Surgery"
+    ],
+    "mdInstitution": "University of Oklahoma"
   }
 ]
