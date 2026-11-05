@@ -15,8 +15,8 @@ Policy (eligibility, evidence, routing of Issues/PRs/direct pushes) lives in `AG
  ─────────────────────────────           ──────────────────────────          ─────
  task PRs  "[scheduled:<task>] ..."  ──►  re-verify live, test on main,
                                           CI green → squash-merge
- finding Issues (side discoveries)   ──►  verify → fix PR → close
- new-candidate Issues                ──►  re-dedup → verify → add entry,  ──►  only if the add is
+ finding Issues (side discoveries)   ──►  verify → fix on main → close
+ new-candidate Issues (single/batch) ──►  re-dedup → verify → add entry,  ──►  only if the add is
                                           close (else "ready for owner")      denied or unclear
  owner-review Issues                 ──►  comment findings, leave open   ──►  only items the
                                                                               auditor leaves open
@@ -24,7 +24,7 @@ Policy (eligibility, evidence, routing of Issues/PRs/direct pushes) lives in `AG
 
 - **Producers** do one playbook each, in small capped batches. They never merge or push to `main`,
   except the relationships routine (see `AGENTS.md`). The auditor merges PRs and lands its own
-  verified Issue fixes through one fix PR per run. Verified new candidates are added by the
+  verified Issue fixes on `main` (one `audit-fix` PR only if the push is denied). Verified new candidates are added by the
   auditor itself (see "New-candidate Issues" under the auditor section).
 - While researching, producers also report **side findings**: errors or leads outside their own
   task, filed as Issues (see "Side findings" below). This is how a narrow task like the LinkedIn
@@ -183,28 +183,32 @@ Follow `TASKS/AUDIT_ISSUES_PRS.md`, including "Independent review". Also read
   long as its per-entry table shows real checks (spot-check 3 "confirmed" rows live). If the
   table is missing or shows only URL status codes, close the PR and say why. The next run then
   repeats those ids.
-- New-candidate Issues: re-run the dedup (`npm run find-roster-matches` with the name and every
-  identity URL in the Issue) against current `public/data.json`. If it hits the same person
-  (often at a former institution), update that entry in place and close the Issue with its id; a
-  retired-id hit gets its original id back. Otherwise re-verify eligibility live. Under the standing
-  owner authorization in `AGENTS.md` ("New entries vs. edits"), a verified candidate is added by
-  the auditor itself: add the entry (no `id`) to `public/data.json` on the run's `audit-fix` branch,
-  run `npm run assign-profile-ids -- --apply`, and store the portrait if the verified official
-  profile page shows a clear single-person headshot (validate with `identify`, convert to WebP in
-  `public/portraits/`, set `portrait` and `portraitSource`; `TASKS/fetch_portraits.md`). Give the
-  commit its own `Closes #n` line and comment on the Issue with the new id and the evidence. If the
-  cloud permission check still denies the add, comment `## Audit <date>: verified, ready for owner`
-  with the evidence and a ready-to-paste entry (no `id`), leave the Issue open, and report the exact
-  denial in the Sunday health Issue. A moved-person or retired-id hit is an edit, not a new entry,
-  so it goes in the fix PR as before.
+- New-candidate Issues, both single (`New candidate:`) and batched (`[scheduled:discover] New
+  faculty batch`): at most 25 candidates per run across all candidate Issues, oldest Issue first;
+  a batch counts as one Issue toward the 20-Issue cap. For each candidate, re-run the dedup
+  (`npm run find-roster-matches` with the name and every identity URL in the Issue) against current
+  `public/data.json`. If it hits the same person (often at a former institution), update that entry
+  in place; a retired-id hit gets its original id back. Otherwise re-verify eligibility live. Under
+  the standing owner authorization in `AGENTS.md` ("New entries vs. edits"), the auditor adds a
+  verified candidate itself: add the entry (no `id`) to `public/data.json`, add any needed
+  `FIELD_OVERRIDES` in `src/data.ts`, run `npm run assign-profile-ids -- --apply`, and store the
+  portrait if the verified official profile page shows a clear single-person headshot (validate with
+  `identify`, convert to WebP in `public/portraits/`, set `portrait` and `portraitSource`;
+  `TASKS/fetch_portraits.md`). Rejected candidates get a one-line reason. Comment on the Issue with
+  a table of each candidate's outcome (`vp-####`, existing id updated, or rejection reason). Close a
+  single-candidate Issue with its commit's `Closes #n`; close a batched Issue only when every
+  candidate in it has an outcome, otherwise post the progress table and leave it open for the next
+  night. If the permission check denies the add, comment `## Audit <date>: verified, ready for owner`
+  with the verified entries (no `id`), leave the Issue open, and report the exact denial in the
+  Sunday health Issue.
 - Removals: when live evidence confirms that a person is gone or no longer eligible (left academia,
-  now visiting or postdoc, deceased), the auditor retires the id in the fix PR instead of leaving
+  now visiting or postdoc, deceased), the auditor retires the id in the run's fixes instead of leaving
   the Issue for the owner: delete the entry and its portrait, and add a row to
   `maintenance/retired-ids.json` (`replacedBy: null`, with the reason and source). The official page
   outranks a personal homepage. An entry with protected `directFields` is never removed by
   automation; that conflict goes to the owner.
 - Side-finding and other correction Issues: verify live. If confirmed, fix, validate, and put it
-  in the run's fix PR with what changed and the source. If the evidence is wrong, close with the
+  in the run's fixes with what changed and the source. If the evidence is wrong, close with the
   reason. Duplicates: keep the older (lower) id, even if the newer entry is richer or has protected
   fields; move the verified current facts and unique sourced fields onto it, delete the newer
   entry, and run `npm run retire-profile-id -- <newer> --into <older> --reason "..." --apply`,
@@ -223,18 +227,16 @@ Follow `TASKS/AUDIT_ISSUES_PRS.md`, including "Independent review". Also read
   monthly report will flag them again.
 - The auditor doesn't file side findings about its own items; it resolves them.
 - `[scheduled:review]` Issues are for the owner: leave them open and don't act on them.
-- Applying fixes: the auditor never edits `main` directly. It makes all of a run's verified Issue
-  fixes on one branch, `audit-fix/<YYYY-MM-DD>`, with one commit per Issue
-  (`Closes #n` in each message), runs `npm test`, `npm run build`, and `git diff --check`, pushes
-  the branch, opens one PR titled `[scheduled:audit] Verified Issue fixes (<date>)` that lists each
-  Issue and its evidence, with one `Closes #n` line per Issue (a comma list only closes the first), and squash-merges it once CI is green, then comments on each Issue with
-  the change. This is the one PR the auditor merges itself: the Issues were filed by other agents or
-  the owner, so the review is still independent, and the PR adds a CI gate and a record. Why not
-  push to `main`: the cloud session's permission check blocks large unreviewed rewrites of
-  `public/data.json` headed for `main` ("Modify Shared Resources"), even with written authorization
-  in the prompt, while edits to existing entries on a branch and PR merges are allowed. Adding a
-  new entry is denied even on the branch (see "New-candidate Issues"). If the fix PR's CI is red,
-  leave it open with a comment; the next run fixes or closes it.
+- Applying fixes (changed 2026-11-05: `main` first): commit each verified Issue fix on fresh
+  `main`, one commit per Issue (`Closes #n` in each message), run `npm test`, `npm run build`, and
+  `git diff --check`, and push to `main`; comment on each Issue with the change. Pull and re-test
+  before each push if `main` moved. Fallback: if the permission check denies the push to `main`
+  (it did through October 2026: "Modify Shared Resources" on large `public/data.json` rewrites), put
+  the run's remaining fixes on one `audit-fix/<YYYY-MM-DD>` branch, open one PR titled
+  `[scheduled:audit] Verified Issue fixes (<date>)` with one `Closes #n` line per Issue (a comma list
+  only closes the first), and squash-merge it once CI is green. Report which path the run used in its
+  summary, and a denial in the Sunday health Issue. If the fallback PR's CI is red, leave it open with
+  a comment; the next run fixes or closes it.
 - Automation health (Sunday runs only, after the normal work). Check:
   1. PRs open more than 3 days, and why (red CI, conflict, rejected but still open).
   2. Open PRs that still conflict or fail after the nightly rebase (see PRs above): why.
@@ -347,12 +349,34 @@ Issue each.
 
 ### Discover new faculty (`discover`)
 
-Playbooks: `TASKS/discover_new_faculty.md` and `TASKS/candidate_intake.md`. Pick one field or
-institution group that no `[scheduled:discover]` Issue has covered in the last 30 days. File at
-most 10 `New candidate:` Issues, one per person. When that field's surname searches are already
-done, search by common Vietnamese given-name tokens. Never edit `public/data.json` or open a PR.
-Put the field and the queries used in the run summary and in a comment on the first Issue filed,
-so the next run can avoid repeating them.
+Playbooks: `TASKS/discover_from_database.md` (database channels), `TASKS/discover_new_faculty.md`
+(web/directory search), and `TASKS/candidate_intake.md` (eligibility and enrichment).
+
+1. **Channel by weekday (UTC):** Mon `grants` (NIH RePORTER + NSF PIs), Tue `coauthors`
+   (Crossref/OpenAlex co-authors of rostered scholars), Wed `gaps` (feeder-vs-faculty gap report,
+   then `./scripts/faculty-discovery-queries.ts` for the top uncovered gap university), Thu `labs`
+   (alumni pages on rostered `websiteUrl`s), Fri web search per `discover_new_faculty.md` (one field
+   or institution group; given-name tokens once that field's surname sweep is done), Sat `logs`
+   (out-of-roster leads in `maintenance/relationship-research.json`). Run
+   `npm run discover-leads -- --mode=<channel> --limit=<n>` (never `--mode=all`). If the day's channel
+   yields fewer than 5 promising leads, fall back to the next channel in the list.
+2. **Skip covered ground:** read the `[scheduled:discover]` Issues of the last 30 days (open and
+   closed) and skip leads, gap universities, seed labs, or fields they already list.
+   `maintenance/discovery-leads.json` is gitignored, so the Issue body is the only record that
+   survives between runs.
+3. **Dedup and verify:** for each lead, `npm run find-roster-matches -- "<Name>" --url <url> ...`
+   and `gh issue list --state all --search '"<Name>"'`. A roster hit is a move or promotion: file a
+   side-finding Issue for that id instead. Otherwise verify eligibility live on the official page
+   (`ROSTER_MAINTENANCE.md`) and enrich per `candidate_intake.md`.
+4. **File one batched Issue per run:** at most 25 verified candidates, titled
+   `[scheduled:discover] New faculty batch (<N> candidates): <channel and slice>`. Never pad the
+   batch with unverified leads; a run with 3 verified candidates files 3. Body: a summary table, then
+   one numbered section per candidate with a ready-to-paste JSON entry (no `id`), the dedup result,
+   and the verification URLs. End with a "Coverage" section listing the channel, parameters, and
+   every lead, university, lab, or query examined, including rejected leads and why.
+5. **Boundaries:** never edit `public/data.json`, assign an id, or open a PR. The only commit allowed
+   is `maintenance/network-discovery.json` after a `labs` or `coauthors` run (pushed to `main` after
+   `npm test`, `npm run build`, `git diff --check`).
 
 ### Academic relationships (`relationships`)
 
@@ -379,8 +403,8 @@ out-of-roster advisors or coauthors.
 ## Troubleshooting
 
 - **Fixes posted on Issues but never applied:** check the run log (`get_run_log`) for
-  `permission_denied`. See "Applying fixes" in the auditor section: fixes must go through the
-  `audit-fix/<date>` PR, not a direct edit of `main`.
+  `permission_denied`. See "Applying fixes" in the auditor section: a denied push to `main` must fall back
+  to the `audit-fix/<date>` PR in the same run.
 - **PR branches piling up:** agents can't delete branches (the cloud git proxy returns 403). The
   branch-cleanup Action does it; check its runs with `gh run list -w delete-pr-branches.yml`.
 - **What did a run do?** Use `RemoteTrigger list_runs` for the routine, then `get_run_log` for a

@@ -11,9 +11,9 @@ In this multi-agent architecture:
 - **Task Agents** (`fetch_portraits.md`, `backfill_linkedin.md`, `check_google_scholar.md`, `verify_websites_and_labs.md`, `audit_facts_and_honors.md`) discover data, perform deep research, create topic branches, and **file GitHub Pull Requests or GitHub Issues**. Task agents DO NOT commit directly to `main` or merge their own PRs.
 - **Audit Agent (`AUDIT_ISSUES_PRS.md`):** Acts as the primary auditor. Reviews all open PRs, verifies diffs, executes test suites (`npm test`, `npm run build`), **squash-merges verified PRs**, deletes topic branches, processes issues, and updates ledgers.
 
-> **One fix PR per run.** Verified Issue fixes go on the run's `audit-fix/<date>` branch and land
-> through one squash-merged PR (Steps 4–5). Scheduled runs never push to `main` directly; a local
-> owner session may commit a single verified fix straight to `main`.
+> **Fixes land on `main`.** Verified Issue fixes are committed to fresh `main`, one commit per Issue
+> (Steps 4–5). Only if the cloud permission check denies the push does a scheduled run put its
+> remaining fixes on one `audit-fix/<date>` branch and squash-merge that PR on green CI.
 
 ### Independent review (agent checks agent)
 
@@ -137,7 +137,8 @@ Before modifying data or closing issues, ensure compliance with repository rules
      - Re-run the dedup check from `TASKS/candidate_intake.md` step 1 (`npm run find-roster-matches -- "<name>" --url ...` with every identity URL in the Issue) against the current `public/data.json`; the Issue's "not on the roster" claim may be stale. A hit at another institution is a probable move: if it's the same person, update that entry in place (the Issue's fields become an edit, with owner-asserted ones in `directFields`) and close the Issue naming the existing ID. See `ROSTER_MAINTENANCE.md` "One person, one ID".
      - A retired-ID hit means the person was on the roster before: add them back under that original ID and remove it from `maintenance/retired-ids.json`, instead of assigning a new one.
      - Assign immutable profile IDs for genuinely new people only: `npm run assign-profile-ids -- --apply`.
-     - Scheduled cloud audits add a verified new person themselves on the `audit-fix` branch (standing owner authorization in `AGENTS.md`). Only if the cloud permission check denies the add do they comment "verified, ready for owner" with a ready-to-paste entry and leave the Issue open for a local session (`TASKS/AUTOMATION.md`, auditor "New-candidate Issues").
+     - Candidate Issues are either single (`New candidate: <Name> — ...`) or batched (`[scheduled:discover] New faculty batch (<N> candidates): ...`, from `TASKS/discover_from_database.md` via the `discover` routine). Run every candidate in a batch through the same dedup, live verification, `FIELD_OVERRIDES` check, and `assign-profile-ids` steps; comment a per-candidate outcome table (`vp-####`, existing id updated, or rejection reason), and close the batch only when every candidate has an outcome (cap: 25 candidates per scheduled run).
+     - Scheduled cloud audits add a verified new person themselves on `main` (standing owner authorization in `AGENTS.md`; `audit-fix` branch only as the denied-push fallback). Only if the cloud permission check denies the add do they comment "verified, ready for owner" with a ready-to-paste entry and leave the Issue open for a local session (`TASKS/AUTOMATION.md`, auditor "New-candidate Issues").
      - When adding a new entry locally, also fetch its portrait if the Issue or the verified official profile page has a clear single-person headshot: validate with `identify` (≥120×120, aspect ≤1.55), convert to WebP in `public/portraits/`, set `portrait` and the direct original URL as `portraitSource`. Don't leave it for the `portraits` routine.
 
    - **B. Honors & Award Additions:**
@@ -166,32 +167,36 @@ Before modifying data or closing issues, ensure compliance with repository rules
 
 ---
 
-### Step 4: Validate and Land the Fixes Through One PR
-Scheduled audit runs never push to `main` directly (see `TASKS/AUTOMATION.md` "Applying fixes"; the
-cloud permission check blocks it). Make every verified fix on one branch:
-1. **Branch from fresh `main` and commit one Issue at a time:**
+### Step 4: Validate and Land the Fixes on `main`
+Commit verified fixes on fresh `main`, one Issue per commit (see `TASKS/AUTOMATION.md` "Applying fixes"):
+1. **Commit one Issue at a time on fresh `main`:**
    ```bash
-   git checkout -B audit-fix/$(date -u +%F) origin/main
+   git checkout main && git pull --ff-only
    # ...apply the fix for one Issue...
-   git add -A public/data.json public/updates.json maintenance/ src/data.ts
+   git add -A public/data.json public/updates.json public/portraits/ maintenance/ src/data.ts
    git commit -m "fix(roster): <what changed> (Closes #<n>)"
    ```
-2. **Validate, push the branch, open the PR, merge on green CI:**
+2. **Validate and push:**
    ```bash
    npm test && npm run build && git diff --check
-   git push -u origin HEAD
+   git pull --rebase && npm test && git push origin main
+   ```
+   Close each Issue explicitly with a comment (Step 5), not only through the commit's `Closes #n`.
+3. **Fallback if the push to `main` is denied** (cloud permission check): move the run's unpushed
+   commits to a branch and land them through one PR:
+   ```bash
+   git checkout -B audit-fix/$(date -u +%F) && git push -u origin HEAD
    # open "[scheduled:audit] Verified Issue fixes (<date>)" listing each Issue and its evidence,
    # with one "Closes #<n>" line per Issue (a comma-separated list only closes the first),
    # wait for CI to pass, then squash-merge it (the GitHub MCP merge tool or gh pr merge --squash)
    ```
-   A local owner session may still commit a single verified fix straight to `main`; it then
-   closes the Issue explicitly with a comment (Step 5), not only through the commit's `Closes #n`.
+   Report the denial and the fallback in the run summary.
 
 ---
 
 ### Step 5: Close GitHub Issues
 Every close gets a comment saying what was found and what was done (`TASKS/AUTOMATION.md`
-convention 10). Issues that the fix PR's `Closes #n` already closed still get a comment with the
+convention 10). Issues that a commit's `Closes #n` already closed still get a comment with the
 change and its source. Close other resolved issues with a clear summary comment:
 ```bash
 gh issue close <ISSUE_NUMBER> --comment "Verified and resolved: <SUMMARY_OF_CHANGES>"

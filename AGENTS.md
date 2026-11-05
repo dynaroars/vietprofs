@@ -79,9 +79,9 @@ instead of restating it.
 
 | Change | Route |
 | :--- | :--- |
-| New roster ID (any new `public/data.json` entry) | GitHub Issue, one per candidate |
+| New roster ID (any new `public/data.json` entry) | GitHub Issue: one per candidate, or one `[scheduled:discover] New faculty batch` Issue per `discover` run |
 | Edit to existing IDs from a `TASKS/` playbook (links, portraits, honors, degrees) | Topic branch + PR; the auditor (`TASKS/AUDIT_ISSUES_PRS.md`) merges |
-| Auditor's own fixes for verified Issues | One `audit-fix/<date>` branch + PR per run; the auditor squash-merges it on green CI (`TASKS/AUTOMATION.md` "Applying fixes") |
+| Auditor's own fixes for verified Issues (including new entries) | Commit and push to `main`, one commit per Issue; only if the push is denied, one `audit-fix/<date>` PR per run that the auditor squash-merges on green CI (`TASKS/AUTOMATION.md` "Applying fixes") |
 | Relationship batches (`public/relationships.json`) | Commit and push to `main` |
 | Conflict with a protected `directFields` value, or anything needing an owner decision | GitHub Issue |
 

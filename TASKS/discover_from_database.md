@@ -1,7 +1,7 @@
 # Database-Driven & API Faculty Discovery (`discover_from_database.md`)
 
 > **Autonomous Goal Directive (`/goal TASKS/discover_from_database.md`):**  
-> Leverage the existing `public/data.json` roster, maintenance ledgers, and public academic APIs (NIH RePORTER, NSF Award Search, OpenAlex, and Crossref) via `npm run discover-leads` (`scripts/discover-leads.ts`) to discover unlisted Vietnamese and Vietnamese-diaspora faculty and research-institute scientists outside Vietnam, as well as rank promotions and institutional moves among existing roster entries. Deduplicate every candidate with `npm run find-roster-matches` and against existing GitHub Issues (`gh issue list --state all`), verify current appointments live on official institutional pages according to `ROSTER_MAINTENANCE.md`, and file **batched GitHub Issues (20+ verified candidates per Issue)** (or a `Side finding:` Issue for existing-entry rank promotions or moves).
+> Leverage the existing `public/data.json` roster, maintenance ledgers, and public academic APIs (NIH RePORTER, NSF Award Search, OpenAlex, and Crossref) via `npm run discover-leads` (`scripts/discover-leads.ts`) to discover unlisted Vietnamese and Vietnamese-diaspora faculty and research-institute scientists outside Vietnam, as well as rank promotions and institutional moves among existing roster entries. Deduplicate every candidate with `npm run find-roster-matches` and against existing GitHub Issues (`gh issue list --state all`), verify current appointments live on official institutional pages according to `ROSTER_MAINTENANCE.md`, and file **one batched GitHub Issue per run (up to 25 verified candidates; never padded with unverified leads)** (or a `Side finding:` Issue for existing-entry rank promotions or moves).
 
 ---
 
@@ -79,9 +79,9 @@ For each deduplicated candidate, verify their current appointment live (`curl -s
   - Qualifying `honors` (endowed chairs, national academies, NSF CAREER, society fellowships) with a verifiable `source` URL.
   - Never guess or reconstruct `vietnameseName` diacritics unless an authoritative source writes the name with diacritics.
 
-### Step 5: Batched Issue Handoff (20+ Candidates per Issue) & Validation
+### Step 5: Batched Issue Handoff (up to 25 Candidates per Issue) & Validation
 
-1. Group verified new candidates into **batched GitHub Issues of 20+ candidates per Issue** (e.g., `[discover] New candidates batch: 25 verified faculty (OpenAlex & NIH/NSF)`), including each candidate's full name, `find-roster-matches` check, verified rank/track/department/university, official `profileUrl` (HTTP 200), degrees, research areas, honors, and source URLs.
+1. Group verified new candidates into **one batched GitHub Issue** of up to 25 (fewer is fine; never pad it), titled `[scheduled:discover] New faculty batch (<N> candidates): <channel and slice>` (scheduled runs follow `TASKS/AUTOMATION.md` "Discover new faculty"). For each candidate include the full name, `find-roster-matches` result, verified rank/track/department/university, official `profileUrl` (HTTP 200), degrees, research areas, honors, source URLs, and a ready-to-paste JSON entry (no `id`). End with a "Coverage" section listing the channel, parameters, and every lead, university, lab, or query examined (rejected leads with the reason), since `maintenance/discovery-leads.json` is gitignored and this is the only record the next run sees.
 2. If you updated `maintenance/network-discovery.json` or any script/doc files, run:
    ```bash
    npm test && npm run build && git diff --check
