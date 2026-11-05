@@ -89,6 +89,13 @@ node scripts/fetch-portraits.ts --next=10 --apply --retry   # newest never-attem
 python3 scripts/portrait_faces.py $(git status --porcelain public/portraits | awk '{print $2}')   # every added image must be `ok`
 ```
 
+When a stored page yields nothing live (down, under maintenance, or refusing us) even after
+rendering, the script reads its Wayback Machine copy. Candidates from a snapshot are always
+review-only: the ledger note gives the snapshot date, and you should look for a current photo on
+the live page or a newer official source before accepting one. An image whose live URL fails is
+also fetched from its archived copy, so the stored bytes still match `portraitSource`. Pass
+`--no-wayback` to skip both lookups.
+
 Then open every portrait this batch added (`git status --porcelain public/portraits/`) and look at
 it against the section 2 rejection rules. For any that fail, remove that entry's `portrait` and
 `portraitSource` from `public/data.json`, delete the image file, and mark the entry `not_found` in

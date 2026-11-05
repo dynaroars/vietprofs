@@ -7,6 +7,7 @@ import {
   PORTRAIT_QUEUE_FILE,
   type PortraitQueueItem as QueueItem,
 } from './maintenance-logs.ts';
+import { findSnapshot } from './wayback.ts';
 
 type Person = {
   id: string;
@@ -43,7 +44,9 @@ type AuditFixture = {
   blocked: string[];
   commonNames: string[];
 };
-type Page = { url: string; sourceType: SourceType; stored: boolean };
+// `archivedAt` marks a stored page read from its Wayback Machine copy (the live page was down or
+// refused us): its candidates are review-only, since the snapshot may predate a newer photo.
+type Page = { url: string; sourceType: SourceType; stored: boolean; archivedAt?: string };
 type Candidate = {
   imageUrl: string;
   page: Page;
@@ -275,6 +278,7 @@ function confidence(candidate: Candidate): Confidence {
   // review-only: a direct URL bearing the scholar's name is a cheap, reproducible extra guard
   // against a neighboring card or a page-wide hero image being selected automatically.
   return directSource &&
+    !candidate.page.archivedAt &&
     corroborated &&
     candidate.identitySignals.includes('stored_roster_url') &&
     candidate.urlHasNameEvidence
@@ -359,7 +363,28 @@ async function fetchImage(url: string): Promise<Buffer | null> {
   } catch {
     /* CDNs that block curl often serve a browser */
   }
-  return usable(await renderedImage(url));
+  const rendered = usable(await renderedImage(url));
+  if (rendered) return rendered;
+  // Last resort: the archived copy of the same image URL, so the stored bytes still match
+  // `portraitSource`. Only reached for a reviewed candidate or after the live host failed.
+  if (args.has('--no-wayback')) return null;
+  const snapshot = await findSnapshot(url);
+  if (!snapshot) return null;
+  try {
+    return usable(await curl(snapshot.rawUrl, 30));
+  } catch {
+    return null;
+  }
+}
+async function archivedPageHtml(url: string): Promise<{ html: string; date: string } | null> {
+  if (args.has('--no-wayback')) return null;
+  const snapshot = await findSnapshot(url);
+  if (!snapshot) return null;
+  try {
+    return { html: (await curl(snapshot.rawUrl, 30)).toString('utf8'), date: snapshot.date };
+  } catch {
+    return null;
+  }
 }
 async function archiveImage(bytes: Buffer, output: string): Promise<void> {
   const input = `${output}.source${extname(output) || '.bin'}`;
@@ -659,6 +684,12 @@ for (const person of selected) {
       const html = await renderedHtml(page.url);
       if (html) found = imageCandidates(html, page, person);
     }
+    if (found.length === 0) {
+      // Down, under maintenance, or refusing us: read the Wayback copy, never get around a block.
+      const archived = await archivedPageHtml(page.url);
+      if (archived)
+        found = imageCandidates(archived.html, { ...page, archivedAt: archived.date }, person);
+    }
     candidates.push(...found);
   }
   // Search is a fallback discovery route, never an image source on its own. Avoid it when a
@@ -705,9 +736,13 @@ for (const person of selected) {
     ledger.entries[person.id] = {
       ...entry,
       outcome: level === 'HIGH' ? 'needs_review' : entry.outcome,
-      note: applying
-        ? 'candidate requires visual review before acceptance'
-        : 'dry run; rerun with --apply after review',
+      note:
+        (applying
+          ? 'candidate requires visual review before acceptance'
+          : 'dry run; rerun with --apply after review') +
+        (candidate.page.archivedAt
+          ? `; found on the ${candidate.page.archivedAt} Wayback copy of the page, so check the live page or a newer source for a current photo`
+          : ''),
     };
     if (applying) {
       const item = queue.find((queued) => queued.id === person.id);

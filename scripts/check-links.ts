@@ -11,11 +11,17 @@
  *   npm run check-links -- --portraits          # Check portrait source URLs & local portrait files
  *   npm run check-links -- --verify-content     # Fetch HTML & verify person's name exists (soft 404 check)
  *   npm run check-links -- --id vp-0020         # Check all URLs for a specific person
+ *   npm run check-links -- --no-wayback         # Skip archived-copy lookups for failed URLs
+ *
+ * Every URL that is broken or could not be checked is looked up in the Wayback Machine, so the
+ * report says whether an archived copy exists and when it was taken. An archived copy helps find
+ * where a person moved or what a dead page showed; it never confirms a current appointment.
  */
 
 import { readFile } from 'node:fs/promises';
 import { existsSync, statSync } from 'node:fs';
 import { resolve } from 'node:path';
+import { findSnapshot, waybackEligible, type Snapshot } from './wayback.ts';
 
 interface UrlEntry {
   id: string;
@@ -32,6 +38,8 @@ interface CheckResult extends UrlEntry {
   errorDetail?: string;
   /** The site blocked, rate-limited, or timed out on the checker, so the link's state is unknown. */
   unverifiable?: string;
+  /** Most recent Wayback Machine copy of a URL that failed. */
+  archived?: Snapshot;
 }
 
 // Only these mean the page is really gone. Everything else that fails (403 bot walls, 429 rate
@@ -58,6 +66,8 @@ Options:
   --verify-content      Fetch HTML and verify faculty name appears on the page
   --concurrency <N>     Number of parallel requests (default: 16)
   --timeout <ms>        Request timeout in milliseconds (default: 12000)
+  --no-wayback          Don't look up archived copies of broken or uncheckable URLs
+  --wayback-limit <N>   Look up at most N failed URLs in the Wayback Machine (default: 500)
 `);
   process.exit(0);
 }
@@ -80,6 +90,11 @@ const timeoutArg = getArgValue('--timeout');
 const TIMEOUT_MS = timeoutArg ? parseInt(timeoutArg, 10) : 12000;
 const verifyContent = args.includes('--verify-content') || args.includes('--verify-identity');
 const checkPortraitsOnly = args.includes('--portraits');
+const useWayback = !args.includes('--no-wayback');
+const waybackLimitArg = getArgValue('--wayback-limit');
+const WAYBACK_LIMIT = waybackLimitArg ? parseInt(waybackLimitArg, 10) : 500;
+// The Internet Archive rate-limits bursts; a couple of lookups at a time stays well inside it.
+const WAYBACK_CONCURRENCY = 2;
 
 // Collect URLs
 let entries: UrlEntry[] = [];
@@ -100,7 +115,12 @@ for (const person of roster) {
 
   for (const field of fieldsToCheck) {
     if (person[field]) {
-      entries.push({ id: person.id, name: person.name, field, url: person[field] });
+      entries.push({
+        id: person.id,
+        name: person.name,
+        field,
+        url: person[field],
+      });
     }
   }
 
@@ -215,7 +235,12 @@ async function checkOne(entry: UrlEntry): Promise<CheckResult> {
     let errorDetail: string | undefined;
 
     if (!res.ok && !DEAD_STATUSES.has(res.status)) {
-      return { ...entry, status: res.status, ok: false, unverifiable: `HTTP ${res.status}` };
+      return {
+        ...entry,
+        status: res.status,
+        ok: false,
+        unverifiable: `HTTP ${res.status}`,
+      };
     }
 
     // Check Redirects to directory roots
@@ -333,6 +358,18 @@ const results = await runPool(entries, CONCURRENCY, checkOne);
 
 const broken = results.filter((r) => !r.ok && !r.unverifiable);
 const unverifiable = results.filter((r) => r.unverifiable);
+
+const failed = [...broken, ...unverifiable].filter((r) => waybackEligible(r.url));
+const toLookUp = useWayback ? failed.slice(0, Math.max(0, WAYBACK_LIMIT)) : [];
+if (toLookUp.length > 0) {
+  console.log(`🗄️  Looking up ${toLookUp.length} failed URLs in the Wayback Machine...`);
+  await runPool(toLookUp, WAYBACK_CONCURRENCY, async (result) => {
+    result.archived = (await findSnapshot(result.url)) ?? undefined;
+  });
+}
+const archived = results.filter((r) => r.archived);
+const archivedLine = (r: CheckResult) =>
+  r.archived ? `\n    Archived ${r.archived.date}: ${r.archived.viewUrl}` : '';
 const warnings = results.filter((r) => r.warning);
 const successful = results.filter((r) => r.ok && !r.warning);
 
@@ -340,13 +377,23 @@ console.log(`📊 Link & Content Verification Summary:`);
 console.log(`   ✅ Healthy:   ${successful.length}`);
 console.log(`   ⚠️  Warnings:  ${warnings.length}`);
 console.log(`   🚨 Broken:    ${broken.length}`);
-console.log(`   🔒 Could not check (blocked/rate-limited/timeout): ${unverifiable.length}\n`);
+console.log(`   🔒 Could not check (blocked/rate-limited/timeout): ${unverifiable.length}`);
+console.log(
+  `   🗄️  Archived copy found: ${archived.length}` +
+    (useWayback
+      ? ` of ${toLookUp.length} looked up` +
+        (failed.length > toLookUp.length
+          ? ` (${failed.length - toLookUp.length} skipped by --wayback-limit)`
+          : '')
+      : ' (lookups off)') +
+    '\n',
+);
 
 if (broken.length > 0) {
   console.log(`🚨 BROKEN LINKS (${broken.length}):`);
   for (const b of broken) {
     console.log(
-      `  - [${b.id}] ${b.name} (${b.field}): Status ${b.status} ${b.errorDetail ? `(${b.errorDetail})` : ''}\n    ${b.url}`,
+      `  - [${b.id}] ${b.name} (${b.field}): Status ${b.status} ${b.errorDetail ? `(${b.errorDetail})` : ''}\n    ${b.url}${archivedLine(b)}`,
     );
   }
   console.log();
@@ -377,6 +424,19 @@ if (unverifiable.length > 0) {
   );
   for (const [host, count] of top) console.log(`  - ${host}: ${count}`);
   console.log();
+
+  const archivedUncheckable = unverifiable.filter((u) => u.archived);
+  if (archivedUncheckable.length > 0) {
+    console.log(
+      `🗄️  COULD NOT CHECK, BUT ARCHIVED (${archivedUncheckable.length}; the snapshot shows what the page held, not that it is current):`,
+    );
+    for (const u of archivedUncheckable) {
+      console.log(
+        `  - [${u.id}] ${u.name} (${u.field}): ${u.unverifiable}\n    ${u.url}${archivedLine(u)}`,
+      );
+    }
+    console.log();
+  }
 }
 
 if (broken.length > 0) {
