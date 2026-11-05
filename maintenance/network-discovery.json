@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-06T03:15:00.000Z",
+  "updatedAt": "2026-11-05T16:58:00.000Z",
   "scope": "Alumni, former-member, placement-announcement, and collaborator discovery.",
   "sources": [
     {
@@ -449,6 +449,106 @@
           "status": "excluded",
           "evidenceUrls": ["https://optnetsci.cise.ufl.edu/people/"],
           "nextAction": "No follow-up: the page identifies non-Vietnamese faculty placements, industry appointments, or research roles without faculty-equivalence evidence."
+        }
+      ]
+    },
+    {
+      "seedMember": "Tin Nguyen",
+      "scanDate": "2026-11-05",
+      "sourceUrls": ["https://tinnguyen-lab.com/home/"],
+      "status": "resolved",
+      "candidates": [
+        {
+          "name": "Sy Bang Tran",
+          "aliases": ["Bang Tran"],
+          "reportedInstitution": "California State University, Sacramento",
+          "status": "unresolved",
+          "evidenceUrls": [
+            "https://tinnguyen-lab.com/home/",
+            "https://scholars.csus.edu/esploro/profile/sy_bang_tran",
+            "https://webpages.csus.edu/s.tran/"
+          ],
+          "nextAction": "Verified current tenure-line Assistant Professor of Computer Science appointment at California State University, Sacramento (PhD University of Nevada, Reno 2023; postdoc Auburn University); filed as New-candidate GitHub Issue for roster intake."
+        },
+        {
+          "name": "Ha Nguyen",
+          "aliases": [],
+          "reportedInstitution": "Auburn University",
+          "status": "excluded",
+          "evidenceUrls": ["https://tinnguyen-lab.com/home/"],
+          "nextAction": "No follow-up: the source identifies a current PhD student."
+        },
+        {
+          "name": "Phi Nguyen",
+          "aliases": [],
+          "reportedInstitution": "Auburn University",
+          "status": "excluded",
+          "evidenceUrls": ["https://tinnguyen-lab.com/home/"],
+          "nextAction": "No follow-up: the source identifies a current PhD student."
+        },
+        {
+          "name": "Hung Nguyen",
+          "aliases": [],
+          "reportedInstitution": "Flatiron Health",
+          "status": "excluded",
+          "evidenceUrls": ["https://tinnguyen-lab.com/home/"],
+          "nextAction": "No follow-up: the source identifies an industry role (Senior Machine Learning Scientist at Flatiron Health)."
+        },
+        {
+          "name": "Duc Tran",
+          "aliases": [],
+          "reportedInstitution": "University of Nevada, Reno",
+          "status": "excluded",
+          "evidenceUrls": ["https://tinnguyen-lab.com/home/"],
+          "nextAction": "No follow-up: the source lists a former postdoctoral researcher without current permanent faculty-appointment evidence."
+        }
+      ]
+    },
+    {
+      "seedMember": "Truong X. Nghiem",
+      "scanDate": "2026-11-05",
+      "sourceUrls": ["https://nxtlab.org/people"],
+      "status": "resolved",
+      "candidates": [
+        {
+          "name": "Viet-Anh Le",
+          "aliases": [],
+          "reportedInstitution": "University of Michigan",
+          "status": "excluded",
+          "evidenceUrls": ["https://nxtlab.org/people"],
+          "nextAction": "No follow-up: the source identifies a postdoctoral fellow at the University of Michigan."
+        },
+        {
+          "name": "Other xLab members",
+          "aliases": [],
+          "reportedInstitution": "University of Central Florida / Northern Arizona University",
+          "status": "excluded",
+          "evidenceUrls": ["https://nxtlab.org/people"],
+          "nextAction": "No follow-up: listed roles are current PhD, MS, and undergraduate students."
+        }
+      ]
+    },
+    {
+      "seedMember": "Duc Duy Nguyen",
+      "scanDate": "2026-11-05",
+      "sourceUrls": ["https://nguyenlab.ai/"],
+      "status": "resolved",
+      "candidates": [
+        {
+          "name": "Long H. Nguyen",
+          "aliases": [],
+          "reportedInstitution": "University of Kentucky",
+          "status": "excluded",
+          "evidenceUrls": ["https://nguyenlab.ai/"],
+          "nextAction": "No follow-up: the source identifies a PhD student / graduate researcher."
+        },
+        {
+          "name": "Hieu Nguyen",
+          "aliases": [],
+          "reportedInstitution": "University of Kentucky",
+          "status": "excluded",
+          "evidenceUrls": ["https://nguyenlab.ai/"],
+          "nextAction": "No follow-up: the source identifies a PhD student / graduate researcher."
         }
       ]
     }

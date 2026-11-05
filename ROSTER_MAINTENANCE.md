@@ -157,7 +157,7 @@ Use all relevant candidate sources:
 - linked person pages, including opaque directory URLs such as `/profile/tn294`;
 - official institutional news, research-center, lab, grant, and award pages;
 - personal academic homepages, Google Sites, lab pages, CVs, Google Scholar, and reputable conference profiles; mark the entry unconfirmed if these are the best available current-appointment evidence; and
-- broad search-engine queries using the institution, field, Vietnamese surnames (`Nguyen`, `Tran`, `Le`, `Pham`, `Vo`, `Vu`, `Bui`, `Do`, `Phan`, `Lai`, `Huynh`, `Duong`, `Truong`, `Dang`, `Ngo`, `Mai`, `Dao`, `Trinh`, `Quach`, `Nghiem`, `Trieu`, `Ton-That`), and common Vietnamese given names.
+- broad search-engine queries using the institution, field, Vietnamese surnames (`Nguyen`, `Tran`, `Le`, `Pham`, `Vo`, `Vu`, `Bui`, `Do`, `Phan`, `Lai`, `Huynh`, `Duong`, `Truong`, `Dang`, `Ngo`, `Mai`, `Dao`, `Trinh`, `Quach`, `Nghiem`, `Trieu`, `Ton-That`, `Hoang`, `Dinh`, `Doan`, `Phung`, `Vuong`, `Luong`, `Kieu`), and common Vietnamese given names.
 
 Do not depend on URL shape, visible diacritics, or a faculty page being linked from a department homepage. A research mention, dissertation-supervision link, coauthorship, student page, or grant page is a lead—not proof of a current faculty appointment.
 
@@ -190,6 +190,39 @@ For every alumni-network sweep, retain a resumable source record in
 reported institution, status (`included`, `already-listed`, `excluded`, or `unresolved`), evidence,
 and next action. Record student, postdoctoral, corporate, Vietnam-based, and other ineligible
 outcomes with their reason. An unsuccessful identity or appointment search remains `unresolved`.
+
+### Database-driven multi-channel lead discovery
+
+Use `npm run discover-leads` (`scripts/discover-leads.ts`) and the step-by-step playbook in
+[`TASKS/discover_from_database.md`](TASKS/discover_from_database.md) to mine the existing roster and
+public academic APIs for out-of-roster faculty leads, existing-entry promotions/moves, and
+institutional coverage gaps (`maintenance/discovery-leads.json`):
+
+```bash
+npm run discover-leads -- --mode=all --limit=35
+```
+
+Supported `--mode` channels (`all`, `grants`, `coauthors`, `labs`, `logs`, `gaps`):
+
+- `grants`: Queries the NIH RePORTER v2 API and NSF Award Search API across the Vietnamese surname
+  lexicon for active PIs/co-PIs, filters out predoctoral/postdoctoral training mechanisms (`F30`,
+  `F31`, `F32`, `F99`, `K99`, `R36`, `T32`), and cross-checks against `public/data.json` and
+  `maintenance/retired-ids.json` to surface both new faculty candidates and existing-entry rank
+  promotions (e.g., an Associate Professor appearing as `PROFESSOR` on a current R01).
+- `coauthors`: Queries the Crossref API (`mailto=vietprofs@roars.dev`) for recent works of rostered
+  scholars, extracts co-authors matching the Vietnamese surname + given-name lexicon whose published
+  affiliations name universities or public/nonprofit research institutes outside Vietnam, and
+  deduplicates against the roster.
+- `labs`: Crawls stored lab/group/personal `websiteUrl` entries (including `/people`, `/team`,
+  `/members`, `/alumni` subpages) not yet recorded in `maintenance/network-discovery.json` for
+  faculty placement announcements and academic collaborators.
+- `logs`: Extracts out-of-roster Vietnamese-named dissertation advisors, advisees, and co-authors
+  noted during `maintenance/relationship-research.json` batches and verifies whether they have since
+  been added to `public/data.json`.
+- `gaps`: Computes feeder-vs-faculty institutional coverage gaps by comparing normalized counts of
+  non-Vietnam degree and postdoc institutions (`phdInstitution`, `msInstitution`,
+  `undergradInstitution`, `mdInstitution`, `postdocInstitution`) against active faculty counts in
+  `public/data.json`.
 
 ### Emeritus-focused discovery
 
@@ -245,14 +278,17 @@ Generate repeatable search queries with:
 ```
 
 The surname list above was extended (from an original ten) after a plain token-frequency scan of
-`public/data.json` itself surfaced `Huynh`, `Duong`, `Truong`, `Dang`, `Ngo`, `Mai`, and `Dao` as
+`public/data.json` itself surfaced `Huynh`, `Duong`, `Truong`, `Dang`, `Ngo`, `Mai`, and `Dao` (and
+later `Hoang`, `Dinh`, `Doan`, `Phung`, `Vuong`, `Luong`, and `Kieu` across the 2,530-entry roster) as
 common Vietnamese surnames the original list happened to miss — worth checking periodically as the
 roster grows, since a name common enough to be worth adding will show up as a frequent token in the
 existing data before anyone thinks to add it by hand.
 
 Pass `--given-names` to also generate queries for common given/middle-name tokens (`Thanh`, `Quang`,
 `Minh`, `Hoang`, `Anh`, `Tuan`, `Van`, `Hung`, `Quan`, `Quoc`, `Ngoc`, `Viet`, `Phuong`, `Huy`, `Kim`,
-`Nam`, `Long`, `Linh`, `Toan`, `Hieu`, `Chinh`, `Thai`, `Hai`, `Dinh`, `Quynh`), each with `-Vietnam
+`Nam`, `Long`, `Linh`, `Toan`, `Hieu`, `Chinh`, `Thai`, `Hai`, `Dinh`, `Quynh`, `Thuy`, `Duc`, `Trung`,
+`Thu`, `Trang`, `Duy`, `Thao`, `Xuan`, `Khanh`, `Hien`, `Vinh`, `Cuong`, `Khoa`, `Tien`, `Tung`,
+`Giang`, `Huong`, `Phong`, `Binh`, `Tri`, `Thinh`, `Chau`, `Dung`), each with `-Vietnam
 -student -postdoctoral` appended. A given-name token matches far more broadly than a surname — it hits
 anyone with that token anywhere in their name, not just as a family name — so it needs both the
 institution restriction the generator already applies and those extra exclusions to stay usable;

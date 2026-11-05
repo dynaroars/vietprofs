@@ -7,7 +7,7 @@
 
 ## 🎯 Task Purpose & Scope
 
-Expand roster coverage by finding qualified Vietnamese and Vietnamese-diaspora scholars at universities and public research institutes outside Vietnam.
+Expand roster coverage by finding qualified Vietnamese and Vietnamese-diaspora scholars at universities and public research institutes outside Vietnam. You can generate targeted directory search queries with `./scripts/faculty-discovery-queries.ts` and mine database-driven leads (NIH/NSF grant PIs, OpenAlex/Crossref co-authors, lab alumni pages, relationship-research logs, and feeder-vs-faculty institutional gaps) with `npm run discover-leads` (see [`TASKS/discover_from_database.md`](discover_from_database.md)).
 
 ---
 
@@ -31,6 +31,6 @@ Expand roster coverage by finding qualified Vietnamese and Vietnamese-diaspora s
    npm test && npm run build && git diff --check
    ```
 5. **Issue Submission** (per `AGENTS.md`'s "New entries vs. edits" policy — a new roster ID always goes through an Issue, never a PR or direct commit):
-   - File one GitHub Issue per candidate (or a small batch of candidates), including full name, evidence/source URLs, proposed fields (university, country, rank, track, department, field, profileUrl, keywords, confirmed), and eligibility rationale.
+   - For bulk discovery passes, file **batched GitHub Issues (20+ verified candidates per Issue)** rather than one Issue per person (or a single Issue if fewer than 20 candidates are found in a targeted pass), including each candidate's full name, evidence/source URLs, proposed fields (`university`, `country`, `rank`, `track`, `department`, `field`, `profileUrl`, `keywords`, `confirmed`), and eligibility rationale.
    - Before filing, run `npm run find-roster-matches -- "<name>" --url ...` with every identity URL. A hit at another institution is usually the same person after a move: file a `Review stale institution:` side finding for that id instead of a new candidate (`ROSTER_MAINTENANCE.md` "One person, one ID").
    - Do not run `assign-profile-ids -- --apply` or add the candidate to `public/data.json` yourself; leave ID assignment to the owner or to `AUDIT_ISSUES_PRS.md` once the Issue is resolved.

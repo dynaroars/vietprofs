@@ -26,6 +26,9 @@ const site = domain ? `site:${domain}` : '';
 // Ton-That were added after the 2026-11 audit of discover Issues #503-#512, where every
 // candidate found under them (13 in all) was verified and added; as Vietnamese romanizations
 // they rarely collide with Chinese spellings of the same names (Guo/Kwok, Zhao/Chiu).
+// Hoang, Dinh, Doan, Phung, Vuong, Luong, and Kieu were added after a 2026-11 token-frequency
+// scan across the 2,530-entry roster showed they are frequent family-name tokens (51, 32, 27,
+// 17, 15, 11, and 5 entries respectively) with low non-Vietnamese collision rates.
 const surnames = [
   'Nguyen',
   'Tran',
@@ -49,6 +52,13 @@ const surnames = [
   'Nghiem',
   'Trieu',
   'Ton-That',
+  'Hoang',
+  'Dinh',
+  'Doan',
+  'Phung',
+  'Vuong',
+  'Luong',
+  'Kieu',
 ];
 // Common Vietnamese given/middle-name tokens. These produce more false positives than a surname
 // search (they match any person with that token anywhere in their name, not just as a family
@@ -82,6 +92,29 @@ const givenNames = [
   'Hai',
   'Dinh',
   'Quynh',
+  'Thuy',
+  'Duc',
+  'Trung',
+  'Thu',
+  'Trang',
+  'Duy',
+  'Thao',
+  'Xuan',
+  'Khanh',
+  'Hien',
+  'Vinh',
+  'Cuong',
+  'Khoa',
+  'Tien',
+  'Tung',
+  'Giang',
+  'Huong',
+  'Phong',
+  'Binh',
+  'Tri',
+  'Thinh',
+  'Chau',
+  'Dung',
 ];
 const names = includeGivenNames ? [...surnames, ...givenNames] : surnames;
 const givenNameExclusions = includeGivenNames ? ' -Vietnam -student -postdoctoral' : '';

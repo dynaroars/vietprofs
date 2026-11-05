@@ -23,6 +23,7 @@
     "assign-profile-ids": "node scripts/assign-profile-ids.ts",
     "retire-profile-id": "node scripts/retire-profile-id.ts",
     "harvest-websites": "node scripts/harvest-websites.ts",
+    "discover-leads": "node scripts/discover-leads.ts",
     "find-roster-matches": "node scripts/find-roster-matches.ts",
     "stamp-updates": "node scripts/stamp-updates.ts",
     "normalize-maintenance": "node scripts/maintenance-logs.ts",
