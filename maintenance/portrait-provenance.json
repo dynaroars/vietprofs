@@ -9668,10 +9668,13 @@
       "confidence": "MEDIUM",
       "identitySignals": [
         "name",
+        "institution",
+        "department",
+        "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-11-01T17:16:08.292Z",
-      "note": "2026-11-01 deep audit: name-matched candidate failed --store checks (120x120 or portrait-aspect validation)"
+      "retrievedAt": "2026-11-04T11:04:30.154Z",
+      "note": "Beside-name image is a full-body shot in front of a statue, 160x303 (aspect 0.53); not a headshot."
     },
     "vp-0784": {
       "name": "Hien Thi Thu Nguyen",
@@ -10186,7 +10189,7 @@
     },
     "vp-2265": {
       "name": "Jacqueline B. Vo",
-      "outcome": "needs_review",
+      "outcome": "not_found",
       "pageUrl": "https://www.nursing.emory.edu/faculty-staff/jacqueline-b-vo",
       "imageUrl": "https://emorynursing.widen.net/content/9d187fbc-ec69-48e0-a9cb-8bf6f2a45c57/web/Jacqueline%20B%20Vo.jpg?v=9d187fbc-ec69-48e0-a9cb-8bf6f2a45c57",
       "sourceType": "official_faculty",
@@ -10199,7 +10202,7 @@
         "stored_roster_url"
       ],
       "retrievedAt": "2026-11-04T03:18:05.043Z",
-      "note": "dry run; rerun with --apply after review"
+      "note": "Beside-name image (alt text) is a clear headshot but 267x400 (aspect 0.67) is below the 0.70 minimum; not stored."
     },
     "vp-2266": {
       "name": "Tam H. Nguyen",
@@ -10227,7 +10230,7 @@
     },
     "vp-2268": {
       "name": "Thang Tran",
-      "outcome": "needs_review",
+      "outcome": "not_found",
       "pageUrl": "https://www.unomaha.edu/college-of-education-health-and-human-sciences/counseling/about/directory/thang-tran.php",
       "imageUrl": "https://www.unomaha.edu/college-of-education-health-and-human-sciences/counseling/_files/images/faculty/thang_tran_web.jpg",
       "sourceType": "official_faculty",
@@ -10240,7 +10243,7 @@
         "stored_roster_url"
       ],
       "retrievedAt": "2026-11-04T03:18:08.231Z",
-      "note": "dry run; rerun with --apply after review"
+      "note": "Beside-name image (alt text) is a clear headshot but 300x450 (aspect 0.67) is below the 0.70 minimum; not stored."
     },
     "vp-2269": {
       "name": "Mai Bui",
@@ -10251,7 +10254,7 @@
     },
     "vp-2270": {
       "name": "Neal Nghia Nguyen",
-      "outcome": "needs_review",
+      "outcome": "not_found",
       "pageUrl": "https://facultyshowcase.sfasu.edu/en/persons/nghia-nguyen/",
       "imageUrl": "https://facultyshowcase.sfasu.edu/files-asset/40042136/36623.jpg?w=160&f=jpg",
       "sourceType": "official_faculty",
@@ -10264,7 +10267,7 @@
         "stored_roster_url"
       ],
       "retrievedAt": "2026-11-04T03:18:10.784Z",
-      "note": "dry run; rerun with --apply after review"
+      "note": "Beside-name image is only 101x150, below the 120px minimum; not stored."
     },
     "vp-2271": {
       "name": "V.N. Trinh",
@@ -14486,6 +14489,99 @@
         "stored_roster_url"
       ],
       "retrievedAt": "2026-11-04T23:31:09.339Z"
+    },
+    "vp-0662": {
+      "name": "Bich Ngoc Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-04T11:04:32.324Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-0702": {
+      "name": "Hieu P. T. Nguyen",
+      "outcome": "not_found",
+      "pageUrl": "https://ece.njit.edu/hieu-p-t-nguyen",
+      "imageUrl": "https://tvspix.com/t.png?&t=1793790303872&l=tvscientific-pix-o-05f9bf38-e2d3-479e-8b43-65457bfd9039&u3=https%3A%2F%2Fece.njit.edu%2Fhieu-p-t-nguyen",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-04T11:05:02.248Z",
+      "note": "candidate image could not be downloaded"
+    },
+    "vp-1369": {
+      "name": "Yen Hai Doan",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-04T11:05:59.674Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1371": {
+      "name": "Minh-Son To",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-04T11:06:13.068Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1372": {
+      "name": "Nhung T. H. Trinh",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-04T11:06:32.082Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1402": {
+      "name": "Duy-Tai Dinh",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-04T11:06:42.855Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1428": {
+      "name": "Quoc-Hung Phan",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-04T11:06:55.352Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1429": {
+      "name": "Thanh Hai Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-04T11:07:07.592Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1436": {
+      "name": "Thuan V. Ly",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-04T11:07:34.659Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1446": {
+      "name": "Van Thinh Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-04T11:07:42.951Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1471": {
+      "name": "Hong-Minh Hoang",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-04T11:08:00.666Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1483": {
+      "name": "Tan-Hoa Vuong",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-04T11:08:37.420Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     }
   }
 }
