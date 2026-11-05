@@ -70,10 +70,9 @@ slots VietProfs leaves free (05:00, 08:00, 11:00, 14:00 UTC) and whose Opus audi
 | `portraits` | `trig_01D58Azgkh8kdKFBdFNAXox2` | Sonnet 5.5 | `0 11 * * 3` | Wed 7 AM | [Portraits](#portraits-portraits) |
 | `honors` | `trig_012eH5rSZwQw7PXiQPSRj9Wn` | Sonnet 5.5 | `0 11 * * 2,4,6` | Tue/Thu/Sat 7 AM | [Honors & degrees](#honors-and-degrees-honors) |
 
-One-time: `review` (`trig_017xbcfAPtZwntWrPBW8W5A6`, Opus 5.5) runs once on 2026-10-26 at 14:00 UTC
-(10 AM ET), after every routine above has run at least four times. It changes nothing and files one
-`[scheduled:review] Automation setup review (2026-10-26)` Issue with per-routine results and
-recommendations for the owner. Until then, leave the setup as it is unless something is broken or the owner asks for a change.
+One-time: `review` (`trig_017xbcfAPtZwntWrPBW8W5A6`, Opus 5.5) ran once on 2026-10-26 and filed the
+`[scheduled:review] Automation setup review (2026-10-26)` Issue for the owner; the routine was
+deleted on 2026-11-05.
 
 Outside the cloud:
 
