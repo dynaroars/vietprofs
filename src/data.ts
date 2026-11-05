@@ -591,6 +591,8 @@ const FIELD_OVERRIDES = new Map([
   ],
   // San Jose State speech-language pathology.
   ['Communicative Disorders & Sciences|San Jose State University', 'Health Sciences'],
+  // Charles Sturt podiatry (School of Allied Health, Exercise and Sports Sciences).
+  ['Podiatry|Charles Sturt University', 'Health Sciences'],
   // Sorbonne's applied-mathematics laboratory (the lab name carries no field keyword).
   ['Laboratoire Jacques-Louis Lions|Sorbonne Université', 'Mathematics'],
   // UiT fishery college; this appointment is in environmental and resource economics.
