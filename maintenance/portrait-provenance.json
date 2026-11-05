@@ -14582,6 +14582,22 @@
       "identitySignals": [],
       "retrievedAt": "2026-11-04T11:08:37.420Z",
       "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2598": {
+      "name": "Thomas T. Nguyen - St. Thomas University",
+      "outcome": "found",
+      "pageUrl": "https://www.stu.edu/law/faculty-staff/faculty/thomas-nguyen/",
+      "imageUrl": "https://www.stu.edu/wp-content/uploads/2025/04/Thomas-Nguyen_Web-200x250-1.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-05T03:14:49.336Z"
     }
   }
 }
