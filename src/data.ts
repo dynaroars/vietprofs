@@ -570,12 +570,17 @@ export const HEALTH_SUBFIELDS = [
 // generic keyword to FIELD_RULES below — whenever a department's correct field depends on which
 // institution it's at, not just the department string.
 const FIELD_OVERRIDES = new Map([
-  // Audit 2026-11-07 additions (#1034).
+  // Audit 2026-11-07 additions (#1034, #1035).
   [
     'School of Environment and Science (Biomedical)|Griffith University',
     'Biological & Biomedical Sciences',
   ],
   ['Institut Galien Paris-Saclay|Université Paris-Saclay', 'Chemistry'],
+  ['Urology|University of California, San Francisco', 'Health Sciences'],
+  [
+    'Laboratory for Vascular Translational Science (Inserm U1148)|Université Paris Cité',
+    'Health Sciences',
+  ],
   // Cal Poly Pomona's Technology and Operations Department (College of Business Administration).
   [
     'Technology and Operations|California State Polytechnic University, Pomona',
