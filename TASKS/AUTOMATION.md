@@ -110,6 +110,11 @@ them share these rules:
    section lists is part of a check (skipping Scholar, LinkedIn, or the portrait recheck leaves the
    entry unchecked). Runs through 2026-11-05 often ended after about 2 minutes with half the cap
    unused; the summary must say why if a run stops short of its cap.
+   **There is no time, turn, or token budget for a run.** A full cap normally takes 20–40
+   minutes; a run that finishes in under 10 minutes almost certainly skipped work. "Ran out of
+   time" or "to keep the run short" is never a valid reason to stop (links on 2026-11-07 stopped
+   at 16 of 30 entries after 135 seconds, citing time). The only valid reasons are a blocked
+   source, an empty queue, or a failing `npm test`/`npm run build` you can't fix.
 3. **Titles.** Every PR and Issue title starts with `[scheduled:<key>]`.
 4. **Boundaries.** Producers never merge PRs and never push to `main` (relationships excepted).
    They never add a person to `public/data.json` or assign an id. New people always go in an
