@@ -42,7 +42,10 @@ Cloud routines live at <https://claude.ai/code/routines> (environment: Default, 
 is shown for convenience (EDT; add an hour in winter).
 
 Each routine attaches only the `Claude_Docs` connector. Don't add `Claude_Code_Remote`: with it,
-a run that opens a PR schedules hourly "Re-check PR" reminders until the PR is merged.
+a run that opens a PR schedules hourly "Re-check PR" reminders until the PR is merged. Every
+producer also lists `mcp__claude-code-remote__subscribe_pr_activity` and
+`mcp__claude-code-remote__unsubscribe_pr_activity` in `disallowed_tools` (since 2026-11-07);
+otherwise the session is auto-subscribed to its PR and wakes again when the auditor merges it.
 
 Ordering rule: the auditor runs nightly at 03:00 UTC and only takes items at least 12 hours old,
 so every producer must run between 04:00 and 15:00 UTC: after the audit finishes, and early enough
