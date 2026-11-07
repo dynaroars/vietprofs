@@ -3,10 +3,20 @@
   "entries": {
     "vp-0001": {
       "name": "Hieu Bui",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-09-15T03:54:40.565Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://engineering.catholic.edu/research-and-faculty/faculty-profiles/computer-science/hieu-bui/index.html",
+      "imageUrl": "https://engineering.catholic.edu/sites/engineering.catholic.edu/files/2026-08/hieu-bui.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-07T04:00:00.000Z",
+      "note": "auditor 2026-11-07 (#502): old image URL dead; replaced with the current official headshot (same person, visually compared)"
     },
     "vp-0002": {
       "name": "Tommy Dang",
