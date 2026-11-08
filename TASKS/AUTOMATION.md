@@ -42,7 +42,10 @@ Cloud routines live at <https://claude.ai/code/routines> (environment: Default, 
 is shown for convenience (EDT; add an hour in winter).
 
 Each routine attaches only the `Claude_Docs` connector. Don't add `Claude_Code_Remote`: with it,
-a run that opens a PR schedules hourly "Re-check PR" reminders until the PR is merged.
+a run that opens a PR schedules hourly "Re-check PR" reminders until the PR is merged. Every
+producer also lists `mcp__claude-code-remote__subscribe_pr_activity` and
+`mcp__claude-code-remote__unsubscribe_pr_activity` in `disallowed_tools` (since 2026-11-07);
+otherwise the session is auto-subscribed to its PR and wakes again when the auditor merges it.
 
 Ordering rule: the auditor runs nightly at 03:00 UTC and only takes items at least 12 hours old,
 so every producer must run between 04:00 and 15:00 UTC: after the audit finishes, and early enough
@@ -110,6 +113,11 @@ them share these rules:
    section lists is part of a check (skipping Scholar, LinkedIn, or the portrait recheck leaves the
    entry unchecked). Runs through 2026-11-05 often ended after about 2 minutes with half the cap
    unused; the summary must say why if a run stops short of its cap.
+   **There is no time, turn, or token budget for a run.** A full cap normally takes 20–40
+   minutes; a run that finishes in under 10 minutes almost certainly skipped work. "Ran out of
+   time" or "to keep the run short" is never a valid reason to stop (links on 2026-11-07 stopped
+   at 16 of 30 entries after 135 seconds, citing time). The only valid reasons are a blocked
+   source, an empty queue, or a failing `npm test`/`npm run build` you can't fix.
 3. **Titles.** Every PR and Issue title starts with `[scheduled:<key>]`.
 4. **Boundaries.** Producers never merge PRs and never push to `main` (relationships excepted).
    They never add a person to `public/data.json` or assign an id. New people always go in an
