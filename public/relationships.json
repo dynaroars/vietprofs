@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-03T14:09:28.000Z",
+  "updatedAt": "2026-11-07T14:10:46.000Z",
   "relationships": [
     {
       "id": "rel-coauthor-vp-0015-vp-0018",
@@ -3073,6 +3073,708 @@
       "verifiedAt": "2026-11-03T14:09:28.000Z",
       "direct": false,
       "notes": "Co-advisor Victor Ginzburg is not in the roster."
+    },
+    {
+      "id": "rel-coauthor-vp-2657-vp-2694",
+      "type": "coauthor",
+      "sourceId": "vp-2657",
+      "targetId": "vp-2694",
+      "sources": [
+        "https://profiles.stanford.edu/mindie-nguyen",
+        "https://kyoiku-kenkyudb.omu.ac.jp/html/100000473_en.html",
+        "https://doi.org/10.1016/s2468-1253(20)30249-1",
+        "https://doi.org/10.1111/liv.15550",
+        "https://doi.org/10.1097/hc9.0000000000000336"
+      ],
+      "evidence": "OpenAlex author records (API) list 3 shared works (each with at most 25 authors, errata excluded) naming Mindie H. Nguyen (vp-2657) and Thi Thanh Thuy Le (vp-2694). Identity signals: full-name match, the roster institutions (Stanford University; Osaka Metropolitan University) or their recorded affiliations on the works, and matching research area; the OpenAlex author profile's affiliations were checked against the roster entry.",
+      "works": [
+        {
+          "identifier": "doi:10.1016/s2468-1253(20)30249-1",
+          "title": "Hepatocellular carcinoma incidence with tenofovir versus entecavir in chronic hepatitis B: a systematic review and meta-analysis",
+          "date": "2020-09-30",
+          "url": "https://doi.org/10.1016/s2468-1253(20)30249-1"
+        },
+        {
+          "identifier": "doi:10.1111/liv.15550",
+          "title": "Global treatment rate and barriers to direct‐acting antiviral therapy: A systematic review and meta‐analysis of 146 studies and 1 760 352 hepatitis C virus patients",
+          "date": "2023-02-24",
+          "url": "https://doi.org/10.1111/liv.15550"
+        },
+        {
+          "identifier": "doi:10.1097/hc9.0000000000000336",
+          "title": "Collaborating with AI in literature search—An important frontier",
+          "date": "2023-12-01",
+          "url": "https://doi.org/10.1097/hc9.0000000000000336"
+        }
+      ],
+      "verifiedAt": "2026-11-07T14:10:46.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-0501-vp-2688",
+      "type": "coauthor",
+      "sourceId": "vp-0501",
+      "targetId": "vp-2688",
+      "sources": [
+        "https://experts.griffith.edu.au/18898-namtrung-nguyen",
+        "https://experts.griffith.edu.au/27034-hang-ta",
+        "https://doi.org/10.1039/d0ra08566a",
+        "https://doi.org/10.3390/bios10110182",
+        "https://doi.org/10.1016/j.sna.2020.112474",
+        "https://doi.org/10.1039/d1lc00082a",
+        "https://doi.org/10.1039/d0lc01247e",
+        "https://doi.org/10.1002/viw.20200080"
+      ],
+      "evidence": "OpenAlex author records (API) list 43 shared works (each with at most 25 authors, errata excluded) naming Nam-Trung Nguyen (vp-0501) and Hang Thu Ta (vp-2688). Identity signals: full-name match, the roster institutions (Griffith University; Griffith University) or their recorded affiliations on the works, and matching research area; the OpenAlex author profile's affiliations were checked against the roster entry.",
+      "works": [
+        {
+          "identifier": "doi:10.1039/d0ra08566a",
+          "title": "Hydrogels as artificial matrices for cell seeding in microfluidic devices",
+          "date": "2020-01-01",
+          "url": "https://doi.org/10.1039/d0ra08566a"
+        },
+        {
+          "identifier": "doi:10.3390/bios10110182",
+          "title": "Surface Modification Techniques for Endothelial Cell Seeding in PDMS Microfluidic Devices",
+          "date": "2020-11-19",
+          "url": "https://doi.org/10.3390/bios10110182"
+        },
+        {
+          "identifier": "doi:10.1016/j.sna.2020.112474",
+          "title": "Wet oxidation of 3C-SiC on Si for MEMS processing and use in harsh environments: Effects of the film thicknesses, crystalline orientations, and growth temperatures",
+          "date": "2020-11-25",
+          "url": "https://doi.org/10.1016/j.sna.2020.112474"
+        },
+        {
+          "identifier": "doi:10.1039/d1lc00082a",
+          "title": "Size-tuneable isolation of cancer cells using stretchable inertial microfluidics",
+          "date": "2021-01-01",
+          "url": "https://doi.org/10.1039/d1lc00082a"
+        },
+        {
+          "identifier": "doi:10.1039/d0lc01247e",
+          "title": "In-air particle generation by on-chip electrohydrodynamics",
+          "date": "2021-01-01",
+          "url": "https://doi.org/10.1039/d0lc01247e"
+        },
+        {
+          "identifier": "doi:10.1002/viw.20200080",
+          "title": "Mechanobiology in cardiology: Micro‐ and nanotechnologies to probe mechanosignaling",
+          "date": "2021-01-12",
+          "url": "https://doi.org/10.1002/viw.20200080"
+        },
+        {
+          "identifier": "doi:10.1002/viw2.119",
+          "title": "Frontispiece: Mechanobiology in cardiology: Micro‐ and nanotechnologies to probe mechanosignaling (View 2/2021)",
+          "date": "2021-04-01",
+          "url": "https://doi.org/10.1002/viw2.119"
+        },
+        {
+          "identifier": "doi:10.1021/acsaelm.0c01122",
+          "title": "Wide-Band-Gap Semiconductors for Biointegrated Electronics: Recent Advances and Future Directions",
+          "date": "2021-04-19",
+          "url": "https://doi.org/10.1021/acsaelm.0c01122"
+        },
+        {
+          "identifier": "doi:10.1002/elps.202100126",
+          "title": "Investigation of viscoelastic focusing of particles and cells in a zigzag microchannel",
+          "date": "2021-08-16",
+          "url": "https://doi.org/10.1002/elps.202100126"
+        },
+        {
+          "identifier": "doi:10.1016/b978-0-12-823971-1.00009-x",
+          "title": "Lab-on-a-chip (lab-on-a-phone) for analysis of blood and diagnosis of blood diseases",
+          "date": "2021-10-01",
+          "url": "https://doi.org/10.1016/b978-0-12-823971-1.00009-x"
+        },
+        {
+          "identifier": "doi:10.1002/elps.202170144",
+          "title": "Back Cover: Investigation of viscoelastic focusing of particles and cells in a zigzag microchannel",
+          "date": "2021-11-01",
+          "url": "https://doi.org/10.1002/elps.202170144"
+        },
+        {
+          "identifier": "doi:10.1039/d1nh00679g",
+          "title": "On-demand deterministic release of particles and cells using stretchable microfluidics",
+          "date": "2022-01-01",
+          "url": "https://doi.org/10.1039/d1nh00679g"
+        },
+        {
+          "identifier": "doi:10.3390/bios12020120",
+          "title": "Enhanced Blood Plasma Extraction Utilising Viscoelastic Effects in a Serpentine Microchannel",
+          "date": "2022-02-14",
+          "url": "https://doi.org/10.3390/bios12020120"
+        },
+        {
+          "identifier": "doi:10.1002/adbi.202101316",
+          "title": "Atherothrombosis‐on‐Chip: A Site‐Specific Microfluidic Model for Thrombus Formation and Drug Discovery",
+          "date": "2022-06-04",
+          "url": "https://doi.org/10.1002/adbi.202101316"
+        },
+        {
+          "identifier": "doi:10.1002/adbi.202270071",
+          "title": "Atherothrombosis‐on‐Chip: A Site‐Specific Microfluidic Model for Thrombus Formation and Drug Discovery (Adv. Biology 7/2022)",
+          "date": "2022-07-01",
+          "url": "https://doi.org/10.1002/adbi.202270071"
+        },
+        {
+          "identifier": "doi:10.1002/smll.202204946",
+          "title": "Flexible Nanoarchitectonics for Biosensing and Physiological Monitoring Applications",
+          "date": "2022-12-20",
+          "url": "https://doi.org/10.1002/smll.202204946"
+        },
+        {
+          "identifier": "doi:10.34133/cbsystems.0036",
+          "title": "Asymmetrical Obstacles Enable Unilateral Inertial Focusing and Separation in Sinusoidal Microchannel",
+          "date": "2023-01-01",
+          "url": "https://doi.org/10.34133/cbsystems.0036"
+        },
+        {
+          "identifier": "doi:10.1039/d2bm01594c",
+          "title": "Polymeric nanomaterial strategies to encapsulate and deliver biological drugs: points to consider between methods",
+          "date": "2023-01-01",
+          "url": "https://doi.org/10.1039/d2bm01594c"
+        },
+        {
+          "identifier": "doi:10.3390/bios13010136",
+          "title": "Microfluidic Gut-on-a-Chip: Fundamentals and Challenges",
+          "date": "2023-01-13",
+          "url": "https://doi.org/10.3390/bios13010136"
+        },
+        {
+          "identifier": "doi:10.1002/smll.202370053",
+          "title": "Flexible Nanoarchitectonics for Biosensing and Physiological Monitoring Applications (Small 9/2023)",
+          "date": "2023-03-01",
+          "url": "https://doi.org/10.1002/smll.202370053"
+        },
+        {
+          "identifier": "doi:10.1016/j.bioactmat.2023.04.008",
+          "title": "Advances in haemostatic sponges: Characteristics and the underlying mechanisms for rapid haemostasis",
+          "date": "2023-04-13",
+          "url": "https://doi.org/10.1016/j.bioactmat.2023.04.008"
+        },
+        {
+          "identifier": "doi:10.1016/j.ces.2023.118826",
+          "title": "Effects of obstacles on inertial focusing and separation in sinusoidal channels: An experimental and numerical study",
+          "date": "2023-05-04",
+          "url": "https://doi.org/10.1016/j.ces.2023.118826"
+        },
+        {
+          "identifier": "doi:10.1021/acsami.3c02000",
+          "title": "Charge-Reduced Particles via Self-Propelled Electrohydrodynamic Atomization for Drug Delivery Applications",
+          "date": "2023-06-15",
+          "url": "https://doi.org/10.1021/acsami.3c02000"
+        },
+        {
+          "identifier": "doi:10.1016/j.mtbio.2023.100767",
+          "title": "Advances in drug delivery to atherosclerosis: Investigating the efficiency of different nanomaterials employed for different type of drugs",
+          "date": "2023-08-07",
+          "url": "https://doi.org/10.1016/j.mtbio.2023.100767"
+        },
+        {
+          "identifier": "doi:10.1002/adhm.202301039",
+          "title": "Unravelling Surface Modification Strategies for Preventing Medical Device‐Induced Thrombosis",
+          "date": "2023-09-19",
+          "url": "https://doi.org/10.1002/adhm.202301039"
+        },
+        {
+          "identifier": "doi:10.1088/1361-6528/ad0592",
+          "title": "Preparation of protein-loaded nanoparticles based on poly(succinimide)-oleylamine for sustained protein release: a two-step nanoprecipitation method",
+          "date": "2023-10-20",
+          "url": "https://doi.org/10.1088/1361-6528/ad0592"
+        },
+        {
+          "identifier": "doi:10.1039/d4lc00131a",
+          "title": "Evaluating thrombosis risk and patient-specific treatment strategy using an atherothrombosis-on-chip model",
+          "date": "2024-01-01",
+          "url": "https://doi.org/10.1039/d4lc00131a"
+        },
+        {
+          "identifier": "doi:10.1021/acsami.4c15893",
+          "title": "Ultra-Stretchable Microfluidic Devices for Optimizing Particle Manipulation in Viscoelastic Fluids",
+          "date": "2024-11-04",
+          "url": "https://doi.org/10.1021/acsami.4c15893"
+        },
+        {
+          "identifier": "doi:10.1039/d4lc00868e",
+          "title": "An intimal-lumen model in a microfluidic device: potential platform for atherosclerosis-related studies",
+          "date": "2024-12-16",
+          "url": "https://doi.org/10.1039/d4lc00868e"
+        },
+        {
+          "identifier": "doi:10.1039/d4bm01714e",
+          "title": "Polyaspartic acid coatings for blood-contacting surfaces: Promising antithrombotic and antibacterial properties under static and dynamic conditions",
+          "date": "2025-01-01",
+          "url": "https://doi.org/10.1039/d4bm01714e"
+        },
+        {
+          "identifier": "doi:10.1039/d5bm01192b",
+          "title": "Impact of material characteristics on nanoparticle penetration and retention in thrombi: implications for thrombolysis",
+          "date": "2025-01-01",
+          "url": "https://doi.org/10.1039/d5bm01192b"
+        },
+        {
+          "identifier": "doi:10.1021/acsbiomaterials.5c00208",
+          "title": "Multi-organ-on-a-Chip: The Gut and Inflammatory Diseases",
+          "date": "2025-08-13",
+          "url": "https://doi.org/10.1021/acsbiomaterials.5c00208"
+        },
+        {
+          "identifier": "doi:10.1021/acsanm.5c04092",
+          "title": "Preparation Of Protein-Encapsulated Nanoparticles Using Polysuccinimide-Oleylamine For Sustained Protein Release",
+          "date": "2025-09-29",
+          "url": "https://doi.org/10.1021/acsanm.5c04092"
+        },
+        {
+          "identifier": "doi:10.1002/ppsc.202500141",
+          "title": "Hydrogen and Oxygen Nanobubbles Modulate Oxidative Stress and Inflammation in Breast Cancer Cells",
+          "date": "2025-11-08",
+          "url": "https://doi.org/10.1002/ppsc.202500141"
+        },
+        {
+          "identifier": "doi:10.1002/marc.202500785",
+          "title": "Detection of Placental Extracellular Vesicle Biomarker with Terbium Coordination Polymer",
+          "date": "2025-12-08",
+          "url": "https://doi.org/10.1002/marc.202500785"
+        },
+        {
+          "identifier": "doi:10.1039/d6lc00085a",
+          "title": "Integrated microfluidic platform for inertial separation and encapsulation of single cells in droplets",
+          "date": "2026-01-01",
+          "url": "https://doi.org/10.1039/d6lc00085a"
+        },
+        {
+          "identifier": "doi:10.1039/d6qm00114a",
+          "title": "Facile synthesis of tunable zinc–adenine frameworks for aptamer-based biological applications",
+          "date": "2026-01-01",
+          "url": "https://doi.org/10.1039/d6qm00114a"
+        },
+        {
+          "identifier": "doi:10.1016/j.mtbio.2026.102762",
+          "title": "Antithrombotic and antibacterial surface coating based on spiky silver nanoparticles: A counterattack against clotting and biofilm",
+          "date": "2026-01-06",
+          "url": "https://doi.org/10.1016/j.mtbio.2026.102762"
+        },
+        {
+          "identifier": "doi:10.1016/j.bioadv.2026.214723",
+          "title": "Sulfated poly(aspartic acid) coatings as next-generation biomimetic interfaces for blood-contacting devices",
+          "date": "2026-01-19",
+          "url": "https://doi.org/10.1016/j.bioadv.2026.214723"
+        },
+        {
+          "identifier": "doi:10.1039/d6lc00085a/v2/response1",
+          "title": "Author response for \"Integrated Microfluidic Platform for Inertial Separation and Encapsulation of Single Cells in Droplets\"",
+          "date": "2026-02-28",
+          "url": "https://doi.org/10.1039/d6lc00085a/v2/response1"
+        },
+        {
+          "identifier": "doi:10.1016/j.bioadv.2026.214796",
+          "title": "Emerging haemostatic sprays: From material design to clinical translation",
+          "date": "2026-03-03",
+          "url": "https://doi.org/10.1016/j.bioadv.2026.214796"
+        },
+        {
+          "identifier": "doi:10.1039/d6lc00085a/v3/response1",
+          "title": "Author response for \"Integrated Microfluidic Platform for Inertial Separation and Encapsulation of Single Cells in Droplets\"",
+          "date": "2026-03-17",
+          "url": "https://doi.org/10.1039/d6lc00085a/v3/response1"
+        },
+        {
+          "identifier": "doi:10.1002/elsa.70028",
+          "title": "Zinc–Adenine Metal‐Organic Frameworks for Electrochemical Detection of VCAM‐1 + CD63 + Endothelial Cell‐derived Extracellular Vesicles",
+          "date": "2026-06-28",
+          "url": "https://doi.org/10.1002/elsa.70028"
+        }
+      ],
+      "verifiedAt": "2026-11-07T14:10:46.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-1423-vp-2688",
+      "type": "coauthor",
+      "sourceId": "vp-1423",
+      "targetId": "vp-2688",
+      "sources": [
+        "https://experts.griffith.edu.au/18881-van-thanh-dau",
+        "https://experts.griffith.edu.au/27034-hang-ta",
+        "https://doi.org/10.1039/d0lc01247e",
+        "https://doi.org/10.1039/d2bm01594c",
+        "https://doi.org/10.1021/acsami.3c02000",
+        "https://doi.org/10.1016/j.mtadv.2025.100626"
+      ],
+      "evidence": "OpenAlex author records (API) list 4 shared works (each with at most 25 authors, errata excluded) naming Van Thanh Dau (vp-1423) and Hang Thu Ta (vp-2688). Identity signals: full-name match, the roster institutions (Griffith University; Griffith University) or their recorded affiliations on the works, and matching research area; the OpenAlex author profile's affiliations were checked against the roster entry.",
+      "works": [
+        {
+          "identifier": "doi:10.1039/d0lc01247e",
+          "title": "In-air particle generation by on-chip electrohydrodynamics",
+          "date": "2021-01-01",
+          "url": "https://doi.org/10.1039/d0lc01247e"
+        },
+        {
+          "identifier": "doi:10.1039/d2bm01594c",
+          "title": "Polymeric nanomaterial strategies to encapsulate and deliver biological drugs: points to consider between methods",
+          "date": "2023-01-01",
+          "url": "https://doi.org/10.1039/d2bm01594c"
+        },
+        {
+          "identifier": "doi:10.1021/acsami.3c02000",
+          "title": "Charge-Reduced Particles via Self-Propelled Electrohydrodynamic Atomization for Drug Delivery Applications",
+          "date": "2023-06-15",
+          "url": "https://doi.org/10.1021/acsami.3c02000"
+        },
+        {
+          "identifier": "doi:10.1016/j.mtadv.2025.100626",
+          "title": "Particle self-neutralization for highly efficient deep lung drug delivery via bipolar electrohydrodynamic atomization",
+          "date": "2025-09-23",
+          "url": "https://doi.org/10.1016/j.mtadv.2025.100626"
+        }
+      ],
+      "verifiedAt": "2026-11-07T14:10:46.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-2164-vp-2688",
+      "type": "coauthor",
+      "sourceId": "vp-2164",
+      "targetId": "vp-2688",
+      "sources": [
+        "https://experts.griffith.edu.au/7142-dzung-dao",
+        "https://experts.griffith.edu.au/27034-hang-ta",
+        "https://doi.org/10.1016/j.sna.2020.112474",
+        "https://doi.org/10.1039/d0lc01247e",
+        "https://doi.org/10.1021/acsami.3c02000",
+        "https://doi.org/10.1016/j.mtadv.2025.100626"
+      ],
+      "evidence": "OpenAlex author records (API) list 4 shared works (each with at most 25 authors, errata excluded) naming Dzung Viet Dao (vp-2164) and Hang Thu Ta (vp-2688). Identity signals: full-name match, the roster institutions (Griffith University; Griffith University) or their recorded affiliations on the works, and matching research area; the OpenAlex author profile's affiliations were checked against the roster entry.",
+      "works": [
+        {
+          "identifier": "doi:10.1016/j.sna.2020.112474",
+          "title": "Wet oxidation of 3C-SiC on Si for MEMS processing and use in harsh environments: Effects of the film thicknesses, crystalline orientations, and growth temperatures",
+          "date": "2020-11-25",
+          "url": "https://doi.org/10.1016/j.sna.2020.112474"
+        },
+        {
+          "identifier": "doi:10.1039/d0lc01247e",
+          "title": "In-air particle generation by on-chip electrohydrodynamics",
+          "date": "2021-01-01",
+          "url": "https://doi.org/10.1039/d0lc01247e"
+        },
+        {
+          "identifier": "doi:10.1021/acsami.3c02000",
+          "title": "Charge-Reduced Particles via Self-Propelled Electrohydrodynamic Atomization for Drug Delivery Applications",
+          "date": "2023-06-15",
+          "url": "https://doi.org/10.1021/acsami.3c02000"
+        },
+        {
+          "identifier": "doi:10.1016/j.mtadv.2025.100626",
+          "title": "Particle self-neutralization for highly efficient deep lung drug delivery via bipolar electrohydrodynamic atomization",
+          "date": "2025-09-23",
+          "url": "https://doi.org/10.1016/j.mtadv.2025.100626"
+        }
+      ],
+      "verifiedAt": "2026-11-07T14:10:46.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-0504-vp-2688",
+      "type": "coauthor",
+      "sourceId": "vp-0504",
+      "targetId": "vp-2688",
+      "sources": [
+        "https://www.unsw.edu.au/staff/hoang-phuong-phan",
+        "https://experts.griffith.edu.au/27034-hang-ta",
+        "https://doi.org/10.1016/j.sna.2020.112474",
+        "https://doi.org/10.1039/d1lc00082a",
+        "https://doi.org/10.1039/d0lc01247e",
+        "https://doi.org/10.1021/acsaelm.0c01122",
+        "https://doi.org/10.1002/adbi.202101316",
+        "https://doi.org/10.1002/adbi.202270071"
+      ],
+      "evidence": "OpenAlex author records (API) list 9 shared works (each with at most 25 authors, errata excluded) naming Hoang-Phuong Phan (vp-0504) and Hang Thu Ta (vp-2688). Identity signals: full-name match, the roster institutions (University of New South Wales; Griffith University) or their recorded affiliations on the works, and matching research area; the OpenAlex author profile's affiliations were checked against the roster entry.",
+      "works": [
+        {
+          "identifier": "doi:10.1016/j.sna.2020.112474",
+          "title": "Wet oxidation of 3C-SiC on Si for MEMS processing and use in harsh environments: Effects of the film thicknesses, crystalline orientations, and growth temperatures",
+          "date": "2020-11-25",
+          "url": "https://doi.org/10.1016/j.sna.2020.112474"
+        },
+        {
+          "identifier": "doi:10.1039/d1lc00082a",
+          "title": "Size-tuneable isolation of cancer cells using stretchable inertial microfluidics",
+          "date": "2021-01-01",
+          "url": "https://doi.org/10.1039/d1lc00082a"
+        },
+        {
+          "identifier": "doi:10.1039/d0lc01247e",
+          "title": "In-air particle generation by on-chip electrohydrodynamics",
+          "date": "2021-01-01",
+          "url": "https://doi.org/10.1039/d0lc01247e"
+        },
+        {
+          "identifier": "doi:10.1021/acsaelm.0c01122",
+          "title": "Wide-Band-Gap Semiconductors for Biointegrated Electronics: Recent Advances and Future Directions",
+          "date": "2021-04-19",
+          "url": "https://doi.org/10.1021/acsaelm.0c01122"
+        },
+        {
+          "identifier": "doi:10.1002/adbi.202101316",
+          "title": "Atherothrombosis‐on‐Chip: A Site‐Specific Microfluidic Model for Thrombus Formation and Drug Discovery",
+          "date": "2022-06-04",
+          "url": "https://doi.org/10.1002/adbi.202101316"
+        },
+        {
+          "identifier": "doi:10.1002/adbi.202270071",
+          "title": "Atherothrombosis‐on‐Chip: A Site‐Specific Microfluidic Model for Thrombus Formation and Drug Discovery (Adv. Biology 7/2022)",
+          "date": "2022-07-01",
+          "url": "https://doi.org/10.1002/adbi.202270071"
+        },
+        {
+          "identifier": "doi:10.1002/smll.202204946",
+          "title": "Flexible Nanoarchitectonics for Biosensing and Physiological Monitoring Applications",
+          "date": "2022-12-20",
+          "url": "https://doi.org/10.1002/smll.202204946"
+        },
+        {
+          "identifier": "doi:10.1002/smll.202370053",
+          "title": "Flexible Nanoarchitectonics for Biosensing and Physiological Monitoring Applications (Small 9/2023)",
+          "date": "2023-03-01",
+          "url": "https://doi.org/10.1002/smll.202370053"
+        },
+        {
+          "identifier": "doi:10.1021/acsami.3c02000",
+          "title": "Charge-Reduced Particles via Self-Propelled Electrohydrodynamic Atomization for Drug Delivery Applications",
+          "date": "2023-06-15",
+          "url": "https://doi.org/10.1021/acsami.3c02000"
+        }
+      ],
+      "verifiedAt": "2026-11-07T14:10:46.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-1804-vp-2688",
+      "type": "coauthor",
+      "sourceId": "vp-1804",
+      "targetId": "vp-2688",
+      "sources": [
+        "https://www.flinders.edu.au/people/khoa.nguyen",
+        "https://experts.griffith.edu.au/27034-hang-ta",
+        "https://doi.org/10.1016/j.sna.2020.112474",
+        "https://doi.org/10.1039/d0lc01247e",
+        "https://doi.org/10.1021/acsaelm.0c01122",
+        "https://doi.org/10.1002/smll.202204946",
+        "https://doi.org/10.1002/smll.202370053",
+        "https://doi.org/10.1021/acsami.3c02000"
+      ],
+      "evidence": "OpenAlex author records (API) list 6 shared works (each with at most 25 authors, errata excluded) naming Tuan-Khoa Nguyen (vp-1804) and Hang Thu Ta (vp-2688). Identity signals: full-name match, the roster institutions (Flinders University; Griffith University) or their recorded affiliations on the works, and matching research area; the OpenAlex author profile's affiliations were checked against the roster entry.",
+      "works": [
+        {
+          "identifier": "doi:10.1016/j.sna.2020.112474",
+          "title": "Wet oxidation of 3C-SiC on Si for MEMS processing and use in harsh environments: Effects of the film thicknesses, crystalline orientations, and growth temperatures",
+          "date": "2020-11-25",
+          "url": "https://doi.org/10.1016/j.sna.2020.112474"
+        },
+        {
+          "identifier": "doi:10.1039/d0lc01247e",
+          "title": "In-air particle generation by on-chip electrohydrodynamics",
+          "date": "2021-01-01",
+          "url": "https://doi.org/10.1039/d0lc01247e"
+        },
+        {
+          "identifier": "doi:10.1021/acsaelm.0c01122",
+          "title": "Wide-Band-Gap Semiconductors for Biointegrated Electronics: Recent Advances and Future Directions",
+          "date": "2021-04-19",
+          "url": "https://doi.org/10.1021/acsaelm.0c01122"
+        },
+        {
+          "identifier": "doi:10.1002/smll.202204946",
+          "title": "Flexible Nanoarchitectonics for Biosensing and Physiological Monitoring Applications",
+          "date": "2022-12-20",
+          "url": "https://doi.org/10.1002/smll.202204946"
+        },
+        {
+          "identifier": "doi:10.1002/smll.202370053",
+          "title": "Flexible Nanoarchitectonics for Biosensing and Physiological Monitoring Applications (Small 9/2023)",
+          "date": "2023-03-01",
+          "url": "https://doi.org/10.1002/smll.202370053"
+        },
+        {
+          "identifier": "doi:10.1021/acsami.3c02000",
+          "title": "Charge-Reduced Particles via Self-Propelled Electrohydrodynamic Atomization for Drug Delivery Applications",
+          "date": "2023-06-15",
+          "url": "https://doi.org/10.1021/acsami.3c02000"
+        }
+      ],
+      "verifiedAt": "2026-11-07T14:10:46.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-1422-vp-2688",
+      "type": "coauthor",
+      "sourceId": "vp-1422",
+      "targetId": "vp-2688",
+      "sources": [
+        "https://staffprofile.unisq.edu.au/profile/toan-dinh",
+        "https://experts.griffith.edu.au/27034-hang-ta",
+        "https://doi.org/10.1016/j.sna.2020.112474",
+        "https://doi.org/10.1039/d0lc01247e",
+        "https://doi.org/10.1021/acsaelm.0c01122",
+        "https://doi.org/10.1021/acsami.3c02000"
+      ],
+      "evidence": "OpenAlex author records (API) list 4 shared works (each with at most 25 authors, errata excluded) naming Toan Dinh (vp-1422) and Hang Thu Ta (vp-2688). Identity signals: full-name match, the roster institutions (University of Southern Queensland; Griffith University) or their recorded affiliations on the works, and matching research area; the OpenAlex author profile's affiliations were checked against the roster entry.",
+      "works": [
+        {
+          "identifier": "doi:10.1016/j.sna.2020.112474",
+          "title": "Wet oxidation of 3C-SiC on Si for MEMS processing and use in harsh environments: Effects of the film thicknesses, crystalline orientations, and growth temperatures",
+          "date": "2020-11-25",
+          "url": "https://doi.org/10.1016/j.sna.2020.112474"
+        },
+        {
+          "identifier": "doi:10.1039/d0lc01247e",
+          "title": "In-air particle generation by on-chip electrohydrodynamics",
+          "date": "2021-01-01",
+          "url": "https://doi.org/10.1039/d0lc01247e"
+        },
+        {
+          "identifier": "doi:10.1021/acsaelm.0c01122",
+          "title": "Wide-Band-Gap Semiconductors for Biointegrated Electronics: Recent Advances and Future Directions",
+          "date": "2021-04-19",
+          "url": "https://doi.org/10.1021/acsaelm.0c01122"
+        },
+        {
+          "identifier": "doi:10.1021/acsami.3c02000",
+          "title": "Charge-Reduced Particles via Self-Propelled Electrohydrodynamic Atomization for Drug Delivery Applications",
+          "date": "2023-06-15",
+          "url": "https://doi.org/10.1021/acsami.3c02000"
+        }
+      ],
+      "verifiedAt": "2026-11-07T14:10:46.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-2041-vp-2688",
+      "type": "coauthor",
+      "sourceId": "vp-2041",
+      "targetId": "vp-2688",
+      "sources": [
+        "https://www.unsw.edu.au/staff/thanh-nho-do",
+        "https://experts.griffith.edu.au/27034-hang-ta",
+        "https://doi.org/10.1021/acsaelm.0c01122",
+        "https://doi.org/10.1002/smll.202204946",
+        "https://doi.org/10.1002/smll.202370053"
+      ],
+      "evidence": "OpenAlex author records (API) list 3 shared works (each with at most 25 authors, errata excluded) naming Thanh Nho Do (vp-2041) and Hang Thu Ta (vp-2688). Identity signals: full-name match, the roster institutions (University of New South Wales; Griffith University) or their recorded affiliations on the works, and matching research area; the OpenAlex author profile's affiliations were checked against the roster entry.",
+      "works": [
+        {
+          "identifier": "doi:10.1021/acsaelm.0c01122",
+          "title": "Wide-Band-Gap Semiconductors for Biointegrated Electronics: Recent Advances and Future Directions",
+          "date": "2021-04-19",
+          "url": "https://doi.org/10.1021/acsaelm.0c01122"
+        },
+        {
+          "identifier": "doi:10.1002/smll.202204946",
+          "title": "Flexible Nanoarchitectonics for Biosensing and Physiological Monitoring Applications",
+          "date": "2022-12-20",
+          "url": "https://doi.org/10.1002/smll.202204946"
+        },
+        {
+          "identifier": "doi:10.1002/smll.202370053",
+          "title": "Flexible Nanoarchitectonics for Biosensing and Physiological Monitoring Applications (Small 9/2023)",
+          "date": "2023-03-01",
+          "url": "https://doi.org/10.1002/smll.202370053"
+        }
+      ],
+      "verifiedAt": "2026-11-07T14:10:46.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-1373-vp-2657",
+      "type": "coauthor",
+      "sourceId": "vp-1373",
+      "targetId": "vp-2657",
+      "sources": [
+        "https://profiles.ucsf.edu/nghiem.ha",
+        "https://profiles.stanford.edu/mindie-nguyen",
+        "https://doi.org/10.1016/j.cgh.2008.02.037",
+        "https://doi.org/10.1002/hep.23044",
+        "https://doi.org/10.1007/s10620-011-1610-5",
+        "https://doi.org/10.1007/s10552-012-9895-z",
+        "https://doi.org/10.1016/j.cgh.2012.08.011",
+        "https://doi.org/10.1097/mcg.0b013e31825ceed9"
+      ],
+      "evidence": "OpenAlex author records (API) list 10 shared works (each with at most 25 authors, errata excluded) naming Nghiem B. Ha (vp-1373) and Mindie H. Nguyen (vp-2657). Identity signals: full-name match, the roster institutions (University of California, San Francisco; Stanford University) or their recorded affiliations on the works, and matching research area; the OpenAlex author profile's affiliations were checked against the roster entry.",
+      "works": [
+        {
+          "identifier": "doi:10.1016/j.cgh.2008.02.037",
+          "title": "Significant Prevalence of Histologic Disease in Patients With Chronic Hepatitis B and Mildly Elevated Serum Alanine Aminotransferase Levels",
+          "date": "2008-05-01",
+          "url": "https://doi.org/10.1016/j.cgh.2008.02.037"
+        },
+        {
+          "identifier": "doi:10.1002/hep.23044",
+          "title": "Renal dysfunction in chronic hepatitis B patients treated with adefovir dipivoxil #",
+          "date": "2009-04-27",
+          "url": "https://doi.org/10.1002/hep.23044"
+        },
+        {
+          "identifier": "doi:10.1007/s10620-011-1610-5",
+          "title": "Medication Nonadherence with Long-Term Management of Patients with Hepatitis B e antigen-Negative Chronic Hepatitis B",
+          "date": "2011-02-16",
+          "url": "https://doi.org/10.1007/s10620-011-1610-5"
+        },
+        {
+          "identifier": "doi:10.1007/s10552-012-9895-z",
+          "title": "Risk factors for hepatocellular carcinoma in patients with chronic liver disease: a case–control study",
+          "date": "2012-01-18",
+          "url": "https://doi.org/10.1007/s10552-012-9895-z"
+        },
+        {
+          "identifier": "doi:10.1016/j.cgh.2012.08.011",
+          "title": "Incidence of Hepatocellular Carcinoma Among US Patients With Cirrhosis of Viral or Nonviral Etiologies",
+          "date": "2012-08-15",
+          "url": "https://doi.org/10.1016/j.cgh.2012.08.011"
+        },
+        {
+          "identifier": "doi:10.1097/mcg.0b013e31825ceed9",
+          "title": "High Frequency of Recurrent Viremia After Hepatitis B e Antigen Seroconversion and Consolidation Therapy",
+          "date": "2012-08-31",
+          "url": "https://doi.org/10.1097/mcg.0b013e31825ceed9"
+        },
+        {
+          "identifier": "doi:10.1007/s13187-013-0466-0",
+          "title": "Prevalence, Risk Factors, and Disease Knowledge of Chronic Hepatitis B Infection in Vietnamese Americans in California",
+          "date": "2013-04-05",
+          "url": "https://doi.org/10.1007/s13187-013-0466-0"
+        },
+        {
+          "identifier": "doi:10.1007/s10620-015-3621-0",
+          "title": "Poor Sustained Virological Response in a Multicenter Real-Life Cohort of Chronic Hepatitis C Patients Treated with Pegylated Interferon and Ribavirin plus Telaprevir or Boceprevir",
+          "date": "2015-03-28",
+          "url": "https://doi.org/10.1007/s10620-015-3621-0"
+        },
+        {
+          "identifier": "doi:10.1097/mcg.0000000000000325",
+          "title": "Renal Function in Chronic Hepatitis B Patients Treated With Tenofovir Disoproxil Fumarate or Entecavir Monotherapy",
+          "date": "2015-04-09",
+          "url": "https://doi.org/10.1097/mcg.0000000000000325"
+        },
+        {
+          "identifier": "doi:10.1371/journal.pone.0173499",
+          "title": "Prevalence of non-alcoholic fatty liver disease and risk factors for advanced fibrosis and mortality in the United States",
+          "date": "2017-03-27",
+          "url": "https://doi.org/10.1371/journal.pone.0173499"
+        }
+      ],
+      "verifiedAt": "2026-11-07T14:10:46.000Z",
+      "direct": false,
+      "notes": ""
     }
   ]
 }
