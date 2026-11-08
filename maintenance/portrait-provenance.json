@@ -14865,6 +14865,103 @@
       "identitySignals": [],
       "retrievedAt": "2026-11-07T03:18:55.248Z",
       "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2695": {
+      "name": "Karine Nguyen",
+      "outcome": "needs_review",
+      "pageUrl": "https://fr.ap-hm.fr/category/chefs-de-services/nguyen-karine",
+      "imageUrl": "https://fr.ap-hm.fr/misc/feed.png",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-08T03:24:54.112Z",
+      "note": "candidate requires visual review before acceptance"
+    },
+    "vp-2696": {
+      "name": "Noël Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://lpl-aix.fr/en/directory/nguyen-noel",
+      "imageUrl": "https://lpl-aix.fr/sites/default/files/styles/contact_150/public/2026-02/27.jpg?itok=KEFArb0O",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-08T03:25:30.160Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-2697": {
+      "name": "Scott Q. Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://profiles.mountsinai.org/scott-q-nguyen",
+      "imageUrl": "https://www.mountsinai.org/files/images/fad-images/0000076810011253736331.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-08T03:25:30.795Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-2698": {
+      "name": "Bich-Tram Huynh",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-08T03:24:56.763Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2699": {
+      "name": "Dung Le",
+      "outcome": "found",
+      "pageUrl": "https://profiles.hopkinsmedicine.org/provider/dung-le/2709398",
+      "imageUrl": "https://cdn-images.kyruus.com/providermatch/johnshopkins/photos/orig/le-dung-1487700688.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-08T03:25:12.920Z"
+    },
+    "vp-2700": {
+      "name": "Melissa Le-Hoa Vo",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-08T03:25:14.493Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2701": {
+      "name": "Eric Bui",
+      "outcome": "found",
+      "pageUrl": "https://neuropresage.fr/team/eric-bui/",
+      "imageUrl": "https://neuropresage.fr/wp-content/uploads/2022/09/eric.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-08T03:25:31.817Z",
+      "note": "MEDIUM candidate stored after visual review"
     }
   }
 }
