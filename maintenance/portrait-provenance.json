@@ -3325,10 +3325,20 @@
     },
     "vp-1626": {
       "name": "Tai Duc Pham",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-14T12:44:06.756Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://www.siit.tu.ac.th/faculty",
+      "imageUrl": "https://www.siit.tu.ac.th/api/v1/upload/media/siit_1793608405461_d9193be97fd34140b00bd93aa5cf7ec4.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-08T03:45:00.000Z",
+      "note": "auditor 2026-11-08 (#502): SIIT faculty directory card (alt \"Dr. Pham Duc Tai\"); single-person headshot, face check ok"
     },
     "vp-1583": {
       "name": "Ky Q. Tran",
@@ -8523,11 +8533,11 @@
         "name",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-11-01T18:26:42.000Z",
-      "note": "2026-11-01 Chromium scan of stored profile/homepage: photo name-matched by alt text, filename, or adjacent name; looked at, face-cropped, face-checked; fetched from the Wayback Machine copy (live site blocked automated access)",
-      "imageUrl": "https://www.siit.tu.ac.th/images/webpage/Nguyen-Duy-Hung2.jpg",
+      "retrievedAt": "2026-11-08T03:45:00.000Z",
+      "note": "auditor 2026-11-08 (#502): old page_bx.php page and image 404 after SIIT redesign; current directory photo is the same photo recropped (64px gray RMSE 0.22, visually compared); file unchanged",
+      "imageUrl": "https://www.siit.tu.ac.th/api/v1/upload/media/siit_1793606035790_6dd476a7300140669b1c2278e486dc1b.jpg",
       "confidence": "HIGH",
-      "pageUrl": "https://www.siit.tu.ac.th/page_bx.php?cid=106&cno=71&show=",
+      "pageUrl": "https://www.siit.tu.ac.th/faculty",
       "sourceType": "official_faculty"
     },
     "vp-2163": {
@@ -14976,6 +14986,23 @@
       "identitySignals": [],
       "retrievedAt": "2026-11-08T03:26:31.058Z",
       "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-0942": {
+      "name": "Huy Q. Ta",
+      "outcome": "found",
+      "pageUrl": "https://med.virginia.edu/clinical/surgery/faculty-listing/",
+      "imageUrl": "https://cdn-assets-dynamic.frontify.com/8000198/eyJhc3NldF9pZCI6MTY0MTc1LCJzY29wZSI6ImFzc2V0OnZpZXcifQ:uva-health:X3f865kNhBiNW7Fa_9RVs3z5B5ElnD2CRCpns4N_Vkk",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-08T03:45:00.000Z",
+      "note": "auditor 2026-11-08 (#502): old tcv-lab image 404; current UVA Surgery listing photo (alt \"Huy Ta, PhD Research Assistant Professor of Surgery\") replaces it; same person, visually compared; face check ok"
     }
   }
 }
