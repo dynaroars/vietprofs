@@ -15003,6 +15003,125 @@
       ],
       "retrievedAt": "2026-11-08T03:45:00.000Z",
       "note": "auditor 2026-11-08 (#502): old tcv-lab image 404; current UVA Surgery listing photo (alt \"Huy Ta, PhD Research Assistant Professor of Surgery\") replaces it; same person, visually compared; face check ok"
+    },
+    "vp-2704": {
+      "name": "Trang Minh Duong",
+      "outcome": "found",
+      "pageUrl": "https://www.un-ihe.org/people/staff/trang-duong",
+      "imageUrl": "https://ihe-delft-ihe-website-production.s3.eu-central-1.amazonaws.com/s3fs-public/2022-08/Trang%20Duong.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-09T03:18:29.758Z"
+    },
+    "vp-2705": {
+      "name": "Dat Doan",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-09T03:18:32.332Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2706": {
+      "name": "Nathan Huynh",
+      "outcome": "found",
+      "pageUrl": "https://engineering.unl.edu/civil/person/nathan-huynh/",
+      "imageUrl": "https://engineering.unl.edu/sites/unl.edu.engineering/files/styles/1_1_720x720/public/node/person/photo/2025-03/Huynh_faculty_photo.jpg?itok=4S7pk5sF",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-09T03:19:13.078Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-2707": {
+      "name": "Jean-Rene Huynh",
+      "outcome": "found",
+      "pageUrl": "https://www.college-de-france.fr/fr/personne/jean-rene-huynh",
+      "imageUrl": "https://www.college-de-france.fr/sites/default/files/media/portrait/2022-07/JeanReneHuynh.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-09T03:18:37.154Z"
+    },
+    "vp-2708": {
+      "name": "Kevin Huynh",
+      "outcome": "found",
+      "pageUrl": "https://baker.edu.au/our-people/kevin-huynh",
+      "imageUrl": "https://baker.edu.au/-/media/images/people/staff-bio/huynhk.jpg?w=245",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-09T03:19:14.301Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-2709": {
+      "name": "Ryan Doan",
+      "outcome": "found",
+      "pageUrl": "https://brain.harvard.edu/people/ryan-doan/",
+      "imageUrl": "https://brain.harvard.edu/wp-content/uploads/Doan_Ryan_preview.jpg?media_refresh=20260710",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-09T03:18:41.024Z"
+    },
+    "vp-2710": {
+      "name": "Jerry Dang",
+      "outcome": "found",
+      "pageUrl": "https://case.edu/cancer/members/member-directory/jerry-dang",
+      "imageUrl": "https://case.edu/cancer/sites/default/files/styles/bio_listing/public/2024-05/Jerry%20Dang.jpeg?h=b06ae710&itok=CnKi8aNl",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-09T03:18:53.903Z"
+    },
+    "vp-2711": {
+      "name": "Hien T. Dang",
+      "outcome": "found",
+      "pageUrl": "https://www.jefferson.edu/academics/colleges-schools-institutes/skmc/departments/surgery/divisions/surgical-research/faculty/dang.html",
+      "imageUrl": "https://www.jefferson.edu/content/academic/academics/colleges-schools-institutes/skmc/departments/surgery/divisions/surgical-research/faculty/dang/_jcr_content/profile/image.img.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-09T03:19:14.953Z",
+      "note": "MEDIUM candidate stored after visual review"
     }
   }
 }

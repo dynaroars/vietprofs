@@ -583,6 +583,16 @@ const FIELD_OVERRIDES = new Map([
     'Laboratory for Vascular Translational Science (Inserm U1148)|Université Paris Cité',
     'Health Sciences',
   ],
+  // Audit 2026-11-09 (#1036): IHE Delft coastal engineering, AUT built environment, Baker lipidomics.
+  [
+    'Department of Coastal and Urban Risk & Resilience|IHE Delft Institute for Water Education',
+    'Engineering',
+  ],
+  ['School of Future Environments|Auckland University of Technology', 'Engineering'],
+  [
+    'Metabolomics Laboratory|Baker Heart and Diabetes Institute',
+    'Biological & Biomedical Sciences',
+  ],
   // Cal Poly Pomona's Technology and Operations Department (College of Business Administration).
   [
     'Technology and Operations|California State Polytechnic University, Pomona',
