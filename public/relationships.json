@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-07T14:10:46.000Z",
+  "updatedAt": "2026-11-09T14:12:22.787Z",
   "relationships": [
     {
       "id": "rel-coauthor-vp-0015-vp-0018",
@@ -3773,6 +3773,412 @@
         }
       ],
       "verifiedAt": "2026-11-07T14:10:46.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-0507-vp-2654",
+      "type": "coauthor",
+      "sourceId": "vp-0507",
+      "targetId": "vp-2654",
+      "sources": [
+        "https://doi.org/10.1109/ssp.2007.4301310",
+        "https://doi.org/10.1109/glocom.2008.ecp.621",
+        "https://doi.org/10.1109/twc.2009.080485",
+        "https://doi.org/10.1109/icc.2009.5198813",
+        "https://doi.org/10.1109/glocom.2009.5425752",
+        "https://doi.org/10.4018/978-1-61520-680-3.ch007",
+        "https://doi.org/10.1109/wcnc.2013.6554629",
+        "https://doi.org/10.1109/vtcspring.2013.6692527",
+        "https://doi.org/10.1109/icc.2013.6655460",
+        "https://doi.org/10.1109/tw.2013.081913.121525",
+        "https://doi.org/10.1109/wcnc.2014.6952599",
+        "https://doi.org/10.1109/icc.2014.6883459",
+        "https://doi.org/10.1109/glocom.2014.7417468",
+        "https://doi.org/10.1109/glocom.2014.7417306",
+        "https://doi.org/10.1109/icc.2015.7248588",
+        "https://doi.org/10.1109/pimrc.2015.7343304",
+        "https://doi.org/10.1109/pimrc.2015.7343436",
+        "https://doi.org/10.1109/glocom.2015.7417306",
+        "https://doi.org/10.1109/glocom.2015.7417468",
+        "https://doi.org/10.1109/access.2016.2594216",
+        "https://doi.org/10.1109/tcomm.2016.2515620",
+        "https://doi.org/10.1109/vtcspring.2016.7504240",
+        "https://doi.org/10.1109/jsac.2016.2600338",
+        "https://doi.org/10.1007/978-3-319-57693-0_6",
+        "https://doi.org/10.1007/978-3-319-57693-0_3",
+        "https://doi.org/10.1007/978-3-319-57693-0_5",
+        "https://doi.org/10.1007/978-3-319-57693-0_2",
+        "https://doi.org/10.1007/978-3-319-57693-0_4",
+        "https://doi.org/10.1007/978-3-319-57693-0_1",
+        "https://doi.org/10.1007/978-3-319-57693-0",
+        "https://doi.org/10.1109/tii.2020.3027826"
+      ],
+      "evidence": "OpenAlex author records (API) list 31 shared works (each with at most 40 authors, errata excluded) naming Tho Le-Ngoc (vp-0507) and Khoa T. Phan (vp-2654). Identity signals: full-name match, the roster institutions or their recorded affiliations on the works (Khoa T. Phan: University of Alberta, McGill University, La Trobe University), and matching research area; the OpenAlex author profile's affiliations were checked against the roster entry.",
+      "works": [
+        {
+          "identifier": "doi:10.1109/ssp.2007.4301310",
+          "title": "Power Control for Wireless Cellular Systems via D.C. Programming",
+          "date": "2007-08-01",
+          "url": "https://doi.org/10.1109/ssp.2007.4301310"
+        },
+        {
+          "identifier": "doi:10.1109/glocom.2008.ecp.621",
+          "title": "Power Allocation in Wireless Relay Networks: A Geometric Programming-Based Approach",
+          "date": "2008-01-01",
+          "url": "https://doi.org/10.1109/glocom.2008.ecp.621"
+        },
+        {
+          "identifier": "doi:10.1109/twc.2009.080485",
+          "title": "Power allocation in wireless multi-user relay networks",
+          "date": "2009-05-01",
+          "url": "https://doi.org/10.1109/twc.2009.080485"
+        },
+        {
+          "identifier": "doi:10.1109/icc.2009.5198813",
+          "title": "Centralized and Distributed Power Allocation in Multi-User Wireless Relay Networks",
+          "date": "2009-06-01",
+          "url": "https://doi.org/10.1109/icc.2009.5198813"
+        },
+        {
+          "identifier": "doi:10.1109/glocom.2009.5425752",
+          "title": "Joint Power Allocation and Relay Selection in Cooperative Networks",
+          "date": "2009-11-01",
+          "url": "https://doi.org/10.1109/glocom.2009.5425752"
+        },
+        {
+          "identifier": "doi:10.4018/978-1-61520-680-3.ch007",
+          "title": "Resource Allocation and QoS Provisioning for Wireless Relay Networks",
+          "date": "2010-05-25",
+          "url": "https://doi.org/10.4018/978-1-61520-680-3.ch007"
+        },
+        {
+          "identifier": "doi:10.1109/wcnc.2013.6554629",
+          "title": "Online QoS-based dynamic scheduling in multi-channel wireless networks",
+          "date": "2013-04-01",
+          "url": "https://doi.org/10.1109/wcnc.2013.6554629"
+        },
+        {
+          "identifier": "doi:10.1109/vtcspring.2013.6692527",
+          "title": "Dynamic Scheduling with Statistical Delay Guarantees and Traffic Dropping",
+          "date": "2013-06-01",
+          "url": "https://doi.org/10.1109/vtcspring.2013.6692527"
+        },
+        {
+          "identifier": "doi:10.1109/icc.2013.6655460",
+          "title": "Joint scheduling — Traffic admission control: Structural results and online learning algorithm",
+          "date": "2013-06-01",
+          "url": "https://doi.org/10.1109/icc.2013.6655460"
+        },
+        {
+          "identifier": "doi:10.1109/tw.2013.081913.121525",
+          "title": "Optimal Scheduling over Time-Varying Channels with Traffic Admission Control: Structural Results and Online Learning Algorithms",
+          "date": "2013-08-23",
+          "url": "https://doi.org/10.1109/tw.2013.081913.121525"
+        },
+        {
+          "identifier": "doi:10.1109/wcnc.2014.6952599",
+          "title": "Effective capacities of dual-hop networks with relay selection",
+          "date": "2014-04-01",
+          "url": "https://doi.org/10.1109/wcnc.2014.6952599"
+        },
+        {
+          "identifier": "doi:10.1109/icc.2014.6883459",
+          "title": "Effective capacity of dual-hop networks with a concurrent buffer-aided relaying protocol",
+          "date": "2014-06-01",
+          "url": "https://doi.org/10.1109/icc.2014.6883459"
+        },
+        {
+          "identifier": "doi:10.1109/glocom.2014.7417468",
+          "title": "Optimal Stochastic Power Control for Energy Harvesting Systems with Statistical Delay Constraint",
+          "date": "2014-12-01",
+          "url": "https://doi.org/10.1109/glocom.2014.7417468"
+        },
+        {
+          "identifier": "doi:10.1109/glocom.2014.7417306",
+          "title": "Relay Selection, Link Scheduling, and Rate Allocation in Dual-Hop Buffer-Aided Networks with Statistical Delay Constraints",
+          "date": "2014-12-01",
+          "url": "https://doi.org/10.1109/glocom.2014.7417306"
+        },
+        {
+          "identifier": "doi:10.1109/icc.2015.7248588",
+          "title": "Adaptive link selection in buffer-aided relaying with statistical QoS constraints",
+          "date": "2015-06-01",
+          "url": "https://doi.org/10.1109/icc.2015.7248588"
+        },
+        {
+          "identifier": "doi:10.1109/pimrc.2015.7343304",
+          "title": "Buffer-aided full-duplex relaying with residual self-interference and statistical delay provisioning",
+          "date": "2015-08-01",
+          "url": "https://doi.org/10.1109/pimrc.2015.7343304"
+        },
+        {
+          "identifier": "doi:10.1109/pimrc.2015.7343436",
+          "title": "Stochastic user scheduling and power control for energy harvesting networks with statistical delay provisioning",
+          "date": "2015-08-01",
+          "url": "https://doi.org/10.1109/pimrc.2015.7343436"
+        },
+        {
+          "identifier": "doi:10.1109/glocom.2015.7417306",
+          "title": "Relay Selection, Link Scheduling, and Rate Allocation in Dual-Hop Buffer-Aided Networks with Statistical Delay Constraints",
+          "date": "2015-12-01",
+          "url": "https://doi.org/10.1109/glocom.2015.7417306"
+        },
+        {
+          "identifier": "doi:10.1109/glocom.2015.7417468",
+          "title": "Optimal Stochastic Power Control for Energy Harvesting Systems with Statistical Delay Constraint",
+          "date": "2015-12-01",
+          "url": "https://doi.org/10.1109/glocom.2015.7417468"
+        },
+        {
+          "identifier": "doi:10.1109/access.2016.2594216",
+          "title": "Power Allocation for Buffer-Aided Full-Duplex Relaying With Imperfect Self-Interference Cancelation and Statistical Delay Constraint",
+          "date": "2016-01-01",
+          "url": "https://doi.org/10.1109/access.2016.2594216"
+        },
+        {
+          "identifier": "doi:10.1109/tcomm.2016.2515620",
+          "title": "Optimal Resource Allocation for Buffer-Aided Relaying With Statistical QoS Constraint",
+          "date": "2016-01-07",
+          "url": "https://doi.org/10.1109/tcomm.2016.2515620"
+        },
+        {
+          "identifier": "doi:10.1109/vtcspring.2016.7504240",
+          "title": "Equalization for MIMO-OFDM Systems with Insufficient Cyclic Prefix",
+          "date": "2016-05-01",
+          "url": "https://doi.org/10.1109/vtcspring.2016.7504240"
+        },
+        {
+          "identifier": "doi:10.1109/jsac.2016.2600338",
+          "title": "Optimal Stochastic Power Control for Energy Harvesting Systems With Delay Constraints",
+          "date": "2016-08-15",
+          "url": "https://doi.org/10.1109/jsac.2016.2600338"
+        },
+        {
+          "identifier": "doi:10.1007/978-3-319-57693-0_6",
+          "title": "Power Allocation for Buffer-Aided Full-Duplex Relaying with Imperfect Self-Interference Cancellation Under Delay-Outage Constraint",
+          "date": "2017-01-01",
+          "url": "https://doi.org/10.1007/978-3-319-57693-0_6"
+        },
+        {
+          "identifier": "doi:10.1007/978-3-319-57693-0_3",
+          "title": "Joint Data Admission Control and Power Allocation Over Fading Channel Under Average Delay Constraint",
+          "date": "2017-01-01",
+          "url": "https://doi.org/10.1007/978-3-319-57693-0_3"
+        },
+        {
+          "identifier": "doi:10.1007/978-3-319-57693-0_5",
+          "title": "Resource Allocation for Buffer-Aided Half-Duplex Relaying Under Delay-Outage Constraint",
+          "date": "2017-01-01",
+          "url": "https://doi.org/10.1007/978-3-319-57693-0_5"
+        },
+        {
+          "identifier": "doi:10.1007/978-3-319-57693-0_2",
+          "title": "Power Allocation Over Fading Channels Under Delay Constraints: A Review",
+          "date": "2017-01-01",
+          "url": "https://doi.org/10.1007/978-3-319-57693-0_2"
+        },
+        {
+          "identifier": "doi:10.1007/978-3-319-57693-0_4",
+          "title": "Power Allocation with Energy Harvesting Over Fading Channel Under Statistical Delay Constraints",
+          "date": "2017-01-01",
+          "url": "https://doi.org/10.1007/978-3-319-57693-0_4"
+        },
+        {
+          "identifier": "doi:10.1007/978-3-319-57693-0_1",
+          "title": "Introduction",
+          "date": "2017-01-01",
+          "url": "https://doi.org/10.1007/978-3-319-57693-0_1"
+        },
+        {
+          "identifier": "doi:10.1007/978-3-319-57693-0",
+          "title": "Radio Resource Allocation Over Fading Channels Under Statistical Delay Constraints",
+          "date": "2017-01-01",
+          "url": "https://doi.org/10.1007/978-3-319-57693-0"
+        },
+        {
+          "identifier": "doi:10.1109/tii.2020.3027826",
+          "title": "Energy-Efficient Dual-Hop Internet of Things Communications Network With Delay-Outage Constraints",
+          "date": "2020-09-30",
+          "url": "https://doi.org/10.1109/tii.2020.3027826"
+        }
+      ],
+      "verifiedAt": "2026-11-09T14:12:22.787Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-0841-vp-2654",
+      "type": "coauthor",
+      "sourceId": "vp-0841",
+      "targetId": "vp-2654",
+      "sources": [
+        "https://doi.org/10.1109/icc45855.2022.9838365",
+        "https://doi.org/10.1109/twc.2022.3213256",
+        "https://doi.org/10.1109/wcnc55385.2023.10119006",
+        "https://doi.org/10.1109/jiot.2023.3270420",
+        "https://doi.org/10.1109/tmc.2023.3288085",
+        "https://doi.org/10.1109/tmc.2024.3406721",
+        "https://doi.org/10.1109/twc.2024.3403964",
+        "https://doi.org/10.1109/mnet.2024.3470811"
+      ],
+      "evidence": "OpenAlex author records (API) list 8 shared works (each with at most 40 authors, errata excluded) naming Dinh Thai Hoang (vp-0841) and Khoa T. Phan (vp-2654). Identity signals: full-name match, the roster institutions or their recorded affiliations on the works (Khoa T. Phan: University of Alberta, McGill University, La Trobe University), and matching research area; the OpenAlex author profile's affiliations were checked against the roster entry.",
+      "works": [
+        {
+          "identifier": "doi:10.1109/icc45855.2022.9838365",
+          "title": "Energy-based Proportional Fairness for Task Offloading and Resource Allocation in Edge Computing",
+          "date": "2022-05-16",
+          "url": "https://doi.org/10.1109/icc45855.2022.9838365"
+        },
+        {
+          "identifier": "doi:10.1109/twc.2022.3213256",
+          "title": "Elastic Resource Allocation for Coded Distributed Computing Over Heterogeneous Wireless Edge Networks",
+          "date": "2022-11-03",
+          "url": "https://doi.org/10.1109/twc.2022.3213256"
+        },
+        {
+          "identifier": "doi:10.1109/wcnc55385.2023.10119006",
+          "title": "Dynamic Resource Allocation for Metaverse Applications with Deep Reinforcement Learning",
+          "date": "2023-03-01",
+          "url": "https://doi.org/10.1109/wcnc55385.2023.10119006"
+        },
+        {
+          "identifier": "doi:10.1109/jiot.2023.3270420",
+          "title": "AI-Enabled mm-Waveform Configuration for Autonomous Vehicles With Integrated Communication and Sensing",
+          "date": "2023-04-26",
+          "url": "https://doi.org/10.1109/jiot.2023.3270420"
+        },
+        {
+          "identifier": "doi:10.1109/tmc.2023.3288085",
+          "title": "MetaSlicing: A Novel Resource Allocation Framework for Metaverse",
+          "date": "2023-06-23",
+          "url": "https://doi.org/10.1109/tmc.2023.3288085"
+        },
+        {
+          "identifier": "doi:10.1109/tmc.2024.3406721",
+          "title": "Energy-Based Proportional Fairness in Cooperative Edge Computing",
+          "date": "2024-05-29",
+          "url": "https://doi.org/10.1109/tmc.2024.3406721"
+        },
+        {
+          "identifier": "doi:10.1109/twc.2024.3403964",
+          "title": "Countering Eavesdroppers With Meta- Learning-Based Cooperative Ambient Backscatter Communications",
+          "date": "2024-05-29",
+          "url": "https://doi.org/10.1109/twc.2024.3403964"
+        },
+        {
+          "identifier": "doi:10.1109/mnet.2024.3470811",
+          "title": "Dynamic Multi-Tier Resource Allocation Framework for Metaverse",
+          "date": "2024-09-30",
+          "url": "https://doi.org/10.1109/mnet.2024.3470811"
+        }
+      ],
+      "verifiedAt": "2026-11-09T14:12:22.787Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-1179-vp-2654",
+      "type": "coauthor",
+      "sourceId": "vp-1179",
+      "targetId": "vp-2654",
+      "sources": [
+        "https://doi.org/10.1109/icc.2009.5198813",
+        "https://doi.org/10.4018/978-1-61520-680-3.ch007",
+        "https://doi.org/10.1109/glocom.2014.7417306",
+        "https://doi.org/10.1109/glocom.2015.7417306",
+        "https://doi.org/10.1109/tcomm.2016.2515620"
+      ],
+      "evidence": "OpenAlex author records (API) list 5 shared works (each with at most 40 authors, errata excluded) naming Long Bao Le (vp-1179) and Khoa T. Phan (vp-2654). Identity signals: full-name match, the roster institutions or their recorded affiliations on the works (Khoa T. Phan: University of Alberta, McGill University, La Trobe University), and matching research area; the OpenAlex author profile's affiliations were checked against the roster entry.",
+      "works": [
+        {
+          "identifier": "doi:10.1109/icc.2009.5198813",
+          "title": "Centralized and Distributed Power Allocation in Multi-User Wireless Relay Networks",
+          "date": "2009-06-01",
+          "url": "https://doi.org/10.1109/icc.2009.5198813"
+        },
+        {
+          "identifier": "doi:10.4018/978-1-61520-680-3.ch007",
+          "title": "Resource Allocation and QoS Provisioning for Wireless Relay Networks",
+          "date": "2010-05-25",
+          "url": "https://doi.org/10.4018/978-1-61520-680-3.ch007"
+        },
+        {
+          "identifier": "doi:10.1109/glocom.2014.7417306",
+          "title": "Relay Selection, Link Scheduling, and Rate Allocation in Dual-Hop Buffer-Aided Networks with Statistical Delay Constraints",
+          "date": "2014-12-01",
+          "url": "https://doi.org/10.1109/glocom.2014.7417306"
+        },
+        {
+          "identifier": "doi:10.1109/glocom.2015.7417306",
+          "title": "Relay Selection, Link Scheduling, and Rate Allocation in Dual-Hop Buffer-Aided Networks with Statistical Delay Constraints",
+          "date": "2015-12-01",
+          "url": "https://doi.org/10.1109/glocom.2015.7417306"
+        },
+        {
+          "identifier": "doi:10.1109/tcomm.2016.2515620",
+          "title": "Optimal Resource Allocation for Buffer-Aided Relaying With Statistical QoS Constraint",
+          "date": "2016-01-07",
+          "url": "https://doi.org/10.1109/tcomm.2016.2515620"
+        }
+      ],
+      "verifiedAt": "2026-11-09T14:12:22.787Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-1444-vp-2654",
+      "type": "coauthor",
+      "sourceId": "vp-1444",
+      "targetId": "vp-2654",
+      "sources": [
+        "https://openalex.org/W4298209957",
+        "https://doi.org/10.1007/978-3-642-36543-0_41"
+      ],
+      "evidence": "OpenAlex author records (API) list 2 shared works (each with at most 40 authors, errata excluded) naming Hoai An Le Thi (vp-1444) and Khoa T. Phan (vp-2654). Identity signals: full-name match, the roster institutions or their recorded affiliations on the works (Khoa T. Phan: University of Alberta, McGill University, La Trobe University), and matching research area; the OpenAlex author profile's affiliations were checked against the roster entry.",
+      "works": [
+        {
+          "identifier": "openalex:W4298209957",
+          "title": "Energy Minimization-based Cross-layer Design in Wireless Networks",
+          "date": "2008-01-01",
+          "url": "https://openalex.org/W4298209957"
+        },
+        {
+          "identifier": "doi:10.1007/978-3-642-36543-0_41",
+          "title": "DC Programming and DCA Based Cross-Layer Optimization in Multi-hop TDMA Networks",
+          "date": "2013-01-01",
+          "url": "https://doi.org/10.1007/978-3-642-36543-0_41"
+        }
+      ],
+      "verifiedAt": "2026-11-09T14:12:22.787Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-1205-vp-2654",
+      "type": "coauthor",
+      "sourceId": "vp-1205",
+      "targetId": "vp-2654",
+      "sources": [
+        "https://openalex.org/W4298209957",
+        "https://doi.org/10.1007/978-3-642-36543-0_41"
+      ],
+      "evidence": "OpenAlex author records (API) list 2 shared works (each with at most 40 authors, errata excluded) naming Tao Pham Dinh (vp-1205) and Khoa T. Phan (vp-2654). Identity signals: full-name match, the roster institutions or their recorded affiliations on the works (Khoa T. Phan: University of Alberta, McGill University, La Trobe University), and matching research area; the OpenAlex author profile's affiliations were checked against the roster entry.",
+      "works": [
+        {
+          "identifier": "openalex:W4298209957",
+          "title": "Energy Minimization-based Cross-layer Design in Wireless Networks",
+          "date": "2008-01-01",
+          "url": "https://openalex.org/W4298209957"
+        },
+        {
+          "identifier": "doi:10.1007/978-3-642-36543-0_41",
+          "title": "DC Programming and DCA Based Cross-Layer Optimization in Multi-hop TDMA Networks",
+          "date": "2013-01-01",
+          "url": "https://doi.org/10.1007/978-3-642-36543-0_41"
+        }
+      ],
+      "verifiedAt": "2026-11-09T14:12:22.787Z",
       "direct": false,
       "notes": ""
     }
