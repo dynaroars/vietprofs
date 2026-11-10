@@ -16045,6 +16045,66 @@
       ],
       "retrievedAt": "2026-11-10T17:05:08.910Z",
       "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-2805": {
+      "name": "Toan Ha",
+      "outcome": "found",
+      "pageUrl": "https://www.publichealth.pitt.edu/directory/toan-ha",
+      "imageUrl": "https://www.publichealth.pitt.edu/sites/default/files/styles/person_image/public/person-img/Toan_Ha.jpg?h=97851014&itok=TtYYhIHY",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-10T17:12:51.171Z"
+    },
+    "vp-2806": {
+      "name": "Phuoc Dai Ha",
+      "outcome": "found",
+      "pageUrl": "https://www.towson.edu/fcsm/departments/physics/facultystaff/pha.html",
+      "imageUrl": "https://www.towson.edu/fcsm/images/ha-phuoc-sq.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-10T17:12:51.615Z"
+    },
+    "vp-2807": {
+      "name": "Anh Tuan Ta",
+      "outcome": "found",
+      "identitySignals": [
+        "Official Sanitary Engineering staff page attaches this image to Lect.Dr.Anh Tuan Ta and anhtuan.ta@mahidol.ac.th",
+        "Official CV linked from the same named staff block supplies matching institution and department; downloaded image visually checked as a clean single-person portrait"
+      ],
+      "retrievedAt": "2026-11-10T17:14:16.683Z",
+      "note": "MEDIUM candidate stored after visual review",
+      "imageUrl": "https://phse.ph.mahidol.ac.th/staff/New%20folder/%E0%B8%AD.%E0%B8%AD%E0%B8%B1%E0%B9%89%E0%B8%99.jpg",
+      "pageUrl": "https://phse.ph.mahidol.ac.th/staff.html",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM"
+    },
+    "vp-2808": {
+      "name": "Thi-Na Ta",
+      "outcome": "found",
+      "identitySignals": [
+        "Official individual profile labels image 謝氏娜 助理教授 and publishes THI-NA TA with nata@ncut.edu.tw",
+        "Current full-time faculty directory links this exact profile under the same name; downloaded image visually checked as a clean single-person headshot"
+      ],
+      "retrievedAt": "2026-11-10T17:14:18.895Z",
+      "note": "MEDIUM candidate stored after visual review",
+      "imageUrl": "https://iae.ncut.edu.tw/var/file/62/1062/img/670/581627130.png",
+      "pageUrl": "https://iae.ncut.edu.tw/p/405-1062-95404,c2342.php",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM"
     }
   }
 }
