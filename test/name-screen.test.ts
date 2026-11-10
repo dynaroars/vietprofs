@@ -27,6 +27,24 @@ const NON_VIETNAMESE: [string, string?][] = [
   ['J. Mac McCullough'],
   ['Mac H. Alford'],
   ['Mac Gaunaa', 'Denmark'],
+  // Owner rulings 2026-11-10: retired from the Codex audit of #1044-#1048.
+  ['Chong-Wah Ngo', 'Singapore'],
+  ['Jacky Chi-Ki Ngo', 'Hong Kong'],
+  ['Chia-Wei Phan', 'Malaysia'],
+  ['Gavin Bui', 'Hong Kong'],
+  ['Sang-Do Ha', 'South Korea'],
+  ['Do Sang Kim', 'South Korea'],
+  ['Liqiang Mai', 'China'],
+  ['Gengchen Mai', 'United States'],
+  ['Mai Har Sham', 'Hong Kong'],
+  ['Volker Mai', 'United States'],
+  ['Juliane Mai', 'Canada'],
+  ['Mai M. Khalaf', 'Saudi Arabia'],
+  ['Ken Mai', 'United States'],
+  ['Rosa Schiano-Phan', 'United Kingdom'],
+  ['Kaylon L. Bruner-Tran'],
+  ['Erin (Misty) Paig-Tran'],
+  ['Sophie Selby-Pham', 'Australia'],
 ];
 
 // Real roster members and accepted candidates, including the shapes the screen must not reject:
@@ -51,6 +69,14 @@ const VIETNAMESE: [string, string?][] = [
   ['Mac Thi Hoa'],
   ['Kevin Mac'],
   ['Hoa Thi Mac'],
+  ['Mai Anh Nguyen'],
+  ['Thi Mai Pham'],
+  ['Viann N. Nguyen-Feng'],
+  ['Johannes Tran-Gia'],
+  ['Hoa Briscoe-Tran'],
+  ['Felice Le-Scherban'],
+  ['Thanh Le-Cong'],
+  ['Que-Lam Huynh'],
 ];
 
 test('the name screen rejects high-confidence non-Vietnamese names', () => {

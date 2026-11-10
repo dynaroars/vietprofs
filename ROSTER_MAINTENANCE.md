@@ -329,15 +329,33 @@ given names made only of Chinese/Korean syllables ("Dao-Xin", "Wai-Meng"), a Chi
 surname with no Vietnamese-only token ("Dao Zhou"), two or more Chinese-style given syllables with
 a shared surname ("Vera Ling Hui Phung"), a Chinese/Korean-style given name with a shared surname at
 an East Asian institution ("Ho Kyung Ha"), and "Ngo" without a Vietnamese given name at an African
-institution ("Gerald Ngo Teke"). A Western given name with a shared surname (Ryan Doan, Wendy
-Quach, Kevin Le) is **not** rejected: the roster has many such members, so those leads get the
-normal appointment check. Measured 2026-11-09: run over the 2,642 roster names, it rejects 6
-(0.2%: Le Bin Ho, Suan Li Mai, Tren Ma, Don Ta, Dong Ngoduy, Anna K. Fam), and the test fails if
-that rises above 0.5%. Run over the 997 candidates queued in batch Issues #1034–#1082, it rejected
-118. A manual read found all 118 to be Korean, Chinese/Taiwanese/Hong Kong, Cameroonian or Nigerian
-names, concentrated in the surname sweeps for Ha, Lai, Mai, Do, Ho, Tu and Chu (#1048–#1057). It
-does not catch every case: "Sang-Do Ha" and "Dong-Jiunn Jeffery Truong" pass, because every token
-is also a Vietnamese name token or the surname is strongly Vietnamese.
+institution ("Gerald Ngo Teke"). Owner rulings of 2026-11-10 added four more:
+
+- **Married hyphenated surnames.** A non-Vietnamese surname first and a Vietnamese surname second
+  (Alicia Smith-Tran, Rosa Schiano-Phan, Kaylon Bruner-Tran) means the person was non-Vietnamese
+  and took the Vietnamese surname by marriage: reject. The reverse order (Viann Nguyen-Feng, Felice
+  Le-Scherban, Johannes Tran-Gia) is a Vietnamese person who added a spouse's name: accept. A
+  Vietnamese given name (Hoa Briscoe-Tran) counts as Vietnamese evidence whatever the surname order.
+- **"Mai" alone is not enough.** Mai is also a Chinese, German and Arabic name (Liqiang Mai, Volker
+  Mai, Mai M. Khalaf). A name whose only Vietnamese token is Mai is rejected.
+- **Gaelic "Mac".** "Mac ___" surnames (Ralph Mac Nally) and Mac as a Western given name or nickname
+  (Mac H. Alford, James "Mac" Hyman) are not the Vietnamese surname Mạc. "Mac Van Nam" and
+  "Kevin Mac" still pass.
+- **Chinese and Korean names that reuse Vietnamese spellings.** Ngo, Phan, Bui, Lam, Ly, Ho and
+  similar are also Cantonese/Hokkien romanizations (Chong-Wah Ngo, Chia-Wei Phan, Gavin Bui at a
+  Hong Kong university), and Korean names reuse Vietnamese syllables (Sang-Do Ha, Do Sang Kim). At a
+  Chinese, Hong Kong, Taiwanese or Macau institution a shared surname needs a Vietnamese given name;
+  at a Korean institution the name needs a token Korean romanization cannot spell.
+
+Apart from these patterns, a Western given name with a shared surname (Ryan Doan, Wendy Quach,
+Kevin Le) is **not** rejected: the roster has many such members, so those leads get the normal
+appointment check. Agents reviewing candidates apply the same rules by hand, including when the
+screen misses a case (Mathabo Khau, a Sesotho name, passes it). Measured 2026-11-10: run over the
+2,682 roster names, it rejects 5 (0.2%: Tren Ma, Don Ta, Dong Ngoduy, Anna K. Fam, Daniella
+Zalcman), and the test fails if that rises above 0.5%. On 2026-11-09 it rejected 118 of the 997
+candidates queued in batch Issues #1034–#1082; a manual read found all 118 to be Korean,
+Chinese/Taiwanese/Hong Kong, Cameroonian or Nigerian names. It still does not catch every case:
+"Dong-Jiunn Jeffery Truong" passes because the surname is strongly Vietnamese.
 
 Name matching is deliberately high-precision discovery assistance, not an exhaustive classifier.
 It will miss Vietnamese-diaspora people who publish under names without a recognized Vietnamese

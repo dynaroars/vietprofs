@@ -359,6 +359,37 @@ const EAST_ASIA = new Set([
   'sg',
   'my',
 ]);
+// Vietnamese surnames that are also Cantonese/Hokkien romanizations (Ngo Chong-Wah, Bui Hiu-Yuet,
+// Phan Chia-Wei): not Vietnamese evidence on their own in East Asia.
+const CHINESE_TOO = new Set([
+  'ngo',
+  'phan',
+  'bui',
+  'lam',
+  'ly',
+  'mai',
+  'ho',
+  'ha',
+  'lai',
+  'ta',
+  'to',
+  'tang',
+  'tong',
+  'luu',
+  'au',
+]);
+const CHINESE_REGIONS = new Set([
+  'china',
+  'hong kong',
+  'taiwan',
+  'macau',
+  'macao',
+  'cn',
+  'hk',
+  'tw',
+  'mo',
+]);
+const KOREA = new Set(['south korea', 'korea', 'republic of korea', 'kr']);
 const AFRICA = new Set(['cameroon', 'nigeria', 'ghana', 'gabon', 'cm', 'ng', 'gh', 'ga']);
 
 function normalizedParts(name: string): string[] {
@@ -398,13 +429,17 @@ export function screenVietnameseName(name: string, country?: string): NameScreen
   for (const part of parts.filter((p) => p.includes('-'))) {
     const pieces = part.split('-').filter(Boolean);
     if (pieces.length < 2 || pieces.some((p) => p.length > 7)) continue;
-    if (tokens.some((t) => !pieces.includes(t) && vietOnly(t))) continue;
+    // The surname doesn't count here: Ngo/Phan are also Chinese (Chong-Wah Ngo, Chia-Wei Phan).
+    if (tokens.some((t) => !pieces.includes(t) && !CHINESE_TOO.has(t) && vietOnly(t))) continue;
     if (
       pieces.every((p) => isVietToken(p) || cjkShaped(p)) &&
       pieces.some(cjkNotViet) &&
       !pieces.some(vietOnly)
     ) {
-      return { likely: false, reason: `Chinese/Korean-style hyphenated given name "${part}"` };
+      return {
+        likely: false,
+        reason: `Chinese/Korean-style hyphenated given name "${part}"`,
+      };
     }
   }
 
@@ -420,6 +455,29 @@ export function screenVietnameseName(name: string, country?: string): NameScreen
       reason: `Chinese/Korean-style given name "${givenCjk[0]}" at an institution in ${country}`,
     };
   }
+  // "Mai" is also a Chinese, German and Arabic name (Liqiang Mai, Volker Mai, Mai Khalaf): when
+  // it is the only Vietnamese name token, it is not enough. Owner ruling 2026-11-10.
+  if (tokens.includes('mai') && tokens.every((t) => t === 'mai' || !isVietToken(t))) {
+    return { likely: false, reason: '"Mai" is the only Vietnamese name token' };
+  }
+  // Korean names reuse Vietnamese-looking syllables (Sang-Do Ha, Do Sang Kim): at a Korean
+  // institution, require a token Korean romanization cannot spell.
+  if (KOREA.has(where) && !tokens.some(vietOnly)) {
+    return {
+      likely: false,
+      reason: `no Vietnamese-only name token at an institution in ${country}`,
+    };
+  }
+  if (
+    CHINESE_REGIONS.has(where) &&
+    givenViet.length === 0 &&
+    !tokens.some((t) => vietOnly(t) && !CHINESE_TOO.has(t))
+  ) {
+    return {
+      likely: false,
+      reason: `no Vietnamese given name at an institution in ${country}`,
+    };
+  }
   // Gaelic "Mac ___" surnames (Ralph Mac Nally, Ciarán Mac an Bhaird) and "Mac" as a Western
   // given name or nickname (Mac H. Alford, James "Mac" Hyman): Mac is not the surname position
   // and another token is not Vietnamese. Vietnamese Mạc stays: "Mac Van Nam" (all Vietnamese
@@ -430,11 +488,34 @@ export function screenVietnameseName(name: string, country?: string): NameScreen
     last !== 'mac' &&
     tokens.some((t) => t !== 'mac' && !isVietToken(t))
   ) {
-    return { likely: false, reason: 'Gaelic "Mac" surname prefix or "Mac" given name/nickname' };
+    return {
+      likely: false,
+      reason: 'Gaelic "Mac" surname prefix or "Mac" given name/nickname',
+    };
+  }
+  // Married hyphenated surname: a non-Vietnamese birth surname first, a Vietnamese surname
+  // added second, and no Vietnamese token anywhere else (Rosa Schiano-Phan, Kaylon
+  // Bruner-Tran). Vietnamese-first double surnames (Nguyen-Feng, Tran-Gia) and names with a
+  // Vietnamese given name (Hoa Briscoe-Tran) still pass. Owner ruling 2026-11-10.
+  const lastPart = parts[parts.length - 1] ?? '';
+  const surnamePieces = lastPart.split('-').filter(Boolean);
+  if (
+    surnamePieces.length === 2 &&
+    !isVietToken(surnamePieces[0]) &&
+    ALL_SURNAMES.has(surnamePieces[1]) &&
+    parts.slice(0, -1).every((p) => !p.split('-').some(isVietToken))
+  ) {
+    return {
+      likely: false,
+      reason: `married hyphenated surname "${lastPart}"`,
+    };
   }
   // "Ngo" is also a Cameroonian name element ("Valentina Josiane Ngo Bitoungui").
   if (AFRICA.has(where) && givenViet.length === 0) {
-    return { likely: false, reason: `no Vietnamese given name at an institution in ${country}` };
+    return {
+      likely: false,
+      reason: `no Vietnamese given name at an institution in ${country}`,
+    };
   }
 
   if (strong) return { likely: true, reason: `Vietnamese surname "${strong}"` };
@@ -444,7 +525,11 @@ export function screenVietnameseName(name: string, country?: string): NameScreen
       reason: `surname "${shared}" with Vietnamese given name "${givenViet[0]}"`,
     };
   }
-  if (shared) return { likely: true, reason: `shared surname "${shared}"; heritage unverified` };
+  if (shared)
+    return {
+      likely: true,
+      reason: `shared surname "${shared}"; heritage unverified`,
+    };
   if (givenViet.length > 0)
     return { likely: true, reason: `Vietnamese given name "${givenViet[0]}"` };
   return { likely: false, reason: 'no Vietnamese name token' };

@@ -8870,20 +8870,6 @@
       "retrievedAt": "2026-11-01T16:46:48.205Z",
       "note": "MEDIUM candidate stored after visual review"
     },
-    "vp-2186": {
-      "name": "Suan Li Mai",
-      "outcome": "found",
-      "pageUrl": "http://info.ifpan.edu.pl/~masli/masli.html",
-      "imageUrl": "http://info.ifpan.edu.pl/~masli/images/people/li.jpg",
-      "sourceType": "official_faculty",
-      "confidence": "MEDIUM",
-      "identitySignals": [
-        "name",
-        "stored_roster_url"
-      ],
-      "retrievedAt": "2026-11-01T17:25:45.372Z",
-      "note": "MEDIUM candidate stored after visual review"
-    },
     "vp-2187": {
       "name": "Truong Co Nguyen",
       "outcome": "found",
@@ -10316,23 +10302,6 @@
       "retrievedAt": "2026-11-04T03:19:04.260Z",
       "note": "MEDIUM candidate stored after visual review"
     },
-    "vp-2273": {
-      "name": "Alicia Smith-Tran",
-      "outcome": "found",
-      "pageUrl": "https://www.oberlin.edu/alicia-smith-tran",
-      "imageUrl": "https://www.oberlin.edu/sites/default/files/2025-11/alicia_smith-tran-trosenjones.jpg",
-      "sourceType": "personal_homepage",
-      "confidence": "HIGH",
-      "identitySignals": [
-        "name",
-        "institution",
-        "department",
-        "rank",
-        "stored_roster_url"
-      ],
-      "retrievedAt": "2026-11-04T03:19:04.584Z",
-      "note": "MEDIUM candidate stored after visual review"
-    },
     "vp-2274": {
       "name": "My Hanh (Theresa) Nguyen",
       "outcome": "found",
@@ -10421,22 +10390,6 @@
       ],
       "retrievedAt": "2026-11-04T21:48:57.625Z",
       "note": "MEDIUM candidate stored after visual review"
-    },
-    "vp-2280": {
-      "name": "Stephanie Campos-Bui",
-      "outcome": "found",
-      "pageUrl": "https://www.law.berkeley.edu/our-faculty/faculty-profiles/stephanie-campos-bui/",
-      "imageUrl": "https://www.law.berkeley.edu/wp-content/uploads/2016/07/StephanieCamposBui_square.jpg",
-      "sourceType": "official_faculty",
-      "confidence": "HIGH",
-      "identitySignals": [
-        "name",
-        "institution",
-        "department",
-        "rank",
-        "stored_roster_url"
-      ],
-      "retrievedAt": "2026-11-04T21:48:23.131Z"
     },
     "vp-2281": {
       "name": "Christina C Nguyen",
@@ -13667,13 +13620,6 @@
       ],
       "retrievedAt": "2026-11-04T23:00:44.705Z"
     },
-    "vp-2529": {
-      "name": "Anne Réach-Ngo",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-11-04T23:00:50.152Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
-    },
     "vp-2530": {
       "name": "Charles Truong",
       "outcome": "found",
@@ -15683,23 +15629,6 @@
       ],
       "retrievedAt": "2026-11-10T15:40:08.772Z"
     },
-    "vp-2753": {
-      "name": "Chong-Wah Ngo",
-      "outcome": "needs_review",
-      "pageUrl": "https://faculty.smu.edu.sg/profile/ngo-chong-wah-601",
-      "imageUrl": "https://staffphoto.smu.edu.sg/s/cwngo/600x400",
-      "sourceType": "official_faculty",
-      "confidence": "MEDIUM",
-      "identitySignals": [
-        "name",
-        "institution",
-        "department",
-        "rank",
-        "stored_roster_url"
-      ],
-      "retrievedAt": "2026-11-10T15:40:20.770Z",
-      "note": "candidate requires visual review before acceptance"
-    },
     "vp-2754": {
       "name": "John T. Ngo",
       "outcome": "found",
@@ -15717,22 +15646,6 @@
       "retrievedAt": "2026-11-10T15:41:54.393Z",
       "note": "MEDIUM candidate stored after visual review"
     },
-    "vp-2755": {
-      "name": "Jacky Chi-Ki Ngo",
-      "outcome": "found",
-      "pageUrl": "https://www.sls.cuhk.edu.hk/profile/ngo-chi-ki-jacky/",
-      "imageUrl": "https://www.sls.cuhk.edu.hk/wp-content/uploads/NGO-CK-Jacky-scaled.jpg",
-      "sourceType": "official_faculty",
-      "confidence": "HIGH",
-      "identitySignals": [
-        "name",
-        "institution",
-        "department",
-        "rank",
-        "stored_roster_url"
-      ],
-      "retrievedAt": "2026-11-10T15:40:21.422Z"
-    },
     "vp-2756": {
       "name": "Justin C. Bui",
       "outcome": "needs_review",
@@ -15749,22 +15662,6 @@
       ],
       "retrievedAt": "2026-11-10T15:40:24.871Z",
       "note": "candidate requires visual review before acceptance"
-    },
-    "vp-2757": {
-      "name": "Gavin Bui",
-      "outcome": "found",
-      "pageUrl": "https://eng.hsu.edu.hk/academic/dr-bui-hiu-yuet-gavin/",
-      "imageUrl": "https://eng.hsu.edu.hk/wp-content/uploads/2022/09/Gavin-Bui-Pic-1-739x1024.jpg",
-      "sourceType": "official_faculty",
-      "confidence": "HIGH",
-      "identitySignals": [
-        "name",
-        "institution",
-        "department",
-        "rank",
-        "stored_roster_url"
-      ],
-      "retrievedAt": "2026-11-10T15:40:26.909Z"
     },
     "vp-2758": {
       "name": "Vinh Bui",
@@ -15836,21 +15733,6 @@
       ],
       "retrievedAt": "2026-11-10T15:40:54.935Z",
       "note": "Official image downloaded successfully with curl; visually reviewed clean single-person headshot and checked dimensions before manual WebP storage."
-    },
-    "vp-2763": {
-      "name": "Sophie Selby-Pham",
-      "outcome": "found",
-      "identitySignals": [
-        "name",
-        "institution",
-        "stored_roster_url"
-      ],
-      "retrievedAt": "2026-11-10T15:42:42.530Z",
-      "note": "MEDIUM candidate stored after visual review",
-      "pageUrl": "https://safes.unimelb.edu.au/research/food-science/people",
-      "imageUrl": "https://pictures.staff.unimelb.edu.au/squiz/index_eis.php?cid=0YjVBCBS4Hba9ajl3Q1Zn5H3KIS6fXGougN44znmRyE%3D&h=9zfLlU0JL4dQF%2BmQkloNYwfjg0hylOPXtKfZVVnmWsyY5X0Ka4zmDnNb2vByPt5y",
-      "sourceType": "official_faculty",
-      "confidence": "MEDIUM"
     },
     "vp-2764": {
       "name": "Loan Pham Kim",
@@ -15933,29 +15815,6 @@
       ],
       "retrievedAt": "2026-11-10T15:48:08.093Z"
     },
-    "vp-2769": {
-      "name": "Chia-Wei Phan",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-11-10T15:48:13.920Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
-    },
-    "vp-2770": {
-      "name": "Rosa Schiano-Phan",
-      "outcome": "found",
-      "pageUrl": "https://www.westminster.ac.uk/about-us/our-people/directory/schiano-phan-rosa",
-      "imageUrl": "https://www.westminster.ac.uk/sites/default/public-files/styles/profile_380x380_/public/staff-profile-photos/Rosa-Schiano-Phan-profile-image.jpg?itok=g2MISs9R",
-      "sourceType": "official_faculty",
-      "confidence": "HIGH",
-      "identitySignals": [
-        "name",
-        "institution",
-        "department",
-        "rank",
-        "stored_roster_url"
-      ],
-      "retrievedAt": "2026-11-10T15:48:37.541Z"
-    },
     "vp-2771": {
       "name": "Lilianna Phan",
       "outcome": "found",
@@ -16019,22 +15878,6 @@
       ],
       "retrievedAt": "2026-11-10T15:54:18.672Z"
     },
-    "vp-2776": {
-      "name": "Kaylon L. Bruner-Tran",
-      "outcome": "found",
-      "pageUrl": "https://www.vumc.org/obgyn/node/88",
-      "imageUrl": "https://www.vumc.org/obgyn/sites/default/files/people/Bruner-Tran_Kaylon%20%281%29.JPG",
-      "sourceType": "official_faculty",
-      "confidence": "HIGH",
-      "identitySignals": [
-        "name",
-        "institution",
-        "department",
-        "rank",
-        "stored_roster_url"
-      ],
-      "retrievedAt": "2026-11-10T15:54:19.404Z"
-    },
     "vp-2777": {
       "name": "Gina A. Tran",
       "outcome": "found",
@@ -16055,13 +15898,6 @@
       "outcome": "not_found",
       "identitySignals": [],
       "retrievedAt": "2026-11-10T15:54:29.220Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
-    },
-    "vp-2780": {
-      "name": "Erin (Misty) Paig-Tran",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-11-10T15:54:44.741Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-2781": {
@@ -16157,177 +15993,6 @@
       "outcome": "not_found",
       "identitySignals": [],
       "retrievedAt": "2026-11-10T16:06:15.236Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
-    },
-    "vp-2788": {
-      "name": "Mathabo Khau",
-      "outcome": "found",
-      "identitySignals": [
-        "name",
-        "institution",
-        "official_staff_profile"
-      ],
-      "retrievedAt": "2026-11-10T16:07:17.889Z",
-      "note": "MEDIUM candidate stored after visual review",
-      "pageUrl": "https://education.mandela.ac.za/Staff/Academic-Staff/Prof-Mathabo-Khau",
-      "imageUrl": "https://education.mandela.ac.za/Education-new/media/Store/Images/Staff/Prof-Mathabo.jpg",
-      "sourceType": "official_faculty",
-      "confidence": "MEDIUM"
-    },
-    "vp-2789": {
-      "name": "Sang-Do Ha",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-11-10T16:12:24.707Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
-    },
-    "vp-2790": {
-      "name": "Do Sang Kim",
-      "outcome": "found",
-      "identitySignals": [
-        "name",
-        "institution",
-        "official_profile_photo"
-      ],
-      "retrievedAt": "2026-11-10T16:15:18.471Z",
-      "note": "MEDIUM candidate stored after visual review",
-      "pageUrl": "https://cms.pknu.ac.kr/dosangkim/view.do?no=15594",
-      "imageUrl": "https://cms.pknu.ac.kr/data/dosangkim/contents/2222%EA%B5%90%EC%88%98%EB%8B%98%EC%97%AC%EA%B6%8C%EC%82%AC%EC%A7%842023.jpg",
-      "sourceType": "official_faculty",
-      "confidence": "MEDIUM"
-    },
-    "vp-2791": {
-      "name": "Liqiang Mai",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-11-10T16:12:44.808Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
-    },
-    "vp-2792": {
-      "name": "Wenjie Mai",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-11-10T16:12:55.571Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
-    },
-    "vp-2793": {
-      "name": "Yiyong Mai",
-      "outcome": "found",
-      "identitySignals": [
-        "name",
-        "institution",
-        "official_profile_photo"
-      ],
-      "retrievedAt": "2026-11-10T16:17:38.609Z",
-      "note": "MEDIUM candidate stored after visual review",
-      "pageUrl": "https://scce.sjtu.edu.cn/en/Faculty_Directory/364.html",
-      "imageUrl": "https://scce.sjtu.edu.cn/en/upload/image/20231219/20231219093400.jpg",
-      "sourceType": "official_faculty",
-      "confidence": "MEDIUM"
-    },
-    "vp-2794": {
-      "name": "Volker Mai",
-      "outcome": "found",
-      "pageUrl": "https://phhp.ufl.edu/profile/mai-volker/",
-      "imageUrl": "https://directory.ufhealth.org/mai-volker/files/profile-photo",
-      "sourceType": "official_faculty",
-      "confidence": "HIGH",
-      "identitySignals": [
-        "name",
-        "institution",
-        "department",
-        "rank",
-        "stored_roster_url"
-      ],
-      "retrievedAt": "2026-11-10T16:13:17.797Z"
-    },
-    "vp-2795": {
-      "name": "Sabine Mai",
-      "outcome": "found",
-      "pageUrl": "https://umanitoba.ca/medicine/faculty-staff/sabine-mai",
-      "imageUrl": "https://umanitoba.ca/medicine/sites/medicine/files/styles/3x2_900w/public/2025-01/sabine-mai.jpg?itok=9idjiHPa",
-      "sourceType": "official_faculty",
-      "confidence": "HIGH",
-      "identitySignals": [
-        "name",
-        "institution",
-        "department",
-        "rank",
-        "stored_roster_url"
-      ],
-      "retrievedAt": "2026-11-10T16:13:18.484Z"
-    },
-    "vp-2796": {
-      "name": "Ken Mai",
-      "outcome": "found",
-      "pageUrl": "https://www.ece.cmu.edu/directory/bios/mai-ken.html",
-      "imageUrl": "https://www.ece.cmu.edu/directory/images/faculty/M/ken-mai-800x800.png",
-      "sourceType": "official_faculty",
-      "confidence": "HIGH",
-      "identitySignals": [
-        "name",
-        "institution",
-        "department",
-        "stored_roster_url"
-      ],
-      "retrievedAt": "2026-11-10T16:13:19.271Z"
-    },
-    "vp-2797": {
-      "name": "Mai Har Sham",
-      "outcome": "found",
-      "pageUrl": "https://research.cuhk.edu.hk/en/persons/mai-har-sham/",
-      "imageUrl": "https://research.cuhk.edu.hk/files-asset/243275075/mhsham.jpg?w=160&f=jpg",
-      "sourceType": "official_faculty",
-      "confidence": "MEDIUM",
-      "identitySignals": [
-        "name",
-        "institution",
-        "department",
-        "rank",
-        "stored_roster_url"
-      ],
-      "retrievedAt": "2026-11-10T16:14:48.805Z",
-      "note": "MEDIUM candidate stored after visual review"
-    },
-    "vp-2798": {
-      "name": "Gengchen Mai",
-      "outcome": "not_found",
-      "pageUrl": "https://www.oden.utexas.edu/people/directory/gengchen-mai-2361/",
-      "imageUrl": "https://www.oden.utexas.edu/media/directory-assets/profile-imgs/Gengchen_Mai.png",
-      "sourceType": "official_faculty",
-      "confidence": "HIGH",
-      "identitySignals": [
-        "name",
-        "institution",
-        "department",
-        "rank",
-        "stored_roster_url"
-      ],
-      "retrievedAt": "2026-11-10T16:13:20.985Z",
-      "note": "candidate failed 120x120 or portrait-aspect validation"
-    },
-    "vp-2799": {
-      "name": "Juliane Mai",
-      "outcome": "found",
-      "pageUrl": "https://uwaterloo.ca/artificial-intelligence-institute/contacts/juliane-mai",
-      "imageUrl": "https://uwaterloo.ca/artificial-intelligence-institute/sites/default/files/styles/large/public/uploads/images/sanfrancisco_2_fotor_square.jpg?itok=puazOOnf",
-      "sourceType": "official_faculty",
-      "confidence": "MEDIUM",
-      "identitySignals": [
-        "name",
-        "institution",
-        "department",
-        "rank",
-        "stored_roster_url"
-      ],
-      "retrievedAt": "2026-11-10T16:14:49.027Z",
-      "note": "MEDIUM candidate stored after visual review"
-    },
-    "vp-2800": {
-      "name": "Mai M. Khalaf",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-11-10T16:13:44.138Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     }
   }
