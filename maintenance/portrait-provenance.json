@@ -16315,6 +16315,197 @@
       ],
       "retrievedAt": "2026-11-10T17:26:45.324Z",
       "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-2823": {
+      "name": "John Nguyen",
+      "outcome": "found",
+      "identitySignals": [
+        "John Nguyen",
+        "West Virginia University",
+        "image on verified individual profile"
+      ],
+      "retrievedAt": "2026-11-10T18:26:55.644Z",
+      "note": "MEDIUM candidate stored after visual review",
+      "imageUrl": "https://sole.hsc.wvu.edu/apps/directory/Public/PhotoView?id=32965",
+      "pageUrl": "https://directory.hsc.wvu.edu/Profile/32965",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH"
+    },
+    "vp-2824": {
+      "name": "Hiep Tran",
+      "outcome": "found",
+      "identitySignals": [
+        "Hiep Tran",
+        "RMIT University",
+        "image on verified individual profile"
+      ],
+      "retrievedAt": "2026-11-10T18:26:56.899Z",
+      "note": "MEDIUM candidate stored after visual review",
+      "imageUrl": "https://academics.rmit.edu.au/hiep-tranlengoc/thumbnail",
+      "pageUrl": "https://academics.rmit.edu.au/hiep-tranlengoc",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH"
+    },
+    "vp-2825": {
+      "name": "Vincent Pham",
+      "outcome": "found",
+      "pageUrl": "https://my.willamette.edu/people/vpham",
+      "imageUrl": "https://idauth.willamette.edu/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBb01SIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--94573c63fc42ea3d76c84de110867a64d0cf71f0/vpham.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-10T18:26:57.890Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-2826": {
+      "name": "Phu Cuong Le",
+      "outcome": "found",
+      "identitySignals": [
+        "Phu Cuong Le",
+        "Norwegian University of Science and Technology",
+        "image on verified individual profile"
+      ],
+      "retrievedAt": "2026-11-10T18:26:58.557Z",
+      "note": "MEDIUM candidate stored after visual review",
+      "imageUrl": "https://backends.it.ntnu.no/user-profile-service/rest/files/d1044cb6-353a-35d7-a7fe-bc696c23a1e9",
+      "pageUrl": "https://www.ntnu.edu/employees/cuong.le",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH"
+    },
+    "vp-2827": {
+      "name": "Kris Hoang",
+      "outcome": "found",
+      "identitySignals": [
+        "Kris Hoang",
+        "University of Alabama",
+        "image on verified individual profile"
+      ],
+      "retrievedAt": "2026-11-10T18:26:59.115Z",
+      "note": "MEDIUM candidate stored after visual review",
+      "imageUrl": "https://culverhouse.ua.edu/wp-content/uploads/2022/01/Kris_Headshot_2021-scaled-e1670962985895.jpg",
+      "pageUrl": "https://culverhouse.ua.edu/people/kris-hoang/",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH"
+    },
+    "vp-2828": {
+      "name": "Kevin Vu",
+      "outcome": "found",
+      "pageUrl": "https://www.marian.edu/directory/kevin-vu",
+      "imageUrl": "https://www.marian.edu/directory/_images/Avatar_Vu_Anh-Vu.JPG",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-10T18:26:59.516Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-2829": {
+      "name": "Brenda Vo",
+      "outcome": "found",
+      "pageUrl": "https://www.une.edu.au/staff-profiles/science-and-technology/brenda-vo",
+      "imageUrl": "https://www.une.edu.au/media/media-content/images/profile-images/Brenda-Vo.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-10T18:25:36.898Z"
+    },
+    "vp-2830": {
+      "name": "Duc-Tam Ho",
+      "outcome": "found",
+      "pageUrl": "https://www.northumbria.ac.uk/about-us/our-staff/h/tam-ho/",
+      "imageUrl": "https://www.northumbria.ac.uk/-/media/corporate-website/pure/pure-ho-tam-af91d137-2f7b-40d9-9224-d223af590a79.jpg?sc_lang=en&modified=20261109202452&hash=1B11C3AD168142DA1355D787CE28A0BE",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-10T18:25:42.790Z"
+    },
+    "vp-2831": {
+      "name": "Christine Ngoc Ngo",
+      "outcome": "found",
+      "pageUrl": "https://www.bucknell.edu/fac-staff/christine-ngo",
+      "imageUrl": "https://www.bucknell.edu/sites/default/files/styles/faculty_page_photo/public/libris/C00001GOQFVeT0YE/G0000hRJySpIobZY/ChristineNgo001.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-10T18:25:50.372Z"
+    },
+    "vp-2832": {
+      "name": "Ly Dinh",
+      "outcome": "found",
+      "pageUrl": "https://www.usf.edu/arts-sciences/departments/information/people/ly-dinh.aspx",
+      "imageUrl": "https://www.usf.edu/arts-sciences/departments/information/images/faculty/lydinh160x160.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-10T18:26:59.914Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-2833": {
+      "name": "Loan Truong",
+      "outcome": "needs_review",
+      "pageUrl": "https://pure.uj.ac.za/en/persons/loan-truong/",
+      "imageUrl": "https://pure.uj.ac.za/files-asset/55009661/Thi-Ngoc-Loan-Truong.png?w=160&f=jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-10T18:25:51.175Z",
+      "note": "candidate requires visual review before acceptance; found on the 2026-05-11 Wayback copy of the page, so check the live page or a newer source for a current photo"
+    },
+    "vp-2834": {
+      "name": "Nancy N. Truong",
+      "outcome": "found",
+      "identitySignals": [
+        "Nancy N. Truong",
+        "Arizona State University",
+        "image on verified individual profile"
+      ],
+      "retrievedAt": "2026-11-10T18:27:00.137Z",
+      "note": "MEDIUM candidate stored after visual review",
+      "imageUrl": "https://webapp4.asu.edu/photo-ws/directory_photo/ntruong6?size=medium",
+      "pageUrl": "https://search.asu.edu/profile/3722740",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH"
     }
   }
 }

@@ -571,6 +571,14 @@ export const HEALTH_SUBFIELDS = [
 // institution it's at, not just the department string.
 const FIELD_OVERRIDES = new Map([
   [
+    'Department of Electronic Systems|Norwegian University of Science and Technology',
+    'Engineering',
+  ],
+  ['Culverhouse School of Accountancy|University of Alabama', 'Business & Economics'],
+  ['School of Science and Technology|University of New England', 'Mathematics'],
+  ['School of Engineering, Physics and Mathematics|Northumbria University', 'Engineering'],
+  ['School of Information|University of South Florida', 'Computer & Information Sciences'],
+  [
     'Biosciences and Biotechnology Division|Lawrence Livermore National Laboratory',
     'Biological & Biomedical Sciences',
   ],
