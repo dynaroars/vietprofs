@@ -15851,6 +15851,150 @@
       "imageUrl": "https://pictures.staff.unimelb.edu.au/squiz/index_eis.php?cid=0YjVBCBS4Hba9ajl3Q1Zn5H3KIS6fXGougN44znmRyE%3D&h=9zfLlU0JL4dQF%2BmQkloNYwfjg0hylOPXtKfZVVnmWsyY5X0Ka4zmDnNb2vByPt5y",
       "sourceType": "official_faculty",
       "confidence": "MEDIUM"
+    },
+    "vp-2764": {
+      "name": "Loan Pham Kim",
+      "outcome": "found",
+      "pageUrl": "https://seaver.pepperdine.edu/academics/faculty/loan-kim/",
+      "imageUrl": "https://seaver.pepperdine.edu/academics/faculty/images/loan-kim.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-10T15:48:00.126Z"
+    },
+    "vp-2765": {
+      "name": "Viet Hoang Man",
+      "outcome": "found",
+      "pageUrl": "https://www.pharmacy.pitt.edu/people/viet-hoang-man",
+      "imageUrl": "https://www.pharmacy.pitt.edu/sites/default/files/styles/person_image/public/person-img/Viet-Man.jpg?h=6e3d08b1&itok=_3757TIg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-10T15:48:00.863Z"
+    },
+    "vp-2766": {
+      "name": "Ky V. Hoang",
+      "outcome": "found",
+      "pageUrl": "https://search.lsu.edu/vetmed/faculty/hoang.php",
+      "imageUrl": "https://www.lsu.edu/vetmed/images/headshots/hoang-ky.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-10T15:49:44.441Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-2767": {
+      "name": "Sem Hin Phan",
+      "outcome": "found",
+      "pageUrl": "https://pathology.med.umich.edu/news/1593/",
+      "imageUrl": "https://www.pathology.med.umich.edu/static/apps/cms/news/1593/Sem_Hin_Phan_Headshot-sq.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-10T15:48:03.184Z"
+    },
+    "vp-2768": {
+      "name": "Phillip H. Phan",
+      "outcome": "found",
+      "pageUrl": "https://carey.jhu.edu/faculty/faculty-directory/phillip-phan-phd",
+      "imageUrl": "https://carey.jhu.edu/sites/default/files/2026-02/Phillip-Phan_Headshot.webp",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-10T15:48:08.093Z"
+    },
+    "vp-2769": {
+      "name": "Chia-Wei Phan",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-10T15:48:13.920Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2770": {
+      "name": "Rosa Schiano-Phan",
+      "outcome": "found",
+      "pageUrl": "https://www.westminster.ac.uk/about-us/our-people/directory/schiano-phan-rosa",
+      "imageUrl": "https://www.westminster.ac.uk/sites/default/public-files/styles/profile_380x380_/public/staff-profile-photos/Rosa-Schiano-Phan-profile-image.jpg?itok=g2MISs9R",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-10T15:48:37.541Z"
+    },
+    "vp-2771": {
+      "name": "Lilianna Phan",
+      "outcome": "found",
+      "pageUrl": "https://drexel.edu/dornsife/academics/faculty/Lilianna-Phan/",
+      "imageUrl": "https://drexel.edu/~/media/Images/dornsife/academics/Faculty%20Headshots/Phan-Lilianna.ashx?h=149&la=en&w=140&hash=7375B6C6678AD82DE301434ADBE3258E49F3C498",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-10T15:48:38.022Z"
+    },
+    "vp-2772": {
+      "name": "Theodore Vo",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-10T15:48:38.756Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2773": {
+      "name": "Tina Vo",
+      "outcome": "found",
+      "pageUrl": "https://www.unlv.edu/people/tina-vo",
+      "imageUrl": "https://www.unlv.edu/sites/default/files/employee_images/DrVo_0.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-10T15:49:20.560Z",
+      "note": "MEDIUM candidate stored after visual review"
     }
   }
 }
