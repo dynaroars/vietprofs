@@ -61,6 +61,7 @@ export const ISO_TO_COUNTRY_NAME: Record<string, string> = {
   "ma": "Morocco",
   "br": "Brazil",
   "mx": "Mexico",
+  "tt": "Trinidad and Tobago",
   "ar": "Argentina",
   "cl": "Chile",
   "co": "Colombia",

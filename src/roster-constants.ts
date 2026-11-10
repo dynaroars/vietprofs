@@ -49,6 +49,7 @@ export const COUNTRY_TO_CONTINENT: Record<string, string> = {
   USA: 'North America',
   Canada: 'North America',
   Mexico: 'North America',
+  'Trinidad and Tobago': 'North America',
 
   // South America
   Brazil: 'South America',
@@ -182,6 +183,7 @@ export const COUNTRY_FLAGS: Record<string, string> = {
   Morocco: '🇲🇦',
   Brazil: '🇧🇷',
   Mexico: '🇲🇽',
+  'Trinidad and Tobago': '🇹🇹',
   Argentina: '🇦🇷',
   Chile: '🇨🇱',
   Colombia: '🇨🇴',

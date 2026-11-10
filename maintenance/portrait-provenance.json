@@ -15266,6 +15266,145 @@
       ],
       "retrievedAt": "2026-11-10T03:15:20.473Z",
       "note": "candidate requires visual review before acceptance"
+    },
+    "vp-2723": {
+      "name": "Howard Cam Luong",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-10T03:20:09.096Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2724": {
+      "name": "Gloria Luong",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-10T03:20:22.060Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2725": {
+      "name": "Lien Luong",
+      "outcome": "found",
+      "pageUrl": "https://apps.ualberta.ca/directory/person/lluong",
+      "imageUrl": "https://apps.ualberta.ca/profile/photo/lluong",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-10T03:21:32.034Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-2726": {
+      "name": "Hai Thanh Luong",
+      "outcome": "found",
+      "pageUrl": "https://experts.griffith.edu.au/47051-hai-luong",
+      "imageUrl": "https://experts.griffith.edu.au/47051-hai-luong/thumbnail",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-10T03:20:31.132Z"
+    },
+    "vp-2727": {
+      "name": "Justin Luong",
+      "outcome": "found",
+      "pageUrl": "https://ourenvironment.berkeley.edu/node/94",
+      "imageUrl": "https://ourenvironment.berkeley.edu/sites/default/files/styles/openberkeley_brand_widgets_rectangle/public/luong_justin_espmheadshotthumb.jpg?itok=iGBXzLGw&timestamp=1775860023",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-10T03:20:39.111Z"
+    },
+    "vp-2728": {
+      "name": "Hoa Luong",
+      "outcome": "found",
+      "pageUrl": "https://www.otago.ac.nz/accountancyfinance/staff/people/luong.html",
+      "imageUrl": "https://www.otago.ac.nz/__data/assets/image/0022/283126/hoa-luong-image-736984.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-10T03:20:39.588Z"
+    },
+    "vp-2729": {
+      "name": "Duc The Kieu",
+      "outcome": "found",
+      "pageUrl": "https://sta.uwi.edu/fst/dcit/staff-profiles",
+      "imageUrl": "https://sta.uwi.edu/fst/dcit/sites/default/files/dcit/styles/medium/public/Duc%20The%20Kieu.jpg?itok=B270hrjZ",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-10T03:20:47.869Z"
+    },
+    "vp-2730": {
+      "name": "Cuong Dao",
+      "outcome": "found",
+      "pageUrl": "https://www.bradford.ac.uk/staff/dcdao",
+      "imageUrl": "https://www.bradford.ac.uk/__data/assets/image/0026/50795/19468.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-10T03:21:32.657Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-2731": {
+      "name": "Philippe Trinh",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-10T03:20:50.300Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2732": {
+      "name": "Kelly Trinh",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-10T03:21:04.334Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2733": {
+      "name": "Dzung Dinh",
+      "outcome": "found",
+      "pageUrl": "https://peoria.medicine.uic.edu/profiles/dzung-dinh/",
+      "imageUrl": "https://peoria.medicine.uic.edu/wp-content/uploads/sites/993/2023/02/Dzung-Dinh-resized-157x180.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-10T03:21:13.597Z"
     }
   }
 }
