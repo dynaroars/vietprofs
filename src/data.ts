@@ -589,6 +589,8 @@ const FIELD_OVERRIDES = new Map([
     'Engineering',
   ],
   ['School of Future Environments|Auckland University of Technology', 'Engineering'],
+  // Owner session 2026-11-10 (#1034): ISIS neutron spectroscopy (condensed matter).
+  ['ISIS Neutron and Muon Source|Rutherford Appleton Laboratory', 'Physics & Astronomy'],
   [
     'Metabolomics Laboratory|Baker Heart and Diabetes Institute',
     'Biological & Biomedical Sciences',
