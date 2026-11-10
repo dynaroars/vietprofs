@@ -15994,6 +15994,21 @@
       "identitySignals": [],
       "retrievedAt": "2026-11-10T16:06:15.236Z",
       "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2801": {
+      "name": "Mai-Ly Nguyen Steers",
+      "outcome": "found",
+      "pageUrl": "https://www.duq.edu/faculty-and-staff/mai-ly-nguyen-steers.php",
+      "imageUrl": "https://www.duq.edu/images/headshots/mail-lysteers-2022a-feature.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "Official individual profile is headed Mai-Ly Nguyen Steers, Associate Professor, School of Nursing.",
+        "The same official profile embeds /images/headshots/mail-lysteers-2022a-feature.jpg; generic Placeholder Profile alt text is inaccurate.",
+        "Downloaded official image visually reviewed: clean single-person headshot."
+      ],
+      "retrievedAt": "2026-11-10T16:56:53.679Z",
+      "note": "MEDIUM candidate stored after visual review"
     }
   }
 }
