@@ -19,6 +19,14 @@ const NON_VIETNAMESE: [string, string?][] = [
   ['Chin‐Hung Lai', 'Taiwan'],
   ['Yiu‐Wing Mai', 'Hong Kong'],
   ['Gerald Ngo Teke', 'Cameroon'],
+  // Owner ruling 2026-11-10 (#1047): Gaelic Mac surnames and Mac given names/nicknames.
+  ['Ralph Mac Nally', 'Australia'],
+  ['Ciarán Mac an Bhaird', 'Ireland'],
+  ['Naoíse Mac Sweeney'],
+  ['James Mac Hyman'],
+  ['J. Mac McCullough'],
+  ['Mac H. Alford'],
+  ['Mac Gaunaa', 'Denmark'],
 ];
 
 // Real roster members and accepted candidates, including the shapes the screen must not reject:
@@ -39,6 +47,10 @@ const VIETNAMESE: [string, string?][] = [
   ['Son Tung Ha', 'Singapore'],
   ['Tat Dat Bui', 'Taiwan'],
   ['Thi Kim Tuoi Truong', 'Japan'],
+  ['Mac Van Nam'],
+  ['Mac Thi Hoa'],
+  ['Kevin Mac'],
+  ['Hoa Thi Mac'],
 ];
 
 test('the name screen rejects high-confidence non-Vietnamese names', () => {

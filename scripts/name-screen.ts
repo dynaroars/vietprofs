@@ -420,6 +420,18 @@ export function screenVietnameseName(name: string, country?: string): NameScreen
       reason: `Chinese/Korean-style given name "${givenCjk[0]}" at an institution in ${country}`,
     };
   }
+  // Gaelic "Mac ___" surnames (Ralph Mac Nally, Ciarán Mac an Bhaird) and "Mac" as a Western
+  // given name or nickname (Mac H. Alford, James "Mac" Hyman): Mac is not the surname position
+  // and another token is not Vietnamese. Vietnamese Mạc stays: "Mac Van Nam" (all Vietnamese
+  // tokens) and Western order "Kevin Mac" (Mac last). Owner ruling 2026-11-10 (#1047).
+  if (
+    !strong &&
+    tokens.includes('mac') &&
+    last !== 'mac' &&
+    tokens.some((t) => t !== 'mac' && !isVietToken(t))
+  ) {
+    return { likely: false, reason: 'Gaelic "Mac" surname prefix or "Mac" given name/nickname' };
+  }
   // "Ngo" is also a Cameroonian name element ("Valentina Josiane Ngo Bitoungui").
   if (AFRICA.has(where) && givenViet.length === 0) {
     return { likely: false, reason: `no Vietnamese given name at an institution in ${country}` };
