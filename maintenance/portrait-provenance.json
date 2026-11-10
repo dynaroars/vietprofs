@@ -16030,6 +16030,21 @@
       "identitySignals": [],
       "retrievedAt": "2026-11-10T17:02:00.151Z",
       "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2804": {
+      "name": "Sandie Ha",
+      "outcome": "found",
+      "pageUrl": "https://sites.ucmerced.edu/sandieha",
+      "imageUrl": "https://sites.ucmerced.edu/files/sandieha/files/img_1571_sept_2023.jpg",
+      "sourceType": "personal_homepage",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "Named official university-hosted personal site embeds img_1571_sept_2023.jpg as its profile portrait.",
+        "Visually matches current named Earth Institute profile headshot, which uses a smaller copy of the same photo.",
+        "Downloaded original visually reviewed as a clean single-person portrait."
+      ],
+      "retrievedAt": "2026-11-10T17:05:08.910Z",
+      "note": "MEDIUM candidate stored after visual review"
     }
   }
 }
