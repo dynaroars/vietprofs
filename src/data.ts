@@ -1064,6 +1064,7 @@ const FIELD_OVERRIDES = new Map([
     'School of Graduate Studies, College of Aviation|Embry-Riddle Aeronautical University',
     'Engineering',
   ],
+  ['Department of Writing, Rhetoric, and Cultures|Michigan State University', 'Humanities'],
   ['Department of Physiology, Cochin Hospital|Université Paris Cité', 'Health Sciences'],
   [
     "Laboratoire d'Imagerie Biomédicale (LIB)|Inserm (Institut National de la Santé et de la Recherche Médicale)",

@@ -15484,6 +15484,88 @@
       ],
       "retrievedAt": "2026-11-10T03:30:03.319Z",
       "note": "auditor 2026-11-10 (#1083): Brooklyn College faculty bio photo (keyword Ngoc (Cindy) Pham), single person, viewed; center-cropped to portrait"
+    },
+    "vp-2740": {
+      "name": "Charles A. Doan",
+      "outcome": "found",
+      "pageUrl": "https://www.elon.edu/u/directory/profile/cdoan4/",
+      "imageUrl": "https://www.elon.edu/PhotoManager/GetImage.ashx?user=cdoan4&crop=5:7&w=175",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-10T04:15:00.870Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-2741": {
+      "name": "Peter E. Doan",
+      "outcome": "found",
+      "pageUrl": "https://chemistry.northwestern.edu/people/research-faculty/index.html",
+      "imageUrl": "https://chemistry.northwestern.edu/images/faculty-v2/doan-168x210.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-10T04:15:01.268Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-2742": {
+      "name": "Petra L. Doan",
+      "outcome": "found",
+      "pageUrl": "https://facsenate.fsu.edu/person/dr-petra-doan",
+      "imageUrl": "https://facsenate.fsu.edu/sites/default/files/styles/max_325x325/public/2019-04/Petra-Doan-crop.jpg?itok=m_5jlIdv",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-10T04:14:31.181Z"
+    },
+    "vp-2743": {
+      "name": "Alesha E. Doan",
+      "outcome": "found",
+      "pageUrl": "https://spaa.ku.edu/people/alesha-doan",
+      "imageUrl": "https://spaa.ku.edu/sites/spaa/files/styles/portrait_col_xl_6/public/images/Faculty%20Headshots/Doan_Alesha-web.jpg?h=373873ec&itok=-oO3HL8q",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-10T04:14:31.505Z"
+    },
+    "vp-2744": {
+      "name": "Sara C. Doan",
+      "outcome": "found",
+      "pageUrl": "https://directory.cal.msu.edu/author/sdoan/",
+      "imageUrl": "https://cdn.casl.cal.msu.edu/uploads/sites/27/sites/71/2025/08/Sara-Doan-Headshot-Square-crop-300x300.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-10T04:14:32.503Z"
     }
   }
 }
