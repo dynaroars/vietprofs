@@ -17006,6 +17006,86 @@
       ],
       "retrievedAt": "2026-11-10T21:00:59.465Z",
       "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-2874": {
+      "name": "Lily Vuong",
+      "outcome": "found",
+      "pageUrl": "https://cas.uoregon.edu/directory/religious-studies/all/lvuong",
+      "imageUrl": "https://cas.uoregon.edu/sites/default/files/uo_profiles/lvuong_cas_d13fd6.png",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-10T23:40:10.952Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-2875": {
+      "name": "Vivien Nguyen",
+      "outcome": "found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department"
+      ],
+      "retrievedAt": "2026-11-10T23:39:16.378Z",
+      "note": "Visually verified clean single-person UCSF headshot; detector multiple-face false positive reviewed manually",
+      "pageUrl": "https://www.ucsfbenioffchildrens.org/providers/vivien-nguyen",
+      "imageUrl": "https://providers.ucsfhealth.org/sparkle-assets/images/nguyen-vivien-1154586659-9f6f270e7eafb1c85b13e2f4f97df9e1.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM"
+    },
+    "vp-2876": {
+      "name": "Joseph (An Thanh) Vu",
+      "outcome": "found",
+      "pageUrl": "https://radiology.ucsf.edu/people/joseph-vu",
+      "imageUrl": "https://radiology.ucsf.edu/sites/radiology.ucsf.edu/files/styles/profile_150x215/public/An.Vu.jpeg.webp?h=ff2033e8&itok=-_AT2KQR",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-10T23:39:24.327Z"
+    },
+    "vp-2877": {
+      "name": "Tim Q. Duong",
+      "outcome": "found",
+      "pageUrl": "https://einsteinmed.edu/faculty/16575/tim-q-duong",
+      "imageUrl": "https://assets.montefioreeinstein.org/profiles/images/16575-tim-duong.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-10T23:39:25.215Z"
+    },
+    "vp-2878": {
+      "name": "Dongngan Truong",
+      "outcome": "not_found",
+      "pageUrl": "https://www.choa.org/doctors/dongngan-truong",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-10T23:39:37.017Z",
+      "note": "candidate image could not be downloaded"
     }
   }
 }
