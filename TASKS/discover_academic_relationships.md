@@ -7,7 +7,7 @@
 
 ## 1. Purpose and scope
 
-Build a reproducible evidence ledger for academic connections within VietProfs. Both endpoints of a relationship must already have immutable `vp-####` IDs in `public/data.json`.
+Build a reproducible evidence ledger for academic connections of VietProfs roster members. A relationship between two roster members goes in `relationships` and references both by immutable `vp-####` ID. Since 2026-11-09 (owner decision), a verified advisor, advisee, postdoctoral mentor/mentee, or collaborator who is **not** on the roster is also recorded, in `external` (section 3), so every profile page can show the person's PhD advisor, advisees, and collaborators.
 
 Allowed relationship types:
 
@@ -24,8 +24,7 @@ Explicitly out of scope:
 - spouses, partners, relatives, and every other personal or family relationship;
 - inferred mentorship based only on attendance at the same institution, department, laboratory, grant, or conference;
 - generic professional proximity such as colleagues, collaborators, co-investigators, or lab members without the evidence required below;
-- relationships involving a person who is not already in the VietProfs roster; and
-- adding new roster members. Before calling a counterparty out-of-roster, run `npm run find-roster-matches -- "<name>" --url ...`: an advisor or coauthor listed under a later institution is in the roster, and the edge belongs to that ID. Record a genuinely out-of-roster counterparty as an excluded outcome, not as a new entry. A strong out-of-roster lead is worth surfacing to `discover_new_faculty.md` (which files new candidates as a GitHub Issue per `AGENTS.md`'s "New entries vs. edits" policy), but this task itself must not create the roster entry.
+- adding new roster members. Before calling a counterparty out-of-roster, run `npm run find-roster-matches -- "<name>" --url ...`: an advisor or coauthor listed under a later institution is in the roster, and the edge belongs to that ID. Record a genuinely out-of-roster counterparty, verified to the same evidence standard, as an `external` connection (section 3), never as a new roster entry. A strong out-of-roster lead is worth surfacing to `discover_new_faculty.md` (which files new candidates as a GitHub Issue per `AGENTS.md`'s "New entries vs. edits" policy), but this task itself must not create the roster entry.
 
 Do not duplicate relationships inside individual `public/data.json` entries. `public/relationships.json` is the normalized public edge table for the roster: each relationship is stored once and references people by immutable roster ID. Only verified relationships belong in this file.
 
@@ -119,6 +118,33 @@ Every public relationship record uses immutable roster IDs and must be verified 
 
 For the symmetric types (`coauthor`, `grant-collaborator`, `patent-coinventor`), store the two IDs in ascending lexical order, use that same order in the deterministic `id`, and populate `works` with the retained item identifiers, titles, dates, and source URLs — `coauthor` requires at least two, `grant-collaborator` and `patent-coinventor` require at least one. For directional mentorship (`doctoral-advisor`, `masters-advisor`, `undergraduate-advisor`, `postdoctoral-mentor`), `sourceId` is always the advisor or mentor, `targetId` is the advisee or postdoctoral researcher, and `works` stays empty.
 
+### Connections to people who are not on the roster (`external`)
+
+The optional top-level `external` array holds verified connections between one roster member and someone who is not on the roster. The evidence standards in section 2 apply unchanged (a coauthor still needs two shared works, a postdoctoral mentor still needs explicit wording). Record:
+
+```json
+{
+  "type": "doctoral-advisor",
+  "personId": "vp-0568",
+  "role": "mentor",
+  "name": "Vadim Lyubashevsky",
+  "affiliation": "IBM Research Europe – Zurich",
+  "url": "",
+  "sources": ["https://www.kcl.ac.uk/people/ngoc-khanh-nguyen"],
+  "evidence": "The official King's College London profile says he obtained his PhD under the supervision of Vadim Lyubashevsky and Dennis Hofheinz.",
+  "works": [],
+  "verifiedAt": "2026-11-09T00:00:00.000Z",
+  "notes": ""
+}
+```
+
+- `role` is the **other** person's role: `mentor` (they advised or mentored the roster member), `mentee` (the roster member advised them), or `peer` for `coauthor`, `grant-collaborator`, and `patent-coinventor`.
+- `name` is the name as the source gives it; `affiliation` is the institution the source gives for them (or `""`); `url` is an optional HTTPS profile page for them (or `""`).
+- There is no `id`; `(personId, type, role, name)` must be unique. Keep the array sorted by `personId`, `type`, `name`.
+- Record completed advisees (a graduated PhD student), not current students.
+- When the other person later joins the roster, replace the `external` record with an ordinary `relationships` edge.
+- Profile pages list roster connections and external ones together under CONNECTIONS; only roster names link to a VietProfs page.
+
 Do not write `unresolved`, `candidate`, or `excluded` records to the public database. Those are not established relationships. Resumable research state lives in `maintenance/relationship-research.json`, which must never be loaded by the public site or described as roster relationship data. Its layout (version 2), one record per line:
 
 - `batches`: keyed by batch number, `{ "status", "startedAt", "completedAt", "notes"? }`; an open batch also lists its `rosterIds`.
@@ -154,7 +180,7 @@ For each person, search bounded combinations of:
 - the person's official profile, CV, personal academic site, and lab site — a CV or homepage that itself lists advisors, doctoral students, postdocs, or advisees is a fast, high-value source; check it first when available; and
 - field-specific genealogy resources as lead generators, such as the Mathematics Genealogy Project (mathgenealogy.org) for mathematics and closely related fields, and comparable genealogy databases in other fields.
 
-Whenever a search surfaces an advisor, advisee, postdoctoral mentor, or postdoctoral researcher whose name sounds Vietnamese, treat that as a signal the counterparty may already be in the VietProfs roster even if they were not part of the current batch; search `public/data.json` for a matching entry before concluding the lead is out of scope, and only record it as an out-of-roster counterparty if no match is found.
+Whenever a search surfaces an advisor, advisee, postdoctoral mentor, or postdoctoral researcher whose name sounds Vietnamese, treat that as a signal the counterparty may already be in the VietProfs roster even if they were not part of the current batch; search `public/data.json` for a matching entry before concluding the lead is out of scope, and only record it as an `external` connection if no match is found.
 
 Write verified relationships to `public/relationships.json`. Record unresolved and excluded outcomes only in the non-public research-state file. Stop searching a candidate once the evidence standard is met or the bounded sources are exhausted.
 

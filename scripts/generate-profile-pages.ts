@@ -29,6 +29,7 @@ import { renderShareMenu } from '../src/share.ts';
 import { escapeHtml, formatRosterDate } from '../src/utils.ts';
 import {
   connectionsFor,
+  externalConnectionsFor,
   validateRelationshipDatabase,
   type RelationshipDatabase,
 } from '../src/relationships.ts';
@@ -250,40 +251,74 @@ function profilePage(
   const linkSection = links.length
     ? `<section class="man-section"><h2>SOURCES</h2><nav class="links" aria-label="External profiles">${links.map(({ label, href, icon }) => `<a href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true">${icon}</svg>${escapeHtml(label)}</a>`).join('')}</nav></section>`
     : '';
-  const connections = connectionsFor(person.id, relationships)
-    .map((connection) => ({ ...connection, other: rosterById.get(connection.otherId) }))
-    .filter((connection): connection is typeof connection & { other: RosterEntry } =>
-      Boolean(connection.other),
-    )
-    .sort(
-      (a, b) =>
-        displayName(a.other.name).localeCompare(displayName(b.other.name)) ||
-        a.label.localeCompare(b.label),
+  const evidenceLinks = (sources: string[]) =>
+    `<span class="connection-sources">${sources.map((source, index) => `<a href="${escapeHtml(source)}" target="_blank" rel="noopener noreferrer">${sources.length === 1 ? 'evidence' : `evidence ${index + 1}`}</a>`).join(', ')}</span>`;
+  // Advisors first, then advisees, then collaborators; alphabetical within each group.
+  // Doctoral advisors, then other advisors and mentors, advisees, and collaborators.
+  const roleRank = (label: string) =>
+    /^Doctoral advisor/.test(label)
+      ? 0
+      : /advisor|mentor\b/i.test(label)
+        ? 1
+        : /advisee|mentee/i.test(label)
+          ? 2
+          : 3;
+  type ConnectionItem = {
+    key: string;
+    name: string;
+    rank: number;
+    person: string;
+    relations: string[];
+  };
+  const items = new Map<string, ConnectionItem>();
+  const addItem = (key: string, name: string, person: string, label: string, sources: string[]) => {
+    const item = items.get(key) ?? { key, name, rank: 3, person, relations: [] };
+    item.rank = Math.min(item.rank, roleRank(label));
+    // Same bullet format as the other sections: "Name (relationship: evidence; relationship: evidence)".
+    item.relations.push(
+      `<span class="connection-kind">${escapeHtml(label)}</span>: ${evidenceLinks(sources)}`,
     );
-  const connectionsByPerson = new Map<string, typeof connections>();
-  for (const connection of connections) {
-    const group = connectionsByPerson.get(connection.otherId) ?? [];
-    group.push(connection);
-    connectionsByPerson.set(connection.otherId, group);
+    items.set(key, item);
+  };
+  for (const { relationship, otherId, label } of connectionsFor(person.id, relationships)) {
+    const other = rosterById.get(otherId);
+    if (!other) continue;
+    addItem(
+      otherId,
+      displayName(other.name),
+      `<a class="connection-person" href="../${personPath(other.id)}">${escapeHtml(displayName(other.name))}</a>`,
+      label,
+      relationship.sources,
+    );
   }
-  const connectionSection = connections.length
-    ? `<section class="man-section"><h2>CONNECTIONS</h2><ul class="connection-list">${[
-        ...connectionsByPerson.values(),
-      ]
-        .map((group) => {
-          const { other } = group[0];
-          // Same bullet format as the other sections: "Name (relationship: evidence; relationship: evidence)".
-          const relations = group
-            .map(
-              ({ relationship, label }) =>
-                `<span class="connection-kind">${escapeHtml(label)}</span>: <span class="connection-sources">${relationship.sources.map((source, index) => `<a href="${escapeHtml(source)}" target="_blank" rel="noopener noreferrer">${relationship.sources.length === 1 ? 'evidence' : `evidence ${index + 1}`}</a>`).join(', ')}</span>`,
-            )
-            .join('; ');
-          return `<li class="connection-item"><a class="connection-person" href="../${personPath(other.id)}">${escapeHtml(displayName(other.name))}</a> (${relations})</li>`;
-        })
+  for (const { connection, label } of externalConnectionsFor(person.id, relationships)) {
+    const name = escapeHtml(connection.name);
+    const nameHtml = connection.url
+      ? `<a class="connection-person connection-external" href="${escapeHtml(connection.url)}" target="_blank" rel="noopener noreferrer">${name}</a>`
+      : `<span class="connection-person connection-external">${name}</span>`;
+    const affiliation = connection.affiliation
+      ? ` <span class="connection-affiliation">· ${escapeHtml(connection.affiliation)}</span>`
+      : '';
+    addItem(
+      `external:${connection.name.trim().toLowerCase()}`,
+      connection.name,
+      nameHtml + affiliation,
+      label,
+      connection.sources,
+    );
+  }
+  const connectionItems = [...items.values()].sort(
+    (a, b) => a.rank - b.rank || a.name.localeCompare(b.name),
+  );
+  const connectionSection = connectionItems.length
+    ? `<section class="man-section"><h2>CONNECTIONS</h2><ul class="connection-list">${connectionItems
+        .map(
+          ({ person: who, relations }) =>
+            `<li class="connection-item">${who} (${relations.join('; ')})</li>`,
+        )
         .join(
           '',
-        )}</ul><p class="section-note">Only source-verified connections between people in the roster are shown.</p></section>`
+        )}</ul><p class="section-note">Only source-verified connections are shown. Names that link to a VietProfs page are on the roster; the others are not.</p></section>`
     : '';
   const rawRecord = escapeHtml(JSON.stringify(person, null, 2));
   const editUrl = `../submit.html?edit=${encodeURIComponent(person.id)}`;

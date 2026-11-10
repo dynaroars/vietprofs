@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-09T14:12:22.787Z",
+  "updatedAt": "2026-11-10T04:20:41.000Z",
   "relationships": [
     {
       "id": "rel-coauthor-vp-0015-vp-0018",
@@ -4181,6 +4181,638 @@
       "verifiedAt": "2026-11-09T14:12:22.787Z",
       "direct": false,
       "notes": ""
+    }
+  ],
+  "external": [
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-0081",
+      "role": "mentor",
+      "name": "Rama Chellappa",
+      "affiliation": "University of Maryland",
+      "url": "",
+      "sources": [
+        "https://www.hvnguyen.com/"
+      ],
+      "evidence": "The cited page names Rama Chellappa as Hien Van Nguyen's doctoral advisor.",
+      "works": [],
+      "verifiedAt": "2026-11-10T04:20:41.000Z",
+      "notes": "Backfilled 2026-11-09 from maintenance/relationship-research.json leads; name re-checked on the cited source."
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-0086",
+      "role": "mentor",
+      "name": "Nathan S. Lewis",
+      "affiliation": "California Institute of Technology",
+      "url": "",
+      "sources": [
+        "https://chemistry.northwestern.edu/people/faculty/profiles/sonbinh-nguyen.html"
+      ],
+      "evidence": "The cited page names Nathan S. Lewis as SonBinh T. Nguyen's doctoral advisor.",
+      "works": [],
+      "verifiedAt": "2026-11-10T04:20:41.000Z",
+      "notes": "Backfilled 2026-11-09 from maintenance/relationship-research.json leads; name re-checked on the cited source."
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-0086",
+      "role": "mentor",
+      "name": "Robert H. Grubbs",
+      "affiliation": "California Institute of Technology",
+      "url": "",
+      "sources": [
+        "https://chemistry.northwestern.edu/people/faculty/profiles/sonbinh-nguyen.html"
+      ],
+      "evidence": "The cited page names Robert H. Grubbs as SonBinh T. Nguyen's doctoral advisor.",
+      "works": [],
+      "verifiedAt": "2026-11-10T04:20:41.000Z",
+      "notes": "Backfilled 2026-11-09 from maintenance/relationship-research.json leads; name re-checked on the cited source."
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-0509",
+      "role": "mentor",
+      "name": "Michalis Polychronakis",
+      "affiliation": "Stony Brook University",
+      "url": "",
+      "sources": [
+        "https://homepage.np-tokumei.net"
+      ],
+      "evidence": "The cited page names Michalis Polychronakis as Nguyen Phong Hoang's doctoral advisor.",
+      "works": [],
+      "verifiedAt": "2026-11-10T04:20:41.000Z",
+      "notes": "Backfilled 2026-11-09 from maintenance/relationship-research.json leads; name re-checked on the cited source."
+    },
+    {
+      "type": "postdoctoral-mentor",
+      "personId": "vp-0509",
+      "role": "mentor",
+      "name": "Nick Feamster",
+      "affiliation": "",
+      "url": "",
+      "sources": [
+        "https://homepage.np-tokumei.net"
+      ],
+      "evidence": "The cited page names Nick Feamster as Nguyen Phong Hoang's postdoctoral mentor.",
+      "works": [],
+      "verifiedAt": "2026-11-10T04:20:41.000Z",
+      "notes": "Backfilled 2026-11-09 from maintenance/relationship-research.json leads; name re-checked on the cited source."
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-0522",
+      "role": "mentor",
+      "name": "David Pointcheval",
+      "affiliation": "École normale supérieure",
+      "url": "",
+      "sources": [
+        "https://www.di.ens.fr/users/phan/index.html"
+      ],
+      "evidence": "The cited page names David Pointcheval as Duong Hieu Phan's doctoral advisor.",
+      "works": [],
+      "verifiedAt": "2026-11-10T04:20:41.000Z",
+      "notes": "Backfilled 2026-11-09 from maintenance/relationship-research.json leads; name re-checked on the cited source."
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-0537",
+      "role": "mentor",
+      "name": "David Lo",
+      "affiliation": "Singapore Management University",
+      "url": "",
+      "sources": [
+        "https://xuanbachle.github.io/"
+      ],
+      "evidence": "The cited page names David Lo as Xuan-Bach Le's doctoral advisor.",
+      "works": [],
+      "verifiedAt": "2026-11-10T04:20:41.000Z",
+      "notes": "Backfilled 2026-11-09 from maintenance/relationship-research.json leads; name re-checked on the cited source."
+    },
+    {
+      "type": "postdoctoral-mentor",
+      "personId": "vp-0537",
+      "role": "mentor",
+      "name": "Corina Pasareanu",
+      "affiliation": "Carnegie Mellon University",
+      "url": "",
+      "sources": [
+        "https://xuanbachle.github.io/"
+      ],
+      "evidence": "The cited page names Corina Pasareanu as Xuan-Bach Le's postdoctoral mentor.",
+      "works": [],
+      "verifiedAt": "2026-11-10T04:20:41.000Z",
+      "notes": "Backfilled 2026-11-09 from maintenance/relationship-research.json leads; name re-checked on the cited source."
+    },
+    {
+      "type": "undergraduate-advisor",
+      "personId": "vp-0537",
+      "role": "mentor",
+      "name": "Wei Ngan Chin",
+      "affiliation": "",
+      "url": "",
+      "sources": [
+        "https://xuanbachle.github.io/"
+      ],
+      "evidence": "The cited page names Wei Ngan Chin as Xuan-Bach Le's undergraduate research advisor.",
+      "works": [],
+      "verifiedAt": "2026-11-10T04:20:41.000Z",
+      "notes": "Backfilled 2026-11-09 from maintenance/relationship-research.json leads; name re-checked on the cited source."
+    },
+    {
+      "type": "postdoctoral-mentor",
+      "personId": "vp-0561",
+      "role": "mentor",
+      "name": "Abhik Roychoudhury",
+      "affiliation": "National University of Singapore",
+      "url": "",
+      "sources": [
+        "https://thuanpv.github.io/"
+      ],
+      "evidence": "The cited page names Abhik Roychoudhury as Van-Thuan Pham's postdoctoral mentor.",
+      "works": [],
+      "verifiedAt": "2026-11-10T04:20:41.000Z",
+      "notes": "Backfilled 2026-11-09 from maintenance/relationship-research.json leads; name re-checked on the cited source."
+    },
+    {
+      "type": "postdoctoral-mentor",
+      "personId": "vp-0561",
+      "role": "mentor",
+      "name": "Marcel Böhme",
+      "affiliation": "Monash University",
+      "url": "",
+      "sources": [
+        "https://thuanpv.github.io/"
+      ],
+      "evidence": "The cited page names Marcel Böhme as Van-Thuan Pham's postdoctoral mentor.",
+      "works": [],
+      "verifiedAt": "2026-11-10T04:20:41.000Z",
+      "notes": "Backfilled 2026-11-09 from maintenance/relationship-research.json leads; name re-checked on the cited source."
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-0568",
+      "role": "mentor",
+      "name": "Dennis Hofheinz",
+      "affiliation": "ETH Zurich",
+      "url": "",
+      "sources": [
+        "https://www.kcl.ac.uk/people/ngoc-khanh-nguyen"
+      ],
+      "evidence": "The cited page names Dennis Hofheinz as Ngoc Khanh Nguyen's doctoral advisor.",
+      "works": [],
+      "verifiedAt": "2026-11-10T04:20:41.000Z",
+      "notes": "Backfilled 2026-11-09 from maintenance/relationship-research.json leads; name re-checked on the cited source."
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-0568",
+      "role": "mentor",
+      "name": "Vadim Lyubashevsky",
+      "affiliation": "IBM Research Europe – Zurich",
+      "url": "",
+      "sources": [
+        "https://www.kcl.ac.uk/people/ngoc-khanh-nguyen"
+      ],
+      "evidence": "The cited page names Vadim Lyubashevsky as Ngoc Khanh Nguyen's doctoral advisor.",
+      "works": [],
+      "verifiedAt": "2026-11-10T04:20:41.000Z",
+      "notes": "Backfilled 2026-11-09 from maintenance/relationship-research.json leads; name re-checked on the cited source."
+    },
+    {
+      "type": "postdoctoral-mentor",
+      "personId": "vp-0568",
+      "role": "mentor",
+      "name": "Alessandro Chiesa",
+      "affiliation": "EPFL",
+      "url": "",
+      "sources": [
+        "https://www.kcl.ac.uk/people/ngoc-khanh-nguyen"
+      ],
+      "evidence": "The cited page names Alessandro Chiesa as Ngoc Khanh Nguyen's postdoctoral mentor.",
+      "works": [],
+      "verifiedAt": "2026-11-10T04:20:41.000Z",
+      "notes": "Backfilled 2026-11-09 from maintenance/relationship-research.json leads; name re-checked on the cited source."
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-0582",
+      "role": "mentor",
+      "name": "Connie Eaves",
+      "affiliation": "University of British Columbia",
+      "url": "",
+      "sources": [
+        "https://medbio.utoronto.ca/faculty/long-nguyen"
+      ],
+      "evidence": "The cited page names Connie Eaves as Long Nguyen's doctoral advisor.",
+      "works": [],
+      "verifiedAt": "2026-11-10T04:20:41.000Z",
+      "notes": "Backfilled 2026-11-09 from maintenance/relationship-research.json leads; name re-checked on the cited source."
+    },
+    {
+      "type": "postdoctoral-mentor",
+      "personId": "vp-0582",
+      "role": "mentor",
+      "name": "Carlos Caldas",
+      "affiliation": "University of Cambridge",
+      "url": "",
+      "sources": [
+        "https://medbio.utoronto.ca/faculty/long-nguyen"
+      ],
+      "evidence": "The cited page names Carlos Caldas as Long Nguyen's postdoctoral mentor.",
+      "works": [],
+      "verifiedAt": "2026-11-10T04:20:41.000Z",
+      "notes": "Backfilled 2026-11-09 from maintenance/relationship-research.json leads; name re-checked on the cited source."
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-0627",
+      "role": "mentor",
+      "name": "Isabelle Debled-Rennesson",
+      "affiliation": "Université de Lorraine",
+      "url": "",
+      "sources": [
+        "https://webusers.i3s.unice.fr/~tpnguyen/index.html"
+      ],
+      "evidence": "The cited page names Isabelle Debled-Rennesson as Thanh-Phuong Nguyen's doctoral advisor.",
+      "works": [],
+      "verifiedAt": "2026-11-10T04:20:41.000Z",
+      "notes": "Backfilled 2026-11-09 from maintenance/relationship-research.json leads; name re-checked on the cited source."
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-0640",
+      "role": "mentor",
+      "name": "Roman Frigg",
+      "affiliation": "London School of Economics",
+      "url": "",
+      "sources": [
+        "https://www2.philosophy.su.se/nguyen/CV.pdf"
+      ],
+      "evidence": "The cited page names Roman Frigg as James Nguyen's doctoral advisor.",
+      "works": [],
+      "verifiedAt": "2026-11-10T04:20:41.000Z",
+      "notes": "Backfilled 2026-11-09 from maintenance/relationship-research.json leads; name re-checked on the cited source."
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-0643",
+      "role": "mentor",
+      "name": "Anne Agur",
+      "affiliation": "University of Toronto",
+      "url": "",
+      "sources": [
+        "https://www.surgery.utoronto.ca/faculty/john-tran"
+      ],
+      "evidence": "The cited page names Anne Agur as John Tran's doctoral advisor.",
+      "works": [],
+      "verifiedAt": "2026-11-10T04:20:41.000Z",
+      "notes": "Backfilled 2026-11-09 from maintenance/relationship-research.json leads; name re-checked on the cited source."
+    },
+    {
+      "type": "postdoctoral-mentor",
+      "personId": "vp-0643",
+      "role": "mentor",
+      "name": "Eldon Loh",
+      "affiliation": "Western University",
+      "url": "",
+      "sources": [
+        "https://www.surgery.utoronto.ca/faculty/john-tran"
+      ],
+      "evidence": "The cited page names Eldon Loh as John Tran's postdoctoral mentor.",
+      "works": [],
+      "verifiedAt": "2026-11-10T04:20:41.000Z",
+      "notes": "Backfilled 2026-11-09 from maintenance/relationship-research.json leads; name re-checked on the cited source."
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-1571",
+      "role": "mentor",
+      "name": "Laurent Véron",
+      "affiliation": "Université de Tours",
+      "url": "",
+      "sources": [
+        "https://www.muni.cz/inet-doc/1785890"
+      ],
+      "evidence": "The cited page names Laurent Véron as Phuoc Tai Nguyen's doctoral advisor.",
+      "works": [],
+      "verifiedAt": "2026-11-10T04:20:41.000Z",
+      "notes": "Backfilled 2026-11-09 from maintenance/relationship-research.json leads; name re-checked on the cited source."
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-1571",
+      "role": "mentor",
+      "name": "Michèle Grillot",
+      "affiliation": "",
+      "url": "",
+      "sources": [
+        "https://www.muni.cz/inet-doc/1785890"
+      ],
+      "evidence": "The cited page names Michèle Grillot as Phuoc Tai Nguyen's doctoral advisor.",
+      "works": [],
+      "verifiedAt": "2026-11-10T04:20:41.000Z",
+      "notes": "Backfilled 2026-11-09 from maintenance/relationship-research.json leads; name re-checked on the cited source."
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-1573",
+      "role": "mentor",
+      "name": "Mariano Scapin",
+      "affiliation": "University of Bristol",
+      "url": "",
+      "sources": [
+        "https://www.bristol.ac.uk/people/person/Trang-Nguyen-5eeb6fc9-1ba5-4839-8238-7d32b5649766/"
+      ],
+      "evidence": "The cited page names Mariano Scapin as Trang Nguyen's doctoral advisor.",
+      "works": [],
+      "verifiedAt": "2026-11-10T04:20:41.000Z",
+      "notes": "Backfilled 2026-11-09 from maintenance/relationship-research.json leads; name re-checked on the cited source."
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-1573",
+      "role": "mentor",
+      "name": "Piotr Korczak",
+      "affiliation": "University of Bristol",
+      "url": "",
+      "sources": [
+        "https://www.bristol.ac.uk/people/person/Trang-Nguyen-5eeb6fc9-1ba5-4839-8238-7d32b5649766/"
+      ],
+      "evidence": "The cited page names Piotr Korczak as Trang Nguyen's doctoral advisor.",
+      "works": [],
+      "verifiedAt": "2026-11-10T04:20:41.000Z",
+      "notes": "Backfilled 2026-11-09 from maintenance/relationship-research.json leads; name re-checked on the cited source."
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-1578",
+      "role": "mentee",
+      "name": "Tra Van Tran",
+      "affiliation": "",
+      "url": "",
+      "sources": [
+        "https://eldorado.tu-dortmund.de/bitstream/2003/36798/1/Dissertation_Tran.pdf"
+      ],
+      "evidence": "The cited dissertation names Thinh Xuan Nguyen as supervisor of Tra Van Tran, so Tra Van Tran is Thinh Xuan Nguyen's doctoral advisee.",
+      "works": [],
+      "verifiedAt": "2026-11-10T04:20:41.000Z",
+      "notes": "Backfilled 2026-11-09 from maintenance/relationship-research.json leads; name re-checked on the cited source."
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-1591",
+      "role": "mentor",
+      "name": "Mark Lowenberg",
+      "affiliation": "University of Bristol",
+      "url": "",
+      "sources": [
+        "https://www.bristol.ac.uk/people/person/Duc-Nguyen-8b75e851-ce31-4aa6-bce3-0d8756fd998c/"
+      ],
+      "evidence": "The cited page names Mark Lowenberg as Duc H. Nguyen's doctoral advisor.",
+      "works": [],
+      "verifiedAt": "2026-11-10T04:20:41.000Z",
+      "notes": "Backfilled 2026-11-09 from maintenance/relationship-research.json leads; name re-checked on the cited source."
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-1591",
+      "role": "mentor",
+      "name": "Simon Neild",
+      "affiliation": "University of Bristol",
+      "url": "",
+      "sources": [
+        "https://www.bristol.ac.uk/people/person/Duc-Nguyen-8b75e851-ce31-4aa6-bce3-0d8756fd998c/"
+      ],
+      "evidence": "The cited page names Simon Neild as Duc H. Nguyen's doctoral advisor.",
+      "works": [],
+      "verifiedAt": "2026-11-10T04:20:41.000Z",
+      "notes": "Backfilled 2026-11-09 from maintenance/relationship-research.json leads; name re-checked on the cited source."
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-1595",
+      "role": "mentor",
+      "name": "Keith Molenaar",
+      "affiliation": "University of Colorado Boulder",
+      "url": "",
+      "sources": [
+        "https://ceae.ku.edu/sites/ceae/files/attached-files/2023%20CV-Tran_web.pdf"
+      ],
+      "evidence": "The cited page names Keith Molenaar as Dan Tran's doctoral advisor.",
+      "works": [],
+      "verifiedAt": "2026-11-10T04:20:41.000Z",
+      "notes": "Backfilled 2026-11-09 from maintenance/relationship-research.json leads; name re-checked on the cited source."
+    },
+    {
+      "type": "postdoctoral-mentor",
+      "personId": "vp-1683",
+      "role": "mentor",
+      "name": "Ioannis Havoutis",
+      "affiliation": "University of Oxford",
+      "url": "",
+      "sources": [
+        "https://kimtienly.github.io/"
+      ],
+      "evidence": "The cited page names Ioannis Havoutis as Kim Tien Ly's postdoctoral mentor.",
+      "works": [],
+      "verifiedAt": "2026-11-10T04:20:41.000Z",
+      "notes": "Backfilled 2026-11-09 from maintenance/relationship-research.json leads; name re-checked on the cited source."
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-1690",
+      "role": "mentor",
+      "name": "Ann Rundell",
+      "affiliation": "Purdue University",
+      "url": "",
+      "sources": [
+        "https://vucdinh.github.io/"
+      ],
+      "evidence": "The cited page names Ann Rundell as Vu Dinh's doctoral advisor.",
+      "works": [],
+      "verifiedAt": "2026-11-10T04:20:41.000Z",
+      "notes": "Backfilled 2026-11-09 from maintenance/relationship-research.json leads; name re-checked on the cited source."
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-1690",
+      "role": "mentor",
+      "name": "Greg Buzzard",
+      "affiliation": "Purdue University",
+      "url": "",
+      "sources": [
+        "https://vucdinh.github.io/"
+      ],
+      "evidence": "The cited page names Greg Buzzard as Vu Dinh's doctoral advisor.",
+      "works": [],
+      "verifiedAt": "2026-11-10T04:20:41.000Z",
+      "notes": "Backfilled 2026-11-09 from maintenance/relationship-research.json leads; name re-checked on the cited source."
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-1696",
+      "role": "mentor",
+      "name": "Kazuya Kato",
+      "affiliation": "University of Chicago",
+      "url": "",
+      "sources": [
+        "https://tungprime.github.io/"
+      ],
+      "evidence": "The cited page names Kazuya Kato as Tung T. Nguyen's doctoral advisor.",
+      "works": [],
+      "verifiedAt": "2026-11-10T04:20:41.000Z",
+      "notes": "Backfilled 2026-11-09 from maintenance/relationship-research.json leads; name re-checked on the cited source."
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-1815",
+      "role": "mentor",
+      "name": "Erik Elmroth",
+      "affiliation": "Umeå University",
+      "url": "",
+      "sources": [
+        "https://people.cs.umu.se/sonvx/"
+      ],
+      "evidence": "The cited page names Erik Elmroth as Xuan-Son Vu's doctoral advisor.",
+      "works": [],
+      "verifiedAt": "2026-11-10T04:20:41.000Z",
+      "notes": "Backfilled 2026-11-09 from maintenance/relationship-research.json leads; name re-checked on the cited source."
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-1815",
+      "role": "mentor",
+      "name": "Lili Jiang",
+      "affiliation": "Umeå University",
+      "url": "",
+      "sources": [
+        "https://people.cs.umu.se/sonvx/"
+      ],
+      "evidence": "The cited page names Lili Jiang as Xuan-Son Vu's doctoral advisor.",
+      "works": [],
+      "verifiedAt": "2026-11-10T04:20:41.000Z",
+      "notes": "Backfilled 2026-11-09 from maintenance/relationship-research.json leads; name re-checked on the cited source."
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-1890",
+      "role": "mentor",
+      "name": "El Hassan Youssfi",
+      "affiliation": "Université de Provence",
+      "url": "",
+      "sources": [
+        "https://pro.univ-lille.fr/viet-anh-nguyen/"
+      ],
+      "evidence": "The cited page names El Hassan Youssfi as Viet-Anh Nguyen's doctoral advisor.",
+      "works": [],
+      "verifiedAt": "2026-11-10T04:20:41.000Z",
+      "notes": "Backfilled 2026-11-09 from maintenance/relationship-research.json leads; name re-checked on the cited source."
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-1925",
+      "role": "mentor",
+      "name": "Patrick De Causmaecker",
+      "affiliation": "KU Leuven",
+      "url": "",
+      "sources": [
+        "https://ndangtt.github.io/"
+      ],
+      "evidence": "The cited page names Patrick De Causmaecker as Nguyen Dang's doctoral advisor.",
+      "works": [],
+      "verifiedAt": "2026-11-10T04:20:41.000Z",
+      "notes": "Backfilled 2026-11-09 from maintenance/relationship-research.json leads; name re-checked on the cited source."
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-1925",
+      "role": "mentor",
+      "name": "Thomas Stützle",
+      "affiliation": "Université libre de Bruxelles",
+      "url": "",
+      "sources": [
+        "https://ndangtt.github.io/"
+      ],
+      "evidence": "The cited page names Thomas Stützle as Nguyen Dang's doctoral advisor.",
+      "works": [],
+      "verifiedAt": "2026-11-10T04:20:41.000Z",
+      "notes": "Backfilled 2026-11-09 from maintenance/relationship-research.json leads; name re-checked on the cited source."
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-2035",
+      "role": "mentor",
+      "name": "Richard Turner",
+      "affiliation": "University of Cambridge",
+      "url": "",
+      "sources": [
+        "https://researchportalplus.anu.edu.au/en/persons/thang-bui/"
+      ],
+      "evidence": "The cited page names Richard Turner as Thang Bui's doctoral advisor.",
+      "works": [],
+      "verifiedAt": "2026-11-10T04:20:41.000Z",
+      "notes": "Backfilled 2026-11-09 from maintenance/relationship-research.json leads; name re-checked on the cited source."
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-2038",
+      "role": "mentor",
+      "name": "Russell Cross",
+      "affiliation": "",
+      "url": "",
+      "sources": [
+        "https://research.monash.edu/en/persons/kim-dang/"
+      ],
+      "evidence": "The cited page names Russell Cross as Kim Dang's doctoral advisor.",
+      "works": [],
+      "verifiedAt": "2026-11-10T04:20:41.000Z",
+      "notes": "Backfilled 2026-11-09 from maintenance/relationship-research.json leads; name re-checked on the cited source."
+    },
+    {
+      "type": "masters-advisor",
+      "personId": "vp-2038",
+      "role": "mentor",
+      "name": "Frances Christie",
+      "affiliation": "",
+      "url": "",
+      "sources": [
+        "https://research.monash.edu/en/persons/kim-dang/"
+      ],
+      "evidence": "The cited page names Frances Christie as Kim Dang's master's thesis advisor.",
+      "works": [],
+      "verifiedAt": "2026-11-10T04:20:41.000Z",
+      "notes": "Backfilled 2026-11-09 from maintenance/relationship-research.json leads; name re-checked on the cited source."
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-2099",
+      "role": "mentor",
+      "name": "Dan Nettleton",
+      "affiliation": "Iowa State University",
+      "url": "",
+      "sources": [
+        "https://ntyet.github.io/"
+      ],
+      "evidence": "The cited page names Dan Nettleton as Yet Nguyen's doctoral advisor.",
+      "works": [],
+      "verifiedAt": "2026-11-10T04:20:41.000Z",
+      "notes": "Backfilled 2026-11-09 from maintenance/relationship-research.json leads; name re-checked on the cited source."
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-2104",
+      "role": "mentor",
+      "name": "Ben Andrews",
+      "affiliation": "Australian National University",
+      "url": "",
+      "sources": [
+        "https://sites.google.com/site/mathnguyenthehuy/home"
+      ],
+      "evidence": "The cited page names Ben Andrews as Huy The Nguyen's doctoral advisor.",
+      "works": [],
+      "verifiedAt": "2026-11-10T04:20:41.000Z",
+      "notes": "Backfilled 2026-11-09 from maintenance/relationship-research.json leads; name re-checked on the cited source."
     }
   ]
 }

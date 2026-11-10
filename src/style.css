@@ -370,6 +370,10 @@ h1 {
   font-size: 0.86rem;
 }
 
+.subpage .connection-affiliation {
+  color: var(--text-muted);
+}
+
 .subpage .man-section h2 {
   color: var(--text-primary);
   font-family: var(--font-mono);
