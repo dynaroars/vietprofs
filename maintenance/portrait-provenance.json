@@ -16633,6 +16633,28 @@
       "identitySignals": [],
       "retrievedAt": "2026-11-10T18:39:28.666Z",
       "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2846": {
+      "name": "Cristy Grace Ngo",
+      "outcome": "found",
+      "identitySignals": [
+        "exact faculty record name Cristy Grace Ngo",
+        "University of Mindanao College of Teacher Education",
+        "direct image field in faculty record"
+      ],
+      "retrievedAt": "2026-11-10T19:04:44.900Z",
+      "note": "MEDIUM candidate stored after visual review",
+      "pageUrl": "https://academia.umindanao.edu.ph/faculty/preview/59",
+      "imageUrl": "https://academia.umindanao.edu.ph/faculty/images/1412644c3433120dcc92f6fc56b9f393.png",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH"
+    },
+    "vp-2847": {
+      "name": "Huu Kien Bui",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-10T19:04:05.008Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     }
   }
 }

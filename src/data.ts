@@ -570,6 +570,7 @@ export const HEALTH_SUBFIELDS = [
 // generic keyword to FIELD_RULES below — whenever a department's correct field depends on which
 // institution it's at, not just the department string.
 const FIELD_OVERRIDES = new Map([
+  ['Mesures Physiques, IUT Saint-Nazaire|Nantes Université', 'Engineering'],
   ['Odontology|Université Paris Cité', 'Health Sciences'],
   ['Hematology|Sorbonne Université', 'Health Sciences'],
   [
