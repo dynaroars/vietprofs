@@ -32,6 +32,7 @@ const NON_VIETNAMESE: [string, string?][] = [
   ['Jacky Chi-Ki Ngo', 'Hong Kong'],
   ['Chia-Wei Phan', 'Malaysia'],
   ['Gavin Bui', 'Hong Kong'],
+  ['Cristy Grace Ngo', 'Philippines'],
   ['Sang-Do Ha', 'South Korea'],
   ['Do Sang Kim', 'South Korea'],
   ['Liqiang Mai', 'China'],
@@ -77,6 +78,7 @@ const VIETNAMESE: [string, string?][] = [
   ['Felice Le-Scherban'],
   ['Thanh Le-Cong'],
   ['Que-Lam Huynh'],
+  ['Van Schepler-Luu', 'Philippines'],
 ];
 
 test('the name screen rejects high-confidence non-Vietnamese names', () => {

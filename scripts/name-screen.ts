@@ -388,6 +388,11 @@ const CHINESE_REGIONS = new Set([
   'hk',
   'tw',
   'mo',
+  // Chinese-Filipino and Chinese-Indonesian surnames (Cristy Grace Ngo, Mindanao; 2026-11-10).
+  'philippines',
+  'indonesia',
+  'ph',
+  'id',
 ]);
 const KOREA = new Set(['south korea', 'korea', 'republic of korea', 'kr']);
 const AFRICA = new Set(['cameroon', 'nigeria', 'ghana', 'gabon', 'cm', 'ng', 'gh', 'ga']);
