@@ -16506,6 +16506,72 @@
       "pageUrl": "https://search.asu.edu/profile/3722740",
       "sourceType": "official_faculty",
       "confidence": "HIGH"
+    },
+    "vp-2835": {
+      "name": "Eric Nguyen-Khac",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-10T18:30:28.470Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2836": {
+      "name": "Florence Nguyen-Khac",
+      "outcome": "found",
+      "pageUrl": "https://medecine.sorbonne-universite.fr/fiche-de-departement-hematologie/",
+      "imageUrl": "https://medecine.sorbonne-universite.fr/wp-content/uploads/2025/02/Pr-Florence-Nguyen-Khac.png",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-10T18:30:39.983Z"
+    },
+    "vp-2837": {
+      "name": "Yann Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-10T18:30:42.638Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2838": {
+      "name": "Christelle Nguyen",
+      "outcome": "found",
+      "identitySignals": [
+        "Christelle Nguyen",
+        "Université Paris Cité",
+        "portrait embedded on named BME faculty bio"
+      ],
+      "retrievedAt": "2026-11-10T18:32:09.980Z",
+      "note": "MEDIUM candidate stored after visual review",
+      "imageUrl": "https://www.bme-paris.com/wp-content/uploads/ChN-400x330.jpg",
+      "pageUrl": "https://www.bme-paris.com/about/faculty-and-staff/christelle-nguyen/",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH"
+    },
+    "vp-2839": {
+      "name": "Tanya T. Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-10T18:31:03.418Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2840": {
+      "name": "TuDung T. Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://physicians.wustl.edu/people/tudung-t-nguyen-md-phd/",
+      "imageUrl": "https://physicians.wustl.edu/app/uploads/2020/06/TuDung-Nguyen-280x386.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-10T18:31:22.078Z"
     }
   }
 }
