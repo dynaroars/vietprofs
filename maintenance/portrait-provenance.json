@@ -17203,6 +17203,75 @@
         "stored_roster_url"
       ],
       "retrievedAt": "2026-11-10T23:46:26.625Z"
+    },
+    "vp-2889": {
+      "name": "Hai Dang Dau",
+      "outcome": "found",
+      "pageUrl": "https://hai-dang-dau.github.io/",
+      "imageUrl": "https://hai-dang-dau.github.io/hddau/wp-content/uploads/sites/34/cropped-Standard-photo-scaled-3.jpg",
+      "sourceType": "personal_homepage",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-10T23:51:22.831Z"
+    },
+    "vp-2890": {
+      "name": "The Khoa Do",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-10T23:51:29.586Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2891": {
+      "name": "Trieu H. Do",
+      "outcome": "found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department"
+      ],
+      "retrievedAt": "2026-11-10T23:52:55.811Z",
+      "note": "MEDIUM candidate stored after visual review",
+      "pageUrl": "https://doctors.utmbhealth.com/profile/058695",
+      "imageUrl": "https://utmbstorage.blob.core.windows.net/photos/058695",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM"
+    },
+    "vp-2892": {
+      "name": "Tien Van Do",
+      "outcome": "found",
+      "pageUrl": "https://www.addict.hit.bme.hu/members_en.php",
+      "imageUrl": "https://www.hit.bme.hu/images/profile/84/do_van_tien.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-10T23:51:59.845Z"
+    },
+    "vp-2893": {
+      "name": "Tai Phan",
+      "outcome": "found",
+      "pageUrl": "https://www.ssl.berkeley.edu/people/tai-phan/",
+      "imageUrl": "https://www.ssl.berkeley.edu/wp-content/uploads/2026/03/phan_tai-2.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-10T23:52:09.017Z"
     }
   }
 }
