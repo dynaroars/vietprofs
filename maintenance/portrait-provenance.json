@@ -16166,6 +16166,155 @@
       ],
       "retrievedAt": "2026-11-10T17:20:33.823Z",
       "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-2813": {
+      "name": "Haithuy N. Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-10T17:24:42.939Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2814": {
+      "name": "Stan Nguyen Oklobdzija",
+      "outcome": "found",
+      "pageUrl": "https://murphy.tulane.edu/people/stan-oklobdzija",
+      "imageUrl": "https://murphy.tulane.edu/sites/default/files/2023-07/oklobdzija.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-10T17:26:42.916Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-2815": {
+      "name": "Martin Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://fairfield.elsevierpure.com/en/persons/martin-nguyen/",
+      "imageUrl": "https://fairfield.elsevierpure.com/files-asset/39726044/martin-nguyen.jpg?w=160&f=jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-10T17:24:50.318Z"
+    },
+    "vp-2816": {
+      "name": "Emmanuel Do Linh San",
+      "outcome": "found",
+      "identitySignals": [
+        "Official university appointment article explicitly identifies Emmanuel Do Linh San, department and professor appointment",
+        "Article features this individually named photo; downloaded and visually checked as one-person portrait"
+      ],
+      "retrievedAt": "2026-11-10T17:26:44.449Z",
+      "note": "MEDIUM candidate stored after visual review",
+      "imageUrl": "https://www.spu.ac.za/wp-content/uploads/2024/11/IMG_5141-HR-300-dpi-Emmanuel-Do-Linh-San-2.jpg",
+      "pageUrl": "https://www.spu.ac.za/index.php/wildlife-expert-prof-do-linh-san-joins-spu/",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM"
+    },
+    "vp-2817": {
+      "name": "Thi Nga Do",
+      "outcome": "found",
+      "pageUrl": "https://www.ut.edu/directory/do-thi-nga",
+      "imageUrl": "https://www.ut.edu/content/dam/ut/uploadedImages/Directory/do-thi-nga.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-10T17:25:08.805Z"
+    },
+    "vp-2818": {
+      "name": "Manh-Cuong Do",
+      "outcome": "found",
+      "pageUrl": "https://www.faculte-sciences-sport.universite-paris-saclay.fr/manh-cuong-do",
+      "imageUrl": "https://www.faculte-sciences-sport.universite-paris-saclay.fr/sites/default/files/styles/max_325x325/public/media/2021-04/manhcuongdo_web.png?itok=LJo7ZtLh",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-10T17:25:09.506Z"
+    },
+    "vp-2819": {
+      "name": "Trung Do",
+      "outcome": "found",
+      "pageUrl": "https://www.southalabama.edu/colleges/engineering/ce/CEfaculty.html",
+      "imageUrl": "https://www.southalabama.edu/colleges/engineering/images/do-headshot.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-10T17:26:44.815Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-2820": {
+      "name": "Linh Ho",
+      "outcome": "found",
+      "pageUrl": "https://pharmacy.cnsu.edu/directory/bios/linh-ho.php",
+      "imageUrl": "https://pharmacy.cnsu.edu/images/headshots/Linh-Ho.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-10T17:25:12.198Z"
+    },
+    "vp-2821": {
+      "name": "Rachel Hoang",
+      "outcome": "found",
+      "identitySignals": [
+        "Official individual profile Rachel Hoang, biology associate professor and institutional email match",
+        "Profile headshot downloaded and visually checked as a clean single-person portrait"
+      ],
+      "retrievedAt": "2026-11-10T17:26:45.068Z",
+      "note": "MEDIUM candidate stored after visual review",
+      "imageUrl": "https://www.haverford.edu/sites/default/files/styles/profile_thumbnail/public/RH%20Headshot.jpg?itok=Madr3Za_",
+      "pageUrl": "https://www.haverford.edu/users/rhoang",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM"
+    },
+    "vp-2822": {
+      "name": "Luan Truong",
+      "outcome": "found",
+      "pageUrl": "https://scholars.houstonmethodist.org/en/persons/luan-truong/",
+      "imageUrl": "https://scholars.houstonmethodist.org/files-asset/19253218/Truong_220x250.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-10T17:26:45.324Z",
+      "note": "MEDIUM candidate stored after visual review"
     }
   }
 }
