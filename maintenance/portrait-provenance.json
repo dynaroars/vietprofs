@@ -16105,6 +16105,67 @@
       "pageUrl": "https://iae.ncut.edu.tw/p/405-1062-95404,c2342.php",
       "sourceType": "official_faculty",
       "confidence": "MEDIUM"
+    },
+    "vp-2809": {
+      "name": "Khai-Tri Lam",
+      "outcome": "found",
+      "identitySignals": [
+        "Individual official profile labels Khai-Tri Lam and matching institutional email",
+        "Photo is CSS background immediately below name; downloaded and visually checked as one-person portrait"
+      ],
+      "retrievedAt": "2026-11-10T17:20:33.334Z",
+      "note": "MEDIUM candidate stored after visual review",
+      "pageUrl": "https://www.im.fju.edu.tw/%E9%BB%83%E6%99%BA%E6%A6%AE/",
+      "imageUrl": "https://www.im.fju.edu.tw/wp-content/uploads/2017/08/R354A2452-2-1024x1024.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM"
+    },
+    "vp-2810": {
+      "name": "Quynh Chu-LaGraff",
+      "outcome": "found",
+      "pageUrl": "https://www.union.edu/biology/faculty-staff/quynh-chu-lagraff",
+      "imageUrl": "https://www.union.edu/sites/default/files/union-marketing-layer/202210/quynh-chu-lagraff-new.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-10T17:18:35.815Z"
+    },
+    "vp-2811": {
+      "name": "Alexander Truong",
+      "outcome": "found",
+      "identitySignals": [
+        "Official faculty profile JavaScript loads the ADTRUON API identity; full name, department and rank match",
+        "Original headshot decoded from API userPhoto.profilePhoto, visually inspected, 180x180 and face verdict ok (one dominant face)"
+      ],
+      "retrievedAt": "2026-11-10T17:18:36.464Z",
+      "note": "Original image is embedded as base64 in the official public faculty API; archived decoded bytes after visual and size/aspect/face checks",
+      "pageUrl": "https://med.emory.edu/departments/medicine/divisions/pulmonary/profile/?u=ADTRUON",
+      "imageUrl": "https://api.app.emory.edu/api/user/ADTRUON",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH"
+    },
+    "vp-2812": {
+      "name": "Aliza Pham Wingo",
+      "outcome": "found",
+      "pageUrl": "https://profiles.ucdavis.edu/aliza.wingo",
+      "imageUrl": "https://researcherprofiles.org/profile/Modules/CustomViewPersonGeneralInfo/PhotoHandler.ashx?NodeID=527480131&cachekey=0c4767d3-5d1b-456b-9d22-8085cb030028",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-10T17:20:33.823Z",
+      "note": "MEDIUM candidate stored after visual review"
     }
   }
 }
