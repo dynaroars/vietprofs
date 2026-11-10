@@ -602,6 +602,7 @@ const FIELD_OVERRIDES = new Map([
   ],
   ['Institut Galien Paris-Saclay|Université Paris-Saclay', 'Chemistry'],
   ['Urology|University of California, San Francisco', 'Health Sciences'],
+  ['Urology|Yale University', 'Health Sciences'],
   // Audit 2026-11-08 (#1035): LPL is the AMU/CNRS phonetics and linguistics lab.
   ['Laboratoire Parole et Langage (UMR 7309)|Aix-Marseille Université', 'Humanities'],
   [
