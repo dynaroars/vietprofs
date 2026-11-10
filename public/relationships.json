@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-10T04:20:41.000Z",
+  "updatedAt": "2026-11-10T14:11:43.000Z",
   "relationships": [
     {
       "id": "rel-coauthor-vp-0015-vp-0018",
@@ -4179,6 +4179,34 @@
         }
       ],
       "verifiedAt": "2026-11-09T14:12:22.787Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-2474-vp-2730",
+      "type": "coauthor",
+      "sourceId": "vp-2474",
+      "targetId": "vp-2730",
+      "sources": [
+        "https://doi.org/10.1002/we.70073",
+        "https://doi.org/10.1016/j.energy.2026.140008"
+      ],
+      "evidence": "OpenAlex author records (API) list 2 shared works (at most 5 authors each; the peer-review author response excluded) naming Phong Ba Dao (vp-2474, ORCID 0000-0002-9211-5619) and Cuong Duc Dao (vp-2730, ORCID 0000-0002-3322-1243). Identity signals: full-name match, University of Bradford and AGH University of Krakow affiliations on the works matching the roster institutions, and matching research area (wind turbine SCADA analysis).",
+      "works": [
+        {
+          "identifier": "doi:10.1002/we.70073",
+          "title": "Analysis of Failures, Downtimes and Reliability of Wind Turbines From SCADA Data",
+          "date": "2025-11-05",
+          "url": "https://doi.org/10.1002/we.70073"
+        },
+        {
+          "identifier": "doi:10.1016/j.energy.2026.140008",
+          "title": "An integrated change-point detection framework for wind turbine monitoring and fault diagnosis using SCADA data",
+          "date": "2026-01-10",
+          "url": "https://doi.org/10.1016/j.energy.2026.140008"
+        }
+      ],
+      "verifiedAt": "2026-11-10T14:11:43.000Z",
       "direct": false,
       "notes": ""
     }
