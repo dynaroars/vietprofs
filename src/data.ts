@@ -1056,6 +1056,14 @@ const FIELD_OVERRIDES = new Map([
     'Institute for Infocomm Research (I2R)|Agency for Science, Technology and Research',
     'Computer & Information Sciences',
   ],
+  [
+    'Institute of Sustainability for Chemicals, Energy and Environment (ISCE2)|Agency for Science, Technology and Research',
+    'Chemistry',
+  ],
+  [
+    'School of Graduate Studies, College of Aviation|Embry-Riddle Aeronautical University',
+    'Engineering',
+  ],
   ['Department of Physiology, Cochin Hospital|Université Paris Cité', 'Health Sciences'],
   [
     "Laboratoire d'Imagerie Biomédicale (LIB)|Inserm (Institut National de la Santé et de la Recherche Médicale)",

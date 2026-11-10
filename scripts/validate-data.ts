@@ -35,6 +35,7 @@ const surnameFirstAllowlist = new Set<string>([
   'Hoang Mai Luong', // Chulalongkorn EE profile gives Thai "ฮวาง มาย เลื่อง" (Hoang Mai Luong) and email hoang.l@chula.ac.th; Luong is his surname
   'Truong Nghiem', // published as "Truong X. Nghiem" across 83 DBLP entries; Nghiem is his surname
   'Dinh Phung', // published as "Dinh Q. Phung" / "Dinh Quoc Phung" across 552 DBLP entries; Phung is his surname
+  'Truong Phung', // Federation University profile gives "Dr Truong H. Phung" with email t.phung@federation.edu.au; Phung is his surname
   'Tran Nguyen Templeton', // "Nguyen" is a preserved maiden name, not a misordered surname
   'Mai Tuyet Pho', // published as "Mai Tuyet Pho, MD" across her UChicago bio, MD/MPH listings, and
   // LinkedIn, and referred to as "Dr. Pho" in UChicago news articles — Pho is her surname.
