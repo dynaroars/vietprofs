@@ -16846,6 +16846,85 @@
         "stored_roster_url"
       ],
       "retrievedAt": "2026-11-10T20:43:43.648Z"
+    },
+    "vp-2863": {
+      "name": "Qui Tran-Cong-Miyata",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-10T20:47:30.780Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2864": {
+      "name": "Tanya B. Tran",
+      "outcome": "found",
+      "pageUrl": "https://vivo.brown.edu/display/tt15",
+      "imageUrl": "https://vivo.brown.edu/source-images/profile-images/bd2/4e0/f54/15b/482/b87/3a0/833/4ed/c3f/95/tt15_photo_.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-10T20:50:28.504Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-2865": {
+      "name": "Alisia (Giac-Thao) Tran",
+      "outcome": "found",
+      "pageUrl": "https://search.asu.edu/profile/1991143",
+      "imageUrl": "https://webapp4.asu.edu/photo-ws/directory_photo/gttran?blankImage2=1&size=medium",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-10T20:50:28.750Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-2866": {
+      "name": "Marie-Antoinette Tran",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-10T20:48:52.333Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2867": {
+      "name": "Dai Quoc Tran",
+      "outcome": "found",
+      "pageUrl": "https://utorii.com/dai-quoc-tran/",
+      "imageUrl": "https://utorii.com/wp-content/uploads/2026/01/Dai-Tran_photo.jpeg",
+      "sourceType": "authoritative_academic",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank"
+      ],
+      "retrievedAt": "2026-11-10T20:50:54.921Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-2868": {
+      "name": "Betty T. Tran",
+      "outcome": "found",
+      "pageUrl": "https://www.feinberg.northwestern.edu/faculty-profiles/az/profile.html?xid=47790",
+      "imageUrl": "https://deptcommon.fsm.northwestern.edu/profile-images/47790.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-10T20:50:29.079Z",
+      "note": "MEDIUM candidate stored after visual review"
     }
   }
 }
