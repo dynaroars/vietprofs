@@ -25,6 +25,9 @@ const schemaFile = resolve('public/roster.schema.json');
 // faculty pages, or an explicit maiden-name pattern) — see the git history for the check —
 // are allowlisted so the test doesn't force a wrong "fix" on them.
 const surnameFirstAllowlist = new Set<string>([
+  'Do Sang Kim', // PKNU publishes "Do Sang Kim"; ORCID 0000-0003-4191-2295 explicitly gives "Do Sang" as given names and "Kim" as family name.
+  'Mai Har Sham', // CUHK's current profile labels her "Professor SHAM Mai Har" and its English biography calls her "Professor Sham"; Sham is her surname.
+  'Mai M. Khalaf', // ORCID 0000-0003-0599-9928 explicitly gives Mai as given name and Khalaf as family name; KFU publishes "Mai Mostafa Khalaf".
   'Nguyen-Thi Dang', // IMO Orsay member page lists Nguyen-Thi Dang (Maîtresse de conférences); she publishes as "Nguyen-Thi Dang" with Dang as surname
   'Hoang La', // his IUT Orsay page gives "Hoang La" and the address firstname.lastname@universite-paris-saclay.fr; La is his surname
   'Le Nguyen Hoang', // Télécom Paris profile publishes "Lê Nguyên Hoang" in Western order; Hoang is his surname (EPFL/Science4All)

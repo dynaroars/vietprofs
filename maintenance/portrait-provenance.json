@@ -16173,6 +16173,162 @@
       "imageUrl": "https://education.mandela.ac.za/Education-new/media/Store/Images/Staff/Prof-Mathabo.jpg",
       "sourceType": "official_faculty",
       "confidence": "MEDIUM"
+    },
+    "vp-2789": {
+      "name": "Sang-Do Ha",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-10T16:12:24.707Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2790": {
+      "name": "Do Sang Kim",
+      "outcome": "found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "official_profile_photo"
+      ],
+      "retrievedAt": "2026-11-10T16:15:18.471Z",
+      "note": "MEDIUM candidate stored after visual review",
+      "pageUrl": "https://cms.pknu.ac.kr/dosangkim/view.do?no=15594",
+      "imageUrl": "https://cms.pknu.ac.kr/data/dosangkim/contents/2222%EA%B5%90%EC%88%98%EB%8B%98%EC%97%AC%EA%B6%8C%EC%82%AC%EC%A7%842023.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM"
+    },
+    "vp-2791": {
+      "name": "Liqiang Mai",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-10T16:12:44.808Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2792": {
+      "name": "Wenjie Mai",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-10T16:12:55.571Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2793": {
+      "name": "Yiyong Mai",
+      "outcome": "found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "official_profile_photo"
+      ],
+      "retrievedAt": "2026-11-10T16:17:38.609Z",
+      "note": "MEDIUM candidate stored after visual review",
+      "pageUrl": "https://scce.sjtu.edu.cn/en/Faculty_Directory/364.html",
+      "imageUrl": "https://scce.sjtu.edu.cn/en/upload/image/20231219/20231219093400.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM"
+    },
+    "vp-2794": {
+      "name": "Volker Mai",
+      "outcome": "found",
+      "pageUrl": "https://phhp.ufl.edu/profile/mai-volker/",
+      "imageUrl": "https://directory.ufhealth.org/mai-volker/files/profile-photo",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-10T16:13:17.797Z"
+    },
+    "vp-2795": {
+      "name": "Sabine Mai",
+      "outcome": "found",
+      "pageUrl": "https://umanitoba.ca/medicine/faculty-staff/sabine-mai",
+      "imageUrl": "https://umanitoba.ca/medicine/sites/medicine/files/styles/3x2_900w/public/2025-01/sabine-mai.jpg?itok=9idjiHPa",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-10T16:13:18.484Z"
+    },
+    "vp-2796": {
+      "name": "Ken Mai",
+      "outcome": "found",
+      "pageUrl": "https://www.ece.cmu.edu/directory/bios/mai-ken.html",
+      "imageUrl": "https://www.ece.cmu.edu/directory/images/faculty/M/ken-mai-800x800.png",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-10T16:13:19.271Z"
+    },
+    "vp-2797": {
+      "name": "Mai Har Sham",
+      "outcome": "found",
+      "pageUrl": "https://research.cuhk.edu.hk/en/persons/mai-har-sham/",
+      "imageUrl": "https://research.cuhk.edu.hk/files-asset/243275075/mhsham.jpg?w=160&f=jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-10T16:14:48.805Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-2798": {
+      "name": "Gengchen Mai",
+      "outcome": "not_found",
+      "pageUrl": "https://www.oden.utexas.edu/people/directory/gengchen-mai-2361/",
+      "imageUrl": "https://www.oden.utexas.edu/media/directory-assets/profile-imgs/Gengchen_Mai.png",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-10T16:13:20.985Z",
+      "note": "candidate failed 120x120 or portrait-aspect validation"
+    },
+    "vp-2799": {
+      "name": "Juliane Mai",
+      "outcome": "found",
+      "pageUrl": "https://uwaterloo.ca/artificial-intelligence-institute/contacts/juliane-mai",
+      "imageUrl": "https://uwaterloo.ca/artificial-intelligence-institute/sites/default/files/styles/large/public/uploads/images/sanfrancisco_2_fotor_square.jpg?itok=puazOOnf",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-10T16:14:49.027Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-2800": {
+      "name": "Mai M. Khalaf",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-10T16:13:44.138Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     }
   }
 }
