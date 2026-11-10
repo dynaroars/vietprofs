@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-10T14:11:43.000Z",
+  "updatedAt": "2026-11-10T15:18:53.000Z",
   "relationships": [
     {
       "id": "rel-coauthor-vp-0015-vp-0018",
@@ -4841,6 +4841,36 @@
       "works": [],
       "verifiedAt": "2026-11-10T04:20:41.000Z",
       "notes": "Backfilled 2026-11-09 from maintenance/relationship-research.json leads; name re-checked on the cited source."
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-1693",
+      "role": "mentor",
+      "name": "Boris S. Mordukhovich",
+      "affiliation": "Wayne State University",
+      "url": "",
+      "sources": [
+        "https://vietducle1102.github.io/"
+      ],
+      "evidence": "The cited page names Boris S. Mordukhovich as one of Viet D. Le’s PhD advisors at Wayne State University.",
+      "works": [],
+      "verifiedAt": "2026-11-10T15:18:53.000Z",
+      "notes": "Personal site checked 2026-11-10; its PhD-student wording is stale (owner-accepted appointment, #1086)."
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-1693",
+      "role": "mentor",
+      "name": "Pham Duy Khanh",
+      "affiliation": "Ho Chi Minh City University of Education",
+      "url": "",
+      "sources": [
+        "https://vietducle1102.github.io/"
+      ],
+      "evidence": "The cited page names Pham Duy Khanh as one of Viet D. Le’s PhD advisors at Wayne State University.",
+      "works": [],
+      "verifiedAt": "2026-11-10T15:18:53.000Z",
+      "notes": "Personal site checked 2026-11-10; its PhD-student wording is stale (owner-accepted appointment, #1086)."
     }
   ]
 }

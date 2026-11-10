@@ -218,7 +218,8 @@ Follow `TASKS/AUDIT_ISSUES_PRS.md`, including "Independent review". Also read
   now visiting or postdoc, deceased), the auditor retires the id in the run's fixes instead of leaving
   the Issue for the owner: delete the entry and its portrait, and add a row to
   `maintenance/retired-ids.json` (`replacedBy: null`, with the reason and source). The official page
-  outranks a personal homepage. An entry with protected `directFields` is never removed by
+  outranks a personal homepage, and a personal page that still says student or postdoc is not
+  removal evidence on its own. An entry with protected `directFields` is never removed by
   automation; that conflict goes to the owner.
 - Side-finding and other correction Issues: verify live. If confirmed, fix, validate, and put it
   in the run's fixes with what changed and the source. If the evidence is wrong, close with the

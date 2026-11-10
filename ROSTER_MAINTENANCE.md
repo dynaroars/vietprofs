@@ -268,6 +268,11 @@ become eligible merely because the host is a major university or an eligible non
 For example, a joint postdoctoral appointment at Harvard and a research institute is still excluded
 unless a separate, current permanent faculty-equivalent appointment is documented.
 
+The reverse also holds: personal sites go stale. When an official university page (or an
+owner-accepted source) lists someone as eligible faculty, include them even if their personal
+homepage still says PhD student or postdoc. A stale personal page is never grounds to reject or
+retire anyone.
+
 Generate repeatable search queries with:
 
 ```bash
