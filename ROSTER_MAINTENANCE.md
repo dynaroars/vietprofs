@@ -318,6 +318,22 @@ several relevant non-Vietnamese populations, including Chinese, Korean, Indian, 
 samples, and manually inspect the matches. Record the sample, method, and results before making a
 quantitative accuracy claim; a small or convenient control set does not establish general accuracy.
 
+The discovery scripts share one screen, `scripts/name-screen.ts` (tests in
+`test/name-screen.test.ts`). It rejects only high-confidence non-Vietnamese patterns: hyphenated
+given names made only of Chinese/Korean syllables ("Dao-Xin", "Wai-Meng"), a Chinese/Korean
+surname with no Vietnamese-only token ("Dao Zhou"), two or more Chinese-style given syllables with
+a shared surname ("Vera Ling Hui Phung"), a Chinese/Korean-style given name with a shared surname at
+an East Asian institution ("Ho Kyung Ha"), and "Ngo" without a Vietnamese given name at an African
+institution ("Gerald Ngo Teke"). A Western given name with a shared surname (Ryan Doan, Wendy
+Quach, Kevin Le) is **not** rejected: the roster has many such members, so those leads get the
+normal appointment check. Measured 2026-11-09: run over the 2,642 roster names, it rejects 6
+(0.2%: Le Bin Ho, Suan Li Mai, Tren Ma, Don Ta, Dong Ngoduy, Anna K. Fam), and the test fails if
+that rises above 0.5%. Run over the 997 candidates queued in batch Issues #1034–#1082, it rejected
+118. A manual read found all 118 to be Korean, Chinese/Taiwanese/Hong Kong, Cameroonian or Nigerian
+names, concentrated in the surname sweeps for Ha, Lai, Mai, Do, Ho, Tu and Chu (#1048–#1057). It
+does not catch every case: "Sang-Do Ha" and "Dong-Jiunn Jeffery Truong" pass, because every token
+is also a Vietnamese name token or the surname is strongly Vietnamese.
+
 Name matching is deliberately high-precision discovery assistance, not an exhaustive classifier.
 It will miss Vietnamese-diaspora people who publish under names without a recognized Vietnamese
 token, as well as unfamiliar, changed, shortened, or initialed names. Continue using the non-name
