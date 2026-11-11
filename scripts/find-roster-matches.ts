@@ -13,6 +13,7 @@
 import { readFile } from 'node:fs/promises';
 import type { RosterEntry } from '../src/data.ts';
 import { identityKey, namesMatch, nameTokens } from '../src/identity.ts';
+import { loadAllEntries } from './roster-files.ts';
 
 type Retired = Record<
   string,
@@ -37,7 +38,7 @@ function urlsOf(person: Partial<RosterEntry>): Map<string, string> {
 }
 
 const args = process.argv.slice(2);
-const roster: RosterEntry[] = JSON.parse(await readFile('public/data.json', 'utf8'));
+const roster: RosterEntry[] = await loadAllEntries();
 const retired: Retired = JSON.parse(await readFile('maintenance/retired-ids.json', 'utf8'));
 
 if (args.includes('--roster')) {

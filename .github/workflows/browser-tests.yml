@@ -9,6 +9,7 @@ on:
     branches: [main]
     paths-ignore:
       - 'public/data.json'
+      - 'public/industry.json'
       - 'public/updates.json'
       - 'public/relationships.json'
       - 'public/portraits/**'
@@ -20,6 +21,7 @@ on:
     branches: [main]
     paths-ignore:
       - 'public/data.json'
+      - 'public/industry.json'
       - 'public/updates.json'
       - 'public/relationships.json'
       - 'public/portraits/**'

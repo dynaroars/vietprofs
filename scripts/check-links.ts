@@ -18,9 +18,9 @@
  * where a person moved or what a dead page showed; it never confirms a current appointment.
  */
 
-import { readFile } from 'node:fs/promises';
 import { existsSync, statSync } from 'node:fs';
 import { resolve } from 'node:path';
+import { loadAllEntries } from './roster-files.ts';
 import { findSnapshot, waybackEligible, type Snapshot } from './wayback.ts';
 
 interface UrlEntry {
@@ -49,8 +49,7 @@ interface CheckResult extends UrlEntry {
 const DEAD_STATUSES = new Set([404, 410]);
 const DEAD_ERROR_CODES = new Set(['ENOTFOUND', 'EAI_NONAME']);
 
-const rosterFile = resolve('public/data.json');
-const roster = JSON.parse(await readFile(rosterFile, 'utf8'));
+const roster = await loadAllEntries();
 
 const args = process.argv.slice(2);
 
@@ -114,12 +113,13 @@ for (const person of roster) {
       : ['profileUrl', 'websiteUrl', 'scholarUrl', 'linkedinUrl', 'portraitSource'];
 
   for (const field of fieldsToCheck) {
-    if (person[field]) {
+    const url = (person as unknown as Record<string, unknown>)[field];
+    if (typeof url === 'string' && url) {
       entries.push({
         id: person.id,
         name: person.name,
         field,
-        url: person[field],
+        url,
       });
     }
   }

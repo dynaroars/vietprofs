@@ -4,22 +4,32 @@
 //
 //   node scripts/check-protected-fields.ts [base-ref]   (default: origin/main)
 import { execFileSync } from 'node:child_process';
-import { readFileSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 import { isDeepStrictEqual } from 'node:util';
 import type { RosterEntry } from '../src/data.ts';
+import { ROSTER_FILES } from './roster-files.ts';
 
 const baseRef = process.argv[2] ?? 'origin/main';
-const base = JSON.parse(
-  execFileSync('git', ['show', `${baseRef}:public/data.json`], {
-    encoding: 'utf8',
-    maxBuffer: 100_000_000,
-  }),
-) as RosterEntry[];
+// A base ref from before a roster file existed simply has no protected values in that file.
+const base = ROSTER_FILES.flatMap((file) => {
+  try {
+    return JSON.parse(
+      execFileSync('git', ['show', `${baseRef}:${file}`], {
+        encoding: 'utf8',
+        maxBuffer: 100_000_000,
+        stdio: ['ignore', 'pipe', 'ignore'],
+      }),
+    ) as RosterEntry[];
+  } catch {
+    if (file === ROSTER_FILES[0]) throw new Error(`cannot read ${file} at ${baseRef}`);
+    return [];
+  }
+});
+// Looked up across both files: moving an entry between them keeps its protected values.
 const current = new Map(
-  (JSON.parse(readFileSync('public/data.json', 'utf8')) as RosterEntry[]).map((person) => [
-    person.id,
-    person,
-  ]),
+  ROSTER_FILES.flatMap((file) =>
+    existsSync(file) ? (JSON.parse(readFileSync(file, 'utf8')) as RosterEntry[]) : [],
+  ).map((person) => [person.id, person]),
 );
 
 const problems: string[] = [];

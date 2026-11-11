@@ -20,6 +20,7 @@ import { promisify } from 'node:util';
 import type { RosterEntry } from '../src/data.ts';
 import { namesMatch, nameTokens } from '../src/identity.ts';
 import { isLikelyVietnameseName as screenName } from './name-screen.ts';
+import { loadAllEntries } from './roster-files.ts';
 
 const execFileAsync = promisify(execFile);
 
@@ -68,7 +69,7 @@ type Lead = {
 };
 
 async function loadRosterContext() {
-  const roster: RosterEntry[] = JSON.parse(await readFile('public/data.json', 'utf8'));
+  const roster: RosterEntry[] = await loadAllEntries();
   const retired: Record<string, { name: string; university: string; replacedBy: string | null }> =
     JSON.parse(await readFile('maintenance/retired-ids.json', 'utf8'));
   const rosterTokenList = roster.map((person) => ({

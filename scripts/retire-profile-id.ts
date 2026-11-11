@@ -13,6 +13,7 @@
 import { readdir, readFile, writeFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import type { RosterEntry } from '../src/data.ts';
+import { loadRosterFiles } from './roster-files.ts';
 
 type RetiredIds = Record<
   string,
@@ -42,9 +43,9 @@ if (Number(kept.slice(3)) > Number(retired.slice(3))) {
   );
 }
 
-const rosterFile = resolve('public/data.json');
 const retiredFile = resolve('maintenance/retired-ids.json');
-const roster: RosterEntry[] = JSON.parse(await readFile(rosterFile, 'utf8'));
+const rosterFiles = await loadRosterFiles();
+const roster: RosterEntry[] = rosterFiles.flatMap(({ entries }) => entries);
 const retiredIds: RetiredIds = JSON.parse(await readFile(retiredFile, 'utf8'));
 const ledgersOnly = args.includes('--ledgers-only'); // replay reference rewrites after a manual roster edit
 const retiredEntry = ledgersOnly ? undefined : roster.find((person) => person.id === retired);
@@ -126,12 +127,14 @@ for (const file of files) {
 
 if (restoring && !ledgersOnly) {
   const { id: _old, ...rest } = person;
-  const index = roster.indexOf(person);
-  roster.splice(index, 1);
+  // The entry keeps its place in whichever roster file holds it; only its id changes.
+  const home = rosterFiles.find(({ entries }) => entries.includes(person));
+  if (!home) throw new Error(`${retired} is not in a roster file`);
+  home.entries.splice(home.entries.indexOf(person), 1);
   const renamed = { id: kept, ...rest } as RosterEntry;
-  const at = roster.findIndex((entry) => byId(entry.id, kept) > 0);
-  roster.splice(at < 0 ? roster.length : at, 0, renamed);
-  writes.push([rosterFile, `${JSON.stringify(roster, null, 2)}\n`]);
+  const at = home.entries.findIndex((entry) => byId(entry.id, kept) > 0);
+  home.entries.splice(at < 0 ? home.entries.length : at, 0, renamed);
+  writes.push([resolve(home.file), `${JSON.stringify(home.entries, null, 2)}\n`]);
 }
 delete retiredIds[kept];
 retiredIds[retired] = {
