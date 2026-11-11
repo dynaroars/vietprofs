@@ -15,11 +15,10 @@
 // MEDIUM = labeled link, 200 OK, no identity signal               (needs a look)
 // Results land in maintenance/website-candidates.json. websiteUrl is not a protected field, so
 // --apply-high may write it; everything else stays a candidate for the `links` routine or a human.
-import { writeFile } from 'node:fs/promises';
+import { readFile, writeFile } from 'node:fs/promises';
 import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
 import type { RosterEntry } from '../src/data.ts';
-import { loadRosterFiles, saveRosterFile } from './roster-files.ts';
 
 const execFileAsync = promisify(execFile);
 
@@ -252,8 +251,7 @@ async function consider(person: RosterEntry): Promise<Candidate | null> {
   return null;
 }
 
-const rosterFiles = await loadRosterFiles();
-const roster: RosterEntry[] = rosterFiles.flatMap(({ entries }) => entries);
+const roster: RosterEntry[] = JSON.parse(await readFile('public/data.json', 'utf8'));
 let targets = roster.filter(
   (person) =>
     (validate ? Boolean(person.websiteUrl) : !person.websiteUrl) &&
@@ -334,6 +332,6 @@ if (applyHigh) {
     person.websiteUrl = candidate.finalUrl;
     stored += 1;
   }
-  for (const rosterFile of rosterFiles) await saveRosterFile(rosterFile);
+  await writeFile('public/data.json', `${JSON.stringify(roster, null, 2)}\n`);
   console.log(`stored ${stored} HIGH-confidence websiteUrl values`);
 }

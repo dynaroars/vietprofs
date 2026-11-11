@@ -41,9 +41,9 @@ test('retired ids are recorded with a reason and never reused', () => {
     string,
     { replacedBy: string | null; reason: string }
   >;
-  const roster = ['public/data.json', 'public/industry.json'].flatMap(
-    (file) => JSON.parse(readFileSync(file, 'utf8')) as Array<{ id: string }>,
-  );
+  const roster = JSON.parse(readFileSync('public/data.json', 'utf8')) as Array<{
+    id: string;
+  }>;
   const ids = new Set(roster.map((person) => person.id));
   assert.equal(retired['vp-1692']?.replacedBy, 'vp-0037');
   for (const [id, record] of Object.entries(retired)) {

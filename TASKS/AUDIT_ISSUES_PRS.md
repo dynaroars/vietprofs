@@ -80,7 +80,7 @@ Before modifying data or closing issues, ensure compliance with repository rules
    - **Always test the PR merged into a fresh `main`, never the PR branch in isolation.** A duplicate
      `vp-####` id introduced by this PR and by another PR merged since this branch was created will
      **not** show up as a git conflict — two entries with the same id value in different, non-adjacent
-     parts of `public/data.json` or `public/industry.json` merge cleanly at the text level, and `gh pr merge --squash` would
+     parts of `public/data.json` merge cleanly at the text level, and `gh pr merge --squash` would
      happily push that straight into `main`. The only thing that catches it is running the full test
      suite (`validate-data.ts`'s duplicate-id check) against the actual merged result:
      ```bash
@@ -97,12 +97,12 @@ Before modifying data or closing issues, ensure compliance with repository rules
      id (e.g. rows in `maintenance/portrait-queue.json`). Reminting is only for ids
      that never reached `main`; an id already on `main` is permanent (see `ROSTER_MAINTENANCE.md`
      "One person, one ID").
-   - **Check that nothing on `main` disappears.** A branch that rewrote `public/data.json` or `public/industry.json` from a stale
+   - **Check that nothing on `main` disappears.** A branch that rewrote `public/data.json` from a stale
      copy drops every entry added to `main` since it branched, plus later edits, and still merges
      cleanly (fc655f5 on 2026-09-12 lost 22 people and undid a field removal this way). On the scratch
      branch, list ids that `main` has and the merge result doesn't:
      ```bash
-     comm -23 <(git show main:public/data.json main:public/industry.json | grep -o '"id": "vp-[0-9]*"' | sort) <(grep -o '"id": "vp-[0-9]*"' public/data.json public/industry.json | sort)
+     comm -23 <(git show main:public/data.json | grep -o '"id": "vp-[0-9]*"' | sort) <(grep -o '"id": "vp-[0-9]*"' public/data.json | sort)
      ```
      Any id the PR doesn't explicitly remove (with a reason and a `maintenance/retired-ids.json` row)
      means a stale overwrite: request changes, don't merge.
@@ -117,7 +117,7 @@ Before modifying data or closing issues, ensure compliance with repository rules
      ```bash
      gh pr close <PR_NUMBER> --comment "Closed as duplicate/superseded: URL already backfilled and merged in PR #..."
      ```
-   - If git conflicts occur in `public/data.json` or `public/industry.json` (or the id-collision case above), pull `main`, resolve line offsets or reassign colliding ids, re-run validation, and merge.
+   - If git conflicts occur in `public/data.json` (or the id-collision case above), pull `main`, resolve line offsets or reassign colliding ids, re-run validation, and merge.
 
 ---
 
@@ -135,13 +135,13 @@ Before modifying data or closing issues, ensure compliance with repository rules
      - Ensure Western display name order (`First (Middle) Last`) in `name` and Vietnamese order in `vietnameseName`.
      - Re-verify eligibility (appointment, track, institution type) against live sources before assigning an ID — an Issue is a proposal, not a pre-cleared fact.
        - Candidates at universities and academic research institutes belong in `public/data.json`.
-       - Candidates at defense and federal research/funding agencies (AFOSR, ONR, DARPA, IARPA, ARL, NRL, NSF, NIH) as scientific program managers/officers/directors, or at FFRDCs/UARCs (MITRE, Aerospace Corp, IDA, CNA, Lincoln Lab, JHU APL), belong in `public/industry.json` (`track: "Government & Defense"` or `"Research"`, `institutionType: "Public research institute"` or `"Independent nonprofit research institute"`).
-       - Candidates at corporate research labs (e.g., Google DeepMind, OpenAI, Microsoft Research, Meta FAIR, NVIDIA Research, etc.) belong in `public/industry.json` (`track: "Industry Research"`, `institutionType: "Corporate research lab"`).
-       - Candidates at central banks, international economic organizations, and policy think tanks (e.g., Federal Reserve, ECB, IMF, World Bank, Brookings, RAND, NBER, PIIE, CSIS) belong in `public/industry.json` (`track: "Policy & Think Tank"`, `institutionType: "Policy & international organization"` or `"Think tank"`).
-       - Accept and route these candidates to the appropriate file (`public/data.json` vs. `public/industry.json`) rather than rejecting them. Only reject postdocs, students, interns, contractor-only staff, non-research commercial roles, and Vietnam-based appointments.
-     - Re-run the dedup check from `TASKS/candidate_intake.md` step 1 (`npm run find-roster-matches -- "<name>" --url ...` with every identity URL in the Issue) against both current `public/data.json` and `public/industry.json`; the Issue's "not on the roster" claim may be stale. A hit at another institution is a probable move: if it's the same person, update that entry in place (the Issue's fields become an edit, with owner-asserted ones in `directFields`) and close the Issue naming the existing ID. See `ROSTER_MAINTENANCE.md` "One person, one ID".
+       - Candidates at defense and federal research/funding agencies (AFOSR, ONR, DARPA, IARPA, ARL, NRL, NSF, NIH) as scientific program managers/officers/directors, or at FFRDCs/UARCs (MITRE, Aerospace Corp, IDA, CNA, Lincoln Lab, JHU APL), belong in `public/data.json` (`track: "Government & Defense"` or `"Research"`, `institutionType: "Public research institute"` or `"Independent nonprofit research institute"`).
+       - Candidates at corporate research labs (e.g., Google DeepMind, OpenAI, Microsoft Research, Meta FAIR, NVIDIA Research, etc.) belong in `public/data.json` (`track: "Industry Research"`, `institutionType: "Corporate research lab"`).
+       - Candidates at central banks, international economic organizations, and policy think tanks (e.g., Federal Reserve, ECB, IMF, World Bank, Brookings, RAND, NBER, PIIE, CSIS) belong in `public/data.json` (`track: "Policy & Think Tank"`, `institutionType: "Policy & international organization"` or `"Think tank"`).
+       - Accept and route these candidates with the `institutionType` and `track` that place them on the right tab (Labs or Industry) rather than rejecting them. Only reject postdocs, students, interns, contractor-only staff, non-research commercial roles, and Vietnam-based appointments.
+     - Re-run the dedup check from `TASKS/candidate_intake.md` step 1 (`npm run find-roster-matches -- "<name>" --url ...` with every identity URL in the Issue) against the current `public/data.json`; the Issue's "not on the roster" claim may be stale. A hit at another institution is a probable move: if it's the same person, update that entry in place (the Issue's fields become an edit, with owner-asserted ones in `directFields`) and close the Issue naming the existing ID. See `ROSTER_MAINTENANCE.md` "One person, one ID".
      - A retired-ID hit means the person was on the roster before: add them back under that original ID and remove it from `maintenance/retired-ids.json`, instead of assigning a new one.
-     - Assign immutable profile IDs for genuinely new people only across both files: `npm run assign-profile-ids -- --apply`.
+     - Assign immutable profile IDs for genuinely new people only across the roster: `npm run assign-profile-ids -- --apply`.
      - Candidate Issues are either single (`New candidate: <Name> — ...`) or batched (`[scheduled:discover] New faculty batch (<N> candidates): ...`, from `TASKS/discover_from_database.md` via the `discover` routine). Run every candidate in a batch through the same dedup, live verification, `FIELD_OVERRIDES` check, and `assign-profile-ids` steps; comment a per-candidate outcome table (`vp-####`, existing id updated, or rejection reason), and close the batch only when every candidate has an outcome (cap: 25 candidates per scheduled run).
      - Scheduled cloud audits add a verified new person themselves on `main` (standing owner authorization in `AGENTS.md`; `audit-fix` branch only as the denied-push fallback). Only if the cloud permission check denies the add do they comment "verified, ready for owner" with a ready-to-paste entry and leave the Issue open for a local session (`TASKS/AUTOMATION.md`, auditor "New-candidate Issues").
      - When adding a new entry locally, also fetch its portrait if the Issue or the verified official profile page has a clear single-person headshot: validate with `identify` (≥120×120, aspect ≤1.55), convert to WebP in `public/portraits/`, set `portrait` and the direct original URL as `portraitSource`. Don't leave it for the `portraits` routine.
@@ -178,7 +178,7 @@ Commit verified fixes on fresh `main`, one Issue per commit (see `TASKS/AUTOMATI
    ```bash
    git checkout main && git pull --ff-only
    # ...apply the fix for one Issue...
-   git add -A public/data.json public/industry.json public/updates.json public/portraits/ maintenance/ src/data.ts
+   git add -A public/data.json public/updates.json public/portraits/ maintenance/ src/data.ts
    git commit -m "fix(roster): <what changed> (Closes #<n>)"
    ```
 2. **Validate and push:**

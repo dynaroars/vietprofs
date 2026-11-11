@@ -31,5 +31,4 @@ const slimRoster = (roster: unknown) =>
   });
 
 await rewrite('data.json', slimRoster);
-await rewrite('industry.json', slimRoster);
 await rewrite('relationships.json', (database) => database);

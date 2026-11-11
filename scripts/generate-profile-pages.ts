@@ -13,6 +13,7 @@ import {
   FIELDS,
   hasEnoughPeopleForRosterHub,
   isLabEntry,
+  isOnTab,
   personPath,
   ROSTER_CONTINENTS,
   regionPath,
@@ -207,8 +208,9 @@ function profilePage(
   relationships: RelationshipDatabase,
   rosterById: ReadonlyMap<string, RosterEntry>,
   related: RelatedContext,
-  isIndustry = false,
 ) {
+  // Entries on the Labs/Industry tabs only (not Academia) link back there and skip country hubs.
+  const isIndustry = !isOnTab(person, 'academia');
   const directoryPage = isIndustry
     ? isLabEntry(person)
       ? 'labs.html'
@@ -715,15 +717,9 @@ function categoryHubPage(config: HubConfig) {
 
 async function main() {
   await loadAssetVersions();
-  const [roster, industryRoster, relationships, retiredIds] = await Promise.all([
+  const [roster, relationships, retiredIds] = await Promise.all([
     Promise.all([
       readFile(resolve(root, 'public/data.json'), 'utf8'),
-      readFile(resolve(root, 'public/updates.json'), 'utf8'),
-    ]).then(([data, updates]) =>
-      withUpdates(JSON.parse(data) as Roster, JSON.parse(updates) as RosterUpdates),
-    ),
-    Promise.all([
-      readFile(resolve(root, 'public/industry.json'), 'utf8').catch(() => '[]'),
       readFile(resolve(root, 'public/updates.json'), 'utf8'),
     ]).then(([data, updates]) =>
       withUpdates(JSON.parse(data) as Roster, JSON.parse(updates) as RosterUpdates),
@@ -736,8 +732,7 @@ async function main() {
     ),
   ]);
   const ids = new Set<string>();
-  const industryIds = new Set<string>(industryRoster.map((p) => p.id));
-  const allEntries = [...roster, ...industryRoster];
+  const allEntries = roster;
   for (const person of allEntries) {
     if (!person.id || ids.has(person.id))
       throw new Error(`Profile ID is missing or duplicated: ${person.name}`);
@@ -802,10 +797,9 @@ async function main() {
     allEntries.map(async (person) => {
       const outputFile = resolve(output, personPath(person.id));
       await mkdir(dirname(outputFile), { recursive: true });
-      const isIndustry = industryIds.has(person.id);
       await writeFile(
         outputFile,
-        profilePage(person, availableCountryHubs, relationships, rosterById, related, isIndustry),
+        profilePage(person, availableCountryHubs, relationships, rosterById, related),
       );
     }),
   );

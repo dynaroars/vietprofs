@@ -15,7 +15,7 @@ For each pasted name, follow `ROSTER_MAINTENANCE.md` "One person, one ID":
   same person until ruled out. A same-name entry at a different institution usually means the
   person moved (Tin Nguyen was listed at Auburn as vp-0037 when an intake re-added him at Wayne
   State as vp-1692, 2026-09-24). A retired-id hit means they were on the roster before.
-- Also check `public/data.json` and `public/industry.json` for an existing entry by hand: match on `name`, `vietnameseName`, and obvious
+- Also check `public/data.json` for an existing entry by hand: match on `name`, `vietnameseName`, and obvious
   name-order/diacritic/anglicized variants (see the given-name/surname search guidance in
   `ROSTER_MAINTENANCE.md`). Also check common Vietnamese surname/given-name reordering — a
   candidate can be already listed under a shortened, anglicized, or reordered published name that a
@@ -40,7 +40,7 @@ For each pasted name, follow `ROSTER_MAINTENANCE.md` "One person, one ID":
   afterward, so a candidate cleared here can be added by a different process before this Issue is
   ever acted on. Whoever later assigns the `vp-####` ID (the audit workflow, per
   `AUDIT_ISSUES_PRS.md`) must re-run this same dedup check (`npm run find-roster-matches` with
-  every identity URL in the Issue) against the *current* `public/data.json` and `public/industry.json` immediately before
+  every identity URL in the Issue) against the *current* `public/data.json` immediately before
   adding the entry, not rely on the Issue's original "not already on the roster" claim.
 - **Not listed:** continue to step 2.
 
@@ -52,18 +52,18 @@ Before spending time on enrichment, confirm the candidate can plausibly satisfy
 - **`🎓 Academia`** (`public/data.json`): A current (or accepted-and-dated incoming) appointment at a
   university or eligible public/nonprofit research institute outside Vietnam, on an accepted track
   (`Tenure-line`, `Teaching`, `Research`, `Clinical`, `Admin and Staff`, `Emeritus`, `Deceased`).
-- **`🏛️ Gov, Defense & Labs`** (`public/industry.json`): Doctorate-holding scientific program
+- **`🏛️ Gov, Defense & Labs`** (`public/data.json`): Doctorate-holding scientific program
   managers/officers/directors at defense and federal research/funding agencies (e.g., AFOSR, ONR, DARPA,
   IARPA, ARL, NRL, NSF, NIH) and permanent career researchers at FFRDCs/UARCs (e.g., MITRE, Aerospace Corp,
   IDA, CNA, Lincoln Lab, JHU APL) under `track: "Government & Defense"` or `"Research"` with
   `institutionType: "Public research institute"` or `"Independent nonprofit research institute"`.
-- **`🏢 Industry` — Corporate Research Labs** (`public/industry.json`): Full-time, career Research
+- **`🏢 Industry` — Corporate Research Labs**: Full-time, career Research
   Scientists, Principal/Staff Scientists, Distinguished Engineers, and Research Directors at corporate
   research labs (e.g., Google DeepMind, Google Research, OpenAI, Anthropic, Microsoft Research, Meta FAIR,
   NVIDIA Research, Apple ML, AWS AI, IBM Research, Adobe Research, Genentech) under `track: "Industry Research"`,
   `institutionType: "Corporate research lab"`. Exclude standard software engineers, product managers, and
   non-research roles.
-- **`🏛️ Gov, Defense & Labs` — Central Banks, International Orgs & Think Tanks** (`public/industry.json`):
+- **`🏛️ Gov, Defense & Labs` — Central Banks, International Orgs & Think Tanks**:
   Permanent/career Economists, Senior Economists, Policy Researchers, and Senior Fellows at central banks
   (Fed Board & regional Fed banks, ECB, BIS), international organizations (IMF, World Bank, OECD, ADB),
   and scholarly think tanks (Brookings, RAND, NBER, PIIE, Urban Institute, CSIS, Carnegie) under
@@ -82,7 +82,7 @@ Once a candidate clears steps 1–2, gather everything reasonably available befo
 the goal is for the Issue alone to give a downstream agent enough to add the entry without further
 research:
 
-- **Core fields:** target dataset (`public/data.json` vs. `public/industry.json`), current `university` (employing institution),
+- **Core fields:** target tab (derived from `institutionType` and `track`), current `university` (employing institution),
   `country`, `city`/`state` if applicable, `department`, `rank`, `track`, `institutionType` (if non-university),
   primary `field`/`researchAreas`.
 - **Identity/name:** `name`, `vietnameseName`, and any published surname-change history (apply the
@@ -112,7 +112,7 @@ yourself. For each eligible, not-yet-listed candidate, file an Issue containing:
 
 1. Full name (and Vietnamese name / known aliases).
 2. Eligibility rationale citing the specific `ROSTER_MAINTENANCE.md` track and evidence.
-3. All proposed fields gathered in step 3, clearly labeled (specifying target dataset `public/data.json` or `public/industry.json`, so another agent can paste them
+3. All proposed fields gathered in step 3, clearly labeled (specifying the target tab via `institutionType` and `track`, so another agent can paste them
    directly into the appropriate roster file), including which are officially confirmable vs.
    unconfirmed.
 4. Every source URL used, mapped to the fact(s) it supports.

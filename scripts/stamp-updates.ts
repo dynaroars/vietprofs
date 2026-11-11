@@ -1,6 +1,6 @@
 // Records when each roster entry's content last changed, so nobody stamps it by hand. Runs before
 // npm test. The dates live in public/updates.json ({ "vp-0001": "<ISO time>", ... }), not in
-// public/data.json or public/industry.json, so a roster edit's diff shows only the facts that changed.
+// public/data.json, so a roster edit's diff shows only the facts that changed.
 // An entry is stamped once: if its date already differs from the committed one, it was stamped earlier
 // (or deliberately set) and is left alone. directFields is metadata and doesn't count as a change
 // (ROSTER_MAINTENANCE.md).
@@ -22,7 +22,6 @@ import type { RosterEntry, RosterUpdates } from '../src/data.ts';
 const IGNORED = new Set(['lastUpdatedAt', 'directFields']);
 const ref = process.argv[2] ?? 'HEAD';
 const rosterFile = 'public/data.json';
-const industryFile = 'public/industry.json';
 const updatesFile = 'public/updates.json';
 
 function committed<T>(file: string): T | null {
@@ -60,8 +59,6 @@ function content(person: RosterEntry): string {
 
 const rosterText = await readFile(rosterFile, 'utf8');
 const roster: RosterEntry[] = JSON.parse(rosterText);
-const industryText = await readFile(industryFile, 'utf8').catch(() => '[]\n');
-const industryRoster: RosterEntry[] = JSON.parse(industryText);
 const updatesText = await readFile(updatesFile, 'utf8').catch(() => '{}\n');
 const current: RosterUpdates = JSON.parse(updatesText);
 const now = new Date().toISOString();
@@ -80,57 +77,32 @@ for (const person of roster) {
   rosterChanged = true;
 }
 
-let industryChanged = false;
-for (const person of industryRoster) {
-  if (person.lastUpdatedAt === undefined) continue;
-  current[person.id] ??= person.lastUpdatedAt;
-  delete person.lastUpdatedAt;
-  industryChanged = true;
-}
-
 const baseRoster = process.env.SCHEMA_MIGRATION ? null : committed<RosterEntry[]>(rosterFile);
-const baseIndustry = process.env.SCHEMA_MIGRATION ? null : committed<RosterEntry[]>(industryFile);
 const stamped: string[] = [];
-if (baseRoster || baseIndustry) {
+if (baseRoster) {
   const baseUpdates: RosterUpdates =
     committed<RosterUpdates>(updatesFile) ??
     Object.fromEntries(
-      (baseRoster ?? [])
+      baseRoster
         .filter((person) => person.lastUpdatedAt)
         .map((person) => [person.id, person.lastUpdatedAt as string]),
     );
 
-  if (baseRoster) {
-    const beforeRoster = new Map(baseRoster.map((person) => [person.id, person]));
-    for (const person of roster) {
-      const old = beforeRoster.get(person.id);
-      const changed = !old
-        ? !current[person.id]
-        : content(old) !== content(person) && current[person.id] === baseUpdates[person.id];
-      if (!changed) continue;
-      current[person.id] = now;
-      stamped.push(person.id);
-    }
-  }
-
-  if (baseIndustry) {
-    const beforeIndustry = new Map(baseIndustry.map((person) => [person.id, person]));
-    for (const person of industryRoster) {
-      const old = beforeIndustry.get(person.id);
-      const changed = !old
-        ? !current[person.id]
-        : content(old) !== content(person) && current[person.id] === baseUpdates[person.id];
-      if (!changed) continue;
-      current[person.id] = now;
-      stamped.push(person.id);
-    }
+  const beforeRoster = new Map(baseRoster.map((person) => [person.id, person]));
+  for (const person of roster) {
+    const old = beforeRoster.get(person.id);
+    const changed = !old
+      ? !current[person.id]
+      : content(old) !== content(person) && current[person.id] === baseUpdates[person.id];
+    if (!changed) continue;
+    current[person.id] = now;
+    stamped.push(person.id);
   }
 }
 
-const allEntries = [...roster, ...industryRoster];
 const allIds = [
   ...new Set(
-    allEntries
+    roster
       .map((person) => person.id)
       .filter(Boolean)
       .sort(),
@@ -142,7 +114,6 @@ for (const id of allIds) updates[id] = current[id] ?? now;
 const updatesOut = `${JSON.stringify(updates, null, 2)}\n`;
 if (updatesOut !== updatesText) await writeFile(updatesFile, updatesOut);
 if (rosterChanged) await writeFile(rosterFile, `${JSON.stringify(roster, null, 2)}\n`);
-if (industryChanged) await writeFile(industryFile, `${JSON.stringify(industryRoster, null, 2)}\n`);
 if (stamped.length) {
   console.log(
     `stamp-updates: stamped ${stamped.length} changed ${stamped.length === 1 ? 'entry' : 'entries'} (${stamped.slice(0, 10).join(', ')}${stamped.length > 10 ? ', ...' : ''})`,

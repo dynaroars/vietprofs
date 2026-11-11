@@ -17,7 +17,6 @@ import {
 import { validateRelationshipDatabase } from '../src/relationships.ts';
 
 const rosterFile = resolve('public/data.json');
-const industryFile = resolve('public/industry.json');
 const relationshipsFile = resolve('public/relationships.json');
 const schemaFile = resolve('public/roster.schema.json');
 
@@ -76,11 +75,8 @@ function validateTimestamp(file: string, value: string, label: string, field: st
   if (timestamp.valueOf() > Date.now()) fail(file, `${label} ${field} must not be in the future`);
 }
 
-const [roster, industry, relationships, rosterSchema] = await Promise.all([
+const [roster, relationships, rosterSchema] = await Promise.all([
   readFile(rosterFile, 'utf8').then(JSON.parse),
-  readFile(industryFile, 'utf8')
-    .then(JSON.parse)
-    .catch(() => []),
   readFile(relationshipsFile, 'utf8').then(JSON.parse),
   readFile(schemaFile, 'utf8').then(JSON.parse),
 ]);
@@ -125,22 +121,8 @@ if (!validateRoster(roster)) {
       .join('\n  ')}${errors.length > 20 ? `\n  ...and ${errors.length - 20} more` : ''}`,
   );
 }
-if (industry.length > 0 && !validateRoster(industry)) {
-  const errors = validateRoster.errors ?? [];
-  fail(
-    industryFile,
-    `does not match roster.schema.json:\n  ${errors
-      .slice(0, 20)
-      .map((err) => describeSchemaError(err, industry))
-      .join('\n  ')}${errors.length > 20 ? `\n  ...and ${errors.length - 20} more` : ''}`,
-  );
-}
 const rosterIds = new Set((roster as Array<{ id: string }>).map((person) => person.id));
-const industryIds = new Set((industry as Array<{ id: string }>).map((person) => person.id));
-for (const id of industryIds) {
-  if (rosterIds.has(id)) fail(industryFile, `duplicate id across rosters: ${id}`);
-}
-const allRosterIds = new Set([...rosterIds, ...industryIds]);
+const allRosterIds = rosterIds;
 
 // Retired ids stay retired: a merged duplicate points at the entry that absorbed it, and a person
 // who comes back gets the original id restored (npm run retire-profile-id), not a fresh one.
@@ -185,10 +167,9 @@ const scholarUrls = new Set();
 const linkedinUrls = new Set();
 const portraits = new Set();
 
-for (const { list, file } of [
-  { list: roster as RosterEntry[], file: rosterFile },
-  { list: industry as RosterEntry[], file: industryFile },
-]) {
+{
+  const list = roster as RosterEntry[];
+  const file = rosterFile;
   for (const [index, person] of list.entries()) {
     const label = `entry ${index + 1}`;
     const record = person as unknown as Record<string, any>;
@@ -351,7 +332,7 @@ const DISTINCT_PEOPLE = new Set<string>([
   'vp-0020 vp-0414', // Truong X. Tran (Computer Science, Harrisburg; Alabama-Huntsville PhD) and Tran Truong (Linguistics, University Park; Chicago PhD): separate PSU profiles (#559)
   'vp-1135 vp-2974', // Tuan Minh Nguyen (Materials Science Division, UC Irvine PhD) and Tuan H. Nguyen (Global Security Directorate / CGSR, Iowa State PhD), Lawrence Livermore National Laboratory: separate LLNL profiles
 ]);
-const allEntries = [...roster, ...industry] as RosterEntry[];
+const allEntries = roster as RosterEntry[];
 const identityOwners = new Map<string, string>();
 const rosterTokens = allEntries.map((person) => nameTokens(person.name));
 for (const [index, person] of allEntries.entries()) {
@@ -386,5 +367,5 @@ for (const [index, person] of allEntries.entries()) {
 const relationshipErrors = validateRelationshipDatabase(relationships, roster);
 if (relationshipErrors.length) fail(relationshipsFile, relationshipErrors.join('; '));
 console.log(
-  `Validated ${roster.length} roster entries, ${industry.length} industry entries, and ${relationships.relationships.length} academic relationships.`,
+  `Validated ${roster.length} roster entries and ${relationships.relationships.length} academic relationships.`,
 );

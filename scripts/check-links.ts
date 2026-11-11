@@ -20,7 +20,8 @@
 
 import { existsSync, statSync } from 'node:fs';
 import { resolve } from 'node:path';
-import { loadAllEntries } from './roster-files.ts';
+import { readFile } from 'node:fs/promises';
+import type { RosterEntry } from '../src/data.ts';
 import { findSnapshot, waybackEligible, type Snapshot } from './wayback.ts';
 
 interface UrlEntry {
@@ -49,7 +50,7 @@ interface CheckResult extends UrlEntry {
 const DEAD_STATUSES = new Set([404, 410]);
 const DEAD_ERROR_CODES = new Set(['ENOTFOUND', 'EAI_NONAME']);
 
-const roster = await loadAllEntries();
+const roster = JSON.parse(await readFile('public/data.json', 'utf8')) as RosterEntry[];
 
 const args = process.argv.slice(2);
 

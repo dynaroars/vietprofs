@@ -28,6 +28,7 @@ import {
   buildPhdToFacultyPairings,
   isCorporatePolicyEntry,
   isLabEntry,
+  isOnTab,
   type Roster,
   type RosterEntry,
 } from '../src/data.ts';
@@ -178,10 +179,7 @@ test('portrait audit fixture is reproducible and covers the required risk groups
     blocked: string[];
     commonNames: string[];
   };
-  const industryRoster = JSON.parse(
-    readFileSync(join(__dirname, '../public/industry.json'), 'utf8'),
-  ) as RosterEntry[];
-  const ids = new Set([...roster, ...industryRoster].map((person) => person.id));
+  const ids = new Set(roster.map((person) => person.id));
   assert.equal(fixture.version, 1);
   assert.ok(fixture.knownGood.length >= 10);
   assert.ok(fixture.missing.length >= 10);
@@ -216,10 +214,7 @@ test('portrait provenance is ID-keyed and records reproducible identity evidence
       }
     >;
   };
-  const industryRoster = JSON.parse(
-    readFileSync(join(__dirname, '../public/industry.json'), 'utf8'),
-  ) as RosterEntry[];
-  const ids = new Set([...roster, ...industryRoster].map((person) => person.id));
+  const ids = new Set(roster.map((person) => person.id));
   assert.equal(ledger.version, 1);
   for (const [id, entry] of Object.entries(ledger.entries)) {
     assert.ok(ids.has(id), `provenance references unknown ID ${id}`);
@@ -365,7 +360,9 @@ test('institution-specific overrides resolve department names that carry no fiel
 });
 
 test('the roster has no unmapped Others entries in the current snapshot', () => {
-  const unmapped = roster.filter((p) => fieldOf(p.department, p.university) === 'Others');
+  const unmapped = roster
+    .filter((p) => isOnTab(p, 'academia'))
+    .filter((p) => fieldOf(p.department, p.university) === 'Others');
   assert.deepEqual(
     unmapped.map((p) => `${p.name} (${p.department} | ${p.university})`),
     [],
@@ -981,17 +978,17 @@ test('landmark and marquee faculty maintain their verified major honors', () => 
   }
 });
 
-test('industry roster satisfies schema and classification helpers categorize entries', async () => {
+test('roster satisfies schema and classification helpers categorize entries', async () => {
   const { Ajv2020 } = await import('ajv/dist/2020.js');
-  const industryData = JSON.parse(
-    readFileSync(new URL('../public/industry.json', import.meta.url), 'utf8'),
+  const rosterData = JSON.parse(
+    readFileSync(new URL('../public/data.json', import.meta.url), 'utf8'),
   );
-  assert.ok(Array.isArray(industryData));
+  assert.ok(Array.isArray(rosterData));
   const schema = JSON.parse(
     readFileSync(new URL('../public/roster.schema.json', import.meta.url), 'utf8'),
   );
   const validate = new Ajv2020({ allErrors: true }).compile(schema);
-  assert.ok(validate(industryData), JSON.stringify(validate.errors?.slice(0, 5)));
+  assert.ok(validate(rosterData), JSON.stringify(validate.errors?.slice(0, 5)));
 
   assert.equal(isLabEntry({ institutionType: 'Public research institute' }), true);
   assert.equal(isLabEntry({ institutionType: 'Corporate research lab' }), false);
@@ -1004,6 +1001,27 @@ test('industry roster satisfies schema and classification helpers categorize ent
   );
   assert.equal(isCorporatePolicyEntry({ track: 'Industry Research' }), true);
   assert.equal(isCorporatePolicyEntry({ institutionType: 'Public research institute' }), false);
+
+  // Tab membership comes from institutionType and track alone.
+  const corporate = {
+    institutionType: 'Corporate research lab',
+    track: 'Industry Research',
+  } as const;
+  const defense = {
+    institutionType: 'Public research institute',
+    track: 'Government & Defense',
+  } as const;
+  const institute = {
+    institutionType: 'Public research institute',
+    track: 'Research',
+  } as const;
+  const university = { track: 'Tenure-line' } as const;
+  assert.deepEqual(
+    [corporate, defense, institute, university].map((p) =>
+      (['academia', 'labs', 'industry'] as const).filter((tab) => isOnTab(p, tab)),
+    ),
+    [['industry'], ['labs'], ['academia', 'labs'], ['academia']],
+  );
 });
 
 test('labs.html and industry.html exist and declare their data-roster attributes', () => {

@@ -1,13 +1,13 @@
 # Discover Industry, Government & Policy Researchers (`discover_industry_labs.md`)
 
 > **Autonomous Goal Directive (`/goal TASKS/discover_industry_labs.md`):**
-> Find eligible Vietnamese and Vietnamese-diaspora career researchers outside Vietnam at corporate research labs, government and defense labs, FFRDCs/UARCs, central banks, international organizations, and think tanks who are not yet in `public/industry.json` or `public/data.json`. Work one employer group per run, verify each person on a page published by the current employer, and file the verified candidates as a **GitHub Issue** (never a PR or a commit) for the auditor or owner to add.
+> Find eligible Vietnamese and Vietnamese-diaspora career researchers outside Vietnam at corporate research labs, government and defense labs, FFRDCs/UARCs, central banks, international organizations, and think tanks who are not yet in `public/data.json`. Work one employer group per run, verify each person on a page published by the current employer, and file the verified candidates as a **GitHub Issue** (never a PR or a commit) for the auditor or owner to add.
 
 ---
 
 ## 🎯 Scope
 
-Target file: `public/industry.json`. Eligibility, tracks, and `institutionType` values are the
+Target file: `public/data.json` (Labs and Industry tabs). Eligibility, tracks, and `institutionType` values are the
 `🏢 Industry` and `🏛️ Gov, Defense & Labs` rules in [`candidate_intake.md`](candidate_intake.md)
 step 2 and `ROSTER_MAINTENANCE.md`; this playbook only adds how to find and verify people there.
 University faculty and public/nonprofit scholarly institutes (CNRS, Max Planck, NIH intramural PIs)
@@ -68,7 +68,7 @@ in Vietnam (a Vietnam office of a foreign lab is out).
 ## 📝 Proposed fields
 
 `name`, `university` (the employer, spelled as existing entries spell it; check
-`public/industry.json` before coining "Meta AI" next to "Meta FAIR"), `institutionType`, `city`,
+`public/data.json` before coining "Meta AI" next to "Meta FAIR"), `institutionType`, `city`,
 `state`, `country`, `department` (team or division), `rank` (`Researcher`, or `Administrator` for
 program officers and directors), `track`, `researchAreas`, `phdInstitution`, `phdYear`,
 `undergradInstitution`, `profileUrl`, `scholarUrl`, `linkedinUrl`, `confirmed` (only when `false`).

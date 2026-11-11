@@ -68,7 +68,6 @@ export {
 } from './roster-constants.ts';
 
 let cached: Roster | null = null;
-let industryCached: Roster | null = null;
 let relationshipsCached: RelationshipDatabase | null = null;
 
 export function institutionTypeOf(person: Pick<RosterEntry, 'institutionType'>): string {
@@ -80,6 +79,18 @@ export function isLabEntry(person: Pick<RosterEntry, 'institutionType' | 'track'
   return (
     type === 'Public research institute' ||
     type === 'Independent nonprofit research institute' ||
+    type === 'Government & defense' ||
+    type === 'National laboratory' ||
+    type === 'Policy & international organization' ||
+    type === 'Think tank' ||
+    person.track === 'Government & Defense' ||
+    person.track === 'Policy & Think Tank'
+  );
+}
+
+export function isGovPolicyEntry(person: Pick<RosterEntry, 'institutionType' | 'track'>): boolean {
+  const type = institutionTypeOf(person);
+  return (
     type === 'Government & defense' ||
     type === 'National laboratory' ||
     type === 'Policy & international organization' ||
@@ -171,34 +182,26 @@ export async function loadRoster(): Promise<Roster> {
   return roster;
 }
 
-export async function loadIndustryRoster(): Promise<Roster> {
-  if (industryCached) return industryCached;
-  const cacheBuster =
-    typeof __BUILD_COMMIT__ !== 'undefined' && __BUILD_COMMIT__ ? `?v=${__BUILD_COMMIT__}` : '';
-  const [res, updates] = await Promise.all([
-    fetch(`${import.meta.env.BASE_URL}industry.json${cacheBuster}`),
-    // Update dates are optional decoration: the directory still works without them.
-    fetch(`${import.meta.env.BASE_URL}updates.json${cacheBuster}`)
-      .then((response) => (response.ok ? (response.json() as Promise<RosterUpdates>) : {}))
-      .catch(() => ({})),
-  ]);
-  if (!res.ok) throw new Error(`Failed to load industry.json: ${res.status}`);
-  const roster = withUpdates((await res.json()) as Roster, updates);
-  industryCached = roster;
-  return roster;
+export type RosterTab = 'academia' | 'labs' | 'industry';
+
+// Which directory tab(s) an entry appears on, derived from institutionType and track.
+// Corporate research labs are Industry only. Defense/government, policy, and think-tank entries
+// (by type or track) are Labs only. Every other entry is Academia; the non-University ones
+// (public and nonprofit research institutes) also appear on Labs.
+export function isOnTab(person: Pick<RosterEntry, 'institutionType' | 'track'>, tab: RosterTab) {
+  if (isCorporatePolicyEntry(person) && !isLabEntry(person)) return tab === 'industry';
+  if (isGovPolicyEntry(person)) return tab === 'labs';
+  if (tab === 'labs') return institutionTypeOf(person) !== 'University';
+  return tab === 'academia';
 }
 
-export async function loadLabsRoster(): Promise<Roster> {
-  const [academic, industry] = await Promise.all([loadRoster(), loadIndustryRoster()]);
-  const labsFromAcademic = academic.filter((p) => institutionTypeOf(p) !== 'University');
-  const labsFromIndustry = industry.filter((p) => isLabEntry(p));
-  return [...labsFromAcademic, ...labsFromIndustry];
+export async function loadRosterForTab(tab: RosterTab): Promise<Roster> {
+  const roster = await loadRoster();
+  return roster.filter((person) => isOnTab(person, tab));
 }
 
-export async function loadCorporateIndustryRoster(): Promise<Roster> {
-  const industry = await loadIndustryRoster();
-  return industry.filter((p) => !isLabEntry(p));
-}
+export const loadLabsRoster = () => loadRosterForTab('labs');
+export const loadCorporateIndustryRoster = () => loadRosterForTab('industry');
 
 export async function loadRelationships(): Promise<RelationshipDatabase> {
   if (relationshipsCached) return relationshipsCached;

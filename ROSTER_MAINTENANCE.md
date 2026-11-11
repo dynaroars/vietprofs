@@ -6,16 +6,14 @@ This document is for maintainers and automated agents. It contains the detailed 
 
 VietProfs organizes entries across three top-level directory tabs:
 1. **`🎓 Academia`** (`index.html`): University faculty and academic appointments, backed by university entries in `public/data.json`.
-2. **`🏛️ Gov, Defense & Labs`** (`labs.html`): Public and nonprofit scholarly research institutes in `public/data.json`, along with defense and government research scientists and scientific program officers (`track: "Government & Defense"` or `"Research"`, with `institutionType: "Public research institute"` or `"Independent nonprofit research institute"`) and central banks, international organizations, and policy think tanks (`track: "Policy & Think Tank"`, `institutionType: "Policy & international organization"` or `"Think tank"`) in `public/industry.json`.
-3. **`🏢 Industry`** (`industry.html`): Corporate research labs (`track: "Industry Research"`, `institutionType: "Corporate research lab"`), backed by `public/industry.json`.
+2. **`🏛️ Gov, Defense & Labs`** (`labs.html`): Public and nonprofit scholarly research institutes, along with defense and government research scientists and scientific program officers (`track: "Government & Defense"` or `"Research"`, with `institutionType: "Public research institute"` or `"Independent nonprofit research institute"`) and central banks, international organizations, and policy think tanks (`track: "Policy & Think Tank"`, `institutionType: "Policy & international organization"` or `"Think tank"`).
+3. **`🏢 Industry`** (`industry.html`): Corporate research labs (`track: "Industry Research"`, `institutionType: "Corporate research lab"`).
 
-### Two roster files, one ID namespace
+### One roster file, one ID namespace
 
-The directory data is partitioned between two JSON files:
-- **`public/data.json`**: The traditional roster of university faculty and public or independent nonprofit scholarly research institutes.
-- **`public/industry.json`**: The expanded roster covering defense and government scientific program officers, FFRDCs/UARCs, corporate research laboratories, central banks, international economic organizations, and scholarly think tanks.
+All directory data lives in **`public/data.json`**: university faculty, public or independent nonprofit scholarly research institutes, defense and government scientific program officers, FFRDCs/UARCs, corporate research laboratories, central banks, international economic organizations, and scholarly think tanks. The tab an entry appears on is derived from its `institutionType` and `track` (`isOnTab` in `src/data.ts`): corporate research labs appear on Industry; entries with `track: "Government & Defense"` or `"Policy & Think Tank"` (or those institution types) appear on Gov, Defense & Labs; other non-university institutes appear on both Academia and Gov, Defense & Labs; the rest appear on Academia.
 
-Both files share a single, unified, immutable `vp-####` ID namespace. Roster scripts (`npm run assign-profile-ids -- --apply`, `npm run find-roster-matches`, `npm run retire-profile-id`) inspect both files simultaneously. A scholar is assigned exactly one `vp-####` ID across the entire project; duplicate IDs between `public/data.json` and `public/industry.json` are strictly forbidden.
+The file uses a single, unified, immutable `vp-####` ID namespace. A scholar is assigned exactly one `vp-####` ID across the entire project; duplicate IDs are strictly forbidden.
 
 ## Inclusion standard
 
@@ -76,22 +74,22 @@ Accepted tracks:
   not qualify.
 - `Emeritus`: a formally conferred emeritus/emerita title following a tenure-line career. Prefer an active emeritus listing or a source documenting the conferral.
 - `Deceased`: deceased or historical scholars who held an eligible tenure-line, permanent teaching/research, or emeritus faculty appointment at a university or eligible public/nonprofit research institute outside Vietnam during their career.
-- `Government & Defense`: scientific program officers, program managers, branch heads, and research leaders with doctorates at defense and federal research/funding agencies (AFOSR, ONR, DARPA, IARPA, ARL, NRL, NSF, NIH), as well as research staff at FFRDCs/UARCs (MITRE, Aerospace Corp, IDA, CNA, Lincoln Lab, JHU APL). Stored in `public/industry.json` with `institutionType: "Public research institute"` or `"Independent nonprofit research institute"`.
-- `Industry Research`: full-time, career Research Scientists, Principal/Staff Scientists, Distinguished Engineers, and Research Directors at corporate research labs (e.g., Google DeepMind, Google Research, OpenAI, Anthropic, Microsoft Research, Meta FAIR, NVIDIA Research, Apple ML, AWS AI, IBM Research, Adobe Research, Genentech). Stored in `public/industry.json` with `institutionType: "Corporate research lab"`.
-- `Policy & Think Tank`: permanent/career Economists, Senior Economists, Policy Researchers, and Senior Fellows at central banks (Federal Reserve Board & regional Fed banks, ECB, BIS), international organizations (IMF, World Bank, OECD, ADB), and scholarly think tanks (Brookings, RAND, NBER, PIIE, Urban Institute, CSIS, Carnegie). Stored in `public/industry.json` with `institutionType: "Policy & international organization"` or `"Think tank"`.
+- `Government & Defense`: scientific program officers, program managers, branch heads, and research leaders with doctorates at defense and federal research/funding agencies (AFOSR, ONR, DARPA, IARPA, ARL, NRL, NSF, NIH), as well as research staff at FFRDCs/UARCs (MITRE, Aerospace Corp, IDA, CNA, Lincoln Lab, JHU APL). Uses `institutionType: "Public research institute"` or `"Independent nonprofit research institute"`.
+- `Industry Research`: full-time, career Research Scientists, Principal/Staff Scientists, Distinguished Engineers, and Research Directors at corporate research labs (e.g., Google DeepMind, Google Research, OpenAI, Anthropic, Microsoft Research, Meta FAIR, NVIDIA Research, Apple ML, AWS AI, IBM Research, Adobe Research, Genentech). Uses `institutionType: "Corporate research lab"`.
+- `Policy & Think Tank`: permanent/career Economists, Senior Economists, Policy Researchers, and Senior Fellows at central banks (Federal Reserve Board & regional Fed banks, ECB, BIS), international organizations (IMF, World Bank, OECD, ADB), and scholarly think tanks (Brookings, RAND, NBER, PIIE, Urban Institute, CSIS, Carnegie). Uses `institutionType: "Policy & international organization"` or `"Think tank"`.
 
 Eligible non-university employers are organized across three sectors and datasets:
 
 1. **Public and independent nonprofit scholarly research institutes (`public/data.json`, `track: "Research"`):**
    Limited to public research bodies (for example, CNRS, INRIA, national academies, Max Planck institutes, Japan's RIKEN, Australia's CSIRO, U.S. Department of Energy national laboratories, NIH intramural institutes, NIST, NASA research centers, NOAA research laboratories, USGS research centers, the U.S. Naval Research Laboratory, Air Force Research Laboratory, and Army Research Laboratory/DEVCOM ARL) and independent nonprofit scholarly research institutes (for example, the Allen Institute, Broad Institute, and HHMI Janelia). The appointment must be permanent: any full-time, career (non-trainee, non-term-limited) research appointment held by someone with a doctorate qualifies, regardless of seniority, rank, or whether the role carries independent PI/leadership status — a rank-and-file Staff Scientist or Research Scientist is eligible on the same footing as a Principal Investigator or group leader. Titles need not say `Professor`; for example, RIKEN Research Scientists/Unit Leaders and CSIRO Research Scientists/Research Group Leaders qualify at any rank once the appointment is ongoing.
 
-2. **Defense, Government Research & Scientific Program Management, FFRDCs/UARCs (`public/industry.json`, `track: "Government & Defense"`, `institutionType: "Public research institute"` or `"Independent nonprofit research institute"`):**
+2. **Defense, Government Research & Scientific Program Management, FFRDCs/UARCs (`track: "Government & Defense"`, `institutionType: "Public research institute"` or `"Independent nonprofit research institute"`):**
    Scientific program officers, program directors, and scientific program managers with doctorates at defense and federal research/funding agencies (e.g., AFOSR, ONR, DARPA, IARPA, ARL, NRL, NSF, NIH) and research staff at FFRDCs/UARCs (MITRE, Aerospace Corporation, Institute for Defense Analyses [IDA], Center for Naval Analyses [CNA], MIT Lincoln Laboratory, Johns Hopkins Applied Physics Laboratory [JHU APL]) are eligible. In federal laboratories and funding agencies, doctorate-holding scientific program managers, division directors, branch heads, and permanent career research staff qualify.
 
-3. **Corporate Research Labs (`public/industry.json`, `track: "Industry Research"`, `institutionType: "Corporate research lab"`):**
+3. **Corporate Research Labs (`track: "Industry Research"`, `institutionType: "Corporate research lab"`):**
    Full-time, career Research Scientists, Principal/Staff Scientists, Distinguished Engineers, and Research Directors at corporate research labs (e.g., Google DeepMind, Google Research, OpenAI, Anthropic, Microsoft Research, Meta FAIR, NVIDIA Research, Apple ML, AWS AI, IBM Research, Adobe Research, Genentech) are eligible. Exclude standard commercial software engineers, product managers, marketing, sales, and IT roles without a primary scholarly/scientific research appointment.
 
-4. **Central Banks, International Organizations & Policy Think Tanks (`public/industry.json`, `track: "Policy & Think Tank"`, `institutionType: "Policy & international organization"` or `"Think tank"`):**
+4. **Central Banks, International Organizations & Policy Think Tanks (`track: "Policy & Think Tank"`, `institutionType: "Policy & international organization"` or `"Think tank"`):**
    Permanent, career Economists, Senior Economists, Policy Researchers, and Senior Fellows at central banks (Federal Reserve Board & regional Fed banks, European Central Bank [ECB], Bank for International Settlements [BIS]), international economic/policy organizations (International Monetary Fund [IMF], World Bank, OECD, Asian Development Bank [ADB]), and scholarly policy think tanks (Brookings Institution, RAND Corporation, National Bureau of Economic Research [NBER], Peterson Institute for International Economics [PIIE], Urban Institute, Center for Strategic and International Studies [CSIS], Carnegie Endowment for International Peace) are eligible.
 
 **Cross-roster exclusions:**
@@ -143,11 +141,11 @@ For a university, omit `institutionType` (a missing value means `University`; `n
 explicit `University`, so writing it is harmless).
 
 For non-university employers, set `institutionType` to one of the following canonical values:
-- `Public research institute`: Government laboratories and publicly funded research organizations (e.g., CNRS, INRIA, Max Planck, RIKEN, CSIRO, DOE national labs, NIST, NASA, AFOSR, ONR, DARPA, ARL, NRL). Used in `public/data.json` with `track: "Research"` or in `public/industry.json` with `track: "Government & Defense"`.
-- `Independent nonprofit research institute`: Independent scholarly research organizations and FFRDCs/UARCs (e.g., Allen Institute, Broad Institute, HHMI Janelia, MITRE, Aerospace Corp, IDA, CNA, Lincoln Lab, JHU APL). Used in `public/data.json` with `track: "Research"` or in `public/industry.json` with `track: "Government & Defense"`.
-- `Corporate research lab`: Industrial research laboratories (e.g., Google DeepMind, Google Research, OpenAI, Anthropic, Microsoft Research, Meta FAIR, NVIDIA Research, Apple ML, AWS AI, IBM Research, Adobe Research, Genentech). Used in `public/industry.json` with `track: "Industry Research"`.
-- `Policy & international organization`: Central banks and multilateral international economic/policy bodies (e.g., Federal Reserve Board, regional Fed banks, ECB, BIS, IMF, World Bank, OECD, ADB). Used in `public/industry.json` with `track: "Policy & Think Tank"`.
-- `Think tank`: Scholarly public policy research institutions (e.g., Brookings, RAND, NBER, PIIE, Urban Institute, CSIS, Carnegie). Used in `public/industry.json` with `track: "Policy & Think Tank"`.
+- `Public research institute`: Government laboratories and publicly funded research organizations (e.g., CNRS, INRIA, Max Planck, RIKEN, CSIRO, DOE national labs, NIST, NASA, AFOSR, ONR, DARPA, ARL, NRL). Used with `track: "Research"` (Academia and Labs tabs) or `track: "Government & Defense"` (Labs tab only).
+- `Independent nonprofit research institute`: Independent scholarly research organizations and FFRDCs/UARCs (e.g., Allen Institute, Broad Institute, HHMI Janelia, MITRE, Aerospace Corp, IDA, CNA, Lincoln Lab, JHU APL). Used with `track: "Research"` (Academia and Labs tabs) or `track: "Government & Defense"` (Labs tab only).
+- `Corporate research lab`: Industrial research laboratories (e.g., Google DeepMind, Google Research, OpenAI, Anthropic, Microsoft Research, Meta FAIR, NVIDIA Research, Apple ML, AWS AI, IBM Research, Adobe Research, Genentech). Used with `track: "Industry Research"`.
+- `Policy & international organization`: Central banks and multilateral international economic/policy bodies (e.g., Federal Reserve Board, regional Fed banks, ECB, BIS, IMF, World Bank, OECD, ADB). Used with `track: "Policy & Think Tank"`.
+- `Think tank`: Scholarly public policy research institutions (e.g., Brookings, RAND, NBER, PIIE, Urban Institute, CSIS, Carnegie). Used with `track: "Policy & Think Tank"`.
 
 ## Research workflow
 
@@ -471,7 +469,7 @@ exist in the canonical roster, and perform a thorough roster-relevant review. Fo
 from the supplied page and find an official university source when needed; the supplied URL is a
 source or lead, not by itself proof of eligibility or every fact it contains.
 
-First, resolve the person's identity and search `public/data.json` and `public/industry.json` (or use `npm run find-roster-matches`) for them, including name
+First, resolve the person's identity and search `public/data.json` (or use `npm run find-roster-matches`) for them, including name
 variants, before changing anything. Then review all applicable roster fields rather than stopping
 after the first correction:
 
@@ -510,7 +508,7 @@ link.
 Entries from an external dataset or lead list are **leads only**: the source does not know faculty status, tenure eligibility, or Vietnamese heritage. Maintainers and automated agents process each candidate queue using the following step-by-step verification standard:
 
 1. **Fast-path Deduplication & Entity Matching:**
-   - Check the candidate against the existing roster (`public/data.json` and `public/industry.json`) by canonical name, full diacritic `vietnameseName`, and the lead's recorded name variants, using `npm run find-roster-matches` with every identity URL (see "One person, one ID"). A same-name entry at another institution is a probable move, not a namesake.
+   - Check the candidate against the existing roster (`public/data.json`) by canonical name, full diacritic `vietnameseName`, and the lead's recorded name variants, using `npm run find-roster-matches` with every identity URL (see "One person, one ID"). A same-name entry at another institution is a probable move, not a namesake.
    - Detect **split leads** (several lead records for the same individual). Map all of them to the single primary canonical roster ID (`matchedId: "vp-####"`).
    - Beware of false-positive duplicate collisions on 2-token names (e.g., "Minh Huynh" at CSIRO vs an unrelated clinical namesake). Always verify institution and research domain before marking as duplicate.
 
@@ -596,21 +594,19 @@ later qualify again. None of that is a new person, so none of it gets a new ID.
 
 ## Data-entry rules
 
-Roster data is maintained in two files sharing the same schema and ID space:
-- `public/data.json`: Canonical academic roster (universities and public/nonprofit research institutes).
-- `public/industry.json`: Expanded roster (defense/government scientific leaders and program officers, corporate research labs, central banks, international organizations, and policy think tanks).
+Roster data is maintained in one file, `public/data.json` (universities, public/nonprofit research institutes, defense/government scientific leaders and program officers, corporate research labs, central banks, international organizations, and policy think tanks).
 
 Each entry should use the following conventions:
 
 - `id` is a required immutable profile identifier in `vp-####` form. Contributors must not choose
   or edit it manually: after adding an entry, run `npm run assign-profile-ids -- --apply` to assign
-  an ID strictly higher than every ID currently in the roster across both `public/data.json` and `public/industry.json`. Tests, development, and builds only
+  an ID strictly higher than every ID currently in the roster in `public/data.json`. Tests, development, and builds only
   verify IDs and do not edit the roster. Preserve the generated ID when correcting a name,
   appointment, or other facts. An ID belongs to the person, not the appointment: see "One person,
   one ID" above before adding anyone.
 - `track` must be one of:
-  - In `public/data.json`: `Tenure-line`, `Teaching`, `Research`, `Clinical`, `Admin and Staff`, `Emeritus`, or `Deceased`.
-  - In `public/industry.json`: `Government & Defense`, `Industry Research`, `Policy & Think Tank`, or `Research`.
+  - University and research-institute entries: `Tenure-line`, `Teaching`, `Research`, `Clinical`, `Admin and Staff`, `Emeritus`, or `Deceased`.
+  - Defense/government, corporate, and policy entries: `Government & Defense`, `Industry Research`, `Policy & Think Tank`, or `Research`.
 - `institutionType`, when present, must be `University`, `Public research institute`, `Independent nonprofit research institute`, `Corporate research lab`, `Policy & international organization`, or `Think tank`. Omit it for ordinary university records; it is required for non-university institutes, corporate research labs, policy organizations, and think tanks. Non-university entries in `public/data.json` must use the `Research` track.
 - `profileUrl` must be a current, working academic or official institutional profile and must not be a Google Scholar URL. Store Scholar separately in `scholarUrl` (must be a canonical citations profile URL `https://scholar.google.com/citations?user=...`, never a search query). Store one maintained personal or lab homepage in `websiteUrl` (there is no separate lab field; prefer the personal page when both exist); store a verified LinkedIn profile in `linkedinUrl` (must be a direct personal profile URL `https://linkedin.com/in/...` or `https://www.linkedin.com/in/...`, never search or company pages). Verify Scholar and LinkedIn matches strictly: confirm name, institution, and publication/field overlap before attaching them — never guess from name alone. Prefer LinkedIn profiles directly linked from the faculty member's institutional bio or homepage.
 - `lastUpdatedAt` is not stored in `public/data.json`. It lives in `public/updates.json`, keyed by
@@ -851,7 +847,7 @@ regex.
 
 This is a separate, recurring task from the "Research workflow" above. That section covers
 finding and vetting *new* candidates. This section covers re-verifying *every existing* entry in
-`public/data.json` and `public/industry.json`, since profiles go dead, people move institutions, ranks change, and new
+`public/data.json`, since profiles go dead, people move institutions, ranks change, and new
 honors accrue over time. Run this when the user asks for a periodic roster refresh.
 
 On a schedule this runs in rotation inside the `links` routine (`TASKS/AUTOMATION.md`): each run

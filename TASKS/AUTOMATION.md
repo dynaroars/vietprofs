@@ -339,6 +339,14 @@ show:
   Commit `public/portraits/`, `public/data.json`, and the portrait ledger files with the batch, and
   give each new portrait a row note (source page, why accepted).
 - **Honors and degrees** noticed on those pages go in side findings, not this PR.
+- **Industry, government, and policy entries** (`track` `Industry Research`, `Government & Defense`,
+  or `Policy & Think Tank`) go stale faster than faculty, and many employers publish no staff page.
+  For them, the person's LinkedIn (via the search index) or own site naming the current role counts
+  as appointment evidence; set `"confirmed": false` when that is the only source, and clear it when
+  an employer page turns up. Recheck every `confirmed: false` entry's current role, not just its
+  links. A move to another research lab is an in-place update; someone who left for a non-research
+  role (engineering, product, a startup) or has no doctorate where the Gov/Policy rule needs one gets
+  a `Review possible eligibility issue:` side finding, never a silent edit.
 
 In the PR body, put one table row per entry, including entries checked with no change, with these
 columns: id, appointment (confirmed / changed / blocked), profile and website, Scholar, LinkedIn,
@@ -403,7 +411,7 @@ employers), and `TASKS/candidate_intake.md` (eligibility and enrichment).
    one numbered section per candidate with a ready-to-paste JSON entry (no `id`), the dedup result,
    and the verification URLs. End with a "Coverage" section listing the channel, parameters, and
    every lead, university, lab, or query examined, including rejected leads and why.
-5. **Boundaries:** never edit `public/data.json` or `public/industry.json`, assign an id, or open a PR. The only commit allowed
+5. **Boundaries:** never edit `public/data.json`, assign an id, or open a PR. The only commit allowed
    is `maintenance/network-discovery.json` after a `labs` or `coauthors` run (pushed to `main` after
    `npm test`, `npm run build`, `git diff --check`).
 
