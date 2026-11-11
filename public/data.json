@@ -30896,26 +30896,6 @@
     "linkedinUrl": "https://www.linkedin.com/in/dong-nguyen-554a5174/"
   },
   {
-    "id": "vp-1134",
-    "name": "Laurent Pham-Van",
-    "profileUrl": "https://iramis.cea.fr/spec/lepo/annuaire/?recherche=Laurent+PHAM-VAN",
-    "university": "Commissariat à l'énergie atomique et aux énergies alternatives (CEA)",
-    "city": "Saclay",
-    "country": "France",
-    "researchAreas": [
-      "Organic Electronics",
-      "Photonics",
-      "Magnetic Sensors"
-    ],
-    "track": "Research",
-    "institutionType": "Public research institute",
-    "department": "Laboratoire d'Électronique et Photonique Organique (LEPO), CEA-SPEC, Electrical Engineering",
-    "rank": "Researcher",
-    "portrait": "portraits/1134-laurent-pham-van.webp",
-    "portraitSource": "https://iramis.cea.fr/wp-content/uploads/2024/03/Laurentphanvan2.jpg",
-    "undergradYear": 2000
-  },
-  {
     "id": "vp-1135",
     "name": "Tuan Minh Nguyen",
     "profileUrl": "https://people.llnl.gov/nguyen147",
@@ -35478,6 +35458,27 @@
     "portraitSource": "https://academics.rmit.edu.au/tu-le/thumbnail"
   },
   {
+    "id": "vp-1134",
+    "name": "Laurent Pham-Van",
+    "profileUrl": "https://iramis.cea.fr/spec/lepo/annuaire/?recherche=Laurent+PHAM-VAN",
+    "university": "Commissariat à l'énergie atomique et aux énergies alternatives (CEA)",
+    "city": "Saclay",
+    "country": "France",
+    "researchAreas": [
+      "Organic Electronics",
+      "Photonics",
+      "Magnetic Sensors"
+    ],
+    "track": "Research",
+    "institutionType": "Public research institute",
+    "department": "Laboratoire d'Électronique et Photonique Organique (LEPO), CEA-SPEC, Electrical Engineering",
+    "rank": "Researcher",
+    "portrait": "portraits/1134-laurent-pham-van.webp",
+    "portraitSource": "https://iramis.cea.fr/wp-content/uploads/2024/03/Laurentphanvan2.jpg",
+    "phdInstitution": "Université Pierre et Marie Curie",
+    "phdYear": 1992
+  },
+  {
     "id": "vp-1325",
     "name": "Bich-Thuy Doan",
     "vietnameseName": "Đoàn Bích Thủy",
@@ -35495,7 +35496,8 @@
       "Bioimaging",
       "Cancer Theranostic Nanocarriers"
     ],
-    "undergradYear": 2000
+    "phdInstitution": "Université Paris-Sud",
+    "phdYear": 1994
   },
   {
     "id": "vp-1326",
@@ -35515,7 +35517,9 @@
       "Aquaporins",
       "Abiotic Stress Tolerance",
       "Water Transport"
-    ]
+    ],
+    "phdInstitution": "École Normale Supérieure de Lyon",
+    "phdYear": 1997
   },
   {
     "id": "vp-1327",
@@ -36791,7 +36795,9 @@
       "Mathematical Biology"
     ],
     "confirmed": false,
-    "websiteUrl": "https://kien-kieu.github.io/"
+    "websiteUrl": "https://kien-kieu.github.io/",
+    "phdInstitution": "Aarhus University",
+    "phdYear": 1991
   },
   {
     "id": "vp-1383",
@@ -36935,7 +36941,8 @@
       "Bio-Signals"
     ],
     "confirmed": false,
-    "undergradYear": 2000
+    "phdInstitution": "Université Pierre et Marie Curie",
+    "phdYear": 1996
   },
   {
     "id": "vp-1389",
@@ -38713,7 +38720,9 @@
     ],
     "websiteUrl": "https://perso.lip6.fr/Binh-Minh.Bui-Xuan/",
     "portrait": "portraits/vp-1464-binh-minh-bui-xuan.webp",
-    "portraitSource": "https://perso.lip6.fr/binh-minh.bui-xuan/files/metoo.png"
+    "portraitSource": "https://perso.lip6.fr/binh-minh.bui-xuan/files/metoo.png",
+    "phdInstitution": "University of Montpellier 2",
+    "phdYear": 2008
   },
   {
     "id": "vp-1465",
@@ -38783,9 +38792,10 @@
       "Molecular Photoprocesses"
     ],
     "websiteUrl": "https://www.ismo.universite-paris-saclay.fr/systemae-team-members-2/",
-    "undergradYear": 2025,
     "portrait": "portraits/vp-1467-minh-huong-ha-thi.webp",
-    "portraitSource": "https://www.ismo.universite-paris-saclay.fr/wp-content/uploads/2023/12/PhotoID.016.jpeg"
+    "portraitSource": "https://www.ismo.universite-paris-saclay.fr/wp-content/uploads/2023/12/PhotoID.016.jpeg",
+    "phdInstitution": "École Normale Supérieure de Cachan",
+    "phdYear": 2007
   },
   {
     "id": "vp-1468",
@@ -38807,7 +38817,9 @@
       "Circular Economy",
       "Lightweight Materials"
     ],
-    "confirmed": false
+    "confirmed": false,
+    "phdInstitution": "University of Innsbruck",
+    "phdYear": 1996
   },
   {
     "id": "vp-1469",
@@ -46494,7 +46506,9 @@
       "Sex Chromosome Evolution",
       "Lepidoptera Genomics"
     ],
-    "institutionType": "Public research institute"
+    "institutionType": "Public research institute",
+    "phdInstitution": "University of South Bohemia in České Budějovice",
+    "phdYear": 2013
   },
   {
     "id": "vp-1862",
@@ -52954,7 +52968,9 @@
     "department": "Department of Biosystems and Soft Matter",
     "rank": "Assistant Professor",
     "portrait": "portraits/vp-2187-truong-co-nguyen.webp",
-    "portraitSource": "https://www.ippt.pan.pl/images/ludzie/nguyen_truong_co.jpg"
+    "portraitSource": "https://www.ippt.pan.pl/images/ludzie/nguyen_truong_co.jpg",
+    "phdInstitution": "Institute of Physics, Polish Academy of Sciences",
+    "phdYear": 2022
   },
   {
     "id": "vp-2188",
@@ -59267,7 +59283,9 @@
       "T-Cell Acute Lymphoblastic Leukemia"
     ],
     "portrait": "portraits/vp-2498-christine-tran-quang.webp",
-    "portraitSource": "https://institutcochin.fr/system/files/styles/square_1x/private/2026-01/IMG-20260106-WA0006.jpg?itok=fcgtLs5N"
+    "portraitSource": "https://institutcochin.fr/system/files/styles/square_1x/private/2026-01/IMG-20260106-WA0006.jpg?itok=fcgtLs5N",
+    "phdInstitution": "Université Pierre et Marie Curie",
+    "phdYear": 1997
   },
   {
     "id": "vp-2499",
@@ -61876,7 +61894,9 @@
       "Occupational Safety",
       "Safety Culture",
       "Psychosocial Work Environment"
-    ]
+    ],
+    "phdInstitution": "Roskilde University",
+    "phdYear": 2015
   },
   {
     "id": "vp-2617",
@@ -62995,7 +63015,9 @@
     ],
     "state": "Washington",
     "institutionType": "Public research institute",
-    "rank": "Researcher"
+    "rank": "Researcher",
+    "phdInstitution": "National University of Singapore",
+    "phdYear": 2012
   },
   {
     "id": "vp-2672",
@@ -64515,7 +64537,8 @@
       "Nucleosome Engineering"
     ],
     "portrait": "portraits/vp-2746-hai-t-dao.webp",
-    "portraitSource": "https://stjude.scene7.com/is/image/stjudecs/dao-hai-002215548-006:Aspect-Ratio-1x1?wid=240&hei=240&fmt=png-alpha"
+    "portraitSource": "https://stjude.scene7.com/is/image/stjudecs/dao-hai-002215548-006:Aspect-Ratio-1x1?wid=240&hei=240&fmt=png-alpha",
+    "phdInstitution": "The Scripps Research Institute"
   },
   {
     "id": "vp-2747",
@@ -68687,7 +68710,8 @@
       "Materials Characterization"
     ],
     "phdInstitution": "University of California, Davis",
-    "profileUrl": "https://orcid.org/0000-0002-5988-1784"
+    "profileUrl": "https://www.linkedin.com/in/ngon-t-tran-05b5b33a/",
+    "confirmed": false
   },
   {
     "id": "vp-2959",
@@ -69372,6 +69396,29 @@
     "profileUrl": "https://scholar.google.com/citations?user=rtM1UQ8AAAAJ",
     "portrait": "portraits/vp-2995-quang-nguyen-microsoft-research.webp",
     "portraitSource": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=rtM1UQ8AAAAJ"
+  },
+  {
+    "id": "vp-2997",
+    "name": "Philip Pham",
+    "university": "Google DeepMind",
+    "institutionType": "Corporate research lab",
+    "city": "New York",
+    "state": "New York",
+    "country": "United States",
+    "department": "Long-Context Modeling and Transformers",
+    "rank": "Researcher",
+    "track": "Industry Research",
+    "researchAreas": [
+      "Transformer Architectures",
+      "Long-Context Modeling",
+      "Efficient Deep Learning"
+    ],
+    "undergradInstitution": "Duke University",
+    "profileUrl": "https://research.google/people/philippham/",
+    "scholarUrl": "https://scholar.google.com/citations?user=0RvAVR4AAAAJ",
+    "confirmed": false,
+    "portrait": "portraits/vp-2997-philip-pham.webp",
+    "portraitSource": "https://storage.googleapis.com/gweb-research2023-media/pubtools/5263.png"
   },
   {
     "id": "vp-2998",
