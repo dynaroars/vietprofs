@@ -7,7 +7,7 @@
 
 ## 🎯 Scope
 
-Target file: `public/data.json` (Labs and Industry tabs). Eligibility, tracks, and `institutionType` values are the
+Target file: `public/data.json` (Gov & Labs and Industry sectors). Eligibility, tracks, and `institutionType` values are the
 `🏢 Industry` and `🏛️ Gov, Defense & Labs` rules in [`candidate_intake.md`](candidate_intake.md)
 step 2 and `ROSTER_MAINTENANCE.md`; this playbook only adds how to find and verify people there.
 University faculty and public/nonprofit scholarly institutes (CNRS, Max Planck, NIH intramural PIs)

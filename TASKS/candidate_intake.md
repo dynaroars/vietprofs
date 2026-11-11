@@ -47,10 +47,10 @@ For each pasted name, follow `ROSTER_MAINTENANCE.md` "One person, one ID":
 ## 2. Eligibility check
 
 Before spending time on enrichment, confirm the candidate can plausibly satisfy
-`ROSTER_MAINTENANCE.md`'s inclusion standard across one of the directory views:
+`ROSTER_MAINTENANCE.md`'s inclusion standard across one of the directory sectors:
 
 - **`🎓 Academia`** (`public/data.json`): A current (or accepted-and-dated incoming) appointment at a
-  university or eligible public/nonprofit research institute outside Vietnam, on an accepted track
+  university outside Vietnam (eligible public/nonprofit research institutes are listed under Gov & Labs), on an accepted track
   (`Tenure-line`, `Teaching`, `Research`, `Clinical`, `Admin and Staff`, `Emeritus`, `Deceased`).
 - **`🏛️ Gov, Defense & Labs`** (`public/data.json`): Doctorate-holding scientific program
   managers/officers/directors at defense and federal research/funding agencies (e.g., AFOSR, ONR, DARPA,
@@ -82,7 +82,7 @@ Once a candidate clears steps 1–2, gather everything reasonably available befo
 the goal is for the Issue alone to give a downstream agent enough to add the entry without further
 research:
 
-- **Core fields:** target tab (derived from `institutionType` and `track`), current `university` (employing institution),
+- **Core fields:** target sector (derived from `institutionType` and `track`), current `university` (employing institution),
   `country`, `city`/`state` if applicable, `department`, `rank`, `track`, `institutionType` (if non-university),
   primary `field`/`researchAreas`.
 - **Identity/name:** `name`, `vietnameseName`, and any published surname-change history (apply the
@@ -112,7 +112,7 @@ yourself. For each eligible, not-yet-listed candidate, file an Issue containing:
 
 1. Full name (and Vietnamese name / known aliases).
 2. Eligibility rationale citing the specific `ROSTER_MAINTENANCE.md` track and evidence.
-3. All proposed fields gathered in step 3, clearly labeled (specifying the target tab via `institutionType` and `track`, so another agent can paste them
+3. All proposed fields gathered in step 3, clearly labeled (specifying the target sector via `institutionType` and `track`, so another agent can paste them
    directly into the appropriate roster file), including which are officially confirmable vs.
    unconfirmed.
 4. Every source URL used, mapped to the fact(s) it supports.

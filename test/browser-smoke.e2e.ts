@@ -5,7 +5,7 @@ import { spawn, type ChildProcess } from 'node:child_process';
 import { createRequire } from 'node:module';
 import { get } from 'node:http';
 import type { Browser, BrowserContext } from 'playwright';
-import type { RosterEntry } from '../src/data.ts';
+import { sectorOf, type RosterEntry } from '../src/data.ts';
 
 const require = createRequire(import.meta.url);
 const { chromium } = require('playwright');
@@ -1321,5 +1321,62 @@ test('sharing uses native Share, copies the current URL, and handles cancellatio
   assert.equal(dialog.defaultValue(), 'https://vietprofs.roars.dev/fields/arts-and-design.html');
   await dialog.dismiss();
   await clickPromise;
+  await page.close();
+});
+
+test('sector filter narrows the single directory, drives track options, and old tabs redirect', async () => {
+  const roster = (await (await fetch(`${baseUrl}/data.json`)).json()) as RosterEntry[];
+  const expected = { all: roster.length, academia: 0, labs: 0, industry: 0 };
+  for (const person of roster) expected[sectorOf(person)] += 1;
+  const page = await context.newPage();
+  const resultTotal = async () =>
+    Number((await textOf(page.locator('#result-count'))).match(/^([\d,]+)/)?.[1].replace(/,/g, ''));
+  const trackValues = async () =>
+    page
+      .locator('#track-filter option')
+      .evaluateAll((options) => options.map((option) => (option as HTMLOptionElement).value));
+
+  await page.goto(`${baseUrl}/`, { waitUntil: 'networkidle' });
+  assert.equal(await page.locator('.top-nav').count(), 0);
+  assert.equal(await page.locator('#sector-filter').inputValue(), 'all');
+  assert.equal(await resultTotal(), expected.all);
+  assert.equal(await page.locator('#employer-filter').isHidden(), true);
+  const allTracks = await trackValues();
+
+  const tracksBySector = new Map<string, string[]>();
+  for (const sector of ['academia', 'labs', 'industry'] as const) {
+    await page.locator('#sector-filter').selectOption(sector);
+    assert.equal(await resultTotal(), expected[sector], `${sector} count`);
+    assert.match(page.url(), new RegExp(`sector=${sector}`));
+    const tracks = await trackValues();
+    tracksBySector.set(sector, tracks);
+    const expectedTracks = new Set(
+      roster.filter((p) => sectorOf(p) === sector).map((p) => p.track ?? ''),
+    );
+    assert.deepEqual(
+      tracks.filter((track) => track !== 'all').sort(),
+      [...expectedTracks].filter(Boolean).sort(),
+    );
+    assert.ok(tracks.length <= allTracks.length);
+    assert.equal(await page.locator('#employer-filter').isVisible(), sector === 'industry');
+  }
+  assert.notDeepEqual(tracksBySector.get('academia'), tracksBySector.get('labs'));
+
+  await page.locator('#sector-filter').selectOption('all');
+  assert.equal(await resultTotal(), expected.all);
+  assert.doesNotMatch(page.url(), /sector=/);
+
+  await page.goto(`${baseUrl}/?sector=industry`, { waitUntil: 'networkidle' });
+  assert.equal(await page.locator('#sector-filter').inputValue(), 'industry');
+  assert.equal(await resultTotal(), expected.industry);
+  await page.reload({ waitUntil: 'networkidle' });
+  assert.equal(await page.locator('#sector-filter').inputValue(), 'industry');
+
+  for (const sector of ['labs', 'industry'] as const) {
+    await page.goto(`${baseUrl}/${sector}.html`, { waitUntil: 'networkidle' });
+    assert.match(page.url(), new RegExp(`/\\?sector=${sector}$`));
+    assert.equal(await page.locator('#sector-filter').inputValue(), sector);
+    assert.equal(await resultTotal(), expected[sector]);
+  }
   await page.close();
 });

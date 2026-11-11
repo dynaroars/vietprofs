@@ -4,14 +4,14 @@ This document is for maintainers and automated agents. It contains the detailed 
 
 ## Directory structure and roster datasets
 
-VietProfs organizes entries across three top-level directory tabs:
-1. **`🎓 Academia`** (`index.html`): University faculty and academic appointments, backed by university entries in `public/data.json`.
-2. **`🏛️ Gov, Defense & Labs`** (`labs.html`): Public and nonprofit scholarly research institutes, along with defense and government research scientists and scientific program officers (`track: "Government & Defense"` or `"Research"`, with `institutionType: "Public research institute"` or `"Independent nonprofit research institute"`) and central banks, international organizations, and policy think tanks (`track: "Policy & Think Tank"`, `institutionType: "Policy & international organization"` or `"Think tank"`).
-3. **`🏢 Industry`** (`industry.html`): Corporate research labs (`track: "Industry Research"`, `institutionType: "Corporate research lab"`).
+VietProfs is one directory page (`index.html`) with a Sector filter (All, Academia, Gov & Labs, Industry) and a dependent Track filter (plus an Employer filter within Industry). Every entry belongs to exactly one sector:
+1. **`🎓 Academia`**: University faculty and academic appointments, backed by university entries in `public/data.json`.
+2. **`🏛️ Gov, Defense & Labs`** (the Gov & Labs sector): Public and nonprofit scholarly research institutes, along with defense and government research scientists and scientific program officers (`track: "Government & Defense"` or `"Research"`, with `institutionType: "Public research institute"` or `"Independent nonprofit research institute"`) and central banks, international organizations, and policy think tanks (`track: "Policy & Think Tank"`, `institutionType: "Policy & international organization"` or `"Think tank"`).
+3. **`🏢 Industry`**: Corporate research labs (`track: "Industry Research"`, `institutionType: "Corporate research lab"`).
 
 ### One roster file, one ID namespace
 
-All directory data lives in **`public/data.json`**: university faculty, public or independent nonprofit scholarly research institutes, defense and government scientific program officers, FFRDCs/UARCs, corporate research laboratories, central banks, international economic organizations, and scholarly think tanks. The tab an entry appears on is derived from its `institutionType` and `track` (`isOnTab` in `src/data.ts`): corporate research labs appear on Industry; entries with `track: "Government & Defense"` or `"Policy & Think Tank"` (or those institution types) appear on Gov, Defense & Labs; other non-university institutes appear on both Academia and Gov, Defense & Labs; the rest appear on Academia.
+All directory data lives in **`public/data.json`**: university faculty, public or independent nonprofit scholarly research institutes, defense and government scientific program officers, FFRDCs/UARCs, corporate research laboratories, central banks, international economic organizations, and scholarly think tanks. The sector of an entry is derived, never stored, from its `institutionType` and `track` (`sectorOf` in `src/data.ts`): corporate research labs are Industry; every other non-University entry (public and nonprofit research institutes, national laboratories, government and defense, policy organizations, think tanks, or `track: "Government & Defense"` / `"Policy & Think Tank"`) is Gov & Labs; University entries are Academia. Public and nonprofit research institutes therefore appear only under Gov & Labs. `labs.html` and `industry.html` are redirects to `./?sector=labs` and `./?sector=industry`.
 
 The file uses a single, unified, immutable `vp-####` ID namespace. A scholar is assigned exactly one `vp-####` ID across the entire project; duplicate IDs are strictly forbidden.
 
@@ -141,8 +141,8 @@ For a university, omit `institutionType` (a missing value means `University`; `n
 explicit `University`, so writing it is harmless).
 
 For non-university employers, set `institutionType` to one of the following canonical values:
-- `Public research institute`: Government laboratories and publicly funded research organizations (e.g., CNRS, INRIA, Max Planck, RIKEN, CSIRO, DOE national labs, NIST, NASA, AFOSR, ONR, DARPA, ARL, NRL). Used with `track: "Research"` (Academia and Labs tabs) or `track: "Government & Defense"` (Labs tab only).
-- `Independent nonprofit research institute`: Independent scholarly research organizations and FFRDCs/UARCs (e.g., Allen Institute, Broad Institute, HHMI Janelia, MITRE, Aerospace Corp, IDA, CNA, Lincoln Lab, JHU APL). Used with `track: "Research"` (Academia and Labs tabs) or `track: "Government & Defense"` (Labs tab only).
+- `Public research institute`: Government laboratories and publicly funded research organizations (e.g., CNRS, INRIA, Max Planck, RIKEN, CSIRO, DOE national labs, NIST, NASA, AFOSR, ONR, DARPA, ARL, NRL). Used with `track: "Research"` or `track: "Government & Defense"` (both appear under Gov & Labs).
+- `Independent nonprofit research institute`: Independent scholarly research organizations and FFRDCs/UARCs (e.g., Allen Institute, Broad Institute, HHMI Janelia, MITRE, Aerospace Corp, IDA, CNA, Lincoln Lab, JHU APL). Used with `track: "Research"` or `track: "Government & Defense"` (both appear under Gov & Labs).
 - `Corporate research lab`: Industrial research laboratories (e.g., Google DeepMind, Google Research, OpenAI, Anthropic, Microsoft Research, Meta FAIR, NVIDIA Research, Apple ML, AWS AI, IBM Research, Adobe Research, Genentech). Used with `track: "Industry Research"`.
 - `Policy & international organization`: Central banks and multilateral international economic/policy bodies (e.g., Federal Reserve Board, regional Fed banks, ECB, BIS, IMF, World Bank, OECD, ADB). Used with `track: "Policy & Think Tank"`.
 - `Think tank`: Scholarly public policy research institutions (e.g., Brookings, RAND, NBER, PIIE, Urban Institute, CSIS, Carnegie). Used with `track: "Policy & Think Tank"`.

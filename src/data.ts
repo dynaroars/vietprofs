@@ -182,26 +182,23 @@ export async function loadRoster(): Promise<Roster> {
   return roster;
 }
 
-export type RosterTab = 'academia' | 'labs' | 'industry';
+export type Sector = 'academia' | 'labs' | 'industry';
+export const SECTORS: readonly Sector[] = ['academia', 'labs', 'industry'];
+export const SECTOR_LABELS: Record<Sector, string> = {
+  academia: 'Academia',
+  labs: 'Gov & Labs',
+  industry: 'Industry',
+};
 
-// Which directory tab(s) an entry appears on, derived from institutionType and track.
-// Corporate research labs are Industry only. Defense/government, policy, and think-tank entries
-// (by type or track) are Labs only. Every other entry is Academia; the non-University ones
-// (public and nonprofit research institutes) also appear on Labs.
-export function isOnTab(person: Pick<RosterEntry, 'institutionType' | 'track'>, tab: RosterTab) {
-  if (isCorporatePolicyEntry(person) && !isLabEntry(person)) return tab === 'industry';
-  if (isGovPolicyEntry(person)) return tab === 'labs';
-  if (tab === 'labs') return institutionTypeOf(person) !== 'University';
-  return tab === 'academia';
+// The one directory sector an entry belongs to, derived from institutionType and track (never
+// stored). Corporate research labs are Industry. Every other non-University entry (public and
+// nonprofit research institutes, national laboratories, government & defense, policy, think tanks,
+// by type or track) is Gov & Labs. Everything else (University entries) is Academia.
+export function sectorOf(person: Pick<RosterEntry, 'institutionType' | 'track'>): Sector {
+  if (isCorporatePolicyEntry(person) && !isLabEntry(person)) return 'industry';
+  if (isGovPolicyEntry(person) || institutionTypeOf(person) !== 'University') return 'labs';
+  return 'academia';
 }
-
-export async function loadRosterForTab(tab: RosterTab): Promise<Roster> {
-  const roster = await loadRoster();
-  return roster.filter((person) => isOnTab(person, tab));
-}
-
-export const loadLabsRoster = () => loadRosterForTab('labs');
-export const loadCorporateIndustryRoster = () => loadRosterForTab('industry');
 
 export async function loadRelationships(): Promise<RelationshipDatabase> {
   if (relationshipsCached) return relationshipsCached;
@@ -1776,6 +1773,10 @@ interface FilterOptions {
   track?: string;
   institutionType?: string;
   university?: string;
+  /** Directory sector (derived by sectorOf); 'all' or unset keeps every sector. */
+  sector?: string;
+  /** Exact employer (the `university` field), used by the Industry sector's Employer filter. */
+  employer?: string;
   phdInstitution?: string;
   state?: string;
   country?: string;
@@ -1869,6 +1870,8 @@ export function filterRoster(
     track,
     institutionType,
     university,
+    sector,
+    employer,
     phdInstitution,
     state,
     country,
@@ -1890,6 +1893,12 @@ export function filterRoster(
   }
   if (institutionType && institutionType !== 'all') {
     result = result.filter((p) => institutionTypeOf(p) === institutionType);
+  }
+  if (sector && sector !== 'all') {
+    result = result.filter((p) => sectorOf(p) === sector);
+  }
+  if (employer && employer !== 'all') {
+    result = result.filter((p) => p.university === employer);
   }
   if (country) {
     const norm = stripDiacritics(country.trim().toLowerCase());

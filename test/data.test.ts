@@ -28,7 +28,7 @@ import {
   buildPhdToFacultyPairings,
   isCorporatePolicyEntry,
   isLabEntry,
-  isOnTab,
+  sectorOf,
   type Roster,
   type RosterEntry,
 } from '../src/data.ts';
@@ -361,7 +361,7 @@ test('institution-specific overrides resolve department names that carry no fiel
 
 test('the roster has no unmapped Others entries in the current snapshot', () => {
   const unmapped = roster
-    .filter((p) => isOnTab(p, 'academia'))
+    .filter((p) => sectorOf(p) === 'academia')
     .filter((p) => fieldOf(p.department, p.university) === 'Others');
   assert.deepEqual(
     unmapped.map((p) => `${p.name} (${p.department} | ${p.university})`),
@@ -1002,7 +1002,7 @@ test('roster satisfies schema and classification helpers categorize entries', as
   assert.equal(isCorporatePolicyEntry({ track: 'Industry Research' }), true);
   assert.equal(isCorporatePolicyEntry({ institutionType: 'Public research institute' }), false);
 
-  // Tab membership comes from institutionType and track alone.
+  // Sector membership comes from institutionType and track alone; each person has exactly one.
   const corporate = {
     institutionType: 'Corporate research lab',
     track: 'Industry Research',
@@ -1016,20 +1016,25 @@ test('roster satisfies schema and classification helpers categorize entries', as
     track: 'Research',
   } as const;
   const university = { track: 'Tenure-line' } as const;
-  assert.deepEqual(
-    [corporate, defense, institute, university].map((p) =>
-      (['academia', 'labs', 'industry'] as const).filter((tab) => isOnTab(p, tab)),
-    ),
-    [['industry'], ['labs'], ['academia', 'labs'], ['academia']],
-  );
+  assert.deepEqual([corporate, defense, institute, university].map(sectorOf), [
+    'industry',
+    'labs',
+    'labs',
+    'academia',
+  ]);
+  // The sectors partition the roster, and the derived counts add up to it.
+  const counts = { academia: 0, labs: 0, industry: 0 };
+  for (const person of roster) counts[sectorOf(person)] += 1;
+  assert.equal(counts.academia + counts.labs + counts.industry, roster.length);
+  assert.ok(counts.academia > 0 && counts.labs > 0 && counts.industry > 0);
 });
 
-test('labs.html and industry.html exist and declare their data-roster attributes', () => {
-  const labsHtml = readFileSync(new URL('../labs.html', import.meta.url), 'utf8');
-  assert.match(labsHtml, /<body data-roster="labs">/);
-  assert.match(labsHtml, /Gov, Defense &amp; Labs/);
-
-  const industryHtml = readFileSync(new URL('../industry.html', import.meta.url), 'utf8');
-  assert.match(industryHtml, /<body data-roster="industry">/);
-  assert.match(industryHtml, /VietProfs — Industry Directory/);
+test('labs.html and industry.html redirect to the sector filter on the single directory page', () => {
+  for (const sector of ['labs', 'industry']) {
+    const html = readFileSync(new URL(`../${sector}.html`, import.meta.url), 'utf8');
+    assert.match(html, new RegExp(`http-equiv="refresh" content="0; url=\\./\\?sector=${sector}"`));
+    assert.match(html, new RegExp(`location\\.replace\\('\\./\\?sector=${sector}'`));
+    assert.match(html, new RegExp(`rel="canonical" href="[^"]+/\\?sector=${sector}"`));
+    assert.doesNotMatch(html, /data-roster/);
+  }
 });

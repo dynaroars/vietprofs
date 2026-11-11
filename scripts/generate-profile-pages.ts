@@ -12,8 +12,7 @@ import {
   fieldRegionPath,
   FIELDS,
   hasEnoughPeopleForRosterHub,
-  isLabEntry,
-  isOnTab,
+  sectorOf,
   personPath,
   ROSTER_CONTINENTS,
   regionPath,
@@ -209,13 +208,12 @@ function profilePage(
   rosterById: ReadonlyMap<string, RosterEntry>,
   related: RelatedContext,
 ) {
-  // Entries on the Labs/Industry tabs only (not Academia) link back there and skip country hubs.
-  const isIndustry = !isOnTab(person, 'academia');
-  const directoryPage = isIndustry
-    ? isLabEntry(person)
-      ? 'labs.html'
-      : 'industry.html'
-    : 'index.html';
+  // Gov & Labs and Industry entries link back to their sector on the single directory page and
+  // skip country hubs, which cover Academia only.
+  const sector = sectorOf(person);
+  const isIndustry = sector !== 'academia';
+  const directoryPage = 'index.html';
+  const sectorParam = sector === 'academia' ? '' : `sector=${sector}&`;
   const sectionNum = TRACK_SECTION[person.track || ''] || 1;
   const sectionLabel = `PROFILE(${sectionNum})`;
   const name = displayName(person.name);
@@ -236,7 +234,7 @@ function profilePage(
     : `<img class="portrait portrait-placeholder" src="../default-portrait.svg" alt="No portrait on file yet for ${escapeHtml(name)}" width="240" height="300">`;
   const personField = fieldOf(person.department, person.university);
   const research = person.researchAreas?.length
-    ? `<section class="man-section"><h2>RESEARCH</h2><ul>${person.researchAreas.map((area) => `<li><a href="../${directoryPage}?q=${encodeURIComponent(area)}" class="research-area-link">${escapeHtml(area)}</a></li>`).join('')}</ul></section>`
+    ? `<section class="man-section"><h2>RESEARCH</h2><ul>${person.researchAreas.map((area) => `<li><a href="../${directoryPage}?${sectorParam}q=${encodeURIComponent(area)}" class="research-area-link">${escapeHtml(area)}</a></li>`).join('')}</ul></section>`
     : '';
   const education = formatEducationDetails(person, { fullLabels: true });
   const educationSection = education.length
@@ -458,7 +456,7 @@ if (button) {
   const countryTargetUrl =
     !isIndustry && availableCountryHubs.has(countryTarget)
       ? `../${regionPath(countryTarget)}`
-      : `../${directoryPage}?loc=${encodeURIComponent(countryTarget === 'United States' ? 'US' : countryTarget)}`;
+      : `../${directoryPage}?${sectorParam}loc=${encodeURIComponent(countryTarget === 'United States' ? 'US' : countryTarget)}`;
 
   return `<!doctype html>
 <!--
@@ -503,9 +501,9 @@ if (button) {
   <div id="app">
     <main>
       <article class="man-page">
-        <p class="man-running-head"><span>${sectionLabel}</span><span class="man-running-title"><a class="man-running-brand" href="../${directoryPage}" aria-label="VietProfs directory"><img class="brand-logo" src="../vietprofs-bamboo-v.svg" alt="" width="20" height="20"><span class="man-running-label">Profile Manual</span></a></span><span>${sectionLabel}</span></p>
+        <p class="man-running-head"><span>${sectionLabel}</span><span class="man-running-title"><a class="man-running-brand" href="../${directoryPage}${sectorParam ? `?${sectorParam.slice(0, -1)}` : ''}" aria-label="VietProfs directory"><img class="brand-logo" src="../vietprofs-bamboo-v.svg" alt="" width="20" height="20"><span class="man-running-label">Profile Manual</span></a></span><span>${sectionLabel}</span></p>
         <section class="man-section name-section"><h2>NAME</h2><div class="identity profile-identity">${portrait}<div class="identity-details"><div class="name-heading"><div class="name-title"><h1>${escapeHtml(name)}</h1>${favoriteToggle}</div><div class="profile-actions" aria-label="Roster actions"><a class="self-claim-link" href="${escapeHtml(selfUrl)}">Is this you?</a></div></div><p id="profile-save-status" role="status" hidden></p><p class="native">${escapeHtml(nativeName)} <a class="loc-badge-link" href="${countryTargetUrl}" title="Filter faculty in ${escapeHtml(person.country || 'United States')}"><span class="loc-badge" title="${escapeHtml(person.country || 'United States')}"><span class="country-flag" aria-hidden="true">${countryFlag(person.country)}</span></span></a></p><p class="record-id">${escapeHtml(person.id)}</p></div></div></section>
-        <section class="man-section"><h2>SYNOPSIS</h2><p class="synopsis">${escapeHtml(role)}${locationOf(person) ? ` · ${escapeHtml(locationOf(person))}` : ''}</p><div class="tags"><a href="../${fieldPath(personField)}" class="tag" title="Explore ${escapeHtml(personField)} faculty on VietProfs">${escapeHtml(personField)}</a>${person.track ? `<a href="../${directoryPage}?track=${encodeURIComponent(person.track)}" class="tag${person.track === 'Emeritus' ? ' tag-emeritus' : person.track === 'Deceased' ? ' tag-deceased' : ''}" title="Filter by ${escapeHtml(person.track)}">${person.track === 'Emeritus' ? '🎓 Emeritus' : person.track === 'Deceased' ? '🏛️ Deceased' : escapeHtml(person.track)}</a>` : ''}${person.institutionType && person.institutionType !== 'University' ? `<a href="../${directoryPage}?institutionType=${encodeURIComponent(person.institutionType)}" class="tag" title="Filter by ${escapeHtml(person.institutionType)}">${escapeHtml(person.institutionType)}</a>` : ''}${person.confirmed === false ? '<span class="tag tag-unconfirmed">Unconfirmed</span>' : ''}</div></section>
+        <section class="man-section"><h2>SYNOPSIS</h2><p class="synopsis">${escapeHtml(role)}${locationOf(person) ? ` · ${escapeHtml(locationOf(person))}` : ''}</p><div class="tags"><a href="../${fieldPath(personField)}" class="tag" title="Explore ${escapeHtml(personField)} faculty on VietProfs">${escapeHtml(personField)}</a>${person.track ? `<a href="../${directoryPage}?${sectorParam}track=${encodeURIComponent(person.track)}" class="tag${person.track === 'Emeritus' ? ' tag-emeritus' : person.track === 'Deceased' ? ' tag-deceased' : ''}" title="Filter by ${escapeHtml(person.track)}">${person.track === 'Emeritus' ? '🎓 Emeritus' : person.track === 'Deceased' ? '🏛️ Deceased' : escapeHtml(person.track)}</a>` : ''}${person.institutionType && person.institutionType !== 'University' ? `<a href="../${directoryPage}?${sectorParam}institutionType=${encodeURIComponent(person.institutionType)}" class="tag" title="Filter by ${escapeHtml(person.institutionType)}">${escapeHtml(person.institutionType)}</a>` : ''}${person.confirmed === false ? '<span class="tag tag-unconfirmed">Unconfirmed</span>' : ''}</div></section>
         ${research}${educationSection}${honors}${connectionSection}${relatedSections(person, personField, related)}${linkSection}${missingSection}
         <section class="man-section"><h2>ROSTER METADATA</h2><dl class="roster-metadata"><div><dt>record</dt><dd>${escapeHtml(person.id)}</dd></div><div><dt>confirmation</dt><dd>${person.confirmed === false ? 'Unconfirmed — reliable non-official evidence' : 'Confirmed'}</dd></div><div><dt>last verified</dt><dd>${escapeHtml(formatRosterDate(person.lastUpdatedAt || ''))}</dd></div><div><dt>build</dt><dd><a href="https://github.com/dynaroars/vietprofs/commit/${escapeHtml(commit)}">${escapeHtml(commit)}</a></dd></div></dl><details class="raw-record"><summary>view raw record</summary><pre><code>${rawRecord}</code></pre></details></section>
         ${renderSeeAlso('../')}
@@ -994,7 +992,7 @@ async function main() {
       (person) =>
         `  <url>\n    <loc>${absoluteUrl(personPath(person.id))}</loc>${person.lastUpdatedAt ? `\n    <lastmod>${person.lastUpdatedAt.slice(0, 10)}</lastmod>` : ''}\n    <changefreq>monthly</changefreq>\n    <priority>0.7</priority>\n  </url>`,
     );
-    const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url>\n    <loc>${siteUrl}/</loc>\n    <changefreq>daily</changefreq>\n    <priority>1.0</priority>\n  </url>\n  <url>\n    <loc>${siteUrl}/labs.html</loc>\n    <changefreq>daily</changefreq>\n    <priority>0.9</priority>\n  </url>\n  <url>\n    <loc>${siteUrl}/industry.html</loc>\n    <changefreq>daily</changefreq>\n    <priority>0.9</priority>\n  </url>\n  <url>\n    <loc>${siteUrl}/submit.html</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.5</priority>\n  </url>\n${hubUrls.join('\n')}\n${profileUrls.join('\n')}\n</urlset>\n`;
+    const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url>\n    <loc>${siteUrl}/</loc>\n    <changefreq>daily</changefreq>\n    <priority>1.0</priority>\n  </url>\n  <url>\n    <loc>${siteUrl}/submit.html</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.5</priority>\n  </url>\n${hubUrls.join('\n')}\n${profileUrls.join('\n')}\n</urlset>\n`;
     await writeFile(resolve(output, 'sitemap.xml'), sitemap);
   }
   console.log(
