@@ -82,7 +82,10 @@ export function isLabEntry(person: Pick<RosterEntry, 'institutionType' | 'track'
     type === 'Independent nonprofit research institute' ||
     type === 'Government & defense' ||
     type === 'National laboratory' ||
-    person.track === 'Government & Defense'
+    type === 'Policy & international organization' ||
+    type === 'Think tank' ||
+    person.track === 'Government & Defense' ||
+    person.track === 'Policy & Think Tank'
   );
 }
 
@@ -90,13 +93,7 @@ export function isCorporatePolicyEntry(
   person: Pick<RosterEntry, 'institutionType' | 'track'>,
 ): boolean {
   const type = institutionTypeOf(person);
-  return (
-    type === 'Corporate research lab' ||
-    type === 'Policy & international organization' ||
-    type === 'Think tank' ||
-    person.track === 'Industry Research' ||
-    person.track === 'Policy & Think Tank'
-  );
+  return type === 'Corporate research lab' || person.track === 'Industry Research';
 }
 
 export interface SearchIndex {

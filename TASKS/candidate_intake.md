@@ -57,13 +57,13 @@ Before spending time on enrichment, confirm the candidate can plausibly satisfy
   IARPA, ARL, NRL, NSF, NIH) and permanent career researchers at FFRDCs/UARCs (e.g., MITRE, Aerospace Corp,
   IDA, CNA, Lincoln Lab, JHU APL) under `track: "Government & Defense"` or `"Research"` with
   `institutionType: "Public research institute"` or `"Independent nonprofit research institute"`.
-- **`🏢 Industry & Policy` — Corporate Research Labs** (`public/industry.json`): Full-time, career Research
+- **`🏢 Industry` — Corporate Research Labs** (`public/industry.json`): Full-time, career Research
   Scientists, Principal/Staff Scientists, Distinguished Engineers, and Research Directors at corporate
   research labs (e.g., Google DeepMind, Google Research, OpenAI, Anthropic, Microsoft Research, Meta FAIR,
   NVIDIA Research, Apple ML, AWS AI, IBM Research, Adobe Research, Genentech) under `track: "Industry Research"`,
   `institutionType: "Corporate research lab"`. Exclude standard software engineers, product managers, and
   non-research roles.
-- **`🏢 Industry & Policy` — Central Banks, International Orgs & Think Tanks** (`public/industry.json`):
+- **`🏛️ Gov, Defense & Labs` — Central Banks, International Orgs & Think Tanks** (`public/industry.json`):
   Permanent/career Economists, Senior Economists, Policy Researchers, and Senior Fellows at central banks
   (Fed Board & regional Fed banks, ECB, BIS), international organizations (IMF, World Bank, OECD, ADB),
   and scholarly think tanks (Brookings, RAND, NBER, PIIE, Urban Institute, CSIS, Carnegie) under

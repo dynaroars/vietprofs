@@ -4,8 +4,8 @@ Before researching or modifying the roster, read [ROSTER_MAINTENANCE.md](ROSTER_
 
 This repository is **VietProfs**: a directory of Vietnamese and Vietnamese-diaspora faculty, researchers, and scientific leaders outside Vietnam, organized across three directory tabs:
 - **`🎓 Academia`** (`index.html`, backed by university entries in `public/data.json`)
-- **`🏛️ Gov, Defense & Labs`** (`labs.html`, backed by public/nonprofit research institute entries in `public/data.json` and defense/government research & scientific program officer entries in `public/industry.json`)
-- **`🏢 Industry & Policy`** (`industry.html`, backed by `public/industry.json`, covering corporate research labs, central banks, international organizations, and policy think tanks)
+- **`🏛️ Gov, Defense & Labs`** (`labs.html`, backed by public/nonprofit research institute entries in `public/data.json` and defense/government research, scientific program officer, central bank, international organization, and think tank entries in `public/industry.json`)
+- **`🏢 Industry`** (`industry.html`, backed by corporate research lab entries in `public/industry.json`)
 
 Both `public/data.json` and `public/industry.json` share a single, unified `vp-####` ID namespace and follow identical `directFields` protection, verification, and Issue/PR rules. Do not apply inclusion criteria from an external repository or linked project without first confirming that it is relevant here.
 

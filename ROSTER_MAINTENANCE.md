@@ -6,8 +6,8 @@ This document is for maintainers and automated agents. It contains the detailed 
 
 VietProfs organizes entries across three top-level directory tabs:
 1. **`🎓 Academia`** (`index.html`): University faculty and academic appointments, backed by university entries in `public/data.json`.
-2. **`🏛️ Gov, Defense & Labs`** (`labs.html`): Public and nonprofit scholarly research institutes in `public/data.json`, along with defense and government research scientists and scientific program officers in `public/industry.json` (under `track: "Government & Defense"` or `"Research"`, with `institutionType: "Public research institute"` or `"Independent nonprofit research institute"`).
-3. **`🏢 Industry & Policy`** (`industry.html`): Corporate research labs (`track: "Industry Research"`, `institutionType: "Corporate research lab"`) and central banks, international organizations, and policy think tanks (`track: "Policy & Think Tank"`, `institutionType: "Policy & international organization"` or `"Think tank"`), backed by `public/industry.json`.
+2. **`🏛️ Gov, Defense & Labs`** (`labs.html`): Public and nonprofit scholarly research institutes in `public/data.json`, along with defense and government research scientists and scientific program officers (`track: "Government & Defense"` or `"Research"`, with `institutionType: "Public research institute"` or `"Independent nonprofit research institute"`) and central banks, international organizations, and policy think tanks (`track: "Policy & Think Tank"`, `institutionType: "Policy & international organization"` or `"Think tank"`) in `public/industry.json`.
+3. **`🏢 Industry`** (`industry.html`): Corporate research labs (`track: "Industry Research"`, `institutionType: "Corporate research lab"`), backed by `public/industry.json`.
 
 ### Two roster files, one ID namespace
 

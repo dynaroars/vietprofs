@@ -58,6 +58,7 @@ type Candidate = {
 const execFileAsync = promisify(execFile);
 const root = resolve('.');
 const dataPath = join(root, 'public/data.json');
+const industryPath = join(root, 'public/industry.json');
 const queuePath = join(root, PORTRAIT_QUEUE_FILE);
 const provenancePath = join(root, 'maintenance/portrait-provenance.json');
 const fixturePath = join(root, 'maintenance/portrait-audit-sample.json');
@@ -513,7 +514,15 @@ async function auditIds(): Promise<Set<string>> {
   ]);
 }
 
-const people = JSON.parse(await readFile(dataPath, 'utf8')) as Person[];
+const academicPeople = JSON.parse(await readFile(dataPath, 'utf8')) as Person[];
+const industryPeople = JSON.parse(
+  await readFile(industryPath, 'utf8').catch(() => '[]'),
+) as Person[];
+const people = [...academicPeople, ...industryPeople];
+async function writeRosters() {
+  await writeFile(dataPath, `${JSON.stringify(academicPeople, null, 2)}\n`);
+  await writeFile(industryPath, `${JSON.stringify(industryPeople, null, 2)}\n`);
+}
 const ledger = await loadLedger();
 const queue = syncQueue(await loadQueue(people), people, ledger);
 async function writeQueue() {
@@ -609,7 +618,7 @@ if (storeArgument) {
     results.push({ id, result: 'stored', portrait });
   }
   await writeFile(provenancePath, `${JSON.stringify(ledger, null, 2)}\n`);
-  await writeFile(dataPath, `${JSON.stringify(people, null, 2)}\n`);
+  await writeRosters();
   await writeQueue();
   console.log(JSON.stringify({ mode: 'store', results }, null, 2));
   process.exit(0);
@@ -879,7 +888,7 @@ await renderBrowser?.close().catch(() => undefined);
 if (renderedPages) console.error(`rendered ${renderedPages} page(s) in headless Chromium`);
 await writeFile(provenancePath, `${JSON.stringify(ledger, null, 2)}\n`);
 if (applying) {
-  await writeFile(dataPath, `${JSON.stringify(people, null, 2)}\n`);
+  await writeRosters();
   await writeQueue();
 }
 console.log(

@@ -178,7 +178,10 @@ test('portrait audit fixture is reproducible and covers the required risk groups
     blocked: string[];
     commonNames: string[];
   };
-  const ids = new Set(roster.map((person) => person.id));
+  const industryRoster = JSON.parse(
+    readFileSync(join(__dirname, '../public/industry.json'), 'utf8'),
+  ) as RosterEntry[];
+  const ids = new Set([...roster, ...industryRoster].map((person) => person.id));
   assert.equal(fixture.version, 1);
   assert.ok(fixture.knownGood.length >= 10);
   assert.ok(fixture.missing.length >= 10);
@@ -213,7 +216,10 @@ test('portrait provenance is ID-keyed and records reproducible identity evidence
       }
     >;
   };
-  const ids = new Set(roster.map((person) => person.id));
+  const industryRoster = JSON.parse(
+    readFileSync(join(__dirname, '../public/industry.json'), 'utf8'),
+  ) as RosterEntry[];
+  const ids = new Set([...roster, ...industryRoster].map((person) => person.id));
   assert.equal(ledger.version, 1);
   for (const [id, entry] of Object.entries(ledger.entries)) {
     assert.ok(ids.has(id), `provenance references unknown ID ${id}`);
@@ -990,10 +996,11 @@ test('industry roster satisfies schema and classification helpers categorize ent
   assert.equal(isLabEntry({ institutionType: 'Public research institute' }), true);
   assert.equal(isLabEntry({ institutionType: 'Corporate research lab' }), false);
   assert.equal(isLabEntry({ track: 'Government & Defense' }), true);
+  assert.equal(isLabEntry({ institutionType: 'Policy & international organization' }), true);
   assert.equal(isCorporatePolicyEntry({ institutionType: 'Corporate research lab' }), true);
   assert.equal(
     isCorporatePolicyEntry({ institutionType: 'Policy & international organization' }),
-    true,
+    false,
   );
   assert.equal(isCorporatePolicyEntry({ track: 'Industry Research' }), true);
   assert.equal(isCorporatePolicyEntry({ institutionType: 'Public research institute' }), false);
@@ -1006,5 +1013,5 @@ test('labs.html and industry.html exist and declare their data-roster attributes
 
   const industryHtml = readFileSync(new URL('../industry.html', import.meta.url), 'utf8');
   assert.match(industryHtml, /<body data-roster="industry">/);
-  assert.match(industryHtml, /Industry &amp; Policy/);
+  assert.match(industryHtml, /VietProfs — Industry Directory/);
 });

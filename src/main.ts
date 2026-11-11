@@ -208,7 +208,7 @@ function renderShell() {
       <nav class="top-nav" aria-label="Primary navigation">
         <a href="${import.meta.env.BASE_URL}index.html"${isAcademia ? ' class="active" aria-current="page"' : ''}>🎓 Academia</a>
         <a href="${import.meta.env.BASE_URL}labs.html"${isLabs ? ' class="active" aria-current="page"' : ''}>🏛️ Gov, Defense &amp; Labs</a>
-        <a href="${import.meta.env.BASE_URL}industry.html"${isIndustry ? ' class="active" aria-current="page"' : ''}>🏢 Industry &amp; Policy</a>
+        <a href="${import.meta.env.BASE_URL}industry.html"${isIndustry ? ' class="active" aria-current="page"' : ''}>🏢 Industry</a>
       </nav>
     </header>
     <div class="controls">
