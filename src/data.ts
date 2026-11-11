@@ -1567,11 +1567,66 @@ const FIELD_RULES = [
   // A department that matches none of the established broad disciplines is grouped under Others.
 ];
 
-export function fieldOf(department?: string, university?: string): string {
+// Lab, agency, and company teams ("Alignment Science", "Search and Information Retrieval") rarely
+// read like university departments, so when the department maps to nothing the research areas
+// decide: each area in order, through these research-topic rules, then the department rules.
+const RESEARCH_AREA_RULES = [
+  {
+    field: 'Law & Public Affairs',
+    match:
+      /national security|border security|nonproliferation|WMD|defen[cs]e policy|security policy|international relations|governance|public policy/i,
+  },
+  {
+    field: 'Computer & Information Sciences',
+    match:
+      /machine learning|deep learning|artificial intelligence|AI|neural|language model|natural language|NLP|computer vision|reinforcement learning|robot|information retrieval|search|recommend|software|program(?:ming)?|compil|cyber|security|privacy|cryptograph|distributed systems|cloud computing|database|network(?:ing|s)?|human-computer|graphics|speech|alignment|interpretab|transformer|generative|multimodal|optimization|autonomous|computing|dialogue|conversational|spoken language/i,
+  },
+  {
+    field: 'Business & Economics',
+    match:
+      /macroeconom|microeconom|monetary|fiscal|econom|financ|banking|trade|labor market|public finance|development policy|poverty|inflation/i,
+  },
+  {
+    field: 'Physics & Astronomy',
+    match:
+      /quantum|photonic|optic|laser|plasma|particle|astro|cosmolog|spectroscop|condensed matter/i,
+  },
+  {
+    field: 'Earth & Environmental Sciences',
+    match: /climate|atmospher|earth|ocean|remote sensing|environment|geoscien|hydrolog/i,
+  },
+  {
+    field: 'Biological & Biomedical Sciences',
+    match:
+      /genom|biolog|protein|cell biology|cellular|neuroscien|immun|drug discovery|bioinformat/i,
+  },
+  { field: 'Chemistry', match: /chemi|catalys|electrochem/i },
+  {
+    field: 'Engineering',
+    match:
+      /control systems|flight|aeroelastic|material|semiconductor|device|aerospace|propulsion|combustion|radar|antenna|wireless|signal processing|electromagnet|energy|battery|power systems|nuclear|sensor|hardware|circuit|manufactur/i,
+  },
+];
+
+export function fieldOf(
+  department?: string,
+  university?: string,
+  researchAreas?: readonly string[],
+): string {
   const override = university && FIELD_OVERRIDES.get(`${department}|${university}`);
   if (override) return override;
-  if (!department) return 'Others';
-  return FIELD_RULES.find((rule) => rule.match.test(department))?.field ?? 'Others';
+  const fromDepartment = department
+    ? (FIELD_RULES.find((rule) => rule.match.test(department))?.field ?? 'Others')
+    : 'Others';
+  if (fromDepartment !== 'Others' || !researchAreas?.length) return fromDepartment;
+  // Areas are listed most representative first, so the first one that maps decides.
+  for (const area of researchAreas) {
+    const field =
+      RESEARCH_AREA_RULES.find((rule) => rule.match.test(area))?.field ??
+      FIELD_RULES.find((rule) => rule.match.test(area))?.field;
+    if (field) return field;
+  }
+  return 'Others';
 }
 
 export interface RosterHtmlInventory {
@@ -1586,7 +1641,9 @@ export interface RosterHtmlInventory {
 export function buildRosterHtmlInventory(roster: Roster): RosterHtmlInventory {
   const fields = FIELDS.filter((field) =>
     hasEnoughPeopleForRosterHub(
-      roster.filter((person) => fieldOf(person.department, person.university) === field).length,
+      roster.filter(
+        (person) => fieldOf(person.department, person.university, person.researchAreas) === field,
+      ).length,
     ),
   );
   const countries = [...new Set(roster.map((person) => person.country || 'United States'))];
@@ -1601,7 +1658,7 @@ export function buildRosterHtmlInventory(roster: Roster): RosterHtmlInventory {
           roster.filter(
             (person) =>
               locationMatches(person, region) &&
-              fieldOf(person.department, person.university) === field,
+              fieldOf(person.department, person.university, person.researchAreas) === field,
           ).length,
         ),
       ).length,
@@ -1620,7 +1677,8 @@ export function buildRosterHtmlInventory(roster: Roster): RosterHtmlInventory {
 }
 
 export function healthSubfieldOf(person: RosterEntry): string | null {
-  if (fieldOf(person.department, person.university) !== 'Health Sciences') return null;
+  if (fieldOf(person.department, person.university, person.researchAreas) !== 'Health Sciences')
+    return null;
   const text = `${person.department} ${(person.researchAreas ?? []).join(' ')}`;
   if (/nursing/i.test(text)) return 'Nursing';
   if (/pharma|pharmac/i.test(text)) return 'Pharmacy';
@@ -1684,7 +1742,7 @@ export function buildTopUniversities(roster: Roster, limit = 8): [string, number
 }
 
 export function buildFieldCounts(roster: Roster): [string, number][] {
-  return countBy(roster, (p) => fieldOf(p.department, p.university));
+  return countBy(roster, (p) => fieldOf(p.department, p.university, p.researchAreas));
 }
 
 export function buildTopCountries(roster: Roster, limit = 8): [string, number][] {
@@ -1800,7 +1858,7 @@ function scopedValuesFor(person: RosterEntry, scope: string): (string | undefine
     case 'department':
       return [person.department];
     case 'field':
-      return [fieldOf(person.department, person.university)];
+      return [fieldOf(person.department, person.university, person.researchAreas)];
     case 'track':
       return [person.track];
     case 'rank':
@@ -1888,7 +1946,7 @@ export function filterRoster(
     result = result.filter((p) => locationMatches(p, location));
   }
   if (field && field !== 'all') {
-    result = result.filter((p) => fieldOf(p.department, p.university) === field);
+    result = result.filter((p) => fieldOf(p.department, p.university, p.researchAreas) === field);
   }
   if (track && track !== 'all') {
     result = result.filter((p) => p.track === track);
@@ -2117,7 +2175,9 @@ function observationUniversities(roster: Roster): [string, number][] {
 }
 
 function observationFields(roster: Roster): [string, number][] {
-  return countBy(roster, (p) => (p.department ? fieldOf(p.department, p.university) : 'Others'));
+  return countBy(roster, (p) =>
+    p.department ? fieldOf(p.department, p.university, p.researchAreas) : 'Others',
+  );
 }
 
 function observationDepartmentSpread(roster: Roster): [string, number][] {
@@ -2137,7 +2197,7 @@ function observationSameFieldClusters(roster: Roster): [[string, string], number
   const groups = new Map<string, number>();
   for (const person of roster) {
     if (!person.university || !person.department) continue;
-    const field = fieldOf(person.department, person.university);
+    const field = fieldOf(person.department, person.university, person.researchAreas);
     const key = `${person.university}\u0000${field}`;
     groups.set(key, (groups.get(key) ?? 0) + 1);
   }

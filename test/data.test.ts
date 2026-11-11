@@ -265,7 +265,7 @@ test('the field filter offers all seventeen broad fields', () => {
 test('every entry maps to one of the broad fields', () => {
   for (const p of roster) {
     assert.ok(
-      FIELDS.includes(fieldOf(p.department, p.university)),
+      FIELDS.includes(fieldOf(p.department, p.university, p.researchAreas)),
       `department "${p.department}" (for ${p.name}) does not match any FIELDS rule`,
     );
   }
@@ -362,7 +362,7 @@ test('institution-specific overrides resolve department names that carry no fiel
 test('the roster has no unmapped Others entries in the current snapshot', () => {
   const unmapped = roster
     .filter((p) => sectorOf(p) === 'academia')
-    .filter((p) => fieldOf(p.department, p.university) === 'Others');
+    .filter((p) => fieldOf(p.department, p.university, p.researchAreas) === 'Others');
   assert.deepEqual(
     unmapped.map((p) => `${p.name} (${p.department} | ${p.university})`),
     [],
@@ -636,7 +636,10 @@ test('scoped search restricts results to the requested roster attribute', () => 
   });
   assert.ok(engineering.length > 0);
   assert.ok(
-    engineering.every((person) => fieldOf(person.department, person.university) === 'Engineering'),
+    engineering.every(
+      (person) =>
+        fieldOf(person.department, person.university, person.researchAreas) === 'Engineering',
+    ),
   );
 
   const research = filterRoster(roster, {
@@ -1037,4 +1040,32 @@ test('labs.html and industry.html redirect to the sector filter on the single di
     assert.match(html, new RegExp(`rel="canonical" href="[^"]+/\\?sector=${sector}"`));
     assert.doesNotMatch(html, /data-roster/);
   }
+});
+
+test('lab and company teams take their field from research areas when the department maps to nothing', () => {
+  assert.equal(
+    fieldOf('Alignment Science', 'Anthropic', ['AI Alignment', 'AI Safety']),
+    'Computer & Information Sciences',
+  );
+  assert.equal(
+    fieldOf('Global Security Directorate', 'Lawrence Livermore National Laboratory', [
+      'Countering WMD Threats',
+      'Chemical and Biological Defense',
+    ]),
+    'Law & Public Affairs',
+  );
+  assert.equal(
+    fieldOf('Science Directorate', undefined, ['Atmospheric Science']),
+    'Earth & Environmental Sciences',
+  );
+  assert.equal(
+    fieldOf('Computer Science', undefined, ['Monetary Policy']),
+    'Computer & Information Sciences',
+  );
+  for (const person of roster.filter((p) => sectorOf(p) !== 'academia'))
+    assert.notEqual(
+      fieldOf(person.department, person.university, person.researchAreas),
+      'Others',
+      person.id,
+    );
 });

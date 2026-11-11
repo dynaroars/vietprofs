@@ -567,7 +567,7 @@ test('the + button opens the form and the header links switch views in place', a
     .evaluateAll((links) => links.map((link) => link.getAttribute('aria-label')));
   assert.deepEqual(labels, [
     'Diaspora Insights & Pathways',
-    'Academic Connections',
+    'Research Connections',
     'Data Health & Completeness',
     'Read the paper (PDF)',
     'Share',
@@ -1422,11 +1422,18 @@ test('Gov & Labs and Industry views use sector wording, not professor or Univers
     assert.match(await page.locator('#search-scope-chip').innerText(), /University/);
     // The Type and Track keywords scope to institution type and track.
     await page.goto(`${baseUrl}/?sector=industry`, { waitUntil: 'networkidle' });
+    const industryCount = await page.locator('.entry').count();
     await page.locator('#search').fill('Type: Corporate research lab');
     assert.match(await page.locator('#search-scope-chip').innerText(), /Type/);
-    await page.waitForFunction(() => document.querySelectorAll('.entry').length === 53);
+    await page.waitForFunction(
+      (count) => document.querySelectorAll('.entry').length === count,
+      industryCount,
+    );
     await page.locator('#search').fill('Track: Industry Research');
-    await page.waitForFunction(() => document.querySelectorAll('.entry').length === 53);
+    await page.waitForFunction(
+      (count) => document.querySelectorAll('.entry').length === count,
+      industryCount,
+    );
   } finally {
     await page.close();
   }
@@ -1437,7 +1444,12 @@ test('Gov & Labs and Industry profile pages avoid academic wording and universit
   try {
     for (const id of ['vp-2963', 'vp-2920']) {
       await page.goto(`${baseUrl}/people/${id}.html`, { waitUntil: 'networkidle' });
-      const text = await page.locator('body').innerText();
+      // Related-people lists name other entries (often professors in the same field); skip them.
+      const text = await page.evaluate(() => {
+        const clone = document.body.cloneNode(true) as HTMLElement;
+        clone.querySelectorAll('.related-section').forEach((section) => section.remove());
+        return clone.innerText || clone.textContent || '';
+      });
       assert.doesNotMatch(text, /professor|faculty/i, id);
       const head = await page.evaluate(
         () =>

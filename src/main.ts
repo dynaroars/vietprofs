@@ -209,7 +209,7 @@ function renderShell() {
   app.innerHTML = `
     <header>
       <div class="title-row">
-        <h1><a class="home-link brand-link" href="${import.meta.env.BASE_URL}" id="home-link" title="A Public Directory of the Vietnamese Academic and Research Diaspora Worldwide"><img class="brand-logo" src="${import.meta.env.BASE_URL}vietprofs-bamboo-v.svg" alt="" width="56" height="56"><span>Vietnamese Academic Diaspora</span></a></h1>
+        <h1><a class="home-link brand-link" href="${import.meta.env.BASE_URL}" id="home-link" title="A Public Directory of the Vietnamese Academic and Research Diaspora Worldwide"><img class="brand-logo" src="${import.meta.env.BASE_URL}vietprofs-bamboo-v.svg" alt="" width="56" height="56"><span>Vietnamese Research Diaspora</span></a></h1>
         <div class="header-icons">
           <a class="icon-link roars-link" href="https://roars.dev" target="_blank" rel="noopener noreferrer" aria-label="ROARS Lab website" title="ROARS Lab website"></a>
           <a class="icon-link github-link" href="https://github.com/dynaroars/vietprofs" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository" title="GitHub repository and source code">
@@ -274,7 +274,7 @@ function renderShell() {
       <p class="result-count" id="result-count" aria-live="polite"></p>
       <nav class="site-nav" aria-label="Site">
           ${siteNavLink('index.html?view=insights', 'Diaspora Insights & Pathways', ICONS.insights, ' data-view="insights"')}
-          ${siteNavLink('connections.html', 'Academic Connections', ICONS.connections)}
+          ${siteNavLink('connections.html', 'Research Connections', ICONS.connections)}
           ${siteNavLink('index.html?view=health', 'Data Health & Completeness', ICONS.health, ' data-view="health"')}
           ${siteNavLink(`${import.meta.env.BASE_URL}vietprofs.pdf`, 'Read the paper (PDF)', PAPER_ICON, EXTERNAL)}
           ${renderShareMenu({ title: 'VietProfs: Vietnamese scholars and scientists worldwide' })}
@@ -560,7 +560,9 @@ async function init() {
     ],
     [
       'field',
-      FIELDS.filter((field) => roster.some((p) => fieldOf(p.department, p.university) === field)),
+      FIELDS.filter((field) =>
+        roster.some((p) => fieldOf(p.department, p.university, p.researchAreas) === field),
+      ),
     ],
     ['track', activeTracks.filter((track) => roster.some((p) => p.track === track))],
     ['research', uniqueResearchAreas(roster)],
@@ -811,7 +813,8 @@ async function init() {
         (activeSector === 'all' || sectorOf(person) === activeSector) &&
         (employer === 'all' || person.university === employer) &&
         locationMatches(person, location) &&
-        (field === 'all' || fieldOf(person.department, person.university) === field) &&
+        (field === 'all' ||
+          fieldOf(person.department, person.university, person.researchAreas) === field) &&
         (track === 'all' || person.track === track),
     );
   }
@@ -819,7 +822,9 @@ async function init() {
   const fieldCounts = new Map(
     FIELDS.map((field) => [
       field,
-      roster.filter((person) => fieldOf(person.department, person.university) === field).length,
+      roster.filter(
+        (person) => fieldOf(person.department, person.university, person.researchAreas) === field,
+      ).length,
     ]),
   );
   const sortedFields = [...FIELDS].sort(
@@ -934,7 +939,7 @@ async function init() {
     ];
     for (const field of sortedFields) {
       const count = fieldContext.filter(
-        (p) => fieldOf(p.department, p.university) === field,
+        (p) => fieldOf(p.department, p.university, p.researchAreas) === field,
       ).length;
       if (count > 0) {
         fieldEntries.push({ value: field, label: `${fieldDropdownLabel(field)} (${count})` });
@@ -1050,7 +1055,11 @@ async function init() {
     let initialField = 'all';
     if (
       FIELDS.includes(requestedField) &&
-      roster.some((p) => sectorMatches(p) && fieldOf(p.department, p.university) === requestedField)
+      roster.some(
+        (p) =>
+          sectorMatches(p) &&
+          fieldOf(p.department, p.university, p.researchAreas) === requestedField,
+      )
     ) {
       initialField = requestedField;
     }

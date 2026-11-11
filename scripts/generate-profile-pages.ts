@@ -232,7 +232,7 @@ function profilePage(
   const portrait = person.portrait
     ? `<img class="portrait" src="../${escapeHtml(person.portrait)}" alt="Portrait of ${escapeHtml(name)}" width="240" height="300">`
     : `<img class="portrait portrait-placeholder" src="../default-portrait.svg" alt="No portrait on file yet for ${escapeHtml(name)}" width="240" height="300">`;
-  const personField = fieldOf(person.department, person.university);
+  const personField = fieldOf(person.department, person.university, person.researchAreas);
   const research = person.researchAreas?.length
     ? `<section class="man-section"><h2>RESEARCH</h2><ul>${person.researchAreas.map((area) => `<li><a href="../${directoryPage}?${sectorParam}q=${encodeURIComponent(area)}" class="research-area-link">${escapeHtml(area)}</a></li>`).join('')}</ul></section>`
     : '';
@@ -775,7 +775,7 @@ async function main() {
   for (const person of roster) {
     if (person.university)
       byUniversity.set(person.university, [...(byUniversity.get(person.university) ?? []), person]);
-    const field = fieldOf(person.department, person.university);
+    const field = fieldOf(person.department, person.university, person.researchAreas);
     byField.set(field, [...(byField.get(field) ?? []), person]);
   }
   const universityHubNames = [...byUniversity.keys()]
@@ -820,7 +820,9 @@ async function main() {
 
   // 2. Generate Discipline Hub pages
   const fieldHubs: HubConfig[] = FIELDS.map((field) => {
-    const people = roster.filter((p) => fieldOf(p.department, p.university) === field);
+    const people = roster.filter(
+      (p) => fieldOf(p.department, p.university, p.researchAreas) === field,
+    );
     return {
       categoryType: 'Discipline' as const,
       categoryName: field,
@@ -902,7 +904,8 @@ async function main() {
     fieldHubs.flatMap((fieldHub) => {
       const people = roster.filter(
         (person) =>
-          fieldOf(person.department, person.university) === fieldHub.categoryName &&
+          fieldOf(person.department, person.university, person.researchAreas) ===
+            fieldHub.categoryName &&
           (regionHub.categoryName === personCountry(person) ||
             continentOf(person.country) === regionHub.categoryName),
       );
@@ -956,7 +959,9 @@ async function main() {
   const universityHubs: HubConfig[] = universityHubNames.map((university) => {
     const people = byUniversity.get(university)!;
     const fieldLinks = [
-      ...new Set(people.map((person) => fieldOf(person.department, person.university))),
+      ...new Set(
+        people.map((person) => fieldOf(person.department, person.university, person.researchAreas)),
+      ),
     ]
       .filter((field) => related.fieldHubs.has(field))
       .sort((a, b) => a.localeCompare(b))
