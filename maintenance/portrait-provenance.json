@@ -17453,6 +17453,56 @@
         "stored_roster_url"
       ],
       "retrievedAt": "2026-11-11T00:25:55.630Z"
+    },
+    "vp-2907": {
+      "name": "Luc Duong",
+      "outcome": "found",
+      "pageUrl": "https://www.etsmtl.ca/en/study-at-ets/professors/lduong",
+      "imageUrl": "https://www.etsmtl.ca/uploads/P20180504-Duong-Luc-002.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T00:28:13.797Z"
+    },
+    "vp-2908": {
+      "name": "Jane Vy Trinh",
+      "outcome": "found",
+      "pageUrl": "https://scholars.duke.edu/person/jane.trinh",
+      "imageUrl": "https://scholars.duke.edu/profile-images/thumbnail500/0215211.jpg?nocache=1794356896236",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T00:28:56.680Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-2909": {
+      "name": "Lan N. Doan",
+      "outcome": "found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "official img alt Lan Doan"
+      ],
+      "retrievedAt": "2026-11-11T00:29:48.921090+00:00",
+      "note": "Original 3840x1680 official hero photograph downloaded and visually checked; script --store refused wide aspect. Square crop of the same single person visually checked, 600x600, original image URL retained; face check ok.",
+      "pageUrl": "https://med.nyu.edu/faculty/lan-doan",
+      "imageUrl": "https://med.nyu.edu/dti-physician-photo/faculty/d/doanl02/doanl02-hero.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM"
     }
   }
 }
