@@ -628,6 +628,11 @@ const FIELD_OVERRIDES = new Map([
   ['School of Future Environments|Auckland University of Technology', 'Engineering'],
   // Owner session 2026-11-10 (#1034): ISIS neutron spectroscopy (condensed matter).
   ['ISIS Neutron and Muon Source|Rutherford Appleton Laboratory', 'Physics & Astronomy'],
+  // Owner session 2026-11-10 (#1052): tourism studies, as at Ritsumeikan APU and Tokyo Metropolitan.
+  [
+    'Faculty of Creative Tourism and Intelligent Technologies|Macao University of Tourism',
+    'Social & Behavioral Sciences',
+  ],
   [
     'Metabolomics Laboratory|Baker Heart and Diabetes Institute',
     'Biological & Biomedical Sciences',
