@@ -54,9 +54,9 @@ left a duplicate of an existing entry, guessed `vietnameseName` values, and a qu
    company that publishes (Waymo, Tesla, Bloomberg). Not eligible: engineers with no research output
    in the current job, product and program staff, residents, interns, student
    researchers, visiting researchers, postdocs and other fixed-term fellows, contractors, and
-   consultants. For government, defense, FFRDC/UARC, central-bank, and international-organization
-   roles a doctorate is required; record `phdInstitution`, and leave the person out when no source
-   shows one.
+   consultants. A research doctorate is required in every sector this playbook covers, corporate labs
+   included (PhD or equivalent; an MD for clinical-research roles); record `phdInstitution`, and
+   leave the person out when no source shows one.
 3. **Not already on the roster.** Run
    `npm run find-roster-matches -- "<name>" --url <every identity URL>` (it reads both roster files
    and the retired-id ledger) and `gh issue list --state all --search '"<name>"'`. A hit at a
