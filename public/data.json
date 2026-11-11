@@ -71728,5 +71728,77 @@
     "phdInstitution": "Johns Hopkins University",
     "undergradInstitution": "Swarthmore College",
     "confirmed": false
+  },
+  {
+    "id": "vp-3111",
+    "name": "Dzung Phan",
+    "university": "IBM Research",
+    "institutionType": "Corporate research lab",
+    "track": "Industry Research",
+    "rank": "Researcher",
+    "city": "Yorktown Heights",
+    "state": "New York",
+    "country": "United States",
+    "profileUrl": "https://research.ibm.com/people/dzung-phan",
+    "researchAreas": [
+      "Optimization",
+      "Quantum computing",
+      "AI for mathematics",
+      "Stochastic optimization",
+      "Energy systems"
+    ],
+    "linkedinUrl": "https://www.linkedin.com/in/dzungphan",
+    "phdInstitution": "University of Florida",
+    "phdYear": 2010,
+    "undergradInstitution": "Vietnam National University, Hanoi",
+    "undergradYear": 2001,
+    "department": "AI and Optimization"
+  },
+  {
+    "id": "vp-3112",
+    "name": "Long Vu",
+    "university": "IBM Research",
+    "institutionType": "Corporate research lab",
+    "track": "Industry Research",
+    "rank": "Researcher",
+    "city": "Yorktown Heights",
+    "state": "New York",
+    "country": "United States",
+    "profileUrl": "https://www.linkedin.com/in/long-vu-4aab5b54",
+    "researchAreas": [
+      "Generative AI",
+      "Text-to-SQL",
+      "Machine learning",
+      "Reinforcement learning",
+      "Data management"
+    ],
+    "linkedinUrl": "https://www.linkedin.com/in/long-vu-4aab5b54",
+    "phdInstitution": "University of Illinois Urbana-Champaign",
+    "confirmed": false,
+    "department": "Text2SQL"
+  },
+  {
+    "id": "vp-3113",
+    "name": "Phuong Ha Nguyen",
+    "university": "eBay",
+    "institutionType": "Corporate research lab",
+    "track": "Industry Research",
+    "rank": "Researcher",
+    "city": "San Jose",
+    "state": "California",
+    "country": "United States",
+    "profileUrl": "https://www.linkedin.com/in/phuong-ha-nguyen-4b17b5110",
+    "researchAreas": [
+      "Machine learning",
+      "Computational advertising",
+      "Cryptography",
+      "Differential privacy",
+      "Stochastic optimization"
+    ],
+    "linkedinUrl": "https://www.linkedin.com/in/phuong-ha-nguyen-4b17b5110",
+    "phdInstitution": "Nanyang Technological University",
+    "phdYear": 2013,
+    "confirmed": false,
+    "department": "Research"
   }
 ]
