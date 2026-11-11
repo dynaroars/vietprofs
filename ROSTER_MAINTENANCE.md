@@ -15,6 +15,10 @@ Include a person only when reliable evidence, preferably an official institution
 - A primary academic appointment and one of the accepted tracks below. University leaders qualify
   only through a substantial underlying academic appointment; an administrative title alone is not
   sufficient.
+- Community and two-year colleges count as universities when the appointment is permanent: a tenured
+  or tenure-track professorship (e.g. a tenured Irvine Valley College professor). Part-time,
+  adjunct, and semester-by-semester lecturer or instructor posts there are excluded like anywhere
+  else (owner decision, 2026-11-10).
 
 An official current institutional profile makes an entry **confirmed** and remains the preferred
 standard. When that profile is unavailable but reliable, identity-resolved evidence supports an
