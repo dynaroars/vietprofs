@@ -17405,6 +17405,38 @@
         "stored_roster_url"
       ],
       "retrievedAt": "2026-11-11T00:14:04.383Z"
+    },
+    "vp-2904": {
+      "name": "Quang Hung Pham",
+      "outcome": "found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "named_portrait_in_official_emeriti_book"
+      ],
+      "retrievedAt": "2026-11-11T00:18:20.752Z",
+      "note": "Extracted original embedded JPEG from page 37 of official UVA 2023 emeriti book using pdfimages; visually checked against named page, clean single-person headshot, 534x727; converted to WebP.",
+      "pageUrl": "https://s3.amazonaws.com/cdn.sites.provost.virginia.edu/files/2023.06.05-Faculty-Emeriti-Book_508.pdf#page=37",
+      "imageUrl": "https://s3.amazonaws.com/cdn.sites.provost.virginia.edu/files/2023.06.05-Faculty-Emeriti-Book_508.pdf#page=37",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH"
+    },
+    "vp-2905": {
+      "name": "Chi-Tuong Pham",
+      "outcome": "not_found",
+      "pageUrl": "https://www.lisn.upsaclay.fr/membres/pham-chi-tuong/",
+      "imageUrl": "https://www.lisn.upsaclay.fr/app/uploads/2024/02/Pham_ChiTuong-20240220-2153.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T00:18:22.271Z",
+      "note": "Official LISN named image downloaded and visually inspected: generic avatar, not stored."
     }
   }
 }
