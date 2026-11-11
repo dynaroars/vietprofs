@@ -377,13 +377,15 @@ Issue each.
 ### Discover new faculty (`discover`)
 
 Playbooks: `TASKS/discover_from_database.md` (database channels), `TASKS/discover_new_faculty.md`
-(web/directory search), and `TASKS/candidate_intake.md` (eligibility and enrichment).
+(web/directory search), `TASKS/discover_industry_labs.md` (corporate, government, and policy
+employers), and `TASKS/candidate_intake.md` (eligibility and enrichment).
 
 1. **Channel by weekday (UTC):** Mon `grants` (NIH RePORTER + NSF PIs), Tue `coauthors`
    (Crossref/OpenAlex co-authors of rostered scholars), Wed `gaps` (feeder-vs-faculty gap report,
    then `./scripts/faculty-discovery-queries.ts` for the top uncovered gap university), Thu `labs`
-   (alumni pages on rostered `websiteUrl`s), Fri web search per `discover_new_faculty.md` (one field
-   or institution group; given-name tokens once that field's surname sweep is done), Sat `logs`
+   (alumni pages on rostered `websiteUrl`s), Fri web search: on odd ISO weeks per `discover_new_faculty.md` (one field
+   or institution group; given-name tokens once that field's surname sweep is done), on even ISO
+   weeks per `discover_industry_labs.md` (one employer group, filed as a `New industry batch`), Sat `logs`
    (out-of-roster leads in `maintenance/relationship-research.json`). Run
    `npm run discover-leads -- --mode=<channel> --limit=<n>` (never `--mode=all`). If the day's channel
    yields fewer than 5 promising leads, fall back to the next channel in the list.
@@ -401,7 +403,7 @@ Playbooks: `TASKS/discover_from_database.md` (database channels), `TASKS/discove
    one numbered section per candidate with a ready-to-paste JSON entry (no `id`), the dedup result,
    and the verification URLs. End with a "Coverage" section listing the channel, parameters, and
    every lead, university, lab, or query examined, including rejected leads and why.
-5. **Boundaries:** never edit `public/data.json`, assign an id, or open a PR. The only commit allowed
+5. **Boundaries:** never edit `public/data.json` or `public/industry.json`, assign an id, or open a PR. The only commit allowed
    is `maintenance/network-discovery.json` after a `labs` or `coauthors` run (pushed to `main` after
    `npm test`, `npm run build`, `git diff --check`).
 
