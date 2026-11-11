@@ -17305,6 +17305,28 @@
         "stored_roster_url"
       ],
       "retrievedAt": "2026-11-10T23:56:43.251Z"
+    },
+    "vp-2896": {
+      "name": "Quoc Thinh Tran",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-11T00:02:53.411Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2897": {
+      "name": "Mirko Pham",
+      "outcome": "found",
+      "pageUrl": "https://www.ukw.de/neuroradiologie/team/neuroradiologie-detail/name/pham-mirko/",
+      "imageUrl": "https://www.ukw.de/fileadmin/_processed_/1/b/csm_NRAD_Pham-M_b8675e5a43.png",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T00:03:03.799Z",
+      "note": "Official single-person headshot visually verified. --store refused landscape aspect ratio; manually cropped to square around the same person, then stored WebP."
     }
   }
 }
