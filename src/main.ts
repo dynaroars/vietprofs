@@ -18,7 +18,6 @@ import {
   hasEnoughPeopleForRosterHub,
   institutionTypeOf,
   loadCorporateIndustryRoster,
-  loadIndustryRoster,
   loadLabsRoster,
   loadRelationships,
   loadRoster,
