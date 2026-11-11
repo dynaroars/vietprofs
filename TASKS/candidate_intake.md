@@ -61,8 +61,10 @@ Before spending time on enrichment, confirm the candidate can plausibly satisfy
   Scientists, Principal/Staff Scientists, Distinguished Engineers, and Research Directors at corporate
   research labs (e.g., Google DeepMind, Google Research, OpenAI, Anthropic, Microsoft Research, Meta FAIR,
   NVIDIA Research, Apple ML, AWS AI, IBM Research, Adobe Research, Genentech) under `track: "Industry Research"`,
-  `institutionType: "Corporate research lab"`. Exclude standard software engineers, product managers, and
-  non-research roles.
+  `institutionType: "Corporate research lab"`. The role decides, not the title: a research title, or a
+  current job that visibly includes publishing research, at an organization that publishes research
+  (`ROSTER_MAINTENANCE.md` "Corporate Research Labs"). Exclude engineers and product roles with no
+  research output in the current job.
 - **`🏛️ Gov, Defense & Labs` — Central Banks, International Orgs & Think Tanks**:
   Permanent/career Economists, Senior Economists, Policy Researchers, and Senior Fellows at central banks
   (Fed Board & regional Fed banks, ECB, BIS), international organizations (IMF, World Bank, OECD, ADB),

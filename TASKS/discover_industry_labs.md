@@ -49,8 +49,10 @@ left a duplicate of an existing entry, guessed `vietnameseName` values, and a qu
    is newer before recording an employer: lab pages outlive the job.
 2. **A career research role.** Research Scientist, Principal/Staff/Distinguished Scientist,
    Research Director, Economist, Senior Fellow, program manager/officer, or the lab's equivalent
-   permanent staff ladder. Not eligible: software/ML engineers and "Member of Technical Staff"
-   without a research record at that lab, product and program staff, residents, interns, student
+   permanent staff ladder. The role decides, not the title: a "Software Engineer" or "Member of
+   Technical Staff" who publishes research from the current job qualifies, at a lab or at a product
+   company that publishes (Waymo, Tesla, Bloomberg). Not eligible: engineers with no research output
+   in the current job, product and program staff, residents, interns, student
    researchers, visiting researchers, postdocs and other fixed-term fellows, contractors, and
    consultants. For government, defense, FFRDC/UARC, central-bank, and international-organization
    roles a doctorate is required; record `phdInstitution`, and leave the person out when no source
