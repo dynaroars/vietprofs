@@ -1,5 +1,6 @@
 import './style.css';
 import './directory.css';
+import { KEYWORD_ALIASES } from './keywords.ts';
 import { loadStatsHistory } from './stats-history.ts';
 import {
   FIELDS,
@@ -61,7 +62,6 @@ import {
   focusQuietly,
   hideCommandOutput as hideCommandOutputEl,
   parseKeywordQuery as parseKeywordQueryShared,
-  setupKeyboardShortcuts,
   setupSearchHelp,
 } from './search-kit.ts';
 import { setupBackToTop } from './back-to-top.ts';
@@ -97,10 +97,45 @@ function parseSector(value: string | null | undefined): SectorChoice {
 // Keyword prefixes let the single search box target one field directly (e.g. "Name: Nguyen"),
 // without needing the scope dropdown. Aliases map several spellings to the same scope value the
 // dropdown already uses, so both paths produce identical results.
+// The organization keyword is sector-aware ("University:" only in Academia); every old prefix
+// still parses through KEYWORD_ALIASES, and `type` (alias `institution`) is the separate institution-type scope.
+const ORGANIZATION_LABELS: Record<SectorChoice, string> = {
+  all: 'Organization',
+  academia: 'University',
+  labs: 'Organization',
+  industry: 'Employer',
+};
+const ORGANIZATION_EXAMPLES: Record<SectorChoice, string> = {
+  all: 'George Mason University',
+  academia: 'George Mason University',
+  labs: 'Argonne National Laboratory',
+  industry: 'Google',
+};
+const TYPE_EXAMPLES: Record<SectorChoice, string> = {
+  all: 'Corporate research lab',
+  academia: 'University',
+  labs: 'Public research institute',
+  industry: 'Corporate research lab',
+};
+const TRACK_EXAMPLES: Record<SectorChoice, string> = {
+  all: 'Tenure-line',
+  academia: 'Tenure-line',
+  labs: 'Government & Defense',
+  industry: 'Industry Research',
+};
+const RANK_EXAMPLES: Record<SectorChoice, string> = {
+  all: 'Researcher',
+  academia: 'Associate Professor',
+  labs: 'Researcher',
+  industry: 'Researcher',
+};
 const KEYWORD_LABELS: Record<string, string> = {
   name: 'Name',
-  university: 'University',
-  institution: 'Institution',
+  get university() {
+    return ORGANIZATION_LABELS[activeSector];
+  },
+  type: 'Type',
+  track: 'Track',
   department: 'Department',
   rank: 'Rank',
   research: 'Research',
@@ -113,7 +148,8 @@ const KEYWORD_LABELS: Record<string, string> = {
 const KEYWORD_ICONS: Record<string, string> = {
   name: '👤',
   university: '🏛️',
-  institution: '🏛️',
+  type: '🏷️',
+  track: '🧭',
   department: '🏢',
   rank: '🎓',
   research: '🔬',
@@ -125,10 +161,19 @@ const KEYWORD_ICONS: Record<string, string> = {
 
 const KEYWORD_EXAMPLES: Record<string, string> = {
   name: 'ThanhVu Nguyen',
-  university: 'George Mason University',
-  institution: 'Public research institute',
+  get university() {
+    return ORGANIZATION_EXAMPLES[activeSector];
+  },
+  get type() {
+    return TYPE_EXAMPLES[activeSector];
+  },
+  get track() {
+    return TRACK_EXAMPLES[activeSector];
+  },
   department: 'Computer Science',
-  rank: 'Associate Professor',
+  get rank() {
+    return RANK_EXAMPLES[activeSector];
+  },
   research: 'Software Engineering',
   honors: 'NSF CAREER Award',
   phd: 'University of New Mexico',
@@ -136,35 +181,14 @@ const KEYWORD_EXAMPLES: Record<string, string> = {
   connection: 'co-author, mentorship',
 };
 
-const KEYWORD_ALIASES: Record<string, string> = {
-  name: 'name',
-  university: 'university',
-  uni: 'university',
-  organization: 'university',
-  org: 'university',
-  company: 'university',
-  lab: 'university',
-  institute: 'university',
-  agency: 'university',
-  institution: 'institution',
-  institutiontype: 'institution',
-  department: 'department',
-  dept: 'department',
-  rank: 'rank',
-  research: 'research',
-  researcharea: 'research',
-  honors: 'honors',
-  honor: 'honors',
-  award: 'honors',
-  awards: 'honors',
-  phd: 'phd',
-  phdinstitution: 'phd',
-  undergrad: 'undergrad',
-  ugrad: 'undergrad',
-  ugradinst: 'undergrad',
-  connection: 'connection',
-  connections: 'connection',
-};
+function renderKeywordHelpItems(): string {
+  return Object.entries(KEYWORD_LABELS)
+    .map(
+      ([scope, label]) =>
+        `<li><code>${escapeHtml(label)}:</code> ${escapeHtml(KEYWORD_EXAMPLES[scope] ?? '')}</li>`,
+    )
+    .join('');
+}
 
 function parseKeywordQuery(raw: string): { scope: string; query: string } | null {
   const parsed = parseKeywordQueryShared(raw, (key) => KEYWORD_ALIASES[key]);
@@ -207,7 +231,7 @@ function renderShell() {
               <span class="search-scope-chip-remove" aria-hidden="true">×</span>
             </button>
             <input id="search" class="search-input" type="search" autocomplete="off" placeholder="Search by name, field, or organization" aria-label="Search" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="search-suggestion-panel" />
-            <button type="button" id="search-help-btn" class="search-help-btn" aria-haspopup="dialog" aria-expanded="false" aria-controls="search-help-panel" aria-label="Search syntax and keyboard help" title="Search syntax and keyboard help"><span class="search-help-icon" aria-hidden="true">?</span></button>
+            <button type="button" id="search-help-btn" class="search-help-btn" aria-haspopup="dialog" aria-expanded="false" aria-controls="search-help-panel" aria-label="Search syntax help" title="Search syntax help"><span class="search-help-icon" aria-hidden="true">?</span></button>
           </div>
           <div id="search-suggestion-panel" class="search-suggestion-panel" role="listbox" hidden></div>
         </div>
@@ -215,15 +239,8 @@ function renderShell() {
           <p><strong>QUERY SYNTAX</strong></p>
           <p>Type a keyword prefix to search one field directly:</p>
           <ul>
-            ${Object.entries(KEYWORD_LABELS)
-              .map(
-                ([scope, label]) =>
-                  `<li><code>${escapeHtml(label)}:</code> ${escapeHtml(KEYWORD_EXAMPLES[scope] ?? '')}</li>`,
-              )
-              .join('')}
+            ${renderKeywordHelpItems()}
           </ul>
-          <p><strong>KEYBOARD</strong></p>
-          <p><code>/</code> search · <code>j</code>/<code>k</code> move · <code>Enter</code> open · <code>f</code> favorite · <code>r</code> random · <code>Esc</code> clear</p>
           <p><strong>COMMANDS</strong></p>
           <p><code>help</code> · <code>query plan</code> · <code>clear</code></p>
         </div>
@@ -236,7 +253,7 @@ function renderShell() {
       <select id="field-filter" class="field-select" aria-label="Filter by field">
         <option value="all">All Fields</option>
       </select>
-      <select id="track-filter" class="field-select track-select" aria-label="Filter by faculty track">
+      <select id="track-filter" class="field-select track-select" aria-label="Filter by track">
         <option value="all">All Tracks</option>
       </select>
       <select id="employer-filter" class="field-select employer-select" aria-label="Filter by employer" hidden>
@@ -260,7 +277,7 @@ function renderShell() {
           ${siteNavLink('connections.html', 'Academic Connections', ICONS.connections)}
           ${siteNavLink('index.html?view=health', 'Data Health & Completeness', ICONS.health, ' data-view="health"')}
           ${siteNavLink(`${import.meta.env.BASE_URL}vietprofs.pdf`, 'Read the paper (PDF)', PAPER_ICON, EXTERNAL)}
-          ${renderShareMenu({ title: 'VietProfs: Vietnamese professors worldwide' })}
+          ${renderShareMenu({ title: 'VietProfs: Vietnamese scholars and scientists worldwide' })}
         </nav>
     </div>
     <div class="roster" id="roster"></div>
@@ -313,7 +330,7 @@ const TRACK_INFO: Record<string, { label: string; tooltip: string }> = {
       'Deceased or historical scholars who held a qualifying university faculty or eligible research-institute appointment outside Vietnam.',
   },
   'Industry Research': {
-    label: 'industry research',
+    label: 'industry',
     tooltip:
       'A research scientist, research director, or senior technical contributor appointment at an industrial research laboratory or corporate R&D organization.',
   },
@@ -385,8 +402,6 @@ function sortRoster(roster: Roster, order: string): Roster {
   );
 }
 
-let currentRoster: Roster = [];
-
 function renderRoster(
   roster: Roster,
   {
@@ -431,16 +446,15 @@ function renderRoster(
       ? `<a class="result-count-link" href="${locationTarget}" title="Open ${escapeHtml(rawLocationName)} region hub">${escapeHtml(rawLocationName)} ↗</a>`
       : escapeHtml(rawLocationName);
   const peopleLabel = roster.length === 1 ? 'person' : 'people';
-  const orgWord = isAcademia()
-    ? institutions === 1
-      ? 'institution'
-      : 'institutions'
-    : institutions === 1
-      ? 'organization'
-      : 'organizations';
+  const orgWord =
+    activeSector === 'academia'
+      ? institutions === 1
+        ? 'institution'
+        : 'institutions'
+      : institutions === 1
+        ? 'organization'
+        : 'organizations';
   countEl.innerHTML = `${roster.length}${trackQualifier(roster)} ${peopleLabel}${fieldPhrase} across ${institutions} ${orgWord} in ${locationPhrase}.`;
-
-  currentRoster = roster;
 
   if (roster.length === 0) {
     rosterEl.innerHTML = '<p class="empty-state">No matches. Try a different search or filter.</p>';
@@ -563,10 +577,7 @@ async function init() {
       ].sort(),
     ],
     ['university', [...new Set(roster.map((p) => p.university))].sort()],
-    [
-      'institution',
-      INSTITUTION_TYPES.filter((type) => roster.some((p) => institutionTypeOf(p) === type)),
-    ],
+    ['type', INSTITUTION_TYPES.filter((type) => roster.some((p) => institutionTypeOf(p) === type))],
     ['department', uniqueDepartments(roster)],
     ['phd', uniquePhdInstitutions(roster)],
     ['undergrad', uniqueUndergradInstitutions(roster)],
@@ -578,7 +589,7 @@ async function init() {
     const rosterSize = roster
       .filter((p) => activeSector === 'all' || sectorOf(p) === activeSector)
       .length.toLocaleString('en-US');
-    const orgWord = isAcademia() ? 'university' : 'organization';
+    const orgWord = activeSector === 'academia' ? 'university' : 'organization';
     searchInput.placeholder = narrowScreen.matches
       ? `Search ${rosterSize} people`
       : `Search ${rosterSize} people by name, field, or ${orgWord}`;
@@ -602,7 +613,6 @@ async function init() {
   const statsHistory = await loadStatsHistory();
   let currentGrowthMetric: GrowthMetricKey = 'count';
   let queryPlan = '';
-  let keyboardSelectedIndex = -1;
   // Search box: a typed/pasted "Keyword: value" prefix becomes a removable scope chip
   // (createSearchController in the shared search-kit), with an in-page suggestion listbox.
   // An in-page listbox rather than a native <datalist>: browser-owned datalist popups can
@@ -613,9 +623,14 @@ async function init() {
     scopeChipLabel: searchScopeChipLabel,
     suggestionPanel,
     keywordMeta: Object.fromEntries(
-      Object.entries(KEYWORD_LABELS).map(([scope, label]) => [
+      Object.keys(KEYWORD_LABELS).map((scope) => [
         scope,
-        { label, icon: KEYWORD_ICONS[scope] },
+        {
+          get label() {
+            return KEYWORD_LABELS[scope] as string;
+          },
+          icon: KEYWORD_ICONS[scope],
+        },
       ]),
     ),
     resolveKey: (key) => KEYWORD_ALIASES[key],
@@ -1004,12 +1019,13 @@ async function init() {
     if (params.has('q')) {
       setSearchValue(params.get('q') ?? '');
     } else if (INSTITUTION_TYPES.some((type) => type === requestedInstitutionType)) {
-      setSearchValue(`${KEYWORD_LABELS.institution}: ${requestedInstitutionType}`);
+      setSearchValue(`${KEYWORD_LABELS.type}: ${requestedInstitutionType}`);
     } else {
       clearSearch();
     }
     activeSector = parseSector(params.get('sector'));
     sectorSelect.value = activeSector;
+    refreshKeywordLabels();
     const requestedEmployer = params.get('employer') ?? 'all';
     const requestedLocation = params.get('loc') ?? params.get('location');
     filterState.state = params.get('state') ?? '';
@@ -1153,6 +1169,15 @@ async function init() {
     browserShelf.append(group);
   }
 
+  // The organization keyword follows the sector: refresh the help list and any active chip.
+  function refreshKeywordLabels() {
+    const helpList = document.querySelector('#search-help-panel ul');
+    if (helpList) helpList.innerHTML = renderKeywordHelpItems();
+    if (search.activeScope() === 'university') {
+      setSearchValue(`${KEYWORD_LABELS.university}: ${searchInput.value}`);
+    }
+  }
+
   function update({ fromSearch = false } = {}) {
     applySearchPlaceholder();
     if (fromSearch) {
@@ -1192,6 +1217,7 @@ async function init() {
         locationLabel(locationSelect.value),
         locationSelect.value,
         scopedRoster,
+        activeSector,
       );
       renderQueryPlan(locRoster.length, 'insights');
       syncUrl();
@@ -1228,7 +1254,6 @@ async function init() {
         ),
       availableRegionHubs,
     });
-    keyboardSelectedIndex = -1;
     renderQueryPlan(filtered.length);
     syncUrl();
     renderBrowserShelf();
@@ -1279,7 +1304,7 @@ async function init() {
   });
 
   // The shared help / query plan / clear commands; every other input is a search.
-  const runCommand = createCommandHandler({
+  const runSharedCommand = createCommandHandler({
     input: searchInput,
     getSearch: () => search,
     commandOutputEl: commandOutput,
@@ -1288,57 +1313,19 @@ async function init() {
     getQueryPlan: () => queryPlan,
     resetDirectory,
   });
+  // The shared `help` reply mentions keyboard shortcuts, which this directory doesn't have.
+  const runCommand = (raw: string): boolean => {
+    const handled = runSharedCommand(raw);
+    if (handled && raw.trim().toLowerCase().replace(/^:/, '') === 'help') {
+      commandOutput.textContent = 'help: query prefixes and commands are listed above';
+    }
+    return handled;
+  };
 
   searchStateChip.addEventListener('click', () => {
     filterState.state = '';
     renderStateFilterChip();
     update();
-  });
-
-  // j/k (or arrows) move, Enter opens, f favorites, r random, / search, ? help, and Escape steps
-  // back: close help → leave insights/health/state filter → blur search → clear search.
-  setupKeyboardShortcuts({
-    input: searchInput,
-    help: searchHelp,
-    getItemElements: () => [...document.querySelectorAll<HTMLElement>('.entry')],
-    getSelectedIndex: () => keyboardSelectedIndex,
-    setSelectedIndex: (index) => {
-      keyboardSelectedIndex = index;
-    },
-    selectedClass: 'entry-keyboard-selected',
-    nextKeys: ['j', 'ArrowDown'],
-    prevKeys: ['k', 'ArrowUp'],
-    isNavigable: () => currentRoster.length > 0 || document.querySelectorAll('.entry').length > 0,
-    onEnter: (selected) => selected.querySelector<HTMLAnchorElement>('.entry-name')?.click(),
-    onSecondary: (selected) =>
-      selected.querySelector<HTMLButtonElement>('.favorite-toggle')?.click(),
-    onRandom: () => {
-      const entries = [...document.querySelectorAll<HTMLElement>('.entry')];
-      if (!entries.length) {
-        showToast('No profiles to choose from. Open the directory first.');
-        return;
-      }
-      entries[keyboardSelectedIndex]?.classList.remove('entry-keyboard-selected');
-      keyboardSelectedIndex = Math.floor(Math.random() * entries.length);
-      const selected = entries[keyboardSelectedIndex];
-      selected.classList.add('entry-keyboard-selected');
-      selected.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
-    },
-    escape: {
-      onEscape: () => {
-        if (!(filterState.insights || filterState.health || filterState.state)) return false;
-        filterState.insights = false;
-        filterState.health = false;
-        filterState.state = '';
-        update();
-        return true;
-      },
-      closeSuggestions: () => search.close(),
-      clearSearch: () => {
-        clearSearch();
-        update();
-      },
-    },
   });
 
   sectorSelect.addEventListener('change', () => {
@@ -1349,6 +1336,7 @@ async function init() {
     filterState.state = '';
     filterState.insights = false;
     filterState.health = false;
+    refreshKeywordLabels();
     update();
   });
   employerSelect.addEventListener('change', () => {

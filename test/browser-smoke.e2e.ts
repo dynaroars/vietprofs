@@ -185,29 +185,21 @@ test('recently viewed profiles stay in browser storage', async () => {
   await page.close();
 });
 
-test('keyboard navigation and the query plan command work without leaving the directory', async () => {
+test('the query plan command works without leaving the directory, and no keyboard shortcuts are bound', async () => {
   const page = await context.newPage();
   await page.goto(`${baseUrl}/`, { waitUntil: 'networkidle' });
-  await page.evaluate(() => {
-    localStorage.removeItem('vietprofs:favorites');
-  });
-  await page.reload({ waitUntil: 'networkidle' });
-
-  await page.keyboard.press('/');
-  assert.equal(
-    await page.locator('#search').evaluate((element) => element === document.activeElement),
-    true,
-  );
   await page.locator('#search').fill('query plan');
   await page.locator('#search').press('Enter');
   assert.match(await textOf(page.locator('#command-output')), /query plan: .*matches=\d+/);
   assert.equal(await page.locator('#search').inputValue(), '');
   await page.locator('#search').blur();
-  await page.keyboard.press('j');
-  const selected = page.locator('.entry-keyboard-selected');
-  assert.equal(await selected.count(), 1);
-  await page.keyboard.press('f');
-  assert.equal(await selected.locator('.favorite-toggle').getAttribute('aria-pressed'), 'true');
+  for (const key of ['/', 'j', 'f', 'r']) await page.keyboard.press(key);
+  assert.equal(await page.locator('.entry-keyboard-selected').count(), 0);
+  assert.equal(
+    await page.locator('#search').evaluate((element) => element === document.activeElement),
+    false,
+  );
+  assert.doesNotMatch(await textOf(page.locator('#search-help-panel')), /KEYBOARD|shortcut/i);
   await page.close();
 });
 
@@ -631,14 +623,17 @@ test('combined field and location filters link to their static intersection hub'
   assert.equal(await page.locator('#location-filter').inputValue(), 'Japan');
   assert.match(
     await textOf(page.locator('#result-count')),
-    /\d+ people in Health Sciences .* across \d+ institutions in Japan/,
+    /\d+ people in Health Sciences .* across \d+ organizations in Japan/,
   );
 
   const fieldHubLink = page.locator('#result-count .result-count-link').first();
   assert.match(await attrOf(fieldHubLink, 'href'), /\/regions\/japan\/health-sciences\.html$/);
   await fieldHubLink.click();
   await page.waitForLoadState('networkidle');
-  assert.equal(await textOf(page.locator('h1')), 'Vietnamese Health Sciences Professors in Japan');
+  assert.equal(
+    await textOf(page.locator('h1')),
+    'Vietnamese Health Sciences Researchers & Scholars in Japan',
+  );
   await page.close();
 });
 
@@ -1112,25 +1107,6 @@ test('map country controls filter by mouse and keyboard and explain empty countr
   }
 });
 
-test('random shortcut selects a profile from the current results', async () => {
-  const page = await context.newPage();
-  try {
-    await page.addInitScript(() => localStorage.removeItem('vietprofs:favorites'));
-    await page.goto(`${baseUrl}/?loc=France`, { waitUntil: 'networkidle' });
-    const before = page.url();
-    await page.locator('#search').blur();
-    await page.keyboard.press('r');
-    const selected = page.locator('.entry-keyboard-selected');
-    assert.equal(await selected.count(), 1);
-    assert.equal(page.url(), before);
-    await page.keyboard.press('f');
-    assert.equal(await selected.locator('.favorite-toggle').getAttribute('aria-pressed'), 'true');
-    await selected.locator('.favorite-toggle').click();
-  } finally {
-    await page.close();
-  }
-});
-
 test('submission validation recovers after editing and switching modes', async () => {
   const page = await context.newPage();
   try {
@@ -1379,4 +1355,107 @@ test('sector filter narrows the single directory, drives track options, and old 
     assert.equal(await resultTotal(), expected[sector]);
   }
   await page.close();
+});
+
+const SECTOR_CASES = ['all', 'academia', 'labs', 'industry'] as const;
+
+test('the directory never scrolls horizontally at phone width in any sector', async () => {
+  const phone = await browser.newContext({ viewport: { width: 375, height: 800 } });
+  const page = await phone.newPage();
+  try {
+    for (const sector of SECTOR_CASES) {
+      await page.goto(`${baseUrl}/?sector=${sector}`, { waitUntil: 'networkidle' });
+      const [scrollWidth, innerWidth] = await page.evaluate(() => [
+        document.scrollingElement?.scrollWidth ?? 0,
+        window.innerWidth,
+      ]);
+      assert.ok(scrollWidth <= innerWidth, `${sector}: scrollWidth ${scrollWidth} > ${innerWidth}`);
+    }
+  } finally {
+    await phone.close();
+  }
+});
+
+test('Industry filter controls share one row on desktop', async () => {
+  const desktop = await browser.newContext({ viewport: { width: 1280, height: 800 } });
+  const page = await desktop.newPage();
+  try {
+    await page.goto(`${baseUrl}/?sector=industry`, { waitUntil: 'networkidle' });
+    const tops = await page
+      .locator('.controls select:visible')
+      .evaluateAll((selects) =>
+        selects.map((select) => (select as HTMLElement).getBoundingClientRect().top),
+      );
+    assert.equal(tops.length, 6);
+    assert.ok(Math.max(...tops) - Math.min(...tops) <= 3, `controls wrapped: ${tops}`);
+  } finally {
+    await desktop.close();
+  }
+});
+
+test('Gov & Labs and Industry views use sector wording, not professor or University', async () => {
+  const page = await context.newPage();
+  try {
+    for (const sector of ['labs', 'industry'] as const) {
+      for (const view of ['', '&view=insights']) {
+        await page.goto(`${baseUrl}/?sector=${sector}${view}`, { waitUntil: 'networkidle' });
+        // Entry text is data (a few genuinely carry a Professor title); the surrounding page
+        // chrome and insights copy must not.
+        const text = await page.evaluate(() => {
+          const clone = document.querySelector('#app')?.cloneNode(true) as HTMLElement;
+          clone.querySelectorAll('.entry').forEach((entry) => entry.remove());
+          return clone.innerText || clone.textContent || '';
+        });
+        assert.doesNotMatch(text, /professor|faculty/i, `${sector}${view}`);
+      }
+      await page.goto(`${baseUrl}/?sector=${sector}`, { waitUntil: 'networkidle' });
+      await page.locator('#search').fill('Organization: a');
+      assert.doesNotMatch(await page.locator('#search-scope-chip').innerText(), /University/);
+      assert.match(
+        await page.locator('#search-scope-chip').innerText(),
+        sector === 'industry' ? /Employer/ : /Organization/,
+      );
+      assert.doesNotMatch(await textOf(page.locator('#search-help-panel')), /University:/);
+    }
+    await page.goto(`${baseUrl}/?sector=academia`, { waitUntil: 'networkidle' });
+    await page.locator('#search').fill('Uni: a');
+    assert.match(await page.locator('#search-scope-chip').innerText(), /University/);
+    // The Type and Track keywords scope to institution type and track.
+    await page.goto(`${baseUrl}/?sector=industry`, { waitUntil: 'networkidle' });
+    await page.locator('#search').fill('Type: Corporate research lab');
+    assert.match(await page.locator('#search-scope-chip').innerText(), /Type/);
+    await page.waitForFunction(() => document.querySelectorAll('.entry').length === 53);
+    await page.locator('#search').fill('Track: Industry Research');
+    await page.waitForFunction(() => document.querySelectorAll('.entry').length === 53);
+  } finally {
+    await page.close();
+  }
+});
+
+test('Gov & Labs and Industry profile pages avoid academic wording and university schema types', async () => {
+  const page = await context.newPage();
+  try {
+    for (const id of ['vp-2963', 'vp-2920']) {
+      await page.goto(`${baseUrl}/people/${id}.html`, { waitUntil: 'networkidle' });
+      const text = await page.locator('body').innerText();
+      assert.doesNotMatch(text, /professor|faculty/i, id);
+      const head = await page.evaluate(
+        () =>
+          document.title +
+          [...document.querySelectorAll('meta[name=description], meta[property^="og:"]')]
+            .map((meta) => meta.getAttribute('content'))
+            .join(' '),
+      );
+      assert.doesNotMatch(head, /professor|faculty/i, id);
+      const graph = JSON.parse(
+        await page.locator('script[type="application/ld+json"]').first().innerHTML(),
+      )['@graph'];
+      const person = graph.find((node: { '@type': string }) => node['@type'] === 'Person');
+      for (const key of ['worksFor', 'affiliation']) {
+        assert.doesNotMatch(person[key]['@type'], /College|University|Educational/, `${id} ${key}`);
+      }
+    }
+  } finally {
+    await page.close();
+  }
 });

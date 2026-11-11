@@ -1793,6 +1793,8 @@ function scopedValuesFor(person: RosterEntry, scope: string): (string | undefine
       return [displayName(person.name)];
     case 'university':
       return [person.university];
+    case 'type':
+      return [institutionTypeOf(person)];
     case 'institution':
       return [person.university, institutionTypeOf(person)];
     case 'department':
@@ -2028,7 +2030,7 @@ const MARQUEE_HONORS = [
 export function buildAwardsFunFacts(roster: Roster | null | undefined): string[] {
   const allRoster = roster || [];
   if (allRoster.length === 0) {
-    return ['No faculty currently listed, so no awards or honors can be counted.'];
+    return ['No people currently listed, so no awards or honors can be counted.'];
   }
 
   const honored = allRoster.filter((p) => (p.honors || []).length > 0).length;
@@ -2066,7 +2068,7 @@ export function buildAwardsFunFacts(roster: Roster | null | undefined): string[]
 
   if (honored > 0)
     facts.push(
-      `${honored} of ${allRoster.length} professors have at least one recorded major honor or award.`,
+      `${honored} of ${allRoster.length} people have at least one recorded major honor or award.`,
     );
   if (nsfHolders > 0) {
     facts.push(
@@ -2187,9 +2189,9 @@ function addRosterObservations(facts: string[], roster: Roster, label: string): 
 export function buildUsObservations(roster: Roster | null | undefined): string[] {
   const usRoster = (roster || []).filter((p) => (p.country || 'United States') === 'United States');
   if (usRoster.length === 0)
-    return ['No United States faculty currently listed under the active filter selection.'];
+    return ['No people in the United States currently listed under the active filter selection.'];
   const facts = [
-    `${usRoster.length} U.S. entries across ${new Set(usRoster.map((p) => p.university)).size} institutions.`,
+    `${usRoster.length} U.S. entries across ${new Set(usRoster.map((p) => p.university)).size} organizations.`,
   ];
   const places = countBy(usRoster, (p) => canonicalState(p.state, p.country));
   if (places.length >= 2 && places[0][1] + places[1][1] >= usRoster.length * 0.2) {
@@ -2212,10 +2214,10 @@ export function buildInternationalObservations(roster: Roster | null | undefined
   );
   if (international.length === 0)
     return [
-      'No international diaspora faculty currently listed under the active filter selection.',
+      'No people outside the United States currently listed under the active filter selection.',
     ];
   const facts = [
-    `${international.length} international entries across ${new Set(international.map((p) => p.university)).size} institutions in ${new Set(international.map((p) => p.country)).size} countries.`,
+    `${international.length} international entries across ${new Set(international.map((p) => p.university)).size} organizations in ${new Set(international.map((p) => p.country)).size} countries.`,
   ];
   const countries = countBy(international, (p) => p.country);
   if (countries.length)
@@ -2255,10 +2257,10 @@ export function buildLocationObservations(
 ): string[] {
   const selected = roster || [];
   if (selected.length === 0)
-    return ['No faculty currently listed under the active location selection.'];
+    return ['No people currently listed under the active location selection.'];
   const countries = new Set(selected.map((person) => person.country || 'United States')).size;
   const facts = [
-    `${selected.length} entries across ${new Set(selected.map((person) => person.university)).size} institutions in ${countries} countr${countries === 1 ? 'y' : 'ies'}.`,
+    `${selected.length} entries across ${new Set(selected.map((person) => person.university)).size} organizations in ${countries} countr${countries === 1 ? 'y' : 'ies'}.`,
   ];
   const fields = observationFields(selected);
   if (
@@ -2308,7 +2310,7 @@ export function buildQualifiedObservations(roster: Roster | null | undefined): s
 // renders them as a list.
 export function buildFunFacts(roster: Roster | null | undefined): string[] {
   if (!roster || roster.length === 0) {
-    return ['No faculty currently listed for this location or filter selection.'];
+    return ['No people currently listed for this location or filter selection.'];
   }
   const usFacts = buildUsObservations(roster);
   const globalFacts = buildInternationalObservations(roster);

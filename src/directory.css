@@ -13,6 +13,15 @@
   margin: 1.5rem 0 0.75rem;
 }
 
+/* The Industry-only Employer select is a sixth control; keep all of them on one row. */
+.controls:has(.employer-select:not([hidden])) {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.controls:has(.employer-select:not([hidden])) .field-select {
+  min-width: 0;
+}
+
 .browser-shelf {
   display: grid;
   gap: 0.35rem;
@@ -85,7 +94,8 @@
     padding: 0.85rem;
   }
 
-  .controls {
+  .controls,
+  .controls:has(.employer-select:not([hidden])) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 0.5rem;
   }
