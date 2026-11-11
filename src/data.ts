@@ -68,10 +68,35 @@ export {
 } from './roster-constants.ts';
 
 let cached: Roster | null = null;
+let industryCached: Roster | null = null;
 let relationshipsCached: RelationshipDatabase | null = null;
 
 export function institutionTypeOf(person: Pick<RosterEntry, 'institutionType'>): string {
   return person.institutionType || 'University';
+}
+
+export function isLabEntry(person: Pick<RosterEntry, 'institutionType' | 'track'>): boolean {
+  const type = institutionTypeOf(person);
+  return (
+    type === 'Public research institute' ||
+    type === 'Independent nonprofit research institute' ||
+    type === 'Government & defense' ||
+    type === 'National laboratory' ||
+    person.track === 'Government & Defense'
+  );
+}
+
+export function isCorporatePolicyEntry(
+  person: Pick<RosterEntry, 'institutionType' | 'track'>,
+): boolean {
+  const type = institutionTypeOf(person);
+  return (
+    type === 'Corporate research lab' ||
+    type === 'Policy & international organization' ||
+    type === 'Think tank' ||
+    person.track === 'Industry Research' ||
+    person.track === 'Policy & Think Tank'
+  );
 }
 
 export interface SearchIndex {
@@ -147,6 +172,35 @@ export async function loadRoster(): Promise<Roster> {
   const roster = withUpdates((await res.json()) as Roster, updates);
   cached = roster;
   return roster;
+}
+
+export async function loadIndustryRoster(): Promise<Roster> {
+  if (industryCached) return industryCached;
+  const cacheBuster =
+    typeof __BUILD_COMMIT__ !== 'undefined' && __BUILD_COMMIT__ ? `?v=${__BUILD_COMMIT__}` : '';
+  const [res, updates] = await Promise.all([
+    fetch(`${import.meta.env.BASE_URL}industry.json${cacheBuster}`),
+    // Update dates are optional decoration: the directory still works without them.
+    fetch(`${import.meta.env.BASE_URL}updates.json${cacheBuster}`)
+      .then((response) => (response.ok ? (response.json() as Promise<RosterUpdates>) : {}))
+      .catch(() => ({})),
+  ]);
+  if (!res.ok) throw new Error(`Failed to load industry.json: ${res.status}`);
+  const roster = withUpdates((await res.json()) as Roster, updates);
+  industryCached = roster;
+  return roster;
+}
+
+export async function loadLabsRoster(): Promise<Roster> {
+  const [academic, industry] = await Promise.all([loadRoster(), loadIndustryRoster()]);
+  const labsFromAcademic = academic.filter((p) => institutionTypeOf(p) !== 'University');
+  const labsFromIndustry = industry.filter((p) => isLabEntry(p));
+  return [...labsFromAcademic, ...labsFromIndustry];
+}
+
+export async function loadCorporateIndustryRoster(): Promise<Roster> {
+  const industry = await loadIndustryRoster();
+  return industry.filter((p) => !isLabEntry(p));
 }
 
 export async function loadRelationships(): Promise<RelationshipDatabase> {

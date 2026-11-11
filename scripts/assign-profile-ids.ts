@@ -3,14 +3,22 @@ import { resolve } from 'node:path';
 import type { RosterEntry } from '../src/data.ts';
 
 const rosterFile = resolve('public/data.json');
+const industryFile = resolve('public/industry.json');
 const apply = process.argv.includes('--apply');
 const roster: RosterEntry[] = JSON.parse(await readFile(rosterFile, 'utf8'));
+const industryRoster: RosterEntry[] = await readFile(industryFile, 'utf8')
+  .then((text) => JSON.parse(text))
+  .catch(() => []);
 // Retired ids (merged duplicates, removed people) are never handed out again: their old public
 // pages redirect to the kept entry, and a returning person gets their original id back.
 const retired = Object.keys(
   JSON.parse(await readFile(resolve('maintenance/retired-ids.json'), 'utf8')),
 );
-const ids = new Set<string>([...roster.map((person) => person.id).filter(Boolean), ...retired]);
+const ids = new Set<string>([
+  ...roster.map((person) => person.id).filter(Boolean),
+  ...industryRoster.map((person) => person.id).filter(Boolean),
+  ...retired,
+]);
 let next = Math.max(0, ...[...ids].map((id) => Number(id.slice(3))).filter(Number.isFinite)) + 1;
 
 function nextId(): string {
@@ -30,10 +38,19 @@ function withAssignedId(person: RosterEntry): RosterEntry {
   return { id: nextId(), ...rest };
 }
 
-const updated: RosterEntry[] = roster.map((person) =>
+const updatedRoster: RosterEntry[] = roster.map((person) =>
   person.id ? person : withAssignedId(person),
 );
-const added = updated.filter((_, index: number) => !roster[index]?.id).length;
+const addedRoster = updatedRoster.filter((_, index: number) => !roster[index]?.id).length;
+
+const updatedIndustry: RosterEntry[] = industryRoster.map((person) =>
+  person.id ? person : withAssignedId(person),
+);
+const addedIndustry = updatedIndustry.filter(
+  (_, index: number) => !industryRoster[index]?.id,
+).length;
+
+const added = addedRoster + addedIndustry;
 if (!apply) {
   if (added > 0) {
     throw new Error(
@@ -42,6 +59,11 @@ if (!apply) {
   }
   console.log('All roster entries have immutable profile IDs.');
 } else {
-  await writeFile(rosterFile, `${JSON.stringify(updated, null, 2)}\n`);
+  if (addedRoster > 0) {
+    await writeFile(rosterFile, `${JSON.stringify(updatedRoster, null, 2)}\n`);
+  }
+  if (addedIndustry > 0) {
+    await writeFile(industryFile, `${JSON.stringify(updatedIndustry, null, 2)}\n`);
+  }
   console.log(`Assigned immutable profile IDs to ${added} roster entries.`);
 }

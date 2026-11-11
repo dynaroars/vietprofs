@@ -1,0 +1,11 @@
+- generic [active] [ref=f1e1]:
+  - generic [ref=f1e2]:
+    - generic [ref=f1e3]:
+      - heading "Security Check" [level=1] [ref=f1e4]
+      - paragraph [ref=f1e5]: Your browser is being verified
+    - status [ref=f1e23]: Consulting the crowd...
+    - generic [ref=f1e24]:
+      - generic [ref=f1e25]: Powered by
+      - link "CrowdSec" [ref=f1e26] [cursor=pointer]:
+        - /url: https://crowdsec.net/
+  - button "Why am I seeing this?" [ref=f1e36] [cursor=pointer]

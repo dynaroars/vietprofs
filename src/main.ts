@@ -17,6 +17,9 @@ import {
   filterRoster,
   hasEnoughPeopleForRosterHub,
   institutionTypeOf,
+  loadCorporateIndustryRoster,
+  loadIndustryRoster,
+  loadLabsRoster,
   loadRelationships,
   loadRoster,
   locationMatches,
@@ -77,12 +80,27 @@ function pickRandomUnique<T>(values: readonly T[], count: number): T[] {
   return shuffle([...new Set(values)]).slice(0, count);
 }
 
+const rosterMode: 'academia' | 'labs' | 'industry' =
+  typeof document !== 'undefined' && document.body.dataset.roster === 'labs'
+    ? 'labs'
+    : typeof document !== 'undefined' && document.body.dataset.roster === 'industry'
+      ? 'industry'
+      : typeof window !== 'undefined' && window.location.pathname.endsWith('/labs.html')
+        ? 'labs'
+        : typeof window !== 'undefined' && window.location.pathname.endsWith('/industry.html')
+          ? 'industry'
+          : 'academia';
+
+const isAcademia = rosterMode === 'academia';
+const isLabs = rosterMode === 'labs';
+const isIndustry = rosterMode === 'industry';
+
 // Keyword prefixes let the single search box target one field directly (e.g. "Name: Nguyen"),
 // without needing the scope dropdown. Aliases map several spellings to the same scope value the
 // dropdown already uses, so both paths produce identical results.
 const KEYWORD_LABELS: Record<string, string> = {
   name: 'Name',
-  university: 'University',
+  university: isAcademia ? 'University' : 'Organization',
   institution: 'Institution',
   department: 'Department',
   rank: 'Rank',
@@ -95,7 +113,7 @@ const KEYWORD_LABELS: Record<string, string> = {
 
 const KEYWORD_ICONS: Record<string, string> = {
   name: '👤',
-  university: '🏛️',
+  university: isAcademia ? '🏛️' : '🏢',
   institution: '🏛️',
   department: '🏢',
   rank: '🎓',
@@ -108,12 +126,24 @@ const KEYWORD_ICONS: Record<string, string> = {
 
 const KEYWORD_EXAMPLES: Record<string, string> = {
   name: 'ThanhVu Nguyen',
-  university: 'George Mason University',
-  institution: 'Public research institute',
-  department: 'Computer Science',
-  rank: 'Associate Professor',
+  university: isLabs
+    ? 'Los Alamos National Laboratory'
+    : isIndustry
+      ? 'Google DeepMind'
+      : 'George Mason University',
+  institution: isLabs
+    ? 'Public research institute'
+    : isIndustry
+      ? 'Corporate research lab'
+      : 'Public research institute',
+  department: isAcademia ? 'Computer Science' : 'Research & Development',
+  rank: isLabs
+    ? 'Senior Scientist'
+    : isIndustry
+      ? 'Staff Research Scientist'
+      : 'Associate Professor',
   research: 'Software Engineering',
-  honors: 'NSF CAREER Award',
+  honors: isAcademia ? 'NSF CAREER Award' : 'Distinguished Paper Award',
   phd: 'University of New Mexico',
   undergrad: 'Pennsylvania State University',
   connection: 'co-author, mentorship',
@@ -123,6 +153,12 @@ const KEYWORD_ALIASES: Record<string, string> = {
   name: 'name',
   university: 'university',
   uni: 'university',
+  organization: 'university',
+  org: 'university',
+  company: 'university',
+  lab: 'university',
+  institute: 'university',
+  agency: 'university',
   institution: 'institution',
   institutiontype: 'institution',
   department: 'department',
@@ -162,7 +198,7 @@ function renderShell() {
   app.innerHTML = `
     <header>
       <div class="title-row">
-        <h1><a class="home-link brand-link" href="${import.meta.env.BASE_URL}" id="home-link" title="A Public Directory of the Vietnamese Academic and Research Diaspora Worldwide"><img class="brand-logo" src="${import.meta.env.BASE_URL}vietprofs-bamboo-v.svg" alt="" width="56" height="56"><span>Vietnamese Academic Diaspora</span></a></h1>
+        <h1><a class="home-link brand-link" href="${import.meta.env.BASE_URL}${isLabs ? 'labs.html' : isIndustry ? 'industry.html' : ''}" id="home-link" title="A Public Directory of the Vietnamese Academic and Research Diaspora Worldwide"><img class="brand-logo" src="${import.meta.env.BASE_URL}vietprofs-bamboo-v.svg" alt="" width="56" height="56"><span>Vietnamese Academic Diaspora</span></a></h1>
         <div class="header-icons">
           <a class="icon-link roars-link" href="https://roars.dev" target="_blank" rel="noopener noreferrer" aria-label="ROARS Lab website" title="ROARS Lab website"></a>
           <a class="icon-link github-link" href="https://github.com/dynaroars/vietprofs" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository" title="GitHub repository and source code">
@@ -170,6 +206,11 @@ function renderShell() {
           </a>
         </div>
       </div>
+      <nav class="top-nav" aria-label="Primary navigation">
+        <a href="${import.meta.env.BASE_URL}index.html"${isAcademia ? ' class="active" aria-current="page"' : ''}>🎓 Academia</a>
+        <a href="${import.meta.env.BASE_URL}labs.html"${isLabs ? ' class="active" aria-current="page"' : ''}>🏛️ Gov, Defense &amp; Labs</a>
+        <a href="${import.meta.env.BASE_URL}industry.html"${isIndustry ? ' class="active" aria-current="page"' : ''}>🏢 Industry &amp; Policy</a>
+      </nav>
     </header>
     <div class="controls">
       <div class="search-box">
@@ -183,7 +224,7 @@ function renderShell() {
               <span id="search-state-chip-label"></span>
               <span class="search-scope-chip-remove" aria-hidden="true">×</span>
             </button>
-            <input id="search" class="search-input" type="search" autocomplete="off" placeholder="Search by name, field, or university" aria-label="Search" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="search-suggestion-panel" />
+            <input id="search" class="search-input" type="search" autocomplete="off" placeholder="Search by name, field, or ${isAcademia ? 'university' : 'organization'}" aria-label="Search" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="search-suggestion-panel" />
             <button type="button" id="search-help-btn" class="search-help-btn" aria-haspopup="dialog" aria-expanded="false" aria-controls="search-help-panel" aria-label="Search syntax and keyboard help" title="Search syntax and keyboard help"><span class="search-help-icon" aria-hidden="true">?</span></button>
           </div>
           <div id="search-suggestion-panel" class="search-suggestion-panel" role="listbox" hidden></div>
@@ -283,6 +324,21 @@ const TRACK_INFO: Record<string, { label: string; tooltip: string }> = {
     tooltip:
       'Deceased or historical scholars who held a qualifying university faculty or eligible research-institute appointment outside Vietnam.',
   },
+  'Industry Research': {
+    label: 'industry research',
+    tooltip:
+      'A research scientist, research director, or senior technical contributor appointment at an industrial research laboratory or corporate R&D organization.',
+  },
+  'Policy & Think Tank': {
+    label: 'policy & think tank',
+    tooltip:
+      'A fellow, researcher, or economist appointment at a policy research organization, think tank, or international institution.',
+  },
+  'Government & Defense': {
+    label: 'gov & defense',
+    tooltip:
+      'A research scientist, engineer, or leader at a government agency, national laboratory, or defense research organization.',
+  },
 };
 
 function trackQualifier(roster: Roster): string {
@@ -290,10 +346,12 @@ function trackQualifier(roster: Roster): string {
     roster.map((p) => p.track).filter((track): track is string => Boolean(track)),
   );
   if (tracks.size !== 1) return '';
-  const info = TRACK_INFO[[...tracks][0] ?? ''];
-  return info
-    ? ` <span class="term" tabindex="0" data-tooltip="${escapeHtml(info.tooltip)}">${info.label}</span>`
-    : '';
+  const trackName = [...tracks][0] ?? '';
+  const info = TRACK_INFO[trackName] ?? {
+    label: trackName.toLowerCase(),
+    tooltip: trackName,
+  };
+  return ` <span class="term" tabindex="0" data-tooltip="${escapeHtml(info.tooltip)}">${info.label}</span>`;
 }
 
 interface RenderOptions {
@@ -357,19 +415,23 @@ function renderRoster(
   const isFieldFiltered = Boolean(field && field !== 'all');
   const isLocationFiltered = Boolean(location && location !== 'World');
   const locationTargetName = location === 'US' ? 'United States' : (location ?? 'United States');
-  const fieldTarget = isFieldFiltered
-    ? `${import.meta.env.BASE_URL}${
-        hasIntersectionHub && isLocationFiltered
-          ? fieldRegionPath(field as string, locationTargetName)
-          : fieldPath(field as string)
-      }`
-    : '';
+  const fieldTarget =
+    isFieldFiltered && isAcademia
+      ? `${import.meta.env.BASE_URL}${
+          hasIntersectionHub && isLocationFiltered
+            ? fieldRegionPath(field as string, locationTargetName)
+            : fieldPath(field as string)
+        }`
+      : '';
   const fieldPhrase = isFieldFiltered
-    ? ` in <a class="result-count-link" href="${fieldTarget}" title="Open ${escapeHtml(field as string)}${hasIntersectionHub && isLocationFiltered ? ` in ${escapeHtml(locationTargetName)}` : ''} hub">${escapeHtml(field as string)} ↗</a>`
+    ? fieldTarget
+      ? ` in <a class="result-count-link" href="${fieldTarget}" title="Open ${escapeHtml(field as string)}${hasIntersectionHub && isLocationFiltered ? ` in ${escapeHtml(locationTargetName)}` : ''} hub">${escapeHtml(field as string)} ↗</a>`
+      : ` in ${escapeHtml(field as string)}`
     : '';
-  const locationTarget = isLocationFiltered
-    ? `${import.meta.env.BASE_URL}${regionPath(locationTargetName)}`
-    : '';
+  const locationTarget =
+    isLocationFiltered && isAcademia
+      ? `${import.meta.env.BASE_URL}${regionPath(locationTargetName)}`
+      : '';
   const rawLocationName =
     location === 'US'
       ? 'the United States'
@@ -377,11 +439,18 @@ function renderRoster(
         ? 'the World'
         : location;
   const locationPhrase =
-    isLocationFiltered && hasLocationHub
+    isLocationFiltered && hasLocationHub && isAcademia
       ? `<a class="result-count-link" href="${locationTarget}" title="Open ${escapeHtml(rawLocationName)} region hub">${escapeHtml(rawLocationName)} ↗</a>`
       : escapeHtml(rawLocationName);
   const peopleLabel = roster.length === 1 ? 'person' : 'people';
-  countEl.innerHTML = `${roster.length}${trackQualifier(roster)} ${peopleLabel}${fieldPhrase} across ${institutions} institution${institutions === 1 ? '' : 's'} in ${locationPhrase}.`;
+  const orgWord = isAcademia
+    ? institutions === 1
+      ? 'institution'
+      : 'institutions'
+    : institutions === 1
+      ? 'organization'
+      : 'organizations';
+  countEl.innerHTML = `${roster.length}${trackQualifier(roster)} ${peopleLabel}${fieldPhrase} across ${institutions} ${orgWord} in ${locationPhrase}.`;
 
   currentRoster = roster;
 
@@ -412,7 +481,12 @@ async function init() {
   try {
     // Keep one randomized order for the session so the default directory view is less
     // predictable, without reshuffling every time a filter or search is changed.
-    roster = shuffle(await loadRoster());
+    const rawRoster = isLabs
+      ? await loadLabsRoster()
+      : isIndustry
+        ? await loadCorporateIndustryRoster()
+        : await loadRoster();
+    roster = shuffle(rawRoster);
   } catch {
     document.getElementById('roster').innerHTML =
       '<p class="empty-state">Could not load the roster. Please refresh the page or try again later.</p>';
@@ -433,6 +507,13 @@ async function init() {
       hasEnoughPeopleForRosterHub(filterRoster(roster, { location: region }).length),
     ),
   );
+
+  const activeTracks = [
+    ...new Set([
+      ...TRACKS,
+      ...roster.map((person) => person.track).filter((t): t is string => Boolean(t)),
+    ]),
+  ];
 
   // Matches everything filterRoster actually searches over (name, university, city, state, country,
   // department, rank, research areas, degree institutions, and honors) so a suggestion always yields at least one result.
@@ -483,7 +564,7 @@ async function init() {
       'field',
       FIELDS.filter((field) => roster.some((p) => fieldOf(p.department, p.university) === field)),
     ],
-    ['track', TRACKS.filter((track) => roster.some((p) => p.track === track))],
+    ['track', activeTracks.filter((track) => roster.some((p) => p.track === track))],
     ['research', uniqueResearchAreas(roster)],
     [
       'honors',
@@ -511,9 +592,10 @@ async function init() {
   const narrowScreen = window.matchMedia('(max-width: 560px)');
   const rosterSize = roster.length.toLocaleString('en-US');
   const applySearchPlaceholder = () => {
+    const orgWord = isAcademia ? 'university' : 'organization';
     searchInput.placeholder = narrowScreen.matches
       ? `Search ${rosterSize} people`
-      : `Search ${rosterSize} people by name, field, or university`;
+      : `Search ${rosterSize} people by name, field, or ${orgWord}`;
   };
   applySearchPlaceholder();
   narrowScreen.addEventListener('change', applySearchPlaceholder);
@@ -736,11 +818,11 @@ async function init() {
   );
 
   const trackCounts = new Map(
-    TRACKS.map((track) => [track, roster.filter((person) => person.track === track).length]),
+    activeTracks.map((track) => [track, roster.filter((person) => person.track === track).length]),
   );
-  const sortedTracks = [...TRACKS].sort(
-    (a, b) => (trackCounts.get(b) ?? 0) - (trackCounts.get(a) ?? 0) || a.localeCompare(b),
-  );
+  const sortedTracks = activeTracks
+    .filter((track) => (trackCounts.get(track) ?? 0) > 0)
+    .sort((a, b) => (trackCounts.get(b) ?? 0) - (trackCounts.get(a) ?? 0) || a.localeCompare(b));
 
   function updateDropdownCounts() {
     const { scope, query } = effectiveSearch();
@@ -1047,12 +1129,14 @@ async function init() {
       field: fieldSelect.value,
       location: locationSelect.value,
       hasIntersectionHub:
+        isAcademia &&
         fieldSelect.value !== 'all' &&
         locationSelect.value !== 'World' &&
         hasEnoughPeopleForRosterHub(
           filterRoster(roster, { field: fieldSelect.value, location: locationSelect.value }).length,
         ),
       hasLocationHub:
+        isAcademia &&
         locationSelect.value !== 'World' &&
         availableRegionHubs.has(
           locationSelect.value === 'US' ? 'United States' : locationSelect.value,

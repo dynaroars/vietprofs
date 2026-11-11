@@ -26,6 +26,8 @@ import {
   buildTrackCounts,
   buildTopUndergradInstitutions,
   buildPhdToFacultyPairings,
+  isCorporatePolicyEntry,
+  isLabEntry,
   type Roster,
   type RosterEntry,
 } from '../src/data.ts';
@@ -971,4 +973,38 @@ test('landmark and marquee faculty maintain their verified major honors', () => 
       );
     }
   }
+});
+
+test('industry roster satisfies schema and classification helpers categorize entries', async () => {
+  const { Ajv2020 } = await import('ajv/dist/2020.js');
+  const industryData = JSON.parse(
+    readFileSync(new URL('../public/industry.json', import.meta.url), 'utf8'),
+  );
+  assert.ok(Array.isArray(industryData));
+  const schema = JSON.parse(
+    readFileSync(new URL('../public/roster.schema.json', import.meta.url), 'utf8'),
+  );
+  const validate = new Ajv2020({ allErrors: true }).compile(schema);
+  assert.ok(validate(industryData), JSON.stringify(validate.errors?.slice(0, 5)));
+
+  assert.equal(isLabEntry({ institutionType: 'Public research institute' }), true);
+  assert.equal(isLabEntry({ institutionType: 'Corporate research lab' }), false);
+  assert.equal(isLabEntry({ track: 'Government & Defense' }), true);
+  assert.equal(isCorporatePolicyEntry({ institutionType: 'Corporate research lab' }), true);
+  assert.equal(
+    isCorporatePolicyEntry({ institutionType: 'Policy & international organization' }),
+    true,
+  );
+  assert.equal(isCorporatePolicyEntry({ track: 'Industry Research' }), true);
+  assert.equal(isCorporatePolicyEntry({ institutionType: 'Public research institute' }), false);
+});
+
+test('labs.html and industry.html exist and declare their data-roster attributes', () => {
+  const labsHtml = readFileSync(new URL('../labs.html', import.meta.url), 'utf8');
+  assert.match(labsHtml, /<body data-roster="labs">/);
+  assert.match(labsHtml, /Gov, Defense &amp; Labs/);
+
+  const industryHtml = readFileSync(new URL('../industry.html', import.meta.url), 'utf8');
+  assert.match(industryHtml, /<body data-roster="industry">/);
+  assert.match(industryHtml, /Industry &amp; Policy/);
 });
