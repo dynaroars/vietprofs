@@ -17503,6 +17503,23 @@
       "imageUrl": "https://med.nyu.edu/dti-physician-photo/faculty/d/doanl02/doanl02-hero.jpg",
       "sourceType": "official_faculty",
       "confidence": "MEDIUM"
+    },
+    "vp-2910": {
+      "name": "Jie C. Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://www.med.upenn.edu/apps/faculty/index.php/g275/p8670096",
+      "imageUrl": "https://www.med.upenn.edu/apps/my/images/faculty_pics/nguy7255.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T00:31:50.043Z",
+      "note": "MEDIUM candidate stored after visual review"
     }
   }
 }
