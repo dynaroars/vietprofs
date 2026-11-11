@@ -17334,6 +17334,77 @@
       "identitySignals": [],
       "retrievedAt": "2026-11-11T00:09:17.242Z",
       "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2899": {
+      "name": "Angela Pham",
+      "outcome": "found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "official_profile_context"
+      ],
+      "retrievedAt": "2026-11-11T00:15:08.543Z",
+      "note": "MEDIUM candidate stored after visual review",
+      "imageUrl": "https://directory.ufhealth.org/pham-angela/files/profile-photo",
+      "pageUrl": "https://gastroliver.medicine.ufl.edu/profile/pham-angela/",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH"
+    },
+    "vp-2900": {
+      "name": "Nancy Pham",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-11T00:13:39.447Z",
+      "note": "Stanford profile image fetched and visually inspected: generic Stanford tree placeholder; not stored."
+    },
+    "vp-2901": {
+      "name": "Ngan Thi Kim Pham",
+      "outcome": "found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "official_profile_context"
+      ],
+      "retrievedAt": "2026-11-11T00:15:09.524Z",
+      "note": "MEDIUM candidate stored after visual review",
+      "imageUrl": "https://nihon-u-med-microbe.jp/images/member_miyagami.jpg",
+      "pageUrl": "https://nihon-u-med-microbe.jp/members/",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH"
+    },
+    "vp-2902": {
+      "name": "Thythy Pham",
+      "outcome": "found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "official_profile_context"
+      ],
+      "retrievedAt": "2026-11-11T00:15:09.767Z",
+      "note": "MEDIUM candidate stored after visual review",
+      "imageUrl": "https://www.loyolamedicine.org/sites/default/files/hg_features/hg_provider/c271791bf6fb9fb2380d1e2580aa7483.jpg",
+      "pageUrl": "https://www.loyolamedicine.org/provider/thythy-t-pham-md",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH"
+    },
+    "vp-2903": {
+      "name": "Anthony Pham",
+      "outcome": "found",
+      "pageUrl": "https://www.radiationoncology.uw.edu/faculty-anthony-pham/",
+      "imageUrl": "https://www.radiationoncology.uw.edu/wp-content/uploads/2024/02/Pham_Anthony2-214x300.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T00:14:04.383Z"
     }
   }
 }
