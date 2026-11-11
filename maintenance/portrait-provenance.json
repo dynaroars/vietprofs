@@ -17437,6 +17437,22 @@
       ],
       "retrievedAt": "2026-11-11T00:18:22.271Z",
       "note": "Official LISN named image downloaded and visually inspected: generic avatar, not stored."
+    },
+    "vp-2906": {
+      "name": "Joyce Pham",
+      "outcome": "found",
+      "pageUrl": "https://www.csusb.edu/profile/joyce.pham",
+      "imageUrl": "https://www.csusb.edu/sites/default/files/styles/profile_image/public/upload/image/AvH_Joyce_Pham.jpg.webp?h=365883c0&itok=7kexeNyo",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T00:25:55.630Z"
     }
   }
 }
