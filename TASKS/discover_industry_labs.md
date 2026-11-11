@@ -54,9 +54,12 @@ left a duplicate of an existing entry, guessed `vietnameseName` values, and a qu
    company that publishes (Waymo, Tesla, Bloomberg). Not eligible: engineers with no research output
    in the current job, product and program staff, residents, interns, student
    researchers, visiting researchers, postdocs and other fixed-term fellows, contractors, and
-   consultants. A research doctorate is required in every sector this playbook covers, corporate labs
-   included (PhD or equivalent; an MD for clinical-research roles); record `phdInstitution`, and
-   leave the person out when no source shows one.
+   consultants. Every sector this playbook covers needs a research doctorate (PhD or equivalent; an MD
+   for clinical-research roles) or a current publication record: two or more papers in the last
+   three years with the person as author at the current employer, from OpenAlex, DBLP, Scholar, or
+   the employer's publication pages, identity resolved by co-authors, topic, or a linked profile.
+   Record `phdInstitution` when there is a doctorate; otherwise list the papers in the Issue. Leave
+   the person out when neither holds.
 3. **Not already on the roster.** Run
    `npm run find-roster-matches -- "<name>" --url <every identity URL>` (it reads both roster files
    and the retired-id ledger) and `gh issue list --state all --search '"<name>"'`. A hit at a

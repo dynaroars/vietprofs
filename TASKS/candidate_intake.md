@@ -64,8 +64,9 @@ Before spending time on enrichment, confirm the candidate can plausibly satisfy
   `institutionType: "Corporate research lab"`. The role decides, not the title: a research title, or a
   current job that visibly includes publishing research, at an organization that publishes research
   (`ROSTER_MAINTENANCE.md` "Corporate Research Labs"). Exclude engineers and product roles with no
-  research output in the current job. A research doctorate is required (PhD or equivalent; an MD
-  for clinical-research roles), as for every Gov & Labs track.
+  research output in the current job. As for every Gov & Labs track, a research doctorate (PhD or
+  equivalent; an MD for clinical-research roles) or a current publication record (two or more papers in
+  the last three years from the current job; `ROSTER_MAINTENANCE.md`) is required.
 - **`🏛️ Gov, Defense & Labs` — Central Banks, International Orgs & Think Tanks**:
   Permanent/career Economists, Senior Economists, Policy Researchers, and Senior Fellows at central banks
   (Fed Board & regional Fed banks, ECB, BIS), international organizations (IMF, World Bank, OECD, ADB),

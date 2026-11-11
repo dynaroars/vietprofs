@@ -345,7 +345,7 @@ show:
   as appointment evidence; set `"confirmed": false` when that is the only source, and clear it when
   an employer page turns up. Recheck every `confirmed: false` entry's current role, not just its
   links. A move to another research lab is an in-place update; someone who left for a non-research
-  role (engineering, product, a startup) or has no research doctorate (required outside Academia) gets
+  role (engineering, product, a startup) or has neither a research doctorate nor a current publication record (one is required outside Academia) gets
   a `Review possible eligibility issue:` side finding, never a silent edit.
 
 In the PR body, put one table row per entry, including entries checked with no change, with these
