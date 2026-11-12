@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-12T23:03:31.000Z",
+  "updatedAt": "2026-11-12T23:08:57.000Z",
   "relationships": [
     {
       "id": "rel-coauthor-vp-0015-vp-0018",
@@ -446,6 +446,33 @@
       "notes": ""
     },
     {
+      "id": "rel-coauthor-vp-0123-vp-3227",
+      "type": "coauthor",
+      "sourceId": "vp-0123",
+      "targetId": "vp-3227",
+      "sources": [
+        "https://mavmatrix.uta.edu/bioengineering_dissertations/20/"
+      ],
+      "evidence": "OpenAlex records Richard T. Tran (Pennsylvania State University, after his 2011 UT Arlington bioengineering PhD under Jian Yang) and Kytai Truong Nguyen (UT Arlington Bioengineering) as coauthors on these two peer-reviewed nanomedicine papers; a 2013 meeting abstract of the same work is excluded.",
+      "works": [
+        {
+          "identifier": "doi:10.2174/1874764711306010007",
+          "title": "Design and Application of Magnetic-Based Theranostic Nanoparticle Systems",
+          "date": "2013-03-01",
+          "url": "https://doi.org/10.2174/1874764711306010007"
+        },
+        {
+          "identifier": "doi:10.1021/nn504636n",
+          "title": "In Situ Re-endothelialization via Multifunctional Nanoscaffolds",
+          "date": "2014-09-15",
+          "url": "https://doi.org/10.1021/nn504636n"
+        }
+      ],
+      "verifiedAt": "2026-11-12T23:08:57.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
       "id": "rel-coauthor-vp-0135-vp-1568",
       "type": "coauthor",
       "sourceId": "vp-0135",
@@ -646,6 +673,81 @@
         }
       ],
       "verifiedAt": "2026-09-23T06:17:56.286Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-0500-vp-3275",
+      "type": "coauthor",
+      "sourceId": "vp-0500",
+      "targetId": "vp-3275",
+      "sources": [
+        "https://openalex.org/A5067423247"
+      ],
+      "evidence": "OpenAlex records Dai Quoc Nguyen (University of Melbourne and Monash University, later Oracle) and Dinh Phung (Monash University) as coauthors on these knowledge-graph and graph-neural-network papers; the affiliations, field and his Melbourne PhD and Monash period match vp-3275 and vp-0500.",
+      "works": [
+        {
+          "identifier": "doi:10.18653/v1/n19-1226",
+          "title": "A Capsule Network-based Embedding Model for Knowledge Graph Completion and Search Personalization",
+          "date": "2019-01-01",
+          "url": "https://doi.org/10.18653/v1/n19-1226"
+        },
+        {
+          "identifier": "doi:10.1145/3510454.3516865",
+          "title": "ReGVD: Revisiting Graph Neural Networks for Vulnerability Detection",
+          "date": "2022-05-01",
+          "url": "https://doi.org/10.1145/3510454.3516865"
+        },
+        {
+          "identifier": "doi:10.1145/3487553.3524258",
+          "title": "Universal Graph Transformer Self-Attention Networks",
+          "date": "2022-04-25",
+          "url": "https://doi.org/10.1145/3487553.3524258"
+        },
+        {
+          "identifier": "doi:10.1145/3487553.3524251",
+          "title": "QuatRE: Relation-Aware Quaternions for Knowledge Graph Embeddings",
+          "date": "2022-04-25",
+          "url": "https://doi.org/10.1145/3487553.3524251"
+        },
+        {
+          "identifier": "doi:10.3233/sw-180318",
+          "title": "A convolutional neural network-based model for knowledge base completion and its application to search personalization",
+          "date": "2018-08-24",
+          "url": "https://doi.org/10.3233/sw-180318"
+        },
+        {
+          "identifier": "doi:10.1145/3488560.3502183",
+          "title": "Node Co-occurrence based Graph Neural Networks for Knowledge Graph Link Prediction",
+          "date": "2022-02-11",
+          "url": "https://doi.org/10.1145/3488560.3502183"
+        },
+        {
+          "identifier": "doi:10.18653/v1/2020.acl-main.313",
+          "title": "A Relational Memory-based Embedding Model for Triple Classification and Search Personalization",
+          "date": "2020-01-01",
+          "url": "https://doi.org/10.18653/v1/2020.acl-main.313"
+        },
+        {
+          "identifier": "doi:10.1007/978-3-031-33455-9_16",
+          "title": "Two-View Graph Neural Networks for Knowledge Graph Completion",
+          "date": "2023-01-01",
+          "url": "https://doi.org/10.1007/978-3-031-33455-9_16"
+        },
+        {
+          "identifier": "doi:10.1145/3340531.3417455",
+          "title": "A Capsule Network-based Model for Learning Node Embeddings",
+          "date": "2020-10-19",
+          "url": "https://doi.org/10.1145/3340531.3417455"
+        },
+        {
+          "identifier": "doi:10.1007/978-3-030-67664-3_22",
+          "title": "A Self-attention Network Based Node Embedding Model",
+          "date": "2021-01-01",
+          "url": "https://doi.org/10.1007/978-3-030-67664-3_22"
+        }
+      ],
+      "verifiedAt": "2026-11-12T23:08:57.000Z",
       "direct": false,
       "notes": ""
     },
