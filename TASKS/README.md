@@ -11,6 +11,7 @@ Each playbook is pre-configured with an **Autonomous Goal Directive** header. Yo
 ```bash
 /goal TASKS/discover_new_faculty.md
 /goal TASKS/discover_from_database.md
+/goal TASKS/discover_industry_labs.md
 /goal TASKS/fetch_portraits.md
 /goal TASKS/backfill_linkedin.md
 /goal TASKS/check_google_scholar.md
@@ -39,6 +40,7 @@ are in [`AUTOMATION.md`](AUTOMATION.md).
 | :--- | :--- | :--- |
 | [`discover_new_faculty.md`](discover_new_faculty.md) | Search university directories, Google Scholar, DBLP, and conference rosters for eligible Vietnamese faculty outside Vietnam. | `public/data.json` new entry Issues |
 | [`discover_from_database.md`](discover_from_database.md) | Mine the existing roster, grant APIs (NIH/NSF), OpenAlex/Crossref graphs, lab alumni sites, and feeder-institution gaps via `npm run discover-leads`. | `public/data.json` new entry & promotion Issues |
+| [`discover_industry_labs.md`](discover_industry_labs.md) | Search corporate research labs, national and defense labs, central banks, international organizations, and think tanks, one employer group per run. | `public/data.json` new entry Issues |
 | [`fetch_portraits.md`](fetch_portraits.md) | Search official university sites and personal homepages for verified faculty headshots. | `public/data.json` headshot PRs |
 | [`backfill_linkedin.md`](backfill_linkedin.md) | Audit and backfill missing personal LinkedIn profile links. | `public/data.json` LinkedIn PRs |
 | [`check_google_scholar.md`](check_google_scholar.md) | Audit and backfill missing Google Scholar citation profile links. | `public/data.json` Scholar PRs |

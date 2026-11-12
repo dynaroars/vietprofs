@@ -2,7 +2,14 @@
 
 Before researching or modifying the roster, read [ROSTER_MAINTENANCE.md](ROSTER_MAINTENANCE.md) and [README.md](README.md). Before reviewing, merging, or closing a GitHub PR or Issue in this repository, read [TASKS/AUDIT_ISSUES_PRS.md](TASKS/AUDIT_ISSUES_PRS.md) — it is the authoritative audit workflow (fresh-`main` testing, id-collision handling, merge/close steps) and takes precedence over any ad hoc review approach. When the repository owner pastes one or more candidate names directly into a conversation for roster consideration, follow [TASKS/candidate_intake.md](TASKS/candidate_intake.md) — dedup against the roster, check eligibility, enrich (awards, portrait source, LinkedIn, lab/personal website, about/bio), and file one GitHub Issue per new eligible candidate.
 
-This repository is **VietProfs**: a roster of Vietnamese and Vietnamese-diaspora faculty at universities outside Vietnam. Do not apply inclusion criteria from an external repository or linked project without first confirming that it is relevant here.
+This repository is **VietProfs**: a directory of Vietnamese and Vietnamese-diaspora faculty, researchers, and scientific leaders outside Vietnam, presented as one directory page (`index.html`) with a Sector filter and three sectors:
+- **`🎓 Academia`** (university entries in `public/data.json`)
+- **`🏛️ Gov, Defense & Labs`** (public/nonprofit research institute, defense/government research, scientific program officer, central bank, international organization, and think tank entries in `public/data.json`; shown as "Gov & Labs")
+- **`🏢 Industry`** (corporate research lab entries in `public/data.json`)
+
+The old `labs.html` and `industry.html` are redirects to `./?sector=labs` and `./?sector=industry`.
+
+All three sectors are backed by the single roster file `public/data.json`, which has one unified `vp-####` ID namespace; the sector for an entry (exactly one) is derived from its `institutionType` and `track` by `sectorOf` in `src/data.ts`, and every entry follows the same `directFields` protection, verification, and Issue/PR rules. Do not apply inclusion criteria from an external repository or linked project without first confirming that it is relevant here.
 
 `ROSTER_MAINTENANCE.md` is the authoritative guide for eligibility, evidence, appointment tracks, degrees, honors, and portraits. For local roster data updates without UI changes, `npm test`, `npm run build`, and `git diff --check` are fast, lightweight, and sufficient. Full browser smoke tests (`npm run test:e2e`) are only needed before pushing frontend/UI changes.
 
@@ -59,8 +66,8 @@ passed eligibility review. Because of that:
   relationship counterparty who isn't in the roster yet, or any other brand-new
   `public/data.json` entry) must be proposed as a **GitHub Issue**, not a PR, regardless of how
   strong the supporting evidence is. Do not run `assign-profile-ids -- --apply` or otherwise commit
-  a new ID to a branch for review; describe the candidate (evidence, source URLs, proposed fields)
-  in the Issue and let the auditor or the owner add it.
+  a new ID to a branch for review; describe the candidate (evidence, source URLs, proposed fields,
+  target file) in the Issue and let the auditor or the owner add it.
 - **A person already on the roster is never a new ID**, even at a new institution, under a
   different name order, or after an earlier removal. Run `npm run find-roster-matches` with the
   name and every identity URL before proposing anyone; a hit at another institution is usually a
@@ -80,7 +87,7 @@ instead of restating it.
 | Change | Route |
 | :--- | :--- |
 | New roster ID (any new `public/data.json` entry) | GitHub Issue: one per candidate, or one `[scheduled:discover] New faculty batch` Issue per `discover` run |
-| Edit to existing IDs from a `TASKS/` playbook (links, portraits, honors, degrees) | Topic branch + PR; the auditor (`TASKS/AUDIT_ISSUES_PRS.md`) merges |
+| Edit to existing IDs from a `TASKS/` playbook (links, portraits, honors, degrees across either roster file) | Topic branch + PR; the auditor (`TASKS/AUDIT_ISSUES_PRS.md`) merges |
 | Auditor's own fixes for verified Issues (including new entries) | Commit and push to `main`, one commit per Issue; only if the push is denied, one `audit-fix/<date>` PR per run that the auditor squash-merges on green CI (`TASKS/AUTOMATION.md` "Applying fixes") |
 | Relationship batches (`public/relationships.json`) | Commit and push to `main` |
 | Conflict with a protected `directFields` value, or anything needing an owner decision | GitHub Issue |

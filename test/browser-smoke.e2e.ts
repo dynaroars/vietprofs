@@ -5,7 +5,7 @@ import { spawn, type ChildProcess } from 'node:child_process';
 import { createRequire } from 'node:module';
 import { get } from 'node:http';
 import type { Browser, BrowserContext } from 'playwright';
-import type { RosterEntry } from '../src/data.ts';
+import { sectorOf, type RosterEntry } from '../src/data.ts';
 
 const require = createRequire(import.meta.url);
 const { chromium } = require('playwright');
@@ -185,29 +185,21 @@ test('recently viewed profiles stay in browser storage', async () => {
   await page.close();
 });
 
-test('keyboard navigation and the query plan command work without leaving the directory', async () => {
+test('the query plan command works without leaving the directory, and no keyboard shortcuts are bound', async () => {
   const page = await context.newPage();
   await page.goto(`${baseUrl}/`, { waitUntil: 'networkidle' });
-  await page.evaluate(() => {
-    localStorage.removeItem('vietprofs:favorites');
-  });
-  await page.reload({ waitUntil: 'networkidle' });
-
-  await page.keyboard.press('/');
-  assert.equal(
-    await page.locator('#search').evaluate((element) => element === document.activeElement),
-    true,
-  );
   await page.locator('#search').fill('query plan');
   await page.locator('#search').press('Enter');
   assert.match(await textOf(page.locator('#command-output')), /query plan: .*matches=\d+/);
   assert.equal(await page.locator('#search').inputValue(), '');
   await page.locator('#search').blur();
-  await page.keyboard.press('j');
-  const selected = page.locator('.entry-keyboard-selected');
-  assert.equal(await selected.count(), 1);
-  await page.keyboard.press('f');
-  assert.equal(await selected.locator('.favorite-toggle').getAttribute('aria-pressed'), 'true');
+  for (const key of ['/', 'j', 'f', 'r']) await page.keyboard.press(key);
+  assert.equal(await page.locator('.entry-keyboard-selected').count(), 0);
+  assert.equal(
+    await page.locator('#search').evaluate((element) => element === document.activeElement),
+    false,
+  );
+  assert.doesNotMatch(await textOf(page.locator('#search-help-panel')), /KEYBOARD|shortcut/i);
   await page.close();
 });
 
@@ -575,7 +567,7 @@ test('the + button opens the form and the header links switch views in place', a
     .evaluateAll((links) => links.map((link) => link.getAttribute('aria-label')));
   assert.deepEqual(labels, [
     'Diaspora Insights & Pathways',
-    'Academic Connections',
+    'Research Connections',
     'Data Health & Completeness',
     'Read the paper (PDF)',
     'Share',
@@ -631,14 +623,17 @@ test('combined field and location filters link to their static intersection hub'
   assert.equal(await page.locator('#location-filter').inputValue(), 'Japan');
   assert.match(
     await textOf(page.locator('#result-count')),
-    /\d+ people in Health Sciences .* across \d+ institutions in Japan/,
+    /\d+ people in Health Sciences .* across \d+ organizations in Japan/,
   );
 
   const fieldHubLink = page.locator('#result-count .result-count-link').first();
   assert.match(await attrOf(fieldHubLink, 'href'), /\/regions\/japan\/health-sciences\.html$/);
   await fieldHubLink.click();
   await page.waitForLoadState('networkidle');
-  assert.equal(await textOf(page.locator('h1')), 'Vietnamese Health Sciences Professors in Japan');
+  assert.equal(
+    await textOf(page.locator('h1')),
+    'Vietnamese Health Sciences Researchers & Scholars in Japan',
+  );
   await page.close();
 });
 
@@ -1112,25 +1107,6 @@ test('map country controls filter by mouse and keyboard and explain empty countr
   }
 });
 
-test('random shortcut selects a profile from the current results', async () => {
-  const page = await context.newPage();
-  try {
-    await page.addInitScript(() => localStorage.removeItem('vietprofs:favorites'));
-    await page.goto(`${baseUrl}/?loc=France`, { waitUntil: 'networkidle' });
-    const before = page.url();
-    await page.locator('#search').blur();
-    await page.keyboard.press('r');
-    const selected = page.locator('.entry-keyboard-selected');
-    assert.equal(await selected.count(), 1);
-    assert.equal(page.url(), before);
-    await page.keyboard.press('f');
-    assert.equal(await selected.locator('.favorite-toggle').getAttribute('aria-pressed'), 'true');
-    await selected.locator('.favorite-toggle').click();
-  } finally {
-    await page.close();
-  }
-});
-
 test('submission validation recovers after editing and switching modes', async () => {
   const page = await context.newPage();
   try {
@@ -1322,4 +1298,176 @@ test('sharing uses native Share, copies the current URL, and handles cancellatio
   await dialog.dismiss();
   await clickPromise;
   await page.close();
+});
+
+test('sector filter narrows the single directory, drives track options, and old tabs redirect', async () => {
+  const roster = (await (await fetch(`${baseUrl}/data.json`)).json()) as RosterEntry[];
+  const expected = { all: roster.length, academia: 0, labs: 0, industry: 0 };
+  for (const person of roster) expected[sectorOf(person)] += 1;
+  const page = await context.newPage();
+  const resultTotal = async () =>
+    Number((await textOf(page.locator('#result-count'))).match(/^([\d,]+)/)?.[1].replace(/,/g, ''));
+  const trackValues = async () =>
+    page
+      .locator('#track-filter option')
+      .evaluateAll((options) => options.map((option) => (option as HTMLOptionElement).value));
+
+  await page.goto(`${baseUrl}/`, { waitUntil: 'networkidle' });
+  assert.equal(await page.locator('.top-nav').count(), 0);
+  assert.equal(await page.locator('#sector-filter').inputValue(), 'all');
+  assert.equal(await resultTotal(), expected.all);
+  assert.equal(await page.locator('#employer-filter').isHidden(), true);
+  const allTracks = await trackValues();
+
+  const tracksBySector = new Map<string, string[]>();
+  for (const sector of ['academia', 'labs', 'industry'] as const) {
+    await page.locator('#sector-filter').selectOption(sector);
+    assert.equal(await resultTotal(), expected[sector], `${sector} count`);
+    assert.match(page.url(), new RegExp(`sector=${sector}`));
+    const tracks = await trackValues();
+    tracksBySector.set(sector, tracks);
+    const expectedTracks = new Set(
+      roster.filter((p) => sectorOf(p) === sector).map((p) => p.track ?? ''),
+    );
+    assert.deepEqual(
+      tracks.filter((track) => track !== 'all').sort(),
+      [...expectedTracks].filter(Boolean).sort(),
+    );
+    assert.ok(tracks.length <= allTracks.length);
+    assert.equal(await page.locator('#employer-filter').isVisible(), sector === 'industry');
+  }
+  assert.notDeepEqual(tracksBySector.get('academia'), tracksBySector.get('labs'));
+
+  await page.locator('#sector-filter').selectOption('all');
+  assert.equal(await resultTotal(), expected.all);
+  assert.doesNotMatch(page.url(), /sector=/);
+
+  await page.goto(`${baseUrl}/?sector=industry`, { waitUntil: 'networkidle' });
+  assert.equal(await page.locator('#sector-filter').inputValue(), 'industry');
+  assert.equal(await resultTotal(), expected.industry);
+  await page.reload({ waitUntil: 'networkidle' });
+  assert.equal(await page.locator('#sector-filter').inputValue(), 'industry');
+
+  for (const sector of ['labs', 'industry'] as const) {
+    await page.goto(`${baseUrl}/${sector}.html`, { waitUntil: 'networkidle' });
+    assert.match(page.url(), new RegExp(`/\\?sector=${sector}$`));
+    assert.equal(await page.locator('#sector-filter').inputValue(), sector);
+    assert.equal(await resultTotal(), expected[sector]);
+  }
+  await page.close();
+});
+
+const SECTOR_CASES = ['all', 'academia', 'labs', 'industry'] as const;
+
+test('the directory never scrolls horizontally at phone width in any sector', async () => {
+  const phone = await browser.newContext({ viewport: { width: 375, height: 800 } });
+  const page = await phone.newPage();
+  try {
+    for (const sector of SECTOR_CASES) {
+      await page.goto(`${baseUrl}/?sector=${sector}`, { waitUntil: 'networkidle' });
+      const [scrollWidth, innerWidth] = await page.evaluate(() => [
+        document.scrollingElement?.scrollWidth ?? 0,
+        window.innerWidth,
+      ]);
+      assert.ok(scrollWidth <= innerWidth, `${sector}: scrollWidth ${scrollWidth} > ${innerWidth}`);
+    }
+  } finally {
+    await phone.close();
+  }
+});
+
+test('Industry filter controls share one row on desktop', async () => {
+  const desktop = await browser.newContext({ viewport: { width: 1280, height: 800 } });
+  const page = await desktop.newPage();
+  try {
+    await page.goto(`${baseUrl}/?sector=industry`, { waitUntil: 'networkidle' });
+    const tops = await page
+      .locator('.controls select:visible')
+      .evaluateAll((selects) =>
+        selects.map((select) => (select as HTMLElement).getBoundingClientRect().top),
+      );
+    assert.equal(tops.length, 6);
+    assert.ok(Math.max(...tops) - Math.min(...tops) <= 3, `controls wrapped: ${tops}`);
+  } finally {
+    await desktop.close();
+  }
+});
+
+test('Gov & Labs and Industry views use sector wording, not professor or University', async () => {
+  const page = await context.newPage();
+  try {
+    for (const sector of ['labs', 'industry'] as const) {
+      for (const view of ['', '&view=insights']) {
+        await page.goto(`${baseUrl}/?sector=${sector}${view}`, { waitUntil: 'networkidle' });
+        // Entry text is data (a few genuinely carry a Professor title); the surrounding page
+        // chrome and insights copy must not.
+        const text = await page.evaluate(() => {
+          const clone = document.querySelector('#app')?.cloneNode(true) as HTMLElement;
+          clone.querySelectorAll('.entry').forEach((entry) => entry.remove());
+          return clone.innerText || clone.textContent || '';
+        });
+        assert.doesNotMatch(text, /professor|faculty/i, `${sector}${view}`);
+      }
+      await page.goto(`${baseUrl}/?sector=${sector}`, { waitUntil: 'networkidle' });
+      await page.locator('#search').fill('Organization: a');
+      assert.doesNotMatch(await page.locator('#search-scope-chip').innerText(), /University/);
+      assert.match(
+        await page.locator('#search-scope-chip').innerText(),
+        sector === 'industry' ? /Employer/ : /Organization/,
+      );
+      assert.doesNotMatch(await textOf(page.locator('#search-help-panel')), /University:/);
+    }
+    await page.goto(`${baseUrl}/?sector=academia`, { waitUntil: 'networkidle' });
+    await page.locator('#search').fill('Uni: a');
+    assert.match(await page.locator('#search-scope-chip').innerText(), /University/);
+    // The Type and Track keywords scope to institution type and track.
+    await page.goto(`${baseUrl}/?sector=industry`, { waitUntil: 'networkidle' });
+    const industryCount = await page.locator('.entry').count();
+    await page.locator('#search').fill('Type: Corporate research lab');
+    assert.match(await page.locator('#search-scope-chip').innerText(), /Type/);
+    await page.waitForFunction(
+      (count) => document.querySelectorAll('.entry').length === count,
+      industryCount,
+    );
+    await page.locator('#search').fill('Track: Industry Research');
+    await page.waitForFunction(
+      (count) => document.querySelectorAll('.entry').length === count,
+      industryCount,
+    );
+  } finally {
+    await page.close();
+  }
+});
+
+test('Gov & Labs and Industry profile pages avoid academic wording and university schema types', async () => {
+  const page = await context.newPage();
+  try {
+    for (const id of ['vp-2963', 'vp-2920']) {
+      await page.goto(`${baseUrl}/people/${id}.html`, { waitUntil: 'networkidle' });
+      // Related-people lists name other entries (often professors in the same field); skip them.
+      const text = await page.evaluate(() => {
+        const clone = document.body.cloneNode(true) as HTMLElement;
+        clone.querySelectorAll('.related-section').forEach((section) => section.remove());
+        return clone.innerText || clone.textContent || '';
+      });
+      assert.doesNotMatch(text, /professor|faculty/i, id);
+      const head = await page.evaluate(
+        () =>
+          document.title +
+          [...document.querySelectorAll('meta[name=description], meta[property^="og:"]')]
+            .map((meta) => meta.getAttribute('content'))
+            .join(' '),
+      );
+      assert.doesNotMatch(head, /professor|faculty/i, id);
+      const graph = JSON.parse(
+        await page.locator('script[type="application/ld+json"]').first().innerHTML(),
+      )['@graph'];
+      const person = graph.find((node: { '@type': string }) => node['@type'] === 'Person');
+      for (const key of ['worksFor', 'affiliation']) {
+        assert.doesNotMatch(person[key]['@type'], /College|University|Educational/, `${id} ${key}`);
+      }
+    }
+  } finally {
+    await page.close();
+  }
 });

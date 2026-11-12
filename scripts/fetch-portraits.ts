@@ -514,6 +514,9 @@ async function auditIds(): Promise<Set<string>> {
 }
 
 const people = JSON.parse(await readFile(dataPath, 'utf8')) as Person[];
+async function writeRosters() {
+  await writeFile(dataPath, `${JSON.stringify(people, null, 2)}\n`);
+}
 const ledger = await loadLedger();
 const queue = syncQueue(await loadQueue(people), people, ledger);
 async function writeQueue() {
@@ -609,7 +612,7 @@ if (storeArgument) {
     results.push({ id, result: 'stored', portrait });
   }
   await writeFile(provenancePath, `${JSON.stringify(ledger, null, 2)}\n`);
-  await writeFile(dataPath, `${JSON.stringify(people, null, 2)}\n`);
+  await writeRosters();
   await writeQueue();
   console.log(JSON.stringify({ mode: 'store', results }, null, 2));
   process.exit(0);
@@ -879,7 +882,7 @@ await renderBrowser?.close().catch(() => undefined);
 if (renderedPages) console.error(`rendered ${renderedPages} page(s) in headless Chromium`);
 await writeFile(provenancePath, `${JSON.stringify(ledger, null, 2)}\n`);
 if (applying) {
-  await writeFile(dataPath, `${JSON.stringify(people, null, 2)}\n`);
+  await writeRosters();
   await writeQueue();
 }
 console.log(

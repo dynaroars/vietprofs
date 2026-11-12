@@ -26,6 +26,9 @@ import {
   buildTrackCounts,
   buildTopUndergradInstitutions,
   buildPhdToFacultyPairings,
+  isCorporatePolicyEntry,
+  isLabEntry,
+  sectorOf,
   type Roster,
   type RosterEntry,
 } from '../src/data.ts';
@@ -262,7 +265,7 @@ test('the field filter offers all seventeen broad fields', () => {
 test('every entry maps to one of the broad fields', () => {
   for (const p of roster) {
     assert.ok(
-      FIELDS.includes(fieldOf(p.department, p.university)),
+      FIELDS.includes(fieldOf(p.department, p.university, p.researchAreas)),
       `department "${p.department}" (for ${p.name}) does not match any FIELDS rule`,
     );
   }
@@ -357,7 +360,9 @@ test('institution-specific overrides resolve department names that carry no fiel
 });
 
 test('the roster has no unmapped Others entries in the current snapshot', () => {
-  const unmapped = roster.filter((p) => fieldOf(p.department, p.university) === 'Others');
+  const unmapped = roster
+    .filter((p) => sectorOf(p) === 'academia')
+    .filter((p) => fieldOf(p.department, p.university, p.researchAreas) === 'Others');
   assert.deepEqual(
     unmapped.map((p) => `${p.name} (${p.department} | ${p.university})`),
     [],
@@ -631,7 +636,10 @@ test('scoped search restricts results to the requested roster attribute', () => 
   });
   assert.ok(engineering.length > 0);
   assert.ok(
-    engineering.every((person) => fieldOf(person.department, person.university) === 'Engineering'),
+    engineering.every(
+      (person) =>
+        fieldOf(person.department, person.university, person.researchAreas) === 'Engineering',
+    ),
   );
 
   const research = filterRoster(roster, {
@@ -971,4 +979,93 @@ test('landmark and marquee faculty maintain their verified major honors', () => 
       );
     }
   }
+});
+
+test('roster satisfies schema and classification helpers categorize entries', async () => {
+  const { Ajv2020 } = await import('ajv/dist/2020.js');
+  const rosterData = JSON.parse(
+    readFileSync(new URL('../public/data.json', import.meta.url), 'utf8'),
+  );
+  assert.ok(Array.isArray(rosterData));
+  const schema = JSON.parse(
+    readFileSync(new URL('../public/roster.schema.json', import.meta.url), 'utf8'),
+  );
+  const validate = new Ajv2020({ allErrors: true }).compile(schema);
+  assert.ok(validate(rosterData), JSON.stringify(validate.errors?.slice(0, 5)));
+
+  assert.equal(isLabEntry({ institutionType: 'Public research institute' }), true);
+  assert.equal(isLabEntry({ institutionType: 'Corporate research lab' }), false);
+  assert.equal(isLabEntry({ track: 'Government & Defense' }), true);
+  assert.equal(isLabEntry({ institutionType: 'Policy & international organization' }), true);
+  assert.equal(isCorporatePolicyEntry({ institutionType: 'Corporate research lab' }), true);
+  assert.equal(
+    isCorporatePolicyEntry({ institutionType: 'Policy & international organization' }),
+    false,
+  );
+  assert.equal(isCorporatePolicyEntry({ track: 'Industry Research' }), true);
+  assert.equal(isCorporatePolicyEntry({ institutionType: 'Public research institute' }), false);
+
+  // Sector membership comes from institutionType and track alone; each person has exactly one.
+  const corporate = {
+    institutionType: 'Corporate research lab',
+    track: 'Industry Research',
+  } as const;
+  const defense = {
+    institutionType: 'Public research institute',
+    track: 'Government & Defense',
+  } as const;
+  const institute = {
+    institutionType: 'Public research institute',
+    track: 'Research',
+  } as const;
+  const university = { track: 'Tenure-line' } as const;
+  assert.deepEqual([corporate, defense, institute, university].map(sectorOf), [
+    'industry',
+    'labs',
+    'labs',
+    'academia',
+  ]);
+  // The sectors partition the roster, and the derived counts add up to it.
+  const counts = { academia: 0, labs: 0, industry: 0 };
+  for (const person of roster) counts[sectorOf(person)] += 1;
+  assert.equal(counts.academia + counts.labs + counts.industry, roster.length);
+  assert.ok(counts.academia > 0 && counts.labs > 0 && counts.industry > 0);
+});
+
+test('labs.html and industry.html redirect to the sector filter on the single directory page', () => {
+  for (const sector of ['labs', 'industry']) {
+    const html = readFileSync(new URL(`../${sector}.html`, import.meta.url), 'utf8');
+    assert.match(html, new RegExp(`http-equiv="refresh" content="0; url=\\./\\?sector=${sector}"`));
+    assert.match(html, new RegExp(`location\\.replace\\('\\./\\?sector=${sector}'`));
+    assert.match(html, new RegExp(`rel="canonical" href="[^"]+/\\?sector=${sector}"`));
+    assert.doesNotMatch(html, /data-roster/);
+  }
+});
+
+test('lab and company teams take their field from research areas when the department maps to nothing', () => {
+  assert.equal(
+    fieldOf('Alignment Science', 'Anthropic', ['AI Alignment', 'AI Safety']),
+    'Computer & Information Sciences',
+  );
+  assert.equal(
+    fieldOf('Global Security Directorate', 'Lawrence Livermore National Laboratory', [
+      'Countering WMD Threats',
+      'Chemical and Biological Defense',
+    ]),
+    'Law & Public Affairs',
+  );
+  assert.equal(
+    fieldOf('Science Directorate', undefined, ['Atmospheric Science']),
+    'Earth & Environmental Sciences',
+  );
+  assert.equal(
+    fieldOf('Computer Science', undefined, ['Monetary Policy']),
+    'Computer & Information Sciences',
+  );
+  for (const person of roster.filter((p) => sectorOf(p) !== 'academia'))
+    assert.notEqual(
+      fieldOf(person.department, person.university, person.researchAreas),
+      'Others',
+      person.id,
+    );
 });

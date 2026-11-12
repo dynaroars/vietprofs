@@ -30,10 +30,11 @@ function withAssignedId(person: RosterEntry): RosterEntry {
   return { id: nextId(), ...rest };
 }
 
-const updated: RosterEntry[] = roster.map((person) =>
+const updatedRoster: RosterEntry[] = roster.map((person) =>
   person.id ? person : withAssignedId(person),
 );
-const added = updated.filter((_, index: number) => !roster[index]?.id).length;
+const added = updatedRoster.filter((_, index: number) => !roster[index]?.id).length;
+
 if (!apply) {
   if (added > 0) {
     throw new Error(
@@ -42,6 +43,8 @@ if (!apply) {
   }
   console.log('All roster entries have immutable profile IDs.');
 } else {
-  await writeFile(rosterFile, `${JSON.stringify(updated, null, 2)}\n`);
+  if (added > 0) {
+    await writeFile(rosterFile, `${JSON.stringify(updatedRoster, null, 2)}\n`);
+  }
   console.log(`Assigned immutable profile IDs to ${added} roster entries.`);
 }

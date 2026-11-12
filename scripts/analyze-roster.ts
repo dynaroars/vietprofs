@@ -16,7 +16,8 @@ const roster: Roster = JSON.parse(
 );
 
 const countryOf = (p: RosterEntry) => p.country ?? 'United States';
-const fieldsOf = (people: Roster) => countBy(people, (p) => fieldOf(p.department, p.university));
+const fieldsOf = (people: Roster) =>
+  countBy(people, (p) => fieldOf(p.department, p.university, p.researchAreas));
 const withShares = (people: Roster) =>
   fieldsOf(people).map(([field, n]) => [field, n, Math.round((100 * n) / people.length)]);
 
@@ -36,7 +37,7 @@ const departmentSpread = countBy(
 );
 const sameInstitutionFieldClusters = countBy(
   roster.filter((p) => p.department),
-  (p) => `${p.university} | ${fieldOf(p.department, p.university)}`,
+  (p) => `${p.university} | ${fieldOf(p.department, p.university, p.researchAreas)}`,
 ).filter(([, n]) => n >= 3);
 
 console.log(

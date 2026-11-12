@@ -339,6 +339,14 @@ show:
   Commit `public/portraits/`, `public/data.json`, and the portrait ledger files with the batch, and
   give each new portrait a row note (source page, why accepted).
 - **Honors and degrees** noticed on those pages go in side findings, not this PR.
+- **Industry, government, and policy entries** (`track` `Industry Research`, `Government & Defense`,
+  or `Policy & Think Tank`) go stale faster than faculty, and many employers publish no staff page.
+  For them, the person's LinkedIn (via the search index) or own site naming the current role counts
+  as appointment evidence; set `"confirmed": false` when that is the only source, and clear it when
+  an employer page turns up. Recheck every `confirmed: false` entry's current role, not just its
+  links. A move to another research lab is an in-place update; someone who left for a non-research
+  role (engineering, product, a startup) or has neither a research doctorate nor a current publication record (one is required outside Academia) gets
+  a `Review possible eligibility issue:` side finding, never a silent edit.
 
 In the PR body, put one table row per entry, including entries checked with no change, with these
 columns: id, appointment (confirmed / changed / blocked), profile and website, Scholar, LinkedIn,
@@ -377,13 +385,15 @@ Issue each.
 ### Discover new faculty (`discover`)
 
 Playbooks: `TASKS/discover_from_database.md` (database channels), `TASKS/discover_new_faculty.md`
-(web/directory search), and `TASKS/candidate_intake.md` (eligibility and enrichment).
+(web/directory search), `TASKS/discover_industry_labs.md` (corporate, government, and policy
+employers), and `TASKS/candidate_intake.md` (eligibility and enrichment).
 
 1. **Channel by weekday (UTC):** Mon `grants` (NIH RePORTER + NSF PIs), Tue `coauthors`
    (Crossref/OpenAlex co-authors of rostered scholars), Wed `gaps` (feeder-vs-faculty gap report,
    then `./scripts/faculty-discovery-queries.ts` for the top uncovered gap university), Thu `labs`
-   (alumni pages on rostered `websiteUrl`s), Fri web search per `discover_new_faculty.md` (one field
-   or institution group; given-name tokens once that field's surname sweep is done), Sat `logs`
+   (alumni pages on rostered `websiteUrl`s), Fri web search: on odd ISO weeks per `discover_new_faculty.md` (one field
+   or institution group; given-name tokens once that field's surname sweep is done), on even ISO
+   weeks per `discover_industry_labs.md` (one employer group, filed as a `New industry batch`), Sat `logs`
    (out-of-roster leads in `maintenance/relationship-research.json`). Run
    `npm run discover-leads -- --mode=<channel> --limit=<n>` (never `--mode=all`). If the day's channel
    yields fewer than 5 promising leads, fall back to the next channel in the list.

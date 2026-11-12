@@ -98,7 +98,8 @@ test('generated profile pages use shared styles without page-specific CSS', asyn
   assert.match(seeAlso, />SEE ALSO</);
   assert.match(seeAlso, /connections\.html/);
   assert.match(generator, />CONNECTIONS</);
-  assert.match(generator, />SAME UNIVERSITY</);
+  assert.match(generator, /SAME UNIVERSITY/);
+  assert.match(generator, /SAME ORGANIZATION/);
   assert.match(generator, />SAME FIELD</);
   assert.match(generator, />MISSING</);
   assert.match(generator, /missingFields\(person\)/);

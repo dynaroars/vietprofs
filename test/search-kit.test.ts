@@ -1,3 +1,4 @@
+import { KEYWORD_ALIASES } from '../src/keywords.ts';
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import {
@@ -34,6 +35,20 @@ test('parseKeywordQuery parses recognized keyword prefixes with raw and quoted q
 
   const parsedConnection = parseKeywordQuery('connection:co-author', resolveKey);
   assert.deepEqual(parsedConnection, { key: 'connection', query: 'co-author' });
+});
+
+test('directory keyword aliases map every spelling to its scope', () => {
+  const resolve = (key: string) => KEYWORD_ALIASES[key];
+  const scopeOf = (raw: string) => parseKeywordQuery(raw, resolve)?.key;
+  for (const prefix of ['University', 'Uni', 'Organization', 'Org', 'Employer', 'Company', 'Lab']) {
+    assert.equal(scopeOf(`${prefix}: Google`), 'university', prefix);
+  }
+  for (const prefix of ['Type', 'Institution', 'InstitutionType']) {
+    assert.equal(scopeOf(`${prefix}: Think tank`), 'type', prefix);
+  }
+  assert.equal(scopeOf('Track: Industry Research'), 'track');
+  assert.equal(scopeOf('Rank: Researcher'), 'rank');
+  assert.equal(scopeOf('Unknown: x'), undefined);
 });
 
 test('sample and shuffle array helpers preserve elements and length', () => {

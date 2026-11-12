@@ -6,6 +6,9 @@ export const TRACKS = [
   'Admin and Staff',
   'Emeritus',
   'Deceased',
+  'Industry Research',
+  'Policy & Think Tank',
+  'Government & Defense',
 ] as const;
 
 // Career level only; the track says what kind of appointment it is (a Clinical Assistant Professor
@@ -27,6 +30,11 @@ export const INSTITUTION_TYPES = [
   'University',
   'Public research institute',
   'Independent nonprofit research institute',
+  'Corporate research lab',
+  'Policy & international organization',
+  'Think tank',
+  'Government & defense',
+  'National laboratory',
 ] as const;
 
 export const UTC_TIMESTAMP_PATTERN = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$/;

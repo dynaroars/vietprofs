@@ -42,8 +42,8 @@ if (Number(kept.slice(3)) > Number(retired.slice(3))) {
   );
 }
 
-const rosterFile = resolve('public/data.json');
 const retiredFile = resolve('maintenance/retired-ids.json');
+const rosterFile = resolve('public/data.json');
 const roster: RosterEntry[] = JSON.parse(await readFile(rosterFile, 'utf8'));
 const retiredIds: RetiredIds = JSON.parse(await readFile(retiredFile, 'utf8'));
 const ledgersOnly = args.includes('--ledgers-only'); // replay reference rewrites after a manual roster edit
@@ -126,8 +126,7 @@ for (const file of files) {
 
 if (restoring && !ledgersOnly) {
   const { id: _old, ...rest } = person;
-  const index = roster.indexOf(person);
-  roster.splice(index, 1);
+  roster.splice(roster.indexOf(person), 1);
   const renamed = { id: kept, ...rest } as RosterEntry;
   const at = roster.findIndex((entry) => byId(entry.id, kept) > 0);
   roster.splice(at < 0 ? roster.length : at, 0, renamed);

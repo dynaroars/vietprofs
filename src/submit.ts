@@ -74,7 +74,7 @@ function renderShell() {
               <div class="name-heading">
                 <h1>Submit or Update an Entry</h1>
               </div>
-              <p class="synopsis">Submit a new academic, suggest corrections to an existing profile, or share a source-backed academic connection between roster members.</p>
+              <p class="synopsis">Submit a new person, suggest corrections to an existing profile, or share a source-backed academic connection between roster members.</p>
             </div>
           </div>
         </section>
@@ -169,7 +169,7 @@ function renderShell() {
               <label for="name">Full name</label>
               <input id="name" name="name" type="text" placeholder="e.g. ThanhVu H. Nguyen" autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="name-suggestions" aria-describedby="name-hint" />
               <div id="name-suggestions" class="correction-suggestions" role="listbox" hidden></div>
-              <p class="form-help" id="name-hint">If this professor is already listed, typing their name will suggest them and pre-fill their details for editing.</p>
+              <p class="form-help" id="name-hint">If this person is already listed, typing their name will suggest them and pre-fill their details for editing.</p>
               <p class="form-help notice" id="name-match-notice" hidden></p>
             </div>
 
@@ -222,8 +222,8 @@ function renderShell() {
             </div>
 
             <div class="form-section">
-              <label for="university">Employing institution</label>
-              <input id="university" name="university" type="text" placeholder="e.g. University of Washington, Allen Institute, etc." />
+              <label for="university">Employer or institution</label>
+              <input id="university" name="university" type="text" placeholder="e.g. University of Washington, Allen Institute, Google, etc." />
             </div>
 
             <div class="form-section">
@@ -371,7 +371,7 @@ const FIELD_LABELS: Partial<Record<keyof SubmissionDraft, string>> = {
   scholarUrl: 'Google Scholar',
   linkedinUrl: 'LinkedIn',
   portraitSource: 'Profile picture URL',
-  university: 'Employing institution',
+  university: 'Employer or institution',
   institutionType: 'Institution type',
   department: 'Department',
   field: 'Broad field',

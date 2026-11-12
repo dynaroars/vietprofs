@@ -1,5 +1,6 @@
 import './style.css';
 import './directory.css';
+import { KEYWORD_ALIASES } from './keywords.ts';
 import { loadStatsHistory } from './stats-history.ts';
 import {
   FIELDS,
@@ -22,6 +23,10 @@ import {
   locationMatches,
   personPath,
   regionPath,
+  SECTORS,
+  SECTOR_LABELS,
+  sectorOf,
+  type Sector,
   uniqueCities,
   uniqueCountries,
   uniqueDepartments,
@@ -57,7 +62,6 @@ import {
   focusQuietly,
   hideCommandOutput as hideCommandOutputEl,
   parseKeywordQuery as parseKeywordQueryShared,
-  setupKeyboardShortcuts,
   setupSearchHelp,
 } from './search-kit.ts';
 import { setupBackToTop } from './back-to-top.ts';
@@ -77,13 +81,61 @@ function pickRandomUnique<T>(values: readonly T[], count: number): T[] {
   return shuffle([...new Set(values)]).slice(0, count);
 }
 
+// One directory with three sectors. `all` (the default) shows everyone; the Sector filter narrows
+// to one, and the track/employer filters depend on it. Module-level so the label helpers below can
+// follow the selection.
+type SectorChoice = 'all' | Sector;
+let activeSector: SectorChoice = 'all';
+// Hub pages and "institution" wording suit the default view and Academia; Gov & Labs and
+// Industry say "organization" and don't link to the (all-entry) hubs.
+const isAcademia = () => activeSector === 'all' || activeSector === 'academia';
+
+function parseSector(value: string | null | undefined): SectorChoice {
+  return SECTORS.find((sector) => sector === value) ?? 'all';
+}
+
 // Keyword prefixes let the single search box target one field directly (e.g. "Name: Nguyen"),
 // without needing the scope dropdown. Aliases map several spellings to the same scope value the
 // dropdown already uses, so both paths produce identical results.
+// The organization keyword is sector-aware ("University:" only in Academia); every old prefix
+// still parses through KEYWORD_ALIASES, and `type` (alias `institution`) is the separate institution-type scope.
+const ORGANIZATION_LABELS: Record<SectorChoice, string> = {
+  all: 'Organization',
+  academia: 'University',
+  labs: 'Organization',
+  industry: 'Employer',
+};
+const ORGANIZATION_EXAMPLES: Record<SectorChoice, string> = {
+  all: 'George Mason University',
+  academia: 'George Mason University',
+  labs: 'Argonne National Laboratory',
+  industry: 'Google',
+};
+const TYPE_EXAMPLES: Record<SectorChoice, string> = {
+  all: 'Corporate research lab',
+  academia: 'University',
+  labs: 'Public research institute',
+  industry: 'Corporate research lab',
+};
+const TRACK_EXAMPLES: Record<SectorChoice, string> = {
+  all: 'Tenure-line',
+  academia: 'Tenure-line',
+  labs: 'Government & Defense',
+  industry: 'Industry Research',
+};
+const RANK_EXAMPLES: Record<SectorChoice, string> = {
+  all: 'Researcher',
+  academia: 'Associate Professor',
+  labs: 'Researcher',
+  industry: 'Researcher',
+};
 const KEYWORD_LABELS: Record<string, string> = {
   name: 'Name',
-  university: 'University',
-  institution: 'Institution',
+  get university() {
+    return ORGANIZATION_LABELS[activeSector];
+  },
+  type: 'Type',
+  track: 'Track',
   department: 'Department',
   rank: 'Rank',
   research: 'Research',
@@ -96,7 +148,8 @@ const KEYWORD_LABELS: Record<string, string> = {
 const KEYWORD_ICONS: Record<string, string> = {
   name: '👤',
   university: '🏛️',
-  institution: '🏛️',
+  type: '🏷️',
+  track: '🧭',
   department: '🏢',
   rank: '🎓',
   research: '🔬',
@@ -108,10 +161,19 @@ const KEYWORD_ICONS: Record<string, string> = {
 
 const KEYWORD_EXAMPLES: Record<string, string> = {
   name: 'ThanhVu Nguyen',
-  university: 'George Mason University',
-  institution: 'Public research institute',
+  get university() {
+    return ORGANIZATION_EXAMPLES[activeSector];
+  },
+  get type() {
+    return TYPE_EXAMPLES[activeSector];
+  },
+  get track() {
+    return TRACK_EXAMPLES[activeSector];
+  },
   department: 'Computer Science',
-  rank: 'Associate Professor',
+  get rank() {
+    return RANK_EXAMPLES[activeSector];
+  },
   research: 'Software Engineering',
   honors: 'NSF CAREER Award',
   phd: 'University of New Mexico',
@@ -119,29 +181,14 @@ const KEYWORD_EXAMPLES: Record<string, string> = {
   connection: 'co-author, mentorship',
 };
 
-const KEYWORD_ALIASES: Record<string, string> = {
-  name: 'name',
-  university: 'university',
-  uni: 'university',
-  institution: 'institution',
-  institutiontype: 'institution',
-  department: 'department',
-  dept: 'department',
-  rank: 'rank',
-  research: 'research',
-  researcharea: 'research',
-  honors: 'honors',
-  honor: 'honors',
-  award: 'honors',
-  awards: 'honors',
-  phd: 'phd',
-  phdinstitution: 'phd',
-  undergrad: 'undergrad',
-  ugrad: 'undergrad',
-  ugradinst: 'undergrad',
-  connection: 'connection',
-  connections: 'connection',
-};
+function renderKeywordHelpItems(): string {
+  return Object.entries(KEYWORD_LABELS)
+    .map(
+      ([scope, label]) =>
+        `<li><code>${escapeHtml(label)}:</code> ${escapeHtml(KEYWORD_EXAMPLES[scope] ?? '')}</li>`,
+    )
+    .join('');
+}
 
 function parseKeywordQuery(raw: string): { scope: string; query: string } | null {
   const parsed = parseKeywordQueryShared(raw, (key) => KEYWORD_ALIASES[key]);
@@ -162,7 +209,7 @@ function renderShell() {
   app.innerHTML = `
     <header>
       <div class="title-row">
-        <h1><a class="home-link brand-link" href="${import.meta.env.BASE_URL}" id="home-link" title="A Public Directory of the Vietnamese Academic and Research Diaspora Worldwide"><img class="brand-logo" src="${import.meta.env.BASE_URL}vietprofs-bamboo-v.svg" alt="" width="56" height="56"><span>Vietnamese Academic Diaspora</span></a></h1>
+        <h1><a class="home-link brand-link" href="${import.meta.env.BASE_URL}" id="home-link" title="A Public Directory of the Vietnamese Academic and Research Diaspora Worldwide"><img class="brand-logo" src="${import.meta.env.BASE_URL}vietprofs-bamboo-v.svg" alt="" width="56" height="56"><span>Vietnamese Research Diaspora</span></a></h1>
         <div class="header-icons">
           <a class="icon-link roars-link" href="https://roars.dev" target="_blank" rel="noopener noreferrer" aria-label="ROARS Lab website" title="ROARS Lab website"></a>
           <a class="icon-link github-link" href="https://github.com/dynaroars/vietprofs" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository" title="GitHub repository and source code">
@@ -183,8 +230,8 @@ function renderShell() {
               <span id="search-state-chip-label"></span>
               <span class="search-scope-chip-remove" aria-hidden="true">×</span>
             </button>
-            <input id="search" class="search-input" type="search" autocomplete="off" placeholder="Search by name, field, or university" aria-label="Search" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="search-suggestion-panel" />
-            <button type="button" id="search-help-btn" class="search-help-btn" aria-haspopup="dialog" aria-expanded="false" aria-controls="search-help-panel" aria-label="Search syntax and keyboard help" title="Search syntax and keyboard help"><span class="search-help-icon" aria-hidden="true">?</span></button>
+            <input id="search" class="search-input" type="search" autocomplete="off" placeholder="Search by name, field, or organization" aria-label="Search" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="search-suggestion-panel" />
+            <button type="button" id="search-help-btn" class="search-help-btn" aria-haspopup="dialog" aria-expanded="false" aria-controls="search-help-panel" aria-label="Search syntax help" title="Search syntax help"><span class="search-help-icon" aria-hidden="true">?</span></button>
           </div>
           <div id="search-suggestion-panel" class="search-suggestion-panel" role="listbox" hidden></div>
         </div>
@@ -192,26 +239,25 @@ function renderShell() {
           <p><strong>QUERY SYNTAX</strong></p>
           <p>Type a keyword prefix to search one field directly:</p>
           <ul>
-            ${Object.entries(KEYWORD_LABELS)
-              .map(
-                ([scope, label]) =>
-                  `<li><code>${escapeHtml(label)}:</code> ${escapeHtml(KEYWORD_EXAMPLES[scope] ?? '')}</li>`,
-              )
-              .join('')}
+            ${renderKeywordHelpItems()}
           </ul>
-          <p><strong>KEYBOARD</strong></p>
-          <p><code>/</code> search · <code>j</code>/<code>k</code> move · <code>Enter</code> open · <code>f</code> favorite · <code>r</code> random · <code>Esc</code> clear</p>
           <p><strong>COMMANDS</strong></p>
           <p><code>help</code> · <code>query plan</code> · <code>clear</code></p>
         </div>
       </div>
+      <select id="sector-filter" class="field-select sector-select" aria-label="Filter by sector">
+        <option value="all">All Sectors</option>
+      </select>
       <select id="location-filter" class="field-select location-select" aria-label="Filter by location">
       </select>
       <select id="field-filter" class="field-select" aria-label="Filter by field">
         <option value="all">All Fields</option>
       </select>
-      <select id="track-filter" class="field-select track-select" aria-label="Filter by faculty track">
+      <select id="track-filter" class="field-select track-select" aria-label="Filter by track">
         <option value="all">All Tracks</option>
+      </select>
+      <select id="employer-filter" class="field-select employer-select" aria-label="Filter by employer" hidden>
+        <option value="all">All Employers</option>
       </select>
       <select id="sort-order" class="field-select sort-select" aria-label="Sort order">
         <option value="random">Random order</option>
@@ -228,10 +274,10 @@ function renderShell() {
       <p class="result-count" id="result-count" aria-live="polite"></p>
       <nav class="site-nav" aria-label="Site">
           ${siteNavLink('index.html?view=insights', 'Diaspora Insights & Pathways', ICONS.insights, ' data-view="insights"')}
-          ${siteNavLink('connections.html', 'Academic Connections', ICONS.connections)}
+          ${siteNavLink('connections.html', 'Research Connections', ICONS.connections)}
           ${siteNavLink('index.html?view=health', 'Data Health & Completeness', ICONS.health, ' data-view="health"')}
           ${siteNavLink(`${import.meta.env.BASE_URL}vietprofs.pdf`, 'Read the paper (PDF)', PAPER_ICON, EXTERNAL)}
-          ${renderShareMenu({ title: 'VietProfs: Vietnamese professors worldwide' })}
+          ${renderShareMenu({ title: 'VietProfs: Vietnamese scholars and scientists worldwide' })}
         </nav>
     </div>
     <div class="roster" id="roster"></div>
@@ -283,6 +329,21 @@ const TRACK_INFO: Record<string, { label: string; tooltip: string }> = {
     tooltip:
       'Deceased or historical scholars who held a qualifying university faculty or eligible research-institute appointment outside Vietnam.',
   },
+  'Industry Research': {
+    label: 'industry',
+    tooltip:
+      'A research scientist, research director, or senior technical contributor appointment at an industrial research laboratory or corporate R&D organization.',
+  },
+  'Policy & Think Tank': {
+    label: 'policy & think tank',
+    tooltip:
+      'A fellow, researcher, or economist appointment at a policy research organization, think tank, or international institution.',
+  },
+  'Government & Defense': {
+    label: 'gov & defense',
+    tooltip:
+      'A research scientist, engineer, or leader at a government agency, national laboratory, or defense research organization.',
+  },
 };
 
 function trackQualifier(roster: Roster): string {
@@ -290,10 +351,12 @@ function trackQualifier(roster: Roster): string {
     roster.map((p) => p.track).filter((track): track is string => Boolean(track)),
   );
   if (tracks.size !== 1) return '';
-  const info = TRACK_INFO[[...tracks][0] ?? ''];
-  return info
-    ? ` <span class="term" tabindex="0" data-tooltip="${escapeHtml(info.tooltip)}">${info.label}</span>`
-    : '';
+  const trackName = [...tracks][0] ?? '';
+  const info = TRACK_INFO[trackName] ?? {
+    label: trackName.toLowerCase(),
+    tooltip: trackName,
+  };
+  return ` <span class="term" tabindex="0" data-tooltip="${escapeHtml(info.tooltip)}">${info.label}</span>`;
 }
 
 interface RenderOptions {
@@ -339,8 +402,6 @@ function sortRoster(roster: Roster, order: string): Roster {
   );
 }
 
-let currentRoster: Roster = [];
-
 function renderRoster(
   roster: Roster,
   {
@@ -357,19 +418,23 @@ function renderRoster(
   const isFieldFiltered = Boolean(field && field !== 'all');
   const isLocationFiltered = Boolean(location && location !== 'World');
   const locationTargetName = location === 'US' ? 'United States' : (location ?? 'United States');
-  const fieldTarget = isFieldFiltered
-    ? `${import.meta.env.BASE_URL}${
-        hasIntersectionHub && isLocationFiltered
-          ? fieldRegionPath(field as string, locationTargetName)
-          : fieldPath(field as string)
-      }`
-    : '';
+  const fieldTarget =
+    isFieldFiltered && isAcademia()
+      ? `${import.meta.env.BASE_URL}${
+          hasIntersectionHub && isLocationFiltered
+            ? fieldRegionPath(field as string, locationTargetName)
+            : fieldPath(field as string)
+        }`
+      : '';
   const fieldPhrase = isFieldFiltered
-    ? ` in <a class="result-count-link" href="${fieldTarget}" title="Open ${escapeHtml(field as string)}${hasIntersectionHub && isLocationFiltered ? ` in ${escapeHtml(locationTargetName)}` : ''} hub">${escapeHtml(field as string)} ↗</a>`
+    ? fieldTarget
+      ? ` in <a class="result-count-link" href="${fieldTarget}" title="Open ${escapeHtml(field as string)}${hasIntersectionHub && isLocationFiltered ? ` in ${escapeHtml(locationTargetName)}` : ''} hub">${escapeHtml(field as string)} ↗</a>`
+      : ` in ${escapeHtml(field as string)}`
     : '';
-  const locationTarget = isLocationFiltered
-    ? `${import.meta.env.BASE_URL}${regionPath(locationTargetName)}`
-    : '';
+  const locationTarget =
+    isLocationFiltered && isAcademia()
+      ? `${import.meta.env.BASE_URL}${regionPath(locationTargetName)}`
+      : '';
   const rawLocationName =
     location === 'US'
       ? 'the United States'
@@ -377,13 +442,19 @@ function renderRoster(
         ? 'the World'
         : location;
   const locationPhrase =
-    isLocationFiltered && hasLocationHub
+    isLocationFiltered && hasLocationHub && isAcademia()
       ? `<a class="result-count-link" href="${locationTarget}" title="Open ${escapeHtml(rawLocationName)} region hub">${escapeHtml(rawLocationName)} ↗</a>`
       : escapeHtml(rawLocationName);
   const peopleLabel = roster.length === 1 ? 'person' : 'people';
-  countEl.innerHTML = `${roster.length}${trackQualifier(roster)} ${peopleLabel}${fieldPhrase} across ${institutions} institution${institutions === 1 ? '' : 's'} in ${locationPhrase}.`;
-
-  currentRoster = roster;
+  const orgWord =
+    activeSector === 'academia'
+      ? institutions === 1
+        ? 'institution'
+        : 'institutions'
+      : institutions === 1
+        ? 'organization'
+        : 'organizations';
+  countEl.innerHTML = `${roster.length}${trackQualifier(roster)} ${peopleLabel}${fieldPhrase} across ${institutions} ${orgWord} in ${locationPhrase}.`;
 
   if (roster.length === 0) {
     rosterEl.innerHTML = '<p class="empty-state">No matches. Try a different search or filter.</p>';
@@ -412,7 +483,8 @@ async function init() {
   try {
     // Keep one randomized order for the session so the default directory view is less
     // predictable, without reshuffling every time a filter or search is changed.
-    roster = shuffle(await loadRoster());
+    const rawRoster = await loadRoster();
+    roster = shuffle(rawRoster);
   } catch {
     document.getElementById('roster').innerHTML =
       '<p class="empty-state">Could not load the roster. Please refresh the page or try again later.</p>';
@@ -433,6 +505,13 @@ async function init() {
       hasEnoughPeopleForRosterHub(filterRoster(roster, { location: region }).length),
     ),
   );
+
+  const activeTracks = [
+    ...new Set([
+      ...TRACKS,
+      ...roster.map((person) => person.track).filter((t): t is string => Boolean(t)),
+    ]),
+  ];
 
   // Matches everything filterRoster actually searches over (name, university, city, state, country,
   // department, rank, research areas, degree institutions, and honors) so a suggestion always yields at least one result.
@@ -481,9 +560,11 @@ async function init() {
     ],
     [
       'field',
-      FIELDS.filter((field) => roster.some((p) => fieldOf(p.department, p.university) === field)),
+      FIELDS.filter((field) =>
+        roster.some((p) => fieldOf(p.department, p.university, p.researchAreas) === field),
+      ),
     ],
-    ['track', TRACKS.filter((track) => roster.some((p) => p.track === track))],
+    ['track', activeTracks.filter((track) => roster.some((p) => p.track === track))],
     ['research', uniqueResearchAreas(roster)],
     [
       'honors',
@@ -498,10 +579,7 @@ async function init() {
       ].sort(),
     ],
     ['university', [...new Set(roster.map((p) => p.university))].sort()],
-    [
-      'institution',
-      INSTITUTION_TYPES.filter((type) => roster.some((p) => institutionTypeOf(p) === type)),
-    ],
+    ['type', INSTITUTION_TYPES.filter((type) => roster.some((p) => institutionTypeOf(p) === type))],
     ['department', uniqueDepartments(roster)],
     ['phd', uniquePhdInstitutions(roster)],
     ['undergrad', uniqueUndergradInstitutions(roster)],
@@ -509,11 +587,14 @@ async function init() {
   const searchInput = document.getElementById('search') as HTMLInputElement;
   // The full placeholder doesn't fit a phone-width box.
   const narrowScreen = window.matchMedia('(max-width: 560px)');
-  const rosterSize = roster.length.toLocaleString('en-US');
   const applySearchPlaceholder = () => {
+    const rosterSize = roster
+      .filter((p) => activeSector === 'all' || sectorOf(p) === activeSector)
+      .length.toLocaleString('en-US');
+    const orgWord = activeSector === 'academia' ? 'university' : 'organization';
     searchInput.placeholder = narrowScreen.matches
       ? `Search ${rosterSize} people`
-      : `Search ${rosterSize} people by name, field, or university`;
+      : `Search ${rosterSize} people by name, field, or ${orgWord}`;
   };
   applySearchPlaceholder();
   narrowScreen.addEventListener('change', applySearchPlaceholder);
@@ -523,6 +604,8 @@ async function init() {
   const searchStateChipLabel = document.getElementById('search-state-chip-label') as HTMLElement;
   const suggestionPanel = document.getElementById('search-suggestion-panel') as HTMLElement;
   const browserShelf = document.getElementById('browser-shelf') as HTMLElement;
+  const sectorSelect = document.getElementById('sector-filter') as HTMLSelectElement;
+  const employerSelect = document.getElementById('employer-filter') as HTMLSelectElement;
   const locationSelect = document.getElementById('location-filter') as HTMLSelectElement;
   const fieldSelect = document.getElementById('field-filter') as HTMLSelectElement;
   const trackSelect = document.getElementById('track-filter') as HTMLSelectElement;
@@ -532,7 +615,6 @@ async function init() {
   const statsHistory = await loadStatsHistory();
   let currentGrowthMetric: GrowthMetricKey = 'count';
   let queryPlan = '';
-  let keyboardSelectedIndex = -1;
   // Search box: a typed/pasted "Keyword: value" prefix becomes a removable scope chip
   // (createSearchController in the shared search-kit), with an in-page suggestion listbox.
   // An in-page listbox rather than a native <datalist>: browser-owned datalist popups can
@@ -543,9 +625,14 @@ async function init() {
     scopeChipLabel: searchScopeChipLabel,
     suggestionPanel,
     keywordMeta: Object.fromEntries(
-      Object.entries(KEYWORD_LABELS).map(([scope, label]) => [
+      Object.keys(KEYWORD_LABELS).map((scope) => [
         scope,
-        { label, icon: KEYWORD_ICONS[scope] },
+        {
+          get label() {
+            return KEYWORD_LABELS[scope] as string;
+          },
+          icon: KEYWORD_ICONS[scope],
+        },
       ]),
     ),
     resolveKey: (key) => KEYWORD_ALIASES[key],
@@ -606,6 +693,8 @@ async function init() {
       currentLocation: locationSelect.value,
       field: fieldSelect.value,
       track: trackSelect.value,
+      sector: activeSector,
+      employer: employerSelect.value,
       relationships: relationshipDatabase,
     });
   }
@@ -622,6 +711,7 @@ async function init() {
       `query=${query.trim() ? JSON.stringify(query.trim()) : '*'}`,
       `location=${JSON.stringify(locationSelect.value)}`,
       `field=${JSON.stringify(fieldSelect.value)}`,
+      `sector=${JSON.stringify(activeSector)}`,
       `track=${JSON.stringify(trackSelect.value)}`,
       filterState.state ? `state=${JSON.stringify(filterState.state)}` : '',
       `sort=${sortSelect.value}`,
@@ -717,10 +807,14 @@ async function init() {
     LOCATION_LABELS[loc] || `${countryFlag(loc)} ${loc}`;
 
   function filtersHaveResults(location: string, field: string, track: string): boolean {
+    const employer = employerSelect.value || 'all';
     return roster.some(
       (person) =>
+        (activeSector === 'all' || sectorOf(person) === activeSector) &&
+        (employer === 'all' || person.university === employer) &&
         locationMatches(person, location) &&
-        (field === 'all' || fieldOf(person.department, person.university) === field) &&
+        (field === 'all' ||
+          fieldOf(person.department, person.university, person.researchAreas) === field) &&
         (track === 'all' || person.track === track),
     );
   }
@@ -728,7 +822,9 @@ async function init() {
   const fieldCounts = new Map(
     FIELDS.map((field) => [
       field,
-      roster.filter((person) => fieldOf(person.department, person.university) === field).length,
+      roster.filter(
+        (person) => fieldOf(person.department, person.university, person.researchAreas) === field,
+      ).length,
     ]),
   );
   const sortedFields = [...FIELDS].sort(
@@ -736,17 +832,63 @@ async function init() {
   );
 
   const trackCounts = new Map(
-    TRACKS.map((track) => [track, roster.filter((person) => person.track === track).length]),
+    activeTracks.map((track) => [track, roster.filter((person) => person.track === track).length]),
   );
-  const sortedTracks = [...TRACKS].sort(
-    (a, b) => (trackCounts.get(b) ?? 0) - (trackCounts.get(a) ?? 0) || a.localeCompare(b),
-  );
+  const sortedTracks = activeTracks
+    .filter((track) => (trackCounts.get(track) ?? 0) > 0)
+    .sort((a, b) => (trackCounts.get(b) ?? 0) - (trackCounts.get(a) ?? 0) || a.localeCompare(b));
 
   function updateDropdownCounts() {
     const { scope, query } = effectiveSearch();
     const currentLoc = locationSelect.value || 'World';
     const currentField = fieldSelect.value || 'all';
     const currentTrack = trackSelect.value || 'all';
+    const currentEmployer = activeSector === 'industry' ? employerSelect.value || 'all' : 'all';
+
+    // Each dropdown counts against every other active filter, so its options only list what the
+    // selection can still reach; Sector and Employer follow the same rule.
+    const sectorContext = filterRoster(searchIndex, {
+      query,
+      searchScope: scope,
+      state: filterState.state,
+      location: currentLoc,
+      field: currentField,
+      track: currentTrack,
+      relationships: relationshipDatabase,
+    });
+    setOptions(
+      sectorSelect,
+      [
+        { value: 'all', label: `All Sectors (${sectorContext.length})` },
+        ...SECTORS.map((sector) => ({
+          value: sector,
+          label: `${SECTOR_LABELS[sector]} (${sectorContext.filter((p) => sectorOf(p) === sector).length})`,
+        })),
+      ],
+      activeSector,
+    );
+    const employerContext = filterRoster(searchIndex, {
+      query,
+      searchScope: scope,
+      state: filterState.state,
+      location: currentLoc,
+      field: currentField,
+      track: currentTrack,
+      sector: 'industry',
+      relationships: relationshipDatabase,
+    });
+    const employerCounts = new Map<string, number>();
+    for (const person of employerContext) {
+      employerCounts.set(person.university, (employerCounts.get(person.university) ?? 0) + 1);
+    }
+    const employerEntries: OptionEntry[] = [
+      { value: 'all', label: `All Employers (${employerContext.length})` },
+      ...[...employerCounts]
+        .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+        .map(([employer, count]) => ({ value: employer, label: `${employer} (${count})` })),
+    ];
+    employerSelect.hidden = activeSector !== 'industry';
+    setOptions(employerSelect, employerEntries, currentEmployer);
 
     const locationContext = filterRoster(searchIndex, {
       query,
@@ -755,6 +897,8 @@ async function init() {
       location: 'World',
       field: currentField,
       track: currentTrack,
+      sector: activeSector,
+      employer: currentEmployer,
       relationships: relationshipDatabase,
     });
     const countryEntries: OptionEntry[] = [];
@@ -786,6 +930,8 @@ async function init() {
       location: locationSelect.value || 'World',
       field: 'all',
       track: currentTrack,
+      sector: activeSector,
+      employer: currentEmployer,
       relationships: relationshipDatabase,
     });
     const fieldEntries: OptionEntry[] = [
@@ -793,7 +939,7 @@ async function init() {
     ];
     for (const field of sortedFields) {
       const count = fieldContext.filter(
-        (p) => fieldOf(p.department, p.university) === field,
+        (p) => fieldOf(p.department, p.university, p.researchAreas) === field,
       ).length;
       if (count > 0) {
         fieldEntries.push({ value: field, label: `${fieldDropdownLabel(field)} (${count})` });
@@ -808,6 +954,8 @@ async function init() {
       location: locationSelect.value || 'World',
       field: fieldSelect.value || 'all',
       track: 'all',
+      sector: activeSector,
+      employer: currentEmployer,
       relationships: relationshipDatabase,
     });
     const trackEntries: OptionEntry[] = [
@@ -822,7 +970,7 @@ async function init() {
     setOptions(trackSelect, trackEntries, currentTrack);
 
     // A closed dropdown shows only its choice; the counts are for comparing options in the open list.
-    for (const select of [locationSelect, fieldSelect, trackSelect]) {
+    for (const select of [sectorSelect, employerSelect, locationSelect, fieldSelect, trackSelect]) {
       const selected = select.selectedOptions[0];
       if (selected) selected.textContent = selected.textContent?.replace(/ \([\d,]+\)$/, '') ?? '';
     }
@@ -832,7 +980,13 @@ async function init() {
     updateDropdownCounts();
   }
 
+  const sectorRoster = () => (activeSector === 'all' ? roster : roster.filter(sectorMatches));
+  const sectorMatches = (person: RosterEntry) =>
+    activeSector === 'all' || sectorOf(person) === activeSector;
+
   function updateDropdownHighlights() {
+    sectorSelect.classList.toggle('is-active', activeSector !== 'all');
+    employerSelect.classList.toggle('is-active', employerSelect.value !== 'all');
     locationSelect.classList.toggle('is-active', locationSelect.value !== 'World');
     fieldSelect.classList.toggle('is-active', fieldSelect.value !== 'all');
     trackSelect.classList.toggle('is-active', trackSelect.value !== 'all');
@@ -870,10 +1024,14 @@ async function init() {
     if (params.has('q')) {
       setSearchValue(params.get('q') ?? '');
     } else if (INSTITUTION_TYPES.some((type) => type === requestedInstitutionType)) {
-      setSearchValue(`${KEYWORD_LABELS.institution}: ${requestedInstitutionType}`);
+      setSearchValue(`${KEYWORD_LABELS.type}: ${requestedInstitutionType}`);
     } else {
       clearSearch();
     }
+    activeSector = parseSector(params.get('sector'));
+    sectorSelect.value = activeSector;
+    refreshKeywordLabels();
+    const requestedEmployer = params.get('employer') ?? 'all';
     const requestedLocation = params.get('loc') ?? params.get('location');
     filterState.state = params.get('state') ?? '';
     const requestedField = params.get('field') ?? '';
@@ -887,7 +1045,7 @@ async function init() {
     if (
       requestedLocation &&
       locationOptions.includes(requestedLocation) &&
-      roster.some((p) => locationMatches(p, requestedLocation))
+      roster.some((p) => sectorMatches(p) && locationMatches(p, requestedLocation))
     ) {
       initialLocation = requestedLocation;
     } else if (params.has('q')) {
@@ -897,7 +1055,11 @@ async function init() {
     let initialField = 'all';
     if (
       FIELDS.includes(requestedField) &&
-      roster.some((p) => fieldOf(p.department, p.university) === requestedField)
+      roster.some(
+        (p) =>
+          sectorMatches(p) &&
+          fieldOf(p.department, p.university, p.researchAreas) === requestedField,
+      )
     ) {
       initialField = requestedField;
     }
@@ -908,11 +1070,18 @@ async function init() {
     let initialTrack = 'all';
     if (
       TRACKS.some((track) => track === requestedTrack) &&
-      roster.some((p) => p.track === requestedTrack)
+      roster.some((p) => p.track === requestedTrack && sectorMatches(p))
     ) {
       initialTrack = requestedTrack;
     }
+    // Employer only applies within Industry; an unknown employer falls back to all.
+    employerSelect.value =
+      activeSector === 'industry' &&
+      roster.some((p) => sectorOf(p) === 'industry' && p.university === requestedEmployer)
+        ? requestedEmployer
+        : 'all';
     setFilterValues({ location: initialLocation, field: initialField, track: initialTrack });
+    applySearchPlaceholder();
     sortSelect.value = ['random', 'last-name', 'first-name', 'vp-newest', 'recent'].includes(
       requestedSort,
     )
@@ -920,6 +1089,17 @@ async function init() {
       : 'random';
   }
 
+  // Employer options must exist before the URL state can select one.
+  setOptions(
+    employerSelect,
+    [
+      { value: 'all', label: 'All Employers' },
+      ...[...new Set(roster.filter((p) => sectorOf(p) === 'industry').map((p) => p.university))]
+        .sort()
+        .map((employer) => ({ value: employer, label: employer })),
+    ],
+    'all',
+  );
   initializeDropdowns();
   applyUrlState(new URLSearchParams(window.location.search));
 
@@ -933,6 +1113,9 @@ async function init() {
     const next = new URLSearchParams();
     const searchQuery = searchQueryValue();
     if (searchQuery) next.set('q', searchQuery);
+    if (activeSector !== 'all') next.set('sector', activeSector);
+    if (activeSector === 'industry' && employerSelect.value !== 'all')
+      next.set('employer', employerSelect.value);
     if (filterState.state) next.set('state', filterState.state);
     if (locationSelect.value !== 'World') next.set('loc', locationSelect.value);
     if (fieldSelect.value !== 'all') next.set('field', fieldSelect.value);
@@ -995,7 +1178,17 @@ async function init() {
     browserShelf.append(group);
   }
 
+  // The organization keyword follows the sector: refresh the help list and any active chip.
+  function refreshKeywordLabels() {
+    const helpList = document.querySelector('#search-help-panel ul');
+    if (helpList) helpList.innerHTML = renderKeywordHelpItems();
+    if (search.activeScope() === 'university') {
+      setSearchValue(`${KEYWORD_LABELS.university}: ${searchInput.value}`);
+    }
+  }
+
   function update({ fromSearch = false } = {}) {
+    applySearchPlaceholder();
     if (fromSearch) {
       filterState.state = '';
       filterState.insights = false;
@@ -1013,21 +1206,28 @@ async function init() {
       }
       if (rosterEl) {
         rosterEl.innerHTML = renderHealthPanel(
-          roster,
+          sectorRoster(),
           import.meta.env.BASE_URL,
           true,
           statsHistory,
           currentGrowthMetric,
         );
       }
-      renderQueryPlan(roster.length, 'health');
+      renderQueryPlan(sectorRoster().length, 'health');
       syncUrl();
       renderBrowserShelf();
       return;
     }
-    const locRoster = roster.filter((p) => locationMatches(p, locationSelect.value));
+    const scopedRoster = sectorRoster();
+    const locRoster = scopedRoster.filter((p) => locationMatches(p, locationSelect.value));
     if (filterState.insights) {
-      renderFunFacts(locRoster, locationLabel(locationSelect.value), locationSelect.value, roster);
+      renderFunFacts(
+        locRoster,
+        locationLabel(locationSelect.value),
+        locationSelect.value,
+        scopedRoster,
+        activeSector,
+      );
       renderQueryPlan(locRoster.length, 'insights');
       syncUrl();
       renderBrowserShelf();
@@ -1041,25 +1241,28 @@ async function init() {
       location: locationSelect.value,
       field: fieldSelect.value,
       track: trackSelect.value,
+      sector: activeSector,
+      employer: employerSelect.value,
       relationships: relationshipDatabase,
     });
     renderRoster(sortRoster(filtered, sortSelect.value), {
       field: fieldSelect.value,
       location: locationSelect.value,
       hasIntersectionHub:
+        isAcademia() &&
         fieldSelect.value !== 'all' &&
         locationSelect.value !== 'World' &&
         hasEnoughPeopleForRosterHub(
           filterRoster(roster, { field: fieldSelect.value, location: locationSelect.value }).length,
         ),
       hasLocationHub:
+        isAcademia() &&
         locationSelect.value !== 'World' &&
         availableRegionHubs.has(
           locationSelect.value === 'US' ? 'United States' : locationSelect.value,
         ),
       availableRegionHubs,
     });
-    keyboardSelectedIndex = -1;
     renderQueryPlan(filtered.length);
     syncUrl();
     renderBrowserShelf();
@@ -1095,6 +1298,9 @@ async function init() {
     filterState.state = '';
     filterState.insights = false;
     filterState.health = false;
+    activeSector = 'all';
+    sectorSelect.value = 'all';
+    employerSelect.value = 'all';
     setFilterValues({ location: 'World' });
     sortSelect.value = 'random';
     update();
@@ -1107,7 +1313,7 @@ async function init() {
   });
 
   // The shared help / query plan / clear commands; every other input is a search.
-  const runCommand = createCommandHandler({
+  const runSharedCommand = createCommandHandler({
     input: searchInput,
     getSearch: () => search,
     commandOutputEl: commandOutput,
@@ -1116,6 +1322,14 @@ async function init() {
     getQueryPlan: () => queryPlan,
     resetDirectory,
   });
+  // The shared `help` reply mentions keyboard shortcuts, which this directory doesn't have.
+  const runCommand = (raw: string): boolean => {
+    const handled = runSharedCommand(raw);
+    if (handled && raw.trim().toLowerCase().replace(/^:/, '') === 'help') {
+      commandOutput.textContent = 'help: query prefixes and commands are listed above';
+    }
+    return handled;
+  };
 
   searchStateChip.addEventListener('click', () => {
     filterState.state = '';
@@ -1123,52 +1337,22 @@ async function init() {
     update();
   });
 
-  // j/k (or arrows) move, Enter opens, f favorites, r random, / search, ? help, and Escape steps
-  // back: close help → leave insights/health/state filter → blur search → clear search.
-  setupKeyboardShortcuts({
-    input: searchInput,
-    help: searchHelp,
-    getItemElements: () => [...document.querySelectorAll<HTMLElement>('.entry')],
-    getSelectedIndex: () => keyboardSelectedIndex,
-    setSelectedIndex: (index) => {
-      keyboardSelectedIndex = index;
-    },
-    selectedClass: 'entry-keyboard-selected',
-    nextKeys: ['j', 'ArrowDown'],
-    prevKeys: ['k', 'ArrowUp'],
-    isNavigable: () => currentRoster.length > 0 || document.querySelectorAll('.entry').length > 0,
-    onEnter: (selected) => selected.querySelector<HTMLAnchorElement>('.entry-name')?.click(),
-    onSecondary: (selected) =>
-      selected.querySelector<HTMLButtonElement>('.favorite-toggle')?.click(),
-    onRandom: () => {
-      const entries = [...document.querySelectorAll<HTMLElement>('.entry')];
-      if (!entries.length) {
-        showToast('No profiles to choose from. Open the directory first.');
-        return;
-      }
-      entries[keyboardSelectedIndex]?.classList.remove('entry-keyboard-selected');
-      keyboardSelectedIndex = Math.floor(Math.random() * entries.length);
-      const selected = entries[keyboardSelectedIndex];
-      selected.classList.add('entry-keyboard-selected');
-      selected.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
-    },
-    escape: {
-      onEscape: () => {
-        if (!(filterState.insights || filterState.health || filterState.state)) return false;
-        filterState.insights = false;
-        filterState.health = false;
-        filterState.state = '';
-        update();
-        return true;
-      },
-      closeSuggestions: () => search.close(),
-      clearSearch: () => {
-        clearSearch();
-        update();
-      },
-    },
+  sectorSelect.addEventListener('change', () => {
+    activeSector = parseSector(sectorSelect.value);
+    // Track, field, and location options re-filter to the new sector in update(); an option the
+    // sector can't reach falls back to "All".
+    if (activeSector !== 'industry') employerSelect.value = 'all';
+    filterState.state = '';
+    filterState.insights = false;
+    filterState.health = false;
+    refreshKeywordLabels();
+    update();
   });
-
+  employerSelect.addEventListener('change', () => {
+    filterState.insights = false;
+    filterState.health = false;
+    update();
+  });
   locationSelect.addEventListener('change', () => {
     filterState.state = '';
     filterState.insights = false;

@@ -12,6 +12,7 @@ import {
   fieldRegionPath,
   FIELDS,
   hasEnoughPeopleForRosterHub,
+  sectorOf,
   personPath,
   ROSTER_CONTINENTS,
   regionPath,
@@ -179,7 +180,7 @@ function relatedSections(person: RosterEntry, field: string, context: RelatedCon
     : '';
   return [
     sameUniversity.length
-      ? `<section class="man-section related-section"><h2>SAME UNIVERSITY</h2>${relatedList(sameUniversity, (other) => [canonicalRank(other), other.department].filter(Boolean).join(', '))}${universityLink}</section>`
+      ? `<section class="man-section related-section"><h2>${sectorOf(person) === 'academia' ? 'SAME UNIVERSITY' : 'SAME ORGANIZATION'}</h2>${relatedList(sameUniversity, (other) => [canonicalRank(other), other.department].filter(Boolean).join(', '))}${universityLink}</section>`
       : '',
     sameField.length
       ? `<section class="man-section related-section"><h2>SAME FIELD</h2>${relatedList(sameField, (other) => [canonicalRank(other), other.university].filter(Boolean).join(', '))}${fieldLink}</section>`
@@ -195,6 +196,9 @@ const TRACK_SECTION: Record<string, number> = {
   'Admin and Staff': 5,
   Emeritus: 6,
   Deceased: 7,
+  'Industry Research': 8,
+  'Policy & Think Tank': 9,
+  'Government & Defense': 10,
 };
 
 function profilePage(
@@ -204,6 +208,12 @@ function profilePage(
   rosterById: ReadonlyMap<string, RosterEntry>,
   related: RelatedContext,
 ) {
+  // Gov & Labs and Industry entries link back to their sector on the single directory page and
+  // skip country hubs, which cover Academia only.
+  const sector = sectorOf(person);
+  const isIndustry = sector !== 'academia';
+  const directoryPage = 'index.html';
+  const sectorParam = sector === 'academia' ? '' : `sector=${sector}&`;
   const sectionNum = TRACK_SECTION[person.track || ''] || 1;
   const sectionLabel = `PROFILE(${sectionNum})`;
   const name = displayName(person.name);
@@ -222,9 +232,9 @@ function profilePage(
   const portrait = person.portrait
     ? `<img class="portrait" src="../${escapeHtml(person.portrait)}" alt="Portrait of ${escapeHtml(name)}" width="240" height="300">`
     : `<img class="portrait portrait-placeholder" src="../default-portrait.svg" alt="No portrait on file yet for ${escapeHtml(name)}" width="240" height="300">`;
-  const personField = fieldOf(person.department, person.university);
+  const personField = fieldOf(person.department, person.university, person.researchAreas);
   const research = person.researchAreas?.length
-    ? `<section class="man-section"><h2>RESEARCH</h2><ul>${person.researchAreas.map((area) => `<li><a href="../index.html?q=${encodeURIComponent(area)}" class="research-area-link">${escapeHtml(area)}</a></li>`).join('')}</ul></section>`
+    ? `<section class="man-section"><h2>RESEARCH</h2><ul>${person.researchAreas.map((area) => `<li><a href="../${directoryPage}?${sectorParam}q=${encodeURIComponent(area)}" class="research-area-link">${escapeHtml(area)}</a></li>`).join('')}</ul></section>`
     : '';
   const education = formatEducationDetails(person, { fullLabels: true });
   const educationSection = education.length
@@ -383,6 +393,16 @@ if (button) {
     person.msInstitution && { '@type': 'EducationalOrganization', name: person.msInstitution },
   ].filter(Boolean);
 
+  // Only universities are educational organizations; companies are plain Organizations and
+  // government or defense labs GovernmentOrganizations.
+  const employerType =
+    sector === 'academia'
+      ? 'EducationalOrganization'
+      : person.track === 'Government & Defense' ||
+          person.institutionType === 'Government & defense' ||
+          person.institutionType === 'National laboratory'
+        ? 'GovernmentOrganization'
+        : 'Organization';
   const jsonLd = JSON.stringify({
     '@context': 'https://schema.org',
     '@graph': [
@@ -394,14 +414,14 @@ if (button) {
         ...(person.portrait ? { image: ogImage } : {}),
         jobTitle: canonicalRank(person) || undefined,
         worksFor: {
-          '@type': 'EducationalOrganization',
+          '@type': employerType,
           name: person.university,
           ...(person.department
             ? { department: { '@type': 'Organization', name: person.department } }
             : {}),
         },
         affiliation: {
-          '@type': 'EducationalOrganization',
+          '@type': employerType,
           name: person.university,
           ...(person.department
             ? { department: { '@type': 'Organization', name: person.department } }
@@ -443,9 +463,10 @@ if (button) {
     person.country && !['United States', 'US', 'USA'].includes(person.country)
       ? person.country
       : 'United States';
-  const countryTargetUrl = availableCountryHubs.has(countryTarget)
-    ? `../${regionPath(countryTarget)}`
-    : `../index.html?loc=${encodeURIComponent(countryTarget === 'United States' ? 'US' : countryTarget)}`;
+  const countryTargetUrl =
+    !isIndustry && availableCountryHubs.has(countryTarget)
+      ? `../${regionPath(countryTarget)}`
+      : `../${directoryPage}?${sectorParam}loc=${encodeURIComponent(countryTarget === 'United States' ? 'US' : countryTarget)}`;
 
   return `<!doctype html>
 <!--
@@ -490,9 +511,9 @@ if (button) {
   <div id="app">
     <main>
       <article class="man-page">
-        <p class="man-running-head"><span>${sectionLabel}</span><span class="man-running-title"><a class="man-running-brand" href="../index.html" aria-label="VietProfs directory"><img class="brand-logo" src="../vietprofs-bamboo-v.svg" alt="" width="20" height="20"><span class="man-running-label">Profile Manual</span></a></span><span>${sectionLabel}</span></p>
-        <section class="man-section name-section"><h2>NAME</h2><div class="identity profile-identity">${portrait}<div class="identity-details"><div class="name-heading"><div class="name-title"><h1>${escapeHtml(name)}</h1>${favoriteToggle}</div><div class="profile-actions" aria-label="Roster actions"><a class="self-claim-link" href="${escapeHtml(selfUrl)}">Is this you?</a></div></div><p id="profile-save-status" role="status" hidden></p><p class="native">${escapeHtml(nativeName)} <a class="loc-badge-link" href="${countryTargetUrl}" title="Filter faculty in ${escapeHtml(person.country || 'United States')}"><span class="loc-badge" title="${escapeHtml(person.country || 'United States')}"><span class="country-flag" aria-hidden="true">${countryFlag(person.country)}</span></span></a></p><p class="record-id">${escapeHtml(person.id)}</p></div></div></section>
-        <section class="man-section"><h2>SYNOPSIS</h2><p class="synopsis">${escapeHtml(role)}${locationOf(person) ? ` · ${escapeHtml(locationOf(person))}` : ''}</p><div class="tags"><a href="../${fieldPath(personField)}" class="tag" title="Explore ${escapeHtml(personField)} faculty on VietProfs">${escapeHtml(personField)}</a>${person.track ? `<a href="../index.html?track=${encodeURIComponent(person.track)}" class="tag${person.track === 'Emeritus' ? ' tag-emeritus' : person.track === 'Deceased' ? ' tag-deceased' : ''}" title="Filter by ${escapeHtml(person.track)}">${person.track === 'Emeritus' ? '🎓 Emeritus' : person.track === 'Deceased' ? '🏛️ Deceased' : escapeHtml(person.track)}</a>` : ''}${person.institutionType && person.institutionType !== 'University' ? `<a href="../index.html?institutionType=${encodeURIComponent(person.institutionType)}" class="tag" title="Filter by ${escapeHtml(person.institutionType)}">${escapeHtml(person.institutionType)}</a>` : ''}${person.confirmed === false ? '<span class="tag tag-unconfirmed">Unconfirmed</span>' : ''}</div></section>
+        <p class="man-running-head"><span>${sectionLabel}</span><span class="man-running-title"><a class="man-running-brand" href="../${directoryPage}${sectorParam ? `?${sectorParam.slice(0, -1)}` : ''}" aria-label="VietProfs directory"><img class="brand-logo" src="../vietprofs-bamboo-v.svg" alt="" width="20" height="20"><span class="man-running-label">Profile Manual</span></a></span><span>${sectionLabel}</span></p>
+        <section class="man-section name-section"><h2>NAME</h2><div class="identity profile-identity">${portrait}<div class="identity-details"><div class="name-heading"><div class="name-title"><h1>${escapeHtml(name)}</h1>${favoriteToggle}</div><div class="profile-actions" aria-label="Roster actions"><a class="self-claim-link" href="${escapeHtml(selfUrl)}">Is this you?</a></div></div><p id="profile-save-status" role="status" hidden></p><p class="native">${escapeHtml(nativeName)} <a class="loc-badge-link" href="${countryTargetUrl}" title="Filter people in ${escapeHtml(person.country || 'United States')}"><span class="loc-badge" title="${escapeHtml(person.country || 'United States')}"><span class="country-flag" aria-hidden="true">${countryFlag(person.country)}</span></span></a></p><p class="record-id">${escapeHtml(person.id)}</p></div></div></section>
+        <section class="man-section"><h2>SYNOPSIS</h2><p class="synopsis">${escapeHtml(role)}${locationOf(person) ? ` · ${escapeHtml(locationOf(person))}` : ''}</p><div class="tags"><a href="../${fieldPath(personField)}" class="tag" title="Explore ${escapeHtml(personField)} on VietProfs">${escapeHtml(personField)}</a>${person.track ? `<a href="../${directoryPage}?${sectorParam}track=${encodeURIComponent(person.track)}" class="tag${person.track === 'Emeritus' ? ' tag-emeritus' : person.track === 'Deceased' ? ' tag-deceased' : ''}" title="Filter by ${escapeHtml(person.track)}">${person.track === 'Emeritus' ? '🎓 Emeritus' : person.track === 'Deceased' ? '🏛️ Deceased' : escapeHtml(person.track)}</a>` : ''}${person.institutionType && person.institutionType !== 'University' ? `<a href="../${directoryPage}?${sectorParam}institutionType=${encodeURIComponent(person.institutionType)}" class="tag" title="Filter by ${escapeHtml(person.institutionType)}">${escapeHtml(person.institutionType)}</a>` : ''}${person.confirmed === false ? '<span class="tag tag-unconfirmed">Unconfirmed</span>' : ''}</div></section>
         ${research}${educationSection}${honors}${connectionSection}${relatedSections(person, personField, related)}${linkSection}${missingSection}
         <section class="man-section"><h2>ROSTER METADATA</h2><dl class="roster-metadata"><div><dt>record</dt><dd>${escapeHtml(person.id)}</dd></div><div><dt>confirmation</dt><dd>${person.confirmed === false ? 'Unconfirmed — reliable non-official evidence' : 'Confirmed'}</dd></div><div><dt>last verified</dt><dd>${escapeHtml(formatRosterDate(person.lastUpdatedAt || ''))}</dd></div><div><dt>build</dt><dd><a href="https://github.com/dynaroars/vietprofs/commit/${escapeHtml(commit)}">${escapeHtml(commit)}</a></dd></div></dl><details class="raw-record"><summary>view raw record</summary><pre><code>${rawRecord}</code></pre></details></section>
         ${renderSeeAlso('../')}
@@ -669,8 +690,8 @@ function categoryHubPage(config: HubConfig) {
           <h2>SYNOPSIS</h2>
           <p class="synopsis">${escapeHtml(config.description)}</p>
           <div class="tags">
-            <span class="tag">${config.people.length} Faculty Members</span>
-            ${config.categoryType === 'Institution' ? '' : `<span class="tag">${uniqueUniversities.size} Institutions</span>`}
+            <span class="tag">${config.people.length} ${config.people.length === 1 ? 'Person' : 'People'}</span>
+            ${config.categoryType === 'Institution' ? '' : `<span class="tag">${uniqueUniversities.size} ${uniqueUniversities.size === 1 ? 'Organization' : 'Organizations'}</span>`}
           </div>
         </section>
         <section class="man-section">
@@ -689,7 +710,7 @@ function categoryHubPage(config: HubConfig) {
           <h2>ROSTER METADATA</h2>
           <dl class="roster-metadata">
             <div><dt>category</dt><dd>${escapeHtml(config.categoryType)} · ${escapeHtml(config.categoryName)}</dd></div>
-            <div><dt>faculty count</dt><dd>${sortedPeople.length}</dd></div>
+            <div><dt>people count</dt><dd>${sortedPeople.length}</dd></div>
             <div><dt>build</dt><dd><a href="https://github.com/dynaroars/vietprofs/commit/${escapeHtml(commit)}">${escapeHtml(commit)}</a></dd></div>
           </dl>
         </section>
@@ -719,7 +740,8 @@ async function main() {
     ),
   ]);
   const ids = new Set<string>();
-  for (const person of roster) {
+  const allEntries = roster;
+  for (const person of allEntries) {
     if (!person.id || ids.has(person.id))
       throw new Error(`Profile ID is missing or duplicated: ${person.name}`);
     ids.add(person.id);
@@ -739,7 +761,7 @@ async function main() {
       .filter(([, count]) => hasEnoughPeopleForRosterHub(count))
       .map(([country]) => country),
   );
-  const rosterById = new Map(roster.map((person) => [person.id, person]));
+  const rosterById = new Map(allEntries.map((person) => [person.id, person]));
 
   await Promise.all([
     rm(peopleDir, { recursive: true, force: true }),
@@ -753,7 +775,7 @@ async function main() {
   for (const person of roster) {
     if (person.university)
       byUniversity.set(person.university, [...(byUniversity.get(person.university) ?? []), person]);
-    const field = fieldOf(person.department, person.university);
+    const field = fieldOf(person.department, person.university, person.researchAreas);
     byField.set(field, [...(byField.get(field) ?? []), person]);
   }
   const universityHubNames = [...byUniversity.keys()]
@@ -780,7 +802,7 @@ async function main() {
 
   // 1. Generate individual profile pages
   await Promise.all(
-    roster.map(async (person) => {
+    allEntries.map(async (person) => {
       const outputFile = resolve(output, personPath(person.id));
       await mkdir(dirname(outputFile), { recursive: true });
       await writeFile(
@@ -798,13 +820,15 @@ async function main() {
 
   // 2. Generate Discipline Hub pages
   const fieldHubs: HubConfig[] = FIELDS.map((field) => {
-    const people = roster.filter((p) => fieldOf(p.department, p.university) === field);
+    const people = roster.filter(
+      (p) => fieldOf(p.department, p.university, p.researchAreas) === field,
+    );
     return {
       categoryType: 'Discipline' as const,
       categoryName: field,
-      categoryTitle: `Vietnamese ${field} Professors`,
-      categorySubtitle: `Vietnamese Professors & Scholars in ${field}`,
-      description: `Directory of ${people.length} Vietnamese and Vietnamese-diaspora professors in ${field} across universities worldwide.`,
+      categoryTitle: `Vietnamese ${field} Researchers & Scholars`,
+      categorySubtitle: `Vietnamese Researchers & Scholars in ${field}`,
+      description: `Directory of ${people.length} Vietnamese and Vietnamese-diaspora professors, researchers, and scientists in ${field} across universities, labs, and industry worldwide.`,
       people,
       canonicalPath: fieldPath(field),
       interactiveUrl: `index.html?field=${encodeURIComponent(field)}`,
@@ -826,9 +850,9 @@ async function main() {
       return {
         categoryType: 'Region' as const,
         categoryName: continent,
-        categoryTitle: `Vietnamese Professors in ${continent}`,
-        categorySubtitle: `Vietnamese Academic Diaspora in ${continent}`,
-        description: `Directory of ${people.length} Vietnamese and Vietnamese-diaspora professors teaching and researching across ${continent}.`,
+        categoryTitle: `Vietnamese Researchers & Scholars in ${continent}`,
+        categorySubtitle: `Vietnamese Diaspora in ${continent}`,
+        description: `Directory of ${people.length} Vietnamese and Vietnamese-diaspora professors, researchers, and scientists across ${continent}.`,
         people,
         canonicalPath: regionPath(continent),
         interactiveUrl: `index.html?loc=${encodeURIComponent(continent)}`,
@@ -852,9 +876,9 @@ async function main() {
       return {
         categoryType: 'Region' as const,
         categoryName: country,
-        categoryTitle: `Vietnamese Professors in ${withArticle(country)}`,
-        categorySubtitle: `Vietnamese Academic Diaspora in ${withArticle(country)}`,
-        description: `Directory of ${people.length} Vietnamese and Vietnamese-diaspora professors at universities in ${withArticle(country)}.`,
+        categoryTitle: `Vietnamese Researchers & Scholars in ${withArticle(country)}`,
+        categorySubtitle: `Vietnamese Diaspora in ${withArticle(country)}`,
+        description: `Directory of ${people.length} Vietnamese and Vietnamese-diaspora professors, researchers, and scientists in ${withArticle(country)}.`,
         people,
         canonicalPath: regionPath(country),
         interactiveUrl: `index.html?loc=${encodeURIComponent(country === 'United States' ? 'US' : country)}`,
@@ -880,7 +904,8 @@ async function main() {
     fieldHubs.flatMap((fieldHub) => {
       const people = roster.filter(
         (person) =>
-          fieldOf(person.department, person.university) === fieldHub.categoryName &&
+          fieldOf(person.department, person.university, person.researchAreas) ===
+            fieldHub.categoryName &&
           (regionHub.categoryName === personCountry(person) ||
             continentOf(person.country) === regionHub.categoryName),
       );
@@ -891,15 +916,15 @@ async function main() {
         {
           categoryType: 'Discipline × Region' as const,
           categoryName: `${field} in ${region}`,
-          categoryTitle: `Vietnamese ${field} Professors in ${withArticle(region)}`,
-          categorySubtitle: `Vietnamese Professors & Scholars in ${field} in ${withArticle(region)}`,
-          description: `Directory of ${people.length} Vietnamese and Vietnamese-diaspora professors in ${field} at universities and eligible research institutions in ${withArticle(region)}.`,
+          categoryTitle: `Vietnamese ${field} Researchers & Scholars in ${withArticle(region)}`,
+          categorySubtitle: `Vietnamese Researchers & Scholars in ${field} in ${withArticle(region)}`,
+          description: `Directory of ${people.length} Vietnamese and Vietnamese-diaspora professors, researchers, and scientists in ${field} at universities, labs, and companies in ${withArticle(region)}.`,
           people,
           canonicalPath: fieldRegionPath(field, region),
           interactiveUrl: `index.html?field=${encodeURIComponent(field)}&loc=${encodeURIComponent(region === 'United States' ? 'US' : region)}`,
           otherCategories: [
-            { label: `All ${field} faculty`, path: fieldPath(field) },
-            { label: `All faculty in ${region}`, path: regionPath(region) },
+            { label: `Everyone in ${field}`, path: fieldPath(field) },
+            { label: `Everyone in ${region}`, path: regionPath(region) },
           ],
           field,
           region,
@@ -934,20 +959,22 @@ async function main() {
   const universityHubs: HubConfig[] = universityHubNames.map((university) => {
     const people = byUniversity.get(university)!;
     const fieldLinks = [
-      ...new Set(people.map((person) => fieldOf(person.department, person.university))),
+      ...new Set(
+        people.map((person) => fieldOf(person.department, person.university, person.researchAreas)),
+      ),
     ]
       .filter((field) => related.fieldHubs.has(field))
       .sort((a, b) => a.localeCompare(b))
       .map((field) => ({ label: field, path: fieldPath(field) }));
     const countryLinks = [...new Set(people.map(personCountry))]
       .filter((country) => availableCountryHubs.has(country))
-      .map((country) => ({ label: `All faculty in ${country}`, path: regionPath(country) }));
+      .map((country) => ({ label: `Everyone in ${country}`, path: regionPath(country) }));
     return {
       categoryType: 'Institution' as const,
       categoryName: university,
-      categoryTitle: `Vietnamese Professors at ${university}`,
-      categorySubtitle: `Vietnamese and Vietnamese-Diaspora Faculty at ${university}`,
-      description: `Directory of ${people.length} Vietnamese and Vietnamese-diaspora faculty at ${university}.`,
+      categoryTitle: `Vietnamese Researchers & Scholars at ${university}`,
+      categorySubtitle: `Vietnamese and Vietnamese-Diaspora People at ${university}`,
+      description: `Directory of ${people.length} Vietnamese and Vietnamese-diaspora people at ${university}.`,
       people,
       canonicalPath: universityPath(university),
       interactiveUrl: `index.html?q=${encodeURIComponent(university)}`,
@@ -976,7 +1003,7 @@ async function main() {
       (hub) =>
         `  <url>\n    <loc>${absoluteUrl(hub.canonicalPath)}</loc>\n    <changefreq>weekly</changefreq>\n    <priority>${hub.categoryType === 'Discipline × Region' || hub.categoryType === 'Institution' ? '0.7' : '0.8'}</priority>\n  </url>`,
     );
-    const profileUrls = roster.map(
+    const profileUrls = allEntries.map(
       (person) =>
         `  <url>\n    <loc>${absoluteUrl(personPath(person.id))}</loc>${person.lastUpdatedAt ? `\n    <lastmod>${person.lastUpdatedAt.slice(0, 10)}</lastmod>` : ''}\n    <changefreq>monthly</changefreq>\n    <priority>0.7</priority>\n  </url>`,
     );
@@ -984,7 +1011,7 @@ async function main() {
     await writeFile(resolve(output, 'sitemap.xml'), sitemap);
   }
   console.log(
-    `Generated ${roster.length} profile pages, ${fieldHubs.length} field hubs, ${continentHubs.length + countryHubs.length} region hubs, ${intersectionHubs.length} field-region hubs, and ${universityHubs.length} university hubs${development ? ' for development.' : ' and sitemap entries.'}`,
+    `Generated ${allEntries.length} profile pages, ${fieldHubs.length} field hubs, ${continentHubs.length + countryHubs.length} region hubs, ${intersectionHubs.length} field-region hubs, and ${universityHubs.length} university hubs${development ? ' for development.' : ' and sitemap entries.'}`,
   );
 }
 

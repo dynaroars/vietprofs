@@ -27,7 +27,7 @@ export function computeCompleteness(roster: Roster): CompletenessMetric[] {
       key: 'profileUrl',
       label: 'Official Profile Links',
       count: roster.filter((p) => Boolean(p.profileUrl)).length,
-      description: 'Faculty members with an official university or institute directory page.',
+      description: 'People with an official university, institute, or organization profile page.',
     },
     {
       key: 'portrait',
@@ -58,7 +58,7 @@ export function computeCompleteness(roster: Roster): CompletenessMetric[] {
       label: 'Research Areas & Keywords',
       count: roster.filter((p) => Array.isArray(p.researchAreas) && p.researchAreas.length > 0)
         .length,
-      description: 'Faculty with indexed research tags and topic areas.',
+      description: 'People with indexed research tags and topic areas.',
     },
     {
       key: 'scholarUrl',

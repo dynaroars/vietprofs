@@ -84,7 +84,7 @@ export function renderAlmaMaterOriginsMap(subRoster: Roster): string {
     .map(([inst, count], idx) => {
       const pct = Math.round((count / maxUg) * 100);
       return `
-        <button type="button" class="ranked-item" data-search="${escapeHtml(inst)}" data-scope="undergrad" title="Search faculty with undergrad degree from ${escapeHtml(inst)}">
+        <button type="button" class="ranked-item" data-search="${escapeHtml(inst)}" data-scope="undergrad" title="Search people with undergrad degree from ${escapeHtml(inst)}">
           <div class="ranked-header">
             <span class="ranked-name"><span class="ranked-num">${idx + 1}.</span> ${escapeHtml(inst)}</span>
             <span class="ranked-count">${count}</span>
@@ -99,7 +99,7 @@ export function renderAlmaMaterOriginsMap(subRoster: Roster): string {
     .map(([inst, count], idx) => {
       const pct = Math.round((count / maxPhd) * 100);
       return `
-        <button type="button" class="ranked-item" data-search="${escapeHtml(inst)}" data-scope="phd" title="Search faculty with PhD from ${escapeHtml(inst)}">
+        <button type="button" class="ranked-item" data-search="${escapeHtml(inst)}" data-scope="phd" title="Search people with PhD from ${escapeHtml(inst)}">
           <div class="ranked-header">
             <span class="ranked-name"><span class="ranked-num">${idx + 1}.</span> ${escapeHtml(inst)}</span>
             <span class="ranked-count">${count}</span>
@@ -126,7 +126,7 @@ export function renderAlmaMaterOriginsMap(subRoster: Roster): string {
   `;
 }
 
-export function renderAcademicFlowSummary(subRoster: Roster): string {
+export function renderAcademicFlowSummary(subRoster: Roster, academic = true): string {
   const pairings = buildPhdToFacultyPairings(subRoster, 6);
   if (!pairings.length) return '';
   const max = pairings[0][2];
@@ -136,7 +136,7 @@ export function renderAcademicFlowSummary(subRoster: Roster): string {
       const flag = countryFlag(country);
       return `
         <div class="flow-pair-item">
-          <button type="button" class="ranked-item flow-pair-btn" data-search="${escapeHtml(phd)}" data-scope="phd" title="Search faculty who earned PhD at ${escapeHtml(phd)}">
+          <button type="button" class="ranked-item flow-pair-btn" data-search="${escapeHtml(phd)}" data-scope="phd" title="Search people who earned PhD at ${escapeHtml(phd)}">
             <div class="ranked-header">
               <span class="ranked-name"><span class="flow-phd">🎓 ${escapeHtml(phd)}</span> <span class="flow-arrow">➔</span> <span class="flow-dest">${flag} ${escapeHtml(country)}</span></span>
               <span class="ranked-count">${count} ${count === 1 ? 'person' : 'people'}</span>
@@ -150,24 +150,27 @@ export function renderAcademicFlowSummary(subRoster: Roster): string {
 
   return `
     <div class="insights-section">
-      <h3 class="insights-heading">Doctoral-to-Faculty Pairings</h3>
-      <p class="insights-caption">Most frequent PhD institution and faculty host country pairs in the roster; click to search alumni.</p>
+      <h3 class="insights-heading">${academic ? 'Doctoral-to-Faculty Pairings' : 'Doctoral-to-Host-Country Pairings'}</h3>
+      <p class="insights-caption">Most frequent PhD institution and host country pairs in the roster; click to search alumni.</p>
       <div class="flow-pair-list">${items}</div>
     </div>
   `;
 }
 
+const MIN_COHORT_RECORDS = 10;
+
 export function renderDecadesChart(roster: Roster): string {
   const decadeCounts = buildDecadeCounts(roster);
   const total = roster.filter((p) => p.phdYear).length;
-  if (!decadeCounts.length) return '';
+  // A handful of PhD years is too thin to chart as cohorts (small sectors, small locations).
+  if (!decadeCounts.length || total < MIN_COHORT_RECORDS) return '';
   const max = Math.max(...decadeCounts.map(([, c]) => c));
   const rows = decadeCounts
     .map(([decade, count]) => {
       const pct = Math.round((count / max) * 100);
       const share = Math.round((count / total) * 100);
       return `
-        <button type="button" class="chart-row-btn chart-row" data-search="${escapeHtml(decade)}" data-scope="phd" title="Search faculty with PhD in ${escapeHtml(decade)}">
+        <button type="button" class="chart-row-btn chart-row" data-search="${escapeHtml(decade)}" data-scope="phd" title="Search people with PhD in ${escapeHtml(decade)}">
           <span class="chart-label">${escapeHtml(decade)}</span>
           <div class="chart-track">
             <div class="chart-bar" style="width: ${pct}%;"></div>
@@ -180,7 +183,7 @@ export function renderDecadesChart(roster: Roster): string {
   return `
     <div class="insights-section">
       <h3 class="insights-heading">PhD Graduation Cohorts</h3>
-      <p class="insights-caption">Distribution by decade of PhD completion (${total} faculty on record); click a decade to search.</p>
+      <p class="insights-caption">Distribution by decade of PhD completion (${total} ${total === 1 ? 'person' : 'people'} on record); click a decade to search.</p>
       <div class="chart-container">${rows}</div>
     </div>
   `;
@@ -260,17 +263,24 @@ export function renderFilterBreakdown(
   `;
 }
 
-export function renderDistributionCharts(subRoster: Roster): string {
+export function renderDistributionCharts(subRoster: Roster, academic = true): string {
   const fieldCard = renderFilterBreakdown(buildFieldCounts(subRoster), {
     title: 'By Field',
-    caption: 'Broad academic field; click a bar to filter.',
+    caption: academic
+      ? 'Broad academic field; click a bar to filter.'
+      : 'Broad field; click a bar to filter.',
     filterKey: 'field',
   });
-  const trackCard = renderFilterBreakdown(buildTrackCounts(subRoster), {
-    title: 'By Career Stage',
-    caption: 'Appointment track; click a bar to filter.',
-    filterKey: 'track',
-  });
+  // One track is no distribution (e.g. everyone in Industry is "Industry Research").
+  const tracks = buildTrackCounts(subRoster);
+  const trackCard =
+    tracks.length < 2
+      ? ''
+      : renderFilterBreakdown(tracks, {
+          title: academic ? 'By Career Stage' : 'By Track',
+          caption: 'Appointment track; click a bar to filter.',
+          filterKey: 'track',
+        });
   if (!fieldCard && !trackCard) return '';
   return `<div class="insights-grid">${fieldCard}${trackCard}</div>`;
 }
@@ -445,12 +455,15 @@ export function renderFunFacts(
   selectedLocationLabel: string,
   selectedLocation: string,
   fullRoster: Roster,
+  sector: 'all' | 'academia' | 'labs' | 'industry' = 'all',
 ) {
   const rosterEl = document.getElementById('roster');
   const countEl = document.getElementById('result-count');
   if (countEl) {
     countEl.textContent =
-      'Insights and patterns for the selected location and the worldwide diaspora:';
+      selectedLocation === 'World'
+        ? 'Insights and patterns across the roster:'
+        : 'Insights and patterns for the selected location and across all locations in this view:';
   }
 
   const worldUsRoster = fullRoster.filter(
@@ -477,7 +490,33 @@ export function renderFunFacts(
   const formatList = (facts: string[]) =>
     facts.map((f) => `<li>${escapeHtml(abbreviateInsightText(f))}</li>`).join('');
 
-  const selectedUniversities = new Set(selectedRoster.map((p) => p.university)).size;
+  const selectedOrganizations = new Set(selectedRoster.map((p) => p.university)).size;
+
+  // Faculty/academic wording suits Academia only. The default All view and the other sectors
+  // use neutral wording, and sections that need a larger or academic roster are skipped.
+  const academic = sector === 'academia';
+  const regionName = selectedIsUs ? 'United States' : selectedLocationLabel.replace(/^\S+\s+/, '');
+  let sectionNumber = 0;
+  const category = (title: string, subtitle: string, body: string): string => {
+    if (!body.trim()) return '';
+    sectionNumber += 1;
+    return `
+        <div class="insights-category">
+          <div class="insights-category-header">
+            <h3 class="insights-category-title">${sectionNumber}. ${title}</h3>
+            <p class="insights-category-subtitle">${subtitle}</p>
+          </div>
+          ${body}
+        </div>`;
+  };
+  const hubsTitle = academic ? 'Faculty Hubs' : 'Organization Hubs';
+  const disciplinesTitle = academic
+    ? 'Academic Disciplines &amp; Career Stages'
+    : 'Fields &amp; Tracks';
+  const generationsTitle = academic ? 'Academic Generations' : 'PhD Cohorts';
+  const flowSubtitle = academic
+    ? 'Undergraduate feeder schools, doctoral alma maters, and international faculty trajectories.'
+    : 'Undergraduate feeder schools and doctoral alma maters recorded in the roster.';
 
   const selectedSection = selectedIsWorld
     ? ''
@@ -486,57 +525,107 @@ export function renderFunFacts(
       <section class="insights-section-block">
         <div class="insights-section-header">
           <span class="insights-badge">${escapeHtml(selectedLocationLabel)}</span>
-          <h2 class="insights-main-heading">${escapeHtml(selectedIsUs ? 'United States Academic Landscape' : `${selectedLocationLabel} Academic Landscape`)}</h2>
-          <p class="insights-main-desc">${selectedRoster.length} ${selectedRoster.length === 1 ? 'person' : 'people'} across ${selectedUniversities} institution${selectedUniversities === 1 ? '' : 's'} in ${escapeHtml(selectedIsUs ? 'the United States' : selectedLocationLabel.replace(/^\S+\s+/, ''))}.</p>
+          <h2 class="insights-main-heading">${escapeHtml(academic ? `${regionName} Academic Landscape` : `${regionName} Landscape`)}</h2>
+          <p class="insights-main-desc">${selectedRoster.length} ${selectedRoster.length === 1 ? 'person' : 'people'} across ${selectedOrganizations} ${academic ? 'institution' : 'organization'}${selectedOrganizations === 1 ? '' : 's'} in ${escapeHtml(selectedIsUs ? 'the United States' : regionName)}.</p>
         </div>
-
-        <div class="insights-category">
-          <div class="insights-category-header">
-            <h3 class="insights-category-title">1. Geographic Distribution &amp; Faculty Hubs</h3>
-            <p class="insights-category-subtitle">Regional density and institutions with the highest concentration of Vietnamese faculty.</p>
-          </div>
-          ${selectedIsUs && selectedRoster.length ? renderStateGrid(selectedRoster) : ''}
-          ${!selectedIsUs && selectedRoster.length ? renderWorldMap(selectedRoster, selectedLocation) : ''}
-          ${selectedRoster.length ? renderTopFacultyHubs(selectedRoster, selectedIsUs ? 'Top U.S. Faculty Hubs' : 'Top Faculty Hubs', 'Institutions with the most Vietnamese academics in the selected location; click to search.') : ''}
-        </div>
-
-        <div class="insights-category">
-          <div class="insights-category-header">
-            <h3 class="insights-category-title">2. Academic Disciplines &amp; Career Stages</h3>
-            <p class="insights-category-subtitle">Broad disciplinary distributions and faculty appointment tracks.</p>
-          </div>
-          ${selectedRoster.length ? renderDistributionCharts(selectedRoster) : ''}
-        </div>
-
-        <div class="insights-category">
-          <div class="insights-category-header">
-            <h3 class="insights-category-title">3. Diaspora Pathways &amp; Educational Origins</h3>
-            <p class="insights-category-subtitle">Undergraduate feeder schools, doctoral alma maters, and international faculty trajectories.</p>
-          </div>
-          ${selectedRoster.length ? renderAlmaMaterOriginsMap(selectedRoster) : ''}
-          ${selectedRoster.length ? renderAcademicFlowSummary(selectedRoster) : ''}
-        </div>
-
-        <div class="insights-category">
-          <div class="insights-category-header">
-            <h3 class="insights-category-title">4. Academic Generations</h3>
-            <p class="insights-category-subtitle">Distribution by PhD graduation decade.</p>
-          </div>
-          ${selectedRoster.length ? renderDecadesChart(selectedRoster) : ''}
-        </div>
-
-        <div class="insights-category">
-          <div class="insights-category-header">
-            <h3 class="insights-category-title">5. Scholarly Highlights &amp; Honors</h3>
-            <p class="insights-category-subtitle">Roster-verified observations, prestigious recognitions, and major honors.</p>
-          </div>
-          <div class="insights-section">
+        ${category(
+          `Geographic Distribution &amp; ${hubsTitle}`,
+          academic
+            ? 'Regional density and institutions with the highest concentration of Vietnamese faculty.'
+            : 'Regional density and organizations with the most people listed.',
+          [
+            selectedIsUs && selectedRoster.length ? renderStateGrid(selectedRoster) : '',
+            !selectedIsUs && selectedRoster.length
+              ? renderWorldMap(selectedRoster, selectedLocation)
+              : '',
+            selectedRoster.length
+              ? renderTopFacultyHubs(
+                  selectedRoster,
+                  `${selectedIsUs ? 'Top U.S. ' : 'Top '}${hubsTitle}`,
+                  academic
+                    ? 'Institutions with the most Vietnamese academics in the selected location; click to search.'
+                    : 'Organizations with the most people in the selected location; click to search.',
+                )
+              : '',
+          ].join(''),
+        )}
+        ${category(
+          disciplinesTitle,
+          academic
+            ? 'Broad disciplinary distributions and faculty appointment tracks.'
+            : 'Broad field and appointment-track distributions.',
+          selectedRoster.length ? renderDistributionCharts(selectedRoster, academic) : '',
+        )}
+        ${category(
+          'Diaspora Pathways &amp; Educational Origins',
+          flowSubtitle,
+          selectedRoster.length
+            ? renderAlmaMaterOriginsMap(selectedRoster) +
+                renderAcademicFlowSummary(selectedRoster, academic)
+            : '',
+        )}
+        ${category(
+          generationsTitle,
+          'Distribution by PhD graduation decade.',
+          selectedRoster.length ? renderDecadesChart(selectedRoster) : '',
+        )}
+        ${category(
+          'Scholarly Highlights &amp; Honors',
+          'Roster-verified observations, prestigious recognitions, and major honors.',
+          `<div class="insights-section">
             <ul class="fun-facts">${formatList([...selectedFacts, ...selectedAwardsFacts])}</ul>
             ${calculationBasis(selectedRoster, selectedLocationLabel)}
-          </div>
-        </div>
+          </div>`,
+        )}
       </section>
   `;
+
+  // The world/all-locations block numbers from 1 again, after the regional block's sections.
+  sectionNumber = 0;
+  const worldSection = `
+        ${category(
+          `Geographic Distribution &amp; ${hubsTitle}`,
+          academic
+            ? 'Worldwide diaspora geography and top international faculty concentrations.'
+            : 'Geography of the roster and the organizations outside the U.S. with the most people.',
+          renderWorldMap(fullRoster, selectedLocation) +
+            (worldInternationalRoster.length
+              ? renderTopFacultyHubs(
+                  worldInternationalRoster,
+                  `Top International ${hubsTitle}`,
+                  academic
+                    ? 'Global institutions outside the U.S. with the most Vietnamese academics; click to search.'
+                    : 'Organizations outside the U.S. with the most people; click to search.',
+                )
+              : ''),
+        )}
+        ${category(
+          disciplinesTitle,
+          academic
+            ? 'Field distribution across STEM, medicine, humanities, and faculty tracks.'
+            : 'Field and appointment-track distributions.',
+          renderDistributionCharts(fullRoster, academic),
+        )}
+        ${category(
+          'Diaspora Pathways &amp; Educational Origins',
+          academic
+            ? 'Top undergraduate feeders, doctoral alma maters, and international academic career pairings.'
+            : 'Top undergraduate feeders, doctoral alma maters, and PhD-to-host-country pairings.',
+          renderAlmaMaterOriginsMap(fullRoster) + renderAcademicFlowSummary(fullRoster, academic),
+        )}
+        ${category(
+          generationsTitle,
+          'Historical cohorts grouped by PhD completion decade.',
+          renderDecadesChart(fullRoster),
+        )}
+        ${category(
+          'Scholarly Highlights &amp; Honors',
+          'Curated roster observations, prestigious fellowships, and major awards.',
+          `<div class="insights-section">
+              <ul class="fun-facts">${formatList([...worldFacts, ...worldAwardsFacts])}</ul>
+              ${calculationBasis(fullRoster, 'World')}
+            </div>`,
+        )}`;
 
   if (rosterEl) {
     rosterEl.innerHTML = `
@@ -545,55 +634,10 @@ export function renderFunFacts(
         <section class="insights-section-block insights-main-block" id="pathways-section">
           <div class="insights-section-header">
             <span class="insights-badge">DIASPORA INSIGHTS</span>
-            <p class="insights-main-desc">Geographic distributions, PhD graduation cohorts, alma mater feeder networks, and academic disciplines.</p>
+            <p class="insights-main-desc">${academic ? 'Geographic distributions, PhD graduation cohorts, alma mater feeder networks, and academic disciplines.' : 'Geographic distributions, PhD graduation cohorts, alma mater feeder networks, and fields.'}</p>
           </div>
           ${selectedSection}
-
-          <!-- GLOBAL SECTION -->
-          <div class="insights-category">
-            <div class="insights-category-header">
-              <h3 class="insights-category-title">1. Geographic Distribution &amp; Faculty Hubs</h3>
-              <p class="insights-category-subtitle">Worldwide diaspora geography and top international faculty concentrations.</p>
-            </div>
-            ${renderWorldMap(fullRoster, selectedLocation)}
-            ${worldInternationalRoster.length ? renderTopFacultyHubs(worldInternationalRoster, 'Top International Faculty Hubs', 'Global institutions outside the U.S. with the most Vietnamese academics; click to search.') : ''}
-          </div>
-
-          <div class="insights-category">
-            <div class="insights-category-header">
-              <h3 class="insights-category-title">2. Academic Disciplines &amp; Career Stages</h3>
-              <p class="insights-category-subtitle">Field distribution across STEM, medicine, humanities, and faculty tracks.</p>
-            </div>
-            ${renderDistributionCharts(fullRoster)}
-          </div>
-
-          <div class="insights-category">
-            <div class="insights-category-header">
-              <h3 class="insights-category-title">3. Diaspora Pathways &amp; Educational Origins</h3>
-              <p class="insights-category-subtitle">Top undergraduate feeders, doctoral alma maters, and international academic career pairings.</p>
-            </div>
-            ${renderAlmaMaterOriginsMap(fullRoster)}
-            ${renderAcademicFlowSummary(fullRoster)}
-          </div>
-
-          <div class="insights-category">
-            <div class="insights-category-header">
-              <h3 class="insights-category-title">4. Academic Generations</h3>
-              <p class="insights-category-subtitle">Historical cohorts grouped by PhD completion decade.</p>
-            </div>
-            ${renderDecadesChart(fullRoster)}
-          </div>
-
-          <div class="insights-category">
-            <div class="insights-category-header">
-              <h3 class="insights-category-title">5. Scholarly Highlights &amp; Honors</h3>
-              <p class="insights-category-subtitle">Curated roster observations, prestigious fellowships, and major awards.</p>
-            </div>
-            <div class="insights-section">
-              <ul class="fun-facts">${formatList([...worldFacts, ...worldAwardsFacts])}</ul>
-              ${calculationBasis(fullRoster, 'World')}
-            </div>
-          </div>
+          ${worldSection}
         </section>
       </div>
     `;
@@ -622,11 +666,11 @@ export function renderHealthPanel(
         <div class="health-panel-header">
           <div class="health-badge-row">
             <span class="insights-badge">📊 System Health &amp; Maintenance</span>
-            <span class="health-records-count">${formatNumber(stats.total)} Total Faculty Records</span>
+            <span class="health-records-count">${formatNumber(stats.total)} Total Records</span>
           </div>
           <h2 class="health-main-heading">System Health &amp; Verification</h2>
           <p class="health-main-desc">
-            VietProfs is an open, evidence-audited repository of Vietnamese and Vietnamese-diaspora university faculty outside Vietnam.
+            VietProfs is an evidence-audited directory of Vietnamese and Vietnamese-diaspora faculty, researchers, and scientific leaders outside Vietnam.
             This section tracks generated pages and metadata completeness.
           </p>
         </div>
@@ -638,7 +682,7 @@ export function renderHealthPanel(
         <div class="html-inventory-header">
           <div>
             <h3 class="html-inventory-title">Generated HTML Inventory</h3>
-            <p class="html-inventory-desc">Roster hubs require at least three listed faculty members.</p>
+            <p class="html-inventory-desc">Roster hubs require at least three listed people.</p>
           </div>
           <strong class="html-inventory-total">${formatNumber(htmlInventory.total)} pages</strong>
         </div>
@@ -708,7 +752,7 @@ export function renderHealthPanel(
           ? `
         <div class="health-growth-section">
           <h3 class="insights-category-title">Project &amp; Archive Growth History</h3>
-          <p class="insights-caption">Daily repository snapshots; these counts describe the archive, not changes in the academic population.</p>
+          <p class="insights-caption">Daily repository snapshots; these counts describe the archive, not changes in the underlying population.</p>
           ${renderGrowthChart(statsHistory, activeGrowthMetric)}
         </div>
       `

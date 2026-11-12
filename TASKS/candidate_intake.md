@@ -23,7 +23,7 @@ For each pasted name, follow `ROSTER_MAINTENANCE.md` "One person, one ID":
   "Nhan Huynh"; "Thieu Vo" already listed as "Thieu Ngoc Vo").
 - Once identity-establishing fields are gathered in step 3 (`profileUrl`, `websiteUrl`,
   `scholarUrl`, `linkedinUrl`), also cross-check those exact URLs against every existing roster
-  entry's corresponding fields, not just against names. A shared institutional profile, personal
+  entry's corresponding fields across both roster files, not just against names. A shared institutional profile, personal
   site, Scholar ID, or LinkedIn URL is a stronger duplicate signal than name matching alone and
   catches cases a name-only pass misses.
 - **Already listed (including under a former institution or name):** stop here for that person.
@@ -47,19 +47,38 @@ For each pasted name, follow `ROSTER_MAINTENANCE.md` "One person, one ID":
 ## 2. Eligibility check
 
 Before spending time on enrichment, confirm the candidate can plausibly satisfy
-`ROSTER_MAINTENANCE.md`'s inclusion standard:
+`ROSTER_MAINTENANCE.md`'s inclusion standard across one of the directory sectors:
 
-- A current (or accepted-and-dated incoming) appointment at a university or eligible
-  public/nonprofit research institute outside Vietnam.
-- One of the accepted tracks (`Tenure-line`, `Teaching`, `Research`, `Clinical`,
-  `Admin and Staff`, `Emeritus`, `Deceased`).
-- Vietnamese or Vietnamese-diaspora signal (name is normally sufficient; no separate identity
-  documentation is required once appointment eligibility is otherwise established).
+- **`🎓 Academia`** (`public/data.json`): A current (or accepted-and-dated incoming) appointment at a
+  university outside Vietnam (eligible public/nonprofit research institutes are listed under Gov & Labs), on an accepted track
+  (`Tenure-line`, `Teaching`, `Research`, `Clinical`, `Admin and Staff`, `Emeritus`, `Deceased`).
+- **`🏛️ Gov, Defense & Labs`** (`public/data.json`): Doctorate-holding scientific program
+  managers/officers/directors at defense and federal research/funding agencies (e.g., AFOSR, ONR, DARPA,
+  IARPA, ARL, NRL, NSF, NIH) and permanent career researchers at FFRDCs/UARCs (e.g., MITRE, Aerospace Corp,
+  IDA, CNA, Lincoln Lab, JHU APL) under `track: "Government & Defense"` or `"Research"` with
+  `institutionType: "Public research institute"` or `"Independent nonprofit research institute"`.
+- **`🏢 Industry` — Corporate Research Labs**: Full-time, career Research
+  Scientists, Principal/Staff Scientists, Distinguished Engineers, and Research Directors at corporate
+  research labs (e.g., Google DeepMind, Google Research, OpenAI, Anthropic, Microsoft Research, Meta FAIR,
+  NVIDIA Research, Apple ML, AWS AI, IBM Research, Adobe Research, Genentech) under `track: "Industry Research"`,
+  `institutionType: "Corporate research lab"`. The role decides, not the title: a research title, or a
+  current job that visibly includes publishing research, at an organization that publishes research
+  (`ROSTER_MAINTENANCE.md` "Corporate Research Labs"). Exclude engineers and product roles with no
+  research output in the current job. As for every Gov & Labs track, a research doctorate (PhD or
+  equivalent; an MD for clinical-research roles) or a current publication record (two or more papers in
+  the last three years from the current job; `ROSTER_MAINTENANCE.md`) is required.
+- **`🏛️ Gov, Defense & Labs` — Central Banks, International Orgs & Think Tanks**:
+  Permanent/career Economists, Senior Economists, Policy Researchers, and Senior Fellows at central banks
+  (Fed Board & regional Fed banks, ECB, BIS), international organizations (IMF, World Bank, OECD, ADB),
+  and scholarly think tanks (Brookings, RAND, NBER, PIIE, Urban Institute, CSIS, Carnegie) under
+  `track: "Policy & Think Tank"`, `institutionType: "Policy & international organization"` or `"Think tank"`.
+- **Vietnamese signal:** Vietnamese or Vietnamese-diaspora signal (name is normally sufficient; no separate
+  identity documentation is required once appointment eligibility is otherwise established).
 
-If the first-pass evidence clearly fails eligibility (e.g. postdoc, adjunct, industry-only,
-on-the-market candidate, Vietnam-based institution), stop and report why to the owner instead of
-filing an Issue. If eligibility is plausible but thin, keep going and note the gap explicitly in
-the Issue rather than guessing.
+**Exclusions across all rosters:** If the first-pass evidence clearly fails eligibility (e.g. postdoc,
+PhD student, intern, contractor-only, adjunct/visiting, routine commercial software engineer, on-the-market
+candidate, or Vietnam-based institution), stop and report why to the owner instead of filing an Issue.
+If eligibility is plausible but thin, keep going and note the gap explicitly in the Issue rather than guessing.
 
 ## 3. Full enrichment pass
 
@@ -67,8 +86,9 @@ Once a candidate clears steps 1–2, gather everything reasonably available befo
 the goal is for the Issue alone to give a downstream agent enough to add the entry without further
 research:
 
-- **Core fields:** current `university`, `country`, `city`/`state` if applicable, `department`,
-  `rank`, `track`, `institutionType` (if non-university), primary `field`/`researchAreas`.
+- **Core fields:** target sector (derived from `institutionType` and `track`), current `university` (employing institution),
+  `country`, `city`/`state` if applicable, `department`, `rank`, `track`, `institutionType` (if non-university),
+  primary `field`/`researchAreas`.
 - **Identity/name:** `name`, `vietnameseName`, and any published surname-change history (apply the
   AGENTS.md rule of preserving the original Vietnamese surname in `name`/`vietnameseName` if the
   candidate publishes under a changed surname).
@@ -96,8 +116,8 @@ yourself. For each eligible, not-yet-listed candidate, file an Issue containing:
 
 1. Full name (and Vietnamese name / known aliases).
 2. Eligibility rationale citing the specific `ROSTER_MAINTENANCE.md` track and evidence.
-3. All proposed fields gathered in step 3, clearly labeled (so another agent can paste them
-   directly into a new `public/data.json` entry), including which are officially confirmable vs.
+3. All proposed fields gathered in step 3, clearly labeled (specifying the target sector via `institutionType` and `track`, so another agent can paste them
+   directly into the appropriate roster file), including which are officially confirmable vs.
    unconfirmed.
 4. Every source URL used, mapped to the fact(s) it supports.
 5. Open questions or gaps (missing portrait, missing degree year, ambiguous identity, etc.) so the

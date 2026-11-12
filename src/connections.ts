@@ -160,7 +160,7 @@ function renderAllConnections(roster: Roster, database: RelationshipDatabase): s
 function renderConnections(roster: Roster, database: RelationshipDatabase): string {
   return `<main><article class="man-page stats-man-page">
     ${runningHead()}
-    <section class="man-section name-section"><div class="identity"><div class="identity-details"><div class="name-heading"><h1>Academic Connections</h1></div>
+    <section class="man-section name-section"><div class="identity"><div class="identity-details"><div class="name-heading"><h1>Research Connections</h1></div>
       <p class="synopsis">Verified doctoral, postdoctoral, and collaborative links discovered among roster members.</p>
       <p class="synopsis stats-snapshot">Last updated: <time datetime="${escapeHtml(database.updatedAt)}">${escapeHtml(formatLocalTimestamp(database.updatedAt))}</time></p>
     </div></div></section>
@@ -177,11 +177,11 @@ function renderConnections(roster: Roster, database: RelationshipDatabase): stri
 }
 
 function renderLoading(): string {
-  return `<main><article class="man-page stats-man-page">${runningHead()}<section class="man-section"><h1>Academic Connections</h1><div class="stats-loading-box"><p>Loading connections…</p></div></section></article></main>${renderAddFab(`${base}submit.html`)}`;
+  return `<main><article class="man-page stats-man-page">${runningHead()}<section class="man-section"><h1>Research Connections</h1><div class="stats-loading-box"><p>Loading connections…</p></div></section></article></main>${renderAddFab(`${base}submit.html`)}`;
 }
 
 function renderError(message: string): string {
-  return `<main><article class="man-page stats-man-page">${runningHead()}<section class="man-section name-section"><h1>Academic Connections</h1><p class="synopsis">Verified academic connections among roster members.</p></section>
+  return `<main><article class="man-page stats-man-page">${runningHead()}<section class="man-section name-section"><h1>Research Connections</h1><p class="synopsis">Verified academic connections among roster members.</p></section>
     <section class="man-section"><h2>CONNECTIONS</h2><div class="stats-error-box" role="alert"><p class="error-title">Connections data is temporarily unavailable.</p><p class="error-detail">${escapeHtml(message)}</p><button type="button" id="retry-btn" class="retry-btn">Retry</button></div></section>${renderSeeAlso(base, 'connections')}</article></main>${renderAddFab(`${base}submit.html`)}`;
 }
 
