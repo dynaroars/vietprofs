@@ -1026,10 +1026,17 @@
     },
     "vp-1138": {
       "name": "Ruby Nguyen",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-14T11:59:06.240Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://inl.elsevierpure.com/en/persons/thuy-nguyen/",
+      "imageUrl": "https://inl.elsevierpure.com/files-asset/68279868/Ruby_Nguyen.jpg/",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T18:00:00.000Z"
     },
     "vp-1148": {
       "name": "Hao Phan",
@@ -17520,6 +17527,1037 @@
       "identitySignals": [],
       "retrievedAt": "2026-11-11T00:45:06.974Z",
       "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2913": {
+      "name": "Quoc V. Le",
+      "outcome": "found",
+      "pageUrl": "https://cs.stanford.edu/~quocle/",
+      "imageUrl": "https://cs.stanford.edu/~quocle/",
+      "sourceType": "personal_homepage",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T18:00:00.000Z"
+    },
+    "vp-2914": {
+      "name": "Minh-Thang Luong",
+      "outcome": "found",
+      "pageUrl": "https://research.google/people/105176/",
+      "imageUrl": "https://research.google/people/105176/",
+      "sourceType": "personal_homepage",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T18:00:00.000Z"
+    },
+    "vp-2915": {
+      "name": "Trieu H. Trinh",
+      "outcome": "found",
+      "pageUrl": "https://thtrieu.github.io/",
+      "imageUrl": "https://thtrieu.github.io/",
+      "sourceType": "personal_homepage",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T18:00:00.000Z"
+    },
+    "vp-2916": {
+      "name": "Thien Hang Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://thienhangnguyen.github.io/",
+      "imageUrl": "https://thienhangnguyen.github.io/profile.jpg",
+      "sourceType": "personal_homepage",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T18:00:00.000Z"
+    },
+    "vp-2917": {
+      "name": "Timothy P. Nguyen",
+      "outcome": "found",
+      "pageUrl": "http://www.timothynguyen.org/",
+      "imageUrl": "http://www.timothynguyen.org/",
+      "sourceType": "personal_homepage",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T18:00:00.000Z"
+    },
+    "vp-2918": {
+      "name": "Du Tran",
+      "outcome": "found",
+      "pageUrl": "https://dutran.github.io/",
+      "imageUrl": "https://dutran.github.io/",
+      "sourceType": "personal_homepage",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T18:00:00.000Z"
+    },
+    "vp-2919": {
+      "name": "Long T. Le",
+      "outcome": "found",
+      "pageUrl": "https://research.google/people/107150/",
+      "imageUrl": "https://research.google/people/107150/",
+      "sourceType": "personal_homepage",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T18:00:00.000Z"
+    },
+    "vp-2920": {
+      "name": "Dustin Tran",
+      "outcome": "found",
+      "pageUrl": "http://www.dustintran.com/",
+      "imageUrl": "http://www.dustintran.com/img/photo.jpg",
+      "sourceType": "personal_homepage",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T18:00:00.000Z"
+    },
+    "vp-2921": {
+      "name": "Duc Le",
+      "outcome": "found",
+      "pageUrl": "https://scholar.google.com/citations?user=Zorb5T4AAAAJ",
+      "imageUrl": "https://scholar.google.com/citations?user=Zorb5T4AAAAJ",
+      "sourceType": "personal_homepage",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T18:00:00.000Z"
+    },
+    "vp-2922": {
+      "name": "Eric-Tuan Le",
+      "outcome": "found",
+      "pageUrl": "https://scholar.google.com/citations?user=-UB3zm8AAAAJ",
+      "imageUrl": "https://scholar.google.com/citations?user=-UB3zm8AAAAJ",
+      "sourceType": "personal_homepage",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T18:00:00.000Z"
+    },
+    "vp-2923": {
+      "name": "Viet-An Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://viet-an.github.io/",
+      "imageUrl": "https://viet-an.github.io/images/photo.png",
+      "sourceType": "personal_homepage",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T18:00:00.000Z"
+    },
+    "vp-2924": {
+      "name": "Trung Bui",
+      "outcome": "found",
+      "pageUrl": "https://research.adobe.com/person/trung-bui/",
+      "imageUrl": "https://research.adobe.com/wp-content/uploads/2015/10/person-trung-bui.jpg",
+      "sourceType": "personal_homepage",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T18:00:00.000Z"
+    },
+    "vp-2925": {
+      "name": "Cuong Nguyen - Adobe Research",
+      "outcome": "found",
+      "pageUrl": "https://cuongnd.com/",
+      "imageUrl": "https://research.adobe.com/wp-content/uploads/2017/11/cunguyen.00.png",
+      "sourceType": "personal_homepage",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T18:00:00.000Z"
+    },
+    "vp-2926": {
+      "name": "Quan H. Tran",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-11T17:14:11.319Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2927": {
+      "name": "Long Mai",
+      "outcome": "found",
+      "pageUrl": "https://mai-t-long.com/",
+      "imageUrl": "https://research.adobe.com/wp-content/uploads/2018/02/Long_Mai_Profile_Picture-e1544650055141.jpg",
+      "sourceType": "personal_homepage",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T18:00:00.000Z"
+    },
+    "vp-2928": {
+      "name": "Trung T. Pham",
+      "outcome": "found",
+      "pageUrl": "https://trungtpham.github.io/",
+      "imageUrl": "https://trungtpham.github.io/assets/img/profile_01.jpg",
+      "sourceType": "personal_homepage",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T18:00:00.000Z"
+    },
+    "vp-2929": {
+      "name": "Khoi Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://khoinguyen.org/",
+      "imageUrl": "https://khoinguyen.org/author/khoi-nguyen/avatar_hu_a4146b2c8e9809f4.jpg",
+      "sourceType": "personal_homepage",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T18:00:00.000Z"
+    },
+    "vp-2930": {
+      "name": "Lam M. Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://www.lamnguyen.org/",
+      "imageUrl": "https://www.lamnguyen.org/",
+      "sourceType": "personal_homepage",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T18:00:00.000Z"
+    },
+    "vp-2931": {
+      "name": "Thanh-Lam Hoang",
+      "outcome": "found",
+      "pageUrl": "https://research.ibm.com/people/thanh-hoang",
+      "imageUrl": "https://research.ibm.com/_next/image?url=https%3A%2F%2Fresearch-website-prod-ibmers-images.s3.us-east.cloud-object-storage.appdomain.cloud%2F2738&w=3840&q=75",
+      "sourceType": "personal_homepage",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T18:00:00.000Z"
+    },
+    "vp-2932": {
+      "name": "Vu Le",
+      "outcome": "found",
+      "pageUrl": "https://www.vuminhle.com/",
+      "imageUrl": "https://www.microsoft.com/en-us/research/wp-content/uploads/2020/05/my-photo.jpg",
+      "sourceType": "personal_homepage",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T18:00:00.000Z"
+    },
+    "vp-2933": {
+      "name": "Bichlien Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://www.microsoft.com/en-us/research/people/bnguy/",
+      "imageUrl": "https://www.microsoft.com/en-us/research/wp-content/uploads/2016/06/avatar_user__1466809645.jpg",
+      "sourceType": "personal_homepage",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T18:00:00.000Z"
+    },
+    "vp-2934": {
+      "name": "Nguyen Bach",
+      "outcome": "found",
+      "pageUrl": "https://nguyenbh.github.io/",
+      "imageUrl": "https://nguyenbh.github.io/authors/admin/avatar_huaf86694975fe5beecb493d38fc677dd1_22672_270x270_fill_q90_lanczos_center.jpg",
+      "sourceType": "personal_homepage",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T18:00:00.000Z"
+    },
+    "vp-2935": {
+      "name": "Thao Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://thaonguyen19.github.io/",
+      "imageUrl": "https://thaonguyen19.github.io/me2.jpg",
+      "sourceType": "personal_homepage",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T18:00:00.000Z"
+    },
+    "vp-2936": {
+      "name": "Trang T. Hoang",
+      "outcome": "found",
+      "pageUrl": "https://trang-hoang.com",
+      "imageUrl": "https://www.federalreserve.gov/econres/images/trang-t-hoang.jpg",
+      "sourceType": "personal_homepage",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T18:00:00.000Z"
+    },
+    "vp-2937": {
+      "name": "Ha Minh Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-11T17:16:07.843Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2938": {
+      "name": "Quy-Toan Do",
+      "outcome": "found",
+      "pageUrl": "https://www.worldbank.org/en/about/people/q/quy-toan-do",
+      "imageUrl": "https://worldbank.scene7.com/is/image/worldbankprod/Quy-Toan-Do?qlt=90&resMode=sharp2",
+      "sourceType": "personal_homepage",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T18:00:00.000Z"
+    },
+    "vp-2939": {
+      "name": "Duong Trung Le",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-11T17:16:23.764Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2940": {
+      "name": "Trang Van Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://blogs.worldbank.org/en/team/t/trang-nguyen",
+      "imageUrl": "https://s7d1.scene7.com/is/image/wbcollab/picture-10085-1412281849?qlt=90&fmt=webp&resMode=sharp2",
+      "sourceType": "personal_homepage",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T18:00:00.000Z"
+    },
+    "vp-2941": {
+      "name": "Trang Thu Tran",
+      "outcome": "found",
+      "pageUrl": "https://blogs.worldbank.org/en/team/t/trang-tran",
+      "imageUrl": "https://s7d1.scene7.com/is/image/wbcollab/picture-13753-1552663359?qlt=90&fmt=webp&resMode=sharp2",
+      "sourceType": "personal_homepage",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T18:00:00.000Z"
+    },
+    "vp-2942": {
+      "name": "Minh Cong Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://blogs.worldbank.org/en/team/m/minh-cong-nguyen",
+      "imageUrl": "https://s7d1.scene7.com/is/image/wbcollab/Minh?qlt=90&fmt=webp&resMode=sharp2",
+      "sourceType": "personal_homepage",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T18:00:00.000Z"
+    },
+    "vp-2943": {
+      "name": "Tuan Minh Le",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-11T17:16:42.897Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2944": {
+      "name": "Thuy Lan Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://www.frbsf.org/economic-research/economists/thuy-lan-nguyen/",
+      "imageUrl": "https://www.frbsf.org/wp-content/uploads/Experts_Nguyen_sm.jpg?quality=100&w=370&h=450&crop=1",
+      "sourceType": "personal_homepage",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T18:00:00.000Z"
+    },
+    "vp-2945": {
+      "name": "Trung T. H. Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://sites.google.com/view/htrungnguyen",
+      "imageUrl": "https://www.richmondfed.org/-/media/RichmondFedOrg/assets/images/_Banking_Staging/NguyenTrung_20241008.jpg",
+      "sourceType": "personal_homepage",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T18:00:00.000Z"
+    },
+    "vp-2946": {
+      "name": "Monica Tran-Xuan",
+      "outcome": "found",
+      "pageUrl": "https://www.monicatranxuan.com/",
+      "imageUrl": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=SMdllBIAAAAJ",
+      "sourceType": "authoritative_academic",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T18:00:00.000Z"
+    },
+    "vp-2947": {
+      "name": "Anh D.M. Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-11T17:17:25.244Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2948": {
+      "name": "Vina Nguyen",
+      "outcome": "needs_review",
+      "pageUrl": "https://www.brandeis.edu/global/alumni/profiles/vina-nguyen.html",
+      "imageUrl": "https://dx.mountain.com/spx?dxver=4.0.0&shaid=44809&tdr=&plh=https%3A%2F%2Fwww.brandeis.edu%2Fglobal%2Falumni%2Fprofiles%2Fvina-nguyen.html&cb=16926659444736",
+      "sourceType": "personal_homepage",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T17:17:37.836Z",
+      "note": "candidate requires visual review before acceptance"
+    },
+    "vp-2949": {
+      "name": "Benoît Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://benoitnguyen.github.io/",
+      "imageUrl": "https://benoitnguyen.github.io/assets/img/profile_pic.jpg?43a8d27b78d39617f8cbd6003cdb66a4",
+      "sourceType": "personal_homepage",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T18:00:00.000Z"
+    },
+    "vp-2950": {
+      "name": "Quynh-Anh Vo",
+      "outcome": "found",
+      "pageUrl": "https://www.bankofengland.co.uk/research/researchers/quynh-anh-vo",
+      "imageUrl": "https://www.bankofengland.co.uk/-/media/boe/images/people/researchers/vo_quynh-anh.jpg",
+      "sourceType": "personal_homepage",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T18:00:00.000Z"
+    },
+    "vp-2951": {
+      "name": "Thao Liz Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://www.rand.org/about/people/n/nguyen_thao_liz.html",
+      "imageUrl": "https://www.rand.org/content/rand/about/people/n/nguyen_thao_liz/jcr:content/par/bio.crop.1200x900.cm.jpeg/1691087297734.jpeg",
+      "sourceType": "personal_homepage",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T18:00:00.000Z"
+    },
+    "vp-2952": {
+      "name": "Huong Le Thu",
+      "outcome": "found",
+      "pageUrl": "https://www.crisisgroup.org/who-we-are/people/huong-le-thu",
+      "imageUrl": "https://www.crisisgroup.org/sites/default/files/styles/medium_1x1_ct/public/2023-10/huong-le-tun.png.webp?itok=5LrlhFtl",
+      "sourceType": "personal_homepage",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T18:00:00.000Z"
+    },
+    "vp-2953": {
+      "name": "Lan N. Le",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-11T17:18:16.728Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2954": {
+      "name": "Tristan N. Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-11T17:18:29.136Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2955": {
+      "name": "Tien Pham",
+      "outcome": "needs_review",
+      "pageUrl": "https://spie.org/profile/Tien.Pham-38237",
+      "imageUrl": "https://spie.org/images/profiles/P000038237.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T17:18:41.095Z",
+      "note": "candidate requires visual review before acceptance"
+    },
+    "vp-2957": {
+      "name": "Ngon T. Tran",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-11T17:18:48.332Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2959": {
+      "name": "Gam D. Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-11T17:19:03.608Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2962": {
+      "name": "Linh M. Pham",
+      "outcome": "found",
+      "pageUrl": "https://tlo.mit.edu/industry-entrepreneurs/researchers/linh-pham",
+      "imageUrl": "https://tlo.mit.edu/sites/default/files/styles/square_270/public/inventors/mylinh_tlo.jpg.webp?itok=B1VdWtFC",
+      "sourceType": "personal_homepage",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T18:00:00.000Z"
+    },
+    "vp-2963": {
+      "name": "Nam Q. Le - Johns Hopkins University Applied Physics Laboratory",
+      "outcome": "found",
+      "pageUrl": "https://www.jhuapl.edu/about/people/nam-q-le",
+      "imageUrl": "https://www.jhuapl.edu/sites/default/files/2022-12/Le_Nam_566.jpg",
+      "sourceType": "personal_homepage",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T18:00:00.000Z"
+    },
+    "vp-2964": {
+      "name": "Tien M. Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-11T17:20:22.677Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2965": {
+      "name": "Vicky Doan-Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-11T17:20:29.549Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2966": {
+      "name": "Kim Pham",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-11T17:20:39.828Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2968": {
+      "name": "Thao T. Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-11T17:21:01.058Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2969": {
+      "name": "Lan-Anh N. Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://ares.jsc.nasa.gov/people/bios/lan-anh-n-nguyen/",
+      "imageUrl": "https://ares.jsc.nasa.gov/people/pictures/Nguyen_Ann.png",
+      "sourceType": "personal_homepage",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T18:00:00.000Z"
+    },
+    "vp-2971": {
+      "name": "Tan Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-11T17:21:20.905Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2972": {
+      "name": "Marcus Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-11T17:21:29.667Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2973": {
+      "name": "Thien D. Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-11T17:21:37.139Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2974": {
+      "name": "Tuan H. Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://cgsr.llnl.gov/experts/fellows/tuan_nguyen",
+      "imageUrl": "https://cgsr.llnl.gov/sites/cgsr/files/styles/scaled_220w/public/pubs/2024-08/nguyen_250px.jpg?itok=mvoi0Y3C",
+      "sourceType": "personal_homepage",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T18:00:00.000Z"
+    },
+    "vp-2975": {
+      "name": "Han Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-11T17:21:51.921Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2976": {
+      "name": "Emerald Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-11T17:21:57.335Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2977": {
+      "name": "Quan H. Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-11T17:22:06.314Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2978": {
+      "name": "Dung N. Tran",
+      "outcome": "found",
+      "pageUrl": "https://www.microsoft.com/applied-sciences/people/dung-tran",
+      "imageUrl": "https://www.microsoft.com/applied-sciences/images/people/profile/dung-tran.jpg?v=XTtzyay1fp1sYV5yRLt0wvqboQ2tpFKYcQC1DlG3QXU",
+      "sourceType": "personal_homepage",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T18:00:00.000Z"
+    },
+    "vp-2979": {
+      "name": "Ke Tran",
+      "outcome": "found",
+      "pageUrl": "https://ketranm.github.io/",
+      "imageUrl": "https://ketranm.github.io/images/bio.jpeg",
+      "sourceType": "personal_homepage",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T18:00:00.000Z"
+    },
+    "vp-2980": {
+      "name": "Nam Khanh Tran",
+      "outcome": "found",
+      "pageUrl": "https://namkhanhtran.github.io/",
+      "imageUrl": "https://namkhanhtran.github.io/images/namtra-photo.jpg",
+      "sourceType": "personal_homepage",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T18:00:00.000Z"
+    },
+    "vp-2985": {
+      "name": "Hoang M. Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://hoangnguyenm.github.io/",
+      "imageUrl": "https://hoangnguyenm.github.io/assets/img/avatar.JPG",
+      "sourceType": "personal_homepage",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T18:00:00.000Z"
+    },
+    "vp-2987": {
+      "name": "Lisa Nguyen Quang Do",
+      "outcome": "found",
+      "pageUrl": "https://lisanqd.com/",
+      "imageUrl": "https://storage.googleapis.com/gweb-research2023-media/pubtools/5360.png",
+      "sourceType": "personal_homepage",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T18:00:00.000Z"
+    },
+    "vp-2988": {
+      "name": "Nguyen Ha Vo",
+      "outcome": "found",
+      "pageUrl": "https://github.com/nguyenvo09",
+      "imageUrl": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=fjQpwC0AAAAJ",
+      "sourceType": "authoritative_academic",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T18:00:00.000Z"
+    },
+    "vp-2989": {
+      "name": "Lan Huong Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://nlhuong.github.io/",
+      "imageUrl": "https://storage.googleapis.com/gweb-research2023-media/pubtools/6771.png",
+      "sourceType": "personal_homepage",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T18:00:00.000Z"
+    },
+    "vp-2990": {
+      "name": "Duc Bui",
+      "outcome": "found",
+      "pageUrl": "https://ducbui.com/",
+      "imageUrl": "https://ducbui.com/files/portrait_thumbnail.jpg",
+      "sourceType": "personal_homepage",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T18:00:00.000Z"
+    },
+    "vp-2993": {
+      "name": "Lyndon Duong",
+      "outcome": "found",
+      "pageUrl": "https://lyndonduong.com/",
+      "imageUrl": "https://lyndonduong.com/assets/images/bio-photo.png",
+      "sourceType": "personal_homepage",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T18:00:00.000Z"
+    },
+    "vp-2995": {
+      "name": "Quang Nguyen - Microsoft Research",
+      "outcome": "found",
+      "pageUrl": "https://scholar.google.com/citations?user=rtM1UQ8AAAAJ",
+      "imageUrl": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=rtM1UQ8AAAAJ",
+      "sourceType": "authoritative_academic",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T18:00:00.000Z"
+    },
+    "vp-2999": {
+      "name": "Duc Dung Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://scholar.google.com/citations?user=r7yTfboAAAAJ",
+      "imageUrl": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=r7yTfboAAAAJ",
+      "sourceType": "authoritative_academic",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T18:00:00.000Z"
+    },
+    "vp-3002": {
+      "name": "Laurent Dinh",
+      "outcome": "found",
+      "pageUrl": "https://laurent-dinh.github.io/",
+      "imageUrl": "https://laurent-dinh.github.io/assets/img/profile.jpg",
+      "sourceType": "personal_homepage",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T18:00:00.000Z"
+    },
+    "vp-3004": {
+      "name": "Hai Nguyen - Amazon Science",
+      "outcome": "found",
+      "pageUrl": "https://hai-h-nguyen.github.io/",
+      "imageUrl": "https://hai-h-nguyen.github.io/images/profile.jpg",
+      "sourceType": "personal_homepage",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T18:00:00.000Z"
+    },
+    "vp-3008": {
+      "name": "Khuong H. Tran",
+      "outcome": "found",
+      "pageUrl": "https://www.nasa.gov/people/khuong-tran/",
+      "imageUrl": "https://www.nasa.gov/wp-content/uploads/2024/11/acd24-0171-015.jpg",
+      "sourceType": "personal_homepage",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T18:00:00.000Z"
+    },
+    "vp-3016": {
+      "name": "Hy D. Tran",
+      "outcome": "found",
+      "pageUrl": "https://www.sandia.gov/labnews/2018/04/27/tran/",
+      "imageUrl": "https://www.sandia.gov/app/uploads/sites/81/2021/07/tran_portrait.jpg",
+      "sourceType": "personal_homepage",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T18:00:00.000Z"
+    },
+    "vp-3017": {
+      "name": "Doan N. Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://nationalmaglab.org/staff/?name=DoanNguyen",
+      "imageUrl": "https://nationalmaglab.org/pictures/200x200x72/NguyenDoan.jpg",
+      "sourceType": "personal_homepage",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T18:00:00.000Z"
+    },
+    "vp-3020": {
+      "name": "Ba Tran",
+      "outcome": "found",
+      "pageUrl": "https://www.pnnl.gov/people/ba-tran",
+      "imageUrl": "https://www.pnnl.gov/sites/default/files/media/image/Ba%20Tran.jpg",
+      "sourceType": "personal_homepage",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T18:00:00.000Z"
+    },
+    "vp-3022": {
+      "name": "Thai-Son Tran",
+      "outcome": "found",
+      "pageUrl": "https://scholar.google.com/citations?user=ohnwP8sAAAAJ",
+      "imageUrl": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=ohnwP8sAAAAJ",
+      "sourceType": "authoritative_academic",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T18:00:00.000Z"
+    },
+    "vp-3023": {
+      "name": "Ngoc Thanh Mai Tran",
+      "outcome": "found",
+      "pageUrl": "https://www.nist.gov/people/mai-tran",
+      "imageUrl": "https://www.nist.gov/sites/default/files/styles/480_x_480_limit/public/images/2026/07/07/kimmai%20NIST%2010.29.24%20LR-5%20updated.png.webp?itok=4gg5UIKn",
+      "sourceType": "personal_homepage",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T18:00:00.000Z"
+    },
+    "vp-3024": {
+      "name": "Huy T. Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://www.ll.mit.edu/about/laboratory-stories/huy-nguyen",
+      "imageUrl": "https://www.ll.mit.edu/sites/default/files/styles/laboratory_story_full/public/laboratory-story/image/2021-06/Nguyen_Huy_522233-002D.jpg?itok=0E11CIRA",
+      "sourceType": "personal_homepage",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T18:00:00.000Z"
+    },
+    "vp-3025": {
+      "name": "Hung Nguyen Do",
+      "outcome": "found",
+      "pageUrl": "https://irp.nida.nih.gov/staff-members/hung-nguyen-do-ph-d/",
+      "imageUrl": "https://irp.nida.nih.gov/wp-content/uploads/2026/07/hung-do.jpg",
+      "sourceType": "personal_homepage",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T18:00:00.000Z"
+    },
+    "vp-3029": {
+      "name": "Vinh Q. Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://www.nrl.navy.mil/Portals/38/PDF%20Files/2013_NRL_Review.pdf",
+      "imageUrl": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=vxAjDlkAAAAJ",
+      "sourceType": "authoritative_academic",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T18:00:00.000Z"
+    },
+    "vp-3032": {
+      "name": "Bac Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://bacnguyencong.github.io/",
+      "imageUrl": "https://bacnguyencong.github.io/assets/img/my_pic.jpeg?v=5eaa13f4ed2f76a7f2aa6dfa602a45f8",
+      "sourceType": "personal_homepage",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T18:00:00.000Z"
+    },
+    "vp-2997": {
+      "name": "Philip Pham",
+      "outcome": "found",
+      "pageUrl": "https://research.google/people/philippham/",
+      "imageUrl": "https://storage.googleapis.com/gweb-research2023-media/pubtools/5263.png",
+      "sourceType": "personal_homepage",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T18:00:00.000Z"
     },
     "vp-2675": {
       "name": "Au Vo",

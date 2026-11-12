@@ -181,7 +181,7 @@ export function renderRosterEntry(person: RosterEntry, baseUrl = '/', countryHub
   const countryTargetUrl = countryHubAvailable
     ? `${baseUrl}${regionPath(countryTarget)}`
     : `${baseUrl}index.html?loc=${encodeURIComponent(countryTarget === 'United States' ? 'US' : countryTarget)}`;
-  const locBadge = `<a class="loc-badge-link" href="${escapeHtml(countryTargetUrl)}" title="${countryHubAvailable ? 'Explore' : 'Filter'} ${escapeHtml(person.country || 'United States')} faculty"><span class="loc-badge"><span class="country-flag" aria-hidden="true">${countryFlag(person.country)}</span></span></a>`;
+  const locBadge = `<a class="loc-badge-link" href="${escapeHtml(countryTargetUrl)}" title="${countryHubAvailable ? 'Explore' : 'Filter'} ${escapeHtml(person.country || 'United States')} directory"><span class="loc-badge"><span class="country-flag" aria-hidden="true">${countryFlag(person.country)}</span></span></a>`;
 
   return `
     <div class="entry entry-with-portrait">

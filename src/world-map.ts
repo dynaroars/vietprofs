@@ -121,11 +121,11 @@ export function renderWorldMap(roster: Roster, selectedLocation?: string): strin
           <h3 class="insights-heading">Global Diaspora Geographic Heatmap</h3>
           <span class="world-map-host-badge">🌐 ${counts.size} Host Countries</span>
         </div>
-        <p class="insights-caption">Faculty density across worldwide host nations — darker/vibrant heatmap shading indicates larger faculty communities. Hover over any country or badge to inspect details; click to filter roster.</p>
+        <p class="insights-caption">Density across host nations — darker/vibrant heatmap shading indicates larger communities. Hover over any country or badge to inspect details; click to filter roster.</p>
       </div>
 
       <div class="world-map-svg-wrap">
-        <svg class="world-map-svg" viewBox="${WORLD_MAP_VIEWBOX}" role="img" aria-label="Global Heatmap of Vietnamese Diaspora Faculty">
+        <svg class="world-map-svg" viewBox="${WORLD_MAP_VIEWBOX}" role="img" aria-label="Global heatmap of the Vietnamese diaspora">
           <rect class="world-map-ocean" x="30" y="240" width="785" height="460" rx="12" />
           <g class="world-map-countries">
             ${countryElements}
@@ -142,11 +142,11 @@ export function renderWorldMap(roster: Roster, selectedLocation?: string): strin
         <div class="world-map-legend">
           <span class="legend-title">Density:</span>
           <div class="legend-scale">
-            <span class="legend-cell heat-0" title="0 faculty"><span class="legend-color"></span>0</span>
-            <span class="legend-cell heat-1" title="1 to 4 faculty"><span class="legend-color"></span>1–4</span>
-            <span class="legend-cell heat-2" title="5 to 19 faculty"><span class="legend-color"></span>5–19</span>
-            <span class="legend-cell heat-3" title="20 to 99 faculty"><span class="legend-color"></span>20–99</span>
-            <span class="legend-cell heat-4" title="100+ faculty"><span class="legend-color"></span>100+</span>
+            <span class="legend-cell heat-0" title="0 people"><span class="legend-color"></span>0</span>
+            <span class="legend-cell heat-1" title="1 to 4 people"><span class="legend-color"></span>1–4</span>
+            <span class="legend-cell heat-2" title="5 to 19 people"><span class="legend-color"></span>5–19</span>
+            <span class="legend-cell heat-3" title="20 to 99 people"><span class="legend-color"></span>20–99</span>
+            <span class="legend-cell heat-4" title="100+ people"><span class="legend-color"></span>100+</span>
             <span class="legend-cell is-origin-legend" title="Vietnam: Diaspora Origin"><span class="legend-color origin-color">★</span>Origin</span>
           </div>
         </div>

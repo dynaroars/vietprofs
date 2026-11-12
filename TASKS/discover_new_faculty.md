@@ -16,7 +16,7 @@ Expand roster coverage by finding qualified Vietnamese and Vietnamese-diaspora s
 1. **Eligibility Criteria**:
    - Current academic appointment at a university or eligible public/nonprofit research institute outside Vietnam (e.g. CNRS, INRIA, Max Planck, NIH, NIST, NASA, Argonne, LBNL, Allen Institute).
    - Accepted track: `Tenure-line`, `Teaching`, `Research`, `Clinical`, `Admin and Staff`, `Emeritus`, `Deceased`.
-   - Exclude adjunct, visiting, postdoctoral, graduate student, industry-only (e.g. Microsoft Research without university appointment), and temporary positions.
+   - Exclude adjunct, visiting, postdoctoral, graduate student, and temporary positions. Industry, government, and policy researchers without a university appointment (e.g. Microsoft Research, MIT Lincoln Laboratory, the IMF) are not faculty leads: they follow [`discover_industry_labs.md`](discover_industry_labs.md) and `institutionType`/`track` values other than `University`.
 2. **Data Fields Required**:
    - `name`, `university`, `country`, `rank`, `track`, `department`, `field`, `profileUrl`, `keywords`, `confirmed`.
    - Propose `vietnameseName` only when a source spells it with diacritics (cite that source). Never

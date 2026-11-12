@@ -43,6 +43,8 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(root, 'index.html'),
+        labs: resolve(root, 'labs.html'),
+        industry: resolve(root, 'industry.html'),
         submit: resolve(root, 'submit.html'),
         connections: resolve(root, 'connections.html'),
       },

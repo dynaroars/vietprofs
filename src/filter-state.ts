@@ -19,6 +19,8 @@ interface LocationForQueryOptions {
   field?: string;
   track?: string;
   institutionType?: string;
+  sector?: string;
+  employer?: string;
   relationships?: RelationshipDatabase;
 }
 
@@ -33,6 +35,8 @@ export function locationForQuery(
     field = 'all',
     track = 'all',
     institutionType = 'all',
+    sector = 'all',
+    employer = 'all',
     relationships,
   }: LocationForQueryOptions,
 ): string {
@@ -60,6 +64,8 @@ export function locationForQuery(
     field,
     track,
     institutionType,
+    sector,
+    employer,
     relationships,
   };
   const matchesCurrent = filterRoster(searchIndex, {

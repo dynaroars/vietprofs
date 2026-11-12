@@ -21,7 +21,7 @@ const LINKS: Array<[Destination, string, string]> = [
   ['directory', 'index.html', 'Back to Directory'],
   ['health', 'index.html?view=health', 'Data Health & Completeness'],
   ['insights', 'index.html?view=insights', 'Diaspora Insights & Pathways'],
-  ['connections', 'connections.html', 'Academic Connections'],
+  ['connections', 'connections.html', 'Research Connections'],
   ['submit', 'submit.html', 'Submit / Update'],
   ['github', 'https://github.com/dynaroars/vietprofs', 'GitHub'],
 ];

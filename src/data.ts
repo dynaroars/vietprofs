@@ -74,6 +74,39 @@ export function institutionTypeOf(person: Pick<RosterEntry, 'institutionType'>):
   return person.institutionType || 'University';
 }
 
+export function isLabEntry(person: Pick<RosterEntry, 'institutionType' | 'track'>): boolean {
+  const type = institutionTypeOf(person);
+  return (
+    type === 'Public research institute' ||
+    type === 'Independent nonprofit research institute' ||
+    type === 'Government & defense' ||
+    type === 'National laboratory' ||
+    type === 'Policy & international organization' ||
+    type === 'Think tank' ||
+    person.track === 'Government & Defense' ||
+    person.track === 'Policy & Think Tank'
+  );
+}
+
+export function isGovPolicyEntry(person: Pick<RosterEntry, 'institutionType' | 'track'>): boolean {
+  const type = institutionTypeOf(person);
+  return (
+    type === 'Government & defense' ||
+    type === 'National laboratory' ||
+    type === 'Policy & international organization' ||
+    type === 'Think tank' ||
+    person.track === 'Government & Defense' ||
+    person.track === 'Policy & Think Tank'
+  );
+}
+
+export function isCorporatePolicyEntry(
+  person: Pick<RosterEntry, 'institutionType' | 'track'>,
+): boolean {
+  const type = institutionTypeOf(person);
+  return type === 'Corporate research lab' || person.track === 'Industry Research';
+}
+
 export interface SearchIndex {
   roster: Roster;
   textByPerson: WeakMap<RosterEntry, string[]>;
@@ -147,6 +180,24 @@ export async function loadRoster(): Promise<Roster> {
   const roster = withUpdates((await res.json()) as Roster, updates);
   cached = roster;
   return roster;
+}
+
+export type Sector = 'academia' | 'labs' | 'industry';
+export const SECTORS: readonly Sector[] = ['academia', 'labs', 'industry'];
+export const SECTOR_LABELS: Record<Sector, string> = {
+  academia: 'Academia',
+  labs: 'Gov & Labs',
+  industry: 'Industry',
+};
+
+// The one directory sector an entry belongs to, derived from institutionType and track (never
+// stored). Corporate research labs are Industry. Every other non-University entry (public and
+// nonprofit research institutes, national laboratories, government & defense, policy, think tanks,
+// by type or track) is Gov & Labs. Everything else (University entries) is Academia.
+export function sectorOf(person: Pick<RosterEntry, 'institutionType' | 'track'>): Sector {
+  if (isCorporatePolicyEntry(person) && !isLabEntry(person)) return 'industry';
+  if (isGovPolicyEntry(person) || institutionTypeOf(person) !== 'University') return 'labs';
+  return 'academia';
 }
 
 export async function loadRelationships(): Promise<RelationshipDatabase> {
@@ -1516,11 +1567,66 @@ const FIELD_RULES = [
   // A department that matches none of the established broad disciplines is grouped under Others.
 ];
 
-export function fieldOf(department?: string, university?: string): string {
+// Lab, agency, and company teams ("Alignment Science", "Search and Information Retrieval") rarely
+// read like university departments, so when the department maps to nothing the research areas
+// decide: each area in order, through these research-topic rules, then the department rules.
+const RESEARCH_AREA_RULES = [
+  {
+    field: 'Law & Public Affairs',
+    match:
+      /national security|border security|nonproliferation|WMD|defen[cs]e policy|security policy|international relations|governance|public policy/i,
+  },
+  {
+    field: 'Computer & Information Sciences',
+    match:
+      /machine learning|deep learning|artificial intelligence|AI|neural|language model|natural language|NLP|computer vision|reinforcement learning|robot|information retrieval|search|recommend|software|program(?:ming)?|compil|cyber|security|privacy|cryptograph|distributed systems|cloud computing|database|network(?:ing|s)?|human-computer|graphics|speech|alignment|interpretab|transformer|generative|multimodal|optimization|autonomous|computing|dialogue|conversational|spoken language/i,
+  },
+  {
+    field: 'Business & Economics',
+    match:
+      /macroeconom|microeconom|monetary|fiscal|econom|financ|banking|trade|labor market|public finance|development policy|poverty|inflation/i,
+  },
+  {
+    field: 'Physics & Astronomy',
+    match:
+      /quantum|photonic|optic|laser|plasma|particle|astro|cosmolog|spectroscop|condensed matter/i,
+  },
+  {
+    field: 'Earth & Environmental Sciences',
+    match: /climate|atmospher|earth|ocean|remote sensing|environment|geoscien|hydrolog/i,
+  },
+  {
+    field: 'Biological & Biomedical Sciences',
+    match:
+      /genom|biolog|protein|cell biology|cellular|neuroscien|immun|drug discovery|bioinformat/i,
+  },
+  { field: 'Chemistry', match: /chemi|catalys|electrochem/i },
+  {
+    field: 'Engineering',
+    match:
+      /control systems|flight|aeroelastic|material|semiconductor|device|aerospace|propulsion|combustion|radar|antenna|wireless|signal processing|electromagnet|energy|battery|power systems|nuclear|sensor|hardware|circuit|manufactur/i,
+  },
+];
+
+export function fieldOf(
+  department?: string,
+  university?: string,
+  researchAreas?: readonly string[],
+): string {
   const override = university && FIELD_OVERRIDES.get(`${department}|${university}`);
   if (override) return override;
-  if (!department) return 'Others';
-  return FIELD_RULES.find((rule) => rule.match.test(department))?.field ?? 'Others';
+  const fromDepartment = department
+    ? (FIELD_RULES.find((rule) => rule.match.test(department))?.field ?? 'Others')
+    : 'Others';
+  if (fromDepartment !== 'Others' || !researchAreas?.length) return fromDepartment;
+  // Areas are listed most representative first, so the first one that maps decides.
+  for (const area of researchAreas) {
+    const field =
+      RESEARCH_AREA_RULES.find((rule) => rule.match.test(area))?.field ??
+      FIELD_RULES.find((rule) => rule.match.test(area))?.field;
+    if (field) return field;
+  }
+  return 'Others';
 }
 
 export interface RosterHtmlInventory {
@@ -1535,7 +1641,9 @@ export interface RosterHtmlInventory {
 export function buildRosterHtmlInventory(roster: Roster): RosterHtmlInventory {
   const fields = FIELDS.filter((field) =>
     hasEnoughPeopleForRosterHub(
-      roster.filter((person) => fieldOf(person.department, person.university) === field).length,
+      roster.filter(
+        (person) => fieldOf(person.department, person.university, person.researchAreas) === field,
+      ).length,
     ),
   );
   const countries = [...new Set(roster.map((person) => person.country || 'United States'))];
@@ -1550,7 +1658,7 @@ export function buildRosterHtmlInventory(roster: Roster): RosterHtmlInventory {
           roster.filter(
             (person) =>
               locationMatches(person, region) &&
-              fieldOf(person.department, person.university) === field,
+              fieldOf(person.department, person.university, person.researchAreas) === field,
           ).length,
         ),
       ).length,
@@ -1569,7 +1677,8 @@ export function buildRosterHtmlInventory(roster: Roster): RosterHtmlInventory {
 }
 
 export function healthSubfieldOf(person: RosterEntry): string | null {
-  if (fieldOf(person.department, person.university) !== 'Health Sciences') return null;
+  if (fieldOf(person.department, person.university, person.researchAreas) !== 'Health Sciences')
+    return null;
   const text = `${person.department} ${(person.researchAreas ?? []).join(' ')}`;
   if (/nursing/i.test(text)) return 'Nursing';
   if (/pharma|pharmac/i.test(text)) return 'Pharmacy';
@@ -1633,7 +1742,7 @@ export function buildTopUniversities(roster: Roster, limit = 8): [string, number
 }
 
 export function buildFieldCounts(roster: Roster): [string, number][] {
-  return countBy(roster, (p) => fieldOf(p.department, p.university));
+  return countBy(roster, (p) => fieldOf(p.department, p.university, p.researchAreas));
 }
 
 export function buildTopCountries(roster: Roster, limit = 8): [string, number][] {
@@ -1722,6 +1831,10 @@ interface FilterOptions {
   track?: string;
   institutionType?: string;
   university?: string;
+  /** Directory sector (derived by sectorOf); 'all' or unset keeps every sector. */
+  sector?: string;
+  /** Exact employer (the `university` field), used by the Industry sector's Employer filter. */
+  employer?: string;
   phdInstitution?: string;
   state?: string;
   country?: string;
@@ -1738,12 +1851,14 @@ function scopedValuesFor(person: RosterEntry, scope: string): (string | undefine
       return [displayName(person.name)];
     case 'university':
       return [person.university];
+    case 'type':
+      return [institutionTypeOf(person)];
     case 'institution':
       return [person.university, institutionTypeOf(person)];
     case 'department':
       return [person.department];
     case 'field':
-      return [fieldOf(person.department, person.university)];
+      return [fieldOf(person.department, person.university, person.researchAreas)];
     case 'track':
       return [person.track];
     case 'rank':
@@ -1815,6 +1930,8 @@ export function filterRoster(
     track,
     institutionType,
     university,
+    sector,
+    employer,
     phdInstitution,
     state,
     country,
@@ -1829,13 +1946,19 @@ export function filterRoster(
     result = result.filter((p) => locationMatches(p, location));
   }
   if (field && field !== 'all') {
-    result = result.filter((p) => fieldOf(p.department, p.university) === field);
+    result = result.filter((p) => fieldOf(p.department, p.university, p.researchAreas) === field);
   }
   if (track && track !== 'all') {
     result = result.filter((p) => p.track === track);
   }
   if (institutionType && institutionType !== 'all') {
     result = result.filter((p) => institutionTypeOf(p) === institutionType);
+  }
+  if (sector && sector !== 'all') {
+    result = result.filter((p) => sectorOf(p) === sector);
+  }
+  if (employer && employer !== 'all') {
+    result = result.filter((p) => p.university === employer);
   }
   if (country) {
     const norm = stripDiacritics(country.trim().toLowerCase());
@@ -1965,7 +2088,7 @@ const MARQUEE_HONORS = [
 export function buildAwardsFunFacts(roster: Roster | null | undefined): string[] {
   const allRoster = roster || [];
   if (allRoster.length === 0) {
-    return ['No faculty currently listed, so no awards or honors can be counted.'];
+    return ['No people currently listed, so no awards or honors can be counted.'];
   }
 
   const honored = allRoster.filter((p) => (p.honors || []).length > 0).length;
@@ -2003,7 +2126,7 @@ export function buildAwardsFunFacts(roster: Roster | null | undefined): string[]
 
   if (honored > 0)
     facts.push(
-      `${honored} of ${allRoster.length} professors have at least one recorded major honor or award.`,
+      `${honored} of ${allRoster.length} people have at least one recorded major honor or award.`,
     );
   if (nsfHolders > 0) {
     facts.push(
@@ -2052,7 +2175,9 @@ function observationUniversities(roster: Roster): [string, number][] {
 }
 
 function observationFields(roster: Roster): [string, number][] {
-  return countBy(roster, (p) => (p.department ? fieldOf(p.department, p.university) : 'Others'));
+  return countBy(roster, (p) =>
+    p.department ? fieldOf(p.department, p.university, p.researchAreas) : 'Others',
+  );
 }
 
 function observationDepartmentSpread(roster: Roster): [string, number][] {
@@ -2072,7 +2197,7 @@ function observationSameFieldClusters(roster: Roster): [[string, string], number
   const groups = new Map<string, number>();
   for (const person of roster) {
     if (!person.university || !person.department) continue;
-    const field = fieldOf(person.department, person.university);
+    const field = fieldOf(person.department, person.university, person.researchAreas);
     const key = `${person.university}\u0000${field}`;
     groups.set(key, (groups.get(key) ?? 0) + 1);
   }
@@ -2124,9 +2249,9 @@ function addRosterObservations(facts: string[], roster: Roster, label: string): 
 export function buildUsObservations(roster: Roster | null | undefined): string[] {
   const usRoster = (roster || []).filter((p) => (p.country || 'United States') === 'United States');
   if (usRoster.length === 0)
-    return ['No United States faculty currently listed under the active filter selection.'];
+    return ['No people in the United States currently listed under the active filter selection.'];
   const facts = [
-    `${usRoster.length} U.S. entries across ${new Set(usRoster.map((p) => p.university)).size} institutions.`,
+    `${usRoster.length} U.S. entries across ${new Set(usRoster.map((p) => p.university)).size} organizations.`,
   ];
   const places = countBy(usRoster, (p) => canonicalState(p.state, p.country));
   if (places.length >= 2 && places[0][1] + places[1][1] >= usRoster.length * 0.2) {
@@ -2149,10 +2274,10 @@ export function buildInternationalObservations(roster: Roster | null | undefined
   );
   if (international.length === 0)
     return [
-      'No international diaspora faculty currently listed under the active filter selection.',
+      'No people outside the United States currently listed under the active filter selection.',
     ];
   const facts = [
-    `${international.length} international entries across ${new Set(international.map((p) => p.university)).size} institutions in ${new Set(international.map((p) => p.country)).size} countries.`,
+    `${international.length} international entries across ${new Set(international.map((p) => p.university)).size} organizations in ${new Set(international.map((p) => p.country)).size} countries.`,
   ];
   const countries = countBy(international, (p) => p.country);
   if (countries.length)
@@ -2192,10 +2317,10 @@ export function buildLocationObservations(
 ): string[] {
   const selected = roster || [];
   if (selected.length === 0)
-    return ['No faculty currently listed under the active location selection.'];
+    return ['No people currently listed under the active location selection.'];
   const countries = new Set(selected.map((person) => person.country || 'United States')).size;
   const facts = [
-    `${selected.length} entries across ${new Set(selected.map((person) => person.university)).size} institutions in ${countries} countr${countries === 1 ? 'y' : 'ies'}.`,
+    `${selected.length} entries across ${new Set(selected.map((person) => person.university)).size} organizations in ${countries} countr${countries === 1 ? 'y' : 'ies'}.`,
   ];
   const fields = observationFields(selected);
   if (
@@ -2245,7 +2370,7 @@ export function buildQualifiedObservations(roster: Roster | null | undefined): s
 // renders them as a list.
 export function buildFunFacts(roster: Roster | null | undefined): string[] {
   if (!roster || roster.length === 0) {
-    return ['No faculty currently listed for this location or filter selection.'];
+    return ['No people currently listed for this location or filter selection.'];
   }
   const usFacts = buildUsObservations(roster);
   const globalFacts = buildInternationalObservations(roster);

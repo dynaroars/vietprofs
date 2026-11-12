@@ -47,6 +47,30 @@ header {
   margin-bottom: 1.25rem;
 }
 
+.top-nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin-top: 0.65rem;
+}
+
+.top-nav a {
+  color: var(--text-secondary);
+  border-bottom: 0;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.top-nav a:hover,
+.top-nav a.active,
+.top-nav a[aria-current='page'] {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
 h1 {
   font-family: var(--font-heading);
   font-size: var(--text-3xl);

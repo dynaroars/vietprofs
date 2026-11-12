@@ -54,6 +54,7 @@ const surnameFirstAllowlist = new Set<string>([
   'Le Mai Tu', // published as "Dre Le Mai Tu" across Université de Sherbrooke directory; Tu is her surname and Le Mai is her given name.
   'Dinh Ha Duy Thuy', // published as "Dinh Ha Duy Thuy" across Kyoto University directory and Researchmap; Dinh is his surname and Thuy is his given name.
   'Ha Thanh Dong', // published as "Ha Thanh Dong" / "Dr. Ha Thanh Dong" on AIT faculty directory; Dong is his surname and Ha is his given name.
+  'Nguyen Bach', // published as "Nguyen Bach" on his homepage (nguyenbh.github.io), CMU dissertation, and Google Scholar; Bach is his surname and Nguyen is his given name.
 ]);
 
 const CURRENT_YEAR = new Date().getFullYear();
@@ -93,9 +94,9 @@ for (const [field, values] of [
     fail(schemaFile, `${field} enum must match src/roster-constants.ts`);
 }
 const validateRoster = new Ajv2020({ allErrors: true, verbose: true }).compile<any>(rosterSchema);
-function describeSchemaError(error: ErrorObject): string {
+function describeSchemaError(error: ErrorObject, currentList: RosterEntry[]): string {
   const [, index, ...path] = error.instancePath.split('/');
-  const id = roster[Number(index)]?.id;
+  const id = currentList[Number(index)]?.id;
   const where = index
     ? `entry ${Number(index) + 1}${id ? ` (${id})` : ''}${path.length ? ` ${path.join('.')}` : ''}`
     : 'roster';
@@ -114,10 +115,14 @@ if (!validateRoster(roster)) {
   const errors = validateRoster.errors ?? [];
   fail(
     rosterFile,
-    `does not match roster.schema.json:\n  ${errors.slice(0, 20).map(describeSchemaError).join('\n  ')}${errors.length > 20 ? `\n  ...and ${errors.length - 20} more` : ''}`,
+    `does not match roster.schema.json:\n  ${errors
+      .slice(0, 20)
+      .map((err) => describeSchemaError(err, roster))
+      .join('\n  ')}${errors.length > 20 ? `\n  ...and ${errors.length - 20} more` : ''}`,
   );
 }
 const rosterIds = new Set((roster as Array<{ id: string }>).map((person) => person.id));
+const allRosterIds = rosterIds;
 
 // Retired ids stay retired: a merged duplicate points at the entry that absorbed it, and a person
 // who comes back gets the original id restored (npm run retire-profile-id), not a fresh one.
@@ -128,12 +133,12 @@ const retiredIds = JSON.parse(await readFile(retiredFile, 'utf8')) as Record<
 >;
 for (const [id, record] of Object.entries(retiredIds)) {
   if (!/^vp-\d{4,}$/.test(id)) fail(retiredFile, `invalid id ${id}`);
-  if (rosterIds.has(id))
+  if (allRosterIds.has(id))
     fail(
       retiredFile,
       `${id} is back in the roster; remove it from retired-ids.json when restoring an id`,
     );
-  if (record.replacedBy !== null && !rosterIds.has(record.replacedBy))
+  if (record.replacedBy !== null && !allRosterIds.has(record.replacedBy))
     fail(retiredFile, `${id} points at ${record.replacedBy}, which is not in the roster`);
   if (typeof record.name !== 'string' || typeof record.reason !== 'string' || !record.reason.trim())
     fail(retiredFile, `${id} needs a name and a reason`);
@@ -147,11 +152,11 @@ const updateIds = Object.keys(updates);
 if (updateIds.join() !== [...updateIds].sort().join())
   fail(updatesFile, 'keys must be sorted by id; run npm run stamp-updates');
 for (const id of updateIds) {
-  if (!rosterIds.has(id))
+  if (!allRosterIds.has(id))
     fail(updatesFile, `${id} is not in the roster; run npm run stamp-updates`);
   validateTimestamp(updatesFile, updates[id], id, 'timestamp');
 }
-for (const id of rosterIds)
+for (const id of allRosterIds)
   if (!(id in updates)) fail(updatesFile, `${id} has no timestamp; run npm run stamp-updates`);
 
 const names = new Set<string>();
@@ -161,142 +166,156 @@ const websiteUrls = new Map<string, string>();
 const scholarUrls = new Set();
 const linkedinUrls = new Set();
 const portraits = new Set();
-for (const [index, person] of roster.entries()) {
-  const label = `entry ${index + 1}`;
-  // `id` leads every record so the raw view on a profile page and roster diffs stay consistent.
-  // Cheap to satisfy: JSON.stringify preserves insertion order, so anything that parses the
-  // roster and writes it back keeps this automatically.
-  if (Object.keys(person)[0] !== 'id')
-    fail(rosterFile, `${label} (${person.id}) must list id as its first field`);
-  if (person.websiteUrl !== undefined) {
-    if (person.websiteUrl === person.profileUrl)
-      fail(rosterFile, `${label} websiteUrl must differ from profileUrl`);
-    if (websiteUrls.has(person.websiteUrl)) {
-      fail(
-        rosterFile,
-        `${label} duplicates websiteUrl ${person.websiteUrl} with ${websiteUrls.get(person.websiteUrl)}`,
-      );
-    }
-    websiteUrls.set(person.websiteUrl, person.name);
-  }
-  if (person.scholarUrl !== undefined) {
-    const scholarErr = validateExternalUrl(person.scholarUrl, 'scholarUrl');
-    if (scholarErr) fail(rosterFile, `${label} ${scholarErr}`);
-    if (scholarUrls.has(person.scholarUrl))
-      fail(
-        rosterFile,
-        `${label} duplicates scholarUrl ${person.scholarUrl} — a Google Scholar profile belongs to one person; this usually means a placeholder/wrong ID got copied across a batch`,
-      );
-    scholarUrls.add(person.scholarUrl);
-  }
-  if (person.linkedinUrl !== undefined) {
-    const linkedinErr = validateExternalUrl(person.linkedinUrl, 'linkedinUrl');
-    if (linkedinErr) fail(rosterFile, `${label} ${linkedinErr}`);
-    if (linkedinUrls.has(person.linkedinUrl))
-      fail(
-        rosterFile,
-        `${label} duplicates linkedinUrl ${person.linkedinUrl} — a LinkedIn profile belongs to one person; this usually means a placeholder/wrong ID got copied across a batch`,
-      );
-    linkedinUrls.add(person.linkedinUrl);
-  }
-  if (looksSurnameFirst(person.name) && !surnameFirstAllowlist.has(person.name)) {
-    fail(
-      rosterFile,
-      `${label} name "${person.name}" looks stored surname-first (Vietnamese order) instead of "First (Middle) Last" — reorder it, or if the first token is genuinely this person's given name, add it to surnameFirstAllowlist in scripts/validate-data.ts with a note on how you confirmed it`,
-    );
-  }
-  if (person.portrait !== undefined) {
-    if (portraits.has(person.portrait))
-      fail(rosterFile, `${label} duplicates portrait ${person.portrait}`);
-    try {
-      await access(resolve('public', person.portrait));
-    } catch {
-      fail(rosterFile, `${label} portrait file does not exist: ${person.portrait}`);
-    }
-    portraits.add(person.portrait);
-  }
-  if (person.honors !== undefined) {
-    const honorNames = new Set();
-    for (const [honorIndex, honor] of person.honors.entries()) {
-      const honorLabel = `${label} honor ${honorIndex + 1}`;
-      if (honor.year !== null && honor.year > CURRENT_YEAR)
-        fail(rosterFile, `${honorLabel} year ${honor.year} is in the future`);
-      const honorKey = `${honor.name}|${honor.year ?? 'unknown'}|${honor.organization}`;
-      if (honorNames.has(honorKey))
-        fail(rosterFile, `${honorLabel} duplicates an honor for ${person.name}`);
-      honorNames.add(honorKey);
-    }
-  }
-  if (
-    person.institutionType !== undefined &&
-    person.institutionType !== 'University' &&
-    !['Research', 'Emeritus', 'Deceased'].includes(person.track)
-  ) {
-    fail(
-      rosterFile,
-      `${label} non-university institutionType requires the Research, Emeritus, or Deceased track`,
-    );
-  }
-  if (
-    typeof person.state === 'string' &&
-    canonicalState(person.state, person.country) !== person.state
-  ) {
-    fail(
-      rosterFile,
-      `${label} state must be the full U.S. state name (${canonicalState(person.state, person.country)}), not ${person.state}`,
-    );
-  }
-  const institutionFields = [
-    'phdInstitution',
-    'undergradInstitution',
-    'msInstitution',
-    'mdInstitution',
-    'postdocInstitution',
-  ];
-  for (const field of institutionFields) {
-    if (person[field] !== undefined) {
-      const formatErr = validateInstitutionFormat(person[field], field);
-      if (formatErr) fail(rosterFile, `${label} ${formatErr}`);
-    }
-  }
-  const yearFields = ['phdYear', 'undergradYear'];
-  for (const field of yearFields) {
-    if (person[field] > CURRENT_YEAR)
-      fail(rosterFile, `${label} ${field} ${person[field]} is in the future`);
-  }
-  const chronologyErrors = validateEducationChronology(person);
-  if (chronologyErrors.length) {
-    fail(rosterFile, `${label} education chronology: ${chronologyErrors.join('; ')}`);
-  }
-  if (person.directFields !== undefined) {
-    for (const field of person.directFields) {
-      if (
-        person[field] === undefined ||
-        person[field] === null ||
-        (typeof person[field] === 'string' && !person[field].trim())
-      ) {
+
+{
+  const list = roster as RosterEntry[];
+  const file = rosterFile;
+  for (const [index, person] of list.entries()) {
+    const label = `entry ${index + 1}`;
+    const record = person as unknown as Record<string, any>;
+    // `id` leads every record so the raw view on a profile page and roster diffs stay consistent.
+    // Cheap to satisfy: JSON.stringify preserves insertion order, so anything that parses the
+    // roster and writes it back keeps this automatically.
+    if (Object.keys(person)[0] !== 'id')
+      fail(file, `${label} (${person.id}) must list id as its first field`);
+    if (person.websiteUrl !== undefined) {
+      if (person.websiteUrl === person.profileUrl)
+        fail(file, `${label} websiteUrl must differ from profileUrl`);
+      if (websiteUrls.has(person.websiteUrl)) {
         fail(
-          rosterFile,
-          `${label} (${person.id}) lists "${field}" in directFields but the field value is missing or empty`,
+          file,
+          `${label} duplicates websiteUrl ${person.websiteUrl} with ${websiteUrls.get(person.websiteUrl)}`,
         );
+      }
+      websiteUrls.set(person.websiteUrl, person.name);
+    }
+    if (person.scholarUrl !== undefined) {
+      const scholarErr = validateExternalUrl(person.scholarUrl, 'scholarUrl');
+      if (scholarErr) fail(file, `${label} ${scholarErr}`);
+      if (scholarUrls.has(person.scholarUrl))
+        fail(
+          file,
+          `${label} duplicates scholarUrl ${person.scholarUrl} — a Google Scholar profile belongs to one person; this usually means a placeholder/wrong ID got copied across a batch`,
+        );
+      scholarUrls.add(person.scholarUrl);
+    }
+    if (person.linkedinUrl !== undefined) {
+      const linkedinErr = validateExternalUrl(person.linkedinUrl, 'linkedinUrl');
+      if (linkedinErr) fail(file, `${label} ${linkedinErr}`);
+      if (linkedinUrls.has(person.linkedinUrl))
+        fail(
+          file,
+          `${label} duplicates linkedinUrl ${person.linkedinUrl} — a LinkedIn profile belongs to one person; this usually means a placeholder/wrong ID got copied across a batch`,
+        );
+      linkedinUrls.add(person.linkedinUrl);
+    }
+    if (looksSurnameFirst(person.name) && !surnameFirstAllowlist.has(person.name)) {
+      fail(
+        file,
+        `${label} name "${person.name}" looks stored surname-first (Vietnamese order) instead of "First (Middle) Last" — reorder it, or if the first token is genuinely this person's given name, add it to surnameFirstAllowlist in scripts/validate-data.ts with a note on how you confirmed it`,
+      );
+    }
+    if (person.portrait !== undefined) {
+      if (portraits.has(person.portrait))
+        fail(file, `${label} duplicates portrait ${person.portrait}`);
+      try {
+        await access(resolve('public', person.portrait));
+      } catch {
+        fail(file, `${label} portrait file does not exist: ${person.portrait}`);
+      }
+      portraits.add(person.portrait);
+    }
+    if (person.honors !== undefined) {
+      const honorNames = new Set();
+      for (const [honorIndex, honor] of person.honors.entries()) {
+        const honorLabel = `${label} honor ${honorIndex + 1}`;
+        if (honor.year !== null && honor.year !== undefined && honor.year > CURRENT_YEAR)
+          fail(file, `${honorLabel} year ${honor.year} is in the future`);
+        const honorKey = `${honor.name}|${honor.year ?? 'unknown'}|${honor.organization}`;
+        if (honorNames.has(honorKey))
+          fail(file, `${honorLabel} duplicates an honor for ${person.name}`);
+        honorNames.add(honorKey);
       }
     }
     if (
-      !person.directFields.every(
-        (field: string, index: number, fields: string[]) =>
-          index === 0 || fields[index - 1].localeCompare(field) < 0,
-      )
+      person.institutionType !== undefined &&
+      person.institutionType !== 'University' &&
+      (!person.track ||
+        ![
+          'Research',
+          'Emeritus',
+          'Deceased',
+          'Industry Research',
+          'Policy & Think Tank',
+          'Government & Defense',
+        ].includes(person.track))
     ) {
-      fail(rosterFile, `${label} directFields must be sorted`);
+      fail(
+        file,
+        `${label} non-university institutionType requires the Research, Emeritus, Deceased, Industry Research, Policy & Think Tank, or Government & Defense track`,
+      );
     }
+    if (
+      typeof person.state === 'string' &&
+      canonicalState(person.state, person.country) !== person.state
+    ) {
+      fail(
+        file,
+        `${label} state must be the full U.S. state name (${canonicalState(person.state, person.country)}), not ${person.state}`,
+      );
+    }
+    const institutionFields = [
+      'phdInstitution',
+      'undergradInstitution',
+      'msInstitution',
+      'mdInstitution',
+      'postdocInstitution',
+    ];
+    for (const field of institutionFields) {
+      if (record[field] !== undefined) {
+        const formatErr = validateInstitutionFormat(record[field], field);
+        if (formatErr) fail(file, `${label} ${formatErr}`);
+      }
+    }
+    const yearFields = ['phdYear', 'undergradYear'];
+    for (const field of yearFields) {
+      if (typeof record[field] === 'number' && record[field] > CURRENT_YEAR)
+        fail(file, `${label} ${field} ${record[field]} is in the future`);
+    }
+    const chronologyErrors = validateEducationChronology(person);
+    if (chronologyErrors.length) {
+      fail(file, `${label} education chronology: ${chronologyErrors.join('; ')}`);
+    }
+    if (person.directFields !== undefined) {
+      for (const field of person.directFields) {
+        if (
+          record[field] === undefined ||
+          record[field] === null ||
+          (typeof record[field] === 'string' && !record[field].trim())
+        ) {
+          fail(
+            file,
+            `${label} (${person.id}) lists "${field}" in directFields but the field value is missing or empty`,
+          );
+        }
+      }
+      if (
+        !person.directFields.every(
+          (field: string, index: number, fields: string[]) =>
+            index === 0 || fields[index - 1].localeCompare(field) < 0,
+        )
+      ) {
+        fail(file, `${label} directFields must be sorted`);
+      }
+    }
+    if (names.has(person.name)) fail(file, `duplicate name: ${person.name}`);
+    if (ids.has(person.id)) fail(file, `duplicate id: ${person.id}`);
+    if (profileUrls.has(person.profileUrl))
+      fail(file, `duplicate profileUrl: ${person.profileUrl}`);
+    names.add(person.name);
+    ids.add(person.id);
+    profileUrls.add(person.profileUrl);
   }
-  if (names.has(person.name)) fail(rosterFile, `duplicate name: ${person.name}`);
-  if (ids.has(person.id)) fail(rosterFile, `duplicate id: ${person.id}`);
-  if (profileUrls.has(person.profileUrl))
-    fail(rosterFile, `duplicate profileUrl: ${person.profileUrl}`);
-  names.add(person.name);
-  ids.add(person.id);
-  profileUrls.add(person.profileUrl);
 }
 
 // One person, one entry. The exact-string checks above miss the same Scholar profile, LinkedIn
@@ -311,10 +330,12 @@ const DISTINCT_PEOPLE = new Set<string>([
   'vp-0129 vp-2340', // Tran N. H. Nguyen (Biomedical Engineering, PhD) and Tran T. Nguyen (Hospital Medicine, MD), UT Southwestern: separate UTSW profiles
   'vp-2416 vp-2417', // Hong Loan Nguyen (General Internal Medicine) and Loan T. Nguyen (Pediatrics Hospital Medicine), Baylor College of Medicine: separate BCM profiles 27617 and 27539
   'vp-0020 vp-0414', // Truong X. Tran (Computer Science, Harrisburg; Alabama-Huntsville PhD) and Tran Truong (Linguistics, University Park; Chicago PhD): separate PSU profiles (#559)
+  'vp-1135 vp-2974', // Tuan Minh Nguyen (Materials Science Division, UC Irvine PhD) and Tuan H. Nguyen (Global Security Directorate / CGSR, Iowa State PhD), Lawrence Livermore National Laboratory: separate LLNL profiles
 ]);
+const allEntries = roster as RosterEntry[];
 const identityOwners = new Map<string, string>();
-const rosterTokens = (roster as RosterEntry[]).map((person) => nameTokens(person.name));
-for (const [index, person] of (roster as RosterEntry[]).entries()) {
+const rosterTokens = allEntries.map((person) => nameTokens(person.name));
+for (const [index, person] of allEntries.entries()) {
   for (const field of ['websiteUrl', 'scholarUrl', 'linkedinUrl'] as const) {
     const value = person[field];
     if (!value) continue;
@@ -329,7 +350,7 @@ for (const [index, person] of (roster as RosterEntry[]).entries()) {
     identityOwners.set(key, person.id);
   }
   for (let other = 0; other < index; other += 1) {
-    const earlier = (roster as RosterEntry[])[other];
+    const earlier = allEntries[other];
     if (
       earlier.university !== person.university ||
       !namesMatch(rosterTokens[index], rosterTokens[other])

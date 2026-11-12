@@ -1,4 +1,4 @@
-import { readFile, writeFile } from 'node:fs/promises';
+import { access, readFile, writeFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import type { Roster } from '../src/data.ts';
 
@@ -10,6 +10,11 @@ const dist = resolve(import.meta.dirname, '..', 'dist');
 
 async function rewrite(file: string, transform: (value: unknown) => unknown) {
   const path = resolve(dist, file);
+  try {
+    await access(path);
+  } catch {
+    return;
+  }
   const before = await readFile(path, 'utf8');
   const after = JSON.stringify(transform(JSON.parse(before)));
   await writeFile(path, after);
@@ -18,11 +23,12 @@ async function rewrite(file: string, transform: (value: unknown) => unknown) {
   );
 }
 
-await rewrite('data.json', (roster) =>
+const slimRoster = (roster: unknown) =>
   (roster as Roster).map((person) => {
     const shipped: Record<string, unknown> = { ...person };
     for (const field of UNSHIPPED_FIELDS) delete shipped[field];
     return shipped;
-  }),
-);
+  });
+
+await rewrite('data.json', slimRoster);
 await rewrite('relationships.json', (database) => database);

@@ -8,15 +8,16 @@ import { readFileSync } from 'node:fs';
 import { isDeepStrictEqual } from 'node:util';
 import type { RosterEntry } from '../src/data.ts';
 
+const rosterFile = 'public/data.json';
 const baseRef = process.argv[2] ?? 'origin/main';
 const base = JSON.parse(
-  execFileSync('git', ['show', `${baseRef}:public/data.json`], {
+  execFileSync('git', ['show', `${baseRef}:${rosterFile}`], {
     encoding: 'utf8',
     maxBuffer: 100_000_000,
   }),
 ) as RosterEntry[];
 const current = new Map(
-  (JSON.parse(readFileSync('public/data.json', 'utf8')) as RosterEntry[]).map((person) => [
+  (JSON.parse(readFileSync(rosterFile, 'utf8')) as RosterEntry[]).map((person) => [
     person.id,
     person,
   ]),

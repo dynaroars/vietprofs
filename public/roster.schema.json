@@ -3,7 +3,7 @@
   "title": "VietProfs Roster Schema",
   "description": "Schema for the Vietnamese and diaspora faculty roster (public/data.json)",
   "type": "array",
-  "minItems": 1,
+  "minItems": 0,
   "items": {
     "type": "object",
     "required": [
@@ -38,7 +38,12 @@
         "enum": [
           "University",
           "Public research institute",
-          "Independent nonprofit research institute"
+          "Independent nonprofit research institute",
+          "Corporate research lab",
+          "Policy & international organization",
+          "Think tank",
+          "Government & defense",
+          "National laboratory"
         ],
         "description": "Omitted for a university; otherwise the kind of research institute"
       },
@@ -81,7 +86,10 @@
           "Clinical",
           "Admin and Staff",
           "Emeritus",
-          "Deceased"
+          "Deceased",
+          "Industry Research",
+          "Policy & Think Tank",
+          "Government & Defense"
         ],
         "description": "Appointment track"
       },
