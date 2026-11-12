@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-12T14:10:13.000Z",
+  "updatedAt": "2026-11-12T23:03:31.000Z",
   "relationships": [
     {
       "id": "rel-coauthor-vp-0015-vp-0018",
@@ -161,6 +161,45 @@
         }
       ],
       "verifiedAt": "2026-09-23T04:50:00.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-0047-vp-3204",
+      "type": "coauthor",
+      "sourceId": "vp-0047",
+      "targetId": "vp-3204",
+      "sources": [
+        "https://computerscience.nmsu.edu/_files/documents/newsletter-2013-fall.pdf"
+      ],
+      "evidence": "Crossref records name Khoi Nguyen (also published as Hoang-Khoi Nguyen) and Tran Cao Son (Tran Son) of New Mexico State University as coauthors on these conformant-planning works from his NMSU doctoral period; the NMSU newsletter lists the 2013 ACM TIST paper among the department's publications.",
+      "works": [
+        {
+          "identifier": "doi:10.1007/978-3-540-92995-6_17",
+          "title": "Improving Performance of Conformant Planners: Static Analysis of Declarative Planning Domain Specifications",
+          "date": "2008",
+          "url": "https://doi.org/10.1007/978-3-540-92995-6_17"
+        },
+        {
+          "identifier": "doi:10.1609/aaai.v25i1.8005",
+          "title": "On Improving Conformant Planners by Analyzing Domain-Structures",
+          "date": "2011-08-04",
+          "url": "https://doi.org/10.1609/aaai.v25i1.8005"
+        },
+        {
+          "identifier": "doi:10.1609/icaps.v22i1.13498",
+          "title": "On Computing Conformant Plans Using Classical Planners: A Generate-And-Complete Approach",
+          "date": "2012-05-14",
+          "url": "https://doi.org/10.1609/icaps.v22i1.13498"
+        },
+        {
+          "identifier": "doi:10.1145/2438653.2438671",
+          "title": "A conformant planner based on approximation",
+          "date": "2013-03",
+          "url": "https://doi.org/10.1145/2438653.2438671"
+        }
+      ],
+      "verifiedAt": "2026-11-12T23:03:31.000Z",
       "direct": false,
       "notes": ""
     },
@@ -2550,6 +2589,45 @@
       "notes": ""
     },
     {
+      "id": "rel-coauthor-vp-0922-vp-3268",
+      "type": "coauthor",
+      "sourceId": "vp-0922",
+      "targetId": "vp-3268",
+      "sources": [
+        "https://anhvu.doan.eu.com/publications"
+      ],
+      "evidence": "OpenAlex records Nguyen Anh Vu Doan (TU Munich, later Infineon Technologies) and Khanh N. Dang (VNU Hanoi, later University of Aizu) as coauthors on these neuromorphic-systems works; the affiliations, field and Doan's own publication list match vp-3268 and vp-0922.",
+      "works": [
+        {
+          "identifier": "doi:10.1109/tetc.2021.3136028",
+          "title": "MigSpike: A Migration Based Algorithms and Architecture for Scalable Robust Neuromorphic Systems",
+          "date": "2021",
+          "url": "https://doi.org/10.1109/tetc.2021.3136028"
+        },
+        {
+          "identifier": "doi:10.1109/access.2023.3345168",
+          "title": "HeterGenMap: An Evolutionary Mapping Framework for Heterogeneous NoC-Based Neuromorphic Systems",
+          "date": "2023",
+          "url": "https://doi.org/10.1109/access.2023.3345168"
+        },
+        {
+          "identifier": "doi:10.1109/mcsoc64144.2024.00075",
+          "title": "Energy-Efficient Spiking Neural Networks Using Approximate Neuron Circuits and 3D Stacking Memory",
+          "date": "2024-12-16",
+          "url": "https://doi.org/10.1109/mcsoc64144.2024.00075"
+        },
+        {
+          "identifier": "doi:10.1109/tcad.2025.3597251",
+          "title": "<i>ApproxiMorph</i>\n                    : Energy-Efficient Neuromorphic System With Layer-Wise Approximation of Spiking Neural Networks and 3-D-Stacked SRAM",
+          "date": "2026-03",
+          "url": "https://doi.org/10.1109/tcad.2025.3597251"
+        }
+      ],
+      "verifiedAt": "2026-11-12T23:03:31.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
       "id": "rel-coauthor-vp-0926-vp-0932",
       "type": "coauthor",
       "sourceId": "vp-0926",
@@ -3795,6 +3873,57 @@
       "notes": ""
     },
     {
+      "id": "rel-coauthor-vp-2180-vp-3213",
+      "type": "coauthor",
+      "sourceId": "vp-2180",
+      "targetId": "vp-3213",
+      "sources": [
+        "https://kuniong.github.io/cv/"
+      ],
+      "evidence": "Hung Q. Nguyen's CV lists these papers coauthored with Tuan Phung-Duc; OpenAlex records both authors with University of Tsukuba affiliations, matching vp-2180 and vp-3213.",
+      "works": [
+        {
+          "identifier": "doi:10.1007/s11134-022-09786-3",
+          "title": "Strategic customer behavior and optimal policies in a passenger–taxi double-ended queueing system with multiple access points and nonzero matching times",
+          "date": "2022-12",
+          "url": "https://doi.org/10.1007/s11134-022-09786-3"
+        },
+        {
+          "identifier": "doi:10.1016/j.cie.2022.108306",
+          "title": "Supply–demand equilibria and multivariate optimization of social welfare in double-ended queueing systems",
+          "date": "2022-08",
+          "url": "https://doi.org/10.1016/j.cie.2022.108306"
+        },
+        {
+          "identifier": "doi:10.1016/j.orl.2022.05.004",
+          "title": "A two-population game in observable double-ended queuing systems",
+          "date": "2022-07",
+          "url": "https://doi.org/10.1016/j.orl.2022.05.004"
+        },
+        {
+          "identifier": "doi:10.1016/j.orl.2022.04.003",
+          "title": "To wait or not to wait: Strategic behaviors in an observable batch-service queueing system",
+          "date": "2022-05",
+          "url": "https://doi.org/10.1016/j.orl.2022.04.003"
+        },
+        {
+          "identifier": "doi:10.3390/math10122101",
+          "title": "Modified Erlang Loss System for Cognitive Wireless Networks",
+          "date": "2022-06-16",
+          "url": "https://doi.org/10.3390/math10122101"
+        },
+        {
+          "identifier": "doi:10.1016/j.orl.2025.107362",
+          "title": "Subgame perfect Nash equilibrium analysis in a two-population strategic matching queue with nonzero matching times",
+          "date": "2025-11",
+          "url": "https://doi.org/10.1016/j.orl.2025.107362"
+        }
+      ],
+      "verifiedAt": "2026-11-12T23:03:31.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
       "id": "rel-coauthor-vp-2474-vp-2730",
       "type": "coauthor",
       "sourceId": "vp-2474",
@@ -3913,6 +4042,20 @@
       "evidence": "My Thai's (vp-0044) official lab page lists Nam P Nguyen among former PhD students, noting his current position as Assistant Professor at Towson University; this matches vp-0029's recorded PhD Florida 2013, Towson appointment, and \"npnguyen\" personal site.",
       "works": [],
       "verifiedAt": "2026-09-22T18:00:00.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-doctoral-advisor-vp-0047-vp-3204",
+      "type": "doctoral-advisor",
+      "sourceId": "vp-0047",
+      "targetId": "vp-3204",
+      "sources": [
+        "https://computerscience.nmsu.edu/_files/documents/newsletter-2013-fall.pdf"
+      ],
+      "evidence": "The NMSU Computer Science Fall 2013 newsletter lists Khoi Nguyen among the 2012-2013 CS doctoral graduates (dissertation \"Methodologies for Scaling Up Conformant Planning\") and states \"All four students were co-advised by Drs. Son Tran and Enrico Pontelli.\" vp-0047 is Son Tran (Tran Cao Son), NMSU Computer Science; vp-3204 is the same Khoi Nguyen per his NMSU PhD and conformant-planning publications.",
+      "works": [],
+      "verifiedAt": "2026-11-12T23:03:31.000Z",
       "direct": false,
       "notes": ""
     },
@@ -4160,6 +4303,21 @@
       "evidence": "Oanh Nguyen's (vp-0209) own CV lists \"Ph.D. in Mathematics, Yale University. Advisor: Professor Van Vu\"; matches vp-0711 (Van H. Vu).",
       "works": [],
       "verifiedAt": "2026-09-23T04:55:00.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-doctoral-advisor-vp-2180-vp-3213",
+      "type": "doctoral-advisor",
+      "sourceId": "vp-2180",
+      "targetId": "vp-3213",
+      "sources": [
+        "https://kuniong.github.io/cv/",
+        "https://www.sk.tsukuba.ac.jp/~tuan/lab/member.html"
+      ],
+      "evidence": "Hung Q. Nguyen's maintained CV says \"Ph.D. in Policy and Planning Sciences, University of Tsukuba, Applied Stochastic Systems Laboratory, supervised by Professor Tuan Phung-Duc\" (04/2020-03/2023); the laboratory's member page lists Nguyen Quoc Hung as a doctoral graduate (March 2023). vp-2180 is Tuan Phung-Duc, University of Tsukuba.",
+      "works": [],
+      "verifiedAt": "2026-11-12T23:03:31.000Z",
       "direct": false,
       "notes": ""
     },
@@ -5025,6 +5183,486 @@
       "evidence": "His maintained resume says \"Postdoctoral Fellow in Magnetic Resonance Imaging Physics advised by Prof. Krishna Nayak\".",
       "works": [],
       "verifiedAt": "2026-11-12T14:10:13.000Z",
+      "notes": ""
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-3179",
+      "role": "mentor",
+      "name": "Jordan Boyd-Graber",
+      "affiliation": "University of Maryland",
+      "url": "",
+      "sources": [
+        "https://psresnik.github.io/students.html"
+      ],
+      "evidence": "Philip Resnik's advisees page lists \"Dr. Thang Nguyen (CS, co-advised with Jordan Boyd-Graber)\".",
+      "works": [],
+      "verifiedAt": "2026-11-12T23:03:31.000Z",
+      "notes": ""
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-3179",
+      "role": "mentor",
+      "name": "Philip Resnik",
+      "affiliation": "University of Maryland",
+      "url": "",
+      "sources": [
+        "https://psresnik.github.io/students.html"
+      ],
+      "evidence": "Philip Resnik's advisees page lists \"Dr. Thang Nguyen (CS, co-advised with Jordan Boyd-Graber)\" with his 2019 thesis \"Rich and Scalable Models for Text\".",
+      "works": [],
+      "verifiedAt": "2026-11-12T23:03:31.000Z",
+      "notes": ""
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-3182",
+      "role": "mentor",
+      "name": "Lev R. Ginzburg",
+      "affiliation": "Stony Brook University",
+      "url": "",
+      "sources": [
+        "https://commons.library.stonybrook.edu/stony-brook-theses-and-dissertations-collection/647/"
+      ],
+      "evidence": "The Stony Brook dissertation record for Jeremy Khai Tran, \"Adaptation by group selection: elimination acts on all levels\" (2011), lists Advisor: Ginzburg, Lev R.",
+      "works": [],
+      "verifiedAt": "2026-11-12T23:03:31.000Z",
+      "notes": ""
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-3188",
+      "role": "mentor",
+      "name": "Placidus Amama",
+      "affiliation": "Kansas State University",
+      "url": "",
+      "sources": [
+        "https://www.k-state.edu/graduation/ceremonies/fall2016/2016-Fall-Commencement.pdf"
+      ],
+      "evidence": "The Kansas State Fall 2016 commencement program lists Phong Nguyen, Doctor of Philosophy (Chemical Engineering), \"Co-Major Professors: Placidus Amama, Ph.D., and Vikas Berry, Ph.D.\"",
+      "works": [],
+      "verifiedAt": "2026-11-12T23:03:31.000Z",
+      "notes": ""
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-3188",
+      "role": "mentor",
+      "name": "Vikas Berry",
+      "affiliation": "Kansas State University",
+      "url": "",
+      "sources": [
+        "https://www.k-state.edu/graduation/ceremonies/fall2016/2016-Fall-Commencement.pdf"
+      ],
+      "evidence": "The Kansas State Fall 2016 commencement program lists Phong Nguyen, Doctor of Philosophy, \"Co-Major Professors: Placidus Amama, Ph.D., and Vikas Berry, Ph.D.\"",
+      "works": [],
+      "verifiedAt": "2026-11-12T23:03:31.000Z",
+      "notes": ""
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-3196",
+      "role": "mentor",
+      "name": "Matteo Barsuglia",
+      "affiliation": "Laboratoire AstroParticule et Cosmologie (APC), Université Paris Cité",
+      "url": "",
+      "sources": [
+        "https://apc.u-paris.fr/fr/soutenance-de-these-catherine-nguyen"
+      ],
+      "evidence": "The APC PhD defense announcement says Catherine Nguyen did her thesis work \"under the supervision of Matteo Barsuglia\" (defense 5 October 2021).",
+      "works": [],
+      "verifiedAt": "2026-11-12T23:03:31.000Z",
+      "notes": ""
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-3202",
+      "role": "mentor",
+      "name": "Rebecca M. Voorhees",
+      "affiliation": "California Institute of Technology",
+      "url": "",
+      "sources": [
+        "https://thesis.caltech.edu/17288/"
+      ],
+      "evidence": "The Caltech thesis record for Nguyen, Vy Ngoc Mai, Ph.D. dissertation (2025), lists Advisor: Voorhees, Rebecca M.",
+      "works": [],
+      "verifiedAt": "2026-11-12T23:03:31.000Z",
+      "notes": ""
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-3204",
+      "role": "mentor",
+      "name": "Enrico Pontelli",
+      "affiliation": "New Mexico State University",
+      "url": "",
+      "sources": [
+        "https://computerscience.nmsu.edu/_files/documents/newsletter-2013-fall.pdf"
+      ],
+      "evidence": "The NMSU CS Fall 2013 newsletter says Khoi Nguyen and three other 2012-2013 doctoral graduates \"were co-advised by Drs. Son Tran and Enrico Pontelli.\"",
+      "works": [],
+      "verifiedAt": "2026-11-12T23:03:31.000Z",
+      "notes": ""
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-3205",
+      "role": "mentor",
+      "name": "Fuat E. Celik",
+      "affiliation": "Rutgers University",
+      "url": "",
+      "sources": [
+        "https://grad.rutgers.edu/sites/default/files/2023-05/SGS%20Convocation%20Program%202023.pdf"
+      ],
+      "evidence": "The Rutgers 2023 graduate convocation program lists Dinh Thu Nguyen, \"Advisors: George Tsilomelekis and Fuat E. Celik\".",
+      "works": [],
+      "verifiedAt": "2026-11-12T23:03:31.000Z",
+      "notes": ""
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-3205",
+      "role": "mentor",
+      "name": "George Tsilomelekis",
+      "affiliation": "Rutgers University",
+      "url": "",
+      "sources": [
+        "https://grad.rutgers.edu/sites/default/files/2023-05/SGS%20Convocation%20Program%202023.pdf"
+      ],
+      "evidence": "The Rutgers 2023 graduate convocation program lists Dinh Thu Nguyen, Chemical and Biochemical Engineering, \"Advisors: George Tsilomelekis and Fuat E. Celik\".",
+      "works": [],
+      "verifiedAt": "2026-11-12T23:03:31.000Z",
+      "notes": ""
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-3209",
+      "role": "mentor",
+      "name": "Cees G. M. Snoek",
+      "affiliation": "University of Amsterdam",
+      "url": "",
+      "sources": [
+        "https://dare.uva.nl/id/cf6c257f-56f3-4bf7-a817-2c74ae25acd0"
+      ],
+      "evidence": "The University of Amsterdam thesis record \"On inductive biases in vision transformers\" by D.K. Nguyen (award date 9 February 2026) lists Supervisors: C.G.M. Snoek.",
+      "works": [],
+      "verifiedAt": "2026-11-12T23:03:31.000Z",
+      "notes": ""
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-3209",
+      "role": "mentor",
+      "name": "Martin R. Oswald",
+      "affiliation": "University of Amsterdam",
+      "url": "",
+      "sources": [
+        "https://dare.uva.nl/id/cf6c257f-56f3-4bf7-a817-2c74ae25acd0"
+      ],
+      "evidence": "The University of Amsterdam thesis record by D.K. Nguyen lists Co-supervisors: M.R. Oswald.",
+      "works": [],
+      "verifiedAt": "2026-11-12T23:03:31.000Z",
+      "notes": ""
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-3210",
+      "role": "mentor",
+      "name": "Cyrus Shahabi",
+      "affiliation": "University of Southern California",
+      "url": "",
+      "sources": [
+        "https://duykien.net/research/"
+      ],
+      "evidence": "His research page says he completed his USC PhD in August 2021 at InfoLab \"under the supervision of Prof. Cyrus Shahabi\".",
+      "works": [],
+      "verifiedAt": "2026-11-12T23:03:31.000Z",
+      "notes": ""
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-3216",
+      "role": "mentor",
+      "name": "Peter Bühlmann",
+      "affiliation": "ETH Zurich",
+      "url": "",
+      "sources": [
+        "https://people.math.ethz.ch/~peterbu/CV2026.pdf"
+      ],
+      "evidence": "Peter Bühlmann's CV lists under PhD student supervision \"2022: An-phi Nguyen, ETH Zurich and IBM Ruschlikon\".",
+      "works": [],
+      "verifiedAt": "2026-11-12T23:03:31.000Z",
+      "notes": ""
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-3225",
+      "role": "mentor",
+      "name": "Maurizio Filippone",
+      "affiliation": "EURECOM",
+      "url": "",
+      "sources": [
+        "https://tranbahien.github.io/"
+      ],
+      "evidence": "His homepage says he obtained his PhD in machine learning from Sorbonne University \"under the supervision of Prof. Maurizio Filippone\".",
+      "works": [],
+      "verifiedAt": "2026-11-12T23:03:31.000Z",
+      "notes": ""
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-3227",
+      "role": "mentor",
+      "name": "Jian Yang",
+      "affiliation": "The University of Texas at Arlington",
+      "url": "",
+      "sources": [
+        "https://mavmatrix.uta.edu/bioengineering_dissertations/20/"
+      ],
+      "evidence": "The UT Arlington dissertation record for M. Richard Tran, \"Methodology of Citrate-based Biomaterial Development and Application\" (PhD Biomedical Engineering, 2011), lists First Advisor: Jian Yang.",
+      "works": [],
+      "verifiedAt": "2026-11-12T23:03:31.000Z",
+      "notes": ""
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-3238",
+      "role": "mentor",
+      "name": "Brian B. Liau",
+      "affiliation": "Harvard University",
+      "url": "",
+      "sources": [
+        "https://dash.harvard.edu/server/api/core/bitstreams/73d14956-a87d-49c1-99c9-474dc82796cc/content"
+      ],
+      "evidence": "Her Harvard dissertation (June 2021) front matter names \"Dissertation Advisor: Brian B. Liau\".",
+      "works": [],
+      "verifiedAt": "2026-11-12T23:03:31.000Z",
+      "notes": ""
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-3242",
+      "role": "mentor",
+      "name": "Raphaële Clément",
+      "affiliation": "University of California, Santa Barbara",
+      "url": "",
+      "sources": [
+        "https://clement.materials.ucsb.edu/people/howie-nguyen"
+      ],
+      "evidence": "The Clément Research Group (UCSB Materials) lists Howie Nguyen as a \"Former Ph.D. student\".",
+      "works": [],
+      "verifiedAt": "2026-11-12T23:03:31.000Z",
+      "notes": ""
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-3261",
+      "role": "mentor",
+      "name": "James M. Rehg",
+      "affiliation": "Georgia Institute of Technology",
+      "url": "",
+      "sources": [
+        "https://anhthai1997.com/"
+      ],
+      "evidence": "Her site says she was a PhD student at Georgia Tech \"advised by Professor James M. Rehg and Professor Judy Hoffman\".",
+      "works": [],
+      "verifiedAt": "2026-11-12T23:03:31.000Z",
+      "notes": ""
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-3261",
+      "role": "mentor",
+      "name": "Judy Hoffman",
+      "affiliation": "Georgia Institute of Technology",
+      "url": "",
+      "sources": [
+        "https://anhthai1997.com/"
+      ],
+      "evidence": "Her site says she was a PhD student at Georgia Tech \"advised by Professor James M. Rehg and Professor Judy Hoffman\".",
+      "works": [],
+      "verifiedAt": "2026-11-12T23:03:31.000Z",
+      "notes": ""
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-3265",
+      "role": "mentor",
+      "name": "Mari Ostendorf",
+      "affiliation": "University of Washington",
+      "url": "",
+      "sources": [
+        "https://ttmt001.github.io/"
+      ],
+      "evidence": "Her site says that at the University of Washington ECE TIAL lab \"I was advised by Prof. Mari Ostendorf.\"",
+      "works": [],
+      "verifiedAt": "2026-11-12T23:03:31.000Z",
+      "notes": ""
+    },
+    {
+      "type": "masters-advisor",
+      "personId": "vp-3265",
+      "role": "mentor",
+      "name": "Robert Nickel",
+      "affiliation": "Bucknell University",
+      "url": "",
+      "sources": [
+        "https://ttmt001.github.io/"
+      ],
+      "evidence": "Her site says \"My Master's thesis advisor was Prof. Robert Nickel\" (Bucknell University, Electrical and Computer Engineering).",
+      "works": [],
+      "verifiedAt": "2026-11-12T23:03:31.000Z",
+      "notes": ""
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-3269",
+      "role": "mentor",
+      "name": "Ryan A. Shenvi",
+      "affiliation": "Scripps Research",
+      "url": "",
+      "sources": [
+        "https://www.scripps.edu/news-events/news/20250522-graduation/"
+      ],
+      "evidence": "The Scripps Research 2025 graduation announcement lists graduate Ngoc Thanh Nam (Nathan) Dao with advisor Ryan A. Shenvi, PhD.",
+      "works": [],
+      "verifiedAt": "2026-11-12T23:03:31.000Z",
+      "notes": ""
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-3273",
+      "role": "mentor",
+      "name": "Akihiro Sugimoto",
+      "affiliation": "National Institute of Informatics",
+      "url": "",
+      "sources": [
+        "https://vmdlab.github.io/"
+      ],
+      "evidence": "His homepage lists \"Ph.D. Computer Science, SOKENDAI / NII, Advisor: Prof. Akihiro Sugimoto\".",
+      "works": [],
+      "verifiedAt": "2026-11-12T23:03:31.000Z",
+      "notes": ""
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-3276",
+      "role": "mentor",
+      "name": "Reza Haffari",
+      "affiliation": "Monash University",
+      "url": "",
+      "sources": [
+        "https://duyvuleo.github.io/"
+      ],
+      "evidence": "His homepage says his 2019 Melbourne PhD was \"under the joint supervision of Prof. Trevor Cohn and Prof. Reza Haffari\".",
+      "works": [],
+      "verifiedAt": "2026-11-12T23:03:31.000Z",
+      "notes": ""
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-3276",
+      "role": "mentor",
+      "name": "Trevor Cohn",
+      "affiliation": "University of Melbourne",
+      "url": "",
+      "sources": [
+        "https://duyvuleo.github.io/"
+      ],
+      "evidence": "His homepage says he obtained his PhD from the University of Melbourne in 2019 \"under the joint supervision of Prof. Trevor Cohn and Prof. Reza Haffari\".",
+      "works": [],
+      "verifiedAt": "2026-11-12T23:03:31.000Z",
+      "notes": ""
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-3277",
+      "role": "mentor",
+      "name": "David R. Hunter",
+      "affiliation": "Pennsylvania State University",
+      "url": "",
+      "sources": [
+        "https://science.psu.edu/stat/alumni/members"
+      ],
+      "evidence": "The Penn State Statistics alumni page lists Duy Vu, PhD, thesis \"Statistical Models and Algorithms for Large Network Analysis\", Advisor: David Hunter, current position Oracle.",
+      "works": [],
+      "verifiedAt": "2026-11-12T23:03:31.000Z",
+      "notes": ""
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-3280",
+      "role": "mentor",
+      "name": "Alexey Gorshkov",
+      "affiliation": "University of Maryland",
+      "url": "",
+      "sources": [
+        "https://www.quics.umd.edu/people/minh-tran"
+      ],
+      "evidence": "His QuICS alumni page says \"His advisers were Jacob Taylor and Alexey Gorshkov\" and that he received his Physics PhD from the University of Maryland in 2021.",
+      "works": [],
+      "verifiedAt": "2026-11-12T23:03:31.000Z",
+      "notes": ""
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-3280",
+      "role": "mentor",
+      "name": "Jacob Taylor",
+      "affiliation": "University of Maryland",
+      "url": "",
+      "sources": [
+        "https://www.quics.umd.edu/people/minh-tran"
+      ],
+      "evidence": "His QuICS alumni page says \"His advisers were Jacob Taylor and Alexey Gorshkov\".",
+      "works": [],
+      "verifiedAt": "2026-11-12T23:03:31.000Z",
+      "notes": ""
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-3283",
+      "role": "mentor",
+      "name": "Elizabeth McNally",
+      "affiliation": "University of Chicago",
+      "url": "",
+      "sources": [
+        "https://drsb.uchicago.edu/program/alumni/andy-vo"
+      ],
+      "evidence": "The University of Chicago DRSB alumni record for Andy Vo (graduation 2019, thesis \"Genetic modifiers of muscular dystrophy\") lists Advisor: Elizabeth McNally.",
+      "works": [],
+      "verifiedAt": "2026-11-12T23:03:31.000Z",
+      "notes": ""
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-3295",
+      "role": "mentor",
+      "name": "Gita Alaghband",
+      "affiliation": "University of Colorado Denver",
+      "url": "",
+      "sources": [
+        "https://cse.ucdenver.edu/~gita/"
+      ],
+      "evidence": "Gita Alaghband's faculty page lists among her PhD students \"Manh Huynh: Online Adaptive Learning For Pedestrian Future Trajectory Prediction In Dynamic Scenes (Graduated 2023, Researcher at Nissan Motor Corporation, CA)\".",
+      "works": [],
+      "verifiedAt": "2026-11-12T23:03:31.000Z",
+      "notes": ""
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-3297",
+      "role": "mentor",
+      "name": "Matthew L. Becker",
+      "affiliation": "The University of Akron",
+      "url": "",
+      "sources": [
+        "https://www.uakron.edu/registrar/docs/2020%20Summer-Fall%20Program-Virtual.pdf?language_id=1"
+      ],
+      "evidence": "The University of Akron 2020 commencement program lists Derek Luong, Polymer Science, dissertation \"Surface Modification of Biomedical Implants Through Physical and Covalent Interactions\", Adviser: Dr. Matthew Becker.",
+      "works": [],
+      "verifiedAt": "2026-11-12T23:03:31.000Z",
       "notes": ""
     }
   ]
