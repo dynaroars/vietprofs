@@ -107,7 +107,8 @@
     "103": {"status":"complete","startedAt":"2026-11-07T14:10:46.000Z","completedAt":"2026-11-07T14:10:46.000Z","notes":"OpenAlex coauthor scan (API key) for 20 members; 9 new coauthor edges after identity checks. Name-only matches rejected. Advisor web searches for vp-2688, vp-2655, vp-2686 found no roster advisor. NSF/NIH/patent searches not run."},
     "104": {"status":"complete","startedAt":"2026-11-09T14:12:22.787Z","completedAt":"2026-11-09T14:12:22.787Z","notes":"OpenAlex coauthor scan (API key) for 20 members; 5 new coauthor edges, all for vp-2654 after identity checks (author A5047541214). Name-only/token-set matches for vp-2711, 2708, 2705, 2702, 2701, 2699 rejected as namesakes (different field/institution). Web advisor searches, NSF/NIH and patent searches not run this batch."},
     "105": {"status":"complete","startedAt":"2026-11-10T14:10:00.000Z","completedAt":"2026-11-10T14:11:43.000Z","notes":"OpenAlex scan (API key) for 20 members: 1 new coauthor edge vp-2474/vp-2730. Name-only matches for vp-2734, 2728, 2726, 2737, 2727 rejected as namesakes (different institution/field). Web advisor searches limited (3 tried, nothing explicit); NSF/NIH/patent searches not run."},
-    "106": {"status":"complete","startedAt":"2026-11-11T14:10:52.981Z","completedAt":"2026-11-11T14:10:52.981Z","notes":"OpenAlex scan (API key) for 20 members: 1 new coauthor edge vp-1356/vp-2909 (3 NYU works). 1 external doctoral-advisor record (vp-2906 -> Gordon J. Miller, official CSUSB profile). Name-only matches for vp-2910, 2904, 2903, 2902, 2901, 2900, 2899, 2898, 2897, 2893 rejected as namesakes or different institution/field; vp-2907/vp-0015 two ETS-era works (ISSPA 2012, ICIP 2015) listed Ngan Le at Carnegie Mellon, identity unresolved so not recorded. Web advisor checks: vp-2907 ETS profile (no own advisor named; postdoc supervisor Chenyang Xu only, not mentor-of-record), vp-2893 Berkeley SSL profile (PhD Dartmouth 1991, no advisor named). NSF/NIH/patent searches not run."}
+    "106": {"status":"complete","startedAt":"2026-11-11T14:10:52.981Z","completedAt":"2026-11-11T14:10:52.981Z","notes":"OpenAlex scan (API key) for 20 members: 1 new coauthor edge vp-1356/vp-2909 (3 NYU works). 1 external doctoral-advisor record (vp-2906 -> Gordon J. Miller, official CSUSB profile). Name-only matches for vp-2910, 2904, 2903, 2902, 2901, 2900, 2899, 2898, 2897, 2893 rejected as namesakes or different institution/field; vp-2907/vp-0015 two ETS-era works (ISSPA 2012, ICIP 2015) listed Ngan Le at Carnegie Mellon, identity unresolved so not recorded. Web advisor checks: vp-2907 ETS profile (no own advisor named; postdoc supervisor Chenyang Xu only, not mentor-of-record), vp-2893 Berkeley SSL profile (PhD Dartmouth 1991, no advisor named). NSF/NIH/patent searches not run."},
+    "107": {"status":"complete","startedAt":"2026-11-12T14:10:13.000Z","completedAt":"2026-11-12T14:10:13.000Z","notes":"OpenAlex scan (API key) for 20 members: no new coauthor edges. Same-name hits rejected as namesakes: vp-3174/vp-1886 (Hoai Viet Nguyen at Parse Biosciences is a biologist, not TH Köln), vp-3165 with vp-0025/vp-2994 (1 work, namesake Khanh Nguyen), vp-3176/vp-1437 (1 work). 7 external advisor/mentor records from personal sites (vp-3175 resume: Krishna Nayak PhD/MS/postdoc; vp-3157 site: 4 PhD supervisors). vp-3161 site returned 503. NSF/NIH/patent searches not run."}
   },
   "people": {
     "vp-0001": {"batch":1,"status":"unresolved","sources":["https://engineering.catholic.edu/research-and-faculty/faculty-profiles/computer-science/hieu-bui/index.html"],"nextAction":"Search official CVs, dissertation records, and identity-resolved publications for roster-internal advisor, mentor, or coauthor evidence."},
@@ -2218,6 +2219,26 @@
     "vp-2909": {"batch":106,"status":"completed"},
     "vp-2910": {"batch":106,"status":"unresolved","sources":["OpenAlex author search and works scan (roster-name matches rejected as namesakes or none found)"],"nextAction":"Check CV/lab page and dissertation records for advisor; run NSF/NIH/patent searches."},
     "vp-2911": {"batch":106,"status":"unresolved","sources":["OpenAlex author search and works scan (roster-name matches rejected as namesakes or none found)"],"nextAction":"Check CV/lab page and dissertation records for advisor; run NSF/NIH/patent searches."},
-    "vp-2912": {"batch":106,"status":"unresolved","sources":["OpenAlex author search and works scan (roster-name matches rejected as namesakes or none found)"],"nextAction":"Check CV/lab page and dissertation records for advisor; run NSF/NIH/patent searches."}
+    "vp-2912": {"batch":106,"status":"unresolved","sources":["OpenAlex author search and works scan (roster-name matches rejected as namesakes or none found)"],"nextAction":"Check CV/lab page and dissertation records for advisor; run NSF/NIH/patent searches."},
+    "vp-3157": {"batch":107,"status":"completed"},
+    "vp-3158": {"batch":107,"status":"completed"},
+    "vp-3159": {"batch":107,"status":"completed"},
+    "vp-3160": {"batch":107,"status":"completed"},
+    "vp-3161": {"batch":107,"status":"completed"},
+    "vp-3162": {"batch":107,"status":"completed"},
+    "vp-3163": {"batch":107,"status":"completed"},
+    "vp-3164": {"batch":107,"status":"completed"},
+    "vp-3165": {"batch":107,"status":"completed"},
+    "vp-3166": {"batch":107,"status":"completed"},
+    "vp-3167": {"batch":107,"status":"completed"},
+    "vp-3168": {"batch":107,"status":"completed"},
+    "vp-3169": {"batch":107,"status":"completed"},
+    "vp-3170": {"batch":107,"status":"completed"},
+    "vp-3171": {"batch":107,"status":"completed"},
+    "vp-3172": {"batch":107,"status":"completed"},
+    "vp-3173": {"batch":107,"status":"completed"},
+    "vp-3174": {"batch":107,"status":"completed"},
+    "vp-3175": {"batch":107,"status":"completed"},
+    "vp-3176": {"batch":107,"status":"completed"}
   }
 }
