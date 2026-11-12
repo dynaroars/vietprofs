@@ -149,16 +149,9 @@
     "vp-0819": {
       "name": "Mylinh T. Nguyen",
       "outcome": "not_found",
-      "pageUrl": "https://profiles.ucsd.edu/mylinh.nguyen",
-      "imageUrl": "https://profiles.ucsd.edu/profile/Modules/CustomViewPersonGeneralInfo/PhotoHandler.ashx?NodeID=182738",
-      "sourceType": "official_faculty",
-      "confidence": "MEDIUM",
-      "identitySignals": [
-        "name",
-        "stored_roster_url"
-      ],
-      "retrievedAt": "2026-11-01T17:25:28.429Z",
-      "note": "2026-11-01 deep audit: own-page profile photo failed --store checks (image could not be downloaded)"
+      "identitySignals": [],
+      "retrievedAt": "2026-11-11T11:14:42.047Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-0823": {
       "name": "Tien Hung Nguyen",
@@ -260,17 +253,20 @@
     },
     "vp-0880": {
       "name": "Matthew Thai-Khang Nguyen",
-      "outcome": "not_found",
+      "outcome": "needs_review",
       "pageUrl": "https://vivo.weill.cornell.edu/display/cwid-mtn9004",
-      "imageUrl": "https://directory.weill.cornell.edu/api/v1/person/profile/mtn9004.png?returnGenericOn404=true",
+      "imageUrl": "https://vivo.weill.cornell.edu/images/DirectoryGenericPhoto.png",
       "sourceType": "official_faculty",
       "confidence": "MEDIUM",
       "identitySignals": [
         "name",
+        "institution",
+        "department",
+        "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-11-01T17:16:08.292Z",
-      "note": "2026-11-01 deep audit: name-matched candidate failed --store checks (image could not be downloaded)"
+      "retrievedAt": "2026-11-11T11:15:09.533Z",
+      "note": "candidate requires visual review before acceptance"
     },
     "vp-0886": {
       "name": "Hanh Nguyen",
@@ -655,17 +651,20 @@
     },
     "vp-0971": {
       "name": "Truc Tran",
-      "outcome": "not_found",
+      "outcome": "needs_review",
       "pageUrl": "https://vivo.weill.cornell.edu/display/cwid-ttt4001",
-      "imageUrl": "https://directory.weill.cornell.edu/api/v1/person/profile/ttt4001.png?returnGenericOn404=true",
+      "imageUrl": "https://vivo.weill.cornell.edu/images/DirectoryGenericPhoto.png",
       "sourceType": "official_faculty",
       "confidence": "MEDIUM",
       "identitySignals": [
         "name",
+        "institution",
+        "department",
+        "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-11-01T17:16:08.292Z",
-      "note": "2026-11-01 deep audit: name-matched candidate failed --store checks (face check none (0 faces))"
+      "retrievedAt": "2026-11-11T11:15:09.878Z",
+      "note": "candidate requires visual review before acceptance"
     },
     "vp-0981": {
       "name": "Ba D. Nguyen",
@@ -858,16 +857,9 @@
     "vp-1067": {
       "name": "Huy Chau",
       "outcome": "not_found",
-      "pageUrl": "https://research.manchester.ac.uk/en/persons/huy.chau",
-      "imageUrl": "https://research.manchester.ac.uk/assets/no-portrait-473c6d005990baa1f418d9c668dcd4ec.png",
-      "sourceType": "official_faculty",
-      "confidence": "MEDIUM",
-      "identitySignals": [
-        "name",
-        "stored_roster_url"
-      ],
-      "retrievedAt": "2026-11-01T17:16:08.292Z",
-      "note": "2026-11-01 deep audit: name-matched candidate failed --store checks (face check none (0 faces))"
+      "identitySignals": [],
+      "retrievedAt": "2026-11-11T11:15:47.989Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1070": {
       "name": "Ruby (Hong Ngoc) Nguyen",
@@ -1056,16 +1048,9 @@
     "vp-1149": {
       "name": "Amy Pham",
       "outcome": "not_found",
-      "pageUrl": "https://www.sandiego.edu/library/about/biography.php?profile_id=14164",
-      "imageUrl": "https://www.sandiego.edu/assets/directory/uploads/images/no-image.jpg",
-      "sourceType": "official_faculty",
-      "confidence": "MEDIUM",
-      "identitySignals": [
-        "name",
-        "stored_roster_url"
-      ],
-      "retrievedAt": "2026-11-01T17:16:08.292Z",
-      "note": "2026-11-01 deep audit: name-matched candidate failed --store checks (face check none (0 faces))"
+      "identitySignals": [],
+      "retrievedAt": "2026-11-11T11:16:50.636Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-0648": {
       "name": "Trien Nguyen",
@@ -1485,7 +1470,7 @@
     },
     "vp-1236": {
       "name": "Nhan Viet Tran",
-      "outcome": "not_found",
+      "outcome": "needs_review",
       "pageUrl": "https://computing.fnal.gov/nhan-tran/",
       "imageUrl": "http://computing.fnal.gov/wp-content/uploads/tran1.png",
       "sourceType": "official_faculty",
@@ -1497,8 +1482,8 @@
         "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-10-14T12:05:06.476Z",
-      "note": "reviewed candidate failed --store checks 2026-10-14: image too small or not portrait-shaped"
+      "retrievedAt": "2026-11-11T11:17:16.093Z",
+      "note": "candidate requires visual review before acceptance"
     },
     "vp-1240": {
       "name": "Kim-Vy Tran",
@@ -9688,13 +9673,16 @@
       "pageUrl": "https://vbn.aau.dk/en/persons/httn/",
       "imageUrl": "https://vbn.aau.dk/files-asset/716574842/HienThiThuNguyen.jpg?w=160&f=jpg",
       "sourceType": "official_faculty",
-      "confidence": "MEDIUM",
+      "confidence": "HIGH",
       "identitySignals": [
         "name",
+        "institution",
+        "department",
+        "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-11-01T17:16:08.292Z",
-      "note": "2026-11-01 deep audit: name-matched candidate failed --store checks (face check none (0 faces))"
+      "retrievedAt": "2026-11-11T11:14:41.257Z",
+      "note": "candidate failed face check: none (0 faces)"
     },
     "vp-0841": {
       "name": "Dinh Thai Hoang",
@@ -9713,16 +9701,9 @@
     "vp-1046": {
       "name": "Giang Phung",
       "outcome": "not_found",
-      "pageUrl": "https://www.iscparis.com/isc-paris-faculte-corps-professoral/giang-phung/",
-      "imageUrl": "https://www.facebook.com/tr?id=482519753609791&ev=PageView&noscript=1&cd%5Bpage_title%5D=Giang+Phung&cd%5Bpost_type%5D=page&cd%5Bpost_id%5D=17398&cd%5Bplugin%5D=PixelYourSite&cd%5Buser_role%5D=guest&cd%5Bevent_url%5D=www.iscparis.com%2Fisc-paris-faculte-corps-professoral%2Fgiang-phung%2F",
-      "sourceType": "official_faculty",
-      "confidence": "MEDIUM",
-      "identitySignals": [
-        "name",
-        "stored_roster_url"
-      ],
-      "retrievedAt": "2026-11-01T17:16:08.292Z",
-      "note": "2026-11-01 deep audit: name-matched candidate failed --store checks (image could not be downloaded)"
+      "identitySignals": [],
+      "retrievedAt": "2026-11-11T11:15:10.324Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1064": {
       "name": "Annette Nguyen",
@@ -9730,13 +9711,15 @@
       "pageUrl": "https://experts.deakin.edu.au/7290-annette-nguyen",
       "imageUrl": "https://experts.deakin.edu.au/7290-annette-nguyen/thumbnail",
       "sourceType": "official_faculty",
-      "confidence": "MEDIUM",
+      "confidence": "HIGH",
       "identitySignals": [
         "name",
+        "institution",
+        "department",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-11-01T17:16:08.292Z",
-      "note": "2026-11-01 deep audit: name-matched candidate failed --store checks (face check none (0 faces))"
+      "retrievedAt": "2026-11-11T11:15:44.973Z",
+      "note": "candidate failed face check: none (0 faces)"
     },
     "vp-1103": {
       "name": "Van Thanh Huynh",
@@ -9744,13 +9727,16 @@
       "pageUrl": "https://experts.deakin.edu.au/37675-van-thanh-huynh/about",
       "imageUrl": "https://experts.deakin.edu.au/37675-van-thanh-huynh/thumbnail",
       "sourceType": "official_faculty",
-      "confidence": "MEDIUM",
+      "confidence": "HIGH",
       "identitySignals": [
         "name",
+        "institution",
+        "department",
+        "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-11-01T17:16:08.292Z",
-      "note": "2026-11-01 deep audit: name-matched candidate failed --store checks (face check none (0 faces))"
+      "retrievedAt": "2026-11-11T11:16:31.220Z",
+      "note": "candidate failed face check: none (0 faces)"
     },
     "vp-1131": {
       "name": "Nhan Nguyen",
@@ -10531,7 +10517,7 @@
     },
     "vp-2289": {
       "name": "Paul Tran - University of Wisconsin-Madison",
-      "outcome": "needs_review",
+      "outcome": "not_found",
       "pageUrl": "https://english.wisc.edu/staff/tran-paul/",
       "imageUrl": "https://english.wisc.edu/wp-content/uploads/sites/650/2022/09/tran_full_profile-scaled.jpeg",
       "sourceType": "official_faculty",
@@ -10543,8 +10529,8 @@
         "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-11-04T21:51:07.047Z",
-      "note": "candidate requires visual review before acceptance"
+      "retrievedAt": "2026-11-11T11:09:26.835Z",
+      "note": "Rejected on visual review: candid outdoor photo (signing a book, wearing sunglasses), not a headshot"
     },
     "vp-2290": {
       "name": "Truong D. Tran",
@@ -10729,7 +10715,7 @@
     },
     "vp-2305": {
       "name": "Julie L. Le",
-      "outcome": "needs_review",
+      "outcome": "found",
       "pageUrl": "https://profiles.ucsd.edu/julie.le",
       "imageUrl": "https://researcherprofiles.org/profile/Modules/CustomViewPersonGeneralInfo/PhotoHandler.ashx?NodeID=193459&cachekey=14ccd39e-0f8c-4d66-9de6-902aca2758e3",
       "sourceType": "official_faculty",
@@ -10741,8 +10727,8 @@
         "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-11-04T21:53:49.308Z",
-      "note": "candidate requires visual review before acceptance"
+      "retrievedAt": "2026-11-11T11:09:33.759Z",
+      "note": "MEDIUM candidate stored after visual review"
     },
     "vp-2306": {
       "name": "Ngoc Nhu Tran",
@@ -10787,7 +10773,7 @@
     },
     "vp-2309": {
       "name": "Martin H. Pham",
-      "outcome": "needs_review",
+      "outcome": "found",
       "pageUrl": "https://profiles.ucsd.edu/martin.pham",
       "imageUrl": "https://researcherprofiles.org/profile/Modules/CustomViewPersonGeneralInfo/PhotoHandler.ashx?NodeID=25463776&cachekey=65c21ec0-af74-4a33-8c2d-3ce880215605",
       "sourceType": "official_faculty",
@@ -10799,8 +10785,8 @@
         "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-11-04T21:55:17.792Z",
-      "note": "candidate requires visual review before acceptance"
+      "retrievedAt": "2026-11-11T11:09:40.537Z",
+      "note": "MEDIUM candidate stored after visual review"
     },
     "vp-2310": {
       "name": "Hung Nguyen - University of California, San Francisco",
@@ -11790,7 +11776,7 @@
     },
     "vp-2384": {
       "name": "Huan Mark Nguyen",
-      "outcome": "needs_review",
+      "outcome": "found",
       "pageUrl": "https://www.westernu.edu/bios/?bio=mnguyen3",
       "imageUrl": "https://www.westernu.edu/media/westernu/images/staff/mnguyen3.jpg",
       "sourceType": "official_faculty",
@@ -11802,12 +11788,12 @@
         "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-11-04T22:06:28.087Z",
-      "note": "candidate requires visual review before acceptance"
+      "retrievedAt": "2026-11-11T11:09:56.111Z",
+      "note": "MEDIUM candidate stored after visual review"
     },
     "vp-2385": {
       "name": "David Q. Pham",
-      "outcome": "needs_review",
+      "outcome": "found",
       "pageUrl": "https://www.westernu.edu/bios/?bio=dqpham",
       "imageUrl": "https://www.westernu.edu/media/westernu/images/staff/dqpham.jpg",
       "sourceType": "official_faculty",
@@ -11819,8 +11805,8 @@
         "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-11-04T22:06:29.510Z",
-      "note": "candidate requires visual review before acceptance"
+      "retrievedAt": "2026-11-11T11:09:56.666Z",
+      "note": "MEDIUM candidate stored after visual review"
     },
     "vp-2386": {
       "name": "Rebecca Tran",
@@ -12822,7 +12808,7 @@
     },
     "vp-2465": {
       "name": "Gia-Khanh Pham",
-      "outcome": "needs_review",
+      "outcome": "found",
       "pageUrl": "https://sci.hm.edu/kontakte_de/phonebook_detailseite_32458.de.html",
       "imageUrl": "https://mediapool.hm.edu/media/fk06/fk06_lokal/personen_8/professorinnen_1/pham/Pham_portrait_m.jpg",
       "sourceType": "official_faculty",
@@ -12833,8 +12819,8 @@
         "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-11-04T22:35:56.499Z",
-      "note": "candidate requires visual review before acceptance"
+      "retrievedAt": "2026-11-11T11:09:59.418Z",
+      "note": "MEDIUM candidate stored after visual review"
     },
     "vp-2466": {
       "name": "Linh Thao Ly",
@@ -13666,7 +13652,7 @@
     },
     "vp-2533": {
       "name": "Hugo Nguyen",
-      "outcome": "needs_review",
+      "outcome": "found",
       "pageUrl": "https://www.uu.se/en/contact-and-organisation/staff?query=N96-1480",
       "imageUrl": "https://www.uu.se/images/200.5c92f2ac195d2427ab9a878/1743104767840/N96-1480.jpg",
       "sourceType": "official_faculty",
@@ -13678,8 +13664,8 @@
         "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-11-04T23:07:56.221Z",
-      "note": "candidate requires visual review before acceptance"
+      "retrievedAt": "2026-11-11T11:10:01.244Z",
+      "note": "MEDIUM candidate stored after visual review"
     },
     "vp-2534": {
       "name": "Thanh Viet Nguyen",
@@ -18572,6 +18558,142 @@
         "stored_roster_url"
       ],
       "retrievedAt": "2026-11-11T18:00:00.000Z"
+    },
+    "vp-2675": {
+      "name": "Au Vo",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-11T11:10:30.028Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2676": {
+      "name": "Jack D. Bui",
+      "outcome": "needs_review",
+      "pageUrl": "https://profiles.ucsd.edu/jack.bui",
+      "imageUrl": "https://researcherprofiles.org/profile/Modules/CustomViewPersonGeneralInfo/PhotoHandler.ashx?NodeID=183500&cachekey=76d3be01-92f0-4776-a1b7-7688cca2d9b8",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T11:10:57.747Z",
+      "note": "candidate requires visual review before acceptance"
+    },
+    "vp-2677": {
+      "name": "Francis Minhthang Bui",
+      "outcome": "needs_review",
+      "pageUrl": "https://engineering.usask.ca/people/ece/bui,francis.php",
+      "imageUrl": "https://engineering.usask.ca/images/depts/ece/bui-profile.png",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T11:10:59.320Z",
+      "note": "candidate requires visual review before acceptance"
+    },
+    "vp-2678": {
+      "name": "Alex A. T. Bui",
+      "outcome": "found",
+      "pageUrl": "https://samueli.ucla.edu/people/alex-bui/",
+      "imageUrl": "https://samueli.ucla.edu/wp-content/uploads/samueli/Alex-bui-thumbnail-scaled-300x200.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T11:11:00.154Z"
+    },
+    "vp-2679": {
+      "name": "Christine Thuyvan Dinh",
+      "outcome": "found",
+      "pageUrl": "https://med.miami.edu/faculty/christine-t-dinh-md",
+      "imageUrl": "https://med.miami.edu/-/media/millerschool/faculty/ent/otology/50147383-christine-dinh.jpg?h=550&iar=0&w=440&rev=35690892de8a443cb595f4625ba5d160",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T11:11:01.217Z"
+    },
+    "vp-2680": {
+      "name": "Victoria Khanh Ngo",
+      "outcome": "not_found",
+      "pageUrl": "https://sph.cuny.edu/about/people/faculty/victoria-ngo/",
+      "imageUrl": "https://webdav.sph.cuny.edu:8443/victoria.ngo/pci/Victoria_Ngo_008_RT-1.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T11:11:03.936Z",
+      "note": "candidate image could not be downloaded"
+    },
+    "vp-2681": {
+      "name": "Bic Ngo",
+      "outcome": "needs_review",
+      "pageUrl": "https://ci.umn.edu/bic-ngo",
+      "imageUrl": "https://ci.umn.edu/sites/ci/files/styles/x_small_portrait/public/NgoB-2007.jpg?h=be0248d6&itok=nZ2a-bf6",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T11:11:23.167Z",
+      "note": "candidate requires visual review before acceptance"
+    },
+    "vp-2682": {
+      "name": "William Ngo",
+      "outcome": "found",
+      "pageUrl": "https://uwaterloo.ca/waterloo-eye-institute-vision-science-consortium/contacts/william-ngo",
+      "imageUrl": "https://uwaterloo.ca/waterloo-eye-institute-vision-science-consortium/sites/default/files/styles/uw_is_portrait/public/uploads/images/william-ngo.png?itok=uWIChnWd",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-11T11:11:23.713Z"
+    },
+    "vp-2683": {
+      "name": "Fawn T. Ngo",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-11T11:11:24.999Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2694": {
+      "name": "Thi Thanh Thuy Le",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-11T11:11:51.100Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     }
   }
 }
