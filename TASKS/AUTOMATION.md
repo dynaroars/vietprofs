@@ -38,7 +38,7 @@ Policy (eligibility, evidence, routing of Issues/PRs/direct pushes) lives in `AG
 
 ## Schedule
 
-Cloud routines live at <https://claude.ai/code/routines> (environment: Default, network access **Full** since 2026-09-24; edit it from the environment button above the claude.ai/code message box → gear icon). Cron is UTC; ET
+Cloud routines live at <https://claude.ai/code/routines> (environment: Default, network access **Full** since 2026-09-24; edit it on the new-session screen at claude.ai/code: open the environment selector under the message box, hover the Default row under **Cloud**, and click the settings icon on its right; `OPENALEX_API_KEY` is set there under **Environment variables**). Cron is UTC; ET
 is shown for convenience (EDT; add an hour in winter).
 
 Each routine attaches only the `Claude_Docs` connector. Don't add `Claude_Code_Remote`: with it,
