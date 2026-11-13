@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-12T23:08:57.000Z",
+  "updatedAt": "2026-11-13T15:04:00.000Z",
   "relationships": [
     {
       "id": "rel-coauthor-vp-0015-vp-0018",
@@ -5180,6 +5180,36 @@
       "evidence": "The official CSUSB faculty profile lists her Iowa State University PhD education entry with \"Adviser: Gordon J. Miller\".",
       "works": [],
       "verifiedAt": "2026-11-11T14:10:52.981Z",
+      "notes": ""
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-3142",
+      "role": "mentor",
+      "name": "Laura Gagliardi",
+      "affiliation": "University of Chicago",
+      "url": "",
+      "sources": [
+        "https://hungqpham.com/"
+      ],
+      "evidence": "Hung Q. Pham's personal site says he earned his Ph.D. in quantum chemistry with Laura Gagliardi at the University of Minnesota, then a postdoc with David Reichman at Columbia.",
+      "works": [],
+      "verifiedAt": "2026-11-13T15:04:00.000Z",
+      "notes": ""
+    },
+    {
+      "type": "postdoctoral-mentor",
+      "personId": "vp-3142",
+      "role": "mentor",
+      "name": "David Reichman",
+      "affiliation": "Columbia University",
+      "url": "",
+      "sources": [
+        "https://hungqpham.com/"
+      ],
+      "evidence": "Hung Q. Pham's personal site says he earned his Ph.D. in quantum chemistry with Laura Gagliardi at the University of Minnesota, then a postdoc with David Reichman at Columbia.",
+      "works": [],
+      "verifiedAt": "2026-11-13T15:04:00.000Z",
       "notes": ""
     },
     {
