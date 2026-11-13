@@ -9,6 +9,7 @@ import {
   personPath,
   regionPath,
   type RosterEntry,
+  sectorOf,
   vietnameseName,
 } from './data.ts';
 import { isFavorite } from './favorites-store.ts';
@@ -78,11 +79,26 @@ export function formatEducationDetails(person: RosterEntry, { fullLabels = false
 
 const MAX_CARD_TOPICS = 3;
 
-export function renderRosterEntry(person: RosterEntry, baseUrl = '/', countryHubAvailable = true) {
+// Labels every card in a sector would repeat, since the Sector filter already says them.
+const SECTOR_IMPLIED: Record<string, { track?: string; institutionType?: string }> = {
+  industry: { track: 'Industry Research', institutionType: 'Corporate research lab' },
+};
+
+export function renderRosterEntry(
+  person: RosterEntry,
+  baseUrl = '/',
+  countryHubAvailable = true,
+  activeSector = 'all',
+) {
   const visibleName = displayName(person.name);
   const nativeName = vietnameseName(person);
+  const implied = SECTOR_IMPLIED[activeSector] ?? {};
+  // Outside academia nearly every rank is the catch-all "Researcher" (the exact title lives on the
+  // linked profile), so it is noise there; the institution-type and track tags say more.
+  const rank = canonicalRank(person);
+  const shownRank = rank === 'Researcher' && sectorOf(person) !== 'academia' ? undefined : rank;
   const entryMeta = [
-    canonicalRank(person),
+    shownRank,
     person.department,
     displayUniversity(person.university),
     formatLocation(person),
@@ -96,11 +112,14 @@ export function renderRosterEntry(person: RosterEntry, baseUrl = '/', countryHub
   // The role line already names Teaching, Clinical, Research, and Emeritus appointments (see
   // canonicalRank), so the track chip only appears when it adds something.
   const trackInRole = Boolean(person.track && canonicalRank(person)?.includes(person.track));
-  const trackTag = trackInRole
-    ? ''
-    : `<span class="tag tag-track${person.track === 'Emeritus' ? ' tag-emeritus' : person.track === 'Deceased' ? ' tag-deceased' : ''}">${person.track === 'Emeritus' ? '🎓 Emeritus' : person.track === 'Deceased' ? '🏛️ Deceased' : escapeHtml(person.track)}</span>`;
+  const trackTag =
+    trackInRole || person.track === implied.track
+      ? ''
+      : `<span class="tag tag-track${person.track === 'Emeritus' ? ' tag-emeritus' : person.track === 'Deceased' ? ' tag-deceased' : ''}">${person.track === 'Emeritus' ? '🎓 Emeritus' : person.track === 'Deceased' ? '🏛️ Deceased' : escapeHtml(person.track)}</span>`;
   const institutionTypeTag =
-    person.institutionType && person.institutionType !== 'University'
+    person.institutionType &&
+    person.institutionType !== 'University' &&
+    person.institutionType !== implied.institutionType
       ? `<span class="tag tag-institution-type">${escapeHtml(person.institutionType)}</span>`
       : '';
   const confirmationTag =

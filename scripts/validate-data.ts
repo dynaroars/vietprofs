@@ -25,6 +25,9 @@ const schemaFile = resolve('public/roster.schema.json');
 // faculty pages, or an explicit maiden-name pattern) — see the git history for the check —
 // are allowlisted so the test doesn't force a wrong "fix" on them.
 const surnameFirstAllowlist = new Set<string>([
+  'Phan Luu', // Neurosom/BEL leadership pages list "Phan Luu" (Chief Science Officer) and he publishes as "Luu, P." (EEG work with D. M. Tucker); Luu is his surname
+  'Vuong N. Trieu', // Oncotelic leadership page lists "Vuong Trieu, Ph.D." (CEO/CSO) and he publishes as "Trieu, V. N."; Trieu is his surname
+  'Hoang Dothe', // Johns Hopkins Winter 2020 in-memoriam notice names him "Hoang Dothe" (A&S 1987 MS/PhD) and he published under that spelling; Dothe is his surname
   'Do Sang Kim', // PKNU publishes "Do Sang Kim"; ORCID 0000-0003-4191-2295 explicitly gives "Do Sang" as given names and "Kim" as family name.
   'Mai Har Sham', // CUHK's current profile labels her "Professor SHAM Mai Har" and its English biography calls her "Professor Sham"; Sham is her surname.
   'Mai M. Khalaf', // ORCID 0000-0003-0599-9928 explicitly gives Mai as given name and Khalaf as family name; KFU publishes "Mai Mostafa Khalaf".

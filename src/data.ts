@@ -621,6 +621,14 @@ export const HEALTH_SUBFIELDS = [
 // generic keyword to FIELD_RULES below — whenever a department's correct field depends on which
 // institution it's at, not just the department string.
 const FIELD_OVERRIDES = new Map([
+  // Industry teams whose department names alone don't name a discipline.
+  ['Computational Mechanics|Synopsys', 'Engineering'],
+  ['Consumables|MicrOmics Technologies', 'Chemistry'],
+  [
+    'Innovation-Cell Culture Media Development, Bioprocessing Upstream R&D|MilliporeSigma',
+    'Biological & Biomedical Sciences',
+  ],
+  ['Research and Development|Aridis Pharmaceuticals', 'Biological & Biomedical Sciences'],
   ['LISN (Fluid Mechanics and Energetics)|Université Paris-Saclay', 'Physics & Astronomy'],
   ['Obstetrics and Gynecology|Loyola University Chicago', 'Health Sciences'],
   ['Radiation Oncology|University of Washington', 'Health Sciences'],

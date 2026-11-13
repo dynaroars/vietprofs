@@ -471,6 +471,7 @@ function renderRoster(
         person,
         import.meta.env.BASE_URL,
         availableRegionHubs.has(countryTarget),
+        activeSector,
       );
     })
     .join('');
