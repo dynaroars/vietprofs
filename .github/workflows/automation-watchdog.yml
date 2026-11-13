@@ -48,8 +48,10 @@ jobs:
           since=$(date -u -d "-15 days" +%Y-%m-%d)
           gh search prs --repo "$GH_REPO" "scheduled" --created ">=$since" --limit 200 --json title,createdAt > prs.json
           gh search issues --repo "$GH_REPO" "scheduled" --created ">=$since" --limit 200 --json title,createdAt > issues.json
-          gh api "repos/$GH_REPO/commits?sha=main&since=$(date -u -d "-${window[relationships]} days" +%Y-%m-%dT%H:%M:%SZ)&per_page=100" \
-            --jq '[.[] | select(.commit.message | startswith("data(relationships)")) | .commit.committer.date]' > rel.json
+          # --paginate: a busy day (e.g. a 100-commit audit) pushes the relationships commit off page 1.
+          gh api --paginate "repos/$GH_REPO/commits?sha=main&since=$(date -u -d "-${window[relationships]} days" +%Y-%m-%dT%H:%M:%SZ)&per_page=100" \
+            --jq '.[] | select(.commit.message | startswith("data(relationships)")) | .commit.committer.date' \
+            | jq -R -s 'split("\n") | map(select(length > 0))' > rel.json
           quiet=""
           for key in "${!window[@]}"; do
             cutoff=$(date -u -d "-${window[$key]} days" +%Y-%m-%dT%H:%M:%SZ)
