@@ -90,20 +90,20 @@ test('generated profile pages use shared styles without page-specific CSS', asyn
   assert.match(generator, /SCHOLAR_ICON/);
   assert.match(generator, /LINKEDIN_ICON/);
   assert.match(generator, /<svg viewBox="0 0 24 24" aria-hidden="true">\$\{icon\}<\/svg>/);
-  assert.match(generator, />SYNOPSIS</);
-  assert.match(generator, />ROSTER METADATA</);
+  assert.match(generator, /'SYNOPSIS'/);
+  assert.match(generator, /'ROSTER METADATA'/);
   // SEE ALSO comes from the shared src/see-also.ts block used by every standalone page.
   const seeAlso = await readFile(new URL('../src/see-also.ts', import.meta.url), 'utf8');
-  assert.match(generator, /renderSeeAlso\('\.\.\/'\)/);
+  assert.match(generator, /renderSeeAlso\(site\)/);
   assert.match(seeAlso, />SEE ALSO</);
   assert.match(seeAlso, /connections\.html/);
-  assert.match(generator, />CONNECTIONS</);
+  assert.match(generator, /'CONNECTIONS'/);
   assert.match(generator, /SAME UNIVERSITY/);
   assert.match(generator, /SAME ORGANIZATION/);
-  assert.match(generator, />SAME FIELD</);
+  assert.match(generator, /'SAME FIELD'/);
   assert.match(generator, />MISSING</);
   assert.match(generator, /missingFields\(person\)/);
-  assert.match(generator, />Is this you\?</);
+  assert.match(generator, /'Is this you\?'/);
   assert.match(generator, /&self=1/);
   assert.match(generator, /University hub path collision/);
   assert.match(generator, /connectionsFor/);
@@ -128,7 +128,7 @@ test('generated profile pages use shared styles without page-specific CSS', asyn
   );
   assert.match(
     generator,
-    /class="name-title"><h1>\$\{escapeHtml\(name\)\}<\/h1>\$\{favoriteToggle\}<\/div>/,
+    /class="name-title"><h1>\$\{escapeHtml\(vi \? nativeName \|\| name : name\)\}<\/h1>\$\{favoriteToggle\}<\/div>/,
   );
 });
 

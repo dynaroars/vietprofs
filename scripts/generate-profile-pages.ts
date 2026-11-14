@@ -29,6 +29,17 @@ import { renderAddFab } from '../src/add-fab.ts';
 import { renderShareMenu } from '../src/share.ts';
 import { escapeHtml, formatRosterDate } from '../src/utils.ts';
 import {
+  connectionLabelVi,
+  educationVi,
+  fieldVi,
+  institutionTypeVi,
+  type Lang,
+  placeVi,
+  rankVi,
+  REQUESTABLE_FIELDS_VI,
+  trackVi,
+} from '../src/i18n-vi.ts';
+import {
   connectionsFor,
   externalConnectionsFor,
   validateRelationshipDatabase,
@@ -51,6 +62,7 @@ const peopleDir = resolve(output, 'people');
 const fieldsDir = resolve(output, 'fields');
 const regionsDir = resolve(output, 'regions');
 const universitiesDir = resolve(output, 'universities');
+const viDir = resolve(output, 'vi');
 const commit =
   process.env.VITE_GIT_COMMIT ||
   (() => {
@@ -81,6 +93,23 @@ async function loadAssetVersions() {
 function absoluteUrl(path: string) {
   return `${siteUrl}/${path}`;
 }
+
+// Every generated page exists in English at `path` and in Vietnamese at `vi/path`. Both carry
+// the same alternates so search engines pair them; English is the default.
+function langPath(path: string, lang: Lang) {
+  return lang === 'vi' ? `vi/${path}` : path;
+}
+
+function alternateLinks(path: string) {
+  return [
+    `<link rel="alternate" hreflang="en" href="${absoluteUrl(path)}">`,
+    `<link rel="alternate" hreflang="vi" href="${absoluteUrl(langPath(path, 'vi'))}">`,
+    `<link rel="alternate" hreflang="x-default" href="${absoluteUrl(path)}">`,
+  ].join('\n  ');
+}
+
+const rankLabel = (person: RosterEntry, lang: Lang) =>
+  lang === 'vi' ? rankVi(person) : canonicalRank(person);
 
 // A retired id's old profile page forwards to the entry that absorbed it, so shared links survive
 // a duplicate merge.
@@ -161,13 +190,19 @@ function relatedList(people: RosterEntry[], detail: (other: RosterEntry) => stri
     .join('')}</ul>`;
 }
 
-function relatedSections(person: RosterEntry, field: string, context: RelatedContext) {
+function relatedSections(
+  person: RosterEntry,
+  field: string,
+  context: RelatedContext,
+  lang: Lang = 'en',
+) {
+  const vi = lang === 'vi';
   const universityPeople = context.byUniversity.get(person.university) ?? [];
   const sameUniversity = pickRelated(person, universityPeople, (other) =>
     Number(Boolean(person.department) && other.department === person.department),
   );
   const universityLink = context.universityHubs.has(person.university)
-    ? `<p class="section-note"><a href="../${universityPath(person.university)}">All ${universityPeople.length} at ${escapeHtml(person.university)}</a></p>`
+    ? `<p class="section-note"><a href="../${universityPath(person.university)}">${vi ? `Tất cả ${universityPeople.length} người tại` : `All ${universityPeople.length} at`} ${escapeHtml(person.university)}</a></p>`
     : '';
   const fieldPeople = (context.byField.get(field) ?? []).filter(
     (other) => other.university !== person.university,
@@ -176,14 +211,14 @@ function relatedSections(person: RosterEntry, field: string, context: RelatedCon
     Number((other.country || 'United States') === (person.country || 'United States')),
   );
   const fieldLink = context.fieldHubs.has(field)
-    ? `<p class="section-note"><a href="../${fieldPath(field)}">All ${(context.byField.get(field) ?? []).length} in ${escapeHtml(field)}</a></p>`
+    ? `<p class="section-note"><a href="../${fieldPath(field)}">${vi ? `Tất cả ${(context.byField.get(field) ?? []).length} người ngành ${escapeHtml(fieldVi(field))}` : `All ${(context.byField.get(field) ?? []).length} in ${escapeHtml(field)}`}</a></p>`
     : '';
   return [
     sameUniversity.length
-      ? `<section class="man-section related-section"><h2>${sectorOf(person) === 'academia' ? 'SAME UNIVERSITY' : 'SAME ORGANIZATION'}</h2>${relatedList(sameUniversity, (other) => [canonicalRank(other), other.department].filter(Boolean).join(', '))}${universityLink}</section>`
+      ? `<section class="man-section related-section"><h2>${vi ? (sectorOf(person) === 'academia' ? 'CÙNG TRƯỜNG' : 'CÙNG TỔ CHỨC') : sectorOf(person) === 'academia' ? 'SAME UNIVERSITY' : 'SAME ORGANIZATION'}</h2>${relatedList(sameUniversity, (other) => [rankLabel(other, lang), other.department].filter(Boolean).join(', '))}${universityLink}</section>`
       : '',
     sameField.length
-      ? `<section class="man-section related-section"><h2>SAME FIELD</h2>${relatedList(sameField, (other) => [canonicalRank(other), other.university].filter(Boolean).join(', '))}${fieldLink}</section>`
+      ? `<section class="man-section related-section"><h2>${vi ? 'CÙNG LĨNH VỰC' : 'SAME FIELD'}</h2>${relatedList(sameField, (other) => [rankLabel(other, lang), other.university].filter(Boolean).join(', '))}${fieldLink}</section>`
       : '',
   ].join('');
 }
@@ -207,7 +242,12 @@ function profilePage(
   relationships: RelationshipDatabase,
   rosterById: ReadonlyMap<string, RosterEntry>,
   related: RelatedContext,
+  lang: Lang = 'en',
 ) {
+  // English pages sit one level below the site root (people/); Vietnamese ones two (vi/people/).
+  // `site` reaches shared assets and the interactive directory; `../` stays inside the language.
+  const vi = lang === 'vi';
+  const site = vi ? '../../' : '../';
   // Gov & Labs and Industry entries link back to their sector on the single directory page and
   // skip country hubs, which cover Academia only.
   const sector = sectorOf(person);
@@ -218,51 +258,72 @@ function profilePage(
   const sectionLabel = `PROFILE(${sectionNum})`;
   const name = displayName(person.name);
   const nativeName = vietnameseName(person);
-  const path = personPath(person.id);
+  const basePath = personPath(person.id);
+  const path = langPath(basePath, lang);
   const canonicalUrl = absoluteUrl(path);
-  const title = `${name} — VietProfs`;
+  const shownName = vi && nativeName && nativeName !== name ? `${nativeName} (${name})` : name;
+  const title = `${shownName} — VietProfs`;
   const ogImage = person.portrait
     ? absoluteUrl(person.portrait)
     : absoluteUrl('vietprofs-bamboo-v-512.png');
-  const ogImageAlt = person.portrait ? `Portrait of ${name}` : 'VietProfs bamboo V logo';
-  const role = [canonicalRank(person), person.department, person.university]
+  const ogImageAlt = person.portrait
+    ? vi
+      ? `Ảnh chân dung ${name}`
+      : `Portrait of ${name}`
+    : 'VietProfs bamboo V logo';
+  const role = [rankLabel(person, lang), person.department, person.university]
     .filter(Boolean)
     .join(', ');
-  const description = `${name} is listed by VietProfs as ${role}.`;
+  const place = vi
+    ? [person.city, placeVi(person.country || 'United States')].filter(Boolean).join(', ')
+    : '';
+  const description = vi
+    ? `${shownName}: ${role}${place ? `, ${place}` : ''}. Hồ sơ trên VietProfs, danh bạ giáo sư và nhà khoa học người Việt trên thế giới.`
+    : `${name} is listed by VietProfs as ${role}.`;
   const portrait = person.portrait
-    ? `<img class="portrait" src="../${escapeHtml(person.portrait)}" alt="Portrait of ${escapeHtml(name)}" width="240" height="300">`
-    : `<img class="portrait portrait-placeholder" src="../default-portrait.svg" alt="No portrait on file yet for ${escapeHtml(name)}" width="240" height="300">`;
+    ? `<img class="portrait" src="${site}${escapeHtml(person.portrait)}" alt="${vi ? 'Ảnh chân dung' : 'Portrait of'} ${escapeHtml(name)}" width="240" height="300">`
+    : `<img class="portrait portrait-placeholder" src="${site}default-portrait.svg" alt="${vi ? 'Chưa có ảnh của' : 'No portrait on file yet for'} ${escapeHtml(name)}" width="240" height="300">`;
   const personField = fieldOf(person.department, person.university, person.researchAreas);
   const research = person.researchAreas?.length
-    ? `<section class="man-section"><h2>RESEARCH</h2><ul>${person.researchAreas.map((area) => `<li><a href="../${directoryPage}?${sectorParam}q=${encodeURIComponent(area)}" class="research-area-link">${escapeHtml(area)}</a></li>`).join('')}</ul></section>`
+    ? `<section class="man-section"><h2>${vi ? 'NGHIÊN CỨU' : 'RESEARCH'}</h2><ul>${person.researchAreas.map((area) => `<li><a href="${site}${directoryPage}?${sectorParam}q=${encodeURIComponent(area)}" class="research-area-link">${escapeHtml(area)}</a></li>`).join('')}</ul></section>`
     : '';
-  const education = formatEducationDetails(person, { fullLabels: true });
+  const education = vi ? educationVi(person) : formatEducationDetails(person, { fullLabels: true });
   const educationSection = education.length
-    ? `<section class="man-section"><h2>EDUCATION</h2><ul>${education.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul></section>`
+    ? `<section class="man-section"><h2>${vi ? 'HỌC VẤN' : 'EDUCATION'}</h2><ul>${education.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul></section>`
     : '';
   const honors = person.honors?.length
-    ? `<section class="man-section"><h2>HONORS</h2><ul>${person.honors.map((honor) => `<li>${honor.source ? `<a href="${escapeHtml(honor.source)}" rel="noopener noreferrer">` : ''}${escapeHtml(honor.name)}${honor.year ? ` (${honor.year})` : ''}${honor.source ? '</a>' : ''}</li>`).join('')}</ul></section>`
+    ? `<section class="man-section"><h2>${vi ? 'GIẢI THƯỞNG & DANH HIỆU' : 'HONORS'}</h2><ul>${person.honors.map((honor) => `<li>${honor.source ? `<a href="${escapeHtml(honor.source)}" rel="noopener noreferrer">` : ''}${escapeHtml(honor.name)}${honor.year ? ` (${honor.year})` : ''}${honor.source ? '</a>' : ''}</li>`).join('')}</ul></section>`
     : '';
   const links = [
     person.profileUrl && {
       label:
         person.confirmed === false
-          ? 'Verification source'
+          ? vi
+            ? 'Nguồn xác minh'
+            : 'Verification source'
           : person.institutionType && person.institutionType !== 'University'
-            ? 'Official institution profile'
-            : 'Official university profile',
+            ? vi
+              ? 'Trang chính thức của tổ chức'
+              : 'Official institution profile'
+            : vi
+              ? 'Trang chính thức của trường'
+              : 'Official university profile',
       href: person.profileUrl,
       icon: PROFILE_ICON,
     },
-    person.websiteUrl && { label: 'Website', href: person.websiteUrl, icon: PERSONAL_SITE_ICON },
+    person.websiteUrl && {
+      label: vi ? 'Trang web' : 'Website',
+      href: person.websiteUrl,
+      icon: PERSONAL_SITE_ICON,
+    },
     person.scholarUrl && { label: 'Google Scholar', href: person.scholarUrl, icon: SCHOLAR_ICON },
     person.linkedinUrl && { label: 'LinkedIn', href: person.linkedinUrl, icon: LINKEDIN_ICON },
   ].filter(Boolean) as { label: string; href: string; icon: string }[];
   const linkSection = links.length
-    ? `<section class="man-section"><h2>SOURCES</h2><nav class="links" aria-label="External profiles">${links.map(({ label, href, icon }) => `<a href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true">${icon}</svg>${escapeHtml(label)}</a>`).join('')}</nav></section>`
+    ? `<section class="man-section"><h2>${vi ? 'NGUỒN' : 'SOURCES'}</h2><nav class="links" aria-label="External profiles">${links.map(({ label, href, icon }) => `<a href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true">${icon}</svg>${escapeHtml(label)}</a>`).join('')}</nav></section>`
     : '';
   const evidenceLinks = (sources: string[]) =>
-    `<span class="connection-sources">${sources.map((source, index) => `<a href="${escapeHtml(source)}" target="_blank" rel="noopener noreferrer">${sources.length === 1 ? 'evidence' : `evidence ${index + 1}`}</a>`).join(', ')}</span>`;
+    `<span class="connection-sources">${sources.map((source, index) => `<a href="${escapeHtml(source)}" target="_blank" rel="noopener noreferrer">${sources.length === 1 ? (vi ? 'nguồn' : 'evidence') : `${vi ? 'nguồn' : 'evidence'} ${index + 1}`}</a>`).join(', ')}</span>`;
   // Advisors first, then advisees, then collaborators; alphabetical within each group.
   // Doctoral advisors, then other advisors and mentors, advisees, and collaborators.
   const roleRank = (label: string) =>
@@ -286,7 +347,7 @@ function profilePage(
     item.rank = Math.min(item.rank, roleRank(label));
     // Same bullet format as the other sections: "Name (relationship: evidence; relationship: evidence)".
     item.relations.push(
-      `<span class="connection-kind">${escapeHtml(label)}</span>: ${evidenceLinks(sources)}`,
+      `<span class="connection-kind">${escapeHtml(vi ? connectionLabelVi(label) : label)}</span>: ${evidenceLinks(sources)}`,
     );
     items.set(key, item);
   };
@@ -321,23 +382,25 @@ function profilePage(
     (a, b) => a.rank - b.rank || a.name.localeCompare(b.name),
   );
   const connectionSection = connectionItems.length
-    ? `<section class="man-section"><h2>CONNECTIONS</h2><ul class="connection-list">${connectionItems
+    ? `<section class="man-section"><h2>${vi ? 'KẾT NỐI' : 'CONNECTIONS'}</h2><ul class="connection-list">${connectionItems
         .map(
           ({ person: who, relations }) =>
             `<li class="connection-item">${who} (${relations.join('; ')})</li>`,
         )
         .join(
           '',
-        )}</ul><p class="section-note">Only source-verified connections are shown. Names that link to a VietProfs page are on the roster; the others are not.</p></section>`
+        )}</ul><p class="section-note">${vi ? 'Chỉ hiển thị các kết nối đã được xác minh qua nguồn. Tên có liên kết đến trang VietProfs là người có trong danh bạ; các tên khác thì không.' : 'Only source-verified connections are shown. Names that link to a VietProfs page are on the roster; the others are not.'}</p></section>`
     : '';
   const rawRecord = escapeHtml(JSON.stringify(person, null, 2));
-  const editUrl = `../submit.html?edit=${encodeURIComponent(person.id)}`;
+  const editUrl = `${site}submit.html?edit=${encodeURIComponent(person.id)}`;
   const selfUrl = `${editUrl}&self=1`;
   const missing = missingFields(person);
   const missingSection = missing.length
-    ? `<section class="man-section missing-section"><h2>MISSING</h2><p>Not on record yet: ${missing.map((field) => escapeHtml(REQUESTABLE_FIELDS[field])).join(', ')}. <a href="${escapeHtml(`${editUrl}&missing=${missing.join(',')}`)}">Know ${missing.length === 1 ? 'it' : 'any of them'}? Add ${missing.length === 1 ? 'it' : 'them'}</a></p></section>`
+    ? vi
+      ? `<section class="man-section missing-section"><h2>CÒN THIẾU</h2><p>Chưa có thông tin: ${missing.map((field) => escapeHtml(REQUESTABLE_FIELDS_VI[field] ?? REQUESTABLE_FIELDS[field])).join(', ')}. <a href="${escapeHtml(`${editUrl}&missing=${missing.join(',')}`)}">Bạn biết? Bổ sung tại đây</a></p></section>`
+      : `<section class="man-section missing-section"><h2>MISSING</h2><p>Not on record yet: ${missing.map((field) => escapeHtml(REQUESTABLE_FIELDS[field])).join(', ')}. <a href="${escapeHtml(`${editUrl}&missing=${missing.join(',')}`)}">Know ${missing.length === 1 ? 'it' : 'any of them'}? Add ${missing.length === 1 ? 'it' : 'them'}</a></p></section>`
     : '';
-  const favoriteLabel = 'Add to favorites';
+  const favoriteLabel = vi ? 'Thêm vào mục yêu thích' : 'Add to favorites';
   const favoriteToggle = `<button type="button" class="favorite-toggle profile-favorite-toggle" data-id="${escapeHtml(person.id)}" data-name="${escapeHtml(name)}" aria-pressed="false" aria-label="${favoriteLabel}" title="${favoriteLabel}"><svg viewBox="0 0 24 24" aria-hidden="true">${STAR_ICON}</svg></button>`;
   const profileScript = `<script type="module">
 const KEY = 'vietprofs:favorites', RECENT_KEY = 'vietprofs:recent-profiles', id = ${JSON.stringify(person.id)};
@@ -357,7 +420,7 @@ if (button) {
   const apply = (favorited) => {
     button.classList.toggle('is-favorite', favorited);
     button.setAttribute('aria-pressed', String(favorited));
-    const label = favorited ? 'Remove from favorites' : 'Add to favorites';
+    const label = favorited ? ${JSON.stringify(vi ? 'Bỏ khỏi mục yêu thích' : 'Remove from favorites')} : ${JSON.stringify(favoriteLabel)};
     button.setAttribute('aria-label', label);
     button.title = label;
   };
@@ -372,7 +435,7 @@ if (button) {
       status.hidden = true;
     } catch {
       status.hidden = false;
-      status.textContent = 'Favorites could not be saved. Allow browser storage and try again.';
+      status.textContent = ${JSON.stringify(vi ? 'Không lưu được mục yêu thích. Hãy cho phép trình duyệt lưu trữ rồi thử lại.' : 'Favorites could not be saved. Allow browser storage and try again.')};
     }
   });
 }
@@ -412,7 +475,7 @@ if (button) {
         ...(nativeName && nativeName !== name ? { alternateName: nativeName } : {}),
         description,
         ...(person.portrait ? { image: ogImage } : {}),
-        jobTitle: canonicalRank(person) || undefined,
+        jobTitle: rankLabel(person, lang) || undefined,
         worksFor: {
           '@type': employerType,
           name: person.university,
@@ -445,13 +508,13 @@ if (button) {
           {
             '@type': 'ListItem',
             position: 2,
-            name: personField,
-            item: `${siteUrl}/${fieldPath(personField)}`,
+            name: vi ? fieldVi(personField) : personField,
+            item: absoluteUrl(langPath(fieldPath(personField), lang)),
           },
           {
             '@type': 'ListItem',
             position: 3,
-            name,
+            name: shownName,
             item: canonicalUrl,
           },
         ],
@@ -466,7 +529,7 @@ if (button) {
   const countryTargetUrl =
     !isIndustry && availableCountryHubs.has(countryTarget)
       ? `../${regionPath(countryTarget)}`
-      : `../${directoryPage}?${sectorParam}loc=${encodeURIComponent(countryTarget === 'United States' ? 'US' : countryTarget)}`;
+      : `${site}${directoryPage}?${sectorParam}loc=${encodeURIComponent(countryTarget === 'United States' ? 'US' : countryTarget)}`;
 
   return `<!doctype html>
 <!--
@@ -476,7 +539,7 @@ if (button) {
           ||
      view source encouraged · https://github.com/dynaroars/vietprofs
 -->
-<html lang="en">
+<html lang="${lang}">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -485,6 +548,7 @@ if (button) {
   <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#15181c" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="${canonicalUrl}">
+  ${alternateLinks(basePath)}
   <meta property="og:type" content="profile">
   <meta property="og:site_name" content="VietProfs">
   <meta property="og:title" content="${escapeHtml(title)}">
@@ -497,26 +561,26 @@ if (button) {
   <meta name="twitter:description" content="${escapeHtml(description)}">
   <meta name="twitter:image" content="${escapeHtml(ogImage)}">
   <meta name="twitter:image:alt" content="${escapeHtml(ogImageAlt)}">
-  <link rel="icon" type="image/svg+xml" href="../vietprofs-bamboo-v.svg">
-  <link rel="apple-touch-icon" href="../vietprofs-bamboo-v-512.png">
-  <link rel="manifest" href="../manifest.webmanifest">
+  <link rel="icon" type="image/svg+xml" href="${site}vietprofs-bamboo-v.svg">
+  <link rel="apple-touch-icon" href="${site}vietprofs-bamboo-v-512.png">
+  <link rel="manifest" href="${site}manifest.webmanifest">
   <title>${escapeHtml(title)}</title>
   <script type="application/ld+json">${jsonLd.replace(/</g, '\\u003c')}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../profile.css?v=${assetVersion.css}">
+  <link rel="stylesheet" href="${site}profile.css?v=${assetVersion.css}">
 </head>
 <body class="subpage">
   <div id="app">
     <main>
       <article class="man-page">
-        <p class="man-running-head"><span>${sectionLabel}</span><span class="man-running-title"><a class="man-running-brand" href="../${directoryPage}${sectorParam ? `?${sectorParam.slice(0, -1)}` : ''}" aria-label="VietProfs directory"><img class="brand-logo" src="../vietprofs-bamboo-v.svg" alt="" width="20" height="20"><span class="man-running-label">Profile Manual</span></a></span><span>${sectionLabel}</span></p>
-        <section class="man-section name-section"><h2>NAME</h2><div class="identity profile-identity">${portrait}<div class="identity-details"><div class="name-heading"><div class="name-title"><h1>${escapeHtml(name)}</h1>${favoriteToggle}</div><div class="profile-actions" aria-label="Roster actions"><a class="self-claim-link" href="${escapeHtml(selfUrl)}">Is this you?</a></div></div><p id="profile-save-status" role="status" hidden></p><p class="native">${escapeHtml(nativeName)} <a class="loc-badge-link" href="${countryTargetUrl}" title="Filter people in ${escapeHtml(person.country || 'United States')}"><span class="loc-badge" title="${escapeHtml(person.country || 'United States')}"><span class="country-flag" aria-hidden="true">${countryFlag(person.country)}</span></span></a></p><p class="record-id">${escapeHtml(person.id)}</p></div></div></section>
-        <section class="man-section"><h2>SYNOPSIS</h2><p class="synopsis">${escapeHtml(role)}${locationOf(person) ? ` · ${escapeHtml(locationOf(person))}` : ''}</p><div class="tags"><a href="../${fieldPath(personField)}" class="tag" title="Explore ${escapeHtml(personField)} on VietProfs">${escapeHtml(personField)}</a>${person.track ? `<a href="../${directoryPage}?${sectorParam}track=${encodeURIComponent(person.track)}" class="tag${person.track === 'Emeritus' ? ' tag-emeritus' : person.track === 'Deceased' ? ' tag-deceased' : ''}" title="Filter by ${escapeHtml(person.track)}">${person.track === 'Emeritus' ? '🎓 Emeritus' : person.track === 'Deceased' ? '🏛️ Deceased' : escapeHtml(person.track)}</a>` : ''}${person.institutionType && person.institutionType !== 'University' ? `<a href="../${directoryPage}?${sectorParam}institutionType=${encodeURIComponent(person.institutionType)}" class="tag" title="Filter by ${escapeHtml(person.institutionType)}">${escapeHtml(person.institutionType)}</a>` : ''}${person.confirmed === false ? '<span class="tag tag-unconfirmed">Unconfirmed</span>' : ''}</div></section>
-        ${research}${educationSection}${honors}${connectionSection}${relatedSections(person, personField, related)}${linkSection}${missingSection}
-        <section class="man-section"><h2>ROSTER METADATA</h2><dl class="roster-metadata"><div><dt>record</dt><dd>${escapeHtml(person.id)}</dd></div><div><dt>confirmation</dt><dd>${person.confirmed === false ? 'Unconfirmed — reliable non-official evidence' : 'Confirmed'}</dd></div><div><dt>last verified</dt><dd>${escapeHtml(formatRosterDate(person.lastUpdatedAt || ''))}</dd></div><div><dt>build</dt><dd><a href="https://github.com/dynaroars/vietprofs/commit/${escapeHtml(commit)}">${escapeHtml(commit)}</a></dd></div></dl><details class="raw-record"><summary>view raw record</summary><pre><code>${rawRecord}</code></pre></details></section>
-        ${renderSeeAlso('../')}
+        <p class="man-running-head"><span>${sectionLabel}</span><span class="man-running-title"><a class="man-running-brand" href="${vi ? '../index.html' : `../${directoryPage}${sectorParam ? `?${sectorParam.slice(0, -1)}` : ''}`}" aria-label="${vi ? 'Trang chủ VietProfs tiếng Việt' : 'VietProfs directory'}"><img class="brand-logo" src="${site}vietprofs-bamboo-v.svg" alt="" width="20" height="20"><span class="man-running-label">${vi ? 'Hồ sơ' : 'Profile Manual'}</span></a></span><span>${sectionLabel}</span></p>
+        <section class="man-section name-section"><h2>${vi ? 'TÊN' : 'NAME'}</h2><div class="identity profile-identity">${portrait}<div class="identity-details"><div class="name-heading"><div class="name-title"><h1>${escapeHtml(vi ? nativeName || name : name)}</h1>${favoriteToggle}</div><div class="profile-actions" aria-label="${vi ? 'Thao tác' : 'Roster actions'}"><a class="self-claim-link" href="${escapeHtml(selfUrl)}">${vi ? 'Đây là bạn?' : 'Is this you?'}</a><a class="self-claim-link lang-switch" href="${site}${vi ? basePath : langPath(basePath, 'vi')}" hreflang="${vi ? 'en' : 'vi'}" lang="${vi ? 'en' : 'vi'}">${vi ? 'English' : 'Tiếng Việt'}</a></div></div><p id="profile-save-status" role="status" hidden></p><p class="native">${escapeHtml(vi ? name : nativeName)} <a class="loc-badge-link" href="${countryTargetUrl}" title="${vi ? `Xem những người ở ${escapeHtml(placeVi(person.country || 'United States'))}` : `Filter people in ${escapeHtml(person.country || 'United States')}`}"><span class="loc-badge" title="${escapeHtml(vi ? placeVi(person.country || 'United States') : person.country || 'United States')}"><span class="country-flag" aria-hidden="true">${countryFlag(person.country)}</span></span></a></p><p class="record-id">${escapeHtml(person.id)}</p></div></div></section>
+        <section class="man-section"><h2>${vi ? 'TÓM TẮT' : 'SYNOPSIS'}</h2><p class="synopsis">${escapeHtml(role)}${vi ? (place ? ` · ${escapeHtml(place)}` : '') : locationOf(person) ? ` · ${escapeHtml(locationOf(person))}` : ''}</p><div class="tags"><a href="../${fieldPath(personField)}" class="tag" title="${vi ? `Xem ngành ${escapeHtml(fieldVi(personField))} trên VietProfs` : `Explore ${escapeHtml(personField)} on VietProfs`}">${escapeHtml(vi ? fieldVi(personField) : personField)}</a>${person.track ? `<a href="${site}${directoryPage}?${sectorParam}track=${encodeURIComponent(person.track)}" class="tag${person.track === 'Emeritus' ? ' tag-emeritus' : person.track === 'Deceased' ? ' tag-deceased' : ''}" title="${vi ? 'Lọc theo' : 'Filter by'} ${escapeHtml(vi ? trackVi(person.track) : person.track)}">${person.track === 'Emeritus' ? `🎓 ${vi ? 'Danh dự' : 'Emeritus'}` : person.track === 'Deceased' ? `🏛️ ${vi ? 'Đã mất' : 'Deceased'}` : escapeHtml(vi ? trackVi(person.track) : person.track)}</a>` : ''}${person.institutionType && person.institutionType !== 'University' ? `<a href="${site}${directoryPage}?${sectorParam}institutionType=${encodeURIComponent(person.institutionType)}" class="tag" title="${vi ? 'Lọc theo' : 'Filter by'} ${escapeHtml(vi ? institutionTypeVi(person.institutionType) : person.institutionType)}">${escapeHtml(vi ? institutionTypeVi(person.institutionType) : person.institutionType)}</a>` : ''}${person.confirmed === false ? `<span class="tag tag-unconfirmed">${vi ? 'Chưa xác nhận' : 'Unconfirmed'}</span>` : ''}</div></section>
+        ${research}${educationSection}${honors}${connectionSection}${relatedSections(person, personField, related, lang)}${linkSection}${missingSection}
+        <section class="man-section"><h2>${vi ? 'THÔNG TIN HỒ SƠ' : 'ROSTER METADATA'}</h2><dl class="roster-metadata"><div><dt>${vi ? 'mã hồ sơ' : 'record'}</dt><dd>${escapeHtml(person.id)}</dd></div><div><dt>${vi ? 'xác nhận' : 'confirmation'}</dt><dd>${person.confirmed === false ? (vi ? 'Chưa xác nhận — có nguồn đáng tin cậy nhưng không chính thức' : 'Unconfirmed — reliable non-official evidence') : vi ? 'Đã xác nhận' : 'Confirmed'}</dd></div><div><dt>${vi ? 'kiểm tra lần cuối' : 'last verified'}</dt><dd>${escapeHtml(formatRosterDate(person.lastUpdatedAt || ''))}</dd></div><div><dt>build</dt><dd><a href="https://github.com/dynaroars/vietprofs/commit/${escapeHtml(commit)}">${escapeHtml(commit)}</a></dd></div></dl><details class="raw-record"><summary>${vi ? 'xem dữ liệu gốc' : 'view raw record'}</summary><pre><code>${rawRecord}</code></pre></details></section>
+        ${renderSeeAlso(site)}
       </article>
     </main>
     ${renderAddFab(editUrl)}
@@ -535,9 +599,72 @@ interface HubConfig {
   people: RosterEntry[];
   canonicalPath: string;
   interactiveUrl: string;
-  otherCategories: { label: string; path: string }[];
+  otherCategories: { label: string; viLabel: string; path: string }[];
   field?: string;
   region?: string;
+  lang?: Lang;
+}
+
+const CATEGORY_TYPE_VI: Record<HubConfig['categoryType'], string> = {
+  Discipline: 'Lĩnh vực',
+  Region: 'Khu vực',
+  'Discipline × Region': 'Lĩnh vực × Khu vực',
+  Institution: 'Tổ chức',
+};
+
+// The Vietnamese twin of an English hub: same people, Vietnamese wording, paths under vi/.
+function vietnameseHub(hub: HubConfig): HubConfig {
+  const n = hub.people.length;
+  const people = `${n} giáo sư, nhà nghiên cứu và nhà khoa học người Việt và gốc Việt`;
+  const text = (() => {
+    switch (hub.categoryType) {
+      case 'Discipline': {
+        const field = fieldVi(hub.categoryName);
+        return {
+          name: field,
+          title: `Giáo sư & nhà khoa học người Việt ngành ${field}`,
+          subtitle: `Nhà nghiên cứu và học giả gốc Việt trong lĩnh vực ${field}`,
+          description: `Danh sách ${people} ngành ${field} tại các trường đại học, viện nghiên cứu và doanh nghiệp trên thế giới.`,
+        };
+      }
+      case 'Region': {
+        const place = placeVi(hub.categoryName);
+        return {
+          name: place,
+          title: `Giáo sư & nhà khoa học người Việt tại ${place}`,
+          subtitle: `Cộng đồng học thuật người Việt tại ${place}`,
+          description: `Danh sách ${people} tại ${place}.`,
+        };
+      }
+      case 'Discipline × Region': {
+        const field = fieldVi(hub.field ?? '');
+        const place = placeVi(hub.region ?? '');
+        return {
+          name: `${field} tại ${place}`,
+          title: `Giáo sư & nhà khoa học người Việt ngành ${field} tại ${place}`,
+          subtitle: `Nhà nghiên cứu gốc Việt ngành ${field} tại ${place}`,
+          description: `Danh sách ${people} ngành ${field} tại các trường đại học, viện nghiên cứu và doanh nghiệp ở ${place}.`,
+        };
+      }
+      case 'Institution':
+        return {
+          name: hub.categoryName,
+          title: `Giáo sư & nhà nghiên cứu người Việt tại ${hub.categoryName}`,
+          subtitle: `Người Việt và gốc Việt tại ${hub.categoryName}`,
+          description: `Danh sách ${n} người Việt và gốc Việt tại ${hub.categoryName}.`,
+        };
+    }
+  })();
+  return {
+    ...hub,
+    categoryName: text.name,
+    categoryTitle: text.title,
+    categorySubtitle: text.subtitle,
+    description: text.description,
+    canonicalPath: langPath(hub.canonicalPath, 'vi'),
+    otherCategories: hub.otherCategories.map((c) => ({ ...c, path: langPath(c.path, 'vi') })),
+    lang: 'vi',
+  };
 }
 
 const COUNTRIES_WITH_ARTICLE = new Set([
@@ -554,6 +681,9 @@ function withArticle(region: string) {
 }
 
 function categoryHubPage(config: HubConfig) {
+  const lang = config.lang ?? 'en';
+  const vi = lang === 'vi';
+  const basePath = vi ? config.canonicalPath.replace(/^vi\//, '') : config.canonicalPath;
   const canonicalUrl = absoluteUrl(config.canonicalPath);
   const title = `${config.categoryTitle} (${config.people.length}) — VietProfs`;
   const ogImage = absoluteUrl('vietprofs-bamboo-v-512.png');
@@ -588,7 +718,12 @@ function categoryHubPage(config: HubConfig) {
       {
         '@type': 'BreadcrumbList',
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'VietProfs', item: `${siteUrl}/` },
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'VietProfs',
+            item: vi ? absoluteUrl('vi/') : `${siteUrl}/`,
+          },
           // Intersection hubs sit under their discipline hub; other hubs have no intermediate
           // page, so they hang directly off the home page.
           ...(config.field
@@ -596,8 +731,8 @@ function categoryHubPage(config: HubConfig) {
                 {
                   '@type': 'ListItem',
                   position: 2,
-                  name: config.field,
-                  item: absoluteUrl(fieldPath(config.field)),
+                  name: vi ? fieldVi(config.field) : config.field,
+                  item: absoluteUrl(langPath(fieldPath(config.field), lang)),
                 },
               ]
             : []),
@@ -617,21 +752,25 @@ function categoryHubPage(config: HubConfig) {
       const name = displayName(person.name);
       const native = vietnameseName(person);
       const role = [
-        canonicalRank(person),
+        rankLabel(person, lang),
         person.department,
         config.categoryType === 'Institution' ? '' : person.university,
       ]
         .filter(Boolean)
         .join(', ');
       const flag = person.country
-        ? `<span class="country-flag" title="${escapeHtml(person.country)}">${countryFlag(person.country)}</span>`
+        ? `<span class="country-flag" title="${escapeHtml(vi ? placeVi(person.country) : person.country)}">${countryFlag(person.country)}</span>`
         : '';
-      return `<li class="hub-roster-item"><a class="hub-person-name" href="${rootPrefix}${personPath(person.id)}">${escapeHtml(name)}</a>${native && native !== name ? ` <span class="hub-person-native">(${escapeHtml(native)})</span>` : ''} <span class="hub-person-role">${escapeHtml(role)}</span> ${flag}</li>`;
+      const [shown, other] = vi && native ? [native, name] : [name, native];
+      return `<li class="hub-roster-item"><a class="hub-person-name" href="${rootPrefix}${langPath(personPath(person.id), lang)}">${escapeHtml(shown)}</a>${other && other !== shown ? ` <span class="hub-person-native">(${escapeHtml(other)})</span>` : ''} <span class="hub-person-role">${escapeHtml(role)}</span> ${flag}</li>`;
     })
     .join('\n            ');
 
   const crossLinks = config.otherCategories
-    .map((c) => `<a class="hub-crosslink" href="${rootPrefix}${c.path}">${escapeHtml(c.label)}</a>`)
+    .map(
+      (c) =>
+        `<a class="hub-crosslink" href="${rootPrefix}${c.path}">${escapeHtml(vi ? c.viLabel : c.label)}</a>`,
+    )
     .join('\n            ');
 
   return `<!doctype html>
@@ -642,7 +781,7 @@ function categoryHubPage(config: HubConfig) {
           ||
      view source encouraged · https://github.com/dynaroars/vietprofs
 -->
-<html lang="en">
+<html lang="${lang}">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -651,6 +790,7 @@ function categoryHubPage(config: HubConfig) {
   <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#15181c" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="${canonicalUrl}">
+  ${alternateLinks(basePath)}
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="VietProfs">
   <meta property="og:title" content="${escapeHtml(title)}">
@@ -677,40 +817,40 @@ function categoryHubPage(config: HubConfig) {
   <div id="app">
     <main>
       <article class="man-page">
-        <p class="man-running-head"><span>${sectionLabel}</span><span class="man-running-title"><a class="man-running-brand" href="${rootPrefix}index.html" aria-label="VietProfs directory"><img class="brand-logo" src="${rootPrefix}vietprofs-bamboo-v.svg" alt="" width="20" height="20"><span class="man-running-label">Directory Hub</span></a></span><span>${sectionLabel}</span></p>
+        <p class="man-running-head"><span>${sectionLabel}</span><span class="man-running-title"><a class="man-running-brand" href="${rootPrefix}${vi ? 'vi/' : 'index.html'}" aria-label="${vi ? 'Trang chủ VietProfs tiếng Việt' : 'VietProfs directory'}"><img class="brand-logo" src="${rootPrefix}vietprofs-bamboo-v.svg" alt="" width="20" height="20"><span class="man-running-label">${vi ? 'Danh mục' : 'Directory Hub'}</span></a></span><span>${sectionLabel}</span></p>
         <section class="man-section name-section">
-          <h2>CATEGORY</h2>
+          <h2>${vi ? 'DANH MỤC' : 'CATEGORY'}</h2>
           <div class="name-heading">
             <div class="name-title"><h1>${escapeHtml(config.categoryTitle)}</h1></div>
-            <div class="profile-actions">${renderShareMenu({ title: `${config.categoryTitle} — VietProfs`, url: canonicalUrl })}<a class="submission-link" href="${escapeHtml(`${rootPrefix}${config.interactiveUrl}`)}">Open in Interactive Directory</a></div>
+            <div class="profile-actions">${renderShareMenu({ title: `${config.categoryTitle} — VietProfs`, url: canonicalUrl })}<a class="submission-link" href="${escapeHtml(`${rootPrefix}${config.interactiveUrl}`)}">${vi ? 'Mở trong danh bạ tương tác (tiếng Anh)' : 'Open in Interactive Directory'}</a><a class="submission-link lang-switch" href="${rootPrefix}${vi ? basePath : langPath(basePath, 'vi')}" hreflang="${vi ? 'en' : 'vi'}" lang="${vi ? 'en' : 'vi'}">${vi ? 'English' : 'Tiếng Việt'}</a></div>
           </div>
           <p class="native">${escapeHtml(config.categorySubtitle)}</p>
         </section>
         <section class="man-section">
-          <h2>SYNOPSIS</h2>
+          <h2>${vi ? 'TÓM TẮT' : 'SYNOPSIS'}</h2>
           <p class="synopsis">${escapeHtml(config.description)}</p>
           <div class="tags">
-            <span class="tag">${config.people.length} ${config.people.length === 1 ? 'Person' : 'People'}</span>
-            ${config.categoryType === 'Institution' ? '' : `<span class="tag">${uniqueUniversities.size} ${uniqueUniversities.size === 1 ? 'Organization' : 'Organizations'}</span>`}
+            <span class="tag">${config.people.length} ${vi ? 'người' : config.people.length === 1 ? 'Person' : 'People'}</span>
+            ${config.categoryType === 'Institution' ? '' : `<span class="tag">${uniqueUniversities.size} ${vi ? 'tổ chức' : uniqueUniversities.size === 1 ? 'Organization' : 'Organizations'}</span>`}
           </div>
         </section>
         <section class="man-section">
-          <h2>ROSTER (${sortedPeople.length})</h2>
+          <h2>${vi ? 'DANH SÁCH' : 'ROSTER'} (${sortedPeople.length})</h2>
           <ul class="hub-roster-list">
             ${rosterItems}
           </ul>
         </section>
         <section class="man-section">
-          <h2>SEE ALSO</h2>
-          <nav class="hub-crosslinks" aria-label="Other categories">
+          <h2>${vi ? 'XEM THÊM' : 'SEE ALSO'}</h2>
+          <nav class="hub-crosslinks" aria-label="${vi ? 'Danh mục khác' : 'Other categories'}">
             ${crossLinks}
           </nav>
         </section>
         <section class="man-section">
-          <h2>ROSTER METADATA</h2>
+          <h2>${vi ? 'THÔNG TIN DANH MỤC' : 'ROSTER METADATA'}</h2>
           <dl class="roster-metadata">
-            <div><dt>category</dt><dd>${escapeHtml(config.categoryType)} · ${escapeHtml(config.categoryName)}</dd></div>
-            <div><dt>people count</dt><dd>${sortedPeople.length}</dd></div>
+            <div><dt>${vi ? 'danh mục' : 'category'}</dt><dd>${escapeHtml(vi ? CATEGORY_TYPE_VI[config.categoryType] : config.categoryType)} · ${escapeHtml(config.categoryName)}</dd></div>
+            <div><dt>${vi ? 'số người' : 'people count'}</dt><dd>${sortedPeople.length}</dd></div>
             <div><dt>build</dt><dd><a href="https://github.com/dynaroars/vietprofs/commit/${escapeHtml(commit)}">${escapeHtml(commit)}</a></dd></div>
           </dl>
         </section>
@@ -718,6 +858,113 @@ function categoryHubPage(config: HubConfig) {
     </main>
     ${renderAddFab(`${rootPrefix}submit.html`)}
     <script src="${rootPrefix}share.js?v=${assetVersion.share}" defer></script>
+  </div>
+</body>
+</html>`;
+}
+
+// The Vietnamese home page at /vi/: what VietProfs is, plus links into every Vietnamese hub.
+// The interactive directory itself stays English, so this page is the Vietnamese entry point.
+function vietnameseHomePage(
+  roster: RosterEntry[],
+  fieldHubs: HubConfig[],
+  regionHubs: HubConfig[],
+  countryCount: number,
+) {
+  const canonicalUrl = absoluteUrl('vi/');
+  const title = 'VietProfs — Danh bạ giáo sư & nhà khoa học người Việt trên thế giới';
+  const description = `Danh bạ ${roster.length} giáo sư, nhà nghiên cứu và nhà khoa học người Việt và gốc Việt tại ${countryCount} quốc gia, trong các trường đại học, viện nghiên cứu, cơ quan chính phủ và doanh nghiệp.`;
+  const ogImage = absoluteUrl('vietprofs-bamboo-v-512.png');
+  const hubLinks = (hubs: HubConfig[]) =>
+    [...hubs]
+      .sort((a, b) => b.people.length - a.people.length)
+      .map(
+        (hub) =>
+          `<a class="hub-crosslink" href="../${hub.canonicalPath}">${escapeHtml(hub.categoryName)} (${hub.people.length})</a>`,
+      )
+      .join('\n            ');
+  const jsonLd = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'VietProfs',
+    inLanguage: 'vi',
+    url: canonicalUrl,
+    description,
+  });
+  return `<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="${escapeHtml(description)}">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#15181c" media="(prefers-color-scheme: dark)">
+  <link rel="canonical" href="${canonicalUrl}">
+  <link rel="alternate" hreflang="en" href="${siteUrl}/">
+  <link rel="alternate" hreflang="vi" href="${canonicalUrl}">
+  <link rel="alternate" hreflang="x-default" href="${siteUrl}/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="VietProfs">
+  <meta property="og:locale" content="vi_VN">
+  <meta property="og:title" content="${escapeHtml(title)}">
+  <meta property="og:description" content="${escapeHtml(description)}">
+  <meta property="og:url" content="${canonicalUrl}">
+  <meta property="og:image" content="${ogImage}">
+  <meta property="og:image:alt" content="Logo VietProfs">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="${escapeHtml(title)}">
+  <meta name="twitter:description" content="${escapeHtml(description)}">
+  <meta name="twitter:image" content="${ogImage}">
+  <link rel="icon" type="image/svg+xml" href="../vietprofs-bamboo-v.svg">
+  <link rel="apple-touch-icon" href="../vietprofs-bamboo-v-512.png">
+  <link rel="manifest" href="../manifest.webmanifest">
+  <title>${escapeHtml(title)}</title>
+  <script type="application/ld+json">${jsonLd.replace(/</g, '\\u003c')}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../profile.css?v=${assetVersion.css}">
+</head>
+<body class="subpage hub-page">
+  <div id="app">
+    <main>
+      <article class="man-page">
+        <p class="man-running-head"><span>VIETPROFS</span><span class="man-running-title"><a class="man-running-brand" href="../index.html" aria-label="Danh bạ VietProfs"><img class="brand-logo" src="../vietprofs-bamboo-v.svg" alt="" width="20" height="20"><span class="man-running-label">Tiếng Việt</span></a></span><span>VIETPROFS</span></p>
+        <section class="man-section name-section">
+          <h2>VIETPROFS</h2>
+          <div class="name-heading">
+            <div class="name-title"><h1>Giáo sư & nhà khoa học người Việt trên thế giới</h1></div>
+            <div class="profile-actions"><a class="submission-link" href="../index.html">Mở danh bạ tương tác (tiếng Anh)</a><a class="submission-link lang-switch" href="../index.html" hreflang="en" lang="en">English</a></div>
+          </div>
+          <p class="native">Danh bạ cộng đồng học thuật và khoa học người Việt ở nước ngoài</p>
+        </section>
+        <section class="man-section">
+          <h2>GIỚI THIỆU</h2>
+          <p class="synopsis">${escapeHtml(description)}</p>
+          <p>VietProfs ghi nhận những người đang giữ vị trí chính thức (giảng viên, giáo sư, nhà nghiên cứu, nhà khoa học) bên ngoài Việt Nam. Mỗi hồ sơ dẫn về trang chính thức của trường hoặc tổ chức, và được kiểm tra lại định kỳ.</p>
+          <p>Bạn có thể tìm người hướng dẫn nghiên cứu, đồng nghiệp hoặc chuyên gia theo lĩnh vực, quốc gia hay trường đại học bên dưới. Nếu thấy thiếu ai đó hoặc thông tin chưa đúng, hãy <a href="../submit.html">đề xuất hoặc cập nhật</a>.</p>
+          <div class="tags">
+            <span class="tag">${roster.length} người</span>
+            <span class="tag">${countryCount} quốc gia</span>
+          </div>
+        </section>
+        <section class="man-section">
+          <h2>THEO LĨNH VỰC</h2>
+          <nav class="hub-crosslinks" aria-label="Lĩnh vực">
+            ${hubLinks(fieldHubs)}
+          </nav>
+        </section>
+        <section class="man-section">
+          <h2>THEO KHU VỰC</h2>
+          <nav class="hub-crosslinks" aria-label="Khu vực">
+            ${hubLinks(regionHubs)}
+          </nav>
+        </section>
+        ${renderSeeAlso('../')}
+      </article>
+    </main>
+    ${renderAddFab('../submit.html', 'Đề xuất hoặc cập nhật thông tin')}
   </div>
 </body>
 </html>`;
@@ -768,6 +1015,7 @@ async function main() {
     rm(fieldsDir, { recursive: true, force: true }),
     rm(regionsDir, { recursive: true, force: true }),
     rm(universitiesDir, { recursive: true, force: true }),
+    rm(viDir, { recursive: true, force: true }),
   ]);
 
   const byUniversity = new Map<string, RosterEntry[]>();
@@ -800,16 +1048,18 @@ async function main() {
     ),
   };
 
-  // 1. Generate individual profile pages
+  // 1. Generate individual profile pages, in English and Vietnamese
   await Promise.all(
-    allEntries.map(async (person) => {
-      const outputFile = resolve(output, personPath(person.id));
-      await mkdir(dirname(outputFile), { recursive: true });
-      await writeFile(
-        outputFile,
-        profilePage(person, availableCountryHubs, relationships, rosterById, related),
-      );
-    }),
+    allEntries.flatMap((person) =>
+      (['en', 'vi'] as const).map(async (lang) => {
+        const outputFile = resolve(output, langPath(personPath(person.id), lang));
+        await mkdir(dirname(outputFile), { recursive: true });
+        await writeFile(
+          outputFile,
+          profilePage(person, availableCountryHubs, relationships, rosterById, related, lang),
+        );
+      }),
+    ),
   );
   await Promise.all(
     Object.entries(retiredIds).map(async ([id, { replacedBy }]) => {
@@ -839,7 +1089,11 @@ async function main() {
   for (const fieldHub of fieldHubs) {
     fieldHub.otherCategories = fieldHubs
       .filter((hub) => hub !== fieldHub)
-      .map((hub) => ({ label: hub.categoryName, path: hub.canonicalPath }));
+      .map((hub) => ({
+        label: hub.categoryName,
+        viLabel: fieldVi(hub.categoryName),
+        path: hub.canonicalPath,
+      }));
   }
 
   // 3. Generate Region Hub pages
@@ -864,7 +1118,11 @@ async function main() {
   for (const continentHub of continentHubs) {
     continentHub.otherCategories = continentHubs
       .filter((hub) => hub !== continentHub)
-      .map((hub) => ({ label: hub.categoryName, path: hub.canonicalPath }));
+      .map((hub) => ({
+        label: hub.categoryName,
+        viLabel: placeVi(hub.categoryName),
+        path: hub.canonicalPath,
+      }));
   }
 
   const allCountries = Object.keys(countryCounts).sort(
@@ -891,7 +1149,11 @@ async function main() {
     countryHub.otherCategories = countryHubs
       .filter((hub) => hub !== countryHub)
       .slice(0, 10)
-      .map((hub) => ({ label: hub.categoryName, path: hub.canonicalPath }));
+      .map((hub) => ({
+        label: hub.categoryName,
+        viLabel: placeVi(hub.categoryName),
+        path: hub.canonicalPath,
+      }));
   }
 
   function personCountry(person: RosterEntry): string {
@@ -923,8 +1185,16 @@ async function main() {
           canonicalPath: fieldRegionPath(field, region),
           interactiveUrl: `index.html?field=${encodeURIComponent(field)}&loc=${encodeURIComponent(region === 'United States' ? 'US' : region)}`,
           otherCategories: [
-            { label: `Everyone in ${field}`, path: fieldPath(field) },
-            { label: `Everyone in ${region}`, path: regionPath(region) },
+            {
+              label: `Everyone in ${field}`,
+              viLabel: `Tất cả ngành ${fieldVi(field)}`,
+              path: fieldPath(field),
+            },
+            {
+              label: `Everyone in ${region}`,
+              viLabel: `Tất cả tại ${placeVi(region)}`,
+              path: regionPath(region),
+            },
           ],
           field,
           region,
@@ -940,6 +1210,7 @@ async function main() {
         .filter((hub) => hub.field === fieldHub.categoryName)
         .map((hub) => ({
           label: `${fieldHub.categoryName} in ${hub.region}`,
+          viLabel: `${fieldVi(fieldHub.categoryName)} tại ${placeVi(hub.region ?? '')}`,
           path: hub.canonicalPath,
         })),
     );
@@ -950,6 +1221,7 @@ async function main() {
         .filter((hub) => hub.region === regionHub.categoryName)
         .map((hub) => ({
           label: `${hub.field} in ${regionHub.categoryName}`,
+          viLabel: `${fieldVi(hub.field ?? '')} tại ${placeVi(regionHub.categoryName)}`,
           path: hub.canonicalPath,
         })),
     );
@@ -965,10 +1237,14 @@ async function main() {
     ]
       .filter((field) => related.fieldHubs.has(field))
       .sort((a, b) => a.localeCompare(b))
-      .map((field) => ({ label: field, path: fieldPath(field) }));
+      .map((field) => ({ label: field, viLabel: fieldVi(field), path: fieldPath(field) }));
     const countryLinks = [...new Set(people.map(personCountry))]
       .filter((country) => availableCountryHubs.has(country))
-      .map((country) => ({ label: `Everyone in ${country}`, path: regionPath(country) }));
+      .map((country) => ({
+        label: `Everyone in ${country}`,
+        viLabel: `Tất cả tại ${placeVi(country)}`,
+        path: regionPath(country),
+      }));
     return {
       categoryType: 'Institution' as const,
       categoryName: university,
@@ -982,36 +1258,47 @@ async function main() {
     };
   });
 
+  const englishHubs = [
+    ...fieldHubs,
+    ...continentHubs,
+    ...countryHubs,
+    ...intersectionHubs,
+    ...universityHubs,
+  ];
+  const vietnameseHubs = englishHubs.map(vietnameseHub);
   await Promise.all(
-    [...fieldHubs, ...continentHubs, ...countryHubs, ...intersectionHubs, ...universityHubs].map(
-      async (hub) => {
-        const outputFile = resolve(output, hub.canonicalPath);
-        await mkdir(dirname(outputFile), { recursive: true });
-        await writeFile(outputFile, categoryHubPage(hub));
-      },
+    [...englishHubs, ...vietnameseHubs].map(async (hub) => {
+      const outputFile = resolve(output, hub.canonicalPath);
+      await mkdir(dirname(outputFile), { recursive: true });
+      await writeFile(outputFile, categoryHubPage(hub));
+    }),
+  );
+  await writeFile(
+    resolve(viDir, 'index.html'),
+    vietnameseHomePage(
+      roster,
+      fieldHubs.map(vietnameseHub),
+      [...continentHubs, ...countryHubs].map(vietnameseHub),
+      Object.keys(countryCounts).length,
     ),
   );
 
   if (!development) {
-    const hubUrls = [
-      ...fieldHubs,
-      ...continentHubs,
-      ...countryHubs,
-      ...intersectionHubs,
-      ...universityHubs,
-    ].map(
+    const hubUrls = [...englishHubs, ...vietnameseHubs].map(
       (hub) =>
         `  <url>\n    <loc>${absoluteUrl(hub.canonicalPath)}</loc>\n    <changefreq>weekly</changefreq>\n    <priority>${hub.categoryType === 'Discipline × Region' || hub.categoryType === 'Institution' ? '0.7' : '0.8'}</priority>\n  </url>`,
     );
-    const profileUrls = allEntries.map(
-      (person) =>
-        `  <url>\n    <loc>${absoluteUrl(personPath(person.id))}</loc>${person.lastUpdatedAt ? `\n    <lastmod>${person.lastUpdatedAt.slice(0, 10)}</lastmod>` : ''}\n    <changefreq>monthly</changefreq>\n    <priority>0.7</priority>\n  </url>`,
+    const profileUrls = allEntries.flatMap((person) =>
+      (['en', 'vi'] as const).map(
+        (lang) =>
+          `  <url>\n    <loc>${absoluteUrl(langPath(personPath(person.id), lang))}</loc>${person.lastUpdatedAt ? `\n    <lastmod>${person.lastUpdatedAt.slice(0, 10)}</lastmod>` : ''}\n    <changefreq>monthly</changefreq>\n    <priority>0.7</priority>\n  </url>`,
+      ),
     );
-    const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url>\n    <loc>${siteUrl}/</loc>\n    <changefreq>daily</changefreq>\n    <priority>1.0</priority>\n  </url>\n  <url>\n    <loc>${siteUrl}/submit.html</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.5</priority>\n  </url>\n${hubUrls.join('\n')}\n${profileUrls.join('\n')}\n</urlset>\n`;
+    const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url>\n    <loc>${siteUrl}/</loc>\n    <changefreq>daily</changefreq>\n    <priority>1.0</priority>\n  </url>\n  <url>\n    <loc>${siteUrl}/vi/</loc>\n    <changefreq>daily</changefreq>\n    <priority>0.9</priority>\n  </url>\n  <url>\n    <loc>${siteUrl}/submit.html</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.5</priority>\n  </url>\n${hubUrls.join('\n')}\n${profileUrls.join('\n')}\n</urlset>\n`;
     await writeFile(resolve(output, 'sitemap.xml'), sitemap);
   }
   console.log(
-    `Generated ${allEntries.length} profile pages, ${fieldHubs.length} field hubs, ${continentHubs.length + countryHubs.length} region hubs, ${intersectionHubs.length} field-region hubs, and ${universityHubs.length} university hubs${development ? ' for development.' : ' and sitemap entries.'}`,
+    `Generated ${allEntries.length} profile pages, ${fieldHubs.length} field hubs, ${continentHubs.length + countryHubs.length} region hubs, ${intersectionHubs.length} field-region hubs, and ${universityHubs.length} university hubs, each in English and Vietnamese${development ? ', for development.' : ', and sitemap entries.'}`,
   );
 }
 
