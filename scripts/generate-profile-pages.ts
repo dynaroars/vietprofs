@@ -650,8 +650,8 @@ function vietnameseHub(hub: HubConfig): HubConfig {
         return {
           name: hub.categoryName,
           title: `Giáo sư & nhà nghiên cứu người Việt tại ${hub.categoryName}`,
-          subtitle: `Người Việt và gốc Việt tại ${hub.categoryName}`,
-          description: `Danh sách ${n} người Việt và gốc Việt tại ${hub.categoryName}.`,
+          subtitle: `Người gốc Việt tại ${hub.categoryName}`,
+          description: `Danh sách ${n} người gốc Việt tại ${hub.categoryName}.`,
         };
     }
   })();
@@ -747,6 +747,14 @@ function categoryHubPage(config: HubConfig) {
     ],
   });
 
+  // When everyone on the roster shares one country, show its flag once in the
+  // heading instead of repeating it on every roster row.
+  const rosterCountries = new Set(sortedPeople.map((person) => person.country || ''));
+  const sharedCountry =
+    rosterCountries.size === 1 ? [...rosterCountries][0] || undefined : undefined;
+  const headingFlag = sharedCountry
+    ? ` <span class="country-flag" title="${escapeHtml(vi ? placeVi(sharedCountry) : sharedCountry)}">${countryFlag(sharedCountry)}</span>`
+    : '';
   const rosterItems = sortedPeople
     .map((person) => {
       const name = displayName(person.name);
@@ -758,11 +766,12 @@ function categoryHubPage(config: HubConfig) {
       ]
         .filter(Boolean)
         .join(', ');
-      const flag = person.country
-        ? `<span class="country-flag" title="${escapeHtml(vi ? placeVi(person.country) : person.country)}">${countryFlag(person.country)}</span>`
-        : '';
+      const flag =
+        person.country && !sharedCountry
+          ? `<span class="country-flag" title="${escapeHtml(vi ? placeVi(person.country) : person.country)}">${countryFlag(person.country)}</span>`
+          : '';
       const [shown, other] = vi && native ? [native, name] : [name, native];
-      return `<li class="hub-roster-item"><a class="hub-person-name" href="${rootPrefix}${langPath(personPath(person.id), lang)}">${escapeHtml(shown)}</a>${other && other !== shown ? ` <span class="hub-person-native">(${escapeHtml(other)})</span>` : ''} <span class="hub-person-role">${escapeHtml(role)}</span> ${flag}</li>`;
+      return `<li class="hub-roster-item"><a class="hub-person-name" href="${rootPrefix}${langPath(personPath(person.id), lang)}">${escapeHtml(shown)}</a>${other && other !== shown ? ` <span class="hub-person-native">(${escapeHtml(other)})</span>` : ''} <span class="hub-person-role">${escapeHtml(role)}</span>${flag ? ` ${flag}` : ''}</li>`;
     })
     .join('\n            ');
 
@@ -821,7 +830,7 @@ function categoryHubPage(config: HubConfig) {
         <section class="man-section name-section">
           <h2>${vi ? 'DANH MỤC' : 'CATEGORY'}</h2>
           <div class="name-heading">
-            <div class="name-title"><h1>${escapeHtml(config.categoryTitle)}</h1></div>
+            <div class="name-title"><h1>${escapeHtml(config.categoryTitle)}${headingFlag}</h1></div>
             <div class="profile-actions">${renderShareMenu({ title: `${config.categoryTitle} — VietProfs`, url: canonicalUrl })}<a class="submission-link" href="${escapeHtml(`${rootPrefix}${config.interactiveUrl}`)}">${vi ? 'Mở trong danh bạ tương tác (tiếng Anh)' : 'Open in Interactive Directory'}</a><a class="submission-link lang-switch" href="${rootPrefix}${vi ? basePath : langPath(basePath, 'vi')}" hreflang="${vi ? 'en' : 'vi'}" lang="${vi ? 'en' : 'vi'}">${vi ? 'English' : 'Tiếng Việt'}</a></div>
           </div>
           <p class="native">${escapeHtml(config.categorySubtitle)}</p>
@@ -1249,8 +1258,8 @@ async function main() {
       categoryType: 'Institution' as const,
       categoryName: university,
       categoryTitle: `Vietnamese Researchers & Scholars at ${university}`,
-      categorySubtitle: `Vietnamese and Vietnamese-Diaspora People at ${university}`,
-      description: `Directory of ${people.length} Vietnamese and Vietnamese-diaspora people at ${university}.`,
+      categorySubtitle: `Vietnamese-Diaspora People at ${university}`,
+      description: `Directory of ${people.length} Vietnamese-diaspora people at ${university}.`,
       people,
       canonicalPath: universityPath(university),
       interactiveUrl: `index.html?q=${encodeURIComponent(university)}`,
