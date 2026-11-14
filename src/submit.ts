@@ -473,7 +473,7 @@ function buildUpdateBody(
   for (const key of FIELD_ORDER) {
     const oldValue =
       key === 'field'
-        ? fieldOf(matchedEntry.department, matchedEntry.university)
+        ? fieldOf(matchedEntry.department, matchedEntry.university, matchedEntry.researchAreas)
         : key === 'institutionType'
           ? institutionTypeOf(matchedEntry)
           : formatValue(matchedRecord[key]);
@@ -559,7 +559,7 @@ function populateEntry(form: SubmitForm, entry: RosterEntry): void {
   form.state.value = entry.state ?? '';
   form.country.value = entry.country ?? '';
   form.department.value = entry.department ?? '';
-  form.field.value = fieldOf(entry.department, entry.university);
+  form.field.value = fieldOf(entry.department, entry.university, entry.researchAreas);
   form.rank.value = entry.rank ?? '';
   form.undergradYear.value = entry.undergradYear ? String(entry.undergradYear) : '';
   form.undergradInstitution.value = entry.undergradInstitution ?? '';

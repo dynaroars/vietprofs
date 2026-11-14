@@ -105,10 +105,14 @@ export function renderRosterEntry(
   ]
     .filter(Boolean)
     .join(' · ');
-  const personField = fieldOf(person.department, person.university);
+  const personField = fieldOf(person.department, person.university, person.researchAreas);
   const healthSubfield = healthSubfieldOf(person);
   const fieldLabel = `${fieldDropdownLabel(personField)}${healthSubfield ? ` (${healthSubfield})` : ''}`;
-  const fieldTag = `<a class="tag tag-field tag-link" href="${escapeHtml(`${baseUrl}${fieldPath(personField)}`)}" title="Explore ${escapeHtml(personField)} discipline hub">${escapeHtml(fieldLabel)}</a>`;
+  // "Others" is a catch-all with no discipline hub page, so it is shown unlinked.
+  const fieldTag =
+    personField === 'Others'
+      ? `<span class="tag tag-field">${escapeHtml(fieldLabel)}</span>`
+      : `<a class="tag tag-field tag-link" href="${escapeHtml(`${baseUrl}${fieldPath(personField)}`)}" title="Explore ${escapeHtml(personField)} discipline hub">${escapeHtml(fieldLabel)}</a>`;
   // The role line already names Teaching, Clinical, Research, and Emeritus appointments (see
   // canonicalRank), so the track chip only appears when it adds something.
   const trackInRole = Boolean(person.track && canonicalRank(person)?.includes(person.track));

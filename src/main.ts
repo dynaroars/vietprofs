@@ -420,7 +420,7 @@ function renderRoster(
   const isLocationFiltered = Boolean(location && location !== 'World');
   const locationTargetName = location === 'US' ? 'United States' : (location ?? 'United States');
   const fieldTarget =
-    isFieldFiltered && isAcademia()
+    isFieldFiltered && field !== 'Others' && isAcademia()
       ? `${import.meta.env.BASE_URL}${
           hasIntersectionHub && isLocationFiltered
             ? fieldRegionPath(field as string, locationTargetName)
