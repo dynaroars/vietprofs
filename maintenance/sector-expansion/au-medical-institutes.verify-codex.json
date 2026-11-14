@@ -1,0 +1,137 @@
+{
+  "verifier": "codex",
+  "input": "maintenance/sector-expansion/au-medical-institutes.agy.json",
+  "candidates": [
+    {
+      "name": "Quan Nguyen",
+      "verdict": "fixable",
+      "failedTests": [
+        1
+      ],
+      "reason": "The submitted qimrberghofer.edu.au URL redirects to a 404 on qimrb.edu.au. The replacement employer profile names Quan Nguyen as Group Leader of the Genomics and Machine Learning Lab: https://www.qimrb.edu.au/about/our-people/associate-professor-quan-nguyen . His UQ profile independently documents the UQ Bioengineering PhD (2013), RIKEN training, and career research leadership: https://about.uq.edu.au/experts/16084 . The Vietnamese name combination Quan Nguyen, also documented as Hoang Quan Nguyen in the UQ thesis record, supplies an affirmative name signal. Brisbane-based, outside Vietnam. Reran find-roster-matches with the submitted and replacement profiles, UQ profile, ORCID 0000-0001-7870-5703, and name variant; the hits concern other disciplines/identities, with no matching identity URL or retired ID.",
+      "correctedProfileUrl": "https://www.qimrb.edu.au/about/our-people/associate-professor-quan-nguyen",
+      "correctedFields": {}
+    },
+    {
+      "name": "Cattram Nguyen",
+      "verdict": "fixable",
+      "failedTests": [
+        1
+      ],
+      "reason": "The submitted /users/ URL did not yield a profile (Cloudflare challenge). Opened the replacement MCRI researcher profile, which identifies a current Senior Research Fellow in Asia-Pacific Health and lists current research outputs: https://www.mcri.edu.au/researcher-details/cattram-nguyen . NHMRC independently documents her University of Melbourne PhD as 2015, rather than the submitted 2014: https://www.nhmrc.gov.au/about-us/resources/impact-case-studies-protecting-children-pneumonia . This is an established career researcher, not the historical postdoctoral appointment. Cattram Nguyen is an affirmative Vietnamese name combination; no reconstructed diacritics used. Based at MCRI in Melbourne, outside Vietnam. find-roster-matches returned no roster or retired-id matches for both submitted and replacement profiles.",
+      "correctedProfileUrl": "https://www.mcri.edu.au/researcher-details/cattram-nguyen",
+      "correctedFields": {
+        "phdYear": 2015
+      }
+    },
+    {
+      "name": "Minh Pham",
+      "verdict": "fixable",
+      "failedTests": [
+        1
+      ],
+      "reason": "The submitted /users/ URL returned a Cloudflare challenge. Opened https://www.mcri.edu.au/researcher-details/minh-pham , a current employer profile naming a Senior Research Fellow in Global Adolescent Health, with student supervision and research funding. It independently confirms Hanoi Medical University medical training and Monash PhD (2014-2018). Vietnamese education plus the Minh Duc Pham publishing identity provides an affirmative signal. Melbourne appointment is outside Vietnam. Reran find-roster-matches for Minh Pham and Minh Duc Pham with both profiles; existing hits are different people (decision sciences, materials, chemistry, computing, paediatric infectious diseases, AI, and the retired CNRS scholar), not this Monash-trained public-health researcher.",
+      "correctedProfileUrl": "https://www.mcri.edu.au/researcher-details/minh-pham",
+      "correctedFields": {}
+    },
+    {
+      "name": "Ha Trong Nguyen",
+      "verdict": "fixable",
+      "failedTests": [
+        1
+      ],
+      "reason": "The submitted /about-us/ profile returns 404. Opened the current /contact-us/ employer profile: https://www.thekids.org.au/contact-us/our-people/n/ha-nguyen/ . It establishes the Senior Research Fellow role, ANU economics PhD, National Economics University BA in Vietnam, and Human Development and Community Wellbeing team. Those qualifications and the Ha Trong Nguyen identity supply affirmative Vietnamese evidence. Perth-based career appointment is outside Vietnam. Reran find-roster-matches with both profile URLs and the employer-linked personal site https://sites.google.com/view/nguyen-ha ; the returned language, aviation, mathematics, education, and bioassay researchers are distinct.",
+      "correctedProfileUrl": "https://www.thekids.org.au/contact-us/our-people/n/ha-nguyen/",
+      "correctedFields": {
+        "department": "Human Development and Community Wellbeing Team"
+      }
+    },
+    {
+      "name": "Vu Vuong",
+      "verdict": "fixable",
+      "failedTests": [
+        1
+      ],
+      "reason": "The submitted /about-us/ URL returns 404. Opened https://www.thekids.org.au/contact-us/our-people/v/vu-vuong/ , which individually identifies Vu Vuong as Senior Research Officer, describes his economics research, explicitly records a UWA economics PhD, and links his Human Development and Community Wellbeing team and ongoing projects. This supports a career research appointment in Perth, outside Vietnam. The combined Vietnamese given/family name Vu Vuong supplies a stronger signal than an ambiguous shared surname alone. find-roster-matches with the original and corrected URLs returned no roster or retired-id matches.",
+      "correctedProfileUrl": "https://www.thekids.org.au/contact-us/our-people/v/vu-vuong/",
+      "correctedFields": {}
+    },
+    {
+      "name": "Hai Vu Nguyen",
+      "verdict": "fail",
+      "failedTests": [
+        1,
+        2
+      ],
+      "reason": "The submitted individual WEHI URL returns 404, including with a trailing slash. The live Strasser Lab team page does not name Hai Vu Nguyen: https://www.wehi.edu.au/laboratory/strasser-lab/ . An employer seminar page identifies him as Senior Research Officer in that lab on 26 November 2025: https://www.wehi.edu.au/event/dr-hai-vu-nguyen-blood-cells-blood-cancer-division/ . A dated event is not an acceptable current profile, and neither it nor the older research news independently establishes the proposed PhD institution/year or a current stable appointment. No acceptable replacement individual profile or personal site was verified; the WEHI public researcher sitemap also contained no matching profile. Tests 1 and 2 therefore remain unverified, not a finding that he has definitely left research. Hai Vu Nguyen is an affirmative Vietnamese name combination and the documented work is in Melbourne. find-roster-matches was run with the submitted URL; its hits have different names, disciplines, or degree histories and do not establish a duplicate.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Nghi Huu Nguyen",
+      "verdict": "fail",
+      "failedTests": [
+        1,
+        2
+      ],
+      "reason": "The submitted WEHI individual URL returns 404. Opened https://www.wehi.edu.au/laboratory/sleebs-lab/ , which lists Dr Nghi Nguyen as Senior Research Officer, but supplies only a team-list name/title, without an individual biography or profile. No qualifying individual employer profile or personal site was verified. The proposed full name, La Trobe PhD institution and 2013 year were not independently identity-resolved, and a Dr title alone does not verify that research doctorate. Thus the profile and full career-role-plus-doctorate test remain unverified. Nghi Nguyen is a Vietnamese name combination, and the lab is in Melbourne, outside Vietnam. Reran find-roster-matches for both Nghi Huu Nguyen and Nghi Nguyen; vp-0773 is Nghi Nhan Nguyen in materials engineering at National Formosa University, a distinct identity.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "William Nguyen",
+      "verdict": "fail",
+      "failedTests": [
+        1
+      ],
+      "reason": "The submitted individual WEHI URL returns 404. The live Sleebs Lab page lists Dr William Nguyen as Senior Research Officer but provides no individual biography or profile: https://www.wehi.edu.au/laboratory/sleebs-lab/ . No acceptable individual employer page or personal site was verified, including in the public WEHI researcher sitemap. His own author biography in the primary research review independently establishes the Monash PhD, prior Scripps postdoc, and subsequent WEHI career research role: https://media.malariaworld.org/Chemo_proteomics_in_antimalarial_target_identification_and_engagement_97dce61a33.pdf (DOI 10.1002/med.21975). The current lab listing corroborates that continuing role. Nguyen is a distinctive Vietnamese surname rather than one of the ambiguous shared romanizations; no contrary identity signal found. Melbourne is outside Vietnam. find-roster-matches returned no roster or retired-id matches. A lab-wide listing or paper cannot be substituted for the required profileUrl.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Tan Nguyen",
+      "verdict": "fail",
+      "failedTests": [
+        1,
+        2
+      ],
+      "reason": "The submitted individual WEHI URL returns 404. The live WEHI lab page lists Dr Tan Nguyen as Senior Research Officer but offers no individual profile: https://www.wehi.edu.au/laboratory/wickramasinghe-lab/ . The lab-owned biography at https://www.wickramasinghelab.com/our-team calls him a postdoctoral researcher and says his current Senior Research Officer position is at exteRNA, a biotechnology spinout, after a WEHI PhD and UCSF postdoctoral training. These conflicting employment descriptions do not independently establish the proposed stable WEHI appointment, and the biography does not verify the proposed PhD-awarding university. No qualifying current individual employer profile or personal site was found. Vietnamese name combination Tan Nguyen and documented Melbourne employment pass the name/location screening. find-roster-matches was rerun with the proposed profile; nine name hits concern different full names/fields and no matching identity URL, with no identified duplicate. Resolve employer and career status before acceptance.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Ben Tran",
+      "verdict": "fixable",
+      "failedTests": [
+        1
+      ],
+      "reason": "The submitted /people/ URL returns 404. Found and opened the individual employer profile https://findaresearcher.wehi.edu.au/tran.b ; its public backing data https://findaresearcher.wehi.edu.au/api/users/tran.b names Ben Tran, Senior Clinical Research Fellow, Cancer, and describes his GU research leadership. It lists Melbourne MBBS and FRACP, not a PhD: omit the submitted phdInstitution (null below means remove that unsupported field). The employer-linked publication list independently resolves him to multiple 2026 papers, including DOI 10.1093/oncolo/oyag397 and DOI 10.1016/j.esmoop.2026.108583, satisfying the publication alternative to a doctorate. WEHI affirmatively identifies his Vietnamese grandfather: https://www.wehi.edu.au/news/landmark-research-aims-to-close-cultural-gaps-in-cancer-care/ . Based in Melbourne, outside Vietnam. Reran find-roster-matches with old/new profiles, Peter Mac profile and ORCID 0000-0001-9124-354X; vp-2053 is the distinct Vanderbilt Asian Studies/English scholar. The Peter Mac profile itself was blocked by Cloudflare, so its cached text was not used as verification.",
+      "correctedProfileUrl": "https://findaresearcher.wehi.edu.au/tran.b",
+      "correctedFields": {
+        "phdInstitution": null,
+        "department": "Cancer"
+      }
+    },
+    {
+      "name": "Hoanh Tran",
+      "verdict": "fail",
+      "failedTests": [
+        1,
+        2
+      ],
+      "reason": "The supplied Doherty profile returns an Incapsula security incident page rather than readable profile content, both through the web tool and direct HTTP; its contents therefore could not be verified live. The current proposed WEHI appointment was not independently established. Opened the official Melbourne molecular-oncology page, which is explicitly archived and lists Hoanh Tran as Senior Research Fellow (Honorary): https://medicine.unimelb.edu.au/research-groups/infectious-diseases-research/archived-research-content/host-pathogen-interactions/molecular-oncology . An honorary appointment does not establish the required career appointment. A 2024 conference biography is a lead toward a Doherty joint lab-head position and a Friedrich Miescher PhD, but is not a current employer profile: https://proteins-2024.p.asnevents.com.au/speaker/532510 . Do not accept the submitted WEHI employer from that historical evidence. Tests 1 and 2 remain unresolved rather than proven ineligible. Hoanh Tran is an affirmative Vietnamese name combination and the documented research affiliations are in Melbourne. find-roster-matches returned no roster or retired-id matches.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    }
+  ],
+  "possible_move": [
+    {
+      "name": "Thach S. Tran",
+      "id": "none",
+      "verdict": "not_moved",
+      "newEmployer": "",
+      "url": "https://www.garvan.org.au/people/researchers/thach-tran",
+      "reason": "Opened the current Garvan individual profile, which still identifies Thach Tran as Senior Research Officer in the Center Lab and documents a Prince of Songkla University PhD (1999), migration to Australia in 2011, and joining Garvan in 2014. The UNSW ICFHS staff page also links this exact Garvan profile for Thach S Tran: https://www.unsw.edu.au/research/icfhs/about-us . The claimed Deakin destination is a different person: https://experts.deakin.edu.au/71371-thach-tran identifies ORCID 0000-0002-4686-8601, a Melbourne PhD (2014), and a Monash appointment. That ORCID matches rostered vp-2661 via https://research.monash.edu/en/persons/thach-tran/ . Thus there is no verified Garvan-to-Deakin move for Thach S. Tran. The input supplies id none, so there is no existing roster employer to compare for him; find-roster-matches finds only the distinct vp-2661 name hit. Deakin may be relevant to vp-2661 separately, but it cannot be transferred to this candidate."
+    }
+  ]
+}

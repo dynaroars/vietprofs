@@ -1,0 +1,542 @@
+{
+  "group": "hardware-physical-labs",
+  "agent": "agy",
+  "finishedAt": "2026-11-14T22:52:00Z",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Van-Quan Pham",
+        "university": "Nokia Bell Labs",
+        "institutionType": "Corporate research lab",
+        "track": "Industry Research",
+        "rank": "Researcher",
+        "department": "Network Systems and Security Research Lab",
+        "city": "Murray Hill",
+        "state": "New Jersey",
+        "country": "United States",
+        "researchAreas": [
+          "Mobile networks",
+          "5G/6G architecture",
+          "Network security",
+          "Cloud-native networking"
+        ],
+        "phdInstitution": "Institut Polytechnique de Paris",
+        "phdYear": 2022,
+        "profileUrl": "https://www.nokia.com/about/our-company/bell-labs/people/quan-pham-van/",
+        "scholarUrl": "https://scholar.google.com/citations?user=gyGxgrgAAAAJ",
+        "confirmed": true
+      },
+      "evidence": {
+        "currentRole": "https://www.nokia.com/about/our-company/bell-labs/people/quan-pham-van/ : 'Van-Quan Pham is a researcher in the Network Systems and Security Research Lab at Nokia Bell Labs, Murray Hill, NJ, USA.'",
+        "doctorateOrPapers": "PhD in Computer Science from Institut Polytechnique de Paris / Telecom SudParis (2022); dissertation on dynamic service function chaining in mobile edge networks.",
+        "vietnameseSignal": "B.E. degree from Posts and Telecommunications Institute of Technology (PTIT), Ho Chi Minh City, Vietnam (2013); full Vietnamese name structure Van-Quan Pham.",
+        "dedup": "npm run find-roster-matches -- 'Van-Quan Pham' -> Clean (vp-0865 and vp-3232 are distinct people)."
+      }
+    },
+    {
+      "entry": {
+        "name": "Kevin Tran",
+        "university": "Toyota Research Institute",
+        "institutionType": "Corporate research lab",
+        "track": "Industry Research",
+        "rank": "Researcher",
+        "department": "Energy & Materials",
+        "city": "Los Altos",
+        "state": "California",
+        "country": "United States",
+        "researchAreas": [
+          "Computational materials science",
+          "Machine learning for catalysis",
+          "Battery materials"
+        ],
+        "phdInstitution": "Carnegie Mellon University",
+        "phdYear": 2021,
+        "profileUrl": "https://www.tri.global/",
+        "websiteUrl": "https://ktran9891.github.io/",
+        "scholarUrl": "https://scholar.google.com/citations?user=vT5X3qAAAAAJ",
+        "confirmed": false
+      },
+      "evidence": {
+        "currentRole": "https://ktran9891.github.io/ : 'Staff Research Scientist at the Toyota Research Institute working in the Energy & Materials division since 2021.' Verified on recent TRI publications.",
+        "doctorateOrPapers": "PhD in Chemical Engineering from Carnegie Mellon University (2021) supervised by Zack Ulissi; lead author on Open Catalyst Project publications and multiple 2022-2024 TRI publications.",
+        "vietnameseSignal": "Vietnamese heritage surname Tran; personal site and co-author network.",
+        "dedup": "npm run find-roster-matches -- 'Kevin Tran' -> Clean (vp-1751 is Kevin Ducbao Tran at University of Bristol, completely distinct person)."
+      }
+    },
+    {
+      "entry": {
+        "name": "Duy Nguyen-Tuong",
+        "university": "Bosch",
+        "institutionType": "Corporate research lab",
+        "track": "Industry Research",
+        "rank": "Researcher",
+        "department": "Bosch Center for Artificial Intelligence",
+        "city": "Renningen",
+        "country": "Germany",
+        "researchAreas": [
+          "Robot learning",
+          "Model-based reinforcement learning",
+          "Gaussian processes"
+        ],
+        "phdInstitution": "University of Freiburg",
+        "phdYear": 2011,
+        "profileUrl": "https://www.bosch.de/stories/kuenstliche-intelligenz/",
+        "scholarUrl": "https://scholar.google.com/citations?user=6Uv7aekAAAAJ",
+        "confirmed": true
+      },
+      "evidence": {
+        "currentRole": "https://www.bosch.de/stories/kuenstliche-intelligenz/ : 'Duy Nguyen-Tuong, Senior Research Manager am Bosch Center for Artificial Intelligence (BCAI) in Renningen.'",
+        "doctorateOrPapers": "Dr. rer. nat. (PhD) in Robot Learning from University of Freiburg / Max Planck Institute (2011), supervised by Jan Peters and Bernhard Schölkopf; senior research leadership at BCAI with extensive publication record.",
+        "vietnameseSignal": "Full Vietnamese name Duy Nguyen-Tuong (Nguyễn Tường Duy); active in Vietnamese academic networks in Germany.",
+        "dedup": "npm run find-roster-matches -- 'Duy Nguyen-Tuong' -> Clean (vp-0213, vp-0707, vp-2202, vp-3153, vp-3237 are all distinct people)."
+      }
+    },
+    {
+      "entry": {
+        "name": "Trung Kien Tran",
+        "university": "Bosch",
+        "institutionType": "Corporate research lab",
+        "track": "Industry Research",
+        "rank": "Researcher",
+        "department": "Bosch Center for Artificial Intelligence",
+        "city": "Renningen",
+        "country": "Germany",
+        "researchAreas": [
+          "Knowledge representation and reasoning",
+          "Semantic web",
+          "Ontologies in AI"
+        ],
+        "phdInstitution": "Ulm University",
+        "phdYear": 2018,
+        "profileUrl": "https://sites.google.com/site/trungkientran0ban/",
+        "websiteUrl": "https://sites.google.com/site/trungkientran0ban/",
+        "scholarUrl": "https://scholar.google.com/citations?user=KqUMncQAAAAJ",
+        "confirmed": false
+      },
+      "evidence": {
+        "currentRole": "https://sites.google.com/site/trungkientran0ban/ and https://www.uni-ulm.de/in/ki/staff/trung-kien-tran/ : 'Lead Research Scientist & Project Manager at Bosch Center for Artificial Intelligence (BCAI), Renningen, Germany.' Verified on recent Bosch BCAI papers.",
+        "doctorateOrPapers": "PhD in Computer Science (Artificial Intelligence) from Ulm University (2018); author on multiple 2022-2025 papers and patents affiliated with Bosch Center for Artificial Intelligence.",
+        "vietnameseSignal": "Full Vietnamese name Trung Kien Tran (Trần Trung Kiên); prior engineering degree from Hanoi University of Science and Technology (HUST).",
+        "dedup": "npm run find-roster-matches -- 'Trung Kien Tran' -> Clean (vp-1008, vp-1990, vp-2138, vp-2460 are distinct people)."
+      }
+    },
+    {
+      "entry": {
+        "name": "Tuan M. Hoang Trong",
+        "university": "IBM Research",
+        "institutionType": "Corporate research lab",
+        "track": "Industry Research",
+        "rank": "Researcher",
+        "department": "Thomas J. Watson Research Center",
+        "city": "Yorktown Heights",
+        "state": "New York",
+        "country": "United States",
+        "researchAreas": [
+          "Foundation model stack",
+          "AI compilers",
+          "High performance computing",
+          "Computational biology"
+        ],
+        "phdInstitution": "George Mason University",
+        "phdYear": 2014,
+        "profileUrl": "https://research.ibm.com/people/tuan-m-hoang-trong",
+        "scholarUrl": "https://scholar.google.com/citations?user=G6647u8AAAAJ",
+        "confirmed": true
+      },
+      "evidence": {
+        "currentRole": "https://research.ibm.com/people/tuan-m-hoang-trong : 'Tuan M. Hoang Trong is a Senior Research Scientist at IBM Thomas J. Watson Research Center, Yorktown Heights, NY.'",
+        "doctorateOrPapers": "PhD in Bioinformatics & Computational Biology from George Mason University (2014); leading Triton compiler and AI foundation model systems work at IBM Research.",
+        "vietnameseSignal": "Full Vietnamese name Tuan Hoang Trong (Hoàng Trọng Tuấn); B.S. in Computer Science from Vietnam National University Ho Chi Minh City (VNU-HCM).",
+        "dedup": "npm run find-roster-matches -- 'Tuan M. Hoang Trong' -> Clean (vp-0354 is Tuan Hoang at Pepperdine University, distinct person)."
+      }
+    },
+    {
+      "entry": {
+        "name": "Van Luan Nguyen",
+        "university": "Samsung Advanced Institute of Technology",
+        "institutionType": "Corporate research lab",
+        "track": "Industry Research",
+        "rank": "Researcher",
+        "department": "Semiconductor & Materials Laboratory",
+        "city": "Suwon",
+        "country": "South Korea",
+        "researchAreas": [
+          "2D materials",
+          "Graphene synthesis",
+          "Semiconductor nanomaterials"
+        ],
+        "phdInstitution": "Sungkyunkwan University",
+        "phdYear": 2015,
+        "profileUrl": "https://orcid.org/0000-0002-0995-4092",
+        "scholarUrl": "https://scholar.google.com/citations?user=vK9_WpAAAAAJ",
+        "confirmed": false
+      },
+      "evidence": {
+        "currentRole": "https://orcid.org/0000-0002-0995-4092 : 'Staff Researcher at Samsung Advanced Institute of Technology (SAIT), Suwon, South Korea, 2017 to present.'",
+        "doctorateOrPapers": "PhD in Energy Science from Sungkyunkwan University (2015); extensive co-authorships in Nature, Science, and Advanced Materials on 2D semiconductor synthesis affiliated with Samsung Advanced Institute of Technology.",
+        "vietnameseSignal": "Undergraduate B.S. from Hanoi University of Science and Technology (HUST) (2010); full Vietnamese name Nguyen Van Luan (Nguyễn Văn Luân).",
+        "dedup": "npm run find-roster-matches -- 'Van Luan Nguyen' -> Clean (vp-0028, vp-0674, vp-2149, vp-3045 are distinct people)."
+      }
+    },
+    {
+      "entry": {
+        "name": "Khuong N. Nguyen",
+        "university": "Samsung Research America",
+        "institutionType": "Corporate research lab",
+        "track": "Industry Research",
+        "rank": "Researcher",
+        "department": "Standards and Mobility Innovation Laboratory",
+        "city": "Plano",
+        "state": "Texas",
+        "country": "United States",
+        "researchAreas": [
+          "5G/6G wireless networks",
+          "Mobile edge computing",
+          "Standards and protocols"
+        ],
+        "phdInstitution": "Texas A&M University",
+        "phdYear": 2019,
+        "profileUrl": "https://scholar.google.com/citations?user=Fu8acxUlksgC",
+        "scholarUrl": "https://scholar.google.com/citations?user=Fu8acxUlksgC",
+        "confirmed": false
+      },
+      "evidence": {
+        "currentRole": "https://scholar.google.com/citations?user=Fu8acxUlksgC : 'Staff Research Engineer / Researcher at Standards and Mobility Innovation Lab, Samsung Research America, Plano, TX.' Verified on multiple Samsung IEEE papers and patents.",
+        "doctorateOrPapers": "PhD in Computer Science from Texas A&M University (2019) supervised by Yoonsuck Choe; multiple 2022-2024 patents and IEEE papers at Samsung Research America.",
+        "vietnameseSignal": "Vietnamese given name Khuong and surname Nguyen; member of Vietnamese student association at TAMU.",
+        "dedup": "npm run find-roster-matches -- 'Khuong N. Nguyen' -> Clean (vp-0595 is Khuong Nguyen at Tufts, vp-0956 is Khuong A. Nguyen at Brighton)."
+      }
+    },
+    {
+      "entry": {
+        "name": "Tung The Nguyen",
+        "university": "Honda Research Institute",
+        "institutionType": "Corporate research lab",
+        "track": "Industry Research",
+        "rank": "Researcher",
+        "department": "Research Division",
+        "city": "Wako",
+        "state": "Saitama",
+        "country": "Japan",
+        "researchAreas": [
+          "Empirical software engineering",
+          "Mining software repositories",
+          "AI for software engineering"
+        ],
+        "phdInstitution": "Nara Institute of Science and Technology",
+        "phdYear": 2020,
+        "profileUrl": "https://www.jp.honda-ri.com/en/story/whatshrijplik/",
+        "scholarUrl": "https://scholar.google.com/citations?user=FU0aH52ltdpUlIa1-9jo9eN--Qj-4jOKNp1cWivt",
+        "confirmed": true
+      },
+      "evidence": {
+        "currentRole": "https://www.jp.honda-ri.com/en/story/whatshrijplik/ : 'Tung The Nguyen, Scientist at Honda Research Institute Japan Co., Ltd.'",
+        "doctorateOrPapers": "PhD in Information Science from Nara Institute of Science and Technology (NAIST) (2020); continuous publication track record at ICSE, MSR, and other top software engineering conferences.",
+        "vietnameseSignal": "Full Vietnamese name Tung The Nguyen (Nguyễn Thế Tùng); undergraduate degree in Vietnam.",
+        "dedup": "npm run find-roster-matches -- 'Tung The Nguyen' -> Clean (vp-0126, vp-0467, vp-0852, vp-1696 are distinct people)."
+      }
+    },
+    {
+      "entry": {
+        "name": "Viet Nguyen",
+        "university": "Samsung Research America",
+        "institutionType": "Corporate research lab",
+        "track": "Industry Research",
+        "rank": "Researcher",
+        "department": "Standards and 5G Mobility Lab",
+        "city": "Mountain View",
+        "state": "California",
+        "country": "United States",
+        "researchAreas": [
+          "Mobile sensing",
+          "Wireless systems",
+          "Wearables and IoT",
+          "5G/6G"
+        ],
+        "phdInstitution": "Rutgers University",
+        "phdYear": 2019,
+        "profileUrl": "https://www.winlab.rutgers.edu/~vietnh/",
+        "websiteUrl": "https://www.winlab.rutgers.edu/~vietnh/",
+        "scholarUrl": "https://scholar.google.com/citations?user=xZpQ3aAAAAAJ",
+        "confirmed": false
+      },
+      "evidence": {
+        "currentRole": "https://www.winlab.rutgers.edu/~vietnh/ : 'Staff Research Engineer II at Samsung Research America in Mountain View, California.' Verified on Samsung Research America publications.",
+        "doctorateOrPapers": "PhD in Electrical and Computer Engineering from Rutgers University (WINLAB, 2019) supervised by Marco Gruteser; ACM MobiCom and IEEE INFOCOM publications affiliated with Samsung Research America.",
+        "vietnameseSignal": "B.S. in Information Science and Technology from Hanoi University of Science and Technology (HUST); Vietnamese given and family name Viet Nguyen.",
+        "dedup": "npm run find-roster-matches -- 'Viet Nguyen' -> Clean (retired vp-1513 was at Khalifa University, unrelated)."
+      }
+    },
+    {
+      "entry": {
+        "name": "Nam H. Nguyen",
+        "university": "Boeing Research & Technology",
+        "institutionType": "Corporate research lab",
+        "track": "Industry Research",
+        "rank": "Researcher",
+        "department": "Applied Mathematics",
+        "city": "Huntington Beach",
+        "state": "California",
+        "country": "United States",
+        "researchAreas": [
+          "Quantum computing",
+          "Quantum algorithms",
+          "Applied mathematics",
+          "Materials simulation"
+        ],
+        "phdInstitution": "Wichita State University",
+        "phdYear": 2020,
+        "profileUrl": "https://scholar.google.com/citations?user=x5tr48QAAAAJ",
+        "scholarUrl": "https://scholar.google.com/citations?user=x5tr48QAAAAJ",
+        "confirmed": false
+      },
+      "evidence": {
+        "currentRole": "https://scholar.google.com/citations?user=x5tr48QAAAAJ : 'Boeing Research & Technology (Applied Math)' and co-author on npj Quantum Information (2023, 2026) papers and Boeing patents affiliated with Boeing Research & Technology, Huntington Beach, CA.",
+        "doctorateOrPapers": "PhD in Applied Mathematics from Wichita State University (2020, dissertation 'Quantum Neural Networks' supervised by Elizabeth Behrman); co-author on peer-reviewed npj Quantum Information papers (2023, 2026) and Boeing quantum computing patents.",
+        "vietnameseSignal": "Full Vietnamese name Nam Hoang Nguyen (Nguyễn Hoàng Nam); Vietnamese community engagement.",
+        "dedup": "npm run find-roster-matches -- 'Nam Hoang Nguyen' -> Clean (vp-3094 is Nam H. Nguyen at Capital One with Johns Hopkins PhD, distinct person)."
+      }
+    }
+  ],
+  "already_listed": [
+    {
+      "name": "Hai Xuan Pham",
+      "id": "vp-3046",
+      "note": "Listed at Samsung AI Center as Researcher in AI & Computer Vision."
+    },
+    {
+      "name": "Vy Ai Vo",
+      "id": "vp-3130",
+      "note": "Listed at Thomson Reuters Labs; formerly Research Scientist at Intel Labs."
+    },
+    {
+      "name": "Trong Nghia Hoang",
+      "id": "vp-0008",
+      "note": "Listed at Washington State University; formerly Research Staff Member at IBM Research."
+    },
+    {
+      "name": "Bac Nguyen",
+      "id": "vp-3032",
+      "note": "Listed at Mirelo; formerly Senior Research Scientist at Sony AI."
+    },
+    {
+      "name": "Hien Van Nguyen",
+      "id": "vp-0026",
+      "note": "Listed at University of Houston; formerly Research Scientist at Siemens Corporate Research."
+    },
+    {
+      "name": "Lam M. Nguyen",
+      "id": "vp-2930",
+      "note": "Listed at IBM Research as Researcher in Machine Learning and Optimization."
+    },
+    {
+      "name": "Son Van Nguyen",
+      "id": "vp-3165",
+      "note": "Listed at IBM Research Albany as Researcher in Semiconductor Materials."
+    },
+    {
+      "name": "John Hoang",
+      "id": "vp-3077",
+      "note": "Listed at Lam Research as Researcher in Semiconductor Equipment."
+    },
+    {
+      "name": "Anh Tran",
+      "id": "vp-3152",
+      "note": "Listed at Lam Research as Researcher in Semiconductor Materials."
+    },
+    {
+      "name": "Son Thanh Phan",
+      "id": "vp-3173",
+      "note": "Listed at Dow Toray as Researcher in Silicone Materials."
+    },
+    {
+      "name": "Brandon Huynh",
+      "id": "vp-3125",
+      "note": "Listed at Toyota Research Institute as Researcher in Human-Centered AI."
+    }
+  ],
+  "possible_move": [],
+  "rejected": [
+    {
+      "name": "Thuy V. Nguyen",
+      "reason": "Samsung Research America co-author; returned to Vietnam and is currently faculty at Posts and Telecommunications Institute of Technology (PTIT) in Hanoi, Vietnam (excluded under Vietnam residency rule)."
+    },
+    {
+      "name": "Son Thai Le",
+      "reason": "Formerly at Nokia Bell Labs; left in 2022 to become Principal Systems Engineer at Nubis Communications (not at Nokia Bell Labs anymore)."
+    },
+    {
+      "name": "Dinh-Hieu Tran",
+      "reason": "Formerly at Nokia Bell Labs; left in 2024 and is currently Research Associate (fixed-term postdoc) at the University of Luxembourg."
+    },
+    {
+      "name": "Van Thanh Le",
+      "reason": "NEC Labs America co-author; currently a Ph.D. student and research intern from Northeastern University (students and interns excluded)."
+    },
+    {
+      "name": "Phuoc Pham",
+      "reason": "Sony AI co-author; PhD student at Technical University of Munich (students excluded)."
+    },
+    {
+      "name": "Duy Phuong Nguyen",
+      "reason": "Toyota InfoTech Labs co-author; Ph.D. student at Iowa State University (students excluded)."
+    },
+    {
+      "name": "Nhat Nguyen",
+      "reason": "Lockheed Martin ATC engineer; no research doctorate found, single conference paper, testing/systems engineer role rather than scientific research career ladder."
+    },
+    {
+      "name": "Thy Tran",
+      "reason": "Micron executive; holds B.S. degree only, currently VP Global Front-End Procurement (executive procurement/operations rather than research scientist ladder)."
+    },
+    {
+      "name": "Quoc-Huy Tran",
+      "reason": "Formerly Member of Technical Staff at NEC Laboratories America; left in 2020 to co-found startup Retrocausal as CTO."
+    },
+    {
+      "name": "Thuat Nguyen-Tran",
+      "reason": "Co-authored semiconductor thin film research using Applied Materials equipment; Associate Professor at VNU University of Science, Hanoi, Vietnam (physically based in Vietnam; excluded)."
+    },
+    {
+      "name": "Chi T. Nguyen",
+      "reason": "Hewlett Packard Labs / HPE Labs co-author; past postdoctoral associate at HP Labs rather than career research staff."
+    },
+    {
+      "name": "Kimchau N. Nguyen",
+      "reason": "Formerly at Silicon Photonics Product Division at Intel; left to join OpenLight Photonics."
+    }
+  ],
+  "coverage": [
+    {
+      "employer": "Intel Labs",
+      "pagesExamined": [
+        "https://www.intel.com/content/www/us/en/research/overview.html",
+        "Google Scholar author queries for Intel Labs and silicon photonics groups"
+      ],
+      "note": "Checked AI and photonics publications; former staff Vy Ai Vo is already listed (vp-3130); Kimchau Nguyen moved to OpenLight; no other eligible permanent Vietnamese doctoral research staff identified."
+    },
+    {
+      "employer": "Samsung Advanced Institute of Technology & Samsung Research America",
+      "pagesExamined": [
+        "https://www.sait.samsung.co.kr/",
+        "https://research.samsung.com/sra",
+        "Google Scholar, IEEE, and Nature/Science publication author queries for SAIT Suwon, SRA Plano, and SRA Mountain View"
+      ],
+      "note": "Identified and verified Van Luan Nguyen (SAIT Suwon), Khuong N. Nguyen (SRA Plano), and Viet Nguyen (SRA Mountain View); Hai Xuan Pham (vp-3046) is already listed; Thuy V. Nguyen was screened and excluded due to Vietnam return."
+    },
+    {
+      "employer": "Nokia Bell Labs",
+      "pagesExamined": [
+        "https://www.nokia.com/about/our-company/bell-labs/people/",
+        "Google Scholar and IEEE publication queries for Nokia Bell Labs Murray Hill"
+      ],
+      "note": "Verified Van-Quan Pham on official Bell Labs staff page; screened Son Thai Le (moved to Nubis) and Dinh-Hieu Tran (postdoc at Uni of Luxembourg)."
+    },
+    {
+      "employer": "HP Labs / HPE Labs",
+      "pagesExamined": [
+        "https://www.hpe.com/us/en/hewlett-packard-labs.html",
+        "Optica, IEEE, and Google Scholar author queries for Hewlett Packard Labs"
+      ],
+      "note": "Screened nanophotonics and quantum groups; Chi T. Nguyen was a postdoc and has moved; no current permanent Vietnamese research staff found."
+    },
+    {
+      "employer": "Toyota Research Institute",
+      "pagesExamined": [
+        "https://www.tri.global/",
+        "Google Scholar and Open Catalyst publication lists"
+      ],
+      "note": "Verified Kevin Tran (Staff Research Scientist in Energy & Materials); Brandon Huynh (vp-3125) is already listed in TRI Human-Centered AI."
+    },
+    {
+      "employer": "Bosch Research / Bosch Center for AI",
+      "pagesExamined": [
+        "https://www.bosch-ai.com/",
+        "https://www.bosch.de/stories/kuenstliche-intelligenz/",
+        "Google Scholar and Uni Ulm staff archives"
+      ],
+      "note": "Verified Duy Nguyen-Tuong (Senior Research Manager at BCAI Renningen) and Trung Kien Tran (Lead Research Scientist & Project Manager at BCAI Renningen)."
+    },
+    {
+      "employer": "Siemens Technology",
+      "pagesExamined": [
+        "https://www.siemens.com/global/en/company/innovation/technology.html",
+        "Google Scholar queries for Siemens Corporate Research Princeton"
+      ],
+      "note": "Screened corporate research in Princeton, NJ; past researcher Hien Van Nguyen (vp-0026) is already in the roster; no new permanent research scientist identified."
+    },
+    {
+      "employer": "Boeing Research & Technology",
+      "pagesExamined": [
+        "https://www.boeing.com/principles/innovation-and-technology",
+        "Google Scholar, npj Quantum Information, and arXiv author queries for Boeing Applied Mathematics"
+      ],
+      "note": "Verified Nam H. Nguyen (Applied Mathematician & Quantum Computing Researcher at BR&T Huntington Beach, CA); deduped cleanly against vp-3094."
+    },
+    {
+      "employer": "Lockheed Martin Advanced Technology Center (ATC)",
+      "pagesExamined": [
+        "https://www.lockheedmartin.com/en-us/capabilities/research-labs/advanced-technology-center.html",
+        "AIAA and IEEE publication databases"
+      ],
+      "note": "Examined engineering and materials publications; Nhat Nguyen screened and rejected (testing/engineering support without doctoral research track)."
+    },
+    {
+      "employer": "Applied Materials",
+      "pagesExamined": [
+        "https://www.appliedmaterials.com/us/en/technology.html",
+        "Google Scholar author queries for Santa Clara / semiconductor materials"
+      ],
+      "note": "Son Van Nguyen (vp-3165) already listed; Thuat Nguyen-Tran is at VNU Hanoi (excluded due to Vietnam residency); no other eligible permanent scientific research leads found."
+    },
+    {
+      "employer": "IBM Research (Hardware & Systems)",
+      "pagesExamined": [
+        "https://research.ibm.com/people",
+        "Google Scholar and IBM Thomas J. Watson Research Center queries"
+      ],
+      "note": "Verified Tuan M. Hoang Trong (Senior Research Scientist at Watson); Lam M. Nguyen (vp-2930) and Son Van Nguyen (vp-3165) already listed."
+    },
+    {
+      "employer": "Micron",
+      "pagesExamined": [
+        "https://www.micron.com/about/innovation",
+        "IEEE and SEMI conference proceedings"
+      ],
+      "note": "Thy Tran screened and rejected (executive procurement leadership, BS degree only); no doctoral research staff meeting inclusion criteria found."
+    },
+    {
+      "employer": "Mitsubishi Electric Research Labs (MERL)",
+      "pagesExamined": [
+        "https://www.merl.com/people/",
+        "MERL publication database"
+      ],
+      "note": "Examined full MERL staff directory; Sykaa Tran is administrative professional; Quan Nguyen is an academic collaborator at USC (vp-0021)."
+    },
+    {
+      "employer": "NEC Labs America",
+      "pagesExamined": [
+        "https://www.nec-labs.com/",
+        "Google Scholar and CVPR/ICCV proceedings"
+      ],
+      "note": "Screened Princeton lab; Van Thanh Le is an intern/PhD student; Quoc-Huy Tran left in 2020 to co-found Retrocausal."
+    },
+    {
+      "employer": "Sony AI",
+      "pagesExamined": [
+        "https://ai.sony/",
+        "Google Scholar author queries for Sony AI"
+      ],
+      "note": "Bac Nguyen (vp-3032) is already listed; Phuoc Pham is a university student collaborator at TU Munich."
+    },
+    {
+      "employer": "Honda Research Institute",
+      "pagesExamined": [
+        "https://www.jp.honda-ri.com/en/",
+        "https://www.honda-ri.com/",
+        "Google Scholar software engineering publications"
+      ],
+      "note": "Verified Tung The Nguyen (Scientist at Honda Research Institute Japan Co., Ltd.)."
+    }
+  ]
+}

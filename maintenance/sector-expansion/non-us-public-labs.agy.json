@@ -1,0 +1,873 @@
+{
+  "group": "non-us-public-labs",
+  "agent": "agy",
+  "finishedAt": "2026-11-14T17:46:00-05:00",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Van Tung Tran",
+        "university": "Agency for Science, Technology and Research",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Singapore Institute of Manufacturing Technology (SIMTech)",
+        "city": "Singapore",
+        "country": "Singapore",
+        "researchAreas": [
+          "Predictive Maintenance",
+          "Smart Manufacturing",
+          "Condition Monitoring",
+          "Digital Twins"
+        ],
+        "phdInstitution": "Pukyong National University",
+        "phdYear": 2010,
+        "profileUrl": "https://www.a-star.edu.sg/simtech/kto/courses/connectivity-for-visibility-and-decision-making-in-smart-factories",
+        "scholarUrl": "https://scholar.google.com/citations?user=0tZtQc0AAAAJ"
+      },
+      "evidence": {
+        "currentRole": "https://www.a-star.edu.sg/simtech/kto/courses/connectivity-for-visibility-and-decision-making-in-smart-factories 'Dr Tran Van Tung is a Senior Scientist with the Singapore Institute of Manufacturing Technology (SIMTech), A*STAR.'",
+        "doctorateOrPapers": "PhD in Mechanical Engineering, Pukyong National University (2010); ORCID 0000-0002-8568-1129",
+        "vietnameseSignal": "Vietnamese naming structure (Tran Van Tung), Bachelor/Master degrees from Vietnam (HCMC University of Technology), and Vietnamese co-authorships.",
+        "dedup": "npm run find-roster-matches returned no match."
+      }
+    },
+    {
+      "entry": {
+        "name": "Thanh Xuan Hoang",
+        "vietnameseName": "Hoàng Thanh Xuân",
+        "university": "Agency for Science, Technology and Research",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Institute of High Performance Computing (IHPC)",
+        "city": "Singapore",
+        "country": "Singapore",
+        "researchAreas": [
+          "Plasmonics",
+          "Nanophotonics",
+          "Metamaterials",
+          "Biosensing"
+        ],
+        "phdInstitution": "National University of Singapore",
+        "phdYear": 2014,
+        "profileUrl": "https://research.a-star.edu.sg/researcher/thanh-xuan-hoang/",
+        "scholarUrl": "https://scholar.google.com/citations?user=4_yv8fIAAAAJ"
+      },
+      "evidence": {
+        "currentRole": "https://research.a-star.edu.sg/researcher/thanh-xuan-hoang/ 'Thanh-Xuan Hoang is a Senior Scientist at the Institute of High Performance Computing (IHPC), A*STAR.'",
+        "doctorateOrPapers": "PhD in Physics, National University of Singapore (2014); BSc in Physics from VNU Hanoi University of Science (2007).",
+        "vietnameseSignal": "Vietnamese name Hoàng Thanh Xuân; undergraduate degree from VNU University of Science, Hanoi.",
+        "dedup": "npm run find-roster-matches returned no match."
+      }
+    },
+    {
+      "entry": {
+        "name": "Neil Hoai Nguyen Huynh",
+        "university": "Agency for Science, Technology and Research",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Institute of High Performance Computing (IHPC)",
+        "city": "Singapore",
+        "country": "Singapore",
+        "researchAreas": [
+          "Computational Fluid Dynamics",
+          "Aeroacoustics",
+          "Aerodynamics",
+          "Multiphase Flow"
+        ],
+        "phdInstitution": "Nanyang Technological University",
+        "phdYear": 2013,
+        "profileUrl": "https://research.a-star.edu.sg/researcher/neil-hoai-nguyen-huynh/",
+        "scholarUrl": "https://scholar.google.com/citations?user=dF0M69QAAAAJ"
+      },
+      "evidence": {
+        "currentRole": "https://research.a-star.edu.sg/researcher/neil-hoai-nguyen-huynh/ 'Neil Hoai-Nguyen Huynh is a Senior Scientist and Theme Lead at the Institute of High Performance Computing (IHPC), A*STAR.'",
+        "doctorateOrPapers": "PhD in Mechanical and Aerospace Engineering, Nanyang Technological University (2013).",
+        "vietnameseSignal": "Vietnamese full name Hoai Nguyen Huynh (Huỳnh Hoài Nguyên); undergraduate education in Vietnam.",
+        "dedup": "npm run find-roster-matches returned no match."
+      }
+    },
+    {
+      "entry": {
+        "name": "Vinh-Tan Nguyen",
+        "vietnameseName": "Nguyễn Vĩnh Tân",
+        "university": "Agency for Science, Technology and Research",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Institute of High Performance Computing (IHPC)",
+        "city": "Singapore",
+        "country": "Singapore",
+        "researchAreas": [
+          "Fluid Dynamics",
+          "Multiscale Modeling",
+          "Scientific Computing",
+          "Microfluidics"
+        ],
+        "phdInstitution": "National University of Singapore",
+        "phdYear": 2007,
+        "profileUrl": "https://research.a-star.edu.sg/researcher/vinh-tan-nguyen/",
+        "scholarUrl": "https://scholar.google.com/citations?user=0tN5J80AAAAJ"
+      },
+      "evidence": {
+        "currentRole": "https://research.a-star.edu.sg/researcher/vinh-tan-nguyen/ 'Vinh-Tan Nguyen is a Senior Principal Scientist and Technology Area Lead at the Institute of High Performance Computing (IHPC), A*STAR.'",
+        "doctorateOrPapers": "PhD from Singapore-MIT Alliance / National University of Singapore (2007).",
+        "vietnameseSignal": "Vietnamese name Nguyễn Vĩnh Tân; BEng from Ho Chi Minh City University of Technology (HCMUT).",
+        "dedup": "npm run find-roster-matches checked; not previously listed."
+      }
+    },
+    {
+      "entry": {
+        "name": "Tung Hoang",
+        "university": "CSIRO",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Energy",
+        "city": "Newcastle",
+        "state": "NSW",
+        "country": "Australia",
+        "researchAreas": [
+          "Batteries",
+          "Energy Storage",
+          "Electrochemistry",
+          "Materials Science"
+        ],
+        "phdInstitution": "Griffith University",
+        "phdYear": 2002,
+        "profileUrl": "https://people.csiro.au/h/t/tung-hoang",
+        "scholarUrl": "https://scholar.google.com/citations?user=J11_5xQAAAAJ"
+      },
+      "evidence": {
+        "currentRole": "https://people.csiro.au/h/t/tung-hoang 'Dr Tung Hoang is a Principal Research Scientist in CSIRO Energy.'",
+        "doctorateOrPapers": "PhD in Chemistry, Griffith University (2002).",
+        "vietnameseSignal": "Vietnamese name Hoang Tung; BSc from Vietnam National University.",
+        "dedup": "npm run find-roster-matches checked; not matched."
+      }
+    },
+    {
+      "entry": {
+        "name": "Yen Pham",
+        "university": "CSIRO",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Health and Biosecurity, Australian e-Health Research Centre",
+        "city": "Brisbane",
+        "state": "QLD",
+        "country": "Australia",
+        "researchAreas": [
+          "Health Informatics",
+          "Digital Health",
+          "Medical Information Systems",
+          "Clinical Decision Support"
+        ],
+        "phdInstitution": "University of Southern Queensland",
+        "phdYear": 2021,
+        "profileUrl": "https://people.csiro.au/P/Y/Yen-Pham",
+        "scholarUrl": "https://scholar.google.com/citations?user=r1jJbV4AAAAJ"
+      },
+      "evidence": {
+        "currentRole": "https://people.csiro.au/P/Y/Yen-Pham 'Dr Yen Pham is a Research Scientist at CSIRO Health and Biosecurity and the Australian e-Health Research Centre.'",
+        "doctorateOrPapers": "PhD in Information Systems, University of Southern Queensland (2021).",
+        "vietnameseSignal": "Vietnamese given name Yen (Phạm Yến); undergraduate from University of Economics Ho Chi Minh City.",
+        "dedup": "npm run find-roster-matches checked; ruled out from vp-1565 Yen Tran."
+      }
+    },
+    {
+      "entry": {
+        "name": "Hoang Duong",
+        "university": "CSIRO",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Mineral Resources",
+        "city": "Clayton",
+        "state": "VIC",
+        "country": "Australia",
+        "researchAreas": [
+          "Metallurgy",
+          "Alloy Processes",
+          "High Temperature Materials",
+          "Phase Transformations"
+        ],
+        "phdInstitution": "La Trobe University",
+        "phdYear": 1997,
+        "profileUrl": "https://people.csiro.au/D/H/Hoang-Duong"
+      },
+      "evidence": {
+        "currentRole": "https://people.csiro.au/D/H/Hoang-Duong 'Dr Hoang Duong is a Research Scientist in CSIRO Mineral Resources, Alloy Processes group.'",
+        "doctorateOrPapers": "PhD in Materials Science / Metallurgy, La Trobe University (1997).",
+        "vietnameseSignal": "Vietnamese surname and given name Duong Hoang (Dương Hoàng); active researcher in Australia.",
+        "dedup": "npm run find-roster-matches checked; no conflict."
+      }
+    },
+    {
+      "entry": {
+        "name": "James Hoang",
+        "university": "CSIRO",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Data61",
+        "city": "Melbourne",
+        "state": "VIC",
+        "country": "Australia",
+        "researchAreas": [
+          "Software Engineering",
+          "Mining Software Repositories",
+          "Code Review",
+          "Software Quality"
+        ],
+        "phdInstitution": "Singapore Management University",
+        "phdYear": 2020,
+        "profileUrl": "https://people.csiro.au/h/j/james-hoang",
+        "scholarUrl": "https://scholar.google.com/citations?user=L0Qe3cAAAAAJ"
+      },
+      "evidence": {
+        "currentRole": "https://people.csiro.au/h/j/james-hoang 'Dr James Hoang (Thong Hoang) is a Research Scientist in Data61, CSIRO.'",
+        "doctorateOrPapers": "PhD in Computer Science, Singapore Management University (2020).",
+        "vietnameseSignal": "Vietnamese original name Thong Hoang (Hoàng Thông); BSc from Vietnam National University.",
+        "dedup": "npm run find-roster-matches checked; distinct from vp-1140 Vu Nguyen."
+      }
+    },
+    {
+      "entry": {
+        "name": "Nhuong Van Nguyen",
+        "university": "Max Planck Institute of Immunobiology and Epigenetics",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Department of Chromatin Regulation",
+        "city": "Freiburg",
+        "country": "Germany",
+        "researchAreas": [
+          "Chromatin Regulation",
+          "Epigenetics",
+          "RNA Biology",
+          "Molecular Genetics"
+        ],
+        "phdInstitution": "University of Freiburg",
+        "phdYear": 2014,
+        "profileUrl": "https://www.ie-freiburg.mpg.de/person/94917/17351659",
+        "scholarUrl": "https://scholar.google.com/citations?user=13MhIicAAAAJ"
+      },
+      "evidence": {
+        "currentRole": "https://www.ie-freiburg.mpg.de/person/94917/17351659 'Dr. Nhuong Van Nguyen, Project Leader in the Department of Chromatin Regulation (Akhtar Dept) at the Max Planck Institute of Immunobiology and Epigenetics.'",
+        "doctorateOrPapers": "PhD in Biology/Epigenetics, University of Freiburg (2014); continuous high-impact publications (Science 2023, Nature Comm 2024).",
+        "vietnameseSignal": "Vietnamese full name Nguyen Van Nhuong (Nguyễn Văn Nhượng); BSc from Vietnam National University Hanoi.",
+        "dedup": "npm run find-roster-matches checked; clean."
+      }
+    },
+    {
+      "entry": {
+        "name": "Truong-Vinh Hoang",
+        "university": "Forschungszentrum Jülich",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Institute for Biological Information Processing (IBI-3 / IHE)",
+        "city": "Jülich",
+        "country": "Germany",
+        "researchAreas": [
+          "Machine Learning",
+          "X-ray Imaging",
+          "Deep Learning for Biomedicine",
+          "Image Processing"
+        ],
+        "phdInstitution": "Université du Littoral Côte d'Opale",
+        "phdYear": 2014,
+        "profileUrl": "https://www.fz-juelich.de/de/profile/hoang_vinh",
+        "scholarUrl": "https://scholar.google.com/citations?user=tN-bC1gAAAAJ"
+      },
+      "evidence": {
+        "currentRole": "https://www.fz-juelich.de/de/profile/hoang_vinh 'Dr. Truong-Vinh Hoang (Vinh Hoang), Team Leader / Group Leader for ML/AI for X-ray Sciences at Forschungszentrum Jülich.'",
+        "doctorateOrPapers": "PhD in Computer Science, Université du Littoral Côte d'Opale (2014); postdoctoral research at TU Braunschweig & RWTH Aachen.",
+        "vietnameseSignal": "Vietnamese name Hoang Truong Vinh (Hoàng Trương Vinh); university background in Vietnam.",
+        "dedup": "npm run find-roster-matches checked; clean."
+      }
+    },
+    {
+      "entry": {
+        "name": "Truong Thao Nguyen",
+        "university": "National Institute of Advanced Industrial Science and Technology",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Digital Architecture Research Center / Artificial Intelligence Research Center (AIRC)",
+        "city": "Tokyo",
+        "country": "Japan",
+        "researchAreas": [
+          "High Performance Computing",
+          "Cloud Computing",
+          "AI Infrastructure",
+          "Parallel Systems"
+        ],
+        "phdInstitution": "The Graduate University for Advanced Studies (SOKENDAI)",
+        "phdYear": 2018,
+        "profileUrl": "https://www.airc.aist.go.jp/en/teams/ai-cloud/",
+        "scholarUrl": "https://scholar.google.com/citations?user=Q0N0XQkAAAAJ"
+      },
+      "evidence": {
+        "currentRole": "https://www.airc.aist.go.jp/en/teams/ai-cloud/ 'Dr. Truong Thao Nguyen is a Senior Researcher at the Artificial Intelligence Research Center, AIST.'",
+        "doctorateOrPapers": "PhD in Informatics, SOKENDAI / National Institute of Informatics (2018); IEEE Senior Member.",
+        "vietnameseSignal": "Vietnamese full name Nguyễn Trương Thảo; BEng from Hanoi University of Science and Technology (HUST).",
+        "dedup": "npm run find-roster-matches checked; clean."
+      }
+    },
+    {
+      "entry": {
+        "name": "Do-Van Nguyen",
+        "university": "National Institute of Information and Communications Technology",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Big Data Integration Research Center",
+        "city": "Koganei",
+        "country": "Japan",
+        "researchAreas": [
+          "Big Data Analytics",
+          "Knowledge Graphs",
+          "Information Extraction",
+          "Natural Language Processing"
+        ],
+        "phdInstitution": "Nagaoka University of Technology",
+        "phdYear": 2014,
+        "profileUrl": "https://bdirc.nict.go.jp/member/",
+        "scholarUrl": "https://scholar.google.com/citations?user=r9k4QGAAAAAJ"
+      },
+      "evidence": {
+        "currentRole": "https://bdirc.nict.go.jp/member/ 'Dr. Do-Van Nguyen, Senior Researcher, Big Data Integration Research Center, NICT.'",
+        "doctorateOrPapers": "PhD in Information and Communication Engineering, Nagaoka University of Technology (2014).",
+        "vietnameseSignal": "Vietnamese name Nguyen Do Van (Nguyễn Đỗ Văn); degrees from Hanoi University of Science and Technology (HUST).",
+        "dedup": "npm run find-roster-matches checked; clean."
+      }
+    },
+    {
+      "entry": {
+        "name": "Hoang-Quoc Nguyen-Son",
+        "university": "National Institute of Information and Communications Technology",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Big Data Integration Research Center",
+        "city": "Koganei",
+        "country": "Japan",
+        "researchAreas": [
+          "Cybersecurity",
+          "Natural Language Processing",
+          "Phishing Detection",
+          "Machine Learning"
+        ],
+        "phdInstitution": "The Graduate University for Advanced Studies (SOKENDAI)",
+        "phdYear": 2015,
+        "profileUrl": "https://bdirc.nict.go.jp/member/",
+        "scholarUrl": "https://scholar.google.com/citations?user=aG1T_wUAAAAJ"
+      },
+      "evidence": {
+        "currentRole": "https://bdirc.nict.go.jp/member/ 'Dr. Hoang-Quoc Nguyen-Son, Senior Researcher, Big Data Integration Research Center, NICT.'",
+        "doctorateOrPapers": "PhD in Informatics, SOKENDAI / National Institute of Informatics (2015).",
+        "vietnameseSignal": "Vietnamese compound surname and given name Nguyen-Son Hoang-Quoc (Nguyễn Sơn Hoàng Quốc); BSc from VNU HCM University of Science.",
+        "dedup": "npm run find-roster-matches checked; clean."
+      }
+    },
+    {
+      "entry": {
+        "name": "Nguyen-Truong Le",
+        "university": "Fraunhofer Society",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Fraunhofer Institute for Industrial Engineering (IAO)",
+        "city": "Stuttgart",
+        "country": "Germany",
+        "researchAreas": [
+          "Creative Innovation",
+          "Design Thinking",
+          "Human-Centered Engineering",
+          "Industrial Innovation"
+        ],
+        "phdInstitution": "University of Stuttgart",
+        "phdYear": 2019,
+        "profileUrl": "https://www.iao.fraunhofer.de/de/m/25/01/beitrag_11-der-wegbereiter.html"
+      },
+      "evidence": {
+        "currentRole": "https://www.iao.fraunhofer.de/de/m/25/01/beitrag_11-der-wegbereiter.html 'Dr.-Ing. Nguyen-Truong Le (Truong Le) ist Fachberater und Experte für Creative Innovation am Fraunhofer IAO.'",
+        "doctorateOrPapers": "Dr.-Ing. in Engineering / Innovation, University of Stuttgart (2019).",
+        "vietnameseSignal": "Vietnamese name Le Nguyen Truong (Lê Nguyễn Trường); Vietnamese background.",
+        "dedup": "npm run find-roster-matches checked; clean."
+      }
+    },
+    {
+      "entry": {
+        "name": "Cuong M. Nguyen",
+        "university": "National Research Council Canada",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Aerospace Research Centre",
+        "city": "Ottawa",
+        "state": "ON",
+        "country": "Canada",
+        "researchAreas": [
+          "Radar Meteorology",
+          "Atmospheric Sensing",
+          "Airborne Radar",
+          "Signal Processing"
+        ],
+        "phdInstitution": "Colorado State University",
+        "phdYear": 2013,
+        "profileUrl": "https://nrc.canada.ca/en/stories/cloudy-chance-research",
+        "scholarUrl": "https://scholar.google.com/citations?user=c1xSrvsAAAAJ"
+      },
+      "evidence": {
+        "currentRole": "https://nrc.canada.ca/en/stories/cloudy-chance-research 'Dr. Cuong Nguyen is a Senior Research Officer and Chief Radar Scientist with the NRC's Aerospace Research Centre.'",
+        "doctorateOrPapers": "PhD in Electrical Engineering, Colorado State University (2013).",
+        "vietnameseSignal": "Vietnamese name Nguyen Manh Cuong; undergraduate from Hanoi University of Science and Technology.",
+        "dedup": "npm run find-roster-matches checked; distinct from vp-2977 Quan H. Nguyen."
+      }
+    },
+    {
+      "entry": {
+        "name": "Thai Quang Tung",
+        "university": "Electronics and Telecommunications Research Institute",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Mobile Core Network Research Section",
+        "city": "Daejeon",
+        "country": "South Korea",
+        "researchAreas": [
+          "Mobile Core Networks",
+          "6G/5G Wireless Networks",
+          "Edge Computing",
+          "Network Slicing"
+        ],
+        "profileUrl": "https://ksp.etri.re.kr/",
+        "scholarUrl": "https://scholar.google.com/citations?user=vYh3_sUAAAAJ"
+      },
+      "evidence": {
+        "currentRole": "https://ksp.etri.re.kr/ 'Senior Researcher, Mobile Core Network Research Section, ETRI (Electronics and Telecommunications Research Institute).'",
+        "doctorateOrPapers": "PhD in Telecommunications Engineering; author of 3+ IEEE/ETRI publications in 2022-2024 affiliated with ETRI.",
+        "vietnameseSignal": "Vietnamese name Thái Quang Tùng; BEng from Vietnam.",
+        "dedup": "npm run find-roster-matches checked; clean."
+      }
+    },
+    {
+      "entry": {
+        "name": "Dong-Nhat Nguyen",
+        "vietnameseName": "Nguyễn Đông Nhật",
+        "university": "TNO",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Optics / Space Systems",
+        "city": "Delft",
+        "country": "Netherlands",
+        "researchAreas": [
+          "Free-Space Optical Communications",
+          "Optical Satellite Communications",
+          "Laser Satcom",
+          "Integrated Photonics"
+        ],
+        "phdInstitution": "University of Nottingham",
+        "phdYear": 2018,
+        "profileUrl": "https://www.researchgate.net/profile/Dong-Nhat-Nguyen",
+        "confirmed": false,
+        "scholarUrl": "https://scholar.google.com/citations?user=mR8b04oAAAAJ"
+      },
+      "evidence": {
+        "currentRole": "Confirmed: false. TNO does not maintain public individual staff directory pages. Current affiliation as Expert / Scientist at TNO in Delft verified through Golden Globe 2026 award announcement and recent 2023-2025 optical satcom publications listing TNO.",
+        "doctorateOrPapers": "PhD in Electrical & Electronic Engineering, University of Nottingham (2018); recipient of Vietnamese Golden Globe Award (Quả Cầu Vàng) 2026.",
+        "vietnameseSignal": "Vietnamese name Nguyễn Đông Nhật; Golden Globe Award recipient from the Ministry of Science and Technology of Vietnam.",
+        "dedup": "npm run find-roster-matches checked; clean."
+      }
+    },
+    {
+      "entry": {
+        "name": "Dang-Bao-An Tran",
+        "university": "National Physical Laboratory",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Time and Frequency Department",
+        "city": "Teddington",
+        "country": "United Kingdom",
+        "researchAreas": [
+          "Optical Clocks",
+          "Frequency Metrology",
+          "Laser Spectroscopy",
+          "Quantum Metrology"
+        ],
+        "phdInstitution": "Université Sorbonne Paris Nord",
+        "phdYear": 2019,
+        "profileUrl": "https://www.npl.co.uk/people/an-tran"
+      },
+      "evidence": {
+        "currentRole": "https://www.npl.co.uk/people/an-tran 'Dr An Tran is a Senior Scientist in the Time and Frequency department at NPL.'",
+        "doctorateOrPapers": "PhD in Physics, Université Sorbonne Paris Nord (2019).",
+        "vietnameseSignal": "Vietnamese full name Trần Đặng Bảo An; Vietnamese secondary and higher education background.",
+        "dedup": "npm run find-roster-matches checked; clean."
+      }
+    },
+    {
+      "entry": {
+        "name": "Si Tran Nguyen",
+        "university": "Defence Science and Technology Group",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Sensors and Effectors",
+        "city": "Edinburgh",
+        "state": "SA",
+        "country": "Australia",
+        "researchAreas": [
+          "Radar Signal Processing",
+          "Wavelet Transform",
+          "Sparse Optimization",
+          "Helicopter Radar"
+        ],
+        "phdInstitution": "University of Adelaide",
+        "phdYear": 2014,
+        "profileUrl": "https://www.dst.defence.gov.au/publication/signal-separation-helicopter-radar-returns-using-wavelet-based-sparse-signal-optimisation"
+      },
+      "evidence": {
+        "currentRole": "https://www.dst.defence.gov.au/publication/signal-separation-helicopter-radar-returns-using-wavelet-based-sparse-signal-optimisation 'Si Tran Nguyen, Defence Scientist, Sensors and Effectors Division, Defence Science and Technology Group (DSTG).'",
+        "doctorateOrPapers": "PhD in Electrical and Electronic Engineering, University of Adelaide (2014).",
+        "vietnameseSignal": "Vietnamese full name Nguyen Tran Nguyen Si (Nguyễn Trần Nguyên Sĩ); BE from Ho Chi Minh City University of Technology.",
+        "dedup": "npm run find-roster-matches checked; clean."
+      }
+    },
+    {
+      "entry": {
+        "name": "Hai-Tan Tran",
+        "university": "Defence Science and Technology Group",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "National Security and Intelligence, Surveillance and Reconnaissance",
+        "city": "Edinburgh",
+        "state": "SA",
+        "country": "Australia",
+        "researchAreas": [
+          "Nonlinear Dynamics",
+          "Signal Processing",
+          "Radar Systems",
+          "Applied Mathematics"
+        ],
+        "phdInstitution": "Australian National University",
+        "phdYear": 1993,
+        "profileUrl": "https://www.dst.defence.gov.au/publication/signal-separation-helicopter-radar-returns-using-wavelet-based-sparse-signal-optimisation"
+      },
+      "evidence": {
+        "currentRole": "https://www.dst.defence.gov.au/publication/signal-separation-helicopter-radar-returns-using-wavelet-based-sparse-signal-optimisation 'Hai-Tan Tran, Senior Defence Scientist, Defence Science and Technology Group (DSTG).'",
+        "doctorateOrPapers": "PhD in Mathematics, Australian National University (1993); over 30 years of defense research publications.",
+        "vietnameseSignal": "Vietnamese full name Tran Hai Tan (Trần Hải Tấn).",
+        "dedup": "npm run find-roster-matches checked; clean."
+      }
+    },
+    {
+      "entry": {
+        "name": "Minh Nguyen",
+        "university": "Fraunhofer Society",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Fraunhofer Institute for Open Communication Systems (FOKUS)",
+        "city": "Berlin",
+        "country": "Germany",
+        "researchAreas": [
+          "Video Streaming",
+          "Multimedia Systems",
+          "HTTP Adaptive Streaming",
+          "QoE Optimization"
+        ],
+        "phdInstitution": "Alpen-Adria-Universität Klagenfurt",
+        "phdYear": 2023,
+        "profileUrl": "https://www.fokus.fraunhofer.de/en/fame/about-fame/team.html",
+        "scholarUrl": "https://scholar.google.com/citations?user=fLwXoXgAAAAJ"
+      },
+      "evidence": {
+        "currentRole": "https://www.fokus.fraunhofer.de/en/fame/about-fame/team.html 'Dr. Minh Nguyen, Research Associate / Scientist in the Future Applications and Media (FAME) business unit at Fraunhofer FOKUS.'",
+        "doctorateOrPapers": "PhD in Computer Science, Alpen-Adria-Universität Klagenfurt (2023).",
+        "vietnameseSignal": "Vietnamese name Nguyen Minh (Nguyễn Minh); BSc and early career in Vietnam.",
+        "dedup": "npm run find-roster-matches checked; clean."
+      }
+    },
+    {
+      "entry": {
+        "name": "Thanh-Duc Nguyen",
+        "university": "Fraunhofer Society",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Fraunhofer Institute for Manufacturing Engineering and Automation (IPA)",
+        "city": "Stuttgart",
+        "country": "Germany",
+        "researchAreas": [
+          "Biomechatronics",
+          "Medical Robotics",
+          "Prosthetics & Exoskeletons",
+          "Mechanical Testing Systems"
+        ],
+        "profileUrl": "https://www.ipa.fraunhofer.de/en/current-research/biomechatronic-systems/test_systems_for_body_worn_products/3D_test_systems.html"
+      },
+      "evidence": {
+        "currentRole": "https://www.ipa.fraunhofer.de/en/current-research/biomechatronic-systems/test_systems_for_body_worn_products/3D_test_systems.html 'Dipl.-Ing. Thanh-Duc Nguyen, Head of Mechanical Testing Laboratory / Medical Engineer, Biomechatronic Systems, Fraunhofer IPA.'",
+        "doctorateOrPapers": "Dipl.-Ing. (equiv. to research master) with multiple peer-reviewed papers at Fraunhofer IPA in 2024 (Science Advances 2024, Die Unfallchirurgie 2024).",
+        "vietnameseSignal": "Vietnamese name Nguyen Thanh Duc (Nguyễn Thành Đức).",
+        "dedup": "npm run find-roster-matches checked; clean."
+      }
+    },
+    {
+      "entry": {
+        "name": "Bao-Nguyen Nguyen",
+        "university": "Agency for Science, Technology and Research",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Institute of Materials Research and Engineering (IMRE)",
+        "city": "Singapore",
+        "country": "Singapore",
+        "researchAreas": [
+          "Supramolecular Chemistry",
+          "Polymer Chemistry",
+          "Sustainable Materials",
+          "Circular Plastics"
+        ],
+        "phdInstitution": "University of Cambridge",
+        "phdYear": 2021,
+        "profileUrl": "https://www.a-star.edu.sg/imre/research-departments/sustainable-supramolecular-materials",
+        "scholarUrl": "https://scholar.google.com/citations?user=7eJz87sAAAAJ"
+      },
+      "evidence": {
+        "currentRole": "https://www.a-star.edu.sg/imre/research-departments/sustainable-supramolecular-materials 'Dr Bao-Nguyen Nguyen, Scientist, Sustainable Supramolecular Materials, IMRE, A*STAR.'",
+        "doctorateOrPapers": "PhD in Chemistry, University of Cambridge (2021).",
+        "vietnameseSignal": "Vietnamese compound given name Bao-Nguyen (Nguyễn Bảo Nguyên); Vietnamese national olympiad background.",
+        "dedup": "npm run find-roster-matches checked; clean."
+      }
+    },
+    {
+      "entry": {
+        "name": "Ngoc Minh Nguyen",
+        "university": "Agency for Science, Technology and Research",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Bioinformatics Institute (BII)",
+        "city": "Singapore",
+        "country": "Singapore",
+        "researchAreas": [
+          "Computational Biology",
+          "Structural Bioinformatics",
+          "Protein Dynamics",
+          "Molecular Modeling"
+        ],
+        "phdInstitution": "Nanyang Technological University",
+        "profileUrl": "https://www.a-star.edu.sg/bii/about-us/principal-investigators",
+        "scholarUrl": "https://scholar.google.com/citations?user=4b52-E0AAAAJ"
+      },
+      "evidence": {
+        "currentRole": "https://www.a-star.edu.sg/bii/about-us/principal-investigators 'Dr Minh N. Nguyen, Principal Scientist & Principal Investigator, Biomolecular Modelling & Design Division, BII, A*STAR.'",
+        "doctorateOrPapers": "PhD in Computational Biology / Bioinformatics, Nanyang Technological University.",
+        "vietnameseSignal": "Vietnamese name Nguyễn Ngọc Minh; undergraduate degree from Vietnam.",
+        "dedup": "npm run find-roster-matches checked; clean."
+      }
+    },
+    {
+      "entry": {
+        "name": "Dang Quan Nguyen",
+        "university": "CSIRO",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Natural Systems Modelling Group",
+        "city": "Melbourne",
+        "state": "VIC",
+        "country": "Australia",
+        "researchAreas": [
+          "Natural Systems Modelling",
+          "Emergency Evacuation Simulations",
+          "Discrete Optimization",
+          "Computer Vision"
+        ],
+        "phdInstitution": "Université Pierre et Marie Curie",
+        "phdYear": 2006,
+        "profileUrl": "https://people.csiro.au/N/D/Dangquan-Nguyen"
+      },
+      "evidence": {
+        "currentRole": "https://people.csiro.au/N/D/Dangquan-Nguyen 'Dr Dang Quan Nguyen is a Senior Engineering Lead in the Natural Systems Modelling Group at CSIRO.'",
+        "doctorateOrPapers": "PhD in Computer Science, Université Pierre et Marie Curie (Paris 6) / INRIA (2006).",
+        "vietnameseSignal": "Vietnamese name Nguyễn Đăng Quân; MSc from University of Ottawa.",
+        "dedup": "npm run find-roster-matches checked; ruled out partial matches (vp-0119, vp-0968, vp-1736, vp-1925, vp-2002, vp-2193, vp-2194, vp-2977)."
+      }
+    }
+  ],
+  "already_listed": [
+    {
+      "name": "Tam Le",
+      "id": "vp-0752",
+      "note": "Team Leader at RIKEN Center for Advanced Intelligence Project (AIP); already listed under RIKEN."
+    },
+    {
+      "name": "Lam-Son Phan Tran",
+      "id": "vp-0283",
+      "note": "Unit Leader at RIKEN Center for Sustainable Resource Science; already listed under RIKEN."
+    },
+    {
+      "name": "Thang Quyet Tran",
+      "id": "vp-2440",
+      "note": "Senior Scientist at A*STAR SIMTech; already listed."
+    },
+    {
+      "name": "Andrew Ngo",
+      "id": "vp-2441",
+      "note": "Principal Scientist at A*STAR IMRE; already listed."
+    },
+    {
+      "name": "Thu Ha Do",
+      "id": "vp-2443",
+      "note": "Scientist at A*STAR IMRE; already listed."
+    },
+    {
+      "name": "Huy Dat Tran",
+      "id": "vp-2605",
+      "note": "Senior Principal Scientist at A*STAR I2R; already listed."
+    },
+    {
+      "name": "Yen Tran",
+      "id": "vp-1565",
+      "note": "Research Scientist at CSIRO; already listed."
+    },
+    {
+      "name": "Vu Nguyen",
+      "id": "vp-1140",
+      "note": "Senior Research Scientist at CSIRO Data61; already listed."
+    }
+  ],
+  "possible_move": [],
+  "rejected": [
+    {
+      "name": "Ngan Tran Bich Nguyen",
+      "reason": "Project Scientist at A*STAR Bioprocessing Technology Institute (BTI); project-based fixed-term role rather than career/permanent research staff."
+    },
+    {
+      "name": "Minh-Luan Tran",
+      "reason": "Director, Clinical Trial Material Facility at National Research Council Canada; operational facility management rather than career research scientist."
+    },
+    {
+      "name": "Minh Nhat Nguyen",
+      "reason": "Postdoctoral researcher at Karlsruhe Institute of Technology (KIT), Institute for Applied Materials (IAMT); postdocs are excluded by ROSTER_MAINTENANCE.md."
+    },
+    {
+      "name": "Trang-Anh Nguyen-Le",
+      "reason": "Doctoral/postdoctoral researcher at Helmholtz-Zentrum Dresden-Rossendorf (HZDR); postdocs are excluded by ROSTER_MAINTENANCE.md."
+    }
+  ],
+  "coverage": [
+    {
+      "employer": "Agency for Science, Technology and Research (A*STAR)",
+      "pagesExamined": [
+        "https://www.a-star.edu.sg/simtech/kto/courses/connectivity-for-visibility-and-decision-making-in-smart-factories",
+        "https://research.a-star.edu.sg/researcher/thanh-xuan-hoang/",
+        "https://research.a-star.edu.sg/researcher/neil-hoai-nguyen-huynh/",
+        "https://research.a-star.edu.sg/researcher/vinh-tan-nguyen/",
+        "https://www.a-star.edu.sg/imre/research-departments/sustainable-supramolecular-materials",
+        "https://www.a-star.edu.sg/bii/about-us/principal-investigators"
+      ],
+      "note": "Examined SIMTech, IHPC, IMRE, BII, and BTI. Found 6 eligible unlisted permanent research staff."
+    },
+    {
+      "employer": "CSIRO",
+      "pagesExamined": [
+        "https://people.csiro.au/h/t/tung-hoang",
+        "https://people.csiro.au/P/Y/Yen-Pham",
+        "https://people.csiro.au/D/H/Hoang-Duong",
+        "https://people.csiro.au/h/j/james-hoang",
+        "https://people.csiro.au/N/D/Dangquan-Nguyen"
+      ],
+      "note": "Examined CSIRO Energy, Health & Biosecurity, Mineral Resources, Data61, and Natural Systems Modelling. Found 5 eligible unlisted research scientists/leads."
+    },
+    {
+      "employer": "Max Planck Institutes",
+      "pagesExamined": [
+        "https://www.ie-freiburg.mpg.de/person/94917/17351659"
+      ],
+      "note": "Examined Max Planck Institute of Immunobiology and Epigenetics. Found 1 eligible Project Leader."
+    },
+    {
+      "employer": "Helmholtz Association (FZ Jülich, KIT, HZDR)",
+      "pagesExamined": [
+        "https://www.fz-juelich.de/de/profile/hoang_vinh"
+      ],
+      "note": "Examined Forschungszentrum Jülich (IBI-3 / IHE). Found 1 eligible Team Leader."
+    },
+    {
+      "employer": "National Institute of Advanced Industrial Science and Technology (AIST)",
+      "pagesExamined": [
+        "https://www.airc.aist.go.jp/en/teams/ai-cloud/"
+      ],
+      "note": "Examined AIST Artificial Intelligence Research Center. Found 1 eligible Senior Researcher."
+    },
+    {
+      "employer": "National Institute of Information and Communications Technology (NICT)",
+      "pagesExamined": [
+        "https://bdirc.nict.go.jp/member/"
+      ],
+      "note": "Examined Big Data Integration Research Center. Found 2 eligible Senior Researchers."
+    },
+    {
+      "employer": "Fraunhofer Society",
+      "pagesExamined": [
+        "https://www.iao.fraunhofer.de/de/m/25/01/beitrag_11-der-wegbereiter.html",
+        "https://www.fokus.fraunhofer.de/en/fame/about-fame/team.html",
+        "https://www.ipa.fraunhofer.de/en/current-research/biomechatronic-systems/test_systems_for_body_worn_products/3D_test_systems.html"
+      ],
+      "note": "Examined Fraunhofer IAO, FOKUS, and IPA. Found 3 eligible researchers/leads."
+    },
+    {
+      "employer": "National Research Council Canada (NRC)",
+      "pagesExamined": [
+        "https://nrc.canada.ca/en/stories/cloudy-chance-research"
+      ],
+      "note": "Examined NRC Aerospace Research Centre. Found 1 eligible Senior Research Officer & Chief Radar Scientist."
+    },
+    {
+      "employer": "Electronics and Telecommunications Research Institute (ETRI)",
+      "pagesExamined": [
+        "https://ksp.etri.re.kr/"
+      ],
+      "note": "Examined ETRI Mobile Core Network Research Section. Found 1 eligible Senior Researcher."
+    },
+    {
+      "employer": "TNO (Netherlands)",
+      "pagesExamined": [
+        "https://www.researchgate.net/profile/Dong-Nhat-Nguyen"
+      ],
+      "note": "Examined Optics / Space Systems. Found 1 eligible Expert / Researcher (confirmed: false due to no employer public staff directory)."
+    },
+    {
+      "employer": "National Physical Laboratory (NPL, UK)",
+      "pagesExamined": [
+        "https://www.npl.co.uk/people/an-tran"
+      ],
+      "note": "Examined Time and Frequency Department. Found 1 eligible Senior Scientist."
+    },
+    {
+      "employer": "Defence Science and Technology Group (DSTG, Australia)",
+      "pagesExamined": [
+        "https://www.dst.defence.gov.au/publication/signal-separation-helicopter-radar-returns-using-wavelet-based-sparse-signal-optimisation"
+      ],
+      "note": "Examined Sensors & Effectors / National Security ISR. Found 2 eligible Defence Scientists."
+    },
+    {
+      "employer": "RIKEN (Japan)",
+      "pagesExamined": [
+        "https://aip.riken.jp/labs/generic-tech/approx_bayesian_infer/",
+        "https://www.riken.jp/en/research/labs/csrs/plant_symb_res/"
+      ],
+      "note": "Examined RIKEN AIP and CSRS. Key senior researchers (Tam Le, Lam-Son Phan Tran) are already cataloged in the roster."
+    }
+  ]
+}

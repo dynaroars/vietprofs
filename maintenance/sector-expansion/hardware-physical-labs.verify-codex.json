@@ -1,0 +1,127 @@
+{
+  "verifier": "codex",
+  "input": "maintenance/sector-expansion/hardware-physical-labs.agy.json",
+  "candidates": [
+    {
+      "name": "Van-Quan Pham",
+      "verdict": "fixable",
+      "failedTests": [
+        1
+      ],
+      "reason": "The proposed Nokia URL could not be opened. The live employer profile at https://www.nokia.com/people/quan-pham-van/ identifies Van-Quan Pham as a Network Control Researcher / Member of Technical Staff at Bell Labs in Murray Hill, New Jersey, and explicitly records his Computer Science PhD at Institut Polytechnique de Paris and PTIT HCM undergraduate education in Vietnam. This supports tests 2, 3 and 5. It does not state a PhD year: remove the unsupported 2022 rather than infer another year (null below means omit). Ran find-roster-matches with the name and every submitted identity URL, then the replacement URL: only vp-0865 (clinical psychology, Catholic University PhD 2002) and vp-3232 (viral vectors, Boston College PhD) matched by name; their identities differ.",
+      "correctedProfileUrl": "https://www.nokia.com/people/quan-pham-van/",
+      "correctedFields": {
+        "profileUrl": "https://www.nokia.com/people/quan-pham-van/",
+        "phdYear": null,
+        "department": "Mobile Networks Systems Department, Network Systems and Security Research Lab"
+      }
+    },
+    {
+      "name": "Kevin Tran",
+      "verdict": "fail",
+      "failedTests": [
+        1,
+        3
+      ],
+      "reason": "https://www.tri.global/ is a corporate landing page, not an individual profile (web fetch also returned 403). His live personal page https://ktran9891.github.io/ states an ongoing staff research scientist role in TRI Energy & Materials and a Carnegie Mellon Chemical Engineering PhD completed in 2021; it is an acceptable unconfirmed replacement for test 1. However, neither that biography nor the independently searched sources supplies an affirmative Vietnamese/diaspora signal beyond Tran. A coauthor network does not establish identity, so this is not merely a URL correction. Ran find-roster-matches with all submitted identity URLs: vp-1751 Kevin Ducbao Tran is an economist with a different personal site and research record, not this materials researcher.",
+      "correctedProfileUrl": "https://ktran9891.github.io/",
+      "correctedFields": {
+        "profileUrl": "https://ktran9891.github.io/",
+        "confirmed": false
+      }
+    },
+    {
+      "name": "Duy Nguyen-Tuong",
+      "verdict": "fail",
+      "failedTests": [
+        1
+      ],
+      "reason": "The submitted Bosch URL returns a 404. https://www.bosch.de/news-and-stories/artificial-intelligence/ is live but is a historical career story referring to the newly founded 2017 BCAI; news stories are expressly forbidden as profileUrl and this does not verify a current 2026 role. https://www.ias.informatik.tu-darmstadt.de/Team/DuyNguyen-Tuong is a former academic affiliation page, also inadmissible as profileUrl; it documents Freiburg PhD 2011 and Bosch work in Germany. No live current-employer person profile or suitable independent personal homepage was found. The full Duy Nguyen-Tuong name is a Vietnamese signal beyond a shared surname. Ran find-roster-matches with all submitted URLs: vp-0213, vp-0707, vp-2202, vp-3153 and vp-3237 have different doctoral institutions and specialties, so these name hits do not establish a duplicate. Do not substitute the news story or mark confirmed true.",
+      "correctedFields": {
+        "confirmed": false
+      }
+    },
+    {
+      "name": "Trung Kien Tran",
+      "verdict": "fail",
+      "failedTests": [
+        1,
+        2
+      ],
+      "reason": "The proposed Google Site redirects to Google sign-in; no login was attempted. The live former-employer page https://www.uni-ulm.de/in/ki/inst/alumni/trung-kien-tran/ explicitly says he left and links kieen.com, which could not be opened. The 5 February 2026 Ulm colloquium biography at https://www.uni-ulm.de/en/in/fakultaet/forschung/kognitive-systeme/colloquium-cognitive-systems-2025-26/05022026-trung-kien-tran-bosch-center-for-ai/ supports a Bosch lead research role in Germany but is neither an employer profile nor his own site. It mentions earlier PhD candidacy, not a conferred doctorate; the submitted 2018 doctorate and the alternative two-papers-in-three-years threshold were not independently established. The multi-token Vietnamese name supports test 3; no diacritics were reconstructed. Ran find-roster-matches with all submitted URLs: vp-1008, vp-1990, vp-2138 and vp-2460 concern economics, human interfaces, geography and literature, respectively, with different doctoral records.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Tuan M. Hoang Trong",
+      "verdict": "fixable",
+      "failedTests": [
+        1
+      ],
+      "reason": "The submitted IBM slug could not be opened. The live replacement https://research.ibm.com/people/tuan-hoang-trong identifies a Senior Research Scientist, career Research Staff Member since 2017, George Mason Bioinformatics and Computational Biology PhD 2014, and Yorktown Heights work location. Its linked CV https://catalogtest-datacatalog-ryifbbevi.s3.us-south.cloud-object-storage.appdomain.cloud/Tuan_CV_full.pdf records undergraduate education at Ho Chi Minh City University of Technology, Vietnam, supporting the Vietnamese connection. IBM links Scholar user CRN2-YYAAAAJ, not the supplied G6647u8AAAAJ; the correction is employer-linked, although Scholar itself could not be fetched. Ran find-roster-matches using all submitted URLs and both corrected URLs: only vp-0354, the Pepperdine historian with a Notre Dame PhD, matches by name and is a different person.",
+      "correctedProfileUrl": "https://research.ibm.com/people/tuan-hoang-trong",
+      "correctedFields": {
+        "profileUrl": "https://research.ibm.com/people/tuan-hoang-trong",
+        "scholarUrl": "https://scholar.google.com/citations?user=CRN2-YYAAAAJ"
+      }
+    },
+    {
+      "name": "Van Luan Nguyen",
+      "verdict": "fail",
+      "failedTests": [
+        1,
+        2
+      ],
+      "reason": "ORCID is explicitly inadmissible as profileUrl, even when confirmed is false. Opened the ORCID page and retrieved its public record at https://pub.orcid.org/v3.0/0000-0002-0995-4092/record: it lists Samsung Electronics in Suwon since November 2017 with no role title or department, a prior Sungkyunkwan postdoc, and HUST education 2005-2010. It does not document the claimed SAIT staff title or conferred 2015 doctorate. A past postdoc and patent inventorship alone do not satisfy the doctorate/current-publications and career-role test. No acceptable employer profile or personal-site replacement was found. HUST education and the full name support test 3, and Suwon supports test 5. Ran find-roster-matches with all submitted URLs: vp-0028 is a UT Arlington computer-science PhD; vp-0674 is a Deakin nursing PhD; vp-2149 is a Kansas economics PhD; vp-3045 is an Ecole des Ponts computer-vision PhD. These are distinct research identities.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Khuong N. Nguyen",
+      "verdict": "fail",
+      "failedTests": [
+        1
+      ],
+      "reason": "The supplied Scholar URL could not be fetched and is prohibited as profileUrl. The independently retrieved public ORCID record https://pub.orcid.org/v3.0/0000-0003-2631-350X/record supports a Samsung Research America Senior Research Engineer role in Plano since August 2018 and Texas A&M Computer Science PhD completed December 2019. Its linked publication record uses both Khuong N. Nguyen and Khuong Nhat Nguyen, providing a Vietnamese full-name signal beyond Nguyen. This corroborates the person but ORCID is not an acceptable current-appointment profile; no employer person page or own-site replacement was found. The submitted Vietnamese student-association claim was not verified. Ran find-roster-matches with every submitted URL: actual hits are vp-0595 Khuong An Nguyen (Royal Holloway PhD, different Scholar) and vp-0956 Duc Khuong Nguyen (Grenoble finance PhD), not the Tufts/Brighton identities claimed in the input.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Tung The Nguyen",
+      "verdict": "fixable",
+      "failedTests": [
+        1
+      ],
+      "reason": "The supplied Honda story URL could not be opened and a story is not acceptable as profileUrl. The live individual employer page https://www.jp.honda-ri.com/en/members/nguyen-tung/ names NGUYEN, Tung as Scientist / Research Division and identifies Tung The Nguyen through the listed publications. It explicitly records the NAIST doctorate in September 2020; the employer address is Wako, Saitama, Japan. The full Vietnamese name provides a signal beyond Nguyen. The proposed research areas conflate this dialogue/robot-interaction researcher with software-engineering work: replace them using the employer-listed publications. The supplied Scholar user string is malformed-looking and unverified; omit it (null means omit) unless independently resolved. Ran find-roster-matches with all submitted URLs and the replacement: vp-0126 is a mechanical engineer with Toledo PhD 2009, vp-0467/vp-0852 are clinicians, and vp-1696 is a Chicago mathematics PhD; none matches this research identity.",
+      "correctedProfileUrl": "https://www.jp.honda-ri.com/en/members/nguyen-tung/",
+      "correctedFields": {
+        "profileUrl": "https://www.jp.honda-ri.com/en/members/nguyen-tung/",
+        "university": "Honda Research Institute Japan",
+        "researchAreas": [
+          "Dialogue management",
+          "Human-robot interaction",
+          "Natural language processing"
+        ],
+        "scholarUrl": null
+      }
+    },
+    {
+      "name": "Viet Nguyen",
+      "verdict": "fail",
+      "failedTests": [
+        1,
+        2,
+        4
+      ],
+      "reason": "The live https://www.winlab.rutgers.edu/~vietnh/ is a personal homepage at a former university. It records Rutgers PhD 2019 and starting at Samsung Standard and 5G Mobility Lab in August 2019, but gives no current career research title, ends its news in 2019, and lists only pre-Samsung publications. Thus it does not substantiate the proposed current Staff Research Engineer II role or Mountain View location. No newer eligible current-role source or employer person profile was found. His old resume https://www.winlab.rutgers.edu/~vietnh/docs/Viet_Nguyen_resume.pdf supplies a Vietnamese education signal and corrects the input biography: the BS is from Ritsumeikan, following transfer from Hanoi University of Technology, not a HUST BS. Ran find-roster-matches with all submitted URLs and inspected name hits. The numerous active matches have different specialties or doctoral histories; retired vp-1513 contains an unsourced Khalifa placeholder and insufficient identity information to declare it unrelated as the input does. Resolve that retired identity before assigning a new ID; test 4 remains unresolved rather than a proven duplicate.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Nam H. Nguyen",
+      "verdict": "fail",
+      "failedTests": [
+        1
+      ],
+      "reason": "Scholar returned 403 and is expressly forbidden as profileUrl. No live Boeing person profile or personal homepage stating the current role was found. https://chicagoquantum.org/events/big-q-hackathon-cqe-and-quantx identifies a Boeing applied mathematician in 2023, but a historical event biography cannot establish the current appointment. The Wichita dissertation https://soar.wichita.edu/server/api/core/bitstreams/47785f79-a0b1-4840-be23-1c79d85d3f27/content independently confirms Applied Mathematics PhD May 2020 and advisor Elizabeth Behrman; its dedication names his mother Nguyen Thi Kim Hoa and grandmother Phan Thi Suu, an affirmative Vietnamese family signal beyond the candidate surname. Ran find-roster-matches with all submitted URLs: active hits have different research identities (including finance vp-2134 and Capital One machine learning vp-3094); no shared identity URL was found. A new acceptable current-role profile is still required; historical research evidence does not cure test 1.",
+      "correctedFields": {}
+    }
+  ],
+  "possible_move": []
+}

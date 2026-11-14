@@ -1,0 +1,842 @@
+{
+  "group": "france-public-research",
+  "agent": "agy",
+  "finishedAt": "2026-11-14T23:05:00Z",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Thanh Binh Nguyen",
+        "vietnameseName": "Nguyễn Thanh Bình",
+        "university": "CNRS (Centre National de la Recherche Scientifique)",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Institut de Chimie des Substances Naturelles (ICSN - UPR 2301)",
+        "city": "Gif-sur-Yvette",
+        "country": "France",
+        "researchAreas": [
+          "Organic Synthesis",
+          "Sulfur Chemistry",
+          "Catalysis",
+          "Medicinal Chemistry"
+        ],
+        "phdInstitution": "Université du Maine",
+        "phdYear": 2008,
+        "profileUrl": "https://icsn.cnrs.fr/en/cv/nguyen",
+        "scholarUrl": "https://scholar.google.com/citations?user=dE_30jIAAAAJ"
+      },
+      "evidence": {
+        "currentRole": "Chargé de recherche CNRS at ICSN (UPR 2301, Gif-sur-Yvette)",
+        "doctorateOrPapers": "PhD in Chemistry from Université du Maine (2008); recipient of the CNRS Bronze Medal in 2017",
+        "vietnameseSignal": "BS in Chemistry from University of Natural Sciences, Vietnam National University Ho Chi Minh City (2004)",
+        "dedup": "npm run find-roster-matches: clean; ruled out vp-0654 (radiologist at University of Ottawa) and vp-3148 (EntoZyme researcher)"
+      }
+    },
+    {
+      "entry": {
+        "name": "Le Thanh Dung Nguyen",
+        "vietnameseName": "Lê Thành Dũng Nguyễn",
+        "university": "CNRS (Centre National de la Recherche Scientifique)",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Laboratoire d'Informatique et Systèmes (LIS - UMR 7020)",
+        "city": "Marseille",
+        "country": "France",
+        "researchAreas": [
+          "Theoretical Computer Science",
+          "Mathematical Logic",
+          "Proof Theory",
+          "Linear Logic",
+          "Automata Theory"
+        ],
+        "phdInstitution": "Université Sorbonne Paris Nord",
+        "phdYear": 2021,
+        "profileUrl": "https://www.ins2i.cnrs.fr/fr/cnrsinfo/le-thanh-dung-nguyen-etablir-des-liens-entre-des-facettes-de-la-logique-informatique",
+        "websiteUrl": "https://nguyen.situee.net/"
+      },
+      "evidence": {
+        "currentRole": "Chargé de recherche CNRS at LIS (recruited 2024)",
+        "doctorateOrPapers": "PhD in Computer Science from Université Sorbonne Paris Nord (2021)",
+        "vietnameseSignal": "Full name Lê Thành Dũng Nguyễn cited in CNRS profile and publications",
+        "dedup": "npm run find-roster-matches: clean (0 matches)"
+      }
+    },
+    {
+      "entry": {
+        "name": "Antoine Le",
+        "vietnameseName": "Lê",
+        "university": "CNRS (Centre National de la Recherche Scientifique)",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Centre d'Asie du Sud-Est (CASE - UMR 8170)",
+        "city": "Aubervilliers",
+        "country": "France",
+        "researchAreas": [
+          "History of Vietnam",
+          "Southeast Asian Studies",
+          "Indochina Wars",
+          "Vietnamese Communist Party"
+        ],
+        "phdInstitution": "Institut National des Langues et Civilisations Orientales",
+        "phdYear": 2024,
+        "profileUrl": "https://case.ehess.fr/moteur-de-recherche-des-membres/antoine-le"
+      },
+      "evidence": {
+        "currentRole": "Chargé de recherche CNRS at Centre d'Asie du Sud-Est (CASE, Aubervilliers)",
+        "doctorateOrPapers": "PhD in History from INALCO (2024), specialized in modern Vietnamese political and military history",
+        "vietnameseSignal": "Vietnamese diaspora surname Lê, specialization and fluency in Vietnamese archival records and historical sources",
+        "dedup": "npm run find-roster-matches: clean (0 matches)"
+      }
+    },
+    {
+      "entry": {
+        "name": "Quang-Duy Nguyen",
+        "vietnameseName": "Nguyễn Quang Duy",
+        "university": "Commissariat à l'énergie atomique et aux énergies alternatives (CEA)",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "CEA-List",
+        "city": "Palaiseau",
+        "country": "France",
+        "researchAreas": [
+          "Digital Twins",
+          "Flexible Manufacturing",
+          "Industrial Robotics",
+          "Smart Production Lines"
+        ],
+        "phdInstitution": "Université Clermont Auvergne",
+        "phdYear": 2020,
+        "profileUrl": "https://list.cea.fr/en/the-digital-twin-an-enabler-of-flexible-dynamic-production-lines/"
+      },
+      "evidence": {
+        "currentRole": "Ingénieur-chercheur / Research Engineer at CEA-List (Palaiseau)",
+        "doctorateOrPapers": "PhD in Robotics from Université Clermont Auvergne / INRAE (2020)",
+        "vietnameseSignal": "Undergraduate degree in Mechatronics from Hanoi University of Science and Technology (HUST, 2012)",
+        "dedup": "npm run find-roster-matches: clean (0 matches)"
+      }
+    },
+    {
+      "entry": {
+        "name": "Minh-Ha Nguyen",
+        "vietnameseName": "Nguyễn Thị Minh Hà",
+        "university": "Institut Pasteur",
+        "institutionType": "Independent nonprofit research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Biological NMR and HDX-MS Technological Platform",
+        "city": "Paris",
+        "country": "France",
+        "researchAreas": [
+          "Biological NMR",
+          "Structural Biology",
+          "Hydrogen-Deuterium Exchange Mass Spectrometry",
+          "Protein Dynamics"
+        ],
+        "phdInstitution": "Université de Lyon",
+        "phdYear": 2019,
+        "profileUrl": "https://research.pasteur.fr/en/member/minh-ha-nguyen/"
+      },
+      "evidence": {
+        "currentRole": "Research Engineer (Ingénieure de recherche) at Institut Pasteur (Paris)",
+        "doctorateOrPapers": "PhD in Structural Biology from Université de Lyon (2019, UMR 5086)",
+        "vietnameseSignal": "Doctoral thesis and IdRef profile registered as Minh-Ha Nguyen Thi with traditional Vietnamese feminine middle marker 'Thi'",
+        "dedup": "npm run find-roster-matches: clean; ruled out vp-0849 (FAU Erlangen-Nuremberg), vp-0850 (University of Washington), and vp-1563 (Bielefeld University)"
+      }
+    },
+    {
+      "entry": {
+        "name": "Phuong Hoang Nguyen",
+        "vietnameseName": "Nguyễn Hoàng Phương",
+        "university": "CNRS (Centre National de la Recherche Scientifique)",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Laboratoire de Biochimie Théorique (LBT - UPR 9080)",
+        "city": "Paris",
+        "country": "France",
+        "researchAreas": [
+          "Theoretical Biochemistry",
+          "Molecular Dynamics Simulation",
+          "Protein Folding",
+          "Amyloid Aggregation"
+        ],
+        "phdInstitution": "Bielefeld University",
+        "phdYear": 2003,
+        "profileUrl": "https://lbt.cnrs.fr/index.php/people/",
+        "scholarUrl": "https://scholar.google.com/citations?user=P_T83mYAAAAJ"
+      },
+      "evidence": {
+        "currentRole": "Chargé de recherche CNRS (CR1) at Laboratoire de Biochimie Théorique (UPR 9080, Paris)",
+        "doctorateOrPapers": "PhD in Physics from Bielefeld University (2003)",
+        "vietnameseSignal": "Full Vietnamese name Phuong Hoang Nguyen (Nguyễn Hoàng Phương)",
+        "dedup": "npm run find-roster-matches: clean; ruled out vp-0638 (Phuong Nguyen, assistant professor at Eindhoven University of Technology)"
+      }
+    },
+    {
+      "entry": {
+        "name": "Long Hoang Bao Nguyen",
+        "vietnameseName": "Nguyễn Hoàng Bảo Long",
+        "university": "CNRS (Centre National de la Recherche Scientifique)",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Institut Charles Gerhardt Montpellier (ICGM - UMR 5253)",
+        "city": "Montpellier",
+        "country": "France",
+        "researchAreas": [
+          "Electrochemical Energy Storage",
+          "Solid-State Batteries",
+          "Inorganic Materials Chemistry",
+          "Battery Interfaces"
+        ],
+        "phdInstitution": "University of Bordeaux",
+        "phdYear": 2019,
+        "profileUrl": "https://www.icgm.fr/long-nguyen/",
+        "scholarUrl": "https://scholar.google.com/citations?user=V6Q5UbgAAAAJ"
+      },
+      "evidence": {
+        "currentRole": "Chargé de recherche CNRS at ICGM (recruited Oct 2023)",
+        "doctorateOrPapers": "PhD in Solid State Chemistry from University of Bordeaux (2019)",
+        "vietnameseSignal": "Full Vietnamese name Long Hoang Bao Nguyen (Nguyễn Hoàng Bảo Long)",
+        "dedup": "npm run find-roster-matches: clean; ruled out distinct Nguyen entries in US and UK"
+      }
+    },
+    {
+      "entry": {
+        "name": "Ha Tran",
+        "vietnameseName": "Trần Thị Ngọc Hà",
+        "university": "CNRS (Centre National de la Recherche Scientifique)",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Laboratoire de Météorologie Dynamique (LMD - UMR 8539)",
+        "city": "Palaiseau",
+        "country": "France",
+        "researchAreas": [
+          "Atmospheric Physics",
+          "Molecular Spectroscopy",
+          "Line Shape Modeling",
+          "Radiative Transfer"
+        ],
+        "phdInstitution": "Université Paris 12 Val-de-Marne",
+        "phdYear": 2005,
+        "profileUrl": "https://www.ip-paris.fr/en/research-portal/researchers/thi-ngoc-ha-tran",
+        "scholarUrl": "https://scholar.google.com/citations?user=P-BZZt8AAAAJ"
+      },
+      "evidence": {
+        "currentRole": "Chargée de recherche CNRS at Laboratoire de Météorologie Dynamique (Palaiseau)",
+        "doctorateOrPapers": "PhD in Physics from Université Paris 12 (2005), HDR, co-developer of the IUPAC-recommended Hartmann-Tran Profile (HTP)",
+        "vietnameseSignal": "Full Vietnamese legal name Thi Ngoc Ha Tran with traditional feminine markers Thi and Ngoc",
+        "dedup": "npm run find-roster-matches: clean; ruled out vp-0555 (Viet Chi Tran) and other Tran faculty entries"
+      }
+    },
+    {
+      "entry": {
+        "name": "Ha Pham",
+        "vietnameseName": "Phạm Hà",
+        "university": "Inria",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Makutu / Magique-3D Project-Team",
+        "city": "Pau",
+        "country": "France",
+        "researchAreas": [
+          "Applied Mathematics",
+          "Wave Propagation",
+          "Inverse Problems",
+          "Microlocal Analysis",
+          "Partial Differential Equations"
+        ],
+        "phdInstitution": "Stanford University",
+        "phdYear": 2012,
+        "profileUrl": "https://team.inria.fr/magique3d/ha-pham/",
+        "websiteUrl": "https://sites.google.com/view/ha-pham"
+      },
+      "evidence": {
+        "currentRole": "Chargée de recherche Inria at Centre Inria de l'Université de Bordeaux / Pau",
+        "doctorateOrPapers": "PhD in Mathematics from Stanford University (2012, advisor András Vasy)",
+        "vietnameseSignal": "Vietnamese given name Ha, surname Pham, active in the international Vietnamese mathematical community",
+        "dedup": "npm run find-roster-matches: clean; ruled out other Pham entries across the roster"
+      }
+    },
+    {
+      "entry": {
+        "name": "Quynh-Trang Bui",
+        "vietnameseName": "Bùi Quỳnh Trang",
+        "university": "INRAE (Institut National de Recherche pour l'Agriculture, l'Alimentation et l'Environnement)",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Biologie du Fruit et Pathologie (UMR 1332 BFP)",
+        "city": "Villenave-d'Ornon",
+        "country": "France",
+        "researchAreas": [
+          "Fruit Biology",
+          "Plant Pathology",
+          "Prunus Adaptation",
+          "Plant Genetics",
+          "Crop Breeding"
+        ],
+        "phdInstitution": "Le Mans Université",
+        "phdYear": 2006,
+        "profileUrl": "https://bfp.bordeaux-aquitaine.hub.inrae.fr/recherche/equipe-prunus-adaptation-diversite-amelioration-pradam/personnel-pradam/bui-quynh-trang"
+      },
+      "evidence": {
+        "currentRole": "Chargée de recherche INRAE at UMR BFP (Villenave-d'Ornon / Bordeaux)",
+        "doctorateOrPapers": "PhD in Plant Biology from Le Mans Université (2006)",
+        "vietnameseSignal": "Full Vietnamese name Quynh Trang Bui (Bùi Quỳnh Trang)",
+        "dedup": "npm run find-roster-matches: clean; ruled out other Bui entries"
+      }
+    },
+    {
+      "entry": {
+        "name": "Dominique Pham",
+        "vietnameseName": "Phạm",
+        "university": "Ifremer (Institut Français de Recherche pour l'Exploitation de la Mer)",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Unité LEAD / Délégation de Nouvelle-Calédonie",
+        "city": "Boulouparis",
+        "country": "France",
+        "researchAreas": [
+          "Aquaculture",
+          "Shrimp Pathology",
+          "Marine Pathology",
+          "Tropical Marine Ecosystems"
+        ],
+        "phdInstitution": "Université de la Polynésie Française",
+        "phdYear": 2011,
+        "profileUrl": "https://annuaire.ifremer.fr/cv/16492/en/"
+      },
+      "evidence": {
+        "currentRole": "Cadre de recherche / Chercheur titulaire at Ifremer (New Caledonia delegation)",
+        "doctorateOrPapers": "PhD in Marine Biology from Université de la Polynésie Française (2011)",
+        "vietnameseSignal": "New Caledonian Vietnamese diaspora (Chân Đăng community heritage), surname Pham",
+        "dedup": "npm run find-roster-matches: clean (0 matches)"
+      }
+    },
+    {
+      "entry": {
+        "name": "Phong Nguyen",
+        "vietnameseName": "Nguyễn Phong",
+        "university": "CNRS (Centre National de la Recherche Scientifique)",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Unité de Génétique et Biologie du Développement (UMR 3215 CNRS / U934 Inserm / Institut Curie)",
+        "city": "Paris",
+        "country": "France",
+        "researchAreas": [
+          "Cardiovascular Biology",
+          "Heart Regeneration",
+          "Developmental Genetics",
+          "Tissue Repair"
+        ],
+        "phdInstitution": "Monash University",
+        "phdYear": 2014,
+        "profileUrl": "https://institut-curie.org/team/mechanisms-of-heart-regeneration",
+        "scholarUrl": "https://scholar.google.com/citations?user=m2aW4dIAAAAJ"
+      },
+      "evidence": {
+        "currentRole": "Chargé de recherche CNRS / Junior Team Leader at Institut Curie (Paris)",
+        "doctorateOrPapers": "PhD in Developmental Biology from Monash University (2014); Eureka Prize for Scientific Research recipient (2015)",
+        "vietnameseSignal": "Vietnamese diaspora name Phong Nguyen",
+        "dedup": "npm run find-roster-matches: ruled out vp-0526 (Phong Nguyen, cryptographer at ENS / Inria)"
+      }
+    },
+    {
+      "entry": {
+        "name": "Matthew Nguyen",
+        "vietnameseName": "Nguyễn",
+        "university": "CNRS (Centre National de la Recherche Scientifique)",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Laboratoire Leprince-Ringuet (LLR - UMR 7638 CNRS / École Polytechnique)",
+        "city": "Palaiseau",
+        "country": "France",
+        "researchAreas": [
+          "High Energy Physics",
+          "Heavy-Ion Collisions",
+          "Quark-Gluon Plasma",
+          "CMS Experiment",
+          "Particle Detectors"
+        ],
+        "phdInstitution": "Stony Brook University",
+        "phdYear": 2009,
+        "profileUrl": "https://llr.in2p3.fr/annuaire/",
+        "scholarUrl": "https://scholar.google.com/citations?user=qL62u_AAAAAJ"
+      },
+      "evidence": {
+        "currentRole": "Chargé de recherche CNRS at Laboratoire Leprince-Ringuet (LLR, Palaiseau)",
+        "doctorateOrPapers": "PhD in Experimental Nuclear Physics from Stony Brook University (2009); CMS Young Researcher Prize (2015)",
+        "vietnameseSignal": "Vietnamese-American diaspora, surname Nguyen",
+        "dedup": "npm run find-roster-matches: ruled out vp-0880 (Matthew Nguyen at Weill Cornell Medicine)"
+      }
+    },
+    {
+      "entry": {
+        "name": "Truong Son Nguyen",
+        "vietnameseName": "Nguyễn Trường Sơn",
+        "university": "CNRS (Centre National de la Recherche Scientifique)",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Institut Jean Lamour (IJL - UMR 7198 CNRS / Université de Lorraine)",
+        "city": "Nancy",
+        "country": "France",
+        "researchAreas": [
+          "Plasma Physics",
+          "Surfaces and Interfaces",
+          "Plasma-Surface Interactions",
+          "Spectroscopy",
+          "Material Processing"
+        ],
+        "phdInstitution": "Université Sorbonne Paris Nord",
+        "phdYear": 2022,
+        "profileUrl": "https://ijl.univ-lorraine.fr/en/research/scientific-departments/department-2-chemistry-and-physics-of-solids-and-surfaces-cp2s/plasmas-processes-surfaces-group/"
+      },
+      "evidence": {
+        "currentRole": "Chargé de recherche CNRS at Institut Jean Lamour (Nancy)",
+        "doctorateOrPapers": "PhD in Physics from Université Sorbonne Paris Nord (2022)",
+        "vietnameseSignal": "BS from University of Science and Technology of Hanoi (USTH), Vietnamese cited name Trường Sơn Nguyễn",
+        "dedup": "npm run find-roster-matches: clean (0 matches)"
+      }
+    },
+    {
+      "entry": {
+        "name": "Eric Nguyen Van",
+        "vietnameseName": "Nguyễn Văn",
+        "university": "ONERA (Office National d'Études et de Recherches Aérospatiales)",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Département Traitement de l'Information et Systèmes (DTIS)",
+        "city": "Toulouse",
+        "country": "France",
+        "researchAreas": [
+          "Aircraft Design",
+          "Multidisciplinary Design Optimization",
+          "Distributed Electric Propulsion",
+          "Flight Control",
+          "Aeroelasticity"
+        ],
+        "phdInstitution": "ISAE-SUPAERO",
+        "phdYear": 2020,
+        "profileUrl": "https://www.onera.fr/",
+        "scholarUrl": "https://scholar.google.com/citations?user=P7F1v_wAAAAJ"
+      },
+      "evidence": {
+        "currentRole": "Ingénieur de recherche / Research Engineer at ONERA (DTIS, Toulouse)",
+        "doctorateOrPapers": "PhD in Automatic Control from ISAE-SUPAERO / Université de Toulouse (2020)",
+        "vietnameseSignal": "French-Vietnamese diaspora, surname Nguyen Van (Nguyễn Văn)",
+        "dedup": "npm run find-roster-matches: ruled out vp-0674, vp-2149, vp-3045, vp-3120"
+      }
+    },
+    {
+      "entry": {
+        "name": "Tuan Ngo Dac",
+        "vietnameseName": "Ngô Đắc Tuấn",
+        "university": "CNRS (Centre National de la Recherche Scientifique)",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Laboratoire de Mathématiques Nicolas Oresme (LMNO - UMR 6139 CNRS / Université de Caen Normandie)",
+        "city": "Caen",
+        "country": "France",
+        "researchAreas": [
+          "Arithmetic Geometry",
+          "Number Theory",
+          "Drinfeld Modules",
+          "Anderson Motives",
+          "Langlands Correspondence"
+        ],
+        "phdInstitution": "Université Paris-Sud",
+        "phdYear": 2004,
+        "profileUrl": "https://www.math.unicaen.fr/~ngodac/",
+        "scholarUrl": "https://scholar.google.com/citations?user=O-j6PqQAAAAJ"
+      },
+      "evidence": {
+        "currentRole": "Directeur de recherche CNRS at LMNO (Caen)",
+        "doctorateOrPapers": "PhD in Mathematics from Université Paris-Sud (2004, advisor Laurent Lafforgue), HDR",
+        "vietnameseSignal": "Full Vietnamese name Ngô Đắc Tuấn, former international Olympiad medalist for Vietnam",
+        "dedup": "npm run find-roster-matches: ruled out vp-0539 (Tuan Ngo, civil engineering professor at Melbourne)"
+      }
+    },
+    {
+      "entry": {
+        "name": "Van Thien Nguyen",
+        "vietnameseName": "Nguyễn Văn Thiện",
+        "university": "Commissariat à l'énergie atomique et aux énergies alternatives (CEA)",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "CEA-Leti",
+        "city": "Grenoble",
+        "country": "France",
+        "researchAreas": [
+          "Machine Learning",
+          "Deep Learning",
+          "Hardware-Aware AI",
+          "Embedded Systems",
+          "Computer Vision"
+        ],
+        "phdInstitution": "Université Grenoble Alpes",
+        "phdYear": 2022,
+        "profileUrl": "https://theses.fr/2022GRALT094",
+        "scholarUrl": "https://scholar.google.com/citations?user=P0n5vEAAAAAJ"
+      },
+      "evidence": {
+        "currentRole": "Research Engineer / Ingénieur de recherche at CEA-Leti (Grenoble)",
+        "doctorateOrPapers": "PhD in Signal and Image Processing from Université Grenoble Alpes / CEA-Leti (2022)",
+        "vietnameseSignal": "Vietnamese name Nguyen Van Thien (Nguyễn Văn Thiện)",
+        "dedup": "npm run find-roster-matches: ruled out vp-0181, vp-0674, vp-0887, vp-1615, vp-2149, vp-2973, vp-3045, vp-3279"
+      }
+    },
+    {
+      "entry": {
+        "name": "Tinh-Suong Nguyen",
+        "vietnameseName": "Nguyễn Tinh Sương",
+        "university": "INRAE (Institut National de Recherche pour l'Agriculture, l'Alimentation et l'Environnement)",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Unité BIOGER (Biologie et Gestion des Risques en Agriculture - UMR 1290 INRAE / AgroParisTech)",
+        "city": "Palaiseau",
+        "country": "France",
+        "researchAreas": [
+          "Plant Pathology",
+          "Fungal Genetics",
+          "Epigenetics",
+          "Leptosphaeria maculans",
+          "Eukaryotic Microbiology"
+        ],
+        "phdInstitution": "Université Paris Diderot",
+        "phdYear": 2018,
+        "profileUrl": "https://bioger.versailles-grignon.hub.inrae.fr/le-personnel-de-l-unite/equipes-de-recherche/eplm/membres-de-l-equipe/nguyen-tinh-suong"
+      },
+      "evidence": {
+        "currentRole": "Chargée de recherche INRAE at BIOGER (Palaiseau)",
+        "doctorateOrPapers": "PhD in Cellular Biology and Eukaryotic Microbiology from Université Paris 7 Diderot (2018)",
+        "vietnameseSignal": "Full Vietnamese name Tinh Sương Nguyễn (traditional poetic Vietnamese given name)",
+        "dedup": "npm run find-roster-matches: ruled out vp-0527 (Suong Nguyen at EPFL)"
+      }
+    },
+    {
+      "entry": {
+        "name": "Thao Dang",
+        "vietnameseName": "Đặng Thảo",
+        "university": "CNRS (Centre National de la Recherche Scientifique)",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Laboratoire Verimag (UMR 5104 CNRS / Université Grenoble Alpes)",
+        "city": "Gières",
+        "country": "France",
+        "researchAreas": [
+          "Cyber-Physical Systems",
+          "Hybrid Systems",
+          "Formal Verification",
+          "Reachability Analysis",
+          "Model-Based Testing"
+        ],
+        "phdInstitution": "Institut National Polytechnique de Grenoble",
+        "phdYear": 2000,
+        "profileUrl": "http://www-verimag.imag.fr/~dang/",
+        "scholarUrl": "https://scholar.google.com/citations?user=d1G717EAAAAJ"
+      },
+      "evidence": {
+        "currentRole": "Directrice de recherche CNRS at Verimag (Grenoble)",
+        "doctorateOrPapers": "PhD in Automatic Control from INPG (2000), HDR from Université Joseph Fourier (2007)",
+        "vietnameseSignal": "Vietnamese given name Thao, surname Dang (Đặng)",
+        "dedup": "npm run find-roster-matches: ruled out vp-0790 and vp-2511 (Thao Dang, professor in Germany)"
+      }
+    },
+    {
+      "entry": {
+        "name": "Frederic Nguyen",
+        "vietnameseName": "Nguyễn",
+        "university": "Commissariat à l'énergie atomique et aux énergies alternatives (CEA)",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Département d'Études des Réacteurs (DER / IRESNE)",
+        "city": "Saint-Paul-lès-Durance",
+        "country": "France",
+        "researchAreas": [
+          "Reactor Physics",
+          "Neutronics",
+          "Decay Heat",
+          "Nuclear Reactor Safety",
+          "Core Simulation"
+        ],
+        "phdInstitution": "Université Paris-Sud",
+        "phdYear": 1993,
+        "profileUrl": "https://www.gen-4.org/gif/jcms/c_178493/prpp-co-chairs",
+        "scholarUrl": "https://scholar.google.com/citations?user=hRz0qD4AAAAJ"
+      },
+      "evidence": {
+        "currentRole": "Directeur de recherche CEA / Senior Expert at CEA Cadarache, Co-Chair of Generation IV International Forum PR&PP",
+        "doctorateOrPapers": "Doctorate in Reactor Physics from Université Paris-Sud, HDR",
+        "vietnameseSignal": "French-Vietnamese diaspora, surname Nguyen",
+        "dedup": "npm run find-roster-matches: ruled out vp-1856 (Frédéric Nguyen, geophysics professor at U Liège)"
+      }
+    },
+    {
+      "entry": {
+        "name": "Thu-Hoa Tran-Thi",
+        "vietnameseName": "Trần Thị Thu Hòa",
+        "university": "Commissariat à l'énergie atomique et aux énergies alternatives (CEA)",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "IRAMIS / NIMBE (Laboratoire Nanosciences et Innovation pour les Matériaux, la Biomécanique et l'Énergie)",
+        "city": "Gif-sur-Yvette",
+        "country": "France",
+        "researchAreas": [
+          "Chemical Sensors",
+          "Sol-Gel Materials",
+          "Air Pollutant Detection",
+          "Photochemistry",
+          "Environmental Nanotechnology"
+        ],
+        "phdInstitution": "Université Paris-Sud",
+        "phdYear": 1978,
+        "profileUrl": "https://iramis.cea.fr/nimbe/ledna/PhoCoS/",
+        "scholarUrl": "https://scholar.google.com/citations?user=1P36l_UAAAAJ"
+      },
+      "evidence": {
+        "currentRole": "Directrice de recherche CNRS / CEA (IRAMIS / NIMBE), Chevalier de la Légion d'honneur (2010)",
+        "doctorateOrPapers": "Doctorat ès Sciences Physiques from Université Paris-Sud (1978), 100+ publications, co-founder of ETHERA",
+        "vietnameseSignal": "Full Vietnamese name Trần Thị Thu Hòa",
+        "dedup": "npm run find-roster-matches: ruled out vp-0164, vp-2145, vp-2345, vp-3118"
+      }
+    }
+  ],
+  "already_listed": [
+    {
+      "id": "vp-1217",
+      "name": "Hoai Nam Truong",
+      "university": "INRAE (Institut National de Recherche pour l'Agriculture, l'Alimentation et l'Environnement)",
+      "note": "Permanent researcher at LIPM / INRAE Occitanie-Toulouse"
+    },
+    {
+      "id": "vp-1223",
+      "name": "Cuong Pham-Huu",
+      "university": "CNRS (Centre National de la Recherche Scientifique)",
+      "note": "Directeur de recherche at ICPEES / CNRS Strasbourg"
+    },
+    {
+      "id": "vp-1233",
+      "name": "Anh-Thy Bui",
+      "university": "CNRS (Centre National de la Recherche Scientifique)",
+      "note": "Chargée de recherche at ISM / Université de Bordeaux"
+    },
+    {
+      "id": "vp-1432",
+      "name": "Quoc Tuan Tran",
+      "university": "Commissariat à l'Énergie Atomique et aux Énergies Alternatives",
+      "note": "Research Director / Fellow at CEA Tech / LITEN"
+    },
+    {
+      "id": "vp-1464",
+      "name": "Binh-Minh Bui-Xuan",
+      "university": "CNRS (Centre National de la Recherche Scientifique)",
+      "note": "Chargé de recherche at LIP6 / Sorbonne Université"
+    },
+    {
+      "id": "vp-1471",
+      "name": "Hong-Minh Hoang",
+      "university": "INRAE (Institut National de Recherche pour l'Agriculture, l'Alimentation et l'Environnement)",
+      "note": "Chargée de recherche at FRISE / INRAE Antony"
+    },
+    {
+      "id": "vp-2495",
+      "name": "Damien Tran",
+      "university": "CNRS (Centre National de la Recherche Scientifique)",
+      "note": "Chargé de recherche at EPOC / Arcachon Marine Station"
+    },
+    {
+      "id": "vp-2497",
+      "name": "Hang Thi Thu Nguyen",
+      "university": "Inserm (Institut National de la Santé et de la Recherche Médicale)",
+      "note": "Directrice de recherche at M2iSH / UMR 1071 Inserm / Clermont-Ferrand"
+    },
+    {
+      "id": "vp-2499",
+      "name": "Mai Nguyen-Chi",
+      "university": "CNRS (Centre National de la Recherche Scientifique)",
+      "note": "Directrice de recherche at LPHI / Université de Montpellier"
+    },
+    {
+      "id": "vp-2518",
+      "name": "Luc-Sy Tran",
+      "university": "CNRS (Centre National de la Recherche Scientifique)",
+      "note": "Chargé de recherche at LRGP / CNRS Nancy"
+    },
+    {
+      "id": "vp-2643",
+      "name": "Minh Ha-Duong",
+      "university": "CNRS (Centre National de la Recherche Scientifique)",
+      "note": "Directeur de recherche at CIRED / CNRS Paris"
+    },
+    {
+      "id": "vp-2707",
+      "name": "Jean-Rene Huynh",
+      "university": "CNRS (Centre National de la Recherche Scientifique)",
+      "note": "Directeur de recherche at CIRB / Collège de France"
+    },
+    {
+      "id": "vp-0526",
+      "name": "Phong Nguyen",
+      "university": "Inria",
+      "note": "Directeur de recherche at Inria Paris / Cascade team"
+    },
+    {
+      "id": "vp-0555",
+      "name": "Viet Chi Tran",
+      "university": "Inria",
+      "note": "Directeur de recherche at Inria Lille / PoPoPoP team"
+    }
+  ],
+  "possible_move": [],
+  "rejected": [
+    {
+      "name": "Yvette Tran",
+      "employer": "ESPCI Paris",
+      "reason": "University faculty track (Professeur / MCU), belongs in Academia sector rather than Public research institute"
+    },
+    {
+      "name": "Tai Pham",
+      "employer": "Université Paris Cité",
+      "reason": "University faculty track (Maître de conférences), belongs in Academia sector"
+    },
+    {
+      "name": "Duong Hung Pham",
+      "employer": "Université de Picardie Jules Verne",
+      "reason": "University faculty track (Maître de conférences), belongs in Academia sector"
+    },
+    {
+      "name": "Hai-Vu Pham",
+      "employer": "Université Paris 8",
+      "reason": "University faculty track (Maître de conférences), belongs in Academia sector"
+    },
+    {
+      "name": "Noel Nguyen",
+      "employer": "Aix-Marseille Université",
+      "reason": "University faculty track (Professeur des universités), already listed in Academia sector (vp-1478)"
+    },
+    {
+      "name": "Nguyen Viet Dang",
+      "employer": "Sorbonne Université",
+      "reason": "University faculty track (Professeur des universités), already listed in Academia sector (vp-0524)"
+    },
+    {
+      "name": "Dinh-Tuan Pham",
+      "employer": "Grenoble INP",
+      "reason": "University faculty track (Professeur émérite), already listed in Academia sector (vp-0556)"
+    },
+    {
+      "name": "Le Nguyen Hoang",
+      "employer": "Télécom Paris",
+      "reason": "University faculty / scientific mediation staff, already listed in Academia sector (vp-1463)"
+    },
+    {
+      "name": "Kim Thang Nguyen",
+      "employer": "Université Grenoble Alpes",
+      "reason": "University faculty track (Professeur des universités), already listed in Academia sector (vp-2213)"
+    },
+    {
+      "name": "Quang Nguyen-Luong",
+      "employer": "ICISE Quy Nhon / USTH",
+      "reason": "Physically based in Vietnam; outside diaspora scope"
+    },
+    {
+      "name": "Huyen Thanh Tran",
+      "employer": "VASI / IRD Vietnam",
+      "reason": "Physically based in Vietnam; outside diaspora scope"
+    },
+    {
+      "name": "Thang Nguyen-Quoc",
+      "employer": "DIAL / Vietnam",
+      "reason": "Physically based in Vietnam; outside diaspora scope"
+    },
+    {
+      "name": "Gia Quoc Bao Tran",
+      "employer": "UIUC",
+      "reason": "Postdoctoral research associate at UIUC (USA); not a permanent researcher in France"
+    },
+    {
+      "name": "Van Duong Dinh",
+      "employer": "Independent",
+      "reason": "Independent researcher / former postdoctoral fellow; not a tenured CR/DR"
+    },
+    {
+      "name": "Trang Ngan Giang",
+      "employer": "Institut des Nanotechnologies de Lyon (INL)",
+      "reason": "Doctoral student (doctorante); not a permanent researcher"
+    },
+    {
+      "name": "Mathieu Pham Van Cang",
+      "employer": "Institut Pasteur",
+      "reason": "Postdoctoral researcher; not a permanent staff scientist / research engineer"
+    },
+    {
+      "name": "Quoc-Hung Nguyen",
+      "employer": "Chinese Academy of Sciences",
+      "reason": "Moved to Chinese Academy of Sciences (already listed as vp-2450)"
+    },
+    {
+      "name": "Nguyen Quoc Son",
+      "employer": "CNRS / LMS École Polytechnique",
+      "reason": "Deceased (1944–2021)"
+    }
+  ],
+  "coverage": [
+    {
+      "employer": "CNRS (Centre National de la Recherche Scientifique)",
+      "status": "covered: comprehensive search across CoNRS sections and joint UMR laboratories; identified 11 verified permanent researchers (Thanh Binh Nguyen, Le Thanh Dung Nguyen, Antoine Le, Phuong Hoang Nguyen, Long Hoang Bao Nguyen, Ha Tran, Phong Nguyen, Matthew Nguyen, Truong Son Nguyen, Tuan Ngo Dac, Thao Dang) plus 7 verified already-listed members (vp-1223, vp-1233, vp-1464, vp-2495, vp-2518, vp-2643, vp-2707)"
+    },
+    {
+      "employer": "Commissariat à l'énergie atomique et aux énergies alternatives (CEA)",
+      "status": "covered: investigated major CEA divisions (CEA-List, CEA-Leti, CEA Cadarache / DER, CEA IRAMIS / NIMBE); identified 4 verified permanent researchers (Quang-Duy Nguyen, Van Thien Nguyen, Frederic Nguyen, Thu-Hoa Tran-Thi) plus 1 already-listed fellow (vp-1432 Quoc Tuan Tran)"
+    },
+    {
+      "employer": "INRAE (Institut National de Recherche pour l'Agriculture, l'Alimentation et l'Environnement)",
+      "status": "covered: surveyed plant biology, pathology, and agro-engineering units; identified 2 verified permanent chargées de recherche (Quynh-Trang Bui, Tinh-Suong Nguyen) plus 2 already-listed researchers (vp-1217 Hoai Nam Truong, vp-1471 Hong-Minh Hoang)"
+    },
+    {
+      "employer": "Inria",
+      "status": "covered: surveyed project-teams; identified 1 verified chargée de recherche (Ha Pham at Makutu/Magique-3D) plus 2 already-listed directeurs de recherche (vp-0526 Phong Nguyen, vp-0555 Viet Chi Tran)"
+    },
+    {
+      "employer": "Institut Pasteur",
+      "status": "covered: surveyed core technological platforms and research units; identified 1 verified research engineer (Minh-Ha Nguyen) and ruled out short-term postdocs"
+    },
+    {
+      "employer": "Ifremer (Institut Français de Recherche pour l'Exploitation de la Mer)",
+      "status": "covered: surveyed overseas delegations and marine research units; identified 1 verified cadre de recherche (Dominique Pham in New Caledonia)"
+    },
+    {
+      "employer": "ONERA (Office National d'Études et de Recherches Aérospatiales)",
+      "status": "covered: surveyed aeronautical systems and information processing departments; identified 1 verified research engineer (Eric Nguyen Van)"
+    },
+    {
+      "employer": "Inserm (Institut National de la Santé et de la Recherche Médicale)",
+      "status": "covered: verified existing entry vp-2497 (Hang Thi Thu Nguyen, directrice de recherche UMR 1071); distinguished hospital/university faculty (MCU-PH/PU-PH) from EPST research corps"
+    },
+    {
+      "employer": "IRD (Institut de Recherche pour le Développement)",
+      "status": "covered: surveyed international development and oceanographic records; ruled out Vietnam-based personnel and temporary fellows"
+    },
+    {
+      "employer": "CNES (Centre National d'Études Spatiales)",
+      "status": "covered: checked national database; confirmed no unlisted permanent research engineers/scientists"
+    }
+  ]
+}

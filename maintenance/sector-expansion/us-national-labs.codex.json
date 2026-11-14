@@ -1,0 +1,721 @@
+{
+  "group": "us-national-labs",
+  "agent": "codex",
+  "finishedAt": "2026-11-14T22:35:56Z",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Binh Pham",
+        "university": "Idaho National Laboratory",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Instrument Controls and Data Science Department",
+        "country": "United States",
+        "researchAreas": [
+          "TRISO fuel performance",
+          "Statistical data analysis",
+          "Sensor anomaly detection",
+          "Quantitative modeling"
+        ],
+        "phdInstitution": "Moscow Power Engineering Institute",
+        "profileUrl": "https://inl.elsevierpure.com/en/persons/binh-pham/"
+      },
+      "evidence": {
+        "currentRole": "https://inl.elsevierpure.com/en/persons/binh-pham/ — “Binh Pham is a data analyst in the Instrument Controls and Data Science Department at Idaho National Laboratory.” The employer describes ongoing scientific analysis of TRISO fuel experiments, statistical detection of instrument failures, and quantitative simulation research. Current employer-linked output includes 2026 reactor and sensor-monitoring research. This is a career scientific data-analysis appointment rather than a trainee position; the linked ORCID records continuous INL employment since 2008.",
+        "doctorateOrPapers": "https://inl.elsevierpure.com/en/persons/binh-pham/ — employer biography and education section explicitly identify a PhD in Electronic Engineering from Moscow Power Engineering Institute. phdYear deliberately omitted: employer education gives a February 1993 award date, whereas linked ORCID https://orcid.org/0000-0001-6695-6150 records completion in June 1992. The doctorate itself is consistently documented. Employer profile also lists peer-reviewed reactor research in 2024 and 2026.",
+        "vietnameseSignal": "Vietnamese given name Binh with surname Pham, explicitly published on the official INL profile: https://inl.elsevierpure.com/en/persons/binh-pham/. No diacritics or expanded middle name reconstructed.",
+        "dedup": "Ran npm run find-roster-matches -- \"Binh Pham\" --url https://inl.elsevierpure.com/en/persons/binh-pham/ --url https://orcid.org/0000-0001-6695-6150 ; output: no roster or retired-id matches. gh issue list --state all --search '\"Binh Pham\"' returned closed #1080 (https://github.com/dynaroars/vietprofs/issues/1080); checked its body/comments: that hit concerns Thai Binh Pham, a UCI mosquito/CRISPR researcher, not this INL electronic-engineering PhD. No matching INL candidate in that issue."
+      }
+    },
+    {
+      "entry": {
+        "name": "Tin Thien Phan",
+        "university": "Los Alamos National Laboratory",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Theoretical Biology and Biophysics",
+        "city": "Los Alamos",
+        "state": "New Mexico",
+        "country": "United States",
+        "researchAreas": [
+          "Mathematical biology",
+          "Viral dynamics",
+          "Cancer treatment modeling",
+          "Wastewater epidemiology"
+        ],
+        "phdInstitution": "Arizona State University",
+        "phdYear": 2021,
+        "profileUrl": "https://tintphan.wixsite.com/academics",
+        "confirmed": false
+      },
+      "evidence": {
+        "currentRole": "https://tintphan.wixsite.com/academics — “I am a staff scientist in Theoretical Biology and Biophysics at Los Alamos National Laboratory”. His maintained October 2026 CV (https://71161e2f-bb90-45d5-b13d-3c9f33d9ab00.filesusr.com/ugd/90b8bd_123cfbffe3d84d03807c6243fc84d446.pdf?index=true), linked from https://tintphan.wixsite.com/academics/resume, specifies a career staff appointment beginning June 2025, following postdoctoral service ending that month. It gives Los Alamos, New Mexico as his work address. Employer-published identity corroboration: https://laro.lanl.gov/esploro/profile/tin_phan names Tin Thien Phan and links ORCID 0000-0001-9998-8263. That employer page is a publication profile without an appointment title, so the proposed verification source is the maintained personal site and confirmed is false; do not upgrade confirmation on publication affiliation alone.",
+        "doctorateOrPapers": "October 2026 CV, page 1: https://71161e2f-bb90-45d5-b13d-3c9f33d9ab00.filesusr.com/ugd/90b8bd_123cfbffe3d84d03807c6243fc84d446.pdf?index=true — PhD in applied mathematics at Arizona State University, August 2016–July 2021. Same CV distinguishes staff employment from the preceding postdoctoral appointments. Independently, employer profile https://laro.lanl.gov/esploro/profile/tin_phan and publications identify the same researcher through ORCID and viral-dynamics coauthors.",
+        "vietnameseSignal": "https://news.asu.edu/20160509-asu-grad-mathematics-something-i-am-meant-do — ASU's profile explicitly identifies Tin Phan as originally from Quy Nhon, Vietnam. The employer profile supplies the fuller name Tin Thien Phan; no Vietnamese diacritics inferred.",
+        "dedup": "Ran npm run find-roster-matches -- \"Tin Thien Phan\" with every identity URL: LANL profile, personal homepage, resume page, linked CV PDF, and https://orcid.org/0000-0001-9998-8263 ; output: no roster or retired-id matches. Earlier run with the LANL profile also returned no matches. gh issue list --state all --search '\"Tin Phan\"' returned closed #1045 (https://github.com/dynaroars/vietprofs/issues/1045). Its audit rejected the earlier proposal because only personal staff claims/publication affiliations were available and explicitly allowed a later evidence-backed proposal. This output preserves that history and remains unconfirmed; the October 2026 CV now documents the June 2025 staff conversion precisely. No new GitHub issue was created."
+      }
+    }
+  ],
+  "already_listed": [
+    {
+      "name": "Tan Nguyen",
+      "id": "vp-2971",
+      "note": "Lawrence Berkeley National Laboratory; exact stored profile https://profiles.lbl.gov/22471-tan-nguyen. Dedup matched name and profile URL."
+    },
+    {
+      "name": "Joseph Q. Nguyen",
+      "id": "vp-3019",
+      "note": "Lawrence Berkeley National Laboratory; exact stored profile https://minasian.lbl.gov/people. Dedup matched name and profile URL."
+    },
+    {
+      "name": "Nghia Vo",
+      "id": "vp-1667",
+      "note": "Brookhaven National Laboratory; https://www.bnl.gov/staff/nvo examined live; ongoing HEX beamline scientist. Dedup matched name and profile URL."
+    },
+    {
+      "name": "Huyen N. Dinh",
+      "id": "vp-1434",
+      "note": "National Laboratory of the Rockies; https://research-hub.nlr.gov/en/persons/huyen-dinh/. Dedup matched name and URL. Canonical roster employer spelling confirmed."
+    },
+    {
+      "name": "Thanh Toan Tran",
+      "id": "vp-1659",
+      "note": "National Laboratory of the Rockies; https://research-hub.nlr.gov/en/persons/thanh-toan-tran/. Dedup matched name and URL."
+    },
+    {
+      "name": "Ruby Nguyen",
+      "id": "vp-1138",
+      "note": "Idaho National Laboratory; https://inl.elsevierpure.com/en/persons/thuy-nguyen/ identifies Ruby Nguyen in the biography despite Thuy Nguyen heading. Dedup matched exact profile and name; do not add Thuy as a second person."
+    },
+    {
+      "name": "Linh M. Pham",
+      "id": "vp-2962",
+      "note": "MIT Lincoln Laboratory; https://tlo.mit.edu/industry-entrepreneurs/researchers/linh-pham. Dedup matched name and URL."
+    },
+    {
+      "name": "Huy T. Nguyen",
+      "id": "vp-3024",
+      "note": "MIT Lincoln Laboratory; https://www.ll.mit.edu/about/laboratory-stories/huy-nguyen read live. Dedup matched name and URL."
+    },
+    {
+      "name": "Nam Q. Le",
+      "id": "vp-2963",
+      "note": "Johns Hopkins University Applied Physics Laboratory; https://www.jhuapl.edu/about/people/nam-q-le read live: senior scientist, University of Virginia doctorate. Dedup matched the APL record and URL, as well as unrelated names. APL researcher is already represented."
+    },
+    {
+      "name": "Marcus Nguyen",
+      "id": "vp-2972",
+      "note": "Argonne National Laboratory; https://www.anl.gov/profile/marcus-nguyen. Dedup matched name and URL."
+    },
+    {
+      "name": "Anh D. Vu",
+      "id": "vp-3013",
+      "note": "Argonne National Laboratory; https://www.anl.gov/profile/anh-d-vu. Dedup matched the existing Argonne ID and profile URL."
+    },
+    {
+      "name": "Tat Nghia Nguyen",
+      "id": "vp-3014",
+      "note": "Argonne National Laboratory; https://www.anl.gov/profile/tat-nghia-nguyen. Dedup matched name and URL."
+    },
+    {
+      "name": "Thien D. Nguyen",
+      "id": "vp-2973",
+      "note": "Oak Ridge National Laboratory; https://www.ornl.gov/staff-profile/thien-d-nguyen and its CV /staff-profile/cv/82352 describe senior R&D staff. Dedup matched the existing ORNL record."
+    },
+    {
+      "name": "Phong V. V. Le",
+      "id": "vp-3021",
+      "note": "Oak Ridge National Laboratory; https://www.ornl.gov/staff-profile/phong-v-v-le and https://www.ornl.gov/news/phong-le-exploring-rising-tide-water-resource-risks. Dedup matched existing ORNL ID and profile URL."
+    },
+    {
+      "name": "Phung Le",
+      "id": "vp-1664",
+      "note": "Pacific Northwest National Laboratory; https://www.pnnl.gov/people/phung-le examined live. Dedup matched name and URL. Joint VNU-HCM role is explicitly disclosed; not treated as a second person."
+    },
+    {
+      "name": "Manh Thuong Nguyen",
+      "id": "vp-1657",
+      "note": "Pacific Northwest National Laboratory; https://www.pnnl.gov/people/manh-thuong-nguyen examined live. Dedup matched name and URL."
+    },
+    {
+      "name": "Dan-Thien Nguyen",
+      "id": "vp-1658",
+      "note": "Pacific Northwest National Laboratory; https://www.pnnl.gov/people/dan-thien-nguyen and employer staff-promotion account https://www.pnnl.gov/news-media/pnnl-research-recognized-innovation-grid-energy-storage. Dedup matched PNNL record and URL."
+    },
+    {
+      "name": "Quan H. Nguyen",
+      "id": "vp-2977",
+      "note": "Pacific Northwest National Laboratory; https://www.pnnl.gov/people/quan-nguyen. Dedup matched existing PNNL ID and URL."
+    },
+    {
+      "name": "Ba Tran",
+      "id": "vp-3020",
+      "note": "Pacific Northwest National Laboratory; https://www.pnnl.gov/people/ba-tran. Dedup matched existing PNNL ID and URL."
+    },
+    {
+      "name": "Tuan Minh Nguyen",
+      "id": "vp-1135",
+      "note": "Lawrence Livermore National Laboratory; https://people.llnl.gov/nguyen147 examined live. Dedup matched the existing LLNL ID, including the stored portrait-source identity URL."
+    },
+    {
+      "name": "Tuan Anh Pham",
+      "id": "vp-1270",
+      "note": "Lawrence Livermore National Laboratory; https://people.llnl.gov/pham16 examined live. Page calls him Anh Pham in narrative; same identity as Tuan Anh Pham. Dedup matched existing LLNL ID and URL."
+    },
+    {
+      "name": "Tu A. Nguyen",
+      "id": "vp-1656",
+      "note": "Sandia National Laboratories; https://energy.sandia.gov/staff/tu-nguyen/ examined. Dedup matched existing Sandia ID and URL."
+    },
+    {
+      "name": "Dien Nguyen",
+      "id": "vp-0074",
+      "note": "University of Tennessee, Knoxville, with Jefferson Lab bridge appointment. Dedup matched the existing UTK faculty record. https://www.jlab.org/sites/default/files/hr/Public%20Facing%20Org%20Chart/April%202026/Physics%20Division.pdf explicitly labels the UTK bridge appointment; not a new Jefferson Lab entry."
+    },
+    {
+      "name": "Trang Nguyen - MIT Lincoln Laboratory",
+      "id": "vp-2960",
+      "note": "Retired ID, not an active roster entry. Dedup of Trang Nguyen and https://www.ll.mit.edu/biographies/trang-nguyen matched this retired record. Ledger says it was removed for BS/MS only and no qualifying recent papers; re-add only on doctorate or two recent papers. Current bio still lists BS/MS, so excluded from candidates."
+    },
+    {
+      "name": "Dinh C. Nguyen - SLAC",
+      "id": "vp-1146",
+      "note": "Retired ID. Dedup found the former SLAC/LANL record, retired after departure to xLight. Not a new national-lab candidate. Distinguish from active namesake vp-1551 at Alabama in Huntsville."
+    }
+  ],
+  "possible_move": [
+    {
+      "name": "Phuong Pham",
+      "id": "vp-0759",
+      "note": "Name-collision hold, not an asserted move. Roster says Phuong V. Pham, physics, National Sun Yat-sen University; https://www.srnl.gov/speaker/phuong-pham/ says Savannah River scientist, Chemistry PhD at Florida International University, BS Chemistry at Kennesaw State. Other dedup hits: vp-0904, vp-1671, vp-3117. Employer profile supplies Vietnamese given name Phuong and research in alpha-particle detection and waste remediation. Candidate withheld under BRIEF's any-hit rule; identity resolution is required before considering a new ID. Earlier FIU reports identify an SRNL postdoc beginning 2023, so also establish staff conversion rather than relying on generic scientist wording alone."
+    },
+    {
+      "name": "Nhan Tran",
+      "id": "vp-1236",
+      "note": "Name-collision hold, not an asserted move. Roster says Nhan Viet Tran, Fermilab particle physics; https://www.pnnl.gov/people/nhan-tran says Materials Scientist with two employer-linked 2024 battery papers (10.1002/smll.202402256 and 10.1002/adfm.202407012). Vietnamese given name Nhan is published. Dedup produced vp-1236; withheld under any-hit rule. Compare identity and full names before deciding whether these are different researchers."
+    },
+    {
+      "name": "Tony Nguyen",
+      "id": "vp-1113",
+      "note": "Name-collision hold, not an asserted move. Roster says Rutgers librarian; another hit vp-0905 is a Kaiser clinical faculty member. https://www.pnnl.gov/people/tony-nguyen documents an electrical engineer researching power systems at PNNL since 2002, UIUC electrical-engineering PhD 2002, and CanTho University mathematics BS 1989 (affirmative Vietnamese education). No matching identity URL, but the name hits require withholding under the brief. Resolve identities before considering an additional record."
+    },
+    {
+      "name": "Minh Duong Nguyen",
+      "id": "vp-0023",
+      "note": "Name-collision hold, not an asserted move. Roster says Duong Nguyen at Wyoming; https://research-hub.nlr.gov/en/persons/minh-duong-nguyen/ documents a Research Technologist III in Materials Science at National Laboratory of the Rockies, Material Chemistry PhD from Hanyang University, perovskite photovoltaics research and 2025–2026 papers. Given names Minh Duong provide an affirmative Vietnamese-name signal. Additional dedup hits: vp-0163, vp-0358, vp-0458, vp-0551, vp-1577, vp-1731, vp-1765, vp-2339. Withheld under the any-hit rule; compare education and identity URLs. No doctorate year inferred."
+    },
+    {
+      "name": "Bang Nguyen",
+      "id": "vp-0591",
+      "note": "Name-collision and current-employer hold. Roster says Bang Dang Nguyen, Cambridge business faculty; https://research-hub.nlr.gov/en/persons/bang-nguyen/ lists a Researcher IV in electrical engineering. The career site https://nlebang.github.io/cv/ and an APEC biography instead identify a Bang L. H. Nguyen at LANL since 2023, with former NREL student research. These may be different people or an outdated NLR page. Do not infer a move or accept the NLR listing without resolving identity and recency. Vietnamese given name Bang is a lead. Dedup name hit means no new candidate here."
+    },
+    {
+      "name": "Quynh L. Nguyen",
+      "id": "vp-0639",
+      "note": "Name-collision and stale-affiliation hold. Roster match vp-0639 is Bern political science, with other name hits vp-0431, vp-0965, vp-1383, vp-1660, vp-1903, vp-2107. SLAC's March 2025 lecture https://www6.slac.stanford.edu/events/2025-03-27-revealing-secrets-transistors-using-supercomputers describes a staff scientist and Colorado/JILA doctoral research, but current https://heds.slac.stanford.edu/about/people lists Quynh Nguyen in alumni at Nvidia. Withhold; verify current appointment elsewhere. No move to any matching roster ID asserted."
+    },
+    {
+      "name": "Nga Thi Thuy Nguyen-Fotiadis",
+      "id": "vp-0324",
+      "note": "Name-collision hold, not an asserted move. Roster says Nga Nguyen at Wyoming; https://laro.lanl.gov/esploro/profile/nga_nguyenfotiadis identifies the fuller name at LANL (ORCID 0000-0003-3672-6666). The publication profile alone supplies no career appointment. Historical local reporting described a LANL staff scientist and condensed-matter doctorate. Other dedup hits: vp-0137, vp-0311, vp-0373, vp-0476, vp-0614, vp-1929, vp-2492, vp-2501. Vietnamese given-name tokens Nga Thi Thuy are explicit. Need current role plus identity resolution; withheld under any-hit rule."
+    },
+    {
+      "name": "Linh Nguyen",
+      "id": "vp-0184",
+      "note": "Name-collision and appointment-detail hold. Roster says Linh Thuy Nguyen at Washington; https://www.bnl.gov/orgcharts/ad.pdf lists Linh Nguyen in Brookhaven's Electron Source Development/Laser Group. Numerous additional name hits were returned, with no identity URL match. Org chart alone supplies neither career scientist status nor a doctorate. Withheld; obtain an employer bio and resolve name matches before any new ID."
+    },
+    {
+      "name": "Hoang Nguyen",
+      "id": "vp-0836",
+      "note": "Name-collision and evidence hold. Roster hit vp-0836 is Hoang Vu Nguyen at University of South-Eastern Norway; many additional Hoang Nguyen name hits also occur. LLNL's https://str.llnl.gov/sites/str/files/2024-04/2023.1.3.pdf describes a senior laser scientist, and 2024–2025 employer materials identify the same optics researcher, but no identity-resolved doctorate or two current papers was verified. The historically referenced https://people.llnl.gov/nguyen7 now returns 404. Not an asserted move; withheld under any-hit rule and incomplete qualification evidence."
+    },
+    {
+      "name": "Ngoc A. Nguyen",
+      "id": "vp-1136",
+      "note": "Potential stale source rather than a new candidate. Roster says Ngoc Anh Nguyen at University of Illinois Urbana-Champaign; https://www.ornl.gov/sites/default/files/CV%20NgocNguyen-ORNL.pdf is an older ORNL CV with a University of Delaware Materials Science PhD 2016 and HUST education. Dedup found vp-1136 plus many unrelated names. Do not use an enduring older CV to reverse a newer roster affiliation; resolve live current appointment first. Withheld."
+    },
+    {
+      "name": "Le Thanh Mai Pham",
+      "id": "vp-0579",
+      "note": "Name-collision hold, not an asserted move. Roster says Thanh Pham at Monash; other hits vp-0919 and vp-1744. Sandia's FY24 LDRD report https://www.sandia.gov/app/uploads/sites/156/2025/03/Sandia-Natl-Labs-LDRD-FY24-Annual-Report-SAND2025-03370R-R.pdf identifies Le Thanh Mai Pham as PI on machine learning for medical countermeasures. Vietnamese given-name sequence is explicit. Doctorate/two qualifying recent papers not independently established here. Withheld under any-hit rule and incomplete qualification evidence."
+    },
+    {
+      "name": "Thi Kim Hoang Trinh",
+      "id": "vp-0900",
+      "note": "Name-collision and appointment-detail hold. Roster says Kim Hoang, Stanford pediatrics; https://www.pnnl.gov/people/thi-kim-hoang-trinh provides two 2024 publications but no job title or biography. A search-only lead suggests later Cornell postdoctoral work; it was not fetched from LinkedIn and is not accepted as evidence. Given-name sequence is Vietnamese, but career-staff status remains unverified. Withheld under any-hit rule."
+    },
+    {
+      "name": "Dinh Truong",
+      "id": "vp-1261",
+      "note": "Name-collision hold, not an asserted move. Roster says Dinh Quang Truong at Warwick; https://www.sandia.gov/labnews/2023/01/12/experiments-at-the-heart-of-a-nuclear-reaction/ identifies Dinh Truong on Sandia's DIII-D fusion-materials team. No doctorate or two papers within the required window established. Vietnamese name tokens are a lead. Withheld under any-hit rule; compare identities before considering any additional entry."
+    }
+  ],
+  "rejected": [
+    {
+      "name": "Long Ngoc Dinh",
+      "reason": "Contractor-only current record. https://people.llnl.gov/dinh1 fetched live returns employer North Wind Services, Llc, with no profile details. Current LLNL group page https://mass.llnl.gov/ still links him and https://st.llnl.gov/news/directors-awards/2022-distinguished-members-technical-staff documents a UC Davis doctorate and 2022 distinguished staff appointment. The current named-employer record prevents treating the older award as evidence of current LLNL staff employment. Excluded under contractor rule. Both Long Dinh and identity URLs checked: no roster/retired matches on initial Long Dinh run; not proposed."
+    },
+    {
+      "name": "Buu Pham",
+      "reason": "https://www.ameslab.gov/insider-january-2020 documents an Ames career-scientist appointment and Iowa State doctorate, but is historical. Current official staff-directory searches for Pham/Nguyen/Tran did not return him. A search-only newer-employer lead exists, but was not accepted as evidence or fetched from LinkedIn. No live current Ames appointment verified. Dedup Buu Pham with the Ames article: no roster/retired matches. Excluded rather than resurrecting the 2020 biography."
+    },
+    {
+      "name": "Sy-Toan Ngo",
+      "reason": "Current Berkeley Scientific Data Division directory https://scidata.lbl.gov/people/ and https://secpriv.lbl.gov/people/ identify a computer systems engineer. The linked https://profiles.lbl.gov/34322-sytoan-ngo is JavaScript-only in available tools. No doctorate or two identity-resolved papers since 2023-11-14 established; the surfaced recent item was a patent, not a qualifying paper. Dedup with the two official listing URLs: no roster/retired matches. Excluded pending qualification evidence."
+    },
+    {
+      "name": "Kha Le",
+      "reason": "https://www.pnnl.gov/people/kha-le identifies Materials Scientist, but only one 2024 paper and no doctorate. No second qualifying recent paper verified. Given name Kha is Vietnamese, but qualification gate incomplete. Dedup with official profile: no roster/retired matches."
+    },
+    {
+      "name": "Long Le",
+      "reason": "https://www.pnnl.gov/people/long-le identifies Materials Scientist and one 2024 paper, with no doctorate information. No second qualifying recent paper established. Excluded for incomplete qualification evidence; not proposed as a new candidate."
+    },
+    {
+      "name": "Thuy Le",
+      "reason": "https://www.pnnl.gov/people/thuy-le has a Materials Scientist heading, but the biography explicitly identifies a postdoctoral researcher. The biography overrides the generic heading. Excluded as trainee."
+    },
+    {
+      "name": "Theresa Pham",
+      "reason": "https://www.pnnl.gov/people/theresa-pham explicitly identifies a Post Masters Research Associate, with master's/bachelor's education. Excluded as trainee."
+    },
+    {
+      "name": "Aramy Truong",
+      "reason": "https://www.pnnl.gov/people/aramy-truong explicitly identifies a post-bachelor's research associate. Two recent papers do not override the trainee-role exclusion."
+    },
+    {
+      "name": "Linh Truong",
+      "reason": "https://www.pnnl.gov/people/linh-truong describes communications, media relations and project/account management, with an agricultural-journalism bachelor's degree. Not a career research appointment."
+    },
+    {
+      "name": "Paul Tran",
+      "reason": "https://www.pnnl.gov/people/paul-tran identifies UX Designer. Listed items are technical/user reports; no research doctorate or two recent qualifying papers established."
+    },
+    {
+      "name": "Randy Tran",
+      "reason": "https://www.pnnl.gov/people/randy-tran identifies Software Engineer and a 2020 report. No doctorate or two current research papers verified."
+    },
+    {
+      "name": "Truc Trang-Le",
+      "reason": "https://www.pnnl.gov/people/truc-trang-le identifies Technician. Recent listed work consists of technical reports; listed journal papers are from 2021 or earlier. No doctorate or qualifying current paper pair established."
+    },
+    {
+      "name": "Loc Truong",
+      "reason": "https://www.pnnl.gov/people/loc-truong identifies a career data scientist but lists master's/bachelor's degrees and only 2020 publications. No two papers in the last three years established."
+    },
+    {
+      "name": "Hoang Tran - PNNL hydrology",
+      "reason": "https://www.pnnl.gov/people/hoang-tran lists current hydrology publications but no appointment title or biography. Publication affiliation alone cannot establish a permanent career role; excluded from candidates."
+    },
+    {
+      "name": "Ross (Ruoshi) Cao",
+      "reason": "https://www.pnnl.gov/people/ross-cao identifies an Earth scientist and doctorate, but the full given name Ruoshi and Chinese education provide no affirmative Vietnamese signal. Shared surname Cao alone is insufficient."
+    },
+    {
+      "name": "Le Wang",
+      "reason": "https://www.pnnl.gov/people/le-wang identifies a materials scientist educated at the Chinese Academy of Sciences and Inner Mongolia University. Le is the given name here, Wang the surname; no affirmative Vietnamese signal. Excluded."
+    },
+    {
+      "name": "Jiande Mai",
+      "reason": "https://www.pnnl.gov/people/jiande-mai is a publication-only profile without role details or an affirmative Vietnamese signal. Mai alone does not establish Vietnamese identity."
+    },
+    {
+      "name": "Xia Cao / Wenjin Cao",
+      "reason": "PNNL sitemap surfaced https://www.pnnl.gov/people/xia-cao and https://www.pnnl.gov/people/wenjin-cao. Names alone provide no affirmative Vietnamese signal; not promoted from surname leads to candidates."
+    },
+    {
+      "name": "Diana Tran",
+      "reason": "https://www.emsl.pnnl.gov/people/diana-tran is an older project-participant page, not a current staff biography. No present career appointment or qualification evidence established."
+    },
+    {
+      "name": "Liem Dang",
+      "reason": "https://www.emsl.pnnl.gov/people/liem-dang is a historical project-participant record. A 2013 university seminar documents a doctorate and then-current PNNL role, but no current career appointment was verified; not accepted from old project affiliations."
+    },
+    {
+      "name": "Michael Nguyen - Berkeley ALS",
+      "reason": "https://als.lbl.gov/about/staff/ identifies Scientific Engineering Associate with a mechanical-engineering bachelor's degree. No research doctorate or two recent qualifying research papers established."
+    },
+    {
+      "name": "Anne Pham",
+      "reason": "https://foundry.lbl.gov/about/staff/anne-pham/ identifies Scientific Engineering Associate/lab-manager support and a mechanical-engineering BS. One qualifying 2024 paper surfaced; the other listed 2023 paper is before the rolling three-year cutoff, and unrelated older Anh Le-Tuan Pham papers on the page must not be assigned to Anne. Qualification threshold not met."
+    },
+    {
+      "name": "Huu-Hoang Nguyen",
+      "reason": "https://appliedenergyscience.lbl.gov/people/huu-hoang-nguyen provides identity/contact information but no verified permanent career appointment in the accessible profile. Excluded for insufficient role evidence."
+    },
+    {
+      "name": "Nam Nguyen - Sutter-Fella group",
+      "reason": "https://sutterfellalab.lbl.gov/people/ places Nam Nguyen in alumni. No current Berkeley career role verified."
+    },
+    {
+      "name": "Don Huynh",
+      "reason": "https://helmsgroup.lbl.gov/members.html describes an earlier undergraduate SULI internship. Not evidence of a current Berkeley career research appointment."
+    },
+    {
+      "name": "Ngoc Bui",
+      "reason": "Historical LLNL bioengineering page still mentions Ngoc Bui, but current https://www.ou.edu/coe/cees/people/faculty/ngoc-bui and https://als.lbl.gov/epscor-award-2024/ identify an Oklahoma professor and former national-lab postdoc. Not a current national-lab discovery."
+    },
+    {
+      "name": "Lien Ngo",
+      "reason": "https://chipps.lbl.gov/lien-ngo/ documents a UW Physical Chemistry doctorate and past lab-scientist work; https://gtsc.lbl.gov/contact lists Program Manager. No evidence established that the present center-management role is a qualifying career research or scientific agency program-officer appointment. Excluded rather than inferring eligibility from doctorate alone."
+    },
+    {
+      "name": "PhucDanh Tran",
+      "reason": "https://people.llnl.gov/tran74 is a bare directory record with no biography or position. Neither current career research role nor doctorate/two-paper criterion established."
+    },
+    {
+      "name": "Tony L. Huynh",
+      "reason": "An ORCID lead describes LLNL staff radiochemistry, but no current employer-authored role biography or eligible personal-site fallback was established. Not accepted from ORCID affiliation alone."
+    },
+    {
+      "name": "Thuy-Ai Dang Nguyen",
+      "reason": "LANL's https://cdn.lanl.gov/files/annual-progress-report-2020-overview-final_f3080.pdf documents a 2020 conversion to Q-5 staff, and older employer publication records identify the fuller name. No sufficiently current career appointment source established. Do not conflate with the biomedical namesake Thuy-Ai Tran Nguyen. Excluded pending current verification."
+    },
+    {
+      "name": "Nguyen S. Phan",
+      "reason": "ORCID lead describes LANL physics staff, but no current employer appointment biography or eligible maintained personal-site source was established. ORCID alone is not a profileUrl under this brief."
+    },
+    {
+      "name": "Brian Tran",
+      "reason": "https://cnls-www.lanl.gov/External/Current.php lists Brian Tran under Postdoctoral Research Associates and Fellows. Excluded as trainee."
+    },
+    {
+      "name": "Minh Nhat Vu",
+      "reason": "https://cnls-www.lanl.gov/External/Current.php lists Minh Nhat Vu under Postdoctoral Research Associates and Fellows. Excluded as trainee."
+    },
+    {
+      "name": "Minh Thanh Vu",
+      "reason": "https://cnls-www.lanl.gov/External/Current.php lists Minh Thanh Vu under Postdoctoral Research Associates and Fellows. Excluded as trainee."
+    },
+    {
+      "name": "Thang Pham",
+      "reason": "https://extremecomputingtraining.anl.gov/program/people/thang-pham explicitly describes an Argonne postdoctoral researcher, including PhD. Excluded as trainee."
+    },
+    {
+      "name": "Anthony Tran",
+      "reason": "https://www.phy.anl.gov/division/directory.html explicitly identifies Visiting Grad Student (Mustapha). Excluded as visiting student."
+    },
+    {
+      "name": "Thinh Tran",
+      "reason": "https://www.srnl.gov/srnl_news/srnl-holds-research-slam-competition/ explicitly identifies a postdoctoral researcher. Excluded as trainee."
+    },
+    {
+      "name": "Le Viet Nguyen",
+      "reason": "https://www.pppl.gov/news/2022/bumper-crop-undergraduate-students-attends-annual-plasma-workshop-kicking-summer identifies a summer student, not career staff."
+    },
+    {
+      "name": "Tam Nguyen",
+      "reason": "https://control.princeton.edu/members/ identifies an undergraduate student. Excluded; PPPL collaboration does not make the student career lab staff."
+    },
+    {
+      "name": "Trung Huu Le",
+      "reason": "https://www.nlr.gov/careers/postdoctoral-researchers-hiring-job-recruitment explicitly lists Trung Huu Le among postdoctoral researchers. Excluded as trainee."
+    },
+    {
+      "name": "Thien Truong",
+      "reason": "https://www.nlr.gov/careers/postdoctoral-researchers-hiring-job-recruitment explicitly lists Thien Truong among postdoctoral researchers. Excluded as trainee."
+    },
+    {
+      "name": "Victoria Nguyen",
+      "reason": "https://biology-lcls.slac.stanford.edu/about/our-staff identifies a Web Design Intern. Excluded as intern/nonresearch role."
+    },
+    {
+      "name": "Stephanie Tran",
+      "reason": "https://www.ll.mit.edu/about/laboratory-stories/stephanie-tran identifies Lincoln Laboratory's social media manager. Excluded as nonresearch staff."
+    },
+    {
+      "name": "Lillian Nguyen",
+      "reason": "https://www.jhuapl.edu/work/impact/space-science-and-engineering/people?page=8 identifies Software Engineer. Employer technical-digest bio https://www.jhuapl.edu/sites/default/files/2024-09/33-04-Choo.pdf gives a mathematics MA, not a doctorate. Two recent qualifying papers not established; excluded."
+    },
+    {
+      "name": "Khang Ngo / Liem Huynh / Doan-Trang Pham",
+      "reason": "APL employer awards and annual reports name these people on teams, but a team mention does not verify an individual current career research role plus doctorate/two current papers. Excluded pending stronger individual evidence; no identity assertions made from unrelated namesakes."
+    },
+    {
+      "name": "Jenna Nguyen",
+      "reason": "https://www.sri.com/people/jenna-nguyen/ is a current employer research biography, but education is EdM/BA and recent listed outputs are older frameworks/infographics rather than two qualifying papers within the last three years. No doctorate established; excluded."
+    },
+    {
+      "name": "Michelle Huynh",
+      "reason": "https://pact.sri.com/team.html lists an SRI Education project participant, but does not establish a current career appointment, doctorate or two qualifying recent papers."
+    },
+    {
+      "name": "Hung H. Bui - historical SRI affiliation",
+      "reason": "SRI search surfaced 2006–2012 AI publications. Historical publication affiliation is insufficient for a current SRI appointment; not a new SRI candidate."
+    },
+    {
+      "name": "Minh A. Nguyen / Quinn Nguyen / Khien Nguyen / Anh Nguyen - MITRE leads",
+      "reason": "Search leads did not yield current employer-published individual research appointments with doctorate/two recent papers, or maintained personal-site fallback establishing the required facts. Historical dissertation and third-party staff claims were not substituted. No LinkedIn page was fetched."
+    },
+    {
+      "name": "Khai Tran / Quang Dao - GTRI leads",
+      "reason": "Search-only leads did not produce an employer-authored current career research biography and doctorate/two current papers. GTRI home and leadership routes were examined; no candidate accepted from LinkedIn snippets."
+    },
+    {
+      "name": "Tran-Vinh Nguyen - Georgia Tech IEN",
+      "reason": "https://dev.research.gatech.edu/people/tran-vinh-nguyen identifies an Institute for Electronics and Nanotechnology cleanroom team lead, not a verified GTRI career researcher with doctorate/two current papers. Outside the assigned GTRI appointment scope."
+    },
+    {
+      "name": "Nhu (Jessica) Nguyen",
+      "reason": "Current https://www.sandia.gov/research/experts/earth-energy-environmental-science-experts/ explicitly identifies a postdoctoral researcher in the Hydrodynamic Energy Systems Program. Excluded as trainee."
+    }
+  ],
+  "coverage": [
+    {
+      "employer": "Lawrence Berkeley National Laboratory",
+      "pagesExamined": [
+        "https://foundry.lbl.gov/about/staff/",
+        "https://foundry.lbl.gov/about/staff/anne-pham/",
+        "https://als.lbl.gov/about/staff/",
+        "https://scidata.lbl.gov/people/",
+        "https://secpriv.lbl.gov/people/",
+        "https://profiles.lbl.gov/34322-sytoan-ngo",
+        "https://appliedenergyscience.lbl.gov/people/huu-hoang-nguyen",
+        "https://sutterfellalab.lbl.gov/people/",
+        "https://helmsgroup.lbl.gov/members.html",
+        "https://chipps.lbl.gov/lien-ngo/",
+        "https://gtsc.lbl.gov/contact",
+        "https://bmr.lbl.gov/people/"
+      ],
+      "note": "Searched Nguyen, Tran, Pham, Huynh, Ngo and Le/Vietnam signals; examined several division/group staff lists. Tan Nguyen and Joseph Q. Nguyen already rostered. Sy-Toan Ngo lacked a qualifying recent-paper pair/doctorate; lab-support and alumni leads excluded. Direct HTTP fetching of Foundry/ALS lists returned 403; indexed official content was available for discovery, not accepted as a new candidate's live evidence. Berkeley Discovery profile required JavaScript and yielded no readable biography. Huu-Hoang's current endpoint returned a mostly blank profile. Coverage is a targeted public-directory sweep, not a claim to have read the entire internal staff directory."
+    },
+    {
+      "employer": "Brookhaven National Laboratory",
+      "pagesExamined": [
+        "https://www.bnl.gov/biology/people.php",
+        "https://www.bnl.gov/instrumentation/directory.php",
+        "https://www.bnl.gov/compsci/people/",
+        "https://www.bnl.gov/orgcharts/ad.pdf",
+        "https://www.bnl.gov/orgcharts/ps.pdf",
+        "https://www.bnl.gov/staff/nvo"
+      ],
+      "note": "Nguyen/Tran/Pham and Vietnamese-name discovery across public staff directories and accelerator/NSLS-II organization charts. Nghia Vo already listed. Linh Nguyen held for name collisions and missing individual career/qualification evidence. Alex Tran is labeled NYSBC on a partner beamline, not inferred to be BNL staff. Older Hue-Anh Pham/Viet-Hung Pham news did not establish a current qualifying appointment. HTML directories were retrievable but some staff fields depend on scripting."
+    },
+    {
+      "employer": "National Laboratory of the Rockies",
+      "pagesExamined": [
+        "https://research-hub.nlr.gov/en/persons/bang-nguyen/",
+        "https://research-hub.nlr.gov/en/persons/minh-duong-nguyen/",
+        "https://research-hub.nlr.gov/en/organisations/chemistry-and-nanoscience-research-topic/persons/",
+        "https://www.nlr.gov/chemistry-nanoscience/staff",
+        "https://www.nlr.gov/careers/postdoctoral-researchers-hiring-job-recruitment",
+        "https://research-hub.nlr.gov/en/persons/huyen-dinh/",
+        "https://research-hub.nlr.gov/en/persons/?search=nguyen"
+      ],
+      "note": "Checked exact canonical roster spelling: National Laboratory of the Rockies. Discovery also used former NREL naming and Nguyen/Tran/Pham/Le. Huyen N. Dinh and Thanh Toan Tran already listed; Minh Duong Nguyen has strong role/doctorate evidence but name-only roster hits, so withheld under the brief. Bang Nguyen requires identity/current-employer resolution. Trung Huu Le and Thien Truong are explicitly postdocs. Pure's query results endpoint returned a bot-check/403; no evasion attempted. The roster also still contains Thai-Son Tran under the old National Renewable Energy Laboratory employer spelling (vp-3022); no roster edit made."
+    },
+    {
+      "employer": "Idaho National Laboratory",
+      "pagesExamined": [
+        "https://inl.elsevierpure.com/en/persons/binh-pham/",
+        "https://inl.elsevierpure.com/en/persons/thuy-nguyen/",
+        "https://inl.elsevierpure.com/en/organisations/nuclear-safety-regulatory-research/persons/",
+        "https://inl.gov/about-inl/organization/",
+        "https://inl.elsevierpure.com/en/persons/?search=nguyen"
+      ],
+      "note": "Nguyen/Tran/Pham/Vo discovery and individual employer research profiles. Binh Pham passed career-role, doctorate, Vietnamese-given-name and clean-roster-dedup tests. Ruby/Thuy Nguyen is already vp-1138. Older Tuan Q. Tran presentations do not prove a current role. Pure's surname-query endpoint returned a bot-check/403, but the two candidate-specific profiles were live and readable; no evasion attempted. Binh's conflicting doctorate award/completion years are documented and no year is proposed."
+    },
+    {
+      "employer": "SLAC National Accelerator Laboratory",
+      "pagesExamined": [
+        "https://www6.slac.stanford.edu/events/2025-03-27-revealing-secrets-transistors-using-supercomputers",
+        "https://heds.slac.stanford.edu/about/people",
+        "https://biology-lcls.slac.stanford.edu/about/our-staff",
+        "https://ultrafaststructure.stanford.edu/people/quynh-nguyen",
+        "https://ldrd.slac.stanford.edu/active-projects-fy-2025/active-projects-fy-2025"
+      ],
+      "note": "Nguyen/Tran discovery and two current group staff lists. Quynh Nguyen's older staff-scientist event is superseded for screening by a current HEDS alumni listing at Nvidia; withheld. Victoria Nguyen is an intern. Dinh C. Nguyen's former SLAC roster ID is retired, not a new candidate. No new fully verified career appointment retained."
+    },
+    {
+      "employer": "Ames Laboratory",
+      "pagesExamined": [
+        "https://www.ameslab.gov/directory",
+        "https://www.ameslab.gov/directory/search",
+        "https://www.ameslab.gov/directory/search?search_api_fulltext=Nguyen",
+        "https://www.ameslab.gov/directory/search?search_api_fulltext=Pham",
+        "https://www.ameslab.gov/directory/search?search_api_fulltext=Tran",
+        "https://www.ameslab.gov/insider-january-2020"
+      ],
+      "note": "Queried the live official staff search by three surnames and checked researcher biographies/search leads. Search matches often came from publication text rather than employee names. Buu Pham's 2020 doctorate/staff announcement is strong historical evidence but did not establish a current appointment; withheld. The guessed /directory/buu-pham route returned access denied and was not treated as a person profile. Ho/Kai-Ming Ho leads did not provide an affirmative Vietnamese signal. No new candidate retained."
+    },
+    {
+      "employer": "Princeton Plasma Physics Laboratory",
+      "pagesExamined": [
+        "https://www.pppl.gov/research/computational-sciences/people",
+        "https://surface.pppl.gov/personnel.html",
+        "https://sites.google.com/pppl.gov/martirez-pppl/people",
+        "https://control.princeton.edu/members/",
+        "https://www.pppl.gov/news/2022/bumper-crop-undergraduate-students-attends-annual-plasma-workshop-kicking-summer"
+      ],
+      "note": "Nguyen/Tran and Vietnamese-name searches plus public computational/plasma-control personnel lists. /people redirects to the Computational Sciences department, not an all-lab directory. Le Viet Nguyen and Tam Nguyen are students. Publication collaborator names were not assumed to be PPPL employees. No verified new career appointment found; this is not an assertion that PPPL employs no eligible Vietnamese researchers."
+    },
+    {
+      "employer": "Savannah River National Laboratory",
+      "pagesExamined": [
+        "https://www.srnl.gov/",
+        "https://www.srnl.gov/speaker/phuong-pham/",
+        "https://www.srnl.gov/srnl_news/srnl-holds-research-slam-competition/"
+      ],
+      "note": "Nguyen/Tran/Pham discovery; inspected employer speaker biography and research-SLAM staff descriptions. Phuong Pham has doctorate and research evidence, but roster-name hits and earlier postdoc history require resolution; withheld. Thinh Tran is explicitly a postdoc. Lynh/Vinh/Viet Nguyen archival/report leads did not establish a current permanent doctorate-holding research appointment. No publication byline alone accepted."
+    },
+    {
+      "employer": "Thomas Jefferson National Accelerator Facility (Jefferson Lab)",
+      "pagesExamined": [
+        "https://www.jlab.org/",
+        "https://www.jlab.org/exp_prog/CEBAF_EXP/all_users.html",
+        "https://www.jlab.org/sites/default/files/hr/Public%20Facing%20Org%20Chart/April%202026/Physics%20Division.pdf",
+        "https://www.jlab.org/news/briefs/jlab-weekly-july-22-2020",
+        "https://misportal.jlab.org/Ul/conferences/generic_conference/participants.cfm?conference_id=SummerAC26"
+      ],
+      "note": "Nguyen/Tran and user-directory discovery, distinguishing users/collaborators from employees. Dien Nguyen is already UTK faculty vp-0074 with an explicitly documented Jefferson Lab bridge appointment. Huong Thi Nguyen is listed with University of Virginia; not inferred to be Jefferson Lab staff. No new ID proposed from collaborator or shift rosters."
+    },
+    {
+      "employer": "MIT Lincoln Laboratory",
+      "pagesExamined": [
+        "https://www.ll.mit.edu/biographies/trang-nguyen",
+        "https://www.ll.mit.edu/about/laboratory-stories/huy-nguyen",
+        "https://www.ll.mit.edu/about/laboratory-stories/stephanie-tran"
+      ],
+      "note": "Nguyen/Tran/Pham/Le/Phan targeted discovery across biographies and employee stories. Huy T. Nguyen and Linh M. Pham already rostered. Trang Nguyen matches retired vp-2960 and still lacks doctorate/two qualifying current papers. Stephanie Tran is communications staff. FFRDC/UARC nonprofit appointments would use Independent nonprofit research institute and Government & Defense; no new verified entry here."
+    },
+    {
+      "employer": "Johns Hopkins University Applied Physics Laboratory",
+      "pagesExamined": [
+        "https://www.jhuapl.edu/about/people/nam-q-le",
+        "https://www.jhuapl.edu/work/impact/space-science-and-engineering/people?page=8",
+        "https://www.jhuapl.edu/sites/default/files/2024-09/33-04-Choo.pdf",
+        "https://secwww.jhuapl.edu/2024-Annual-Report/2024-Annual-Report.pdf",
+        "https://www.jhuapl.edu/news/news-releases/220906-2021-annual-apl-achievement-awards",
+        "https://www.jhuapl.edu/news/news-releases/210512-2020-Annual-APL-Achievement-Awards"
+      ],
+      "note": "Nguyen/Tran/Pham/Ngo/Huynh discovery across public people pages and staff awards. Nam Q. Le already vp-2963; current individual bio verified. Lillian Nguyen and awards-only team leads lacked qualification or current individual-role evidence. No new entry accepted from a team mention. Nonprofit UARC mapping would be Independent nonprofit research institute / Government & Defense."
+    },
+    {
+      "employer": "Georgia Tech Research Institute",
+      "pagesExamined": [
+        "https://www.gtri.gatech.edu/",
+        "https://www.gtri.gatech.edu/about/leadership",
+        "https://www.gtri.gatech.edu/people"
+      ],
+      "note": "Searched Nguyen/Tran/Pham and Vietnamese signals. Home and leadership pages fetched successfully over HTTP after web-tool timeouts; /people returned 404. No complete public staff directory discovered from these routes. Khai Tran/Quang Dao remained search-only leads without required employer role/qualification verification. Nearby Georgia Tech student and IEN cleanroom appointments were not misclassified as GTRI. Coverage limited by availability of individual public biographies."
+    },
+    {
+      "employer": "SRI International",
+      "pagesExamined": [
+        "https://www.sri.com/people/",
+        "https://www.sri.com/?s=Nguyen",
+        "https://www.sri.com/?s=Tran",
+        "https://www.sri.com/?s=Pham",
+        "https://www.sri.com/people/jenna-nguyen/",
+        "https://pact.sri.com/team.html"
+      ],
+      "note": "Examined leadership/lab-director listing and employer's own surname search; expanded discovery to Bui and Huynh. Jenna Nguyen's current research role is clear but degree/recent-publication threshold was not met. Michelle Huynh's project listing and old Hung H. Bui papers do not establish a current qualifying career appointment. No candidate accepted from historic author records. SRI would map to Independent nonprofit research institute; Research for scholarly research roles, Government & Defense only where the appointment warrants that track."
+    },
+    {
+      "employer": "MITRE",
+      "pagesExamined": [
+        "https://www.mitre.org/who-we-are/our-people",
+        "https://www.mitre.org/news-insights/publication/october-2016-federal-mobile-computing-summit-report",
+        "https://www.mitre.org/news-insights/publication/july-2016-federal-cloud-computing-summit-report"
+      ],
+      "note": "Nguyen/Tran/Pham/Huynh and Vietnamese-signal discovery. Direct HTTP access to Our People was denied; the web tool could read its generic landing page, which links leadership/fellows rather than a full staff directory. No eligible individual employer biography or personal-site fallback was established for surfaced leads. Old Duy Huynh report authorship and Minh A. Nguyen dissertation employment history are insufficient for current appointment verification. No LinkedIn pages fetched. Mapping would be Independent nonprofit research institute / Government & Defense."
+    },
+    {
+      "employer": "Argonne National Laboratory",
+      "pagesExamined": [
+        "https://www.phy.anl.gov/division/directory.html",
+        "https://extremecomputingtraining.anl.gov/program/people/thang-pham",
+        "https://www.alcf.anl.gov/events/summer-student-presentations-ii",
+        "https://bmr.lbl.gov/people/",
+        "https://www.anl.gov/sitemap.xml"
+      ],
+      "note": "Re-sweep by Nguyen/Tran/Pham/Dinh plus Vietnamese signals, with public Physics directory and computational-training biographies. Marcus Nguyen, Anh D. Vu and Tat Nghia Nguyen are already listed. Thang Pham is a postdoc; Anthony Tran and Tri Nguyen are students/visitors. Argonne sitemap returned a bot challenge; no evasion attempted. Existing external/joint affiliations were not assumed to be new Argonne staff."
+    },
+    {
+      "employer": "Oak Ridge National Laboratory",
+      "pagesExamined": [
+        "https://www.ornl.gov/staff/",
+        "https://www.ornl.gov/staff/?search_api_fulltext=Nguyen",
+        "https://www.olcf.ornl.gov/directory/",
+        "https://www.ornl.gov/staff-profile/thien-d-nguyen?page=0",
+        "https://www.ornl.gov/staff-profile/cv/82352",
+        "https://www.ornl.gov/sites/default/files/CV%20NgocNguyen-ORNL.pdf",
+        "https://www.ornl.gov/staff-profile/phong-t-nguyen",
+        "https://www.ornl.gov/news/phong-le-exploring-rising-tide-water-resource-risks"
+      ],
+      "note": "Nguyen/Tran/Pham/Le/Huynh resweep. Existing Thien D. Nguyen and Phong V. V. Le matched roster IDs. Ngoc A. Nguyen's older CV conflicts with a newer roster affiliation and is held. Phong T Nguyen is a radiological technician with BS-only education and an old publication. Staff search/OLCF directory returned HTTP 403 locally; web-visible individual profile/CV content was used for leads and existing-ID checks. No bypass attempted and no new fact accepted from an unreadable staff-search page."
+    },
+    {
+      "employer": "Pacific Northwest National Laboratory",
+      "pagesExamined": [
+        "https://www.pnnl.gov/sitemap.xml",
+        "https://www.pnnl.gov/people/tony-nguyen",
+        "https://www.pnnl.gov/people/nhan-tran",
+        "https://www.pnnl.gov/people/manh-thuong-nguyen",
+        "https://www.pnnl.gov/people/phung-le",
+        "https://www.pnnl.gov/people/thuy-le",
+        "https://www.pnnl.gov/people/theresa-pham",
+        "https://www.pnnl.gov/people/aramy-truong",
+        "https://www.pnnl.gov/people/linh-truong",
+        "https://www.pnnl.gov/people/kha-le",
+        "https://www.pnnl.gov/people/long-le",
+        "https://www.pnnl.gov/people/paul-tran",
+        "https://www.pnnl.gov/people/randy-tran",
+        "https://www.pnnl.gov/people/truc-trang-le",
+        "https://www.pnnl.gov/people/hoang-tran",
+        "https://www.pnnl.gov/people/thi-kim-hoang-trinh",
+        "https://www.pnnl.gov/people/loc-truong",
+        "https://www.pnnl.gov/people/ross-cao",
+        "https://www.pnnl.gov/people/jiande-mai",
+        "https://www.pnnl.gov/people/le-wang",
+        "https://www.emsl.pnnl.gov/people/liem-dang",
+        "https://www.emsl.pnnl.gov/people/diana-tran"
+      ],
+      "note": "Broadened search beyond indexed surname hits by reading the sitemap index and all its child sitemap URLs, filtering public /people/ routes for Nguyen, Tran, Le, Ly, Ha, Lam, Mai, Dang, Pham, Phan, Ngo, Ho, Huynh, Vo, Vu, Bui, Do, Dinh, Duong, Trinh, Truong, Cao, Chau and Luu. Read the surfaced new plausible profiles live. Already-rostered scientists were deduped; Tony Nguyen/Nhan Tran and Thi Kim Hoang Trinh held under any-hit rule. Explicit trainees/nonresearch staff and unqualified one-paper profiles excluded. The sitemap is public-page coverage, not proof of a complete internal employment census."
+    },
+    {
+      "employer": "Lawrence Livermore National Laboratory",
+      "pagesExamined": [
+        "https://people.llnl.gov/nguyen147",
+        "https://people.llnl.gov/pham16",
+        "https://people.llnl.gov/tran74",
+        "https://people.llnl.gov/dinh1",
+        "https://people.llnl.gov/nguyen7",
+        "https://people.llnl.gov/user-guide",
+        "https://www.llnl.gov/llnl-search/people/nguyen",
+        "https://mass.llnl.gov/",
+        "https://st.llnl.gov/news/directors-awards/2022-distinguished-members-technical-staff",
+        "https://engineering.llnl.gov/research/bioengineering"
+      ],
+      "note": "Nguyen/Tran/Pham/Dinh/Huynh resweep and group-page examination. Tuan Minh Nguyen and Tuan Anh Pham already rostered. Long Ngoc Dinh's current personal-directory page identifies North Wind Services, Llc: excluded as contractor despite a current group link and older staff award. Bare PhucDanh Tran record supplies no qualification evidence; Hoang Nguyen profile route is dead. User guide states participation is optional and the directory can include contractors/students/retirees, so directory presence alone was not treated as career research status. Live LLNL search route returned invalid search criteria rather than a full surname directory."
+    },
+    {
+      "employer": "Los Alamos National Laboratory",
+      "pagesExamined": [
+        "https://cnls-www.lanl.gov/External/Current.php",
+        "https://laro.lanl.gov/esploro/profile/tin_phan",
+        "https://laro.lanl.gov/esploro/profile/nga_nguyenfotiadis",
+        "https://laro.lanl.gov/esploro/profile/nga_nguyenfotiadis/output/publication?institution=01LANL_INST",
+        "https://cdn.lanl.gov/files/annual-progress-report-2020-overview-final_f3080.pdf",
+        "https://lanlexperts.elsevierpure.com/en/persons/?search=nguyen",
+        "https://tintphan.wixsite.com/academics",
+        "https://tintphan.wixsite.com/academics/resume"
+      ],
+      "note": "Nguyen/Tran/Pham/Phan/Bui/Le resweep using CNLS list, institutional publication profiles and historical staff-conversion evidence. Tin Thien Phan has clean roster dedup and a current maintained CV documenting June 2025 career-staff conversion; proposed with confirmed:false because the employer page lacks an appointment biography. Prior rejection in #1045 disclosed. CNLS Tran/Vu leads remain postdocs. Nga Nguyen-Fotiadis held for name collisions/role confirmation; Thuy-Ai Dang Nguyen lacks current career-role verification. LANL Pure query endpoint returned a bot check; no evasion attempted."
+    },
+    {
+      "employer": "Sandia National Laboratories",
+      "pagesExamined": [
+        "https://www.sandia.gov/research/experts/",
+        "https://www.sandia.gov/research/experts/earth-energy-environmental-science-experts/",
+        "https://energy.sandia.gov/programs/energy-storage/staff/",
+        "https://energy.sandia.gov/staff/tu-nguyen/",
+        "https://www.sandia.gov/labnews/2023/01/12/experiments-at-the-heart-of-a-nuclear-reaction/",
+        "https://www.sandia.gov/app/uploads/sites/156/2025/03/Sandia-Natl-Labs-LDRD-FY24-Annual-Report-SAND2025-03370R-R.pdf"
+      ],
+      "note": "Nguyen/Tran/Pham/Le/Truong resweep across expert lists, energy-storage staff and research reports. Tu A. Nguyen already rostered. Nhu (Jessica) Nguyen is explicitly a postdoc. Le Thanh Mai Pham and Dinh Truong are held for name collisions and incomplete qualification evidence. Kyle C. Nguyen's maintained CV https://kcnguyen3191.github.io//cv/ records a Sandia postdoc ending February 2026, followed by Applied Research Associates; not accepted as current Sandia staff. Existing Sandia IDs are not new discoveries. Group-wide stopping point: targeted public coverage of all 20 assigned employers is complete, with the access gaps above; fewer than 25 candidates retained because strict identity/current-role/qualification gates excluded or held the remaining leads."
+    }
+  ]
+}

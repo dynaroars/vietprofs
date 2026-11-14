@@ -1,0 +1,283 @@
+{
+  "verifier": "codex",
+  "input": "maintenance/sector-expansion/france-public-research.agy.json",
+  "candidates": [
+    {
+      "name": "Thanh Binh Nguyen",
+      "verdict": "fixable",
+      "failedTests": [],
+      "reason": "Live employer CV https://icsn.cnrs.fr/en/cv/nguyen establishes CNRS research associate since 2011, Université du Maine PhD 2008, and undergraduate education in Ho Chi Minh City, Vietnam. Gif-sur-Yvette appointment is outside Vietnam. Roster matching found only distinct people in other disciplines, including the Ottawa radiologist vp-0654; no identity-URL match. Eligibility passes. The proposed Vietnamese diacritics are not supplied by this source: null means omit the unsupported vietnameseName, not replace it with a guessed spelling.",
+      "correctedProfileUrl": "",
+      "correctedFields": {
+        "vietnameseName": null
+      }
+    },
+    {
+      "name": "Le Thanh Dung Nguyen",
+      "verdict": "fail",
+      "failedTests": [
+        1
+      ],
+      "reason": "Opened the proposed CNRS URL live: it is a dated recruitment interview/news article (30 September 2025), explicitly disallowed as profileUrl. It establishes CNRS recruitment at LIS in 2024 and Paris XIII doctorate 2021; the published full name Lê Thành Dũng Nguyễn supplies a Vietnamese name signal beyond surname alone. https://cv.hal.science/nguyen-le-thanh-dung corroborates identity and Marseille affiliation but is not an employer profile. The submitted personal domain and the independently found https://nguyentito.eu/ could not be resolved/opened, so neither is certified as a replacement. No identity-URL roster match; fuzzy matches concern other disciplines. Test 1 remains unresolved.",
+      "correctedProfileUrl": "",
+      "correctedFields": {
+        "websiteUrl": null
+      }
+    },
+    {
+      "name": "Antoine Le",
+      "verdict": "fail",
+      "failedTests": [
+        1,
+        3
+      ],
+      "reason": "Submitted URL returns 404. A working joint-laboratory profile, https://case.ehess.fr/membres/antoine-le, explicitly establishes permanent CNRS recruitment in 2025 and a doctorate defended in 2024, with a France-based appointment. However, surname Lê, Vietnamese language skills, Vietnam fieldwork and specialization in Vietnamese history do not establish Vietnamese ancestry; no affirmative identity signal beyond these was found. Test 1 has a concrete correction, but test 3 remains unresolved. Roster matching found no active or retired matches. Replace the surname-only vietnameseName with the full published form if identity is subsequently established.",
+      "correctedProfileUrl": "https://case.ehess.fr/membres/antoine-le",
+      "correctedFields": {
+        "name": "Antoine Lê",
+        "vietnameseName": "Antoine Lê"
+      }
+    },
+    {
+      "name": "Quang-Duy Nguyen",
+      "verdict": "fixable",
+      "failedTests": [
+        1
+      ],
+      "reason": "The proposed CEA link is a news/article URL, not an individual profile; direct retrieval also failed certificate validation. No qualifying employer profile was found. His own https://nqduy35.github.io/ links his live CV https://nqduy35.github.io/files/cv.pdf: current Research Scientist after a CEA postdoc, LSEA/DILS, Palaiseau; Clermont-Auvergne computer-science PhD defended 16 July 2020; HUST engineering education and Vietnamese language. Thus use the personal site only with confirmed=false. The claimed Robotics doctorate/mechatronics degree is inaccurate. Roster matches are other people/disciplines; no URL match. Omit uncited diacritics (null).",
+      "correctedProfileUrl": "https://nqduy35.github.io/",
+      "correctedFields": {
+        "confirmed": false,
+        "websiteUrl": "https://nqduy35.github.io/",
+        "department": "Laboratoire des Systèmes Embarqués et Autonomes (LSEA), Département d’Ingénierie Logiciels et Systèmes (DILS), CEA List",
+        "undergradInstitution": "Hanoi University of Science and Technology",
+        "vietnameseName": null
+      }
+    },
+    {
+      "name": "Minh-Ha Nguyen",
+      "verdict": "fixable",
+      "failedTests": [],
+      "reason": "Opened https://research.pasteur.fr/en/member/minh-ha-nguyen/: explicitly a current Research Engineer, distinguished from her preceding postdocs, at the Paris Biological NMR and HDX-MS platform. Its biography verifies a biochemistry PhD in Lyon in 2019. The published compound given name Minh-Ha plus Nguyen is a Vietnamese name signal beyond a surname-only match. The fuzzy roster results concern other people, and there is no identity-URL match. Eligibility and profile pass. No opened source supplies the proposed expanded Nguyễn Thị Minh Hà spelling; omit it (null) rather than infer Thi or diacritics.",
+      "correctedProfileUrl": "",
+      "correctedFields": {
+        "vietnameseName": null
+      }
+    },
+    {
+      "name": "Phuong Hoang Nguyen",
+      "verdict": "fail",
+      "failedTests": [
+        1
+      ],
+      "reason": "The submitted URL redirects to https://lbt.cnrs.fr/people/, a laboratory-wide table, not an individual profile. It lists NGUYEN Phuong as CNRS Research Associate in Paris. The navigation label Phuong Nguyen is only a # placeholder, and an attempted individual /people/nguyen/ URL returns 404; no qualifying replacement was found. Full Vietnamese given-name combination supplies a signal beyond Nguyen alone. The roster matches are different subjects/institutions, including electrical engineer vp-0638; no identity-URL hit. The unit is now UMR 8266, not UPR 9080, per https://lbt.cnrs.fr/. Proposed PhD year 2003 and Vietnamese diacritics were not independently established; omit pending evidence.",
+      "correctedProfileUrl": "",
+      "correctedFields": {
+        "department": "Laboratoire de Biochimie Théorique (LBT, UMR 8266 CNRS / Université Paris Cité)",
+        "phdYear": null,
+        "vietnameseName": null
+      }
+    },
+    {
+      "name": "Long Hoang Bao Nguyen",
+      "verdict": "fixable",
+      "failedTests": [
+        1
+      ],
+      "reason": "Proposed /long-nguyen/ is not the working profile. Opened https://www.icgm.fr/lnguyen-2/: explicitly permanent researcher, CNRS since October 2023, Montpellier, with Bordeaux condensed-matter chemistry PhD 2016–2019. The full Vietnamese multi-part given name supplies a signal beyond surname alone. Roster matches concern different research disciplines/identities, including Louisville computer scientist vp-0027; no identity-URL match. Replace the URL and omit the uncited reconstructed Vietnamese spelling (null).",
+      "correctedProfileUrl": "https://www.icgm.fr/lnguyen-2/",
+      "correctedFields": {
+        "vietnameseName": null
+      }
+    },
+    {
+      "name": "Ha Tran",
+      "verdict": "fail",
+      "failedTests": [
+        1
+      ],
+      "reason": "Proposed IP Paris profile returns 404. Current CNRS/LMD research-director status is supported by the official 2026 Sorbonne hiring-committee document https://recrutement.sorbonne-universite.fr/_resources/EC/Recrutement%2520EC%25202026/Composition%2520CDS%2520FSI/CDS_261035_MCF_FSI.pdf?download=true, but a PDF cannot be profileUrl. The LISA profile explicitly says no longer available; the LMD directory returned 403, and no qualifying individual replacement was established. Her own lecture CV https://rencontresduvietnam.org/conferences/2018/VSEO_atmospheric_remote_sensing/wp-content/uploads/2018/08/lecture_Ha_TRAN_LineShape.pdf gives Franche-Comté PhD 2004 and Hanoi undergraduate education, contradicting Paris 12/2005. Roster hits are distinct people; no URL hit. Test 1 unresolved; omit uncited diacritics.",
+      "correctedProfileUrl": "",
+      "correctedFields": {
+        "phdInstitution": "Université de Franche-Comté",
+        "phdYear": 2004,
+        "vietnameseName": null
+      }
+    },
+    {
+      "name": "Ha Pham",
+      "verdict": "fixable",
+      "failedTests": [],
+      "reason": "The supplied Inria individual page opens and names Ha Pham as a researcher. https://team.inria.fr/makutu/team-members/ independently lists her under Permanent researchers, Research Scientist, Inria, in Pau. Stanford’s live PhD alumni page https://mathematics.stanford.edu/node/81/phd-alumni lists Ha Pham under graduation year 2012, advisor András Vasy. The given-name/surname combination is a Vietnamese name signal, not a surname-only inference. Roster matches vp-1733 (engineering, UTS), vp-1940 (materials, Tohoku), and retired Minh-Ha Pham are distinct. No URL match. Update the current team and omit the uncited Vietnamese spelling (null).",
+      "correctedProfileUrl": "",
+      "correctedFields": {
+        "department": "Makutu Project-Team",
+        "vietnameseName": null
+      }
+    },
+    {
+      "name": "Quynh-Trang Bui",
+      "verdict": "fixable",
+      "failedTests": [
+        1
+      ],
+      "reason": "Proposed URL returns 404. Opened replacement https://bfp.bordeaux-aquitaine.hub.inrae.fr/personnel/pages-web-personnelles/bui-quynh-trang: current Chargée de Recherche INRAE, PrADAm, Bordeaux; molecular-biology doctorate at Université du Maine 2003–2006, plus Hanoi undergraduate/master education. Career appointment and Vietnamese signal are explicit; France location passes. Fuzzy roster hits are a statistician and a pediatrician, not this plant biologist; no URL match. Le Mans Université is the renamed Université du Maine, not a conflicting doctorate. Omit the unsupported diacritics (null).",
+      "correctedProfileUrl": "https://bfp.bordeaux-aquitaine.hub.inrae.fr/personnel/pages-web-personnelles/bui-quynh-trang",
+      "correctedFields": {
+        "vietnameseName": null
+      }
+    },
+    {
+      "name": "Dominique Pham",
+      "verdict": "fail",
+      "failedTests": [
+        1,
+        3
+      ],
+      "reason": "Opened https://annuaire.ifremer.fr/cv/16492/en/: it names Dominique Pham but currently renders datasets and a bibliography, without a current appointment/title. https://www.cresica.nc/en/node/228 describes a 1988-start Ifremer career and PhD obtained in 2011, but is a dated portrait/news item, not a current employer profile. Recent Ifremer bibliography includes 2024–2026 shrimp research in New Caledonia, outside Vietnam. No evidence was found for the claimed Chân Đăng heritage; surname Pham alone is insufficient under this brief. No roster/retired matches. Need a current-role individual profile and affirmative Vietnamese identity evidence; eligibility is not certified.",
+      "correctedProfileUrl": "",
+      "correctedFields": {
+        "vietnameseName": null
+      }
+    },
+    {
+      "name": "Phong Nguyen",
+      "verdict": "fixable",
+      "failedTests": [
+        1
+      ],
+      "reason": "Submitted URL redirects to the general research-team listing. Opened https://institut-curie.org/person/phong-nguyen (also https://curie.fr/personne/phong-nguyen): CNRS Researcher, Team Leader, Research–Paris, Mechanisms of Heart Regeneration. His self biography published by Eppendorf https://www.eppendorf.com/us-en/company-careers/scientific-awards/eppendorf-award-for-young-european-investigators/all-award-winners-finalists/2024-award-finalist-dr-phong-nguyen/ verifies Monash PhD and subsequent postdoc before his independent Curie group. Phong plus Nguyen is an affirmative Vietnamese name combination. Dedup ruled out cryptographer vp-0526 and other unrelated fields; no URL hit. Replace profile; omit uncited Vietnamese diacritics and unverified PhD year (null).",
+      "correctedProfileUrl": "https://institut-curie.org/person/phong-nguyen",
+      "correctedFields": {
+        "vietnameseName": null,
+        "phdYear": null
+      }
+    },
+    {
+      "name": "Matthew Nguyen",
+      "verdict": "fail",
+      "failedTests": [
+        1,
+        3
+      ],
+      "reason": "Submitted URL is the whole-laboratory directory. Opened individual replacement https://llr.in2p3.fr/annuaire-P292: Chargé de Recherche, CMS&EPIC@EIC lead, LLR office/contact. His own LLR presentation https://indico.bnl.gov/event/23006/contributions/90339/attachments/54125/92600/MatthewNguyen_LLR_Institute.pdf verifies Stony Brook PhD 2009; LLR activity report lists him as permanent. France-based appointment passes. However, no affirmative evidence beyond surname Nguyen was found for the asserted Vietnamese-American heritage. Test 1 is repairable, test 3 remains unresolved. The sole roster hit vp-0880 is an emergency physician, not this physicist; no URL match.",
+      "correctedProfileUrl": "https://llr.in2p3.fr/annuaire-P292",
+      "correctedFields": {
+        "vietnameseName": null
+      }
+    },
+    {
+      "name": "Truong Son Nguyen",
+      "verdict": "fail",
+      "failedTests": [
+        1
+      ],
+      "reason": "Submitted URL returns 404. Working https://ijl.univ-lorraine.fr/en/research-groups/plasmas-processes-surfaces-group lists him among CNRS researchers, but is still a group-wide page, not a qualifying individual profile. Its personal link is HAL https://cv.hal.science/nguyentruongson, also disallowed as profileUrl. Opened HAL shows the published form Trường Sơn Nguyễn; the official LSPM publication list https://www.lspm.cnrs.fr/en/communications/publications/ verifies a 2022 Paris XIII materials doctorate. The IJL appointment is in France. Roster matches are unrelated fields; no URL hit. Need an individual employer page or own site explicitly stating the role. Preserve the sourced Vietnamese spelling without guessing a different order.",
+      "correctedProfileUrl": "",
+      "correctedFields": {
+        "vietnameseName": "Trường Sơn Nguyễn"
+      }
+    },
+    {
+      "name": "Eric Nguyen Van",
+      "verdict": "fail",
+      "failedTests": [
+        1,
+        2,
+        3
+      ],
+      "reason": "The supplied https://www.onera.fr/ is the institution homepage and supplies no individual role. Research documents, including https://www.imothep-project.eu/files/D1.2_ASSESSMENT-OF-DESIGN-AND-SIZING-LOGIC-FOR-HYBRID-ELECTRIC-AIRCRAFT.pdf, identify an ONERA author, but are not qualifying profiles and do not establish a permanent appointment. No opened source verified the asserted ISAE-SUPAERO PhD 2020 or two qualifying recent papers with resolved current-employer affiliation. No affirmative Vietnamese heritage evidence beyond the surname was found. Fuzzy roster results, including vp-3120 Radical Numerics, concern different research identities; no URL match. Fail means insufficient evidence, not demonstrated non-Vietnamese origin.",
+      "correctedProfileUrl": "",
+      "correctedFields": {
+        "vietnameseName": null,
+        "phdInstitution": null,
+        "phdYear": null
+      }
+    },
+    {
+      "name": "Tuan Ngo Dac",
+      "verdict": "fixable",
+      "failedTests": [
+        1
+      ],
+      "reason": "Submitted www.math.unicaen.fr URL does not resolve. Working employer-hosted https://tuan.ngodac.perso.math.cnrs.fr/ identifies a CNRS Research Director at LMNO, Caen, with current responsibilities. Opened VIASM biography https://viasm.edu.vn/hdkh/AM2024?userkey=bao-cao-vien explicitly records birth in Bac Ninh, Vietnam, and Orsay doctorate 2004; IAS https://www.ias.edu/scholars/tuan-ng%C3%B4-dac corroborates Paris 11 PhD 2004. Roster vp-0539 is Melbourne infrastructure engineer Tuan Ngo, a different person; no URL match. Replace dead profile and omit the proposed diacritics until a source supplies that exact spelling (null).",
+      "correctedProfileUrl": "https://tuan.ngodac.perso.math.cnrs.fr/",
+      "correctedFields": {
+        "vietnameseName": null
+      }
+    },
+    {
+      "name": "Van Thien Nguyen",
+      "verdict": "fixable",
+      "failedTests": [
+        1
+      ],
+      "reason": "Submitted theses.fr page is a dissertation record, not a current-role profile. DBLP https://dblp1.uni-trier.de/pid/224/7405-1.html links his own https://thienjnguyen.github.io/; opened site explicitly identifies a current AI Research Engineer at CEA-Leti, L3I, Grenoble and Grenoble-Alpes/CEA-Leti PhD 2022. No qualifying employer profile found: use own site with confirmed=false. The full Van Thien Nguyen name supplies Vietnamese given-name signals beyond Nguyen alone. Roster hits are other disciplines/identities; no URL match. Replace profile, add laboratory, and omit uncited diacritics (null).",
+      "correctedProfileUrl": "https://thienjnguyen.github.io/",
+      "correctedFields": {
+        "confirmed": false,
+        "websiteUrl": "https://thienjnguyen.github.io/",
+        "department": "Smart Embedded Imaging Laboratory (L3I), CEA-Leti",
+        "vietnameseName": null
+      }
+    },
+    {
+      "name": "Tinh-Suong Nguyen",
+      "verdict": "fixable",
+      "failedTests": [
+        1
+      ],
+      "reason": "Submitted obsolete versailles-grignon host failed certificate validation. Found and opened individual replacement on current versailles-saclay host: explicitly Chargée de recherche and EPLM co-leader, BIOGER, Palaiseau. Opened https://cv.hal.science/ts-nguyen verifies cellular-biology thesis, Université Sorbonne Paris Cité, 2018 (2018USPCC164). The full compound Vietnamese given name supplies an identity signal beyond surname alone. Roster vp-0527 is a different EPFL chemist; no URL match. Replace profile, use the degree-granting institution recorded in the thesis, and omit uncited Vietnamese diacritics (null).",
+      "correctedProfileUrl": "https://bioger.versailles-saclay.hub.inrae.fr/equipes-et-plateaux/eplm-effecteurs-et-pathogenese-chez-leptosphaeria-maculans/composition-equipe-eplm/portraits-eplm/nguyen-tinh-suong",
+      "correctedFields": {
+        "phdInstitution": "Université Sorbonne Paris Cité",
+        "vietnameseName": null
+      }
+    },
+    {
+      "name": "Thao Dang",
+      "verdict": "fixable",
+      "failedTests": [
+        1
+      ],
+      "reason": "Submitted /~dang/ returns 404. Opened https://www-verimag.imag.fr/~tdang/: CNRS Research Director, DR1 promotion 2020, INPG PhD 2000, current Grenoble-area contact and 2026 activities. Thao combined with Dang supplies a Vietnamese given-name signal beyond a shared surname. Fuzzy roster hits vp-0790 (medical genetics) and vp-2511 (Esslingen applied computing) differ in field/career; no URL hit. Replace profile and correct city to the published Saint-Martin-d’Hères address. Source gives HDR 2010, not the input evidence’s 2007. Omit uncited Vietnamese diacritics (null).",
+      "correctedProfileUrl": "https://www-verimag.imag.fr/~tdang/",
+      "correctedFields": {
+        "city": "Saint-Martin-d’Hères",
+        "vietnameseName": null
+      }
+    },
+    {
+      "name": "Frederic Nguyen",
+      "verdict": "fail",
+      "failedTests": [
+        1,
+        3
+      ],
+      "reason": "The submitted gen-4.org URL redirects to the general GIF portal and is not a current CEA profile. Opened GIF/JAEA biography https://gif.jaea.go.jp/newsletter/07_gifted_newsletter_2021.02.pdf identifies a longstanding CEA career, Senior Expert since 2019, and astrophysics PhD 1992, contradicting reactor-physics/1993 evidence. It does not specify the PhD institution. Recent CEA-affiliated research exists, but neither a qualifying individual employer page nor an own-site replacement was established. No affirmative evidence beyond surname Nguyen supports the asserted diaspora identity. Roster vp-1856 is the distinct Liège geophysicist; no URL match. Tests 1 and 3 unresolved.",
+      "correctedProfileUrl": "",
+      "correctedFields": {
+        "name": "Frédéric Nguyen",
+        "phdYear": 1992,
+        "phdInstitution": null,
+        "vietnameseName": null
+      }
+    },
+    {
+      "name": "Thu-Hoa Tran-Thi",
+      "verdict": "fixable",
+      "failedTests": [
+        1
+      ],
+      "reason": "Submitted PhoCoS URL returns 404. Opened https://iramis.cea.fr/en/pisp/thu-hoa-tran-thi/: CNRS Research Director and Chemical Sensors Team leader, NIMBE, France. Thus employer is CNRS in the joint CEA/CNRS unit, not simply CEA. Her published speaker biography https://www.adebiotech.org/air2/index.php?target=comites explicitly verifies Doctorat ès-Sciences Physiques, Paris XI, 1983; it does not support the claimed 1978 doctorate. The full Thu-Hoa Tran-Thi name supplies Vietnamese given/middle-name signals beyond Tran alone. Roster hits are different disciplines; no URL match. Replace profile/employer, record the documented doctorate, and omit uncited diacritics (null).",
+      "correctedProfileUrl": "https://iramis.cea.fr/en/pisp/thu-hoa-tran-thi/",
+      "correctedFields": {
+        "university": "CNRS (Centre National de la Recherche Scientifique)",
+        "phdInstitution": "Université Paris-Sud",
+        "phdYear": 1983,
+        "vietnameseName": null
+      }
+    }
+  ],
+  "possible_move": []
+}

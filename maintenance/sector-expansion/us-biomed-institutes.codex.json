@@ -1,0 +1,434 @@
+{
+  "group": "us-biomed-institutes",
+  "agent": "codex",
+  "finishedAt": "2026-11-14T22:32:44.155758+00:00",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Howard Hang",
+        "university": "Scripps Research",
+        "institutionType": "Independent nonprofit research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Department of Immunology and Microbiology",
+        "country": "United States",
+        "researchAreas": [
+          "Chemical Biology",
+          "Immunology",
+          "Immunotherapy",
+          "Microbiota"
+        ],
+        "phdInstitution": "University of California, Berkeley",
+        "phdYear": 2003,
+        "undergradInstitution": "University of California, Santa Cruz",
+        "undergradYear": 1998,
+        "profileUrl": "https://www.scripps.edu/faculty/hang/"
+      },
+      "evidence": {
+        "currentRole": "https://www.scripps.edu/faculty/hang/ — \"Professor, Department of Immunology & Microbiology\"; also department chair. Current faculty PI appointment, with a maintained laboratory research description. Employer page fetched successfully; a June 2026 employer news article independently confirms his continuing professorship: https://www.scripps.edu/news-events/news/20260624-hang-nature-communications/.",
+        "doctorateOrPapers": "https://www.scripps.edu/faculty/hang/ — \"Ph.D. (Chemistry), University of California, Berkeley, 2003\". The same education section supplies the undergraduate institution and year.",
+        "vietnameseSignal": "https://magazine.scripps.edu/profiles/2021/fall/it-takes-guts/ — employer-published interview explicitly says he is originally from Vietnam and immigrated to the United States with his family at age four. This is affirmative biographical evidence, rather than a surname inference. Direct HTTP fetch returned 200 and the interview text was inspected after the web tool timed out.",
+        "dedup": "npm run find-roster-matches -- \"Howard Hang\" --url https://www.scripps.edu/faculty/hang/ --url https://magazine.scripps.edu/profiles/2021/fall/it-takes-guts/ → no roster or retired-id matches. gh issue list --state all --search '\"Howard Hang\"' → []."
+      }
+    },
+    {
+      "entry": {
+        "name": "Tam Tran",
+        "university": "St. Jude Children's Research Hospital",
+        "institutionType": "Independent nonprofit research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Department of Pathology, Advanced Technology and Genomics (ATG) Core",
+        "city": "Memphis",
+        "state": "Tennessee",
+        "country": "United States",
+        "profileUrl": "https://www.stjude.org/research/departments/pathology/research-division/atg-core.html"
+      },
+      "evidence": {
+        "currentRole": "https://www.stjude.org/research/departments/pathology/research-division/atg-core.html — \"Tam Tran, PhD\" / \"Scientist\", with affiliations in Pathology and the ATG Core. Independently listed on the current Xu laboratory team: https://www.stjude.org/research/labs/xu-jian-lab/xu-jian-lab-team.html. The latter separates career scientists from postdoctoral research associates. Accepted as the institute career scientist ladder; neither listing marks this appointment as a trainee, visiting, or temporary position. Both production employer pages were fetched successfully.",
+        "doctorateOrPapers": "Both current employer team pages explicitly identify Tam Tran as PhD. Doctoral institution and year are omitted because these employer pages do not supply them; no degree details were taken from commercial people aggregators.",
+        "vietnameseSignal": "Vietnamese given name Tam together with surname Tran, as spelled on both identity-resolved employer team pages. This satisfies the brief's affirmative Vietnamese-given-name signal; no diacritics or middle names inferred.",
+        "dedup": "npm run find-roster-matches -- \"Tam Tran\" --url https://www.stjude.org/research/labs/xu-jian-lab/xu-jian-lab-team.html --url https://www.stjude.org/research/departments/pathology/research-division/atg-core.html → no roster or retired-id matches. GitHub issue search returned #1152, #1118, #1076, #1061, #1277; relevant body passages concern Quantinuum, Washington University, Minh Tam Tran, or other names, rather than this St. Jude scientist. No Issue was created or changed."
+      }
+    }
+  ],
+  "already_listed": [
+    {
+      "name": "Trang VoPham",
+      "id": "vp-3300",
+      "note": "Dedup matched name and employer profile URL: https://fredhutch.org/en/faculty-lab-directory/vopham-trang.html. Existing Fred Hutch Cancer Center entry; excluded from new candidates."
+    },
+    {
+      "name": "Hai T. Dao",
+      "id": "vp-2746",
+      "note": "Dedup matched name and profile URL https://www.stjude.org/people/d/hai-dao.html. Already rostered at St. Jude; excluded from new candidates."
+    },
+    {
+      "name": "Vu Nguyen Ngo",
+      "id": "vp-2650",
+      "note": "Dedup matched existing name Vu N. Ngo and identical employer profile https://www.cityofhope.org/research/find-a-scientist/vu-nguyen-ngo. Other broad Vu Nguyen name hits do not override this exact URL identity match."
+    },
+    {
+      "name": "Phuong T. Vo",
+      "id": "vp-2738",
+      "note": "Dedup matched name. Roster university is University of Washington, with a Fred Hutch faculty profile already stored. Current employer page https://www.fredhutch.org/en/people/v/phuong-t-vo.html lists Associate Professor, Clinical Research Division, Fred Hutch, plus a UW appointment. Joint affiliation, not a new person; primary-employer classification may merit a later check."
+    }
+  ],
+  "possible_move": [
+    {
+      "name": "Quynh Tran",
+      "id": "vp-1518",
+      "note": "Retired-ID match; not proposed as a new candidate. Retired record says University of Innsbruck and was removed for lacking a real source. Current St. Jude employer page https://www.stjude.org/research/labs/orr-lab/orr-lab-team.html explicitly lists Quynh Tran, PhD, Senior Bioinformatics Research Scientist; https://www.stjude.org/research/why-st-jude/biohackathon.html independently lists the same name, doctorate, and Pathology role in 2026. Vietnamese given name Quynh plus Tran is the affirmative name signal. Identity with the unsupported retired record is not established, so this is an identity/reuse check, not a confirmed institutional move. Resolve that identity and retain/reuse the old ID if it is the same person."
+    },
+    {
+      "name": "Le Xuan (Truong) Nguyen",
+      "id": "vp-3036",
+      "note": "Held under the brief's any-dedup-hit rule, not counted as a new candidate or asserted to be the same person. Dedup returned vp-0079, vp-1592, vp-1742, vp-1878, and vp-3036. The last is a UTMB Obstetrics and Gynecology clinician; the other hits concern engineering/computing/economics. City of Hope profile https://www.cityofhope.org/research/find-a-scientist/truong-nguyen instead lists a leukemia-research Assistant Professor since 2023, PhD Sungkyunkwan University 2010, and Vietnam National University BSc 2004, with Vietnamese language explicitly listed. Current lab: https://www.cityofhope.org/research/hematologic-malignancies-research-institute/gehr-family-center-for-leukemia-research/le-xuan-truong-nguyen-lab. These sources support eligibility and Vietnamese identity, but the brief prohibits treating a dedup hit as new. Resolve all five namesakes before candidate intake; do not automatically move vp-3036. Employer profile text was available through web search; direct HTTP fetch returned 403, so no bot-check bypass was attempted."
+    }
+  ],
+  "rejected": [
+    {
+      "name": "Quynh Do",
+      "reason": "Post-Doctoral Research Fellow, not a career appointment: https://research.fredhutch.org/grady/en/lab-members.html. Vietnamese origin and PhD are documented, but trainee status excludes this lead."
+    },
+    {
+      "name": "Long Nguyen",
+      "reason": "Bioinformatics Analyst on https://research.fredhutch.org/newell/en/lab-members.html. No verified doctorate or two qualifying recent employer-affiliated papers, and no evidence establishing an eligible permanent staff-scientist appointment."
+    },
+    {
+      "name": "Adam Nguyen",
+      "reason": "Graduate student: https://research.fredhutch.org/campbell/en/team.html."
+    },
+    {
+      "name": "Ngoc Phan",
+      "reason": "Physician assistant, outside this group's research scientist/PI scope: https://www.fredhutch.org/en/people/p/ngoc-phan.html."
+    },
+    {
+      "name": "Katarina Nguyen",
+      "reason": "Employer biography supports Vietnamese ancestry, but the lead concerns clinical radiation oncology; no qualifying research PI or staff scientist appointment was established for this group: https://www.fredhutch.org/en/news/blog/2026/04/what-inspires-radiation-oncologist-dr-katarina-nguyen-people-science-and-music.html."
+    },
+    {
+      "name": "Quang Tran",
+      "reason": "Postdoctoral Research Associate on the current Ma team: https://www.stjude.org/research/labs/ma-lab/ma-lab-team.html."
+    },
+    {
+      "name": "Khue Nguyen",
+      "reason": "Postdoctoral Research Associate: https://www.stjude.org/research/labs/blair-lab/blair-lab-team.html."
+    },
+    {
+      "name": "Huyen Nguyen",
+      "reason": "Student: https://www.stjude.org/research/labs/blair-lab/blair-lab-team.html."
+    },
+    {
+      "name": "Hai Nguyen",
+      "reason": "Researcher title on https://www.stjude.org/research/labs/torres-lab/torres-lab-team.html, but no verified doctorate or two identity-resolved recent papers establishing the qualification requirement."
+    },
+    {
+      "name": "Ella Nguyen",
+      "reason": "Employer graduation notice and current lab listing establish a trainee/postdoctoral trajectory, not an eligible permanent appointment: https://www.mskcc.org/news/meet-2026-graduates-of-gerstner-sloan-kettering-graduate-school-01 and https://www.theperrylab.com/."
+    },
+    {
+      "name": "Thinh N. Tran",
+      "reason": "Former MSK graduate student, now listed as Bioinformatics Data Scientist at Natera: https://www.sloankettering.edu/research-areas/labs/members/thinh-tran. Current employer is outside the assigned group."
+    },
+    {
+      "name": "Lynda Vuong",
+      "reason": "Career role and doctorate are supported by https://www.mskcc.org/news/msk-research-highlights-june-11-2026?_subsite=research-ski and the employer directory, but no affirmative Vietnamese signal beyond surname was verified. Not accepted on surname alone."
+    },
+    {
+      "name": "Timothy Pham",
+      "reason": "Research Technician, not an established research-scientist/PI appointment: https://www.mskcc.org/research-areas/labs/ingo-mellinghoff/members."
+    },
+    {
+      "name": "Brittany Pham",
+      "reason": "Former graduate student, now LifeSci Communications, on current employer lab page: https://www.mskcc.org/research/ski/labs/heeseon-an."
+    },
+    {
+      "name": "Thi Pham",
+      "reason": "Data Analyst on https://www.mskcc.org/research-areas/labs/veronica-rotemberg. No verified doctorate/two recent papers and permanent scientist equivalence."
+    },
+    {
+      "name": "Chau T. Dang",
+      "reason": "Clinical breast-oncology research is documented at https://www.mskcc.org/cancer-care/doctors/chau-dang, but no appointment as a Sloan Kettering Institute PI or research staff scientist was established. Kept outside the specifically assigned SKI research-ladder scope."
+    },
+    {
+      "name": "Thuy Nguyen",
+      "reason": "Post-doctoral Fellow: https://labs.dana-farber.org/manciaslab/people."
+    },
+    {
+      "name": "Minh Nguyen",
+      "reason": "Research fellow after prior postdoctoral work; no permanent career appointment established: https://labs.dana-farber.org/bianchilab/people/minh-nguyen-phd."
+    },
+    {
+      "name": "Huy Nguyen",
+      "reason": "CDDR Staff Scientist, ALM/MS, on https://www.dana-farber.org/research/integrative-research/dna-damage-and-repair/team. No verified research doctorate or two qualifying papers in the last three years were established. Dedup also returned multiple Huy Nguyen namesakes, including vp-0024, vp-0068, vp-0171, vp-0243, vp-0289, vp-0800, vp-0872, vp-1585, vp-2104, vp-2597, vp-3024, vp-3190, vp-3195, vp-3212; not counted as new."
+    },
+    {
+      "name": "Tony Tran",
+      "reason": "Former Clinical Research Coordinator in the CPDM alumni section: https://www.dana-farber.org/research/integrative-research/center-for-patient-derived-models/team."
+    },
+    {
+      "name": "Tran Thai",
+      "reason": "Lab Technician/lab manager, with no qualifying doctorate or recent-paper evidence established: https://labs.dana-farber.org/barbielab/people/tran-thai."
+    },
+    {
+      "name": "Christine Nguyen",
+      "reason": "Listed under alumni, not current scientists: https://labs.dana-farber.org/hahnlab/members."
+    },
+    {
+      "name": "Phi Nguyen",
+      "reason": "Graduate student: https://www.broadinstitute.org/xavier-lab/current-lab-members."
+    },
+    {
+      "name": "Phuong Nguyen (Broad Institute)",
+      "reason": "Research Technician, without the required career scientist and doctorate/paper evidence: https://www.broadinstitute.org/scientific-community/science/core-faculty-labs/hung-lab/current-lab-members."
+    },
+    {
+      "name": "Ha Nguyen (Salk)",
+      "reason": "Senior Director, Office of Technology Development; licensing/commercialization role rather than research: https://www.salk.edu/science/technology-development/who-we-are/. A doctorate does not make this a research appointment."
+    },
+    {
+      "name": "Kendrick Nguyen",
+      "reason": "Graduate student: https://hollern.salk.edu/people/."
+    },
+    {
+      "name": "Van Nguyen-Tran",
+      "reason": "Coauthor/collaborator lead at Calibr-Skaggs, but no current employer personnel page establishing a career appointment was verified. Publication byline alone is insufficient: https://www.scripps.edu/news-events/news/20240410-schultz-bollong-lung-regeneration/."
+    },
+    {
+      "name": "Amy Nguyen",
+      "reason": "Research Assistant on https://www.scripps.edu/lipton/members.html; no qualifying doctorate/paper evidence or permanent staff-scientist equivalence established."
+    },
+    {
+      "name": "Grace Huynh",
+      "reason": "PhD and current AI Applications executive role are documented: https://alleninstitute.org/person/grace-huynh. No affirmative Vietnamese ancestry, education, language, or Vietnamese given-name signal beyond surname was verified; therefore not accepted under the brief."
+    },
+    {
+      "name": "Thao Do",
+      "reason": "UX Designer and Visualization Specialist II on https://alleninstitute.org/person/thao-do; not a career research scientist role."
+    },
+    {
+      "name": "Nhan-Kiet Ngo",
+      "reason": "Research Associate III overseeing imaging operations; employer bio lists associate and bachelor degrees, without a doctorate or two verified qualifying recent papers: https://alleninstitute.org/person/nhan-kiet-ngo."
+    },
+    {
+      "name": "Katrina Nguyen",
+      "reason": "Research Associate III; employer bio lists a BS, with no qualifying doctorate established: https://alleninstitute.org/person/katrina-nguyen. Publication tiles exist, but this lead was not established as a staff-scientist/PI appointment in the assigned scope."
+    },
+    {
+      "name": "Kevin Nguyen",
+      "reason": "Research Associate I with BS on https://alleninstitute.org/person/kevin-nguyen; no doctorate or two qualifying recent papers established."
+    },
+    {
+      "name": "Amber Phan",
+      "reason": "Research Associate II in the full Allen staff directory, not an established eligible staff-scientist/PI appointment: https://alleninstitute.org/people/staff-directory?3afc8966_page=5."
+    },
+    {
+      "name": "Jessica Trinh",
+      "reason": "Research Associate III in the full Allen staff directory; no verified doctorate/paper and permanent staff-scientist equivalence: https://alleninstitute.org/people/staff-directory?3afc8966_page=7."
+    },
+    {
+      "name": "Kenny C. Dang",
+      "reason": "Supervisor, Lab Ops, rather than verified researcher: https://alleninstitute.org/people/staff-directory?3afc8966_page=2."
+    },
+    {
+      "name": "Phuong Nguyen (Janelia)",
+      "reason": "Research Technician III: https://www.janelia.org/support-team/cell-and-tissue-culture/members. Required doctorate/paper and career researcher evidence not established."
+    },
+    {
+      "name": "Ken Nguyen",
+      "reason": "Visiting Scientist: https://www.janelia.org/lab/shroff-lab/members."
+    },
+    {
+      "name": "Khoa Nguyen",
+      "reason": "Postdoctoral Research Associate; official September 2025 profile explicitly identifies a postdoc: https://www.stowers.org/news/postdoc-profile-q-a-with-piotrowski-lab-postdoc-khoa-nguyen."
+    },
+    {
+      "name": "Nhung T. T. Tran / Nicole Tran",
+      "reason": "Publication/alumni lead, not a verified current permanent Stowers researcher. Graduate alumni are listed on https://labs.stowers.org/piotrowski/team; publication source https://labs.stowers.org/piotrowski/news/uncovering-mechanisms-regeneration."
+    },
+    {
+      "name": "Minh-Tu Nguyen",
+      "reason": "Former undergraduate researcher/lab technician (2007–2010), not current permanent researcher: https://labs.stowers.org/piotrowski/team."
+    },
+    {
+      "name": "Tuan Nguyen (The Jackson Laboratory)",
+      "reason": "Predoctoral Staff on https://www.jax.org/people/tuan-nguyen; current student status is independently explained at https://www.jax.org/news-and-insights/2025/january/get-to-know-some-of-the-newest-ph-d-students-at-jax."
+    },
+    {
+      "name": "Quynh-Mai Pham",
+      "reason": "Research Assistant III in Cellular Engineering: https://www.jax.org/research-and-faculty/resources. No qualifying doctorate/paper evidence or staff-scientist equivalence established."
+    },
+    {
+      "name": "Dong Nguyen-Bresinsky",
+      "reason": "Advanced Animal Care Technologist, rather than an established eligible career scientist appointment: https://www.jax.org/research-and-faculty/resources/knockout-mouse-project/komp-staff."
+    },
+    {
+      "name": "Vu Nguyen (City of Hope)",
+      "reason": "Unresolved appointment conflict: https://www.cityofhope.org/research/find-a-scientist/vu-nguyen labels Staff Scientist but its experience section says 2018-present Postdoctoral Fellow. Did not assume permanence from the header. Direct HTTP fetch returned 403; the employer-published text was readable through the web tool. Resolve with an unambiguous current employer personnel record."
+    },
+    {
+      "name": "Thuy Xuan Phan",
+      "reason": "Unresolved appointment conflict: https://www.cityofhope.org/research/find-a-scientist/thuy-phan lists both Postdoctoral Fellow and Staff Scientist, and experience says 2016-present Postdoctoral Fellow. Permanent non-trainee status not established."
+    },
+    {
+      "name": "Tung Nguyen (City of Hope lead)",
+      "reason": "Search index showed a PhD Staff Scientist in the Shively team, but the opened current employer page https://www.cityofhope.org/research/find-a-scientist/john-shively no longer lists Tung Nguyen. No current appointment accepted from stale discovery text. Dedup also found vp-0267, vp-0467, vp-0833, vp-0852, vp-1696, vp-1726."
+    }
+  ],
+  "coverage": [
+    {
+      "employer": "Fred Hutch Cancer Center",
+      "pagesExamined": [
+        "https://fredhutch.org/en/faculty-lab-directory/vopham-trang.html",
+        "https://www.fredhutch.org/en/people/v/phuong-t-vo.html",
+        "https://research.fredhutch.org/grady/en/lab-members.html",
+        "https://research.fredhutch.org/newell/en/lab-members.html",
+        "https://research.fredhutch.org/campbell/en/team.html",
+        "https://research.fredhutch.org/singhvi/en/people.html",
+        "https://research.fredhutch.org/bai/en/lab-members.html",
+        "https://research.fredhutch.org/peternelson/en/lab-members.html",
+        "https://research.fredhutch.org/buck/en/people.html"
+      ],
+      "note": "Surname and given-name discovery searches followed by current lab-team and faculty pages. Two identified faculty already rostered; other verified leads were students/postdocs or lacked qualifying career research evidence. Employer spelling follows the existing roster."
+    },
+    {
+      "employer": "St. Jude Children's Research Hospital",
+      "pagesExamined": [
+        "https://www.stjude.org/research/labs/xu-jian-lab/xu-jian-lab-team.html",
+        "https://www.stjude.org/research/departments/pathology/research-division/atg-core.html",
+        "https://www.stjude.org/research/labs/orr-lab/orr-lab-team.html",
+        "https://www.stjude.org/research/why-st-jude/biohackathon.html",
+        "https://www.stjude.org/research/labs/ma-lab/ma-lab-team.html",
+        "https://www.stjude.org/research/labs/blair-lab/blair-lab-team.html",
+        "https://www.stjude.org/research/labs/torres-lab/torres-lab-team.html",
+        "https://www.stjude.org/people/d/hai-dao.html"
+      ],
+      "note": "Tam Tran verified as new; Quynh Tran held for retired-ID identity resolution; Hai T. Dao already listed. Screened research teams, core staff, and 2026 scientific committee listings. Production ATG page found after older short URLs failed; no staging site used as final evidence."
+    },
+    {
+      "employer": "Sloan Kettering Institute (Memorial Sloan Kettering Cancer Center)",
+      "pagesExamined": [
+        "https://www.mskcc.org/research-areas/faculty-staff?_escaped_fragment_=&_wrapper_format=html&letter=H&msk_tools_print=print&page=416&title=",
+        "https://www.mskcc.org/research-areas/faculty-staff?_escaped_fragment_=&msk_tools_print=print&page=616&title=",
+        "https://www.mskcc.org/research/ski/labs/heeseon-an",
+        "https://www.mskcc.org/research-areas/labs/ingo-mellinghoff/members",
+        "https://www.mskcc.org/research-areas/labs/veronica-rotemberg",
+        "https://www.mskcc.org/news/msk-research-highlights-june-11-2026?_subsite=research-ski",
+        "https://www.sloankettering.edu/research-areas/labs/members/thinh-tran",
+        "https://www.mskcc.org/cancer-care/doctors/chau-dang"
+      ],
+      "note": "Searched Nguyen, Tran, Pham, Huynh, Dang and Vietnamese biographical signals across the institute and parent center. Directory mixes current staff and alumni; checked specific lab/profile pages before accepting a role. No new fully verified candidate. Clinical-only parent-hospital leads were not treated as SKI PI appointments."
+    },
+    {
+      "employer": "Dana-Farber Cancer Institute",
+      "pagesExamined": [
+        "https://www.dana-farber.org/research/integrative-research/dna-damage-and-repair/team",
+        "https://labs.dana-farber.org/manciaslab/people",
+        "https://labs.dana-farber.org/bianchilab/people/minh-nguyen-phd",
+        "https://www.dana-farber.org/research/integrative-research/center-for-patient-derived-models/team",
+        "https://labs.dana-farber.org/hahnlab/members",
+        "https://labs.dana-farber.org/barbielab/people/tran-thai"
+      ],
+      "note": "Current research teams and centers inspected after surname searches. Huy Nguyen has a scientist role but qualification and dedup checks were not clean; other leads were trainees, technicians, or alumni. No qualifying new candidate counted."
+    },
+    {
+      "employer": "Broad Institute",
+      "pagesExamined": [
+        "https://www.broadinstitute.org/directory",
+        "https://www.broadinstitute.org/people/senior-scientific-staff",
+        "https://www.broadinstitute.org/people/institute-scientists",
+        "https://www.broadinstitute.org/scientific-community/science/programs/cancer/team",
+        "https://www.broadinstitute.org/xavier-lab/current-lab-members",
+        "https://www.broadinstitute.org/scientific-community/science/core-faculty-labs/hung-lab/current-lab-members"
+      ],
+      "note": "Inspected complete A–Z senior professional scientist list in fetched employer HTML, Institute Scientists, Cancer Program team, and targeted lab rosters. The main directory is a search form. No new eligible Vietnamese-signal scientist verified; the Vietnamese-named current lab leads were graduate/technical roles."
+    },
+    {
+      "employer": "Salk Institute",
+      "pagesExamined": [
+        "https://www.salk.edu/science/directory/faculty/?sort=name",
+        "https://ecker.salk.edu/people/",
+        "https://hollern.salk.edu/people/",
+        "https://www.salk.edu/science/technology-development/who-we-are/"
+      ],
+      "note": "Complete active faculty directory screened, then targeted staff/lab and given-name/Vietnam searches. Ha Nguyen is technology commercialization staff; Kendrick Nguyen is a graduate student. No verified new eligible candidate."
+    },
+    {
+      "employer": "Scripps Research",
+      "pagesExamined": [
+        "https://www.scripps.edu/faculty/hang/",
+        "https://magazine.scripps.edu/profiles/2021/fall/it-takes-guts/",
+        "https://www.scripps.edu/news-events/news/20260624-hang-nature-communications/",
+        "https://www.scripps.edu/lipton/members.html",
+        "https://wiseman.scripps.edu/members/",
+        "https://www.scripps.edu/news-events/news/20240410-schultz-bollong-lung-regeneration/"
+      ],
+      "note": "Howard Hang verified through faculty page and employer biography. Searched lab teams and Calibr collaborator/publication leads. Kept Scripps Research distinct from Scripps College, Scripps Health, and UC San Diego Scripps Oceanography. Van Nguyen-Tran remains a byline-only lead, not counted."
+    },
+    {
+      "employer": "Allen Institute",
+      "pagesExamined": [
+        "https://alleninstitute.org/people",
+        "https://alleninstitute.org/people/staff-directory?3afc8966_page=1",
+        "https://alleninstitute.org/people/staff-directory?3afc8966_page=2",
+        "https://alleninstitute.org/people/staff-directory?3afc8966_page=3",
+        "https://alleninstitute.org/people/staff-directory?3afc8966_page=4",
+        "https://alleninstitute.org/people/staff-directory?3afc8966_page=5",
+        "https://alleninstitute.org/people/staff-directory?3afc8966_page=6",
+        "https://alleninstitute.org/people/staff-directory?3afc8966_page=7",
+        "https://alleninstitute.org/people/staff-directory?3afc8966_page=8",
+        "https://alleninstitute.org/person/grace-huynh",
+        "https://alleninstitute.org/person/nhan-kiet-ngo",
+        "https://alleninstitute.org/person/katrina-nguyen",
+        "https://alleninstitute.org/person/kevin-nguyen"
+      ],
+      "note": "Fetched all eight public staff-directory pages and screened name tokens, then inspected relevant bios. Grace Huynh has a doctorate and AI leadership role but no affirmative Vietnamese signal was verified. Other leads were research associates or operations/design staff without all assigned-scope qualification evidence. Allen Institute for AI was excluded as a different employer."
+    },
+    {
+      "employer": "HHMI Janelia",
+      "pagesExamined": [
+        "https://www.janelia.org/taxonomy/term/5254",
+        "https://www.janelia.org/support-team/cell-and-tissue-culture/members",
+        "https://www.janelia.org/lab/shroff-lab/members"
+      ],
+      "note": "Research-staff taxonomy, support team, and lab teams examined; surname/given-name searches produced technician, visiting, and historical postdoctoral leads. No eligible permanent doctorate-holding new researcher verified. Research technician status was not equated with staff scientist status."
+    },
+    {
+      "employer": "Stowers Institute for Medical Research",
+      "pagesExamined": [
+        "https://www.stowers.org/scientists",
+        "https://labs.stowers.org/piotrowski/team",
+        "https://www.stowers.org/news/postdoc-profile-q-a-with-piotrowski-lab-postdoc-khoa-nguyen",
+        "https://labs.stowers.org/piotrowski/news/uncovering-mechanisms-regeneration"
+      ],
+      "note": "Complete scientist directory screened, plus surname searches and Piotrowski current/alumni pages. Relevant leads were postdoctoral or former student/technical appointments. Publications were used as leads, not proof of a current permanent job."
+    },
+    {
+      "employer": "The Jackson Laboratory",
+      "pagesExamined": [
+        "https://www.jax.org/research-and-faculty",
+        "https://www.jax.org/research-and-faculty/faculty",
+        "https://www.jax.org/research-and-faculty/faculty/research-scientists",
+        "https://www.jax.org/research-and-faculty/resources",
+        "https://www.jax.org/research-and-faculty/resources/knockout-mouse-project/komp-staff",
+        "https://www.jax.org/people/tuan-nguyen"
+      ],
+      "note": "Faculty and research-scientist directory bodies rendered only Loading in the accessible HTML, limiting direct directory coverage. Supplemented with employer people searches, resource/core lists, and surname/given-name queries. Verified leads were predoctoral, research-assistant, or animal-care roles; no new eligible career scientist established. MGI literature author listings were not accepted as evidence of JAX employment."
+    },
+    {
+      "employer": "City of Hope / Beckman Research Institute",
+      "pagesExamined": [
+        "https://www.cityofhope.org/research/find-a-scientist",
+        "https://www.cityofhope.org/research/find-a-scientist/truong-nguyen",
+        "https://www.cityofhope.org/research/hematologic-malignancies-research-institute/gehr-family-center-for-leukemia-research/le-xuan-truong-nguyen-lab",
+        "https://www.cityofhope.org/research/find-a-scientist/vu-nguyen-ngo",
+        "https://www.cityofhope.org/research/find-a-scientist/vu-nguyen",
+        "https://www.cityofhope.org/research/find-a-scientist/thuy-phan",
+        "https://www.cityofhope.org/research/find-a-scientist/john-shively",
+        "https://www.cityofhope.org/research/find-a-scientist/timothy-synold"
+      ],
+      "note": "Scientist directory, individual researcher bios, and laboratory staff examined. Vu N. Ngo already listed. Le Xuan (Truong) Nguyen is held for dedup identity resolution; two staff-scientist headers conflict with continuing postdoc histories. Shively current roster differs from discovery snippets, so Tung Nguyen was not counted. Some direct HTTP requests returned 403; used accessible employer text via the web tool where available and did not attempt bot-check evasion. No hospital clinician counted as a Beckman PI without research-appointment evidence."
+    }
+  ]
+}

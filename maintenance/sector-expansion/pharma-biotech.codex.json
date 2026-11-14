@@ -1,0 +1,404 @@
+{
+  "group": "pharma-biotech",
+  "agent": "codex",
+  "finishedAt": "2026-11-14T22:31:20.538221Z",
+  "candidates": [],
+  "already_listed": [
+    {
+      "name": "Quang Nguyen",
+      "id": "vp-3098",
+      "note": "Own site confirms Regeneron early clinical research and Dartmouth PhD; find-roster-matches matched name and qpmnguyen.com. Source: https://www.qpmnguyen.com/"
+    },
+    {
+      "name": "Tri Nguyen",
+      "id": "vp-3085",
+      "note": "Local dedup matched existing Regeneron antibody-engineering ID. Indexed 2026 PEGS bio names Duke PhD, but generic https://www.pegsummit.com/speaker-biographies/ now serves 2027, so this is duplicate discovery rather than an independent current appointment verification."
+    },
+    {
+      "name": "Thach Nguyen",
+      "id": "vp-3101",
+      "note": "Alumni source identifies Vertex; local dedup matched existing ID. Former-university source is a discovery lead, not independent current-role verification. Source: https://www.bc.edu/content/bc-web/schools/morrissey/departments/chemistry/research-labs/Hoveyda-research-group/people.html"
+    },
+    {
+      "name": "Quyen Nguyen",
+      "id": "vp-3123",
+      "note": "2025 conference bio names Novartis Basel clinical pharmacology and Paris V doctorate; local dedup matched existing ID. Source: https://gmp.asso.fr/wp-content/uploads/2025/05/brochure-du-symposium-gmp-2025-1.pdf"
+    },
+    {
+      "name": "Tuyen Nguyen",
+      "id": "vp-3133",
+      "note": "Alnylam discovery/HTS lead is already rostered. Published education is BS/MS, so not a new candidate under this session’s strict doctorate rule. Source: https://www.slas.org/events-calendar/slas2025-international-conference-exhibition/learn/opportunities-for-students-and-early-career-attendees/meet-the-mentors/"
+    },
+    {
+      "name": "Laurent Nguyen",
+      "id": "vp-3145",
+      "note": "Sanofi modeling lead surfaced in an older posting; local dedup matched existing ID; not independently reverified as current. Source: https://www.mail-archive.com/nmusers%40globomaxnm.com/msg06970.html"
+    },
+    {
+      "name": "Eileen Mai-Huong Hoang",
+      "id": "vp-3238",
+      "note": "Sanofi process chemistry/Harvard PhD lead; local dedup matched existing ID. Source: https://www.bostonsociety.org/APC/images/APC/pdfs/APC2024_Program.pdf"
+    },
+    {
+      "name": "Elizabeth Pham",
+      "id": "vp-3086",
+      "note": "Amgen immuno-oncology/University of Toronto PhD lead; local dedup matched existing ID. Source: https://www.ise.sjsu.edu/wie/partners/women-leaders/elizabethpham.php"
+    },
+    {
+      "name": "Phillip Tran",
+      "id": "vp-3199",
+      "note": "Existing Takeda research automation record; local dedup matched name and personal-site URL. Source: https://phillipytran95.github.io/"
+    },
+    {
+      "name": "Jack Nguyen",
+      "id": "vp-3115",
+      "note": "Employer team page and existing record identify Xylo R&D; local dedup matched name and employer-page URL. Source: https://www.xylo.bio/team"
+    }
+  ],
+  "possible_move": [],
+  "rejected": [
+    {
+      "name": "Khoi Dac Nguyen",
+      "reason": "Held under the brief’s any-hit dedup rule and this session’s strict role screen. Employer page https://ambiotech.us/about/ names Khoi D. Nguyen as Chief Technology Officer and says he leads muscle data analysis/modeling. Yale PhD (2021): https://elischolar.library.yale.edu/gsas_dissertations/385/ . Current employer-affiliated research: https://pmc.ncbi.nlm.nih.gov/articles/PMC12918940/ . Vietnamese affirmative name signal: Khoi Dac in the Yale record. Ran npm run find-roster-matches -- \"Khoi Dac Nguyen\" --url https://ambiotech.us/about/ https://ambiotech.us/ https://elischolar.library.yale.edu/gsas_dissertations/385/ https://pmc.ncbi.nlm.nih.gov/articles/PMC12918940/ . Output hits vp-0750, vp-2929, vp-3204. These appear distinct (visual arts/Bard; Qualcomm/Oregon State PhD; Liquid AI/New Mexico State PhD), but no new entry proposed in view of the explicit any-hit instruction. Next action: resolve these identities and decide whether the CTO’s hands-on scientific role meets the specified Scientist/Research Director screen. gh issue list searches for Khoi Dac Nguyen returned []; broader Khoi Nguyen returned other Khoi identities."
+    },
+    {
+      "name": "Ngoc (Tumi) Tran",
+      "reason": "Promising BMS principal ML scientist with PhD and explicit Vietnamese background, but no current-employer person page or own site establishing the appointment located. Former-school alumni page is insufficient under test 1. Sources: https://www.cshl.edu/phd-program/alumni/ ; https://darkstar.cshl.edu/?page_id=8 . Next action: locate BMS or maintained personal profile before proposing."
+    },
+    {
+      "name": "Tan H. Nguyen",
+      "reason": "Insitro staff imaging/ML scientist lead appeared only in third-party summaries/search results; no live employer or personal role page located. Discovery URL: https://lacuna.tiptreesystems.com/author/tan-h-nguyen . Next action: obtain current-role primary evidence and resolve against existing Tan Nguyen names."
+    },
+    {
+      "name": "Hien P. Nguyen",
+      "reason": "Moderna lead has analytical-chemistry PhD but source identifies Production Science and Technology; a newer third-party lead instead names Mirai Bio. Neither current research appointment nor exclusion of manufacturing support established. Sources: https://www.researchgate.net/profile/Hien-Nguyen-82 ; https://aeroleads.com/in/hien-nguyen-62657712 . Next action: verify employer and research responsibilities on employer/own page."
+    },
+    {
+      "name": "Vi Nguyen",
+      "reason": "Employer 2022 story identifies Principal Research Associate, Rare Diseases, not an established doctorate-holding Scientist role. https://www.modernatx.com/en-US/media-center/all-media/blogs/moderna-gives-back-in-boston ."
+    },
+    {
+      "name": "Vy Tran",
+      "reason": "Moderna lead is Global Medical Affairs–RSV; excluded medical affairs. Discovery source: https://aeroleads.com/in/vygtran ."
+    },
+    {
+      "name": "Trang Nguyen",
+      "reason": "2024 BMS lymphoma research presenter has PhD, but no current employer/person-owned page establishing present appointment located. https://www.govstemscholars.com/post/bms2024 ."
+    },
+    {
+      "name": "MinhAnh Nguyen",
+      "reason": "Employer identifies clinical nurse consultant providing treatment education, not qualifying research scientist. https://www.bms.com/life-and-science/culture/how-nurse-practitioners-impact-patient-care.html ."
+    },
+    {
+      "name": "Anh-Hoa Nguyen",
+      "reason": "Gilead biostatistics PhD lead is supported by a 2019 seminar only; current appointment not established on employer/own page. https://statistics.ucdavis.edu/events/seminar-052319-nguyen ."
+    },
+    {
+      "name": "Sierra Nguyen",
+      "reason": "Gilead Senior Research Associate lead with bachelor’s education only in discovery results; strict doctorate/Scientist screen not met. https://www.signalhire.com/profiles/sierra-nguyen%27s-email/149780635 ."
+    },
+    {
+      "name": "Lan Nguyen",
+      "reason": "Gilead Senior Associate Scientist lead lacks verified doctorate and acceptable current-role source. https://wiza.co/d/gilead-sciences/3414/lan-nguyen ."
+    },
+    {
+      "name": "Uyen Nguyen",
+      "reason": "Novartis Cell & Gene Senior Scientist lead lists BS/MS only; no verified doctorate or qualifying primary current-role page. https://www.signalhire.com/profiles/uyen-nguyen%27s-email/112017768 ."
+    },
+    {
+      "name": "Giang Nguyen",
+      "reason": "Novartis mechanistic immunology lead is a third-party directory result, not current-role primary evidence; doctorate unresolved. https://wiza.co/d/novartis-institutes-for-biomedical-research/e31b/giang-nguyen ."
+    },
+    {
+      "name": "Amanda Nguyen",
+      "reason": "Novartis PharmD clinical scientist account dates to 2019; current appointment not verified. https://mcphsfellowship.com/2019/02/06/alumni-updates-clinical-sciences-at-novartis/ ."
+    },
+    {
+      "name": "Nguyet Nguyen",
+      "reason": "Merck lead has conflicting third-party descriptions: postdoctoral researcher versus senior scientist. No employer/own page resolving transition to permanent role located. https://theorg.com/org/merck/teams/research-and-development ; https://www.signalhire.com/profiles/nguyet-nguyen%27s-email/171479804 . Next action: verify career appointment after postdoc."
+    },
+    {
+      "name": "Don D. Nguyen",
+      "reason": "Merck Healthcare Darmstadt HT-MS scientist/UCSD doctorate lead is a 2022 conference bio; no current primary appointment evidence located. https://eventscribe.net/2022/SLAS2022/fsPopup.asp?Mode=presenterInfo&PresenterID=1202930 ."
+    },
+    {
+      "name": "Truong Nguyen",
+      "reason": "Pfizer principal scientist/process research PhD lead is supported by conference and former-lab sources only; no current employer/own appointment page located. https://www.crystallizationsystems.com/events/advancements-in-process-chemistry-workshop/ ; https://silascook.lab.iu.edu/members/former-members.html ."
+    },
+    {
+      "name": "Chuong Nguyen",
+      "reason": "Pfizer paper disclosures establish research employment at publication time, but do not supply an eligible current career title or identity-resolved doctorate. Name also has multiple unrelated researchers. https://cdn.elifesciences.org/articles/101626/elife-101626-v1.pdf ."
+    },
+    {
+      "name": "Jenn Nguyen",
+      "reason": "Pfizer Scientist lead lists BS only; strict doctorate requirement and primary current-role verification not met. https://www.signalhire.com/profiles/jenn-nguyen%27s-email/128184784 ."
+    },
+    {
+      "name": "Lynda Nguyen",
+      "reason": "Employer identifies Executive Director, Assistant General Counsel; PhD does not qualify a legal role. https://www.regeneron.com/stories/we-do-well-by-doing-good-employee-stories ."
+    },
+    {
+      "name": "Teresa Nguyen",
+      "reason": "Regeneron principal scientist lead appears on former-school lab alumni page; current employer/own appointment evidence not located. https://www.mdanderson.org/research/departments-labs-institutes/labs/viroimmunotherapy-laboratory/lab-members.html ."
+    },
+    {
+      "name": "Ngan Nguyen",
+      "reason": "AbbVie Operations Singapore cell-culture process development lead lacks primary source establishing qualifying research appointment and doctorate; manufacturing boundary unresolved. https://theorg.com/org/abbvie/person/ngan-nguyen ."
+    },
+    {
+      "name": "Dean Nguyen",
+      "reason": "AbbVie Scientist I lead has MS, not verified doctorate; no primary current-role evidence located."
+    },
+    {
+      "name": "Dung Nguyen",
+      "reason": "Takeda Global Biologics research scientist lead with Brandeis PhD (2018) appears on former-lab page; current employer or maintained own site not located. https://sites.google.com/brandeis.edu/krauss-lab/members ."
+    },
+    {
+      "name": "Tai Nguyen",
+      "reason": "Biogen conference lead concerns manufacturing-floor in-process concentration control; doctorate/current research appointment not established. https://www.bioprocessingsummit.com/docs/librariesprovider45/brochures/25/bioprocessing-summit-2025-brochure.pdf?sfvrsn=115c2f2f_3 ."
+    },
+    {
+      "name": "Brian Nguyen",
+      "reason": "Immuneering employer page identifies Senior Research Associate with BS, not doctorate-holding Scientist. https://immuneering.com/our-story/team/ ."
+    },
+    {
+      "name": "Scott Nguyen",
+      "reason": "Immuneering employer page identifies Executive Director, IT; excluded nonresearch role. https://immuneering.com/our-story/team/ ."
+    },
+    {
+      "name": "Khanh-Dung Nguyen",
+      "reason": "Variant Bio genetic researcher lead is supported by a 2023 interview; not present in the current employer team page examined. Current role unresolved; absence is not proof of departure. https://www.variantbio.com/team ; https://coursesandconferences.wellcomeconnectingscience.org/news_item/from-vietnam-to-the-usa-biotech-sector-a-career-journey-focused-on-translating-genetic-findings-into-novel-therapies/ ."
+    },
+    {
+      "name": "Cokey (AnhCo) Nguyen",
+      "reason": "Atara old CSO lead is stale: 2024 employer filing documents promotion to President/CEO. Current research Scientist/Research Director role not established under strict screen. https://investors.atarabio.com/sec-filings/all-sec-filings/content/0000950170-24-095526/0000950170-24-095526.pdf ."
+    },
+    {
+      "name": "Vincent T. Pham",
+      "reason": "Powerhouse CEO is still a Cancer Biology PhD candidate; excluded trainee and outside Boston/SF expansion scope. https://www.vincenttpham.com/about-vincent/ ."
+    },
+    {
+      "name": "Huan Nguyen",
+      "reason": "IGY immunology CSO has doctorate and research role, but Canadian company is outside the named-employer plus Boston/SF biotech scope. https://igylifesciences.com/executive-team/ ."
+    },
+    {
+      "name": "Stephen Pham",
+      "reason": "Avalyn product-development lead has doctorate but acceptable primary current-role page failed to fetch; research role and affirmative Vietnamese signal beyond surname unresolved. https://avalynpharma.life/about/ ; https://rescon-europe.com/wp-content/uploads/2024/07/Rescon_Europe_2024_Print.pdf ."
+    },
+    {
+      "name": "Ellen Duong; Charles W. Tran",
+      "reason": "Names surfaced in Genentech November 2026 paper listing; bylines alone do not establish current Scientist appointments or doctorates. https://www.gene.com/scientists/publications ."
+    },
+    {
+      "name": "Nathan Pham",
+      "reason": "Roche Scientist II discovery lead lists BS/MS only; doctorate and primary current-role evidence not verified. https://www.signalhire.com/profiles/nathan-pham/208669544 ."
+    }
+  ],
+  "coverage": [
+    {
+      "employer": "Moderna",
+      "pagesExamined": [
+        "https://www.modernatx.com/en-US/research",
+        "https://www.modernatx.com/en-US/media-center/all-media/blogs/moderna-gives-back-in-boston"
+      ],
+      "note": "Final direct HTTP read succeeded for the research overview after web-tool access failed. Employee story and Nguyen/Tran/Pham discovery sweeps yielded research-associate, production, or medical-affairs leads; no eligible new primary-verified person."
+    },
+    {
+      "employer": "Novartis BioMedical Research",
+      "pagesExamined": [
+        "https://www.novartis.com/research-and-development",
+        "https://gmp.asso.fr/wp-content/uploads/2025/05/brochure-du-symposium-gmp-2025-1.pdf",
+        "https://mcphsfellowship.com/2019/02/06/alumni-updates-clinical-sciences-at-novartis/"
+      ],
+      "note": "Nguyen/Tran/Pham/Hoang/Huynh/Bui surname searches and doctorate/own-site follow-ups. Quyen already listed; other leads failed current-role or doctorate verification."
+    },
+    {
+      "employer": "Bristol Myers Squibb",
+      "pagesExamined": [
+        "https://www.bms.com/our-science.html",
+        "https://www.bms.com/life-and-science/culture/how-nurse-practitioners-impact-patient-care.html",
+        "https://www.cshl.edu/phd-program/alumni/",
+        "https://www.govstemscholars.com/post/bms2024"
+      ],
+      "note": "Research overview, employee story, and alumni/conference leads. Ngoc Tumi Tran is a promising held lead; no employer/own profile found."
+    },
+    {
+      "employer": "Eli Lilly and Company",
+      "pagesExamined": [
+        "https://www.lilly.com/science",
+        "https://www.amcpfoundation.org/about/about-amcp-foundation/board/Jospehine-Tran"
+      ],
+      "note": "Surname and Scientist/PhD sweeps found mostly old sources and fellowships. Josephine Nhu Tran HEOR research lead remains third-party appointment evidence; no new primary-verified candidate."
+    },
+    {
+      "employer": "Gilead Sciences",
+      "pagesExamined": [
+        "https://www.gilead.com/science-and-medicine",
+        "https://statistics.ucdavis.edu/events/seminar-052319-nguyen"
+      ],
+      "note": "Science URL inaccessible. Nguyen/Tran/Pham discovery and doctorate/homepage follow-ups yielded dated biostatistics bio or BS/MS research-associate leads; no accepted candidate."
+    },
+    {
+      "employer": "GSK",
+      "pagesExamined": [
+        "https://www.gsk.com/en-gb/innovation/",
+        "https://www.organonachip.org.uk/people/industry/"
+      ],
+      "note": "Nguyen/Tran and doctorate/current-role searches. Dung Nguyen investigator lead lacks verified doctorate and primary appointment source; organ-on-a-chip directory direct read failed TLS hostname validation. Gerstner Sloan Kettering results screened out as a different GSK."
+    },
+    {
+      "employer": "AstraZeneca",
+      "pagesExamined": [
+        "https://www.astrazeneca.com/r-d.html",
+        "https://zarbi.chem.yale.edu/alumni.html"
+      ],
+      "note": "Nguyen/Bui and doctorate/current-role searches; Toan Nguyen Yale chemistry alumni lead lacks present employer/own role evidence. Tony Pham already exists in local roster. Vietnam-based and internship leads excluded."
+    },
+    {
+      "employer": "Merck",
+      "pagesExamined": [
+        "https://www.merck.com/research/",
+        "https://eventscribe.net/2022/SLAS2022/fsPopup.asp?Mode=presenterInfo&PresenterID=1202930",
+        "https://theorg.com/org/merck/teams/research-and-development"
+      ],
+      "note": "Final direct HTTP read succeeded for the research overview after an initial web-tool 403. Nguyen/Tran/Pham and doctorate/homepage searches: Nguyet transition unresolved; Don’s 2022 SLAS URL now returns HTTP 404 in direct read. Merck & Co and Merck KGaA identities kept distinct."
+    },
+    {
+      "employer": "Pfizer",
+      "pagesExamined": [
+        "https://www.pfizer.com/science",
+        "https://www.pfizer.com/stories/scientists",
+        "https://www.crystallizationsystems.com/events/advancements-in-process-chemistry-workshop/"
+      ],
+      "note": "Scientist stories and Nguyen/Tran/Chuong/Truong searches. No Nguyen/Tran matches in loaded story listing; conference/publication leads lack qualifying current title/doctorate or primary appointment evidence."
+    },
+    {
+      "employer": "Genentech/Roche",
+      "pagesExamined": [
+        "https://www.gene.com/scientists/our-scientists",
+        "https://www.gene.com/scientists/publications"
+      ],
+      "note": "Full exposed scientist directory scanned; November 2026 publication listing examined. New byline leads held without appointment/doctorate evidence. Existing roster already has numerous Genentech researchers."
+    },
+    {
+      "employer": "Amgen",
+      "pagesExamined": [
+        "https://www.amgen.com/science",
+        "https://www.ise.sjsu.edu/wie/partners/women-leaders/elizabethpham.php"
+      ],
+      "note": "Nguyen/Pham and doctorate searches; Elizabeth Pham already listed, no new primary-verified scientist found. SJSU legacy profile URL failed TLS hostname validation in final direct read; it was discovery evidence only."
+    },
+    {
+      "employer": "Regeneron Pharmaceuticals",
+      "pagesExamined": [
+        "https://www.regeneron.com/science",
+        "https://www.regeneron.com/stories/we-do-well-by-doing-good-employee-stories",
+        "https://www.qpmnguyen.com/",
+        "https://www.pegsummit.com/speaker-biographies/"
+      ],
+      "note": "Science path redirected to homepage in web tool; final direct read returned 403. Nguyen/Tran/Pham scientist/PhD sweeps: Quang and Tri already listed, Lynda legal role excluded, Teresa current role held. PEGS generic speaker URL now serves 2027 rather than the indexed 2026 roster; it is not treated as a fresh 2026 appointment verification."
+    },
+    {
+      "employer": "Vertex Pharmaceuticals",
+      "pagesExamined": [
+        "https://www.vrtx.com/our-science/",
+        "https://www.bc.edu/content/bc-web/schools/morrissey/departments/chemistry/research-labs/Hoveyda-research-group/people.html"
+      ],
+      "note": "Nguyen scientist/PhD search and alumni follow-ups. Thach already listed; Giahan Nguyen process analytics lead lacks doctorate and primary role evidence."
+    },
+    {
+      "employer": "AbbVie",
+      "pagesExamined": [
+        "https://www.abbvie.com/science.html",
+        "https://focis-2024.eventscribe.net/fsPopup.asp?PosterID=672289&efp=V1NCUENIVE8yMjAzNA&mode=posterInfo&rnd=0.5338731"
+      ],
+      "note": "Nguyen/Tran scientist/PhD searches; Denny X. Nguyen publication/conference lead lacks doctorate/current primary role source. Ngan process-development and Dean MS-only leads not accepted."
+    },
+    {
+      "employer": "Sanofi",
+      "pagesExamined": [
+        "https://www.sanofi.com/en/our-science",
+        "https://www.bostonsociety.org/APC/images/APC/pdfs/APC2024_Program.pdf",
+        "https://www.mail-archive.com/nmusers%40globomaxnm.com/msg06970.html"
+      ],
+      "note": "Nguyen/Hoang scientist/PhD and modeling searches. Laurent and Eileen already rostered; no new primary-verified researcher."
+    },
+    {
+      "employer": "Biogen",
+      "pagesExamined": [
+        "https://www.biogen.com/science-and-innovation.html",
+        "https://www.biogen.com/science-and-innovation/our-scientists.html",
+        "https://www.biogen.com/content/dam/corporate/international/global/en-US/docs/pdfs/biogen-pharmd%20fellowship-brochure-2023pdf.pdf"
+      ],
+      "note": "Scientist directory has no Nguyen/Tran text in loaded content. Nguyen/Tran/PhD sweeps yielded medical affairs, regulatory, manufacturing-analytics and older byline leads; no new candidate."
+    },
+    {
+      "employer": "Alnylam Pharmaceuticals",
+      "pagesExamined": [
+        "https://www.alnylam.com/our-science",
+        "https://www.slas.org/events-calendar/slas2025-international-conference-exhibition/learn/opportunities-for-students-and-early-career-attendees/meet-the-mentors/",
+        "https://news.alnylam.com/careers-culture/articles/celebrating-pride-month-unlike-any-other"
+      ],
+      "note": "Final direct HTTP read succeeded for the science overview after web-tool access failed. Nguyen/Tran/PhD searches: Tuyen already listed and BS/MS only; Jen Tran story is IT training; no accepted new candidate."
+    },
+    {
+      "employer": "Takeda Pharmaceutical Company",
+      "pagesExamined": [
+        "https://www.takeda.com/science/",
+        "https://sites.google.com/brandeis.edu/krauss-lab/members",
+        "https://www.phpr.purdue.edu/sites/default/files/fellowships/2026%20Fellowship%20Brochure_2.pdf"
+      ],
+      "note": "Science URL inaccessible. Nguyen/Pham/PhD searches; Dung Nguyen held for primary current appointment; Phillip Tran already listed. Regulatory/fellowship leads excluded."
+    },
+    {
+      "employer": "Accelerated Muscle Biotechnologies",
+      "pagesExamined": [
+        "https://ambiotech.us/",
+        "https://ambiotech.us/about/",
+        "https://elischolar.library.yale.edu/gsas_dissertations/385/",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC12918940/"
+      ],
+      "note": "Boston research-publishing biotech examined in depth. Khoi held for strict CTO-role and dedup review; see rejected entry for complete evidence and next action."
+    },
+    {
+      "employer": "Immuneering",
+      "pagesExamined": [
+        "https://immuneering.com/our-story/team/"
+      ],
+      "note": "Full team page examined; Brian BS/research associate and Scott IT excluded."
+    },
+    {
+      "employer": "Xylo Bio",
+      "pagesExamined": [
+        "https://www.xylo.bio/team"
+      ],
+      "note": "Team examined; Jack Nguyen already listed."
+    },
+    {
+      "employer": "Variant Bio",
+      "pagesExamined": [
+        "https://www.variantbio.com/team",
+        "https://coursesandconferences.wellcomeconnectingscience.org/news_item/from-vietnam-to-the-usa-biotech-sector-a-career-journey-focused-on-translating-genetic-findings-into-novel-therapies/"
+      ],
+      "note": "Incidental Seattle lead screened; Khanh-Dung interview is older and current team does not establish appointment. No candidate proposed."
+    },
+    {
+      "employer": "Atara Biotherapeutics",
+      "pagesExamined": [
+        "https://www.atarabio.com/about/leadership/",
+        "https://investors.atarabio.com/sec-filings/all-sec-filings/content/0000950170-24-095526/0000950170-24-095526.pdf"
+      ],
+      "note": "Leadership URL inaccessible; employer filing shows old CSO lead became CEO, so no qualifying current research title established."
+    },
+    {
+      "employer": "Other Boston/SF biotechs",
+      "pagesExamined": [
+        "https://www.shasqi.com/team",
+        "https://pharm.ucsf.edu/wells/people/alumni",
+        "https://lacuna.tiptreesystems.com/author/tan-h-nguyen",
+        "https://avalynpharma.life/about/"
+      ],
+      "note": "Additional discovery sweeps included insitro, Xaira, Denali, Tenaya, Nurix, Revolution Medicines, Frontier, Arcus, Septerna, Ambagon and Enliven; absence of accepted candidates does not establish absence of Vietnamese scientists. Shasqi team inaccessible; Duy Nguyen former-lab/aggregator sources conflict across ArsenalBio/Capstan and are not sufficient for present appointment. Avalyn page timed out. Search results were discovery only; no LinkedIn pages intentionally fetched or logged into."
+    }
+  ]
+}

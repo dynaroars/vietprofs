@@ -1,0 +1,214 @@
+{
+  "verifier": "codex",
+  "input": "maintenance/sector-expansion/us-national-labs.codex.json",
+  "holds": [
+    {
+      "name": "Phuong Pham",
+      "id": "vp-0759",
+      "verdict": "different_person",
+      "reason": "The SRNL chemist has a Kennesaw State chemistry BS and Florida International University chemistry PhD; the live roster profile identifies Phuong V. Pham as an associate professor of physics at National Sun Yat-sen University (https://phys.nsysu.edu.tw/p/405-1181-288358,c9040.php?Lang=en). These are different careers, not a move. Fresh find-roster-matches returned name-only hits vp-0759, vp-0904 (nephrology), vp-1671 (accounting/economics) and vp-3117 (data science; Pierre and Marie Curie doctorate); no identity URL matched. Tests 1, 3 and 5: the individual employer bio identifies a US-based SRNL scientist with Vietnamese given name Phuong. Doctorate is verified, but test 2 remains unresolved: SRNL FY2024 LDRD report, printed page 29, explicitly marks Phuong Pham as a postdoctoral researcher (https://www.srnl.gov/wp-content/uploads/2025/02/FY-2024-LDRD-Annual-Report.pdf; fetched directly and text extracted). The newer 2026 speaker bio uses generic scientist wording without establishing conversion to career staff. No ready entry until that conversion is documented.",
+      "url": "https://www.srnl.gov/speaker/phuong-pham/"
+    },
+    {
+      "name": "Nhan Tran",
+      "id": "vp-1236",
+      "verdict": "different_person",
+      "reason": "PNNL identifies a materials scientist researching battery electrolytes. The live Fermilab page for roster vp-1236 describes a Princeton physics graduate and Johns Hopkins 2011 doctorate working on CMS/Higgs physics (https://computing.fnal.gov/nhan-tran/). The different research programs, employer-linked publications and identity contacts resolve the name collision. All five tests pass for the PNNL researcher using the two recent papers on the individual employer page; do not edit or move vp-1236.",
+      "url": "https://www.pnnl.gov/people/nhan-tran",
+      "candidate": {
+        "entry": {
+          "name": "Nhan Tran",
+          "university": "Pacific Northwest National Laboratory",
+          "institutionType": "Public research institute",
+          "track": "Research",
+          "rank": "Researcher",
+          "country": "United States",
+          "researchAreas": [
+            "Battery materials",
+            "Sodium metal batteries",
+            "Lithium metal batteries",
+            "Electrolytes"
+          ],
+          "profileUrl": "https://www.pnnl.gov/people/nhan-tran"
+        },
+        "evidence": {
+          "currentRole": "https://www.pnnl.gov/people/nhan-tran — live individual employer profile labels Nhan Tran Materials Scientist and provides a PNNL email and US telephone contact. This is a staff research title; the page does not label the appointment postdoctoral, visiting or contractual.",
+          "doctorateOrPapers": "The same employer profile directly attaches two 2024 research papers to this person: Small 20(40), 2402256, doi:10.1002/smll.202402256 (PNNL-SA-193713), and Advanced Functional Materials 34(42), 2407012, doi:10.1002/adfm.202407012 (PNNL-SA-197241). Both are within three years and identity-resolved through the individual employer page. No doctorate institution or year inferred.",
+          "vietnameseSignal": "Vietnamese given name Nhan on the live PNNL profile, beyond the surname Tran. US laboratory appointment/contact establishes an appointment outside Vietnam.",
+          "dedup": "Ran npm run find-roster-matches -- \"Nhan Tran\" --url https://www.pnnl.gov/people/nhan-tran/ : only vp-1236, name-only. Its live Fermilab page describes Princeton physics, Johns Hopkins PhD (2011), CMS/Higgs research (https://computing.fnal.gov/nhan-tran/), distinct from the PNNL battery researcher. A supplementary search for the publication-name lead Thanh-Nhan Tran returned vp-0417 (Rice ECE), vp-0896/vp-0975 (medicine) and retired vp-1190 (Boston College social work); none is this materials scientist. The fuller name was seen only in search results from a publisher page that returned 403, so it is not adopted."
+        }
+      }
+    },
+    {
+      "name": "Tony Nguyen",
+      "id": "vp-1113",
+      "verdict": "different_person",
+      "reason": "The PNNL power-systems engineer has a UIUC electrical-engineering doctorate (2002), CanTho mathematics degree (1989), and continuous PNNL research employment since 2002. The live Rutgers directory identifies vp-1113 as the Rutgers Health associate university librarian (https://www.libraries.rutgers.edu/directory/tony-nguyen); the second name hit vp-0905 is a Kaiser anesthesiologist. These distinct disciplinary/educational histories rule out a move. All five tests pass for the PNNL scientist; use an employer suffix to distinguish the identical name.",
+      "url": "https://www.pnnl.gov/people/tony-nguyen",
+      "candidate": {
+        "entry": {
+          "name": "Tony Nguyen - Pacific Northwest National Laboratory",
+          "university": "Pacific Northwest National Laboratory",
+          "institutionType": "Public research institute",
+          "track": "Research",
+          "rank": "Researcher",
+          "country": "United States",
+          "researchAreas": [
+            "Power system dynamics and stability",
+            "Power systems operation and control",
+            "Distributed generation",
+            "Renewable energy",
+            "System modeling and simulation"
+          ],
+          "profileUrl": "https://www.pnnl.gov/people/tony-nguyen",
+          "phdInstitution": "University of Illinois Urbana-Champaign",
+          "phdYear": 2002
+        },
+        "evidence": {
+          "currentRole": "https://www.pnnl.gov/people/tony-nguyen — live employer bio identifies an Electrical Engineer, continuous PNNL service starting in 2002, research on power/energy systems, and more than 30 scientific publications. The long-running appointment and current employer research output establish a career research role, despite the engineering title.",
+          "doctorateOrPapers": "Same employer page explicitly lists PhD, Electrical Engineering, University of Illinois at Urbana-Champaign, 2002, and links current power-grid research. Canonical institution spelling mapped to University of Illinois Urbana-Champaign.",
+          "vietnameseSignal": "Same page explicitly lists BS Mathematics, CanTho University, Vietnam, 1989. This is affirmative Vietnamese education, not a surname inference. His current appointment is at PNNL in the United States.",
+          "dedup": "Ran npm run find-roster-matches -- \"Tony Nguyen\" --url https://www.pnnl.gov/people/tony-nguyen/ : vp-1113 and vp-0905, both name-only. The live Rutgers page (https://www.libraries.rutgers.edu/directory/tony-nguyen) identifies the health-sciences librarian, with a different email and academic career; vp-0905 is an anesthesiology faculty member at Kaiser Permanente. Neither has the PNNL power-engineering history/UIUC doctorate. Employer suffix disambiguates the otherwise identical stored Tony Nguyen name."
+        }
+      }
+    },
+    {
+      "name": "Minh Duong Nguyen",
+      "id": "vp-0023",
+      "verdict": "different_person",
+      "reason": "The live Wyoming page identifies Duong Ngoc Nguyen, a computer scientist with Michigan State PhD and Purdue MS; the NLR scientist has a Hanyang materials-chemistry PhD and perovskite research. The other eight name-only roster hits have different disciplines/degree histories, with no identity URL match. All five tests pass for the career NLR research technologist with doctorate and ongoing original research. Preserve the employer-published heading Minh Duong Nguyen; do not infer a doctorate year.",
+      "url": "https://research-hub.nlr.gov/en/persons/minh-duong-nguyen/",
+      "candidate": {
+        "entry": {
+          "name": "Minh Duong Nguyen",
+          "university": "National Laboratory of the Rockies",
+          "institutionType": "Public research institute",
+          "track": "Research",
+          "rank": "Researcher",
+          "country": "United States",
+          "researchAreas": [
+            "Perovskite solar cells for space applications",
+            "Semiconductor patterning",
+            "Colloidal semiconducting nanocrystals"
+          ],
+          "profileUrl": "https://research-hub.nlr.gov/en/persons/minh-duong-nguyen/",
+          "department": "Materials Science",
+          "phdInstitution": "Hanyang University"
+        },
+        "evidence": {
+          "currentRole": "https://research-hub.nlr.gov/en/persons/minh-duong-nguyen/ — individual current employer profile identifies Research Technologist III-Materials Science, gives a laboratory email, and describes original perovskite-photovoltaics research. This is the numbered career technologist ladder, not a student/postdoctoral title; ongoing employer-linked 2025–2026 scientific output corroborates the research role.",
+          "doctorateOrPapers": "Same profile explicitly lists PhD, Material Chemistry, Hanyang University. No year supplied. The employer also lists multiple recent papers with Joseph Luther and other laboratory researchers.",
+          "vietnameseSignal": "Vietnamese given names Minh Duong appear in the employer profile heading; its biography also uses Duong Nguyen Minh. This is beyond a shared surname. The current appointment is at the US national laboratory; no Vietnam-based appointment is claimed.",
+          "dedup": "Ran npm run find-roster-matches for both \"Minh Duong Nguyen\" and \"Duong Nguyen Minh\" with the employer URL, and separately with the employer-linked Scholar URL https://scholar.google.com/citations?user=mtGoq3sAAAAJ. Nine name-only hits: vp-0023, vp-0163, vp-0358, vp-0458, vp-0551, vp-1577, vp-1731, vp-1765, vp-2339; no identity URL match. Roster histories are computer science (Michigan State, UBC, Auckland), business (Hawaii, Reading), sociology (East Anglia) or medicine, distinct from Hanyang materials chemistry/perovskites. Live Wyoming page confirms Duong Ngoc Nguyen, Michigan State computer-science PhD (https://www.uwyo.edu/eecs/faculty-staff/faculty/duong-nguyen/index.html). Scholar fetch returned 429; no additional facts were accepted from it."
+        }
+      }
+    },
+    {
+      "name": "Bang Nguyen",
+      "id": "vp-0591",
+      "verdict": "different_person",
+      "reason": "Cambridge vp-0591 is Bang Dang Nguyen, a finance scholar with HEC Paris doctorate; the engineer is Bang L. H. Nguyen, Clarkson PhD (2022). The maintained personal CV identifies current LANL R&D employment beginning 2023, and its publication list bridges to the identical Vu/Panwar/Hovsapian papers on the NLR profile. Thus the NLR listing is a stale affiliation of the engineer, not a move by the Cambridge professor. All five tests pass at LANL using the personal-site exception, confirmed:false. APEC search-result text was not used as verified evidence because the live page could not be fetched.",
+      "url": "https://nlebang.github.io/cv/",
+      "candidate": {
+        "entry": {
+          "name": "Bang L. H. Nguyen",
+          "university": "Los Alamos National Laboratory",
+          "institutionType": "Public research institute",
+          "track": "Research",
+          "rank": "Researcher",
+          "country": "United States",
+          "researchAreas": [
+            "Pulsed power technology",
+            "Radio frequency engineering",
+            "Power electronics",
+            "Power systems",
+            "Machine learning"
+          ],
+          "profileUrl": "https://nlebang.github.io/cv/",
+          "city": "Los Alamos",
+          "state": "New Mexico",
+          "phdInstitution": "Clarkson University",
+          "phdYear": 2022,
+          "confirmed": false,
+          "websiteUrl": "https://nlebang.github.io/"
+        },
+        "evidence": {
+          "currentRole": "https://nlebang.github.io/cv/ — maintained personal CV lists Los Alamos National Laboratory R&D Engineer, February 2023–now, DC and pulsed-power research. Homepage https://nlebang.github.io/ explicitly gives Los Alamos, New Mexico. No individual LANL appointment biography was found, so use the personal CV as the verification source with confirmed:false. Employer corroboration: https://laro.lanl.gov/esploro/outputs/conferenceProceeding/Synopsis-of-Pulse-Modulator-for-Beam/9916500859403761 describes his original LANSCE pulse-modulator research; the 2024 student symposium https://cdn.lanl.gov/files/2024symposiumprojectdescription_8681d.pdf lists Bang Nguyen as an AOT-RFE mentor. These are corroboration, not substitute profile URLs.",
+          "doctorateOrPapers": "https://nlebang.github.io/cv/ explicitly lists Clarkson University PhD, 2019–December 2022, on machine learning and power systems. https://nlebang.github.io/publications/ identifies the same LANSCE paper and the NLR-listed Spatial-Temporal Recurrent Graph Neural Networks paper with Vu, Panwar and Hovsapian, linking the old NREL/NLR record to this person. LANL research output corroborates the R&D role; doctorate satisfies the qualification test.",
+          "vietnameseSignal": "https://nlebang.github.io/cv/ explicitly says Vietnamese, Native speaker. The same CV and homepage locate the current role in Los Alamos, New Mexico, United States.",
+          "dedup": "Ran npm run find-roster-matches for \"Bang Nguyen\" and \"Bang L. H. Nguyen\" with https://nlebang.github.io/, /cv/, /publications/, https://research-hub.nlr.gov/en/persons/bang-nguyen/ and its linked ORCID https://orcid.org/0000-0002-1832-7621. Only name-only hit vp-0591, Bang Dang Nguyen, Cambridge finance/HEC Paris doctorate, distinct from Clarkson electrical/power researcher. Live Cambridge profile https://www.jbs.cam.ac.uk/people/bang-dang-nguyen/ confirms that separate business-school identity. NLR page is stale for the engineer; current employer is LANL."
+        }
+      }
+    },
+    {
+      "name": "Quynh L. Nguyen",
+      "id": "vp-0639",
+      "verdict": "different_person",
+      "reason": "The NVIDIA employer biography identifies Quynh L. Nguyen, formerly a SLAC physicist/group leader, with a JILA/Colorado atomic, molecular and optical physics PhD. Roster vp-0639 is the Bern political-science scholar (ETH Zurich doctorate); her live site still identifies the Bern role (https://quynhnguyenunibern.com/). Fresh dedup returned only name hits vp-0431, vp-0639, vp-0965, vp-1383, vp-1660, vp-1903 and vp-2107; their medical, policy or business identities differ. Current SLAC alumni listing independently says Nvidia (https://heds.slac.stanford.edu/about/people). Do not propose SLAC. Tests 1 and 3 pass at NVIDIA; doctorate passes the qualification component. Test 2 remains insufficiently established: the live employer bio calls the current job product architect and senior alliance manager. Reviewed her technical blogs, including https://developer.nvidia.com/blog/accelerated-x-ray-analysis-for-nanoscale-imaging-xani-of-novel-materials/ and https://developer.nvidia.com/blog/run-gpu-powered-black-hole-interferometry-with-nvidia-cuphoton/; these document coauthored scientific-computing work, but do not establish that her own appointment is a career research position rather than product/developer-relations work. Current physical work location (test 5) is also not explicit in the individual employer bio. No ready entry pending those details.",
+      "url": "https://developer.nvidia.com/blog/author/quynhn/"
+    },
+    {
+      "name": "Nga Thi Thuy Nguyen-Fotiadis",
+      "id": "vp-0324",
+      "verdict": "different_person",
+      "reason": "LANL identifies the full name and ORCID 0000-0003-3672-6666, with quantum/condensed-matter and machine-learning publications. The Wyoming roster identity has a Michigan State electrical-engineering doctorate (2017) and power-grid research, confirmed on its live faculty page (https://www.uwyo.edu/eecs/faculty-staff/faculty/nga-nguyen/index.html). These are different scientific histories. Fresh dedup returned name-only hits vp-0137, vp-0311, vp-0324, vp-0373, vp-0476, vp-0614, vp-1929, vp-2492 and vp-2501; no identity URL matched. Vietnamese given names Nga Thi Thuy pass test 3. Tests 1 and 2 remain unresolved: the live LANL page is an Esploro publication identity without any current job title, and no current individual appointment biography or maintained personal site establishing career staff was found. The historical staff-scientist/condensed-matter report cannot by itself establish a 2026 appointment. No ready entry; verify a current career role before considering addition.",
+      "url": "https://laro.lanl.gov/esploro/profile/nga_nguyenfotiadis"
+    },
+    {
+      "name": "Linh Nguyen",
+      "id": "vp-0184",
+      "verdict": "different_person",
+      "reason": "BNL org chart places Linh Nguyen in Electron Source Development/Laser Group; accelerator research is corroborated by the employer-hosted 2025 AI4EIC presentation (https://indico.bnl.gov/event/28082/contributions/115375/attachments/65897/113203/AI4EIC_2025_Nguyen_presentation.pdf). Roster vp-0184 is Linh Thuy Nguyen, an ethnic-studies scholar: the live UW profile explicitly gives UC San Diego Ethnic Studies PhD (https://aes.washington.edu/people/linh-thuy-nguyen). This is a name collision, not a move of that scholar. Fresh dedup returned numerous name-only matches and no BNL identity URL. Test 3 passes via Vietnamese given name Linh, and BNL work is outside Vietnam. Tests 1 and 2 do not pass: an organization-chart PDF is prohibited as profileUrl; no current individual employer bio or personal site was verified, and no identity-resolved doctorate or two research papers inside the three-year window was established. A 2019 laser talk and 2025 presentation cannot replace that qualification evidence. No ready entry.",
+      "url": "https://www.bnl.gov/orgcharts/ad.pdf"
+    },
+    {
+      "name": "Hoang Nguyen",
+      "id": "vp-0836",
+      "verdict": "different_person",
+      "reason": "LLNL report describes a senior laser scientist leading the HELD optical-gratings team, with contact nguyen7@llnl.gov (https://str.llnl.gov/sites/str/files/2024-04/2023.1.3.pdf). The live USN page for vp-0836 identifies Hoang Vu Nguyen, associate professor in Microsystems, Norway (https://www.usn.no/english/about/contact-us/employees/hoang-vu-nguyen); the roster documents microsystems packaging/intermetallic bonding rather than the longstanding LLNL optical-gratings career. These are distinct employer-linked research identities, not evidence of a move. Fresh dedup returned many name-only matches, no LLNL URL identity hit. Test 3 passes via Vietnamese given name Hoang; LLNL work is outside Vietnam. Tests 1 and 2 remain incomplete: https://people.llnl.gov/nguyen7 returned HTTP 404 on a direct fetch; a scientific-news PDF is not an acceptable profileUrl. No replacement individual employer/personal appointment page, identity-resolved doctorate or two qualifying recent papers was verified. No ready entry.",
+      "url": "https://str.llnl.gov/sites/str/files/2024-04/2023.1.3.pdf"
+    },
+    {
+      "name": "Ngoc A. Nguyen",
+      "id": "vp-1136",
+      "verdict": "same_person_not_moved",
+      "reason": "The live Illinois employer profile identifies Ngoc Anh Nguyen as Research Engineer at Beckman, with Illinois email and ORCID 0000-0002-0278-406X (https://experts.illinois.edu/en/persons/ngoc-anh-nguyen/). Its polymer/additive-manufacturing research agrees with the roster and older ORNL CV. The ORNL PDF explicitly gives Delaware materials-science PhD (2016), HUST MS (2006)/BS (2004), and ORNL postdoctoral research (2016–2018), matching vp-1136 education and career history (https://www.ornl.gov/sites/default/files/CV%20NgocNguyen-ORNL.pdf). Its publication list stops in the older ORNL era, so the enduring PDF is not evidence of a return from Illinois. Fresh dedup matched the exact Illinois profile URL to vp-1136. Keep the existing Illinois identity/employer; do not create another ID or reverse the affiliation from the old CV.",
+      "url": "https://experts.illinois.edu/en/persons/ngoc-anh-nguyen/"
+    },
+    {
+      "name": "Le Thanh Mai Pham",
+      "id": "vp-0579",
+      "verdict": "different_person",
+      "reason": "Sandia biochemical/antibody-machine-learning researcher is distinct from vp-0579: the live Monash profile identifies Thanh Pham in the School of Education and Culture (https://research.monash.edu/en/persons/thanh-pham/). Fresh dedup also found vp-0919 (Shizuoka systems engineering) and vp-1744 (Wollongong business), all name-only, no identity URL hit. Vietnamese full given-name sequence passes test 3. Sandia FY2024 LDRD report identifies Le Thanh Mai Pham as PI and a 2024 article identifies Sandia Livermore affiliation (https://pubmed.ncbi.nlm.nih.gov/38540744/), but these are not a current individual appointment profile. Test 1 fails: no qualifying employer profile or maintained personal role page was found; a PDF/report/publication cannot be substituted. Test 2 is incomplete: PI activity supports research but no current career appointment plus explicit doctorate or two qualifying recent employer papers was independently established. No ready entry; obtain the individual appointment and qualification evidence first.",
+      "url": "https://www.sandia.gov/app/uploads/sites/156/2025/03/Sandia-Natl-Labs-LDRD-FY24-Annual-Report-SAND2025-03370R-R.pdf"
+    },
+    {
+      "name": "Thi Kim Hoang Trinh",
+      "id": "vp-0900",
+      "verdict": "different_person",
+      "reason": "PNNL page identifies Thi Kim Hoang Trinh through peptoid/materials publications and hoang.trinh@pnnl.gov. Live Stanford page for vp-0900 identifies Kim Hoang as Clinical Associate Professor of Pediatrics/Hospital Medicine (https://med.stanford.edu/profiles/178804). Different full names, surname, disciplines and employer-linked records resolve this as a false name-token match; fresh dedup returned only vp-0900, name-only. Test 3 passes via the explicit Vietnamese given-name sequence. Two 2024 papers are attached to the individual PNNL page (doi:10.1002/anie.202403263 and doi:10.1073/pnas.2412358121), satisfying the publication alternative. Tests 1 and 2 remain unresolved because the page supplies no current job title or biography and therefore does not establish a current non-trainee career role. The purported Cornell postdoc lead was not corroborated on a primary current-appointment page and is not accepted; no LinkedIn page was fetched. No ready entry until current employer and career status are verified.",
+      "url": "https://www.pnnl.gov/people/thi-kim-hoang-trinh"
+    },
+    {
+      "name": "Dinh Truong",
+      "id": "vp-1261",
+      "verdict": "different_person",
+      "reason": "Sandia identifies Dinh Truong with its DIII-D fusion/plasma-facing-materials team and coauthors Jonathan Coburn, Jon Watkins and Ryan Hood (https://www.sandia.gov/labnews/2023/01/12/experiments-at-the-heart-of-a-nuclear-reaction/). Roster vp-1261 is the Warwick mechatronics/control researcher Dinh Quang Truong (Ulsan doctorate; James Marco collaboration), corroborated by Warwick repository author biography https://wrap.warwick.ac.uk/id/eprint/139801/7/WRAP-unknown-input-observer-EFIR-combined-estimator-electro-hydraulic-actuator-sensor-fault-tolerant-control-application-Nahian-2020.pdf. These distinct research/coauthor records support a name collision rather than a move; fresh dedup returned only vp-1261, name-only. Vietnamese name tokens pass test 3; Sandia DIII-D research is outside Vietnam. Tests 1 and 2 fail verification: the 2023 news story is not a current individual profile, and neither a research doctorate nor two identity-resolved recent employer papers together with career staff status was established. No ready entry; the Sandia researcher needs an individual current appointment source and qualification evidence.",
+      "url": "https://www.sandia.gov/labnews/2023/01/12/experiments-at-the-heart-of-a-nuclear-reaction/"
+    }
+  ],
+  "candidates": [
+    {
+      "name": "Binh Pham",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Independently opened https://inl.elsevierpure.com/en/persons/binh-pham/: live individual employer bio identifies the current INL scientific data-analysis role, original reactor/sensor/statistical research and electronic-engineering PhD from Moscow Power Engineering Institute. The career research activity and current employer profile support test 2; no trainee title is stated. Vietnamese given name Binh passes test 3. US national-lab appointment passes test 5. Fresh npm run find-roster-matches with the employer URL and linked ORCID https://orcid.org/0000-0001-6695-6150 returned no roster or retired-ID matches. Proposed fields are supported. Retain omitted phdYear rather than copying an inconsistent year from the producer."
+    },
+    {
+      "name": "Tin Thien Phan",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Independently opened https://tintphan.wixsite.com/academics, its linked CV page and current PDF https://71161e2f-bb90-45d5-b13d-3c9f33d9ab00.filesusr.com/ugd/90b8bd_123cfbffe3d84d03807c6243fc84d446.pdf?index=true. Personal site explicitly identifies LANL staff scientist; CV page 1 separates Staff Scientist June 2025–present from earlier postdocs and gives Los Alamos, New Mexico plus Arizona State applied-mathematics PhD completed July 2021. Live LANL Esploro profile https://laro.lanl.gov/esploro/profile/tin_phan matches the full name and ORCID but has no appointment title; preserve confirmed:false and the personal profileUrl under the explicit exception. ASU primary source https://news.asu.edu/20160509-asu-grad-mathematics-something-i-am-meant-do explicitly identifies his origin as Quy Nhon, Vietnam. Fresh find-roster-matches with personal homepage, CV page/PDF, LANL identity page and ORCID returned no roster or retired-ID matches. All five tests pass; do not infer employer confirmation from the publication profile."
+    }
+  ]
+}

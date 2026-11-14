@@ -1,0 +1,70 @@
+{
+  "verifier": "codex",
+  "input": "maintenance/sector-expansion/us-biomed-institutes.codex.json",
+  "holds": [
+    {
+      "name": "Quynh Tran",
+      "id": "vp-1518",
+      "verdict": "unclear",
+      "reason": "Identity remains unresolved. maintenance/retired-ids.json says the Innsbruck entry was created without a real source and explicitly anticipates possible ID reuse. It supplies no education, field, coauthors, or reliable identity URL to compare. The live St. Jude page individually identifies Quynh Tran, PhD, as Senior Bioinformatics Research Scientist, but supplies no Innsbruck connection. A live search did not establish an Innsbruck scholar of this identity. Neither a move nor a distinct person is proven; absence of a connection is not proof of difference. Do not allocate a new ID or assert a move. Next action: recover reliable original identity evidence or obtain owner identity resolution before deciding whether vp-1518 should be reused.",
+      "url": "https://www.stjude.org/research/labs/orr-lab/orr-lab-team.html",
+      "schemaNote": "HOLDS.md offers only three conclusive verdicts, none supported here. Using the unresolved verdict unclear from VERIFY.md rather than inventing an identity conclusion.",
+      "tests": {
+        "1": "Pass: the employer team page singles out this person in an individual named role card.",
+        "2": "PhD and senior career research-scientist title are explicit; no trainee designation.",
+        "3": "Vietnamese given name Quynh plus Tran.",
+        "4": "Unresolved retired-ID match: npm run find-roster-matches -- \"Quynh Tran\" --url https://www.stjude.org/research/labs/orr-lab/orr-lab-team.html --url https://www.stjude.org/research/why-st-jude/biohackathon.html returned vp-1518 only.",
+        "5": "The employer page gives Memphis, Tennessee, USA."
+      }
+    },
+    {
+      "name": "Le Xuan (Truong) Nguyen",
+      "id": "vp-3036",
+      "verdict": "different_person",
+      "reason": "The UTMB clinician has a 1999 Houston MD and 2003 obstetrics/gynecology residency (https://doctors.utmbhealth.com/profile/007323); City of Hope documents a 2004 biotechnology BSc, 2010 Korean molecular-biology PhD, and leukemia research. The careers and education distinguish them. All four other name hits were inspected live: vp-0079 is UCSD electrical engineering (https://profiles.ucsd.edu/truong.nguyen); vp-1592 has a 2018 Liverpool John Moores PhD in a cybersecurity career (https://www.gla.ac.uk/schools/computing/staff/nguyentruong/); vp-1742 is an economist with a UNSW PhD (https://experts.deakin.edu.au/5685-xuan-nguyen); vp-1878 is a long-established energy engineer (https://www.umu.se/en/staff/truong-nguyen/). These are distinct namesakes, not moves.",
+      "url": "https://www.cityofhope.org/research/find-a-scientist/truong-nguyen",
+      "candidate": {
+        "entry": {
+          "name": "Le Xuan (Truong) Nguyen",
+          "university": "City of Hope",
+          "institutionType": "Independent nonprofit research institute",
+          "track": "Research",
+          "rank": "Researcher",
+          "department": "Department of Hematology & Hematopoietic Cell Transplantation",
+          "city": "Duarte",
+          "state": "California",
+          "country": "United States",
+          "researchAreas": [
+            "Leukemia stem cells",
+            "Treatment resistance"
+          ],
+          "phdInstitution": "Sungkyunkwan University",
+          "phdYear": 2010,
+          "undergradInstitution": "Vietnam National University",
+          "undergradYear": 2004,
+          "profileUrl": "https://www.cityofhope.org/research/find-a-scientist/truong-nguyen"
+        },
+        "evidence": {
+          "currentRole": "https://www.cityofhope.org/research/find-a-scientist/truong-nguyen — live individual employer profile: Assistant Professor since 2023; career research roles there since 2017. Duarte address. Tests 1, 2 and 5 pass.",
+          "doctorateOrPapers": "https://www.cityofhope.org/research/find-a-scientist/truong-nguyen — 2010 molecular-biology PhD; education section also supplies the BSc.",
+          "vietnameseSignal": "https://www.cityofhope.org/research/find-a-scientist/truong-nguyen — Vietnamese language and Vietnamese undergraduate education. Test 3 passes.",
+          "dedup": "npm run find-roster-matches -- \"Le Xuan (Truong) Nguyen\" --url https://www.cityofhope.org/research/find-a-scientist/truong-nguyen --url https://www.cityofhope.org/research/hematologic-malignancies-research-institute/gehr-family-center-for-leukemia-research/le-xuan-truong-nguyen-lab returned vp-0079, vp-1592, vp-1742, vp-1878, vp-3036 on names only. All ruled out using the live employer profiles detailed above; no identity URL matches. Test 4 passes after identity resolution."
+        }
+      }
+    }
+  ],
+  "candidates": [
+    {
+      "name": "Howard Hang",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "All five tests pass. https://www.scripps.edu/faculty/hang/ is a live individual employer profile documenting a current immunology/microbiology professorship, laboratory research, 2003 Berkeley PhD and 1998 UC Santa Cruz BSc. https://magazine.scripps.edu/profiles/2021/fall/it-takes-guts/ explicitly establishes Vietnamese origin and childhood immigration to the United States. The magazine timed out in the web tool, but an ordinary requests.get independently returned HTTP 200 and its text was read. The supplied US appointment and education fields are supported. npm run find-roster-matches -- \"Howard Hang\" --url https://www.scripps.edu/faculty/hang/ --url https://magazine.scripps.edu/profiles/2021/fall/it-takes-guts/ returned no roster or retired-id matches."
+    },
+    {
+      "name": "Tam Tran",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "All five tests pass. https://www.stjude.org/research/departments/pathology/research-division/atg-core.html names Tam Tran, PhD, Scientist in an individual details card with Pathology/ATG affiliations. https://www.stjude.org/research/labs/xu-jian-lab/xu-jian-lab-team.html independently lists the same PhD scientist among current personnel, separately from explicitly labeled postdoctoral associates. These support the institute career scientist role; no trainee or temporary qualifier is given. This is a team page that singles out the individual, satisfying test 1, rather than an anonymous team-wide reference. Tam plus Tran supplies the brief-permitted Vietnamese given-name signal; the employer address is Memphis, Tennessee, USA. Doctoral institution/year remain unknown and appropriately omitted. npm run find-roster-matches -- \"Tam Tran\" --url https://www.stjude.org/research/departments/pathology/research-division/atg-core.html --url https://www.stjude.org/research/labs/xu-jian-lab/xu-jian-lab-team.html returned no roster or retired-id matches."
+    }
+  ]
+}

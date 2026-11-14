@@ -1,0 +1,152 @@
+{
+  "verifier": "agy",
+  "input": "maintenance/sector-expansion/us-federal-science.codex.json",
+  "candidates": [
+    {
+      "name": "Doanh Tran",
+      "verdict": "fail",
+      "failedTests": [
+        1
+      ],
+      "reason": "The submitted profileUrl (https://www.fda.gov/media/194885/download) is a downloadable PDF document (September 2026 public workshop agenda and speaker bios), which is explicitly unacceptable under Test 1 ('Not acceptable as profileUrl: a homepage/landing page, a news story, a publication or PDF, ORCID, Scholar, ResearchGate, LinkedIn, a team-wide page that does not single out the person, or a former employer'). The FDA does not publish individual HTML staff profile pages for CDER review division leadership, and no personal website or portfolio stating his current appointment exists. Although Dr. Tran holds a PhD, serves as Deputy Director of the Division of Cardiometabolic and Endocrine Pharmacology with qualifying peer-reviewed clinical pharmacology publications (satisfying test 2), possesses an affirmative Vietnamese given name ('Doanh', test 3), passed dedup screening (test 4), and is US-based (test 5), he cannot be admitted to the roster without an acceptable profileUrl that meets Test 1."
+    }
+  ],
+  "possible_move": [
+    {
+      "name": "An Dang Do",
+      "id": "vp-0450",
+      "verdict": "not_moved",
+      "newEmployer": null,
+      "url": "https://www.faculty.uci.edu/profile/?facultyId=6080",
+      "reason": "vp-0450 is Dr. An H. Do, MD, Associate Professor of Neurology at the University of California, Irvine. Live institutional profile at https://www.faculty.uci.edu/profile/?facultyId=6080 confirms he remains an active faculty member at UC Irvine specializing in neurorehabilitation and brain-computer interfaces; he has not moved. The researcher identified at NICHD/NIH is Dr. An Ngoc Dang Do, MD, PhD (https://annualreport.nichd.nih.gov/dangdo.html and https://www.nichd.nih.gov/about/org/dir/osd/mt/cd/staff), an Assistant Clinical Investigator / Unit Head in pediatric endocrinology and metabolic genetics. They are two distinct scholars sharing parts of a name, not a move of vp-0450."
+    },
+    {
+      "name": "Thao Tran",
+      "id": "vp-0463",
+      "verdict": "not_moved",
+      "newEmployer": null,
+      "url": "https://www.uml.edu/sciences/mathematics/people/tran-thao.aspx",
+      "reason": "vp-0463 is Dr. Thao Tran, Assistant Professor in the Department of Mathematics and Statistics at the University of Massachusetts Lowell. Live employer page at https://www.uml.edu/sciences/mathematics/people/tran-thao.aspx confirms she is active at UMass Lowell researching low-dimensional topology and geometric group theory; she has not moved. The USDA ARS employee (Thao Tran, Microbiologist, Albany CA, https://www.ars.usda.gov/people-locations/person?person-id=57546) is a different individual in an unrelated discipline."
+    },
+    {
+      "name": "Thao Tran",
+      "id": "vp-1699",
+      "verdict": "not_moved",
+      "newEmployer": null,
+      "url": "https://www.rmit.edu.au/profiles/t/thao-tran2",
+      "reason": "vp-1699 is Dr. Vuong Thao Tran, Senior Lecturer in Economics, Finance and Marketing at RMIT University in Melbourne, Australia. Live profile at https://www.rmit.edu.au/profiles/t/thao-tran2 confirms active ongoing employment at RMIT University; she has not moved. The USDA ARS Albany microbiologist is a distinct person."
+    },
+    {
+      "name": "Thao Tran",
+      "id": "vp-2058",
+      "verdict": "not_moved",
+      "newEmployer": null,
+      "url": "https://www.clemson.edu/science/academics/departments/chemistry/about/profiles/thao",
+      "reason": "vp-2058 is Dr. Thao Tran Dominy, Associate Professor in the Department of Chemistry at Clemson University. Live profile at https://www.clemson.edu/science/academics/departments/chemistry/about/profiles/thao confirms she is an active faculty member at Clemson University; she has not moved. She is distinct from the USDA ARS microbiologist."
+    },
+    {
+      "name": "Thao Tran",
+      "id": "vp-2540",
+      "verdict": "not_moved",
+      "newEmployer": null,
+      "url": "https://tree.univ-pau.fr/fr/organisation/membres/cv-ttran6-fr.html",
+      "reason": "vp-2540 is Dr. Thao Tran, Maître de conférences (Associate Professor) in Geography at Université de Pau et des Pays de l’Adour (TREE laboratory) in France. Live directory profile at https://tree.univ-pau.fr/fr/organisation/membres/cv-ttran6-fr.html confirms her active appointment at UPPA; she has not moved. She is distinct from the USDA ARS microbiologist."
+    },
+    {
+      "name": "Thao Tran",
+      "id": "vp-2865",
+      "verdict": "not_moved",
+      "newEmployer": null,
+      "url": "https://search.asu.edu/profile/1991143",
+      "reason": "vp-2865 is Dr. Alisia (Giac-Thao) Tran, Associate Professor of Counseling and Counseling Psychology at Arizona State University. Live directory profile at https://search.asu.edu/profile/1991143 confirms her active appointment at ASU; she has not moved. She is distinct from the USDA ARS microbiologist."
+    },
+    {
+      "name": "Duong T. Nguyen",
+      "id": "vp-0023",
+      "verdict": "not_moved",
+      "newEmployer": null,
+      "url": "https://www.uwyo.edu/eecs/faculty-staff/faculty/duong-nguyen/index.html",
+      "reason": "vp-0023 is Dr. Duong Nguyen, Assistant Professor in the Department of Electrical Engineering and Computer Science at the University of Wyoming. Live faculty profile at https://www.uwyo.edu/eecs/faculty-staff/faculty/duong-nguyen/index.html confirms he is active at UWyo; he has not moved. The CDC NCHS Chief Medical Officer (Dr. Duong T. Nguyen, MD) is a distinct individual in medicine/epidemiology."
+    },
+    {
+      "name": "Duong T. Nguyen",
+      "id": "vp-0358",
+      "verdict": "not_moved",
+      "newEmployer": null,
+      "url": "https://search.asu.edu/profile/3714024",
+      "reason": "vp-0358 is Dr. Duong Nguyen, Assistant Professor in the School of Electrical, Computer and Energy Engineering at Arizona State University. Live directory profile at https://search.asu.edu/profile/3714024 confirms he is active at ASU; he has not moved. He is distinct from the CDC NCHS physician."
+    },
+    {
+      "name": "Duong T. Nguyen",
+      "id": "vp-1228",
+      "verdict": "not_moved",
+      "newEmployer": null,
+      "url": "https://netl.doe.gov/node/13265",
+      "reason": "vp-1228 is Dr. Thuy-Duong Nguyen-Phan, Materials Engineering and Manufacturing researcher at the National Energy Technology Laboratory (NETL). Live official publication release at https://netl.doe.gov/node/13265 confirms her research at NETL on catalytic CO2 conversion; she has not moved. She is distinct from the CDC NCHS medical officer."
+    },
+    {
+      "name": "Duong T. Nguyen",
+      "id": "vp-1248",
+      "verdict": "not_moved",
+      "newEmployer": null,
+      "url": "https://mrclmb.ac.uk/research-leaders/kelly-nguyen/",
+      "reason": "vp-1248 is Dr. Thi Hoang Duong (Kelly) Nguyen, Programme Leader in the Structural Studies Division at the MRC Laboratory of Molecular Biology in Cambridge, UK. Live lab page at https://mrclmb.ac.uk/research-leaders/kelly-nguyen/ confirms her active appointment at MRC LMB; she has not moved. She is distinct from the CDC NCHS medical officer."
+    },
+    {
+      "name": "Duong T. Nguyen",
+      "id": "vp-1630",
+      "verdict": "not_moved",
+      "newEmployer": null,
+      "url": "https://drug.ku.dk/staff/?pure=en/persons/729949",
+      "reason": "vp-1630 is Dr. Trinh Trung Duong Nguyen, Assistant Professor of Pharmaceutical Informatics in the Department of Drug Design and Pharmacology at the University of Copenhagen. Live institutional profiles at https://drug.ku.dk/staff/?pure=en/persons/729949 and https://research.ku.dk/search/result/?pure=en/persons/729949 confirm his active appointment at the University of Copenhagen; he has not moved. He is distinct from the CDC NCHS medical officer."
+    },
+    {
+      "name": "Christine Pham Nguyen",
+      "id": "vp-0116",
+      "verdict": "not_moved",
+      "newEmployer": null,
+      "url": "https://www.niu.edu/cnguyen/index.shtml",
+      "reason": "vp-0116 is Dr. Christine Nguyen, Associate Professor of Industrial and Systems Engineering at Northern Illinois University. Live faculty profile at https://www.niu.edu/cnguyen/index.shtml confirms her active appointment at NIU; she has not moved. The FDA CDER official (Dr. Christine Pham Nguyen, MD, UCSF) is a distinct individual in medicine/rare diseases."
+    },
+    {
+      "name": "Christine Pham Nguyen",
+      "id": "vp-0150",
+      "verdict": "not_moved",
+      "newEmployer": null,
+      "url": "https://www.monmouth.edu/directory/profiles/npham/",
+      "reason": "vp-0150 is Dr. Nguyen Pham, Associate Professor of Marketing and International Business at Monmouth University. Live directory profile at https://www.monmouth.edu/directory/profiles/npham/ confirms his active appointment at Monmouth University; he has not moved. He is distinct from the FDA CDER official."
+    },
+    {
+      "name": "Christine Pham Nguyen",
+      "id": "vp-0678",
+      "verdict": "not_moved",
+      "newEmployer": null,
+      "url": "https://findanexpert.unimelb.edu.au/profile/25627-christine-nguyen",
+      "reason": "vp-0678 is Associate Professor Christine Nguyen in the Department of Optometry and Vision Sciences at the University of Melbourne. Institutional directory records at https://findanexpert.unimelb.edu.au/profile/25627-christine-nguyen confirm her ongoing faculty appointment in Australia; she has not moved. She is distinct from the FDA CDER official."
+    },
+    {
+      "name": "Christine Pham Nguyen",
+      "id": "vp-2295",
+      "verdict": "not_moved",
+      "newEmployer": null,
+      "url": "https://www.hpu.edu/faculty/nursing/christine-nguyen.html",
+      "reason": "vp-2295 is Dr. Christine Nguyen, Assistant Professor of Nursing at Hawaiʻi Pacific University. Live faculty profile at https://www.hpu.edu/faculty/nursing/christine-nguyen.html confirms her active appointment at HPU; she has not moved. She is distinct from the FDA CDER official."
+    },
+    {
+      "name": "Christine Pham Nguyen",
+      "id": "vp-2362",
+      "verdict": "not_moved",
+      "newEmployer": null,
+      "url": "https://physicians.wustl.edu/people/christine-pham-md/",
+      "reason": "vp-2362 is Dr. Christine T. Pham, Professor of Medicine (Rheumatology) and Pathology & Immunology at Washington University in St. Louis. Live clinical and faculty profile at https://physicians.wustl.edu/people/christine-pham-md/ confirms her active appointment at WUSTL; she has not moved. She is distinct from the FDA CDER official."
+    },
+    {
+      "name": "Christine Pham Nguyen",
+      "id": "vp-2399",
+      "verdict": "not_moved",
+      "newEmployer": null,
+      "url": "https://www.westernu.edu/bios/?bio=ctpham",
+      "reason": "vp-2399 is Dr. Christine Pham, Assistant Professor of Optometry at Western University of Health Sciences. Live directory profile at https://www.westernu.edu/bios/?bio=ctpham confirms her active appointment at WesternU; she has not moved. She is distinct from the FDA CDER official."
+    }
+  ]
+}

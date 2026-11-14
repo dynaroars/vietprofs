@@ -1,0 +1,552 @@
+{
+  "group": "au-medical-institutes",
+  "agent": "agy",
+  "finishedAt": "2026-11-14T22:38:00.000Z",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Quan Nguyen",
+        "university": "QIMR Berghofer Medical Research Institute",
+        "institutionType": "Independent nonprofit research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Genomics and Machine Learning Laboratory",
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia",
+        "researchAreas": [
+          "Spatial Multi-omics",
+          "Machine Learning",
+          "Single-cell Genomics",
+          "Bioinformatics",
+          "Cancer Systems Biology"
+        ],
+        "phdInstitution": "The University of Queensland",
+        "phdYear": 2013,
+        "profileUrl": "https://www.qimrberghofer.edu.au/our-people/associate-professor-quan-nguyen"
+      },
+      "evidence": {
+        "currentRole": "https://www.qimrberghofer.edu.au/our-people/associate-professor-quan-nguyen — \"Head of the Genomics and Machine Learning Laboratory at the QIMR Berghofer Medical Research Institute (QIMR Berghofer)\"; also Scientific Director of QIMRB National Centre for Spatial Tissue and AI Research (NCSTAR) and NHMRC Leadership Fellow (EL2).",
+        "doctorateOrPapers": "https://www.qimrberghofer.edu.au/our-people/associate-professor-quan-nguyen — PhD in Bioengineering from The University of Queensland (2013); postdoctoral research at RIKEN Institute (Japan); ARC DECRA Fellow.",
+        "vietnameseSignal": "Vietnamese given name Quan and surname Nguyen; international research on spatial transcriptomics including co-chairing the SpatioTemporal Omics Consortium (STOC).",
+        "dedup": "npm run find-roster-matches -- \"Quan Nguyen\" --url https://www.qimrberghofer.edu.au/our-people/associate-professor-quan-nguyen returned hits for Quan Nguyen at USC (vp-0119), Stanford (vp-0726), Sussex (vp-0968), UTS (vp-1736), Saskatchewan (vp-2193), Thompson Rivers (vp-2194), and PNNL (vp-2977); none is Quan Nguyen at QIMR Berghofer / UQ."
+      }
+    },
+    {
+      "entry": {
+        "name": "Cattram Nguyen",
+        "university": "Murdoch Children's Research Institute",
+        "institutionType": "Independent nonprofit research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Asia-Pacific Health Group",
+        "city": "Melbourne",
+        "state": "Victoria",
+        "country": "Australia",
+        "researchAreas": [
+          "Biostatistics",
+          "Vaccine Evaluation",
+          "Pneumococcal Disease",
+          "Infectious Disease Epidemiology",
+          "Clinical Trials"
+        ],
+        "phdInstitution": "University of Melbourne",
+        "phdYear": 2014,
+        "profileUrl": "https://www.mcri.edu.au/users/dr-cattram-nguyen"
+      },
+      "evidence": {
+        "currentRole": "https://www.mcri.edu.au/users/dr-cattram-nguyen — \"Senior Research Fellow in the Asia-Pacific Health group at the Murdoch Children's Research Institute (MCRI)\".",
+        "doctorateOrPapers": "PhD in Biostatistics from the University of Melbourne (2014); lead trial statistician on pneumococcal conjugate vaccine (PCV) reduced-dose and impact trials across the Asia-Pacific.",
+        "vietnameseSignal": "Vietnamese given name Cattram (Cát Trâm) and surname Nguyen; lead statistician on major trial evaluation cohorts conducted in Vietnam.",
+        "dedup": "npm run find-roster-matches -- \"Cattram Nguyen\" --url https://www.mcri.edu.au/users/dr-cattram-nguyen returned no roster or retired-id matches."
+      }
+    },
+    {
+      "entry": {
+        "name": "Minh Pham",
+        "university": "Murdoch Children's Research Institute",
+        "institutionType": "Independent nonprofit research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Global Adolescent Health Group",
+        "city": "Melbourne",
+        "state": "Victoria",
+        "country": "Australia",
+        "researchAreas": [
+          "Global Adolescent Health",
+          "Public Health",
+          "Mental Health",
+          "Sexual and Reproductive Health",
+          "Health Disparities"
+        ],
+        "undergradInstitution": "Hanoi Medical University",
+        "phdInstitution": "Monash University",
+        "phdYear": 2018,
+        "profileUrl": "https://www.mcri.edu.au/users/minh-pham"
+      },
+      "evidence": {
+        "currentRole": "https://www.mcri.edu.au/users/minh-pham — \"Dr. Minh Pham (Minh Duc Pham) is a Senior Research Fellow within the Infection, Immunity and Global Health research area and the Global Adolescent Health group at Murdoch Children's Research Institute\".",
+        "doctorateOrPapers": "https://www.mcri.edu.au/users/minh-pham — MD from Hanoi Medical University (1992–1998); MPH from University of Alabama at Birmingham (2003–2005); PhD in Public Health from Monash University (2014–2018).",
+        "vietnameseSignal": "Medical degree (MD) awarded by Hanoi Medical University in Vietnam (1998); full Vietnamese name Minh Duc Pham (Phạm Đức Minh); published on healthcare disparities for marginalized groups in Vietnam.",
+        "dedup": "npm run find-roster-matches -- \"Minh Pham\" --url https://www.mcri.edu.au/users/minh-pham returned hits for Minh Pham at SF State (vp-0420), Imperial (vp-0592), IMT Mines Albi (vp-1225), Bretagne Sud (vp-1479), Stanford (vp-2254), and Mistral AI (vp-3263); none is Minh Duc Pham at MCRI."
+      }
+    },
+    {
+      "entry": {
+        "name": "Ha Trong Nguyen",
+        "university": "The Kids Research Institute Australia",
+        "institutionType": "Independent nonprofit research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Development and Disability",
+        "city": "Perth",
+        "state": "Western Australia",
+        "country": "Australia",
+        "researchAreas": [
+          "Health Economics",
+          "Labour Economics",
+          "Applied Econometrics",
+          "Child Development",
+          "Environmental Economics"
+        ],
+        "undergradInstitution": "National Economics University",
+        "phdInstitution": "Australian National University",
+        "profileUrl": "https://www.thekids.org.au/about-us/our-people/n/ha-nguyen/"
+      },
+      "evidence": {
+        "currentRole": "https://www.thekids.org.au/about-us/our-people/n/ha-nguyen/ — \"Senior Research Fellow at The Kids Research Institute Australia (formerly Telethon Kids Institute)\"; also Senior Research Fellow at ARC Life Course Centre and Adjunct Senior Research Fellow at UWA.",
+        "doctorateOrPapers": "PhD in Economics from the Australian National University (ANU); extensive publication record in Journal of Health Economics, Journal of Environmental Economics and Management, and American Journal of Health Economics.",
+        "vietnameseSignal": "Undergraduate degree from National Economics University (NEU) in Hanoi, Vietnam; published research on Vietnam's transition economy and labour market; full Vietnamese name Ha Trong Nguyen (Nguyễn Trọng Hà).",
+        "dedup": "npm run find-roster-matches -- \"Ha Trong Nguyen\" --url https://www.thekids.org.au/about-us/our-people/n/ha-nguyen/ returned hits for Ha Nguyen at UW (vp-0322), Middle Georgia (vp-0336), CSUDH (vp-0366), UNC (vp-0754), and Intelligent Optical Systems (vp-3231); none is Ha Trong Nguyen at The Kids / ANU."
+      }
+    },
+    {
+      "entry": {
+        "name": "Vu Vuong",
+        "university": "The Kids Research Institute Australia",
+        "institutionType": "Independent nonprofit research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Human Development and Community Wellbeing Team",
+        "city": "Perth",
+        "state": "Western Australia",
+        "country": "Australia",
+        "researchAreas": [
+          "Health Economics",
+          "Applied Microeconomics",
+          "Impact Evaluation",
+          "Disability Studies",
+          "Indigenous Child Health"
+        ],
+        "phdInstitution": "The University of Western Australia",
+        "profileUrl": "https://www.thekids.org.au/about-us/our-people/v/vu-vuong/"
+      },
+      "evidence": {
+        "currentRole": "https://www.thekids.org.au/about-us/our-people/v/vu-vuong/ — \"Dr Vu Vuong is a Senior Research Officer within the Human Development and Community Wellbeing Team at The Kids Research Institute Australia (formerly Telethon Kids Institute)\".",
+        "doctorateOrPapers": "PhD in Economics from The University of Western Australia (UWA); research on impact evaluation of health and education interventions published in international economics journals.",
+        "vietnameseSignal": "Vietnamese given name Vu and surname Vuong (Vương Vũ / Vũ Vương); applied microeconomist educated in Australia.",
+        "dedup": "npm run find-roster-matches -- \"Vu Vuong\" --url https://www.thekids.org.au/about-us/our-people/v/vu-vuong/ returned no roster or retired-id matches."
+      }
+    },
+    {
+      "entry": {
+        "name": "Hai Vu Nguyen",
+        "university": "WEHI",
+        "institutionType": "Independent nonprofit research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Blood Cells and Blood Cancer Division",
+        "city": "Melbourne",
+        "state": "Victoria",
+        "country": "Australia",
+        "researchAreas": [
+          "Cancer Biology",
+          "Molecular Genetics",
+          "Apoptosis",
+          "MYC-driven Lymphoma",
+          "Transcription Factors"
+        ],
+        "phdInstitution": "University of Melbourne",
+        "phdYear": 2010,
+        "profileUrl": "https://www.wehi.edu.au/people/hai-vu-nguyen"
+      },
+      "evidence": {
+        "currentRole": "https://www.wehi.edu.au/people/hai-vu-nguyen — \"Senior Research Officer within the Strasser Laboratory, Blood Cells & Blood Cancer division at WEHI (Walter and Eliza Hall Institute of Medical Research)\".",
+        "doctorateOrPapers": "PhD in Medical Biology from the University of Melbourne / WEHI (2010); published landmark studies on MYC and MNT regulation in lymphoma in Blood and Cancer Cell.",
+        "vietnameseSignal": "Vietnamese given name Hai and middle name Vu with surname Nguyen (Hải Vũ Nguyễn).",
+        "dedup": "npm run find-roster-matches -- \"Hai Vu Nguyen\" --url https://www.wehi.edu.au/people/hai-vu-nguyen returned hits for name variants across US and Australian universities; none matches Hai Vu Nguyen at WEHI."
+      }
+    },
+    {
+      "entry": {
+        "name": "Nghi Huu Nguyen",
+        "university": "WEHI",
+        "institutionType": "Independent nonprofit research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Chemical Biology Division",
+        "city": "Melbourne",
+        "state": "Victoria",
+        "country": "Australia",
+        "researchAreas": [
+          "Chemical Biology",
+          "Medicinal Chemistry",
+          "Drug Discovery",
+          "Antimalarial Agents",
+          "Antiparasitic Therapeutics"
+        ],
+        "phdInstitution": "La Trobe University",
+        "phdYear": 2013,
+        "profileUrl": "https://www.wehi.edu.au/people/nghi-nguyen"
+      },
+      "evidence": {
+        "currentRole": "https://www.wehi.edu.au/people/nghi-nguyen — \"Senior Research Officer in the Sleebs Lab within WEHI's Chemical Biology division\".",
+        "doctorateOrPapers": "PhD in Chemistry from La Trobe University (2013), thesis: \"Synthesis of substituted beta3-amino acid derivatives utilising the 4-substituted-1,3-oxazinan-6-one scaffold\"; active publication output in medicinal chemistry and drug discovery.",
+        "vietnameseSignal": "Vietnamese given name Nghi and middle name Huu with surname Nguyen (Nghi Hữu Nguyễn).",
+        "dedup": "npm run find-roster-matches -- \"Nghi Nguyen\" --url https://www.wehi.edu.au/people/nghi-nguyen returned vp-0773 Nghi Nhan Nguyen at National Formosa University (Taiwan); distinct person."
+      }
+    },
+    {
+      "entry": {
+        "name": "William Nguyen",
+        "university": "WEHI",
+        "institutionType": "Independent nonprofit research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Chemical Biology Division",
+        "city": "Melbourne",
+        "state": "Victoria",
+        "country": "Australia",
+        "researchAreas": [
+          "Chemical Biology",
+          "Medicinal Chemistry",
+          "Antimalarials",
+          "Plasmodium falciparum",
+          "Drug Discovery"
+        ],
+        "phdInstitution": "Monash University",
+        "profileUrl": "https://www.wehi.edu.au/people/william-nguyen"
+      },
+      "evidence": {
+        "currentRole": "https://www.wehi.edu.au/people/william-nguyen — \"Senior Research Officer in the Sleebs Lab (within WEHI's Chemical Biology division)\".",
+        "doctorateOrPapers": "PhD in Medicinal Chemistry from Monash University (Monash Institute of Pharmaceutical Sciences - MIPS); author on multiple papers in J. Med. Chem., Nature Communications, and Antimicrob. Agents Chemother.",
+        "vietnameseSignal": "Vietnamese surname Nguyen with long-term career appointment in Australian chemical biology and drug discovery research.",
+        "dedup": "npm run find-roster-matches -- \"William Nguyen\" --url https://www.wehi.edu.au/people/william-nguyen returned no roster or retired-id matches."
+      }
+    },
+    {
+      "entry": {
+        "name": "Tan Nguyen",
+        "university": "WEHI",
+        "institutionType": "Independent nonprofit research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "ACRF Cancer Biology and Stem Cells Division",
+        "city": "Melbourne",
+        "state": "Victoria",
+        "country": "Australia",
+        "researchAreas": [
+          "Innate Immunity",
+          "RNA Regulation",
+          "Cancer Biology",
+          "SIDT2",
+          "Antiviral Defense"
+        ],
+        "phdInstitution": "University of Melbourne",
+        "profileUrl": "https://www.wehi.edu.au/people/tan-nguyen"
+      },
+      "evidence": {
+        "currentRole": "https://www.wehi.edu.au/people/tan-nguyen — \"Senior Research Officer in the Wickramasinghe Lab at WEHI (Walter and Eliza Hall Institute of Medical Research)\".",
+        "doctorateOrPapers": "PhD in Medical Biology from the University of Melbourne / WEHI; lead author of landmark Immunity (2017) study establishing SIDT2 as an endosomal transporter for double-stranded viral RNA.",
+        "vietnameseSignal": "Vietnamese given name Tan and surname Nguyen (Tân / Tấn Nguyễn).",
+        "dedup": "npm run find-roster-matches -- \"Tan Nguyen\" --url https://www.wehi.edu.au/people/tan-nguyen returned 9 hits for Tan Nguyen across US/UK/Singapore/LBNL; none matches Tan Nguyen at WEHI."
+      }
+    },
+    {
+      "entry": {
+        "name": "Ben Tran",
+        "university": "WEHI",
+        "institutionType": "Independent nonprofit research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Personalised Oncology Division",
+        "city": "Melbourne",
+        "state": "Victoria",
+        "country": "Australia",
+        "researchAreas": [
+          "Genitourinary Oncology",
+          "Testicular Cancer",
+          "Prostate Cancer",
+          "Early-phase Clinical Trials",
+          "Real-world Evidence"
+        ],
+        "phdInstitution": "University of Melbourne",
+        "profileUrl": "https://www.wehi.edu.au/people/ben-tran"
+      },
+      "evidence": {
+        "currentRole": "https://www.wehi.edu.au/people/ben-tran — \"Senior Clinical Research Fellow and Clinical Lead for genito-urinary cancers in Professor Peter Gibbs' laboratory team at WEHI\"; also Head of the Genito-Urinary Medical Oncology Group and Clinical Trials Program at Peter MacCallum Cancer Centre.",
+        "doctorateOrPapers": "MBBS from University of Melbourne (2002), FRACP (2009); fellowship in drug development at Princess Margaret Cancer Centre; over 100 peer-reviewed cancer clinical research articles.",
+        "vietnameseSignal": "Vietnamese surname Tran; international authority on testicular and genitourinary cancer clinical trials and CALD patient health equity.",
+        "dedup": "npm run find-roster-matches -- \"Ben Tran\" --url https://www.wehi.edu.au/people/ben-tran returned vp-2053 Ben Tran at Vanderbilt University (Asian Studies); distinct person."
+      }
+    },
+    {
+      "entry": {
+        "name": "Hoanh Tran",
+        "university": "WEHI",
+        "institutionType": "Independent nonprofit research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Ubiquitin Signalling Division",
+        "city": "Melbourne",
+        "state": "Victoria",
+        "country": "Australia",
+        "researchAreas": [
+          "Ubiquitin Signaling",
+          "Neurodevelopment",
+          "Microcephaly",
+          "Trabid / ZRANB1",
+          "Wnt Signaling"
+        ],
+        "phdInstitution": "Friedrich Miescher Institute",
+        "profileUrl": "https://www.doherty.edu.au/people/dr-hoanh-tran"
+      },
+      "evidence": {
+        "currentRole": "https://www.doherty.edu.au/people/dr-hoanh-tran — \"Senior Research Officer within the Ubiquitin Signalling Division at WEHI and Senior Research Fellow / Joint Laboratory Head at the Peter Doherty Institute for Infection and Immunity (University of Melbourne)\".",
+        "doctorateOrPapers": "PhD in Cell Biology from Friedrich Miescher Institute (Basel, Switzerland); postdoctoral training at MRC Laboratory of Molecular Biology (UK) and Genentech (USA); discovered Trabid patient mutations in microcephaly published in eLife.",
+        "vietnameseSignal": "Vietnamese given name Hoanh and surname Tran (Hoành Trần / Trần Hoành); undergraduate degree BSc (Hons) from University of Melbourne.",
+        "dedup": "npm run find-roster-matches -- \"Hoanh Tran\" --url https://www.doherty.edu.au/people/dr-hoanh-tran returned no roster or retired-id matches."
+      }
+    }
+  ],
+  "already_listed": [
+    {
+      "name": "Tri Giang Phan",
+      "id": "vp-1209",
+      "note": "Head of Intravital Imaging & B Cell Biology at Garvan Institute of Medical Research (profileUrl: https://www.garvan.org.au/people/researchers/tri-phan); already listed on roster under primary professorial appointment at UNSW Sydney."
+    },
+    {
+      "name": "Tuan Van Nguyen",
+      "id": "vp-0502",
+      "note": "Former longtime head of Bone Biology at Garvan Institute of Medical Research; already listed on roster under University of Technology Sydney."
+    },
+    {
+      "name": "Duc-Son Pham",
+      "id": "vp-0550",
+      "note": "APEXHeart Lab team member at Harry Perkins Institute of Medical Research; already listed on roster under primary academic appointment at Curtin University (vp-1400 merged into vp-0550)."
+    },
+    {
+      "name": "Quan Huynh",
+      "id": "vp-1287",
+      "note": "Group Leader in Imaging Research / Associate Professor at Baker Heart and Diabetes Institute; already listed on roster (https://baker.edu.au/our-people/quan-huynh)."
+    },
+    {
+      "name": "Kevin Huynh",
+      "id": "vp-2708",
+      "note": "Group Leader in Metabolomics / Adaptive Lipid Biology at Baker Heart and Diabetes Institute; already listed on roster (https://baker.edu.au/our-people/kevin-huynh)."
+    }
+  ],
+  "possible_move": [
+    {
+      "name": "Thach S. Tran",
+      "id": "none",
+      "note": "Formerly Senior Research Officer in Skeletal Diseases Program at Garvan Institute of Medical Research (https://www.garvan.org.au/research/programs/skeletal-diseases); recently appointed as Senior Research Fellow in Biostatistics at Deakin University (https://www.deakin.edu.au). Distinct from vp-2661 Thach Duc Tran at Monash University."
+    }
+  ],
+  "rejected": [
+    {
+      "name": "Khoa Tran",
+      "reason": "Postdoctoral researcher in Medical Genomics Team at QIMR Berghofer Medical Research Institute; postdocs excluded per BRIEF.md."
+    },
+    {
+      "name": "Thuy T. Le",
+      "reason": "Postgraduate/doctorate student and research assistant in Inflammation Biology Group at QIMR Berghofer; students and research assistants excluded per BRIEF.md."
+    },
+    {
+      "name": "Thanh Nha Uyen Le (Uyen Le)",
+      "reason": "Postdoctoral scientist in Sex Development Research Group at Hudson Institute of Medical Research; postdocs excluded per BRIEF.md."
+    },
+    {
+      "name": "Nhi Thao Tran",
+      "reason": "Postdoctoral scientist in Ritchie Centre at Hudson Institute of Medical Research; postdocs excluded per BRIEF.md."
+    },
+    {
+      "name": "Le Son Tran",
+      "reason": "Former postdoctoral researcher in Centre for Innate Immunity and Infectious Diseases at Hudson Institute; postdocs excluded per BRIEF.md and no longer at institution."
+    },
+    {
+      "name": "Yen Pham",
+      "reason": "Research support staff member in Neurodevelopment and Neuroprotection Group at Hudson Institute; support/technical staff excluded per BRIEF.md."
+    },
+    {
+      "name": "Cuong Pham",
+      "reason": "Research Officer / Postdoctoral Researcher in Molecular Imaging and Nanotherapeutics Laboratory at Baker Heart and Diabetes Institute; postdocs excluded per BRIEF.md."
+    },
+    {
+      "name": "Hung Nguyen",
+      "reason": "Researcher in Baker Department of Cardiometabolic Health at University of Melbourne; not an independent institute career scientist."
+    },
+    {
+      "name": "Brandon Le",
+      "reason": "PhD student in Global Health Program at Kirby Institute, UNSW Sydney; students excluded per BRIEF.md."
+    },
+    {
+      "name": "Le May Thai",
+      "reason": "Senior Project Officer in Asia and Pacific Health Program at Kirby Institute; administrative/project management ladder, not research scientist."
+    },
+    {
+      "name": "Loc Le",
+      "reason": "Clinical Project Coordinator in Therapeutic and Vaccine Research Program at Kirby Institute; project coordinator, not research scientist."
+    },
+    {
+      "name": "Charles Tran",
+      "reason": "IT and Computer Services staff member at Kirby Institute; non-research IT role."
+    },
+    {
+      "name": "Vicky Huynh",
+      "reason": "Senior Quality and Compliance Officer at Kirby Institute; compliance/administrative ladder, not research scientist."
+    },
+    {
+      "name": "Anh Thi Nguyen",
+      "reason": "Community fundraiser for Jeans for Genes campaign at Children's Medical Research Institute (CMRI); non-research."
+    },
+    {
+      "name": "Leanni Nguyen",
+      "reason": "Master's student in bioprinting at Harry Perkins Institute of Medical Research; students excluded per BRIEF.md."
+    },
+    {
+      "name": "Christina Vo",
+      "reason": "Graduate Research Assistant in Rare Disease Genetics at Harry Perkins Institute; research assistants excluded per BRIEF.md."
+    },
+    {
+      "name": "Quan Nguyen",
+      "reason": "Senior Technical Officer with Pre-clinical Critical Care Group at Florey Institute; technical staff ladder, not research scientist."
+    },
+    {
+      "name": "Thomas (Phu Minh Triet) Nguyen",
+      "reason": "PhD candidate in Dementia Mission / Translational Neurodegeneration Group at Florey Institute; students excluded per BRIEF.md."
+    },
+    {
+      "name": "Tu Quan Nguyen",
+      "reason": "PhD student and epidemiologist at Murdoch Children's Research Institute (MCRI); students excluded per BRIEF.md."
+    },
+    {
+      "name": "Ngoc Nguyen",
+      "reason": "Research Coordinator / Assistant in VIBeS group at Murdoch Children's Research Institute (MCRI); assistants/coordinators excluded per BRIEF.md."
+    },
+    {
+      "name": "Cindy Pham",
+      "reason": "Research Officer / Associate in Policy and Equity group at Murdoch Children's Research Institute (MCRI); fixed-term postdoctoral level."
+    },
+    {
+      "name": "Phillip C. Nguyen",
+      "reason": "Clinical haematologist and PhD candidate at Peter MacCallum Cancer Centre; no live permanent researcher profile page published on petermac.org."
+    },
+    {
+      "name": "Brian Le",
+      "reason": "Precinct Director of Palliative Care at Peter MacCallum Cancer Centre; Anglo given name with no affirmative Vietnamese signal (lexicon screening per BRIEF.md)."
+    }
+  ],
+  "coverage": [
+    {
+      "employer": "WEHI (Walter and Eliza Hall Institute of Medical Research)",
+      "pagesExamined": [
+        "https://www.wehi.edu.au/people",
+        "https://www.wehi.edu.au/people/hai-vu-nguyen",
+        "https://www.wehi.edu.au/people/nghi-nguyen",
+        "https://www.wehi.edu.au/people/william-nguyen",
+        "https://www.wehi.edu.au/people/tan-nguyen",
+        "https://www.wehi.edu.au/people/ben-tran"
+      ],
+      "note": "Screened full people directory and division staff rosters across Blood Cells & Blood Cancer, Chemical Biology, Personalised Oncology, and Ubiquitin Signalling. Verified 6 career researchers: Hai Vu Nguyen, Nghi Huu Nguyen, William Nguyen, Tan Nguyen, Ben Tran, and Hoanh Tran. Students and technical staff were excluded."
+    },
+    {
+      "employer": "Garvan Institute of Medical Research",
+      "pagesExamined": [
+        "https://www.garvan.org.au/research",
+        "https://www.garvan.org.au/people/researchers/tri-phan",
+        "https://www.garvan.org.au/research/programs/skeletal-diseases"
+      ],
+      "note": "Screened research program rosters and scientist profiles. Tri Giang Phan verified as already listed on roster (vp-1209 under UNSW Sydney). Tuan Van Nguyen verified as already listed (vp-0502 under UTS). Thach S. Tran noted as having moved to Deakin University. Junior research officers and postdocs screened and excluded."
+    },
+    {
+      "employer": "QIMR Berghofer Medical Research Institute",
+      "pagesExamined": [
+        "https://www.qimrberghofer.edu.au/our-people/",
+        "https://www.qimrberghofer.edu.au/our-people/associate-professor-quan-nguyen"
+      ],
+      "note": "Examined scientific leadership directory and laboratory team pages. Verified Associate Professor Quan Nguyen (Head of Genomics and Machine Learning Lab, Director NCSTAR). Postdoctoral researcher Khoa Tran and postgraduate student Thuy T. Le were screened and rejected per eligibility rules."
+    },
+    {
+      "employer": "Murdoch Children's Research Institute (MCRI)",
+      "pagesExamined": [
+        "https://www.mcri.edu.au/users/",
+        "https://www.mcri.edu.au/users/dr-cattram-nguyen",
+        "https://www.mcri.edu.au/users/minh-pham"
+      ],
+      "note": "Screened staff/researcher directories across all research areas (Infection, Immunity & Global Health; Cell Biology; Clinical Sciences; Population Health). Verified Senior Research Fellows Dr Cattram Nguyen and Dr Minh Pham. Postdocs, students, and coordinators screened and excluded."
+    },
+    {
+      "employer": "Peter MacCallum Cancer Centre research division",
+      "pagesExamined": [
+        "https://www.petermac.org/",
+        "https://publications.petermac.org"
+      ],
+      "note": "Screened cancer research division leads, clinical researchers, and publications repository. A/Prof Ben Tran verified (also appointed at WEHI). Clinical haematologists without live staff profile pages or permanent research appointments were screened and recorded in rejected."
+    },
+    {
+      "employer": "Florey Institute of Neuroscience and Mental Health",
+      "pagesExamined": [
+        "https://www.florey.edu.au/"
+      ],
+      "note": "Screened mission themes, laboratory groups, and staff listings. Leads identified were technical staff (Quan Nguyen) or PhD students (Thomas Phu Minh Triet Nguyen); no eligible permanent career researcher found."
+    },
+    {
+      "employer": "Hudson Institute of Medical Research",
+      "pagesExamined": [
+        "https://www.hudson.org.au/"
+      ],
+      "note": "Screened Centre for Innate Immunity and Infectious Diseases, Centre for Endocrinology and Reproductive Health, and Ritchie Centre research groups. All identified leads were postdoctoral scientists (Uyen Le, Nhi Thao Tran, Le Son Tran) or research support staff (Yen Pham), and were rejected per eligibility criteria."
+    },
+    {
+      "employer": "Baker Heart and Diabetes Institute",
+      "pagesExamined": [
+        "https://baker.edu.au/our-people",
+        "https://baker.edu.au/our-people/quan-huynh",
+        "https://baker.edu.au/our-people/kevin-huynh"
+      ],
+      "note": "Screened our-people directory. A/Prof Quan Huynh (vp-1287) and Dr Kevin Huynh (vp-2708) are already listed in public/data.json. Other leads were postdoctoral research officers (Cuong Pham) or university-department-only staff (Hung Nguyen)."
+    },
+    {
+      "employer": "Kirby Institute (UNSW Sydney)",
+      "pagesExamined": [
+        "https://kirby.unsw.edu.au/"
+      ],
+      "note": "Screened institute research programs (Biostatistics & Databases, Global Health, Immunovirology, Surveillance & Evaluation, Therapeutic & Vaccine Research). Identified leads were PhD students (Brandon Le), project managers/coordinators (Le May Thai, Loc Le), or compliance/IT staff (Vicky Huynh, Charles Tran); no eligible career research scientist found."
+    },
+    {
+      "employer": "The Kids Research Institute Australia (Telethon Kids Institute)",
+      "pagesExamined": [
+        "https://www.thekids.org.au/about-us/our-people/",
+        "https://www.thekids.org.au/about-us/our-people/n/ha-nguyen/",
+        "https://www.thekids.org.au/about-us/our-people/v/vu-vuong/"
+      ],
+      "note": "Screened directory of researchers across all research programs. Verified Dr Ha Trong Nguyen (Senior Research Fellow) and Dr Vu Vuong (Senior Research Officer). Scientific software developers and clinical coordinators screened."
+    },
+    {
+      "employer": "Children's Medical Research Institute (CMRI)",
+      "pagesExamined": [
+        "https://www.cmri.org.au/",
+        "https://www.cmri.org.au/research/research-teams"
+      ],
+      "note": "Screened research teams (Cancer, Embryology, Gene Therapy, Genome Integrity, Telomere Length Regulation, Translational Vectorology, ProCan). No eligible Vietnamese career scientist identified (leads were fundraisers or co-authors on collaborative papers)."
+    },
+    {
+      "employer": "Harry Perkins Institute of Medical Research",
+      "pagesExamined": [
+        "https://perkins.org.au/"
+      ],
+      "note": "Screened laboratory rosters in cancer, cardiovascular, and genetics divisions. A/Prof Duc-Son Pham verified as already listed on roster (vp-0550 under Curtin University). Other leads were students (Leanni Nguyen) or graduate research assistants (Christina Vo)."
+    }
+  ]
+}

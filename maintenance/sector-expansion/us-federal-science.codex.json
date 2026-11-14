@@ -1,0 +1,565 @@
+{
+  "group": "us-federal-science",
+  "agent": "codex",
+  "finishedAt": "2026-11-14T22:34:45.303834Z",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Doanh Tran",
+        "university": "U.S. Food and Drug Administration",
+        "institutionType": "Public research institute",
+        "track": "Government & Defense",
+        "rank": "Administrator",
+        "department": "Center for Drug Evaluation and Research, Office of Translational Science, Office of Clinical Pharmacology, Division of Cardiometabolic and Endocrine Pharmacology",
+        "country": "United States",
+        "researchAreas": [
+          "Clinical pharmacology",
+          "Exposure-response relationships",
+          "Testosterone therapies"
+        ],
+        "profileUrl": "https://www.fda.gov/media/194885/download"
+      },
+      "evidence": {
+        "currentRole": "https://www.fda.gov/media/194885/download (September 17, 2026 workshop, printed page 12 / PDF page 14): \"Deputy Director, Division of Cardiometabolic and Endocrine Pharmacology\". FDA describes his clinical-pharmacology work and more than twenty years of experience. This is a career scientific leadership position, assigned Government & Defense under the federal-agency research-leader rule.",
+        "doctorateOrPapers": "https://www.fda.gov/media/194885/download identifies him as \"Doanh Tran, PhD\". Doctoral institution and year are not stated and are omitted.",
+        "vietnameseSignal": "https://www.fda.gov/media/194885/download publishes the Vietnamese given name Doanh together with surname Tran; affirmative given-name signal, rather than surname alone. No diacritics reconstructed.",
+        "dedup": "npm run find-roster-matches -- \"Doanh Tran\" --url https://www.fda.gov/media/194885/download --url https://www.accessdata.fda.gov/drugsatfda_docs/nda/2026/761152Orig1s000IntegratedR.pdf --url https://www.fda.gov/media/94295/download => no roster or retired-id matches"
+      }
+    }
+  ],
+  "already_listed": [
+    {
+      "name": "My-Le Nguyen",
+      "id": "vp-1137",
+      "note": "find-roster-matches run: NHLBI echocardiography director; name and canonical employer profile matched. https://www.nhlbi.nih.gov/science/echocardiography-laboratory"
+    },
+    {
+      "name": "Emerald Nguyen",
+      "id": "vp-2976",
+      "note": "find-roster-matches run: NIA program official; name matched. https://www.nia.nih.gov/exposome"
+    },
+    {
+      "name": "Nhan T. Nguyen",
+      "id": "vp-3007",
+      "note": "find-roster-matches run: NASA Ames senior research scientist; name matched. https://nas.nasa.gov/pubs/ams/2014/04-22-14.html"
+    },
+    {
+      "name": "QuynhGiao Nguyen",
+      "id": "vp-3012",
+      "note": "find-roster-matches run: NASA Glenn materials scientist; name and employer profile matched. https://www.nasa.gov/people/quynhgiao-nguyen/"
+    },
+    {
+      "name": "Manh-Hung Le",
+      "id": "vp-3006",
+      "note": "find-roster-matches run: Name matched existing NASA Goddard entry. Current employer page explicitly identifies SSAI employment and contractor status; ineligible as a new federal-employee discovery. https://science.gsfc.nasa.gov/sci/bio/manh-hung.le"
+    },
+    {
+      "name": "Khuong H. Tran",
+      "id": "vp-3008",
+      "note": "find-roster-matches run: Name and NASA profile matched; profile lists Bay Area Environmental Research Institute affiliation, rather than a NASA civil-service appointment. https://www.nasa.gov/people/khuong-tran/"
+    },
+    {
+      "name": "Cau D. Pham",
+      "id": "vp-3026",
+      "note": "find-roster-matches run: CDC laboratory PI; name matched. https://stacks.cdc.gov/view/cdc/125949/cdc_125949_DS1.pdf"
+    },
+    {
+      "name": "Lan-Anh N. Nguyen",
+      "id": "vp-2969",
+      "note": "find-roster-matches run: Name and employer profile matched; Johnson Space Center is also outside the five assigned NASA centers. https://ares.jsc.nasa.gov/people/bios/lan-anh-n-nguyen/"
+    }
+  ],
+  "possible_move": [
+    {
+      "name": "An Dang Do",
+      "id": "vp-0450",
+      "note": "DEDUP HOLD, not a confirmed move: roster says An H. Do, University of California, Irvine, Neurology; employer page https://annualreport.nichd.nih.gov/dangdo.html identifies the federal-agency lead. NICHD identifies An N. Dang Do, MD, PhD, as unit head; current clinical-tenure-track title at https://www.nichd.nih.gov/about/org/dir/osd/mt/cd/staff . Vietnamese given/middle-name signal An Ngoc in NIH documentation. Full-name matcher produced a name-only collision; not evidence of a move. Excluded from candidates under BRIEF any-hit rule; resolve identity before proposing a new ID."
+    },
+    {
+      "name": "Thao Tran",
+      "id": "vp-0463",
+      "note": "DEDUP HOLD, not a confirmed move: roster says Thao Tran, University of Massachusetts Lowell, Mathematics and Statistics; employer page https://www.ars.usda.gov/people-locations/person?person-id=57546 identifies the federal-agency lead. USDA identifies Thao Tran as Microbiologist, Foodborne Toxin Detection and Prevention Research, Albany, California. Vietnamese given name Thao. Two current-employer 2024 peer-reviewed papers verified: https://www.ars.usda.gov/research/publications/publication/?seqNo115=396921 (doi:10.1111/1751-7915.14437) and https://www.ars.usda.gov/research/publications/publication/?seqNo115=409857 (doi:10.1128/MRA.01000-23); same linked employee and coauthors Lee, Hnasko, McGarvey. No URL matches, only broad name matches. Fields differ substantially; no move asserted. Excluded from candidates under BRIEF any-hit rule; resolve identity before proposing a new ID."
+    },
+    {
+      "name": "Thao Tran",
+      "id": "vp-1699",
+      "note": "DEDUP HOLD, not a confirmed move: roster says Vuong Thao Tran, RMIT University, Economics, Finance and Marketing; employer page https://www.ars.usda.gov/people-locations/person?person-id=57546 identifies the federal-agency lead. USDA identifies Thao Tran as Microbiologist, Foodborne Toxin Detection and Prevention Research, Albany, California. Vietnamese given name Thao. Two current-employer 2024 peer-reviewed papers verified: https://www.ars.usda.gov/research/publications/publication/?seqNo115=396921 (doi:10.1111/1751-7915.14437) and https://www.ars.usda.gov/research/publications/publication/?seqNo115=409857 (doi:10.1128/MRA.01000-23); same linked employee and coauthors Lee, Hnasko, McGarvey. No URL matches, only broad name matches. Fields differ substantially; no move asserted. Excluded from candidates under BRIEF any-hit rule; resolve identity before proposing a new ID."
+    },
+    {
+      "name": "Thao Tran",
+      "id": "vp-2058",
+      "note": "DEDUP HOLD, not a confirmed move: roster says Thao Tran Dominy, Clemson University, Chemistry; employer page https://www.ars.usda.gov/people-locations/person?person-id=57546 identifies the federal-agency lead. USDA identifies Thao Tran as Microbiologist, Foodborne Toxin Detection and Prevention Research, Albany, California. Vietnamese given name Thao. Two current-employer 2024 peer-reviewed papers verified: https://www.ars.usda.gov/research/publications/publication/?seqNo115=396921 (doi:10.1111/1751-7915.14437) and https://www.ars.usda.gov/research/publications/publication/?seqNo115=409857 (doi:10.1128/MRA.01000-23); same linked employee and coauthors Lee, Hnasko, McGarvey. No URL matches, only broad name matches. Fields differ substantially; no move asserted. Excluded from candidates under BRIEF any-hit rule; resolve identity before proposing a new ID."
+    },
+    {
+      "name": "Thao Tran",
+      "id": "vp-2540",
+      "note": "DEDUP HOLD, not a confirmed move: roster says Thao Tran, Université de Pau et des Pays de l’Adour, Geography; employer page https://www.ars.usda.gov/people-locations/person?person-id=57546 identifies the federal-agency lead. USDA identifies Thao Tran as Microbiologist, Foodborne Toxin Detection and Prevention Research, Albany, California. Vietnamese given name Thao. Two current-employer 2024 peer-reviewed papers verified: https://www.ars.usda.gov/research/publications/publication/?seqNo115=396921 (doi:10.1111/1751-7915.14437) and https://www.ars.usda.gov/research/publications/publication/?seqNo115=409857 (doi:10.1128/MRA.01000-23); same linked employee and coauthors Lee, Hnasko, McGarvey. No URL matches, only broad name matches. Fields differ substantially; no move asserted. Excluded from candidates under BRIEF any-hit rule; resolve identity before proposing a new ID."
+    },
+    {
+      "name": "Thao Tran",
+      "id": "vp-2865",
+      "note": "DEDUP HOLD, not a confirmed move: roster says Alisia (Giac-Thao) Tran, Arizona State University, Counseling and Counseling Psychology; employer page https://www.ars.usda.gov/people-locations/person?person-id=57546 identifies the federal-agency lead. USDA identifies Thao Tran as Microbiologist, Foodborne Toxin Detection and Prevention Research, Albany, California. Vietnamese given name Thao. Two current-employer 2024 peer-reviewed papers verified: https://www.ars.usda.gov/research/publications/publication/?seqNo115=396921 (doi:10.1111/1751-7915.14437) and https://www.ars.usda.gov/research/publications/publication/?seqNo115=409857 (doi:10.1128/MRA.01000-23); same linked employee and coauthors Lee, Hnasko, McGarvey. No URL matches, only broad name matches. Fields differ substantially; no move asserted. Excluded from candidates under BRIEF any-hit rule; resolve identity before proposing a new ID."
+    },
+    {
+      "name": "Duong T. Nguyen",
+      "id": "vp-0023",
+      "note": "DEDUP HOLD, not a confirmed move: roster says Duong Nguyen, University of Wyoming, Electrical Engineering and Computer Science; employer page https://wwwn.cdc.gov/nchs/data/nhanes/public/2025/documents/2025-MEC-Consent-Booklet.pdf identifies the federal-agency lead. CDC NHANES 2025-2026 booklet identifies Chief Medical Officer Duong Nguyen; 2024 anemia and 2026 cholesterol reports identify Duong T. Nguyen/ Duong Nguyen at NCHS. Vietnamese given name Duong. Broad name-only matches; no URL match or actual institutional move established. Research-doctorate/two-qualifying-paper test not completed after dedup hold. Excluded from candidates under BRIEF any-hit rule; resolve identity before proposing a new ID."
+    },
+    {
+      "name": "Duong T. Nguyen",
+      "id": "vp-0358",
+      "note": "DEDUP HOLD, not a confirmed move: roster says Duong Nguyen, Arizona State University, Electrical, Computer and Energy Engineering; employer page https://wwwn.cdc.gov/nchs/data/nhanes/public/2025/documents/2025-MEC-Consent-Booklet.pdf identifies the federal-agency lead. CDC NHANES 2025-2026 booklet identifies Chief Medical Officer Duong Nguyen; 2024 anemia and 2026 cholesterol reports identify Duong T. Nguyen/ Duong Nguyen at NCHS. Vietnamese given name Duong. Broad name-only matches; no URL match or actual institutional move established. Research-doctorate/two-qualifying-paper test not completed after dedup hold. Excluded from candidates under BRIEF any-hit rule; resolve identity before proposing a new ID."
+    },
+    {
+      "name": "Duong T. Nguyen",
+      "id": "vp-1228",
+      "note": "DEDUP HOLD, not a confirmed move: roster says Thuy-Duong Nguyen-Phan, National Energy Technology Laboratory; employer page https://wwwn.cdc.gov/nchs/data/nhanes/public/2025/documents/2025-MEC-Consent-Booklet.pdf identifies the federal-agency lead. CDC NHANES 2025-2026 booklet identifies Chief Medical Officer Duong Nguyen; 2024 anemia and 2026 cholesterol reports identify Duong T. Nguyen/ Duong Nguyen at NCHS. Vietnamese given name Duong. Broad name-only matches; no URL match or actual institutional move established. Research-doctorate/two-qualifying-paper test not completed after dedup hold. Excluded from candidates under BRIEF any-hit rule; resolve identity before proposing a new ID."
+    },
+    {
+      "name": "Duong T. Nguyen",
+      "id": "vp-1248",
+      "note": "DEDUP HOLD, not a confirmed move: roster says Thi Hoang Duong Nguyen, MRC Laboratory of Molecular Biology; employer page https://wwwn.cdc.gov/nchs/data/nhanes/public/2025/documents/2025-MEC-Consent-Booklet.pdf identifies the federal-agency lead. CDC NHANES 2025-2026 booklet identifies Chief Medical Officer Duong Nguyen; 2024 anemia and 2026 cholesterol reports identify Duong T. Nguyen/ Duong Nguyen at NCHS. Vietnamese given name Duong. Broad name-only matches; no URL match or actual institutional move established. Research-doctorate/two-qualifying-paper test not completed after dedup hold. Excluded from candidates under BRIEF any-hit rule; resolve identity before proposing a new ID."
+    },
+    {
+      "name": "Duong T. Nguyen",
+      "id": "vp-1630",
+      "note": "DEDUP HOLD, not a confirmed move: roster says Trinh Trung Duong Nguyen, University of Copenhagen; employer page https://wwwn.cdc.gov/nchs/data/nhanes/public/2025/documents/2025-MEC-Consent-Booklet.pdf identifies the federal-agency lead. CDC NHANES 2025-2026 booklet identifies Chief Medical Officer Duong Nguyen; 2024 anemia and 2026 cholesterol reports identify Duong T. Nguyen/ Duong Nguyen at NCHS. Vietnamese given name Duong. Broad name-only matches; no URL match or actual institutional move established. Research-doctorate/two-qualifying-paper test not completed after dedup hold. Excluded from candidates under BRIEF any-hit rule; resolve identity before proposing a new ID."
+    },
+    {
+      "name": "Christine Pham Nguyen",
+      "id": "vp-0116",
+      "note": "DEDUP HOLD, not a confirmed move: roster says Christine Nguyen, Northern Illinois University; employer page https://www.fda.gov/media/194885/download identifies the federal-agency lead. FDA September 2026 biography identifies deputy director of the Office of Rare Diseases, Pediatrics, Urologic and Reproductive Medicine and an MD with Thesis from UCSF. Name-only matches; no move established. Separate affirmative Vietnamese signal not established beyond family names; not verified as a candidate. Excluded from candidates under BRIEF any-hit rule; resolve identity before proposing a new ID."
+    },
+    {
+      "name": "Christine Pham Nguyen",
+      "id": "vp-0150",
+      "note": "DEDUP HOLD, not a confirmed move: roster says Nguyen Pham, Monmouth University; employer page https://www.fda.gov/media/194885/download identifies the federal-agency lead. FDA September 2026 biography identifies deputy director of the Office of Rare Diseases, Pediatrics, Urologic and Reproductive Medicine and an MD with Thesis from UCSF. Name-only matches; no move established. Separate affirmative Vietnamese signal not established beyond family names; not verified as a candidate. Excluded from candidates under BRIEF any-hit rule; resolve identity before proposing a new ID."
+    },
+    {
+      "name": "Christine Pham Nguyen",
+      "id": "vp-0678",
+      "note": "DEDUP HOLD, not a confirmed move: roster says Christine Nguyen, University of Melbourne; employer page https://www.fda.gov/media/194885/download identifies the federal-agency lead. FDA September 2026 biography identifies deputy director of the Office of Rare Diseases, Pediatrics, Urologic and Reproductive Medicine and an MD with Thesis from UCSF. Name-only matches; no move established. Separate affirmative Vietnamese signal not established beyond family names; not verified as a candidate. Excluded from candidates under BRIEF any-hit rule; resolve identity before proposing a new ID."
+    },
+    {
+      "name": "Christine Pham Nguyen",
+      "id": "vp-2295",
+      "note": "DEDUP HOLD, not a confirmed move: roster says Christine Nguyen, Hawaiʻi Pacific University; employer page https://www.fda.gov/media/194885/download identifies the federal-agency lead. FDA September 2026 biography identifies deputy director of the Office of Rare Diseases, Pediatrics, Urologic and Reproductive Medicine and an MD with Thesis from UCSF. Name-only matches; no move established. Separate affirmative Vietnamese signal not established beyond family names; not verified as a candidate. Excluded from candidates under BRIEF any-hit rule; resolve identity before proposing a new ID."
+    },
+    {
+      "name": "Christine Pham Nguyen",
+      "id": "vp-2362",
+      "note": "DEDUP HOLD, not a confirmed move: roster says Christine T. Pham, Washington University in St. Louis; employer page https://www.fda.gov/media/194885/download identifies the federal-agency lead. FDA September 2026 biography identifies deputy director of the Office of Rare Diseases, Pediatrics, Urologic and Reproductive Medicine and an MD with Thesis from UCSF. Name-only matches; no move established. Separate affirmative Vietnamese signal not established beyond family names; not verified as a candidate. Excluded from candidates under BRIEF any-hit rule; resolve identity before proposing a new ID."
+    },
+    {
+      "name": "Christine Pham Nguyen",
+      "id": "vp-2399",
+      "note": "DEDUP HOLD, not a confirmed move: roster says Christine Pham, Western University of Health Sciences; employer page https://www.fda.gov/media/194885/download identifies the federal-agency lead. FDA September 2026 biography identifies deputy director of the Office of Rare Diseases, Pediatrics, Urologic and Reproductive Medicine and an MD with Thesis from UCSF. Name-only matches; no move established. Separate affirmative Vietnamese signal not established beyond family names; not verified as a candidate. Excluded from candidates under BRIEF any-hit rule; resolve identity before proposing a new ID."
+    }
+  ],
+  "rejected": [
+    {
+      "name": "Thanh Lan Tran",
+      "reason": "Current NIMH Molecular Imaging Branch staff page labels the role Administrative Support, not scientist. https://www.nimh.nih.gov/research/research-conducted-at-nimh/research-areas/clinics-and-labs/mib/spns/staff"
+    },
+    {
+      "name": "Huu Tho Nguyen",
+      "reason": "Current NIMH White lab page places him under Postdoctoral Fellows and describes research-fellow work. Vietnamese education and PhD are documented but trainee appointment is excluded. https://www.nimh.nih.gov/research/research-conducted-at-nimh/research-areas/clinics-and-labs/snf/lab-members"
+    },
+    {
+      "name": "Phuc Tran",
+      "reason": "NIMH radiochemistry people page explicitly lists Postdoctoral Fellow. https://www.nimh.nih.gov/research/research-conducted-at-nimh/research-areas/clinics-and-labs/mib/sprs/people"
+    },
+    {
+      "name": "Linh Pham",
+      "reason": "NIMH organizational locator identifies PRE-DOCTORAL IRTA; excluded trainee. https://www.nimh.nih.gov/about/staff-directories/intramural-research-irp-organizational-locator"
+    },
+    {
+      "name": "Alexander Bui",
+      "reason": "NIMH intramural staff directory lists Fellow; no eligible career appointment established. https://www.nimh.nih.gov/about/staff-directories/alphabetical-listing-of-intramural-research-staff-only"
+    },
+    {
+      "name": "Katarina Tran",
+      "reason": "NIMH intramural staff directory lists Fellow. https://www.nimh.nih.gov/about/staff-directories/alphabetical-listing-of-intramural-research-staff-only"
+    },
+    {
+      "name": "Rebecca Nguyen",
+      "reason": "NIMH staff directory lists Volunteer; no eligible career research appointment. https://www.nimh.nih.gov/about/staff-directories/alphabetical-listing-of-intramural-research-staff-only"
+    },
+    {
+      "name": "Trang Nguyen",
+      "reason": "NIMH staff directory lists Contractor. https://www.nimh.nih.gov/about/staff-directories/alphabetical-listing-of-intramural-research-staff-only"
+    },
+    {
+      "name": "Kim-Thu Tran",
+      "reason": "NIMH locator lists Data Scientist but no research doctorate or two identity-resolved recent papers established. https://www.nimh.nih.gov/about/staff-directories/intramural-research-irp-organizational-locator"
+    },
+    {
+      "name": "Phuoc Pham",
+      "reason": "NIMH locator lists Biomedical Engineering Technician; eligible research role and doctorate/publication test not established. https://www.nimh.nih.gov/about/staff-directories/intramural-research-irp-organizational-locator"
+    },
+    {
+      "name": "Kimberly T. Truong",
+      "reason": "NIEHS directory identifies Contractor - Data Scientist, MSc. Contractor exclusion. https://www.niehs.nih.gov/research/atniehs/labs/ptb/staff ; https://portal.niehs.nih.gov/staff/allScientists"
+    },
+    {
+      "name": "Peter Nguyen",
+      "reason": "NICHD 2025 Serpe report identifies Biological Laboratory Technician; no qualifying doctorate or recent-paper alternative established. https://annualreport.nichd.nih.gov/serpe.html"
+    },
+    {
+      "name": "Phuong (Audrey) Pham",
+      "reason": "NICHD 2025 Zimmerberg report identifies BS, Postbaccalaureate Fellow. https://annualreport.nichd.nih.gov/zimmerberg.html"
+    },
+    {
+      "name": "Van Pham",
+      "reason": "Weinstein lab lead; historical NICHD report identifies BS, Scientific Technician; career research eligibility not established. https://annualreport.nichd.nih.gov/2020/documents/NICHD_DIR_Annual_Report_2020.pdf"
+    },
+    {
+      "name": "Khoa Nguyen",
+      "reason": "NIDDK Health Program Specialist with PharmD; neither intramural career-research appointment nor research-doctorate/two-paper qualification established. https://www.niddk.nih.gov/about-niddk/staff-directory/biography/nguyen-khoa"
+    },
+    {
+      "name": "Carol Nguyen",
+      "reason": "NIA extramural Health Scientist Administrator; official sources identify MS. Neither assigned intramural role nor qualifying doctorate/recent papers established. https://www.nia.nih.gov/research/dgcg/about-gcg ; https://www.nia.nih.gov/research/initiatives/approved-concepts"
+    },
+    {
+      "name": "Tuan Nguyen",
+      "reason": "NIAAA staff scientist with PhD is outside the explicitly assigned NIH institute list; not proposed. https://www.niaaa.nih.gov/about-niaaa/our-staff/tuan-nguyen"
+    },
+    {
+      "name": "Joe T. Nguyen",
+      "reason": "NCI investigator; expressly excluded employer. https://irp.nih.gov/pi/joe-nguyen"
+    },
+    {
+      "name": "Rosa Nguyen",
+      "reason": "NCI investigator; expressly excluded employer. https://irp.nih.gov/pi/rosa-nguyen"
+    },
+    {
+      "name": "Quynh Nguyen",
+      "reason": "NINR investigator; outside assigned NIH institute list. https://irp.nih.gov/our-research/principal-investigators/name"
+    },
+    {
+      "name": "Helen Ngo Lew",
+      "reason": "USDA lipid-utilization lead and doctorate supported by official award announcement and recent Lew HN publications, but no affirmative Vietnamese signal beyond surname established; do not infer ancestry. https://www.ars.usda.gov/Main/Docs.htm?docid=24637 ; https://www.ars.usda.gov/research/publications/publication/?seqNo115=414945 . Name/award URL dedup was clean."
+    },
+    {
+      "name": "Van-Den Truong",
+      "reason": "Historical USDA food-scientist coverage found, but no verified current employer appointment established; archived article is insufficient. https://www.ars.usda.gov/news-events/news/research-news/2014/puree-processing-technology-expands-into-new-markets/"
+    },
+    {
+      "name": "Duy Nguyen",
+      "reason": "USDA magazine identifies visiting scientist from University of Nha Trang, Vietnam; visiting and Vietnam-based exclusions. https://agresearchmag.ars.usda.gov/2011/aug/fish/"
+    },
+    {
+      "name": "Tuan Nguyen (USDA LTAR)",
+      "reason": "LTAR directory lists Software Engineer; no qualifying career research role or doctorate/recent papers established. https://ltar.ars.usda.gov/resources/people/"
+    },
+    {
+      "name": "Bao-Ngoc Nguyen",
+      "reason": "FDA official inspection record identifies Staff Fellow during February-March 2024; later 2025 review-chair document does not resolve a permanent career appointment. Held out rather than treating a fellow/reviewer title as permanent. https://www.fda.gov/media/195415/download ; https://www.fda.gov/media/186796/download"
+    },
+    {
+      "name": "Ngoc-Linh Do",
+      "reason": "FDA CDER safety evaluator with PharmD, not research doctorate; qualifying research role and two-paper alternative not established. https://www.accessdata.fda.gov/drugsatfda_docs/nda/2026/220910Orig1s000NameR.pdf"
+    },
+    {
+      "name": "Thuy M. Nguyen (FDA)",
+      "reason": "FDA Regulatory Project Manager; no eligible scientific research appointment or doctorate/recent publications established. https://www.accessdata.fda.gov/drugsatfda_docs/nda/2024/215168Orig1s000OtherR.pdf"
+    },
+    {
+      "name": "Landon Nguyen",
+      "reason": "NCTR student scientific-research-day abstract explicitly identifies Student. https://www.fda.gov/media/160786/download?attachment="
+    },
+    {
+      "name": "Louis Nguyen",
+      "reason": "Current NASA Langley Research Computer Engineer profile verified; only Nguyen surname signal established, with no affirmative Vietnamese given name, education, language or heritage source. Doctorate/two-recent-paper alternative also not completed. https://www.nasa.gov/people/louis-nguyen/"
+    },
+    {
+      "name": "Anh Nguyen (NASA)",
+      "reason": "Recent NASA biography identifies Headquarters program portfolio integrator; earlier Ames affiliation is historical, so not proposed under the five assigned NASA centers. https://www.nasa.gov/stmd-flight-opportunities/fo-resources/community-of-practice-webinars/september-2024/ ; https://www.nasa.gov/stmd-flight-opportunities/fo-resources/community-of-practice-webinars/january-2026/"
+    },
+    {
+      "name": "Quang Hong Nguyen",
+      "reason": "NASA Goddard profile lists electronic instrumentation systems, NASA employee, but no research doctorate or two recent papers and no substantiated research role found. https://science.gsfc.nasa.gov/sci/bio/17109/"
+    },
+    {
+      "name": "Jessy Nguyen",
+      "reason": "NASA Goddard System Administrator employed by ADNET SYSTEMS INC; contractor and non-research role. https://science.gsfc.nasa.gov/sci/bio/jessy.a.nguyen"
+    },
+    {
+      "name": "Long Nguyen",
+      "reason": "NASA Goddard profile lists senior mechanical engineer employed by KBR; contractor exclusion. https://science.gsfc.nasa.gov/sci/bio/79813/"
+    },
+    {
+      "name": "Duy Tuong Nguyen",
+      "reason": "NASA Goddard software-development profile lists ADNET SYSTEMS INC as employer; contractor exclusion. https://science.gsfc.nasa.gov/astrophysics/heasarc/bio/duy.t.nguyen?fromOrg=698"
+    },
+    {
+      "name": "Huy Nguyen (Marshall)",
+      "reason": "NASA article describes safety/mission-assurance and aviation-operations management, not a verified research role with doctorate or recent papers. https://www.nasa.gov/centers-and-facilities/marshall/the-marshall-star-81/"
+    },
+    {
+      "name": "Canh Nguyen",
+      "reason": "NOAA fisheries methods/equipment specialist; official interview establishes Vietnamese heritage but no research doctorate or two recent papers. https://www.fisheries.noaa.gov/feature-story/meet-canh-nguyen-fisheries-methods-and-equipment-specialist"
+    },
+    {
+      "name": "Han Huynh",
+      "reason": "NOAA CSL search discovery identifies Research Scientist I with PhD, but affiliation is CIRES; direct NOAA employment not established. Profile fetch returned cache miss. Not verified for this federal-employer group. https://www.csl.noaa.gov/staff/han.huynh/"
+    },
+    {
+      "name": "Thanh Tam Nguyen",
+      "reason": "J-SCOPE listing identifies university-employed JISAO Research Scientist among previous collaborators, not a current direct NOAA appointment. https://www.nanoos.org/products/j-scope/people.php"
+    },
+    {
+      "name": "Leon Nguyen (NOAA)",
+      "reason": "2016 NOAA newsletter describes NRC postdoctoral scientist; current eligible appointment not established. https://www.aoml.noaa.gov/keynotes/PDF-Files/Mar-Apr2016.pdf"
+    },
+    {
+      "name": "Leon Nguyen (USGS)",
+      "reason": "Coastal and Marine Geology directory search result identifies IT Specialist (Desktop Support/SysAdmin); no research role established. Direct directory fetch returned 403. https://cmgds.marine.usgs.gov/Program/contacts.php"
+    },
+    {
+      "name": "Phuong A. Le",
+      "reason": "USGS search discovery identifies IT Specialist (Data Management), not an established career research appointment. Direct profile fetch timed out; cannot infer eligibility from listed products. https://www.usgs.gov/staff-profiles/phuong-a-le"
+    },
+    {
+      "name": "Maily Pham",
+      "reason": "EPA page verifies research chemist/quality-assurance manager but states bachelor degree only; two identity-resolved qualifying papers in the last three years and an affirmative Vietnamese signal beyond surname were not established. Name and profile dedup clean. https://www.epa.gov/sciencematters/meet-epa-research-chemist-maily-pham"
+    },
+    {
+      "name": "Thuy L. Nguyen (EPA)",
+      "reason": "EPA pesticide analytical-chemistry branch is outside ORD; historical biography lists BS/MS rather than research doctorate. No qualifying recent-paper alternative established. https://www.epa.gov/pesticide-contacts/contacting-epa-about-pesticides-science-and-policy-issues ; https://19january2021snapshot.epa.gov/aboutepa/about-director-epas-analytical-chemistry-laboratory_.html"
+    },
+    {
+      "name": "Hiep Tran",
+      "reason": "EPA Region 2 compliance/enforcement physical-scientist lead, outside assigned ORD; research-doctorate/recent-paper test not established. https://yosemite.epa.gov/OA/RHC/EPAAdmin.nsf/Filings/969B124D47CFB1248525876100533568/%24File/QuickChek217503CAFO.pdf"
+    }
+  ],
+  "coverage": [
+    {
+      "employer": "National Institute of Allergy and Infectious Diseases",
+      "pagesExamined": [
+        "https://irp.nih.gov/our-research/principal-investigators/name"
+      ],
+      "note": "Screened NIH-wide current PI alphabetical index and employer-specific surname/given-name searches. No new candidate passing all tests. Index coverage does not exhaust all staff-scientist appointments; old paper affiliations were not accepted as current employment."
+    },
+    {
+      "employer": "National Institute of Neurological Disorders and Stroke",
+      "pagesExamined": [
+        "https://irp.nih.gov/our-research/principal-investigators/name"
+      ],
+      "note": "Screened NIH-wide current PI alphabetical index and employer-specific surname/given-name searches. No new candidate passing all tests. Index coverage does not exhaust all staff-scientist appointments; old paper affiliations were not accepted as current employment."
+    },
+    {
+      "employer": "National Library of Medicine / National Center for Biotechnology Information",
+      "pagesExamined": [
+        "https://irp.nih.gov/our-research/principal-investigators/name"
+      ],
+      "note": "Screened NIH-wide current PI alphabetical index and employer-specific surname/given-name searches. No new candidate passing all tests. Index coverage does not exhaust all staff-scientist appointments; old paper affiliations were not accepted as current employment."
+    },
+    {
+      "employer": "National Human Genome Research Institute",
+      "pagesExamined": [
+        "https://irp.nih.gov/our-research/principal-investigators/name"
+      ],
+      "note": "Screened NIH-wide current PI alphabetical index and employer-specific surname/given-name searches. No new candidate passing all tests. Index coverage does not exhaust all staff-scientist appointments; old paper affiliations were not accepted as current employment."
+    },
+    {
+      "employer": "National Heart, Lung, and Blood Institute",
+      "pagesExamined": [
+        "https://irp.nih.gov/our-research/principal-investigators/name",
+        "https://www.nhlbi.nih.gov/science/echocardiography-laboratory",
+        "https://www.nhlbi.nih.gov/science/molecular-immunology",
+        "https://www.nhlbi.nih.gov/science/cellular-and-molecular-therapeutics",
+        "https://www.nhlbi.nih.gov/science/laboratory-of-nucleic-acids"
+      ],
+      "note": "My-Le Nguyen already listed. Other Vietnamese-name searches primarily produced trainee/staff leads without established full eligibility."
+    },
+    {
+      "employer": "National Institute of Diabetes and Digestive and Kidney Diseases",
+      "pagesExamined": [
+        "https://irp.nih.gov/our-research/principal-investigators/name",
+        "https://www.niddk.nih.gov/about-niddk/staff-directory/browse",
+        "https://www.niddk.nih.gov/about-niddk/staff-directory/biography/nguyen-khoa"
+      ],
+      "note": "Staff-directory browse is paginated (1128 results, initial page A); not claimed as a full staff census. Name searches and global PI index produced no new verified intramural candidate."
+    },
+    {
+      "employer": "Eunice Kennedy Shriver National Institute of Child Health and Human Development",
+      "pagesExamined": [
+        "https://irp.nih.gov/our-research/principal-investigators/name",
+        "https://annualreport.nichd.nih.gov/investigators_by_name.html",
+        "https://annualreport.nichd.nih.gov/dangdo.html",
+        "https://www.nichd.nih.gov/about/org/dir/osd/mt/cd/staff",
+        "https://annualreport.nichd.nih.gov/serpe.html",
+        "https://annualreport.nichd.nih.gov/zimmerberg.html"
+      ],
+      "note": "An Dang Do held for name-only roster collision; other leads excluded as trainees or insufficiently qualified technicians."
+    },
+    {
+      "employer": "National Institute of Environmental Health Sciences",
+      "pagesExamined": [
+        "https://irp.nih.gov/our-research/principal-investigators/name",
+        "https://portal.niehs.nih.gov/staff/allScientists",
+        "https://www.niehs.nih.gov/research/atniehs/labs/ptb/staff"
+      ],
+      "note": "Screened all-scientists directory text and surname/given-name queries. Kimberly Truong is explicitly a contractor. No new fully verified lead."
+    },
+    {
+      "employer": "National Institute on Aging",
+      "pagesExamined": [
+        "https://irp.nih.gov/our-research/principal-investigators/name",
+        "https://www.nia.nih.gov/exposome",
+        "https://www.nia.nih.gov/research/dgcg/about-gcg",
+        "https://www.nia.nih.gov/research/initiatives/approved-concepts"
+      ],
+      "note": "Emerald Nguyen already listed; Carol Nguyen not verified for intramural/doctorate qualification."
+    },
+    {
+      "employer": "National Institute of Mental Health",
+      "pagesExamined": [
+        "https://irp.nih.gov/our-research/principal-investigators/name",
+        "https://www.nimh.nih.gov/about/staff-directories/alphabetical-listing-of-intramural-research-staff-only",
+        "https://www.nimh.nih.gov/about/staff-directories/intramural-research-irp-organizational-locator",
+        "https://www.nimh.nih.gov/research/research-conducted-at-nimh/research-areas/clinics-and-labs/mib/spns/staff",
+        "https://www.nimh.nih.gov/research/research-conducted-at-nimh/research-areas/clinics-and-labs/mib/sprs/people",
+        "https://www.nimh.nih.gov/research/research-conducted-at-nimh/research-areas/clinics-and-labs/snf/lab-members"
+      ],
+      "note": "Directory and individual-group screening resolved misleading search snippets to administrative support, trainees, contractors, or unverified data-science/technician roles."
+    },
+    {
+      "employer": "Centers for Disease Control and Prevention",
+      "pagesExamined": [
+        "https://stacks.cdc.gov/view/cdc/125949/cdc_125949_DS1.pdf",
+        "https://wwwn.cdc.gov/nchs/data/nhanes/public/2025/documents/2025-MEC-Consent-Booklet.pdf",
+        "https://www.cdc.gov/nchs/products/databriefs/db519.htm",
+        "https://www.cdc.gov/nchs/data/databriefs/db552.pdf",
+        "https://wwwn.cdc.gov/phil/Details.aspx?pid=10024"
+      ],
+      "note": "Nguyen/Tran/Pham/Le/Huynh and given-name discovery sweeps. Cau Pham already listed; Duong Nguyen held for name collisions. Old CDC article author affiliations alone were not treated as current employment; state-health and Vietnam-based leads were excluded."
+    },
+    {
+      "employer": "U.S. Food and Drug Administration — CDER",
+      "pagesExamined": [
+        "https://www.fda.gov/media/194885/download",
+        "https://www.fda.gov/media/94295/download"
+      ],
+      "note": "Current 2026 employer-published workshop biography verifies Doanh Tran. Christine Pham Nguyen held for collisions and insufficient separate Vietnamese evidence. Regulatory project managers and PharmD-only leads not accepted without qualifying evidence."
+    },
+    {
+      "employer": "U.S. Food and Drug Administration — CBER",
+      "pagesExamined": [
+        "https://www.fda.gov/media/186796/download",
+        "https://www.fda.gov/media/195415/download",
+        "https://www.fda.gov/media/185192/download?attachment="
+      ],
+      "note": "Bao-Ngoc Nguyen lead investigated; career permanence not resolved in light of official Staff Fellow designation. Regulatory-review document authorship was not automatically treated as a permanent research appointment."
+    },
+    {
+      "employer": "U.S. Food and Drug Administration — NCTR",
+      "pagesExamined": [
+        "https://www.fda.gov/about-fda/science-research-nctr/nctr-principal-investigators",
+        "https://www.fda.gov/about-fda/science-research-nctr/nctr-principal-investigators-name"
+      ],
+      "note": "Reviewed complete alphabetical PI listing and surname/given-name searches; no new eligible Vietnamese-signal PI. Student abstract lead excluded."
+    },
+    {
+      "employer": "NASA Ames Research Center",
+      "pagesExamined": [
+        "https://nas.nasa.gov/pubs/ams/2014/04-22-14.html",
+        "https://www.nasa.gov/people/khuong-tran/",
+        "https://www.nasa.gov/ames/earth-science/werk/meet-the-team/",
+        "https://www.nasa.gov/stmd-flight-opportunities/fo-resources/community-of-practice-webinars/january-2026/"
+      ],
+      "note": "Nhan Nguyen already listed. Khuong Tran already listed and employer affiliation is BAERI. Anh Nguyen is now Headquarters-affiliated. Historical/student/contractor leads not accepted."
+    },
+    {
+      "employer": "NASA Goddard Space Flight Center",
+      "pagesExamined": [
+        "https://science.gsfc.nasa.gov/sci/bio/manh-hung.le",
+        "https://science.gsfc.nasa.gov/sci/bio/17109/",
+        "https://science.gsfc.nasa.gov/sci/bio/jessy.a.nguyen",
+        "https://science.gsfc.nasa.gov/sci/bio/79813/",
+        "https://science.gsfc.nasa.gov/astrophysics/heasarc/bio/duy.t.nguyen?fromOrg=698"
+      ],
+      "note": "Employer-field screening distinguishes NASA employees from SSAI, ADNET and KBR contractors. No new candidate passing role plus doctorate/recent-paper tests."
+    },
+    {
+      "employer": "NASA Langley Research Center",
+      "pagesExamined": [
+        "https://www.nasa.gov/people/louis-nguyen/",
+        "https://fd.satcorps.smce.nasa.gov/cgi-bin/site/website?c=people",
+        "https://science.larc.nasa.gov/activate/participants/"
+      ],
+      "note": "Louis Nguyen is current research staff but affirmative Vietnamese evidence beyond surname was not established. Historical Luat Nguyen sources do not establish a current appointment."
+    },
+    {
+      "employer": "NASA Glenn Research Center",
+      "pagesExamined": [
+        "https://www.nasa.gov/people/quynhgiao-nguyen/"
+      ],
+      "note": "QuynhGiao Nguyen already listed. Surname/given-name and cross-center sweeps yielded no additional verified candidate."
+    },
+    {
+      "employer": "NASA Marshall Space Flight Center",
+      "pagesExamined": [
+        "https://www.nasa.gov/centers-and-facilities/marshall/the-marshall-star-81/",
+        "https://www.nasa.gov/centers-and-facilities/marshall/the-marshall-star-for-april-10-2024/"
+      ],
+      "note": "Nguyen/Tran/Pham and given-name discovery searches; safety/operations and historical propulsion leads lacked current qualifying research evidence."
+    },
+    {
+      "employer": "National Oceanic and Atmospheric Administration laboratories",
+      "pagesExamined": [
+        "https://www.fisheries.noaa.gov/feature-story/meet-canh-nguyen-fisheries-methods-and-equipment-specialist",
+        "https://www.csl.noaa.gov/staff/han.huynh/",
+        "https://www.aoml.noaa.gov/keynotes/PDF-Files/Mar-Apr2016.pdf",
+        "https://www.nanoos.org/products/j-scope/people.php"
+      ],
+      "note": "Nguyen/Tran/Pham/Le/Huynh and Vietnamese-language/heritage searches. CSL direct profile fetch returned cache miss; CIRES employment was not equated with direct NOAA employment. Canh Nguyen lacks qualifying education/publication evidence. No candidate verified."
+    },
+    {
+      "employer": "U.S. Geological Survey",
+      "pagesExamined": [
+        "https://cmgds.marine.usgs.gov/Program/contacts.php",
+        "https://www.usgs.gov/staff-profiles/phuong-a-le",
+        "https://ca.water.usgs.gov/sandiego/contact/scientists_current.html"
+      ],
+      "note": "Nguyen/Tran/Pham/Le/Truong staff-profile searches; surfaced mainly IT/technician and historical leads. Marine directory direct fetch 403, Phuong Le profile fetch timeout; no fact was promoted on those incomplete checks."
+    },
+    {
+      "employer": "USDA Agricultural Research Service",
+      "pagesExamined": [
+        "https://www.ars.usda.gov/people-locations/find-a-person/",
+        "https://www.ars.usda.gov/people-locations/find-a-person/?lnss=Ng&slice=alpha",
+        "https://www.ars.usda.gov/people-locations/find-a-person/?lnss=Tr&slice=alpha",
+        "https://www.ars.usda.gov/people-locations/find-a-person/?lnss=Le&slice=alpha",
+        "https://www.ars.usda.gov/people-locations/find-a-person/?lnss=Ph&slice=alpha",
+        "https://www.ars.usda.gov/people-locations/person?person-id=57546",
+        "https://www.ars.usda.gov/research/publications/publication/?seqNo115=396921",
+        "https://www.ars.usda.gov/research/publications/publication/?seqNo115=409857",
+        "https://www.ars.usda.gov/Main/Docs.htm?docid=24637",
+        "https://ltar.ars.usda.gov/resources/people/"
+      ],
+      "note": "Surname sweeps expanded to Ngo/Dao/Duong/Phan/Truong and given names. Several alpha-directory pages returned navigation without records or cache misses; Tr list and Thao employee page were readable. Thao Tran held under any-hit dedup rule; Helen Ngo Lew lacks affirmative Vietnamese signal. External collaborators and visiting scientists excluded."
+    },
+    {
+      "employer": "U.S. Environmental Protection Agency — Office of Research and Development",
+      "pagesExamined": [
+        "https://www.epa.gov/sciencematters/researchers-work",
+        "https://www.epa.gov/sciencematters/meet-epa-research-chemist-maily-pham",
+        "https://www.epa.gov/pesticide-contacts/contacting-epa-about-pesticides-science-and-policy-issues"
+      ],
+      "note": "Reviewed ORD Researchers at Work listing and Nguyen/Tran/Pham/Ngo/Vietnam searches. Maily Pham lacks established doctorate/two-paper and affirmative-identity evidence. Pesticide/compliance roles outside ORD not used to fill the group. No fully verified new candidate."
+    },
+    {
+      "employer": "Run-wide method and stopping rationale",
+      "pagesExamined": [
+        "maintenance/sector-expansion/BRIEF.md",
+        "TASKS/discover_industry_labs.md",
+        "ROSTER_MAINTENANCE.md",
+        "README.md"
+      ],
+      "note": "Stopped after a broad employer-by-employer pass with low remaining yield, not at the 25-candidate cap. One clean verified candidate; other promising leads retained as dedup holds or explicitly rejected. This is not an exhaustive census. Search engines used to discover leads; candidate facts are verified on the live current-employer PDF. No LinkedIn page was opened, no login or challenge evasion used. No issues/PRs created, no IDs assigned, and only this output file written. Research output only: roster tests/build not run because npm test stamps public/updates.json, prohibited by this brief."
+    }
+  ]
+}

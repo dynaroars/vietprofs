@@ -1,0 +1,39 @@
+{
+  "verifier": "agy",
+  "input": "maintenance/sector-expansion/us-biomed-institutes.codex.json",
+  "candidates": [
+    {
+      "name": "Howard Hang",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live employer profile at https://www.scripps.edu/faculty/hang/ verifies Howard C. Hang as Professor and Department Chair of Immunology & Microbiology (with a joint appointment in Chemistry) at Scripps Research in La Jolla, California. It documents his PhD in Chemistry from UC Berkeley (2003) and BS from UC Santa Cruz (1998), satisfying tests 1 and 2. An employer-published profile interview in Scripps Research Magazine (Fall 2021, 'It takes guts', https://magazine.scripps.edu/profiles/2021/fall/it-takes-guts/) explicitly confirms he was born in Vietnam and immigrated to the US with his family at age four, providing affirmative biographical evidence beyond the shared surname (test 3). Physically located in the United States (test 5). Ran find-roster-matches with the candidate name and submitted URLs; no roster or retired-id matches found (test 4)."
+    },
+    {
+      "name": "Tam Tran",
+      "verdict": "fail",
+      "failedTests": [
+        1,
+        3
+      ],
+      "reason": "The submitted profileUrl https://www.stjude.org/research/departments/pathology/research-division/atg-core.html is a departmental/core-facility team-wide page, not an individual profile page; team-wide pages that do not single out the person are expressly unacceptable as profileUrl under test 1. An independent lab team page at https://www.stjude.org/research/labs/xu-jian-lab/xu-jian-lab-team.html also lists Tam Tran under personnel, but is likewise a shared team roster. St. Jude publishes no individual staff profile page for Tam Tran, and no personal website stating the current role was found. Furthermore, neither employer page nor independent biographical sources supply an affirmative Vietnamese biographical or lineage signal beyond the romanized name; 'Tran' can romanize Chinese Chen and 'Tam' is also a common Cantonese name, failing test 3. Doctoral institution, graduation year, and independent research career ladder status also remain unverified from primary sources."
+    }
+  ],
+  "possible_move": [
+    {
+      "name": "Quynh Tran",
+      "id": "vp-1518",
+      "verdict": "unclear",
+      "newEmployer": null,
+      "url": "https://www.stjude.org/research/labs/orr-lab/orr-lab-team.html",
+      "reason": "vp-1518 is a retired record for Quynh Tran at University of Innsbruck (dropped for lacking a real source, corresponding to Quynh Nhu Jennifer Tran in Austria). The researcher identified at St. Jude Children's Research Hospital is Dr. Nhu Quynh T. Tran (PhD University of Memphis), Senior Bioinformatics Research Scientist in Pathology (https://www.stjude.org/research/labs/orr-lab/orr-lab-team.html). They are two distinct individuals (namesake collision), not a verified institutional move of the retired Innsbruck scholar. Because identity with the retired record is not established, this cannot be recorded as a move of vp-1518."
+    },
+    {
+      "name": "Le Xuan (Truong) Nguyen",
+      "id": "vp-3036",
+      "verdict": "not_moved",
+      "newEmployer": null,
+      "url": "https://researchexperts.utmb.edu/en/persons/truong-nguyen/",
+      "reason": "vp-3036 is Dr. Truong Nguyen, Clinical Assistant Professor of Obstetrics and Gynecology and Director of Minimally Invasive Gynecologic Surgery at The University of Texas Medical Branch at Galveston (UTMB Health). Live institutional profiles (https://researchexperts.utmb.edu/en/persons/truong-nguyen/ and https://doctors.utmbhealth.com/provider/Truong+Nguyen/2653243) confirm he remains an active clinical faculty member at UTMB in Galveston, Texas; he has not moved. The leukemia researcher at City of Hope (Le Xuan Truong Nguyen, PhD Sungkyunkwan University 2010, BSc VNU 2004; https://www.cityofhope.org/research/find-a-scientist/truong-nguyen) is a completely different scholar who shares the name, not a move of vp-3036."
+    }
+  ]
+}

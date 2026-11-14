@@ -1,0 +1,282 @@
+{
+  "verifier": "codex",
+  "input": "maintenance/sector-expansion/non-us-public-labs.agy.json",
+  "candidates": [
+    {
+      "name": "Van Tung Tran",
+      "verdict": "fail",
+      "failedTests": [
+        1
+      ],
+      "reason": "The supplied URL returns HTTP 404. Replacement course pages at https://www.a-star.edu.sg/simtech/kto/advanced-manufacturing/connectivity-for-visibility-and-decision-making and https://www.a-star.edu.sg/simtech/kto/advanced-manufacturing/data-driven-predictive-maintenance-and-optimal-plan are course landing pages, not individual profiles; live opens present a JavaScript robot challenge. Search-index text names a Senior Scientist but cannot substitute for opening the evidence. A PhD/scientist lead exists at https://www.researchgate.net/profile/Van-Tran-61, but ResearchGate is prohibited as profileUrl. No acceptable current-employer or personal profile was established. Van Tung is an affirmative Vietnamese given-name combination. Dedup hit vp-0353 is a Harvard-trained sociologist, not this manufacturing researcher. Do not treat the proposed Pukyong institution/year as verified.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Thanh Xuan Hoang",
+      "verdict": "fixable",
+      "failedTests": [],
+      "reason": "Live employer biography https://research.a-star.edu.sg/researcher/thanh-xuan-hoang/ confirms Senior Scientist in Singapore and NUS PhD, 2014. It actually says his bachelor degree was NUS, 2010, contradicting the submitted VNU-Hanoi biography. Thanh Xuan supplies a Vietnamese given-name signal beyond Hoang. The proposed accented name is not supplied by this source and should be omitted rather than reconstructed (null here means remove). Roster hit vp-1066 is a retinal biologist with Miami University PhD, 2016, not this photonics scientist. The other proposed fields pass the five tests; the supplied Scholar identifier was not independently established.",
+      "correctedFields": {
+        "vietnameseName": null
+      }
+    },
+    {
+      "name": "Neil Hoai Nguyen Huynh",
+      "verdict": "fixable",
+      "failedTests": [],
+      "reason": "Live employer profile https://research.a-star.edu.sg/researcher/neil-hoai-nguyen-huynh/ establishes Senior Scientist and theme lead in Singapore, with a physics PhD and research in complexity science and urban systems. The proposed fluid-dynamics/aeroacoustics research areas describe a different field. His own biography https://sites.google.com/site/nelive/neil-h/biography explicitly states Vietnamese ethnicity, NTU physics PhD in 2013, and Vietnamese high-school education, independently settling tests 2 and 3. Dedup found no matches. Remove the supplied Scholar identifier unless separately resolved to this person.",
+      "correctedFields": {
+        "department": "Institute of High Performance Computing (IHPC), Systems Science Department",
+        "researchAreas": [
+          "Complexity Science",
+          "Complex Networks",
+          "Urban Morphology",
+          "Socio-Urban Systems"
+        ],
+        "scholarUrl": null
+      }
+    },
+    {
+      "name": "Vinh-Tan Nguyen",
+      "verdict": "fixable",
+      "failedTests": [],
+      "reason": "Live employer profile https://research.a-star.edu.sg/researcher/vinh-tan-nguyen/ confirms Senior Principal Scientist at IHPC in Singapore and doctorate from the joint MIT/NUS programme. Vinh-Tan is an affirmative Vietnamese given-name combination, not merely a shared surname. The source does not state 2007 or spell the proposed Vietnamese name with diacritics; omit those unsupported values (null means remove). Dedup matches were checked by discipline/degree: e.g. vp-0134 has Georgia Tech PhD, 2020; vp-0076 Amsterdam, 2004; vp-0682 ANU, 2010; the nursing, clinical, humanities, optics and education matches are different identities. The supplied Scholar identifier remains unverified.",
+      "correctedFields": {
+        "vietnameseName": null,
+        "phdYear": null
+      }
+    },
+    {
+      "name": "Tung Hoang",
+      "verdict": "fixable",
+      "failedTests": [],
+      "reason": "Live CSIRO profile https://people.csiro.au/h/t/tung-hoang establishes Principal Research Scientist, Aquaculture Production Systems, Griffith marine-biology PhD, 2002, and Woorim QLD address. It describes shrimp aquaculture, not batteries, electrochemistry or CSIRO Energy. His years working with Vietnamese aquaculture enterprises and Vietnamese given name Tung supply identity signals beyond the surname. Dedup vp-0010 is a cryptographer with UC Davis PhD, 2013. Replace the fabricated field/location combination and omit the unverified, potentially unrelated Scholar link.",
+      "correctedFields": {
+        "department": "Aquaculture Production Systems",
+        "city": "Woorim",
+        "state": "Queensland",
+        "researchAreas": [
+          "Marine Aquaculture",
+          "Shrimp Farming",
+          "Biofloc Technology",
+          "Aquaculture Production Systems"
+        ],
+        "scholarUrl": null
+      }
+    },
+    {
+      "name": "Yen Pham",
+      "verdict": "fail",
+      "failedTests": [
+        1,
+        2
+      ],
+      "reason": "The submitted URL returns 404; https://people.csiro.au/p/y/yen-pham2 is the live person page. Although its heading says Research Scientist, its employment history explicitly lists CSIRO Early Research Career Postdoc Fellow, 2023–2026. No separate subsequent permanent appointment is documented; do not infer permanence from the heading. It confirms a 2021 USQ PhD in Environmental and Agricultural Studies, not information systems, and systems dynamics/One Health research rather than the proposed medical-information-systems field. Dedup vp-2131 has an Oregon PhD and special-education career. Proposed Vietnam undergraduate history is unverified.",
+      "correctedFields": {
+        "researchAreas": [
+          "Systems Thinking",
+          "System Dynamics Modelling",
+          "One Health",
+          "Climate Change Adaptation and Mitigation"
+        ],
+        "scholarUrl": null
+      },
+      "correctedProfileUrl": "https://people.csiro.au/p/y/yen-pham2"
+    },
+    {
+      "name": "Hoang Duong",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Opened https://people.csiro.au/D/H/Hoang-Duong: CSIRO lists Alloy Processes Research Scientist, 2011–Present, La Trobe PhD in Pyrometallurgy, 1997, and Clayton VIC address. Vietnamese is explicitly listed among his languages, supplementing the Hoang/Duong name signal. The career appointment and doctorate meet test 2. Dedup hits vp-0547 (wireless/control), vp-1189 (cryptography, Leiden PhD) and vp-1248 (structural biology, Cambridge PhD) are distinct people; no matching roster identity found.",
+      "correctedFields": {}
+    },
+    {
+      "name": "James Hoang",
+      "verdict": "fixable",
+      "failedTests": [],
+      "reason": "Opened https://people.csiro.au/h/j/james-hoang directly with HTTP 200 after the browser fetch failed. The employer biography confirms current Research Scientist, CSIRO Australia, SMU computer-science PhD in 2020, and HCMC University of Technology bachelor degree in 2009, an affirmative Vietnam signal. Its linked personal website is https://hvdthong.github.io/ and its actual linked Scholar identifier is oegNEicAAAAJ, not the input identifier. Dedup, including these newly found identity URLs, finds no matching person. City is not established by the opened biography.",
+      "correctedFields": {
+        "scholarUrl": "https://scholar.google.com/citations?user=oegNEicAAAAJ",
+        "websiteUrl": "https://hvdthong.github.io/"
+      }
+    },
+    {
+      "name": "Nhuong Van Nguyen",
+      "verdict": "fail",
+      "failedTests": [
+        1,
+        2
+      ],
+      "reason": "The supplied Max Planck person URL returns 404. The actual live employer profile https://www.ie-freiburg.mpg.de/person/136267 labels Nhuong Nguyen a Postdoc in the Akhtar Department, not Project Leader. The current lab list https://www.ie-freiburg.mpg.de/3997142/Group_Members also names him. Postdocs are excluded irrespective of doctorate or publication volume. Nhuong Van is a distinctive Vietnamese name combination; roster nursing/economics/Axon partial matches are unrelated. The corrected URL is evidence for rejection, not an eligible replacement.",
+      "correctedFields": {},
+      "correctedProfileUrl": "https://www.ie-freiburg.mpg.de/person/136267"
+    },
+    {
+      "name": "Truong-Vinh Hoang",
+      "verdict": "fixable",
+      "failedTests": [
+        1
+      ],
+      "reason": "The supplied /de/profile/hoang_vinh URL returns 404. Opened KIT alumni page https://www.scc.kit.edu/forschung/17000.php: its Dr Hoang, Truong Vinh listing links directly to https://www.fz-juelich.de/profile/hoang_vi, independently connecting the fuller name to the current employer identity. Direct HTTP opens return 200 and name Dr Vinh Hoang, Team Leader ML/AI for X-ray Sciences, Institute for a sustainable Hydrogen Economy, Jülich. Replace the broken URL and wrong department. The employer links Scholar _308zMUAAAAJ, not the submitted identifier. Neither the proposed French doctoral institution nor 2014 is supported; omit both (null means remove). Truong Vinh is an affirmative Vietnamese given-name combination. Roster vp-0240 has a Colorado computer-science career; vp-2714 is an A*STAR photochemist. Corrected identity URLs produce no matching roster record.",
+      "correctedFields": {
+        "department": "Institute for a sustainable Hydrogen Economy (IHE), ML/AI for X-ray Sciences",
+        "phdInstitution": null,
+        "phdYear": null,
+        "scholarUrl": "https://scholar.google.com/citations?user=_308zMUAAAAJ"
+      },
+      "correctedProfileUrl": "https://www.fz-juelich.de/en/profile/hoang_vi"
+    },
+    {
+      "name": "Truong Thao Nguyen",
+      "verdict": "fixable",
+      "failedTests": [
+        1
+      ],
+      "reason": "Submitted AIRC URL returns server error. The live AIST page https://www.digiarc.aist.go.jp/en/team/ccart/ singles him out in a Researcher Profile card with name, photograph, Researcher title and HPC/interconnection-network specialisms, separately from postdocs. Employer seminar biography https://www.airc.aist.go.jp/seminar_detail/seminar_054.html explicitly confirms SOKENDAI informatics PhD, 2018. His self-introduction at https://bkai.ai/wp-content/uploads/2021/07/20210729_AIOT_Meeting-2.pdf confirms HUST undergraduate/masters education in Vietnam. Correct employer unit to that on the opened AIST page; it does not say Senior Researcher. Roster vp-0385 is a different person with Columbia PhD, 1993, confirmed on the CCNY profile; other partial matches differ in field/degree.",
+      "correctedFields": {
+        "department": "Digital Architecture Research Center, Continuum Computing Architecture Research Team"
+      },
+      "correctedProfileUrl": "https://www.digiarc.aist.go.jp/en/team/ccart/"
+    },
+    {
+      "name": "Do-Van Nguyen",
+      "verdict": "fail",
+      "failedTests": [
+        1
+      ],
+      "reason": "Opened https://bdirc.nict.go.jp/member/: it is a names/roles-only team directory, not an individual profile. More seriously, the independently opened self-maintained research record https://www.researchgate.net/profile/Do-Van-Nguyen lists NICT employment ending March 2026 and current CTO at Technica AI. That contradicts treating the NICT directory as current. ResearchGate cannot be profileUrl, and no acceptable current-employer/personal page was established to resolve the move or current career-research role. The doctorate is supported there, and Do-Van is an affirmative Vietnamese name combination. Roster nursing, economics, optometry and Axon partial matches are different identities. No LinkedIn was fetched.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Hoang-Quoc Nguyen-Son",
+      "verdict": "fixable",
+      "failedTests": [
+        1
+      ],
+      "reason": "Opened https://bdirc.nict.go.jp/member/: it lists Nguyen Son Hoang Quoc as Senior Researcher, but provides no individual biography. His maintained personal homepage https://sites.google.com/site/nshquoc/ states current NICT employment, SOKENDAI doctorate in 2015 and former postdoc roles, now ended. Use the personal page with confirmed:false because no individual employer profile was found. The compound Vietnamese given name Hoang-Quoc and full published Nguyen-Son identity provide a signal beyond a shared surname. Dedup partial Hoang/Quoc matches are other disciplines or different full names; adding the personal URL yields no identity match.",
+      "correctedFields": {
+        "confirmed": false
+      },
+      "correctedProfileUrl": "https://sites.google.com/site/nshquoc/"
+    },
+    {
+      "name": "Nguyen-Truong Le",
+      "verdict": "fixable",
+      "failedTests": [
+        1
+      ],
+      "reason": "The supplied page is a magazine/news feature and is ineligible as profileUrl. It explicitly says he was born in Vietnam, joined IAO as scientific researcher in 2009, and completed his doctorate in 2019. Following its author-profile link opens https://blog.iao.fraunhofer.de/author/truong-le/, an employer-published individual author biography identifying a doctorate-holding researcher currently studying deep-tech open innovation in Stuttgart. This satisfies current role and non-trainee research tests. Dedup hits are electronics, computing and medical namesakes; the author profile URL has no roster match. The feature does not itself establish the proposed doctoral institution.",
+      "correctedFields": {
+        "phdInstitution": null
+      },
+      "correctedProfileUrl": "https://blog.iao.fraunhofer.de/author/truong-le/"
+    },
+    {
+      "name": "Cuong M. Nguyen",
+      "verdict": "fail",
+      "failedTests": [
+        1
+      ],
+      "reason": "Opened https://nrc.canada.ca/en/stories/cloudy-chance-research: it is a 3 May 2022 news story, only naming Cuong Nguyen among project investigators. It does not contain the quoted Senior Research Officer/Chief Radar Scientist biography and is neither a current individual profile nor evidence of those titles. The identity-resolved researcher CV at https://raincast.isac.cnr.it/system/files/proposal/Fullproposal_submitted_12Jul2018%20NoCosts.pdf supports Colorado State PhD, 2013, Hanoi engineering degree and historical NRC research employment, but a PDF/old affiliation cannot repair test 1. No acceptable current profile found. Dedup nearest engineering match vp-0785 has NUS PhD, 2005; clinical, economic, Adobe and Surrey matches are different researchers.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Thai Quang Tung",
+      "verdict": "fail",
+      "failedTests": [
+        1,
+        2
+      ],
+      "reason": "The supplied URL is a platform homepage, not a profile. Found and opened the actual employer profile https://ksp.etri.re.kr/ksp/user/059241e3-71b2-4938-8d5f-f2d50743742e: Senior Researcher, Mobile Core Network Research Section, ETRI, Daejeon. This repairs test 1, and Quang Tung is an affirmative Vietnamese given-name combination. However neither a research doctorate nor two identity-resolved papers within the last three years at ETRI was established. The profile count of seven articles gives no dates; patents do not satisfy the two-paper alternative. The claimed 2022–2024 publications are not actually identified in the input. Dedup is clean, including the corrected employer URL. Hold for credential/publication verification.",
+      "correctedFields": {
+        "name": "Quang Tung Thai"
+      },
+      "correctedProfileUrl": "https://ksp.etri.re.kr/ksp/user/059241e3-71b2-4938-8d5f-f2d50743742e"
+    },
+    {
+      "name": "Dong-Nhat Nguyen",
+      "verdict": "fail",
+      "failedTests": [
+        1
+      ],
+      "reason": "ResearchGate is expressly prohibited as profileUrl, including when confirmed:false. The submitted URL also differs from the independently found https://www.researchgate.net/profile/Dong-Nhat-Nguyen-2, which does state TNO/Delft. Employer-hosted 2026 paper https://publications.tno.nl/publication/34645972/j3trUXkd/Doelman-2026-Design.pdf has an indexed biography identifying Nottingham electrical-engineering PhD in 2018 and TNO Optical Communications Engineer, but the browser could not open this oversized PDF; it is not a permissible profile in any event. No current employer individual page or maintained personal site was found. Dong-Nhat supplies a Vietnamese given-name signal, but the claimed award and accented Vietnamese name were not verified. Dedup Utrecht, Macau, accounting and Ayar Labs matches have different fields/identities.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Dang-Bao-An Tran",
+      "verdict": "fixable",
+      "failedTests": [],
+      "reason": "The supplied NPL URL redirects successfully, when fetched directly, to https://www.npl.co.uk/our-people/an-tran. The live employer biography confirms Senior Scientist, Time and Frequency, NPL since January 2022, and Sorbonne Paris Nord PhD, 2019. Listed D. B. A. Tran publications resolve the fuller published identity. Dang-Bao-An is an affirmative Vietnamese given-name combination beyond Tran. Roster vp-0159 is a marketing professor, not a metrologist; no corrected-URL match. Use the canonical current URL.",
+      "correctedFields": {},
+      "correctedProfileUrl": "https://www.npl.co.uk/our-people/an-tran"
+    },
+    {
+      "name": "Si Tran Nguyen",
+      "verdict": "fail",
+      "failedTests": [
+        1
+      ],
+      "reason": "The supplied publication URL is blocked with HTTP 403 and is not an individual profile. The accessible equivalent https://www.dst.defence.gov.au/node/1181 is an October 2016 research report naming Si Tran Nguyen Nguyen, rather than a current staff biography. More recent primary research evidence https://amostech.com/TechnicalPapers/2024/Poster/Finch.pdf affiliates Si Tran Nguyen with Silentium Defence, making the assumed current DSTG employment especially unsafe. No current-employer or personal profile established the present role, stable appointment and location. The Vietnamese multi-token identity is affirmative; roster toxicology/clinical/CS partial matches do not establish a duplicate. Do not apply the old DSTG appointment.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Hai-Tan Tran",
+      "verdict": "fail",
+      "failedTests": [
+        1
+      ],
+      "reason": "The supplied URL is blocked with HTTP 403; its accessible equivalent https://www.dst.defence.gov.au/node/1181 is an October 2016 publication, not a current individual profile. Historical official biography in https://www.dst.defence.gov.au/sites/default/files/publications/documents/DST-Group-TR-3481.pdf supports ANU PhD, 1993, and joining DST in 1996, but cannot establish current employment in 2026. No permissible current employer or personal page was found. Hai-Tan is a Vietnamese given-name signal beyond Tran. Roster Hai Tran entries are different finance, communications, US aerospace or biotechnology researchers; the retired Embry-Riddle duplicate belongs to its existing identity. Failure is current-role verification, not evidence that he is definitively ineligible.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Minh Nguyen",
+      "verdict": "fixable",
+      "failedTests": [
+        1
+      ],
+      "reason": "Opened supplied team page and followed its specific More info link to https://www.fokus.fraunhofer.de/en/usr/minh_nguyen.html. The individual employer biography establishes current FAME Research Associate/Scientist in Berlin, AAU PhD in 2023 and Hanoi University of Science and Technology engineering degree in 2018. It distinguishes the former AAU postdoc from the current Fraunhofer job and lists current research publications. These meet career-research and Vietnamese-background tests. Dedup many partial Minh matches were checked by discipline/degree, including AUT computer-vision PhD Auckland 2012 and JAIST NLP PhD 2004, rather than this AAU streaming researcher. Corrected URL has no roster identity match.",
+      "correctedFields": {},
+      "correctedProfileUrl": "https://www.fokus.fraunhofer.de/en/usr/minh_nguyen.html"
+    },
+    {
+      "name": "Thanh-Duc Nguyen",
+      "verdict": "fail",
+      "failedTests": [
+        1,
+        2
+      ],
+      "reason": "Opened https://www.ipa.fraunhofer.de/en/current-research/biomechatronic-systems/test_systems_for_body_worn_products/3D_test_systems.html: it is a product/service page with a Duc Nguyen contact block, not an individual researcher profile. Independent institutional brochure https://www.ipa.fraunhofer.de/content/dam/ipa/de/documents/aktuelle-forschung/Biomechatronische-Systeme/PB_330_472_Mechanische_Produktevaluation_v3.pdf identifies Thanh-Duc Nguyen as Dipl.-Ing.; this is not a research doctorate. Only the 2025 AMP Registry article (https://pubmed.ncbi.nlm.nih.gov/39945794/) was identity-resolved to IPA; two recent papers were not established. A same-name Science Advances author is affiliated with Fraunhofer IPM, not evidence for this IPA researcher. Thanh-Duc is a Vietnamese given-name signal. Roster vp-0208 is a distinct UConn biomaterials professor with Princeton PhD, 2013.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Bao-Nguyen Nguyen",
+      "verdict": "fail",
+      "failedTests": [
+        1
+      ],
+      "reason": "Submitted A*STAR URL returns 404. Opened former-employer record https://baogroup.stanford.edu/people/alumni/postdoctoral-scholars-alumni, which identifies Dr Bao-Nguyen Nguyen, Cambridge PhD, Stanford postdoc 2021–2023, now IMRE Research Scientist. This is credible corroboration of career/doctorate but is explicitly a former-employer page and cannot be profileUrl. The identity-resolved 2025 paper https://pubmed.ncbi.nlm.nih.gov/40302236/ corroborates IMRE affiliation, but a paper cannot establish the required current profile either. No current employer individual profile or own site found. Bao-Nguyen is an affirmative Vietnamese given-name combination. Roster Leeds chemist has a different degree/career; optometry, economics, biology and civil-engineering matches are unrelated. Do not substitute Stanford or ResearchGate as profileUrl.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Ngoc Minh Nguyen",
+      "verdict": "fail",
+      "failedTests": [
+        1,
+        2
+      ],
+      "reason": "Submitted BII URL returns 404. Replacement directory https://www.a-star.edu.sg/bii/people/principal-investigators also returns 404 on direct HTTP fetch and a robot challenge through the browser. Search-index text actually places NGUYEN Ngoc Minh under Chandra Verma as Principal Scientist, not an independent PI, but it could not be checked live. https://mspc.bii.a-star.edu.sg/minhn/ is a CLICK software server, not a person profile. The NTU doctorate was not independently established, and two qualifying recent employer-affiliated papers were not verified. Ngoc Minh is a Vietnamese given-name combination, but the input undergraduate claim is unsupported. Dedup yielded namesakes in clinical medicine, sociology, business and other disciplines; no matching bioinformatics identity established. Requires a current profile and credential/publication evidence before inclusion.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Dang Quan Nguyen",
+      "verdict": "fixable",
+      "failedTests": [],
+      "reason": "Opened https://people.csiro.au/N/D/Dangquan-Nguyen: official title is Software Engineering Lead, with Clayton VIC contact address, Paris 6 computer-science PhD in 2006, and continuous CSIRO employment since 2017. The biography explicitly describes applied research projects in hydraulic/pipeline transport, computer vision, risk evaluation and evacuation modelling, sufficient substantive research despite the engineering title. Dang Quan and the Vietnamese family names Nha Thi/Tuong Van provide signals beyond Nguyen. The page does not name the proposed Natural Systems Modelling Group; remove that unsupported department. Dedup power-grid vp-2977, constraint-programming vp-1925, mechatronics vp-1736 and economics/finance matches differ in field and/or doctorate.",
+      "correctedFields": {
+        "city": "Clayton",
+        "department": null
+      }
+    }
+  ],
+  "possible_move": []
+}

@@ -10,21 +10,29 @@
 Target file: `public/data.json` (Gov & Labs and Industry sectors). Eligibility, tracks, and `institutionType` values are the
 `🏢 Industry` and `🏛️ Gov, Defense & Labs` rules in [`candidate_intake.md`](candidate_intake.md)
 step 2 and `ROSTER_MAINTENANCE.md`; this playbook only adds how to find and verify people there.
-University faculty and public/nonprofit scholarly institutes (CNRS, Max Planck, NIH intramural PIs)
-stay with [`discover_new_faculty.md`](discover_new_faculty.md) and `public/data.json`.
+University faculty stay with [`discover_new_faculty.md`](discover_new_faculty.md). Public and
+nonprofit scholarly institutes (CNRS, Max Planck, NIH intramural, WEHI, Fred Hutch) are covered by
+both playbooks: here as whole-institute employer groups (rows below), there when a field or
+institution sweep reaches them. Either way they are Gov & Labs entries.
 
 ## 🔁 One employer group per run
 
 Pick the group least recently covered by a `[scheduled:discover]` Issue (read the last 60 days of
-them, open and closed) and stay inside it:
+them, open and closed) and stay inside it. Break ties toward the higher-yield groups in
+`maintenance/sector-expansion/LEDGER.md`, and skip any group it marks `exhausted`:
 
 | Group | Employers (examples, not a closed list) | Where the people are listed |
 | :--- | :--- | :--- |
 | AI labs | Google DeepMind, Google Research, Microsoft Research, Meta FAIR, NVIDIA Research, Apple MLR, Amazon Science, IBM Research, Adobe Research, Salesforce AI Research, Qualcomm AI Research, OpenAI, Anthropic | `research.google/people`, `microsoft.com/en-us/research/people`, `research.nvidia.com/person`, `amazon.science/author`, `research.ibm.com/people`, `research.adobe.com/person`, `machinelearning.apple.com` paper bylines |
-| Other corporate R&D | Genentech, Regeneron, Novartis BioMedical Research, Bell Labs, Intel Labs, Samsung Research America, Bosch Research, Toyota Research Institute, Mitsubishi Electric Research Labs | Employer scientist/people pages; `gene.com/scientists` |
-| US national labs | Argonne, LBNL, LLNL, LANL, ORNL, PNNL, Sandia, NREL, SLAC, Fermilab, Brookhaven, NIST, NASA centers | Lab staff directories (`anl.gov/profile`, `profiles.lbl.gov`, `people.llnl.gov`, `ornl.gov/staff-profile`, `pnnl.gov/people`, `nist.gov/people`, `science.gsfc.nasa.gov/sci/bio`) |
+| Pharma & biotech R&D | Genentech, Regeneron, Novartis BioMedical Research, Moderna, BMS, Lilly, Gilead, GSK, AstraZeneca, Merck, Pfizer, Amgen, Vertex, AbbVie, Sanofi, Biogen, Alnylam, Takeda | Employer scientist pages (`gene.com/scientists`) are rare; usually the person's own site or publication record with `"confirmed": false`. Strict role test: no manufacturing, QA, regulatory, medical affairs |
+| Hardware & physical-science labs | Intel Labs, SAIT / Samsung Research America, Nokia Bell Labs, HP/HPE Labs, Toyota Research Institute, Bosch Research, Siemens Technology, GE Aerospace/Vernova Research, Dow, 3M, Boeing R&T, Applied Materials, Micron, TI Kilby Labs, MERL, NEC Labs America, Sony AI, Honda Research Institute | Employer research people pages; publication bylines as leads |
+| US independent biomedical institutes | Fred Hutch, St. Jude, Sloan Kettering Institute, Dana-Farber, Broad, Salk, Scripps Research, Allen Institute, HHMI Janelia, Stowers, Jackson Laboratory, City of Hope Beckman | Faculty/investigator directories; `institutionType: "Independent nonprofit research institute"` |
+| US federal science agencies | NIH intramural institutes (NIAID, NHLBI, NIDDK, NINDS, NICHD, NIEHS, NLM/NCBI, NHGRI, NIA, NIMH; NCI too), CDC, FDA research centers, NASA centers, NOAA labs, USGS, USDA ARS, EPA ORD | `irp.nih.gov/pi`, agency staff/scientist pages |
+| US national labs | Argonne, LBNL, LLNL, LANL, ORNL, PNNL, Sandia, National Laboratory of the Rockies (formerly NREL), INL, SLAC, Fermilab, Brookhaven, Ames, PPPL, Jefferson Lab, NIST | Lab staff directories (`anl.gov/profile`, `profiles.lbl.gov`, `people.llnl.gov`, `ornl.gov/staff-profile`, `pnnl.gov/people`, `nist.gov/people`, `science.gsfc.nasa.gov/sci/bio`) |
 | Defense and FFRDC/UARC | ARL, NRL, AFRL, AFOSR, ONR, DARPA, MIT Lincoln Laboratory, JHU APL, Aerospace Corporation, MITRE, IDA, RAND | Agency program-officer and staff pages; `ll.mit.edu/biographies`; `jhuapl.edu` staff bios |
-| Non-US public and corporate labs | CSIRO and DSTG (Australia), NRC (Canada), RIKEN and AIST (Japan), A*STAR (Singapore), Fraunhofer (Germany), NAVER Labs, Huawei and Samsung research centres outside Vietnam | Institute staff directories |
+| French public research | CNRS, Inserm, Inria, CEA, IRD, INRAE, Institut Pasteur, ONERA, IFREMER, CNES (permanent CR/DR and research engineers) | Lab/unit annuaires; HAL author pages as leads only |
+| Australian medical research institutes | WEHI, Garvan, QIMR Berghofer, Murdoch Children's, Peter MacCallum, Florey, Hudson, Baker, Kirby, Telethon Kids, CMRI, Harry Perkins | Institute lab-head and researcher pages; check for a university conjoint entry first |
+| Non-US public and corporate labs | Max Planck, Helmholtz (DLR, Jülich, DESY, DKFZ), Fraunhofer (Germany); RIKEN, AIST, NIMS, NICT, JAXA (Japan); KIST, ETRI (Korea); NRC (Canada); A*STAR (Singapore); CSIRO and DSTG (Australia); NPL (UK); TNO (Netherlands); NAVER Labs, Huawei and Samsung research centres outside Vietnam | Institute staff directories |
 | Central banks and international organizations | Federal Reserve Board and regional Feds, ECB, BIS, Bank of England, Bank of Canada, RBA, IMF, World Bank, OECD, ADB | Economist directories (`federalreserve.gov/econres`, each regional Fed's economists page, `imf.org` author pages, `worldbank.org/en/about/people`) |
 | Think tanks | Brookings, RAND, PIIE, Urban Institute, CSIS, Carnegie, NBER staff, ISEAS, Lowy Institute | Expert/staff pages |
 
@@ -62,13 +70,26 @@ left a duplicate of an existing entry, guessed `vietnameseName` values, and a qu
    the person out when neither holds.
 3. **Not already on the roster.** Run
    `npm run find-roster-matches -- "<name>" --url <every identity URL>` (it reads both roster files
-   and the retired-id ledger) and `gh issue list --state all --search '"<name>"'`. A hit at a
-   university is usually the same person before or after a move: file a `Review stale institution:`
-   side finding for that id, never a new candidate. Someone who holds a university faculty
+   and the retired-id ledger) and `gh issue list --state all --search '"<name>"'`. A hit is a
+   lead, not a verdict: resolve identity first by field, education, co-authors, or links between
+   the pages. Same person (usually before or after a move): file a `Review stale institution:`
+   side finding for that id, never a new candidate. Different person (common with names like Thao
+   Tran or Tony Nguyen): carry on as a new candidate and say in the Issue which id it was checked
+   against. On 2026-11-14, 30 of 32 name-only holds were different people, 6 of them eligible.
+   Someone who holds a university faculty
    appointment *and* an industry role stays one entry, under the primary appointment.
 
 Screening still applies: the name rulings in `ROSTER_MAINTENANCE.md`, and nobody physically based
 in Vietnam (a Vietnam office of a foreign lab is out).
+
+## 🤝 External producers (Codex, agy)
+
+When the owner delegates discovery to an external CLI agent, give it
+`maintenance/sector-expansion/BRIEF.md`, and have a different agent re-verify every candidate
+with `maintenance/sector-expansion/VERIFY.md` before anything is filed. Record each run's yield and
+the producer's accuracy in `maintenance/sector-expansion/LEDGER.md`. agy invents plausible
+`profileUrl` slugs and cannot run shell commands headless, so its URLs and dedup claims never
+count as checked.
 
 ## 📝 Proposed fields
 

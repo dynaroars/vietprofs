@@ -1,0 +1,162 @@
+{
+  "verifier": "codex",
+  "input": "maintenance/sector-expansion/us-federal-science.codex.json",
+  "holds": [
+    {
+      "name": "An Dang Do",
+      "id": "vp-0450",
+      "verdict": "different_person",
+      "reason": "Different full names and research identities: the UCI page names An Hong Do, a neurologist researching neurorehabilitation and brain-computer interfaces; NICHD identifies An N. Dang Do, a clinical genetics investigator. These are distinct people, not an institutional move. Tests 1-5 pass for the NICHD investigator: the individual HTML investigator/lab page is linked by the current NICHD staff directory; that directory confirms a clinical tenure-track appointment; MD/PhD and unit leadership are explicit; An Ngoc is an affirmative Vietnamese given-name signal; the dedup command returned only this name collision, now resolved; NIH clinical-trial contacts locate the investigator in Bethesda, Maryland. Compared roster identity source: https://www.faculty.uci.edu/profile/?facultyId=6080 .",
+      "url": "https://annualreport.nichd.nih.gov/dangdo.html",
+      "candidate": {
+        "entry": {
+          "name": "An Dang Do",
+          "university": "Eunice Kennedy Shriver National Institute of Child Health and Human Development",
+          "institutionType": "Public research institute",
+          "track": "Research",
+          "rank": "Researcher",
+          "department": "Unit on Cellular Stress in Development and Diseases",
+          "city": "Bethesda",
+          "state": "Maryland",
+          "country": "United States",
+          "researchAreas": [
+            "Cellular stress responses",
+            "Rare pediatric neurogenetic disorders",
+            "CLN3 disease",
+            "MEHMO syndrome"
+          ],
+          "profileUrl": "https://annualreport.nichd.nih.gov/dangdo.html"
+        },
+        "evidence": {
+          "currentRole": "https://www.nichd.nih.gov/about/org/dir/osd/mt/cd/staff identifies Clinical Tenure-Track Investigator and links directly to https://annualreport.nichd.nih.gov/dangdo.html , an individual investigator/laboratory HTML page. It identifies An N. Dang Do as unit head.",
+          "doctorateOrPapers": "https://annualreport.nichd.nih.gov/dangdo.html explicitly lists MD, PhD; the current staff directory independently lists both degrees. Institution and year are omitted because not verified.",
+          "vietnameseSignal": "An Ngoc is spelled out in NICHD clinical-study contacts at https://annualreport.nichd.nih.gov/clinicaltrials.html ; affirmative Vietnamese given names, not surname-only inference.",
+          "dedup": "npm run find-roster-matches -- \"An Dang Do\" --url https://annualreport.nichd.nih.gov/dangdo.html --url https://www.nichd.nih.gov/about/org/dir/osd/mt/cd/staff returned only vp-0450 (name match). UCI names An Hong Do with a different clinical/research identity; collision resolved as different_person. No URL match.",
+          "location": "https://clinicalstudies.info.nih.gov/protocoldetails.aspx?id=000414-CH&query= lists the investigator at 10 Center Drive, Bethesda, Maryland 20892."
+        }
+      }
+    },
+    {
+      "name": "Thao Tran",
+      "id": "vp-0463",
+      "verdict": "different_person",
+      "reason": "The university profile identifies Thao T. Tran, Assistant Teaching Professor in Mathematics and Statistics. The ARS papers identify T. D. Tran working on food microbiology with Lee, Hnasko and McGarvey. Different initials, disciplines and institutional research identities support different people. Candidate tests: 1 fails because a direct HTTP 200 fetch of the proposed ARS profile returns \"The person you selected is invalid or no longer available\"; the unit staff listing also supplies no employee record. Test 2 has two qualifying 2024 papers, but a current career appointment cannot be verified. Test 3 passes on Vietnamese given name Thao. Test 4: rerun returned five name-only hits, resolved individually in these holds, with no URL hit. Test 5: the research location is Albany, California; no Vietnam base indicated. No ready candidate until a live current-employer profile and appointment are recovered. Paper sources: https://www.ars.usda.gov/research/publications/publication/?seqNo115=396921 and https://www.ars.usda.gov/research/publications/publication/?seqNo115=409857 . Staff listing: https://www.ars.usda.gov/people-locations/people-list/?modeCode=20-30-05-30 . Compared roster identity source: https://www.uml.edu/sciences/mathematics/people/tran-thao.aspx .",
+      "url": "https://www.ars.usda.gov/people-locations/person?person-id=57546"
+    },
+    {
+      "name": "Thao Tran",
+      "id": "vp-1699",
+      "verdict": "different_person",
+      "reason": "The live RMIT profile identifies a finance Senior Lecturer with a Deakin finance PhD and an Australian campus. This is distinct from the ARS food-microbiology author T. D. Tran. Full candidate tests and the unavailable ARS employee record are documented in hold vp-0463; no ready candidate. Compared roster identity source: https://www.rmit.edu.au/profiles/t/thao-tran2 .",
+      "url": "https://www.ars.usda.gov/people-locations/person?person-id=57546"
+    },
+    {
+      "name": "Thao Tran",
+      "id": "vp-2058",
+      "verdict": "different_person",
+      "reason": "The live Clemson profile identifies Thao Tran Dominy (Thao T. Tran), with a Houston materials-chemistry PhD (2010-2015), Johns Hopkins materials-physics postdoc (2016-2019), and quantum-materials research. This is distinct from ARS food-microbiology author T. D. Tran. Candidate tests are documented in hold vp-0463; no ready candidate. Compared roster identity source: https://www.clemson.edu/science/academics/departments/chemistry/about/profiles/thao .",
+      "url": "https://www.ars.usda.gov/people-locations/person?person-id=57546"
+    },
+    {
+      "name": "Thao Tran",
+      "id": "vp-2540",
+      "verdict": "different_person",
+      "reason": "The live Pau profile identifies a geography lecturer with a Paris IV-Sorbonne geography/environment doctorate in 2006 and employment at Pau since 2007. This is distinct from ARS food-microbiology author T. D. Tran. Candidate tests are documented in hold vp-0463; no ready candidate. Compared roster identity source: https://tree.univ-pau.fr/fr/organisation/membres/cv-ttran6-fr.html .",
+      "url": "https://www.ars.usda.gov/people-locations/person?person-id=57546"
+    },
+    {
+      "name": "Thao Tran",
+      "id": "vp-2865",
+      "verdict": "different_person",
+      "reason": "The live ASU profile identifies Alisia (Giac-Thao) Tran, a counseling psychologist with a Minnesota psychology doctorate in 2012 and the TEMPE psychology lab. This is distinct from ARS food-microbiology author T. D. Tran. Candidate tests are documented in hold vp-0463; no ready candidate. Compared roster identity source: https://search.asu.edu/profile/1991143 .",
+      "url": "https://www.ars.usda.gov/people-locations/person?person-id=57546"
+    },
+    {
+      "name": "Duong T. Nguyen",
+      "id": "vp-0023",
+      "verdict": "different_person",
+      "reason": "Wyoming identifies Duong Ngoc Nguyen, a computer scientist with a Michigan State PhD and distributed-systems research. The CDC identity is Duong T. (Tony) Nguyen, DO, a pediatrician and NHANES clinical leader. Different names, training and careers establish distinct people. Candidate tests: 1 fails: the CDC consent PDF is excluded as profileUrl, the anemia HTML page is a publication, and no eligible individual employer profile or personal-site fallback was found. Test 2 remains unverified under the exact research-doctorate/two-paper requirement: clinical leadership and a DO are documented, but no research doctorate or two qualifying recent journal papers were established; NCHS data briefs were not assumed to meet that alternative. Test 3 passes on Duong. Test 4: five name-only hits, individually resolved here, no identity URL match. Test 5 passes: CDC materials give Hyattsville, Maryland. No ready candidate. Sources: https://wwwn.cdc.gov/nchs/data/nhanes/public/2025/documents/2025-MEC-Consent-Booklet.pdf ; https://www.cdc.gov/nchs/products/databriefs/db519.htm ; https://www.nationalacademies.org/cdn/materials/9fba0841-9655-46ad-bb0e-2eca8fe76d4e . Compared roster identity source: https://www.uwyo.edu/eecs/faculty-staff/faculty/duong-nguyen/index.html .",
+      "url": "https://wwwn.cdc.gov/nchs/data/nhanes/public/2025/documents/2025-MEC-Consent-Booklet.pdf"
+    },
+    {
+      "name": "Duong T. Nguyen",
+      "id": "vp-0358",
+      "verdict": "different_person",
+      "reason": "ASU identifies an electrical/computer engineering researcher with a UBC doctorate and cloud/energy/optimization work. This is distinct from CDC pediatrician Duong T. (Tony) Nguyen, DO. Candidate tests are documented in hold vp-0023; no ready candidate. Compared roster identity source: https://search.asu.edu/profile/3714024 .",
+      "url": "https://wwwn.cdc.gov/nchs/data/nhanes/public/2025/documents/2025-MEC-Consent-Booklet.pdf"
+    },
+    {
+      "name": "Duong T. Nguyen",
+      "id": "vp-1228",
+      "verdict": "different_person",
+      "reason": "The NETL source identifies Thuy Duong Nguyen Phan as a carbon-conversion/electrocatalysis researcher, including a 2024 catalyst study with Ellis and Kauffman. The full name and research identity differ from CDC pediatrician Duong T. (Tony) Nguyen. Candidate tests are documented in hold vp-0023; no ready candidate. Compared roster identity source: https://netl.doe.gov/node/13265 .",
+      "url": "https://wwwn.cdc.gov/nchs/data/nhanes/public/2025/documents/2025-MEC-Consent-Booklet.pdf"
+    },
+    {
+      "name": "Duong T. Nguyen",
+      "id": "vp-1248",
+      "verdict": "different_person",
+      "reason": "The live MRC LMB profile identifies Kelly Nguyen, a Structural Studies group leader whose papers use Nguyen THD and concern telomerase/cryo-EM. This is distinct from CDC pediatrician Duong T. (Tony) Nguyen. Candidate tests are documented in hold vp-0023; no ready candidate. Compared roster identity source: https://mrclmb.ac.uk/research-leaders/kelly-nguyen/ .",
+      "url": "https://wwwn.cdc.gov/nchs/data/nhanes/public/2025/documents/2025-MEC-Consent-Booklet.pdf"
+    },
+    {
+      "name": "Duong T. Nguyen",
+      "id": "vp-1630",
+      "verdict": "different_person",
+      "reason": "The live Copenhagen profile identifies Trinh Trung Duong Nguyen, Assistant Professor in Pharmaceutical Informatics, with a Copenhagen office and trung.trinh email. This full identity and research field differ from CDC pediatrician Duong T. (Tony) Nguyen. Candidate tests are documented in hold vp-0023; no ready candidate. Compared roster identity source: https://drug.ku.dk/staff/?pure=en/persons/729949 .",
+      "url": "https://wwwn.cdc.gov/nchs/data/nhanes/public/2025/documents/2025-MEC-Consent-Booklet.pdf"
+    },
+    {
+      "name": "Christine Pham Nguyen",
+      "id": "vp-0116",
+      "verdict": "different_person",
+      "reason": "NIU identifies an industrial engineer with USC PhD (2014); the FDA physician trained at UCSF and Johns Hopkins. Distinct people. Candidate tests: 1 fails (PDF; no acceptable replacement found); 2 passes (career clinical-science leadership, MD); 3 fails (no affirmative Vietnamese signal beyond surnames); 4 passes after resolving all six name-only hits here; 5 passes (United States). No ready candidate. FDA identity source: https://www.fda.gov/media/194885/download . Compared roster identity source: https://www.niu.edu/cnguyen/index.shtml .",
+      "url": "https://www.fda.gov/media/194885/download"
+    },
+    {
+      "name": "Christine Pham Nguyen",
+      "id": "vp-0150",
+      "verdict": "different_person",
+      "reason": "Monmouth identifies Nguyen (Win) Pham, a marketing professor with an ASU marketing doctorate. Distinct from the FDA obstetrician. Candidate tests and rejection are recorded in hold vp-0116. Compared roster identity source: https://www.monmouth.edu/directory/profiles/npham/ .",
+      "url": "https://www.fda.gov/media/194885/download"
+    },
+    {
+      "name": "Christine Pham Nguyen",
+      "id": "vp-0678",
+      "verdict": "different_person",
+      "reason": "Melbourne identifies an optometry/vision-sciences associate professor researching retinal biomarkers. Distinct from the FDA obstetrician. Candidate tests and rejection are recorded in hold vp-0116. Compared roster identity source: https://findanexpert.unimelb.edu.au/profile/25627-christine-nguyen .",
+      "url": "https://www.fda.gov/media/194885/download"
+    },
+    {
+      "name": "Christine Pham Nguyen",
+      "id": "vp-2295",
+      "verdict": "different_person",
+      "reason": "HPU identifies Christine Nguyen, DNP/APRN, with Texas nursing degrees. Distinct from the FDA physician. Candidate tests and rejection are recorded in hold vp-0116. Compared roster identity source: https://www.hpu.edu/faculty/nursing/christine-nguyen.html .",
+      "url": "https://www.fda.gov/media/194885/download"
+    },
+    {
+      "name": "Christine Pham Nguyen",
+      "id": "vp-2362",
+      "verdict": "different_person",
+      "reason": "WashU identifies a rheumatologist with a University of Florida MD (1985), distinct from the FDA UCSF-trained obstetrician. Candidate tests and rejection are recorded in hold vp-0116. Compared roster identity source: https://physicians.wustl.edu/people/christine-pham-md/ .",
+      "url": "https://www.fda.gov/media/194885/download"
+    },
+    {
+      "name": "Christine Pham Nguyen",
+      "id": "vp-2399",
+      "verdict": "different_person",
+      "reason": "WesternU identifies Christine Pham in optometry, distinct from the FDA obstetrician. Candidate tests and rejection are recorded in hold vp-0116. Compared roster identity source: https://www.westernu.edu/bios/?bio=ctpham .",
+      "url": "https://www.fda.gov/media/194885/download"
+    }
+  ],
+  "candidates": [
+    {
+      "name": "Doanh Tran",
+      "verdict": "fail",
+      "failedTests": [
+        1
+      ],
+      "reason": "The supplied profileUrl is a workshop PDF, expressly excluded by VERIFY.md test 1. The live FDA digoxin research-project page also lists multiple collaborators without an individual profile; it does not repair test 1. No acceptable employer profile or personal-site fallback was found. Tests 2, 3 and 5 are supported: the September 2026 FDA biography confirms a career scientific deputy-director role and PhD; Doanh is a Vietnamese given-name signal; the role is U.S.-based. Test 4 passes: rerunning find-roster-matches with the name, PDF and project URL produced no roster or retired-id matches. Sources: https://www.fda.gov/media/194885/download ; https://www.fda.gov/science-research/advancing-regulatory-science/clinical-pharmacology-based-approach-optimizing-digoxin-dosing-older-adult-population . No correctedProfileUrl is supplied because no compliant one was verified."
+    }
+  ]
+}
