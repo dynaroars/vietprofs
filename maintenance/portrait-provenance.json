@@ -99,7 +99,7 @@
       "name": "Minh Vo",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-14T11:49:52.580Z",
+      "retrievedAt": "2026-11-14T22:38:53.191Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-0474": {
@@ -776,7 +776,7 @@
       "name": "Hai Anh La",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-14T11:55:53.248Z",
+      "retrievedAt": "2026-11-14T22:40:21.712Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1031": {
@@ -825,10 +825,20 @@
     },
     "vp-1045": {
       "name": "Manh Hao Quach",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-14T11:56:29.802Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://staff.lincoln.ac.uk/51b498aa-2149-4fbb-9156-707c594cb5d3",
+      "imageUrl": "https://staff.lincoln.ac.uk/profile/image/51b498aa-2149-4fbb-9156-707c594cb5d3",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url",
+        "profile_markup"
+      ],
+      "retrievedAt": "2026-11-14T22:51:45.559Z",
+      "note": "MEDIUM candidate stored after visual review"
     },
     "vp-1049": {
       "name": "Huong Vu",
@@ -858,7 +868,7 @@
       "name": "Huy Chau",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-11-11T11:15:47.989Z",
+      "retrievedAt": "2026-11-14T22:41:26.772Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1070": {
@@ -948,18 +958,9 @@
     "vp-1100": {
       "name": "Anh D. Ngo",
       "outcome": "not_found",
-      "pageUrl": "https://nsu.academia.edu/AnhNgo",
-      "imageUrl": "https://c.academia-assets.com/images/s200_no_pic.png",
-      "sourceType": "personal_homepage",
-      "confidence": "MEDIUM",
-      "identitySignals": [
-        "name",
-        "institution",
-        "department",
-        "stored_roster_url"
-      ],
-      "retrievedAt": "2026-10-14T11:58:05.721Z",
-      "note": "rejected on visual review 2026-10-14: academia.edu no-picture placeholder"
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:51:52.980Z",
+      "note": "candidate rejected on visual review: photo of another person (Nikhil Chandra Shil)"
     },
     "vp-1108": {
       "name": "Ellie Luu",
@@ -972,15 +973,24 @@
       "name": "Hang Le",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-14T11:58:27.610Z",
+      "retrievedAt": "2026-11-14T22:42:10.365Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1119": {
       "name": "Uyen T. Nguyen",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-14T11:58:34.691Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://scholar.google.com/citations?user=wAucrZoAAAAJ&hl=en",
+      "imageUrl": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=wAucrZoAAAAJ&citpid=1",
+      "sourceType": "scholar_profile",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "stored_roster_url",
+        "scholar_profile",
+        "institution"
+      ],
+      "retrievedAt": "2026-11-14T22:51:46.117Z",
+      "note": "MEDIUM candidate stored after visual review"
     },
     "vp-1124": {
       "name": "Quynh Doan",
@@ -1234,10 +1244,19 @@
     },
     "vp-1198": {
       "name": "Lam Thi Mai Huynh",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-14T12:00:34.736Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://scholar.google.com/citations?user=28Hug4sAAAAJ&hl=en",
+      "imageUrl": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=28Hug4sAAAAJ&citpid=3",
+      "sourceType": "scholar_profile",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "stored_roster_url",
+        "scholar_profile",
+        "institution"
+      ],
+      "retrievedAt": "2026-11-14T22:51:46.873Z",
+      "note": "MEDIUM candidate stored after visual review"
     },
     "vp-1199": {
       "name": "Son Truong",
@@ -1264,17 +1283,27 @@
     },
     "vp-1202": {
       "name": "Anh Van Vo",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-14T12:00:58.781Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://www.qut.edu.au/about/our-people/academic-profiles/v.anh",
+      "imageUrl": "https://www.qut.edu.au/__data/assets/image/0003/1087833/varieties/sp-profile-large.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url",
+        "profile_markup"
+      ],
+      "retrievedAt": "2026-11-14T22:51:47.177Z",
+      "note": "MEDIUM candidate stored after visual review"
     },
     "vp-1203": {
       "name": "Anh-Huy Phan",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-14T12:01:14.488Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "retrievedAt": "2026-11-14T22:51:52.980Z",
+      "note": "candidate rejected on visual review: photo of another person (Artem Abakumov)"
     },
     "vp-1205": {
       "name": "Tao Pham Dinh",
@@ -1510,7 +1539,7 @@
       "name": "Viet Giang Truong",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-14T12:06:06.336Z",
+      "retrievedAt": "2026-11-14T22:43:19.993Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1257": {
@@ -1841,10 +1870,19 @@
     },
     "vp-1321": {
       "name": "Nghia Duong-Trung",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-14T12:11:51.596Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://scholar.google.com/citations?user=kzKJhREAAAAJ&hl=en",
+      "imageUrl": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=kzKJhREAAAAJ&citpid=3",
+      "sourceType": "scholar_profile",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "stored_roster_url",
+        "scholar_profile",
+        "institution"
+      ],
+      "retrievedAt": "2026-11-14T22:51:47.479Z",
+      "note": "MEDIUM candidate stored after visual review"
     },
     "vp-1323": {
       "name": "Cao-Thang Dinh",
@@ -2085,7 +2123,7 @@
       "name": "Nhu Khue Vuong",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-14T12:19:46.635Z",
+      "retrievedAt": "2026-11-14T22:44:02.723Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1382": {
@@ -2518,7 +2556,7 @@
       "name": "Ngoc-Son Vu",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-14T12:27:32.180Z",
+      "retrievedAt": "2026-11-14T22:44:21.231Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1468": {
@@ -2772,10 +2810,19 @@
     },
     "vp-1565": {
       "name": "Yen Tran",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-14T12:34:03.725Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://scholar.google.com/citations?user=djbQ2X0AAAAJ&hl=en",
+      "imageUrl": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=djbQ2X0AAAAJ&citpid=2",
+      "sourceType": "scholar_profile",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "stored_roster_url",
+        "scholar_profile",
+        "institution"
+      ],
+      "retrievedAt": "2026-11-14T22:51:47.744Z",
+      "note": "MEDIUM candidate stored after visual review"
     },
     "vp-1567": {
       "name": "Hai Pham",
@@ -3059,17 +3106,19 @@
     },
     "vp-1649": {
       "name": "Quang Trung Pham",
-      "outcome": "not_found",
-      "pageUrl": "https://seeds.office.hiroshima-u.ac.jp/profile/en.be8341600c5bf06d520e17560c007669.html",
-      "imageUrl": "https://seeds.office.hiroshima-u.ac.jp/profile/image/portrait/be8341600c5bf06d520e17560c007669.jpg",
-      "sourceType": "official_faculty",
+      "outcome": "found",
+      "pageUrl": "https://scholar.google.com/citations?user=6Ec3ResAAAAJ&hl=en",
+      "imageUrl": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=6Ec3ResAAAAJ&citpid=2",
+      "sourceType": "scholar_profile",
       "confidence": "MEDIUM",
       "identitySignals": [
         "name",
-        "stored_roster_url"
+        "stored_roster_url",
+        "scholar_profile",
+        "institution"
       ],
-      "retrievedAt": "2026-11-01T17:25:28.433Z",
-      "note": "2026-11-01 deep audit: own-page profile photo failed --store checks (image could not be downloaded)"
+      "retrievedAt": "2026-11-14T22:51:48.047Z",
+      "note": "MEDIUM candidate stored after visual review"
     },
     "vp-1650": {
       "name": "Hoa Khanh Dam",
@@ -3382,10 +3431,19 @@
     },
     "vp-1655": {
       "name": "Thinh Bui",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-14T12:47:22.582Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://scholar.google.com/citations?user=O2B4vPwAAAAJ&hl=en",
+      "imageUrl": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=O2B4vPwAAAAJ&citpid=1",
+      "sourceType": "scholar_profile",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "stored_roster_url",
+        "scholar_profile",
+        "institution"
+      ],
+      "retrievedAt": "2026-11-14T22:51:48.383Z",
+      "note": "MEDIUM candidate stored after visual review"
     },
     "vp-1656": {
       "name": "Tu A. Nguyen",
@@ -3439,16 +3497,9 @@
     "vp-1659": {
       "name": "Thanh Toan Tran",
       "outcome": "not_found",
-      "pageUrl": "https://research-hub.nlr.gov/en/persons/thanh-toan-tran/",
-      "imageUrl": "https://research-hub.nlr.gov/assets/no-portrait-473c6d005990baa1f418d9c668dcd4ec.png",
-      "sourceType": "official_faculty",
-      "confidence": "MEDIUM",
-      "identitySignals": [
-        "name",
-        "stored_roster_url"
-      ],
-      "retrievedAt": "2026-11-01T17:16:08.293Z",
-      "note": "2026-11-01 deep audit: name-matched candidate failed --store checks (face check none (0 faces))"
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:45:47.697Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1660": {
       "name": "Quynh T. Nguyen",
@@ -3498,8 +3549,8 @@
       "name": "Phuong Hoang",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-14T12:47:53.360Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "retrievedAt": "2026-11-14T22:51:52.980Z",
+      "note": "candidate rejected on visual review: photo of another person (Mengjun Shu)"
     },
     "vp-1664": {
       "name": "Phung Le",
@@ -3533,10 +3584,19 @@
     },
     "vp-1666": {
       "name": "Thai M. Hoang",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-14T12:48:19.850Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://scholar.google.com/citations?user=H58CN_oAAAAJ&hl=en",
+      "imageUrl": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=H58CN_oAAAAJ&citpid=3",
+      "sourceType": "scholar_profile",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "stored_roster_url",
+        "scholar_profile",
+        "institution"
+      ],
+      "retrievedAt": "2026-11-14T22:51:48.654Z",
+      "note": "MEDIUM candidate stored after visual review"
     },
     "vp-1667": {
       "name": "Nghia Vo",
@@ -3587,7 +3647,7 @@
       "name": "Dang Khoa Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-14T11:50:30.252Z",
+      "retrievedAt": "2026-11-14T22:39:09.621Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1566": {
@@ -3738,8 +3798,8 @@
       "name": "Viet Duc Le",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-14T12:50:44.614Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "retrievedAt": "2026-11-14T22:51:52.980Z",
+      "note": "candidate rejected on visual review: distant or small figure, not a usable headshot"
     },
     "vp-1694": {
       "name": "Amy Nguyen-Chyung",
@@ -3759,10 +3819,19 @@
     },
     "vp-1695": {
       "name": "Tran T. Doan",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-14T12:50:59.769Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "needs_review",
+      "pageUrl": "https://scholar.google.com/citations?user=gJ5Mg_QAAAAJ&hl=en",
+      "imageUrl": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=gJ5Mg_QAAAAJ&citpid=21",
+      "sourceType": "scholar_profile",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "stored_roster_url",
+        "scholar_profile",
+        "institution"
+      ],
+      "retrievedAt": "2026-11-14T22:46:30.528Z",
+      "note": "candidate requires visual review before acceptance"
     },
     "vp-1697": {
       "name": "Thang Tien Nguyen",
@@ -3861,19 +3930,9 @@
     "vp-1675": {
       "name": "Viet Tran",
       "outcome": "not_found",
-      "pageUrl": "https://faculty.erau.edu/Viet.Tran2",
-      "imageUrl": "https://faculty.erau.edu/-/media/Feature/Faculty/faculty-default",
-      "sourceType": "official_faculty",
-      "confidence": "MEDIUM",
-      "identitySignals": [
-        "name",
-        "institution",
-        "department",
-        "rank",
-        "stored_roster_url"
-      ],
-      "retrievedAt": "2026-10-14T12:48:48.256Z",
-      "note": "rejected on visual review 2026-10-14: ERAU default faculty image"
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:51:52.980Z",
+      "note": "candidate rejected on visual review: default faculty image"
     },
     "vp-1676": {
       "name": "Justin Hung Nguyen",
@@ -3907,10 +3966,19 @@
     },
     "vp-1678": {
       "name": "Phuc Nguyen",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-14T12:48:57.415Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://scholar.google.com/citations?user=FnJBrUgAAAAJ&hl=en",
+      "imageUrl": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=FnJBrUgAAAAJ&citpid=5",
+      "sourceType": "scholar_profile",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "stored_roster_url",
+        "scholar_profile",
+        "institution"
+      ],
+      "retrievedAt": "2026-11-14T22:51:49.244Z",
+      "note": "MEDIUM candidate stored after visual review"
     },
     "vp-1680": {
       "name": "Linh Xuan Diep Nguyen",
@@ -3944,17 +4012,19 @@
     },
     "vp-1686": {
       "name": "Huu Nhan Duong",
-      "outcome": "not_found",
-      "pageUrl": "https://research.monash.edu/en/persons/huu-nhan-duong/",
-      "imageUrl": "https://research.monash.edu/assets/no-portrait-473c6d005990baa1f418d9c668dcd4ec.png",
-      "sourceType": "official_faculty",
+      "outcome": "found",
+      "pageUrl": "https://scholar.google.com/citations?user=Fn9aevEAAAAJ&hl=en",
+      "imageUrl": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=Fn9aevEAAAAJ&citpid=1",
+      "sourceType": "scholar_profile",
       "confidence": "MEDIUM",
       "identitySignals": [
         "name",
-        "stored_roster_url"
+        "stored_roster_url",
+        "scholar_profile",
+        "institution"
       ],
-      "retrievedAt": "2026-11-01T17:16:08.293Z",
-      "note": "2026-11-01 deep audit: name-matched candidate failed --store checks (face check none (0 faces))"
+      "retrievedAt": "2026-11-14T22:51:49.519Z",
+      "note": "MEDIUM candidate stored after visual review"
     },
     "vp-1687": {
       "name": "Harvey Nguyen",
@@ -4089,10 +4159,19 @@
     },
     "vp-1671": {
       "name": "Thu Phuong Pham",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-14T12:48:30.747Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://scholar.google.com/citations?user=2IUhnjgAAAAJ&hl=en",
+      "imageUrl": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=2IUhnjgAAAAJ&citpid=17",
+      "sourceType": "scholar_profile",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "stored_roster_url",
+        "scholar_profile",
+        "institution"
+      ],
+      "retrievedAt": "2026-11-14T22:51:48.949Z",
+      "note": "MEDIUM candidate stored after visual review"
     },
     "vp-1584": {
       "name": "Kim Hong Nguyen",
@@ -4336,8 +4415,8 @@
       "name": "Thoa Thieu",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-14T12:32:50.044Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "retrievedAt": "2026-11-14T22:51:52.980Z",
+      "note": "candidate rejected on visual review: group photo"
     },
     "vp-1544": {
       "name": "Tuan Anh Le",
@@ -7747,23 +7826,25 @@
     "vp-1874": {
       "name": "Phuoc Long Nguyen",
       "outcome": "not_found",
-      "pageUrl": "https://pure.lib.cgu.edu.tw/en/persons/nguyen-phuoc-long/",
-      "imageUrl": "https://pure.lib.cgu.edu.tw/assets/no-portrait-473c6d005990baa1f418d9c668dcd4ec.png",
-      "sourceType": "official_faculty",
-      "confidence": "MEDIUM",
-      "identitySignals": [
-        "name",
-        "stored_roster_url"
-      ],
-      "retrievedAt": "2026-11-01T17:16:08.294Z",
-      "note": "2026-11-01 deep audit: name-matched candidate failed --store checks (face check none (0 faces))"
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:51:52.980Z",
+      "note": "candidate rejected on visual review: silhouette placeholder"
     },
     "vp-1875": {
       "name": "Hoang Nguyen - Gdynia Maritime University",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-14T11:20:25.963Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://scholar.google.com/citations?user=ifG5Fg4AAAAJ&hl=en",
+      "imageUrl": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=ifG5Fg4AAAAJ&citpid=1",
+      "sourceType": "scholar_profile",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "stored_roster_url",
+        "scholar_profile",
+        "institution"
+      ],
+      "retrievedAt": "2026-11-14T22:51:50.993Z",
+      "note": "MEDIUM candidate stored after visual review"
     },
     "vp-1876": {
       "name": "Ngoc Thinh Nguyen",
@@ -7807,8 +7888,8 @@
       "name": "Vinh Hung Tran",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-14T11:20:45.098Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "retrievedAt": "2026-11-14T22:51:52.980Z",
+      "note": "candidate rejected on visual review: distant or small figure, not a usable headshot"
     },
     "vp-1886": {
       "name": "Hoai Viet Nguyen",
@@ -8049,10 +8130,19 @@
     },
     "vp-1866": {
       "name": "Van Tien Nguyen",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-16T11:04:53.371Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://scholar.google.com/citations?user=4Sx0oVIAAAAJ&hl=en",
+      "imageUrl": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=4Sx0oVIAAAAJ&citpid=1",
+      "sourceType": "scholar_profile",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "stored_roster_url",
+        "scholar_profile",
+        "institution"
+      ],
+      "retrievedAt": "2026-11-14T22:51:50.708Z",
+      "note": "MEDIUM candidate stored after visual review"
     },
     "vp-1867": {
       "name": "Thi-Van Nguyen",
@@ -8137,10 +8227,18 @@
     },
     "vp-1856": {
       "name": "Frédéric Nguyen",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-16T11:06:38.871Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://scholar.google.com/citations?user=lySfy7AAAAAJ&hl=en",
+      "imageUrl": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=lySfy7AAAAAJ&citpid=4",
+      "sourceType": "scholar_profile",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "stored_roster_url",
+        "scholar_profile",
+        "institution"
+      ],
+      "retrievedAt": "2026-11-14T22:51:50.447Z",
+      "note": "MEDIUM candidate stored after visual review"
     },
     "vp-1857": {
       "name": "Bich Lien Nguyen",
@@ -8169,19 +8267,22 @@
       "pageUrl": "https://kis.pwr.edu.pl/en/structure/division-of-information-systems/computational-collective-intelligence-group",
       "imageUrl": "https://staff-ksi.pwr.edu.pl/photos/thanh_ngo_nguyen.jpg",
       "sourceType": "official_faculty",
-      "confidence": "MEDIUM",
+      "confidence": "HIGH",
       "identitySignals": [
         "name",
+        "institution",
+        "department",
+        "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-11-01T17:16:08.294Z",
-      "note": "2026-11-01 deep audit: name-matched candidate failed --store checks (120x120 or portrait-aspect validation)"
+      "retrievedAt": "2026-11-14T22:47:07.933Z",
+      "note": "candidate failed 120x120 or portrait-aspect validation"
     },
     "vp-1861": {
       "name": "Petr Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-10-16T11:07:04.297Z",
+      "retrievedAt": "2026-11-14T22:47:09.669Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-2154": {
@@ -8339,10 +8440,19 @@
     },
     "vp-1844": {
       "name": "Hong-Chuong Tran",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-19T11:07:03.562Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://scholar.google.com/citations?user=ry0kU0QAAAAJ&hl=en",
+      "imageUrl": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=ry0kU0QAAAAJ&citpid=1",
+      "sourceType": "scholar_profile",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "stored_roster_url",
+        "scholar_profile",
+        "institution"
+      ],
+      "retrievedAt": "2026-11-14T22:51:50.224Z",
+      "note": "MEDIUM candidate stored after visual review"
     },
     "vp-1845": {
       "name": "Dinh-Phuc Tran",
@@ -8364,13 +8474,14 @@
       "pageUrl": "https://www.nutrition.ntnu.edu.tw/index.php/en/faculty_en/thi-kim-ngan-nguyen_en/",
       "imageUrl": "https://www.nutrition.ntnu.edu.tw/wp-content/uploads/-Mary-Nguyen-Thi-Kim-Ngan-e1686583395576.jpeg",
       "sourceType": "official_faculty",
-      "confidence": "MEDIUM",
+      "confidence": "HIGH",
       "identitySignals": [
         "name",
+        "department",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-11-01T17:16:08.294Z",
-      "note": "2026-11-01 deep audit: name-matched candidate failed --store checks (120x120 or portrait-aspect validation)"
+      "retrievedAt": "2026-11-14T22:47:00.625Z",
+      "note": "candidate failed 120x120 or portrait-aspect validation"
     },
     "vp-1840": {
       "name": "Quang Nhat Tran",
@@ -8471,10 +8582,17 @@
     },
     "vp-1804": {
       "name": "Tuan-Khoa Nguyen",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-10-23T11:01:47.427Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://scholar.google.com/citations?user=VU9CuVkAAAAJ&hl=en",
+      "imageUrl": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=VU9CuVkAAAAJ&citpid=21",
+      "sourceType": "scholar_profile",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "stored_roster_url",
+        "scholar_profile"
+      ],
+      "retrievedAt": "2026-11-14T22:51:49.948Z",
+      "note": "MEDIUM candidate stored after visual review"
     },
     "vp-1815": {
       "name": "Xuan-Son Vu",
@@ -8821,7 +8939,7 @@
       "name": "Hoai-Minh Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-11-01T16:44:21.384Z",
+      "retrievedAt": "2026-11-14T22:48:09.174Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-2184": {
@@ -9646,19 +9764,9 @@
     "vp-0595": {
       "name": "Khuong An Nguyen",
       "outcome": "not_found",
-      "pageUrl": "https://pure.royalholloway.ac.uk/en/persons/khuong-an-nguyen/",
-      "imageUrl": "https://pure.royalholloway.ac.uk/files-asset/59451738/photo1.jpg?w=160&f=jpg",
-      "sourceType": "official_faculty",
-      "confidence": "MEDIUM",
-      "identitySignals": [
-        "name",
-        "institution",
-        "department",
-        "rank",
-        "stored_roster_url"
-      ],
-      "retrievedAt": "2026-11-04T11:04:30.154Z",
-      "note": "Beside-name image is a full-body shot in front of a statue, 160x303 (aspect 0.53); not a headshot."
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:51:52.980Z",
+      "note": "candidate rejected on visual review: distant or small figure, not a usable headshot"
     },
     "vp-0784": {
       "name": "Hien Thi Thu Nguyen",
@@ -9674,7 +9782,7 @@
         "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-11-11T11:14:41.257Z",
+      "retrievedAt": "2026-11-14T22:40:07.691Z",
       "note": "candidate failed face check: none (0 faces)"
     },
     "vp-0841": {
@@ -9693,10 +9801,19 @@
     },
     "vp-1046": {
       "name": "Giang Phung",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-11-11T11:15:10.324Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://scholar.google.com/citations?user=1sB70AEAAAAJ&hl=en",
+      "imageUrl": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=1sB70AEAAAAJ&citpid=5",
+      "sourceType": "scholar_profile",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "stored_roster_url",
+        "scholar_profile",
+        "institution"
+      ],
+      "retrievedAt": "2026-11-14T22:51:45.838Z",
+      "note": "MEDIUM candidate stored after visual review"
     },
     "vp-1064": {
       "name": "Annette Nguyen",
@@ -9711,7 +9828,7 @@
         "department",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-11-11T11:15:44.973Z",
+      "retrievedAt": "2026-11-14T22:41:24.094Z",
       "note": "candidate failed face check: none (0 faces)"
     },
     "vp-1103": {
@@ -9728,7 +9845,7 @@
         "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-11-11T11:16:31.220Z",
+      "retrievedAt": "2026-11-14T22:42:03.460Z",
       "note": "candidate failed face check: none (0 faces)"
     },
     "vp-1131": {
@@ -11599,7 +11716,7 @@
     },
     "vp-2372": {
       "name": "Helen Vuong",
-      "outcome": "not_found",
+      "outcome": "found",
       "pageUrl": "https://med.umn.edu/bio/helen-vuong",
       "imageUrl": "https://med.umn.edu/sites/med.umn.edu/files/styles/bio_photo/public/images/vuong_helen.jpg?itok=0iNbFX2p",
       "sourceType": "official_faculty",
@@ -11611,8 +11728,7 @@
         "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-11-04T22:04:18.004Z",
-      "note": "candidate failed 120x120 or portrait-aspect validation"
+      "retrievedAt": "2026-11-14T22:48:14.322Z"
     },
     "vp-2373": {
       "name": "Thu Truong",
@@ -12670,8 +12786,8 @@
       "name": "Lien Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-11-04T22:28:58.297Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "retrievedAt": "2026-11-14T22:51:52.980Z",
+      "note": "candidate rejected on visual review: flag image"
     },
     "vp-2452": {
       "name": "Uyen Nguyen",
@@ -12900,7 +13016,7 @@
       "name": "Federico Nguyen",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-11-04T22:36:12.840Z",
+      "retrievedAt": "2026-11-14T22:48:21.341Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-2472": {
@@ -13582,13 +13698,13 @@
       "sourceType": "official_faculty",
       "confidence": "MEDIUM",
       "identitySignals": [
-        "name",
         "institution",
         "department",
         "rank",
-        "stored_roster_url"
+        "stored_roster_url",
+        "profile_markup"
       ],
-      "retrievedAt": "2026-11-04T23:00:26.096Z",
+      "retrievedAt": "2026-11-14T22:48:23.336Z",
       "note": "candidate requires visual review before acceptance"
     },
     "vp-2528": {
@@ -14189,10 +14305,19 @@
     },
     "vp-2579": {
       "name": "Trong-An Bui",
-      "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-11-04T23:25:36.745Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "outcome": "found",
+      "pageUrl": "https://scholar.google.com/citations?user=eIJKsPYAAAAJ&hl=en",
+      "imageUrl": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=eIJKsPYAAAAJ&citpid=8",
+      "sourceType": "scholar_profile",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "stored_roster_url",
+        "scholar_profile",
+        "institution"
+      ],
+      "retrievedAt": "2026-11-14T22:51:51.270Z",
+      "note": "MEDIUM candidate stored after visual review"
     },
     "vp-2580": {
       "name": "Dinh-Trung Vu",
@@ -14469,7 +14594,7 @@
       "name": "Minh-Son To",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-11-04T11:06:13.068Z",
+      "retrievedAt": "2026-11-14T22:43:45.347Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1372": {
@@ -15496,8 +15621,8 @@
       "name": "Manh Duc Le",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-11-10T15:29:02.522Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "retrievedAt": "2026-11-14T22:51:52.980Z",
+      "note": "candidate rejected on visual review: logo"
     },
     "vp-2746": {
       "name": "Hai T. Dao",
@@ -16815,7 +16940,7 @@
       "name": "Annelise Tran",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-11-10T19:30:53.149Z",
+      "retrievedAt": "2026-11-14T22:49:12.472Z",
       "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-2862": {
@@ -17707,8 +17832,8 @@
       "name": "Quan H. Tran",
       "outcome": "not_found",
       "identitySignals": [],
-      "retrievedAt": "2026-11-11T17:14:11.319Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "retrievedAt": "2026-11-14T22:51:52.980Z",
+      "note": "candidate rejected on visual review: Scholar default avatar"
     },
     "vp-2927": {
       "name": "Long Mai",
@@ -18049,9 +18174,18 @@
     "vp-2953": {
       "name": "Lan N. Le",
       "outcome": "not_found",
-      "identitySignals": [],
-      "retrievedAt": "2026-11-11T17:18:16.728Z",
-      "note": "no identity-verified candidate exposed by inspected pages"
+      "pageUrl": "https://development.asia/expert/lan-n-le",
+      "imageUrl": "https://development.asia/sites/default/files/styles/thumbnail/public/experts/Lan%20N.%20Le.png?itok=IUIEDQqh",
+      "sourceType": "personal_homepage",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-14T22:49:29.326Z",
+      "note": "candidate failed 120x120 or portrait-aspect validation"
     },
     "vp-2954": {
       "name": "Tristan N. Nguyen",
@@ -18687,6 +18821,2021 @@
       "identitySignals": [],
       "retrievedAt": "2026-11-11T11:11:51.100Z",
       "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3124": {
+      "name": "Dat Huynh",
+      "outcome": "found",
+      "pageUrl": "https://hbdat.github.io/index",
+      "imageUrl": "https://hbdat.github.io/profile_pic.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "institution",
+        "stored_roster_url",
+        "profile_markup"
+      ],
+      "retrievedAt": "2026-11-14T22:37:41.206Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-3028": {
+      "name": "Dat T. Tran",
+      "outcome": "found",
+      "pageUrl": "https://scholar.google.com/citations?user=bWGGbNkAAAAJ",
+      "imageUrl": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=bWGGbNkAAAAJ&citpid=3",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-14T22:37:52.363Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-3030": {
+      "name": "Ninh Duong",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:13:07.410Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3031": {
+      "name": "Tu Anh Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:51:52.980Z",
+      "note": "candidate rejected on visual review: two people"
+    },
+    "vp-3033": {
+      "name": "Nhu Huan Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://croma.grenoble-inp.fr/fr/recherche/nguyen-nhu-huan",
+      "imageUrl": "https://croma.grenoble-inp.fr/medias/photo/avatar-gmail_1697024660611-jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "institution",
+        "department",
+        "stored_roster_url",
+        "profile_markup"
+      ],
+      "retrievedAt": "2026-11-14T22:37:34.650Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-3034": {
+      "name": "Huan Tran",
+      "outcome": "found",
+      "pageUrl": "https://scholar.google.com/citations?user=NWoSsJ8AAAAJ&hl=en",
+      "imageUrl": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=NWoSsJ8AAAAJ&citpid=24",
+      "sourceType": "scholar_profile",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "stored_roster_url",
+        "scholar_profile",
+        "institution"
+      ],
+      "retrievedAt": "2026-11-14T22:51:52.038Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-3035": {
+      "name": "Vien Lam",
+      "outcome": "found",
+      "pageUrl": "https://doctors.utmbhealth.com/profile/012613",
+      "imageUrl": "https://utmbstorage.blob.core.windows.net/photos/012613",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-14T22:37:35.092Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-3036": {
+      "name": "Truong Nguyen - University of Texas Medical Branch at Galveston",
+      "outcome": "not_found",
+      "pageUrl": "https://researchexperts.utmb.edu/en/persons/truong-nguyen/",
+      "imageUrl": "https://researchexperts.utmb.edu/files-asset/9772174/204988_Nguyen_Truong.jpg?w=160&f=jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-14T22:13:25.374Z",
+      "note": "candidate failed 120x120 or portrait-aspect validation"
+    },
+    "vp-3037": {
+      "name": "Transon Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://www.utmb.edu/psychiatry/adult-psychiatry",
+      "imageUrl": "https://www.utmb.edu/images/librariesprovider208/psychiatrists/nguyen-transon.jpg?sfvrsn=caaa8c57_3",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-14T22:13:25.734Z"
+    },
+    "vp-3038": {
+      "name": "Phuong-Lan Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://www.urmc.rochester.edu/people/112363156-phuong-lan-nguyen",
+      "imageUrl": "https://www.urmc.rochester.edu/ecv_binary/faculty/generated/profile_web/26979.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-14T22:37:35.392Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-3039": {
+      "name": "Thao Le - University of Hawaiʻi at Mānoa",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:38:04.505Z",
+      "note": "candidate rejected on visual review: placeholder image (photona.gif)"
+    },
+    "vp-3040": {
+      "name": "Hue V. Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:13:33.800Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3041": {
+      "name": "Martin Lam Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://artdept.nd.edu/people/martin-lam-nguyen/",
+      "imageUrl": "https://artdept.nd.edu/assets/491293/600x600/martin_lam_nguyen.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-14T22:13:44.991Z"
+    },
+    "vp-3042": {
+      "name": "Viet Lai",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:13:45.391Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3043": {
+      "name": "Prune Truong",
+      "outcome": "needs_review",
+      "pageUrl": "https://prunetruong.com/",
+      "imageUrl": "https://prunetruong.com/media/profile.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-14T22:13:52.053Z",
+      "note": "candidate requires visual review before acceptance; found on the 2025-05-21 Wayback copy of the page, so check the live page or a newer source for a current photo"
+    },
+    "vp-3044": {
+      "name": "Quincy Le Huynh",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:14:10.147Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3045": {
+      "name": "Van Nguyen Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:14:17.811Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3046": {
+      "name": "Hai Xuan Pham",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:38:04.505Z",
+      "note": "candidate rejected on visual review: icon, not a photo"
+    },
+    "vp-3047": {
+      "name": "Huy Phan",
+      "outcome": "found",
+      "pageUrl": "https://pquochuy.github.io/",
+      "imageUrl": "https://pquochuy.github.io/images/DSC_0196_crop.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-14T22:37:35.735Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-3048": {
+      "name": "Giang Nguyen - Guide Labs",
+      "outcome": "found",
+      "pageUrl": "https://giangnguyen2412.github.io/",
+      "imageUrl": "https://giangnguyen2412.github.io/assets/images/profile2.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url",
+        "profile_markup"
+      ],
+      "retrievedAt": "2026-11-14T22:37:36.169Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-3049": {
+      "name": "Cong Phuoc Huynh",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:14:23.973Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3050": {
+      "name": "Minh Van Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://minhhdvn.github.io/",
+      "imageUrl": "https://minhhdvn.github.io/images/profile.png",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "institution",
+        "department",
+        "stored_roster_url",
+        "profile_markup"
+      ],
+      "retrievedAt": "2026-11-14T22:37:36.708Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-3051": {
+      "name": "Giang Nguyen - Meta",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:14:36.947Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3052": {
+      "name": "Deanna Nguyen",
+      "outcome": "not_found",
+      "pageUrl": "https://www.spyre.com/people/deanna-nguyen",
+      "imageUrl": "https://cdn.prod.website-files.com/68163046112b61d49275fcfd/6890d20eee96bcc9f77e6f7c_Nguyen_Deanna.avif",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-14T22:14:42.699Z",
+      "note": "candidate could not be converted to a local image"
+    },
+    "vp-3053": {
+      "name": "Manh-Dung Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://montimage.com/about",
+      "imageUrl": "https://montimage.com/about/NMDBW.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-14T22:37:37.544Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-3054": {
+      "name": "Maxime Vinh Hoa La",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:38:04.505Z",
+      "note": "candidate rejected on visual review: distant full-body beach photo, not a headshot"
+    },
+    "vp-3055": {
+      "name": "Huu-Nghia Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:14:44.171Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3056": {
+      "name": "Van Luong Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:38:04.505Z",
+      "note": "candidate rejected on visual review: app screenshot"
+    },
+    "vp-3057": {
+      "name": "Eileen Tran",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:14:50.896Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3058": {
+      "name": "Luan Tran",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:14:56.336Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3059": {
+      "name": "Hy Si Bui",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:15:02.396Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3060": {
+      "name": "NamPhuong Tran",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:15:08.084Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3061": {
+      "name": "Victoria Pham",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:15:13.252Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3062": {
+      "name": "Hai Hoang Bui",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:15:18.429Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3063": {
+      "name": "Long Duong",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:15:23.851Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3064": {
+      "name": "Lucas Vinh Tran",
+      "outcome": "found",
+      "pageUrl": "https://scholar.google.com/citations?user=iR9kGH8AAAAJ&hl=en",
+      "imageUrl": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=iR9kGH8AAAAJ&citpid=7",
+      "sourceType": "scholar_profile",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "stored_roster_url",
+        "scholar_profile",
+        "institution"
+      ],
+      "retrievedAt": "2026-11-14T22:51:52.301Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-3065": {
+      "name": "Gar-Wing Truong",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:15:36.494Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3066": {
+      "name": "Janna Duong",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:15:42.261Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3067": {
+      "name": "Bang Truong",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:15:48.030Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3068": {
+      "name": "Ky Truong",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:15:53.969Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3069": {
+      "name": "Evelyne Huynh Cong",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:15:59.177Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3070": {
+      "name": "Allen Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:16:05.054Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3071": {
+      "name": "Minhthi Bui",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:16:11.035Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3072": {
+      "name": "Quyen Duong",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:16:16.396Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3073": {
+      "name": "Trong Pham",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:16:21.901Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3074": {
+      "name": "Tai Bui",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:16:27.602Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3075": {
+      "name": "Peter Bui",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:16:33.599Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3076": {
+      "name": "Dennis Truong",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:16:39.283Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3077": {
+      "name": "John Hoang",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:16:45.193Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3078": {
+      "name": "Lana Tran",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:16:51.051Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3079": {
+      "name": "Song Pham",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:16:56.649Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3080": {
+      "name": "Lan Dinh",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:17:02.371Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3081": {
+      "name": "Han Huynh",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:17:19.237Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3082": {
+      "name": "Thuy Vu",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:17:32.708Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3083": {
+      "name": "Khoi-Nguyen Tran",
+      "outcome": "found",
+      "pageUrl": "https://research.ibm.com/people/khoi-nguyen-tran",
+      "imageUrl": "https://research.ibm.com/_next/image?url=https%3A%2F%2Fresearch-website-prod-ibmers-images.s3.us-east.cloud-object-storage.appdomain.cloud%2F2337&w=3840&q=75",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-14T22:37:38.517Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-3084": {
+      "name": "Vincent Duong",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:17:53.230Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3085": {
+      "name": "Tri Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:17:59.227Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3086": {
+      "name": "Elizabeth Pham",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:18:04.868Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3087": {
+      "name": "Huy Tran",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:18:10.672Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3088": {
+      "name": "Phuong Bui",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:18:19.687Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3089": {
+      "name": "Remi Ngoc Duong",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:18:25.256Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3090": {
+      "name": "Quoc Hoan Tran",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:38:04.505Z",
+      "note": "candidate rejected on visual review: site header image (hand), not a portrait"
+    },
+    "vp-3091": {
+      "name": "Wilfried Dinh",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:18:32.184Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3092": {
+      "name": "Chester Pham",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:18:37.981Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3093": {
+      "name": "Bastien Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:18:43.446Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3094": {
+      "name": "Nam H. Nguyen - Capital One",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:18:48.982Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3095": {
+      "name": "Fabien Tran",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:18:54.809Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3096": {
+      "name": "Cat Bui",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:18:56.095Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3097": {
+      "name": "Michelle Tran-Dube",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:19:01.852Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3098": {
+      "name": "Quang Nguyen - Regeneron",
+      "outcome": "found",
+      "pageUrl": "https://www.qpmnguyen.com/",
+      "imageUrl": "https://www.qpmnguyen.com/profile.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "institution",
+        "department",
+        "stored_roster_url",
+        "profile_markup"
+      ],
+      "retrievedAt": "2026-11-14T22:37:39.142Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-3099": {
+      "name": "Thu Duong",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:19:07.827Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3100": {
+      "name": "Hai Tran",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:19:19.285Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3101": {
+      "name": "Thach Nguyen - Vertex",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:19:24.895Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3102": {
+      "name": "Thanh Nguyen - Amazon Science",
+      "outcome": "not_found",
+      "pageUrl": "https://www.amazon.science/author/thanh-nguyen-1",
+      "imageUrl": "https://cdn.amazon.science/dims4/default/5e7b277/2147483647/strip/true/crop/1200x630+0+0/resize/1200x630!/quality/90/?url=https%3A%2F%2Famzn-science-production-science.s3.us-east-1.amazonaws.com%2Fscience%2F7c%2F4e%2Fd4e963d24f6c966def82a45d2bf1%2Famazon-science-og-image-squid.png",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-14T22:19:30.585Z",
+      "note": "candidate failed 120x120 or portrait-aspect validation"
+    },
+    "vp-3103": {
+      "name": "Ben Vo",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:19:33.546Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3104": {
+      "name": "Vuong Le",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:19:46.014Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3105": {
+      "name": "Timothy Phung",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:19:58.982Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3106": {
+      "name": "Tony Pham - AstraZeneca",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:20:12.518Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3107": {
+      "name": "Hoang Do",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:20:18.630Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3108": {
+      "name": "Joanne Truong",
+      "outcome": "found",
+      "pageUrl": "https://joannetruong.com/",
+      "imageUrl": "https://github.com/joannetruong/website_media/raw/master/index/truong_joanne.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-14T22:20:24.641Z"
+    },
+    "vp-3109": {
+      "name": "Minh Ngoc Duong",
+      "outcome": "found",
+      "pageUrl": "https://www.tigenpharma.com/team-3",
+      "imageUrl": "https://static.wixstatic.com/media/5342e1_27bf4670c1fc4a8e80353c0d797aeaeb~mv2.jpg/v1/crop/x_638,y_77,w_1303,h_1567/fill/w_267,h_320,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Tigen_Duong_MInhNgoc_1.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-14T22:20:26.224Z"
+    },
+    "vp-3110": {
+      "name": "Krisna Duong-Ly",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:20:27.669Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3111": {
+      "name": "Dzung Phan",
+      "outcome": "found",
+      "pageUrl": "https://research.ibm.com/people/dzung-phan",
+      "imageUrl": "https://research.ibm.com/_next/image?url=https%3A%2F%2Fresearch-website-prod-ibmers-images.s3.us-east.cloud-object-storage.appdomain.cloud%2F3268&w=3840&q=75",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-14T22:37:39.810Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-3112": {
+      "name": "Long Vu",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:20:36.718Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3113": {
+      "name": "Phuong Ha Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:20:42.906Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3114": {
+      "name": "Hung Nguyen - eBay",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:20:49.450Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3115": {
+      "name": "Jack Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:20:55.537Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3116": {
+      "name": "Anh Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:21:09.057Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3117": {
+      "name": "Hang-Phuong Pham",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:21:14.486Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3118": {
+      "name": "Thi Tran - Solugen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:21:24.977Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3119": {
+      "name": "Jade Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:38:04.505Z",
+      "note": "candidate rejected on visual review: photo of another person (Michaeline Bunting)"
+    },
+    "vp-3120": {
+      "name": "Eric Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://www.radicalnumerics.ai/about",
+      "imageUrl": "https://www.radicalnumerics.ai/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F0g0784cc%2Fproduction%2F2022d0bd4a70da289a469c440817b15bed9ef917-1500x1952.png%3Fw%3D1920&w=3840&q=90",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-14T22:37:40.606Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-3121": {
+      "name": "Anthony Nguyen - Intel",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:21:43.737Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3122": {
+      "name": "Cuong Xuan Chu",
+      "outcome": "found",
+      "pageUrl": "https://cuongcx.github.io/",
+      "imageUrl": "https://cuongcx.github.io/images/profile-image.jpeg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "institution",
+        "department",
+        "stored_roster_url",
+        "profile_markup"
+      ],
+      "retrievedAt": "2026-11-14T22:37:41.016Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-3123": {
+      "name": "Quyen Nguyen - Novartis",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:21:49.637Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3125": {
+      "name": "Brandon Huynh",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:21:55.858Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3126": {
+      "name": "Duy Xuan Luong",
+      "outcome": "found",
+      "pageUrl": "https://www.universalmatter.com/leadership/",
+      "imageUrl": "https://www.universalmatter.com/wp-content/uploads/2026/07/Dr-Duy-Xuan-Luong-profile-1.webp",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-14T22:22:01.609Z"
+    },
+    "vp-3127": {
+      "name": "Thang Doan",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:51:52.980Z",
+      "note": "candidate rejected on visual review: face check found 2 faces; left for a better source"
+    },
+    "vp-3128": {
+      "name": "Vuong Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://dustin-nguyen-qil.github.io/",
+      "imageUrl": "https://dustin-nguyen-qil.github.io/images/avatar.png",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "institution",
+        "department",
+        "stored_roster_url",
+        "profile_markup"
+      ],
+      "retrievedAt": "2026-11-14T22:37:41.790Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-3129": {
+      "name": "Wilson Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://www.microsoft.com/en-us/research/people/wilsonnguyen/",
+      "imageUrl": "https://www.microsoft.com/en-us/research/wp-content/uploads/2026/06/me-180x180.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url",
+        "profile_markup"
+      ],
+      "retrievedAt": "2026-11-14T22:37:42.259Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-3130": {
+      "name": "Vy Ai Vo",
+      "outcome": "found",
+      "pageUrl": "https://vyaivo.github.io/bio/",
+      "imageUrl": "https://vyaivo.github.io/images/Vo_square_small.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "institution",
+        "department",
+        "stored_roster_url",
+        "profile_markup"
+      ],
+      "retrievedAt": "2026-11-14T22:37:42.471Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-3131": {
+      "name": "Vu Minh Hieu Phan",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:22:15.263Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3132": {
+      "name": "Phuc Leo Vo",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:22:21.633Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3133": {
+      "name": "Tuyen Nguyen - Alnylam",
+      "outcome": "found",
+      "pageUrl": "https://www.linkedin.com/in/tuyennguyen519",
+      "imageUrl": "https://media.licdn.com/dms/image/v2/C4E03AQGATif9Tv5t3Q/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1641682508568?e=1796256000&v=beta&t=p4C4CJ83EQZS90c8SN8ZvHFXltq7sZLwJUNe_VTkb4M",
+      "sourceType": "linkedin_profile",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "stored_roster_url",
+        "owner_identified"
+      ],
+      "retrievedAt": "2026-11-14T22:36:18.407Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-3134": {
+      "name": "Thu Nguyen - Insmed",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:22:33.354Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3135": {
+      "name": "Tam Nguyen - Insmed",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:22:39.326Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3136": {
+      "name": "Cindy M. Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:51:52.980Z",
+      "note": "candidate rejected on visual review: distant travel photo, not a headshot"
+    },
+    "vp-3137": {
+      "name": "Tam Nguyen - EnKoat",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:38:04.505Z",
+      "note": "candidate rejected on visual review: unnamed photo on a company team page; identity unresolved"
+    },
+    "vp-3138": {
+      "name": "Allen Tran - Netflix",
+      "outcome": "found",
+      "pageUrl": "https://allentran.github.io/",
+      "imageUrl": "https://allentran.github.io/static/headshot.jpeg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "institution",
+        "department",
+        "stored_roster_url",
+        "profile_markup"
+      ],
+      "retrievedAt": "2026-11-14T22:37:42.712Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-3139": {
+      "name": "Nhien Nguyen - Alcon",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:22:51.284Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3140": {
+      "name": "Lan Pham - Alcon",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:22:57.134Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3141": {
+      "name": "Long Nguyen - Jnana",
+      "outcome": "found",
+      "pageUrl": "https://www.jnanatx.com/join-us/",
+      "imageUrl": "https://www.jnanatx.com/wp-content/uploads/2025/06/Nguyen-Long-1.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-14T22:23:03.279Z"
+    },
+    "vp-3142": {
+      "name": "Hung Q. Pham",
+      "outcome": "found",
+      "pageUrl": "https://hungqpham.com/",
+      "imageUrl": "https://hungqpham.com/_astro/photo.BzmLVhTO_5UqG9.webp",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "institution",
+        "department",
+        "stored_roster_url",
+        "profile_markup"
+      ],
+      "retrievedAt": "2026-11-14T22:37:42.929Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-3143": {
+      "name": "Phuc Nguyen - Motional",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:23:11.255Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3144": {
+      "name": "Hong Nhung Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://scholar.google.com/citations?user=Lu1tXNUAAAAJ&hl=en",
+      "imageUrl": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=Lu1tXNUAAAAJ&citpid=1",
+      "sourceType": "scholar_profile",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "stored_roster_url",
+        "scholar_profile",
+        "institution"
+      ],
+      "retrievedAt": "2026-11-14T22:51:52.586Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-3145": {
+      "name": "Laurent Nguyen - Sanofi",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:23:23.268Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3146": {
+      "name": "Thinh N. Tran",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:23:29.074Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3147": {
+      "name": "Andrew Dinh - Vertex",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:23:35.430Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3148": {
+      "name": "Binh Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://www.entozyme.com/team-1",
+      "imageUrl": "https://images.squarespace-cdn.com/content/v1/67580d92f573b04c15dfef61/baeb0321-5279-4d1e-b7e5-7c217dfdf8cb/Mask+group+%287%29.png",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-14T22:37:43.243Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-3149": {
+      "name": "Hiep Tran - Abzyme",
+      "outcome": "found",
+      "pageUrl": "https://abzymetx.com/company/management-team/",
+      "imageUrl": "https://abzymetx.com/wp-content/uploads/2017/03/Hiep-Tran.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-14T22:23:42.714Z"
+    },
+    "vp-3150": {
+      "name": "Jennifer Nguyen - Regeneron",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:23:43.514Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3151": {
+      "name": "Hoang Nguyen - ServiceNow",
+      "outcome": "found",
+      "pageUrl": "https://scholar.google.com/citations?user=YKcLxDQAAAAJ&hl=en",
+      "imageUrl": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=YKcLxDQAAAAJ&citpid=1",
+      "sourceType": "scholar_profile",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "stored_roster_url",
+        "scholar_profile",
+        "institution"
+      ],
+      "retrievedAt": "2026-11-14T22:51:52.848Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-3152": {
+      "name": "Anh Tran - Lam Research",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:23:56.396Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3153": {
+      "name": "Duy Nguyen - ChampionX",
+      "outcome": "needs_review",
+      "pageUrl": "https://www.championx.com/careers/its-chemistry/duy-nguyen/",
+      "imageUrl": "https://www.championx.com/careers/its-chemistry/duy-nguyen/assets/images/content/Duy_Nguyen_FINAL2.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-14T22:24:01.911Z",
+      "note": "candidate requires visual review before acceptance; found on the 2025-05-19 Wayback copy of the page, so check the live page or a newer source for a current photo"
+    },
+    "vp-3154": {
+      "name": "Hoang Du Le",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:24:08.699Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3155": {
+      "name": "Trang Tran - Tridek-One",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:24:14.564Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3156": {
+      "name": "John C. Tran",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:24:24.203Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3157": {
+      "name": "Luong Phat Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:24:29.699Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3158": {
+      "name": "Hai Minh Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:51:52.980Z",
+      "note": "candidate rejected on visual review: distant or small figure, not a usable headshot"
+    },
+    "vp-3159": {
+      "name": "Tien Ho",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:24:48.472Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3160": {
+      "name": "Thong Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://nguyentthong.github.io/",
+      "imageUrl": "https://nguyentthong.github.io/assets/img/thong_nguyen.jpg",
+      "sourceType": "personal_homepage",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-14T22:24:54.385Z"
+    },
+    "vp-3161": {
+      "name": "Hoang Minh Le",
+      "outcome": "found",
+      "pageUrl": "http://hoangle.info/",
+      "imageUrl": "http://hoangminhle.github.io/images/hoang.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-14T22:25:00.231Z"
+    },
+    "vp-3162": {
+      "name": "Franck Le",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:51:52.980Z",
+      "note": "candidate rejected on visual review: source image is 115x115, below the 120px floor"
+    },
+    "vp-3163": {
+      "name": "Binh Huy Le",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:25:04.119Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3164": {
+      "name": "Ngoc Phuoc An Vo",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:51:52.980Z",
+      "note": "candidate rejected on visual review: event banner"
+    },
+    "vp-3165": {
+      "name": "Son Van Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:25:23.743Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3166": {
+      "name": "Tam N. Huynh",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:25:29.681Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3167": {
+      "name": "Luuli Tran",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:25:35.804Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3168": {
+      "name": "Hoai-Thu Thai",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:25:41.148Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3169": {
+      "name": "Mai Anh Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:25:47.157Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3170": {
+      "name": "Tien Hoang",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:25:53.159Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3171": {
+      "name": "Neal C. Duong",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:25:58.323Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3172": {
+      "name": "Daniel Le",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:26:03.965Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3173": {
+      "name": "Son Thanh Phan",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:26:09.637Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3174": {
+      "name": "Vuong Tran",
+      "outcome": "found",
+      "pageUrl": "https://www.parsebiosciences.com/ashg-2025/",
+      "imageUrl": "https://www.parsebiosciences.com/wp-content/uploads/2025/08/vuong-tran.webp",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-14T22:26:15.181Z"
+    },
+    "vp-3175": {
+      "name": "Hung P. Do",
+      "outcome": "found",
+      "pageUrl": "https://hdocmsu.github.io/resume/",
+      "imageUrl": "https://hdocmsu.github.io/assets/img/HungDO.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-14T22:26:21.208Z"
+    },
+    "vp-3176": {
+      "name": "Hung Do - M6P Therapeutics",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:26:22.083Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3177": {
+      "name": "William Tieu",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:38:04.505Z",
+      "note": "candidate rejected on visual review: photo of another person (Andrew Adamovich)"
+    },
+    "vp-3178": {
+      "name": "Quoc Phong Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://qphong.github.io/",
+      "imageUrl": "https://qphong.github.io/profile.jpg",
+      "sourceType": "personal_homepage",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "department",
+        "rank",
+        "stored_roster_url",
+        "profile_markup"
+      ],
+      "retrievedAt": "2026-11-14T22:37:44.296Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-3179": {
+      "name": "Thang Nguyen - Zillow",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:26:51.264Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3180": {
+      "name": "Sang Van",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:26:55.886Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3181": {
+      "name": "Ninh Thuan Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:27:01.541Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3182": {
+      "name": "J. Khai Tran",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:27:07.506Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3183": {
+      "name": "Lac Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:27:23.246Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3184": {
+      "name": "Binh-Minh Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:27:39.184Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3185": {
+      "name": "Nhat Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://ayarlabs.com/ofc/",
+      "imageUrl": "https://ayarlabs.com/wp-content/uploads/2026/02/people-nhat-nguyen-244.png",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-14T22:27:55.013Z"
+    },
+    "vp-3186": {
+      "name": "Lam Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:27:56.616Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3187": {
+      "name": "Van At (Jonas) Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:28:12.405Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3188": {
+      "name": "Phong Nguyen - Air Liquide",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:28:28.149Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3189": {
+      "name": "Bich-Van C. Pham",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:28:44.016Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3191": {
+      "name": "Murray Ich Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:28:58.911Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3192": {
+      "name": "Anthony Hieu Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:29:14.411Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3193": {
+      "name": "Tan Ha",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:29:41.548Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3194": {
+      "name": "Hao Tran",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:29:47.554Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3196": {
+      "name": "Catherine Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:29:53.740Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3197": {
+      "name": "Alan D. Tran",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:29:59.545Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3198": {
+      "name": "Ivan Tran",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:30:05.428Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3201": {
+      "name": "Thao Nguyen - Calico Life Sciences",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:30:11.207Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3204": {
+      "name": "Khoi Nguyen - Liquid AI",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:30:17.553Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3205": {
+      "name": "Dinh Thu Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:30:23.727Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3209": {
+      "name": "Duy-Kien Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:30:29.531Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3213": {
+      "name": "Hung Quoc Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:51:52.980Z",
+      "note": "candidate rejected on visual review: distant or small figure, not a usable headshot"
+    },
+    "vp-3217": {
+      "name": "An H.T. Phung",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:30:41.084Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3219": {
+      "name": "Khue Truong",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:30:47.159Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3222": {
+      "name": "Tiffany N. Vo",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:30:52.103Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3226": {
+      "name": "Van Minh Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:30:57.973Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3229": {
+      "name": "Elizabeth Donohue Vo",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:31:04.366Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3237": {
+      "name": "Duy H. K. Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:31:11.588Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3238": {
+      "name": "Eileen Mai-Huong Hoang",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:31:18.097Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3243": {
+      "name": "Jade Nguyen Friedhoff",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:31:23.997Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3249": {
+      "name": "Van Luu",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:31:29.706Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3252": {
+      "name": "Angela Duong",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:31:45.190Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3256": {
+      "name": "Uyen (Jennie) Huynh",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:32:05.171Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3260": {
+      "name": "Penny Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:32:20.719Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3266": {
+      "name": "Chi Nguyen - Novo Nordisk",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:32:36.532Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3269": {
+      "name": "Nathan Dao",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:32:52.213Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3277": {
+      "name": "Duy Quang Vu",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:33:07.838Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3278": {
+      "name": "Duc Thien Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:33:23.503Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3284": {
+      "name": "Ngoc Thai",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:33:39.226Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3285": {
+      "name": "Kevin Huynh - Pfizer",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:33:54.395Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3289": {
+      "name": "Kong T. Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:34:09.548Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3290": {
+      "name": "Christina Pham",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:34:25.418Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3291": {
+      "name": "Thao Doan",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:38:04.505Z",
+      "note": "candidate rejected on visual review: book cover"
+    },
+    "vp-3295": {
+      "name": "Manh Huynh",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:34:43.601Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3297": {
+      "name": "Derek Luong",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:34:59.650Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3301": {
+      "name": "Cong Truc Huynh",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:51:52.980Z",
+      "note": "candidate rejected on visual review: department logo"
+    },
+    "vp-3302": {
+      "name": "Y Hoang",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:35:17.699Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3303": {
+      "name": "Hanh Ngo",
+      "outcome": "found",
+      "pageUrl": "https://research-repository.uwa.edu.au/en/persons/hanh-ngo/",
+      "imageUrl": "https://research-repository.uwa.edu.au/files-asset/268627003/HanhPhotoSep2021.jpg?w=160&f=jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-14T22:37:44.516Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-3306": {
+      "name": "Mai Chi Dao",
+      "outcome": "needs_review",
+      "pageUrl": "https://www.imf.org/en/research/researcher-cv/author/dao-mai",
+      "imageUrl": "https://www.imf.org/-/media/images/imf/cv/mdao.jpg?h=119&iar=0&w=110",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url",
+        "profile_markup"
+      ],
+      "retrievedAt": "2026-11-14T22:35:33.952Z",
+      "note": "candidate requires visual review before acceptance; found on the 2026-05-10 Wayback copy of the page, so check the live page or a newer source for a current photo"
+    },
+    "vp-3308": {
+      "name": "Trong Tuan Luu",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:35:40.443Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-2600": {
+      "name": "Jamie Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://www.linkedin.com/in/jamie-nguyen-phd-737b3188/",
+      "imageUrl": "https://media.licdn.com/dms/image/v2/D5603AQHk36tSMupuSg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1724345857043?e=1796256000&v=beta&t=VPXWwru3AY8_w4uDbmhFR-yJaUrS5T8x2JW9GIQQFBY",
+      "sourceType": "linkedin_profile",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "stored_roster_url",
+        "owner_identified"
+      ],
+      "retrievedAt": "2026-11-14T22:36:18.115Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-0231": {
+      "name": "Michael Dao",
+      "outcome": "not_found",
+      "pageUrl": "https://www.sjsu.edu/kinesiology/about-us/faculty-and-staff.php",
+      "imageUrl": "https://www.sjsu.edu/kinesiology/pics/Michael%20Dao%20-%20Michael%20Dao.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-14T22:38:23.612Z",
+      "note": "candidate image could not be downloaded"
+    },
+    "vp-0351": {
+      "name": "Nguyen-Truc-Dao Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:51:52.980Z",
+      "note": "candidate rejected on visual review: distant or small figure, not a usable headshot"
+    },
+    "vp-0360": {
+      "name": "Linh Vu",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:51:52.980Z",
+      "note": "candidate rejected on visual review: distant or small figure, not a usable headshot"
+    },
+    "vp-0766": {
+      "name": "Thanh Van Hoang",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:39:26.253Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-0772": {
+      "name": "Van-Phung Mai",
+      "outcome": "found",
+      "pageUrl": "https://scholar.google.com/citations?user=voPgUkQAAAAJ&hl=en",
+      "imageUrl": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=voPgUkQAAAAJ&citpid=2",
+      "sourceType": "scholar_profile",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "stored_roster_url",
+        "scholar_profile",
+        "institution"
+      ],
+      "retrievedAt": "2026-11-14T22:51:44.738Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-0920": {
+      "name": "Xuan Tan Phan",
+      "outcome": "found",
+      "pageUrl": "https://scholar.google.com/citations?user=p0maui4AAAAJ&hl=en",
+      "imageUrl": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=p0maui4AAAAJ&citpid=4",
+      "sourceType": "scholar_profile",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "stored_roster_url",
+        "scholar_profile",
+        "institution"
+      ],
+      "retrievedAt": "2026-11-14T22:51:45.036Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-1030": {
+      "name": "Nguyet Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:51:52.980Z",
+      "note": "candidate rejected on visual review: distant or small figure, not a usable headshot"
+    },
+    "vp-1047": {
+      "name": "Chu V. Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:51:52.980Z",
+      "note": "candidate rejected on visual review: camera icon"
+    },
+    "vp-1056": {
+      "name": "Quoc Bao Pham",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:41:06.897Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-1091": {
+      "name": "Liet Vo",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:51:52.980Z",
+      "note": "candidate rejected on visual review: distant or small figure, not a usable headshot"
+    },
+    "vp-1143": {
+      "name": "Minh Tam Truong",
+      "outcome": "needs_review",
+      "pageUrl": "https://scholar.google.com/citations?user=LuVYu_gAAAAJ&hl=en",
+      "imageUrl": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=LuVYu_gAAAAJ&citpid=1",
+      "sourceType": "scholar_profile",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "stored_roster_url",
+        "scholar_profile",
+        "institution"
+      ],
+      "retrievedAt": "2026-11-14T22:42:30.663Z",
+      "note": "candidate requires visual review before acceptance"
+    },
+    "vp-1172": {
+      "name": "Sara Quach Thaichon",
+      "outcome": "found",
+      "pageUrl": "https://scholar.google.com/citations?user=V4ZihgEAAAAJ&hl=en",
+      "imageUrl": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=V4ZihgEAAAAJ&citpid=3",
+      "sourceType": "scholar_profile",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "stored_roster_url",
+        "scholar_profile",
+        "institution"
+      ],
+      "retrievedAt": "2026-11-14T22:51:46.541Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-2614": {
+      "name": "Thi Ngoc Anh Dao",
+      "outcome": "found",
+      "pageUrl": "https://scholar.google.com/citations?user=17zdPcoAAAAJ&hl=en",
+      "imageUrl": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=17zdPcoAAAAJ&citpid=1",
+      "sourceType": "scholar_profile",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "stored_roster_url",
+        "scholar_profile",
+        "institution"
+      ],
+      "retrievedAt": "2026-11-14T22:51:51.511Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-2635": {
+      "name": "Tuyen V. Vu",
+      "outcome": "found",
+      "pageUrl": "https://scholar.google.com/citations?user=xdlXvLUAAAAJ&hl=en",
+      "imageUrl": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=xdlXvLUAAAAJ&citpid=4",
+      "sourceType": "scholar_profile",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "stored_roster_url",
+        "scholar_profile"
+      ],
+      "retrievedAt": "2026-11-14T22:51:51.778Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-2981": {
+      "name": "Tuan-Hung Pham",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-14T22:51:52.980Z",
+      "note": "candidate rejected on visual review: distant or small figure, not a usable headshot"
+    },
+    "vp-2982": {
+      "name": "Son Tran - Amazon Science",
+      "outcome": "not_found",
+      "pageUrl": "https://www.amazon.science/author/son-tran",
+      "imageUrl": "https://cdn.amazon.science/dims4/default/5e7b277/2147483647/strip/true/crop/1200x630+0+0/resize/1200x630!/quality/90/?url=https%3A%2F%2Famzn-science-production-science.s3.us-east-1.amazonaws.com%2Fscience%2F7c%2F4e%2Fd4e963d24f6c966def82a45d2bf1%2Famazon-science-og-image-squid.png",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-14T22:49:46.866Z",
+      "note": "candidate failed 120x120 or portrait-aspect validation"
+    },
+    "vp-2983": {
+      "name": "Vu Nguyen - Amazon Science",
+      "outcome": "not_found",
+      "pageUrl": "https://www.amazon.science/author/vu-nguyen",
+      "imageUrl": "https://cdn.amazon.science/dims4/default/5e7b277/2147483647/strip/true/crop/1200x630+0+0/resize/1200x630!/quality/90/?url=https%3A%2F%2Famzn-science-production-science.s3.us-east-1.amazonaws.com%2Fscience%2F7c%2F4e%2Fd4e963d24f6c966def82a45d2bf1%2Famazon-science-og-image-squid.png",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-14T22:49:49.650Z",
+      "note": "candidate failed 120x120 or portrait-aspect validation"
     }
   }
 }
