@@ -231,6 +231,8 @@ test('portrait provenance is ID-keyed and records reproducible identity evidence
           'lab_site',
           'university_news',
           'authoritative_academic',
+          'scholar_profile',
+          'linkedin_profile',
         ].includes(entry.sourceType ?? ''),
       );
       assert.ok(['HIGH', 'MEDIUM', 'LOW'].includes(entry.confidence ?? ''));

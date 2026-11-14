@@ -17,11 +17,19 @@ type Person = {
   rank?: string;
   profileUrl: string;
   websiteUrl?: string;
+  scholarUrl?: string;
   portrait?: string;
   portraitSource?: string;
   directFields?: string[];
 };
-type SourceType = 'official_faculty' | 'personal_homepage' | 'lab_site' | 'authoritative_academic';
+type SourceType =
+  | 'official_faculty'
+  | 'personal_homepage'
+  | 'lab_site'
+  | 'authoritative_academic'
+  | 'scholar_profile'
+  // Supplied by a maintainer who viewed the scholar's LinkedIn profile; never fetched by this script.
+  | 'linkedin_profile';
 type Confidence = 'HIGH' | 'MEDIUM' | 'LOW';
 type Outcome = 'found' | 'not_found' | 'protected' | 'needs_review';
 type ProvenanceEntry = {
@@ -209,8 +217,19 @@ function imageCandidates(html: string, page: Page, person: Person): Candidate[] 
     )
       return;
     const identity = identitySignals(person, imageUrl, context, page, html);
-    if (!identity.includes('name') || identity.length < 2) return;
-    let score = 10 + identity.length * 5;
+    // Personal homepages rarely put the name in the photo's filename or tag (hbdat.github.io uses
+    // <img class="profile-picture" src="profile_pic.jpg">). On a page the roster itself links, an
+    // image whose filename or class/id/alt marks it as the profile photo is a lead, never more:
+    // without name evidence, confidence() keeps it MEDIUM, so it waits for visual review (--store).
+    const profileMarkup =
+      page.stored &&
+      !identity.includes('name') &&
+      /profile|portrait|headshot|avatar|mugshot|(?<![a-z])(?:me|photo|pic|bio|self)(?![a-z])/i.test(
+        `${new URL(imageUrl).pathname.split('/').pop()} ${(context.match(/\b(?:class|id|alt)=["'][^"']*["']/gi) ?? []).join(' ')}`,
+      );
+    if (profileMarkup) identity.push('profile_markup');
+    else if (!identity.includes('name') || identity.length < 2) return;
+    let score = (profileMarkup ? 0 : 10) + identity.length * 5;
     if (/portrait|headshot|profile|photo|avatar|faculty|people|person|staff/.test(low)) score += 4;
     if (/\.(?:jpe?g|png|webp)(?:[/?#]|$)/i.test(imageUrl)) score += 5;
     candidates.push({
@@ -246,6 +265,42 @@ function imageCandidates(html: string, page: Page, person: Person): Candidate[] 
         .map((candidate) => [candidate.imageUrl, candidate]),
     ).values(),
   ];
+}
+// The photo a scholar uploaded to the Google Scholar profile the roster stores. Fetched once,
+// anonymously, with a pause between requests; never rendered, retried, or read from Wayback. The
+// profile is the scholar's own, but its photo has no name in the URL, so confidence() keeps it
+// MEDIUM: it is a review-only lead, stored only after a person looks at it (--store).
+let lastScholarFetch = 0;
+async function scholarCandidate(person: Person): Promise<Candidate | null> {
+  const user = person.scholarUrl?.match(/[?&]user=([\w-]{12})/)?.[1];
+  if (!user || args.has('--no-scholar')) return null;
+  const wait = lastScholarFetch + 5_000 - Date.now();
+  if (wait > 0) await new Promise((done) => setTimeout(done, wait));
+  lastScholarFetch = Date.now();
+  const pageUrl = `https://scholar.google.com/citations?user=${user}&hl=en`;
+  let html: string;
+  try {
+    html = (await curl(pageUrl, 20)).toString('utf8');
+  } catch {
+    return null;
+  }
+  // A profile without an uploaded photo shows avatar_scholar_*.png and has no view_photo URL.
+  const photo = html.match(
+    /https:\/\/scholar\.googleusercontent\.com\/citations\?view_op=medium_photo&amp;user=[\w-]{12}&amp;citpid=\d+/,
+  )?.[0];
+  if (!photo || !photo.includes(`user=${user}`)) return null;
+  const profileName = html.match(/<div id="gsc_prf_in">([^<]+)</)?.[1] ?? '';
+  const identitySignals = ['stored_roster_url', 'scholar_profile'];
+  if (hasNameEvidence(person.name, profileName)) identitySignals.unshift('name');
+  if (hasWordEvidence(person.university, html.slice(0, 200_000), 2))
+    identitySignals.push('institution');
+  return {
+    imageUrl: cleanUrl(photo),
+    page: { url: pageUrl, sourceType: 'scholar_profile', stored: true },
+    identitySignals,
+    urlHasNameEvidence: false,
+    score: 0,
+  };
 }
 async function discoveryPages(person: Person): Promise<Page[]> {
   const query = new URLSearchParams({
@@ -719,6 +774,10 @@ for (const person of selected) {
         found = imageCandidates(archived.html, { ...page, archivedAt: archived.date }, person);
     }
     candidates.push(...found);
+  }
+  if (candidates.length === 0) {
+    const scholar = await scholarCandidate(person);
+    if (scholar) candidates.push(scholar);
   }
   // Search is a fallback discovery route, never an image source on its own. Avoid it when a
   // stored page already exposed an identity-resolved candidate.

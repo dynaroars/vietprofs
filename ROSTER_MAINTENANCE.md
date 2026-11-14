@@ -649,6 +649,9 @@ person independently; never run a generic image scraper blindly across the roste
    pages such as `/about`, `/bio`, or `/people`. A suitable portrait need not be an institutional
    headshot: a clearly identified portrait from a maintained personal academic homepage, lab site,
    or Google Site is acceptable.
+   On a stored page, an image whose filename or `class`/`id`/`alt` marks it as the profile photo
+   (`profile_pic.jpg`, `class="profile-picture"`, `me.jpg`) is a review-only (MEDIUM) lead even
+   without the name in its URL or tag.
 3. **Use search for discovery, never as image evidence.** If the stored pages do not yield a
    usable portrait, search the exact name with the institution, department/field, and institution
    domain (for example, `"${name}" "${university}"`, `"${name}" "${department}" "${university}"`,
@@ -657,7 +660,10 @@ person independently; never run a generic image scraper blindly across the roste
    news, research-center, hospital/clinical-directory, and institutional research-profile pages.
    Then seek a clearly identified personal academic homepage, followed by other authoritative
    academic sources such as lab sites, conference speaker bios, and professional-society profiles.
-   Google Scholar and ORCID are identity clues, not default portrait sources.
+   Google Scholar and ORCID are identity clues, not default portrait sources. One exception: when
+   no stored page yields a candidate, the photo the scholar uploaded to the Google Scholar profile
+   stored in `scholarUrl` is a review-only (MEDIUM) lead, fetched once anonymously and stored only
+   after visual review.
 4. **Treat blocks as a route change, not a failure.** Do not repeatedly request a bot-blocked
    page. Use it or its search result only to discover alternate official institutional pages, a
    department directory, a personal homepage, or another page that references the same image.
