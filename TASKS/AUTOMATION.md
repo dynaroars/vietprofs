@@ -388,9 +388,12 @@ Playbooks: `TASKS/discover_from_database.md` (database channels), `TASKS/discove
 (web/directory search), `TASKS/discover_industry_labs.md` (corporate, government, and policy
 employers), and `TASKS/candidate_intake.md` (eligibility and enrichment).
 
-1. **Channel by weekday (UTC):** Mon `grants` (NIH RePORTER + NSF PIs), Tue `coauthors`
-   (Crossref/OpenAlex co-authors of rostered scholars), Wed `gaps` (feeder-vs-faculty gap report,
-   then `./scripts/faculty-discovery-queries.ts` for the top uncovered gap university), Thu `labs`
+1. **Channel by weekday (UTC):** Mon `grants` (NIH RePORTER + NSF PIs), Tue `network` on odd ISO
+   weeks (OpenAlex co-authors of a rotating roster slice) and `coauthors` on even ISO weeks
+   (Crossref/OpenAlex co-authors of rostered scholars), Wed `feeders` on odd ISO weeks (OpenAlex
+   authors who published at a Vietnamese university and are now abroad, most-published first) and
+   `gaps` on even ISO weeks (feeder-vs-faculty gap report, then
+   `./scripts/faculty-discovery-queries.ts` for the top uncovered gap university), Thu `labs`
    (alumni pages on rostered `websiteUrl`s), Fri web search: on odd ISO weeks per `discover_new_faculty.md` (one field
    or institution group; given-name tokens once that field's surname sweep is done), on even ISO
    weeks per `discover_industry_labs.md` (one employer group, filed as a `New industry batch`), Sat `logs`

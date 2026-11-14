@@ -15,6 +15,8 @@ Empirical testing across all discovery channels shows a clear hierarchy of effec
 | :--- | :--- | :--- | :--- |
 | **1. Grant PI/Co-PI Sweep (NIH RePORTER + NSF Awards)** | `npm run discover-leads -- --mode=grants --limit=100` | **~70%+** | US biomedical, clinical, engineering, and CS faculty; NSF CAREER winners; catching `Associate Professor` $\rightarrow$ `Professor` promotions on active R01/U01/P01 grants. |
 | **2. OpenAlex High-Citation & Co-Author Graph Sweep** | `npm run discover-leads -- --mode=coauthors --limit=60` | **~50–65%** (with `works_count:>30`) | International faculty (Canada, UK, France, Netherlands, Switzerland, Nordics, Australia, Singapore) and senior national-lab/institute scientists (CNRS, Inserm, CEA, A\*STAR). |
+| **2b. OpenAlex Vietnamese-Feeder Sweep** | `npm run discover-leads -- --mode=feeders` | **~40%** of sampled leads (2026-11-14) | Faculty abroad who first published at a Vietnamese university (FTU, NEU, UEH, HUST, VNU, medical schools, ...): mid-career and senior social scientists, business-school and Australian faculty with too few works or no NIH/NSF grants for channels 1–2 (Chi Ta, Vinh Thai, Tuan Trong Luu). |
+| **2c. OpenAlex Co-Author Network Sweep** | `npm run discover-leads -- --mode=network --limit=60` | **~33%** of sampled leads (2026-11-14) | Unlisted co-authors (last four years) of a day-rotating `--limit`-member slice of the roster; reaches nursing, psychology, and business faculty (Van Ta Park, UCSF). |
 | **3. Feeder-vs-Faculty Institutional Gap Sweep** | `npm run discover-leads -- --mode=gaps` + `./scripts/faculty-discovery-queries.ts` | **High** | Major universities where `public/data.json` records 5–40 alumni degrees/postdocs (`phdInstitution`, `postdocInstitution`) but only 0–2 current faculty (e.g., CMU, Princeton, MIT, Caltech, UTMB). |
 | **4. Expanded Surname & Given-Name Lexicon** | `./scripts/faculty-discovery-queries.ts --given-names` | **High** | Catching the ~7% of Vietnamese scholars whose surnames (`Hoang`, `Dinh`, `Doan`, `Phung`, `Vuong`, `Luong`, `Kieu`) or married/hyphenated names were missed by the original surname list. |
 | **5. Lab Website & Alumni Placement Sweep** | `npm run discover-leads -- --mode=labs --limit=30` | **~5% per page** (high value for junior hires) | Brand-new Assistant Professors (hired within the last 1–2 years) listed on their PhD/postdoc advisor's `/people` or `/alumni` page before they appear in grant or citation databases. |
@@ -34,6 +36,8 @@ npm run discover-leads -- --mode=all --limit=50
 # Or target a specific high-yield channel:
 npm run discover-leads -- --mode=grants --limit=100
 npm run discover-leads -- --mode=coauthors --limit=60
+npm run discover-leads -- --mode=feeders
+npm run discover-leads -- --mode=network --limit=60
 npm run discover-leads -- --mode=labs --limit=30
 npm run discover-leads -- --mode=gaps
 ```
@@ -47,6 +51,16 @@ npm run discover-leads -- --mode=gaps
    - Prioritize OpenAlex authors with `works_count > 30`, `last_known_institutions.type` in `education` or `facility`, and `country_code != 'VN'`.
    - Watch out for **surname-first / middle-name order** or **hyphenated/married surnames** in European entries (e.g., `Uyen Huynh-Do` at Bern, `Olivier Martineau-Huynh` at CNRS/Sorbonne, `Minh Ha-Duong` at CNRS, `Thérèse Truong` at Inserm).
    - For ambiguous surnames (`Le`, `Do`, `Dang`, `Mai`, `Ho`, `Lam`, `Ly`, `Cao`, `Ha`, `Ta`, `To`), require a Vietnamese given/middle-name token or explicit heritage/education signal before spending research time.
+2b. **Feeder and Network Leads (`openalex-feeder`, `openalex-network`):**
+   - Both already require a Vietnamese surname plus a Vietnamese given-name token
+     (`hasVietnameseSurnameAndGivenName` in `scripts/name-screen.ts`), a non-Vietnam current
+     institution, and no roster or retired-id name match. Western-given-name scholars are out of
+     scope for these channels.
+   - Feeder leads are sorted by OpenAlex works, most first; work down the list. Expect PhD
+     students, postdocs, and fixed-term research fellows among the low-works leads; reject them
+     at the first official page that shows the title.
+   - Leads from Korean, Japanese, and Taiwanese labs in `network` output are usually current
+     students of a rostered member's collaborator; spend research time on them last.
 3. **Feeder-Gap Universities (`feederGaps`):**
    - Pick top universities from `feederGaps` in `maintenance/discovery-leads.json` (where `degreeOrPostdocCount >= 6` and `currentFacultyCount <= 2`) and generate targeted queries using the expanded 29-surname + 48-given-name lists:
      ```bash

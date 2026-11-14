@@ -285,6 +285,21 @@ const CHINESE_KOREAN_SURNAMES = new Set([
 
 export type NameScreen = { likely: boolean; reason: string };
 
+// Stricter than the screen: a Vietnamese surname plus a separate Vietnamese given-name token
+// (Chi Ta, Tuyen Huynh, Van Ta Park). For bulk API sweeps whose raw output is mostly
+// non-Vietnamese, where "not clearly non-Vietnamese" lets through Le Conte or Do Yoon Kim.
+// It misses Western-given-name members (Kevin Le), so never use it to reject a single person.
+export function hasVietnameseSurnameAndGivenName(name: string, country?: string): boolean {
+  const tokens = nameTokens(name.replace(/[‐-―−]/g, '-'));
+  const surname = tokens.find((t) => ALL_SURNAMES.has(t));
+  if (!surname) return false;
+  if (!tokens.some((t) => t !== surname && VIET_GIVEN_TOKENS.has(t))) return false;
+  // A Chinese/Korean-only syllable (the "yoon" in Do Yoon Kim) rules the name out unless another
+  // token is one pinyin and Korean can't spell (Thi Gam Pham, Thuy-Na Thi Dinh stay).
+  if (tokens.some(cjkNotViet) && !tokens.some(vietOnly)) return false;
+  return screenVietnameseName(name, country).likely;
+}
+
 // Chinese (pinyin) and Korean (Revised Romanization) syllable shapes, plus common Wade-Giles,
 // Cantonese and Malaysian spellings. Vietnamese written without diacritics overlaps with these
 // ("mai", "lan", "ha", "do", "son"), so a token only counts as Chinese/Korean when it is not

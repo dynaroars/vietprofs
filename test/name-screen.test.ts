@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { test } from 'node:test';
-import { screenVietnameseName } from '../scripts/name-screen.ts';
+import { hasVietnameseSurnameAndGivenName, screenVietnameseName } from '../scripts/name-screen.ts';
 
 // Rejected after the 2026-11-09 audit of bulk batches #1042, #1043 and #1048-#1059.
 const NON_VIETNAMESE: [string, string?][] = [
@@ -103,4 +103,13 @@ test('the name screen keeps at least 99.5% of current roster names', () => {
     rejected.length / roster.length <= 0.005,
     `${rejected.length} roster names rejected: ${rejected.map((e: { name: string }) => e.name).join(', ')}`,
   );
+});
+
+test('the strict sweep filter needs a Vietnamese surname and a Vietnamese given name', () => {
+  for (const name of ['Chi Ta', 'Tuyen Huynh', 'Van Ta Park', 'Lưu Trọng Tuấn', 'Vinh Van THAI']) {
+    assert.equal(hasVietnameseSurnameAndGivenName(name), true, name);
+  }
+  for (const name of ['P. Le Conte', 'Do Yoon Kim', 'Kevin Le', 'Guy Le Fanu', 'Han Yu']) {
+    assert.equal(hasVietnameseSurnameAndGivenName(name), false, name);
+  }
 });

@@ -3,6 +3,8 @@
 //
 //   node scripts/discover-leads.ts --mode=grants      # NSF Award Search & NIH RePORTER PIs/co-PIs
 //   node scripts/discover-leads.ts --mode=coauthors   # Crossref co-authors of rostered scholars
+//   node scripts/discover-leads.ts --mode=feeders     # OpenAlex authors who published at a Vietnamese university, now abroad
+//   node scripts/discover-leads.ts --mode=network     # OpenAlex co-authors of a rotating slice of the roster
 //   node scripts/discover-leads.ts --mode=labs        # Alumni/people/collaborator pages on stored websiteUrl
 //   node scripts/discover-leads.ts --mode=logs        # Out-of-roster leads in maintenance/relationship-research.json
 //   node scripts/discover-leads.ts --mode=gaps        # Feeder-vs-faculty institution & research-institute gap report
@@ -19,7 +21,10 @@ import { join } from 'node:path';
 import { promisify } from 'node:util';
 import type { RosterEntry } from '../src/data.ts';
 import { namesMatch, nameTokens } from '../src/identity.ts';
-import { isLikelyVietnameseName as screenName } from './name-screen.ts';
+import {
+  hasVietnameseSurnameAndGivenName,
+  isLikelyVietnameseName as screenName,
+} from './name-screen.ts';
 
 const execFileAsync = promisify(execFile);
 
@@ -666,6 +671,172 @@ async function discoverFromLabs(
   return leads;
 }
 
+async function openAlex(path: string): Promise<any> {
+  const sep = path.includes('?') ? '&' : '?';
+  const url = `https://api.openalex.org/${path}${sep}api_key=${encodeURIComponent(openAlexApiKey)}`;
+  for (let attempt = 0; attempt < 3; attempt++) {
+    try {
+      const { stdout } = await execFileAsync('curl', ['-s', '-m', '30', url], {
+        maxBuffer: 64 * 1024 * 1024,
+      });
+      return JSON.parse(stdout);
+    } catch {
+      await new Promise((resolve) => setTimeout(resolve, 1500));
+    }
+  }
+  return {};
+}
+
+// Vietnamese universities whose former staff and graduates publish under them before moving
+// abroad. The eight economics/business schools caught Chi Ta-type social scientists that the
+// grant and >30-works channels miss (2026-11-14 experiment: 4 of 10 sampled leads eligible).
+const FEEDER_INSTITUTIONS: Record<string, string> = {
+  I187855631: 'Foreign Trade University',
+  I138622004: 'National Economics University',
+  I181727666: 'University of Economics Ho Chi Minh City',
+  I4387155442: 'University of Economics and Law',
+  I4405276934: 'VNU University of Economics and Business',
+  I4387153637: 'Ho Chi Minh City University of Economics and Finance',
+  I4403386521: 'Banking Academy of Vietnam',
+  I4210134588: 'Academy of Finance',
+  I94518387: 'Hanoi University of Science and Technology',
+  I123565023: 'Vietnam National University Ho Chi Minh City',
+  I177233841: 'Vietnam National University, Hanoi',
+  I47265099: 'Ho Chi Minh City University of Technology',
+  I23582244: 'Ho Chi Minh City University of Science',
+  I67868205: 'VNU University of Science',
+  I189643551: 'Hanoi Medical University',
+  I2802508454: 'University of Medicine and Pharmacy at Ho Chi Minh City',
+  I177733328: 'Can Tho University',
+  I4210095101: 'Hue University',
+  I3129492623: 'University of Da Nang',
+};
+
+// Authors with any affiliation year at a feeder whose last known institution is outside Vietnam
+// and who still published there within the last two years. `--limit` caps 200-author pages per
+// feeder (default 40 → effectively all of them).
+async function discoverFromFeeders(
+  matchRoster: Awaited<ReturnType<typeof loadRosterContext>>['matchRoster'],
+): Promise<Lead[]> {
+  const leads: (Lead & { works?: number })[] = [];
+  const seen = new Set<string>();
+  const recent = new Date().getUTCFullYear() - 2;
+  for (const [id, feeder] of Object.entries(FEEDER_INSTITUTIONS)) {
+    let cursor = '*';
+    for (let page = 0; cursor && page < limit; page++) {
+      const data = await openAlex(
+        `authors?filter=affiliations.institution.id:${id},last_known_institutions.country_code:!vn,last_known_institutions.type:education|facility|government|nonprofit,works_count:>3&select=id,display_name,works_count,last_known_institutions,affiliations&per_page=200&cursor=${cursor}`,
+      );
+      cursor = data.meta?.next_cursor ?? '';
+      for (const author of data.results ?? []) {
+        if (seen.has(author.id)) continue;
+        seen.add(author.id);
+        const name = (author.display_name ?? '').trim();
+        const current = author.last_known_institutions?.[0];
+        if (!current?.display_name) continue;
+        if (!hasVietnameseSurnameAndGivenName(name, current.country_code)) continue;
+        const affiliations: any[] = author.affiliations ?? [];
+        const yearsAt = (match: (inst: any) => boolean) =>
+          affiliations.filter((a) => match(a.institution ?? {})).flatMap((a) => a.years ?? []);
+        const currentYears = yearsAt((inst) => inst.id === current.id);
+        if (Math.max(0, ...currentYears) < recent) continue;
+        const { matchedEntries, retiredMatches } = matchRoster(name);
+        if (matchedEntries.length || retiredMatches.length) continue;
+        const vnYears = yearsAt((inst) => inst.country_code === 'VN');
+        leads.push({
+          name,
+          institution: `${current.display_name} (${current.country_code})`,
+          channel: 'openalex-feeder',
+          sourceUrl: author.id,
+          evidence: `OpenAlex: ${author.works_count} works; published at ${feeder} (Vietnam affiliations ${Math.min(...vnYears)}-${Math.max(...vnYears)}), at ${current.display_name} ${Math.min(...currentYears)}-${Math.max(...currentYears)}`,
+          works: author.works_count ?? 0,
+        });
+      }
+    }
+  }
+  // Most-published first: established faculty sit at the top, students and postdocs below.
+  return leads.sort((a, b) => (b.works ?? 0) - (a.works ?? 0)).map(({ works, ...lead }) => lead);
+}
+
+// OpenAlex co-authors (last four years) of `--limit` roster members, taken as a slice that rotates by
+// day so successive runs cover the whole roster. A seed is resolved only when an OpenAlex
+// author with a matching name was ever affiliated with the seed's university. Vietnamese
+// scholars co-author with each other; this found Van Ta Park (UCSF) and re-found the feeder
+// channel's senior misses in the 2026-11-14 experiment.
+async function discoverFromNetwork(
+  roster: RosterEntry[],
+  matchRoster: Awaited<ReturnType<typeof loadRosterContext>>['matchRoster'],
+): Promise<Lead[]> {
+  const words = (s: string) =>
+    s
+      .toLowerCase()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .replace(/^the /, '')
+      .replace(/[^a-z ]/g, ' ')
+      .split(/\s+/)
+      .filter((w) => w.length > 3 && !['university', 'college', 'school', 'institute'].includes(w));
+  const seeds = roster.filter((p) => !['Emeritus', 'Deceased'].includes(p.track ?? ''));
+  const day = Math.floor(Date.now() / 86_400_000);
+  const start = (day * limit) % Math.max(1, seeds.length);
+  const slice = [...seeds, ...seeds].slice(start, start + Math.min(limit, seeds.length));
+  const leads = new Map<string, Lead & { seeds: Set<string> }>();
+  let resolved = 0;
+  for (const seed of slice) {
+    const name = seed.name.split(' - ')[0].trim();
+    const uniWords = words(seed.university);
+    if (!uniWords.length) continue;
+    const found = await openAlex(
+      `authors?search=${encodeURIComponent(name)}&select=id,display_name,affiliations&per_page=10`,
+    );
+    const author = (found.results ?? []).find(
+      (a: any) =>
+        namesMatch(nameTokens(a.display_name ?? ''), nameTokens(name)) &&
+        (a.affiliations ?? []).some((x: any) => {
+          const instWords = words(x.institution?.display_name ?? '');
+          return uniWords.every((w) => instWords.includes(w));
+        }),
+    );
+    if (!author) continue;
+    resolved++;
+    const works = await openAlex(
+      `works?filter=author.id:${author.id.split('/').pop()},from_publication_date:${new Date().getUTCFullYear() - 4}-01-01&select=authorships,publication_year,doi&per_page=100`,
+    );
+    for (const work of works.results ?? []) {
+      for (const authorship of work.authorships ?? []) {
+        const coauthor = authorship.author ?? {};
+        if (!coauthor.id || coauthor.id === author.id) continue;
+        const inst = authorship.institutions?.[0];
+        if (!inst || inst.country_code === 'VN' || inst.type !== 'education') continue;
+        const coName = (coauthor.display_name ?? '').trim();
+        if (!hasVietnameseSurnameAndGivenName(coName, inst.country_code)) continue;
+        const existing = leads.get(coauthor.id);
+        if (existing) {
+          existing.seeds.add(seed.id);
+          continue;
+        }
+        const { matchedEntries, retiredMatches } = matchRoster(coName);
+        if (matchedEntries.length || retiredMatches.length) continue;
+        leads.set(coauthor.id, {
+          name: coName,
+          institution: `${inst.display_name} (${inst.country_code})`,
+          channel: 'openalex-network',
+          sourceUrl: coauthor.id,
+          evidence: `Co-author on ${work.doi ?? 'an OpenAlex work'} (${work.publication_year})`,
+          seeds: new Set([seed.id]),
+        });
+      }
+    }
+  }
+  console.error(`  Resolved ${resolved} of ${slice.length} seeds in OpenAlex.`);
+  return [...leads.values()]
+    .sort((a, b) => b.seeds.size - a.seeds.size)
+    .map(({ seeds: ids, ...lead }) => ({
+      ...lead,
+      evidence: `${lead.evidence}; co-author of ${[...ids].join(', ')}`,
+    }));
+}
+
 async function analyzeGaps(roster: RosterEntry[]) {
   const norm = (s: string) =>
     s
@@ -744,6 +915,28 @@ if (mode === 'all' || mode === 'labs') {
   const labLeads = await discoverFromLabs(roster, matchRoster);
   console.error(`  Found ${labLeads.length} leads from lab/personal websites.`);
   allLeads.push(...labLeads);
+}
+
+if (mode === 'all' || mode === 'feeders') {
+  if (!openAlexApiKey) console.error('Skipping feeders: no OpenAlex API key.');
+  else {
+    console.error(
+      'Scanning OpenAlex for authors who published at Vietnamese feeder universities...',
+    );
+    const feederLeads = await discoverFromFeeders(matchRoster);
+    console.error(`  Found ${feederLeads.length} leads from feeder universities.`);
+    allLeads.push(...feederLeads);
+  }
+}
+
+if (mode === 'all' || mode === 'network') {
+  if (!openAlexApiKey) console.error('Skipping network: no OpenAlex API key.');
+  else {
+    console.error('Scanning OpenAlex co-authors of a rotating roster slice...');
+    const networkLeads = await discoverFromNetwork(roster, matchRoster);
+    console.error(`  Found ${networkLeads.length} leads from the co-author network.`);
+    allLeads.push(...networkLeads);
+  }
 }
 
 const gaps = mode === 'all' || mode === 'gaps' ? await analyzeGaps(roster) : { feederGaps: [] };
