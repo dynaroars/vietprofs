@@ -1,0 +1,42 @@
+{
+  "verifier": "codex",
+  "input": "maintenance/sector-expansion/runs/w3/us-social-hum.codex.json",
+  "candidates": [
+    {
+      "name": "Trinh Tran",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live individual employer profile https://www.middlebury.edu/college/people/trinh-tran identifies Assistant Professor of Anthropology/Education Studies at Middlebury, Vermont. Official appointment announcement https://www.middlebury.edu/stories/archive/2017/09/middlebury-welcomes-new-faculty-members places her in its tenure-track cohort and verifies Berkeley sociology degrees and Chicago BA. Trinh together with Tran supplies a Vietnamese given-name signal beyond surname alone. Leave noted on the profile does not terminate the appointment. Required name/URL dedup returned no roster or retired-id matches; absent from already-proposed.txt. No evidence of a Vietnam-based appointment.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Angie Ngoc Tran",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live individual employer profile https://researchprofiles.csumb.edu/en/persons/angie-ngoc-tran/ identifies Professor in Social Sciences and Global Studies, faculty service since 1996, USC political-economy doctorate, and continuing teaching in California. Its biography explicitly identifies Saigon birth and refugee migration to California. Required name/URL dedup matched retired vp-0435 Ngoc Tran, a different person: https://princengoc.github.io/about.html identifies that scholar as a mathematician whose academic career ended in 2022, now at Chicago Trading Company; candidate is the long-serving CSUMB political economist. No matching person in already-proposed.txt.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Diem-My Bui",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live individual employer profile https://comm.uic.edu/profiles/diem-my-bui/ identifies Clinical Associate Professor and Director of Undergraduate Studies in Communication, with Chicago office and Illinois PhD. A documented clinical promotion ladder is independently established by the 2020-2021 board promotion record, page 42, naming Diem-My Thi Bui: https://www.trustees.uillinois.edu/trustees/agenda/July-23-2020/009-jul-Promotion-Tenure.pdf . Together with the enduring current faculty profile, this supports stable clinical faculty eligibility. Diem-My plus Bui is a distinctive Vietnamese given-name/surname combination beyond surname alone. Required name/URL dedup returned no roster or retired-id matches; absent from already-proposed.txt.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Anh Sy Huy Le",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live individual employer profile https://www.muhlenberg.edu/directory/anh-le/ identifies Assistant Professor of Modern Chinese History, current courses, Michigan State history PhD, Buffalo MA and Wabash BA, with Allentown contact address. Its linked personal site https://anhsyhuyle.owlstown.net/ confirms the current Muhlenberg appointment, former St. Norbert role, 2021 PhD, and Vietnamese name Le Sy Huy Anh (Lê Sỹ Huy Anh). Required name/URL dedup found vp-0147, vp-1698, vp-1771, vp-2012 and vp-3215; these are different people in finance, management, financial reporting and data science, with different identity URLs and, where recorded, NYU, Iowa, UTS or Duke doctorates rather than Michigan State history. Absent from already-proposed.txt.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Thien-Huong Ninh Villarreal",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live individual employer profile https://www.deltacollege.edu/about/faculty-staff-directory/thien-huong-villarreal identifies Dr. Thien-Huong Villarreal (Ninh), Faculty Researcher/Associate Professor in Sociology and Ethnic Studies, Stockton Main Campus. The original Vietnamese surname is appropriately retained; Thien-Huong plus Ninh provides an affirmative Vietnamese name signal beyond surname alone. Independent current reporting explicitly establishes full-time tenured appointments and Delta tenure in 2025: https://piedmontexedra.com/2026/11/these-part-time-professors-make-big-money-teaching-dozens-of-classes-online-are-their-students-learning . Its linked Delta board record returned 403 and was not independently readable; tenure is supported by the opened CalMatters report, alongside the live employer profile. Concurrent adjunct work elsewhere does not negate this eligible permanent appointment. Required dedup with name and both Delta/CRC identity URLs returned no roster or retired-id matches; absent from already-proposed.txt.",
+      "correctedFields": {}
+    }
+  ],
+  "possible_move": []
+}

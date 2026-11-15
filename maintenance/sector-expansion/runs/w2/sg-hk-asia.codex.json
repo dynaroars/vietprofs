@@ -1,0 +1,211 @@
+{
+  "group": "university",
+  "agent": "codex",
+  "slice": "sg-hk-asia",
+  "finishedAt": "2026-11-15T00:53:57Z",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Luong Trung Huynh",
+        "university": "Asian Institute of Technology",
+        "track": "Tenure-line",
+        "rank": "Professor",
+        "department": "Department of Industrial Systems Engineering",
+        "country": "Thailand",
+        "field": "Engineering",
+        "researchAreas": ["Supply Chain Management", "Operations Research", "Inventory Control", "Reliability and Maintenance"],
+        "phdInstitution": "Asian Institute of Technology",
+        "phdYear": 2000,
+        "msInstitution": "Asian Institute of Technology",
+        "undergradInstitution": "Ho Chi Minh City University of Technology",
+        "undergradYear": 1992,
+        "profileUrl": "https://ait.ac.th/people/dr-huynh-trung-luong/",
+        "scholarUrl": "https://scholar.google.com/citations?user=vacFByoAAAAJ"
+      },
+      "evidence": {
+        "currentRole": "https://ait.ac.th/people/dr-huynh-trung-luong/ — 'is a Professor in the Industrial Systems Engineering Program'. The live individual profile also identifies him as department head and Industrial and Manufacturing Engineering program chair. Normalize surname-first Huynh Trung Luong to Luong Trung Huynh. Current program corroboration discovered at https://ait.ac.th/program/industrial-and-manufacturing-engineering-ime/.",
+        "doctorateOrPapers": "https://ait.ac.th/people/dr-huynh-trung-luong/ — education explicitly gives D.Eng. in Industrial Systems Engineering, AIT, 2000; M.Eng., AIT, 1995; B.Eng. in Chemical Engineering, Ho Chi Minh City University of Technology, 1992. Research topics and degrees are on the same page. No eligible honor was found: the listed best-paper and student academic-performance prizes are excluded by the maintenance rules.",
+        "vietnameseSignal": "https://ait.ac.th/people/dr-huynh-trung-luong/ — Vietnamese given name Trung Luong and undergraduate education at Ho Chi Minh City University of Technology, Vietnam. No reconstructed Vietnamese diacritics.",
+        "dedup": "Ran npm run find-roster-matches for both Huynh Trung Luong and Luong Trung Huynh, with the institutional profile; reran the canonical name with the employer-linked Scholar URL https://scholar.google.com/citations?hl=en&user=vacFByoAAAAJ. Every run: no roster or retired-id matches. Checked already-proposed.txt: absent. Scholar identity comes from the institutional profile's direct link; opening Scholar returned HTTP 429, so no Scholar content was used as evidence. No LinkedIn fetched."
+      }
+    },
+    {
+      "entry": {
+        "name": "Tuan Khai Vu",
+        "university": "Hosei University",
+        "track": "Tenure-line",
+        "rank": "Professor",
+        "department": "Department of International Economics, Faculty of Economics",
+        "country": "Japan",
+        "field": "Business & Economics",
+        "researchAreas": ["International Macroeconomics", "International Finance", "Asian Economies", "Monetary Policy", "Structural Transformation"],
+        "phdInstitution": "Yokohama National University",
+        "phdYear": 2008,
+        "profileUrl": "https://kenkyu-web.hosei.ac.jp/hosei/detail.html?lang=en&systemId=04f52bfacfc52e74"
+      },
+      "evidence": {
+        "currentRole": "https://kenkyu-web.hosei.ac.jp/hosei/detail.html?lang=en&systemId=04f52bfacfc52e74 — 'Hosei University, Faculty of Economics, Professor'; career dates April 2017–Present. Header identifies VU Tuan Khai and Department of International Economics. Publications use Tuan Khai Vu, the proposed canonical form. Live profile includes March 2026 publications.",
+        "doctorateOrPapers": "https://kenkyu-web.hosei.ac.jp/hosei/detail.html?lang=en&systemId=04f52bfacfc52e74 — explicitly lists Ph.D. in Economics, Yokohama National University, March 2008. The same page supplies department, career history and proposed research interests. Undergraduate study was listed without a degree award, so no undergraduate degree was inferred.",
+        "vietnameseSignal": "https://kenkyu-web.hosei.ac.jp/hosei/detail.html?lang=en&systemId=04f52bfacfc52e74 — Vietnamese given-name combination Tuan Khai; education includes National Economics University (Hanoi), 1994–1996.",
+        "dedup": "Ran npm run find-roster-matches -- 'Tuan Khai Vu' with the official profile and its identity links https://researchmap.jp/vutuankhai and https://jglobal.jst.go.jp/detail?JGLOBAL_ID=202501003787997483. Name-only hits: vp-0472 Tuan Vu (USF neurologist, Penn State MD), vp-1665 Tuan H. Vu (JPL planetary scientist, Tufts PhD 2013), vp-2112 Tuan Vu at Bournemouth (accounting, Exeter PhD 2017). Inspected these roster records: different fields, degrees and histories from the Hosei macroeconomist, whose Yokohama PhD 2008 and continuous Japan appointments are explicit. No URL or retired-id match. Checked already-proposed.txt: absent."
+      }
+    },
+    {
+      "entry": {
+        "name": "Linh Thi Hoai Nguyen",
+        "university": "Kyushu University",
+        "track": "Tenure-line",
+        "rank": "Assistant Professor",
+        "department": "International Institute for Carbon-Neutral Energy Research",
+        "city": "Fukuoka",
+        "country": "Japan",
+        "field": "Mathematics",
+        "researchAreas": ["Mathematical Modeling", "Materials Informatics", "Machine Learning", "Quantum Chemistry", "Carbon Dioxide Geological Storage"],
+        "phdInstitution": "Osaka University",
+        "phdYear": 2014,
+        "profileUrl": "https://i2cner.kyushu-u.ac.jp/en/seeds/11018/"
+      },
+      "evidence": {
+        "currentRole": "https://i2cner.kyushu-u.ac.jp/en/seeds/11018/ — 'Nguyen, Linh Thi Hoai', 'Assistant Professor', with Multiscale Science and Engineering for Energy and the Environment research thrust. Individual employer page opened successfully via redirect from /seeds/11018/. https://q-aos.kyushu-u.ac.jp/en/events/events_view.php?cId=2642 independently identifies Assistant Professor NGUYEN Thi Hoai Linh (I²CNER) at the university's March 2026 forum. The institute's general researcher directory did not list her when inspected; the live individual page and dated 2026 employer report support the role, but downstream intake should recheck current status before assigning an ID.",
+        "doctorateOrPapers": "https://link.springer.com/book/10.1007/978-981-97-7850-8 — publisher's editor biography states Osaka University PhD in Information Science and Technology, 2014; Osaka researcher 2014–2016, Kyushu IMI researcher 2018–2023, I²CNER assistant professor since November 2023. Opened the publisher page and read the biography. https://i2cner.kyushu-u.ac.jp/en/seeds/11018/ supplies the proposed research topics and Fukuoka address.",
+        "vietnameseSignal": "Vietnamese given-name tokens Linh Thi Hoai on the institutional profile; the university's https://q-aos.kyushu-u.ac.jp/en/events/events_view.php?cId=2642 uses the Vietnamese surname-first form NGUYEN Thi Hoai Linh for the same I²CNER faculty member and matching research. Do not confuse with the unrelated Hue undergraduate returned by a general search.",
+        "dedup": "Ran npm run find-roster-matches -- 'Linh Thi Hoai Nguyen' with the official profile and its identity link https://www.researchgate.net/profile/Linh-Nguyen-58. Name-only hits vp-0372, vp-0476, vp-0604, vp-0677, vp-1951, vp-2234, vp-2285 were inspected in public/data.json. They are respectively Vietnamese language/migration (Syracuse), philosophy (UCLA 2011), banking (Bangor), finance at Melbourne, social entrepreneurship (Sydney), regenerative dentistry at UCL, and dental microbiology (UNLV). Different subjects and biographies from the Osaka information-science PhD 2014 with Japan career history. No shared identity URL or retired-id match. Checked already-proposed.txt: absent."
+      }
+    }
+  ],
+  "already_listed": [
+    {
+      "name": "Loan Thi Quynh Nguyen / Katie Nguyen",
+      "id": "vp-2448",
+      "note": "Important alias resolution: https://scholars.hsu.edu.hk/en/persons/loan-thi-quynh-nguyen/ identifies an Economics and Finance assistant professor with loannguyen@hsu.edu.hk. The live directory https://www.hsu.edu.hk/en/academic-staff/?staffId=1295 calls the same person Katie Nguyen, gives the same email and matching bank-culture publications, Queen Mary finance PhD, Sheffield Hallam MSc and National Economics University bachelor's degree. These degrees, department and research match vp-2448. Ran find-roster-matches for Loan Thi Quynh Nguyen with both URLs (name hits only); reran Katie Nguyen with both URLs and obtained vp-2448 and unrelated Dublin marketing scholar vp-1637. This is already listed, not a new person or a move."
+    },
+    {
+      "name": "Phan Le Ha",
+      "id": "vp-1455",
+      "note": "Ran find-roster-matches for Ha Le Phan with https://ice.ubd.edu.bn/phan-le-ha/: exact profile URL and name match vp-1455, Universiti Brunei Darussalam. Stopped new-candidate research. The official profile fetch returned an unexpected HTTP status; current role was not independently reverified."
+    },
+    {
+      "name": "Dong Nguyen",
+      "id": "vp-0600",
+      "note": "Macau education lead https://fed.um.edu.mo/dong-nguyen/ matches the existing University of Macau educational leadership entry and NTU doctorate in public/data.json. Not added. Profile fetch returned HTTP 403; no move conclusion drawn."
+    }
+  ],
+  "possible_move": [],
+  "rejected": [
+    {
+      "name": "Ngoc Duy Dinh",
+      "reason": "Unresolved current eligibility: live legacy individual profile https://www.bme.cuhk.edu.hk/new/duyp.php calls him Research Assistant Professor and gives an NUS PhD, but the current core list https://www.bme.cuhk.edu.hk/new/core-faculty.php omits him and https://www.bme.cuhk.edu.hk/new/adjunct-professors.php explicitly lists him as Adjunct Assistant Professor. Do not propose the stale research-faculty role."
+    },
+    {
+      "name": "Khoa Bang Pham",
+      "reason": "Live HKUST mathematics researcher directory https://www.math.hkust.edu.hk/people/?menu=2 identifies him as Post-doctoral Fellow, not research faculty."
+    },
+    {
+      "name": "Tho Van Luu",
+      "reason": "https://www.sutd.edu.sg/profile/luu-van-tho/ explicitly lists an ongoing PhD from September 2024 and supervisors. Earlier Vietnam lecturer experience does not make the present Singapore student appointment eligible."
+    },
+    {
+      "name": "Hieu Dao; Cong Duc Hoang; Nhung Bui; Kieu Thao Nguyen Pham",
+      "reason": "https://www.comp.nus.edu.sg/~lowkh/people.html lists these leads among current PhD students, with student email addresses and earlier bachelor's/master's degrees. The nearby professor labels belong to the adviser or alumni, not these people."
+    },
+    {
+      "name": "Duc Tam Dinh",
+      "reason": "Promising Malaysia lead, not verified to the brief's standard. Opened https://www.monash.edu.my/business/News-and-Events/articles/2025/education-buzz-2025-learning-loud,-talent-proud and a live Monash research activity page. Lecturer role and educational activity are supported, but a current individual employer profile, explicit research doctorate details and sufficient appointment-track evidence were not obtained. Research portal directory fetch returned 403; other portal pages were accessible. Leave for a future pass rather than infer eligibility from Dr/title alone."
+    },
+    {
+      "name": "My Thi Kieu Bui",
+      "reason": "https://ccs.engg.nagoya-u.ac.jp/oshiyama/eng/members/index.html lists Bui Thi Kieu My as Designated Assistant Professor. The project-style designation and old group-site context do not establish a stable career appointment; no doctorate or current appointment permanence was verified. Not included."
+    },
+    {
+      "name": "Quynh Hoa Pham",
+      "reason": "CityUHK Scholars discovery result https://scholars.cityu.edu.hk/en/persons/hqpham2/ and invention-team announcements surfaced a Dr researcher, but no stable faculty-equivalent appointment was verified. Search results alone were not accepted as employment evidence."
+    }
+  ],
+  "coverage": [
+    {
+      "employer": "Slice-wide search strategy",
+      "pagesExamined": ["maintenance/sector-expansion/BRIEF2.md", "maintenance/sector-expansion/already-proposed.txt", "public/data.json", "maintenance/retired-ids.json"],
+      "note": "Later-pass discovery emphasized given-name tokens Khanh, Hieu, Phuc, Bich, Dieu, Quynh, Loan, Ngoc, Phuong, Thuy, Thao, Hanh, Khoa, Hoai, Chinh, Quoc, Kiet, Khuong, Cuong, Bach and less-common surname tokens Huynh, Luu, Quach, Nghiem, Trieu, Ton and Kieu. Broad domain searches covered Singapore, Hong Kong, Malaysia, Thailand, Japan, Taiwan, Korea, mainland China, Macau and Brunei, across fields. Search-engine results were discovery leads only. Stopped after broad later-pass coverage produced diminishing returns; this is targeted coverage, not a claim that every Asian university or department was exhaustively enumerated. Only the requested output file was written."
+    },
+    {
+      "employer": "Asian Institute of Technology",
+      "pagesExamined": ["https://ait.ac.th/people/dr-huynh-trung-luong/"],
+      "note": "Verified new industrial systems professor, doctorate, Vietnamese education and research topics. Older AIT country/faculty directories also surfaced Phan Minh Dung (already in roster) and Pham Huy Giao; historical entries were not accepted as current-role verification. Scholar link was employer-linked but returned HTTP 429."
+    },
+    {
+      "employer": "Hosei University",
+      "pagesExamined": ["https://kenkyu-web.hosei.ac.jp/hosei/detail.html?lang=en&systemId=04f52bfacfc52e74"],
+      "note": "Deeper institution lead from Tuan Khai and Japanese economics career records. Read current profile, degrees, complete career history and recent publications; resolved all fuzzy roster hits."
+    },
+    {
+      "employer": "Kyushu University",
+      "pagesExamined": ["https://i2cner.kyushu-u.ac.jp/en/seeds/11018/", "https://i2cner.kyushu-u.ac.jp/en/researchers/", "https://q-aos.kyushu-u.ac.jp/en/events/events_view.php?cId=2642", "https://link.springer.com/book/10.1007/978-981-97-7850-8"],
+      "note": "Verified Linh Thi Hoai Nguyen from an individual employer profile, a March 2026 university event report and publisher biography. General directory omission recorded explicitly. Ton Viet Ta is already vp-0990. Nguyen Dinh Hoa is listed as a visiting associate professor based at Hanoi University of Science and Technology; Tam Thanh Nguyen is a postdoc, so neither was pursued as a new university candidate."
+    },
+    {
+      "employer": "The Hang Seng University of Hong Kong",
+      "pagesExamined": ["https://research.hsu.edu.hk/world-leading-scholars-at-hsuhk/", "https://scholars.hsu.edu.hk/en/persons/loan-thi-quynh-nguyen/", "https://www.hsu.edu.hk/en/academic-staff/", "https://www.hsu.edu.hk/en/academic-staff/?staffId=1295"],
+      "note": "Deep given-name search found Loan Thi Quynh Nguyen; current institutional email and publication identity resolved her to already-listed Katie Nguyen. Also avoided treating shared-surname Chinese names in the directory as Vietnamese leads."
+    },
+    {
+      "employer": "The Chinese University of Hong Kong",
+      "pagesExamined": ["https://www.bme.cuhk.edu.hk/new/duyp.php", "https://www.bme.cuhk.edu.hk/new/core-faculty.php", "https://www.bme.cuhk.edu.hk/new/adjunct-professors.php"],
+      "note": "Ngoc-token biomedical engineering lead required comparing a live legacy profile against current category lists; current adjunct classification prevented an incorrect addition."
+    },
+    {
+      "employer": "Hong Kong University of Science and Technology",
+      "pagesExamined": ["https://www.math.hkust.edu.hk/people/?menu=2"],
+      "note": "Read researcher roles rather than relying on professor words in search results; Khoa Bang Pham is a postdoc. Duc Duy Trinh and Truong Thao Nguyen surfaced in discovery but are respectively already vp-2221 and on already-proposed.txt."
+    },
+    {
+      "employer": "National University of Singapore",
+      "pagesExamined": ["https://www.comp.nus.edu.sg/~lowkh/people.html"],
+      "note": "Given-name searches led into computing lab current-member and alumni sections; several plausible Vietnamese leads were students. Other Singapore searches also returned senior research fellows without sufficient stable faculty-equivalence evidence."
+    },
+    {
+      "employer": "Nanyang Technological University",
+      "pagesExamined": ["https://www.ntu.edu.sg/nisb/our-people"],
+      "note": "Bich-token search found Bich Ngoc Ann Tran, Principal Research Fellow, Cryo-Electron Microscopy Platform. No verified permanent faculty-equivalent appointment and doctorate evidence assembled; not proposed from the title alone."
+    },
+    {
+      "employer": "Singapore Institute of Technology",
+      "pagesExamined": ["https://www.singaporetech.edu.sg/directory/faculty?page=21"],
+      "note": "Examined live directory after given-name searches; pagination had changed relative to indexed results. Thi Qui Nguyen, Hoang The Nguyen and Tram Truong-Huu leads are already in public/data.json."
+    },
+    {
+      "employer": "Singapore University of Technology and Design",
+      "pagesExamined": ["https://www.sutd.edu.sg/profile/luu-van-tho/"],
+      "note": "Deeper institution and uncommon-surname sweep yielded an ongoing PhD student rather than an eligible faculty appointment."
+    },
+    {
+      "employer": "Singapore University of Social Sciences",
+      "pagesExamined": ["https://www.suss.edu.sg/about/engagement-collaboration/centres/student-success-centre/vietnam"],
+      "note": "Vietnam cooperation leads describe Vietnam-based partner programmes and country management. They do not establish an eligible Singapore academic appointment."
+    },
+    {
+      "employer": "Monash University Malaysia",
+      "pagesExamined": ["https://www.monash.edu.my/business/News-and-Events/articles/2025/education-buzz-2025-learning-loud,-talent-proud", "https://research.monash.edu/en/activities/education-buzz-2025-learning-loud-talent-proud/", "https://research.monash.edu/en/organisations/malaysia-school-of-business/persons/", "https://research.monash.edu/en/prizes/commendation-for-education-excellence-emerging-educator-category"],
+      "note": "Dinh-token search found Duc Tam Dinh. Individual profile was not obtained; activity page fetched successfully through ordinary HTTP, directory returned 403 and prize page returned 502 in browser fetch. No access-control bypass. Recorded the incomplete lead under rejected rather than counting it as verified."
+    },
+    {
+      "employer": "Sunway University and Universiti Malaya",
+      "pagesExamined": ["https://sunwayuniversity.edu.my/school-of-hospitality-and-tourism-management/staff-profiles/dr-riley-pham-xuan-quyet"],
+      "note": "Sunway Riley Pham is already vp-1851. Malaysia given-name and uncommon-surname searches also surfaced older UM staff lists for Bui Duc Long and many Vietnam-employed authors; none was accepted from old lists or journal author biographies alone. These Malaysia searches yielded no verified new candidate."
+    },
+    {
+      "employer": "Nagoya University",
+      "pagesExamined": ["https://ccs.engg.nagoya-u.ac.jp/oshiyama/eng/members/index.html"],
+      "note": "Kieu-token discovery reached a less-covered computational materials group. Bui Thi Kieu My's designated assistant professorship was not accepted without current stability and doctorate verification."
+    },
+    {
+      "employer": "University of Macau and Universiti Brunei Darussalam",
+      "pagesExamined": ["https://fed.um.edu.mo/dong-nguyen/", "https://ice.ubd.edu.bn/phan-le-ha/"],
+      "note": "These were attempted employer-page opens, not successful current-role verification: Macau returned 403 and Brunei an unexpected status. Both leads were already identifiable in the roster; no new candidate or move was inferred from search results."
+    },
+    {
+      "employer": "Other Asian university discovery",
+      "pagesExamined": [],
+      "note": "Search-only scouting extended given-name and uncommon-surname queries into Taiwanese, Korean and mainland Chinese university domains; results were mostly existing roster entries, Vietnamese-home-institution visitors, students, postdocs or shared-surname false positives. Thai Vietnamese-language lecturer searches similarly re-found roster members at Lampang Rajabhat and Srinakharinwirot. No candidate in this file relies solely on those search results."
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "verifier": "codex",
+  "input": "maintenance/sector-expansion/runs/w3/us-institutes-2.codex.json",
+  "candidates": [
+    {
+      "name": "Thanh Pham Cardenas",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Independently opened all four source pages live. Test 1: https://alleninstitute.org/person/thanh-cardenas is an individual current-employer profile naming Thanh Cardenas as Research Associate, Sr., describing her current Molecular Biology/RNASeq Core work and University of Washington chemistry bachelor degree. Test 2: this is career research staff, with no trainee, visitor, contractor or term-limited designation; the two-publication alternative is met by distinct Allen-affiliated papers naming Trangthanh Cardenas: Nature (2025-11-05), DOI 10.1038/s41586-025-09644-1, https://pmc.ncbi.nlm.nih.gov/articles/PMC12589121/, and Nature Communications (2026-04-28), DOI 10.1038/s41467-026-72147-8, https://pmc.ncbi.nlm.nih.gov/articles/PMC13125632/. The employer profile features the first study, connecting Thanh to Trangthanh; both papers list Allen Institute for Brain Science, Seattle, and share research context and coauthors. Test 3: Vietnamese given names Thanh/Trangthanh provide an affirmative signal beyond surname alone. The 2024 preprint of the first study, https://pmc.ncbi.nlm.nih.gov/articles/PMC11741437/, names Trangthanh Pham at Allen, supporting retention of original surname Pham; it is not counted as a separate paper. Test 4: independently ran find-roster-matches with the proposed name and all four identity URLs, plus Thanh Cardenas, Trangthanh Cardenas and Trangthanh Pham. Alias searches returned no roster or retired-id matches. The proposed name returned only vp-0579 Thanh Pham (Monash education scholar, Monash PhD 2011) and vp-0919 Thanh V. Pham (Shizuoka communications engineer, Aizu PhD 2019); local roster education, fields and profile URLs resolve both as different people from the Allen molecular-biology researcher with a UW chemistry bachelor degree and prior Arcadia employment. Candidate and aliases are absent from maintenance/sector-expansion/already-proposed.txt. Test 5: current Allen appointment and both recent publication affiliations locate the research in Seattle, United States, outside Vietnam.",
+      "correctedFields": {}
+    }
+  ],
+  "possible_move": []
+}

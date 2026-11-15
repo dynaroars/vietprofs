@@ -1,0 +1,77 @@
+{
+  "verifier": "codex",
+  "input": "maintenance/sector-expansion/runs/w1/us-cs.codex.json",
+  "candidates": [
+    {
+      "name": "Thao Minh Le",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live employer profile https://greatvalley.psu.edu/person/thao-minh-le identifies the current Assistant Professor of Artificial Intelligence at Penn State Great Valley, USA. https://thaolmk54.github.io/ explicitly confirms tenure-track status and Deakin CS PhD 2021. Vietnamese given/middle names Thao Minh provide a signal beyond Le alone. Matcher run with every submitted identity URL found no URL matches; vp-1025 (real estate, Penn State doctorate), vp-1802 (biomedical sciences, Queensland doctorate), vp-3039 (family/consumer sciences, UC Davis doctorate), and retired vp-1334/retained vp-0666 (NUS pharmacology) are distinct people. Absent from already-proposed.txt.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Tu Le",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live employer profile https://eng.ua.edu/eng-directory/dr-tu-le/ names the current Alabama Computer Science Assistant Professor and Virginia CS PhD 2023. Employer-linked https://lenhattu.com/ explicitly confirms tenure-track status; https://lenhattu.com/CV_TuLe.pdf documents VNU-HCM University of Science education, an affirmative Vietnamese signal. Current appointment and office are in Alabama, USA. Matcher with every submitted identity URL found no URL matches; vp-1324 (RMIT engineering), vp-1362 (Sherbrooke surgery), and vp-1391 (cardiovascular sciences, Sungkyunkwan PhD 2008) are distinct. Absent from already-proposed.txt.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Cao Thang Bui",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live individual employer profile https://csumb.edu/scd/scd-faculty-and-staff/cao-thang-bui/ identifies the current Assistant Professor at CSUMB, California, with Stony Brook CS PhD 2021 and prior WVU Tech appointment. This is eligible regular university faculty; no visiting/adjunct limitation is stated. Vietnamese given/middle-name combination Cao Thang provides a signal beyond Bui alone. Matcher found no URL match; vp-0275 has MIT PhD 1985 and Penn State career, while vp-2035 has Cambridge PhD and ANU machine-learning career, distinct from this access-control researcher. Absent from already-proposed.txt.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Hang Dinh",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live employer profile https://www.cs.iusb.edu/people/dinh.html lists Associate Professor, a full-time faculty appointment beginning in 2010, Connecticut CS/Engineering PhD 2010, and upbringing in Central Vietnam. Employer-hosted https://htdinh.pages.iu.edu/ corroborates the current South Bend, Indiana appointment and explicitly supplies the Vietnamese name Đinh Trung Hằng. Eligible continuing university faculty outside Vietnam. Matcher with both submitted identity URLs returned no roster or retired-id matches; absent from already-proposed.txt.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Hanh Pham",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live employer profile https://webapps.newpaltz.edu/directory/profile/hanhpham identifies the current Computer Science Associate Professor with New Paltz, New York office. Eligible regular university faculty outside Vietnam. Employer-hosted https://cs.newpaltz.edu/~phamh/hp/contact.htm supplies the Vietnamese full-name signal Pham Hong Hanh in its title and Hanh H. Pham in the text. https://csis.pace.edu/hvcet/hanhpham.html independently opened HTTP 200 and identifies the same New Paltz computer scientist with Ukraine CS doctorate 1997. Matcher with both submitted identity URLs found only vp-1749, a distinct Leeds business researcher; no URL match. Absent from already-proposed.txt.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Nhut Nguyen",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live employer profile https://profiles.utdallas.edu/nhut.nguyen names Senior Lecturer II in Computer Science and Tokyo electronics PhD 1983. Newer official https://catalog.utdallas.edu/2026/undergraduate/home/faculty-roster names Nhut Nguyen Professor of Instruction, Computer Science, with matching Tokyo degrees/years, supporting the submitted Professor rank and Teaching career ladder. Current employer is in Texas, USA. Vietnamese given name Nhut is an affirmative signal beyond Nguyen. Matcher found only distinct vp-1003 (AUT finance, Massey doctorate), no URL match. Absent from already-proposed.txt.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Tung L. Nguyen",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live employer profile https://www.usf.edu/ai-cybersecurity-computing/people/faculty/tung-nguyen.aspx explicitly identifies Assistant Professor of Instruction, joined Fall 2026, supporting the Teaching career ladder. It supplies Northern Arizona PhD 2022–2026, Hanoi University of Science and Technology undergraduate/master’s education, and a USF office in Florida, USA. Matcher with every submitted identity URL found no URL matches; vp-0267 (Iowa State PhD 2013), vp-1696 (Chicago mathematics PhD 2020), and the medical/civil-engineering/economics hits vp-0467/vp-0852/vp-0833/vp-1726 are distinct. LinkedIn was used only as a matcher argument, never fetched. Absent from already-proposed.txt.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Huong Le",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live employer profile https://people.njit.edu/profile/hyl4 identifies University Lecturer in Computer Science, NJIT CS PhD 2021, and Fall 2026 courses in Newark, New Jersey. https://cs.njit.edu/faculty places her on the University Lecturer/Senior University Lecturer ladder; https://news.njit.edu/ying-wu-college-computing-welcomes-new-faculty-2021-2022-academic-year documents her faculty hiring in 2021. Together these establish an ongoing Teaching appointment. Vietnamese given name Huong provides a signal beyond Le alone. Matcher found no URL match; vp-1018 has LSU PhD 2015 and business career, and vp-1456/vp-1969/vp-2952 concern HR, education, and policy respectively. Absent from already-proposed.txt.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Quynh Nguyen",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live https://www.stockton.edu/business/faculty-adjuncts.html#modal-d19e802 contains an individual modal with this exact HTML id identifying Quynh Nguyen as Associate Professor of Computer Information Systems and UNT doctorate. It singles her out rather than merely linking an undifferentiated team page. https://stockton.edu/faculty-senate/documents/election_materials/2022_atlarge_committeechair/AtLarge_CandidateProfiles2022.pdf documents tenure-track status (expected tenure 2025). https://stockton.edu/board-of-trustees/documents/2021.05.05_BOTOPSMTG_FINALPostin.pdf documents UNT PhD 2019, Vietnam undergraduate education, and Galloway, New Jersey appointment. Matcher found no URL match; vp-0639 (ETH political science), vp-2107 (Bournemouth PhD), vp-1903 (Chung Yuan doctorate), and medical/public-health/nursing hits vp-0431/vp-0965/vp-1383/vp-1660 are distinct. Absent from already-proposed.txt.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Hai Le",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Employer profile https://app.oxford.emory.edu/WebApps/Directory/index.cfm/view/10094 independently fetched HTTP 200 using Python after browser timeout; Python required bypassing a certificate-chain validation failure. It identifies the current Oxford College Computer Science Assistant Professor, joined fall 2023, completed Georgia State PhD 2023, and upbringing in Ho Chi Minh City, Vietnam. Official https://oxford.emory.edu/catalog/documents/25-26-ox-catalog.pdf fetched HTTP 200 and extracted in memory identifies Assistant Teaching Professor of Computer Science, supporting the submitted Teaching track. Current appointment is at Emory in Georgia, USA. Matcher returned no roster or retired-id matches; absent from already-proposed.txt.",
+      "correctedFields": {}
+    }
+  ],
+  "possible_move": []
+}

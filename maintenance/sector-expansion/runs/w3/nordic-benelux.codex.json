@@ -1,0 +1,393 @@
+{
+  "group": "university",
+  "agent": "codex",
+  "slice": "nordic-benelux",
+  "finishedAt": "2026-11-15T01:36:22.837299+00:00",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Tu Dac Ho",
+        "university": "Norwegian University of Science and Technology",
+        "track": "Tenure-line",
+        "rank": "Associate Professor",
+        "department": "Department of Information Security and Communication Technology",
+        "field": "Engineering",
+        "city": "Trondheim",
+        "country": "Norway",
+        "researchAreas": [
+          "Wireless communications",
+          "Non-terrestrial networks",
+          "6G networks",
+          "Autonomous vehicle networks",
+          "Internet of Things"
+        ],
+        "keywords": [
+          "Wireless communications",
+          "6G",
+          "Internet of Things"
+        ],
+        "phdInstitution": "Waseda University",
+        "phdYear": 2011,
+        "msInstitution": "Waseda University",
+        "profileUrl": "https://www.ntnu.edu/employees/tu.d.ho",
+        "scholarUrl": "https://scholar.google.com/citations?user=E7fKuGIAAAAJ",
+        "linkedinUrl": "https://www.linkedin.com/in/tudacho/"
+      },
+      "evidence": {
+        "currentRole": "https://www.ntnu.edu/employees/tu.d.ho: \"Associate Professor\"; biography describes NTNU appointment since 2023 and concurrent UiT appointment since 2019. https://www.ntnu.edu/iik/communication-technology explicitly places him under \"Permanent Academic Staff\". NTNU profile gives Trondheim office and research topics.",
+        "doctorateOrPapers": "https://www.ntnu.edu/employees/tu.d.ho explicitly states MSc (2005) and PhD (2011), wireless communications, Waseda University, Tokyo. It also describes completed NTNU postdoctoral work in 2012–2014.",
+        "vietnameseSignal": "Vietnamese given-name combination Tu Dac and surname Ho, as published on the current official NTNU profile; this is the affirmative given-name signal required by BRIEF2, rather than surname alone.",
+        "dedup": "Ran npm run find-roster-matches -- \"Tu Dac Ho\" with both NTNU profiles, linked Scholar user E7fKuGIAAAAJ, LinkedIn /in/tudacho/, and ResearchGate /profile/Tu-Ho-6: no roster or retired-id matches. Exact identity URLs and reordered-name variants checked against public/data.json; absent from already-proposed.txt.",
+        "enrichment": "Scholar and LinkedIn URLs are directly linked by the official profile HTML; LinkedIn was not fetched. Official profile-photo candidate: https://backends.it.ntnu.no/user-profile-service/rest/files/c210eb7b-7cbb-3708-9cd8-8f8908390414 (profile header image; downstream portrait vetting required). No qualifying honor or personal website established; IEEE Senior Member is not proposed as an honor."
+      }
+    },
+    {
+      "entry": {
+        "name": "Viet Thuy Vu",
+        "university": "Blekinge Institute of Technology",
+        "track": "Tenure-line",
+        "rank": "Senior Lecturer",
+        "department": "Department of Mathematics and Natural Sciences",
+        "field": "Engineering",
+        "city": "Karlskrona",
+        "country": "Sweden",
+        "researchAreas": [
+          "Synthetic aperture radar",
+          "Radar signal processing",
+          "Change detection",
+          "Ground moving target indication",
+          "Radio occultation"
+        ],
+        "keywords": [
+          "Radar",
+          "Signal processing",
+          "Remote sensing"
+        ],
+        "phdInstitution": "Blekinge Institute of Technology",
+        "phdYear": 2011,
+        "profileUrl": "https://www.bth.se/english/staff-landing-page/viet-thuy-vu"
+      },
+      "evidence": {
+        "currentRole": "https://www.bth.se/english/staff-landing-page/viet-thuy-vu: \"Senior Lecturer/Docent\". The official biography describes a continuing departmental career since 2013 and current docent status in systems engineering. https://www.bth.se/forskning/forskningsomraden/systemteknik lists him among systems-engineering researchers. Rank follows the employment title Senior Lecturer; docent is an academic qualification, not a promotion inferred from it.",
+        "doctorateOrPapers": "https://www.bth.se/english/staff-landing-page/viet-thuy-vu explicitly records doctoral degree in applied signal processing at BTH in 2011 (licentiate in 2009).",
+        "vietnameseSignal": "Distinctively Vietnamese given names Viet Thuy plus Vu on official BTH profile. Vietnamese birthplace is also a discovery corroboration in the indexed academic publication https://www.diva-portal.org/smash/get/diva2%3A835394/FULLTEXT01.pdf; acceptance relies on the official full name, not that search snippet.",
+        "dedup": "Ran npm run find-roster-matches -- \"Viet Thuy Vu\" with the opened English and Swedish BTH profiles. Hit vp-3082 Thuy Vu (Amazon Science) is a different person: roster has UCLA PhD 2017 and NLP/QA; BTH scholar has BTH PhD 2011 and SAR/radar research. Also manually checked vp-1534 TuongThuy Vu: Curtin Malaysia, geoinformatics, different full name and career. No shared identity URL; candidate absent from already-proposed.txt.",
+        "enrichment": "Official portrait candidate, identified by alt=\"Vu, Viet Thuy\": https://www.bth.se/images/18.10e4364b1971fec1e5f21cd6/1749037751312/Viet%20Vu.webp . No verified personal/lab, Scholar or LinkedIn profile found on the opened institutional page; no eligible honor established."
+      }
+    },
+    {
+      "entry": {
+        "name": "Maria Dung Cao",
+        "university": "Østfold University College",
+        "track": "Tenure-line",
+        "rank": "Associate Professor",
+        "department": "Department of Nursing, Health and Laboratory Science",
+        "field": "Biological & Biomedical Sciences",
+        "city": "Fredrikstad",
+        "country": "Norway",
+        "researchAreas": [
+          "Medical biochemistry",
+          "Molecular diagnostics",
+          "Bioinformatics",
+          "Cancer research",
+          "Genetics"
+        ],
+        "keywords": [
+          "Molecular medicine",
+          "Cancer",
+          "Medical biochemistry"
+        ],
+        "phdInstitution": "Norwegian University of Science and Technology",
+        "phdYear": 2012,
+        "msInstitution": "Norwegian University of Science and Technology",
+        "undergradInstitution": "Østfold University College",
+        "undergradYear": 2004,
+        "profileUrl": "https://www.hiof.no/hvo/shb/english/people/aca/mdc/index.html"
+      },
+      "evidence": {
+        "currentRole": "https://www.hiof.no/hvo/shb/english/people/aca/mdc/index.html: \"Associate Professor\"; gives Fredrikstad, department, research interests and teaching. https://www.hiof.no/hvo/shb/personer/und-forsk-ansatte/ independently lists her among teaching and research staff as Forsteamanuensis.",
+        "doctorateOrPapers": "https://www.hiof.no/hvo/shb/english/people/aca/mdc/index.html explicitly lists PhD in Molecular Medicine, NTNU (2008–2012), MSc in Molecular Medicine, NTNU (2006–2008), and bachelor in biomedical science, Ostfold (2001–2004). End years are taken from these stated degree ranges.",
+        "vietnameseSignal": "Vietnamese given name Dung paired with surname Cao on official institutional biography and its publication list (Cao, Maria Dung); the Vietnamese given name supplies the affirmative signal.",
+        "dedup": "Ran npm run find-roster-matches -- \"Maria Dung Cao\" with the opened English profile and its linked Norwegian counterpart: no roster or retired-id matches. Manual full-name/reordered-name and exact-URL checks found none; absent from already-proposed.txt.",
+        "enrichment": "Official headshot candidate, img class vrtx-person-image: https://www.hiof.no/hvo/shb/english/people/aca/mdc/maria-dung-cao-profilbilde-%25285%2529-%25E2%2580%2593-kopi-1.jpg . Norwegian counterpart returned 403 through web tool, but English person page returned content in web and HTTP 200 through requests. Research stays are not assumed to be completed postdoctoral appointments. No verified Scholar, LinkedIn, personal website or qualifying honor established."
+      }
+    },
+    {
+      "entry": {
+        "name": "Bao Quoc Ta",
+        "university": "University of South-Eastern Norway",
+        "track": "Tenure-line",
+        "rank": "Associate Professor",
+        "department": "Department of Microsystems",
+        "field": "Engineering",
+        "country": "Norway",
+        "researchAreas": [
+          "Carbon nanomaterials",
+          "Microfluidics",
+          "Sensor technology",
+          "Lab-on-a-chip devices"
+        ],
+        "keywords": [
+          "Microsystems",
+          "Nanomaterials",
+          "Sensors"
+        ],
+        "phdInstitution": "University College of Buskerud and Vestfold",
+        "phdYear": 2014,
+        "msInstitution": "University College of Vestfold",
+        "profileUrl": "https://www.usn.no/english/about/contact-us/employees/bao-quoc-ta"
+      },
+      "evidence": {
+        "currentRole": "https://www.usn.no/english/about/contact-us/employees/bao-quoc-ta: \"Associate Professor\" in Microsystems, Campus Vestfold; CV explicitly gives USN associate professorship from 2017 to present. Research topics and courses also appear on that page. City omitted because page specifies campus rather than city.",
+        "doctorateOrPapers": "https://www.usn.no/english/about/contact-us/employees/bao-quoc-ta explicitly lists PhD in Micro-and Nanosystem technology at University College of Buskerud and Vestfold, 2010–2014, and MSc at University College of Vestfold, 2008–2010.",
+        "vietnameseSignal": "Vietnamese given names Bao Quoc with surname Ta, plus the official CV explicitly records engineering education at HCM City University of Technology (Bach Khoa) and subsequent faculty employment in Vietnam.",
+        "dedup": "Ran npm run find-roster-matches -- \"Bao Quoc Ta\" with opened USN profile: no roster or retired-id matches. Manual comparison to vp-1384 Bao Quoc Tang resolves different people: Graz mathematician, Graz PhD 2015, versus Ta, USN microsystems, HBV PhD 2014. Exact profile and name-order variants checked; absent from already-proposed.txt.",
+        "enrichment": "Official press-photo candidate directly linked as download from person page: https://www.usn.no/getfile.php/13509770-1544512632/usn.no/ansatte%20%28opplastet%29/Bao%20Quoc%20Ta.jpg . No personal/lab site, Scholar or LinkedIn link established on this profile, and no qualifying honor found. Engineering education not forced into an undergraduate field because the degree designation is Eng. rather than an explicit bachelor."
+      }
+    },
+    {
+      "entry": {
+        "name": "Tuan Thien Tran",
+        "university": "Uppsala University",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Department of Physics and Astronomy; Materials Physics",
+        "field": "Physics & Astronomy",
+        "city": "Uppsala",
+        "country": "Sweden",
+        "researchAreas": [
+          "Ion beam modification of materials",
+          "Ion beam analysis",
+          "Two-dimensional materials",
+          "Transmission electron microscopy",
+          "Epitaxial ultrathin films"
+        ],
+        "keywords": [
+          "Ion beams",
+          "Materials physics",
+          "2D materials"
+        ],
+        "phdInstitution": "Australian National University",
+        "msInstitution": "KU Leuven",
+        "undergradInstitution": "Ho Chi Minh City University of Technology",
+        "profileUrl": "https://www.uu.se/en/contact-and-organisation/staff?query=N17-1987"
+      },
+      "evidence": {
+        "currentRole": "https://www.uu.se/en/contact-and-organisation/staff?query=N17-1987: \"Researcher Docent\" in Materials Physics. Career rather than trainee status is corroborated by Daniel Primetzhofer's official CV, https://www.uu.se/download/18.281eec13195c8a4b921285e/1770969373441/N11-1921.pdf , p. 4: \"2017 – 2022: now staff scientist at UU\". Enduring staff-scientist appointment since the completed postdoc, current docent qualification and ongoing institutional research profile support Research-track eligibility; the page does not explicitly use the word permanent.",
+        "doctorateOrPapers": "https://www.uu.se/en/contact-and-organisation/staff?query=N17-1987 states PhD in Electronic Materials Engineering at Australian National University, M.Eng at Katholieke Universiteit Leuven, and B.Eng at University of Technology, Vietnam National University (HCM City). PhD year omitted. Official profile also lists multiple 2024–2026 Uppsala materials-physics papers.",
+        "vietnameseSignal": "Vietnamese given names Tuan Thien plus explicit undergraduate education in Vietnam on the official Uppsala profile.",
+        "dedup": "Ran npm run find-roster-matches -- \"Tuan Thien Tran\" with Uppsala profile and linked ORCID 0000-0002-1393-1723. Broad name hits vp-0365, vp-0391, vp-0494, vp-1643, vp-1780 and vp-2620 checked manually. Their pharmacy/psychology/fluid-mechanics/civil-engineering/infectious-disease/mathematics careers and respective doctorate institutions differ from this ANU-trained ion-beam physicist. No shared identity URL; absent from already-proposed.txt.",
+        "enrichment": "Official portrait candidate, alt=\"Tuan Thien Tran\": https://www.uu.se/images/200.5c92f2ac195d2427ab9a742/1743104059972/N17-1987.jpg . ORCID is linked by profile; no verified Scholar, LinkedIn or personal site established. Docent is not recorded as Professor or as an honor. No PhD year inferred."
+      }
+    }
+  ],
+  "already_listed": [
+    {
+      "name": "Anh Duc Nguyen / Anh Nguyen-Duc",
+      "id": "vp-1398",
+      "note": "https://www.ntnu.no/ansatte/anhn is the already-listed USN software-engineering scholar: it gives angu@usn.no and the same software-startup/AI-engineering publications with Jaccheri, Abrahamsson and Sundbo. npm run find-roster-matches with name and NTNU URL returned vp-1398 among broad name hits; inspected the roster record and resolved identity. The residual NTNU page does not establish a move from USN."
+    }
+  ],
+  "possible_move": [],
+  "rejected": [
+    {
+      "name": "Thinh Tuan Chu",
+      "reason": "Held for appointment stability, not rejected on identity or doctorate. Opened https://pure.au.dk/portal/en/persons/chu.thinh@qgg.au.dk/ (also HTTP 200 via requests): current Assistant Professor, QGG, Aarhus C, genetics/breeding, PI of MultiSPot. Opened official doctoral announcement https://mbg.au.dk/en/news-and-events/news-item/artikel/thinh-tuan-chu-improving-genetic-gain-of-breeding-programs-for-poultry-reared-under-commercial-prod : joint Aarhus/Wageningen doctorate completed, 2019 announcement. Dedup command with name and Pure URL: no matches; not previously proposed. However QGG explicitly labels some colleagues Tenure Track adjunkt while Chu is Adjunkt: https://pure.au.dk/portal/da/organisations/center-for-quantitative-genetics-and-genomics/persons/ . No explicit tenure-track or continuing appointment established, so no track guessed. Next action: verify his appointment type before proposing."
+    },
+    {
+      "name": "Hoang Phuong Nhi Do",
+      "reason": "Current official BI profile https://www.bi.no/en/about-bi/employees/department-of-communication-and-culture/hoang-phuong-nhi-do/ was opened and explicitly identifies a PhD Candidate. Excluded trainee."
+    },
+    {
+      "name": "Hieu Tran Dinh",
+      "reason": "Opened https://www.uni.lu/snt-en/people/hieu-tran-dinh/ : current function Postdoctoral Researcher. Excluded irrespective of doctorate and publication output."
+    },
+    {
+      "name": "Thi Phuong Van",
+      "reason": "Opened https://www.oru.se/english/schools/orebro-university-school-of-business/contact-information/all-staff-a-o/ : Doctoral Student. Excluded."
+    },
+    {
+      "name": "Ly Pham",
+      "reason": "Opened https://www.uwasa.fi/en/university/organisation-and-management/school-accounting-and-finance/contact-information : Postdoctoral Researcher in Finance. Excluded."
+    },
+    {
+      "name": "Anh Dao Katrin Tran",
+      "reason": "Held, no new candidate accepted. Opened university project https://vietnameseiniceland.hi.is/researchersandcollaborations/ and followed its Publications and CV link to https://english.hi.is/staff/adt . Directory gives Research Specialist, School of Education Research, and project gives completed doctorate. Neither establishes permanent/faculty-equivalent appointment sufficiently; earlier conference material calls her Researcher Adjunct. Next action: clarify substantive employment type and permanence."
+    },
+    {
+      "name": "Viet Seger Weaver-Stevens",
+      "reason": "Opened https://www.uu.nl/staff/VSWeaverStevens : assistant professor of governance, Antwerp PhD, former Mulier Institute/Erasmus employment. Dedup with name and official URL: no matches. Held because Viet alone with otherwise non-Vietnamese name does not securely establish the intended Vietnamese signal in this identity; searches also suggested a departure from Utrecht, but no current-employer page verified a successor role. No LinkedIn fetched and no candidate accepted on those search results."
+    },
+    {
+      "name": "Thi Anh Phuong Ong",
+      "reason": "Namur research-portal lead https://researchportal.unamur.be/fr/persons/tapong/ returned a web-tool cache miss. Discovery result only gives historical project/publication affiliation, no verified current career appointment. Not accepted."
+    },
+    {
+      "name": "Tuan Anh Tony Vo",
+      "reason": "A search result for a 2025 NMBU thesis juxtaposed a supervisor title and student names. Reading the result carefully shows Vo among students, not the Forsteamanuensis supervisor. No candidate inferred from table adjacency."
+    },
+    {
+      "name": "Khanh Tuan Le",
+      "reason": "Search follow-up https://smartgrids.no/om-oss/ identifies a Research Council special adviser/observer, not the NMBU associate professor appearing nearby. Outside this university slice; no university candidate inferred."
+    }
+  ],
+  "coverage": [
+    {
+      "employer": "Norwegian University of Science and Technology",
+      "pagesExamined": [
+        "https://www.ntnu.edu/employees/tu.d.ho",
+        "https://www.ntnu.edu/iik/communication-technology",
+        "https://www.ntnu.no/ansatte/anhn"
+      ],
+      "note": "Communication technology permanent-academic-staff directory and individual research/teaching histories inspected. Ho verified new; Nguyen identity resolved to vp-1398. English and Norwegian given-name searches covered computing, communications and engineering."
+    },
+    {
+      "employer": "Østfold University College",
+      "pagesExamined": [
+        "https://www.hiof.no/hvo/shb/personer/und-forsk-ansatte/",
+        "https://www.hiof.no/hvo/shb/english/people/aca/mdc/index.html"
+      ],
+      "note": "Went deeper than earlier pass into health/laboratory-science teaching and research staff. Cao verified with explicit doctorate, degrees, current courses and publications. Norwegian individual counterpart returned web 403; English returned live page and HTTP 200."
+    },
+    {
+      "employer": "University of South-Eastern Norway",
+      "pagesExamined": [
+        "https://www.usn.no/english/about/contact-us/employees/bao-quoc-ta"
+      ],
+      "note": "Expanded beyond earlier geomatics/business pass into microsystems and materials. Ta verified; prior Hieu/Hoang/Anh names compared to roster; source linked coauthors used as discovery leads without treating old affiliations as current appointments."
+    },
+    {
+      "employer": "Blekinge Institute of Technology",
+      "pagesExamined": [
+        "https://www.bth.se/forskning/forskningsomraden/systemteknik",
+        "https://www.bth.se/om-bth/personer/viet-thuy-vu",
+        "https://www.bth.se/english/staff-landing-page/viet-thuy-vu"
+      ],
+      "note": "Systems-engineering directory and current lecturer biography examined, including doctoral history. Vu verified and distinguished from Amazon and Curtin namesakes."
+    },
+    {
+      "employer": "Uppsala University",
+      "pagesExamined": [
+        "https://www.uu.se/en/contact-and-organisation/staff?query=N17-1987",
+        "https://www.uu.se/download/18.281eec13195c8a4b921285e/1770969373441/N11-1921.pdf"
+      ],
+      "note": "Expanded materials-physics and ion-beam research coverage. Tran verified as current Researcher Docent, former postdoc now staff scientist, with ANU doctorate and Vietnam engineering education. Multiple six-name roster hits resolved."
+    },
+    {
+      "employer": "Aarhus University",
+      "pagesExamined": [
+        "https://pure.au.dk/portal/en/persons/chu.thinh@qgg.au.dk/",
+        "https://mbg.au.dk/en/news-and-events/news-item/artikel/thinh-tuan-chu-improving-genetic-gain-of-breeding-programs-for-poultry-reared-under-commercial-prod"
+      ],
+      "note": "Quantitative genetics/genomics, breeding and food science searched through Tuan/Thinh tokens. Chu researched deeply but held for appointment stability. Food-science Minh Tuan Tran discovery lead was PhD student. Plain assistant-professor rank not automatically treated as tenure track."
+    },
+    {
+      "employer": "BI Norwegian Business School",
+      "pagesExamined": [
+        "https://www.bi.no/en/about-bi/employees/department-of-communication-and-culture/hoang-phuong-nhi-do/"
+      ],
+      "note": "Communication/culture and business given-name discovery; opened Do profile, excluded doctoral candidate."
+    },
+    {
+      "employer": "University of Vaasa",
+      "pagesExamined": [
+        "https://www.uwasa.fi/en/university/organisation-and-management/school-accounting-and-finance/contact-information"
+      ],
+      "note": "Went beyond prior information-systems coverage into accounting/finance staff and appointments. Ly Pham postdoctoral. Also searched management, marketing, technology and innovation directories; those additional pages were discovery results, not full audits."
+    },
+    {
+      "employer": "University of Turku",
+      "pagesExamined": [
+        "https://www.utu.fi/en/people/minh-nguyen"
+      ],
+      "note": "Opened computing person page, doctoral researcher. Name is already in exclusion list, so not proposed or counted. Given-name discovery also covered robotics, health and economics; no new career appointment verified."
+    },
+    {
+      "employer": "Örebro University",
+      "pagesExamined": [
+        "https://www.oru.se/english/schools/orebro-university-school-of-business/contact-information/all-staff-a-o/"
+      ],
+      "note": "Business full staff listing examined for given-name leads: Thi Phuong Van doctoral. Science/technology discovery likewise did not yield a verified new career candidate."
+    },
+    {
+      "employer": "University of Iceland",
+      "pagesExamined": [
+        "https://vietnameseiniceland.hi.is/researchersandcollaborations/",
+        "https://english.hi.is/staff/adt"
+      ],
+      "note": "Education and migration project revisited and linked staff page followed, deeper than prior pass. Research Specialist role still insufficient to establish permanent faculty equivalence. Other given-name searches found student leads; no new verified candidate."
+    },
+    {
+      "employer": "University of Luxembourg",
+      "pagesExamined": [
+        "https://www.uni.lu/snt-en/people/hieu-tran-dinh/"
+      ],
+      "note": "SnT and SigCom given-name search; live person page explicitly postdoctoral. Existing Luxembourg roster entries and prior proposal list screened; no new candidate accepted."
+    },
+    {
+      "employer": "University of Twente",
+      "pagesExamined": [
+        "https://www.utwente.nl/en/bms/iems/people/"
+      ],
+      "note": "Industrial engineering/management full staff listing examined. Thao Nguyen doctoral/guest; no new faculty identity inferred from co-listed supervisors. Other Hanh research leads were historical students or Vietnam-based."
+    },
+    {
+      "employer": "Utrecht University",
+      "pagesExamined": [
+        "https://www.uu.nl/staff/VSWeaverStevens"
+      ],
+      "note": "Governance/sport studies expanded through Viet given-name discovery; substantive official profile opened but Vietnamese identity and current role after reported departure unresolved. Held outside candidates."
+    },
+    {
+      "employer": "Hasselt University",
+      "pagesExamined": [
+        "https://www.uhasselt.be/en/instituten-en/dsi/about-dsi"
+      ],
+      "note": "Live Data Science Institute membership examined across statistics, computing, mathematics and biomedical-data groups. Thi Huyen Nguyen and Trang Nguyen are in predoctoral/scientific-researcher grouping; no stable new faculty appointment verified."
+    },
+    {
+      "employer": "UCLouvain",
+      "pagesExamined": [
+        "https://uclouvain.be/en/research-institutes/irmp/people-0",
+        "https://www.emdat.be/staff/"
+      ],
+      "note": "Expanded math/physics and disaster epidemiology through Minh/Phuong/Hieu given-name leads. Directory appearance without verified career appointment was not enough; no new candidate accepted."
+    },
+    {
+      "employer": "Vrije Universiteit Brussel",
+      "pagesExamined": [
+        "https://researchportal.vub.be/nl/organisations/artificial-intelligence-supported-modelling-in-clinical-sciences/persons/"
+      ],
+      "note": "Attempt to open clinical-modelling directory returned 403; indexed external-employee/doctoral descriptions were discovery only, not accepted evidence. Searches also covered materials, geography, geochemistry and hydrology with Thi/Hieu/Quang tokens; no new verified career candidate."
+    },
+    {
+      "employer": "University of Namur",
+      "pagesExamined": [
+        "https://researchportal.unamur.be/fr/persons/tapong/"
+      ],
+      "note": "Attempted biology researcher profile returned cache miss. Historical project affiliation was not accepted as current employment. Broader Thi/Phuong given-name discovery in life sciences also surfaced Vietnam-based alumni."
+    },
+    {
+      "employer": "Ghent University",
+      "pagesExamined": [
+        "https://research.ugent.be/web/person/minh-hoang-le-0/en"
+      ],
+      "note": "Attempted engineering researcher page returned cache miss. Search-discovery results for agricultural economics, materials, biology and medicine mostly yielded students, former researchers and already-listed faculty. No result snippet promoted to verified candidate."
+    },
+    {
+      "employer": "Search-only extension across Nordic institutions",
+      "pagesExamined": [],
+      "note": "Given-name token searches (Minh, Huy, Thuy, Tuan, Hanh, Quynh, Dung, Thien, Thanh, Hieu, Cuong, Hung, Ngoc, Huong, Khanh, Bao, Nhat, Phuc, Viet, Quoc, Truc, Diem) and local titles universitetslektor, forsteamanuensis, lektor, yliopistonlehtori extended to LUT, Tampere, Jyvaskyla, Eastern Finland, Oulu, Aalto, Agder, Nord, Western Norway, Molde, NHH, NLA, VID, IT University of Copenhagen, Copenhagen Business School, Roskilde, Reykjavik, Chalmers, Lund, Linkoping, Linnaeus, Dalarna, Boras, Skovde, University West, Jonkoping, Karlstad and KTH. These are targeted discovery searches, not live full-directory audits. Earlier-proposed exact names were skipped; familiar roster names were not re-proposed."
+    },
+    {
+      "employer": "Search-only extension across Benelux institutions",
+      "pagesExamined": [],
+      "note": "Given-name and less-common surname searches (Ta, Cao, Chu, Chau, Ton, Phung, Luu, Luong, Nghiem, Tong, Diep, Khuu, Quach and Duong) extended across Leiden, Groningen, Radboud, Maastricht, Tilburg, Amsterdam, Vrije Universiteit Amsterdam, Eindhoven, Delft, Wageningen, Antwerp, ULB, Liege, KU Leuven, Fontys, Saxion, HAN and HZ. Covered biomedical/health, life sciences, physical sciences, engineering/computing, economics/business, law/governance, education, humanities and arts. Additional institutions here were discovery searches only; no new candidate accepted without an opened current-employer person page."
+    },
+    {
+      "employer": "Run limits and provenance",
+      "pagesExamined": [],
+      "note": "Stopped after broad eight-country coverage, deeper checks in previously underexamined departments and diminishing verified-new yield, below the 25-candidate cap. Five accepted profiles opened live; all five deduplicated by required npm command plus manual identity checks. Evidence gaps retained in rejected rather than candidates. No LinkedIn fetched, login, CAPTCHA/bot-check bypass, GitHub Issues/PRs, roster edits, ID assignment, downloads or state-changing git commands. Portrait URLs are source leads for downstream vetting, not installed assets. Only this output JSON was written. Tests/build not run because they can stamp public/updates.json and the brief prohibits other writes; JSON structure is validated directly."
+    }
+  ]
+}

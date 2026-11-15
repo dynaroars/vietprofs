@@ -1,0 +1,71 @@
+{
+  "verifier": "codex",
+  "input": "maintenance/sector-expansion/runs/w2/japan.codex.json",
+  "candidates": [
+    {
+      "name": "Hieu Hanh Le",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live official individual profile https://researchers2.ao.ocha.ac.jp/html/200000922_en.html identifies an Associate Professor in Humanities Data Engineering and a Tokyo Institute of Technology engineering doctorate (2015). Current employer lab https://www.de-lab.te.ocha.ac.jp/en/members_e/ independently lists him as faculty. Hieu Hanh is a Vietnamese given-name combination beyond Le. Japan appointment; no Vietnam base indicated. Matcher returned only vp-0753, a Stony Brook 2020 computer-vision PhD, distinct from this Tokyo Tech 2015 data-engineering scholar. No identity URL match or already-proposed entry.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Thi Tuyet Nhung Tran",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live individual employer biography https://www.aichi-toho.ac.jp/about/outline/kyoin/trannhung identifies ordinary Associate Professor (准教授), Faculty of Business Administration, Department of Business, with a Kyoto University economics doctorate. Thi Tuyet Nhung is an affirmative Vietnamese name combination; the faculty office and appointment are in Japan. Matcher name hits vp-0164, vp-0641, vp-2145 and vp-3118 have different disciplines and doctoral institutions (UT San Antonio MIS, UCLA history, Southern Cross education, Houston chemistry), respectively. No identity URL match; not in already-proposed.txt.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Thi Phuong Thao Nguyen - Hamamatsu University School of Medicine",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live employer page https://www.hama-med.ac.jp/education/fac-med/dept/regen-med/faculty.html singles her out with an individual career biography under ordinary 助教, distinct from separately marked specially appointed researchers. It records Ho Chi Minh City dentistry graduation (2006), Hiroshima doctoral completion (2011), and medical-university appointments. Vietnamese name and education support identity; current employer is in Japan. Exact-name vp-1931 is a different person: live https://rd.iai.osaka-u.ac.jp/en/02717dffdb91cb1d.html documents Hue undergraduate study (2010–2014), Osaka study (2015–2021), and current SANKEN materials-physics research. Other matcher hits differ in discipline/history; dentistry namesake vp-0689 has a South Australia 2013 doctorate. Not already proposed.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Thi Ngoc Huyen Vu",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live individual employer profile https://www.r-info.tohoku.ac.jp/en/6ce5c739d28ac2963beb497496e6ac1a.html identifies Assistant Professor at IMR from April 2024 to present, with Osaka doctoral studies and Hanoi physics education. https://www.sc.imr.tohoku.ac.jp/eng/center/organization.html explicitly ends the former specially appointed position in March 2024 and identifies the subsequent ordinary IMR assistant professorship; current Kumagai lab staff listing corroborates it. Thi Ngoc Huyen and Hanoi education provide Vietnamese signals. Based at Tohoku in Japan. Matcher found no roster or retired-ID matches; not already proposed.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Phuong Thao Tran",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live individual university-lab biography https://whs.nagaokaut.ac.jp/elemech/member/THAO.html identifies Tran Phuong Thao as ordinary Assistant Professor (助教), explicitly gives origin as Ho Chi Minh City, Vietnam, and records Nagaoka electrical-engineering master (2010) and PhD (2013). The HTML title incorrectly names another lab member, but the actual biography clearly identifies this person. Current Japanese university appointment; no Vietnam base indicated. Matcher hits vp-0463, vp-1750, vp-2156 and vp-2540 concern mathematics education, business operations, language teaching and geography, respectively, with different histories. No identity URL match; not already proposed.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Thi My Loan Phan",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live dedicated faculty profile https://www.sfs.osaka-u.ac.jp/teacher/696/ identifies ordinary Associate Professor PHAN THI MY LOAN in Vietnamese studies at Minoh, Japan. Linked individual researcher record https://rd.iai.osaka-u.ac.jp/en/315a70d2ac848830.html independently gives Graduate School of Humanities, Division of Foreign Studies, Associate Professor from October 2022 to present, Osaka University of Foreign Studies doctoral education, and Ho Chi Minh City undergraduate education. Thi My Loan and Vietnamese education support the Vietnamese signal. Matcher returned only vp-1724, an Oxford-trained viral-genomics scholar, distinct in education and discipline. No URL match; not already proposed.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Vu Quynh Anh Cao",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Official individual employer profile https://www.u-tokyo.ac.jp/focus/en/people/k0001_05901.html loaded HTTP 200 by direct request and names Cao Vu Quynh Anh, PhD, Graduate School of Engineering. Its English Research Associate label is resolved by the Japanese counterpart https://www.u-tokyo.ac.jp/focus/ja/people/k0001_05901.html, which explicitly says 助教 in civil engineering. Current employer lab https://hydro.t.u-tokyo.ac.jp/member/index.html calls her Assistant Professor; linked personal site gives a Tokyo address and 2022 Tokyo sustainability doctorate. Vu Quynh Anh is a Vietnamese name combination beyond Cao. Matcher hits vp-1862 (finance) and vp-3013 (Minnesota 2013 battery researcher) are different people. Not already proposed; proposed Assistant Professor rank needs no correction.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Hoang-Nam Tran",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Official individual employer record https://web.db.tokushima-u.ac.jp/cgi-bin/edb_browse?EID=321995 loaded HTTP 200 by direct request. It explicitly records ordinary Associate Professor from October 2024, primary faculty (本務教員), full-time (常勤), International Center affiliation from April 2026, and Tokushima medical-science doctorate awarded September 24, 2010. HoangNam/Hoang-Nam is a Vietnamese given-name combination, corroborated by Vietnam alumni/community activities; appointment is in Japan. Matcher hits vp-0471, vp-0941, vp-1033, vp-1145 and vp-2249 have different disciplines/education. The Nam Tran in already-proposed.txt resolves through runs/w1/au-go8.codex.json to the Oregon-trained Melbourne accountant, a different person. No identity URL match.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    }
+  ],
+  "possible_move": []
+}

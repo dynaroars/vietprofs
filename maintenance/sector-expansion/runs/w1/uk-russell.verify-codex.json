@@ -1,0 +1,55 @@
+{
+  "verifier": "codex",
+  "input": "maintenance/sector-expansion/runs/w1/uk-russell.codex.json",
+  "candidates": [
+    {
+      "name": "Mai Le",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Opened https://profiles.cardiff.ac.uk/staff/levp live: current Professor of Economics at Cardiff Business School, Cardiff address, PhD 2008, and executive-board membership of the Vietnamese Intellectual Society in the UK and Ireland. This supplies an affirmative community signal beyond the name. The substantive professorial appointment qualifies on Tenure-line and is outside Vietnam. Ran npm run find-roster-matches with the name and profile URL: vp-0223 Mai-Nhung Le researches Asian American health at San Francisco State; vp-1362 Le Mai Tu is a Sherbrooke urologist. Both are different identities from this Cardiff-trained macroeconomist. No identical identity URL or already-proposed.txt entry.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Hung Bui",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Opened https://research.manchester.ac.uk/en/persons/hung.bui live: current Lecturer in Pure Mathematics, Bristol doctorate awarded March 2008, with research and doctoral supervision supporting a substantive UK academic appointment. Also opened https://personalpages.manchester.ac.uk/staff/hung.bui/CV.pdf: matching employer, email, doctorate and employment chronology; it records Vietnamese Mathematical Olympiad prizes during 1992–1999 and a 1999 IMO gold medal. This is affirmative Vietnamese educational/community evidence beyond the surname. The HTML personal homepage timed out, so its search snippet was not treated as verified evidence. Ran find-roster-matches for Hung Bui and Hung M. Bui with employer profile, personal homepage and CV URLs: no roster or retired-ID matches. Absent from already-proposed.txt; based in Manchester, UK.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Laura Bui",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Opened https://research.manchester.ac.uk/en/persons/laura.bui live: current Senior Lecturer in Criminology, Cambridge PhD, Boston University MA and UC Irvine BA. This is a substantive UK academic appointment, with no temporary or adjunct qualification. Opened her first-person essay https://diacritics.org/2021/02/beyond-war-talk/: she identifies herself with Vietnamese diasporic writing; the contributor biography independently resolves identity to the Manchester criminologist. This is an affirmative diaspora signal beyond the surname. Ran find-roster-matches with name and employer profile: no roster or retired-ID matches. Absent from already-proposed.txt; employer and essay place her outside Vietnam.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Chi Trinh",
+      "verdict": "fail",
+      "failedTests": [
+        3
+      ],
+      "reason": "Opened https://biologicalsciences.leeds.ac.uk/molecular-and-cellular-biology/staff/413/dr-chi-trinh live: current Lecturer in Structural Biology, Leeds PhD 1994–1998, Bath BSc 1991–1994, and Leeds contact location. Opened https://biologicalsciences.leeds.ac.uk/facilities/doc/pixc/page/3, which explicitly distinguishes his former facility-manager job from his current lectureship. Tests 1, 2 and 5 pass. Ran find-roster-matches with name and profile URL: no roster or retired-ID matches, and absent from already-proposed.txt, so test 4 passes. The proposal supplies only a name-based Vietnamese inference; neither opened employer page supplies an affirmative Vietnamese/diaspora signal, and targeted searches did not establish one. Test 3 is unverified under VERIFY2.md; this is not a finding that he is non-Vietnamese.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Anh Phan",
+      "verdict": "fixable",
+      "failedTests": [],
+      "reason": "Opened https://www.ncl.ac.uk/engineering/staff/profile/anhphan.html live: current Professor and Chair of Circular Chemical Engineering, Newcastle address, active research and teaching. Opened https://vis-ukandireland.org/boards-2021-2022/: lists Phan Ngọc Anh at Newcastle with matching process-intensification expertise and an exact link to this employer profile, establishing an affirmative Vietnamese community signal. Ran find-roster-matches with name and employer/Scholar URLs. vp-0121 is Anh-Vu Phan (computational mechanics), vp-0667 Anh Tuan Phan (biophysics), vp-1203 Anh-Huy Phan (AI), and vp-1454 the Kent higher-education scholar. Opened the closest match, https://www.surrey.ac.uk/people/anh-phan: UCL PhD 2016 and molecular modelling, distinct from Newcastle process intensification. No shared identity URL; absent from already-proposed.txt. All five tests pass. Roster naming rules require disambiguation from existing Surrey and Kent entries named Anh Phan; correct display name as supplied below.",
+      "correctedFields": {
+        "name": "Anh Phan - Newcastle University"
+      }
+    }
+  ],
+  "possible_move": [
+    {
+      "name": "Anh Khoa Doan",
+      "id": "vp-0544",
+      "verdict": "moved",
+      "newEmployer": "Imperial College London",
+      "url": "https://profiles.imperial.ac.uk/n.doan",
+      "reason": "Read vp-0544 in public/data.json: Delft University of Technology, Assistant Professor, Cambridge PhD 2018. Opened the Imperial employer profile live: Nguyen Anh Khoa Doan is Associate Professor in Aerospace Engineering, Department of Aeronautics, Imperial College London, January 2026–present. It explicitly dates the Delft assistant professorship March 2021–31 December 2025 and lists only Guest Researcher status at Delft from January 2026. Matching Cambridge doctorate, engineering field and Delft appointment chronology resolve identity. Primary employer differs from the stored roster employer."
+    }
+  ]
+}

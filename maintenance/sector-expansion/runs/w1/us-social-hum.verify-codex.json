@@ -1,0 +1,99 @@
+{
+  "verifier": "codex",
+  "input": "maintenance/sector-expansion/runs/w1/us-social-hum.codex.json",
+  "candidates": [
+    {
+      "name": "Hung Cam Thai",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live Pomona person profile confirms Professor of Sociology and Asian American Studies and chair, with a Berkeley PhD and Claremont office. Vietnamese given names Hung Cam provide an affirmative signal beyond the surname, alongside documented Vietnamese-diaspora scholarship. Source: https://www.pomona.edu/directory/people/hung-cam-thai . Independent npm name/profile/portrait-URL matching found no roster or retired-ID matches; absent from already-proposed.txt. Eligible US faculty appointment.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Trian Nguyen",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live Bates faculty profile confirms Associate Professor of Art and Visual Culture, core Asian Studies faculty, and Berkeley PhD: https://www.bates.edu/faculty/profile/trian-nguyen/ . Institutional biography explicitly identifies Vietnam as his native country and his immigration to the US in 1981: https://www.bates.edu/news/2003/09/02/fulbright-vietnam-professor/ . Independent npm name/profile/portrait-URL matching found no roster or retired-ID matches; absent from already-proposed.txt. Lewiston appointment is outside Vietnam.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Dung Q. Tran",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live Gonzaga faculty profile confirms a substantive Associate Professor appointment in the MA Organizational Leadership program, a Gonzaga leadership doctorate, and Vietnamese refugee parents; secondary adjunct appointments in other programs do not describe his primary role. Source: https://www.gonzaga.edu/academics/faculty-listing/detail?person=dung-q-tran-phd-8e3bb7e1 . Independent npm check returned name-only matches vp-0046/retired vp-1642 (Vanderbilt computer science), vp-0811 (Missouri mathematics education), vp-1920 (civil engineering), vp-1964 (quantitative methodology), and vp-2978 (Johns Hopkins computer vision). These differ in field, education or full published name from this leadership scholar; no identity URL matches. Absent from already-proposed.txt. Gonzaga appointment is in the US.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Hai B. Pho",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live UMass Lowell individual faculty profile expressly lists Professor Emeritus of Political Science and PhD, satisfying the formal emeritus exception to the current-appointment rule. Vietnamese given name Hai is an affirmative signal beyond surname, with Vietnamese-history scholarship and Indochinese refugee-resettlement work documented. Source: https://www.uml.edu/fahss/political-science/faculty/pho-hai.aspx . Independent npm name/profile/portrait-URL matching found no roster or retired-ID matches; absent from already-proposed.txt. Institutional emeritus affiliation is in Lowell, Massachusetts.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Trang Phan",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live Fresno State person profile confirms Associate Professor, Advanced Studies in Education, Houston education-technology PhD (2016), and Hue University undergraduate education in Vietnam (2006): https://kremen.fresnostate.edu/about/directory/phan-trang.html . Vietnamese given name and Vietnamese education satisfy the affirmative-signal test. Independent npm check included profile, Scholar, personal website and portrait URLs. Name-only matches vp-1260 (chemistry, Mediterranean PhD 2001) and vp-1559 (linguistics, Sheffield PhD 2013) are different people by discipline and degree history. No identity URL matches; absent from already-proposed.txt. Eligible California faculty appointment.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Peter Nguyen",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live Holy Cross person profile confirms Associate Professor in Religious Studies and Toronto theology doctorates: https://www.holycross.edu/academics/people/peter-nguyen . Employer Jesuit biography explicitly states he was born in Saigon and raised in Chicago: https://www.holycross.edu/community/mission-service/jesuit-community/members . Independent npm name/profile/portrait-URL check returned name-only matches vp-0158 (marketing, Western PhD 2019) and vp-0653 (physiology/neuroscience). Neither is this Jesuit systematic theologian; the shared Toronto institution with vp-0653 does not overcome the different discipline and identity. No identity URL matches; absent from already-proposed.txt. Current Worcester appointment is outside Vietnam.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Brian Trung Lam",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live CSULB individual faculty profile explicitly identifies Professor and Tenured in Social Work, Columbia PhD, and CSULB MSW: https://www.csulb.edu/college-of-health-human-services/school-of-social-work/page/brian-trung-lam . Vietnamese given name Trung is an affirmative signal beyond shared surname Lam; profile also documents extensive Vietnamese American research. Independent npm name/profile/portrait-URL matching found no roster or retired-ID matches; absent from already-proposed.txt. Tenured California appointment passes location and track checks.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Linh N. Hoang",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live Siena person profile confirms Professor of Religious Studies, Fordham theology PhD, Catholic Theological Union graduate degrees and Louvain BA: https://www.siena.edu/faculty-and-staff/person/linh-hoang/ . Vietnamese given name Linh provides an affirmative signal beyond the surname, with Vietnamese refugee/Catholic scholarship documented. Independent npm name/profile/portrait-URL check returned name-only matches vp-0948 (finance, Exeter PhD) and vp-1425 (civil engineering, DTU PhD 1999), different people by full name, discipline and degree history. No identity URL matches; absent from already-proposed.txt. Current Siena appointment is in New York.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Yarran Hominh",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live Bard individual profile confirms Assistant Professor of Philosophy, at Bard since 2022, with Columbia PhD and Sydney undergraduate degrees: https://www.bard.edu/faculty/yarran-hominh . His historical Columbia institutional biography explicitly self-identifies as Vietnamese-Australian: https://philosophy.columbia.edu/content/minorities-and-philosophy-initiative . The Columbia education and matching philosophy interests connect that biography to the current Bard scholar. Independent npm matching included name, Bard profile and Bard-linked personal homepage; no roster or retired-ID matches. Absent from already-proposed.txt. Current appointment is in Annandale-on-Hudson, New York.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Kiet Huynh",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live UMass Boston individual directory profile confirms Assistant Professor in Counseling, School Psychology & Sport and Miami counseling-psychology PhD: https://www.umb.edu/directory/kiethuynh/ . Employer-linked lab biography explicitly identifies him as a first-generation immigrant from Vietnam and names UMass Boston as his current institution: https://intersectionalwellbeinglab.wordpress.com/team/ . Independent npm matching included name, current profile, lab, portrait URL and former UNT profile; no roster or retired-ID matches. Absent from already-proposed.txt. Current Boston appointment satisfies location and faculty-track tests.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Thao Ha",
+      "verdict": "fixable",
+      "failedTests": [
+        1
+      ],
+      "reason": "Eligible person, but replace the proposed foundation donor-story URL with the employer individual faculty profile https://hub.miracosta.edu/meet/profile.aspx?id=216 , linked as Faculty, Sociology at https://hub.miracosta.edu/meet/index.aspx . That profile expressly identifies her as an immigrant from Vietnam. Current full-time faculty listing independently confirms Sociology: https://catalog.miracosta.edu/aboutmiracosta/faculty/ . Explicit tenured-professorship evidence: https://www.unmpress.com/9780826370174/love-letters-to-the-dirty-south/ . Independent npm checks of name and identity URLs found only vp-1394: the ASU developmental psychologist with Radboud doctorate, distinct from this UT Austin sociology PhD (2012) and Houston graduate. No identity URL matches; absent from already-proposed.txt. Current Oceanside appointment is outside Vietnam.",
+      "correctedProfileUrl": "https://hub.miracosta.edu/meet/profile.aspx?id=216",
+      "correctedFields": {
+        "profileUrl": "https://hub.miracosta.edu/meet/profile.aspx?id=216"
+      }
+    }
+  ],
+  "possible_move": []
+}

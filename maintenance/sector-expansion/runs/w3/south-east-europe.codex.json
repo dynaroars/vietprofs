@@ -1,0 +1,215 @@
+{
+  "group": "university",
+  "agent": "codex",
+  "slice": "south-east-europe",
+  "finishedAt": "2026-11-15T01:39:09.483834Z",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Thi Thu Huong Nguyen",
+        "university": "Jan Evangelista Purkyně University in Ústí nad Labem",
+        "track": "Teaching",
+        "rank": "Assistant Professor",
+        "department": "Department of Chemistry, Faculty of Science",
+        "city": "Ústí nad Labem",
+        "country": "Czech Republic",
+        "researchAreas": [
+          "Natural Products Chemistry",
+          "Heterocyclic Synthesis",
+          "Microwave-Assisted Synthesis",
+          "Steroid-Based Supramolecular Synthons",
+          "Separation Methods"
+        ],
+        "phdInstitution": "Charles University",
+        "phdYear": 1997,
+        "msInstitution": "Charles University",
+        "profileUrl": "https://chemistry.ujep.cz/rndr-thu-huong-nguyen-thi-ph-d/"
+      },
+      "evidence": {
+        "currentRole": "https://chemistry.ujep.cz/odborni-asistenti/ lists her among Odborní asistenti (assistant professors), linked to the live individual profile. https://www.fzp.ujep.cz/wp-content/uploads/2025/01/P%C5%99%C3%ADloha-3-Udr%C5%BEitelnost-obnoviteln%C3%BDch-zdroj%C5%AF-surovin-AS-F%C5%BDP.pdf (2025 accreditation submission, downloaded successfully and text-extracted in memory) states “2001–dosud– odborná asistentka katedry chemie UJEP”. Its personnel summary explicitly gives Nguyen, Thi Thu Huong, “PP 1,0 doba neurčitá” (full-time, indefinite employment), and the individual personnel sheet gives 40 hours. Course responsibility includes organic chemistry lectures and laboratory teaching. Teaching track reflects the documented permanent faculty teaching appointment; no tenure claim is inferred.",
+        "doctorateOrPapers": "https://chemistry.ujep.cz/rndr-thu-huong-nguyen-thi-ph-d/ confirms organic chemistry studies at the Faculty of Science, Charles University, Prague, with PhD awarded in 1997. The same employer accreditation submission https://www.fzp.ujep.cz/wp-content/uploads/2025/01/P%C5%99%C3%ADloha-3-Udr%C5%BEitelnost-obnoviteln%C3%BDch-zdroj%C5%AF-surovin-AS-F%C5%BDP.pdf gives Mgr. in organic chemistry (1992) and Ph.D. in organic chemistry (1997), both PřF UK Praha. It also lists her 2023 Molecules research article, DOI 10.3390/molecules28135231; eligibility uses the documented doctorate, not a two-paper inference.",
+        "vietnameseSignal": "https://chemistry.ujep.cz/rndr-thu-huong-nguyen-thi-ph-d/ publishes the Vietnamese given-name tokens Thu Huong, with Nguyen Thi in its local display order. The employer accreditation personnel table https://www.fzp.ujep.cz/wp-content/uploads/2025/01/P%C5%99%C3%ADloha-3-Udr%C5%BEitelnost-obnoviteln%C3%BDch-zdroj%C5%AF-surovin-AS-F%C5%BDP.pdf explicitly separates surname Nguyen from given names Thi Thu Huong, supporting the proposed First Middle Last display name. No diacritic Vietnamese name is inferred.",
+        "dedup": "Ran npm run find-roster-matches -- \"Thi Thu Huong Nguyen\" --url https://chemistry.ujep.cz/rndr-thu-huong-nguyen-thi-ph-d/ https://chemistry.ujep.cz/odborni-asistenti/. Also searched the variants Thu Huong Nguyen Thi and Thu Huong Thi Nguyen. No identity-URL or retired-ID match. Name-only hits resolved as different people: vp-0251 (Michigan chemistry education, Michigan State doctorate), vp-0252 (Minnesota nursing, Chicago doctorate), vp-0476 (Utah philosophy), vp-0514 (McGill plant science, Iowa State doctorate), vp-1907 (Greenwich accounting/finance), vp-2029 (La Trobe management/HR, Melbourne doctorate), vp-3134 (Insmed computational biology, Stony Brook doctorate), vp-3200 (Triple Ring medical-device R&D, Stanford doctorate). None matches this Charles University 1997 organic chemist teaching at UJEP since 2001. Checked already-proposed.txt; neither her name nor its local-order variants occurs."
+      }
+    }
+  ],
+  "already_listed": [
+    {
+      "name": "Huyen Trang Phan",
+      "id": "vp-1559",
+      "note": "Same Ca' Foscari linguist; live employer page https://www.unive.it/web/it/18697/persone/27833636 lists Professoressa Associata. Identity resolved against the roster; no new candidate."
+    },
+    {
+      "name": "Phuong Thanh Nguyen",
+      "id": "vp-1560",
+      "note": "Same University of L'Aquila software-engineering faculty. Employer CV opened at https://www.disim.univaq.it/show.php?id=thanhphuong.nguyen&token=c174d4ed4396d5480f0da2dcfe13f94f confirms associate-professor career. Also on already-proposed.txt, so excluded from candidates."
+    },
+    {
+      "name": "Ngoc Thanh Nguyen",
+      "id": "vp-0531",
+      "note": "Same Wrocław professor. Current employer department personnel page opened: https://kis.pwr.edu.pl/pracownicy/aktualnie-zatrudnieni/ . Name/URL dedup resolves to the existing computing researcher."
+    },
+    {
+      "name": "Thanh-Ngo Nguyen",
+      "id": "vp-1860",
+      "note": "Existing Wrocław computing faculty, also present on the opened personnel page https://kis.pwr.edu.pl/pracownicy/aktualnie-zatrudnieni/ . Same department and name; not a new person."
+    },
+    {
+      "name": "Quang Duc Pham",
+      "id": "vp-1640",
+      "note": "Published name order differs from roster Duc Quang Pham. Same CUNEF marketing faculty and IE Business School PhD (2024), confirmed by opened employer CV https://cunefxxi.cunef.edu/CUNEF/CVDocentes/54455_Cv.pdf . Name dedup hit resolved to vp-1640; no new ID."
+    },
+    {
+      "name": "Quang D. Nguyen",
+      "id": "vp-1589",
+      "note": "MATE food-biotechnology lead matches existing ID; dedup also found retired duplicate vp-1612 merged into vp-1589. Employer profile https://research.uni-mate.hu/hu/w/prof.-dr.-quang-d.-nguyen returned HTTP 403, so no fresh verification of its contents is claimed."
+    },
+    {
+      "name": "Petr Nguyen",
+      "id": "vp-1861",
+      "note": "Same chromosome-genetics researcher already listed at Biology Centre CAS. Opened university work-group page https://www.prf.jcu.cz/en/faculty/departments/department-of-molecular-biology-and-genetics/research/work-groups lists him as chromosome-laboratory PI. This supports a university affiliation but does not establish a departure from CAS; no move asserted."
+    }
+  ],
+  "possible_move": [],
+  "rejected": [
+    {
+      "name": "Minh Long Hoang",
+      "reason": "Opened Parma employer profile https://personale.unipr.it/en/ugovdocenti/person/241243 identifies Ricercatore a tempo determinato and postdoctoral researcher/assistant professor. Employer CV discovery identifies an RTD-A project appointment beginning November 2023. A continuing or tenure-track appointment was not established; excluded as temporary."
+    },
+    {
+      "name": "Minh Hai Duong",
+      "reason": "Opened PJAIT department page https://pja.edu.pl/en/katedra-multimediow/pracownicy/ describes teaching and commercial design work, a 2020 master degree and engineering bachelor degree. No research doctorate or two recent employer research papers, and no full-time continuing appointment, were verified."
+    },
+    {
+      "name": "Thi Ngoc Minh Tran",
+      "reason": "Opened Adam Mickiewicz University directory https://amu.edu.pl/uniwersytet/wyszukiwarka-pracownikow/jednostka?id=10000696 lists mgr and lecturer. No doctorate, qualifying recent research record, or continuing appointment evidence verified. Excluded for insufficient evidence, not presumed ineligible from title alone."
+    },
+    {
+      "name": "Ngoc D. Le / Duy Ngoc Le",
+      "reason": "Opened University of Aveiro CICECO person page https://www.ciceco.ua.pt/?language=eng&menu=221&tabela=pessoaldetail&user=5654 explicitly identifies PhD Student; excluded."
+    },
+    {
+      "name": "Dan Tran",
+      "reason": "Opened employer profile https://ciencia.ucp.pt/en/persons/dan-tran/ identifies Invited Assistant Professor. Name/URL dedup additionally found retired vp-1623 (owner removal), distinct from vp-1595 at Kansas. Not a new candidate and not restored."
+    },
+    {
+      "name": "Quang Hung Tran",
+      "reason": "Opened University of South Bohemia staff page https://www.jcu.cz/en/university/staff/person?identita=Tran_Quang_Hung_95482 verifies MSc, PhD and Researcher in fish reproduction/intensive culture. No permanent or faculty-equivalent career appointment evidence found; withheld rather than treating the bare Researcher title as sufficient."
+    },
+    {
+      "name": "Hieu Nguyen / Nguyen Thi Hoang Hieu",
+      "reason": "UNYP employer discovery describes a CERGE PhD candidate, and Anglo-American University results describe lecturer/MA. The UNYP page could not be opened successfully. No doctorate, qualifying recent research record or eligible continuing appointment verified; withheld."
+    },
+    {
+      "name": "Thanh Phuong Nguyen (Lisbon forestry)",
+      "reason": "ISA/University of Lisbon employer discovery identifies a doctoral student: https://www.isa.ulisboa.pt/cef/grupos-de-investigacao/forchange/equipa-de-investigacao/tphuongnguyen/ . Not verified as career faculty; distinct from the already-listed L'Aquila computer scientist. Discovery-only lead, not an opened verified profile."
+    },
+    {
+      "name": "Bui Minh Mai Khanh",
+      "reason": "ELTE mathematics publication affiliations surfaced, but no current eligible employer appointment/person profile could be verified. Publications and a former doctoral-teaching history do not alone establish a continuing career appointment."
+    },
+    {
+      "name": "Richard Quang-Anh Tran",
+      "reason": "Ca' Foscari employer discovery produced historical RTD-A records ending September 2023 and 2022/23 course pages, not a verified current continuing appointment. Not accepted from stale course/publication affiliation: https://www.unive.it/web/fileadmin/user_upload/dipartimenti/DSAAM/documenti/Documenti_AQ/Dipartimento/Progetto_Eccellenza_DSAAM_2022.pdf ."
+    },
+    {
+      "name": "Thi Thuy Dung (Jun) Nguyen",
+      "reason": "UC3M doctoral lead points to current employment at NHH in Norway, which belongs to the Nordic-Benelux slice. No candidate proposed here; current-employer discovery URL https://www.nhh.no/en/employees/faculty/thi-thuy-dung-nguyen/ was not used as verified evidence in this output."
+    },
+    {
+      "name": "Vo Thi Hanh Thao",
+      "reason": "Sassari employer contact-directory discovery lists Dottorandi; no career-faculty appointment verified. Discovery-only student lead excluded."
+    },
+    {
+      "name": "Diem Thi Thanh Hai",
+      "reason": "Macerata teaching-portal discovery https://docenti.unimc.it/t.diem identifies a primary appointment at Greenwich Hanoi, Vietnam, rather than an eligible primary appointment outside Vietnam."
+    },
+    {
+      "name": "Thi Lan Nhi Truong",
+      "reason": "Krakow UKEN doctoral-school discovery explicitly identifies a doctoral student starting in 2024, not career faculty. No eligible appointment verified."
+    },
+    {
+      "name": "Thi Thu Ha Nguyen (Krakow physics)",
+      "reason": "UKEN employer discovery surfaced a 2025 doctoral-defense notice but no current eligible career appointment. Doctoral completion alone is insufficient."
+    },
+    {
+      "name": "Quang Ngoc Nguyen Tri",
+      "reason": "Pontifical Gregorian University directory discovery surfaced Assistant, but no live personal page establishing doctorate and a stable faculty/research appointment was successfully verified. Withheld; no rank inferred."
+    }
+  ],
+  "coverage": [
+    {
+      "employer": "Jan Evangelista Purkyně University in Ústí nad Labem",
+      "pagesExamined": [
+        "https://chemistry.ujep.cz/rndr-thu-huong-nguyen-thi-ph-d/",
+        "https://chemistry.ujep.cz/odborni-asistenti/",
+        "https://www.fzp.ujep.cz/wp-content/uploads/2025/01/P%C5%99%C3%ADloha-3-Udr%C5%BEitelnost-obnoviteln%C3%BDch-zdroj%C5%AF-surovin-AS-F%C5%BDP.pdf"
+      ],
+      "note": "Verified one new permanent full-time chemistry faculty member, including doctoral education and appointment duration. The accreditation PDF also resolves name order explicitly. Profile research interests support all proposed researchAreas. No verified portrait, Scholar, personal website, honors or Vietnamese diacritics added."
+    },
+    {
+      "employer": "Italy — Parma, L'Aquila and Ca' Foscari",
+      "pagesExamined": [
+        "https://personale.unipr.it/en/ugovdocenti/person/241243",
+        "https://www.disim.univaq.it/show.php?id=thanhphuong.nguyen&token=c174d4ed4396d5480f0da2dcfe13f94f",
+        "https://www.unive.it/web/it/18697/persone/27833636"
+      ],
+      "note": "Opened employer person/CV pages; Parma lead temporary, L'Aquila and Venice identities already listed. Historical Venice RTD-A discovery did not establish a current eligible appointment."
+    },
+    {
+      "employer": "Italy — broader institutional discovery",
+      "pagesExamined": [],
+      "note": "Search-screened given-name tokens and uncommon surnames across Bologna, Padua, Turin, Salerno, Sapienza, Pisa, Milano-Bicocca, Bolzano, Bergamo, Catania, Naples Federico II, Brescia, Calabria, Siena, Pavia, Tor Vergata, Orientale, Macerata, Sassari and pontifical universities. These were search-level screens, not complete staff-directory audits. Bolzano access was blocked. No additional verified eligible new faculty emerged."
+    },
+    {
+      "employer": "Spain — CUNEF Universidad",
+      "pagesExamined": [
+        "https://cunefxxi.cunef.edu/CUNEF/CVDocentes/54455_Cv.pdf"
+      ],
+      "note": "Opened employer CV; name-order variant Quang Duc Pham resolves to existing vp-1640. Search-screened UC3M, UPF, UAB, Barcelona, Santiago de Compostela, Valencia Polytechnic, Navarra, Seville, Zaragoza, Autonomous Madrid and IE; no additional verified new candidate. One UC3M graduate lead now points outside the slice."
+    },
+    {
+      "employer": "Portugal — University of Aveiro and Universidade Católica Portuguesa",
+      "pagesExamined": [
+        "https://www.ciceco.ua.pt/?language=eng&menu=221&tabela=pessoaldetail&user=5654",
+        "https://ciencia.ucp.pt/en/persons/dan-tran/",
+        "https://www.clsbe.lisboa.ucp.pt/finance-and-accounting/members"
+      ],
+      "note": "Aveiro lead explicitly doctoral student; Católica profile invited faculty and retired roster ID. Católica members page was opened but did not render usable faculty detail. Additional discovery screens covered Minho, Porto, Lisbon, Coimbra, Algarve, Évora, NOVA IMS and Lusófona. No additional verified eligible new candidate."
+    },
+    {
+      "employer": "Poland — PJAIT, Adam Mickiewicz and Wrocław University of Science and Technology",
+      "pagesExamined": [
+        "https://pja.edu.pl/en/katedra-multimediow/pracownicy/",
+        "https://amu.edu.pl/uniwersytet/wyszukiwarka-pracownikow/jednostka?id=10000696",
+        "https://kis.pwr.edu.pl/pracownicy/aktualnie-zatrudnieni/"
+      ],
+      "note": "Opened staff pages; new teaching leads lacked the brief's doctoral/research and permanence evidence; Wrocław faculty already listed. Search-level screens also covered Warsaw, Nicolaus Copernicus, Silesian Polytechnic, AGH, Gdańsk, Jagiellonian, Wrocław economics and Krakow UKEN. Student, visiting and Vietnam-based affiliations excluded."
+    },
+    {
+      "employer": "Czechia — University of South Bohemia",
+      "pagesExamined": [
+        "https://www.jcu.cz/en/university/staff/person?identita=Tran_Quang_Hung_95482",
+        "https://www.prf.jcu.cz/en/faculty/departments/department-of-molecular-biology-and-genetics/research/work-groups"
+      ],
+      "note": "Opened fish-researcher profile and genetics work groups. Quang Hung Tran lacks verified permanence/faculty equivalence; Petr Nguyen already listed. Additional discovery screens covered Charles, Masaryk, Czech Technical, Tomas Bata Zlín, UCT Prague, Mendel, Palacký, UNYP, Anglo-American University and Ostrava. No additional verified eligible new candidate."
+    },
+    {
+      "employer": "Hungary — MATE and broader university discovery",
+      "pagesExamined": [
+        "https://research.uni-mate.hu/hu/w/prof.-dr.-quang-d.-nguyen"
+      ],
+      "note": "Attempted MATE employer profile returned HTTP 403; do not treat this as live verification. Existing-ID and retired-duplicate matches resolved locally. Search-screened ELTE, Budapest Technology and Economics, Pécs, Szeged, Debrecen, Miskolc, Corvinus, Pannon, Sopron and Óbuda. No new candidate with a verified eligible current appointment; ELTE publication-only leads withheld."
+    },
+    {
+      "employer": "Other European universities outside the other assigned slices",
+      "pagesExamined": [],
+      "note": "Search-level extension into Greece, Romania, Slovenia, Bulgaria, Slovakia, Lithuania, Estonia and Russian university domains (including ITMO, HSE, St Petersburg and Ural Federal). No new eligible current faculty member was verified on an employer person page. These are discovery screens, not exhaustive institutional audits; no claim of absence is made."
+    },
+    {
+      "employer": "Search strategy and stopping point",
+      "pagesExamined": [],
+      "note": "Later-pass discovery used Vietnamese given-name tokens (including Thu, Huong, Huyen, Trang, Thuy, Dung, Hieu, Hai, Minh, Long, Thanh, Phuong, Ngoc, Quang, Duc, Huy, Viet and Phuoc) and less common surnames including Trinh, Quach, Nghiem, Trieu and Ton-That, alongside spelling/order variants. Broad institutional screening across the six core countries and smaller European systems reached diminishing verified yield. Stopped after a well-covered discovery pass with one fully evidenced new candidate, below the 25-candidate cap. Search snippets were used for leads or exclusions only; no candidate rests on a search snippet. No LinkedIn fetched, no login, no GitHub changes, and no roster edits."
+    }
+  ]
+}

@@ -1,0 +1,338 @@
+{
+  "group": "university",
+  "agent": "codex",
+  "slice": "south-east-europe",
+  "finishedAt": "2026-11-15T00:23:20.695986+00:00",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Binh Thi Nguyen Slavicka",
+        "university": "Charles University",
+        "country": "Czech Republic",
+        "city": "Prague",
+        "department": "Institute of Asian Studies, Faculty of Arts",
+        "rank": "Lecturer",
+        "track": "Teaching",
+        "field": "Humanities",
+        "researchAreas": [
+          "Vietnamese Linguistics",
+          "Vietnamese Phonetics",
+          "Vietnamese Grammar",
+          "Vietnamese Literature",
+          "Czech-Vietnamese Translation"
+        ],
+        "phdInstitution": "Charles University",
+        "profileUrl": "https://uas.ff.cuni.cz/ustav/profily-akademiku/binh-slavicka/"
+      },
+      "evidence": {
+        "currentRole": "https://uas.ff.cuni.cz/ustav/profily-akademiku/binh-slavicka/ — current institutional academic profile for Ing. Binh Slavická, Ph.D.; employment since 1992 at the Institute of Far Eastern Studies / Institute of Asian Studies and current Vietnamese-language courses. https://vietnam.ff.cuni.cz/o-nas/lide/ separates three internal teachers (including Slavická) from external instructors. Full-time continuing teaching is corroborated by her first-person interview at https://www.asiaskop.cz/asie-cr/lidska-hloupost-je-vsude-stejna-svejka-si-ve-vietnamu-pochvaluji-rika-prekladatelka-binh-slavicka : “V roce 1992 jsem nastoupila na plný úvazek” (joined full-time in 1992). Current staff directory also opened: https://is.cuni.cz/webapps/whois2/osoba/1058204373463705/?lang=en . Teaching track reflects the documented continuing internal teaching appointment; no tenure claim is made.",
+        "doctorateOrPapers": "https://uas.ff.cuni.cz/ustav/profily-akademiku/binh-slavicka/ — Ph.D. in the title; doctoral studies at FF UK (Charles University Faculty of Arts), 2008–2016, dissertation on particles in modern Vietnamese. Degree year omitted because the opened profile gives a study range rather than an explicit award date.",
+        "vietnameseSignal": "Vietnamese given name Binh; the opened first-person Asiaskop interview states schooling in Vietnam and selection for study in Czechoslovakia. Charles University book announcement https://iforum.cuni.cz/IFORUM-5832-version1.pdf explicitly identifies the author as Slavická, Nguyen Thi Binh. Its title, book, publisher and ISBN match the book on her employer profile. PDF was retrieved live by Python urllib (HTTP 200, application/pdf) and read through pdftotext in memory after web.open returned a cache miss. Canonical name places Binh first and retains original surname Nguyen before married surname Slavicka, with diacritics removed. No reconstructed vietnameseName.",
+        "dedup": "Ran npm run find-roster-matches -- \"Binh Slavicka\" --url https://uas.ff.cuni.cz/ustav/profily-akademiku/binh-slavicka/ https://vietnam.ff.cuni.cz/o-nas/lide/binh-slavicka/ : no roster or retired-id matches. Reran with \"Binh Thi Nguyen Slavicka\" and the WhoIS URL: name-only hits vp-0476 C. Thi Nguyen (Utah philosophy, UCLA PhD 2011), vp-1528 Binh P. Nguyen (Wellington data science, NUS PhD 2014), vp-3148 Binh Nguyen (EntoZyme insect biology, Macquarie PhD 2021). All are different people by field, degree and identity URLs. Manual normalized-name check found no Slavicka or Charles University Binh entry. Not in already-proposed.txt.",
+        "enrichment": "Department, research areas and doctorate institution are supported by the academic profile; Prague/Czech Republic by the current university WhoIS address. The university announcement https://www.ff.cuni.cz/2022/10/dr-binh-slavicka-ziskala-cenu-gratias-agit-2022/ confirms her leadership of Vietnamese studies and Gratias agit 2022 recognition. That recognition concerns international cultural relations and is omitted from honors under the roster exclusion for community-engagement awards. No verified Google Scholar, LinkedIn or separate personal/lab homepage found. Portrait not proposed: the academic profile has no clearly verified individual headshot, and the award-news image was not visually vetted. No image downloaded."
+      }
+    }
+  ],
+  "already_listed": [
+    {
+      "name": "Huyen Trang Phan",
+      "id": "vp-1559",
+      "note": "Thi Huyen Trang Phan at Ca’ Foscari is the same person; npm matcher confirms institutional person ID 27833636. Opened current profile lists Associate Professor. https://www.unive.it/data/persone/27833636/curriculum"
+    },
+    {
+      "name": "Phuong Thanh Nguyen",
+      "id": "vp-1560",
+      "note": "Exact employer profile and name match from npm matcher; opened page confirms Associate Professor at L’Aquila. https://www.disim.univaq.it/ThanhPhuong"
+    },
+    {
+      "name": "Hung Son Nguyen",
+      "id": "vp-0572",
+      "note": "npm matcher confirms Warsaw profile /~son/; current faculty directory identifies the same informatics professor. https://www.mimuw.edu.pl/en/employees/"
+    },
+    {
+      "name": "Linh Anh Nguyen",
+      "id": "vp-0573",
+      "note": "Anh Linh Nguyen in the current Warsaw directory is the same person as roster Linh Anh Nguyen: same N.A.Linh email and informatics affiliation; npm matcher confirms /~nguyen/. https://www.mimuw.edu.pl/en/employees/"
+    },
+    {
+      "name": "Fryderyk Nguyen",
+      "id": "vp-1859",
+      "note": "Exact name and profile match from npm matcher; no new candidate. https://ifp.uwr.edu.pl/pracownicy/fryderyk-nguyen/"
+    },
+    {
+      "name": "Thanh-Ngo Nguyen",
+      "id": "vp-1860",
+      "note": "npm matcher and Wrocław Applied Informatics directory resolve the same assistant professor. https://kis.pwr.edu.pl/pracownicy/aktualnie-zatrudnieni"
+    },
+    {
+      "name": "Ngoc Thanh Nguyen",
+      "id": "vp-0531",
+      "note": "Current Wrocław Applied Informatics directory identifies the already-listed professor and department head. https://kis.pwr.edu.pl/pracownicy/aktualnie-zatrudnieni"
+    },
+    {
+      "name": "Huong May Truong",
+      "id": "vp-2468",
+      "note": "May Truong is already listed under fuller name Huong May Truong; exact IE profile match from npm matcher. https://www.ie.edu/university/about/faculty/may-truong/"
+    },
+    {
+      "name": "Duc Quang Pham",
+      "id": "vp-1640",
+      "note": "Pham Quang Duc is the same CUNEF business-management assistant professor; exact profile match from npm matcher. https://www.cunef.edu/claustro-e-investigacion/pham-quang-duc/"
+    },
+    {
+      "name": "Dong Nghi Pham",
+      "id": "vp-1635",
+      "note": "Exact name and institutional profile match from npm matcher. https://merit.url.edu/en/persons/dong-nghi-pham/ ; identified during Esade discovery, no new entry."
+    },
+    {
+      "name": "Natalie Truong Faust",
+      "id": "vp-2469",
+      "note": "Exact profile match from npm matcher; opened NOVA profile confirms Assistant Professor of Marketing, Research Track. https://www.novasbe.unl.pt/en/faculty-research/faculty/faculty-detail/id/141/natalie-truong-faust"
+    },
+    {
+      "name": "Trong Quyen Nguyen",
+      "id": "vp-2515",
+      "note": "Quyen Nguyen / QUYEN NGUYEN TRONG is already listed in textiles at Minho; npm matcher confirms 2C2T profile. Current employer page timed out; CIÊNCIAVITAE search lead is not treated as fresh employer verification. https://2c2t.uminho.pt/people/#member494"
+    },
+    {
+      "name": "Quang D. Nguyen",
+      "id": "vp-1589",
+      "note": "npm matcher confirms the MATE food-biotechnology professor; attempted current employer profile returned HTTP 403, so no fresh facts accepted. https://research.uni-mate.hu/hu/w/prof.-dr.-quang-d.-nguyen"
+    },
+    {
+      "name": "Krisztina Nguyen",
+      "id": "vp-2197",
+      "note": "Exact name/profile match from npm matcher; ELTE profile surfaced in discovery but live open returned a cache miss. No fresh verification claimed. https://www.btk.elte.hu/en/staff/krisztina-nguyen"
+    },
+    {
+      "name": "Giang Nguyen Thu",
+      "id": "vp-1613",
+      "note": "Exact STU profile match from npm matcher; not a new ID. Current profile was inaccessible through web tool. https://www.fiit.stuba.sk/ludia/giang-nguyen.html?page_id=5810"
+    }
+  ],
+  "possible_move": [],
+  "rejected": [
+    {
+      "name": "Nhu Toan Nguyen",
+      "reason": "Bologna employer profile explicitly says PhD Student. https://www.unibo.it/sitoweb/nhutoan.nguyen/en (opened)."
+    },
+    {
+      "name": "Jennifer Nguyen",
+      "reason": "Esade employer research-community page explicitly identifies her as a postdoc at the Institute for Data-Driven Decisions. https://www.esade.edu/faculty-research/en/research-yearbook/2023-2024-edition/research-community (opened)."
+    },
+    {
+      "name": "Huong Thi Bich Le",
+      "reason": "Employer page labels Huong LE THI BICH Docente a contratto and describes individual semester/year teaching contracts; no continuing full-time appointment or doctorate established. https://www.unive.it/data/persone/22112886/curriculum (opened)."
+    },
+    {
+      "name": "Hieu Nguyen — University of New York in Prague",
+      "reason": "Employer profile identifies a PhD candidate at CERGE-EI, with master’s degrees; no eligible doctorate-holding career appointment established. https://www.unyp.cz/academic-staff/recS3Rec7Em4E0IFB/hieu-nguyen/ (opened)."
+    },
+    {
+      "name": "Tra My Tran",
+      "reason": "BME staff directory explicitly says PhD Student under Tran Tra My. https://hvt.bme.hu/en/staff/ (opened)."
+    },
+    {
+      "name": "Thuy Trang Pham Nguyen",
+      "reason": "Corvinus economics faculty/staff directory places Nguyen Pham Thuy Trang under PhD Students. https://www.uni-corvinus.hu/main-page/about-the-university/institutes/institute-of-economics/faculty-staff-contact/?lang=en (opened)."
+    },
+    {
+      "name": "Dan Tran",
+      "reason": "Current employer biography says invited assistant professor; discovery version also labels the role adjunct. No full-time continuing ladder documented. https://www.clsbe.lisboa.ucp.pt/person/dan-tran (opened)."
+    },
+    {
+      "name": "Chi Tran — University of Warmia and Mazury",
+      "reason": "Employer directory says emerytowany profesor (retired professor), which alone does not establish a formally conferred emeritus title; no current eligible appointment established. https://wg.uwm.edu.pl/igib/kib/pracownicy (opened). Name matcher returned vp-0155 (TCU marketing), vp-0555 (French probability) and vp-1909 (Coventry accounting); none is this Polish civil engineer with Gdańsk doctorate. Held out rather than interpreting retirement as emeritus conferral."
+    },
+    {
+      "name": "Doyen Nguyen",
+      "reason": "Discovery lead says Invited Assistant Professor at Católica Medical School. Attempt to open institutional profile returned 404; no live individual employer profile or permanent appointment established. https://ciencia.ucp.pt/en/persons/doyen-nguyen/ . No acceptance from a search snippet."
+    },
+    {
+      "name": "Thi Hong Thuy Nguyen Vo",
+      "reason": "UIC discovery lead describes collaborative researcher and outside forensic practice; employer profile open returned HTTP 403. Doctorate and stable full-time university appointment not established. https://www.uic.es/en/teacher/tnguyen . No acceptance from search snippet."
+    },
+    {
+      "name": "Hung Vuong Pham",
+      "reason": "Discovery lead labels Adjunct Professor at Ca’ Foscari. Live URL redirects to a generic unable-to-retrieve-content page, so no eligible individual profile verified. https://www.unive.it/data/people/12986627 ."
+    },
+    {
+      "name": "Richard Quang-Anh Tran",
+      "reason": "Earlier Ca’ Foscari appointment was fixed-term RTD-A; later university-hosted 2024 biography discovery lead says Scholar-in-Residence at Berkeley. No current permanent appointment in this slice verified; not proposed. Discovery URLs: https://pric.unive.it/fileadmin/user_upload/KoreanStudiesLectureSeries/documenti/2024/Profile_Tran.pdf and https://www.unive.it/pag/fileadmin/user_upload/dipartimenti/DSAAM/documenti/Documenti_AQ/Dipartimento/Progetto_Eccellenza_DSAAM_2022.pdf . These search-only leads are not used as verified candidate evidence."
+    },
+    {
+      "name": "Michal Nguyen",
+      "reason": "Palacký history department lead places him in the OP JAK URBANITA project section; personal publication-profile discovery lead says Post-Doc. No permanent faculty appointment verified. https://historie.upol.cz/en/people/ and https://upol.academia.edu/MichalNguyen . Held out; search-only leads."
+    },
+    {
+      "name": "Christopher Kim Pham",
+      "reason": "University of the Azores employment-notice discovery lead specifies fixed-term three-year assistant-researcher contract renewable up to six years. Not a verified permanent appointment. https://uac.pt/sites/default/files/enviado_18.06.2025.pdf ; search-only lead."
+    },
+    {
+      "name": "Minh Ha Nguyen Lo Cicero",
+      "reason": "Portuguese official-gazette discovery lead records retirement effective 1 February 2024; no formal emeritus conferral or current appointment verified. https://files.diariodarepublica.pt/gratuitos/2s/2024/02/2S035A0000S00.pdf ; search-only lead."
+    },
+    {
+      "name": "Joanna Różycka-Tran",
+      "reason": "Non-Vietnamese surname first and Tran second is an excluded married-surname pattern under roster rules; no affirmative Vietnamese ancestry signal found. Institutional discovery lead: https://old-en.ug.edu.pl/pracownik/2504/joanna_rozycka-tran ."
+    },
+    {
+      "name": "Thi Kim Hue Nguyen",
+      "reason": "Lead at CNR IAC is a public research institute, outside this university slice; university competition documents alone do not prove a current permanent university appointment. https://www.iac.rm.cnr.it/index.php/personale/thi-kim-hue-nguyen ; search-only lead."
+    }
+  ],
+  "coverage": [
+    {
+      "employer": "Charles University",
+      "pagesExamined": [
+        "https://uas.ff.cuni.cz/ustav/profily-akademiku/binh-slavicka/",
+        "https://vietnam.ff.cuni.cz/o-nas/lide/",
+        "https://is.cuni.cz/webapps/whois2/osoba/1058204373463705/?lang=en",
+        "https://www.ff.cuni.cz/2022/10/dr-binh-slavicka-ziskala-cenu-gratias-agit-2022/",
+        "https://iforum.cuni.cz/IFORUM-5832-version1.pdf"
+      ],
+      "note": "New verified candidate; internal versus external Vietnamese-studies teaching checked. Original surname resolved using employer book announcement retrieved and parsed in memory. Masaryk bibliographic pages returned bot-check HTML/cache misses and were not bypassed; they are not relied on."
+    },
+    {
+      "employer": "Ca' Foscari University of Venice",
+      "pagesExamined": [
+        "https://www.unive.it/data/persone/27833636/curriculum",
+        "https://www.unive.it/data/persone/22112886/curriculum",
+        "https://www.unive.it/data/people/12986627"
+      ],
+      "note": "Linguistics/language and chemistry leads checked: Trang Phan already listed; Huong Le contracted instructor excluded; Hung Vuong Pham profile failed to retrieve individual content. Richard Tran search follow-up did not establish a current permanent role."
+    },
+    {
+      "employer": "University of L'Aquila",
+      "pagesExamined": [
+        "https://www.disim.univaq.it/ThanhPhuong"
+      ],
+      "note": "Computer science/software-engineering lead already listed; live employer confirms associate professorship."
+    },
+    {
+      "employer": "University of Bologna",
+      "pagesExamined": [
+        "https://www.unibo.it/sitoweb/nhutoan.nguyen/en"
+      ],
+      "note": "Industrial-engineering lead is a doctoral student; excluded. Wider Italian searches included Padova, Politecnico di Milano, Pisa, Trento, Turin, Bocconi, Pavia, Naples Federico II, Salerno and Luiss; results mostly students, visiting speakers, references/coauthors or Vietnam-based collaborators. Search-only pages not counted as opened directory coverage."
+    },
+    {
+      "employer": "Esade Business School / Ramon Llull University",
+      "pagesExamined": [
+        "https://www.esade.edu/faculty-research/en/research-yearbook/2023-2024-edition/research-community"
+      ],
+      "note": "Research-community list examined; Jennifer Nguyen excluded as postdoc. Dong Nghi Pham resolves to existing vp-1635 by institutional URL."
+    },
+    {
+      "employer": "IE University",
+      "pagesExamined": [
+        "https://www.ie.edu/university/about/faculty/may-truong/"
+      ],
+      "note": "Information systems/business analytics lead May Truong already listed under fuller name."
+    },
+    {
+      "employer": "CUNEF Universidad",
+      "pagesExamined": [
+        "https://www.cunef.edu/claustro-e-investigacion/pham-quang-duc/"
+      ],
+      "note": "Consumer behavior/business-management tenure-track lead already listed."
+    },
+    {
+      "employer": "Universitat Internacional de Catalunya",
+      "pagesExamined": [
+        "https://www.uic.es/en/teacher/tnguyen"
+      ],
+      "note": "HTTP 403; candidate held out. Wider Spanish queries covered university faculty/profesor terms and Madrid, Carlos III, Pompeu Fabra, UAB and Almería; no additional verified eligible person obtained."
+    },
+    {
+      "employer": "NOVA University Lisbon",
+      "pagesExamined": [
+        "https://www.novasbe.unl.pt/en/faculty-research/faculty/faculty-detail/id/141/natalie-truong-faust"
+      ],
+      "note": "Marketing assistant professor already listed."
+    },
+    {
+      "employer": "Universidade Católica Portuguesa",
+      "pagesExamined": [
+        "https://www.clsbe.lisboa.ucp.pt/person/dan-tran",
+        "https://ciencia.ucp.pt/en/persons/doyen-nguyen/"
+      ],
+      "note": "Dan Tran is invited faculty without continuing full-time evidence; Doyen Nguyen profile returned 404."
+    },
+    {
+      "employer": "University of Minho",
+      "pagesExamined": [
+        "https://2c2t.uminho.pt/people/#member494"
+      ],
+      "note": "Attempt timed out. Textile researcher lead is already listed as vp-2515; no new verified facts accepted. Wider Portugal discovery covered Porto, Aveiro, Bragança, Madeira and Azores; surfaced doctoral students, term-limited research and a retirement rather than an additional eligible new appointment."
+    },
+    {
+      "employer": "University of Warsaw",
+      "pagesExamined": [
+        "https://www.mimuw.edu.pl/en/employees/"
+      ],
+      "note": "Mathematics, Informatics and Mechanics directory examined; both Vietnamese informatics professors already listed, including reversed Anh Linh / Linh Anh name order."
+    },
+    {
+      "employer": "Wrocław University of Science and Technology",
+      "pagesExamined": [
+        "https://kis.pwr.edu.pl/pracownicy/aktualnie-zatrudnieni"
+      ],
+      "note": "Applied Informatics current staff examined; Ngoc Thanh Nguyen and Thanh-Ngo Nguyen already listed."
+    },
+    {
+      "employer": "University of Warmia and Mazury in Olsztyn",
+      "pagesExamined": [
+        "https://wg.uwm.edu.pl/igib/kib/pracownicy"
+      ],
+      "note": "Civil-engineering directory lists Chi Tran as retired; no formal emeritus evidence obtained."
+    },
+    {
+      "employer": "Budapest University of Technology and Economics",
+      "pagesExamined": [
+        "https://hvt.bme.hu/en/staff/"
+      ],
+      "note": "Electrical-engineering staff list examined; Tran Tra My explicitly a PhD student."
+    },
+    {
+      "employer": "Corvinus University of Budapest",
+      "pagesExamined": [
+        "https://www.uni-corvinus.hu/main-page/about-the-university/institutes/institute-of-economics/faculty-staff-contact/?lang=en"
+      ],
+      "note": "Economics staff and doctoral lists examined; Thuy Trang Nguyen Pham is a doctoral student."
+    },
+    {
+      "employer": "Eötvös Loránd University",
+      "pagesExamined": [
+        "https://www.btk.elte.hu/en/staff/krisztina-nguyen"
+      ],
+      "note": "Individual profile attempt returned cache miss. Exact profile already in roster; not used as fresh verification."
+    },
+    {
+      "employer": "Hungarian University of Agriculture and Life Sciences",
+      "pagesExamined": [
+        "https://research.uni-mate.hu/hu/w/prof.-dr.-quang-d.-nguyen"
+      ],
+      "note": "Individual profile attempt returned 403; same identity already listed. No new fact accepted from discovery snippets."
+    },
+    {
+      "employer": "University of New York in Prague",
+      "pagesExamined": [
+        "https://www.unyp.cz/academic-staff/recS3Rec7Em4E0IFB/hieu-nguyen/"
+      ],
+      "note": "Economics lecturer lead is a PhD candidate; excluded."
+    },
+    {
+      "employer": "Slovak University of Technology in Bratislava",
+      "pagesExamined": [
+        "https://www.fiit.stuba.sk/ludia/giang-nguyen.html?page_id=5810"
+      ],
+      "note": "Individual page inaccessible through web tool; Giang Nguyen Thu already listed by exact identity URL."
+    },
+    {
+      "employer": "Other European university reconnaissance",
+      "pagesExamined": [],
+      "note": "Broad regional searches covered Slovakia, Slovenia, Croatia, Greece, Romania, Bulgaria, Serbia, the Baltic states, Malta, Cyprus, Russia and Ukraine. No additional employer-verified eligible university appointment found. These were search-level reconnaissance, not complete institutional-directory sweeps. Ireland/New Zealand, DACH, Nordic/Benelux and Turkey were excluded after consulting slices.tsv because separate slices cover them. Non-university institutes were excluded. All-field searches included academic ranks in English/Italian/Spanish/Polish/Czech plus Vietnamese names and university affiliation; strongest actual employer-page coverage was CS/engineering, business/economics and humanities. This is a bounded discovery pass, not an assertion of exhaustive coverage of every European university. Stopped after repeated searches returned existing entries or excluded/unsupported appointments rather than padding the 25-candidate maximum."
+    }
+  ]
+}

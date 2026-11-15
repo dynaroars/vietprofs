@@ -1,0 +1,30 @@
+{
+  "verifier": "codex",
+  "input": "maintenance/sector-expansion/runs/w2/sg-hk-asia.codex.json",
+  "candidates": [
+    {
+      "name": "Luong Trung Huynh",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Opened https://ait.ac.th/people/dr-huynh-trung-luong/: individual employer profile identifies a Professor of Industrial Systems Engineering, department head and program chair in Thailand, with AIT D.Eng. (2000) and HCMC University of Technology B.Eng. (1992). Current faculty listing at https://ait.ac.th/program/industrial-and-manufacturing-engineering-ime/ independently corroborates the substantive professorship. Vietnamese given names Trung Luong and Vietnamese undergraduate education provide affirmative signals beyond the surname; https://sim.hcmut.edu.vn/gioi-thieu-dien-gia-chinh-keynote-speaker-gs-ts-huynh-trung-luong/ also supplies the matching Vietnamese name. Ran npm run find-roster-matches with the proposed name, employer profile and employer-linked Scholar identity URL: no roster or retired-id matches. Absent from already-proposed.txt. No evidence of a Vietnam-based primary appointment.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Tuan Khai Vu",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Opened https://kenkyu-web.hosei.ac.jp/hosei/detail.html?lang=en&systemId=04f52bfacfc52e74: current individual employer database lists Professor, Faculty of Economics, Department of International Economics, with continuous Hosei employment since 2016 and professorship since April 2017. It documents Yokohama National University economics PhD (March 2008), publications through March 2026, and prior National Economics University (Hanoi) study. Tuan Khai plus the Hanoi educational history supports Vietnamese identity beyond Vu alone. Primary appointment is in Japan. Ran npm run find-roster-matches with the name, employer profile, researchmap and J-GLOBAL URLs. Name-only hits are distinct: vp-0472 is a neurologist with Penn State MD; vp-1665 a planetary scientist with Tufts PhD (2013); vp-2112 an accounting scholar with Exeter PhD (2017). Inspected their roster records; fields, degrees and career histories differ. No identity-URL or retired-id match; absent from already-proposed.txt.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Linh Thi Hoai Nguyen",
+      "verdict": "fail",
+      "failedTests": [
+        2
+      ],
+      "reason": "Test 2 remains unverified, rather than proven ineligible. Opened https://i2cner.kyushu-u.ac.jp/en/seeds/11018/: employer-hosted individual research profile names her Assistant Professor in Fukuoka, Japan, but was last updated July 2024 and does not establish tenure-track or a continuing appointment. Opened https://q-aos.kyushu-u.ac.jp/en/events/events_view.php?cId=2642: March 2026 university report corroborates the same I2CNER role under NGUYEN Thi Hoai Linh, supporting current affiliation and Vietnamese given-name identity beyond the surname. Opened https://link.springer.com/book/10.1007/978-981-97-7850-8: biography confirms Osaka PhD (2014) and assistant professorship since November 2023, but no appointment terms. Current https://i2cner.kyushu-u.ac.jp/en/researchers/ omits her. These sources establish the title but do not settle the proposed Tenure-line track or another eligible continuing track; obtain person-specific tenure/continuing-status evidence before intake. Ran npm run find-roster-matches with employer, ResearchGate and publisher-linked ORCID URLs. Inspected all name-only hits: vp-0372 language/migration, vp-0476 philosophy, vp-0604 banking/Bangor PhD, vp-0677 finance, vp-1951 social entrepreneurship/Sydney PhD, vp-2234 regenerative dentistry, vp-2285 dental microbiology/UNLV PhD. They differ from this Osaka-trained mathematical/materials researcher; no identity-URL or retired-id match. Absent from already-proposed.txt. No evidence of a Vietnam-based primary appointment.",
+      "correctedFields": {}
+    }
+  ],
+  "possible_move": []
+}

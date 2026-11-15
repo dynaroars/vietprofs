@@ -1,0 +1,387 @@
+{
+  "group": "lab",
+  "agent": "codex",
+  "slice": "us-institutes-2",
+  "finishedAt": "2026-11-15T00:30:31.178744Z",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Huy Nguyen",
+        "university": "Dana-Farber Cancer Institute",
+        "institutionType": "Independent nonprofit research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Center for DNA Damage and Repair, Department of Radiation Oncology",
+        "city": "Boston",
+        "state": "Massachusetts",
+        "country": "United States",
+        "researchAreas": [
+          "Computational Biology",
+          "DNA Damage and Repair",
+          "Genomics"
+        ],
+        "profileUrl": "https://www.dana-farber.org/research/integrative-research/dna-damage-and-repair/team"
+      },
+      "evidence": {
+        "currentRole": "https://www.dana-farber.org/research/integrative-research/dna-damage-and-repair/team — \"Huy Nguyen, ALM, MS\"; \"CDDR Staff Scientist\"; identifies him as a computational biologist in the D'Andrea laboratory and associated scientist at Broad. Live HTTP 200 retrieved with Python requests; web open timed out. Career staff position, separated from trainee roles; prior Whitehead/Broad genome-mapping work is described on the same page.",
+        "doctorateOrPapers": "Publication route; employer bio lists two masters degrees, so no doctorate proposed. Two distinct identity-resolved papers within 2023-11-14–2026-11-14: (1) The splicing factor CCAR1 regulates the Fanconi anemia/BRCA pathway, Molecular Cell, first published 2024-07-17, DOI 10.1016/j.molcel.2024.06.031, PMID 39025073, https://pubmed.ncbi.nlm.nih.gov/39025073/ ; (2) CHAMP1 complex directs heterochromatin assembly and promotes homology-directed DNA repair, Nature Communications, 2025-02-17, DOI 10.1038/s41467-025-56834-6, PMID 39962076, https://www.nature.com/articles/s41467-025-56834-6 . Europe PMC live core records verified both full author lists and Huy Nguyen's Dana-Farber radiation-oncology affiliation: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.1016/j.molcel.2024.06.031&format=json&resultType=core and https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.1038/s41467-025-56834-6&format=json&resultType=core . Matching D'Andrea coauthors and exact employer/unit resolve identity; https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE242781 additionally identifies Huy as the Dana-Farber/D'Andrea data contact. CHAMP1 dataset PXD055109 identifies huy_nguyen@dfci.harvard.edu, matching the current employer page. A third paper, DOI 10.1073/pnas.2525144122 (2026), was also verified in Europe PMC.",
+        "vietnameseSignal": "Vietnamese given name Huy together with Nguyen, spelled on the live Dana-Farber team page. No reconstructed diacritics or expanded name.",
+        "dedup": "Ran npm run find-roster-matches -- \"Huy Nguyen\" with --url for the current employer page, Nature paper, PubMed 41481470 and 39025073, ORCID 0000-0002-4424-1047 (obtained from paper metadata), and GEO GSE242781. Fourteen name-only matches, no identity-URL match: vp-0024, vp-0068, vp-0171, vp-0243, vp-0289, vp-0800, vp-0872, vp-1585, vp-2104, vp-2597, vp-3024, vp-3190, vp-3195, vp-3212. Inspected every matched roster record. Their distinct subjects/degree histories (CS theory, mathematics, management, acoustics, tissue engineering, strategy, clinical orthopaedics, marketing, geometric analysis, liver transplantation, embedded systems, spatial-genomics doctorate at Dartmouth, quantum computing, and Hitachi measurement systems) differ from this long-serving Whitehead/Broad genome-mapping computational biologist with Toronto/Harvard masters degrees and D'Andrea cancer-repair publications. Especially vp-3190 is Huy Q. Nguyen, Dartmouth PhD 2015, not this person. gh issue list --state all --search found unrelated same-name hits; read relevant batch bodies, including #1102 (Amazon), #1104, #329 and #1114. Not in already-proposed.txt."
+      }
+    },
+    {
+      "entry": {
+        "name": "Paul Linh Nguyen",
+        "university": "Dana-Farber Cancer Institute",
+        "institutionType": "Independent nonprofit research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Radiation Oncology",
+        "city": "Boston",
+        "state": "Massachusetts",
+        "country": "United States",
+        "researchAreas": [
+          "Prostate Cancer",
+          "Radiation Oncology",
+          "Androgen Deprivation Therapy",
+          "Clinical Trials"
+        ],
+        "profileUrl": "https://www.dana-farber.org/find-a-doctor/paul-l-nguyen"
+      },
+      "evidence": {
+        "currentRole": "https://www.dana-farber.org/find-a-doctor/paul-l-nguyen — \"Senior Physician\"; \"Director, Genitourinary Radiation Oncology\". Live HTTP 200 opened with web and requests. The profile describes leadership of the FORMULA-509, PREDICT-RT and ENZARAD trials and the continuing clinical-research role. Also holds a Harvard Medical School professorship and Brigham and Women's Hospital appointment; these are one person, not additional candidates.",
+        "doctorateOrPapers": "Clinical-research MD exception: the same official profile explicitly states MD from Harvard Medical School and an active prostate-cancer research program. It also lists numerous distinct 2024 research papers, including Insulin resistance during androgen deprivation therapy in men with prostate cancer (Cancer, 2024-06-16) and Long-Term Analysis of NRG Oncology RTOG 0415 (J Clin Oncol, 2024-07-10). No PhD or degree year inferred; the MD is intentionally not placed in phdInstitution.",
+        "vietnameseSignal": "Vietnamese middle/given name Linh, beyond surname alone. Full name Paul Linh Nguyen is visible on the opened biography https://en.wikipedia.org/wiki/Paul_L._Nguyen (Born field), matching the Dana-Farber radiation oncologist. Harvard Catalyst also indexes him as Paul Linh Nguyen, M.D. at https://connects.catalyst.harvard.edu/profiles/display/Person/3917/Network/ResearchAreas/categories ; that Harvard page could not be fetched live (cache miss), so the opened biography supplies the explicit expanded name. Do not reconstruct vietnameseName.",
+        "dedup": "Ran npm run find-roster-matches for both \"Paul L. Nguyen\" and \"Paul Linh Nguyen\" with the Dana-Farber profile, opened biography and Harvard coauthor-map identity URL. Initials search found vp-0256 Christopher Paul Nguyen (management, University of New Mexico). Full-name search found vp-0372 (languages), vp-0677 (finance), vp-1951 (business), vp-2234 (biomaterials/dental engineering) and vp-2285 (dental medicine). All are different people by subject, title and institution; no identity-URL match. gh issue list --state all --search with Paul and Nguyen found unrelated name/context matches and no proposal titled for this radiation oncologist. Not in already-proposed.txt."
+      }
+    }
+  ],
+  "already_listed": [
+    {
+      "name": "Hai T. Dao",
+      "id": "vp-2746",
+      "note": "Same St. Jude Chemical Biology and Therapeutics investigator, Scripps doctorate and Princeton postdoc; verified live https://www.stjude.org/research/labs/dao-lab/dao-lab-team.html . find-roster-matches returned exact name and institutional profile URL."
+    },
+    {
+      "name": "Trang VoPham",
+      "id": "vp-3300",
+      "note": "Same Fred Hutch epidemiologist/Geospatial Exposome Lab PI, Pittsburgh PhD 2014; verified live https://www.fredhutch.org/en/people/v/trang-vopham.html . find-roster-matches returned exact name and former canonical Fred Hutch profile URL."
+    }
+  ],
+  "possible_move": [],
+  "rejected": [
+    {
+      "name": "Phuong Nguyen (Broad Hung lab)",
+      "reason": "https://www.broadinstitute.org/scientific-community/science/core-faculty-labs/hung-lab/current-lab-members lists Research Technician; no doctorate or two recent identity-resolved papers established."
+    },
+    {
+      "name": "Minh Hieu (Harry) Nguyen",
+      "reason": "Broad summer-program bio describes a rising undergraduate sophomore, not career research staff: https://www.broadinstitute.org/bios/harry-nguyen ."
+    },
+    {
+      "name": "Trang Nguyen (Broad Flannick lab)",
+      "reason": "Promising publication-qualified lead, but the live https://flannicklab.org/people/ page returned only People / Former Lab Members (HTTP 200, checked with web and requests), without the candidate. Search snippets describe Computational Associate II and recent papers, but snippets cannot verify a current role under BRIEF2. Do not confuse a search-indexed bio with a successfully opened live person page."
+    },
+    {
+      "name": "Thanh Long (Lucas) Nguyen",
+      "reason": "Search-indexed Flannick lab bio suggests Computational Associate I, but live https://flannicklab.org/people/ contains no person bio; no current-role verification or two recent papers established."
+    },
+    {
+      "name": "Quy Hoang",
+      "reason": "Broad-affiliated publications and Knowledge Portal team slides are leads only; no live current-employer page establishing this person's career research role found."
+    },
+    {
+      "name": "Trinh Nguyen (Broad spatial platform)",
+      "reason": "Listed under Platform Alumni in https://www.broadinstitute.org/technology-areas-spatial-technology-platform/spatial-technology-platform-team ; not a verified current appointment."
+    },
+    {
+      "name": "Khoi Pham",
+      "reason": "Broad Proteomics Alumni lists research associate 2022–2023, left for graduate school: https://www.broadinstitute.org/proteomics/proteomics-alumni ."
+    },
+    {
+      "name": "Kendrick Nguyen",
+      "reason": "Salk news explicitly identifies a graduate student, not career research staff: https://www.salk.edu/news-release/cancer-biologists-are-bringing-in-the-b-cell-reinforcements/ ."
+    },
+    {
+      "name": "Ha Nguyen / Ngoc-Ha Nguyen (Salk)",
+      "reason": "Technology-transfer/licensing/business-development director; doctorate alone does not make this a qualifying research role. https://www.salk.edu/events/the-power-of-science-lecture-series/impact-of-salk-science-on-humanity/ ."
+    },
+    {
+      "name": "Andy Tran (Scripps Ward lab)",
+      "reason": "Live https://ward.scripps.edu/members/ lists Bioinformatics Analyst I; no doctorate or two recent identity-resolved research papers established."
+    },
+    {
+      "name": "Thu Nguyen (Scripps Bollong lab)",
+      "reason": "The 2024 employer lecture PDF identifies an undergraduate intern, not Staff Scientist; nearby staff title belongs to another person. https://frontrow.scripps.edu/wp-content/uploads/2023/12/scripps-research-front-row-lecture-michael-bollong-slides.pdf ."
+    },
+    {
+      "name": "T. K. Yen Nguyen",
+      "reason": "Wilson lab identifies Postdoctoral Associate, excluded: https://wilson.scripps.edu/our-team/ ."
+    },
+    {
+      "name": "Bao Nguyen (Calibr)",
+      "reason": "Third-party employee listing suggests Senior Research Scientist, but no live employer or personal-site current-role page found; cannot verify from an employee aggregator."
+    },
+    {
+      "name": "Long Nguyen (Fred Hutch Newell lab)",
+      "reason": "Live https://research.fredhutch.org/newell/en/lab-members.html lists Bioinformatics Analyst; no doctorate or two recent identity-resolved employer papers established."
+    },
+    {
+      "name": "Quynh Do",
+      "reason": "Grady lab identifies Post-Doctoral Research Fellow, excluded: https://research.fredhutch.org/grady/en/lab-members.html ."
+    },
+    {
+      "name": "Adam Nguyen",
+      "reason": "Fred Hutch news identifies graduate student, excluded: https://www.fredhutch.org/en/news/center-news/2024/12/nih-f31-adam-nguyen-structural-biology.html ."
+    },
+    {
+      "name": "Katarina Nguyen",
+      "reason": "Current Fred Hutch clinical-care role and Vietnamese parents documented, but no qualifying continuing research appointment established from the discovered news profile. https://www.fredhutch.org/en/news/blog/2026/04/what-inspires-radiation-oncologist-dr-katarina-nguyen-people-science-and-music.html ."
+    },
+    {
+      "name": "Anthony Pham",
+      "reason": "Community radiation oncologist; no affirmative Vietnamese signal beyond surname or qualifying career research program established. https://www.fredhutch.org/en/people/p/anthony-pham.html ."
+    },
+    {
+      "name": "Quang Tran",
+      "reason": "Live Ma lab team lists Postdoctoral Research Associate, excluded: https://www.stjude.org/research/labs/ma-lab/ma-lab-team.html ."
+    },
+    {
+      "name": "Hai Nguyen (St. Jude Torres lab)",
+      "reason": "Live https://www.stjude.org/research/labs/torres-lab/torres-lab-team.html lists Researcher, but neither doctorate nor two recent papers identity-resolved to this Torres-lab researcher established. Different Benaroya/Youngblood publication lead was not assumed to be this person."
+    },
+    {
+      "name": "Kim Hoa Nguyen",
+      "reason": "St. Jude global-health student/collaborator whose employer is Hue Central Hospital in Vietnam, outside geographic eligibility. https://www.stjude.org/education-training/st-jude-graduate-school-of-biomedical-sciences/students/meet-our-students/directory/n/kim-hoa-nguyen.html ."
+    },
+    {
+      "name": "Ella Nguyen",
+      "reason": "Recently graduated PhD; current lab lists Postdoctoral Fellow, excluded: https://www.theperrylab.com/ ."
+    },
+    {
+      "name": "Thinh N. Tran",
+      "reason": "MSK alumni profile states current Bioinformatics Data Scientist at Natera, outside this institute slice: https://www.sloankettering.edu/research-areas/labs/members/thinh-tran ."
+    },
+    {
+      "name": "Hoa Tran (MSK Cheung lab)",
+      "reason": "Live https://www.sloankettering.edu/research-areas/labs/nai-kong-cheung lists MA, Senior Research Assistant. No doctorate or two distinct recent MSK papers identity-resolved to this researcher established; unrelated same-name publications were not counted."
+    },
+    {
+      "name": "Diu Nguyen",
+      "reason": "MSK award lead refers to a former postdoctoral scholar; current lab describes an independent group at Barts/Queen Mary since 2022, outside this US-institute slice. https://www.diunguyenlab.org/people/ ."
+    },
+    {
+      "name": "Kevin Nguyen (Allen Institute)",
+      "reason": "Employer profile lists Research Associate I, BS and histology-support duties, without qualifying doctorate or two recent papers; also lacks affirmative Vietnamese signal beyond surname. https://alleninstitute.org/person/kevin-nguyen ."
+    },
+    {
+      "name": "Tai Nguyen (Allen Institute)",
+      "reason": "Employer profile explicitly labels alumni, not a current appointment: https://alleninstitute.org/person/tai-nguyen ."
+    },
+    {
+      "name": "Nhan-Kiet Ngo",
+      "reason": "Live career Research Associate III and Vietnamese given names established: https://alleninstitute.org/person/nhan-kiet-ngo . No doctorate. Found one distinct 2026 paper, Map of spiking activity underlying change detection (PMID 42419303). The other recent-looking featured paper, A whole-brain monosynaptic input connectome (PMID 36550293), was published February 2023, outside the trailing three-year window from November 2026. Preprint/final versions were not double counted."
+    },
+    {
+      "name": "Michael Tieu",
+      "reason": "Live Allen career Research Associate III and multiple 2024–2025 papers established, but no affirmative Vietnamese signal beyond surname; same-name Vietnamese businessman is a different person. https://alleninstitute.org/person/michael-tieu ."
+    },
+    {
+      "name": "Katrina Nguyen (Allen Institute)",
+      "reason": "Employer lists career Research Associate III and recent papers, but no affirmative Vietnamese signal beyond surname found. Same-name Vietnamese marketing graduates and physician have incompatible education/careers and were not used as identity evidence. https://alleninstitute.org/person/katrina-nguyen ."
+    },
+    {
+      "name": "Ken Nguyen (Janelia Shroff lab)",
+      "reason": "Live lab members page lists Visiting Scientist, excluded: https://www.janelia.org/lab/shroff-lab/members ."
+    },
+    {
+      "name": "Quynh-Mai Pham (Jackson Laboratory)",
+      "reason": "Resource directory lists Research Assistant III, with no doctorate or two recent identity-resolved papers established: https://www.jax.org/research-and-faculty/resources ."
+    },
+    {
+      "name": "Ahn (Audrey) Nguyen",
+      "reason": "Van Andel employer search result identifies PhD Student. Person page timed out with web; no career appointment verified. https://joneslab.vai.org/people/audrey-nguyen/ ."
+    },
+    {
+      "name": "Khoa Nguyen (Stowers)",
+      "reason": "Employer article explicitly identifies postdoc, excluded: https://www.stowers.org/news/postdoc-profile-q-a-with-piotrowski-lab-postdoc-khoa-nguyen ."
+    },
+    {
+      "name": "Tran Nguyen (Wistar)",
+      "reason": "Live genomics facility lists MS, Associate Managing Director / Gene Expression Assay Specialist. No doctorate or two recent authored research papers found; acknowledgments for technical assistance are not authorship. https://www.wistar.org/resources/genomics-facility/ ."
+    },
+    {
+      "name": "Quynh Nguyen (La Jolla Institute)",
+      "reason": "Live Shresta lab lists MD/PhD Postdoctoral Fellow, excluded: https://www.lji.org/labs/shresta-lab/ ."
+    },
+    {
+      "name": "Benjamin Nguyen (La Jolla Institute)",
+      "reason": "Reina lab lists Student Volunteer, excluded: https://www.lji.org/labs/reina-lab/ ."
+    },
+    {
+      "name": "Liz / Elizabeth Nguyen (Gladstone)",
+      "reason": "Administrative Assistant/Specialist, not research staff: https://www.engelhardt.gladstone.org/team/elizabeth-nguyen%2C-bs ."
+    },
+    {
+      "name": "Jeremy Nguyen (Gladstone)",
+      "reason": "Third-party Research Associate I lead only; no live employer current-role profile, doctorate or two recent papers established."
+    },
+    {
+      "name": "Anh Nguyen (Whitehead)",
+      "reason": "Opened employer interview identifies postdoc; no newer qualifying career appointment verified: https://wi.mit.edu/news/meet-whitehead-postdoc-anh-nguyen ."
+    },
+    {
+      "name": "Ally Nguyen (Whitehead)",
+      "reason": "Opened employer interview identifies postdoc; no newer qualifying career appointment verified: https://wi.mit.edu/news/meet-whitehead-postdoc-ally-nguyen ."
+    }
+  ],
+  "coverage": [
+    {
+      "employer": "Broad Institute",
+      "pagesExamined": [
+        "https://www.broadinstitute.org/scientific-community/science/core-faculty-labs/hung-lab/current-lab-members",
+        "https://flannicklab.org/people/"
+      ],
+      "note": "Nguyen, Tran, Pham, Bui, Hoang and Vietnamese-signal searches; Hung technician and Flannick computational-staff leads screened. Flannick live page is empty of bios despite richer indexed snippets; no appointment accepted from those snippets. Publications and alumni pages supplied additional leads. Huy Nguyen's Broad association is secondary to Dana-Farber; one candidate only."
+    },
+    {
+      "employer": "Salk Institute for Biological Studies",
+      "pagesExamined": [
+        "https://www.salk.edu/science/directory/faculty/?sort=name",
+        "https://www.salk.edu/news-release/cancer-biologists-are-bringing-in-the-b-cell-reinforcements/"
+      ],
+      "note": "Live faculty directory fetched HTTP 200 and Vietnamese-name tokens screened; Nguyen, Tran, Pham, Bui, Huynh, Trinh and Vietnamese searches yielded trainee and technology-transfer leads, no additional verified eligible researcher."
+    },
+    {
+      "employer": "Scripps Research",
+      "pagesExamined": [
+        "https://www.scripps.edu/faculty/directory/",
+        "https://ward.scripps.edu/members/",
+        "https://wilson.scripps.edu/our-team/"
+      ],
+      "note": "Directory and Nguyen/Tran/Pham/Huynh/Vu/Le searches plus Calibr lead screening. Howard Hang is in already-proposed.txt and was skipped. Other leads were analysts without qualifying credential/output evidence, trainees, or an aggregator-only scientist. Did not conflate Scripps Research with Scripps Health or UCSD Scripps Oceanography."
+    },
+    {
+      "employer": "Fred Hutch Cancer Center",
+      "pagesExamined": [
+        "https://research.fredhutch.org/newell/en/lab-members.html",
+        "https://www.fredhutch.org/en/people/v/trang-vopham.html"
+      ],
+      "note": "Nguyen, Tran, Pham, Le and Vietnamese-signal searches across lab rosters, faculty and news. VoPham already listed; analyst, graduate student, postdoctoral and clinical-care-only leads not promoted without eligibility evidence."
+    },
+    {
+      "employer": "St. Jude Children's Research Hospital",
+      "pagesExamined": [
+        "https://www.stjude.org/research/labs/ma-lab/ma-lab-team.html",
+        "https://www.stjude.org/research/labs/dao-lab/dao-lab-team.html",
+        "https://www.stjude.org/research/labs/torres-lab/torres-lab-team.html"
+      ],
+      "note": "Nguyen, Tran, Pham and related scientist/faculty searches. Dao already listed; Quang Tran postdoc; Hai Nguyen current researcher but credential/publication test unresolved; Vietnam-based global-health student excluded. Tam Tran appears in already-proposed.txt and was skipped."
+    },
+    {
+      "employer": "Memorial Sloan Kettering Cancer Center",
+      "pagesExamined": [
+        "https://www.sloankettering.edu/research-areas/labs/nai-kong-cheung",
+        "https://www.mskcc.org/research-advantage/core-facilities/cell-metabolism-laboratory"
+      ],
+      "note": "Nguyen, Tran, Pham, Hoang and physician/scientist searches, graduate-alumni and Cheung-lab lead checks. Cell-metabolism page returned 404. Hoa Tran held for missing doctorate/two recent papers. Thinh Tran and Diu Nguyen no longer in this employer slice; several student/postdoc leads excluded."
+    },
+    {
+      "employer": "Dana-Farber Cancer Institute",
+      "pagesExamined": [
+        "https://www.dana-farber.org/research/integrative-research/dna-damage-and-repair/team",
+        "https://www.dana-farber.org/find-a-doctor/paul-l-nguyen"
+      ],
+      "note": "Nguyen/Tran and scientist/physician searches across CDDR, lab people, and clinical-research profiles. Two verified candidates. CDDR fetch succeeded HTTP 200 via requests after web timeout. Paul Linh Nguyen has genuine continuing clinical-research leadership and MD; Huy Nguyen satisfies the two-recent-papers route."
+    },
+    {
+      "employer": "Allen Institute",
+      "pagesExamined": [
+        "https://alleninstitute.org/person/nhan-kiet-ngo",
+        "https://alleninstitute.org/person/michael-tieu",
+        "https://alleninstitute.org/person/kevin-nguyen",
+        "https://alleninstitute.org/person/tai-nguyen",
+        "https://alleninstitute.org/person/katrina-nguyen"
+      ],
+      "note": "Nguyen/Tran/Pham and coauthor-name expansion (Ngo, Tieu, Ho, Dang, Thanh Pham, Thuc Nghi Nguyen). Some career staff have strong papers but insufficient affirmative Vietnamese signal; Nhan-Kiet Ngo has only one verified paper within the exact trailing three-year window. No surname-only additions. Allen Institute for AI was not conflated with this biomedical institute."
+    },
+    {
+      "employer": "HHMI Janelia Research Campus",
+      "pagesExamined": [
+        "https://www.janelia.org/lab/shroff-lab/members"
+      ],
+      "note": "Nguyen, Tran, Pham and staff/scientist searches; Shroff members page opened live. Ken Nguyen explicitly visiting; undergraduate-program and publication-only leads do not establish eligible current staff roles."
+    },
+    {
+      "employer": "The Jackson Laboratory",
+      "pagesExamined": [
+        "https://www.jax.org/research-and-faculty/resources"
+      ],
+      "note": "Live extensive resources/core/computational-sciences staff directory plus Nguyen/Tran searches. Quynh-Mai Pham is research assistant without demonstrated doctorate or two recent authored papers. No additional verified candidate."
+    },
+    {
+      "employer": "Van Andel Institute",
+      "pagesExamined": [
+        "https://www.vai.org/graduate-school/faculty/",
+        "https://www.vai.org/research/",
+        "https://joneslab.vai.org/people/audrey-nguyen/"
+      ],
+      "note": "Nguyen, Tran and Vietnam searches plus live graduate faculty directory. Audrey Nguyen is a PhD-student lead, excluded. Main research page returned 403 via requests; Jones person page timed out with web. Accessible faculty directory supplied coverage; no blocked-page fact accepted."
+    },
+    {
+      "employer": "Stowers Institute for Medical Research",
+      "pagesExamined": [
+        "https://www.stowers.org/scientists",
+        "https://labs.stowers.org/piotrowski/team"
+      ],
+      "note": "Live all-scientists directory fetched HTTP 200 and surname tokens screened, plus Nguyen/Tran searches. Piotrowski team/alumni reviewed. Khoa Nguyen employer news is explicitly a postdoc; no additional verified continuing researcher."
+    },
+    {
+      "employer": "The Wistar Institute",
+      "pagesExamined": [
+        "https://www.wistar.org/articles/our-scientists/",
+        "https://www.wistar.org/resources/genomics-facility/"
+      ],
+      "note": "Live scientist listing and genomics facility via web; Nguyen/Tran/Le searches. Tran Nguyen current specialist/core director but neither doctorate nor two recent authored papers established. Requests to scientist listing returned 403, but web opened it; no bypass attempted."
+    },
+    {
+      "employer": "La Jolla Institute for Immunology",
+      "pagesExamined": [
+        "https://www.lji.org/our-team/faculty/",
+        "https://www.lji.org/labs/shresta-lab/"
+      ],
+      "note": "Full live faculty directory fetched HTTP 200; Nguyen searches and lab-team checks. Quynh Nguyen explicitly postdoc; Benjamin Nguyen student volunteer and Kathy Nguyen summer intern leads excluded."
+    },
+    {
+      "employer": "Sanford Burnham Prebys",
+      "pagesExamined": [
+        "https://sbpdiscovery.org/scientists/",
+        "https://labs.sbpdiscovery.org/Pages/Home.aspx"
+      ],
+      "note": "Nguyen, Tran, Huynh and Vietnamese searches; current scientists directory opened with web. Legacy labs directory timed out, and requests to modern directory returned 403. No verified new candidate; did not treat papers merely acknowledging a different Sanford stem-cell core as current SBP research appointments."
+    },
+    {
+      "employer": "Gladstone Institutes",
+      "pagesExamined": [
+        "https://gladstone.org/people/"
+      ],
+      "note": "Live people page opened but current parser exposes little substantive directory content; indexed investigator listing and Nguyen/Tran searches supplied leads. Liz Nguyen administrative; Jeremy Nguyen aggregator-only role unverified; Andrew Nguyen is a former postdoc now at Saint Louis University, outside slice. No additional verified candidate."
+    },
+    {
+      "employer": "Whitehead Institute",
+      "pagesExamined": [
+        "https://wi.mit.edu/people",
+        "https://wi.mit.edu/news/meet-whitehead-postdoc-anh-nguyen",
+        "https://wi.mit.edu/news/meet-whitehead-postdoc-ally-nguyen"
+      ],
+      "note": "Live members/fellows directory HTTP 200 and Nguyen staff/scientist searches. Two employer interviews explicitly identify postdocs; no newer eligible career staff appointment verified."
+    },
+    {
+      "employer": "Cold Spring Harbor Laboratory",
+      "pagesExamined": [
+        "https://www.cshl.edu/research/faculty-staff/"
+      ],
+      "note": "Full live faculty, research-professor and research-staff directory examined, plus Nguyen/Tran searches. No eligible new Vietnamese-signal career researcher found. Historical annual-report, conference-attendee and former-student mentions were not treated as current employment."
+    }
+  ]
+}

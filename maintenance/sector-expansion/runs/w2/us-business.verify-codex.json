@@ -1,0 +1,67 @@
+{
+  "verifier": "codex",
+  "input": "maintenance/sector-expansion/runs/w2/us-business.codex.json",
+  "candidates": [
+    {
+      "name": "Can Trinh",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live Troy faculty directory has a dedicated Can Trinh biography, current Assistant Professor title, marketing research and University of Tennessee marketing doctorate: https://www.troy.edu/academics/colleges-schools/business/departments/economics-finance-risk-management-insurance/faculty-staff.html . This is a person-specific department directory entry, not merely a team listing. Can together with Trinh supplies a Vietnamese given-name signal beyond surname alone. US university appointment; no roster/retired-ID matches in independent name and identity-URL checks; absent from already-proposed.txt.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Hieu Nguyen",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live individual employer profile identifies Professor of Marketing in Long Beach: https://web.csulb.edu/colleges/cob/intranet/vita/public/resume.php?cid=119&username=hnguye47 . Official education record confirms Hanoi undergraduate education and UT Arlington doctorate: https://web.csulb.edu/divisions/academic_affairs/catalog/2016-2017/faculty/faculty_n-r.html . Hieu plus Vietnam education supplies the affirmative Vietnamese signal. Independent dedup found name-only engineering, psychology and quantum-research namesakes plus vp-1973; the latter is a distinct Macquarie applied-finance/lending scholar (https://researchers.mq.edu.au/en/persons/hieu-nguyen/), not the CSULB marketing professor. No identity URL matches; absent from already-proposed.txt (Hieu D. and Hieu P. Nguyen are different published names).",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Hieu Minh Nguyen",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live official individual profile confirms Assistant Professor of Economics in Georgetown, Texas: https://www.southwestern.edu/live/profiles/49669-hieu-nguyen . Opened personal site https://www.hnecon.net/home independently confirms full name Hieu Minh Nguyen, Tennessee economics doctorate, Pittsburgh MA and experimental/public-policy research. Hieu Minh supplies Vietnamese given-name evidence. Independent dedup and roster inspection ruled out medical, engineering, computing, sociology and psychology namesakes; business matches vp-0163 and vp-1731 have Hawaii and Reading doctorates respectively, while vp-1973 studies applied finance/lending at Macquarie. No identity URL matches; absent from already-proposed.txt. Distinct from the CSULB marketing professor with UT Arlington doctorate.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Hazel Thu-Hien Nguyen",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live Southwestern individual profile confirms full published name, Associate Professor of Economics and Business, department chair and Floyd and Annetta Jones Chair: https://www.southwestern.edu/live/profiles/28355-hazel-nguyen . It documents Arkansas finance doctorate, Boston graduate education and Vietnam undergraduate education/work, affirmatively supporting Vietnamese identity and the proposed fields. Georgetown, Texas appointment. Independent dedup produced only name hits; vp-1907 is the Greenwich management-accounting scholar with an Aston accounting doctorate (https://www.gre.ac.uk/people/rep/faculty-of-business/thu-nguyen), distinct from this Arkansas-trained finance scholar. Other hits have chemistry, computing, biology or engineering careers. No identity URL overlap; absent from already-proposed.txt.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Tung (Francis) Cu",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live individual NEIU profile, despite its generic URL slug, explicitly identifies Tung (Francis) Cu as Associate Professor in Accounting, Business Law and Finance, lists LSU and Old Dominion research doctorates and Vietnam undergraduate education: https://www.neiu.edu/faculty/assistant-professor . Vietnamese given name and explicit Vietnam education supply affirmative identity evidence. Chicago campus office and US appointment establish outside-Vietnam location. Independent name/URL dedup found no roster or retired-ID matches; absent from already-proposed.txt.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Duc (Steve) Vu",
+      "verdict": "fixable",
+      "failedTests": [
+        1
+      ],
+      "reason": "The proposed URL is a dated Faculty Spotlight article and fails test 1 under VERIFY2 even though its content supports the appointment. Replace it with the live official departmental directory below: its dedicated Duc Vu entry gives Assistant Professor of Supply Chain Management, department, institutional email and phone, so it singles him out as a department directory entry. The linked individual central directory https://directory.umflint.edu/school-of-management-som/ducvu returned no readable web content and HTTP 403 on an ordinary request; do not treat that blocked page as verified. The opened employer spotlight confirms the Steve nickname and research role: https://blogs.umflint.edu/honors-program/2026/05/20/dr-duc-steve-vu/laurast/ . Duc with Vu supplies the Vietnamese given-name signal. Michigan appointment. Independent dedup using both published and short names and identity URLs found only vp-0931 Vu Duc Tran, a distinct JAIST-trained NLP scholar. Absent from already-proposed.txt.",
+      "correctedProfileUrl": "https://www.umflint.edu/som/contact-us/management-and-marketing-faculty/",
+      "correctedFields": {
+        "profileUrl": "https://www.umflint.edu/som/contact-us/management-and-marketing-faculty/"
+      }
+    },
+    {
+      "name": "Ngoc Dao",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live Kean individual profile confirms current Assistant Professor, department and economics research: https://www.kean.edu/directory/ngoc-dao . Opened official faculty biography confirms Indiana University Bloomington Public Affairs doctorate and applied-economist role: https://www.kean.edu/academics/college-business-and-public-management/department-criminal-justice-and-public-affairs-0 . Ngoc supplies a Vietnamese given-name signal beyond Dao alone. New Jersey campus office supports outside-Vietnam location. Independent dedup found only vp-1262 (Chung-Ang-trained network/AI researcher) and vp-2614 (JAIST-trained materials chemist), both distinct from this Indiana-trained economist. No identity URL matches; absent from already-proposed.txt.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    }
+  ],
+  "possible_move": []
+}

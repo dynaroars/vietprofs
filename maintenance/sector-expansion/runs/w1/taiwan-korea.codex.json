@@ -1,0 +1,428 @@
+{
+  "group": "university",
+  "agent": "codex",
+  "slice": "taiwan-korea",
+  "finishedAt": "2026-11-15T00:19:14.699337Z",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Hang Thi Dieu Nguyen",
+        "university": "National Taipei University",
+        "country": "Taiwan",
+        "department": "MBA in Finance",
+        "rank": "Assistant Professor",
+        "track": "Tenure-line",
+        "field": "Business & Economics",
+        "researchAreas": [
+          "Corporate Finance",
+          "Mergers and Acquisitions",
+          "Sustainable Finance",
+          "Green Finance"
+        ],
+        "phdInstitution": "Yuan Ze University",
+        "profileUrl": "https://www.gmba.ntpu.edu.tw/web/about/about.jsp?cp_id=CP1785118671323"
+      },
+      "evidence": {
+        "currentRole": "https://www.gmba.ntpu.edu.tw/web/about/about.jsp?cp_id=CP1785118671323 — \"Title： Assistant Professor\". Current university person profile supplies finance research areas and 2025–2026 publications.",
+        "doctorateOrPapers": "https://www.gmba.ntpu.edu.tw/web/about/about.jsp?cp_id=CP1785118671323 — \"Ph.D. in Finance, Yuan Ze University\". Degree year not stated; omitted.",
+        "vietnameseSignal": "https://www.gmba.ntpu.edu.tw/web/about/about.jsp?cp_id=CP1785118671323 publishes the full Vietnamese given/middle-name combination Hang Thi Dieu with Nguyen, not a surname-only signal. Hana is the explicitly published nickname. No diacritics reconstructed.",
+        "dedup": "Ran npm run find-roster-matches -- \"Hang Thi Dieu Nguyen\" --url https://www.gmba.ntpu.edu.tw/web/about/about.jsp?cp_id=CP1785118671323. Only vp-0476 C. Thi Nguyen matched by partial name. Different identity: that record is a Utah philosopher with UCLA PhD (2011); candidate is a Yuan Ze finance doctorate with NTPU finance publications. No URL match. Checked name-order variants and already-proposed.txt; no matching prior proposal."
+      }
+    },
+    {
+      "entry": {
+        "name": "Thanh Thien Phuc Nguyen",
+        "university": "National Taiwan Ocean University",
+        "country": "Taiwan",
+        "department": "Department of Electrical Engineering",
+        "rank": "Assistant Professor",
+        "track": "Tenure-line",
+        "field": "Engineering",
+        "researchAreas": [
+          "Computer Vision",
+          "Digital Image Processing",
+          "Machine Learning",
+          "Deep Learning",
+          "Robot Learning"
+        ],
+        "phdInstitution": "National Taiwan University of Science and Technology",
+        "profileUrl": "https://ee.ntou.edu.tw/p/412-1062-7475.php?Lang=en"
+      },
+      "evidence": {
+        "currentRole": "https://ee.ntou.edu.tw/p/412-1062-7475.php?Lang=en — \"Assiatant Professor\" [source spelling]. Embedded individual faculty profile identifies Nguyen Thanh Thien Phuc, nttphuc@mail.ntou.edu.tw, information-technology group. Chinese version https://ee.ntou.edu.tw/p/412-1062-7475.php?Lang=zh-tw independently states 助理教授 and places the entry before the adjunct section.",
+        "doctorateOrPapers": "https://ee.ntou.edu.tw/p/412-1062-7475.php?Lang=en — \"Ph.D., Electrical Engineering, National Taiwan University of Science and Technology\". No degree year supplied.",
+        "vietnameseSignal": "https://ee.ntou.edu.tw/p/412-1062-7475.php?Lang=en gives the Vietnamese given/middle names Thanh Thien Phuc with Nguyen; the bilingual listing has 阮清天福. Vietnamese name diacritics are not inferred.",
+        "dedup": "Ran npm run find-roster-matches -- \"Thanh Thien Phuc Nguyen\" --url with both opened English and Chinese faculty URLs. No URL hit. Partial-name hits: vp-0166, vp-0181, vp-0208, vp-0363, vp-0806, vp-0887, vp-1615, vp-1678, vp-1807, vp-2114, vp-2973, vp-3102, vp-3143, vp-3279; retired vp-0822, vp-0844, vp-1581. Compared roster fields and degree histories: none has this full name, NTUST electrical-engineering doctorate, NTOU email or profile. Closest vp-0806 (and its retired duplicate vp-1581) is the Kyoto quantum/molecular-engineering lecturer with University of Tokyo PhD 2014; vp-3143 is a Motional computer-vision researcher with UC Irvine PhD 2018. Other hits are different names, disciplines or degree histories. No prior-proposal match."
+      }
+    },
+    {
+      "entry": {
+        "name": "Hien X. Bui",
+        "university": "National Central University",
+        "country": "Taiwan",
+        "city": "Taoyuan City",
+        "department": "Department of Atmospheric Sciences",
+        "rank": "Assistant Professor",
+        "track": "Tenure-line",
+        "field": "Earth & Environmental Sciences",
+        "researchAreas": [
+          "Climate Change",
+          "Climate Extremes",
+          "Climate Intervention",
+          "Tropical Dynamics",
+          "Land-Atmosphere-Ocean Interactions"
+        ],
+        "phdInstitution": "National Central University",
+        "phdYear": 2016,
+        "undergradInstitution": "University of Science, Vietnam National University Ho Chi Minh City",
+        "undergradYear": 2010,
+        "profileUrl": "https://www.atm.ncu.edu.tw/about_2.php",
+        "websiteUrl": "https://sites.google.com/view/hienbui0526/hien-bui",
+        "scholarUrl": "https://scholar.google.com/citations?user=eOOMGmoAAAAJ"
+      },
+      "evidence": {
+        "currentRole": "https://www.atm.ncu.edu.tw/about_2.php — individual faculty block: \"Hien X. Bui\", \"助理教授 Assistant Professor/⽟山青年學者 Yushan Young Fellow\". Full-time faculty directory; matches personal site through the same name and hien.bui@atm.ncu.edu.tw. https://sites.google.com/view/hienbui0526/hien-bui dates the appointment to February 2025 and supplies Taoyuan City address.",
+        "doctorateOrPapers": "https://www.atm.ncu.edu.tw/about_2.php — \"Ph.D. National Central University (TIGP-ESS)\". https://sites.google.com/view/hienbui0526/hien-bui explicitly gives doctorate 2016 and Vietnam undergraduate degree 2010.",
+        "vietnameseSignal": "https://sites.google.com/view/hienbui0526/hien-bui states undergraduate education in physics at University of Science, Ho Chi Minh City, Viet Nam; career biography explicitly identifies Vietnam National University, Ho Chi Minh City. This affirmative education signal resolves the ambiguous Bui surname.",
+        "dedup": "Ran npm run find-roster-matches -- \"Hien X. Bui\" --url with institutional faculty page, personal page, linked Scholar ID eOOMGmoAAAAJ, and linked NCU researcher URL. Result: no roster or retired-id matches. Also checked Hien Bui variant locally and already-proposed.txt. NCU researcher-portal person URL returned 401 and Scholar retrieval failed; neither is used as profileUrl. Scholar identity comes from her own linked profile, not a name search."
+      }
+    },
+    {
+      "entry": {
+        "name": "Vinh Ya",
+        "university": "Tamkang University",
+        "country": "Taiwan",
+        "city": "New Taipei",
+        "department": "Department of Water Resources and Environmental Engineering",
+        "rank": "Assistant Professor",
+        "track": "Tenure-line",
+        "field": "Engineering",
+        "researchAreas": [
+          "Industrial Wastewater Treatment",
+          "Electrochemical Treatment",
+          "Phosphorus Recovery",
+          "Fluoride Recovery"
+        ],
+        "phdInstitution": "Tamkang University",
+        "msInstitution": "Tamkang University",
+        "undergradInstitution": "Dalat University",
+        "profileUrl": "https://www.wree.tku.edu.tw/index.php/teacher/54"
+      },
+      "evidence": {
+        "currentRole": "https://www.wree.tku.edu.tw/index.php/teacher/54 — \"Assistant Professor (August 2024-now)\"; Chinese fields identify full-time faculty (專任) and assistant professor (助理教授). Current research and 2026 papers appear on the same profile. Web-tool fetch failed, but Python urllib.request opened the live employer page successfully and its HTML was read in this run.",
+        "doctorateOrPapers": "https://www.wree.tku.edu.tw/index.php/teacher/54 lists a doctorate and master’s in water resources/environmental engineering at Tamkang and B.S. in environment/natural resources at Dalat University, Vietnam. Degree year omitted because employer profile does not state it.",
+        "vietnameseSignal": "https://www.wree.tku.edu.tw/index.php/teacher/54 explicitly lists B.S. at Dalat University, Vietnam and former lecturer appointment there. This is an affirmative Vietnamese education/career signal for the uncommon name. Official publication list consistently uses Vinh Ya; that spelling is retained.",
+        "dedup": "Ran npm run find-roster-matches -- \"Vinh Ya\" --url https://www.wree.tku.edu.tw/index.php/teacher/54. Result: no roster or retired-id matches. Checked reversed Ya Vinh variant and already-proposed.txt. No name or identity-URL duplicate found."
+      }
+    },
+    {
+      "entry": {
+        "name": "Trung Hieu Pham",
+        "university": "Kyungsung University",
+        "country": "South Korea",
+        "city": "Busan",
+        "department": "Global IT Engineering",
+        "rank": "Assistant Professor",
+        "track": "Tenure-line",
+        "field": "Engineering",
+        "researchAreas": [
+          "Embedded Systems",
+          "Motor Drives",
+          "Internet of Things",
+          "Computer Programming"
+        ],
+        "profileUrl": "https://kscms.ks.ac.kr/gs/CMS/Contents/Contents.do?mCode=MN027"
+      },
+      "evidence": {
+        "currentRole": "https://kscms.ks.ac.kr/gs/CMS/Contents/Contents.do?mCode=MN027 — \"Pham Trung Hieu, Ph.D.\", \"Assistant Professor\" in Global IT Engineering. Independent current college listing https://kscms.ks.ac.kr/gc/CMS/ProfessorMgr/list.do?mCode=MN058 gives the same name, rank, phone and phamtrunghieu@ks.ac.kr. Distinguished from explicitly visiting faculty in the same list. Campus address states Busan.",
+        "doctorateOrPapers": "https://kscms.ks.ac.kr/gs/CMS/Contents/Contents.do?mCode=MN027 explicitly identifies the individual as Ph.D. Doctoral institution/year are omitted because the opened employer profiles do not supply them.",
+        "vietnameseSignal": "https://kscms.ks.ac.kr/gs/CMS/Contents/Contents.do?mCode=MN027 gives the affirmative Vietnamese given/middle-name combination Trung Hieu with Pham; not accepted on surname alone.",
+        "dedup": "Ran npm run find-roster-matches -- \"Trung Hieu Pham\" --url with both opened Kyungsung faculty pages. No URL matches. Partial-name hits vp-0706 (and retired duplicate vp-1245), vp-1215, vp-1709 and vp-2928 were checked: Texas Tech Hieu Pham Trung Nguyen has a different surname and McGill PhD 2012 in semiconductor photonics; UAH Hieu Pham has Iowa State PhD 2018 and optimization/business research; Seattle Trung Pham is a Jesuit visual artist; NVIDIA Trung T. Pham has Adelaide PhD 2014 and computer-vision research. None matches this Kyungsung motor-drive/embedded-systems faculty identity. No prior-proposal match."
+      }
+    }
+  ],
+  "already_listed": [
+    {
+      "name": "Van Thinh Nguyen",
+      "id": "vp-1446",
+      "note": "https://cuee.snu.ac.kr/bbs/board.php?bo_table=sub2_1&wr_id=1 — Same full name, SNU civil/environmental faculty and Karlsruhe doctorate; exact profile URL match in dedup. Command run with name and URL."
+    },
+    {
+      "name": "Ngoc Cuong Nguyen",
+      "id": "vp-1125",
+      "note": "https://mathsci.kaist.ac.kr/home/en/math-people/professor/ — Same KAIST mathematician, pluripotential theory and Jagiellonian doctorate; dedup name hit. Command run with name and URL."
+    },
+    {
+      "name": "Ky Q. Tran",
+      "id": "vp-1583",
+      "note": "https://ams.sunykorea.ac.kr/ams/html/sub02/0201.html?mng_no=381206b7afcda35e7d4bbaa0e45e4f30&mode=V — Same SUNY Korea applied-probability faculty, Wayne State PhD 2016; retired vp-1627 was merged into this ID. Command run with name and URL."
+    },
+    {
+      "name": "Quynh-Trang Nguyen",
+      "id": "vp-1903",
+      "note": "https://imba.cycu.edu.tw/en/faculty_en/ — Same CYCU business faculty and CYCU doctorate; name-order variant Nguyen Quynh Trang, same business-ethics/CSR research. Command run with name and URL."
+    },
+    {
+      "name": "Nghi Nhan Nguyen",
+      "id": "vp-0773",
+      "note": "https://mse.nfu.edu.tw/en/department/Full_time — Same Formosa materials faculty under fuller surname-first Nguyen Thi Nghi Nhan; thin-film/piezoelectric research matches. Command run with name and URL."
+    },
+    {
+      "name": "Thi Thanh Huyen Tran",
+      "id": "vp-1848",
+      "note": "https://www.cm.yzu.edu.tw/EN/Page/TeacherPrint.aspx?ID=hanatran — Same Yuan Ze marketing faculty Hana Tran; NTUST doctorate, hanatran email and research match. Command run with name and URL."
+    }
+  ],
+  "possible_move": [
+    {
+      "name": "Phan Le Ha",
+      "id": "vp-1455",
+      "note": "Roster says Universiti Brunei Darussalam, Sultan Hassanal Bolkiah Institute of Education; opened https://elmd.ccu.edu.tw/p/406-1128-94746,r359.php?Lang=en says currently Professor, International Program of Educational Leadership and Management Development, National Chung Cheng University, after prior appointments in Brunei. Same Monash doctorate and language/education expertise; name-plus-URL dedup matches vp-1455. Review and update existing ID rather than creating a person."
+    }
+  ],
+  "rejected": [
+    {
+      "name": "Quang Hung Bui",
+      "reason": "https://deal.nuk.edu.tw/p/405-1049-26180,c3166.php?Lang=zh-tw — detailed current profile specifies 專案副教授 (project associate professor), unlike the abbreviated English listing. Continuing/permanent appointment not established; excluded pending evidence. Name-only dedup found no matches."
+    },
+    {
+      "name": "Quang Anh Le",
+      "reason": "https://deal.nuk.edu.tw/p/405-1049-26178,c3166.php?Lang=zh-tw — detailed profile specifies 專案助理教授 (project assistant professor). Continuing/permanent status not established; excluded pending evidence. The abbreviated English listing omits this qualifier."
+    },
+    {
+      "name": "Thi Thanh Phan",
+      "reason": "https://sealc.nccu.edu.tw/PageStaffing/Detail?fid=10230&id=3062 — contracted assistant professor; explicit appointment 2019-08 to 2027-08. Full-time but term-limited, so excluded."
+    },
+    {
+      "name": "Tuan Duong Nguyen",
+      "reason": "https://bm.nutn.edu.tw/download/activity3_20241125020940.pdf — project assistant professor; https://shcr.nsysu.edu.tw/p/412-1352-27073.php?Lang=en is a postdoctoral alumni lead. No continuing current faculty appointment verified."
+    },
+    {
+      "name": "Thi Huong Nguyen",
+      "reason": "https://finance.cyut.edu.tw/p/412-1025-4425.php?Lang=en lists a full-time lecturer and PhD, but the opened employer CV https://finance.cyut.edu.tw/var/file/25/1025/img/978/117597221.pdf lists a master’s as education and a doctoral program as school experience. Only one journal article plus a conference item found. Research doctorate completion and a continuing eligible teaching appointment remain unresolved; do not promote to verified candidate."
+    },
+    {
+      "name": "Trung Hieu Le",
+      "reason": "Vietnamese experts-network lead https://vneat.org/?page_id=330 says NTUT assistant professor and Vietnam lecturer; no current employer-published individual appointment page located. Secondary network biography alone does not satisfy BRIEF2; not counted."
+    },
+    {
+      "name": "Duc Anh Nguyen",
+      "reason": "https://science.dongguk.edu/professor/list?professor_haggwa_type=PROFH_014 verifies research professor and Sungkyunkwan doctorate, but continuing career appointment/faculty-equivalent permanence was not established. Excluded pending stronger appointment evidence."
+    },
+    {
+      "name": "Thi Nhung Tran",
+      "reason": "https://sweet.kaist.ac.kr/bbs/board.php?bo_table=sub2_2_a gives Research Assistant Professor but places her under Post Doc. A qualifying career research-faculty appointment is not established."
+    },
+    {
+      "name": "Xuan Loc Nguyen",
+      "reason": "https://xuanloc088.github.io/ is a personal-site research-professor lead after 2025 doctorate; no employer appointment page or evidence of stable career-faculty status established. Not verified."
+    },
+    {
+      "name": "Van Tu Nguyen",
+      "reason": "https://his.pusan.ac.kr/dext5editordata/2024/12/20241206_170537961_46466.pdf is an older research-professor CV lead. No current continuing faculty appointment established."
+    },
+    {
+      "name": "Ngoc Que Nguyen",
+      "reason": "https://www.igse.ac.kr/en/academics/kvit/faculty/ supplies doctorate and Vietnamese education, but does not establish a current full-time continuing faculty appointment; prior visiting roles do not qualify."
+    },
+    {
+      "name": "Cong Hoang Nguyen",
+      "reason": "Old CJCU faculty listings are superseded by the opened recent employer news https://dweb.cjcu.edu.tw/prnc/spotlight/8400, which identifies him as currently at East Asia University of Technology in Hanoi, Vietnam. Excluded as Vietnam-based."
+    },
+    {
+      "name": "Tri-Hai Nguyen",
+      "reason": "https://ai.catholic.ac.kr/ai/faculty/faculty03.do explicitly places him among invited/adjunct faculty and states his current primary role is lecturer at Van Lang University in Vietnam."
+    },
+    {
+      "name": "Luong Vuong Nguyen",
+      "reason": "https://ai.catholic.ac.kr/ai/faculty/faculty03.do explicitly states Catholic University adjunct appointment and primary lecturer/researcher role at FPT University, Da Nang, Vietnam."
+    },
+    {
+      "name": "Thanh Tra Vu",
+      "reason": "https://ep.nycu.edu.tw/faculty_info/english-vu-thanh-tra/ is a joint-appointment lead; published current career history is Can Tho University, Vietnam. No primary full-time Taiwan-based role established."
+    },
+    {
+      "name": "Van Doan Tran",
+      "reason": "Retired NTU philosophy professor lead; https://sec.ntu.edu.tw/epaper/article.asp?num=1172&sn=12361 search result identifies retirement, while personal/editorial sources claim emeritus. No current official individual emeritus profile or official conferral verified; not counted."
+    },
+    {
+      "name": "Ngoc Phi Nguyen",
+      "reason": "Historical Sejong lead; lab alumni listing https://www.sejong-gnclab.com/132 instead reports FPT University, Ho Chi Minh City, Vietnam. No current eligible Korean role verified."
+    },
+    {
+      "name": "Hoang Anh Tuan",
+      "reason": "https://sorsu.edu.ph/2024/06/11/sorsu-seals-contract-of-agreement-with-3rd-international-visiting-professor-ivp-prof-hoang-ahn-tuan-from-national-taiwan-normal-university-taiwan/ describes NTNU doctoral study and teaching/research assistant work, plus a temporary visiting role. Ineligible."
+    },
+    {
+      "name": "Yong Kyun Kim",
+      "reason": "SNU Vietnam-studies search result is a Korean scholar; Vietnamese research topic alone is not Vietnamese identity evidence."
+    },
+    {
+      "name": "Wi-vun Taiffalo Chiung",
+      "reason": "https://cvs.twl.ncku.edu.tw/index.php?id=65&index=1&lang=cht&option=module&task=pageinfo describes a Taiwanese linguist using a Vietnamese translated name. No affirmative Vietnamese ancestry/identity signal established; language expertise is insufficient."
+    }
+  ],
+  "coverage": [
+    {
+      "employer": "National Taipei University",
+      "pagesExamined": [
+        "https://www.gmba.ntpu.edu.tw/web/about/about.jsp?cp_id=CP1785118671323"
+      ],
+      "note": "Finance: new verified candidate; existing Quang Thai Truong also surfaced."
+    },
+    {
+      "employer": "National Taiwan Ocean University",
+      "pagesExamined": [
+        "https://ee.ntou.edu.tw/p/412-1062-7475.php?Lang=en",
+        "https://ee.ntou.edu.tw/p/412-1062-7475.php?Lang=zh-tw"
+      ],
+      "note": "Read electrical-engineering faculty profiles across groups; one new candidate."
+    },
+    {
+      "employer": "National Central University",
+      "pagesExamined": [
+        "https://www.atm.ncu.edu.tw/about_2.php",
+        "https://sites.google.com/view/hienbui0526/hien-bui",
+        "https://scholars.ncu.edu.tw/en/persons/hien-x-bui"
+      ],
+      "note": "Atmospheric-sciences full-time directory and linked personal biography verified; linked researcher portal returned 401. One candidate."
+    },
+    {
+      "employer": "Tamkang University",
+      "pagesExamined": [
+        "https://www.wree.tku.edu.tw/index.php/teacher/54"
+      ],
+      "note": "Live profile fetched successfully with urllib after web tool cache-miss. Full text, education, career chronology and publications examined; one new candidate."
+    },
+    {
+      "employer": "Kyungsung University",
+      "pagesExamined": [
+        "https://kscms.ks.ac.kr/gs/CMS/Contents/Contents.do?mCode=MN027",
+        "https://kscms.ks.ac.kr/gc/CMS/ProfessorMgr/list.do?mCode=MN058"
+      ],
+      "note": "Global Studies faculty across business, hospitality, Korean studies, mechanical design and IT read; one new IT-engineering candidate."
+    },
+    {
+      "employer": "National University of Kaohsiung",
+      "pagesExamined": [
+        "https://deal.nuk.edu.tw/p/412-1049-6219.php?Lang=en",
+        "https://deal.nuk.edu.tw/p/412-1049-3166.php?Lang=zh-tw",
+        "https://deal.nuk.edu.tw/p/405-1049-26180,c3166.php?Lang=zh-tw",
+        "https://deal.nuk.edu.tw/p/405-1049-26178,c3166.php?Lang=zh-tw"
+      ],
+      "note": "Read full-time East Asian languages directory and detailed new-person pages; two project-faculty leads excluded. Lan Tran already rostered."
+    },
+    {
+      "employer": "National Chung Cheng University",
+      "pagesExamined": [
+        "https://elmd.ccu.edu.tw/p/406-1128-94746,r359.php?Lang=en"
+      ],
+      "note": "Education profile establishes possible move for vp-1455. Other country-wide queries resurfaced existing Van-Linh Nguyen."
+    },
+    {
+      "employer": "National Chengchi University",
+      "pagesExamined": [
+        "https://sealc.nccu.edu.tw/PageStaffing/Detail?fid=10230&id=3062"
+      ],
+      "note": "Southeast Asian languages: detailed contract dates defeat permanent-role assumption."
+    },
+    {
+      "employer": "Chaoyang University of Technology",
+      "pagesExamined": [
+        "https://finance.cyut.edu.tw/p/412-1025-4425.php?Lang=en",
+        "https://finance.cyut.edu.tw/var/file/25/1025/img/978/117597221.pdf"
+      ],
+      "note": "Read full-time finance faculty and new lecturer CV; doctorate conflict recorded, candidate withheld. Existing Thi Thanh Binh Nguyen also resurfaced through accounting search."
+    },
+    {
+      "employer": "Chung Yuan Christian University",
+      "pagesExamined": [
+        "https://imba.cycu.edu.tw/en/faculty_en/"
+      ],
+      "note": "Management faculty across IMBA, undergraduate business and departments scanned; Quynh-Trang Nguyen already rostered."
+    },
+    {
+      "employer": "Yuan Ze University",
+      "pagesExamined": [
+        "https://www.cm.yzu.edu.tw/EN/Page/TeacherPrint.aspx?ID=hanatran"
+      ],
+      "note": "Marketing identity Hana Tran is existing vp-1848; industrial-engineering and part-time business queries produced existing faculty or excluded adjunct leads."
+    },
+    {
+      "employer": "National Formosa University",
+      "pagesExamined": [
+        "https://mse.nfu.edu.tw/en/department/Full_time"
+      ],
+      "note": "Materials full-time faculty page read; Nghi Nhan Nguyen already listed."
+    },
+    {
+      "employer": "Seoul National University",
+      "pagesExamined": [
+        "https://cuee.snu.ac.kr/bbs/board.php?bo_table=sub2_1&wr_id=1"
+      ],
+      "note": "Civil/environmental faculty: existing Van Thinh Nguyen. Broad mathematics, economics and Vietnam-studies searches found no additional verified new faculty."
+    },
+    {
+      "employer": "KAIST",
+      "pagesExamined": [
+        "https://mathsci.kaist.ac.kr/home/en/math-people/professor/",
+        "https://sweet.kaist.ac.kr/bbs/board.php?bo_table=sub2_2_a"
+      ],
+      "note": "Mathematics directory scanned: Ngoc Cuong Nguyen already listed; water/environment lab research-assistant-professor lead appears under Post Doc."
+    },
+    {
+      "employer": "SUNY Korea",
+      "pagesExamined": [
+        "https://ams.sunykorea.ac.kr/ams/html/sub02/0201.html?mng_no=381206b7afcda35e7d4bbaa0e45e4f30&mode=V"
+      ],
+      "note": "Applied mathematics: Ky Q. Tran is vp-1583, including prior retired duplicate."
+    },
+    {
+      "employer": "Gachon University",
+      "pagesExamined": [
+        "https://www.gachon.ac.kr/eng/12764/subview.do"
+      ],
+      "note": "Engineering faculty scanned; Vietnamese assistant-professor names are already rostered. Extra Pham Tien Song Hiep research-professor lead lacked continuing-role evidence and was not counted."
+    },
+    {
+      "employer": "Dongguk University",
+      "pagesExamined": [
+        "https://science.dongguk.edu/professor/list?professor_haggwa_type=PROFH_014"
+      ],
+      "note": "Physics/semiconductor faculty scanned; Duc Anh Nguyen research role verified but permanence unresolved."
+    },
+    {
+      "employer": "The Catholic University of Korea",
+      "pagesExamined": [
+        "https://ai.catholic.ac.kr/ai/faculty/faculty03.do"
+      ],
+      "note": "AI invited/adjunct list directly establishes exclusions for Tri-Hai Nguyen and Luong Vuong Nguyen."
+    },
+    {
+      "employer": "International Graduate School of Language Education",
+      "pagesExamined": [
+        "https://www.igse.ac.kr/en/academics/kvit/faculty/"
+      ],
+      "note": "Vietnamese translation faculty lead Ngoc Que Nguyen lacks qualifying continuing-status evidence."
+    },
+    {
+      "employer": "Chang Jung Christian University",
+      "pagesExamined": [
+        "https://dweb.cjcu.edu.tw/prnc/spotlight/8400"
+      ],
+      "note": "Follow-up on old management faculty lead found recent employer evidence of Vietnam-based move; withheld."
+    },
+    {
+      "employer": "National Taiwan University",
+      "pagesExamined": [
+        "https://sec.ntu.edu.tw/epaper/article.asp?num=1021&sn=9733"
+      ],
+      "note": "Dedicated historical/emeritus search for Van Doan Tran; opened newsletter was an older service-awards list, not emeritus-conferral evidence. Active mathematics/materials searches mostly resurfaced rostered scholars."
+    },
+    {
+      "employer": "Slice-wide search",
+      "pagesExamined": [],
+      "note": "Taiwan and South Korea, all fields: broad and surname/given-name searches covered Nguyen, Tran, Le, Pham, Bui, Hoang, Huynh, Vo, Vu, Truong, Dang, Doan, Dinh, Duong, Ngo, Phan, Trinh and Nghiem. Follow-up searched engineering, computer science, physics, chemistry/materials, mathematics/statistics, biological/health sciences, finance/business, education, languages, humanities and social sciences, plus emeritus. Additional targeted queries included NTUT, NTHU, NTNU, NCHU, NUTN, NSYSU, Nanhua, I-Shou, NKUST, Dong Hwa, Sejong, Hallym, Pusan, Kyung Hee, Chungnam, Yeungnam, Hankuk, Wonkwang, Kangwon and Hannam. These were search-level discovery checks unless live pages are separately listed above; no claim of exhaustive departmental coverage. Repeated final searches mainly returned existing roster members, students, visiting/project researchers or Vietnam-based people. Stopped on evidence saturation below the 25-candidate cap. No LinkedIn page fetched or login used; search-result LinkedIn material was not used as verification. No Issues, PRs, roster IDs, portraits or other files created."
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "verifier": "codex",
+  "input": "maintenance/sector-expansion/runs/w2/nz-ireland.codex.json",
+  "candidates": [
+    {
+      "name": "Mina Cu",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live employer profile https://profiles.waikato.ac.nz/thithanhhuong.cu was independently rendered and identifies Lecturer in Digital Business at Waikato Management School, Hamilton, New Zealand, October 2023–present. It records a Renmin doctorate completed in 2015, Hanoi University undergraduate education, Vietnamese language, and the institutional identity thithanhhuong.cu. This is a substantive university lecturer appointment, with no trainee, visiting, adjunct, or semester-only qualifier. find-roster-matches for Mina Cu and Thi Thanh Huong Cu, including the profile and ORCID 0000-0002-7313-3096, returned no roster or retired-ID matches. Not in already-proposed.txt.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Linh Tu Ho",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live rendered employer profile https://researchers.lincoln.ac.nz/linh-ho identifies Senior Lecturer in Finance, 2024–present, following Lecturer, 2021–2024, at Lincoln University in New Zealand. It records a Lincoln PhD, National Economics University BA, former Hue University lecturing, and Vietnamese language. The live 2026 calendar https://www.lincoln.ac.nz/assets/Academic-Calendar.pdf independently supplies the full name Linh Tu Ho. find-roster-matches using the profile, Scholar, and ORCID 0000-0003-1847-8136 returned only vp-2820: that rostered Linh Ho is a California Northstate pharmaceutical/biomedical scholar with a UCSF doctorate, distinct from this Lincoln-trained financial economist. No identity-URL match or already-proposed.txt exclusion.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Linh Bui",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "The live employer page https://profiles.auckland.ac.nz/linh-bui returned HTTP 200 and was independently read in a JavaScript browser after the web reader failed. It identifies a current Lecturer in Management and International Business at Auckland, New Zealand; ANU organisational-behaviour/HRM PhD completed February 2025; International University of Japan masters; Hanoi University of Culture BA; former Da Nang government employment; and Vietnamese language. find-roster-matches using the profile, ANU identity URL, and ORCID 0000-0003-1964-5709 returned vp-1083 Linh N. Bui, whose Oregon State public-health doctorate and Sydney masters resolve that match as another person. The earlier-proposed Linh Bui-Raborn is also different: independently opened https://dceg.cancer.gov/about/staff-directory/bui-raborn-linh records an Iowa molecular-biology/genetics doctorate and NCI genomics career. No identity-URL match or same-person earlier proposal.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Toan Pham",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live rendered employer profile https://profiles.auckland.ac.nz/toan-pham identifies Senior Research Fellow at the Auckland Bioengineering Institute in New Zealand, an Auckland physiology PhD completed November 2018, and Vietnamese language. The biography documents his independent laboratory established in 2021, current multidisciplinary group leadership, and accredited doctoral supervision. Together these support an enduring faculty-equivalent Research appointment beyond postdoctoral training. find-roster-matches using the profile, Scholar, and ORCID 0000-0002-6323-9217 returned only vp-2015, an Adelaide Education/TESOL lecturer with a different discipline and career. No identity-URL match or already-proposed.txt exclusion.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Ha Hoang",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live rendered employer profile https://people.wgtn.ac.nz/ha.hoang identifies Lecturer in Applied Linguistics, School of Linguistics and Applied Language Studies, Victoria University of Wellington, New Zealand, and a Wellington applied-linguistics PhD. This is a substantive university academic appointment without an excluded qualifier. The independently downloaded TESOL contributor biography https://www.tesol.org/media/05cpj51m/14109-contributors-biographies-doc.pdf matches that doctorate and field and records ESL/EFL teaching in Vietnam and New Zealand, an affirmative Vietnam connection alongside the Vietnamese given-name/surname combination. find-roster-matches using the profile and ORCID 0000-0001-8603-0689 returned vp-0496, vp-2051, and vp-2125; their fuller names and mathematics, social-work, and film appointments establish different identities. No identity-URL match or already-proposed.txt exclusion.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Anh Duong Trinh",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live employer profile https://www.tudublin.ie/explore/faculties-and-schools/computing-digital-data/informatics-and-cybersecurity/people/academic-staff/dr-anh-duong-trinh.php independently opened and rendered successfully. It identifies Lecturer in Computer Science at the School of Informatics and Cybersecurity, Blanchardstown, Ireland; TU Dublin PhD in 2023; and current teaching, research and supervision. Trinity postdoctoral training and National College of Ireland employment are expressly previous roles. The Vietnamese given-name combination Anh Duong with Trinh supplies a signal beyond a shared surname alone. find-roster-matches with the exact name and employer profile returned no roster or retired-ID matches; no already-proposed.txt match.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Luan Trinh",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Direct live HTTP retrieval of https://tus.ie/staff-directory/dr-luan-trinh/ returned 200 and currently says Lecturer, Department of Built Environment, Moylish Campus, Limerick City, Ireland. An older web-reader representation said Assistant Lecturer; the live page and independently opened current employer biography https://tus.ie/rdi/research/centres-groups/matsimlab/ both support the proposed Lecturer title, with structural-engineering teaching and funded-project leadership. Independently opened https://infrastructure.eng.unimelb.edu.au/scs/people/scs-people/former-phd-students/trinh-luan records Northumbria PhD 2014–2017, Ho Chi Minh City University of Technology BEng/MEng, prior Vietnamese lecturing, and TUS employment since 2022. These resolve identity and Vietnamese connection. find-roster-matches using the name, employer profile and Melbourne biography returned no roster or retired-ID matches; no already-proposed.txt match.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Allie Tran",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Pass under VERIFY2 test 1’s explicit personal-site exception, retaining confirmed:false. Independently opened https://allietran.com/ states Assistant Professor, School of Computing, Dublin City University, and explicitly identifies her Vietnamese name Duyên. Direct live retrieval of https://allietran.com/cv returned 200 and dates Assistant Professor August 2026–present, separately from the ended October 2024–July 2026 postdoc and the separately listed part-time lecturing role. It records a DCU computing PhD, 2019–2024, and VNU-HCM University of Science BSc. The employer directory https://www.dcu.ie/computing/people did not provide her individual profile; the employer announcement https://www.dcu.ie/research/news/2026/aug/22-dcu-researchers-appointed-royal-irish-academy-committees-2026-2030-term corroborates Ly-Duyen Tran’s DCU affiliation but does not establish faculty rank. Ireland is the current work location in the CV. find-roster-matches with Allie Tran, personal site/CV, Scholar and ORCID returned no matches. Alias Ly-Duyen Tran returned retired vp-1177 Ly Tran, merged into vp-1156 Ly Thi Tran: the Deakin education professor with Melbourne PhD 2009 is distinct from this DCU computing PhD 2024. No already-proposed.txt match.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    }
+  ],
+  "possible_move": []
+}

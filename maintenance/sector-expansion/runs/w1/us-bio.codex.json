@@ -1,0 +1,326 @@
+{
+  "group": "university",
+  "agent": "codex",
+  "slice": "us-bio",
+  "finishedAt": "2026-11-14T23:45:38Z",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Son Nguyen",
+        "university": "Bowdoin College",
+        "track": "Tenure-line",
+        "rank": "Assistant Professor",
+        "department": "Biology and Biochemistry",
+        "country": "United States",
+        "field": "Biological & Biomedical Sciences",
+        "researchAreas": [
+          "Immunology",
+          "CD8+ T Cells",
+          "Single-Cell Genomics",
+          "Cell-Mediated Cytolysis"
+        ],
+        "phdInstitution": "University of Pennsylvania",
+        "phdYear": 2020,
+        "undergradInstitution": "Union College",
+        "undergradYear": 2014,
+        "postdocInstitution": "Massachusetts Institute of Technology",
+        "profileUrl": "https://www.bowdoin.edu/profiles/faculty/s.nguyen/index.html",
+        "scholarUrl": "https://scholar.google.com/citations?user=j828UUwAAAAJ"
+      },
+      "evidence": {
+        "currentRole": "https://www.bowdoin.edu/profiles/faculty/s.nguyen/index.html — “Assistant Professor of Biology and Biochemistry”. Live person page opened; research describes his undergraduate laboratory and experimental immunology. https://www.bowdoin.edu/biology/faculty-and-staff/index.html also lists him among regular faculty, separately from lecturers and postdoctoral scholars. Research and education fields come from the person page. The official page links Scholar user j828UUwAAAAJ directly; Scholar itself returned HTTP 429, so identity attribution rests on that institutional link. A headshot image is linked from the page, but not visually vetted for this output. No qualifying honors or separate maintained lab/personal site were established.",
+        "doctorateOrPapers": "https://www.bowdoin.edu/profiles/faculty/s.nguyen/index.html — education lists a 2020 Cell and Molecular Biology PhD from the University of Pennsylvania, a 2014 Union College BS, and MIT postdoctoral training completed in 2025.",
+        "vietnameseSignal": "Vietnamese given name Son together with Nguyen, as published on https://www.bowdoin.edu/profiles/faculty/s.nguyen/index.html; no diacritics reconstructed.",
+        "dedup": "Ran npm run find-roster-matches -- \"Son Nguyen\" --url https://www.bowdoin.edu/profiles/faculty/s.nguyen/index.html https://scholar.google.com/citations?user=j828UUwAAAAJ. Name-only hits: vp-0572, vp-0625, vp-1631, vp-1718, vp-1879, vp-1962, vp-2438, vp-3165. Resolved as different people using full names, fields and education: these are mathematics, nanotechnology, law, systems engineering, physics, civil engineering, biotechnology at SINTEF, and IBM semiconductor research; none matches this Union BS/2020 Penn immunology PhD/MIT-to-Bowdoin career. No identity-URL match or exact canonical-name match. Also distinguished from the chemistry faculty member Son Nguyen at Johnson & Wales, whose doctorate is Tufts 2015, and from Son C. Nguyen at UC Merced, whose doctorate is Berkeley 2014. Not in already-proposed.txt."
+      }
+    },
+    {
+      "entry": {
+        "name": "Hao Nguyen",
+        "university": "California State University, Sacramento",
+        "track": "Tenure-line",
+        "rank": "Professor",
+        "department": "Biological Sciences",
+        "country": "United States",
+        "field": "Biological & Biomedical Sciences",
+        "researchAreas": [
+          "Cell and Molecular Biology",
+          "Colon Carcinogenesis"
+        ],
+        "phdInstitution": "University of Texas at Dallas",
+        "phdYear": 1995,
+        "msInstitution": "University of Texas at Dallas",
+        "undergradInstitution": "Rice University",
+        "undergradYear": 1987,
+        "profileUrl": "https://scholars.csus.edu/esploro/profile/hao_nguyen"
+      },
+      "evidence": {
+        "currentRole": "https://scholars.csus.edu/esploro/profile/hao_nguyen — “Professor, Department of Biological Sciences”. Official individual research profile opened and returned his page with appointment and education. Independently corroborated on the live departmental directory https://www.csus.edu/college/natural-sciences-mathematics/biology/meet-us/ under Hao Nguyen, Professor; its specialties identify cell/molecular biology and colon carcinogenesis. A named headshot is present in the departmental directory, but was not visually vetted. No verified separate maintained lab site, Scholar profile, or qualifying honors established.",
+        "doctorateOrPapers": "https://scholars.csus.edu/esploro/profile/hao_nguyen — education lists University of Texas at Dallas PhD in Molecular and Cell Biology, 1995; MS there, 1991; Rice University BA in Biology, 1987.",
+        "vietnameseSignal": "Vietnamese given-name spelling Hao combined with Nguyen on both institutional pages; no diacritics reconstructed. LinkedIn was not fetched or used as evidence.",
+        "dedup": "Ran npm run find-roster-matches -- \"Hao Nguyen\" --url https://scholars.csus.edu/esploro/profile/hao_nguyen https://www.csus.edu/indiv/n/nguyenh/ and reran with https://www.csus.edu/college/natural-sciences-mathematics/biology/meet-us/. Name-only hits vp-0837 Minh Hao Nguyen (Amsterdam communication scholar, Amsterdam doctorate), vp-1943 Canh Hao Nguyen (Kyoto computational/bioinformatics scholar), vp-2692 Hao G. Nguyen (UCSF urologist, Berkeley undergraduate and Boston University MD/PhD). These differ from the Sacramento biologist with Rice BA/UT Dallas 1995 PhD and earlier Tennessee-Martin faculty appointment documented by the official research profile. No identity-URL or exact canonical-name match. Not in already-proposed.txt."
+      }
+    },
+    {
+      "entry": {
+        "name": "Phuong Pham",
+        "university": "University of Southern California",
+        "track": "Research",
+        "rank": "Assistant Professor",
+        "department": "Molecular and Cellular Biosciences",
+        "country": "United States",
+        "field": "Biological & Biomedical Sciences",
+        "researchAreas": [
+          "DNA Replication and Repair",
+          "Bacterial Mutagenesis",
+          "APOBEC Cytidine Deaminases",
+          "Single-Stranded DNA–Protein Interactions"
+        ],
+        "phdInstitution": "Saint Petersburg State University",
+        "phdYear": 1993,
+        "msInstitution": "Saint Petersburg State University",
+        "postdocInstitution": "National Institute of Environmental Health Sciences",
+        "profileUrl": "https://dornsife.usc.edu/profile/phuong-pham/"
+      },
+      "evidence": {
+        "currentRole": "https://dornsife.usc.edu/profile/phuong-pham/ — “Assistant Professor (Research) of Molecular and Cellular Biosciences”. Live Dornsife person page opened; this is outside the medical school. Faculty-level research appointment is explicit. Its research statement supports the proposed research areas and lists publications under Pham P./Pham P. T. The same appointment appears in USC academic materials dating back to 2014, corroborating a career faculty role. A named portrait is linked on the profile, but was not visually vetted. No identity-verified Scholar profile or separate maintained lab site established.",
+        "doctorateOrPapers": "https://dornsife.usc.edu/profile/phuong-pham/ — education lists Genetics PhD from St. Petersburg State University in May 1993, Biology MS there in June 1989, and completed NIEHS postdoctoral training in 1999–2004.",
+        "vietnameseSignal": "Vietnamese given name Phuong with surname Pham, explicitly published by USC at https://dornsife.usc.edu/profile/phuong-pham/; no diacritics or fuller names invented.",
+        "dedup": "Ran npm run find-roster-matches -- \"Phuong Pham\" --url https://dornsife.usc.edu/profile/phuong-pham/. Name-only hits vp-0759 Phuong V. Pham (National Sun Yat-sen physics), vp-0904 Phuong-Chi Pham (UCLA nephrology), vp-1671 Thu Phuong Pham (Curtin accounting/economics), vp-3117 Hang-Phuong Pham (Parean data science/AI, Pierre and Marie Curie University doctorate). Different full names, fields and education from the USC molecular biologist with St. Petersburg Genetics PhD 1993/NIEHS training. No identity-URL or exact canonical-name match. Also distinct from the Harvard humanitarian/public-health scholar Phuong Pham surfaced by search. Not in already-proposed.txt."
+      }
+    }
+  ],
+  "already_listed": [
+    {
+      "name": "Vu Q. Nguyen",
+      "id": "vp-0215",
+      "note": "UC San Diego Molecular Biology; live https://biology.ucsd.edu/research/faculty/vnguyen matches the roster's person, research and Harvard PhD. No new candidate."
+    },
+    {
+      "name": "Tuan Minh Tran",
+      "id": "vp-0093",
+      "note": "Initial South Alabama lead is an earlier appointment, not a new person or verified move away from Kansas State. Live https://www.plantpath.k-state.edu/about/people/faculty/tran-tuan/index.html (updated April 8, 2026) confirms Assistant Professor, Plant Bacteriology, matching roster profile, Wisconsin-Madison PhD 2016 and Vietnam undergraduate degree. URL-aware matcher identifies vp-0093."
+    },
+    {
+      "name": "Cawa Tran",
+      "id": "vp-2137",
+      "note": "Matcher confirms roster identity; live https://www.sandiego.edu/directory/biography.php?profile_id=13069 lists Associate Professor of Biology, Hawaii PhD 2012."
+    },
+    {
+      "name": "Alex Van Huynh",
+      "id": "vp-0347",
+      "note": "URL-aware matcher and live https://www.desales.edu/profiles/alex-van-huynh identify the existing DeSales biologist."
+    },
+    {
+      "name": "Quynh Chu-LaGraff",
+      "id": "vp-2810",
+      "note": "Exact name and profile match in matcher; live https://www.union.edu/biology/faculty-staff/quynh-chu-lagraff confirms Union biology faculty and Illinois doctorate."
+    },
+    {
+      "name": "Hanh Lam",
+      "id": "vp-0323",
+      "note": "URL-aware matcher and live https://www.biol.vt.edu/faculty/Lam.html confirm existing Virginia Tech biologist, Cornell PhD."
+    },
+    {
+      "name": "Nhu H. Nguyen",
+      "id": "vp-0459",
+      "note": "URL-aware matcher identifies existing Hawaii Tropical Plant and Soil Sciences professor; live https://manoa.hawaii.edu/tpss/people/nhu-nguyen/ confirms microbial ecology research and Berkeley doctorate. Neighboring agricultural department, not a new biology entry."
+    }
+  ],
+  "possible_move": [],
+  "rejected": [
+    {
+      "name": "Andrew Van Nguyen",
+      "reason": "Promising, identity-resolved Queensborough Community College biology lead, but held out of verified candidates because the brief requires community-college tenure/tenure-track evidence and the explicit tenure documents could not be retrieved live. Live https://www.qcc.cuny.edu/biologicalSciences/faculty/ANguyen/index.html confirms Professor and Albert Einstein PhD; https://www.qcc.cuny.edu/news/2020/10/Sumaiyas-bones.html identifies him as an immigrant arriving at the end of the Vietnam War. Live 2019 program proposal https://www.qcc.cuny.edu/governance/academicSenate/docs/ay2018-19/may/Attach_GG_Curriculum_Bio_Program.pdf documents his ongoing faculty role and program allocation. Search-discovered 2025 CUNY reports explicitly say Tenured, but https://www.cuny.edu/wp-content/uploads/sites/4/page-assets/about/trustees/meetings-of-the-board/CAL0425rev.pdf and https://policy.cuny.edu/policy/wp-content/uploads/sites/6/page-assets/calendars/EducationPolicyAgenda100625.pdf returned 404 via direct fetch (web tool also reported size error for latter). Search snippets were not accepted as verification. Next action: retrieve a live tenure record. Ran matcher with Andrew Van Nguyen and profile URL; hits vp-0674, vp-0813, vp-0849, vp-0892, vp-2149, vp-2375, vp-3045 are different nursing, medical, economics or computer-vision careers; none matched the person URL."
+    },
+    {
+      "name": "Howard M. Huynh",
+      "reason": "The Citadel official live news https://www.citadel.edu/provost-notes/2025/05/may-faculty-spotlight/ confirms Assistant Professor of Biology and prior postdoctoral roles. Matcher returned no roster/retired-id matches. An affirmative Vietnamese signal beyond the surname was not established; the statement about cooking Vietnamese alongside other cuisines does not establish ancestry. Next action: obtain an identity-resolved biography with affirmative signal before proposing."
+    },
+    {
+      "name": "Mark Tran",
+      "reason": "Live https://www.ucblueash.edu/offices/faculty-staff/academic/biology.html confirms biology chair/Associate Professor and PhD designation. Matcher returned no roster/retired-id matches. No affirmative Vietnamese signal beyond surname established; do not confuse with the unrelated Bach (Mark) Tran, Rochester statistics doctoral student. Next action: source an identity-resolved biography."
+    },
+    {
+      "name": "Khoa Nguyen",
+      "reason": "Live https://www.lsu.edu/science/biosci/faculty-and-staff/faculty-pages/nguyen.php confirms Distinguished Instructor in Biological Sciences. Named teaching ladder is plausible, but no research doctorate or qualifying current publication record was established for this person, as separately required by BRIEF2. Name-only matcher hits include vp-0254 (Florida pharmacotherapy), vp-0412 (OHSU medicine) and other unrelated fields/institutions; no LSU identity resolved to a roster ID. Next action: source doctorate and research-role evidence."
+    },
+    {
+      "name": "Stacy Nguyen",
+      "reason": "Live https://departments.wheatoncollege.edu/faculty/nguyen-stacy/ confirms Professor of the Practice of Biology. Boston College's graduate-placement page identifies Biology PhD completion in 2023, but an affirmative Vietnamese signal beyond surname and the required continuing/full-time teaching appointment evidence were not established. Did not fetch LinkedIn. Next action: verify biography and appointment terms."
+    },
+    {
+      "name": "Jonah Nguyen",
+      "reason": "Live https://www.beloit.edu/academics/biology/faculty-staff/ explicitly lists Visiting Assistant Professor of Biology; visiting appointments are excluded."
+    },
+    {
+      "name": "David N. Nguyen",
+      "reason": "Live https://biology.berkeley.edu/people/david-n-nguyen identifies Assistant Professor (Affiliated) of Immunology and Molecular Medicine. An affiliated Berkeley appointment does not establish a qualifying primary appointment in this slice."
+    },
+    {
+      "name": "Son Nguyen — Johnson & Wales University",
+      "reason": "Discovery page https://www.jwu.edu/directory/son-nguyen/ describes a chemistry professorship and organic/carbohydrate chemistry research in Biological and Physical Sciences, outside this Biology/Biochemistry research slice. Distinct from Bowdoin candidate: Tufts organic chemistry PhD 2015 versus Penn cell/molecular biology PhD 2020."
+    },
+    {
+      "name": "Son C. Nguyen",
+      "reason": "Discovery page https://naturalsciences.ucmerced.edu/people/son-c-nguyen describes nanoparticle photocatalysis/solar energy research in Chemistry & Biochemistry, outside this biological-research slice. Distinct from Bowdoin immunologist."
+    },
+    {
+      "name": "Alexandra Nguyen",
+      "reason": "Discovery page https://som.cuanschutz.edu/Profiles/Faculty/Profile/39987 identifies Cell & Developmental Biology in the School of Medicine; medical schools explicitly excluded from this slice."
+    },
+    {
+      "name": "Quynh Anh Dac Nguyen",
+      "reason": "Discovery page https://wag.app.vanderbilt.edu/PublicPage/Faculty/Details/49509 identifies Pharmacology at Vanderbilt School of Medicine; outside assigned departments and excluded medical-school setting."
+    },
+    {
+      "name": "Hung Nguyen — University of Central Florida",
+      "reason": "Discovery page https://med.ucf.edu/biomed/person/hung-nguyen/ explicitly identifies Assistant Professor of Medicine in the College of Medicine; excluded medical-school setting."
+    },
+    {
+      "name": "Roger Huynh",
+      "reason": "UMass Boston Biology directory https://www.umb.edu/directory/?department=biology&page=12 surfaced a Post Doctoral Research Fellow; trainee role excluded."
+    },
+    {
+      "name": "Linh Nguyen — University of Kansas",
+      "reason": "Discovery page https://eeb.ku.edu/people/nguyen-linh identifies Doctoral Candidate, not career faculty; excluded."
+    }
+  ],
+  "coverage": [
+    {
+      "employer": "US university slice — search coverage",
+      "pagesExamined": [],
+      "note": "Broad surname sweeps for Nguyen, Tran, Pham, Huynh, Bui, Phan, Vo, Dang, Truong, Doan, Hoang, Dinh, Ngo, Le, Lam, Trinh, Quach, Nghiem, Trieu and Ton-That; given-name sweeps included Quynh, Thao, Hieu, Linh, Dung, Minh, Thuy, Anh, Quoc, Phuong, Thanh, Thang, Bich, Ngoc, Hanh and Tuyen. Queried Biology, Biochemistry, Microbiology, Ecology and Neuroscience, then regional queries. Search results were discovery leads only. Repeated sweeps largely resurfaced listed scholars, trainees, medical-school faculty, or out-of-slice chemistry/engineering/psychology roles. Stop reason: diminishing returns after broad coverage, not reaching 25. This is a targeted discovery pass, not a census of every US department. Names in already-proposed.txt were excluded, including Tung Hoang despite a Hawaii microbiology lead. No LinkedIn pages fetched; no login or challenge bypass; only this output file written."
+    },
+    {
+      "employer": "Bowdoin College",
+      "pagesExamined": [
+        "https://www.bowdoin.edu/profiles/faculty/s.nguyen/index.html"
+      ],
+      "note": "Verified new biology/biochemistry immunologist; official profile supplies doctorate and direct Scholar link. Scholar returned 429, not bypassed."
+    },
+    {
+      "employer": "California State University, Sacramento",
+      "pagesExamined": [
+        "https://scholars.csus.edu/esploro/profile/hao_nguyen",
+        "https://www.csus.edu/college/natural-sciences-mathematics/biology/meet-us/"
+      ],
+      "note": "Verified Hao Nguyen by individual profile plus current department directory; education documented by official research portal."
+    },
+    {
+      "employer": "University of Southern California",
+      "pagesExamined": [
+        "https://dornsife.usc.edu/profile/phuong-pham/"
+      ],
+      "note": "Verified Phuong Pham's research faculty appointment and doctorate in nonmedical Dornsife biosciences."
+    },
+    {
+      "employer": "Queensborough Community College, CUNY",
+      "pagesExamined": [
+        "https://www.qcc.cuny.edu/biologicalSciences/faculty/ANguyen/index.html",
+        "https://www.qcc.cuny.edu/news/2020/10/Sumaiyas-bones.html",
+        "https://www.qcc.cuny.edu/governance/academicSenate/docs/ay2018-19/may/Attach_GG_Curriculum_Bio_Program.pdf"
+      ],
+      "note": "Current professor and doctorate verified; explicit tenure-source retrieval failed, so candidate held out pending live confirmation."
+    },
+    {
+      "employer": "The Citadel",
+      "pagesExamined": [
+        "https://www.citadel.edu/provost-notes/2025/05/may-faculty-spotlight/"
+      ],
+      "note": "Howard M. Huynh career faculty lead; affirmative Vietnamese signal unresolved."
+    },
+    {
+      "employer": "University of Cincinnati, Blue Ash College",
+      "pagesExamined": [
+        "https://www.ucblueash.edu/offices/faculty-staff/academic/biology.html"
+      ],
+      "note": "Mark Tran current biology chair; affirmative Vietnamese signal unresolved."
+    },
+    {
+      "employer": "Louisiana State University",
+      "pagesExamined": [
+        "https://www.lsu.edu/science/biosci/faculty-and-staff/faculty-pages/nguyen.php"
+      ],
+      "note": "Khoa Nguyen teaching faculty; missing doctorate/current qualifying paper evidence. Alternate apa.lsu.edu URL failed, canonical www.lsu.edu page retrieved successfully."
+    },
+    {
+      "employer": "Wheaton College, Massachusetts",
+      "pagesExamined": [
+        "https://departments.wheatoncollege.edu/faculty/nguyen-stacy/"
+      ],
+      "note": "Biology professor-of-practice lead; appointment terms and affirmative Vietnamese signal unresolved."
+    },
+    {
+      "employer": "Beloit College",
+      "pagesExamined": [
+        "https://www.beloit.edu/academics/biology/faculty-staff/"
+      ],
+      "note": "Jonah Nguyen is visiting faculty, excluded."
+    },
+    {
+      "employer": "University of California, Berkeley",
+      "pagesExamined": [
+        "https://biology.berkeley.edu/people/david-n-nguyen"
+      ],
+      "note": "David N. Nguyen listing is explicitly affiliated; primary qualifying appointment not established within slice."
+    },
+    {
+      "employer": "University of California, San Diego",
+      "pagesExamined": [
+        "https://biology.ucsd.edu/research/faculty/vnguyen"
+      ],
+      "note": "Vu Q. Nguyen already listed, vp-0215."
+    },
+    {
+      "employer": "University of San Diego",
+      "pagesExamined": [
+        "https://www.sandiego.edu/directory/biography.php?profile_id=13069"
+      ],
+      "note": "Cawa Tran already listed, vp-2137."
+    },
+    {
+      "employer": "DeSales University",
+      "pagesExamined": [
+        "https://www.desales.edu/profiles/alex-van-huynh"
+      ],
+      "note": "Alex Van Huynh already listed, vp-0347."
+    },
+    {
+      "employer": "Union College",
+      "pagesExamined": [
+        "https://www.union.edu/biology/faculty-staff/quynh-chu-lagraff"
+      ],
+      "note": "Quynh Chu-LaGraff already listed, vp-2810."
+    },
+    {
+      "employer": "Virginia Tech",
+      "pagesExamined": [
+        "https://www.biol.vt.edu/faculty/Lam.html"
+      ],
+      "note": "Hanh Lam already listed, vp-0323."
+    },
+    {
+      "employer": "University of Hawaiʻi at Mānoa",
+      "pagesExamined": [
+        "https://manoa.hawaii.edu/tpss/people/nhu-nguyen/",
+        "https://manoa.hawaii.edu/lifesciences/people/people-faculty/tung-hoang/"
+      ],
+      "note": "Nhu H. Nguyen already listed, vp-0459. Tung Hoang skipped under already-proposed.txt; no candidate proposed."
+    },
+    {
+      "employer": "Kansas State University / University of South Alabama lead",
+      "pagesExamined": [
+        "https://www.plantpath.k-state.edu/about/people/faculty/tran-tuan/index.html"
+      ],
+      "note": "Resolved older South Alabama biology lead to current Kansas State faculty member vp-0093; current official page supports roster, not a move."
+    },
+    {
+      "employer": "University of Texas at Dallas",
+      "pagesExamined": [
+        "https://profiles.utdallas.edu/lena.nguyen"
+      ],
+      "note": "Lena Nguyen neuroscience faculty already appears as vp-0091; no new proposal."
+    }
+  ]
+}

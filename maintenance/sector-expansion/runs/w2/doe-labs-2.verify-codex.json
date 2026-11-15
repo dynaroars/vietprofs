@@ -1,0 +1,28 @@
+{
+  "verifier": "codex",
+  "input": "maintenance/sector-expansion/runs/w2/doe-labs-2.codex.json",
+  "candidates": [
+    {
+      "name": "Truc Nguyen",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Independently opened https://research-hub.nlr.gov/en/persons/truc-nguyen/: current Researcher III-Cyber Security & Resilience in Computational Science, a career research role at the US laboratory, with current research output. Opened https://undergraduateawards.com/gua-alumni-truc-nguyen/: the identity-matched interview establishes a University of Florida computer-engineering PhD in 2023 and laboratory research employment. Truc together with Nguyen supplies a Vietnamese given-name signal beyond surname alone. Ran find-roster-matches with the name, employer profile, employer-linked ORCID and interview URL: no URL matches; vp-0351 has a Wayne State mathematics doctorate, vp-0916 is an anesthesiologist, vp-1908 researches business/leadership, and vp-2537 researches porous materials/acoustics, unlike this Florida cybersecurity researcher. No matching candidate in already-proposed.txt. No evidence of a Vietnam-based appointment.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Minh Duong Nguyen",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Independently opened https://research-hub.nlr.gov/en/persons/minh-duong-nguyen/: current Research Technologist III-Materials Science at the US laboratory, a Hanyang University materials-chemistry PhD, and original perovskite research with current publications. This is a career research appointment rather than a technician inferred from title alone. Minh/Duong together with Nguyen supplies Vietnamese given-name signals beyond surname alone. Ran find-roster-matches for Minh Duong Nguyen and Duong Nguyen Minh with the employer profile and linked Scholar URL (without fetching Scholar). No URL matches. Inspected all nine name hits: vp-0023 and vp-0358 have Michigan State computing and UBC electrical-engineering doctorates; vp-0163 and vp-0551 have Hawaii business-related and Auckland computer-vision backgrounds; vp-0458, vp-1577, vp-1731, vp-1765 and vp-2339 are radiology, sociology, business, ophthalmology and rehabilitation identities. None matches Hanyang/perovskites. The generic Minh Nguyen line in already-proposed.txt does not identify this distinct person; neither full name/order is listed. No evidence of a Vietnam-based appointment.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Duc P. Truong",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Independently opened https://tensors.lanl.gov/team/: its individually headed Duc Truong biography identifies a scientist/staff member in T-5 and an SMU computational/applied-mathematics PhD. Although shared by the team, the page singles him out with his own portrait, role and biography, satisfying test 1. Opened https://github.com/lanl/thor: LANL lists Duc P. Truong as an author and maintainer in its Theoretical Division, corroborating the published initial and current research identity. Duc with Truong supplies a Vietnamese given-name signal beyond surname alone. The older ORCID postdoc record is superseded by the employer staff biography. Ran find-roster-matches for Duc P. Truong, Phan Minh Duc Truong and Duc Phan Minh Truong with employer URLs and ORCID: no URL matches. Inspected vp-0542 (Canterbury mechanical-engineering PhD 1979), vp-2848 (Swinburne accounting) and vp-2886 (Georgia chemistry PhD 2018); all differ from the SMU applied mathematician. None of the name variants is in already-proposed.txt. Current role is at LANL in the United States.",
+      "correctedFields": {}
+    }
+  ],
+  "possible_move": []
+}

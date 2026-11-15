@@ -1,0 +1,54 @@
+{
+  "verifier": "codex",
+  "input": "maintenance/sector-expansion/runs/w2/us-med-a-m.codex.json",
+  "candidates": [
+    {
+      "name": "Phuong Thanh Nguyen",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live employer profile https://www.bcm.edu/people-search/phuong-nguyen-27665 returned HTTP 200 and identifies a Professor of Psychiatry & Behavioral Sciences in Houston, PhD University of Massachusetts (2009), psychology-services director and fellowship training director. The departmental psychology faculty directory also lists her; the newer individual profile supports Professor over the directory's older Associate Professor title. This is an eligible continuing clinical-psychology faculty appointment. Phuong Thanh supplies Vietnamese given-name signals beyond Nguyen alone. Independently ran find-roster-matches with both submitted identity URLs and inspected roster records: exact-name vp-1560 is a software-engineering scholar with a Jena PhD (2012), not this Massachusetts clinical-psychology PhD; other name hits have different names, fields or degrees. No identity-URL match and no already-proposed.txt match. Current offices are in Texas, outside Vietnam.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Vincent Huy Tran",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live employer profile https://www.bcm.edu/people-search/vincent-tran-32068 returned HTTP 200 and identifies an Assistant Professor of Psychiatry & Behavioral Sciences, a UT Southwestern PhD and Rice BA, with a Texas VA office. The current departmental psychology faculty directory https://www.bcm.edu/departments/psychiatry-and-behavioral-sciences/programs-divisions/psychology/faculty independently lists him as faculty. The university/VA clinical-faculty appointment qualifies under the maintenance guide. Huy is a Vietnamese given-name signal beyond Tran alone. Independently ran find-roster-matches: vp-0131 is an aerospace-engineering PhD from Georgia Tech; vp-3087 is an Ottawa chemistry PhD; retired Argonne and NASA matches have distinct full names and careers. Retired vp-1510 is an unsupported Vienna placeholder without identity evidence linking it to this named US psychologist. No matching identity URL or already-proposed.txt entry. Employer profile locates him in Texas, outside Vietnam.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Mai-Linh N. Tran",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Opened https://llu.edu/academics/faculty/tran-mai-linh and https://experts.llu.edu/en/persons/mai-linh-tran/: both identify a current Associate Professor of Family Medicine in LLU's School of Medicine. This university health-system clinical-faculty appointment qualifies; VERIFY2 does not impose the non-university publication threshold on university faculty. The employer research profile also links recent 2025 and 2026 peer-reviewed work to this exact identity. Mai-Linh is an affirmative Vietnamese given-name compound beyond the surname. Independently ran find-roster-matches with both URLs and inspected the hits: vp-0700 and vp-1792 concern education and business; vp-1555 concerns Griffith epidemiology; vp-2248 is a UCLA computational-biology PhD, distinct from this family-medicine MD. No identity-URL match and no already-proposed.txt match. Appointment is at Loma Linda, California, outside Vietnam.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Minh Truong Do",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Opened https://faculty.mdanderson.org/profiles/minhtruong_do.html. Its current primary appointment is Assistant Professor in Thoracic Head/Neck Medical Oncology-Research at UT MD Anderson, Houston. It distinguishes this faculty role from the prior 2021-2026 Instructor appointment and completed 2018-2021 postdoc, supporting an eligible Research-track appointment. The page documents a Biological Pharmacy PhD from Chungnam National University (2014), Duke-NUS postdoctoral training, and an earlier lectureship at Thai Nguyen University of Sciences, Vietnam. Vietnamese given names plus that Vietnam career history support test 3. Independently ran find-roster-matches and compared roster records: vp-0005 is an EPFL electrical-engineering PhD (2001), and vp-1599 is a Toronto political-science PhD; neither is this biomedical researcher. No matching identity URL or already-proposed.txt entry. Current appointment is in Houston, outside Vietnam.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Tuyet-Trinh Truong",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Opened https://profiles.icahn.mssm.edu/tuyet-trinh-truong: current employer profile identifies an Associate Professor of Medicine, Hospital Medicine, with Temple MD and a New York office. This is an eligible university health-system clinical-faculty appointment. The linked employer research page https://scholars.mssm.edu/en/persons/tuyet-trinh-truong/ connects her to 2024 clinical-decision-support and 2026 hospital-at-home peer-reviewed articles; its older Assistant Professor headline does not supersede the faculty profile's current rank. Tuyet-Trinh supplies an affirmative Vietnamese given-name compound beyond Truong alone. Independently ran find-roster-matches with both identity URLs: no roster or retired-id matches. No already-proposed.txt match. Current employer location is New York, outside Vietnam.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Huynh Cao",
+      "verdict": "fixable",
+      "failedTests": [
+        1
+      ],
+      "reason": "The proposed https://lluh.org/sites/lluh.org/files/docs/cancer-center/research/cao-biosketch.pdf opens but is a dated PDF, expressly disallowed as profileUrl by VERIFY2. Replace it with the live official School of Medicine faculty directory below: its distinct Huynh Cao, MD entry explicitly identifies Assistant Professor, Medicine (direct HTTP 200), satisfying the permitted department-directory-entry alternative. Its linked legacy individual page fails to resolve; https://llu.edu/academics/faculty/cao-huynh and https://lluh.org/provider/cao-huynh both returned actual HTTP 404 on independent fetches. Current LLU department catalog also lists him as primary faculty. The biosketch supports UCLA MD (2008) and BS (2003); https://news.llu.edu/research/prompting-leukemia-cells-die explicitly identifies him as originally from Vietnam and describes his LLU academic career. Thus the university clinical-faculty appointment and Vietnamese origin are established. Independently ran find-roster-matches with the PDF and both HTML identity URLs: no roster or retired-id matches. No already-proposed.txt match; LLU appointment is outside Vietnam.",
+      "correctedFields": {
+        "profileUrl": "https://medicine.llu.edu/research/graduate-programs/cancer-developmental-and-regenerative-biology-cdrb/cancer-developmental-and-regenerative-biology-cdrb-faculty"
+      },
+      "correctedProfileUrl": "https://medicine.llu.edu/research/graduate-programs/cancer-developmental-and-regenerative-biology-cdrb/cancer-developmental-and-regenerative-biology-cdrb-faculty"
+    }
+  ],
+  "possible_move": []
+}

@@ -1,0 +1,111 @@
+{
+  "verifier": "codex",
+  "input": "maintenance/sector-expansion/runs/w1/us-med-n-z.codex.json",
+  "candidates": [
+    {
+      "name": "David Huy Nguyen",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live UCSF profile https://profiles.ucsf.edu/david-huy.nguyen identifies a current Assistant Professor of Medicine, laboratory leader and attending physician, with MIT PhD (2008) and Stanford MD. https://infectiousdiseases.ucsf.edu/fellowship/recentgraduates-research supplies the full name David Huy Nguyen; Huy is the affirmative Vietnamese given-name signal beyond Nguyen. US appointment and Berkeley laboratory are explicit. Required name/URL matching found different identities: Brown vp-0872 is orthopaedics; vp-3190 has Dartmouth PhD 2015; remaining Huy hits have different training/fields. Not in already-proposed.txt.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Nhung Nguyen",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live https://profiles.ucsf.edu/nhung.nguyen confirms Assistant Professor of Medicine, independent HEARTY laboratory, UTHealth epidemiology PhD (2014), Hanoi University of Pharmacy education and San Francisco address. https://tobacco.ucsf.edu/content/nhung-nguyen-phd-pharmd gives Assistant Adjunct Professor: eligible under ROSTER_MAINTENANCE.md's explicit UC salaried adjunct research-series exception, supported by current laboratory leadership and faculty profile. Nhung plus Vietnamese education provides a signal beyond surname. Required name/URL dedup: vp-0312 is Kansas-trained communication faculty, vp-1966 business faculty, vp-3144 a Maryland-trained quantum physicist. Not already proposed.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Thuy Tran",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live https://medicine.yale.edu/profile/thuy-tran/ confirms Assistant Professor of Medicine (Medical Oncology), Yale/Smilow clinical employment, Vanderbilt PhD 2011 and MD 2013, and US clinical sites. Clinical track is eligible under the university-health-system physician rule. Thuy is an affirmative Vietnamese given-name signal beyond Tran. Required name/URL matching resolves vp-2241 as the different UCI surgical oncologist; vp-1950 is Uppsala-trained Karolinska faculty, vp-0619 Paris-Saclay pharmaceutical sciences, and other hits have different expanded names/fields. Not in already-proposed.txt.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Cuong V. Nguyen",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live https://www.feinberg.northwestern.edu/faculty-profiles/az/profile.html?xid=45390 confirms Associate Professor in Dermatology and Medicine. The linked https://www.nm.org/doctors/1669817128 confirms Northwestern Medical Group employment, Chicago practice, and UCSD MD 2013, establishing an eligible Clinical appointment. Academia does not require a research doctorate or two recent papers. Cuong supplies a Vietnamese given-name signal beyond Nguyen. Required name/URL matching: exact-name vp-1785 is a Durham mathematician; vp-0982 is a Johns-Hopkins-trained Mayo gastroenterologist; remaining hits differ by discipline/training. Not already proposed.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Son C. Nguyen",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Employer page https://genetics.med.upenn.edu/faculty-profile/8928628 returned HTTP 200 via direct HTTPS and names Research Assistant Professor of Genetics, Harvard PhD 2016, Rutgers BA 2007, and Philadelphia office. It describes career service since 2016 and current spatial-genomics methods development in the Joyce laboratory, supporting genuine Research faculty rather than postdoctoral training. Son supplies a Vietnamese given-name signal beyond Nguyen. Required name/URL dedup found expanded-name namesakes in mathematics, physics, law, engineering and biotechnology; none matches Harvard 2016/Penn Genetics. Not in already-proposed.txt.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Linda Thuy Anh Doan",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live https://scholarconnect.uci.edu/ldoan confirms Associate Professor of Dermatology and Pathology, UCI clinical laboratory and dermatopathology leadership, Yale BS 2002, UCI MD and PhD 2013. This is an eligible university-employed Clinical appointment in California. Thuy Anh supplies affirmative Vietnamese given/middle-name signals beyond Doan. Required name/URL matching finds only vp-1357, the distinct UCSF ophthalmologist Thuy Doan with University of Washington PhD and Stanford MD, rather than UCI MD/PhD dermatopathology. No identity-URL collision or already-proposed-list match.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Hoa Nguyen",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Current employer profile https://profiles.umassmed.edu/display/14739427 returned HTTP 200 via direct HTTPS and confirms Professor, Population and Quantitative Health Sciences, Worcester address, UMass PhD, Harvard MS and Hanoi Medical University MD. https://www.umassmed.edu/capes/about/faculty/ independently confirms the epidemiology professorship and career research role. Hanoi education and Hoa provide signals beyond surname. Sources disagree on middle initial (T versus L); submitted Hoa Nguyen avoids inventing a resolution. Required name/URL dedup hits differ by field/training, including vp-1208, the Tubingen-trained Bochum geneticist. Not already proposed; Vietnam collaborations do not replace her US employment.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Ha Ngan (Milkie) Vu",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Current employer profile https://www.feinberg.northwestern.edu/faculty-profiles/az/profile.html?xid=55919 returned HTTP 200 directly and confirms Assistant Professor in Preventive Medicine and Medical Social Sciences, Chicago. https://www.nucats.nubic.northwestern.edu/about/news/2024/vu-research.html explicitly identifies her as a Vietnamese immigrant. The submitted award is verified by the employer announcement dated April 15, 2026 at https://www.feinberg.northwestern.edu/sites/ipham/news/Vu-selected-for-William-T.-Grant-Scholar-Class-of-2031.html; 2031 denotes cohort, not award year. Required name/URL matching resolves vp-1997 and vp-2078 as economics faculty; Milkie Vu alias has no matches. Not already proposed.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Thienkhai H. Vu",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live https://profiles.ucsf.edu/thienkhai.vu confirms Professor of Radiology and San Francisco address; its narrative identifies Thienkhai H. Vu, MD, PhD and clinical service at SFGH. PhD in Pathology 1997 and MD 1999 from Oklahoma HSC are explicit. The structured current Professor title takes precedence over older Associate Clinical Professor prose. Eligible Clinical appointment under the UC-employed physician rule. Thienkhai is a Vietnamese given-name signal beyond Vu. Required name/URL matching returns no roster or retired-ID matches; absent from already-proposed.txt.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Thanh Nguyen",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live https://www.unmc.edu/emergency/faculty/nguyen.html identifies Assistant Professor and Research Scientist, Emergency Medicine, with PhD, MSN and nursing background, Omaha institutional appointment and research interests matching the submission. Faculty plus career research appointment supports Research track. Thanh, with the institutional email variant Thang, provides Vietnamese given-name signals beyond Nguyen. Required name/URL matching and separate Thang alias check found different people: vp-2114 is the IUPUI-trained UAB computational biomedical engineer, vp-0363 a McGill-trained neurologist, and remaining matches differ by field/training. Not already proposed.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Thanh D. Nguyen",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Current employer page https://scholars.weill.cornell.edu/thanh-d-nguyen returned HTTP 200 via direct HTTPS and confirms Associate Professor of Physics Research in Radiology, primary appointment since 2010, Auburn electrical-engineering PhD 1999 and active grants. https://radiology.weill.cornell.edu/research/mri-research-institute-mriri/thanh-d-nguyen-laboratory corroborates the career Research appointment at Weill Cornell in New York. Thanh is the affirmative Vietnamese given-name signal beyond Nguyen. Required name/URL matching resolves exact-name vp-0208 as the UConn engineer with Princeton PhD 2013, and medical near-hits have different training/specialties. Not already proposed.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Thanh Phuong Pham Nguyen",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live https://www.med.upenn.edu/apps/faculty/index.php/g275/p9010882 confirms Research Assistant Professor of Biostatistics and Epidemiology, Penn MS and Philadelphia address. https://www.med.upenn.edu/evdresearch/new-faculty/ independently records her October 2026 faculty appointment, resolving the older Research Associate line. This establishes Research faculty; a research doctorate is not required for Academia. Thanh Phuong and the compound Pham Nguyen provide affirmative Vietnamese naming signals beyond a shared surname. Required name/URL matching resolves medical near-hits vp-0363 (neurology), vp-0814 (plastic surgery), vp-0870 (anesthesiology), vp-2114 (computational engineering) as different people; others differ by field/training. Not already proposed.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Dat Q. Tran",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live https://keck.usc.edu/faculty-search/dat-q-tran/ and https://profiles.sc-ctsi.org/dat.tran confirm Assistant Professor of Research Pathology, PhD and Los Angeles institutional address. Faculty rank, long-running peptide research and repeated PI roles support career Research faculty rather than training. Dat supplies a Vietnamese given-name signal beyond Tran. Required name/URL matching resolves vp-0423 as Jesuit electrical-engineering faculty, vp-1532 mathematics, vp-2184 materials physics, vp-2605 infocomm and vp-3028 Army battery/materials research; none matches the USC pathology scientist. No identity-URL collision or already-proposed-list match.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    }
+  ],
+  "possible_move": []
+}

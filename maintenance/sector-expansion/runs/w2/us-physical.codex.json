@@ -1,0 +1,437 @@
+{
+  "group": "university",
+  "agent": "codex",
+  "slice": "us-physical",
+  "finishedAt": "2026-11-15T00:41:13.628418Z",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Huong Tran Kratochvil",
+        "university": "University of North Carolina at Chapel Hill",
+        "rank": "Assistant Professor",
+        "track": "Tenure-line",
+        "department": "Chemistry",
+        "field": "Chemistry",
+        "country": "United States",
+        "profileUrl": "https://chem.unc.edu/people/kratochvil-huong/",
+        "researchAreas": [
+          "Protein Biophysics",
+          "Protein Design",
+          "Membrane Proteins"
+        ],
+        "city": "Chapel Hill",
+        "state": "North Carolina",
+        "phdInstitution": "University of Wisconsin-Madison",
+        "undergradInstitution": "The University of Texas at Austin",
+        "postdocInstitution": "University of California, San Francisco",
+        "websiteUrl": "https://www.kratochvillab.com/meet-the-team/prof-huong-kratochvil"
+      },
+      "evidence": {
+        "currentRole": "https://chem.unc.edu/people/kratochvil-huong/ — \"Assistant Professor\"; current faculty profile describes her independent protein-design laboratory and doctoral recruitment.",
+        "doctorateOrPapers": "https://chem.unc.edu/people/kratochvil-huong/ explicitly lists a Ph.D. from University of Wisconsin-Madison, undergraduate study at UT Austin, and postdoctoral training at UCSF.",
+        "vietnameseSignal": "Vietnamese given name Huong; the UCSF lab announcement explicitly publishes the fuller name Huong Tran Kratochvil: https://pharm.ucsf.edu/degrado/news/2016/11/welcome-new-post-docs-huong-robert-nick (opened successfully using requests, HTTP 200). Retain Tran in the proposed name.",
+        "dedup": "npm run find-roster-matches -- \"Huong Tran Kratochvil\" --url https://chem.unc.edu/people/kratochvil-huong/ https://www.kratochvillab.com/meet-the-team/prof-huong-kratochvil → no roster or retired-id matches. No exclusion-list match."
+      }
+    },
+    {
+      "entry": {
+        "name": "Nhu Y Tran Stessman",
+        "university": "California State University, Stanislaus",
+        "rank": "Professor",
+        "track": "Tenure-line",
+        "department": "Chemistry",
+        "field": "Chemistry",
+        "country": "United States",
+        "profileUrl": "https://www.csustan.edu/people/dr-nhu-y-stessman",
+        "researchAreas": [
+          "Organic Chemistry",
+          "Organic Synthesis"
+        ],
+        "city": "Turlock",
+        "state": "California",
+        "phdInstitution": "University of Arizona",
+        "undergradInstitution": "California Polytechnic State University, San Luis Obispo",
+        "postdocInstitution": "University of California, Santa Cruz",
+        "portraitSource": "https://www.csustan.edu/sites/default/files/2022-02/nhu-y-stessman.jpeg"
+      },
+      "evidence": {
+        "currentRole": "https://www.csustan.edu/people/dr-nhu-y-stessman — \"Professor\", Chemistry. https://www.csustan.edu/news/chemistry-professors-add-unique-mix-their-passion-marathons independently identifies her as an organic chemistry professor.",
+        "doctorateOrPapers": "https://www.csustan.edu/people/dr-nhu-y-stessman lists Ph.D., University of Arizona, Tucson; postdoctoral training at UC Santa Cruz; and B.S., Cal Poly San Luis Obispo.",
+        "vietnameseSignal": "https://www.csustan.edu/news/chemistry-professors-add-unique-mix-their-passion-marathons identifies her as a native of Vietnam. Fuller published name is supported by the opened bibliography https://www.grafiati.com/en/literature-selections/cumulenes-organic-compounds-synthesis/dissertation/ (entry 18: Stessman, Nhu Y. Tran, Arizona chemistry dissertation). The primary Arizona repository returned HTTP 403; no degree year is proposed from that blocked source. Retain Tran.",
+        "dedup": "npm run find-roster-matches -- \"Nhu Y Tran Stessman\" --url https://www.csustan.edu/people/dr-nhu-y-stessman → no roster or retired-id matches; shorter Nhu Y Stessman also returned none. No exclusion-list match."
+      }
+    },
+    {
+      "entry": {
+        "name": "Binh Khanh Mai",
+        "university": "University of Pittsburgh",
+        "rank": "Assistant Professor",
+        "track": "Research",
+        "department": "Chemistry",
+        "field": "Chemistry",
+        "country": "United States",
+        "profileUrl": "https://www.chem.pitt.edu/people/binh-khanh-mai",
+        "researchAreas": [
+          "Computational Chemistry",
+          "Machine Learning",
+          "Catalysis",
+          "Enzyme Design"
+        ],
+        "city": "Pittsburgh",
+        "state": "Pennsylvania",
+        "phdInstitution": "Kyung Hee University",
+        "phdYear": 2016,
+        "undergradInstitution": "Ho Chi Minh City University of Education",
+        "undergradYear": 2008,
+        "websiteUrl": "https://www.pengliugroup.com/members/binh-khanh-mai",
+        "portraitSource": "https://www.chem.pitt.edu/sites/default/files/styles/person_image/public/person-img/Binh%20Mai.jpg?h=926aff4b&itok=ov12LF0x"
+      },
+      "evidence": {
+        "currentRole": "https://www.chem.pitt.edu/people — \"Research Assistant Professor\" under Research Faculty. https://www.chem.pitt.edu/people/research-faculty and the individual employer profile independently identify Mai; the individual profile links directly to his lab biography. This is a documented research-faculty rank, separate from the postdoctoral list.",
+        "doctorateOrPapers": "https://www.pengliugroup.com/members/binh-khanh-mai, linked by the official individual profile, lists Ph.D. in Physical Chemistry, Kyung Hee University (2011–2016), and the current research assistant professorship from 2025. Earlier Pittsburgh and Stockholm postdoctoral positions are explicitly separate.",
+        "vietnameseSignal": "Vietnamese given names Binh Khanh, plus Bachelor in Chemistry at Ho Chi Minh City University of Education, Vietnam (2004–2008), explicitly recorded at https://www.pengliugroup.com/members/binh-khanh-mai.",
+        "dedup": "npm run find-roster-matches -- \"Binh Khanh Mai\" --url https://www.chem.pitt.edu/people/binh-khanh-mai https://www.pengliugroup.com/members/binh-khanh-mai https://sites.google.com/site/khanhbinh183 → no roster or retired-id matches. No exclusion-list match."
+      }
+    },
+    {
+      "entry": {
+        "name": "Minh Tri Ho Thanh",
+        "university": "Syracuse University",
+        "rank": "Assistant Professor",
+        "track": "Research",
+        "department": "Physics",
+        "field": "Physics & Astronomy",
+        "country": "United States",
+        "profileUrl": "https://artsandsciences.syracuse.edu/people/faculty/minh-tri-ho-thanh/",
+        "researchAreas": [
+          "Biophysics",
+          "Cell Mechanics",
+          "Cancer Cell Migration",
+          "Computational Modeling"
+        ],
+        "city": "Syracuse",
+        "state": "New York",
+        "phdInstitution": "Worcester Polytechnic Institute",
+        "phdYear": 2020,
+        "undergradInstitution": "Worcester Polytechnic Institute",
+        "undergradYear": 2014,
+        "portraitSource": "https://artsandsciences.syracuse.edu/media/images/Minh_Thanh.width-275.png"
+      },
+      "evidence": {
+        "currentRole": "https://artsandsciences.syracuse.edu/people/faculty/minh-tri-ho-thanh/ — \"Research Assistant Professor\", Physics. https://artsandsciences.syracuse.edu/news-all/news-2026/accomplished-scholars-join-arts-and-sciences-faculty/ announces him among new faculty joining Spring 2026 and distinguishes his previous postdoctoral work.",
+        "doctorateOrPapers": "Official profile links https://artsandsciences.syracuse.edu/media/documents/Minh_CV_noref.pdf: completed Ph.D. in Physics, Worcester Polytechnic Institute, September 2020; B.S. in Physics, May 2014. The 2026 faculty announcement corroborates both degree institutions.",
+        "vietnameseSignal": "Affirmative Vietnamese given-name tokens Minh Tri in the published full name on the employer profile and linked CV; Ho Thanh is the published surname sequence. No diacritics reconstructed.",
+        "dedup": "npm run find-roster-matches -- \"Minh Tri Ho Thanh\" --url https://artsandsciences.syracuse.edu/people/faculty/minh-tri-ho-thanh/ → no roster or retired-id matches. No exclusion-list match."
+      }
+    },
+    {
+      "entry": {
+        "name": "Phuong-Truc Thi Pham",
+        "university": "Pennsylvania State University",
+        "rank": "Associate Professor",
+        "track": "Tenure-line",
+        "department": "Chemistry",
+        "field": "Chemistry",
+        "country": "United States",
+        "profileUrl": "https://pure.psu.edu/en/persons/phuong-truc-thi-pham",
+        "researchAreas": [
+          "Organic Materials Chemistry",
+          "Crystal Engineering",
+          "Computational Chemistry"
+        ]
+      },
+      "evidence": {
+        "currentRole": "https://pure.psu.edu/en/persons/phuong-truc-thi-pham — \"Associate Professor of Chemistry\", Penn State Scranton. Employer-hosted individual research profile opened successfully. The alternate campus biography https://scranton.psu.edu/person/phuong-truc-pham returned HTTP 403, so it is not used as profileUrl.",
+        "doctorateOrPapers": "Two employer-indexed, identity-linked papers within the last three years: 4-Chlorocurcumin (2025), https://pure.psu.edu/en/publications/4-chlorocurcumin/ (DOI 10.1107/S2414314624012434); Di- and Tricyanovinyl-Substituted Triphenylamines: Structural and Computational Studies (2024), https://pure.psu.edu/en/publications/di-and-tricyanovinyl-substituted-triphenylamines-structural-and-c/ (DOI 10.1021/acsomega.3c05312). Both opened records identify Phuong Truc T. Pham, coauthor Mamoun M. Bader, and Penn State Scranton. No unsourced doctorate institution/year proposed.",
+        "vietnameseSignal": "Vietnamese given-name sequence Phuong-Truc Thi, explicitly published on the employer-hosted individual profile.",
+        "dedup": "npm run find-roster-matches -- \"Phuong-Truc Thi Pham\" --url https://pure.psu.edu/en/persons/phuong-truc-thi-pham https://scranton.psu.edu/person/phuong-truc-pham → vp-0759 Phuong V. Pham. Resolved as different people: opened https://phys.nsysu.edu.tw/p/405-1181-288358,c9040.php?Lang=en identifies Phuong V. Pham in Physics at National Sun Yat-sen University, Taiwan; proposed candidate has a fuller different name and an identity-linked organic-crystallography publication record at Penn State with Mamoun Bader. No shared identity URLs. No exclusion-list match."
+      }
+    },
+    {
+      "entry": {
+        "name": "Thi Thuy Minh Nguyen",
+        "university": "Lamar University",
+        "rank": "Associate Professor",
+        "track": "Tenure-line",
+        "department": "Chemistry and Biochemistry",
+        "field": "Chemistry",
+        "country": "United States",
+        "profileUrl": "https://www.lamar.edu/arts-sciences/chemistry-and-biochemistry/faculty-and-staff/dr.-t.-thuy-minh-nguyen.html",
+        "researchAreas": [
+          "Membrane Biochemistry",
+          "Sterols",
+          "Cancer Cell Membranes"
+        ],
+        "portraitSource": "https://www.lamar.edu/arts-sciences/_files/images/chemistry-biochemistry/2013-nguyen250x250.jpg"
+      },
+      "evidence": {
+        "currentRole": "https://www.lamar.edu/arts-sciences/chemistry-and-biochemistry/faculty-and-staff/dr.-t.-thuy-minh-nguyen.html — \"Associate Professor of Biochemistry\". Individual employer profile describes her laboratory and identifies thi.nguyen@lamar.edu. Older program pages retain an assistant-professor title; the individual profile supplies the proposed rank.",
+        "doctorateOrPapers": "https://www.lamar.edu/undergraduate-research/mentor-directory/chemistry-and-biochemistry/ explicitly identifies Thi Thuy Minh Nguyen, Ph.D. The mentor list has an inconsistent email/research block apparently copied from another person; only its doctorate designation and fuller name are used. Research areas come from the individual biochemistry profile. Doctorate institution/year are absent and omitted.",
+        "vietnameseSignal": "Vietnamese given-name sequence Thi Thuy Minh in the employer mentor directory; individual profile uses T. Thuy Minh Nguyen. No diacritics reconstructed.",
+        "dedup": "npm run find-roster-matches -- \"Thi Thuy Minh Nguyen\" --url https://www.lamar.edu/arts-sciences/chemistry-and-biochemistry/faculty-and-staff/dr.-t.-thuy-minh-nguyen.html https://www.lamar.edu/undergraduate-research/mentor-directory/chemistry-and-biochemistry/ → name-only hits vp-0163, vp-0311, vp-0458, vp-0476, vp-0551, vp-0614, vp-0807, vp-1577, vp-1731, vp-1765, vp-1929, vp-2339. Manually compared their roster departments/employers/identity URLs: none is this Lamar biochemist. Exact-name vp-0807 is an English/linguistics scholar at Otago, with a distinct official profile and applied-linguistics record; this person has a separate Lamar biochemistry lab and sterol/membrane publications. Other hits have different fuller names and fields (business, computing, medicine, philosophy, sociology, education); no shared URLs. No exclusion-list match."
+      }
+    },
+    {
+      "entry": {
+        "name": "Thien Khuu",
+        "university": "Reed College",
+        "rank": "Assistant Professor",
+        "track": "Tenure-line",
+        "department": "Chemistry",
+        "field": "Chemistry",
+        "country": "United States",
+        "profileUrl": "https://www.reed.edu/faculty-profiles/profiles/khuu-thien.html",
+        "researchAreas": [
+          "Physical Chemistry",
+          "Vibrational Spectroscopy",
+          "Mass Spectrometry",
+          "Chemistry at Interfaces",
+          "Instrument Development"
+        ],
+        "city": "Portland",
+        "state": "Oregon",
+        "phdInstitution": "Yale University",
+        "phdYear": 2023,
+        "postdocInstitution": "University of Southern California",
+        "websiteUrl": "https://www.khuu-lab.com/",
+        "portraitSource": "https://www.reed.edu/faculty-profiles/profiles/photos/khuu-thien.jpg?1793030583113"
+      },
+      "evidence": {
+        "currentRole": "https://www.reed.edu/faculty-profiles/profiles/khuu-thien.html — \"Assistant Professor of Chemistry\". https://www.reed.edu/dean_of_faculty/current_faculty.html lists him in Faculty 2026–27 (updated October 14, 2026); the chemistry directory distinguishes his regular rank from neighboring visiting appointments.",
+        "doctorateOrPapers": "https://www.reed.edu/faculty-profiles/profiles/khuu-thien.html explicitly describes completed Ph.D. in Physical Chemistry at Yale, supervised by Mark A. Johnson. https://chem.yale.edu/posts/2023-07-07-thien-khuu-receives-nsf-postdoctoral-fellowship-to-study-reactions-in identifies him as a 2023 Ph.D. graduate. The older USC postdoc ended before the current Reed appointment.",
+        "vietnameseSignal": "Vietnamese given-name token Thien together with less common Vietnamese surname Khuu, published on his employer profile. This is a name-based affirmative given-name signal, not surname-only inference; no claim of documented nationality is made.",
+        "dedup": "npm run find-roster-matches -- \"Thien Khuu\" --url https://www.reed.edu/faculty-profiles/profiles/khuu-thien.html https://www.khuu-lab.com/ → no roster or retired-id matches. No exclusion-list match."
+      }
+    }
+  ],
+  "already_listed": [
+    {
+      "name": "Duy Le",
+      "id": "vp-0075",
+      "note": "npm matcher hit resolved as the same UCF physicist, same UCF Ph.D. 2012. Live https://sciences.ucf.edu/physics/person/duy-le/ confirms current assistant professorship. No new entry; employer unchanged."
+    },
+    {
+      "name": "Khanh Kieu",
+      "id": "vp-1414",
+      "note": "npm matcher hit resolved as same Arizona optical scientist, same Arizona Ph.D. 2007; https://wp.optics.arizona.edu/kkieu/people/khanh-kieu-bio/. Adjacent optical-sciences result; already listed."
+    },
+    {
+      "name": "Khanh-Hoa Tran-Ba",
+      "id": "vp-0436",
+      "note": "npm matcher matched identical Towson institutional profile URL https://www.towson.edu/fcsm/departments/chemistry/facultystaff/ktranba.html. Same physical chemist and Kansas State doctorate."
+    },
+    {
+      "name": "Phuoc Dai Ha",
+      "id": "vp-2806",
+      "note": "npm matcher matched identical Towson profile URL https://www.towson.edu/fcsm/departments/physics/facultystaff/pha.html; same physics field and Wisconsin-Madison doctorate."
+    }
+  ],
+  "possible_move": [],
+  "rejected": [
+    {
+      "name": "David Minh",
+      "reason": "Older Illinois Tech directory is blocked (HTTP 403) and may be stale. Opened current employer https://chicago.medicine.uic.edu/bmg/profiles/minh-david/ identifies a Visiting Research Associate Professor; excluded visiting role. No new candidate proposed from the old search listing."
+    },
+    {
+      "name": "An-Phong Le",
+      "reason": "Older Florida Southern materials and secondary listings identify an associate professor, but the current official faculty-directory search returned no An-Phong result (HTTP 200 via requests: https://www.flsouthern.edu/faculty-and-staff/index.html?search_phrase=An-Phong&page=1). No current individual employer profile verified; unresolved lead, not a verified candidate."
+    },
+    {
+      "name": "Linh Vu",
+      "reason": "https://lamont.columbia.edu/directory/linh-vu explicitly identifies a Ph.D. student in Earth and Environmental Sciences at Columbia; excluded trainee."
+    },
+    {
+      "name": "Hieu Nguyen — University of Tennessee, Knoxville Chemistry",
+      "reason": "https://chem.utk.edu/staff/ places Hieu Nguyen under Post-Doctoral Fellows, not research faculty; excluded."
+    },
+    {
+      "name": "Chau Ngo",
+      "reason": "https://www.chemistry.ucla.edu/directory/ngo-chau/ describes the 2023–2024 Cram Teacher-Scholar Assistant Adjunct position; explicitly excluded fixed-term training appointment under roster rules."
+    },
+    {
+      "name": "Khanh Ha",
+      "reason": "Search-discovered https://sunypoly.edu/faculty-and-staff/dr-khanh-ha.html described a Visiting Assistant Professor; attempted live open failed (cache miss). Appointment therefore not verified live and candidate held out; search snippet alone was not accepted."
+    },
+    {
+      "name": "Ny Kieu",
+      "reason": "https://www.luc.edu/physics/facultystaff/nykieuphd/ identifies a Postdoctoral Research Fellow; excluded."
+    },
+    {
+      "name": "Thuy P. Dao",
+      "reason": "https://artsandsciences.syracuse.edu/chemistry/chemistry-faculty-and-staff/ lists laboratory manager, with no faculty-equivalent research appointment demonstrated; excluded ordinary staff role."
+    },
+    {
+      "name": "Diep Le",
+      "reason": "https://csm.fresnostate.edu/about/directory/chemistry/index.html lists Lecturer but does not establish full-time continuing/permanent status; held out rather than infer Teaching eligibility."
+    },
+    {
+      "name": "Quynh Huong Vuong",
+      "reason": "https://www.pas.rochester.edu/people/index.html identifies a Ph.D. candidate, entry year 2020; excluded trainee."
+    },
+    {
+      "name": "Nhat Anh Vu Nghiem",
+      "reason": "https://www.stonybrook.edu/cn-yang-physics/people.html places this lead in the graduate-student listing; no eligible career appointment verified."
+    }
+  ],
+  "coverage": [
+    {
+      "employer": "US university physical-sciences slice",
+      "pagesExamined": [],
+      "note": "Later-pass discovery used Vietnamese given-name tokens Huong, Thuy, Hieu, Linh, Quynh, Huyen, Nhu, Quyen, Bich, Duc, Khanh, Tram, Phuong, Uyen, Minh, Hanh, Nhat, Diep, Quoc, Phuoc, Chau, Tuong, Hao, Suong, Tien, Tung, Thanh, Thien, Triet, Hau, Phong and Huy; less-common surname searches included Kieu, Vuong, Cao, Luong, Nghiem, Khuu, Quach, Buu, Ta, Luu and Chu. Chemistry, physics/astronomy, geology, earth, atmospheric and oceanography combinations were searched. Search results supplied leads only. Stopped after repeated low-yield searches and seven verified new candidates; this is broad targeted coverage, not a claim that every US department was enumerated. Compared employer labels in earlier w1 codex coverage: Reed, Lamar and Florida Southern had no exact employer coverage label. Already-proposed names were screened out. No LinkedIn pages were fetched, no login used, and no roster/GitHub changes made."
+    },
+    {
+      "employer": "University of North Carolina at Chapel Hill",
+      "pagesExamined": [
+        "https://chem.unc.edu/people/kratochvil-huong/"
+      ],
+      "note": "Verified new candidate: Huong Tran Kratochvil. See mapped sources and dedup evidence above. PortraitSource, where provided, is an image URL extracted from the named employer profile; image bytes were not downloaded or independently visually vetted."
+    },
+    {
+      "employer": "California State University, Stanislaus",
+      "pagesExamined": [
+        "https://www.csustan.edu/people/dr-nhu-y-stessman"
+      ],
+      "note": "Verified new candidate: Nhu Y Tran Stessman. See mapped sources and dedup evidence above. PortraitSource, where provided, is an image URL extracted from the named employer profile; image bytes were not downloaded or independently visually vetted."
+    },
+    {
+      "employer": "University of Pittsburgh",
+      "pagesExamined": [
+        "https://www.chem.pitt.edu/people/binh-khanh-mai"
+      ],
+      "note": "Verified new candidate: Binh Khanh Mai. See mapped sources and dedup evidence above. PortraitSource, where provided, is an image URL extracted from the named employer profile; image bytes were not downloaded or independently visually vetted."
+    },
+    {
+      "employer": "Syracuse University",
+      "pagesExamined": [
+        "https://artsandsciences.syracuse.edu/people/faculty/minh-tri-ho-thanh/"
+      ],
+      "note": "Verified new candidate: Minh Tri Ho Thanh. See mapped sources and dedup evidence above. PortraitSource, where provided, is an image URL extracted from the named employer profile; image bytes were not downloaded or independently visually vetted."
+    },
+    {
+      "employer": "Pennsylvania State University",
+      "pagesExamined": [
+        "https://pure.psu.edu/en/persons/phuong-truc-thi-pham"
+      ],
+      "note": "Verified new candidate: Phuong-Truc Thi Pham. See mapped sources and dedup evidence above. PortraitSource, where provided, is an image URL extracted from the named employer profile; image bytes were not downloaded or independently visually vetted."
+    },
+    {
+      "employer": "Lamar University",
+      "pagesExamined": [
+        "https://www.lamar.edu/arts-sciences/chemistry-and-biochemistry/faculty-and-staff/dr.-t.-thuy-minh-nguyen.html"
+      ],
+      "note": "Verified new candidate: Thi Thuy Minh Nguyen. See mapped sources and dedup evidence above. PortraitSource, where provided, is an image URL extracted from the named employer profile; image bytes were not downloaded or independently visually vetted."
+    },
+    {
+      "employer": "Reed College",
+      "pagesExamined": [
+        "https://www.reed.edu/faculty-profiles/profiles/khuu-thien.html"
+      ],
+      "note": "Verified new candidate: Thien Khuu. See mapped sources and dedup evidence above. PortraitSource, where provided, is an image URL extracted from the named employer profile; image bytes were not downloaded or independently visually vetted."
+    },
+    {
+      "employer": "University of Pittsburgh",
+      "pagesExamined": [
+        "https://www.chem.pitt.edu/people",
+        "https://www.chem.pitt.edu/people/research-faculty",
+        "https://www.pengliugroup.com/members/binh-khanh-mai"
+      ],
+      "note": "Read faculty/postdoctoral/research-faculty separation and linked biographical history; current research faculty verified."
+    },
+    {
+      "employer": "Syracuse University",
+      "pagesExamined": [
+        "https://artsandsciences.syracuse.edu/physics/faculty-and-affiliates/",
+        "https://artsandsciences.syracuse.edu/news-all/news-2026/accomplished-scholars-join-arts-and-sciences-faculty/",
+        "https://artsandsciences.syracuse.edu/chemistry/chemistry-faculty-and-staff/"
+      ],
+      "note": "Physics given-name lead confirmed as faculty appointed Spring 2026; chemistry lead Thuy Dao is a lab manager."
+    },
+    {
+      "employer": "Columbia University",
+      "pagesExamined": [
+        "https://lamont.columbia.edu/directory/linh-vu"
+      ],
+      "note": "Earth/atmospheric lead Linh Vu excluded as a graduate student."
+    },
+    {
+      "employer": "University of Rhode Island",
+      "pagesExamined": [
+        "https://web.uri.edu/graduate-school/grad-faculty-status-master-list/"
+      ],
+      "note": "Screened relevant chemistry/physics/oceanography listings; no new verified candidate established. Outside-scholar/adjunct graduate-faculty status alone does not establish employment."
+    },
+    {
+      "employer": "University of Rochester",
+      "pagesExamined": [
+        "https://www.pas.rochester.edu/people/index.html"
+      ],
+      "note": "Targeted Physics/Astronomy name-token screening; Quynh Huong Vuong is a Ph.D. candidate."
+    },
+    {
+      "employer": "Stony Brook University",
+      "pagesExamined": [
+        "https://www.stonybrook.edu/cn-yang-physics/people.html"
+      ],
+      "note": "Targeted theoretical-physics screening; Nhat Anh Vu Nghiem is listed among graduate students."
+    },
+    {
+      "employer": "Binghamton University",
+      "pagesExamined": [
+        "https://www.binghamton.edu/chemistry/faculty/"
+      ],
+      "note": "Chemistry faculty/research-faculty directory examined for given-name and uncommon-surname leads; no new verified candidate established."
+    },
+    {
+      "employer": "California State University, Fresno",
+      "pagesExamined": [
+        "https://csm.fresnostate.edu/about/directory/chemistry/index.html"
+      ],
+      "note": "Chemistry directory screened; Diep Le lacks documented continuing full-time Teaching status."
+    },
+    {
+      "employer": "University of Tennessee, Knoxville",
+      "pagesExamined": [
+        "https://chem.utk.edu/staff/"
+      ],
+      "note": "Resolved Hieu Nguyen as postdoctoral fellow, not the unrelated research-assistant-professor entry on the same page."
+    },
+    {
+      "employer": "Florida Southern College",
+      "pagesExamined": [
+        "https://www.flsouthern.edu/faculty-and-staff/index.html",
+        "https://www.flsouthern.edu/faculty-and-staff/index.html?search_phrase=An-Phong&page=1"
+      ],
+      "note": "Went beyond search snippets to current directory and its published search form, using ordinary HTTP requests; An-Phong Le not verified current."
+    },
+    {
+      "employer": "Illinois Institute of Technology / University of Illinois Chicago",
+      "pagesExamined": [
+        "https://www.iit.edu/directory/people/david-minh",
+        "https://chicago.medicine.uic.edu/bmg/profiles/minh-david/"
+      ],
+      "note": "Illinois Tech returned 403; current UIC individual page opened and shows Visiting Research Associate Professor. Excluded from candidates."
+    },
+    {
+      "employer": "Towson University",
+      "pagesExamined": [
+        "https://www.towson.edu/fcsm/departments/chemistry/facultystaff/ktranba.html",
+        "https://www.towson.edu/fcsm/departments/physics/facultystaff/pha.html"
+      ],
+      "note": "Two uncommon-name leads resolved to existing IDs."
+    },
+    {
+      "employer": "University of Central Florida",
+      "pagesExamined": [
+        "https://sciences.ucf.edu/physics/person/duy-le/"
+      ],
+      "note": "Given-name lead Duy Le resolved to existing ID, not a new person."
+    },
+    {
+      "employer": "University of Arizona",
+      "pagesExamined": [
+        "https://wp.optics.arizona.edu/kkieu/people/khanh-kieu-bio/"
+      ],
+      "note": "Adjacent optical-physics lead resolved to existing ID."
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "verifier": "codex",
+  "input": "maintenance/sector-expansion/runs/w1/taiwan-korea.codex.json",
+  "candidates": [
+    {
+      "name": "Hang Thi Dieu Nguyen",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Independently opened https://www.gmba.ntpu.edu.tw/web/about/about.jsp?cp_id=CP1785118671323: an individual current NTPU faculty profile identifies Hang Thi Dieu Nguyen (Hana) as Assistant Professor, with a Yuan Ze finance PhD, institutional contact details and recent finance publications. The complete Vietnamese given/middle-name combination Thi Dieu Hang with Nguyen provides a signal beyond surname alone. The appointment is in Taiwan and has no visiting, adjunct or temporary qualifier. Required npm dedup returned only vp-0476 C. Thi Nguyen, a different person: Utah philosophy, UCLA PhD 2011, versus this Yuan Ze-trained finance scholar. No identity-URL match or already-proposed.txt match.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Thanh Thien Phuc Nguyen",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Independently opened https://ee.ntou.edu.tw/p/412-1062-7475.php?Lang=en and https://ee.ntou.edu.tw/p/412-1062-7475.php?Lang=zh-tw. Both provide an identifiable individual faculty block, rather than an unnamed team mention: Nguyen Thanh Thien Phuc, Assistant Professor, NTUST electrical-engineering PhD, computer-vision/robot-learning research and nttphuc@mail.ntou.edu.tw. The Chinese listing places him before the adjunct section. Thanh Thien Phuc with Nguyen is an affirmative Vietnamese name combination; current appointment is in Taiwan with no excluded qualifier. Required npm dedup produced partial-name hits but no URL match. Checked their roster fields: none matches his full name and NTUST doctorate. Closest vp-0806/retired vp-1581 is a Tokyo-PhD quantum/molecular researcher; vp-3143 is a UC Irvine-PhD Motional researcher; the other hits have different full names, specialties or degree histories. No already-proposed.txt match.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Hien X. Bui",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Independently opened https://www.atm.ncu.edu.tw/about_2.php: the current departmental faculty directory has a distinct Hien X. Bui profile block naming Assistant Professor/Yushan Young Fellow, NCU PhD, climate research and hien.bui@atm.ncu.edu.tw. It distinguishes project research fellows explicitly elsewhere; her title has no temporary or research-fellow qualifier. Opened https://sites.google.com/view/hienbui0526/hien-bui, which matches that email, dates the faculty appointment to February 2025 and supplies the Taoyuan, Taiwan address, 2016 doctorate and 2010 Vietnamese undergraduate education. The Vietnamese education/career biography and Hien Bui name provide an affirmative signal beyond a shared surname. Required npm dedup with institutional, personal, Scholar and researcher-portal URLs, plus Hien Bui variant, returned no roster or retired-ID matches. No already-proposed.txt match.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Vinh Ya",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "The web tool could not fetch https://www.wree.tku.edu.tw/index.php/teacher/54, but an independent anonymous Python urllib request returned HTTP 200 and the live employer HTML was inspected. The individual profile identifies full-time faculty (專任), Assistant Professor (助理教授), and an ongoing Tamkang appointment beginning August 2024 in New Taipei, Taiwan. It documents Tamkang doctoral/master’s education and a Dalat University, Vietnam bachelor’s degree and former lecturer role, providing affirmative Vietnamese education/career evidence beyond the uncommon name. Vinh Ya is supported by the institutional email and publication bylines, although some bibliography entries reverse the name. Required npm dedup for Vinh Ya and Ya Vinh with the official URL returned no roster or retired-ID matches. No already-proposed.txt match.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Trung Hieu Pham",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Independently opened https://kscms.ks.ac.kr/gs/CMS/Contents/Contents.do?mCode=MN027: a distinct individual faculty block identifies Pham Trung Hieu, Ph.D., Assistant Professor in Global IT Engineering, embedded-systems/motor-drive research and phamtrunghieu@ks.ac.kr. Also opened https://kscms.ks.ac.kr/gc/CMS/ProfessorMgr/list.do?mCode=MN058, which corroborates the name, rank and email and explicitly labels neighboring visiting professors separately. Busan campus address establishes location outside Vietnam. Trung Hieu with Pham is an affirmative Vietnamese name combination beyond surname alone. Required npm dedup returned partial-name matches only: vp-0706/retired vp-1245 has surname Nguyen and semiconductor-photonics research; vp-1215 is an Iowa State-trained business/optimization scholar; vp-1709 is a visual artist; vp-2928 is an Adelaide-trained computer-vision researcher. These are distinct identities; no URL or already-proposed.txt match.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    }
+  ],
+  "possible_move": [
+    {
+      "name": "Phan Le Ha",
+      "id": "vp-1455",
+      "verdict": "moved",
+      "newEmployer": "National Chung Cheng University",
+      "url": "https://elmd.ccu.edu.tw/p/406-1128-94746,r359.php?Lang=en",
+      "reason": "The current official individual CCU profile explicitly identifies her as Professor in the International Program of Educational Leadership and Management Development, College of Education, National Chung Cheng University, Taiwan, after long-term appointments including Brunei Darussalam. The Monash PhD and language/international-education specialties match vp-1455; npm dedup also matches this existing ID. public/data.json still names Universiti Brunei Darussalam, so the employer differs. The profile distinguishes her concurrent honorary UCL and visiting VNU Hanoi roles from the current primary CCU professorship."
+    }
+  ]
+}

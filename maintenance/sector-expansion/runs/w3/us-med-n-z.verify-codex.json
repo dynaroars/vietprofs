@@ -1,0 +1,28 @@
+{
+  "verifier": "codex",
+  "input": "maintenance/sector-expansion/runs/w3/us-med-n-z.codex.json",
+  "candidates": [
+    {
+      "name": "Thuy T. Koll",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Independently opened https://www.unmc.edu/intmed/divisions/geriatrics/faculty/koll.html: current person-specific UNMC faculty profile identifies an Assistant Professor in Geriatrics, Gerontology and Palliative Medicine, a Nebraska Medicine hospital appointment, and research mentorship. This is an eligible university/own-health-system clinical faculty role under ROSTER_MAINTENANCE.md; university faculty do not need the non-university doctorate/publication test. The published Vietnamese given name Thuy provides an affirmative name signal beyond a shared surname; no original surname or diacritics are inferred. The profile gives an Omaha, Nebraska address and Creighton medical education. Required npm name-and-profile-URL search returned no roster or retired-id matches. Absent from maintenance/sector-expansion/already-proposed.txt. All five tests pass.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Phuong Mai",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Independently opened https://www.obgyn.pitt.edu/people/phuong-mai-md-ms: current official individual profile lists Associate Professor of Obstetrics, Gynecology and Reproductive Sciences and Medical Director of Cancer Genetics, based at UPMC Magee-Womens Hospital in Pittsburgh. This university/health-system clinical faculty appointment qualifies; no adjunct, visiting or trainee limitation appears. Phuong supplies a Vietnamese given-name signal beyond the ambiguous surname Mai. Required npm searches for Phuong Mai and Phuong L. Mai with institutional identity URLs returned only vp-1337 Phuong Mai Dinh. Independently opened https://lpt.univ-tlse3.fr/en/fiche-annuaire/dinh-phuong-mai/: that person is a Toulouse theoretical-physics professor researching quantum dynamics, distinct from the Pittsburgh cancer geneticist with a UTMB MD and clinical training. No matching profile URL; absent from already-proposed.txt. Physically based in the United States. All five tests pass.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Thanh Cong Bui",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Independently retrieved https://healthpromotionresearch.org/Faculty/Details/thanh-c-bui-md-drph (HTTP 200) and its linked https://healthpromotionresearch.org/Portals/1005a/Assets/Documents/CVs/Bui%20CV%202026.pdf?ver=KLDucS3W28rA-98uZMejAg%3D%3D (HTTP 200). Official profile lists Associate Professor, Family and Preventive Medicine. The February 2026 CV names Thanh Cong Bui, gives an Oklahoma City office, a UTHealth Houston DrPH completed in 2010, Vietnamese medical education and Vietnam Education Foundation fellowship, and Oklahoma appointments since 2016, including plain Assistant Professor from 2020 and Associate Professor since 2024; the former research-prefixed appointment ended in 2020. These establish a current eligible university faculty appointment and an affirmative Vietnamese signal. Required npm searches with full name, published initial form and identity URLs found name-only matches: vp-1893 is a different St Andrews economist, independently confirmed at https://research-portal.st-andrews.ac.uk/en/persons/thanh-bui (joined 2022; development-economics research; 2019 PhD fellowship). Other initial-form hits are distinct roster identities: vp-0995 Tan Bui-Thanh (aerospace, MIT PhD 2007), vp-1201 Huong Thanh Bui (tourism, Griffith PhD 2011), and vp-1231 Thanh-Tuan Bui (polymer chemistry, Cergy-Pontoise PhD 2008), incompatible with the sourced medical/public-health identity and career. No identity URL matches; absent from already-proposed.txt. All five tests pass. Retrieval limitation: web reader failed and direct HTTPS encountered a local issuer-certificate error; requests succeeded with certificate verification disabled, and the linked CV was read in memory.",
+      "correctedFields": {}
+    }
+  ],
+  "possible_move": []
+}

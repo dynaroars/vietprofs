@@ -1,0 +1,56 @@
+{
+  "verifier": "codex",
+  "input": "maintenance/sector-expansion/runs/w2/us-teaching-colleges.codex.json",
+  "candidates": [
+    {
+      "name": "Diep Phan",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Passes all five tests. Live employer biography https://www.beloit.edu/live/profiles/9973-diep-phan identifies the current Professor of Economics and School of Business director, teaching at Beloit since 2009, with a Wisconsin-Madison PhD (2008). It explicitly identifies Hanoi, Vietnam as her origin and Beloit as her current residence. The official individual faculty profile supports the eligible professorial appointment. Independently ran find-roster-matches with name and profile URL: no roster or retired-ID matches. Not in already-proposed.txt.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Quynh-Anh Nguyen",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Passes all five tests. https://www.uindy.edu/cas/mathematics/faculty contains her own headed directory entry and substantial individual biography, identifying Assistant Professor of Mathematical Sciences, Iowa PhD, and San Jose State BS; it is not merely an undifferentiated team listing. The linked personal site https://quynh-anh-nguyen.weebly.com/ corroborates the ongoing Indianapolis appointment since August 2021 and Iowa PhD in 2019. Quynh-Anh is an affirmative Vietnamese given-name combination beyond Nguyen. Independently checked name, employer URL, personal URL, CV URL, and ORCID 0000-0003-2843-1841: only name hits. Resolved vp-0965 as a different person (Vanderbilt pharmacology, UCSF PhD 2017, Stanford BS); remaining hits have different fields and education/careers (computer science, chemical engineering, political science, nursing, business, economics, and clinical development). Not in already-proposed.txt; the bare Quynh Nguyen exclusion does not identify this mathematician. Current workplace is outside Vietnam.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Paul Uyen",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Passes all five tests. https://www.cofo.edu/Academics/Majors-Minors/Biblical-and-Theological-Studies/1000 contains a distinct named individual biography with current Assistant Professor title, institutional email, degrees, and fall-2026 arrival. It explicitly says born in Vietnam and grew up in California. The matching employer recruitment notice https://www.cofo.edu/Portals/0/Accolades/062880d9-ba21-43b5-89f0-ce8fa642cc1e.pdf?ver=9wajsn3UkSw2_h97jFrRtw%3D%3D establishes a full-time Biblical and Theological Studies faculty position with the corresponding theology/apologetics duties and January or August 2026 start, without a temporary or visiting designation. This supports Teaching rather than an unsupported tenure claim. The biography singles him out despite sharing a page with other faculty. Independently ran find-roster-matches with name and employer URL: no roster or retired-ID matches. Not in already-proposed.txt; current campus is in Missouri.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Tuan Ho Quoc",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Passes all five tests. Live individual employer page https://central.edu/faculty/tuan-ho-quoc/ identifies the current Assistant Professor of Economics, department, campus office, Oklahoma State PhD, and University of Economics HCMC undergraduate degree. Tuan/Quoc given-name signals plus Vietnamese education support Vietnamese identity beyond a shared surname. The current professorial appointment is at Central College in Pella, Iowa. Independently ran find-roster-matches with name and URL; no URL hit. Resolved both name hits: vp-0947 is Bristol accounting/finance with a Manchester doctorate, while vp-1433 is a Sandia geochemist with a University of Oklahoma doctorate (2014), distinct from this Oklahoma State-trained macroeconomist. Not in already-proposed.txt.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Giang-Nguyen Thi Nguyen",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Passes all five tests. https://uwf.edu/soe/departments/teaching-leadership-and-research/faculty/dr-giang-nguyen-thi-nguyen.html is a live named employer profile identifying the current mathematics-education Professor in Pensacola. Its linked CV https://uwf.edu/media/university-of-west-florida/academic-affairs/departments/school-of-education/faculty-cvs/NguyenCV-(1).pdf documents tenured associate professor (2017-2023), professor since 2023, and FSU PhD in 2011. Beyond the Vietnamese given names Giang and Thi, the CV records presidency of the FSU Vietnamese Student Association and teaching Vietnamese at Dieu De Temple. Independently checked name, employer page, CV and personal site: no URL hits; vp-0143, vp-0476, vp-0633, vp-3048 and vp-3051 are different finance, philosophy, robotics, and AI scholars with UNC, UCLA, Dresden, Auburn or Iowa State doctorates. Not in already-proposed.txt.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Dao Hoang Yen Nguyen",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Passes all five tests. https://www.greensboro.edu/faculty/dao-hoang-yen-nguyen/ is a live individual employer biography identifying Assistant Professor of Business Administration in its headshot description; https://www.greensboro.edu/faculty/ independently lists her by name and rank, separately from adjunct instructors. The bio confirms an Otago marketing doctorate, prior teaching in New Zealand and 15 years of educational leadership in Vietnam. Hoang Yen and that career history supply affirmative Vietnamese signals. Current role and office are at Greensboro College, North Carolina. Independently ran find-roster-matches for both full name and Yen Nguyen with the profile URL: no URL hit. The full-name hits concern other disciplines/education, including finance, engineering, medicine, literature, economics and mathematics; shorter-name hits vp-0232, vp-0261, vp-1928 and vp-2418 concern nursing, Vietnamese language, architecture and medicine, rather than this Otago marketing scholar. Not in already-proposed.txt.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Cu Phung",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Passes all five tests. https://www.methodist.edu/directory/cu-phung-ph-d/ is a live individual employer profile identifying Professor of Chemistry, Methodist BS and Duke PhD. https://www.methodist.edu/academics/ahs/natural-sciences/che-faculty/ explicitly places him among Full-Time Faculty, separately from adjuncts. Current campus is Fayetteville, North Carolina. Vietnamese identity is independently corroborated by the reproduced September 1995 Methodist College Today article at https://studylib.net/doc/11938025/ (opened successfully): it describes his native Vietnam, escape as a refugee, Methodist graduation and Duke chemistry doctorate, resolving identity with the current profile. This is stronger than the name alone. Independently ran find-roster-matches with name and profile URL: no roster or retired-ID matches. Not in already-proposed.txt.",
+      "correctedFields": {}
+    }
+  ],
+  "possible_move": []
+}

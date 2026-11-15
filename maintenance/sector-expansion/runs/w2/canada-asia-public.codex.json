@@ -1,0 +1,262 @@
+{
+  "group": "lab",
+  "agent": "codex",
+  "slice": "canada-asia-public",
+  "finishedAt": "2026-11-15T01:06:59.352033+00:00",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Ngoc Chi Nam Doan",
+        "university": "Agency for Science, Technology and Research (A*STAR)",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Singapore Institute of Manufacturing Technology (SIMTech), Manufacturing Decision Support Section",
+        "country": "Singapore",
+        "researchAreas": [
+          "Predictive maintenance",
+          "Predictive quality management",
+          "Artificial intelligence for manufacturing"
+        ],
+        "phdInstitution": "University of Ulsan",
+        "phdYear": 2013,
+        "undergradInstitution": "Ho Chi Minh City University of Technology",
+        "undergradYear": 2008,
+        "profileUrl": "https://www.aimfg.sg/team/"
+      },
+      "evidence": {
+        "currentRole": "https://www.aimfg.sg/team/ — individual named biography headed Dr Doan Ngoc Chi Nam: \"Senior Scientist II, A*STAR, SIMTech\". Leads the manufacturing decision-support research team. This is an employer-operated centre: https://www.aimfg.sg/about/ identifies AIMfg as established by A*STAR and MTI. Career senior scientist, not a trainee.",
+        "doctorateOrPapers": "https://www.jstage.jst.go.jp/article/ijat/9/3/9_283/_pdf — author biography on printed page 290: \"2013 Received the Ph.D. degree in mechatronics from University of Ulsan\". Full Vietnamese-order name matches the employer biography; historical mechatronics/control research and current manufacturing AI are consistent.",
+        "vietnameseSignal": "Vietnamese given names Ngoc Chi Nam on employer biography; the same publisher biography explicitly records his 2008 undergraduate education in Vietnam. Name reordered from Doan Ngoc Chi Nam; no diacritics invented.",
+        "dedup": "Ran npm run find-roster-matches -- \"Ngoc Chi Nam Doan\" --url https://www.aimfg.sg/team/ --url https://www.jstage.jst.go.jp/article/ijat/9/3/9_283/_pdf: no roster or retired-id matches. Also ran name with employer URL alone. Not in already-proposed.txt. gh issue list --state all --search with original full name returned []."
+      }
+    },
+    {
+      "entry": {
+        "name": "Thanh Son Nguyen",
+        "university": "Agency for Science, Technology and Research (A*STAR)",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Institute of Advanced Intelligence and Computing (IAIC)",
+        "country": "Singapore",
+        "researchAreas": [
+          "Knowledge graphs",
+          "Multimodal artificial intelligence",
+          "Natural language processing"
+        ],
+        "phdInstitution": "Singapore Management University",
+        "undergradInstitution": "VNU University of Engineering and Technology",
+        "profileUrl": "https://www.aimfg.sg/team/",
+        "websiteUrl": "https://sites.google.com/view/tsnguyen/"
+      },
+      "evidence": {
+        "currentRole": "https://www.aimfg.sg/team/ — individual biography headed Dr Nguyen Thanh Son: \"Senior Scientist II, A*STAR IAIC\". Current employer biography describes manufacturing knowledge systems research. Centre ownership is established at https://www.aimfg.sg/about/. Personal site independently places him at A*STAR; its older IHPC unit label is superseded by the current employer biography.",
+        "doctorateOrPapers": "https://www.aimfg.sg/team/ explicitly identifies a Singapore Management University PhD. https://sites.google.com/view/tsnguyen/ corroborates the doctorate, supervisor Hady Lauw, review-mining dissertation and Carnegie Mellon visit. No doctorate year sourced.",
+        "vietnameseSignal": "https://sites.google.com/view/tsnguyen/ states undergraduate study at University of Engineering and Technology, Vietnam National University, Hanoi; employer publishes Vietnamese given names Thanh Son.",
+        "dedup": "Ran find-roster-matches using both Thanh Son Nguyen and Nguyen Thanh Son, with https://www.aimfg.sg/team/, https://sites.google.com/view/tsnguyen/ and https://orcid.org/0000-0001-7904-4951. Hits vp-0166, vp-0208, vp-0363, vp-1807, vp-2114, vp-3102, retired vp-0822 and vp-0844 were inspected in public/data.json/their replacement records. Distinct identities: Cornell market design, Princeton biomaterials, McGill-trained neurologist, Griffith finance, IUPUI biomedical AI, Amazon software verification/automated reasoning, East London nanomaterials and USC multi-agent systems respectively, versus this SMU/Hady Lauw NLP researcher. No identity-URL hit. Earlier proposed Son Nguyen is a different person: Bowdoin immunologist with Penn PhD 2020 and Union undergraduate degree; checked earlier run entry. This full name is not in already-proposed.txt. gh issue search for original full name returned []."
+      }
+    },
+    {
+      "entry": {
+        "name": "Linh Nguyen",
+        "university": "Ontario Health",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Occupational Cancer Research Centre, Exposure team",
+        "city": "Toronto",
+        "state": "Ontario",
+        "country": "Canada",
+        "researchAreas": [
+          "Occupational exposure assessment",
+          "Environmental health",
+          "Exposure data science"
+        ],
+        "phdInstitution": "University of Toronto",
+        "profileUrl": "https://www.occupationalcancer.ca/team-biographies/"
+      },
+      "evidence": {
+        "currentRole": "https://www.occupationalcancer.ca/team-biographies/ — individual Linh Nguyen biography: \"Senior Research Associate and project manager on the Exposure team\". Listed as staff separately from students at https://www.occupationalcancer.ca/about-ocrc/; doctorate-holding career research staff, not an academic-affiliate-only proposal. The latter page identifies OCRC as based at Ontario Health, gives its cancer-research mandate and Toronto address.",
+        "doctorateOrPapers": "https://www.occupationalcancer.ca/team-biographies/ records University of Toronto PhD in Environmental Sciences, specializing in Occupational and Environmental Health. Independent corroboration: https://www.torontomu.ca/occupational-public-health/about/people/adjuncts-and-associate-members/linh-nguyen/ identifies the same employer, degree and exposure-data research.",
+        "vietnameseSignal": "Vietnamese given name Linh together with Nguyen on both current institutional biographies; affirmative given-name signal rather than surname alone.",
+        "dedup": "Ran npm run find-roster-matches -- \"Linh Nguyen\" --url https://www.occupationalcancer.ca/team-biographies/ --url https://www.torontomu.ca/occupational-public-health/about/people/adjuncts-and-associate-members/linh-nguyen/. Name-only hits vp-0184, vp-0186, vp-0333, vp-0372, vp-0573, vp-0604, vp-0677, vp-0763, vp-0948, vp-1441, vp-1680, vp-1789, vp-1924, vp-1951, vp-1978, vp-2234, vp-2285 and retired vp-1606. Inspected their fields/degrees: ethnic studies, history, languages, mathematics, business/finance, computing, radiology, materials science, tissue engineering and UNLV dental medicine; none matches the Toronto environmental-sciences doctorate and OCRC exposure career. No URL matches. Not in already-proposed.txt. Scoped GitHub issue search returned only #550, the distinct UNLV dentist already vp-2285."
+      }
+    }
+  ],
+  "already_listed": [
+    {
+      "name": "Ly Vu",
+      "id": "vp-0510",
+      "note": "Live https://www.bccrc.ca/dept/tfl/labs/vu-lab identifies BC Cancer scientist and concurrent UBC appointment. find-roster-matches returned vp-0510 with this exact lab website. Same cancer/RNA researcher; dual appointment, not a new person or a demonstrated move."
+    }
+  ],
+  "possible_move": [],
+  "rejected": [
+    {
+      "name": "Toan Nguyen",
+      "reason": "https://www.sickkids.ca/en/news/archive/2024/propel-breakthroughs-at-the-bench-with-postdoctoral-fellow-dr-toan-nguyen/ explicitly identifies a postdoctoral fellow. No verified subsequent career appointment found."
+    },
+    {
+      "name": "Jimmy Nguyen",
+      "reason": "https://lab.research.sickkids.ca/yuen/team/ identifies a graduate student/PhD candidate; excluded trainee."
+    },
+    {
+      "name": "Ngoc Bui",
+      "reason": "https://ailleslab.ca/ identifies a postdoctoral fellow, despite completed doctorate and Vietnamese education."
+    },
+    {
+      "name": "Quang Thang (Tom) Bui",
+      "reason": "https://www.bccrc.ca/dept/tfl/labs/vu-lab identifies a graduate student."
+    },
+    {
+      "name": "Quang Anh Hoang",
+      "reason": "https://www.bccrc.ca/dept/tfl/labs/vu-lab identifies a graduate student."
+    },
+    {
+      "name": "Brian Tran",
+      "reason": "https://lab.research.sickkids.ca/avila/ identifies an MD student."
+    },
+    {
+      "name": "Robert Nguyen",
+      "reason": "https://lab.research.sickkids.ca/avila/ establishes Research Engineer and ETH Zurich PhD, but no affirmative Vietnamese given-name, education or identity signal was verified. Not accepted on Nguyen alone; research-role equivalence also needs scrutiny."
+    },
+    {
+      "name": "Linh Ly",
+      "reason": "https://www.sickkids.ca/en/staff/l/linh-ly/ establishes longstanding neonatologist, clinical MD and Project Investigator. Withheld because a permanent career research appointment or full-time university appointment was not explicit. find-roster-matches returned only unrelated Berlin administrative-informatics professor Linh Thao Ly, vp-2466."
+    },
+    {
+      "name": "Michelle Nguyen / Michelle Nguyen Thanh Truc",
+      "reason": "https://www.aimfg.sg/team/ establishes Senior AI Research Engineer. Discovery found a 2022 manufacturing paper under Michelle Nguyen Thanh Truc, but neither a research doctorate nor two papers within the last three years was verified. Identity with the longer-name author also remains provisional."
+    },
+    {
+      "name": "Vu Thanh Trung Nam",
+      "reason": "Discovery found A*STAR Q.InC staff listing at https://www.a-star.edu.sg/qinc/about-qinc/our-research-team and Vietnamese school evidence. Opening the employer page returned a bot check, not a live biography. Exact career role and doctorate not verified; not accepted."
+    },
+    {
+      "name": "Duc Vinh Le",
+      "reason": "A*STAR researcher-results search discovery describes a senior scientist. Opening https://www.a-star.edu.sg/Research/researcher-results returned a bot check; no live current employer biography verified."
+    },
+    {
+      "name": "Huynh Phung Huynh",
+      "reason": "Discovery found historic IHPC papers/old supervisor lists, but no verified live current employer biography. Historical authorship is not current appointment evidence."
+    },
+    {
+      "name": "Thao Nguyen (SIFBI)",
+      "reason": "Discovery found Zhang lab team listing at https://zhangc-lab.github.io/ describing a senior scientist, but no opened current employer profile or verified doctorate obtained. Left unverified."
+    },
+    {
+      "name": "Truong Ton Hien Duc",
+      "reason": "A*STAR discovery was contradicted by a search-visible Universiti Brunei Darussalam lecturer page. No current A*STAR appointment verified; not accepted from contact aggregators."
+    },
+    {
+      "name": "Quang Trinh",
+      "reason": "Ontario Institute for Cancer Research scientific-associate lead surfaced from salary data and publications; no live employer biography or doctorate/recent-paper threshold verified. No candidate inferred from third-party title."
+    },
+    {
+      "name": "Hien Chau",
+      "reason": "Krembil discovery primarily established a study-coordinator/technologist role; no verified doctorate or qualifying career research appointment."
+    },
+    {
+      "name": "Quoc Viet Nguyen",
+      "reason": "Live https://temasek-labs.nus.edu.sg/program/program_aerodynamics_tslnqv.html confirms Senior Research Scientist and Konkuk PhD 2008, and https://temasek-labs.nus.edu.sg/about/about_people.html lists current staff. However, find-roster-matches returned retired vp-1513 (Viet Nguyen, Khalifa University) in addition to clearly different vp-0144 finance and vp-1803 Griffith computing. The retired record lacks enough identity evidence to rule out reuse; withheld from verified-new candidates pending identity resolution. Temasek is a NUS/MINDEF defence partnership, documented at https://temasek-labs.nus.edu.sg/about/about_introduction.html."
+    }
+  ],
+  "coverage": [
+    {
+      "employer": "Slice-wide supplementary pass",
+      "pagesExamined": [],
+      "note": "Read BRIEF2.md, TASKS/discover_industry_labs.md, README.md, ROSTER_MAINTENANCE.md and already-proposed.txt. Later-pass discovery emphasized Minh, Linh, Tuan, Quang, Thanh, Thuy, Hien, Hieu, Duc, Ngoc, Khoa, Kien, Duy, Hung, Quoc, Nhan, Quynh, Truc, Phuc, Khanh and less-common surnames Doan, Phung, Dinh, Bui, Huynh, Trinh, Truong and Dao. Substantial search-led coverage with targeted live directories, not an exhaustive staff census. Stopped below 25 after diminishing new eligible leads. No LinkedIn pages fetched, logins, bot-check evasion, GitHub mutations or roster modifications."
+    },
+    {
+      "employer": "Lunenfeld-Tanenbaum Research Institute",
+      "pagesExamined": [
+        "https://www.lunenfeld.ca/?page=principal-investigators",
+        "https://www.lunenfeld.ca/?page=staff-scientists",
+        "https://www.lunenfeld.ca/?page=clinician-scientists",
+        "https://www.lunenfeld.ca/?page=associate-members"
+      ],
+      "note": "Opened PI, staff, clinical and associate directories; discovery follow-ups on Linh, Thanh, Thuy, Dinh, Dao, Huynh and Vietnam. No verified new eligible person. Historical paper coauthors not promoted to current staff."
+    },
+    {
+      "employer": "Princess Margaret Cancer Centre / UHN",
+      "pagesExamined": [
+        "https://www.uhnresearch.ca/pm_researchers",
+        "https://ailleslab.ca/"
+      ],
+      "note": "Opened scientist-directory shell; no names rendered in retrieved text, so no complete directory audit claimed. Followed lab-level lead Ngoc Bui and rejected postdoc. Search-led given-name extension across UHN included Ngoc, Tuan, Quang, Thanh, Mai, Huy, Khanh, Phuong and Hanh; results included staff administration, outside collaborators and trainees."
+    },
+    {
+      "employer": "SickKids Research Institute",
+      "pagesExamined": [
+        "https://lab.research.sickkids.ca/avila/",
+        "https://lab.research.sickkids.ca/yuen/team/",
+        "https://www.sickkids.ca/en/staff/l/linh-ly/",
+        "https://www.sickkids.ca/en/news/archive/2024/propel-breakthroughs-at-the-bench-with-postdoctoral-fellow-dr-toan-nguyen/"
+      ],
+      "note": "Checked research staff and trainee distinctions, plus Linh Ly clinical/research profile. Given-name and less-common surname searches included Hien, Quang, Thanh, Dung, Truc, Phan and Dinh. No new person accepted without all requirements."
+    },
+    {
+      "employer": "BC Cancer / Terry Fox Laboratory",
+      "pagesExamined": [
+        "https://www.bccrc.ca/dept/tfl/labs/vu-lab"
+      ],
+      "note": "Opened Vu lab staff/student listing. Ly Vu already rostered; Quang Thang Bui and Quang Anh Hoang are students. Additional search-led checks used Minh, Linh, Tuan, Thuy, Hien, Kien, Bui, Truong and Phung; no further verified new career scientist."
+    },
+    {
+      "employer": "Ontario Health / Occupational Cancer Research Centre",
+      "pagesExamined": [
+        "https://www.occupationalcancer.ca/about-ocrc/",
+        "https://www.occupationalcancer.ca/team-biographies/",
+        "https://www.torontomu.ca/occupational-public-health/about/people/adjuncts-and-associate-members/linh-nguyen/"
+      ],
+      "note": "Reviewed centre mandate, employer, staff categories and individual biography; Linh Nguyen accepted through career centre employment, with TMU used as corroboration only. Tammy Khuc research-assistant listing did not establish doctorate or recent-publication threshold."
+    },
+    {
+      "employer": "A*STAR / AIMfg / SIMTech / IAIC",
+      "pagesExamined": [
+        "https://www.aimfg.sg/about/",
+        "https://www.aimfg.sg/team/"
+      ],
+      "note": "Read accessible employer-operated manufacturing-centre biographies. Verified Ngoc Chi Nam Doan and Thanh Son Nguyen; Michelle Nguyen withheld for qualification/output threshold. This reached staff below the PI level and newly named institute IAIC."
+    },
+    {
+      "employer": "A*STAR Q.InC and institute-wide directory",
+      "pagesExamined": [
+        "https://www.a-star.edu.sg/Research/researcher-results",
+        "https://www.a-star.edu.sg/qinc/about-qinc/our-research-team"
+      ],
+      "note": "Both opened pages returned robot-verification text. Discovery searches across IHPC, SIFBI, BII, IDL, IME, IMRE and I2R used Vietnamese given names and less-common surnames. Search snippets were not accepted as live employer verification. No attempt to bypass the check."
+    },
+    {
+      "employer": "Temasek Laboratories @ NUS",
+      "pagesExamined": [
+        "https://temasek-labs.nus.edu.sg/about/about_people.html",
+        "https://temasek-labs.nus.edu.sg/program/program_aerodynamics_tslnqv.html",
+        "https://temasek-labs.nus.edu.sg/about/about_introduction.html"
+      ],
+      "note": "Supplementary Singapore institute lead: current staff directory, individual biography and defence partnership mandate examined. Quoc Viet Nguyen withheld for unresolved retired-ID collision rather than assigned a new identity."
+    },
+    {
+      "employer": "Hong Kong Applied Science and Technology Research Institute (ASTRI)",
+      "pagesExamined": [
+        "https://www.astri.org/en",
+        "https://www.astri.org/en/who-we-are/organisation-structure/senior-management",
+        "https://www.astri.org/en/who-we-are/technology-divisions"
+      ],
+      "note": "Opened current leadership and technology divisions. Given-name and identity searches plus Nguyen/Tran follow-ups found no verified new eligible Vietnamese scientist. Leadership pages are not a census of ordinary research staff."
+    },
+    {
+      "employer": "Hong Kong InnoHK centres, HKCLR and other research centres",
+      "pagesExamined": [
+        "https://www.hkclr.hk/en?trk=public_post_share-update_update-text"
+      ],
+      "note": "HKCLR opening failed with cache miss. Search-led coverage included InnoHK, logistics/construction robotics, CAIR, CNRM and broader Hong Kong research-centre queries using Minh, Linh, Quang, Hieu, Duc, Ngoc, Thang, Phuc and Khuong. Results mainly university personnel, outside collaborators, press translations or corporate researchers outside this public-institute slice. No unverified search result admitted; no full centre-directory census claimed."
+    },
+    {
+      "employer": "Additional Canadian provincial/nonprofit research institutions",
+      "pagesExamined": [],
+      "note": "Search-only extensions to OICR, IRCM, Krembil, Sunnybrook and Alberta Innovates. Surfaced OICR Quang Trinh and Krembil Hien Chau but no complete current career-research/qualification evidence; IRCM results mainly administrative, nutritionist and student roles. These institutions are supplementary lead coverage, not completed staff audits."
+    }
+  ]
+}

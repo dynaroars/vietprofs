@@ -1,0 +1,461 @@
+{
+  "group": "Australian Group of Eight universities",
+  "agent": "codex",
+  "slice": "au-go8",
+  "finishedAt": "2026-11-15T00:09:27+00:00",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Thien-Minh Nguyen",
+        "university": "The University of Queensland",
+        "country": "Australia",
+        "track": "Tenure-line",
+        "rank": "Lecturer",
+        "department": "School of Mechanical and Mining Engineering",
+        "field": "Engineering",
+        "researchAreas": [
+          "Robotics",
+          "Localisation and mapping",
+          "Sensor fusion",
+          "Multi-robot systems"
+        ],
+        "profileUrl": "https://about.uq.edu.au/experts/52005?page=0",
+        "phdInstitution": "Nanyang Technological University",
+        "phdYear": 2020,
+        "undergradInstitution": "Ho Chi Minh City University of Technology",
+        "undergradYear": 2014
+      },
+      "evidence": {
+        "currentRole": "https://about.uq.edu.au/experts/52005?page=0 — \"Lecturer\"; current robotics faculty role, with supervision availability. Previous NTU postdoctoral and research assistant professor appointments are explicitly historical.",
+        "doctorateOrPapers": "https://about.uq.edu.au/experts/52005?page=0 — completed PhD in control systems, robotics and automation at Nanyang Technological University in 2020; bachelor degree at Ho Chi Minh City University of Technology in 2014.",
+        "vietnameseSignal": "Vietnamese given names Thien-Minh and Vietnamese bachelor education explicitly stated on the official profile.",
+        "dedup": "Ran npm run find-roster-matches with full name and profile URL. Twelve fuzzy name hits, no identity URL hit. Resolved as different people: vp-0163 (Hawaii PhD 2023/business AI), vp-0551 (Auckland PhD 2012), vp-1615 (Houston PhD 2015/materials), vp-3279 (ANU PhD 2019/quantum); remaining hits concern Asian studies, medicine, sociology, economics or nuclear fuel science, not NTU-trained robotics. Checked name variants and all roster URLs locally."
+      }
+    },
+    {
+      "entry": {
+        "name": "Thu-Ha (Hannah) Nguyen",
+        "university": "Monash University",
+        "country": "Australia",
+        "track": "Tenure-line",
+        "rank": "Senior Lecturer",
+        "department": "Department of Banking and Finance",
+        "field": "Business & Economics",
+        "researchAreas": [
+          "Financial institutions",
+          "Venture capital",
+          "Climate finance"
+        ],
+        "profileUrl": "https://research.monash.edu/en/persons/hannah-nguyen/",
+        "phdInstitution": "The University of Queensland",
+        "msInstitution": "University of Adelaide"
+      },
+      "evidence": {
+        "currentRole": "https://research.monash.edu/en/persons/hannah-nguyen/ — \"Senior Lecturer\"; biography confirms banking and finance faculty appointment, joined Monash in 2015.",
+        "doctorateOrPapers": "https://research.monash.edu/en/persons/hannah-nguyen/ — completed PhD at The University of Queensland; Master of Business Research in Finance at the University of Adelaide. No doctorate year asserted.",
+        "vietnameseSignal": "https://www.monash.edu/records-archives/archives/officers-and-awards/vice-chancellors-awards/citation-for-outstanding-contribution-to-student-learning — identifies the same Monash Business School academic as Thu-Ha (Hannah) Nguyen. Vietnamese given names Thu-Ha; university profile also indexes publications under Nguyen, T. H.",
+        "dedup": "Ran npm run find-roster-matches for Hannah Nguyen and Thu-Ha Hannah Nguyen with official profile URL. No URL hits. vp-0172 is Hannah-Hanh D. Nguyen (Michigan State PhD 2006, management); vp-0367 is a UCLA PhD 2013 social-work scholar. Other expanded-name hits are chemistry, languages, mathematics, learning sciences, computational biology and engineering; vp-1907 is a Greenwich accounting/economics academic, not the UQ-trained banking/finance scholar at Monash since 2015. None has matching identity links."
+      }
+    },
+    {
+      "entry": {
+        "name": "Hung Nguyen",
+        "university": "Adelaide University",
+        "country": "Australia",
+        "track": "Tenure-line",
+        "rank": "Professor",
+        "department": "School of Computer Science and Information Technology",
+        "field": "Computer & Information Sciences",
+        "researchAreas": [
+          "Cybersecurity",
+          "AI agent security",
+          "Attack-graph analysis",
+          "Cyber-physical systems"
+        ],
+        "profileUrl": "https://researchers.adelaide.edu.au/profile/hung.nguyen",
+        "phdInstitution": "École Polytechnique Fédérale de Lausanne",
+        "phdYear": 2008,
+        "scholarUrl": "https://scholar.google.com/citations?user=fepnqKwAAAAJ"
+      },
+      "evidence": {
+        "currentRole": "https://researchers.adelaide.edu.au/profile/hung.nguyen — \"Professor\"; academic lead for cybersecurity and networking and leader of Cyber-AI Research Group. Appointments show professor from 2025 onward.",
+        "doctorateOrPapers": "https://researchers.adelaide.edu.au/profile/hung.nguyen — education table explicitly records PhD, École Polytechnique Fédérale de Lausanne, 2004–2008.",
+        "vietnameseSignal": "Official profile lists Vietnamese language competence. Its linked earlier research paper is hosted under nguyenxuanhung.files.wordpress.com, supplying the additional Xuan Hung identity context.",
+        "dedup": "Ran npm run find-roster-matches with name, employer profile and employer-linked Scholar URL (user=fepnqKwAAAAJ). Twenty-five fuzzy name hits, no URL hits. Checked roster disciplines and doctorate institutions: vp-0589 is Newcastle PhD 1984/biomedical engineering; vp-0495 is MIT PhD 2017/power engineering; vp-0524 is Aix-Marseille PhD 2010/computer science; vp-1803 is Quoc Viet Hung Nguyen/data mining at Griffith, a different published full name and identity links. Other hits have different full names, fields and/or doctorate histories; none matches the EPFL 2008 cybersecurity/networking scholar."
+      }
+    },
+    {
+      "entry": {
+        "name": "TriThang Tran",
+        "university": "University of Melbourne",
+        "country": "Australia",
+        "track": "Tenure-line",
+        "rank": "Lecturer",
+        "department": "School of Mathematics and Statistics",
+        "field": "Mathematics",
+        "researchAreas": [
+          "Algebraic topology",
+          "Configuration spaces",
+          "Braid groups",
+          "Mathematics education"
+        ],
+        "profileUrl": "https://findanexpert.unimelb.edu.au/profile/184709-trithang-tran",
+        "websiteUrl": "https://sites.google.com/site/trithangtran/trithang-tran"
+      },
+      "evidence": {
+        "currentRole": "https://findanexpert.unimelb.edu.au/profile/184709-trithang-tran — \"Lecturer\" in mathematics and statistics. https://ms.unimelb.edu.au/__data/assets/pdf_file/0010/4683790/MSLC-Annual-Report-2022.pdf records Level B promotion and academic confirmation; sustained current faculty profile and 2025–2026 teaching support career appointment.",
+        "doctorateOrPapers": "https://sites.google.com/site/trithangtran/trithang-tran — maintained academic site identifies Melbourne PhD supervisor Craig Westerland and subsequent Oregon postdoc. It lists three 2025 publications while teaching at Melbourne, including work on mathematical communication (with Oliver Murfett) and designing extension questions (with Alba Santin Garcia). The former is independently confirmed by https://www.tandfonline.com/doi/full/10.1080/0020739X.2025.2571123 and the latter is available through https://minerva-access.unimelb.edu.au/server/api/core/bitstreams/140b175e-e6af-468b-ace9-146c3ddde8bd/content . Degree institution/year fields omitted because the historical Trinity degree-list PDF resolved to an empty wrapper when opened.",
+        "vietnameseSignal": "Vietnamese given name TriThang together with surname Tran on both official profile and maintained academic site.",
+        "dedup": "Ran npm run find-roster-matches with TriThang Tran and both official profile and maintained homepage; no roster or retired-id matches. Also checked normalized name/URL variants in public/data.json."
+      }
+    },
+    {
+      "entry": {
+        "name": "Nam Tran",
+        "university": "University of Melbourne",
+        "country": "Australia",
+        "track": "Tenure-line",
+        "rank": "Associate Professor",
+        "department": "Melbourne Business School",
+        "field": "Business & Economics",
+        "researchAreas": [
+          "Financial accounting",
+          "Earnings management",
+          "Mergers and acquisitions",
+          "Corporate social responsibility"
+        ],
+        "profileUrl": "https://mbs.edu/faculty-and-research/faculty/nam-tran",
+        "phdInstitution": "University of Oregon",
+        "msInstitution": "University of New South Wales",
+        "undergradInstitution": "National Economics University"
+      },
+      "evidence": {
+        "currentRole": "https://mbs.edu/faculty-and-research/faculty/nam-tran — \"Associate Professor of Accounting, Associate Dean (Teaching & Learning)\"; substantive MBS faculty appointment since 2011. University FBE honorary listing is a separate affiliation; eligibility rests on MBS employment. MBS page footer explicitly identifies The University of Melbourne.",
+        "doctorateOrPapers": "https://mbs.edu/faculty-and-research/faculty/nam-tran — qualifications list accounting PhD at University of Oregon, accounting master at University of New South Wales, banking BA at Hanoi National Economics University.",
+        "vietnameseSignal": "Official MBS bio supplies Vietnamese given name Nam, Vietnamese undergraduate education and earlier employment at Deloitte Vietnam.",
+        "dedup": "Ran npm run find-roster-matches with Nam Tran, MBS profile and linked Melbourne Find an Expert URL (443227-nam-tran). Seven name-only hits, no URL hits. vp-0941 is Arkansas-trained pavement engineer; vp-2249 is UC Davis pathology; vp-0543 is Kyung Hee-trained wireless engineering; vp-0583 is UNSW PhD/taxation; vp-1982 is chemical engineering; vp-0471 neurology and vp-2980 Hannover-trained Amazon search. None matches Oregon-trained MBS accountant."
+      }
+    },
+    {
+      "entry": {
+        "name": "Cameron Truong",
+        "university": "Monash University",
+        "country": "Australia",
+        "track": "Tenure-line",
+        "rank": "Professor",
+        "department": "Department of Accounting",
+        "field": "Business & Economics",
+        "researchAreas": [
+          "Accounting information and capital markets",
+          "Behavioural biases",
+          "Climate risk",
+          "Big data"
+        ],
+        "profileUrl": "https://research.monash.edu/en/persons/cameron-truong/",
+        "phdInstitution": "The University of Auckland",
+        "websiteUrl": "https://camerontruong.github.io/cv/",
+        "city": "Caulfield",
+        "state": "Victoria"
+      },
+      "evidence": {
+        "currentRole": "https://research.monash.edu/en/persons/cameron-truong/ — \"Professor, Department of Accounting\"; longstanding Monash appointment from 2009 and current research output.",
+        "doctorateOrPapers": "https://www.afaanz.org/sites/default/files/uploaded-content/website-content/newsletter_june_07.pdf — University of Auckland department staff report explicitly records his awarded PhD at Auckland. Current Monash profile separately lists several peer-reviewed 2026 papers. No doctorate year inferred from newsletter publication.",
+        "vietnameseSignal": "https://scp.gov.vn/tin-tuc/t12586/hoi-thao-ban-ve-kinh-te-tuan-hoan-cua-viet-nam — Vietnamese-language government article identifies Cameron Truong in Monash accounting. This is the Vietnamese-language-page signal permitted by BRIEF2; no ancestry inferred from surname alone.",
+        "dedup": "Ran npm run find-roster-matches with full name, official profile and maintained personal site; no roster or retired-id matches. Checked roster normalized names and exact identity links locally."
+      }
+    },
+    {
+      "entry": {
+        "name": "An Duy Tran",
+        "university": "University of Melbourne",
+        "country": "Australia",
+        "track": "Research",
+        "rank": "Associate Professor",
+        "department": "Department of Health Systems, Policy and Economics",
+        "field": "Business & Economics",
+        "researchAreas": [
+          "Health economics",
+          "Simulation modelling",
+          "Economic evaluation",
+          "Chronic disease"
+        ],
+        "profileUrl": "https://clinicalresearch.mdhs.unimelb.edu.au/our-people/staff-profiles/an-duy-tran",
+        "phdInstitution": "Wageningen University & Research",
+        "msInstitution": "Wageningen University & Research"
+      },
+      "evidence": {
+        "currentRole": "https://clinicalresearch.mdhs.unimelb.edu.au/our-people/staff-profiles/an-duy-tran — \"Associate Professor An Duy Tran\"; heads the health economics and simulation modelling unit. Current official page documents substantial research leadership; earlier full-time Senior Research Fellow appointment corroborates research career.",
+        "doctorateOrPapers": "https://www.cepar.edu.au/sites/default/files/CEPAR_AnnualReport_2018_Web.pdf — printed page 52 (PDF page 55), named An Duy Tran bio explicitly lists MSc and PhD at Wageningen and BSc at Hue. Year not given.",
+        "vietnameseSignal": "Vietnamese given names An Duy plus surname Tran on current employer profile; CEPAR education line also lists Hue undergraduate education.",
+        "dedup": "Ran npm run find-roster-matches with full name and official profile. Only vp-0159, An Tran, matched on name: marketing at University of La Verne, Colorado Boulder PhD 2014. Different from Wageningen-trained health economist with Netherlands clinical epidemiology history. No URL matches; checked Tran-Duy publication variant and roster URLs."
+      }
+    },
+    {
+      "entry": {
+        "name": "Thanh Tran",
+        "university": "University of New South Wales",
+        "country": "Australia",
+        "track": "Tenure-line",
+        "rank": "Professor",
+        "department": "School of Mathematics & Statistics",
+        "field": "Mathematics",
+        "researchAreas": [
+          "Computational mathematics",
+          "Numerical methods",
+          "Deterministic partial differential equations",
+          "Stochastic partial differential equations"
+        ],
+        "profileUrl": "https://www.unsw.edu.au/staff/thanh-tran",
+        "phdInstitution": "University of New South Wales"
+      },
+      "evidence": {
+        "currentRole": "https://www.unsw.edu.au/staff/thanh-tran — \"Professor\" in mathematics and statistics; biography describes current computational mathematics research.",
+        "doctorateOrPapers": "https://www.unsw.edu.au/staff/thanh-tran — education explicitly lists UNSW PhD. Doctorate year omitted.",
+        "vietnameseSignal": "Vietnamese given name Thanh with Tran on official employer profile. https://hcmus.edu.vn/truong-dai-hoc-khoa-hoc-tu-nhien-trao-doi-co-hoi-hop-tac-voi-unsw-sydney-australia/ independently identifies this UNSW mathematics professor in a Vietnamese-language institutional report.",
+        "dedup": "Ran npm run find-roster-matches with name and profile URL. Thirteen active fuzzy-name matches plus retired vp-1190. All have different disciplines/full names or doctorates: vp-0417 is Houston-trained Rice electrical engineer; vp-0585 is Sydney-trained engineering scholar Thanh Tran-Cong; vp-0748 is Southampton-trained computer scientist Long Tran-Thanh; retired vp-1190 is Boston College social work scholar Thanh V. Tran. None matches UNSW-trained computational mathematician; no URL hits."
+      }
+    },
+    {
+      "entry": {
+        "name": "Quoc Thong Le Gia",
+        "university": "University of New South Wales",
+        "country": "Australia",
+        "track": "Tenure-line",
+        "rank": "Associate Professor",
+        "department": "School of Mathematics & Statistics",
+        "field": "Mathematics",
+        "researchAreas": [
+          "Numerical analysis",
+          "Approximation theory",
+          "Partial differential equations",
+          "Stochastic processes"
+        ],
+        "profileUrl": "https://www.unsw.edu.au/staff/quoc-le-gia",
+        "phdInstitution": "Texas A&M University",
+        "phdYear": 2003,
+        "msInstitution": "Texas A&M University",
+        "undergradInstitution": "University of New South Wales",
+        "undergradYear": 1998,
+        "city": "Sydney",
+        "state": "New South Wales",
+        "scholarUrl": "https://scholar.google.com/citations?user=4ju_aRsAAAAJ"
+      },
+      "evidence": {
+        "currentRole": "https://www.unsw.edu.au/staff/quoc-le-gia — \"Associate Professor\"; official biography supplies full published name Quoc Thong Le Gia and current mathematics appointment.",
+        "doctorateOrPapers": "https://www.unsw.edu.au/staff/quoc-le-gia — qualifications explicitly state mathematics PhD, Texas A&M University, 2003; MS at Texas A&M in 2000; undergraduate degree at UNSW in 1998.",
+        "vietnameseSignal": "Vietnamese given names Quoc Thong, alongside Le Gia, explicitly supplied by current employer biography.",
+        "dedup": "Ran npm run find-roster-matches with full published name, both UNSW profile URLs and employer-linked Scholar URL (user=4ju_aRsAAAAJ). Only vp-2913 Quoc V. Le matched on name: Stanford PhD 2013/deep learning, distinct from Texas A&M PhD 2003/numerical analysis. No URL match."
+      }
+    },
+    {
+      "entry": {
+        "name": "Peter Kien Pham",
+        "university": "The University of Sydney",
+        "country": "Australia",
+        "track": "Tenure-line",
+        "rank": "Professor",
+        "department": "School of Finance",
+        "field": "Business & Economics",
+        "researchAreas": [
+          "Corporate finance",
+          "Entrepreneurial finance",
+          "Venture capital",
+          "Financial markets"
+        ],
+        "profileUrl": "https://profiles.sydney.edu.au/peter.pham",
+        "phdInstitution": "Monash University",
+        "phdYear": 2004,
+        "websiteUrl": "https://sites.google.com/view/peterkienpham/home"
+      },
+      "evidence": {
+        "currentRole": "https://profiles.sydney.edu.au/peter.pham — \"Professor of Finance\"; current institutional biography and School of Finance membership. Employer page links his maintained personal site, which supplies full name Peter Kien Pham.",
+        "doctorateOrPapers": "https://sites.google.com/view/peterkienpham/home — explicitly states finance PhD at Monash University, 2004. Linked from current Sydney employer profile.",
+        "vietnameseSignal": "Vietnamese given name Kien in full published name on employer-linked academic homepage.",
+        "dedup": "Ran npm run find-roster-matches with Peter Kien Pham, employer profile and employer-linked personal site. vp-2245 Peter H. Pham is a radiologist; vp-2898 Kien Pham is a Florida PhD 2013 pathology researcher. Distinct from Monash PhD 2004/finance scholar; no identity URL matches."
+      }
+    }
+  ],
+  "already_listed": [
+    {
+      "name": "Vinh Nguyen",
+      "id": "vp-0682",
+      "note": "Same UNSW chemistry professor; exact profile URL match: https://www.unsw.edu.au/staff/vinh-nguyen . Not a new candidate."
+    },
+    {
+      "name": "Hoa Nguyen",
+      "id": "vp-0505",
+      "note": "Same UNSW education associate professor; exact URL match: https://www.unsw.edu.au/staff/hoa-nguyen ."
+    },
+    {
+      "name": "Tu Nguyen-Dumont",
+      "id": "vp-2032",
+      "note": "Current Monash profile displays Tu Nguyen; email and biography retain Nguyen-Dumont. Exact profile URL match: https://research.monash.edu/en/persons/tu-nguyen-2/ ."
+    },
+    {
+      "name": "Du Huynh",
+      "id": "vp-2619",
+      "note": "Same UWA computer science scholar; exact profile URL match: https://research-repository.uwa.edu.au/en/persons/du-huynh/ ."
+    },
+    {
+      "name": "Kim Huynh",
+      "id": "vp-2060",
+      "note": "ANU politics/IR scholar identified in https://migration.anu.edu.au/node/89435 ; same institution, name and discipline as roster."
+    },
+    {
+      "name": "Ruby (Hong Ngoc) Nguyen",
+      "id": "vp-1070",
+      "note": "Same Adelaide economics lecturer; exact profile URL match: https://researchers.adelaide.edu.au/profile/ruby.nguyen . Distinct from Ruby-Ngoc Nguyen, learning designer."
+    },
+    {
+      "name": "Nam Ho-Nguyen",
+      "id": "vp-0681",
+      "note": "Same Sydney business analytics scholar; exact profile URL match: https://profiles.sydney.edu.au/nam.ho-nguyen ."
+    },
+    {
+      "name": "Tram Tran",
+      "id": "vp-1976",
+      "note": "Same Sydney design lecturer; https://profiles.sydney.edu.au/tram.tran/about . Current role, design research, institution and name agree with roster; no new ID."
+    }
+  ],
+  "possible_move": [],
+  "rejected": [
+    {
+      "name": "Sophie Selby-Pham",
+      "reason": "Retired vp-2763 explicitly records owner-approved exclusion of non-Vietnamese scholar with married hyphenated surname. npm run find-roster-matches returned that record; do not restore."
+    },
+    {
+      "name": "Bella Nguyen",
+      "reason": "https://research-repository.uwa.edu.au/en/persons/bella-nguyen-2/ — employer explicitly lists Adjunct Senior Lecturer. Excluded despite external conference biography omitting adjunct qualifier."
+    },
+    {
+      "name": "Khanh Linh Chu",
+      "reason": "https://education.uq.edu.au/profile/7341/linh-chu — Sessional Academic and Casual Senior Research Assistant. Excluded."
+    },
+    {
+      "name": "April Hoang",
+      "reason": "https://about.uq.edu.au/experts/30409?page=1 — current positions are Honorary Fellow and affiliate. Older 2025 newsletter describes lecturer promotion, but current directory does not establish eligible primary employment."
+    },
+    {
+      "name": "Ruby-Ngoc Nguyen",
+      "reason": "https://researchers.adelaide.edu.au/profile/ruby-ngoc.nguyen — Learning Designer in central teaching support; 2026 humanities lecturer appointment explicitly P/T. Excluded under staff and part-time rules."
+    },
+    {
+      "name": "The Duong",
+      "reason": "https://eng.anu.edu.au/people/duong and https://eng.anu.edu.au/people?page=1 — current Senior Research Fellow and engineering doctorate established, but biography ties career to postdoctoral fellowship grants. No independent continuing/faculty-equivalent appointment verified; withheld, not declared permanently ineligible."
+    },
+    {
+      "name": "Hieu Nguyen",
+      "reason": "ANU search leads describe historical solar research fellowship/lectureship. https://iceds.anu.edu.au/people/all-people/dr-hieu-nguyen has unrelated Gillian Russell biography; no reliable current ANU person profile verified. Withheld; historical awards/articles insufficient."
+    },
+    {
+      "name": "Giang Nguyen (applied mathematics)",
+      "reason": "Historical Adelaide/ACEMS lead, distinct from already-listed engineer Giang Dinh Nguyen. Could not verify a live current employer person page in this run; withheld. https://acems.org.au/our-people/giang-nguyen is historical discovery evidence only."
+    },
+    {
+      "name": "Amanda Nguyen",
+      "reason": "https://research.monash.edu/en/persons/amanda-nguyen/ discovery page says PhD still in progress despite Dr header; permanent teaching status and completed doctorate/current-paper alternative not established. Withheld."
+    },
+    {
+      "name": "Tony Nguyen (Monash finance)",
+      "reason": "Monash banking/finance directory lead has lecturer title but doctorate, teaching permanence and affirmative Vietnamese signal beyond surname not established. Several other Tony Nguyen identities surfaced; do not conflate."
+    },
+    {
+      "name": "Tuan Sang Tran",
+      "reason": "https://www.unsw.edu.au/staff/tuan-sang-tran — Postdoctoral Fellow; excluded."
+    },
+    {
+      "name": "Minh Tran (UNSW)",
+      "reason": "https://www.unsw.edu.au/staff/minh-tran — Postdoctoral Fellow; excluded."
+    },
+    {
+      "name": "Hien Hoang (UQ)",
+      "reason": "https://languages-cultures.uq.edu.au/staff-directory — Casual Academic. Course lecturer label does not establish permanent faculty employment."
+    },
+    {
+      "name": "Patrick Tran",
+      "reason": "https://www.unsw.edu.au/staff/patrick-tran — Senior Education Designer in central Learning and Teaching Group, not qualifying faculty appointment."
+    },
+    {
+      "name": "Anh TN Nguyen",
+      "reason": "https://research.monash.edu/en/persons/anh-tn-nguyen/ — ARC DECRA fellow/lab lead discovery; teaching within doctoral training does not independently establish permanent faculty role. Stable appointment not verified; withheld."
+    }
+  ],
+  "coverage": [
+    {
+      "employer": "University of Melbourne",
+      "pagesExamined": [
+        "https://findanexpert.unimelb.edu.au/profile/184709-trithang-tran",
+        "https://mbs.edu/faculty-and-research/faculty/nam-tran",
+        "https://clinicalresearch.mdhs.unimelb.edu.au/our-people/staff-profiles/an-duy-tran",
+        "https://ms.unimelb.edu.au/__data/assets/pdf_file/0010/4683790/MSLC-Annual-Report-2022.pdf"
+      ],
+      "note": "Broad surname and faculty searches covered business/economics, mathematics/education, food science, engineering and population health leads. Three new candidates. Mathematics department profile timed out; central individual Find an Expert page opened successfully."
+    },
+    {
+      "employer": "The University of Sydney",
+      "pagesExamined": [
+        "https://profiles.sydney.edu.au/peter.pham",
+        "https://www.sydney.edu.au/business/our-research/research-groups/business-financing-and-banking-research-group.html",
+        "https://profiles.sydney.edu.au/nam.ho-nguyen",
+        "https://profiles.sydney.edu.au/tram.tran/about"
+      ],
+      "note": "Searched faculty leads in finance/business, mathematics/statistics, design and health. Peter Kien Pham verified new; Nam Ho-Nguyen and Tram Tran already listed. Honorary/adjunct clinical leads not accepted."
+    },
+    {
+      "employer": "University of New South Wales",
+      "pagesExamined": [
+        "https://www.unsw.edu.au/staff/thanh-tran",
+        "https://www.unsw.edu.au/staff/quoc-le-gia",
+        "https://research.unsw.edu.au/people/dr-quoc-thong-le-gia",
+        "https://www.unsw.edu.au/staff/vinh-nguyen",
+        "https://www.unsw.edu.au/staff/hoa-nguyen"
+      ],
+      "note": "Searched Nguyen/Tran/Le and Vietnam-linked faculty across mathematics, chemistry, education, engineering and medicine/health. Two new mathematics candidates; chemistry/education hits already listed. Duong Tran page timed out repeatedly and was not accepted. Scholar fetch failed; only explicitly employer-linked identities retained."
+    },
+    {
+      "employer": "Monash University",
+      "pagesExamined": [
+        "https://research.monash.edu/en/persons/hannah-nguyen/",
+        "https://research.monash.edu/en/persons/cameron-truong/",
+        "https://research.monash.edu/en/persons/tu-nguyen-2/",
+        "https://www.monash.edu/records-archives/archives/officers-and-awards/vice-chancellors-awards/citation-for-outstanding-contribution-to-student-learning"
+      ],
+      "note": "Searched banking/finance/accounting, engineering, education, chemistry, nursing and biomedical leads. Two new business candidates. Numerous existing names and excluded/uncertain fellows/student identities. Banking directory open timed out; candidate-specific official research profiles opened successfully."
+    },
+    {
+      "employer": "Australian National University",
+      "pagesExamined": [
+        "https://eng.anu.edu.au/people?page=1",
+        "https://eng.anu.edu.au/people/duong",
+        "https://migration.anu.edu.au/node/89435"
+      ],
+      "note": "Searched engineering/solar, management/economics, politics/IR, language and Vietnamese-linked faculty leads. Kim Huynh already listed. Solar fellowship stability/current-role issues prevented additions. Other recurring hits (Yen Le, Nghia Tran, Vinh Lu, Chung Tran) already present in local roster. No new candidate accepted."
+    },
+    {
+      "employer": "The University of Queensland",
+      "pagesExamined": [
+        "https://about.uq.edu.au/experts/52005?page=0",
+        "https://about.uq.edu.au/experts/30409?page=1",
+        "https://education.uq.edu.au/profile/7341/linh-chu"
+      ],
+      "note": "Searched engineering/robotics, finance, languages, education/psychology and health leads. One new robotics candidate. Many finance/chemical engineering/public-health hits already listed; honorary and casual roles excluded."
+    },
+    {
+      "employer": "The University of Western Australia",
+      "pagesExamined": [
+        "https://research-repository.uwa.edu.au/en/persons/bella-nguyen-2/",
+        "https://research-repository.uwa.edu.au/en/persons/du-huynh/"
+      ],
+      "note": "Searched Nguyen, Tran, Pham and Vietnamese-linked faculty across medicine/dentistry, computing, agriculture and business. Du Huynh already listed; Bella Nguyen adjunct. Geoscience Minh Tran lead could not be tied to a qualifying current person profile and was not accepted. No new candidate accepted."
+    },
+    {
+      "employer": "Adelaide University",
+      "pagesExamined": [
+        "https://researchers.adelaide.edu.au/profile/hung.nguyen",
+        "https://researchers.adelaide.edu.au/profile/ruby.nguyen",
+        "https://researchers.adelaide.edu.au/profile/ruby-ngoc.nguyen"
+      ],
+      "note": "Searched computing/cybersecurity, civil/chemical engineering, economics, education, dentistry, mathematics and science leads, including predecessor University of Adelaide. One new cybersecurity candidate. Most established lecturers already listed; part-time learning designer excluded. Applied-mathematics Giang Nguyen retained only as unresolved rejection."
+    }
+  ]
+}

@@ -1,0 +1,261 @@
+{
+  "group": "university",
+  "agent": "codex",
+  "slice": "middle-east",
+  "finishedAt": "2026-11-15T01:02:49.438911Z",
+  "candidates": [],
+  "already_listed": [
+    {
+      "name": "Vi Khanh Truong",
+      "id": "vp-1235",
+      "note": "Live employer profile https://khazna.ku.ac.ae/en/persons/vi-truong/ identifies an Associate Professor in Biomedical Engineering & Biotechnology. npm run find-roster-matches with name and that URL matched vp-1235 on both name and exact profile URL; this is the existing scholar."
+    },
+    {
+      "name": "Hoach The Nguyen",
+      "id": "vp-1621",
+      "note": "Opened https://www.ku.ac.ae/college-people/nguyen-hoach, which identifies Nguyen The Hoach and power/electrical engineering research. npm run find-roster-matches matched vp-1621 by name and exact profile URL. Published name order is a variant of the existing entry."
+    },
+    {
+      "name": "Thien S. Nguyen",
+      "id": "vp-1615",
+      "note": "Opened the current ONE Lab team https://onelab.kaust.edu.sa/team/current and its linked individual page https://onelab.kaust.edu.sa/team/current/thien. The current team identifies him as Research Scientist working on porous organic materials and gas capture. npm run find-roster-matches with name, individual URL, and https://onelab.kaust.edu.sa/pages/people matched vp-1615 on name and stored profile URL."
+    },
+    {
+      "name": "Thanh-Mai Vu",
+      "id": "vp-2191",
+      "note": "Opened official CV https://www.sharjah.ac.ae/-/media/project/uos/sites/uos/academics/faculty-and-staff/cv/thanh-mai-vu.pdf. It records Assistant Professor, Mechanical and Nuclear Engineering, University of Sharjah, August 2022–present, and native Vietnamese. npm run find-roster-matches matched vp-2191 on name and exact CV URL."
+    }
+  ],
+  "possible_move": [],
+  "rejected": [
+    {
+      "name": "Kevin Quan-Tuan Trinh",
+      "reason": "Unresolved eligibility; not a verified candidate this pass. Personal page opened: https://www.kevintrinh.com/about confirms an HCT Lecturer appointment and PhD in Fine Arts. HCT catalog discovery URL https://hctcatalog.hct.ac.ae/programmes/applied-media/designmediaproduction/ surfaced his name and Newcastle Fine Arts doctorate, but opening it returned a JavaScript/bot-verification screen; that search result was not accepted as live verification. No individual employer profile or explicit full-time/continuing teaching appointment was verified. His current title alone does not establish the required Teaching track. Next action: obtain an accessible HCT individual profile and appointment-status evidence. Dedup rerun with personal, catalog, and ResearchGate identity URLs returned vp-0089 M. Tuan Trinh; the roster scholar is a Utah State physical chemist with a Delft doctorate, whereas Kevin teaches design and has a Fine Arts doctorate, so this is a different person. No LinkedIn page was opened."
+    },
+    {
+      "name": "Bao Nguyen (Zoe)",
+      "reason": "Adjunct appointment, explicitly excluded. Opened https://www.zu.ac.ae/main/en/colleges/colleges/__college_of_business/faculty_and_staff/_profiles/bao_nguyen and the parent directory https://www.zu.ac.ae/main/en/colleges/colleges/__college_of_business/faculty_and_staff/index. The individual page identifies an Accounting Instructor and Vietnamese undergraduate education; the parent directory places her under Adjunct Faculty. Her degrees listed are bachelor and master, with no research doctorate established. Dedup ran against the individual employer URL and returned several Bao Nguyen name matches; no new candidate is proposed and no move identity is asserted."
+    },
+    {
+      "name": "Ngoc-Phuc Le",
+      "reason": "Live employer page https://cemse.kaust.edu.sa/profiles/ngoc-phuc-le identifies a Postdoctoral Research Fellow. Excluded despite the documented Wollongong doctorate and Vietnamese education. Dedup with name and employer URL returned no roster or retired-ID matches."
+    },
+    {
+      "name": "Duc Minh Nguyen",
+      "reason": "Live employer page https://cemse.kaust.edu.sa/profiles/duc-minh-nguyen describes a PhD student. The headline Ph.D. label is a degree-program label, not evidence of a completed doctorate or career appointment. Excluded. Dedup ran with the employer URL; broad Minh/Duc Nguyen name matches did not override the explicit student exclusion."
+    },
+    {
+      "name": "Thang Nguyen Quang",
+      "reason": "Live employer page https://cemse.kaust.edu.sa/profiles/thang-nguyen-quang labels him a former PhD student. No current eligible appointment established."
+    },
+    {
+      "name": "Hoang Tung Nguyen",
+      "reason": "Live current employer team https://ri.kfupm.edu.sa/irc-ine/about-us/people places Dr. Hoang Tung Nguyen under Postdoctoral Fellows and labels him Post Doctoral Fellow. Excluded. Research Scientist III elsewhere on this page belongs to another person. Dedup ran with the name and team URL and returned broad name matches; none was accepted as an identity or move determination."
+    },
+    {
+      "name": "Nguyen Vu Tuan",
+      "reason": "Opened https://researchportal.hbku.edu.qa/en/persons/nguyen-vu-tuan, redirecting to https://elmi.hbku.edu.qa/en/persons/nguyen-vu-tuan/. Employer labels him Post Doc, QCRI Research Grants, with a dated 2024–2027 project. Postdoctoral role is excluded regardless of publication count."
+    },
+    {
+      "name": "Trang Minh Dinh",
+      "reason": "Live employer current-members page https://lpcdb.kaust.edu.sa/people/current places Trang Minh Dinh under Research Group Staff and labels the role Lab Support. A search snippet had called the role Postdoc; the opened current page takes precedence. No stable faculty-equivalent research appointment established. The linked individual URL https://lpcdb.kaust.edu.sa/people/detail/trang-minh-dinh could not be fetched. Dedup with name and current-team URL returned no roster or retired-ID matches."
+    },
+    {
+      "name": "Hieu Hoang",
+      "reason": "Stale UAE affiliation. Opened NYUAD past-members page https://nyuad.nyu.edu/en/research/faculty-labs-and-projects/computational-approaches-to-modeling-language-lab/researchers/Acknowledgements.html: his Research Scientist service is listed in 2015 among past members. A hackathon directory discovery result was therefore not treated as proof of current UAE employment. Current own-site discovery points to Microsoft, outside this university slice."
+    },
+    {
+      "name": "Tran Nguyen",
+      "reason": "Live employer lab page https://sites.nyuad.nyu.edu/activecognition/people/ identifies Tran Nguyen as Capstone Student. Excluded."
+    },
+    {
+      "name": "Vinh Thanh Nguyen",
+      "reason": "Opened employer research staff directory https://nyuad.nyu.edu/en/research/researchers/research-staff.html, including its Nguyen section. It lists Research Assistant and BA/two MSc degrees. No doctorate or stable faculty-equivalent appointment was verified, and no qualifying two-paper record at NYUAD was established. Dedup ran with name and employer directory URL and returned broad Vinh/Thanh Nguyen matches; no identity or move is asserted."
+    },
+    {
+      "name": "Van Dinh Tran",
+      "reason": "Outside the assigned university slice. Opened current employer page https://www.kfshrc.edu.sa/en/research/staff-listing/van-dinh-tran: current scientist at King Faisal Specialist Hospital and Research Centre, PhD University of Padova; KFUPM assistant professorship is described as a prior role. Do not propose a new current KFUPM appointment from older conference material. Dedup with current employer URL returned the name-only vp-0353 Van C. Tran, whose roster field is sociology; no duplicate or move claim is made."
+    },
+    {
+      "name": "Sabine Huynh",
+      "reason": "No current qualifying university appointment verified. Opened https://english.biu.ac.il/tirgum, a 2014 translation event naming her as scholar/author/translator; this is not appointment evidence. Opening her personal biography https://sabinehuynh.com/bio-english/ returned a verification screen. Search results describing historical lector/doctoral teaching were not accepted as a current career appointment."
+    }
+  ],
+  "coverage": [
+    {
+      "employer": "Slice-wide search strategy",
+      "pagesExamined": [],
+      "note": "Later-pass discovery across Qatar, UAE, Saudi Arabia, Israel and Turkey, without discipline restrictions. Given-name sweeps included Minh, Duc, Quang, Tuan, Hieu, Duy, Hien, Thuy, Thanh, Linh, Ngoc, Phuc, Huy, Quynh, Trung, Tung, Kien, Khanh and Bich; less-common surname sweeps included Trinh, Doan, Huynh, Truong, Dinh, Bui, Cao, Luong, Luu, Chu, Chau, Phung, Ngo and Vo. Read BRIEF2, README, ROSTER_MAINTENANCE, both university task playbooks and already-proposed.txt. Prior-proposed names were excluded from new-candidate consideration. No search result alone was accepted as verification. Coverage is substantial discovery coverage, not an exhaustive census; blocked and search-only institutions are distinguished below. No new person cleared every requirement, so candidates is intentionally empty."
+    },
+    {
+      "employer": "King Abdullah University of Science and Technology",
+      "pagesExamined": [
+        "https://www.kaust.edu.sa/en/study/faculty",
+        "https://onelab.kaust.edu.sa/team/current",
+        "https://onelab.kaust.edu.sa/team/current/thien",
+        "https://cemse.kaust.edu.sa/profiles/ngoc-phuc-le",
+        "https://cemse.kaust.edu.sa/profiles/duc-minh-nguyen",
+        "https://cemse.kaust.edu.sa/profiles/thang-nguyen-quang",
+        "https://lpcdb.kaust.edu.sa/people/current",
+        "https://lpcdb.kaust.edu.sa/people/detail/trang-minh-dinh"
+      ],
+      "note": "Went beyond faculty surnames into CEMSE, chemical/materials research scientists, visualization, communications, plant biology and lab staff. Main faculty-directory opens timed out twice; those results were not live verification. Live team and individual pages yielded one existing scientist and student/postdoctoral/lab-support exclusions. Additional discovery searches reached SANDS, visual-intelligence, semiconductor and solar-lab pages; Ngan Nguyen surfaced as a PhD student rather than a verified candidate."
+    },
+    {
+      "employer": "King Fahd University of Petroleum and Minerals",
+      "pagesExamined": [
+        "https://ri.kfupm.edu.sa/irc-ine/about-us/people"
+      ],
+      "note": "Live nuclear-energy team examined; Hoang Tung Nguyen is a postdoc. Broader institution searches covered computing, research institute staff and Vietnamese education/name signals. Van Dinh Tran was followed to his current non-university employer. Nam Nguyen Van surfaced as a publication author without eligible current career-role verification and was not proposed."
+    },
+    {
+      "employer": "Khalifa University",
+      "pagesExamined": [
+        "https://khazna.ku.ac.ae/en/persons/vi-truong/",
+        "https://www.ku.ac.ae/college-people/nguyen-hoach",
+        "https://www.ku.ac.ae/faculty-directory"
+      ],
+      "note": "Opened two identity-resolved existing profiles and followed the faculty-directory link from the Hoach profile. Directory exposes first-name sorting and alphabet navigation; initial A section is not a full directory census. Given-name, rarer-surname and Vietnam-education searches across KU found many external coauthors; those were not treated as KU employees."
+    },
+    {
+      "employer": "University of Sharjah",
+      "pagesExamined": [
+        "https://www.sharjah.ac.ae/-/media/project/uos/sites/uos/academics/faculty-and-staff/cv/thanh-mai-vu.pdf"
+      ],
+      "note": "Read live official six-page CV; Thanh-Mai Vu is already vp-2191. Minh, Dinh, Vietnam and rarer-name discovery queries did not establish another eligible new current scholar."
+    },
+    {
+      "employer": "United Arab Emirates University",
+      "pagesExamined": [
+        "https://www.uaeu.ac.ae/en/chss/contact.shtml?tab=faculty-directory",
+        "https://www.uaeu.ac.ae/en/cit/contact.shtml?tab=faculty-directory",
+        "https://www.uaeu.ac.ae/en/cmhs/contact.shtml?tab=faculty-directory"
+      ],
+      "note": "Opened institutional faculty directories for humanities/social sciences, IT and medicine/health and examined returned named faculty rows, including languages, psychology, media, management-related social sciences, computing, clinical/basic medical departments and nutrition. No new Vietnamese-name lead was verified. Long directory extraction was partial; not claimed to be an all-college census."
+    },
+    {
+      "employer": "Higher Colleges of Technology",
+      "pagesExamined": [
+        "https://hctcatalog.hct.ac.ae/programmes/applied-media/designmediaproduction/",
+        "https://www.kevintrinh.com/about"
+      ],
+      "note": "Deeper applied-media/design lead Kevin Quan-Tuan Trinh pursued through catalog, personal biography and identity dedup. Catalog opening hit a bot check; no evasion attempted. Own biography confirms role and doctorate but does not establish the explicit continuing/full-time Teaching criterion. Retained in rejected as unresolved, with next action. Existing Thanh Hai Nguyen was noted in local roster but not counted as newly live-verified here."
+    },
+    {
+      "employer": "Zayed University",
+      "pagesExamined": [
+        "https://www.zu.ac.ae/main/en/colleges/colleges/__college_of_business/faculty_and_staff/_profiles/bao_nguyen",
+        "https://www.zu.ac.ae/main/en/colleges/colleges/__college_of_business/faculty_and_staff/index"
+      ],
+      "note": "Accounting, business, creative-arts and broader institution name searches. Read live individual biography and directory, resolving Bao Nguyen to an excluded adjunct appointment. Scientific-committee discovery listed Tran Minh Hoang as an independent researcher, not university faculty; no candidate inferred."
+    },
+    {
+      "employer": "New York University Abu Dhabi",
+      "pagesExamined": [
+        "https://nyuad.nyu.edu/en/research/researchers/research-staff.html",
+        "https://sites.nyuad.nyu.edu/activecognition/people/",
+        "https://nyuad.nyu.edu/en/research/faculty-labs-and-projects/computational-approaches-to-modeling-language-lab/researchers/Acknowledgements.html"
+      ],
+      "note": "Examined live research staff directory and name sections, cognition lab people and language-lab alumni. Vinh Thanh Nguyen has a research-assistant listing, Tran Nguyen is a capstone student, and Hieu Hoang is a past member. Given-name searches also returned undergraduates and commencement pages. None was promoted to a career-faculty candidate."
+    },
+    {
+      "employer": "Mohamed bin Zayed University of Artificial Intelligence",
+      "pagesExamined": [
+        "https://mbzuai.ac.ae/faculty-and-researchers",
+        "https://mbzuai.ac.ae/academics/faculty-directory"
+      ],
+      "note": "Opened research/faculty information page and followed actual Faculty directory link. Live directory showed 141 results and first 12 names; remaining pages are dynamic, so no complete-list claim. Vietnamese given-name, Nguyen, Tran and Vietnam discovery searches found students or external coauthors rather than verified new faculty."
+    },
+    {
+      "employer": "Hamad Bin Khalifa University",
+      "pagesExamined": [
+        "https://www.hbku.edu.qa/en/people",
+        "https://www.hbku.edu.qa/en/chss/people",
+        "https://researchportal.hbku.edu.qa/en/persons/nguyen-vu-tuan",
+        "https://elmi.hbku.edu.qa/en/persons/nguyen-vu-tuan/"
+      ],
+      "note": "University-wide and humanities/social-sciences people pages returned 403. The accessible official research profile redirect identifies Nguyen Vu Tuan as a postdoc and was used to exclude him. QCRI or other non-university institute personnel were not assumed to be university faculty."
+    },
+    {
+      "employer": "Georgetown University in Qatar",
+      "pagesExamined": [
+        "https://www.qatar.georgetown.edu/faculty/"
+      ],
+      "note": "Opened live faculty directory spanning politics, economics, history, culture, languages and sciences, with full-time and excluded visiting/adjunct sections distinguished. No new Vietnamese-name lead established. Vietnam expertise or past teaching in Vietnam alone was not treated as ancestry evidence."
+    },
+    {
+      "employer": "Carnegie Mellon University in Qatar",
+      "pagesExamined": [
+        "https://coursecatalog.web.cmu.edu/schools-colleges/qatar/"
+      ],
+      "note": "Catalog open timed out. Discovery also checked computing/contest and information-systems/math faculty results, including given-name tokens. Contest participants were not assumed to be faculty; Thai faculty were not accepted as Vietnamese. Search-only findings remain unverified."
+    },
+    {
+      "employer": "Qatar University",
+      "pagesExamined": [],
+      "note": "Search-only coverage: institution-restricted given-name, Nguyen/Tran and rare-surname queries, with health, business/economics, education, engineering and computing results. Much material was QSpace copies of outside authors, visiting speakers or Vietnamese collaborators. No qualifying new current employee profile found; no claim of full live directory review."
+    },
+    {
+      "employer": "University of Doha for Science and Technology",
+      "pagesExamined": [],
+      "note": "Search-only coverage: faculty-directory discovery and a targeted Minh query. No candidate surfaced. Search results exposed dynamically generated search pages, which were not used as employment evidence."
+    },
+    {
+      "employer": "Ajman University",
+      "pagesExamined": [
+        "https://www.ajman.ac.ae/en/research/research-at-au/research-centers/artificial-intelligence-research-center-airc"
+      ],
+      "note": "Official AIRC members page discovered with dentistry, architecture, engineering and IT affiliates; opening timed out. No search snippet was accepted as an eligible-person verification."
+    },
+    {
+      "employer": "Prince Mohammad Bin Fahd University",
+      "pagesExamined": [
+        "https://www.pmu.edu.sa/academics/editorial_board_ijaich_udp"
+      ],
+      "note": "Broader faculty and Vietnamese-education searches plus live journal editorial-board inspection. A misleading search association of Hong Nhung Nguyen with Dubai resolved on the actual page to Gachon University, South Korea; Dubai belonged to a separate board member. No Saudi candidate inferred."
+    },
+    {
+      "employer": "Abu Dhabi University",
+      "pagesExamined": [],
+      "note": "Search-only coverage across university, business research and Trinh/Vietnam signals. Returned outside collaborators and institutional delegation visits; no new eligible current person verified."
+    },
+    {
+      "employer": "University of Wollongong in Dubai; Middlesex University Dubai; American University in Dubai; American University of Ras Al Khaimah; Heriot-Watt University Dubai; RIT Dubai",
+      "pagesExamined": [],
+      "note": "Search-only extension to institutions beyond the main research-university cluster, across professional, media/design, business, humanities and technical fields. Queries used institution domains, Vietnam, given names and uncommon surnames. Results about past employment in Vietnam, external authors, students and leadership without Vietnamese identity signals were not accepted. No individual eligible candidate verified; this is not a complete directory audit."
+    },
+    {
+      "employer": "Bilkent University",
+      "pagesExamined": [
+        "https://www.bilkent.edu.tr/phonedir/dep/faculty.htm",
+        "https://w3.cs.bilkent.edu.tr/faculty-members/"
+      ],
+      "note": "Opened university directory, which exposes unresolved client-side template fields, and live Computer Engineering faculty list. Broader university queries covered Nguyen, Vietnamese affiliation and business/economics collaborators. No new current Vietnamese faculty identified; computer-science list is not a substitute for an all-field census."
+    },
+    {
+      "employer": "Middle East Technical University",
+      "pagesExamined": [
+        "https://asn.metu.edu.tr/en/faculty-and-admin"
+      ],
+      "note": "Asian Studies faculty/admin page discovered but direct opening timed out. Turkey-wide given-name and rarer-surname searches also covered academic pages and humanities/languages, alongside technical disciplines. No candidate verified from this page."
+    },
+    {
+      "employer": "Sabanci University; Koç University; Özyeğin University; Istanbul universities",
+      "pagesExamined": [],
+      "note": "Search-only extension using given names, Vietnamese signals, Nguyen/Pham/Doan and institutional faculty queries. Results included external coauthors, outside speakers, partnerships and non-Vietnamese Turkish scholars. No new current qualifying person verified; no complete faculty-list review claimed."
+    },
+    {
+      "employer": "Bar-Ilan University",
+      "pagesExamined": [
+        "https://english.biu.ac.il/tirgum",
+        "https://sabinehuynh.com/bio-english/"
+      ],
+      "note": "Pursued Sabine Huynh through live institutional translation event and attempted personal biography. Event is historical, not an appointment; biography hit verification screen. No current continuing university role established."
+    },
+    {
+      "employer": "Hebrew University of Jerusalem; Tel Aviv University; Technion; Ben-Gurion University of the Negev",
+      "pagesExamined": [],
+      "note": "Search-only Israeli coverage used Minh, Duc, Quang, Thuy, Linh, Viet, Nguyen, Trinh and Huynh, including humanities/languages, scientific staff and technical topics. Results were chiefly external publication authors, Vietnam-studies scholars without Vietnamese identity evidence, student/exchange material, or historical events. No new eligible current university appointment verified. A publication on an Israeli university repository alone was never treated as employment evidence."
+    }
+  ]
+}

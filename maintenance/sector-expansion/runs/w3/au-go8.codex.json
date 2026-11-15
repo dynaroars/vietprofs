@@ -1,0 +1,240 @@
+{
+  "group": "university",
+  "agent": "codex",
+  "slice": "au-go8",
+  "finishedAt": "2026-11-15T01:27:25.373007Z",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Rosie Thuy Pham-Henderson",
+        "university": "The University of Western Australia",
+        "track": "Tenure-line",
+        "rank": "Lecturer",
+        "department": "UWA Business School, Marketing",
+        "city": "Perth",
+        "country": "Australia",
+        "field": "Business & Economics",
+        "researchAreas": [
+          "Consumer Behaviour",
+          "Big Data Analytics",
+          "Public Health Communications",
+          "Sustainability"
+        ],
+        "phdInstitution": "Queensland University of Technology",
+        "phdYear": 2022,
+        "profileUrl": "https://research-repository.uwa.edu.au/en/persons/thuy-pham/"
+      },
+      "evidence": {
+        "currentRole": "https://research-repository.uwa.edu.au/en/persons/thuy-pham/ — \"tenure-track Lecturer in Marketing\" since January 2024. Current profile identifies the UWA Business School and Perth, Australia. Older UQ page https://business.uq.edu.au/node/15547 is a prior appointment, not a second person.",
+        "doctorateOrPapers": "https://research-repository.uwa.edu.au/en/persons/thuy-pham/ — Education section records a Marketing PhD at Queensland University of Technology, awarded 26 July 2022. The narrative and education table disagree about the precise day, so only the consistent year is proposed.",
+        "vietnameseSignal": "https://research-repository.uwa.edu.au/en/persons/thuy-pham/ — Biography explicitly says she was born and raised in Saigon, Vietnam; retains Vietnamese surname Pham before added surname Henderson. Full Vietnamese name is not spelled out, so vietnameseName is omitted.",
+        "dedup": "Ran npm run find-roster-matches -- \"Rosie Thuy Pham-Henderson\" --url https://research-repository.uwa.edu.au/en/persons/thuy-pham/ https://business.uq.edu.au/node/15547. Hits vp-2069 and vp-2185 are different people: vp-2069 is an electrical/biomedical engineering lecturer at UTS with a Sydney PhD; vp-2185 is a marine/resource economist at UiT. Candidate is a QUT-trained marketing scholar. Exact identity URL/name checks against public/data.json found no duplicate. Not in already-proposed.txt.",
+        "enrichment": "Official profile image link is https://research-repository.uwa.edu.au/files-asset/530647537/Rosie-2.jpg?f=jpg&w=160 ; opening it returned Cache miss, so portraitSource is not proposed. Student-stage thesis commendation and routine paper recognitions were excluded from honors."
+      }
+    },
+    {
+      "entry": {
+        "name": "Hien Duong",
+        "university": "The University of Sydney",
+        "track": "Tenure-line",
+        "rank": "Senior Lecturer",
+        "department": "Sydney Pharmacy School",
+        "country": "Australia",
+        "field": "Health Sciences",
+        "researchAreas": [
+          "Drug Delivery",
+          "Nanomaterials",
+          "Macromolecular and Materials Chemistry",
+          "Colloid and Surface Chemistry"
+        ],
+        "profileUrl": "https://profiles.sydney.edu.au/hien.duong",
+        "scholarUrl": "https://scholar.google.com.au/citations?user=3tBDz24AAAAJ"
+      },
+      "evidence": {
+        "currentRole": "https://profiles.sydney.edu.au/hien.duong — \"Academic Fellow - Senior Lecturer in Pharmaceutical Sciences\"; School section identifies Sydney Pharmacy School. Biography describes lecturer appointment after earlier postdoctoral work at UNSW, Sydney Chemistry and UTS. Current title is a substantive senior lecturer, not the earlier postdoc position.",
+        "doctorateOrPapers": "https://profiles.sydney.edu.au/hien.duong — Biography describes her PhD at the Centre of Advanced Macromolecular Design followed by postdoctoral appointments. Completion is supported by that sequence; degree institution/year are not explicitly given on the live profile and are omitted.",
+        "vietnameseSignal": "Vietnamese given name Hien with surname Duong on https://profiles.sydney.edu.au/hien.duong. The official Sydney Vietnam engagement booklet also identifies her in the Hanoi University of Pharmacy collaboration: https://www.sydney.edu.au/content/dam/corporate/documents/sydney-southeast-asia-centre/svan/sydney-vietnam-engagement.pdf (page 30).",
+        "dedup": "Ran npm run find-roster-matches -- \"Hien Duong\" --url https://profiles.sydney.edu.au/hien.duong https://scholar.google.com.au/citations?user=3tBDz24AAAAJ ; no roster or retired-id matches. Manual name/URL cross-check found no duplicate. Not in already-proposed.txt.",
+        "enrichment": "https://profiles.sydney.edu.au/hien.duong directly links Google Scholar user 3tBDz24AAAAJ, establishing identity; Scholar fetch itself returned Cache miss. Official image https://profiles.sydney.edu.au/hien.duong/thumbnail also returned Cache miss, so portraitSource is omitted. No sourced full Vietnamese spelling or qualifying faculty-level honor was found."
+      }
+    },
+    {
+      "entry": {
+        "name": "Phuong D. (Yun) Trieu",
+        "university": "The University of Sydney",
+        "track": "Tenure-line",
+        "rank": "Senior Lecturer",
+        "department": "School of Health Sciences",
+        "country": "Australia",
+        "field": "Health Sciences",
+        "researchAreas": [
+          "Medical Imaging",
+          "Breast Cancer Detection",
+          "Mammography",
+          "Radiology Education",
+          "Artificial Intelligence"
+        ],
+        "profileUrl": "https://profiles.sydney.edu.au/phuong.trieu"
+      },
+      "evidence": {
+        "currentRole": "https://profiles.sydney.edu.au/phuong.trieu — \"Senior Lecturer - Medical Imaging Science\". Biography identifies Phuong D Trieu (Yun) as a senior lecturer and Co-Academic Director of BREAST; School section identifies School of Health Sciences. This is an academic imaging researcher, not a hospital-employed physician relying on a conjoint title.",
+        "doctorateOrPapers": "https://profiles.sydney.edu.au/phuong.trieu/publications — two 2026 current-employer journal articles: Enhancing Diagnostic Performance of Screening Mammography Readers Using an Intelligent Bayesian-Driven Adaptive Training System (August 2026), DOI https://doi.org/10.1016/j.acra.2026.08.003; From shadows to signals: exploring the strengths and limitations of artificial intelligence in breast cancer lesion detection on screening mammograms compared to radiologists and radiology trainees (31 July 2026), DOI https://doi.org/10.1093/bjr/tqag177. Both are listed under her current Sydney profile, consistent with the BREAST work described in her biography. No PhD institution or year proposed.",
+        "vietnameseSignal": "https://profiles.sydney.edu.au/phuong.trieu identifies her as Phuong D Trieu (Yun), combining Vietnamese given name Phuong and surname Trieu. Official biography describes her leadership of BREAST research/training in Vietnam. No diacritics reconstructed.",
+        "dedup": "Ran npm run find-roster-matches -- \"Phuong Dung Yun Trieu\" --url https://profiles.sydney.edu.au/phuong.trieu https://www.sydney.edu.au/medicine-health/about/our-people/academic-staff/phuong-trieu.html ; no roster or retired-id matches. Checked all roster Trieu records and exact URL: none is this Sydney imaging researcher. The expanded Dung form was a discovery alias; proposed name retains the official biography initial. Not in already-proposed.txt. Final rerun with the exact proposed name \"Phuong D. (Yun) Trieu\" and current profile URL also returned no matches.",
+        "enrichment": "Official older faculty URL was opened and redirects to https://profiles.sydney.edu.au/phuong.trieu. ORCID linked by employer is https://orcid.org/0000-0001-7021-6331 ; it returned no readable detail. Official image https://profiles.sydney.edu.au/phuong.trieu/thumbnail returned Cache miss; portraitSource omitted."
+      }
+    }
+  ],
+  "already_listed": [
+    {
+      "name": "Minh Bui",
+      "id": "vp-0557",
+      "note": "Same person as Quang Minh Bui: find-roster-matches matched the exact live official URL https://comp.anu.edu.au/people/minh-bui/ ; ANU computing, phylogenomics and Vienna PhD align. Retired vp-1170 was already merged into vp-0557."
+    },
+    {
+      "name": "Ha Bui",
+      "id": "vp-0538",
+      "note": "find-roster-matches matched Ha Hong Bui; https://www.monash.edu/engineering/hahbui identifies Ha H. Bui, geomechanics professor and department head. Retired vp-1648 already merged into vp-0538; vp-1164 is a different Grinnell economist."
+    },
+    {
+      "name": "Laurence Luu",
+      "id": "vp-2040",
+      "note": "Exact official profile match in find-roster-matches: https://www.unsw.edu.au/staff/laurence-luu . Current Scientia Lecturer and bacterial pathogenesis lab leader."
+    },
+    {
+      "name": "Thang Bui",
+      "id": "vp-2035",
+      "note": "find-roster-matches matched existing ANU computing scholar. Live ANU directory https://comp.anu.edu.au/people/ now lists Senior Lecturer. Penn State vp-0275 is a different person. No roster edits made."
+    }
+  ],
+  "possible_move": [],
+  "rejected": [
+    {
+      "name": "Hien Ngo",
+      "reason": "Current official UWA page explicitly lists Adjunct Professor, overriding older dean announcements: https://research-repository.uwa.edu.au/en/persons/hien-ngo/ ."
+    },
+    {
+      "name": "Hien Duy Nguyen",
+      "reason": "Current UQ page says Honorary Associate Professor: https://smp.uq.edu.au/profile/10851/hien-duy-nguyen . Older lecturer page is stale; no qualifying primary Go8 role verified."
+    },
+    {
+      "name": "Hien Duc Han",
+      "reason": "Official profile https://researchers.adelaide.edu.au/profile/hien.han lists Lecturer and a UniSA PhD, but its biography simultaneously describes a current government Economic Analyst role. Full-time primary university appointment is not established; withheld pending clarification rather than assuming eligibility."
+    },
+    {
+      "name": "Chau Khuong",
+      "reason": "Promising Monash teaching lead. Search discovery suggests Senior Lecturer (Education Focus), but live https://research.monash.edu/en/organisations/australian-regenerative-medicine-institute/persons/ returned 403 both through browser and direct request. No individual employer profile could be opened and degree evidence was not verified. Withheld; do not accept search snippets as verification."
+    },
+    {
+      "name": "Van Thuy Hoang",
+      "reason": "Opened https://researchers.adelaide.edu.au/profile/vanthuy.hoang ; Research Fellow with co-supervision, but no evidence of permanent faculty-equivalent appointment. Do not infer stability from research activity."
+    },
+    {
+      "name": "Hanh Tu Duc Nguyen",
+      "reason": "https://findanexpert.unimelb.edu.au/profile/893981-hanh-tu-duc-nguyen lists Associate Lecturer, Social Work; no doctorate/recent-paper evidence or continuing teaching appointment verified. Below this brief’s verification bar."
+    },
+    {
+      "name": "Clara Tran",
+      "reason": "https://profiles.sydney.edu.au/clara.tran lists ARC Mid-Career Industry Fellow and PhD, but does not establish a continuing faculty-equivalent position beyond the funded fellowship."
+    },
+    {
+      "name": "Minh Tri Luu",
+      "reason": "Sydney Nano membership page https://www.sydney.edu.au/nano/about/our-people.html provides no career faculty rank; a university annual report discovery lead describes a postdoc. No qualifying permanent appointment verified."
+    },
+    {
+      "name": "Hue Do",
+      "reason": "Discovery lead described Grant-Funded Researcher (A)/Postdoctoral Researcher. Live https://researchers.adelaide.edu.au/profile/hue.do redirected to university sign-in; did not log in. Not verified as eligible."
+    },
+    {
+      "name": "Bao Thai",
+      "reason": "Only historical ANU teaching/course material surfaced; no current substantive or emeritus appointment verified. Historical teaching listings alone do not establish eligibility."
+    },
+    {
+      "name": "Thuy Pham - Australian National University",
+      "reason": "ANU Vietnamese course outlines name an instructor, but no current permanent teaching profile, research doctorate or recent papers verified. Course participation alone is insufficient."
+    },
+    {
+      "name": "Hoang Vuong Dang",
+      "reason": "https://www.uwa.edu.au/centre-for-water-and-spatial-science/our-team lists this person under completed students, not career faculty."
+    },
+    {
+      "name": "Hoang Long Nguyen",
+      "reason": "https://www.uwa.edu.au/centre-for-water-and-spatial-science/our-team lists this person under completed students, with technical-support recognition; no qualifying career research appointment established."
+    }
+  ],
+  "coverage": [
+    {
+      "employer": "The University of Western Australia",
+      "pagesExamined": [
+        "https://research-repository.uwa.edu.au/en/persons/thuy-pham/",
+        "https://research-repository.uwa.edu.au/en/persons/hien-ngo/",
+        "https://www.uwa.edu.au/centre-for-water-and-spatial-science/our-team"
+      ],
+      "note": "Given-token searches Minh, Thi, Thuy, Dung, Hien, Tien, Quynh, Khanh, Huong, Thang, Bich, Ngan, Quoc; uncommon-surname/identity follow-ups Vuong and Trieu. Deeper business/marketing, dentistry, engineering-history, water/spatial/environmental research and student-versus-staff screening. Rosie is new; Hien Ngo is now adjunct. Already-proposed Vu Vuong skipped. Searches were institution-wide across fields; this is a targeted later pass, not a census of every department."
+    },
+    {
+      "employer": "Adelaide University",
+      "pagesExamined": [
+        "https://researchers.adelaide.edu.au/profile/vanthuy.hoang",
+        "https://researchers.adelaide.edu.au/profile/hien.han",
+        "https://adelaide.edu.au/about/school/accounting-finance/our-people/",
+        "https://researchers.adelaide.edu.au/profile/hue.do"
+      ],
+      "note": "Given-token searches Minh, Hien, Thuy, Huyen, Hanh, Kieu, Nhu, Bich, Hieu, Duyen and less-common surnames Trinh, Quach, Dinh, Ton. Deeper finance/business analytics, photonics, veterinary/agricultural biology, arts and teaching roles. Han primary employment unresolved; Hoang stability not established; Hue Do live profile goes to sign-in. Existing/proposed Giang Trinh and Nam Nghiep Tran not proposed again."
+    },
+    {
+      "employer": "Australian National University",
+      "pagesExamined": [
+        "https://comp.anu.edu.au/people/",
+        "https://comp.anu.edu.au/people/minh-bui/"
+      ],
+      "note": "Given-token searches Quynh, Huong, Huyen, Thuy, Hieu, Hanh, Tuyet; less-common/name follow-ups Dinh, Vo, Truong, Bao Thai. Computing faculty directory resolved Minh Bui to existing Quang Minh Bui and screened Vietnamese-name students. Also searched public health/economics and Vietnamese-language teaching. Previously proposed Hieu Nguyen and Quynh Nguyen skipped. Older Bao Thai teaching evidence did not establish current status."
+    },
+    {
+      "employer": "The University of Queensland",
+      "pagesExamined": [
+        "https://smp.uq.edu.au/profile/10851/hien-duy-nguyen",
+        "https://chemeng.uq.edu.au/contact",
+        "https://eecs.uq.edu.au/about/our-people"
+      ],
+      "note": "Given-token searches Minh, Hien, Thuy, Quynh, Phuong, Hanh, Thanh, Dieu, Nghia, Kien, Nhi, Ngoc, Huu and surname Khuong. Deeper mathematics/statistics, marketing, chemical engineering, EECS, nursing/social work and linguistics. Hien Duy Nguyen is honorary; chemical-engineering directory distinguishes students, adjuncts and research fellows. UQ Rosie lead resolved to current UWA appointment. Names already proposed, including Tuan Nguyen and Ngoc Nguyen, skipped."
+    },
+    {
+      "employer": "University of Melbourne",
+      "pagesExamined": [
+        "https://healthsciences.unimelb.edu.au/departments/socialwork/about-us/our-people",
+        "https://findanexpert.unimelb.edu.au/profile/893981-hanh-tu-duc-nguyen",
+        "https://fbe.unimelb.edu.au/about/academic-staff"
+      ],
+      "note": "Given-token searches Hiep, Quynh, Thien, Kieu, Huan, Phuc. Deeper social work, optometry, chemical engineering honorary/research staff, business/economics and law. Social-work lead lacks brief-required doctorate/publication and permanence evidence. Business faculty directory live request timed out; indexed leads predominantly already listed. No search-only candidate accepted."
+    },
+    {
+      "employer": "Monash University",
+      "pagesExamined": [
+        "https://www.monash.edu/engineering/hahbui",
+        "https://research.monash.edu/en/organisations/australian-regenerative-medicine-institute/persons/"
+      ],
+      "note": "Given-token searches Hanh, Liem, Hieu, Chau and surname Khuong/Ton, plus clinical sciences and engineering lab alumni. Ha Bui already listed. ARMI teaching lead Chau Khuong withheld because live directory is 403 and no individual profile/PhD verified. Hieu Nim follow-up indicates MCRI rather than verified primary Monash faculty; non-university employer is outside this slice. Existing/proposed Thang Nguyen and others skipped."
+    },
+    {
+      "employer": "University of New South Wales",
+      "pagesExamined": [
+        "https://www.unsw.edu.au/staff/laurence-luu"
+      ],
+      "note": "Given-token searches Huyen, Hiep, Ngoc, Thuy, Khuong and less-common surname Luu; finance/accounting, biotechnology, pharmacy and clinical administration leads. Laurence Luu already listed. Search leads for Tien Nga Lam (technical officer), Khuong Duy Hoang (adjunct) and Thuy Huynh (administration) were not promoted into candidates. No LinkedIn pages fetched."
+    },
+    {
+      "employer": "The University of Sydney",
+      "pagesExamined": [
+        "https://www.sydney.edu.au/nano/about/our-people.html",
+        "https://profiles.sydney.edu.au/hien.duong",
+        "https://profiles.sydney.edu.au/phuong.trieu",
+        "https://profiles.sydney.edu.au/phuong.trieu/publications",
+        "https://profiles.sydney.edu.au/clara.tran",
+        "https://www.sydney.edu.au/sydney-southeast-asia-centre/our-research/sydney-vietnam-academic-network.html",
+        "https://www.sydney.edu.au/content/dam/corporate/documents/sydney-southeast-asia-centre/svan/sydney-vietnam-engagement.pdf"
+      ],
+      "note": "Given-token searches Thuy, Hien, Quynh, Minh Tri, Dieu, then less-common Trieu follow-up through the Vietnam Academic Network. Deeper pharmacy/nanomaterials, medical imaging, biomedical engineering and cross-disciplinary network nodes. Two new eligible senior lecturers verified. Luu and Clara Tran lacked stable faculty evidence. BREAST team-site request timed out, but Yun’s official faculty profile and current publication list opened successfully."
+    }
+  ]
+}

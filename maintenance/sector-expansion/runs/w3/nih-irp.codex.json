@@ -1,0 +1,212 @@
+{
+  "group": "lab",
+  "agent": "codex",
+  "slice": "nih-irp",
+  "finishedAt": "2026-11-15T01:41:20.664146Z",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Mary T. Thanh Hai",
+        "university": "U.S. Food and Drug Administration",
+        "institutionType": "Public research institute",
+        "track": "Government & Defense",
+        "rank": "Administrator",
+        "department": "Center for Drug Evaluation and Research, Office of New Drugs",
+        "country": "United States",
+        "researchAreas": [
+          "Clinical Research",
+          "Drug Development",
+          "Endocrinology",
+          "Drug Safety"
+        ],
+        "phdInstitution": "Georgetown University",
+        "profileUrl": "https://www.fda.gov/about-fda/center-drug-evaluation-and-research-cder/mary-thanh-hai"
+      },
+      "evidence": {
+        "currentRole": "https://www.fda.gov/about-fda/center-drug-evaluation-and-research-cder/mary-thanh-hai — “Director - Office of New Drugs”. Individual FDA biography identifies a career FDA clinical-research leader, employed at FDA since 1998. Her office oversees clinical/nonclinical investigations and advises on preapproval and postapproval studies, including clinical trial safety and interpretation. This meets the federal scientific research-leadership route rather than an ordinary administrative-support role.",
+        "doctorateOrPapers": "https://www.fda.gov/about-fda/center-drug-evaluation-and-research-cder/mary-thanh-hai — Employer identifies her as an MD, an internist/endocrinologist, and says her medical degree is from Georgetown University. MD is used under the clinical-research exception; phdInstitution maps the qualifying medical doctorate, not a claim that she earned a PhD. No degree year stated.",
+        "vietnameseSignal": "https://www.fda.gov/about-fda/center-drug-evaluation-and-research-cder/mary-thanh-hai — Published full name includes the Vietnamese name token Thanh in Thanh Hai, an affirmative name signal beyond a shared surname alone. No diacritics or expanded initial reconstructed.",
+        "dedup": "Ran npm run find-roster-matches -- \"Mary T. Thanh Hai\" --url https://www.fda.gov/about-fda/center-drug-evaluation-and-research-cder/mary-thanh-hai; output: no roster or retired-id matches. No name match in maintenance/sector-expansion/already-proposed.txt. Read-only gh issue list --state all --search query returned #1102, inspected and found to concern unrelated Amazon leads; no Mary Thanh Hai identity in that body. No Issues or PRs created."
+      }
+    }
+  ],
+  "already_listed": [
+    {
+      "name": "Joe T. Nguyen",
+      "id": "vp-1668",
+      "note": "Opened https://irp.nih.gov/pi/joe-nguyen in this run. Ran npm run find-roster-matches with the name and URL; exact name and stored profileUrl match resolves identity to this ID."
+    },
+    {
+      "name": "Rosa Nguyen",
+      "id": "vp-1669",
+      "note": "Opened https://irp.nih.gov/pi/rosa-nguyen in this run. Ran npm run find-roster-matches with the name and URL; exact name and stored profileUrl match resolves identity to this ID."
+    },
+    {
+      "name": "Quynh Nguyen",
+      "id": "vp-1660",
+      "note": "Opened https://irp.nih.gov/pi/quynh-nguyen in this run. Ran npm run find-roster-matches with the name and URL; exact stored profileUrl match resolves identity to this ID. Quynh is rostered as Quynh T. Nguyen at NINR; other name hits are distinct people."
+    }
+  ],
+  "possible_move": [],
+  "rejected": [
+    {
+      "name": "Timothy Quang",
+      "reason": "NICHD employer roster verifies Tim Quang, PhD, Staff Scientist, and IRP 2025 article expands the name to Timothy. No affirmative Vietnamese signal beyond surname Quang was established; do not infer ancestry from the surname. https://www.nichd.nih.gov/research/atNICHD/Investigators/tromberg/personnel ; https://irp.nih.gov/blog/post/2025/01/tracking-sickle-cell-symptoms-with-infrared-light . Not a verified candidate."
+    },
+    {
+      "name": "Lon Phan",
+      "reason": "Opened 2025 NLM/NCBI expert biography: career human-genetic-variation team leader with PhD. Earlier NLM report supplies Minnesota biological-chemistry doctorate. No affirmative Vietnamese signal beyond surname Phan established, and no individual person page found. https://www.nlm.nih.gov/ncbi/conferences/ASHG/ASHG_experts.html . Research lead only."
+    },
+    {
+      "name": "Thai-Vu T. Ton",
+      "reason": "Current individual NIEHS page verifies career biologist; no doctorate stated. Listed 2024 PLOS ONE paper qualifies, but January 2023 paper falls outside rolling three years as of November 2026; no second qualifying recent full paper verified. https://www.niehs.nih.gov/research/atniehs/labs/cmp/mole-path/staff/ton"
+    },
+    {
+      "name": "Trinh Ly",
+      "reason": "Individual NIDCD page verifies Chief Medical Officer, Clinical Trials Section, and institutional biography supplies Maryland MD. Work is explicitly extramural clinical-trial program leadership, outside this assigned NIH intramural PI/staff-scientist slice. Potentially eligible for a broader government-program-officer slice. https://www.nidcd.nih.gov/about/staff/trinh-ly ; https://www.nidcd.nih.gov/news/2017/trinh-ly-joins-nidcd-clinical-trials-program"
+    },
+    {
+      "name": "Anh Nguyen Zarndt",
+      "reason": "FDA MOU and journal biographies identify a doctorate-holding tobacco research/evaluation director, but no individual current employer profile page established. MOU contacts and publication bylines do not satisfy this slice’s individual-page requirement. https://www.fda.gov/about-fda/non-profit-and-other-mous/mou-225-24-012 ; https://academic.oup.com/ntr/pages/tobacco-risk-reduction-call-for-proposals?login=true"
+    },
+    {
+      "name": "Huu Tho Nguyen",
+      "reason": "Opened NIMH White-lab biography: current research fellow following postdoctoral research, not a verified permanent NIH career role. Prior Hanoi staff-scientist title does not establish current eligibility. https://www.nimh.nih.gov/research/research-conducted-at-nimh/research-areas/clinics-and-labs/snf/lab-members"
+    },
+    {
+      "name": "Linh Pham",
+      "reason": "Opened NIMH biography: current MD-PhD student in NIH OxCam/UT Health San Antonio. Excluded trainee. https://www.nimh.nih.gov/research/research-conducted-at-nimh/research-areas/clinics-and-labs/hgb/sdn/people"
+    },
+    {
+      "name": "Phuc Tran",
+      "reason": "Opened NIMH radiopharmaceutical-sciences biography: Postdoctoral Fellow since January 2024. Excluded trainee. https://www.nimh.nih.gov/research/research-conducted-at-nimh/research-areas/clinics-and-labs/mib/sprs/people"
+    },
+    {
+      "name": "Kim-Thu Tran",
+      "reason": "NIMH locator labels Data Scientist and gives kevin.tran@nih.gov. Matching LBC biography describes Kevin Tran, MS, providing IT/server/software support. Career research qualification not established. Kevin Tran is also explicitly in already-proposed.txt and was not reproposed. https://www.nimh.nih.gov/about/staff-directories/intramural-research-irp-organizational-locator ; https://www.nimh.nih.gov/research/research-conducted-at-nimh/research-areas/clinics-and-labs/lbc/office-of-the-chief/lbc-office-of-the-chief-staff"
+    },
+    {
+      "name": "Hoan Le",
+      "reason": "NIMH locator and FMRIF pages identify systems administration/IT support, not a qualifying career research appointment. https://www.nimh.nih.gov/about/staff-directories/intramural-research-irp-organizational-locator ; https://fmrif.nimh.nih.gov/Staff/"
+    },
+    {
+      "name": "Trien Tran",
+      "reason": "Opened NIDCD page identifies Intramural Research Administration Branch, with no career research role or research qualification established. https://www.nidcd.nih.gov/about/staff/trien-tran"
+    },
+    {
+      "name": "Kenny Vu",
+      "reason": "Opened individual NIDCD page: MS, Sinonasal and Skull Base Tumor Program; directory identifies animal biologist. No doctorate, two recent identity-resolved papers, or affirmative Vietnamese signal beyond surname established. https://www.nidcd.nih.gov/about/staff/kenny-vu"
+    },
+    {
+      "name": "Hung Kim",
+      "reason": "Opened NIDCD individual page, an old contact-only listing last updated in 2015. No current career research appointment or affirmative Vietnamese identity signal established for this ambiguous name. https://www.nidcd.nih.gov/about/staff/hung-kim"
+    },
+    {
+      "name": "Angel Huynh",
+      "reason": "NIDCD current staff directory explicitly identifies Contract Technician. Excluded contractor. https://www.nidcd.nih.gov/about/staff"
+    },
+    {
+      "name": "Nhut Nguyen",
+      "reason": "Name is in already-proposed.txt; skipped as required. CDC/NIOSH 2023 bulletin surfaced during final given-name sweep, but no new proposal or claim of current individual-profile verification. https://www.cdc.gov/niosh/bulletin/2023/wc-dashboard.html"
+    },
+    {
+      "name": "Quynh Nguyen / Tuan Nguyen / An Ngoc Dang Do / Phuc Hoang / Linh Bui-Raborn",
+      "reason": "Names occur in already-proposed.txt; no repeat candidate. Central IRP Quynh Nguyen identity additionally resolves to existing vp-1660. Earlier w1 results were read for coverage gaps, not reused as current verification."
+    }
+  ],
+  "coverage": [
+    {
+      "employer": "NIH Intramural Research Program — all institutes including NCI",
+      "pagesExamined": [
+        "https://irp.nih.gov/pi",
+        "https://irp.nih.gov/our-research/principal-investigators/name",
+        "https://irp.nih.gov/pi/joe-nguyen",
+        "https://irp.nih.gov/pi/rosa-nguyen",
+        "https://irp.nih.gov/pi/quynh-nguyen"
+      ],
+      "note": "Opened and scanned full alphabetical all-institute PI directory, including given-name tokens and uncommon surnames. Three Vietnamese-name investigators resolved to existing IDs. Ambiguous Haiming Cao, Qing Lan, Claire Le Pichon and Hung Chang Yao were not inferred Vietnamese. Later-pass searches emphasized Thanh, Huong, Dung, Linh, Thuy, Quang, Thao, Hien, Ngoc, Tuan, Hanh, Phuong, Minh, Viet, Hieu, Khanh, Khoa, Chau, Thu, Bao, Truc, Hai, Hoan, Tri, Huy, Tuyet, Lien, Bich, Huyen, Nhan, Oanh, Phuc, Tram, Nhung, Tung, Nghia, Chinh, Diem, Uyen, Kiet, Quoc, Toan, Binh and Tien; supplementary less-common-surname searches covered Phung, Diep, Dinh, Luu, Luong, Quach, Ton, Thai, Vuong, Bach, Dao, Doan, Lai and Tieu. Search results were discovery leads only. No new NIH candidate cleared every test. Coverage is a broad discovery pass, not a census of all 1,200 PIs’ lab members."
+    },
+    {
+      "employer": "National Institute on Deafness and Other Communication Disorders",
+      "pagesExamined": [
+        "https://www.nidcd.nih.gov/about/staff",
+        "https://www.nidcd.nih.gov/about/staff/trinh-ly",
+        "https://www.nidcd.nih.gov/news/2017/trinh-ly-joins-nidcd-clinical-trials-program",
+        "https://www.nidcd.nih.gov/about/staff/trien-tran",
+        "https://www.nidcd.nih.gov/about/staff/hung-kim",
+        "https://www.nidcd.nih.gov/about/staff/kenny-vu"
+      ],
+      "note": "Deeper coverage beyond w1: scanned complete staff-directory linked names, opened individual pages, distinguished extramural medical-science leadership from intramural career research, administrative staff, contractors and insufficient biographies. Michael Hoa surname-only lead not accepted; unrelated namesakes in Vietnamese searches were not conflated."
+    },
+    {
+      "employer": "National Library of Medicine / NCBI",
+      "pagesExamined": [
+        "https://www.nlm.nih.gov/ncbi/conferences/ASHG/ASHG_experts.html"
+      ],
+      "note": "Deeper NCBI personnel discovery found Lon Phan, current human-genetic-variation team leader. Career research and PhD supported, but affirmative Vietnamese signal and individual page not established. Historical FY2006 NLM annual-report search result used only as a degree lead, not current employment evidence."
+    },
+    {
+      "employer": "NICHD / National Institute of Biomedical Imaging and Bioengineering",
+      "pagesExamined": [
+        "https://www.nichd.nih.gov/research/atNICHD/Investigators/tromberg/personnel"
+      ],
+      "note": "Expanded given-name/less-common-surname discovery reached Tim/Timothy Quang, a staff scientist outside central PI directory. Career role verified on opened NICHD roster; no sufficient Vietnamese signal found. An Ngoc Dang Do already proposed and skipped."
+    },
+    {
+      "employer": "National Institute of Mental Health",
+      "pagesExamined": [
+        "https://www.nimh.nih.gov/about/staff-directories/intramural-research-irp-organizational-locator",
+        "https://www.nimh.nih.gov/research/research-conducted-at-nimh/research-areas/clinics-and-labs/snf/lab-members",
+        "https://www.nimh.nih.gov/research/research-conducted-at-nimh/research-areas/clinics-and-labs/hgb/sdn/people",
+        "https://www.nimh.nih.gov/research/research-conducted-at-nimh/research-areas/clinics-and-labs/mib/sprs/people",
+        "https://www.nimh.nih.gov/research/research-conducted-at-nimh/research-areas/clinics-and-labs/lbc/office-of-the-chief/lbc-office-of-the-chief-staff"
+      ],
+      "note": "Opened locator and detailed lab biographies. Resolved Kim-Thu/Kevin Tran contact match as IT-support work; Phuc Tran and Huu Tho Nguyen are fellows; Linh Pham is a student. Directory also identifies administrative support, contractors and student roles; no new career researcher accepted."
+    },
+    {
+      "employer": "National Institute of Environmental Health Sciences",
+      "pagesExamined": [
+        "https://www.niehs.nih.gov/research/atniehs/labs/cmp/staff",
+        "https://www.niehs.nih.gov/research/atniehs/labs/cmp/mole-path/staff/ton"
+      ],
+      "note": "Followed uncommon surname Ton to opened individual career-biologist page. No doctorate and only one verified full paper within last three years. Broad institute/given-name searches returned contractor Kimberly Truong and no additional verified individual candidate; no contractor promoted to staff scientist."
+    },
+    {
+      "employer": "National Heart, Lung, and Blood Institute",
+      "pagesExamined": [
+        "https://www.nhlbi.nih.gov/science/cardiovascular-epidemiology-and-genomics"
+      ],
+      "note": "Opened current Framingham lab personnel page after a Bui lead; Helena Bui was not in extracted current team. Additional given-name searches reached pulmonary vascular biology, molecular immunology, hematopoiesis, regenerative therapies and lymphoid malignancies; mostly trainee/alumni/publication mentions, not accepted individual profiles."
+    },
+    {
+      "employer": "NCI Center for Cancer Research",
+      "pagesExamined": [
+        "https://irp.nih.gov/pi/joe-nguyen",
+        "https://irp.nih.gov/pi/rosa-nguyen",
+        "https://ccr.cancer.gov/Laboratory-of-Tumor-Immunology-and-Biology/duane-h-hamilton"
+      ],
+      "note": "CCR searches by given names and staff-scientist roles surfaced Thanh Hung Nguyen publication bylines, Binh Nguyen postbac/alumnus, and Loc H. Le labeled Scientist (Contr) in employer search results. Hamilton team page open failed with cache miss, so not treated as an opened verification page. Joe/Rosa profiles opened and matched existing IDs. DCEG w1 candidates were on already-proposed list and skipped."
+    },
+    {
+      "employer": "Other NIH institutes — NIAID, NIDDK, NINDS, NHGRI, NIAMS, NIA, NIDA and NIDCR",
+      "pagesExamined": [],
+      "note": "Supplementary targeted employer-domain given-name/staff-scientist searches; central PI directory supplies all-institute coverage. Results largely consisted of grants to external universities, publications, program analysts, IT staff, trainees or prior proposals. These searches are not claimed as direct full-directory inspection. NHGRI Nicholas Nguyen is an MHS/PA-C program analyst, NIDDK Nicole Nguyen is a postbac alumna, and NIAMS Oanh/Thien Nguyen leads are IT branch staff in employer search results. None accepted from snippets."
+    },
+    {
+      "employer": "U.S. Food and Drug Administration",
+      "pagesExamined": [
+        "https://www.fda.gov/about-fda/center-drug-evaluation-and-research-cder/mary-thanh-hai",
+        "https://www.fda.gov/about-fda/science-research-nctr/nctr-principal-investigators",
+        "https://www.fda.gov/about-fda/science-research-nctr/nctr-principal-investigators-name"
+      ],
+      "note": "Deeper NCTR coverage: followed index to full alphabetical investigator-name list and inspected it, beyond w1 landing-page extraction. No affirmative Vietnamese-name PI emerged. CDER/CBER/CTP given-name and less-common-surname searches found Mary T. Thanh Hai, verified on her individual FDA page. Most other hits were application correspondence, regulatory pharmacists/project managers, external speakers or papers, not current individual scientist profiles. Research-biographies guessed landing URL failed and was not used. NCTR all-biosketch download returned unsupported Word content type; alphabetical index remained usable."
+    },
+    {
+      "employer": "Centers for Disease Control and Prevention / NIOSH",
+      "pagesExamined": [
+        "https://www.cdc.gov/niosh/bulletin/2023/wc-dashboard.html"
+      ],
+      "note": "Given-name sweeps included Linh, Thanh, Thuy, Tuan, Quang, Lan, Mai, Hoang, Luan, Thi, Thien and Nhu, plus biography and NIOSH scientist queries. Opened Nhut Nguyen coauthored NIOSH bulletin, but name already proposed and skipped. Most other results were CDC Stacks copies of external papers, historical MMWR authorships, contractor health physicists or external speakers; no new current individual CDC scientist page verified. No paper byline was treated as proof of current career employment."
+    }
+  ]
+}

@@ -1,0 +1,517 @@
+{
+  "group": "university",
+  "agent": "codex",
+  "slice": "au-other",
+  "finishedAt": "2026-11-15T00:52:56.317364Z",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Mai Ngo",
+        "university": "Flinders University",
+        "track": "Tenure-line",
+        "rank": "Associate Professor",
+        "department": "College of Human Sciences and Culture",
+        "country": "Australia",
+        "city": "Adelaide",
+        "state": "South Australia",
+        "field": "Education",
+        "researchAreas": [
+          "TESOL",
+          "Applied linguistics",
+          "Language teacher professional development",
+          "Graduate employability",
+          "Generative AI in language education"
+        ],
+        "phdInstitution": "University of New South Wales",
+        "undergradInstitution": "Hanoi University",
+        "msInstitution": "The University of Sydney",
+        "postdocInstitution": "University of New South Wales",
+        "profileUrl": "https://www.flinders.edu.au/people/mai.ngo",
+        "portraitSource": "https://www.flinders.edu.au/flinders-services/staff-profile-attachment.extension/mai.ngo/78e2d370931916547e88b29b7bba10c8/profile.extension"
+      },
+      "evidence": {
+        "currentRole": "https://www.flinders.edu.au/people/mai.ngo — \"Associate Professor in TESOL and Applied Linguistics at Flinders University.\" Discipline lead with undergraduate/postgraduate teaching and research responsibilities; ordinary substantive academic appointment.",
+        "doctorateOrPapers": "https://www.flinders.edu.au/people/mai.ngo — qualifications explicitly identify a doctorate in Education at UNSW. The same page sources the undergraduate degree, TESOL masters and completed UNSW postdoctoral research. No PhD completion year inferred from scholarship dates.",
+        "vietnameseSignal": "https://www.flinders.edu.au/people/mai.ngo — Hanoi University English degree and earlier dean/director appointments there. This supplies an affirmative Vietnamese education signal beyond the short name Mai Ngo.",
+        "dedup": "Ran npm run find-roster-matches -- \"Mai Tuyet Ngo\" --url https://www.flinders.edu.au/people/mai.ngo. Only vp-0287 Mai Ngo matched by name. Different person: vp-0287 is a chemical/biological engineer at Wisconsin with Illinois PhD (2021); this candidate is the TESOL educator with UNSW Education PhD and Hanoi career. Manual roster/name-order and exact URL checks found no matching person. Published fuller variant Mai Tuyet Ngo occurs in Flinders thesis records; entry retains current official profile name."
+      }
+    },
+    {
+      "entry": {
+        "name": "Thao Phuong Trinh",
+        "university": "Central Queensland University",
+        "track": "Tenure-line",
+        "rank": "Lecturer",
+        "department": "School of Engineering and Technology",
+        "country": "Australia",
+        "city": "Melbourne",
+        "field": "Computer & Information Sciences",
+        "researchAreas": [
+          "Information systems management",
+          "Digital transformation",
+          "Enterprise systems",
+          "Supply chain sustainability",
+          "Generative AI adoption"
+        ],
+        "phdInstitution": "RMIT University",
+        "phdYear": 2012,
+        "undergradInstitution": "Universiti Teknologi Petronas",
+        "undergradYear": 2007,
+        "profileUrl": "https://staff-profiles.cqu.edu.au/home/view/23852",
+        "portraitSource": "https://staff-profiles.cqu.edu.au/files/downloadPhoto/15533/profile.png"
+      },
+      "evidence": {
+        "currentRole": "https://staff-profiles.cqu.edu.au/home/view/23852 — \"Lecturer - Project Management\"; School of Engineering and Technology. Bio states she joined CQU in 2018 and remains lecturer; accredited research supervisor. Melbourne is explicitly listed. https://phonebook.cqu.edu.au/facet/uni-contacts/directory-results?department=School+of+Engineering+and+Technology independently lists the substantive lecturer position.",
+        "doctorateOrPapers": "https://staff-profiles.cqu.edu.au/home/view/23852 — explicitly records the Business Information Systems doctorate at RMIT (2012), and Information Systems bachelors at Universiti Teknologi Petronas (2007).",
+        "vietnameseSignal": "https://staff-profiles.cqu.edu.au/home/view/23852 — full published name Thao Phuong Trinh supplies Vietnamese given-name tokens Thao and Phuong, beyond surname Trinh.",
+        "dedup": "Ran npm run find-roster-matches -- \"Thao Phuong Trinh\" --url https://staff-profiles.cqu.edu.au/home/view/23852: no roster or retired-id matches. Manually checked shortened Thao Trinh/name-order variants and exact profile URL; not in already-proposed.txt."
+      }
+    },
+    {
+      "entry": {
+        "name": "Quynh Nhu Dinh",
+        "university": "RMIT University",
+        "track": "Tenure-line",
+        "rank": "Lecturer",
+        "department": "School of Health and Biomedical Sciences",
+        "country": "Australia",
+        "field": "Biological & Biomedical Sciences",
+        "researchAreas": [
+          "Hypertension",
+          "Inflammation",
+          "Cognitive impairment",
+          "Dementia",
+          "Cardiovascular disease"
+        ],
+        "phdInstitution": "Monash University",
+        "phdYear": 2017,
+        "profileUrl": "https://www.rmit.edu.au/profiles/d/quynh-dinh"
+      },
+      "evidence": {
+        "currentRole": "https://www.rmit.edu.au/profiles/d/quynh-dinh — \"Lecturer\" in Health and Biomedical Sciences, Bundoora West Australia. Opened linked individual employer page https://academics.rmit.edu.au/quynh-dinh, which also identifies the current lecturer role. Current https://www.rmit.edu.au/about/schools-colleges/health-and-biomedical-sciences/contact/people/clinical-sciences lists her among Pharmaceutical Sciences academic staff. This supersedes her earlier La Trobe postdoc role.",
+        "doctorateOrPapers": "https://ish-world.com/portfolio-investigator/quynh-nhu-dinh — firsthand researcher interview: \"I completed my PhD in 2017 at Monash University in Australia.\" Identity matches hypertension/inflammatory brain-injury research. https://www.ascept-hypertensionau.com.au/wp-content/uploads/2025/12/ASCEPTHA2025-Abstract-Book-1.pdf identifies the RMIT pharmaceutical-sciences lecturer as Quynh Nhu Dinh with La Trobe cardiovascular collaborators.",
+        "vietnameseSignal": "Employer publishes Quynh Dinh; the identity-resolved ISH researcher interview and ASCEPT program publish Quynh Nhu Dinh. Quynh and Nhu are affirmative Vietnamese given-name tokens.",
+        "dedup": "Ran npm run find-roster-matches -- \"Quynh Nhu Dinh\" --url https://www.rmit.edu.au/profiles/d/quynh-dinh --url https://academics.rmit.edu.au/quynh-dinh --url https://ish-world.com/portfolio-investigator/quynh-nhu-dinh: no roster or retired-id matches. Manually checked Quynh Dinh/name-order variants and exact URLs; absent from already-proposed.txt. No city inferred from the campus label."
+      }
+    },
+    {
+      "entry": {
+        "name": "Kevin Huu Phat Thai",
+        "university": "RMIT University",
+        "track": "Tenure-line",
+        "rank": "Lecturer",
+        "department": "Department of Accounting, School of Accounting, Information Systems and Supply Chain",
+        "country": "Australia",
+        "city": "Melbourne",
+        "field": "Business & Economics",
+        "researchAreas": [
+          "Accounting standards",
+          "Corporate disclosure",
+          "Textual analysis",
+          "Initial public offerings",
+          "Sustainability reporting"
+        ],
+        "phdInstitution": "The University of Queensland",
+        "phdYear": 2023,
+        "profileUrl": "https://www.rmit.edu.au/profiles/t/kevin-thai",
+        "portraitSource": "https://www.rmit.edu.au/assets/au/en/profile-images/t/kevin-thai.png"
+      },
+      "evidence": {
+        "currentRole": "https://www.rmit.edu.au/profiles/t/kevin-thai — \"Lecturer in Accounting\" at RMIT, Melbourne, from 31 January 2022 to present; also deputy program manager since 2024. Profile documents an ongoing teaching-and-research career and externally commissioned accounting research.",
+        "doctorateOrPapers": "https://www.rmit.edu.au/profiles/t/kevin-thai — degree section explicitly records PhD Accountancy, The University of Queensland, 2016–2023. Completion year 2023 corroborated by ORCID education record linked from employer page.",
+        "vietnameseSignal": "RMIT explicitly links ORCID 0000-0002-0925-1688. Read its public person endpoint https://pub.orcid.org/v3.0/0000-0002-0925-1688/person live (HTTP 200): given-names Kevin Huu Phat; family-name Thai. Huu Phat is affirmative Vietnamese given-name evidence, not an inference from Thai alone.",
+        "dedup": "Ran npm run find-roster-matches -- \"Kevin Huu Phat Thai\" --url https://www.rmit.edu.au/profiles/t/kevin-thai --url https://orcid.org/0000-0002-0925-1688: no roster or retired-id matches. Manual Kevin Thai/name-order and exact URL checks also clean; absent from already-proposed.txt."
+      }
+    },
+    {
+      "entry": {
+        "name": "David Phu Hai Ho",
+        "university": "RMIT University",
+        "track": "Tenure-line",
+        "rank": "Lecturer",
+        "department": "School of Media and Communication",
+        "country": "Australia",
+        "city": "Melbourne",
+        "field": "Social & Behavioral Sciences",
+        "researchAreas": [
+          "Advertising",
+          "Brand communities",
+          "Marketing communication",
+          "Digital communication",
+          "Human-AI collaboration"
+        ],
+        "phdInstitution": "Western Sydney University",
+        "phdYear": 2017,
+        "profileUrl": "https://www.rmit.edu.au/profiles/h/hai-ho2",
+        "portraitSource": "https://www.rmit.edu.au/assets/au/en/profile-images/h/hai-ho2.jpeg"
+      },
+      "evidence": {
+        "currentRole": "https://www.rmit.edu.au/profiles/h/hai-ho2 — \"Lecturer in Advertising\"; employment section explicitly places RMIT appointment in Melbourne, Australia, 2025–present. His prior RMIT Vietnam position ended in 2025. Opened linked employer page https://academics.rmit.edu.au/hai-ho2, which confirms both appointment and full name David (Phu Hai) Ho.",
+        "doctorateOrPapers": "https://researchers.westernsydney.edu.au/en/studentTheses/antecedents-and-consequences-of-brand-community-image-research-fr/ — doctoral thesis by Phu Hai Ho; live page states Date of Award 2017. Identity resolved through the exact Phu Hai Ho name on employer bio and the matching brand-community research specialization. Search result used thesis submission wording, so the opened page was checked for the actual award date.",
+        "vietnameseSignal": "https://www.rmit.edu.au/profiles/h/hai-ho2 — explicit full name David (Phu Hai) Ho supplies Vietnamese given-name tokens Phu Hai; profile documents earlier Vietnam academic career. Current Australia location is explicitly sourced, not assumed from RMIT branding.",
+        "dedup": "Ran npm run find-roster-matches -- \"David Phu Hai Ho\" with RMIT profile, linked academics.rmit profile and Western Sydney thesis URL. Only vp-3241 David G. Ho matched by short name. Different person: vp-3241 is Athos medicinal chemist with UCLA doctorate; candidate is WSU-trained advertising/brand-community researcher. Manual Phu Hai Ho/David Ho and exact URL checks clean; absent from already-proposed.txt."
+      }
+    },
+    {
+      "entry": {
+        "name": "Thong Nguyen-Huy",
+        "university": "University of Southern Queensland",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "School of Science, Engineering and Digital Technologies",
+        "country": "Australia",
+        "city": "Toowoomba",
+        "field": "Earth & Environmental Sciences",
+        "researchAreas": [
+          "Agricultural climate risk",
+          "Geospatial intelligence",
+          "Digital farming",
+          "Environmental finance",
+          "Disaster risk management"
+        ],
+        "phdInstitution": "University of Southern Queensland",
+        "msInstitution": "University of Southern Queensland",
+        "undergradInstitution": "Vietnam National University Ho Chi Minh City",
+        "profileUrl": "https://staffprofile.unisq.edu.au/Profile/thong-nguyen-huy"
+      },
+      "evidence": {
+        "currentRole": "https://staffprofile.unisq.edu.au/Profile/thong-nguyen-huy — \"Senior Research Fellow (Agricultural Climate Risk Management)\"; current substantive school staff page lists Toowoomba Campus, course teaching and research supervision. https://staffprofile.unisq.edu.au/departmentstaff/203400 places him in the regular academic staff section, distinct from postdoctoral/adjunct/casual roles. Career-level assessment rests on that senior school appointment and enduring teaching/supervision duties, not his earlier postdoctoral title in 2022 papers.",
+        "doctorateOrPapers": "https://staffprofile.unisq.edu.au/Profile/thong-nguyen-huy — qualifications explicitly include PhD, University of Southern Queensland; also its spatial-science masters and VNU-HCM engineering bachelors. PhD year omitted because current employer profile does not supply it.",
+        "vietnameseSignal": "https://staffprofile.unisq.edu.au/Profile/thong-nguyen-huy explicitly lists Vietnamese language competence (accredited translator) and Vietnamese undergraduate education.",
+        "dedup": "Ran npm run find-roster-matches -- \"Thong Nguyen-Huy\" --url https://staffprofile.unisq.edu.au/Profile/thong-nguyen-huy. Name-only hits: vp-0171 (UT Dallas PhD, management), vp-0243 (Missouri PhD, engineering), vp-0872 (Brown orthopaedics physician), vp-3024 (Georgia Tech PhD, MIT Lincoln), vp-3160 (NUS PhD, Reka AI), vp-3190 (Dartmouth PhD, Bruker), vp-3195 (Michigan PhD, quantum computing). Compared their stored education/fields/identity URLs: none is the UniSQ-trained climate/geospatial researcher. No shared identity URL or matching full compound name; absent from already-proposed.txt."
+      }
+    },
+    {
+      "entry": {
+        "name": "Cam Minh Tri Tien",
+        "university": "University of Southern Queensland",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "School of Science, Engineering and Digital Technologies",
+        "country": "Australia",
+        "city": "Toowoomba",
+        "field": "Engineering",
+        "researchAreas": [
+          "Composite materials",
+          "Computational fluid dynamics",
+          "Finite element analysis",
+          "Fluid-structure interaction",
+          "Additive manufacturing"
+        ],
+        "phdInstitution": "University of Southern Queensland",
+        "msInstitution": "Konkuk University",
+        "undergradInstitution": "Ho Chi Minh City University of Technology",
+        "profileUrl": "https://staffprofile.unisq.edu.au/Profile/CamMinhTri-Tien"
+      },
+      "evidence": {
+        "currentRole": "https://staffprofile.unisq.edu.au/Profile/CamMinhTri-Tien — \"Senior Research Fellow (Digital Twin of Composite Repair Processes)\"; Toowoomba Campus. Documents senior industrial engineering background and continuing undergraduate/postgraduate engineering course teaching (six years tertiary experience). https://staffprofile.unisq.edu.au/departmentstaff/203400 lists him in regular school staff as Senior Research Fellow (Digital Engineering for Composite Structures), separately from explicitly postdoctoral, adjunct and casual appointments. Career-level research assessment rests on these substantive senior academic duties; differing project descriptors retained here for transparency.",
+        "doctorateOrPapers": "https://staffprofile.unisq.edu.au/Profile/CamMinhTri-Tien — explicitly records UniSQ doctorate in Computational Engineering, Konkuk masters and Ho Chi Minh City University of Technology engineering bachelors. PhD year omitted rather than inferred from thesis title page.",
+        "vietnameseSignal": "https://staffprofile.unisq.edu.au/Profile/CamMinhTri-Tien — Ho Chi Minh City University of Technology undergraduate degree and the full Vietnamese given-name sequence Cam Minh Tri. Biography documents earlier engineering work in Viet Nam.",
+        "dedup": "Ran npm run find-roster-matches -- \"Cam Minh Tri Tien\" --url https://staffprofile.unisq.edu.au/Profile/CamMinhTri-Tien: no roster or retired-id matches. Manual Tri Tien/name-order and exact URL checks also clean; absent from already-proposed.txt."
+      }
+    },
+    {
+      "entry": {
+        "name": "Kien Thanh Nguyen",
+        "university": "Queensland University of Technology",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "School of Electrical Engineering and Robotics",
+        "country": "Australia",
+        "field": "Computer & Information Sciences",
+        "researchAreas": [
+          "Computer vision",
+          "Machine learning",
+          "Biometrics",
+          "Remote sensing",
+          "Medical image analysis"
+        ],
+        "phdInstitution": "Queensland University of Technology",
+        "profileUrl": "https://www.qut.edu.au/about/our-people/academic-profiles/k.nguyenthanh"
+      },
+      "evidence": {
+        "currentRole": "https://www.qut.edu.au/about/our-people/academic-profiles/k.nguyenthanh — \"Senior Research Fellow\" in the School of Electrical Engineering and Robotics. Enduring institutional academic page documents machine-learning/image-processing teaching, principal PhD supervision, completed doctoral supervision back to 2018, and current Australian Competitive Grant DP250103634. These establish a career academic research role rather than a trainee appointment.",
+        "doctorateOrPapers": "https://www.qut.edu.au/about/our-people/academic-profiles/k.nguyenthanh — \"Doctor of Philosophy (Queensland University of Technology)\". No completion year guessed.",
+        "vietnameseSignal": "https://internationaleducation.gov.au/scholarships/Scholarships-and-Fellowships/alumni/Documents/2007-2017%20Recipients.pdf — opened Australian government recipient register identifies Kien Nguyen Thanh, citizenship Vietnam, QUT, incoming 2009 PhD scholarship. QUT publishes Kien Nguyen Thanh; entry reorders the Nguyen/Thanh/Kien tokens to given-middle-family form without adding diacritics.",
+        "dedup": "Ran npm run find-roster-matches for both \"Kien Nguyen Thanh\" and \"Kien Thanh Nguyen\" with the current QUT profile URL. Name hits vp-0166 (Cornell PhD, business), vp-0208 (Princeton PhD, mechanical engineering), vp-0363 (neurology), vp-0918 (Chiba networking, SOKENDAI PhD 2012), vp-1807 (Griffith PhD, JCU finance), vp-2114 (IUPUI PhD, biomedical engineering), vp-3102 (AWS), and retired vp-0822/vp-0844 (merged into UCL nanoscience vp-0515/Oregon software-verification vp-0031). Different fields, degrees and identities. https://dblp.org/pid/68/5068.html explicitly separates QUT Kien Nguyen Thanh (ORCID 0000-0002-3466-9218) from Chiba Kien Nguyen (ORCID 0000-0003-0400-3084). No identity URL hit; absent from already-proposed.txt. City omitted because current individual page does not explicitly supply one."
+      }
+    }
+  ],
+  "already_listed": [
+    {
+      "name": "Thao Duong",
+      "id": "vp-1077",
+      "note": "Same person as Thach-Thao Duong, Murdoch computer science, Griffith PhD. npm find-roster-matches matched both name and exact profileUrl https://researchportal.murdoch.edu.au/esploro/profile/thao_duong. Individual page fetch was blocked (403); no new candidate or rank change proposed."
+    },
+    {
+      "name": "Hiep Tran",
+      "id": "vp-2824",
+      "note": "npm find-roster-matches matched RMIT engineering entry. Same electrical/semiconductor researcher and RMIT institutional identity; vp-3149 at Abzyme is a name-only unrelated hit. Discovery source https://www.rmit.edu.au/profiles/t/hiep-tranlengoc."
+    },
+    {
+      "name": "Thuan Thai",
+      "id": "vp-1396",
+      "note": "npm find-roster-matches matched Notre Dame School of Education academic. Same institution and mathematics/science pedagogy field: https://www.notredame.edu.au/staff/teach/teaching-at-nda/faculties-and-schools/school-of-education/sydney/staff/thuan-thai."
+    },
+    {
+      "name": "Vuong Thao Tran",
+      "id": "vp-1699",
+      "note": "npm find-roster-matches matched exact RMIT finance profile https://www.rmit.edu.au/profiles/t/thao-tran2; current page shortens name to Thao Tran. Other Thao Tran/Vuong Tran hits are different mathematics, geography and industry researchers. Not a new ID."
+    },
+    {
+      "name": "Derick Luong",
+      "id": "vp-2075",
+      "note": "Opened https://profiles.uts.edu.au/Derick.Luong; npm run find-roster-matches -- \"Derick Luong\" --url https://profiles.uts.edu.au/Derick.Luong matched name and exact profileUrl. Same UTS law lecturer, criminal/media law specialization and practitioner history. Existing ID; no new proposal."
+    }
+  ],
+  "possible_move": [
+    {
+      "name": "Vi Khanh Truong",
+      "id": "vp-1235",
+      "note": "Roster says Associate Professor, Biomedical Engineering & Biotechnology, Khalifa University. Live https://www.flinders.edu.au/people/vikhanh.truong and https://researchnow.flinders.edu.au/en/persons/vi-khanh-truong/ identify current Flinders Associate Professor / ARC Future Fellow, College of Medicine and Public Health, Adelaide. npm find-roster-matches hits vp-1235 by full name and stored portraitSource equal to current Flinders page. Same Swinburne PhD (2012), biomedical nanoengineering field and identity. vp-2147 Vi Truong is a distinct Melbourne computing educator. Preserve vp-1235 and independently resolve current primary appointment before any update; no new candidate. The current Flinders page also documents ARC Future Fellowship awarded 2024."
+    }
+  ],
+  "rejected": [
+    {
+      "name": "Thi Le",
+      "reason": "Promising Murdoch accounting lecturer with Murdoch PhD (2020) and Academy of Finance (Vietnam) degree, but individual employer pages https://researchportal.murdoch.edu.au/esploro/profile/thi_le/overview and /activities variants returned 403 through web. Normal urllib fetch returned only an empty JavaScript application shell, not the person content. Live https://www.murdoch.edu.au/schools/business/about/our-people lists her as Lecturer, but brief requires an opened individual profile returning the person page. Excluded from verified candidates pending a usable individual page. npm dedup returned only different-person abbreviated-name matches (vp-0666, vp-0762, vp-1018, vp-1444, vp-2550, vp-2694); they are pharmacology, languages, management, optimization or medical researchers, not this Murdoch finance PhD."
+    },
+    {
+      "name": "Thuy Chu Van",
+      "reason": "https://www.qut.edu.au/about/our-people/academic-profiles/thuy.chuvan was opened; current appointment header is Academic Division, Sessional Staff. Older indexed lecturer/research-fellow bio does not establish a current eligible substantive appointment."
+    },
+    {
+      "name": "Trung Tin Nguyen",
+      "reason": "Official QUT profile https://www.qut.edu.au/about/our-people/academic-profiles/t600.nguyen explicitly identifies MACSYS Post-doctoral Research Fellow; excluded postdoc."
+    },
+    {
+      "name": "Ronan (Khac) Nguyen",
+      "reason": "QUT k25.nguyen lead is DECRA Postdoctoral Fellow, corroborated by current official expert directory https://www.qut.edu.au/research/our-experts?result_700033_result_page=107. Research fellowship grant alone does not establish a stable faculty appointment."
+    },
+    {
+      "name": "Hien Thi Nguyen",
+      "reason": "https://www.ecu.edu.au/schools/arts-and-humanities/staff/profiles/sage-futures/dr-hien-thi-nguyen describes SAGE Research Fellow but explicitly says she commenced a postdoctoral appointment in 2023. https://www.ecu.edu.au/schools/arts-and-humanities/research-and-creative-activity/migration-diversity-and-care/social-ageing-sage-futures-lab/our-research/related-content/projects/support-networks-and-life-course-transitions-of-older-migrants-in-australia describes the work as postdoctoral. No documented later substantive appointment; excluded."
+    },
+    {
+      "name": "Binh Ta",
+      "reason": "Live VU page https://www.vu.edu.au/staff/binh-ta omits a current substantive rank. https://conferences.acspri.org.au/2026/speaker/PVRGRK/ identifies VU research role as 0.4 FTE and Monash lecturer as 0.6 FTE. Part-time appointments excluded by brief; Monash also outside this slice."
+    },
+    {
+      "name": "Bich Nguyen",
+      "reason": "Curtin lead: https://www.curtin.edu.au/research/curtin_disciplines/tesol/ links to https://staffportal.curtin.edu.au/staff/profile/view/bich-nguyen-bd3dc483/. Opened individual page rendered only a generic Staff Profile shell, no current person/appointment content. Search and publications suggest lecturer, but could not verify current role on a live individual employer page. Not accepted."
+    },
+    {
+      "name": "Julie Nguyen",
+      "reason": "Opened https://staff-profiles.cqu.edu.au/home/view/1717. Podiatry lecturer with BPod and MPH; no research doctorate and publications section empty. Does not meet BRIEF2 stricter doctorate-or-two-current-employer-papers test."
+    },
+    {
+      "name": "Phuoc Huynh",
+      "reason": "Opened https://profiles.uts.edu.au/phuoc.huynh: current role Adjunct Fellow. Past lecturer history and PhD do not override the current adjunct exclusion."
+    },
+    {
+      "name": "Tien Kieu",
+      "reason": "Opened https://www.swinburne.edu.au/news/2024/01/quantum-physicist-and-former-mp-appointed-to-swinburne-council/. Appointment is university council membership alongside adjunct professorship; neither establishes eligible substantive academic appointment."
+    },
+    {
+      "name": "Lien Chau",
+      "reason": "Official QUT profile https://www.qut.edu.au/about/our-people/academic-profiles/lien.chau identifies Manager, Design and Fabrication Facility. Ordinary research-facility management/professional staff excluded despite doctorate."
+    },
+    {
+      "name": "Tien Nguyen (La Trobe)",
+      "reason": "Official https://www.latrobe.edu.au/news/announcements/2024/focus-on-dr-tien-nguyen-hulett-group and current https://www.latrobe.edu.au/research/centres/cardiovascular/research/dying-cell-communication-and-clearance identify postdoctoral researcher. Not eligible as career faculty."
+    },
+    {
+      "name": "Thanh Nguyen (James Cook Singapore)",
+      "reason": "Official lead https://portfolio.jcu.edu.au/researchers/nguyen.thanh is Singapore-based, outside Australian location slice; already listed as vp-1807. No proposed new entry."
+    },
+    {
+      "name": "Nhung Nguyen (Tasmania)",
+      "reason": "Earlier-proposed name Nhung Nguyen appears in skip file; no candidate research pursued. Discovery https://discover.utas.edu.au/Nhung.Nguyen additionally places appointment in central Learning Teaching Performance rather than an academic school."
+    },
+    {
+      "name": "Quynh Nguyen (La Trobe)",
+      "reason": "Exact name already in already-proposed.txt; skipped. Directory discovery https://www.latrobe.edu.au/school-humanities-and-social-sciences/staff?page=7 identifies Sociology (TF), but no duplicate proposal made."
+    }
+  ],
+  "coverage": [
+    {
+      "employer": "RMIT University",
+      "pagesExamined": [
+        "https://www.rmit.edu.au/profiles/d/quynh-dinh",
+        "https://academics.rmit.edu.au/quynh-dinh",
+        "https://www.rmit.edu.au/profiles/t/kevin-thai",
+        "https://www.rmit.edu.au/profiles/h/hai-ho2",
+        "https://academics.rmit.edu.au/hai-ho2"
+      ],
+      "note": "Given-name sweep Quynh, Thao, Hanh, Diem, Phuoc, Hiep and uncommon Thai/Ho/Trieu/Cao/Ton/Ta surnames; three new candidates. Explicitly screened Australia versus Vietnam campus and older Vietnam affiliations. Hiep Tran/Vuong Thao Tran duplicates; Vietnam-based Diem Vo/Bich-Phuong Vu/Oanh Vu not accepted. Profile image URLs extracted from employer HTML; candidate headshot sources still require downstream visual review, not downloaded."
+    },
+    {
+      "employer": "Flinders University",
+      "pagesExamined": [
+        "https://www.flinders.edu.au/people/mai.ngo",
+        "https://www.flinders.edu.au/people/vikhanh.truong",
+        "https://researchnow.flinders.edu.au/en/persons/vi-khanh-truong/",
+        "https://staff.flinders.edu.au/staff-directory/staff-directory-person-details?SD_UserID=624637978"
+      ],
+      "note": "Swept Tuyet, Mai, Khanh, Thao, Ngoc, Minh and uncommon surnames. New TESOL academic; Vi Khanh Truong resolved to existing Khalifa ID (possible move). Biomedical laboratory landing page timed out twice; individual Truong page opened successfully. No roster edits."
+    },
+    {
+      "employer": "Central Queensland University",
+      "pagesExamined": [
+        "https://staff-profiles.cqu.edu.au/home/view/23852",
+        "https://staff-profiles.cqu.edu.au/home/view/1717"
+      ],
+      "note": "Deep regional-institution pass across project management, health and business; tokens Thuy, Hien, Phuong, Duc, Huy, Dung and Thao. Thao Phuong Trinh verified; podiatry lecturer Julie Nguyen lacks brief-required doctorate/current publication evidence. Huong Le already rostered and on earlier-proposed skip list."
+    },
+    {
+      "employer": "University of Southern Queensland",
+      "pagesExamined": [
+        "https://staffprofile.unisq.edu.au/departmentstaff/203400",
+        "https://staffprofile.unisq.edu.au/Profile/thong-nguyen-huy",
+        "https://staffprofile.unisq.edu.au/Profile/CamMinhTri-Tien"
+      ],
+      "note": "Examined full school staff directory, including its distinct postdoctoral, adjunct, honorary and casual sections; tokens Thao, Hien, Tuan, Phuong, Thi, Duc, Huy, Thong, Tri. Two substantive senior research leads retained. Already-rostered An-Vo/Andy Nguyen/Toan Dinh not proposed. Canh-Dung Tran is adjunct in current directory. Research repository for Thong returned 403; individual current staff profile usable. Senior-title assessment includes teaching/supervision and school staff placement; no contract end date invented."
+    },
+    {
+      "employer": "Queensland University of Technology",
+      "pagesExamined": [
+        "https://www.qut.edu.au/about/our-people/academic-profiles/thuy.chuvan",
+        "https://www.qut.edu.au/about/our-people/academic-profiles/k.nguyenthanh"
+      ],
+      "note": "Swept given tokens Duc, Tien, Chau, Thuy, Phuc and uncommon surnames. Kien Thanh Nguyen retained after PhD/identity resolution. Sessional Thuy Chu Van, postdoctoral Trung Tin Nguyen/Khac Nguyen and facility manager Lien Chau excluded. Official QUT profiles usable in web even though normal urllib request to Kien profile returned 403."
+    },
+    {
+      "employer": "Murdoch University",
+      "pagesExamined": [
+        "https://www.murdoch.edu.au/schools/business/about/our-people",
+        "https://researchportal.murdoch.edu.au/esploro/profile/thi_le/overview",
+        "https://researchportal.murdoch.edu.au/esploro/profile/thao_duong"
+      ],
+      "note": "Swept Vietnamese education plus Thao/Hien/Thi/Minh. Thi Le remains unverified because person profile blocked/JS-only; business directory alone insufficient under brief. Thao Duong is existing vp-1077. No bypass or login attempted."
+    },
+    {
+      "employer": "University of Technology Sydney",
+      "pagesExamined": [
+        "https://profiles.uts.edu.au/phuoc.huynh",
+        "https://profiles.uts.edu.au/Derick.Luong"
+      ],
+      "note": "Given tokens Phuoc, Phuong, Trinh, Khanh and uncommon Luu/Luong. Phuoc Huynh adjunct; Derick Luong resolved to existing vp-2075 by name and exact URL. Previously listed UTS people and earlier-proposed names filtered. Laurence Luu discovery now points to UNSW (outside this slice) and existing vp-2040."
+    },
+    {
+      "employer": "Western Sydney University",
+      "pagesExamined": [
+        "https://www.westernsydney.edu.au/schools/socdms/our-people",
+        "https://researchers.westernsydney.edu.au/en/studentTheses/antecedents-and-consequences-of-brand-community-image-research-fr/"
+      ],
+      "note": "Quang, Hanh, Phuong, Dinh sweep and computing directory review. Quang Vinh Nguyen already rostered; Hanh Vo course-convenor-only lead did not establish eligible substantive role. WSU doctoral record supported David Phu Hai Ho, currently at RMIT."
+    },
+    {
+      "employer": "La Trobe University",
+      "pagesExamined": [
+        "https://www.latrobe.edu.au/school-humanities-and-social-sciences/staff?page=7"
+      ],
+      "note": "Tokens Nhu, Tien, Duc, Chau, Kieu, Trinh and Thao plus health/life-science leads. Quynh Nguyen already proposed, so skipped. Tien Nguyen postdoctoral. Quynh Nhu Dinh now substantive RMIT lecturer; earlier La Trobe adjunct/postdoc records not used as current appointment."
+    },
+    {
+      "employer": "Deakin University",
+      "pagesExamined": [
+        "https://experts.deakin.edu.au/74557-thuy-le"
+      ],
+      "note": "Tokens Hien, Thuy, Nhu, Diem, Hanh and uncommon Trieu surnames. Van-Hau Trieu already vp-2491. Thuy Le indexed as graduate researcher; individual page retrieval failed (cache miss), not accepted. Existing Truyen Tran/Ly Thi Tran/Hung Le/Quan Vu/Ha Vu were filtered against roster."
+    },
+    {
+      "employer": "Swinburne University of Technology",
+      "pagesExamined": [
+        "https://www.swinburne.edu.au/news/2024/01/quantum-physicist-and-former-mp-appointed-to-swinburne-council/"
+      ],
+      "note": "Tokens Thuy, Hanh, Tram, Kieu, Diem and uncommon surnames; Tien Kieu only adjunct/council role, excluded. Prior roster already covers Trong Tuan Luu, Loc Tran, Quoc Bao Vo and others. Vietnam alliance faculty excluded by location."
+    },
+    {
+      "employer": "Griffith University",
+      "pagesExamined": [
+        "https://staffdirectory.griffith.edu.au/phone-details.php?id=25645581&string=business"
+      ],
+      "note": "Given-token Hien, Trinh, Hanh, Phuoc and uncommon Luong/Truc searches. Truc Le is existing vp-2071; direct phonebook request failed (cache miss). Existing Hai Thanh Luong/vp-2726 and engineering faculty filtered. No new verified lead."
+    },
+    {
+      "employer": "Curtin University",
+      "pagesExamined": [
+        "https://www.curtin.edu.au/research/curtin_disciplines/tesol/",
+        "https://staffportal.curtin.edu.au/staff/profile/view/bich-nguyen-bd3dc483/"
+      ],
+      "note": "Hien, Thao, Huy, Phuc, Duy and uncommon Cao/Khuu sweeps beyond already-rostered engineering cohort. Bich Nguyen individual profile rendered generic shell; Joyce Khuu lacked affirmative Vietnamese identity signal beyond surname. Neither accepted."
+    },
+    {
+      "employer": "Edith Cowan University",
+      "pagesExamined": [],
+      "note": "Search-led Hien, Thao, Minh, Huy, Khoa sweeps. Hien Thi Nguyen postdoctoral nature remains explicit; Minh Nguyen exact name is in already-proposed.txt and skipped. No additional eligible new individual verified. Search results not counted as opened person profiles."
+    },
+    {
+      "employer": "Victoria University",
+      "pagesExamined": [
+        "https://www.vu.edu.au/staff/binh-ta"
+      ],
+      "note": "Thi, Thuy, Duy, Dinh, Ta, Oanh sweeps, including changed-surname lead Thi Kim Oanh Bhatti. Binh Ta appointments fractional; no other eligible new academic with current live employer evidence established."
+    },
+    {
+      "employer": "The University of Newcastle",
+      "pagesExamined": [],
+      "note": "Swept Hanh, Quang, Tien, Duc, Chau, Phuc, Hieu and reviewed engineering discovery results. Duy Trong Ngo, Tuyen Nguyen, Mia Pham, Van Le, Doan T. M. Ngo already rostered; Phuong Quyen Vo surfaced only historical publication/student evidence. No additional verified new candidate. Search-only coverage, not a completed staff-directory audit."
+    },
+    {
+      "employer": "University of Tasmania",
+      "pagesExamined": [],
+      "note": "Duc, Ngoc, Thanh, Hoai and Vietnamese-language/education sweep. Bao Nguyen and Hoang Nguyen already rostered; Nhung Nguyen already proposed, skipped. Quynh Le lead had old publications only, no opened current substantive employer profile. No new verified candidate."
+    },
+    {
+      "employer": "University of New England",
+      "pagesExamined": [],
+      "note": "Thi and Vietnamese education sweeps; Huy P. Phan, Nam T. Hoang, Carolyn Tran and Brenda Vo already rostered. Other leads were postgraduate students or old records. No new verified candidate; search-only coverage."
+    },
+    {
+      "employer": "Charles Sturt University",
+      "pagesExamined": [],
+      "note": "Thao, Thi, Thanh and Hai plus Vietnamese identity searches. Faculty health staff listing surfaced Nguyen Thach Thao Tran as technical officer; professional staff excluded. Julie Nguyen at Charles Sturt already listed (distinct from CQUniversity podiatry lecturer). No new eligible lead verified."
+    },
+    {
+      "employer": "Charles Darwin University",
+      "pagesExamined": [],
+      "note": "Thi, Phuong, Duc, Duy plus Vietnam education searches. Most results were students, professional international-recruitment staff or Vietnam-based conference contributors. Hoang Huong Le already rostered. No new verified candidate; search-only coverage."
+    },
+    {
+      "employer": "Federation University Australia",
+      "pagesExamined": [],
+      "note": "Duc and Vietnamese faculty searches. Dung Tran, Phong (Daniel) Minh Nguyen and Truong Phung already rostered. No new eligible lead with usable employer evidence; search-only coverage."
+    },
+    {
+      "employer": "Southern Cross University",
+      "pagesExamined": [],
+      "note": "Ngoc, Duc, Huy and Duy sweeps; prior roster includes Hoan Nguyen, Hanh Dao Tran and Vinh Bui. No additional verified candidate; search-only coverage."
+    },
+    {
+      "employer": "University of the Sunshine Coast",
+      "pagesExamined": [],
+      "note": "Hien, Duc, Thao and Thi sweep. Forest institute research-student listing yielded student leads, not eligible faculty. Existing Trong Tran, Nguyen Hong Nguyen, Thanh Thi Nguyen filtered. No new verified candidate."
+    },
+    {
+      "employer": "University of Canberra",
+      "pagesExamined": [],
+      "note": "Vietnamese education/language-led searches found alumni and recruitment staff; existing Hai Anh La/Vinh Nguyen/Benjamin Vu filtered. No additional verified substantive academic. Search-only coverage."
+    },
+    {
+      "employer": "Australian Catholic University",
+      "pagesExamined": [],
+      "note": "Thao Huynh/Thi Dinh discovery from old faculty contact list; current substantive faculty eligibility not established. Thao Huynh lead was governance professional staff. No new verified candidate."
+    },
+    {
+      "employer": "Bond University",
+      "pagesExamined": [],
+      "note": "Vietnam/academic search led to UK-origin Perry Hobson and Vietnam partnerships; no affirmative Vietnamese faculty lead established. Search-only coverage."
+    },
+    {
+      "employer": "The University of Notre Dame Australia",
+      "pagesExamined": [],
+      "note": "Thuan/Thai sweep found existing vp-1396 Thuan Thai, resolved by dedup. No new candidate."
+    }
+  ]
+}

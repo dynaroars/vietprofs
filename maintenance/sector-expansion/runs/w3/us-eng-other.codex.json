@@ -1,0 +1,466 @@
+{
+  "group": "university",
+  "agent": "codex",
+  "slice": "us-eng-other",
+  "finishedAt": "2026-11-15T01:19:17.105462+00:00",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Toan Duc Cao",
+        "university": "Rochester Institute of Technology",
+        "track": "Research",
+        "rank": "Assistant Professor",
+        "department": "Department of Civil Engineering Technology, Environmental Management and Safety",
+        "city": "Rochester",
+        "state": "New York",
+        "researchAreas": [
+          "Computational geomechanics",
+          "Multiphysics simulation",
+          "Nuclear waste infrastructure"
+        ],
+        "phdInstitution": "Catholic University of Portugal",
+        "phdYear": 2014,
+        "profileUrl": "https://www.rit.edu/directory/tdcite-toan-duc-cao",
+        "scholarUrl": "https://scholar.google.com/citations?user=zdVFfQkAAAAJ",
+        "country": "United States",
+        "field": "Engineering"
+      },
+      "evidence": {
+        "currentRole": "https://www.rit.edu/directory/tdcite-toan-duc-cao — “Assistant Research Professor”; the biography describes his current teaching, geomechanics research and NRC co-PI role.",
+        "doctorateOrPapers": "https://www.rit.edu/directory/tdcite-toan-duc-cao — Civil Engineering PhD at Catholic University of Portugal, 2014.",
+        "vietnameseSignal": "https://www.rit.edu/directory/tdcite-toan-duc-cao — Vietnamese given names Toan Duc, together with surname Cao; the biography also describes prior work at Vietnamese institutions.",
+        "dedup": "Ran npm run find-roster-matches with name, official profile and employer-linked Scholar URL: no roster or retired-id matches. Absent from already-proposed.txt. Final command rerun with all stored identity URLs and additional cited identity pages; no same-person URL hit. Raw command output: > vietacademia@0.1.0 find-roster-matches\n> node scripts/find-roster-matches.ts Toan Duc Cao --url https://www.rit.edu/directory/tdcite-toan-duc-cao --url https://scholar.google.com/citations?user=zdVFfQkAAAAJ\n\nno roster or retired-id matches"
+      }
+    },
+    {
+      "entry": {
+        "name": "Dzung Dinh Luong",
+        "university": "New York University",
+        "track": "Teaching",
+        "rank": "Associate Professor",
+        "department": "Mechanical and Aerospace Engineering",
+        "researchAreas": [
+          "Lightweight composite materials",
+          "Material characterization",
+          "Finite element methods"
+        ],
+        "phdInstitution": "New York University",
+        "phdYear": 2012,
+        "msInstitution": "Hanoi University of Science and Technology",
+        "undergradInstitution": "Hanoi University of Science and Technology",
+        "undergradYear": 2004,
+        "profileUrl": "https://engineering.nyu.edu/faculty/dung-dzung-luong",
+        "scholarUrl": "https://scholar.google.com/citations?user=E70YzQEAAAAJ",
+        "country": "United States",
+        "field": "Engineering"
+      },
+      "evidence": {
+        "currentRole": "https://engineering.nyu.edu/faculty/dung-dzung-luong — “Industry Associate Professor”. https://engineering.nyu.edu/sites/default/files/2022-08/ContinuingContractfacultyguidelines_20220505_WorkingDocument_1.pdf — identifies the Industry Professor series as a full-time continuing-contract teaching ladder; PDF is labeled a 2022 working document. Current core faculty directory also lists him: https://engineering.nyu.edu/academics/departments/mechanical-and-aerospace-engineering/people .",
+        "doctorateOrPapers": "https://engineering.nyu.edu/faculty/dung-dzung-luong — Mechanical Engineering PhD, Polytechnic School of Engineering, NYU, 2012.",
+        "vietnameseSignal": "https://engineering.nyu.edu/faculty/dung-dzung-luong — Vietnamese given names Dzung Dinh and degrees from Hanoi University of Science and Technology; the page also spells Dũng.",
+        "dedup": "Ran name variants Dzung Luong and Dzung Dinh Luong with official profile and employer-linked Scholar. No URL match. Fuller form hits vp-2733 Dzung Dinh, a neurosurgery professor in Peoria, distinct from this Hanoi-trained mechanical engineer and NYU PhD. Absent from already-proposed.txt. Final command rerun with all stored identity URLs and additional cited identity pages; no same-person URL hit. Raw command output: > vietacademia@0.1.0 find-roster-matches\n> node scripts/find-roster-matches.ts Dzung Dinh Luong --url https://engineering.nyu.edu/faculty/dung-dzung-luong --url https://scholar.google.com/citations?user=E70YzQEAAAAJ\n\nvp-2733 Dzung Dinh | Professor, Department of Neurosurgery, University of Illinois College of Medicine Peoria | matched on name\n\nTreat each hit as the same person until ruled out (compare former affiliations, PhD, lab, Scholar, LinkedIn).\nSame person: update that entry in place, or restore a retired id (npm run retire-profile-id). Never add a new id.",
+        "sourceCaveat": "Profile heading and current department directory say Associate Professor; biography still says Assistant Professor. Used the current heading. No inferred Vietnamese diacritics or degree dates."
+      }
+    },
+    {
+      "entry": {
+        "name": "Cuong T. Nguyen",
+        "university": "Florida State University",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Mechanical and Aerospace Engineering (FAMU-FSU College of Engineering)",
+        "city": "Tallahassee",
+        "state": "Florida",
+        "researchAreas": [
+          "Physics-based real-time simulations",
+          "Virtual reality in surgical training",
+          "Scientific machine learning"
+        ],
+        "phdInstitution": "The University of Texas at Austin",
+        "phdYear": 2017,
+        "undergradInstitution": "Ho Chi Minh City University of Technology",
+        "undergradYear": 2010,
+        "profileUrl": "https://eng.famu.fsu.edu/directory/cuong-t-nguyen",
+        "scholarUrl": "https://scholar.google.com/citations?user=8EhoeOIAAAAJ",
+        "country": "United States",
+        "field": "Engineering"
+      },
+      "evidence": {
+        "currentRole": "https://eng.famu.fsu.edu/directory/cuong-t-nguyen — “Research Faculty I”; independently listed in the current MAE faculty directory https://eng.famu.fsu.edu/mae/people . This is the joint FAMU-FSU college; the institutional directory is also published under materials.fsu.edu (mirror could not be opened with web tool).",
+        "doctorateOrPapers": "https://eng.famu.fsu.edu/directory/cuong-t-nguyen — PhD in Mechanics, Uncertainty and Simulation in Engineering, UT Austin, 2017.",
+        "vietnameseSignal": "https://eng.famu.fsu.edu/directory/cuong-t-nguyen — Cuong is a Vietnamese given name; BS and MS at Ho Chi Minh City University of Technology, Vietnam National University.",
+        "dedup": "Ran name plus official profile and employer-linked Scholar URL: ten name-only hits, no URL matches. Reviewed roster fields: vp-0785 MIT has NUS PhD 2005; vp-2925 Adobe has Portland State PhD 2017; vp-0950, vp-1785, vp-2584 are finance/mathematics; vp-0257 sociology; vp-0456 and vp-0982 medical; vp-1125 KAIST mathematics; vp-1752 Surrey computer vision. None matches this UT Austin mechanics PhD 2017 and HCMUT BS 2010. Earlier-proposed Cuong V. Nguyen is Northwestern medicine, also different. Final command rerun with all stored identity URLs and additional cited identity pages; no same-person URL hit. Raw command output: > vietacademia@0.1.0 find-roster-matches\n> node scripts/find-roster-matches.ts Cuong T. Nguyen --url https://eng.famu.fsu.edu/directory/cuong-t-nguyen --url https://scholar.google.com/citations?user=8EhoeOIAAAAJ\n\nvp-0257 Cuong Nguyen Le | Senior Lecturer, Sociology, University of Massachusetts Amherst | matched on name\nvp-0456 Cuong Nguyen - University of Florida | Associate Professor, Infectious Diseases and Immunology, University of Florida | matched on name\nvp-0785 Cuong Nguyen - Massachusetts Institute of Technology | Researcher, Aeronautics and Astronautics, Massachusetts Institute of Technology | matched on name\nvp-0950 Cuong Nguyen - Lincoln University | Associate Professor, Department of Financial and Business Systems, Lincoln University | matched on name\nvp-0982 Cuong C. Nguyen | Associate Professor, Gastroenterology and Hepatology, Mayo Clinic College of Medicine and Science | matched on name\nvp-1125 Ngoc Cuong Nguyen | Associate Professor, Department of Mathematical Sciences, KAIST | matched on name\nvp-1752 Cuong Nguyen | Lecturer, Centre for Vision, Speech and Signal Processing, University of Surrey | matched on name\nvp-1785 Cuong V. Nguyen | Assistant Professor, Mathematical Sciences, Durham University | matched on name\nvp-2584 Manh Cuong Nguyen | Senior Lecturer, Department of Business Entrepreneurship and Finance, University of East London | matched on name\nvp-2925 Cuong Nguyen - Adobe Research | Researcher, Adobe Research, Adobe Research | matched on name\n\nTreat each hit as the same person until ruled out (compare former affiliations, PhD, lab, Scholar, LinkedIn).\nSame person: update that entry in place, or restore a retired id (npm run retire-profile-id). Never add a new id.",
+        "appointmentDetail": "Official title is Research Faculty I, mapped to Research / Researcher. Employer is the joint FAMU-FSU College of Engineering; Florida State University follows the existing roster university spelling. No specific contract term is published on this profile."
+      }
+    },
+    {
+      "entry": {
+        "name": "Cac M. Dao",
+        "university": "University of Arizona",
+        "track": "Teaching",
+        "rank": "Professor",
+        "department": "Civil and Architectural Engineering and Mechanics",
+        "city": "Tucson",
+        "state": "Arizona",
+        "researchAreas": [
+          "Ultrasonic wave propagation",
+          "Structural health monitoring"
+        ],
+        "phdInstitution": "University of Arizona",
+        "phdYear": 2007,
+        "msInstitution": "University of Arizona",
+        "profileUrl": "https://caem.engineering.arizona.edu/faculty-staff/faculty/cac-dao",
+        "country": "United States",
+        "field": "Engineering"
+      },
+      "evidence": {
+        "currentRole": "https://caem.engineering.arizona.edu/faculty-staff/faculty/cac-dao — “Professor of Practice”; lists an ongoing university appointment since 2017. https://news.engineering.arizona.edu/news/2026-college-awards-celebrate-record-breaking-faculty-staff explicitly places Dao in the career-track faculty award category, supporting the continuing Teaching track despite a separately listed adjunct lecturer title.",
+        "doctorateOrPapers": "https://caem.engineering.arizona.edu/sites/default/files/DAO_CV.pdf — Engineering Mechanics PhD, University of Arizona, 2007.",
+        "vietnameseSignal": "https://caem.engineering.arizona.edu/faculty-staff/faculty/cac-dao — Structural Engineering bachelor degree from HCM City University of Technology, Viet Nam; https://caem.engineering.arizona.edu/sites/default/files/DAO_CV.pdf additionally records Phu Tho Polytechnic University education and teaching in South Vietnam.",
+        "dedup": "Ran Cac Dao and fuller CV name Cac M. Dao with employer profile: no roster or retired-id matches. Absent from already-proposed.txt. Final command rerun with all stored identity URLs and additional cited identity pages; no same-person URL hit. Raw command output: > vietacademia@0.1.0 find-roster-matches\n> node scripts/find-roster-matches.ts Cac M. Dao --url https://caem.engineering.arizona.edu/faculty-staff/faculty/cac-dao --url https://caem.engineering.arizona.edu/sites/default/files/DAO_CV.pdf\n\nno roster or retired-id matches",
+        "sourceCaveat": "Professor of Practice is the qualifying primary career-track role. The same profile also lists Adjunct Lecturer; this secondary title was not used as the qualifying appointment. Local teaching award omitted from honors."
+      }
+    },
+    {
+      "entry": {
+        "name": "John Dzung Hoang Mai",
+        "university": "University of Southern California",
+        "track": "Teaching",
+        "rank": "Senior Lecturer",
+        "department": "Alfred E. Mann Department of Biomedical Engineering",
+        "city": "Los Angeles",
+        "state": "California",
+        "researchAreas": [
+          "BioMEMS",
+          "Microfluidics",
+          "Lab-on-a-chip",
+          "Rare cell sorting"
+        ],
+        "phdInstitution": "University of California, Los Angeles",
+        "msInstitution": "University of California, Los Angeles",
+        "undergradInstitution": "University of California, Los Angeles",
+        "profileUrl": "https://viterbi.usc.edu/directory/faculty/Mai/John",
+        "scholarUrl": "https://scholar.google.com/citations?user=K8Tp27kAAAAJ",
+        "country": "United States",
+        "field": "Engineering"
+      },
+      "evidence": {
+        "currentRole": "https://viterbi.usc.edu/directory/faculty/Mai/John — “Senior Lecturer of Biomedical Engineering”; joined BME in 2024. https://vts.viterbi.usc.edu/faculty-support/ identifies Senior Lecturer within Viterbi full-time teaching faculty and its teaching promotion ladder (Lecturer through Professor of Engineering Practice).",
+        "doctorateOrPapers": "https://viterbi.usc.edu/directory/faculty/Mai/John — Aerospace Engineering doctorate from UCLA; advisor Chih-Ming Ho.",
+        "vietnameseSignal": "https://viterbi.usc.edu/directory/faculty/Mai/John — Full published name supplies Vietnamese given-name sequence Dzung Hoang with surname Mai, beyond the ambiguous surname alone.",
+        "dedup": "Ran full name, official profile and employer-linked Scholar URL: name-only hits vp-1272 Mai P. Hoang (Harvard pathology) and vp-3077 John Hoang (Lam Research etch-process researcher). The latter is distinguished by UCLA Jane Chang laboratory alumni page https://www.seas.ucla.edu/Chang/team.html (co-doped oxide thin films), versus USC Mai biography naming Chih-Ming Ho and bioMEMS/microfluidics. No identity URL match; no earlier-proposed match. Final command rerun with all stored identity URLs and additional cited identity pages; no same-person URL hit. Raw command output: > vietacademia@0.1.0 find-roster-matches\n> node scripts/find-roster-matches.ts John Dzung Hoang Mai --url https://viterbi.usc.edu/directory/faculty/Mai/John --url https://scholar.google.com/citations?user=K8Tp27kAAAAJ\n\nvp-1272 Mai P. Hoang | Professor, Department of Pathology, Harvard University | matched on name\nvp-3077 John Hoang | Researcher, Etch Process Development, Lam Research | matched on name\n\nTreat each hit as the same person until ruled out (compare former affiliations, PhD, lab, Scholar, LinkedIn).\nSame person: update that entry in place, or restore a retired id (npm run retire-profile-id). Never add a new id.",
+        "enrichment": "IEEE Senior Member is not Fellow and was omitted from honors. PhD year not stated by employer; omitted."
+      }
+    },
+    {
+      "entry": {
+        "name": "Wayne Nguyen P. Hung",
+        "university": "Texas A&M University",
+        "track": "Tenure-line",
+        "rank": "Professor",
+        "department": "Engineering Technology and Industrial Distribution; Manufacturing and Mechanical Engineering Technology",
+        "city": "College Station",
+        "state": "Texas",
+        "researchAreas": [
+          "Micromachining",
+          "Metal composites",
+          "Additive manufacturing",
+          "Metrology"
+        ],
+        "phdInstitution": "University of California, Berkeley",
+        "phdYear": 1987,
+        "msInstitution": "University of Michigan",
+        "undergradInstitution": "University of Michigan",
+        "undergradYear": 1978,
+        "profileUrl": "https://engineering.tamu.edu/etid/profiles/whung.html",
+        "scholarUrl": "https://scholar.google.com/citations?user=kLN2fcAAAAAJ",
+        "country": "United States",
+        "field": "Engineering"
+      },
+      "evidence": {
+        "currentRole": "https://engineering.tamu.edu/etid/profiles/whung.html — “Professor, Engineering Technology & Industrial Distribution”; coordinates Manufacturing & Mechanical Engineering Technology. https://ptc.tamu.edu/profile-wayne-nguyen-p-hung/ documents a joint Mechanical Engineering appointment; current main department page takes precedence over older center-page Associate Professor rank.",
+        "doctorateOrPapers": "https://ptc.tamu.edu/profile-wayne-nguyen-p-hung/ — Mechanical Engineering PhD, University of California, Berkeley, 1987; current main profile corroborates doctorate year.",
+        "vietnameseSignal": "https://ptc.tamu.edu/profile-wayne-nguyen-p-hung/ — Full Vietnamese name sequence Nguyen P. Hung, also documented as “Wayne” Nguyen P. Hung in the university newsletter https://ptc.tamu.edu/wp-content/uploads/2016/02/PTC-Newsletter-Spring04.pdf . This supplies a given-name signal beyond Hung alone.",
+        "dedup": "Ran Wayne Hung and Wayne Nguyen P. Hung, official profile, center profile and employer-linked Scholar URL. Wayne Hung gives no matches; fuller form gives name-only Hung Nguyen hits vp-0088, vp-0130, vp-0334, vp-0443, vp-0589, vp-0957, vp-2310, vp-3114. Roster fields show unrelated appointments/education, including Rutgers 2016, MIT 2019, Newcastle 1984 and SUTD doctorates rather than Berkeley 1987. No URL matches. Earlier-proposed Hung Nguyen is Adelaide University (checked earlier run), distinct. Final command rerun with all stored identity URLs and additional cited identity pages; no same-person URL hit. Raw command output: > vietacademia@0.1.0 find-roster-matches\n> node scripts/find-roster-matches.ts Wayne Nguyen P. Hung --url https://engineering.tamu.edu/etid/profiles/whung.html --url https://scholar.google.com/citations?user=kLN2fcAAAAAJ --url https://ptc.tamu.edu/profile-wayne-nguyen-p-hung/\n\nvp-0088 Hung T. Nguyen | Assistant Professor, Chemistry, University at Buffalo | matched on name\nvp-0130 Hung V.-T. Nguyen | Assistant Professor, Thayer School of Engineering, Dartmouth College | matched on name\nvp-0334 Hung M. Nguyen | , Government and Politics, George Mason University | matched on name\nvp-0443 Hung Nguyen - University of Akron | Professor, Mathematics, University of Akron | matched on name\nvp-0589 Hung Nguyen - University of Technology Sydney | , School of Biomedical Engineering, University of Technology Sydney | matched on name\nvp-0957 Hung T. T. Nguyen | Assistant Professor, Earth Science & Environmental Change, University of Illinois Urbana-Champaign | matched on name\nvp-2310 Hung Nguyen - University of California, San Francisco | Professor, Anesthesia and Perioperative Care, University of California, San Francisco | matched on name\nvp-3114 Hung Nguyen - eBay | Researcher, Research, eBay | matched on name\n\nTreat each hit as the same person until ruled out (compare former affiliations, PhD, lab, Scholar, LinkedIn).\nSame person: update that entry in place, or restore a retired id (npm run retire-profile-id). Never add a new id.",
+        "enrichment": "Institution-local faculty fellow awards omitted from honors. Scholar is explicitly linked by current employer and identifies N.P. Hung at Texas A&M in advanced manufacturing."
+      }
+    },
+    {
+      "entry": {
+        "name": "Hieu Tan Pham",
+        "university": "University of California, San Diego",
+        "track": "Teaching",
+        "rank": "Lecturer",
+        "department": "Mechanical and Aerospace Engineering",
+        "city": "La Jolla",
+        "state": "California",
+        "researchAreas": [
+          "Ocean turbulence",
+          "Large-eddy simulation",
+          "Stratified flows"
+        ],
+        "phdInstitution": "University of California, San Diego",
+        "phdYear": 2010,
+        "msInstitution": "University of California, San Diego",
+        "undergradInstitution": "University of California, San Diego",
+        "undergradYear": 2003,
+        "profileUrl": "https://profiles.ucsd.edu/hieu.pham",
+        "websiteUrl": "https://sites.google.com/site/hieuphamucsd/bio",
+        "country": "United States",
+        "field": "Engineering"
+      },
+      "evidence": {
+        "currentRole": "https://maeweb.ucsd.edu/faculty-profiles/lecturers — “Continuing Lecturer” in his individual faculty block, which links directly to https://profiles.ucsd.edu/hieu.pham . The latter identifies his parallel Associate Project Scientist role in MAE. Chose the explicitly continuing Teaching appointment.",
+        "doctorateOrPapers": "https://sites.google.com/site/hieuphamucsd/bio — Engineering Science doctorate at UC San Diego, September 2010; completed UCSD postdoc 2010–2015. The same page documents current ocean-turbulence grants and publications.",
+        "vietnameseSignal": "https://maeweb.ucsd.edu/faculty-profiles/lecturers — Full name Hieu Tan Pham supplies Vietnamese given names Hieu Tan with surname Pham.",
+        "dedup": "Ran full name with official profile and personal biography URL: name-only vp-1215 Hieu Pham, an Alabama in Huntsville accounting faculty member with Iowa State PhD 2018, unlike this UCSD engineering PhD 2010. No URL match. Not earlier-proposed Hien N. Pham (UNM chemical engineering); names, discipline and profile differ. Final command rerun with all stored identity URLs and additional cited identity pages; no same-person URL hit. Raw command output: > vietacademia@0.1.0 find-roster-matches\n> node scripts/find-roster-matches.ts Hieu Tan Pham --url https://profiles.ucsd.edu/hieu.pham --url https://sites.google.com/site/hieuphamucsd/bio --url https://maeweb.ucsd.edu/faculty-profiles/lecturers\n\nvp-1215 Hieu Pham | Assistant Professor, Department of Accounting, Economics and Finance, University of Alabama in Huntsville | matched on name\n\nTreat each hit as the same person until ruled out (compare former affiliations, PhD, lab, Scholar, LinkedIn).\nSame person: update that entry in place, or restore a retired id (npm run retire-profile-id). Never add a new id.",
+        "sourceCaveat": "Employer Profiles page automatically imports apparently unrelated moth-biology papers. Those publications were not used. Degree and fluid-mechanics evidence come from the identity-matched personal bio; role and identity link come from the employer."
+      }
+    },
+    {
+      "entry": {
+        "name": "Trung Duong",
+        "university": "Colorado State University Pueblo",
+        "track": "Tenure-line",
+        "rank": "Associate Professor",
+        "department": "School of Engineering",
+        "city": "Pueblo",
+        "state": "Colorado",
+        "researchAreas": [
+          "Mechatronics system design",
+          "Automation and robotics",
+          "Nondestructive evaluation"
+        ],
+        "phdInstitution": "Oklahoma State University",
+        "phdYear": 2013,
+        "msInstitution": "Oklahoma State University",
+        "undergradInstitution": "Hanoi University of Technology",
+        "undergradYear": 2004,
+        "profileUrl": "https://www.csupueblo.edu/profile/trung-duong/index.html",
+        "country": "United States",
+        "field": "Engineering"
+      },
+      "evidence": {
+        "currentRole": "https://www.csupueblo.edu/profile/trung-duong/index.html — “Associate Professor, Director of Engineering Labs”; current heading and catalog take precedence over a biography still listing Assistant Professor since 2018. Mechanical/mechatronics engineering in a combined engineering school; retained the actual School of Engineering department label.",
+        "doctorateOrPapers": "https://www.csupueblo.edu/profile/trung-duong/index.html — Mechanical and Aerospace Engineering PhD, Oklahoma State University, 2013.",
+        "vietnameseSignal": "https://www.csupueblo.edu/profile/trung-duong/index.html — Vietnamese given name Trung plus Hanoi University of Technology BSE and prior mechanical-engineering teaching in Hanoi.",
+        "dedup": "Ran name plus official profile: no URL hit. vp-0516 Trung Q. Duong has Blekinge PhD 2012 and wireless communications; vp-0933 is information science in Japan; vp-1321 Hildesheim PhD/educational technology; vp-1630 drug design; vp-2939 Binghamton economics PhD 2019. None matches Oklahoma State mechanical/aerospace PhD 2013 and CSU Pueblo. Absent from earlier-proposed list. Final command rerun with all stored identity URLs and additional cited identity pages; no same-person URL hit. Raw command output: > vietacademia@0.1.0 find-roster-matches\n> node scripts/find-roster-matches.ts Trung Duong --url https://www.csupueblo.edu/profile/trung-duong/index.html\n\nvp-0516 Trung Q. Duong | Professor, Faculty of Engineering and Applied Science, Memorial University of Newfoundland | matched on name\nvp-0933 Vu Trung Duong Le | Assistant Professor, Division of Information Science, Nara Institute of Science and Technology | matched on name\nvp-1321 Nghia Duong-Trung | Researcher, Educational Technology Lab, German Research Center for Artificial Intelligence | matched on name\nvp-1630 Trinh Trung Duong Nguyen | Assistant Professor, Department of Drug Design and Pharmacology, University of Copenhagen | matched on name\nvp-2939 Duong Trung Le | Researcher, East Asia and Pacific Chief Economist Office, The World Bank | matched on name\n\nTreat each hit as the same person until ruled out (compare former affiliations, PhD, lab, Scholar, LinkedIn).\nSame person: update that entry in place, or restore a retired id (npm run retire-profile-id). Never add a new id."
+      }
+    },
+    {
+      "entry": {
+        "name": "Kien Dinh",
+        "university": "Embry-Riddle Aeronautical University",
+        "track": "Tenure-line",
+        "rank": "Assistant Professor",
+        "department": "Department of Civil Engineering and Aerospace Infrastructure",
+        "profileUrl": "https://erau.edu/faculty/Kien.Dinh",
+        "phdInstitution": "Concordia University",
+        "country": "United States",
+        "field": "Engineering"
+      },
+      "evidence": {
+        "currentRole": "https://erau.edu/faculty?campus=a6526756-2f5a-4c4d-9181-3dbd1b62aa43&college=580816ea-aa0a-4f15-a95e-4e64a9590427&department=84cf25b5-6509-4dac-ab3d-de1bdbb01f2d&q= — His named faculty block identifies “Assistant Professor” in Civil Engineering and Aerospace Infrastructure and links to the individual profile. This supersedes the Academic Advancement Center page describing Engineering Fundamentals.",
+        "doctorateOrPapers": "https://erau.edu/faculty/Kien.Dinh — “Doctor of Philosophy in Building Engineering”, Concordia University-Montreal.",
+        "vietnameseSignal": "https://erau.edu/faculty?campus=a6526756-2f5a-4c4d-9181-3dbd1b62aa43&college=580816ea-aa0a-4f15-a95e-4e64a9590427&department=84cf25b5-6509-4dac-ab3d-de1bdbb01f2d&q= — Kien is a Vietnamese given name with surname Dinh, an affirmative full-name signal rather than surname alone.",
+        "dedup": "Ran name with official individual profile: no roster or retired-id matches. Absent from already-proposed.txt. Final command rerun with all stored identity URLs and additional cited identity pages; no same-person URL hit. Raw command output: > vietacademia@0.1.0 find-roster-matches\n> node scripts/find-roster-matches.ts Kien Dinh --url https://erau.edu/faculty/Kien.Dinh --url https://erau.edu/faculty?campus=***&college=***&department=***&q=\n\nno roster or retired-id matches",
+        "enrichment": "Employer profile is sparse: degree year, research keywords, lab, Scholar, honors and precise personal office/location were omitted. Department verified in the live filtered institutional directory."
+      }
+    }
+  ],
+  "already_listed": [
+    {
+      "name": "Chau Le",
+      "id": "vp-1482",
+      "note": "Roster name match resolved to UNC Charlotte construction faculty; live current department directory confirms same institution."
+    },
+    {
+      "name": "Phuong Nguyen",
+      "id": "vp-0282",
+      "note": "Roster name match resolved to South Dakota State construction faculty; live official profile confirms same person."
+    },
+    {
+      "name": "Truc Ngo",
+      "id": "vp-1074",
+      "note": "find-roster-matches resolves shortened name to Truc Thanh Ngo at University of San Diego, Industrial and Systems Engineering."
+    },
+    {
+      "name": "Dzung Pham",
+      "id": "vp-0828",
+      "note": "find-roster-matches resolves to Dzung L. Pham, Uniformed Services University Radiology and Bioengineering; existing record, not a new candidate."
+    }
+  ],
+  "possible_move": [],
+  "rejected": [
+    {
+      "name": "Sam Toan",
+      "reason": "https://scse.d.umn.edu/faculty-staff/sam-toan confirms associate professorship and Wyoming PhD, but primary pages do not establish a Vietnamese given-name/education/identity signal beyond ambiguous Toan. Secondary payroll uses Sam Quoc Toan, but primary confirmation of this fuller identity was not found. Do not add without resolving this."
+    },
+    {
+      "name": "Quang T. Su",
+      "reason": "Binghamton legacy lab page and older biography disagree on title (Assistant Professor, Research Professor and adjunct); current stable qualifying appointment could not be established. https://ws2.binghamton.edu/me/MSL/People.html ; https://ws.binghamton.edu/me/msl/doc/QuangSuBio.pdf . Name-only dedup gave no matches, but not accepted."
+    },
+    {
+      "name": "Phuoc Tran",
+      "reason": "University of Pittsburgh discovery result explicitly identifies Adjunct Professor; no qualifying primary university role established. https://engineering.pitt.edu/people/faculty/phuoc-tran/ ."
+    },
+    {
+      "name": "Hoan Thanh Ngo",
+      "reason": "Skipped: already-proposed.txt and w2/us-ece name the same Florida Polytechnic faculty member. Opened employer page confirms current ECE department, outside this slice."
+    },
+    {
+      "name": "Hien N. Pham",
+      "reason": "Skipped: already-proposed.txt and earlier us-eng-other run already cover UNM chemical-engineering research faculty."
+    },
+    {
+      "name": "Quan Khanh Luu",
+      "reason": "Skipped: earlier proposed Nebraska ECE candidate; w2/us-ece identity confirmed locally. No new entry proposed."
+    },
+    {
+      "name": "Hieu Bui",
+      "reason": "Catholic University official profile identifies Computer Science, outside assigned departments. Already-proposed list also contains Hieu Bui."
+    },
+    {
+      "name": "Hieu Trinh",
+      "reason": "UC Irvine search result identifies building coordinator, an ordinary staff role rather than an eligible faculty/research appointment."
+    },
+    {
+      "name": "Quynh Tran",
+      "reason": "Case Western engineering directory discovery result identifies Postdoctoral Scholar; excluded trainee appointment."
+    }
+  ],
+  "coverage": [
+    {
+      "employer": "Rochester Institute of Technology",
+      "pagesExamined": [
+        "https://www.rit.edu/directory/tdcite-toan-duc-cao"
+      ],
+      "note": "Verified individual employer profile; see candidate evidence for additional institutional and degree sources."
+    },
+    {
+      "employer": "New York University",
+      "pagesExamined": [
+        "https://engineering.nyu.edu/faculty/dung-dzung-luong"
+      ],
+      "note": "Verified individual employer profile; see candidate evidence for additional institutional and degree sources."
+    },
+    {
+      "employer": "Florida State University",
+      "pagesExamined": [
+        "https://eng.famu.fsu.edu/directory/cuong-t-nguyen"
+      ],
+      "note": "Verified individual employer profile; see candidate evidence for additional institutional and degree sources."
+    },
+    {
+      "employer": "University of Arizona",
+      "pagesExamined": [
+        "https://caem.engineering.arizona.edu/faculty-staff/faculty/cac-dao"
+      ],
+      "note": "Verified individual employer profile; see candidate evidence for additional institutional and degree sources."
+    },
+    {
+      "employer": "University of Southern California",
+      "pagesExamined": [
+        "https://viterbi.usc.edu/directory/faculty/Mai/John"
+      ],
+      "note": "Verified individual employer profile; see candidate evidence for additional institutional and degree sources."
+    },
+    {
+      "employer": "Texas A&M University",
+      "pagesExamined": [
+        "https://engineering.tamu.edu/etid/profiles/whung.html"
+      ],
+      "note": "Verified individual employer profile; see candidate evidence for additional institutional and degree sources."
+    },
+    {
+      "employer": "University of California, San Diego",
+      "pagesExamined": [
+        "https://profiles.ucsd.edu/hieu.pham"
+      ],
+      "note": "Verified individual employer profile; see candidate evidence for additional institutional and degree sources."
+    },
+    {
+      "employer": "Colorado State University Pueblo",
+      "pagesExamined": [
+        "https://www.csupueblo.edu/profile/trung-duong/index.html"
+      ],
+      "note": "Verified individual employer profile; see candidate evidence for additional institutional and degree sources."
+    },
+    {
+      "employer": "Embry-Riddle Aeronautical University",
+      "pagesExamined": [
+        "https://erau.edu/faculty/Kien.Dinh"
+      ],
+      "note": "Verified individual employer profile; see candidate evidence for additional institutional and degree sources."
+    },
+    {
+      "employer": "FAMU-FSU College of Engineering",
+      "pagesExamined": [
+        "https://eng.famu.fsu.edu/directory/cuong-t-nguyen",
+        "https://eng.famu.fsu.edu/mae/people"
+      ],
+      "note": "Deeper MAE directory sweep yielded Cuong T. Nguyen. Tuy Nguyen is ECE and outside this slice. Joint-college employer naming is explicitly recorded in candidate evidence."
+    },
+    {
+      "employer": "University of Minnesota Duluth",
+      "pagesExamined": [
+        "https://scse.d.umn.edu/faculty-staff/sam-toan"
+      ],
+      "note": "Chemical-engineering lead Sam Toan has doctorate and current role, but affirmative Vietnamese signal was not established strongly enough on primary pages; excluded."
+    },
+    {
+      "employer": "University of North Carolina at Charlotte",
+      "pagesExamined": [
+        "https://engineering.charlotte.edu/academics/department/school-of-construction/faculty-staff/"
+      ],
+      "note": "Current construction directory confirms Chau Le, already vp-1482; no new candidate."
+    },
+    {
+      "employer": "South Dakota State University",
+      "pagesExamined": [
+        "https://www.sdstate.edu/directory/phuong-nguyen"
+      ],
+      "note": "Construction-engineering lead is already vp-0282; employer page confirms doctorate and appointment."
+    },
+    {
+      "employer": "Florida Polytechnic University",
+      "pagesExamined": [
+        "https://floridapoly.edu/faculty/bios/hoan-ngo/"
+      ],
+      "note": "Hoan Thanh Ngo is already proposed in w2/us-ece, and current appointment is ECE. Excluded from this run."
+    },
+    {
+      "employer": "Wichita State University",
+      "pagesExamined": [
+        "https://www.wichita.edu/profiles/academics/"
+      ],
+      "note": "Examined engineering faculty block for additional Vietnamese given-name and less-common-surname leads; search hits for Vu/Nhu Nguyen were students, not faculty."
+    },
+    {
+      "employer": "University of Arkansas",
+      "pagesExamined": [
+        "https://engineering.uark.edu/directory/profile.php?uId=hln"
+      ],
+      "note": "Examined college faculty directory across chemical, mechanical, civil, biomedical and industrial engineering; visible Ngan Le/Khoa Luu appointments are EECS, outside slice."
+    },
+    {
+      "employer": "Washington State University Tri-Cities",
+      "pagesExamined": [
+        "https://tricities.wsu.edu/engineering/faculty/"
+      ],
+      "note": "Examined chemical, civil and mechanical faculty directory, including career-track and research positions; no additional verified Vietnamese candidate."
+    },
+    {
+      "employer": "University of California, Los Angeles",
+      "pagesExamined": [
+        "https://www.seas.ucla.edu/Chang/team.html"
+      ],
+      "note": "Used employer laboratory alumni records to distinguish Lam Research John Hoang from USC John Dzung Hoang Mai; not a new-candidate sweep of this lab."
+    },
+    {
+      "employer": "US engineering slice: discovery coverage",
+      "pagesExamined": [],
+      "note": "Later-pass searches used given-name tokens Hieu, Quynh, Duy, Khoa, Thien, Bao, Nghia, Phuoc, Khai, Bich, Thinh, Quang, Liem, Viet, Nhat, Huan, Toan, Diem, Nhu, Hanh, Phuong, Uyen, Khoi, Chinh, Cuong, Dzung, Huu, Trieu, Kiet, Vinh, Buu, Diep, Truc, Trang, Tuong, Phu, My, Ngan, Quoc, Tri, Tuan, Dat, Hung, Minh, Duc, Dung and Binh across the assigned disciplines. Less-common-surname searches included Cao, Dao, Dinh, Ton, Ta, Luu, La, Quach, Duong, Luong and Kieu. Search engines supplied discovery leads only; accepted role/doctorate facts are from opened pages. Coverage is a substantial bounded later pass, not an exhaustive census of all US departments. Stopped at nine verified candidates as new-lead yield diminished."
+    }
+  ]
+}

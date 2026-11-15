@@ -623,6 +623,7 @@ export const HEALTH_SUBFIELDS = [
 const FIELD_OVERRIDES = new Map([
   // Industry teams whose department names alone don't name a discipline.
   ['Computational Mechanics|Synopsys', 'Engineering'],
+  ['CFD Modelling|CSIRO', 'Engineering'],
   ['Consumables|MicrOmics Technologies', 'Chemistry'],
   [
     'Innovation-Cell Culture Media Development, Bioprocessing Upstream R&D|MilliporeSigma',

@@ -1,0 +1,630 @@
+{
+  "group": "Other UK universities, all fields",
+  "agent": "codex",
+  "slice": "uk-other",
+  "finishedAt": "2026-11-15T00:51:33Z",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Hien Bui",
+        "university": "York St John University",
+        "track": "Tenure-line",
+        "rank": "Lecturer",
+        "department": "York Business School",
+        "field": "Business & Economics",
+        "country": "United Kingdom",
+        "researchAreas": [
+          "Artificial intelligence",
+          "Services marketing",
+          "Digital innovations",
+          "Consumer studies"
+        ],
+        "profileUrl": "https://www.yorksj.ac.uk/our-staff/hien-bui.php",
+        "city": "York",
+        "scholarUrl": "https://scholar.google.com/citations?user=9BKIT7gAAAAJ"
+      },
+      "evidence": {
+        "currentRole": "https://www.yorksj.ac.uk/our-staff/hien-bui.php — \"lecturer in Marketing\" and programme director for two marketing MSc programmes; institutional research group also lists Dr Hien Bui.",
+        "doctorateOrPapers": "https://www.yorksj.ac.uk/our-staff/hien-bui.php describes doctoral research. Independently meets the recent-paper alternative: https://ray.yorksj.ac.uk/id/eprint/13261/ (2025, service-quality measurement) and https://ray.yorksj.ac.uk/id/eprint/13196/ (2025, service robots); both employer repository records identify Bui, Hien, the same ORCID 0000-0002-3146-7098 and York Business School.",
+        "vietnameseSignal": "Vietnamese given name Hien on official profile; employer repository also publishes the Vietnamese multi-token form Hien Thu Bui: https://ray.yorksj.ac.uk/profile/2377.",
+        "dedup": "Ran find-roster-matches with Hien Bui and Hien Thu Bui, official profile, RaY profile and employer-linked Scholar URL: no roster or retired-id matches. Scholar itself returned 403; identity link is supplied directly by employer."
+      }
+    },
+    {
+      "entry": {
+        "name": "Khanh Nguyen",
+        "university": "University of Northampton",
+        "track": "Tenure-line",
+        "rank": "Senior Lecturer",
+        "department": "School of Accounting, Analytics and Finance",
+        "field": "Business & Economics",
+        "country": "United Kingdom",
+        "researchAreas": [
+          "Auditing",
+          "Forensic accounting",
+          "Fraud examination",
+          "Nonprofit organisations"
+        ],
+        "profileUrl": "https://pure.northampton.ac.uk/en/persons/khanh-nguyen/",
+        "city": "Northampton"
+      },
+      "evidence": {
+        "currentRole": "https://pure.northampton.ac.uk/en/persons/khanh-nguyen/ — \"Senior Lecturer in Accounting\"; university staff directory independently agrees: https://www.northampton.ac.uk/directories/people/khanh-nguyen/.",
+        "doctorateOrPapers": "https://pure.northampton.ac.uk/en/persons/khanh-nguyen/ explicitly lists a PhD in Auditing and describes prior appointments at Federation University Australia and Western Sydney University. Doctoral institution/year are not supplied and are omitted.",
+        "vietnameseSignal": "Vietnamese given name Khanh on both employer profiles.",
+        "dedup": "Ran find-roster-matches with name and both employer URLs. Name-only hits vp-0025, vp-0411, vp-0568, vp-1412, vp-1542, vp-1614, vp-1842, vp-1854, vp-1895, vp-2994 and retired vp-2958 are different identities: computing/engineering, medicine, education, or operational research rather than this auditing specialist with Australian accounting appointments. No identity-URL match."
+      }
+    },
+    {
+      "entry": {
+        "name": "Mai Khanh Tran",
+        "university": "London South Bank University",
+        "track": "Tenure-line",
+        "rank": "Senior Lecturer",
+        "department": "LSBU Business School",
+        "field": "Business & Economics",
+        "country": "United Kingdom",
+        "researchAreas": [
+          "Digital marketing",
+          "Arts and consumption",
+          "Mindful consumption",
+          "Responsible marketing"
+        ],
+        "profileUrl": "https://researchportal.lsbu.ac.uk/en/persons/mika-khanh/",
+        "city": "London",
+        "phdInstitution": "University of Birmingham",
+        "phdYear": 2019
+      },
+      "evidence": {
+        "currentRole": "https://researchportal.lsbu.ac.uk/en/persons/mika-khanh/ — \"Senior Lecturer, LSBU Business School\"; profile describes current digital-marketing role. Employer news resolves alias Mika to Mai Khanh Tran: https://www.lsbu.ac.uk/about-us/news/vietnamese-green-fashion-could-help-world-meet-1.5c-warming-target.",
+        "doctorateOrPapers": "https://researchportal.lsbu.ac.uk/en/persons/mika-khanh/ lists PhD Marketing. https://researchportal.lsbu.ac.uk/ws/portalfiles/portal/11007268/Revisiting%20Benjamin%20s%20aura%20in%20the%20age%20of%20mediatisation%20%20%20the%20digital%20aura%20of%20megachurches.pdf explicitly states completion at the University of Birmingham in 2019.",
+        "vietnameseSignal": "Vietnamese given-name combination Mai Khanh and surname Tran, confirmed by employer's full-name/alias announcement; profile also documents employment at Vietnam Communications Corporation.",
+        "dedup": "Ran find-roster-matches under Mika Khanh and Mai Khanh Tran with official profile. Mika: no matches. Mai Khanh: vp-1555 Mai Tran is a different medicine/dentistry scholar at Griffith, whereas this candidate's PhD and publications are in marketing. No URL match."
+      }
+    },
+    {
+      "entry": {
+        "name": "Lien Luu",
+        "university": "Coventry University",
+        "track": "Tenure-line",
+        "rank": "Associate Professor",
+        "department": "School of Economics, Finance and Accounting",
+        "field": "Business & Economics",
+        "country": "United Kingdom",
+        "researchAreas": [
+          "Financial literacy",
+          "Financial education",
+          "Retirement planning",
+          "Investments"
+        ],
+        "profileUrl": "https://pureportal.coventry.ac.uk/en/persons/lien-luu/",
+        "phdInstitution": "University of London",
+        "phdYear": 1997
+      },
+      "evidence": {
+        "currentRole": "https://pureportal.coventry.ac.uk/en/persons/lien-luu/ — \"Curriculum Lead Associate Professor - Financial Planning\"; university directory independently documents a longstanding academic career: https://www.coventry.ac.uk/life-on-campus/staff-directory/business-and-law/dr-lien-luu/.",
+        "doctorateOrPapers": "https://www.coventry.ac.uk/life-on-campus/staff-directory/business-and-law/dr-lien-luu/ explicitly lists PhD, Economic History, University of London (1997).",
+        "vietnameseSignal": "Vietnamese given name Lien with Vietnamese surname Luu on both employer profiles; inclusion does not rely on surname alone.",
+        "dedup": "Ran find-roster-matches with name and both employer URLs: no roster or retired-id matches."
+      }
+    },
+    {
+      "entry": {
+        "name": "Duc Do",
+        "university": "Bangor University",
+        "track": "Tenure-line",
+        "rank": "Lecturer",
+        "department": "Albert Gubay Business School",
+        "field": "Business & Economics",
+        "country": "United Kingdom",
+        "researchAreas": [
+          "Banking",
+          "Sustainable finance",
+          "Climate change",
+          "Corporate finance",
+          "Financial data science"
+        ],
+        "profileUrl": "https://www.bangor.ac.uk/staff/bbs/duc-do-602693/en"
+      },
+      "evidence": {
+        "currentRole": "https://www.bangor.ac.uk/staff/bbs/duc-do-602693/en — \"Lecturer in Banking and Finance\" with module leadership and PhD supervision.",
+        "doctorateOrPapers": "https://www.bangor.ac.uk/staff/bbs/duc-do-602693/en lists PhD Finance; university/year not given, so omitted.",
+        "vietnameseSignal": "Vietnamese given name Duc on official profile, with Vietnamese coauthors and research background; surname Do is not used alone.",
+        "dedup": "Ran find-roster-matches with name and official URL. Name-only hits vp-0180 Hien Duc Do (sociology), vp-2524 Ton Duc Do (robotics) and vp-2685 Khac Duc Do (mechanical engineering) are different researchers; this candidate is a finance scholar, with prior Swansea/Manchester roles. No URL match. Also checked published coauthor form Duc Trung Do: hit vp-2819 Trung Do is civil/coastal engineering at South Alabama, a different field and identity."
+      }
+    },
+    {
+      "entry": {
+        "name": "Bao Kha Nguyen",
+        "university": "University of Sussex",
+        "track": "Tenure-line",
+        "rank": "Associate Professor",
+        "department": "School of Engineering and Informatics",
+        "field": "Engineering",
+        "country": "United Kingdom",
+        "researchAreas": [
+          "Intelligent robotics",
+          "Control engineering",
+          "Mechatronics",
+          "Autonomous systems",
+          "Process control"
+        ],
+        "profileUrl": "https://profiles.sussex.ac.uk/p420275-bao-kha-nguyen/about",
+        "phdYear": 2007
+      },
+      "evidence": {
+        "currentRole": "https://profiles.sussex.ac.uk/p420275-bao-kha-nguyen/about — \"Associate Professor in Control Engineering\" and faculty member in the Centre for Robotics and Sensing Technologies: https://www.sussex.ac.uk/research/centres/centre-for-robotics-and-sensing-technologies/people.",
+        "doctorateOrPapers": "https://profiles.sussex.ac.uk/p420275-bao-kha-nguyen/about explicitly states a PhD in Mechatronics in South Korea in 2007; awarding university not named and omitted.",
+        "vietnameseSignal": "Vietnamese given-name combination Bao Kha on employer profile.",
+        "dedup": "Ran find-roster-matches with full name and employer URL. Name-only hits vp-0679 (Melbourne optometry, Melbourne PhD), vp-1748 (Leeds chemistry, Oxford PhD), vp-2489 (Tasmania economics, ANU PhD) are different people from this South-Korea-trained mechatronics scholar. No URL match."
+      }
+    },
+    {
+      "entry": {
+        "name": "Nguyet Nguyen",
+        "university": "University of Roehampton",
+        "track": "Tenure-line",
+        "rank": "Senior Lecturer",
+        "department": "Faculty of Business and Law",
+        "field": "Business & Economics",
+        "country": "United Kingdom",
+        "researchAreas": [
+          "Accounting",
+          "Earnings management",
+          "Accounting conservatism",
+          "Financial reporting"
+        ],
+        "profileUrl": "https://pure.roehampton.ac.uk/portal/en/persons/nguyet-nguyen/",
+        "phdInstitution": "University of Kent",
+        "phdYear": 2017
+      },
+      "evidence": {
+        "currentRole": "https://pure.roehampton.ac.uk/portal/en/persons/nguyet-nguyen/ — \"Senior Lecturer, Faculty of Business and Law\"; profile links the Centre for Sustainability and Responsible Management.",
+        "doctorateOrPapers": "https://pure.roehampton.ac.uk/portal/en/persons/nguyet-nguyen/ explicitly lists PhD, Accounting and Finance, University of Kent, award date 2 January 2017.",
+        "vietnameseSignal": "Vietnamese given name Nguyet on official institutional profile; publications additionally use N. T. M. Nguyen.",
+        "dedup": "Ran find-roster-matches with name and official URL. Name-only hits vp-1030 (mathematics, Florida State PhD 2014), vp-1809 (history, American University PhD 2019), vp-2364 (pulmonary medicine) are different people from this Kent-trained accounting scholar. No URL match."
+      }
+    },
+    {
+      "entry": {
+        "name": "Duyen Chu",
+        "university": "Birmingham City University",
+        "track": "Tenure-line",
+        "rank": "Senior Lecturer",
+        "department": "Business",
+        "field": "Business & Economics",
+        "country": "United Kingdom",
+        "researchAreas": [
+          "Entrepreneurship",
+          "Innovation",
+          "Sustainability",
+          "Strategy",
+          "International business",
+          "Digital transformation"
+        ],
+        "profileUrl": "https://www.bcu.ac.uk/subject-areas/business-and-management/staff/dr-duyen-chu",
+        "city": "Birmingham"
+      },
+      "evidence": {
+        "currentRole": "https://www.bcu.ac.uk/subject-areas/business-and-management/staff/dr-duyen-chu — \"Senior Lecturer in Business\"; profile describes research projects, doctoral supervision and former postgraduate-research leadership.",
+        "doctorateOrPapers": "https://www.bcu.ac.uk/subject-areas/business-and-management/staff/dr-duyen-chu explicitly lists PhD in Management. No institution or year supplied.",
+        "vietnameseSignal": "Vietnamese given name Duyen on employer profile; surname Chu is not the sole signal.",
+        "dedup": "Ran find-roster-matches with name and employer URL: no roster or retired-id matches."
+      }
+    },
+    {
+      "entry": {
+        "name": "Thu Ba Nguyen",
+        "university": "University of Bedfordshire",
+        "track": "Tenure-line",
+        "rank": "Senior Lecturer",
+        "department": "Graduate School of Business",
+        "field": "Business & Economics",
+        "country": "United Kingdom",
+        "researchAreas": [
+          "Business analytics",
+          "Operations research",
+          "Logistics",
+          "Supply chain management",
+          "Optimisation"
+        ],
+        "profileUrl": "https://researchportal.beds.ac.uk/p/en/persons/thu-ba-nguyen",
+        "phdYear": 2015
+      },
+      "evidence": {
+        "currentRole": "https://researchportal.beds.ac.uk/p/en/persons/thu-ba-nguyen — \"Senior Lecturer in Business and Management (Business Analytics)\"; joined in March 2023.",
+        "doctorateOrPapers": "https://researchportal.beds.ac.uk/p/en/persons/thu-ba-nguyen explicitly lists PhD in Manufacturing Systems & Technology/Operations Research, award date 1 June 2015. Institution omitted because this employer profile does not name it.",
+        "vietnameseSignal": "Vietnamese given-name combination Thu Ba on official employer profile.",
+        "dedup": "Ran find-roster-matches with name and employer URL. Name-only hits vp-0251 (Michigan chemistry), vp-0269 (UCLA Asian languages; Seoul PhD), vp-0981 (Mayo radiology), vp-1907 (Greenwich accounting), vp-3134 (Insmed computational biology), vp-3200 (Triple Ring engineering; Stanford PhD) differ in field and career. Bedfordshire candidate is the operations-research specialist whose employer describes manufacturing/supply-chain optimisation and a 2015 doctorate; no URL match."
+      }
+    },
+    {
+      "entry": {
+        "name": "Mi Tran",
+        "university": "Loughborough University",
+        "track": "Tenure-line",
+        "rank": "Lecturer",
+        "department": "Loughborough Business School",
+        "field": "Business & Economics",
+        "country": "United Kingdom",
+        "researchAreas": [
+          "Corporate social responsibility",
+          "Corporate irresponsibility",
+          "Sustainability",
+          "Business ethics"
+        ],
+        "profileUrl": "https://www.lboro.ac.uk/schools/business-school/our-people/mi-tran/",
+        "city": "Loughborough",
+        "phdInstitution": "University of Huddersfield",
+        "msInstitution": "University of Huddersfield",
+        "scholarUrl": "https://scholar.google.com/citations?user=Nm18rqYAAAAJ"
+      },
+      "evidence": {
+        "currentRole": "https://www.lboro.ac.uk/schools/business-school/our-people/mi-tran/ — \"Lecturer in International Business, Strategy and Innovation\"; joined in April 2024 after NTU and Huddersfield.",
+        "doctorateOrPapers": "https://www.lboro.ac.uk/schools/business-school/our-people/mi-tran/ explicitly lists PhD (Huddersfield) and MSc (Huddersfield).",
+        "vietnameseSignal": "Official profile lists BSc (FTU, Vietnam) and work with NGOs in Vietnam, providing affirmative Vietnamese-education evidence beyond the surname.",
+        "dedup": "Ran find-roster-matches with name, employer profile, employer-linked Scholar URL and Huddersfield thesis URL: no roster or retired-id matches. Scholar itself returned 403; employer directly supplies its link."
+      }
+    },
+    {
+      "entry": {
+        "name": "Thang Ho",
+        "university": "University of Bradford",
+        "track": "Tenure-line",
+        "rank": "Assistant Professor",
+        "department": "School of Management",
+        "field": "Business & Economics",
+        "country": "United Kingdom",
+        "researchAreas": [
+          "Empirical asset pricing",
+          "Corporate finance",
+          "Sustainable finance",
+          "Hedge fund performance"
+        ],
+        "profileUrl": "https://www.bradford.ac.uk/staff/mtho",
+        "city": "Bradford",
+        "phdInstitution": "Lancaster University",
+        "msInstitution": "Lancaster University"
+      },
+      "evidence": {
+        "currentRole": "https://www.bradford.ac.uk/staff/mtho — \"Assistant Professor (Lecturer) in Finance\"; biography explicitly identifies Assistant Professor in Finance and Accounting, appointed October 2022.",
+        "doctorateOrPapers": "https://www.bradford.ac.uk/staff/mtho explicitly states PhD in Finance and MSc in Advanced Financial Analysis at Lancaster University. No doctoral completion year inferred from appointment date.",
+        "vietnameseSignal": "Vietnamese given name Thang on official employer profile; not relying on ambiguous surname Ho alone.",
+        "dedup": "Ran find-roster-matches with name and employer URL: no roster or retired-id matches. Employer-linked personal site https://sites.google.com/view/thang-ho could not be retrieved and is not proposed as websiteUrl. Reran including the employer-linked personal-site URL; still no matches."
+      }
+    },
+    {
+      "entry": {
+        "name": "Thang Truong",
+        "university": "University of Sunderland",
+        "track": "Tenure-line",
+        "rank": "Lecturer",
+        "department": "Pharmacy",
+        "field": "Chemistry",
+        "country": "United Kingdom",
+        "researchAreas": [
+          "Medicinal chemistry",
+          "Organic heterocyclic chemistry",
+          "Antimicrobial resistance",
+          "Anticancer therapy"
+        ],
+        "profileUrl": "https://www.sunderland.ac.uk/about/academic-staff/thang-truong",
+        "city": "Sunderland",
+        "phdInstitution": "Northumbria University",
+        "phdYear": 2019,
+        "undergradInstitution": "Northumbria University",
+        "undergradYear": 2016
+      },
+      "evidence": {
+        "currentRole": "https://www.sunderland.ac.uk/about/academic-staff/thang-truong — \"Lecturer in Medicinal Chemistry\"; joined the Pharmacy department in September 2022.",
+        "doctorateOrPapers": "https://www.sunderland.ac.uk/about/academic-staff/thang-truong explicitly states BSc (Hons) Applied Chemistry at Northumbria in 2016, PhD there in 2019, followed by a three-year postdoc.",
+        "vietnameseSignal": "Vietnamese given name Thang and surname Truong on official employer profile.",
+        "dedup": "Ran find-roster-matches with name and employer URL. Hit vp-0921 Cong Thang Truong is a different computer-science professor at Aizu (KAIST PhD 2006); candidate is a medicinal chemist with Northumbria PhD 2019. No URL match."
+      }
+    },
+    {
+      "entry": {
+        "name": "Vuong Chu",
+        "university": "University of Westminster",
+        "track": "Tenure-line",
+        "rank": "Lecturer",
+        "department": "Accounting, Finance and Economics",
+        "field": "Business & Economics",
+        "country": "United Kingdom",
+        "researchAreas": [
+          "FinTech",
+          "Financial econometrics",
+          "Time series analysis",
+          "Credit risk modelling",
+          "Securitisation"
+        ],
+        "profileUrl": "https://www.westminster.ac.uk/about-us/our-people/directory/chu-vuong",
+        "city": "London",
+        "phdInstitution": "University of Essex",
+        "msInstitution": "University of Essex",
+        "undergradInstitution": "University of Essex"
+      },
+      "evidence": {
+        "currentRole": "https://www.westminster.ac.uk/about-us/our-people/directory/chu-vuong — \"Lecturer\" in Accounting, Finance and Economics; joined Westminster Business School in 2024.",
+        "doctorateOrPapers": "https://www.westminster.ac.uk/about-us/our-people/directory/chu-vuong explicitly states BSc, MSc and PhD in Finance at the University of Essex. PhD year not given.",
+        "vietnameseSignal": "Vietnamese given name Vuong on official employer profile, rather than surname Chu alone.",
+        "dedup": "Ran find-roster-matches with name and employer URL: no roster or retired-id matches. Linked institutional research-portal page returned 502; the main university profile itself opened successfully."
+      }
+    },
+    {
+      "entry": {
+        "name": "Tuan Vuong",
+        "university": "University of Greenwich",
+        "track": "Tenure-line",
+        "rank": "Senior Lecturer",
+        "department": "School of Computing and Mathematical Sciences",
+        "field": "Computer & Information Sciences",
+        "country": "United Kingdom",
+        "researchAreas": [
+          "Cyber-physical security",
+          "Machine learning",
+          "Digital forensics",
+          "Programming and algorithms"
+        ],
+        "profileUrl": "https://www.gre.ac.uk/people/rep/faculty-of-engineering-and-science/tuan-vuong"
+      },
+      "evidence": {
+        "currentRole": "https://www.gre.ac.uk/people/rep/faculty-of-engineering-and-science/tuan-vuong — \"Senior Lecturer in Computer Science (Cyber-physical Security)\"; page lists module leadership.",
+        "doctorateOrPapers": "https://www.gre.ac.uk/people/rep/faculty-of-engineering-and-science/tuan-vuong explicitly states PhD in Cyber-Physical System Security; awarding institution/year are omitted.",
+        "vietnameseSignal": "Vietnamese given name Tuan and documented career in Vietnam at GP Bank and Hanoi Telecom on the employer profile.",
+        "dedup": "Ran find-roster-matches with name and employer URL. Hit vp-1956 Nguyen Dinh Tuan Vuong is a different humanities/social-sciences scholar at Tsukuba (Wisconsin-Madison PhD 2024), whereas this candidate has a cyber-physical security doctorate and software/cybersecurity career. No URL match."
+      }
+    }
+  ],
+  "already_listed": [
+    {
+      "name": "Thuy Nguyen",
+      "id": "vp-0614",
+      "note": "Northampton accounting/finance identity matches; official staff page opened at https://www.northampton.ac.uk/directories/people/thuy-nguyen2/. Matcher run with name and URL; not a new candidate. Main directory rank wording differs from roster; no data changed."
+    },
+    {
+      "name": "Tam Nguyen",
+      "id": "vp-0611",
+      "note": "Exact profile URL and name match at Nottingham Trent; current professor profile opened at https://www.ntu.ac.uk/staff-profiles/business/tam-nguyen. Not a new candidate."
+    },
+    {
+      "name": "Nhu Quynh Do",
+      "id": "vp-1105",
+      "note": "Official Lancaster page https://www.lancaster.ac.uk/pentland/about/meet-the-team/quynh-do resolves to already-listed Quynh Do; same logistics/supply-chain specialism. Matcher confirms."
+    },
+    {
+      "name": "Linh Hoang Nguyen",
+      "id": "vp-0948",
+      "note": "Opened https://www.dmu.ac.uk/about-dmu/academic-staff/business-and-law/linh-nguyen/linh.aspx. Same Exeter finance PhD and asset-pricing/risk/machine-learning specialisms as roster. DMU page's continued existence does not establish a new move from Nottingham; withheld as duplicate."
+    }
+  ],
+  "possible_move": [],
+  "rejected": [
+    {
+      "name": "Ngan Nguyen — Nottingham Trent University",
+      "reason": "Live staff directory lists Lecturer, but individual employer profile https://www.ntu.ac.uk/about-us/staff-directory/staff-profile-dynamic?assetid=2919092 could not be opened as a person's page; ordinary HTTP returned 403. Doctorate/identity not established from an opened profile. Withheld, not judged intrinsically ineligible."
+    },
+    {
+      "name": "Trong Huu Nguyen / Huu Nguyen — University of Lincoln",
+      "reason": "Official marketing research-cluster list identifies lecturer, but linked https://staff.lincoln.ac.uk/15e62ac4-ac70-4847-b3f0-8088490cf1dc returned only a generic directory. Brief requires an actually opened person profile; withheld."
+    },
+    {
+      "name": "Hang Nguyen — Coventry University",
+      "reason": "https://pureportal.coventry.ac.uk/en/persons/hang-nguyen/ is an opened institutional profile and lists Lecturer (Teaching), but provides no doctorate details or qualifying recent papers. Cannot pass this brief's additional doctorate/papers test; withheld."
+    },
+    {
+      "name": "Van Phan — University of the West of England",
+      "reason": "https://people.uwe.ac.uk/Person/Van4Phan confirms Senior Research Fellow and PhD. No affirmative stable/permanent faculty-equivalent appointment evidence; grant projects alone do not establish eligibility. Withheld pending appointment evidence."
+    },
+    {
+      "name": "Quan Phung — University of Portsmouth",
+      "reason": "https://www.port.ac.uk/about-us/structure-and-governance/our-people/our-staff/quan-phung states Teaching Fellow. Full-time continuing status or named teaching promotion ladder not established; withheld."
+    },
+    {
+      "name": "Nguyet Luu (Katie) — UCLan London",
+      "reason": "https://www.london.uclan.ac.uk/about-us/academic-staff explicitly describes a current PhD researcher alongside lectureship. No completed research doctorate or qualifying pair of recent papers established; withheld under the brief."
+    },
+    {
+      "name": "Hieu Vu — Robert Gordon University",
+      "reason": "https://rgu.ac.uk/study/academic-schools/school-of-computing-engineering-and-technology explicitly lists Visiting Researcher, excluded appointment type."
+    }
+  ],
+  "coverage": [
+    {
+      "employer": "York St John University",
+      "pagesExamined": [
+        "https://www.yorksj.ac.uk/our-staff/hien-bui.php"
+      ],
+      "note": "Verified Hien Bui from individual employer profile; given-name or uncommon-surname discovery. Research, doctoral and identity evidence recorded with candidate."
+    },
+    {
+      "employer": "University of Northampton",
+      "pagesExamined": [
+        "https://pure.northampton.ac.uk/en/persons/khanh-nguyen/"
+      ],
+      "note": "Verified Khanh Nguyen from individual employer profile; given-name or uncommon-surname discovery. Research, doctoral and identity evidence recorded with candidate."
+    },
+    {
+      "employer": "London South Bank University",
+      "pagesExamined": [
+        "https://researchportal.lsbu.ac.uk/en/persons/mika-khanh/"
+      ],
+      "note": "Verified Mai Khanh Tran from individual employer profile; given-name or uncommon-surname discovery. Research, doctoral and identity evidence recorded with candidate."
+    },
+    {
+      "employer": "Coventry University",
+      "pagesExamined": [
+        "https://pureportal.coventry.ac.uk/en/persons/lien-luu/"
+      ],
+      "note": "Verified Lien Luu from individual employer profile; given-name or uncommon-surname discovery. Research, doctoral and identity evidence recorded with candidate."
+    },
+    {
+      "employer": "Bangor University",
+      "pagesExamined": [
+        "https://www.bangor.ac.uk/staff/bbs/duc-do-602693/en"
+      ],
+      "note": "Verified Duc Do from individual employer profile; given-name or uncommon-surname discovery. Research, doctoral and identity evidence recorded with candidate."
+    },
+    {
+      "employer": "University of Sussex",
+      "pagesExamined": [
+        "https://profiles.sussex.ac.uk/p420275-bao-kha-nguyen/about"
+      ],
+      "note": "Verified Bao Kha Nguyen from individual employer profile; given-name or uncommon-surname discovery. Research, doctoral and identity evidence recorded with candidate."
+    },
+    {
+      "employer": "University of Roehampton",
+      "pagesExamined": [
+        "https://pure.roehampton.ac.uk/portal/en/persons/nguyet-nguyen/"
+      ],
+      "note": "Verified Nguyet Nguyen from individual employer profile; given-name or uncommon-surname discovery. Research, doctoral and identity evidence recorded with candidate."
+    },
+    {
+      "employer": "Birmingham City University",
+      "pagesExamined": [
+        "https://www.bcu.ac.uk/subject-areas/business-and-management/staff/dr-duyen-chu"
+      ],
+      "note": "Verified Duyen Chu from individual employer profile; given-name or uncommon-surname discovery. Research, doctoral and identity evidence recorded with candidate."
+    },
+    {
+      "employer": "University of Bedfordshire",
+      "pagesExamined": [
+        "https://researchportal.beds.ac.uk/p/en/persons/thu-ba-nguyen"
+      ],
+      "note": "Verified Thu Ba Nguyen from individual employer profile; given-name or uncommon-surname discovery. Research, doctoral and identity evidence recorded with candidate."
+    },
+    {
+      "employer": "Loughborough University",
+      "pagesExamined": [
+        "https://www.lboro.ac.uk/schools/business-school/our-people/mi-tran/"
+      ],
+      "note": "Verified Mi Tran from individual employer profile; given-name or uncommon-surname discovery. Research, doctoral and identity evidence recorded with candidate."
+    },
+    {
+      "employer": "University of Bradford",
+      "pagesExamined": [
+        "https://www.bradford.ac.uk/staff/mtho"
+      ],
+      "note": "Verified Thang Ho from individual employer profile; given-name or uncommon-surname discovery. Research, doctoral and identity evidence recorded with candidate."
+    },
+    {
+      "employer": "University of Sunderland",
+      "pagesExamined": [
+        "https://www.sunderland.ac.uk/about/academic-staff/thang-truong"
+      ],
+      "note": "Verified Thang Truong from individual employer profile; given-name or uncommon-surname discovery. Research, doctoral and identity evidence recorded with candidate."
+    },
+    {
+      "employer": "University of Westminster",
+      "pagesExamined": [
+        "https://www.westminster.ac.uk/about-us/our-people/directory/chu-vuong"
+      ],
+      "note": "Verified Vuong Chu from individual employer profile; given-name or uncommon-surname discovery. Research, doctoral and identity evidence recorded with candidate."
+    },
+    {
+      "employer": "University of Greenwich",
+      "pagesExamined": [
+        "https://www.gre.ac.uk/people/rep/faculty-of-engineering-and-science/tuan-vuong"
+      ],
+      "note": "Verified Tuan Vuong from individual employer profile; given-name or uncommon-surname discovery. Research, doctoral and identity evidence recorded with candidate."
+    },
+    {
+      "employer": "York St John University",
+      "pagesExamined": [
+        "https://www.yorksj.ac.uk/research/visitor-economy-and-experience/",
+        "https://ray.yorksj.ac.uk/profile/2377",
+        "https://ray.yorksj.ac.uk/id/eprint/13261/",
+        "https://ray.yorksj.ac.uk/id/eprint/13196/"
+      ],
+      "note": "Tourism/service and marketing research-group directory led to Hien Bui. Followed repository and recent outputs; directly linked Scholar blocked with 403."
+    },
+    {
+      "employer": "University of Northampton",
+      "pagesExamined": [
+        "https://www.northampton.ac.uk/directories/people/khanh-nguyen/",
+        "https://www.northampton.ac.uk/directories/people/thuy-nguyen2/"
+      ],
+      "note": "Khanh given-name sweep found an auditing academic distinct from all existing Khanh Nguyen matches; Thuy already listed."
+    },
+    {
+      "employer": "London South Bank University",
+      "pagesExamined": [
+        "https://www.lsbu.ac.uk/about-us/news/vietnamese-green-fashion-could-help-world-meet-1.5c-warming-target",
+        "https://researchportal.lsbu.ac.uk/ws/portalfiles/portal/11007268/Revisiting%20Benjamin%20s%20aura%20in%20the%20age%20of%20mediatisation%20%20%20the%20digital%20aura%20of%20megachurches.pdf"
+      ],
+      "note": "Resolved nonstandard directory name Mika Khanh to published Mai Khanh Tran using employer news and author biography; excluded local/student awards."
+    },
+    {
+      "employer": "Coventry University",
+      "pagesExamined": [
+        "https://www.coventry.ac.uk/life-on-campus/staff-directory/business-and-law/dr-lien-luu/",
+        "https://pureportal.coventry.ac.uk/en/persons/hang-nguyen/"
+      ],
+      "note": "Luu surname sweep found Lien Luu with an explicit academic rank and PhD; separate Hang profile is too sparse to meet this brief's doctorate/papers test."
+    },
+    {
+      "employer": "Nottingham Trent University",
+      "pagesExamined": [
+        "https://www.ntu.ac.uk/about-us/staff-directory?query=nguyen",
+        "https://www.ntu.ac.uk/staff-profiles/business/tam-nguyen",
+        "https://www.ntu.ac.uk/about-us/staff-directory/staff-profile-dynamic?assetid=2919092"
+      ],
+      "note": "Read live directory and Tam's profile. Tam/Thao/Hai Dang already present. Ngan's individual dynamic profile was inaccessible (normal HTTP request returned 403); did not use the discovery result alone as verification."
+    },
+    {
+      "employer": "Lancaster University",
+      "pagesExamined": [
+        "https://www.lancaster.ac.uk/pentland/about/meet-the-team/quynh-do"
+      ],
+      "note": "Nhu/Quynh given-name search resolved to already-listed Quynh Do; no duplicate proposed."
+    },
+    {
+      "employer": "University of Lincoln",
+      "pagesExamined": [
+        "https://www.lincoln.ac.uk/lbs/research/marketingresearchcluster/members/",
+        "https://staff.lincoln.ac.uk/15e62ac4-ac70-4847-b3f0-8088490cf1dc"
+      ],
+      "note": "Trong/Huu search found marketing lecturer Huu Nguyen, but linked individual page returned only generic Staff Directory text. Withheld because no successfully opened person profile."
+    },
+    {
+      "employer": "University of the West of England",
+      "pagesExamined": [
+        "https://people.uwe.ac.uk/Person/Van4Phan"
+      ],
+      "note": "Van Phan has a PhD and is Senior Research Fellow with PI/CoI projects; stable/permanent faculty-equivalent status not established, so withheld."
+    },
+    {
+      "employer": "University of Lancashire / UCLan London",
+      "pagesExamined": [
+        "https://www.london.uclan.ac.uk/about-us/academic-staff"
+      ],
+      "note": "Uncommon Luu/Nguyet sweep found Nguyet Luu (Katie), still described as a doctoral researcher; no completed doctorate or qualifying recent paper pair established."
+    },
+    {
+      "employer": "Robert Gordon University",
+      "pagesExamined": [
+        "https://rgu.ac.uk/study/academic-schools/school-of-computing-engineering-and-technology"
+      ],
+      "note": "Read computing/engineering directory after Hieu given-name search. Hieu Vu explicitly visiting; excluded."
+    },
+    {
+      "employer": "University of Portsmouth",
+      "pagesExamined": [
+        "https://www.port.ac.uk/about-us/structure-and-governance/our-people/our-staff/quan-phung"
+      ],
+      "note": "Uncommon Phung sweep found Quan Phung, Teaching Fellow; continuing/full-time appointment evidence not established."
+    },
+    {
+      "employer": "De Montfort University",
+      "pagesExamined": [
+        "https://www.dmu.ac.uk/about-dmu/academic-staff/business-and-law/linh-nguyen/linh.aspx"
+      ],
+      "note": "Linh Hoang Nguyen is already vp-0948 by identical Exeter finance doctorate, research topics and publications. DMU page may be historical; no move asserted against the roster's Nottingham appointment."
+    },
+    {
+      "employer": "UK-wide non-Russell discovery sweep",
+      "pagesExamined": [],
+      "note": "Searched given-name tokens Minh, Thuy, Quynh, Dung, Hien, Hieu, Tung, Thao, Huong, Bich, Ngoc, Phuong, Khanh, Kieu, Nhu, Chinh, Oanh, Hiep, Linh, Huyen, Duy, Tuan, Nhan, Diem, Thu, Phuc, Quoc, Hanh, Viet, Kien, Trong, Thanh, Bao, Duc, Liem, Phu, Huu, Giang, Duyen, Nguyet, Tuong, Khai, Phuoc, Truc, Thien, Hang, Uyen, Chau, Khoa, Loan, Nhung, Tien, Quang, Trung, Hung, Thang and Vinh. Also searched less-common surnames Dinh, Trinh, Tong, Nghiem, Diep, Luu, Ta, Lieu, Cao, Chu, Lai, Ho, La, Dam, Nong, Quach, Ton, Phung, Bach and Luc. Supplemented with institution-specific searches for Portsmouth, Plymouth, Bangor, Oxford Brookes, Worcester, Suffolk, Winchester, Abertay, Edinburgh Napier, Stirling, Dundee, West London, Hertfordshire, Essex and Kent. These are search-stage coverage only where no live page is listed; no candidate accepted from search snippets. Russell Group incidental results excluded from candidates. Stopped after a broad later-pass sweep with 14 verified new candidates, rather than filling the 25-candidate cap with unresolved leads."
+    }
+  ]
+}

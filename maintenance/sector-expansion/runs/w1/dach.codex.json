@@ -1,0 +1,314 @@
+{
+  "group": "university",
+  "agent": "codex",
+  "slice": "dach",
+  "finishedAt": "2026-11-15T00:17:19Z",
+  "candidates": [],
+  "already_listed": [
+    {
+      "name": "Giang T. Nguyen",
+      "id": "vp-0633",
+      "note": "find-roster-matches with name and roster profile URL identified the TU Dresden robotics professor; same institution, telecommunications/robotics career. Current roster already reflects the 2026 robotics appointment. No new ID."
+    },
+    {
+      "name": "Trung Thanh Nguyen",
+      "id": "vp-0834",
+      "note": "find-roster-matches with name and institutional URL identifies the environmental economist at Leibniz University Hannover. Live page examined: https://www.iuw.uni-hannover.de/en/ttnguyen . Distinct from the similarly named Liverpool John Moores engineer."
+    },
+    {
+      "name": "Ngoc Thang Vu",
+      "id": "vp-0570",
+      "note": "find-roster-matches with name and official Stuttgart profile URL matched name and profile URL. Same natural-language-processing researcher."
+    },
+    {
+      "name": "Thomy Phan",
+      "id": "vp-1099",
+      "note": "find-roster-matches with name and Bayreuth profile URL matched name and portrait source. Same AI/multi-agent researcher; discovery announcement https://www.ai.uni-bayreuth.de/de/news/2026/Phan/index.html ."
+    },
+    {
+      "name": "Ngoc Tien Tran",
+      "id": "vp-1576",
+      "note": "find-roster-matches with name and institutional URL identifies the Augsburg numerical mathematician; same Humboldt doctorate and numerical simulation appointment. Junior professorship surfaced by search, not a new person."
+    },
+    {
+      "name": "Quynh Nguyen",
+      "id": "vp-0639",
+      "note": "find-roster-matches with name and stored homepage identifies the Bern political scientist. Official appointment page opened: https://mediarelations.unibe.ch/personalia/2023/personalnachrichten_juni_2023/quynh_nguyen/index_ger.html . Environmental governance and ETH doctorate resolve identity."
+    },
+    {
+      "name": "Suong Nguyen",
+      "id": "vp-0527",
+      "note": "find-roster-matches with name and https://people.epfl.ch/suong.nguyen matched name and profile URL. Opened https://people.epfl.ch/suong.nguyen?lang=en ; same synthetic polymer chemist."
+    },
+    {
+      "name": "Minh Duc Bui",
+      "id": "vp-1222",
+      "note": "find-roster-matches with name and TUM hydraulic-engineering profile URL matched name and portrait source. Existing TUM senior hydraulic researcher; no new ID."
+    },
+    {
+      "name": "Robert Pham Xuan",
+      "id": "vp-2198",
+      "note": "find-roster-matches with name and official Jena URL matched name and profile URL. Same education researcher at the inclusion/heterogeneity chair."
+    },
+    {
+      "name": "Tami Dinh",
+      "id": "vp-2751",
+      "note": "find-roster-matches with name and roster profile URL matched name and institutional profile. Opened institutional CV https://aca.unisg.ch/fileadmin/user_upload/HSG_ROOT/Institut_ACA/Dinh/240623_CV_Dinh_01.pdf ; accounting professor at St. Gallen."
+    },
+    {
+      "name": "Huyen Nguyen",
+      "id": "vp-0593",
+      "note": "find-roster-matches with name and Jena departure URL identified King's College London economist, including retired duplicate vp-1870 merged into vp-0593. Jena's live 8 January 2026 departure notice confirms move to London: https://www.wiwi.uni-jena.de/en/26092/jprof-huyen-nguyen-goes-to-london . Already reflected in roster; outside current DACH slice."
+    },
+    {
+      "name": "Van Anh Nguyen",
+      "id": "vp-1512",
+      "note": "RETIRED ID, restoration lead, not a new identity or ID. find-roster-matches -- 'Van Anh Nguyen' identified retired Medical University of Innsbruck entry removed because its old source was invalid, not because departure was verified. Opened current hospital staff page https://dermatologie.tirol-kliniken.at/page.cfm?switchLocale=en_US&vpath=dermatologie/ueber-uns/aerztliche-mitarbeiterinnen (Van Anh Nguyen, MD; dermatooncology; van.nguyen@i-med.ac.at), current trial-team page https://dermatologie.tirol-kliniken.at/page.cfm?highcontrast=normal&vpath=dermatologie/expertisezentren/hautkrebszentrum-innsbruck/klinisches-studienzentrum (Ao.Univ.-Prof.in Dr.in Van Anh Nguyen), and university research report https://researchreport.i-med.ac.at/research-report/department-of-dermatology-venereology-and-allergy/ . Vietnamese signal: given names Van Anh. Concrete next action: review restoration of vp-1512, verify full-time permanent university appointment and research-doctorate or qualifying recent publication evidence before restoring; MD title and clinical-trial team membership alone do not settle those extra brief requirements. Do not create a new ID."
+    }
+  ],
+  "possible_move": [],
+  "rejected": [
+    {
+      "name": "Tien Dat Phan",
+      "reason": "Not verified for this permanent-only slice. Official https://www.tu.berlin/kup/ueber-uns/phan was opened successfully with Python urllib (HTTP 200) after web.open returned 403; it identifies Prof. Dr.-Ing. Tien Dat Phan, Hochschuldozent, Konstruktion und Produktzuverlässigkeit, Berlin, with teaching and research in rotordynamics, gas foil bearings and hydrogen propulsion. Doctorate title and Vietnamese given names are supported. Page does not establish contract permanence, full-time status, or exact professorial appointment type. find-roster-matches with name and this URL: no roster or retired-id matches. Next action: find appointment/CV evidence of permanent professorship or permanent faculty-equivalent research employment."
+    },
+    {
+      "name": "Thuc Lan Tran",
+      "reason": "Not verified for this permanent-only slice. Opened https://www.fhgr.ch/en/persons/person/tran/ : Prof. Dr., senior lecturer at Institute for Tourism and Leisure, employed since January 2018; doctorate at Friedrich Schiller University Jena in 2009; Vietnamese given names Thuc Lan. No explicit continuing/permanent/full-time appointment or documented applicable teaching promotion ladder established. find-roster-matches with name and URL returned vp-0771 Lan Tran at National University of Kaohsiung; identity remains to be conclusively ruled out against that entry before any proposal. Next action: verify employment fraction/permanence and resolve the vp-0771 match."
+    },
+    {
+      "name": "Bidong Nguyen",
+      "reason": "Not verified for permanent appointment. Opened https://micro.biol.ethz.ch/people/person-detail.MjAwODc3.TGlzdC8xMDU0LDI3NjU3NTY0MA==.html : Dr. Bidong Nguyen, lecturer in Biology at ETH Zurich, Institute of Microbiology. It does not establish permanent/full-time employment or faculty-equivalent research rank. find-roster-matches with name and URL: no roster or retired-id matches. Do not infer permanence from many years of publications or lecturer title."
+    },
+    {
+      "name": "Minh Dat Nguyen",
+      "reason": "Not verified for permanence. Opened https://www.epfl.ch/labs/chemina/meet-the-team/ : Dr. Dat Nguyen completed chemistry PhD at Université de Sherbrooke and trained as an analytical pharmacist in Vietnam; research on aptamer biosensors. Team discovery page https://www.epfl.ch/labs/chemina/team/ puts research staff together with postdocs. No permanent contract or senior faculty-equivalent research appointment established. Name/URL dedup returned other Minh Nguyen entries, not a demonstrated same identity; no candidate proposed."
+    },
+    {
+      "name": "Hai Chau Nguyen",
+      "reason": "Excluded as fixed-term academic staff. Opened https://tp.nt.uni-siegen.de/pages/nguyen/ : Vietnamese-script name, Lecturer (Akademischer Rat), Cologne PhD and quantum research. Crucially, also opened https://www.uni-siegen.de/en/physik/tqo-members : PD Dr. Chau Nguyen is explicitly Akademischer Rat auf Zeit (fixed-term). This resolves the abbreviated title on his personal institutional page. find-roster-matches with full name and profile URL returned several partial Hai/Chau matches, none demonstrating this Siegen physicist; appointment already excludes proposal."
+    },
+    {
+      "name": "Bang Dinh Nguyen",
+      "reason": "Excluded postdoc/fixed-term appointment. Opened https://www.econhist.uni-bayreuth.de/de/team/Bang-Nguyen/index.php : explicitly Postdoc (Akademischer Rat a.Z.), since August 2020, with NYU economics PhD. An Akademischer Rat label elsewhere is not proof of permanence."
+    },
+    {
+      "name": "Duc Cuong Dang",
+      "reason": "Excluded postdoc. Opened https://www.fim.uni-passau.de/en/intelligent-systems/team/research-staff/ : explicitly Postdoc Fellow at University of Passau since October 2021."
+    },
+    {
+      "name": "Hai Hoang Nguyen",
+      "reason": "Excluded postdoc. Opened https://crypto.ethz.ch/~nguyen/ : explicitly postdoctoral researcher in ETH's cryptography group."
+    },
+    {
+      "name": "Phuong Nguyen",
+      "reason": "Excluded doctoral researcher. Opened https://www.isek.uzh.ch/en/anthropology/about/people/staff/N/phuongnguyen.html : doctoral researcher and lecturer on an SNSF project, rather than permanent career faculty."
+    },
+    {
+      "name": "Thu Hang Nguyen",
+      "reason": "Excluded trainee lead. Opened institutional CV https://www.unifr.ch/inf/asam/en/assets/public/files/cv/cv-thu-hang-nguyen-english.pdf : identifies Ph.D Student. CV is old; no current permanent faculty evidence found. Not represented as proof of a current PhD appointment."
+    },
+    {
+      "name": "Phung Quynh Giao Nguyen",
+      "reason": "Excluded predoctoral researcher. Opened https://digihate.univie.ac.at/team : explicitly Predoctoral Researcher."
+    },
+    {
+      "name": "Nguyen Pham",
+      "reason": "Excluded doctoral assistant. Opened https://www.epfl.ch/labs/lamp/staff/ : Nguyen Pham is under PhD students, position Doctoral Assistant."
+    },
+    {
+      "name": "Minh Nhat Nguyen",
+      "reason": "Excluded postdoc. Opened https://www.iamt.kit.edu/21_189.php : Postdoctoral researcher; since October 2022, doctorate in membrane/process engineering."
+    },
+    {
+      "name": "Hoang Hai Nguyen",
+      "reason": "Excluded trainee lead. Opened https://www.ccps.tu-darmstadt.de/ccps/team_ccps/index.de.jsp : M.Sc. under Research Assistants und PhD Students, not permanent research staff."
+    },
+    {
+      "name": "Viet Dung Nguyen",
+      "reason": "Not verified. Opened https://www.ihf.uni-stuttgart.de/en/institute/team/ : M.Sc., scientific employee. No doctorate, qualifying recent papers, or permanent career research appointment established."
+    },
+    {
+      "name": "Viet Anh Nguyen Duc",
+      "reason": "Not verified for permanence. Opened https://www.philosophie.tu-darmstadt.de/institut_phil/mitarbeiter_innen_phil/index.de.jsp : Dr., scientific staff, not one of the professors. Staff listing alone does not prove permanent employment."
+    },
+    {
+      "name": "Huong Pham",
+      "reason": "Not verified for a permanent professorship. Search surfaced https://www.aimotion.de/en/thi-business-school/personnel/huong-pham/ with Junior Professor of Business Psychology since October 2024 and LMU psychology doctorate, but opening returned cache miss; no current permanent appointment verified. Dedup name/URL returned vp-1915 (materials science, Gachon) and vp-1948 (dentistry, Oslo); subject differences suggest different people but no candidate proposed without live appointment verification."
+    },
+    {
+      "name": "Viet Tue Nguyen",
+      "reason": "Outside active permanent-role scope / formal emeritus status unresolved. Opened https://tugraz.elsevierpure.com/de/persons/viet-tue-nguyen/ : current title Univ.-Prof.i.R. Dr.-Ing. habil., retired. Historical indefinite full-time professorship announcement was found at https://mibla-archiv.tugraz.at/09_10/Stk_7/7.html but cannot establish a current active role. find-roster-matches returned retired vp-1513 Viet Nguyen at Khalifa University, a record itself removed for invalid source; identity not resolved and no new ID proposed."
+    }
+  ],
+  "coverage": [
+    {
+      "employer": "DACH university slice (cross-field discovery)",
+      "pagesExamined": [],
+      "note": "Broad country and surname searches across Germany, Austria and Switzerland, in English/German/French; searches included Nguyen, Tran, Pham, Bui, Phan, Huynh, Ngo, Hoang, Dang, Duong, Le, Vo, Vu, Trinh, Dinh, Luong and Truong, plus permanent, unbefristet, Lebenszeit, W2/W3, Akademischer Rat and Senior Scientist terms. Covered computing/engineering, mathematics/physics, chemistry/biology/medicine, economics/business, social sciences, education, humanities, tourism and architecture leads. This is a bounded discovery pass, not a census. Roster and already-proposed.txt checked; no names on the skip list proposed. Zero new candidates cleared all strict permanence/current-employer/identity requirements. No LinkedIn pages fetched, logins, Issues, PRs, roster changes or git state changes."
+    },
+    {
+      "employer": "ETH Zurich",
+      "pagesExamined": [
+        "https://micro.biol.ethz.ch/people/person-detail.MjAwODc3.TGlzdC8xMDU0LDI3NjU3NTY0MA==.html",
+        "https://crypto.ethz.ch/~nguyen/"
+      ],
+      "note": "Searches for faculty and senior/permanent research staff also surfaced former-member and teaching catalog leads. Bidong Nguyen lacks permanence evidence; Hai Hoang Nguyen is a postdoc. Julie Nguyen surfaced as postdoc in discovery, not an eligible candidate."
+    },
+    {
+      "employer": "École Polytechnique Fédérale de Lausanne",
+      "pagesExamined": [
+        "https://people.epfl.ch/suong.nguyen?lang=en",
+        "https://www.epfl.ch/labs/chemina/meet-the-team/",
+        "https://www.epfl.ch/labs/lamp/staff/"
+      ],
+      "note": "Professor Suong Nguyen already listed. Minh Dat Nguyen research role lacks permanence evidence; Nguyen Pham is a doctoral assistant. Search included Senior Scientist/MER terminology and other surnames; did not treat Scientist as a permanent contract."
+    },
+    {
+      "employer": "Technical University of Berlin",
+      "pagesExamined": [
+        "https://www.tu.berlin/kup/ueber-uns/phan"
+      ],
+      "note": "Web reader returned 403; ordinary Python urllib fetch succeeded, HTTP 200, person's real profile and teaching/research read. Tien Dat Phan unlisted but permanent appointment not established. This was ordinary page retrieval, no challenge bypass."
+    },
+    {
+      "employer": "TU Dresden",
+      "pagesExamined": [],
+      "note": "Institution-targeted surname/professor searches surfaced Giang T. Nguyen, already vp-0633; robotics promotion already in current roster. Old haptic-communications profile open failed with cache miss: https://tu-dresden.de/ing/elektrotechnik/ifn/hcs/die-professur/inhaber-in?b_start_870aa%3Aint=50&set_language=en . Also screened discovery results for former chemistry staff and Vietnam-based visiting faculty; none promoted from snippets into candidates."
+    },
+    {
+      "employer": "Technical University of Munich",
+      "pagesExamined": [],
+      "note": "Institution-targeted Nguyen/Tran/professor/Vietnam searches and local roster comparison. Minh Duc Bui already vp-1222; exact stored profile used for dedup: https://www.cee.ed.tum.de/en/wb/team/leitende-wissenschaftliche-mitarbeitende/bui-minh-duc/ . No new permanent lead verified; this is search-level coverage, not a faculty-directory census."
+    },
+    {
+      "employer": "Karlsruhe Institute of Technology",
+      "pagesExamined": [
+        "https://www.iamt.kit.edu/21_189.php"
+      ],
+      "note": "Nguyen/professor and institute searches. Minh Nhat Nguyen explicitly a postdoc. Historical visiting professors from Vietnam were not accepted."
+    },
+    {
+      "employer": "RWTH Aachen University",
+      "pagesExamined": [],
+      "note": "Institution-targeted Nguyen/professor/Vietnam searches; surfaced conference visitors, publications and trainee leads, no unlisted permanent role verified. Existing roster includes Xuan-Thang Vu (vp-2189). Search-level coverage only."
+    },
+    {
+      "employer": "TU Braunschweig",
+      "pagesExamined": [
+        "https://www.tu-braunschweig.de/en/social-sciences/library/translate-to-english-team"
+      ],
+      "note": "Tran/professor discovery result was a library team with student assistants, not a professorship. No new career research appointment established."
+    },
+    {
+      "employer": "Technical University of Darmstadt",
+      "pagesExamined": [
+        "https://www.ccps.tu-darmstadt.de/ccps/team_ccps/index.de.jsp",
+        "https://www.philosophie.tu-darmstadt.de/institut_phil/mitarbeiter_innen_phil/index.de.jsp"
+      ],
+      "note": "Controls/engineering and philosophy directories examined. Hoang Hai Nguyen is listed among research assistants/PhD students; Viet Anh Nguyen Duc is scientific staff with no permanence evidence. Joint Vietnamese-German program teaching lists included Vietnam-based employees, excluded."
+    },
+    {
+      "employer": "University of Stuttgart",
+      "pagesExamined": [
+        "https://www.ihf.uni-stuttgart.de/en/institute/team/"
+      ],
+      "note": "Searched professor and engineering/NLP leads. Ngoc Thang Vu already vp-0570; Viet Dung Nguyen's scientific-employee listing does not establish permanent doctoral career role."
+    },
+    {
+      "employer": "Leibniz University Hannover",
+      "pagesExamined": [
+        "https://www.iuw.uni-hannover.de/en/ttnguyen"
+      ],
+      "note": "Environmental economist Trung Thanh Nguyen already vp-0834. Searches also surfaced doctoral Earth-systems staff; not accepted."
+    },
+    {
+      "employer": "University of Vienna / TU Wien / Austrian regional universities",
+      "pagesExamined": [
+        "https://wirtschaftswissenschaften.univie.ac.at/ueber-uns/personal/wissenschaft/",
+        "https://digihate.univie.ac.at/team"
+      ],
+      "note": "Searches included Vienna, TU Wien, Graz, Innsbruck, Salzburg, JKU Linz, Klagenfurt and Leoben. Vienna communication lead Phung Quynh Giao Nguyen is predoctoral. Existing roster already includes Andre H. Hoang, Ulrich S. Tran, Duy Ha Nguyen, Bao Quoc Tang and Tung Pham. Did not infer permanence from scientific collaborator or associated-researcher listings."
+    },
+    {
+      "employer": "Graz University of Technology",
+      "pagesExamined": [
+        "https://tugraz.elsevierpure.com/de/persons/viet-tue-nguyen/"
+      ],
+      "note": "Viet Tue Nguyen's official current title is retired university professor; not a verified active permanent-role addition. Old appointment announcement is historical, not current-role evidence."
+    },
+    {
+      "employer": "Medical University of Innsbruck",
+      "pagesExamined": [
+        "https://dermatologie.tirol-kliniken.at/page.cfm?switchLocale=en_US&vpath=dermatologie/ueber-uns/aerztliche-mitarbeiterinnen",
+        "https://dermatologie.tirol-kliniken.at/page.cfm?highcontrast=normal&vpath=dermatologie/expertisezentren/hautkrebszentrum-innsbruck/klinisches-studienzentrum",
+        "https://researchreport.i-med.ac.at/research-report/department-of-dermatology-venereology-and-allergy/"
+      ],
+      "note": "Van Anh Nguyen is a retired-ID restoration lead (vp-1512), not a brand-new person. Current hospital role and university trial research supported; full-time permanent academic appointment and brief's doctorate/publication test need completion."
+    },
+    {
+      "employer": "University of Zurich",
+      "pagesExamined": [
+        "https://www.isek.uzh.ch/en/anthropology/about/people/staff/N/phuongnguyen.html"
+      ],
+      "note": "Anthropology lead Phuong Nguyen is doctoral researcher. Broad Swiss searches also resurfaced rostered clinical/public-health scholars; no new permanent appointment verified."
+    },
+    {
+      "employer": "University of Bern",
+      "pagesExamined": [
+        "https://mediarelations.unibe.ch/personalia/2023/personalnachrichten_juni_2023/quynh_nguyen/index_ger.html"
+      ],
+      "note": "Quynh Nguyen already vp-0639; official appointment read and identity matched."
+    },
+    {
+      "employer": "University of St. Gallen",
+      "pagesExamined": [
+        "https://aca.unisg.ch/fileadmin/user_upload/HSG_ROOT/Institut_ACA/Dinh/240623_CV_Dinh_01.pdf"
+      ],
+      "note": "Tami Dinh full professor already vp-2751; CV confirms accounting career, not a new person."
+    },
+    {
+      "employer": "University of Applied Sciences of the Grisons",
+      "pagesExamined": [
+        "https://www.fhgr.ch/en/persons/person/tran/"
+      ],
+      "note": "Thuc Lan Tran senior lecturer/professor lead; 2009 Jena doctorate and Swiss teaching/research employment since 2018 supported. Permanence/full-time status not established, and partial-name roster match vp-0771 needs resolution."
+    },
+    {
+      "employer": "University of Fribourg / Geneva / Lausanne / Swiss applied-science universities",
+      "pagesExamined": [
+        "https://www.unifr.ch/inf/asam/en/assets/public/files/cv/cv-thu-hang-nguyen-english.pdf"
+      ],
+      "note": "French/English broad Swiss searches included HES-SO, FHNW and ZHAW. Fribourg lead's CV says PhD student. Search results for Nicolas Pham involved architecture in Switzerland/France and no research doctorate/current qualifying papers established; Alexandra Nguyen at La Source lacked an affirmative Vietnamese signal beyond surname. No candidate accepted from those search results."
+    },
+    {
+      "employer": "University of Siegen",
+      "pagesExamined": [
+        "https://tp.nt.uni-siegen.de/pages/nguyen/",
+        "https://www.uni-siegen.de/en/physik/tqo-members"
+      ],
+      "note": "Hai Chau Nguyen has Cologne PhD and quantum research, but current team explicitly says Akademischer Rat auf Zeit. Important false-positive resolved: abbreviated Lecturer/Akademischer Rat on another official page did not prove permanence."
+    },
+    {
+      "employer": "University of Bayreuth",
+      "pagesExamined": [
+        "https://www.econhist.uni-bayreuth.de/de/team/Bang-Nguyen/index.php"
+      ],
+      "note": "Bang Dinh Nguyen explicitly postdoc / Akademischer Rat a.Z.; Thomy Phan already listed. Did not confuse a fixed-term academic civil-service title with permanent staff."
+    },
+    {
+      "employer": "University of Passau",
+      "pagesExamined": [
+        "https://www.fim.uni-passau.de/en/intelligent-systems/team/research-staff/"
+      ],
+      "note": "Duc Cuong Dang explicitly postdoc; excluded despite extensive publication history."
+    },
+    {
+      "employer": "Friedrich Schiller University Jena / Technische Hochschule Ingolstadt",
+      "pagesExamined": [
+        "https://www.wiwi.uni-jena.de/en/26092/jprof-huyen-nguyen-goes-to-london"
+      ],
+      "note": "Huyen Nguyen left for King's College London, already vp-0593; Robert Pham Xuan already vp-2198. Huong Pham's junior-professor discovery profile could not be opened by web reader and no permanent appointment was established."
+    }
+  ]
+}

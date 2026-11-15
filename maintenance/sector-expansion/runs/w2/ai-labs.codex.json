@@ -1,0 +1,414 @@
+{
+  "group": "lab",
+  "agent": "codex",
+  "slice": "ai-labs",
+  "finishedAt": "2026-11-15T01:08:50+00:00",
+  "candidates": [
+    {
+      "entry": {
+        "institutionType": "Corporate research lab",
+        "track": "Industry Research",
+        "rank": "Researcher",
+        "name": "Loc Huynh",
+        "university": "Microsoft Research",
+        "department": "Microsoft Research",
+        "country": "United States",
+        "researchAreas": [
+          "Efficient deep learning systems",
+          "Computer vision",
+          "Systems optimization"
+        ],
+        "phdInstitution": "Singapore Management University",
+        "phdYear": 2020,
+        "profileUrl": "https://www.microsoft.com/en-us/research/people/lohuynh/"
+      },
+      "evidence": {
+        "currentRole": "https://www.microsoft.com/en-us/research/people/lohuynh/ — \"I am a Research Software Development Engineer at Microsoft Research.\" The employer describes current research on computationally efficient systems and identifies Watch For as his current project. https://www.microsoft.com/en-us/research/project/watch-for/ describes its media-AI research and optimization techniques. https://graduatestudies.smu.edu.sg/graduates/phd?page=5&programme=All&year=All independently lists Nguyen Loc HUYNH as a Senior Software Engineer at Microsoft, USA. City/state omitted: no live primary source inspected here states them.",
+        "doctorateOrPapers": "https://www.microsoft.com/en-us/research/people/lohuynh/ explicitly states a Singapore Management University PhD in 2020. https://graduatestudies.smu.edu.sg/graduates/phd?page=5&programme=All&year=All corroborates the completed Computer Science doctorate and year. This is the doctorate route, not a two-paper inference.",
+        "vietnameseSignal": "Vietnamese given name Loc on the employer page; https://computing.smu.edu.sg/phd/alumni?page=7 identifies the same SMU systems researcher as HUYNH Nguyen Loc and records his master's degree from University of Technology, Vietnam National University, Vietnam. That page timed out in the web tool but a direct requests GET returned HTTP 200 and its individual alumni text was inspected. No diacritics reconstructed.",
+        "dedup": "Ran npm run find-roster-matches -- \"Loc Huynh\" with --url for the Microsoft profile, SMU graduate-placement page, and SMU alumni page: no roster or retired-id matches. Also ran the published full alias \"Nguyen Loc Huynh\" with the employer URL: name-only hit vp-2118 Loc Nguyen, UNC Charlotte mathematics/PDE/inverse-problems faculty. The different surname, field and identity URLs rule out that match; the Microsoft individual has an SMU Computer Science PhD and computer-vision systems career. All-state gh issue searches for both forms returned []. Not in already-proposed.txt."
+      }
+    },
+    {
+      "entry": {
+        "institutionType": "Corporate research lab",
+        "track": "Industry Research",
+        "rank": "Researcher",
+        "name": "Quang Anh Duong",
+        "university": "Google Research",
+        "department": "Health AI",
+        "country": "United States",
+        "researchAreas": [
+          "Artificial intelligence for healthcare",
+          "Medical image analysis",
+          "Large language models",
+          "Human-computer interaction"
+        ],
+        "phdInstitution": "University of Michigan",
+        "profileUrl": "https://research.google/people/106550/"
+      },
+      "evidence": {
+        "currentRole": "https://research.google/people/106550/ is the live employer individual profile for \"Quang Anh Duong\" and links his research bylines as Quang Duong. Its 2025 text-simplification and 2026 SymptomAI publications establish ongoing research output in the current job. https://www.hthieu.web.illinois.edu/resources/HieuHoang_CV.pdf identifies him as the manager of the current Google Health AI Research Scientist entry: \"Manager: Quang Duong.\" https://viethope.us/our-team/ independently describes the same Google Health engineer and Michigan PhD in California. This is a publishing research engineer/manager, with rank mapped to Researcher. City omitted because the board biography is older and current exact job city was not established.",
+        "doctorateOrPapers": "https://viethope.us/our-team/ explicitly records the Google Health Quang Duong's PhD from University of Michigan, Ann Arbor; no year given. Independently, two distinct current-employer papers: https://research.google/pubs/llm-based-lossless-text-simplification-and-its-effect-on-user-comprehension-and-cognitive-load/ (2025) and https://research.google/pubs/symptomai-toward-a-conversational-ai-agent-for-everyday-symptom-assessment/ (2026), both linked from his employer profile and both opened. The two 2025 title variants on his profile are versions of ONE paper and were not double-counted.",
+        "vietnameseSignal": "Employer page gives the Vietnamese given/middle-name combination Quang Anh with surname Duong; https://viethope.us/our-team/ further documents his long leadership of a Vietnamese education nonprofit. No ancestry inferred from surname alone. No diacritic form proposed.",
+        "dedup": "Ran npm run find-roster-matches -- \"Quang Anh Duong\" with --url https://research.google/people/106550/ and --url https://viethope.us/our-team/: no roster or retired-id matches. All-state exact full-name issue search returned []; shorter \"Quang Duong\" returned unrelated namesakes and a link report, not this individual. The UT Austin architecture PhD student at quangduong.me is a different person (different field, adviser and student status); his site was not used for this entry. Not in already-proposed.txt. Additional published alias check: npm run find-roster-matches -- \"Quang Duong\" with both identity URLs returns name-only vp-0368 Paul Quang Duong Tran (Social Work, Washington PhD), vp-2445 Quang-Thang Duong (Osaka Institute of Technology, Osaka University PhD), and vp-2631 Son Quang Duong (Mount Sinai Pediatrics). Their full names, fields, degrees and individual institutional URLs differ from the Google Health manager with Michigan PhD; none shares the Google profile URL."
+      }
+    },
+    {
+      "entry": {
+        "institutionType": "Corporate research lab",
+        "track": "Industry Research",
+        "rank": "Researcher",
+        "name": "Trung-Hieu Hoang",
+        "university": "Google Research",
+        "department": "Health AI",
+        "state": "California",
+        "country": "United States",
+        "researchAreas": [
+          "Computer vision",
+          "Machine learning for healthcare",
+          "Test-time adaptation",
+          "Human motion analysis"
+        ],
+        "phdInstitution": "University of Illinois Urbana-Champaign",
+        "profileUrl": "https://hthieu166.github.io/",
+        "confirmed": false
+      },
+      "evidence": {
+        "currentRole": "https://hthieu166.github.io/ — dated January 2026 news: \"Joining Health AI, Google Research as a Research Scientsit.\" https://www.hthieu.web.illinois.edu/resources/HieuHoang_CV.pdf separately lists \"Research Scientist at Health AI, Google Research\" from January 2026 to now, Google California, USA, developing vision-language and autonomous-agent algorithms for healthcare. The CV distinctly ends the previous Google internship in August 2025. No employer individual profile was found after exact-name and given-token searches; therefore the actually opened personal homepage is profileUrl and confirmed is false. City omitted.",
+        "doctorateOrPapers": "https://hthieu166.github.io/ explicitly says he received his PhD in Electrical and Computer Engineering from University of Illinois Urbana-Champaign. The same page records successful dissertation defense in November 2025; https://www.hthieu.web.illinois.edu/resources/HieuHoang_CV.pdf lists the doctoral program ending December 2025. phdYear omitted to avoid inferring a conferral year from attendance/defense chronology.",
+        "vietnameseSignal": "https://hthieu166.github.io/ identifies his honors BSc from University of Science, VNU-HCM, in Ho Chi Minh City, Vietnam, and supplies Vietnamese given names Trung-Hieu. No diacritics reconstructed.",
+        "dedup": "Ran npm run find-roster-matches -- \"Trung-Hieu Hoang\" with --url https://hthieu166.github.io/ and --url https://www.hthieu.web.illinois.edu/resources/HieuHoang_CV.pdf: no roster or retired-id matches. All-state exact-name gh issue search returned []. Not in already-proposed.txt."
+      }
+    }
+  ],
+  "already_listed": [
+    {
+      "name": "Viet Lai",
+      "id": "vp-3042",
+      "note": "npm matcher with employer https://research.adobe.com/person/viet-lai/ and personal https://laiviet.github.io/ matches vp-3042 by name and exact existing personal URL. Official Adobe bio and personal page identify the same University of Oregon PhD and Adobe researcher; no new ID."
+    },
+    {
+      "name": "Thang Luong",
+      "id": "vp-2914",
+      "note": "npm matcher with https://research.google/people/105176/ matches Minh-Thang Luong and exact portrait-source profile. Live Google bio identifies the same Stanford PhD and DeepMind Superhuman Reasoning leader."
+    },
+    {
+      "name": "Lisa Nguyen Quang Do",
+      "id": "vp-2987",
+      "note": "npm matcher with https://research.google/people/lisanguyenquangdo/ returns exact full-name vp-2987 plus unrelated partial-name hits. Google Zurich software-analysis researcher and Paderborn doctorate agree with roster identity."
+    },
+    {
+      "name": "Anthony Hieu Nguyen",
+      "id": "vp-3192",
+      "note": "npm matcher with https://research.google/people/108062/ returns exact employer-profile URL match vp-3192 among unrelated partial-name hits. Same Quantum AI researcher."
+    }
+  ],
+  "possible_move": [],
+  "rejected": [
+    {
+      "name": "Xuan-Phi Nguyen",
+      "reason": "Current Salesforce research role, NTU PhD and US country verified live on https://www.salesforce.com/blog/author/xuan-phi-nguyen/, https://nxphi47.github.io/ and https://nxphi47.github.io/files/Phi_CV_2024.pdf. However this was already proposed in https://github.com/dynaroars/vietprofs/issues/1135 and rejected there solely for lack of sourced US city. This run found no new city evidence, so did not recycle the earlier submission. Roster matcher found only different people vp-1742 (Deakin economist, UNSW PhD) and vp-1778 (UIC mathematics education, Missouri PhD). This is a held prior submission, not an eligibility rejection."
+    },
+    {
+      "name": "Huan Nguyen",
+      "reason": "Live Google profile https://research.google/people/huannguyen/ confirms Linux kernel engineer/researcher description and Stony Brook PhD 2025, but https://github.com/dynaroars/vietprofs/issues/1104 explicitly rejected him because the displayed research paper is his doctoral work and no current-job research role was demonstrated. https://news.stonybrook.edu/computer-science/two-stony-brook-computer-science-papers-accepted-to-premier-programming-languages-conference/ was found as a corroborating lead. No new current-job research evidence in this pass resolves that ruling. Not a new candidate."
+    },
+    {
+      "name": "Duc Hoang / Scott Hoang",
+      "reason": "Apple publication lead https://machinelearning.apple.com/research/specmd-expert-prefetching was opened, but own https://scotthoang.github.io/ still labels the Apple job a research internship and the person a UT Austin PhD student. A paper byline and graduation-looking page header do not establish a permanent career role."
+    },
+    {
+      "name": "Minh Bui",
+      "reason": "https://www.microsoft.com/applied-sciences/people/minh-bui explicitly identifies a 2022 research internship and doctoral student; page is marked archival. No verified current career role."
+    },
+    {
+      "name": "Chien Van Nguyen",
+      "reason": "https://chiennv2000.github.io/cv/ explicitly identifies a current Oregon PhD student, AWS applied-scientist internship in 2026, earlier DeepMind student researcher appointment and Adobe internship. Excluded trainee roles."
+    },
+    {
+      "name": "Viet Dang",
+      "reason": "Opened employer https://research.google/people/106409/: Southampton PhD 2004 and software-engineer role, but displayed publication is from 2019 and no contemporary research job/output was established. Do not promote research interests alone into a current research appointment. npm matcher partial-name hits vp-0615, vp-0782 and vp-1058 are different careers; not counted as already listed."
+    },
+    {
+      "name": "Bao N. Nguyen",
+      "reason": "Opened employer https://research.google/people/105198/: Maryland Computer Science PhD, CI/CD engineering and research interests, with only a displayed 2017 paper. No current-job research evidence strong enough to promote this older research profile. No new candidate from degree alone; partial-name roster hits were other disciplines."
+    },
+    {
+      "name": "Andy Ly",
+      "reason": "Opened https://research.google/people/andyly/: old 2020/2023 research bylines but no current-role bio, doctorate evidence or affirmative Vietnamese signal beyond ambiguous Ly. Not verified."
+    },
+    {
+      "name": "Justin T. Ho",
+      "reason": "Opened https://research.google/people/justinho/: a 2010 publication, no current-role or doctorate bio, and no affirmative Vietnamese signal beyond ambiguous Ho. Not verified."
+    },
+    {
+      "name": "William Thong",
+      "reason": "Apple/previous Sony lead discovered at https://twuilliam.github.io/ in search results. No affirmative Vietnamese signal established; western given name plus Thong alone is insufficient under BRIEF2. Personal page not used as verified appointment evidence."
+    },
+    {
+      "name": "Viet Anh Trinh",
+      "reason": "Amazon speech-publication lead; own homepage https://trinhvietanh.com/ returned 502. Other discovery results suggest he left Amazon for a WPI postdoc. Neither older paper bylines nor a stale CV establishes current Amazon employment; excluded pending a current live source."
+    },
+    {
+      "name": "Hieu Duy Nguyen",
+      "reason": "Amazon token search surfaced 2020 and 2022 speech-quantization papers. No live individual current-role page or current own site established; old publication dates were not treated as current employment."
+    },
+    {
+      "name": "Long N. Le",
+      "reason": "Lead from the Samsung internship collaborators in https://www.hthieu.web.illinois.edu/resources/HieuHoang_CV.pdf. Search found patents and a LinkedIn result, but no employer or own live career-role/doctorate page was established. LinkedIn was not fetched. Held as unverified."
+    },
+    {
+      "name": "Trung Hieu Nguyen (Alibaba)",
+      "reason": "Discovery returned a broker profile naming an Alibaba algorithm engineer; no live employer or own individual page was found to establish current career research, doctorate/output and location. Not accepted from broker/search text."
+    },
+    {
+      "name": "Khoa D. Doan",
+      "reason": "Baidu discovery led to a CV identifying the Baidu research job as past and a current VinUniversity appointment in Vietnam. Not a verified current outside-Vietnam Baidu researcher."
+    },
+    {
+      "name": "Bac Nguyen",
+      "reason": "Sony publication discovery; already rostered as vp-3032 at Mirelo, so Sony bylines were not treated as current employment. No new ID; not investigated as a move on bylines alone."
+    },
+    {
+      "name": "Tuan M. Hoang Trong",
+      "reason": "IBM given-name search resurfaced this name, but it is explicitly in maintenance/sector-expansion/already-proposed.txt and was skipped."
+    },
+    {
+      "name": "Phuc Lai / Phuc Pham / Duc Vu / Bang-Dang Pham / Trong-Tung Nguyen (Qualcomm publication leads)",
+      "reason": "Current Qualcomm publication catalog contains these author leads, but a publication catalog alone does not establish career status or an outside-Vietnam job. Qualcomm now has a Vietnam research centre. No individual was promoted without location and role verification."
+    },
+    {
+      "name": "Grace Huynh / Dung (June) Thai",
+      "reason": "Discovery of former Microsoft/IBM collaborators points instead to Allen Institute and Ensemble Health Partners, respectively. Outside this corporate AI-lab slice; no current appointment at the assigned employer verified or candidate proposed here."
+    }
+  ],
+  "coverage": [
+    {
+      "employer": "Google Research",
+      "pagesExamined": [
+        "https://research.google/people/",
+        "https://research.google/people/?page=1",
+        "https://research.google/people/?page=2",
+        "https://research.google/people/?page=3",
+        "https://research.google/people/?page=4",
+        "https://research.google/people/?page=5",
+        "https://research.google/people/?page=6",
+        "https://research.google/people/?page=7",
+        "https://research.google/people/?page=8",
+        "https://research.google/people/?page=9",
+        "https://research.google/people/?page=10",
+        "https://research.google/people/?page=11",
+        "https://research.google/people/?page=12",
+        "https://research.google/people/?page=13",
+        "https://research.google/people/?page=14",
+        "https://research.google/people/?page=15",
+        "https://research.google/people/?page=16",
+        "https://research.google/people/?page=17",
+        "https://research.google/people/?page=18",
+        "https://research.google/people/?page=19",
+        "https://research.google/people/?page=20",
+        "https://research.google/people/?page=21",
+        "https://research.google/people/?page=22",
+        "https://research.google/people/?page=23",
+        "https://research.google/people/?page=24",
+        "https://research.google/people/?page=25",
+        "https://research.google/people/?page=26",
+        "https://research.google/people/?page=27",
+        "https://research.google/people/?page=28",
+        "https://research.google/people/?page=29",
+        "https://research.google/people/?page=30",
+        "https://research.google/people/?page=31",
+        "https://research.google/people/?page=32",
+        "https://research.google/people/?page=33",
+        "https://research.google/people/?page=34",
+        "https://research.google/people/?page=35",
+        "https://research.google/people/?page=36",
+        "https://research.google/people/?page=37",
+        "https://research.google/people/?page=38",
+        "https://research.google/people/?page=39",
+        "https://research.google/people/?page=40",
+        "https://research.google/people/?page=41",
+        "https://research.google/people/?page=42",
+        "https://research.google/people/?page=43",
+        "https://research.google/people/?page=44",
+        "https://research.google/people/?page=45",
+        "https://research.google/people/?page=46",
+        "https://research.google/people/?page=47",
+        "https://research.google/people/?page=48",
+        "https://research.google/people/?page=49",
+        "https://research.google/people/?page=50",
+        "https://research.google/people/?page=51",
+        "https://research.google/people/?page=52",
+        "https://research.google/people/?page=53",
+        "https://research.google/people/?page=54",
+        "https://research.google/people/?page=55",
+        "https://research.google/people/?page=56",
+        "https://research.google/people/?page=57",
+        "https://research.google/people/?page=58",
+        "https://research.google/people/?page=59",
+        "https://research.google/people/?page=60",
+        "https://research.google/people/?page=61",
+        "https://research.google/people/?page=62",
+        "https://research.google/people/?page=63",
+        "https://research.google/people/?page=64",
+        "https://research.google/people/?page=65",
+        "https://research.google/people/?page=66",
+        "https://research.google/people/?page=67",
+        "https://research.google/people/?page=68",
+        "https://research.google/people/?page=69",
+        "https://research.google/people/?page=70",
+        "https://research.google/people/?page=71",
+        "https://research.google/people/?page=72",
+        "https://research.google/people/?page=73",
+        "https://research.google/people/?page=74",
+        "https://research.google/people/106409/",
+        "https://research.google/people/106550/",
+        "https://research.google/people/huannguyen/",
+        "https://research.google/people/annguyen/",
+        "https://research.google/people/105198/",
+        "https://research.google/people/justinho/",
+        "https://research.google/people/andyly/",
+        "https://research.google/people/lisanguyenquangdo/",
+        "https://research.google/people/108062/"
+      ],
+      "note": "All 74 directory pages fetched read-only and screened for Vietnamese given-name tokens and surnames, including rarer forms; candidate profiles then opened live. Additional token queries included Hieu, Quang, Duy, Tien, Khanh, Linh, Chau, Thinh, Cuong, Tong. Added Quang Anh Duong and unconfirmed Trung-Hieu Hoang. An Nguyen is a product engineer with only one displayed paper and no doctorate, so not promoted. Several older profiles lack current-role/research evidence. Broad coverage, not a claim that all Google staff are listed in this public directory."
+    },
+    {
+      "employer": "Google DeepMind",
+      "pagesExamined": [
+        "https://research.google/people/105176/",
+        "https://chiennv2000.github.io/cv/"
+      ],
+      "note": "Shared Google directory and given-token sweep. Thang Luong is already listed. Hoang Anh Duy Le surfaced in a paper byline but no career appointment was established. Chien Van Nguyen was a student researcher. Earlier-proposed names skipped."
+    },
+    {
+      "employer": "Microsoft Research",
+      "pagesExamined": [
+        "https://www.microsoft.com/en-us/research/people/lohuynh/",
+        "https://www.microsoft.com/en-us/research/project/watch-for/",
+        "https://www.microsoft.com/applied-sciences/people/minh-bui"
+      ],
+      "note": "Queries used Minh, Duy, Khoa, Thang, Thinh, Phuong, Ngoc, Chinh, Toan and rarer surnames Huynh, Truong, Quach, Cao. Loc Huynh verified by current employer research bio and matching SMU graduate record, which explicitly places him at Microsoft USA. Minh Bui is an archived intern; most other token hits were coauthors/students rather than staff. No LinkedIn fetched."
+    },
+    {
+      "employer": "Meta FAIR",
+      "pagesExamined": [
+        "https://ai.meta.com/global_search/?page=2"
+      ],
+      "note": "Token and current-researcher queries including Tien, Linh, Dinh and Vietnamese discovery. Public global-search page timed out when opened; its search snippets were discovery only. Minh Vo discovery indicates a former Meta role, and several prominent Meta people already occur in the roster. No new individual cleared from unverified snippets."
+    },
+    {
+      "employer": "NVIDIA Research",
+      "pagesExamined": [
+        "https://research.nvidia.com/people",
+        "https://research.nvidia.com/researchers"
+      ],
+      "note": "The /people directory returned HTTP 200 and all linked person names were screened locally with both given-name and surname tokens; the alternative /researchers URL was inaccessible in the web tool. Additional Duc, Hoang, Huy, Luu and Trung queries surfaced paper collaborators, acknowledgments or past interns without verified current individual research appointments. No headquarters city inferred."
+    },
+    {
+      "employer": "Apple Machine Learning Research",
+      "pagesExamined": [
+        "https://machinelearning.apple.com/research/specmd-expert-prefetching",
+        "https://scotthoang.github.io/"
+      ],
+      "note": "Given-token/publication searches used Khang, Minh, Hoang, Phung, Tung and Dinh. Duc/Scott Hoang remains an internship/student case on own site. Hoang Long Nguyen has old Apple papers but no current-role source. Laurent Dinh is already rostered; William Thong lacks the required affirmative Vietnamese signal. No paper byline used alone to establish a job."
+    },
+    {
+      "employer": "Amazon Science",
+      "pagesExamined": [
+        "https://trinhvietanh.com/"
+      ],
+      "note": "Swept Duy, Linh, Thang, Chinh, Tu and rarer surnames Ngo, Trinh, Cao, plus follow-up on speech-processing researchers. Old bylines and external collaborators dominated. trinhvietanh.com failed with 502; unresolved current role was not accepted. No new verified candidate. Publication URLs surfaced in search are logged as leads; the old quantization result was inspected through search discovery, not used as current-appointment proof."
+    },
+    {
+      "employer": "IBM Research",
+      "pagesExamined": [
+        "https://research.ibm.com/people/lam-nguyen"
+      ],
+      "note": "Queries covered Duc, Hieu, Quang, Tuan, Thai, Ton, Hanh and coauthor trails. Lam Nguyen is in the roster; Tuan M. Hoang Trong is in the skip list. Old Hieu Le/Hanh Pham bylines are not current appointments. June Thai discovery indicates a different current employer. No new person passed all tests."
+    },
+    {
+      "employer": "Adobe Research",
+      "pagesExamined": [
+        "https://research.adobe.com/people/",
+        "https://research.adobe.com/person/viet-lai/",
+        "https://research.adobe.com/people/?filter=N",
+        "https://research.adobe.com/people/page/2/",
+        "https://research.adobe.com/people/page/3/",
+        "https://research.adobe.com/people/page/4/",
+        "https://research.adobe.com/people/page/5/",
+        "https://research.adobe.com/people/page/6/",
+        "https://research.adobe.com/people/page/7/",
+        "https://research.adobe.com/people/page/8/",
+        "https://research.adobe.com/people/page/9/",
+        "https://research.adobe.com/people/page/10/",
+        "https://research.adobe.com/people/page/11/",
+        "https://research.adobe.com/people/page/12/",
+        "https://research.adobe.com/people/page/13/",
+        "https://research.adobe.com/people/page/14/",
+        "https://research.adobe.com/people/page/15/",
+        "https://research.adobe.com/people/page/16/",
+        "https://research.adobe.com/people/page/17/",
+        "https://research.adobe.com/people/page/18/",
+        "https://research.adobe.com/people/page/19/"
+      ],
+      "note": "Fetched all 19 Adobe listing pages in a complete traversal (12 cards on pages 1–18 and 5 on page 19, 221 cards as returned; the directory headline says 225). Screened given-name tokens and less common surnames. Recognized Viet Lai and Trung Bui are already listed; Tong Sun/Tong Yu were ambiguous surname/given-token matches, not promoted. Student coauthors including Chien Van Nguyen were excluded. Canonical page URLs below omit the random ordering seed; no claim that a later randomized traversal has identical page membership."
+    },
+    {
+      "employer": "Salesforce AI Research",
+      "pagesExamined": [
+        "https://www.salesforce.com/blog/author/xuan-phi-nguyen/",
+        "https://nxphi47.github.io/",
+        "https://nxphi47.github.io/files/Phi_CV_2024.pdf",
+        "https://www.salesforceairesearch.com/team"
+      ],
+      "note": "Xuan-Phi Nguyen fully identity-resolved and not in roster, but previous Issue #1135 rejected the submission for missing city and this pass did not resolve it. Team URL inaccessible; Google/Bui follow-up resurfaced existing Nghi D. Q. Bui, not a new Salesforce identity. No recycled candidate from the closed issue."
+    },
+    {
+      "employer": "Qualcomm AI Research",
+      "pagesExamined": [
+        "https://www.qualcomm.com/research/artificial-intelligence/papers"
+      ],
+      "note": "Opened the 229-paper employer catalog and searched Hieu, Quang, Duy, Khoa, Minh, Trung, Viet and Phan. Numerous Vietnamese author leads are associated with the expanded Vietnam organization or trainee coauthorship. Location and career-role tests were applied; no new outside-Vietnam individual verified. No acceptance from the corporate byline alone."
+    },
+    {
+      "employer": "Samsung",
+      "pagesExamined": [
+        "https://research.samsung.com/blog/Automatically-Explaining-the-Privacy-Practices-in-Mobile-Apps",
+        "https://www.hthieu.web.illinois.edu/resources/HieuHoang_CV.pdf"
+      ],
+      "note": "Queries covered Duy, Khoa, Quang, Hieu, Duc, Minh, Phuong, Tung, Hoang, Dinh, Nhat, Thong and Tran. The opened Samsung privacy blog identifies Duc Bui as a University of Michigan collaborator, not Samsung staff. Most other hits are Vietnam staff, coauthors or internships. Long N. Le emerged as a Texas collaborator in the opened current CV but lacked a verified employer/own career profile. Hai Xuan Pham is already listed."
+    },
+    {
+      "employer": "Sony AI",
+      "pagesExamined": [
+        "https://ai.sony/",
+        "https://ai.sony/people?hsLang=en"
+      ],
+      "note": "Opened employer homepage and people page; the page text supplies no individual staff rows. Searches through Sony publications surfaced Bac Nguyen, who is already rostered at Mirelo; former Sony scientist William Thong is an Apple lead with no affirmative Vietnamese signal established. No new current Sony candidate accepted."
+    },
+    {
+      "employer": "Baidu Research",
+      "pagesExamined": [
+        "https://searchscience.baidu.com/team.html"
+      ],
+      "note": "Read full public team page, including staff and separate intern section; no candidate with affirmative Vietnamese signal cleared. Deeper given-token research surfaced former researcher Khoa Doan now in Vietnam and Phan-Minh Nguyen as a historical student intern. Neither supports a current eligible Baidu appointment."
+    },
+    {
+      "employer": "Alibaba Research / DAMO",
+      "pagesExamined": [
+        "https://damo.alibaba.com/",
+        "https://nxphi47.github.io/"
+      ],
+      "note": "Employer homepage returned no readable lines. Vietnamese/given-token discovery and prior-researcher trails surfaced Xuan-Phi Nguyen, whose own current source places him at Salesforce, and broker-only Trung Hieu Nguyen. No new current Alibaba appointment accepted. This coverage is limited by sparse public people pages."
+    },
+    {
+      "employer": "Tencent Research",
+      "pagesExamined": [
+        "https://ai.tencent.com/ailab/en/index/"
+      ],
+      "note": "The old AI Lab English URL now returns a Yuanbao download/chat landing page, not an individual research directory. Vietnamese, Duy and Minh queries plus institution trails produced external coauthors/interns and no verified Vietnamese career researcher. No current employment inferred from historical papers. Public directory coverage limited by the redirect."
+    }
+  ]
+}

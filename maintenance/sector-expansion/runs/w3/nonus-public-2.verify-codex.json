@@ -1,0 +1,30 @@
+{
+  "verifier": "codex",
+  "input": "maintenance/sector-expansion/runs/w3/nonus-public-2.codex.json",
+  "candidates": [
+    {
+      "name": "Cao Nguyen Duong",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live individual employer profile https://www.leibniz-inm.de/en/staff/dr-duong-cao-nguyen/ identifies Dr. Cao Nguyen Duong as Head of Fluorescence Microscopy and lists recent research papers. The employer annual report https://www.leibniz-inm.de/wp-content/uploads/2025/03/Jahresbericht-2023.pdf (printed p. 38) documents a 2020 biology doctorate, a subsequent postdoc, and leadership of the INM microscopy service group since 2023; together these establish an enduring career research appointment in Saarbruecken, Germany. The individual alumni biography https://www.uni-muenster.de/CiM-IMPRS/students/alumni/duong_cao_nguyen.html explicitly gives Thanhhoa, Vietnam as his origin and matches the biology/Muenster training. Independently ran find-roster-matches with the name, employer profile, linked ORCID, and alumni biography. Hits vp-0023 and vp-0358 are different people: roster records identify electrical/computer-engineering academics with Michigan State University (2021) and University of British Columbia (2020) doctorates respectively, distinct from this molecular-biomedicine/microscopy researcher. No matching name in already-proposed.txt.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Van Duc Dinh",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live individual employer profile https://www.pdi-berlin.de/de/people/people-directory/dr-van-duc-dinh-1 identifies Dr. Van Duc Dinh as a Scientist in Epitaxy, responsible for MBE-9 and XPS, with nitride-semiconductor research projects and Berlin contact details. The doctoral title in this scientific context supports a research doctorate, without establishing institution/year. The linked employer project https://www.pdi-berlin.de/science/third-party-funded-projects/rare-earth-nitride-based-heterostructures-for-integrated-thermoelectrics explicitly names him as a PDI principal investigator on a project awarded in 2025, corroborating a substantive career research role. Van Duc is an affirmative Vietnamese name combination beyond the surname Dinh. Independently ran find-roster-matches with his name and both employer URLs: no roster or retired-ID matches. Not in already-proposed.txt. Current workplace is Berlin, Germany.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Ngoc Duyen Tanja Tu",
+      "verdict": "fail",
+      "failedTests": [
+        2
+      ],
+      "reason": "The submitted German employer profile https://perso.ids-mannheim.de/seiten/tu.html is live and identifies her current IDS Grammar employment and completed Mannheim doctorate. However, the independently opened English version https://perso.ids-mannheim.de/seiten/en/tu.html explicitly states her current function as \"Postdoctoral researcher\" in the Grammar department. This directly fails the no-postdocs requirement; the generic German staff title, employment since 2017, doctorate completion, and PostDoc Network service do not override that explicit current appointment. Ngoc Duyen supplies an affirmative Vietnamese given-name signal. Independently ran find-roster-matches with her name, both employer profiles, and ORCID: no roster or retired-ID matches; absent from already-proposed.txt. IDS Mannheim is in Germany. No field correction can cure the excluded appointment.",
+      "correctedFields": {}
+    }
+  ],
+  "possible_move": []
+}

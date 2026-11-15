@@ -1,0 +1,28 @@
+{
+  "verifier": "codex",
+  "input": "maintenance/sector-expansion/runs/w2/ai-labs.codex.json",
+  "candidates": [
+    {
+      "name": "Loc Huynh",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Independently opened https://www.microsoft.com/en-us/research/people/lohuynh/: the current individual employer bio identifies a research software development role, systems research, an active Watch For project, and an SMU PhD (2020). Opened https://www.microsoft.com/en-us/research/project/watch-for/ and verified the research project. https://graduatestudies.smu.edu.sg/graduates/phd?page=5&programme=All&year=All identifies Nguyen Loc HUYNH, the same computer-vision systems PhD graduate, at Microsoft in the USA. https://computing.smu.edu.sg/phd/alumni?page=7 timed out in the web tool, but an independent direct HTTP GET succeeded (200); its HUYNH Nguyen Loc record lists a prior engineering degree from Vietnam National University, providing an affirmative Vietnamese signal beyond surname. The doctorate and explicit research role meet test 2 without requiring two recent papers. Ran the roster matcher with the name and identity URLs: no matches. The full alias Nguyen Loc Huynh produces vp-2118 Loc Nguyen, a mathematics/PDE faculty member with a different surname, field and institutional URL, rather than this SMU computer-science researcher. Not in already-proposed.txt. USA placement supports test 5; an exact current city was not established.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Quang Anh Duong",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Independently opened https://research.google/people/106550/, a live individual Google Research profile linking Quang Anh Duong to the published author alias Quang Duong and recent Google research. Also opened https://research.google/pubs/symptomai-toward-a-conversational-ai-agent-for-everyday-symptom-assessment/ (2026) and https://research.google/pubs/llm-based-lossless-text-simplification-and-its-effect-on-user-comprehension-and-cognitive-load/ (2025): two distinct current-employer research papers. https://viethope.us/our-team/ independently identifies the Google Health engineer, Michigan PhD, California employment and longstanding Vietnamese educational-community leadership, supporting identity and location alongside the Vietnamese given-name combination Quang Anh. The independently opened https://www.hthieu.web.illinois.edu/resources/HieuHoang_CV.pdf names Quang Duong as the manager for a current Google Health AI research-scientist role. The employer profile and sustained research output support an eligible career research role. Ran the roster matcher with both full name and published alias and both identity URLs. Alias-only hits vp-0368 (social work, Washington PhD), vp-2445 (Quang-Thang Duong, Osaka PhD), and vp-2631 (Son Quang Duong, pediatrics) are distinct identities by full name, field, education or institutional URLs. Not in already-proposed.txt. The location bio is older; no unsupported exact city is added.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Trung-Hieu Hoang",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Independently opened https://hthieu166.github.io/: it states a completed UIUC electrical/computer-engineering PhD and a January 2026 start as Google Research Health AI Research Scientist. The independently opened https://www.hthieu.web.illinois.edu/resources/HieuHoang_CV.pdf explicitly lists that career role from January 2026 to present in California, USA, separately from the May-August 2025 internship. This supports tests 2 and 5 rather than mistaking the internship for a career appointment. The CV explicitly records Vietnamese as a native language, and the personal site records an undergraduate degree from VNU-HCM, providing affirmative Vietnamese evidence. Searches for an individual Google employer profile did not find one; the personal homepage is therefore acceptable under the explicit test-1 exception because the input already sets confirmed:false. Retain that flag. Ran the roster matcher with the name, personal homepage and CV URL: no roster or retired-ID matches. Not in already-proposed.txt. No correction required; degree year remains omitted rather than inferred from program/defense dates.",
+      "correctedFields": {}
+    }
+  ],
+  "possible_move": []
+}

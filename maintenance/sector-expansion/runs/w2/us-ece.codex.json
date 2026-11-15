@@ -1,0 +1,470 @@
+{
+  "group": "university",
+  "agent": "codex",
+  "slice": "us-ece",
+  "finishedAt": "2026-11-15T00:40:15.470281Z",
+  "candidates": [
+    {
+      "entry": {
+        "country": "United States",
+        "field": "Engineering",
+        "name": "Lim Nguyen",
+        "university": "University of Nebraska–Lincoln",
+        "department": "Electrical and Computer Engineering",
+        "rank": "Professor",
+        "track": "Tenure-line",
+        "researchAreas": [
+          "RF and optical communications",
+          "Spread spectrum communications",
+          "Signal processing",
+          "Transform techniques"
+        ],
+        "phdInstitution": "Rice University",
+        "phdYear": 1996,
+        "msInstitution": "California Institute of Technology",
+        "undergradInstitution": "Massachusetts Institute of Technology",
+        "undergradYear": 1983,
+        "profileUrl": "https://engineering.unl.edu/person/lim-nguyen/",
+        "portraitSource": "https://engineering.unl.edu/sites/unl.edu.engineering/files/styles/1_1_720x720/public/node/person/photo/2025-01/Lim-Nguyen_1.jpg?itok=B53m5f0I"
+      },
+      "evidence": {
+        "currentRole": "https://engineering.unl.edu/person/lim-nguyen/ — “Professor Electrical & Computer Engineering”. Current department directory https://engineering.unl.edu/ece/about/faculty-staff/ independently lists the same title and lnguyen1@unl.edu.",
+        "doctorateOrPapers": "https://engineering.unl.edu/person/lim-nguyen/ — Education lists a 1996 electrical-engineering doctorate from Rice, a 1991 Caltech MS, and MIT electrical-engineering and mathematics bachelors in 1983.",
+        "vietnameseSignal": "https://engineering.unl.edu/person/lim-nguyen/ — Biography explicitly says he was born in Hue and grew up in Da Nang, Viet Nam, and Tahlequah, Oklahoma.",
+        "dedup": "npm run find-roster-matches -- \"Lim Nguyen\" --url https://engineering.unl.edu/person/lim-nguyen/ => no roster or retired-id matches. Manual roster/name/URL cross-check also clear.",
+        "biography": "https://engineering.unl.edu/person/lim-nguyen/ — Previously worked at Xerox, Hughes Aircraft, JPL, and USAF Phillips Laboratory before joining Nebraska in 1996. The biographical paragraph retains an old assistant-professor title; current profile heading and current department directory both say Professor. No city proposed because the ECE department spans Lincoln and Omaha.",
+        "enrichment": "https://engineering.unl.edu/person/lim-nguyen/ — Portrait URL extracted from the named profile image. No personal homepage, LinkedIn, or Scholar URL established; no qualifying honor found on the profile."
+      }
+    },
+    {
+      "entry": {
+        "country": "United States",
+        "field": "Engineering",
+        "name": "Quan Khanh Luu",
+        "university": "University of Nebraska–Lincoln",
+        "department": "Electrical and Computer Engineering",
+        "rank": "Assistant Professor",
+        "track": "Tenure-line",
+        "researchAreas": [
+          "Robotics",
+          "Tactile sensing and perception",
+          "Embodied artificial intelligence",
+          "Robot learning",
+          "Robot manipulation"
+        ],
+        "phdInstitution": "Japan Advanced Institute of Science and Technology",
+        "phdYear": 2024,
+        "msInstitution": "Japan Advanced Institute of Science and Technology",
+        "undergradInstitution": "Ho Chi Minh City University of Technology",
+        "undergradYear": 2018,
+        "profileUrl": "https://engineering.unl.edu/ece/person/quan-luu/",
+        "websiteUrl": "https://quan-luu.github.io/",
+        "scholarUrl": "https://scholar.google.com/citations?user=cy6AlQMAAAAJ",
+        "portraitSource": "https://engineering.unl.edu/sites/unl.edu.engineering/files/styles/1_1_720x720/public/node/person/photo/2026-10/260819%20Quan%20Luu_edited_2%20copy_0.png?itok=SpkcTFLE"
+      },
+      "evidence": {
+        "currentRole": "https://engineering.unl.edu/ece/person/quan-luu/ — “Assistant Professor Electrical and Computer Engineering”; biography confirms his current UNL appointment. Linked personal site https://quan-luu.github.io/ independently confirms it.",
+        "doctorateOrPapers": "https://engineering.unl.edu/ece/person/quan-luu/ — Education explicitly lists PhD, JAIST, 2024; MS, JAIST, 2021; and BEng, HCMUT, Vietnam, 2018. Narrative calls the graduate work robotics while the education section calls it materials science; no doctorate discipline field proposed.",
+        "vietnameseSignal": "https://engineering.unl.edu/ece/person/quan-luu/ — HCMUT undergraduate education in Vietnam; full Vietnamese given-name sequence Quan Khanh on https://quan-luu.github.io/.",
+        "dedup": "npm run find-roster-matches -- \"Quan Khanh Luu\" --url https://engineering.unl.edu/ece/person/quan-luu/ https://quan-luu.github.io/ \"https://scholar.google.com/citations?user=cy6AlQMAAAAJ\" => no roster or retired-id matches. Earlier short-form Quan Luu check was also clear.",
+        "biography": "https://engineering.unl.edu/ece/person/quan-luu/ — Former Purdue postdoctoral researcher; studies soft sensorized robot bodies and tactile robot manipulation. Full name from the university-linked personal site.",
+        "enrichment": "https://engineering.unl.edu/ece/person/quan-luu/ — Personal homepage, Scholar URL, and portrait extracted from official profile. Scholar identity anchored by official outbound link; not independently read. Workshop paper awards, doctoral JSPS fellowship, RSS Pioneers, and research grants omitted from honors under the faculty-level honors rules. No LinkedIn verified."
+      }
+    },
+    {
+      "entry": {
+        "country": "United States",
+        "field": "Engineering",
+        "name": "Hoan Thanh Ngo",
+        "university": "Florida Polytechnic University",
+        "department": "Electrical, Computer, and Cybersecurity Engineering",
+        "rank": "Assistant Professor",
+        "track": "Tenure-line",
+        "city": "Lakeland",
+        "state": "Florida",
+        "researchAreas": [
+          "Artificial intelligence for health",
+          "Biosensors",
+          "Biophotonics",
+          "Medical instrumentation",
+          "Point-of-care diagnostic devices"
+        ],
+        "phdInstitution": "Duke University",
+        "phdYear": 2017,
+        "msInstitution": "Korea Maritime University",
+        "undergradInstitution": "Ho Chi Minh City University of Technology",
+        "undergradYear": 2006,
+        "profileUrl": "https://floridapoly.edu/faculty/bios/hoan-ngo/",
+        "scholarUrl": "https://scholar.google.com/citations?user=niMq2ssAAAAJ"
+      },
+      "evidence": {
+        "currentRole": "https://floridapoly.edu/faculty/bios/hoan-ngo/ — “Assistant Professor”; biography states he joined electrical, computer, and cybersecurity engineering at Florida Polytechnic in 2025.",
+        "doctorateOrPapers": "https://floridapoly.edu/faculty/bios/hoan-ngo/ — Education lists PhD in Biomedical Engineering, Duke University, 2017; MEng in Control and Instrumentation, Korea Maritime University, 2008; BS in Mechatronics, Bach Khoa University, Ho Chi Minh City, Vietnam, 2006.",
+        "vietnameseSignal": "https://floridapoly.edu/faculty/bios/hoan-ngo/ — Vietnamese given names Hoan Thanh; undergraduate education in Ho Chi Minh City, Vietnam, and prior teaching/department leadership at International University in Vietnam.",
+        "dedup": "npm run find-roster-matches -- \"Hoan Thanh Ngo\" --url https://floridapoly.edu/faculty/bios/hoan-ngo/ \"https://scholar.google.com/citations?user=niMq2ssAAAAJ\" => name-only hits vp-1197 Thanh Ngo and vp-1702 Thanh Ngo - East Carolina University; no URL hits. Different people: vp-1197 studies aviation/efficiency and has Massey PhD 2015; vp-1702 studies finance and has Florida Atlantic PhD 2007, versus this candidate’s Duke biomedical-engineering PhD 2017 and biosensor research.",
+        "biography": "https://floridapoly.edu/faculty/bios/hoan-ngo/ — Previously assistant professor at Florida Southern College; completed Duke and Johns Hopkins postdoctoral training. Degree institution Bach Khoa University normalized to the roster’s Ho Chi Minh City University of Technology. Lakeland, Florida is stated in the official page address.",
+        "enrichment": "https://floridapoly.edu/faculty/bios/hoan-ngo/ — Scholar URL obtained from official outbound link; direct Scholar request returned 429 and its contents were not used as evidence. LinkedIn/ResearchGate labels on this page did not expose usable URLs in the reader. No portrait source or independent personal/lab site established. Listed student-stage fellowships and routine paper/poster awards omitted."
+      }
+    },
+    {
+      "entry": {
+        "country": "United States",
+        "field": "Engineering",
+        "name": "Hung Cao",
+        "university": "University of California, Irvine",
+        "department": "Electrical Engineering and Computer Science",
+        "rank": "Associate Professor",
+        "track": "Tenure-line",
+        "city": "Irvine",
+        "state": "California",
+        "researchAreas": [
+          "MEMS",
+          "Biosensors and bioelectronics",
+          "Implantable devices",
+          "Wireless biomedical systems"
+        ],
+        "phdInstitution": "University of Texas at Arlington",
+        "phdYear": 2012,
+        "msInstitution": "University of Texas at Arlington",
+        "undergradInstitution": "Hanoi University of Science and Technology",
+        "undergradYear": 2003,
+        "profileUrl": "https://profiles.icts.uci.edu/hung.cao",
+        "portraitSource": "https://eng81.banjo.eng.uci.edu/files/styles/scale_and_crop_192x192/public/hung-cao.png?itok=iznBfqOj",
+        "honors": [
+          {
+            "name": "NSF CAREER Award",
+            "year": 2017,
+            "category": "career_award",
+            "organization": "National Science Foundation",
+            "source": "https://eng81.banjo.eng.uci.edu/users/hung-cao"
+          }
+        ]
+      },
+      "evidence": {
+        "currentRole": "https://profiles.icts.uci.edu/hung.cao — “Associate Professor of Electrical Engineering, Biomedical Engineering and Computer Science”; https://eng81.banjo.eng.uci.edu/users/hung-cao separately lists Associate Professor in EECS and the same office/email.",
+        "doctorateOrPapers": "https://eng81.banjo.eng.uci.edu/users/hung-cao — Education explicitly lists electrical-engineering PhD, University of Texas at Arlington, 2012, MS there in 2007, and HUST bachelor’s in 2003. https://profiles.icts.uci.edu/hung.cao independently lists the UT Arlington PhD.",
+        "vietnameseSignal": "https://eng81.banjo.eng.uci.edu/users/hung-cao — Bachelor’s from Hanoi University of Science and Technology, Vietnam, followed by teaching at Vietnam Maritime University; Vietnamese given name Hung.",
+        "dedup": "npm run find-roster-matches -- \"Hung Cao\" --url https://eng81.banjo.eng.uci.edu/users/hung-cao https://profiles.icts.uci.edu/hung.cao => name-only hits vp-1342 Cao Hung Pham and vp-1568 Hung Cao, no URL match. Both excluded as different people: vp-1342 is a Sydney civil/steel-structures scholar with Sydney PhD 2010; vp-1568 is Northwest Missouri State finance faculty with Memphis PhD 2024. Candidate is UCI bioelectronics faculty with UT Arlington EE PhD 2012.",
+        "biography": "https://eng81.banjo.eng.uci.edu/users/hung-cao — Joined UCI in September 2018 after University of Washington; leads HERO Lab on flexible micro-biosensors and bioelectronics. UCI profile provides Irvine, California address.",
+        "enrichment": "https://eng81.banjo.eng.uci.edu/users/hung-cao — NSF CAREER 2017 explicitly stated. Portrait source extracted from the named institutional image; direct image fetch could not be verified by web reader, so this is a downstream portrait lead only. Official HERO Lab link https://hero.eng.uci.edu/ returned 502 and is omitted from entry links. No Scholar or LinkedIn URL established."
+      }
+    },
+    {
+      "entry": {
+        "country": "United States",
+        "field": "Engineering",
+        "name": "Thuan Nguyen",
+        "university": "East Tennessee State University",
+        "department": "Engineering, Engineering Technology, Interior Architecture, and Surveying",
+        "rank": "Assistant Professor",
+        "track": "Tenure-line",
+        "city": "Johnson City",
+        "state": "Tennessee",
+        "researchAreas": [
+          "Wireless communications theory",
+          "Statistical signal processing",
+          "Machine learning",
+          "Information theory",
+          "Domain generalization"
+        ],
+        "phdInstitution": "Oregon State University",
+        "phdYear": 2021,
+        "msInstitution": "Oregon State University",
+        "undergradInstitution": "Posts and Telecommunications Institute of Technology",
+        "undergradYear": 2013,
+        "profileUrl": "https://www.etsu.edu/cas/applied-design/faculty-staff/nguyent.php",
+        "portraitSource": "https://www.etsu.edu/cas/applied-design/pictures/_fac-staff-profile/nguyen_thuan-facstaff-profile.jpg"
+      },
+      "evidence": {
+        "currentRole": "https://www.etsu.edu/cas/applied-design/faculty-staff/nguyent.php — “Assistant Professor, Electrical Engineering”; biography explicitly identifies his current ETSU department.",
+        "doctorateOrPapers": "https://www.etsu.edu/cas/applied-design/faculty-staff/nguyent.php — Education lists electrical-engineering PhD from Oregon State University in 2021, MS there in 2018, and electrical-engineering BS in Hanoi in 2013.",
+        "vietnameseSignal": "https://www.etsu.edu/cas/applied-design/faculty-staff/nguyent.php — Hanoi, Vietnam undergraduate education and recipient of a Vietnam National Olympic Mathematics Competition gold medal; Vietnamese given name Thuan.",
+        "dedup": "npm run find-roster-matches -- \"Thuan Nguyen\" --url https://www.etsu.edu/cas/applied-design/faculty-staff/nguyent.php => name-only hits vp-0249, vp-0409, vp-1039, vp-3181; no URL hits. Different people: vp-0249 has NOVA Southeastern information-systems PhD 2016 (official UNT profile opened); vp-0409 has UC Davis biostatistics PhD 2008; vp-1039 is Morgan State accounting/finance faculty with Mississippi doctorate; vp-3181 is a Ghent-trained BASF agricultural researcher. This candidate earned Oregon State EE PhD 2021 and worked at Tufts/WPI before ETSU.",
+        "biography": "https://www.etsu.edu/cas/applied-design/faculty-staff/nguyent.php — Postdoctoral researcher at Tufts (2021–2023), then lecturer/postdoctoral fellow at WPI (2023–2024). Current page provides Johnson City, Tennessee address. Electrical engineering is a program within the longer named department, so its official department name is retained.",
+        "enrichment": "https://www.etsu.edu/cas/applied-design/faculty-staff/nguyent.php — Headshot source extracted from the named portrait. No independently established personal/lab homepage, Scholar, or LinkedIn URL. Student mathematics medal, dissertation award, and routine conference paper award omitted from honors."
+      }
+    },
+    {
+      "entry": {
+        "country": "United States",
+        "field": "Engineering",
+        "name": "Hung (Harry) Le",
+        "university": "University of Houston",
+        "department": "Electrical and Computer Engineering",
+        "rank": "Associate Professor",
+        "track": "Teaching",
+        "city": "Houston",
+        "state": "Texas",
+        "researchAreas": [
+          "Embedded systems",
+          "Internet of Things",
+          "Reconfigurable systems",
+          "ASIC/FPGA design and verification",
+          "Machine learning"
+        ],
+        "phdInstitution": "University of Houston",
+        "phdYear": 2004,
+        "msInstitution": "University of Alberta",
+        "profileUrl": "https://www.ece.uh.edu/faculty/le-harry",
+        "scholarUrl": "https://scholar.google.com/citations?user=RX_RMgQAAAAJ",
+        "portraitSource": "https://www.ece.uh.edu/sites/www.ece/files/images/faculty/le_harry.jpg"
+      },
+      "evidence": {
+        "currentRole": "https://www.ece.uh.edu/faculty/le-harry — “Instructional Associate Professor”. https://www.uh.edu/provost/faculty/faculty-policies/non-tenure-track/documents/ntt-policy-2022-2023.pdf establishes the instructional series as full-time promotion-eligible NTT teaching appointments; profile documents employment since 2017. Current heading takes precedence over older assistant-professor wording in the biography.",
+        "doctorateOrPapers": "https://www.ece.uh.edu/faculty/le-harry lists PhD in Electrical Engineering, University of Houston, and MSc, University of Alberta. https://www.egr.uh.edu/news/201709/brilliance-descending-uh-new-engineering-faculty-join-cullen-college explicitly dates the Houston EE doctorate to 2004.",
+        "vietnameseSignal": "https://www.ece.uh.edu/faculty/le-harry — Vietnamese given name Hung with surname Le; publication/patent list uses Hung Q. Le and H. Q. Le. Expanded Hung Quang also appears in the university Board materials discovery lead, but the proposed name uses only the opened faculty profile form.",
+        "dedup": "npm run find-roster-matches -- \"Hung Harry Le\" --url https://www.ece.uh.edu/faculty/le-harry \"https://scholar.google.com/citations?user=RX_RMgQAAAAJ\" => name-only hits vp-0014, vp-0247, vp-2077, no URL hits. Different people: UMass algorithms scholar vp-0014 has Oregon State PhD 2018; vp-0247 is UT Knoxville mathematics teaching faculty (official math page opened); vp-2077 has Deakin CS PhD 2020 (official Deakin biography opened). This candidate has Houston EE PhD 2004, prior long HP engineering career, and hardware/embedded-systems research. Expanded-name check also hit vp-2387 Quang A. Le, a USC-trained pharmacy scholar, ruled out.",
+        "biography": "https://www.egr.uh.edu/news/201709/brilliance-descending-uh-new-engineering-faculty-join-cullen-college — Previously an HP master technologist/designer for fourteen years and technology consultant; now teaches and researches hardware and embedded systems. Official profile provides Houston, Texas contact address.",
+        "enrichment": "https://www.ece.uh.edu/faculty/le-harry — Portrait and Scholar URL from official page. Scholar direct request returned 429; identity is anchored by the employer’s outbound link. NAI Senior Member and IEEE Life Senior Member are not Fellow-level honors and are omitted. No LinkedIn or personal/lab site established."
+      }
+    }
+  ],
+  "already_listed": [
+    {
+      "name": "Thang Tien Nguyen",
+      "id": "vp-1697",
+      "note": "Identity resolved by name, current Texas A&M University-Corpus Christi EE program listing and thang.nguyen@tamucc.edu: https://www.tamucc.edu/engineering/roster.php?program=eeen. find-roster-matches returns this ID; other partial-name hits refer to different people."
+    },
+    {
+      "name": "Thuan Dinh Do",
+      "id": "vp-2208",
+      "note": "find-roster-matches matches exact name and https://www.mountunion.edu/dr-thuan-dinh-do. Opened official profile and October 20, 2026 university news confirm current computer/electrical engineering assistant professorship; same doctorate and communications publications."
+    },
+    {
+      "name": "Minh Quang Ta",
+      "id": "vp-0846",
+      "note": "find-roster-matches matches exact official profile URL: https://uwf.edu/hmcse/departments/electrical-and-computer-engineering/faculty/dr-minh-quang-ta.html. Current UWF ECE assistant professor; NTU PhD 2018 resolves identity."
+    },
+    {
+      "name": "Nghi H. Tran",
+      "id": "vp-0442",
+      "note": "find-roster-matches name hit resolved to the same Akron ECE professor using https://www.uakron.edu/engineering/ece/our-people/profile.dot?u=nghi.tran, hnt@uakron.edu and Saskatchewan doctorate 2008."
+    },
+    {
+      "name": "Duy H. N. Nguyen",
+      "id": "vp-0707",
+      "note": "find-roster-matches name hit resolved to the same SDSU ECE professor through https://www.sdsu.edu/experts-directory/duy-h-n-nguyen and linked homepage https://nguyen.sdsu.edu/. Other partial-name hits concern different scholars."
+    }
+  ],
+  "possible_move": [],
+  "rejected": [
+    {
+      "name": "Hau Trung Ngo",
+      "reason": "Promising US Naval Academy ECE professor, but both current employer pages returned 403 when opened: https://usna.edu/ECE/Faculty/index.php and https://www.usna.edu/ECE/ECE_Research/index.php. Search snippets and a 2012 self-study are insufficient live verification. Not included as verified or as confirmed:false without an opened personal site. Dedup command returned only vp-2037 Trung Ngo, a different UTS civil engineer with Wollongong PhD 2013. Revisit accessible current employer profile."
+    },
+    {
+      "name": "Khanh Pham",
+      "reason": "Opened https://ece.unm.edu/faculty-staff/research-faculty-profiles/khanh-pham.html explicitly titles university role Adjunct Research Professor. Primary employer is AFRL; excluded from university slice, regardless of possible eligibility in a government/labs slice."
+    },
+    {
+      "name": "Binh Q. Le",
+      "reason": "Opened https://gcp-web.sjsu.edu/ee/about-us/adjunct-faculty.php lists him among adjunct faculty as a lecturer. No full-time continuing appointment established; old assistant-professor catalog entry does not settle current eligibility."
+    },
+    {
+      "name": "Jane Huynh",
+      "reason": "Opened https://gcp-web.sjsu.edu/ee/about-us/adjunct-faculty.php lists lecturer under adjunct faculty; full-time permanence and doctorate not established."
+    },
+    {
+      "name": "Nhan Levan",
+      "reason": "Current-looking emeritus profile https://www.ee.ucla.edu/nhan-levan/ is superseded by employer obituary https://samueli.ucla.edu/in-memoriam-nhan-levan-professor-emeritus-of-electrical-and-computer-engineering/ confirming death in 2021. No roster/retired-ID matches. Historical Deceased-track eligibility may apply in another task, but not included in this brief’s current-career university discovery pass."
+    }
+  ],
+  "coverage": [
+    {
+      "employer": "Slice-wide discovery",
+      "pagesExamined": [],
+      "note": "Later-pass approach: searched Vietnamese given-name tokens Dung, Khoa, Hieu, Khue, Khai, Duc, Luan, Vinh, Huan, Phuoc, Tuan, Quang, Bao, Cuong, Tri, Dzung, Hoang, Hung, Phuc, Linh, Trung, Khanh, Nhan, Thien, Tung, Long, Huy, Loc, Bach, Toan, Tuy, Quyen, Duy, Tuyen, Hao, Thai, Vy, Binh, Hai, Nam, Son, Sang, Kiet, Dat, Ngoc, Nhut, Liem, Thanh, Manh, Kien, Tam, Hoai, Giang, Tho, Truc, Phuong, Phat, Hau, Nghia, Nghi, Chinh, Hanh, Thao, Huu, Thuan, Quy, Tu, Loi, Lien, Nhu, and Kim with electrical/engineering professor terms; less common surnames Doan, Quach, Luong, Ton, Luu, Ho, Dao, Ta, Chau, Lai, Tong, Kieu, Diep, Trinh, Vo, Huynh, Truong, and Vuong. Search engines used for leads only. Already-proposed list was read and its names skipped, including ambiguous short names rather than trying to force distinct identities. Coverage is a substantial supplementary pass, not a claim to enumerate every US department."
+    },
+    {
+      "employer": "University of Nebraska–Lincoln",
+      "pagesExamined": [
+        "https://engineering.unl.edu/ece/about/faculty-staff/",
+        "https://engineering.unl.edu/person/lim-nguyen/",
+        "https://engineering.unl.edu/ece/person/quan-luu/",
+        "https://quan-luu.github.io/"
+      ],
+      "note": "Department directory inspected; two verified new candidates, Lim Nguyen and Quan Khanh Luu. Current title headings used over stale narrative titles."
+    },
+    {
+      "employer": "Florida Polytechnic University",
+      "pagesExamined": [
+        "https://floridapoly.edu/faculty/bios/hoan-ngo/"
+      ],
+      "note": "Hoan Thanh Ngo verified; degree and Vietnamese education on current profile. Shell fetch was 403, but web reader successfully opened employer page. Scholar 429 noted; no LinkedIn fetched."
+    },
+    {
+      "employer": "University of California, Irvine",
+      "pagesExamined": [
+        "https://eng81.banjo.eng.uci.edu/users/hung-cao",
+        "https://profiles.icts.uci.edu/hung.cao",
+        "https://hero.eng.uci.edu/"
+      ],
+      "note": "Hung Cao verified on two employer profiles; same-name finance scholar resolved. HERO lab returned 502. Stored profile is the successfully opened institutional person page."
+    },
+    {
+      "employer": "East Tennessee State University",
+      "pagesExamined": [
+        "https://www.etsu.edu/cas/applied-design/faculty-staff/nguyent.php"
+      ],
+      "note": "Thuan Nguyen verified; electrical-engineering program appointment, doctorate, and Vietnam education confirmed."
+    },
+    {
+      "employer": "University of Houston",
+      "pagesExamined": [
+        "https://www.ece.uh.edu/faculty/le-harry",
+        "https://www.uh.edu/provost/faculty/faculty-policies/non-tenure-track/documents/ntt-policy-2022-2023.pdf"
+      ],
+      "note": "Hung (Harry) Le verified on Teaching track using current title plus institution-wide instructional promotion/full-time policy. His doctorate year is sourced to employer news."
+    },
+    {
+      "employer": "University of Mount Union",
+      "pagesExamined": [
+        "https://www.mountunion.edu/dr-thuan-dinh-do",
+        "https://www.mountunion.edu/news/mount-union-engineering-professor-do-publishes-book-in-tiny-machine-learning"
+      ],
+      "note": "Regional-university lead Thuan Dinh Do is already vp-2208; not proposed again."
+    },
+    {
+      "employer": "Texas A&M University-Corpus Christi",
+      "pagesExamined": [
+        "https://www.tamucc.edu/engineering/roster.php?program=eeen"
+      ],
+      "note": "Electrical-engineering faculty roster inspected; Thang Tien Nguyen already vp-1697."
+    },
+    {
+      "employer": "University of West Florida",
+      "pagesExamined": [
+        "https://uwf.edu/hmcse/departments/electrical-and-computer-engineering/faculty/dr-minh-quang-ta.html"
+      ],
+      "note": "Minh Quang Ta already vp-0846."
+    },
+    {
+      "employer": "University of Akron",
+      "pagesExamined": [
+        "https://www.uakron.edu/engineering/ece/our-people/profile.dot?u=nghi.tran"
+      ],
+      "note": "Nghi H. Tran already vp-0442."
+    },
+    {
+      "employer": "San Diego State University",
+      "pagesExamined": [
+        "https://www.sdsu.edu/experts-directory/duy-h-n-nguyen"
+      ],
+      "note": "Duy H. N. Nguyen already vp-0707."
+    },
+    {
+      "employer": "San Jose State University",
+      "pagesExamined": [
+        "https://gcp-web.sjsu.edu/ee/about-us/adjunct-faculty.php"
+      ],
+      "note": "Checked Binh Q. Le and Jane Huynh; adjunct listing does not establish eligible continuing full-time teaching appointments."
+    },
+    {
+      "employer": "University of New Mexico",
+      "pagesExamined": [
+        "https://ece.unm.edu/faculty-staff/research-faculty-profiles/khanh-pham.html"
+      ],
+      "note": "Khanh Pham university role is explicitly adjunct, excluded from this slice."
+    },
+    {
+      "employer": "University of California, Los Angeles",
+      "pagesExamined": [
+        "https://www.ee.ucla.edu/nhan-levan/",
+        "https://samueli.ucla.edu/in-memoriam-nhan-levan-professor-emeritus-of-electrical-and-computer-engineering/"
+      ],
+      "note": "Nhan Levan historical lead checked; deceased, outside this pass’s current-career scope."
+    },
+    {
+      "employer": "United States Naval Academy",
+      "pagesExamined": [
+        "https://usna.edu/ECE/Faculty/index.php",
+        "https://www.usna.edu/ECE/ECE_Research/index.php"
+      ],
+      "note": "Both current pages returned 403. Hau Trung Ngo retained only as unverified rejected lead for a future accessible-source pass."
+    },
+    {
+      "employer": "Wichita State University",
+      "pagesExamined": [
+        "https://www.wichita.edu/profiles/academics/engineering/ECE/01_Faculty/index.php"
+      ],
+      "note": "Opened ECE faculty directory and screened names; no additional unproposed Vietnamese-signal candidate found."
+    },
+    {
+      "employer": "Cleveland State University",
+      "pagesExamined": [
+        "https://engineering.csuohio.edu/ece/faculty"
+      ],
+      "note": "Opened full ECE faculty directory and screened names; no additional verified lead."
+    },
+    {
+      "employer": "Marshall University",
+      "pagesExamined": [
+        "https://www.marshall.edu/cecs/directory/biomedical-engineering/"
+      ],
+      "note": "Opened Biomedical and Electrical Engineering directory; no additional verified Vietnamese-signal lead."
+    },
+    {
+      "employer": "Youngstown State University",
+      "pagesExamined": [
+        "https://academics.ysu.edu/rayen-school-of-engineering/electrical-and-computer-engineering-faculty"
+      ],
+      "note": "Opened ECE directory and screened names; no new eligible lead identified."
+    },
+    {
+      "employer": "Tennessee Technological University",
+      "pagesExamined": [
+        "https://www.tntech.edu/engineering/programs/ece/faculty-staff.php"
+      ],
+      "note": "Opened ECE directory, including assistant professors, teaching, adjunct and emeritus listings; no new eligible lead identified."
+    },
+    {
+      "employer": "University of Wisconsin-Milwaukee",
+      "pagesExamined": [
+        "https://uwm.edu/engineering/academics/electrical-engineering/"
+      ],
+      "note": "Opened electrical-engineering faculty/staff listing; no additional Vietnamese-signal lead identified."
+    },
+    {
+      "employer": "University of South Carolina",
+      "pagesExamined": [
+        "https://sc.edu/study/colleges_schools/engineering_and_computing/departments/electrical_engineering/our_people/"
+      ],
+      "note": "Opened EE people page. Samuel Dao is IT manager, an excluded professional staff role, not an academic research appointment."
+    },
+    {
+      "employer": "University of South Alabama",
+      "pagesExamined": [
+        "https://web.usouthal.edu/colleges/engineering/ece/ecefaculty.html"
+      ],
+      "note": "Directory discovered, but live open failed (cache miss); not counted as completed live institution coverage."
+    },
+    {
+      "employer": "Southern Illinois University Carbondale",
+      "pagesExamined": [
+        "https://ecbe.siu.edu/faculty-staff/"
+      ],
+      "note": "Opened school faculty/staff directory including primary, dual, adjunct and emeritus appointments; no additional eligible Vietnamese-signal lead identified."
+    },
+    {
+      "employer": "Southern Illinois University Edwardsville",
+      "pagesExamined": [
+        "https://www.siue.edu/engineering/ece/about/faculty-staff.shtml"
+      ],
+      "note": "Opened ECE faculty directory and screened names/research descriptions; no additional lead identified."
+    },
+    {
+      "employer": "University of Evansville",
+      "pagesExamined": [
+        "https://www.evansville.edu/majors/electricalengineering/faculty.cfm"
+      ],
+      "note": "Opened EE faculty directory and screened current program faculty; no additional lead identified."
+    },
+    {
+      "employer": "Gannon University",
+      "pagesExamined": [
+        "https://www.gannon.edu/academic-offerings/engineering-and-business/school-of-engineering-and-computing/department-of-electrical-and-cyber-engineering/"
+      ],
+      "note": "Opened Electrical and Cyber Engineering page including faculty experts; no additional eligible lead identified."
+    }
+  ]
+}

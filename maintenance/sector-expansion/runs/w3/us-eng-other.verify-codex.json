@@ -1,0 +1,70 @@
+{
+  "verifier": "codex",
+  "input": "maintenance/sector-expansion/runs/w3/us-eng-other.codex.json",
+  "candidates": [
+    {
+      "name": "Toan Duc Cao",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live RIT individual profile identifies an Assistant Research Professor in Rochester, documents substantial teaching and an active co-PI research role, and gives the Portugal PhD (2014). The 2026-27 official faculty catalog independently includes him as faculty and identifies his Ho Chi Minh City University of Technology BS, strengthening the Vietnamese signal beyond his full given names. Sources: https://www.rit.edu/directory/tdcite-toan-duc-cao ; https://www.rit.edu/marketing/sites/rit.edu.marketing/files/docs/pdfs/Graduate_Catalog.pdf (p. 133). Research-track Assistant Professor is an appropriate normalized rank. Fresh name/profile/Scholar matching found no roster or retired-ID matches; absent from already-proposed.txt. US office establishes location outside Vietnam.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Dzung Dinh Luong",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live NYU individual profile and current MAE core-faculty directory both identify Industry Associate Professor; the older Assistant Professor wording in the biography is superseded by those headings. The full-time continuing-contract guidelines explicitly include the Industry Professor promotion series, establishing Teaching eligibility: https://engineering.nyu.edu/sites/default/files/2022-08/ContinuingContractfacultyguidelines_20220505_WorkingDocument_1.pdf (2022 working document, faculty approved). Vietnamese given names, published Dũng spelling, and Hanoi degrees support identity. Fresh name/profile/Scholar matching found only vp-2733, a Peoria neurosurgery professor, distinct from this NYU mechanical-engineering PhD (2012). Absent from already-proposed.txt; Brooklyn office establishes US location. Sources: https://engineering.nyu.edu/faculty/dung-dzung-luong ; https://engineering.nyu.edu/academics/departments/mechanical-and-aerospace-engineering/people .",
+      "correctedFields": {}
+    },
+    {
+      "name": "Cuong T. Nguyen",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live individual profile and MAE faculty directory identify Research Faculty I in Tallahassee, with UT Austin mechanics PhD (2017) and HCMUT BS/MS; full given name and Vietnamese education support Vietnamese identity. FSU documents Research Faculty I within its specialized-faculty promotion ladder, corroborating a genuine career research-faculty rank rather than a postdoc: https://fda.fsu.edu/sites/g/files/upcbnu636/files/Media/Files/Specialized%20Faculty/SpecializedFacMemo2025-26.pdf . Sources: https://eng.famu.fsu.edu/directory/cuong-t-nguyen ; https://eng.famu.fsu.edu/mae/people . Fresh name/profile/Scholar matching returned ten name-only hits; roster education and disciplines distinguish them, particularly MIT vp-0785 (NUS PhD 2005) and Adobe vp-2925 (Portland State PhD 2017). Already-proposed Cuong V. Nguyen and Cuong M. Nguyen are different full names/identities, not this UT Austin mechanics researcher. No identity URL hit; no same-person already-proposed entry. No individual contract term is published, but current faculty listing and established ladder support Research eligibility.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Cac M. Dao",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live Arizona faculty profile identifies Professor of Practice, an ongoing appointment since 2017, Tucson contact information, and a structural-engineering degree from HCM City University of Technology. The institution explicitly identifies Dao as career-track faculty in its April 2026 awards report: https://news.engineering.arizona.edu/news/2026-college-awards-celebrate-record-breaking-faculty-staff . This supports continuing Teaching eligibility despite the secondary Adjunct Lecturer title; the adjunct title is not the qualifying appointment. Vietnamese given name and Vietnamese education supply an affirmative signal. Source: https://caem.engineering.arizona.edu/faculty-staff/faculty/cac-dao . Fresh name/profile matching found no roster or retired-ID matches; absent from already-proposed.txt. Based in the US.",
+      "correctedFields": {}
+    },
+    {
+      "name": "John Dzung Hoang Mai",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live USC individual faculty page identifies Senior Lecturer of Biomedical Engineering with Los Angeles office, UCLA degrees, and appointment in BME since 2024. USC explicitly places Senior Lecturer in its full-time teaching faculty series: https://vts.viterbi.usc.edu/faculty-support/ . The full published Vietnamese given-name sequence Dzung Hoang supplies the affirmative signal beyond Mai alone. Fresh name/profile/Scholar matching returned vp-1272 (Harvard pathology, distinct) and vp-3077 (Lam Research John Hoang, UCLA semiconductor researcher). Independently opened https://www.seas.ucla.edu/Chang/team.html identifies John Hoang in Jane Chang's thin-film research group and Lam Research, whereas USC Mai trained with Chih-Ming Ho in bioMEMS. Thus these are different people. Absent from already-proposed.txt. Source: https://viterbi.usc.edu/directory/faculty/Mai/John .",
+      "correctedFields": {}
+    },
+    {
+      "name": "Wayne Nguyen P. Hung",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live Texas A&M individual departmental profile identifies Professor and MMET program coordinator with College Station office. The university center profile independently supplies the full name Wayne Nguyen P. Hung, Berkeley mechanical-engineering PhD (1987), and long-standing professorial career: https://ptc.tamu.edu/profile-wayne-nguyen-p-hung/ . Current departmental Professor rank takes precedence over the older center Associate Professor title. Full Vietnamese name sequence provides an affirmative signal beyond Hung alone. Fresh name/profile/Scholar matching returned eight name-only Hung Nguyen matches; roster fields distinguish chemistry (Rutgers 2016), Dartmouth (MIT 2019), politics, algebra, biomedical engineering (Newcastle 1984), earth science (SUTD), anesthesia, and eBay research from this Berkeley 1987 manufacturing scholar. Already-proposed Hung Nguyen is not an exact-name identity match to Wayne Nguyen P. Hung; no matching identity URL. Source: https://engineering.tamu.edu/etid/profiles/whung.html . Based in the US.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Hieu Tan Pham",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live employer profile identifies Associate Project Scientist in MAE at La Jolla. Independently opened the department lecturer directory, which singles out Hieu Tan Pham as Continuing Lecturer and links directly to the supplied individual profile: https://maeweb.ucsd.edu/faculty-profiles/lecturers . That continuing appointment supports the proposed Teaching track; the individual profile reflects his parallel research role. The directory still displays 2023-24 teaching quarters, so those dates alone are not evidence of a new appointment. Personal bio corroborates UCSD employment since 2015 and current research: https://sites.google.com/site/hieuphamucsd/bio . Full Vietnamese given names Hieu Tan supply the affirmative signal. Automatically imported moth-biology papers on UCSD Profiles are unrelated and were not used. Fresh name/profile/personal-site matching found only vp-1215 (UAH business, Iowa State PhD 2018), distinct from this UCSD engineering PhD 2010. Absent from already-proposed.txt. US based.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Trung Duong",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live individual CSU Pueblo profile identifies Associate Professor and Director of Engineering Labs, with Pueblo office, Oklahoma State mechanical/aerospace PhD (2013), Hanoi BSE (2004), and previous teaching in Hanoi. The full name and Vietnamese educational/career record support Vietnamese identity. Current Associate Professor heading supersedes older Assistant Professor wording in the biography. Source: https://www.csupueblo.edu/profile/trung-duong/index.html . Fresh name/profile matching returned five name-only hits: vp-0516 is wireless communications with Blekinge PhD 2012, vp-0933 information science in Japan, vp-1321 educational technology/Hildesheim, vp-1630 drug design, and vp-2939 economics/Binghamton 2019; none is this Oklahoma State mechanical engineer. Absent from already-proposed.txt. Current US appointment qualifies.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Kien Dinh",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live individual employer profile identifies Kien Dinh and Assistant Professor in its HTML (the web text extraction omits the name/title panel) and gives the Concordia building-engineering PhD. The current filtered employer faculty directory independently names him as Assistant Professor in Civil Engineering and Aerospace Infrastructure: https://erau.edu/faculty?campus=a6526756-2f5a-4c4d-9181-3dbd1b62aa43&college=580816ea-aa0a-4f15-a95e-4e64a9590427&department=84cf25b5-6509-4dac-ab3d-de1bdbb01f2d&q= . This supports the proposed regular faculty appointment at the US campus. Kien with Dinh is a Vietnamese full-name/given-name signal beyond an ambiguous shared surname alone. Fresh name/profile matching found no roster or retired-ID matches; absent from already-proposed.txt. Supplied individual profile is valid: https://erau.edu/faculty/Kien.Dinh .",
+      "correctedFields": {}
+    }
+  ],
+  "possible_move": []
+}

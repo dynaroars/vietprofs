@@ -1,0 +1,293 @@
+{
+  "group": "university",
+  "agent": "codex",
+  "slice": "uk-russell",
+  "finishedAt": "2026-11-15T01:31:31.911548+00:00",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Thanh T. Nguyen",
+        "university": "University of Exeter",
+        "track": "Tenure-line",
+        "rank": "Lecturer",
+        "department": "Operations and Analytics, University of Exeter Business School",
+        "country": "United Kingdom",
+        "field": "Business & Economics",
+        "researchAreas": [
+          "Operations Management",
+          "Project Management",
+          "Electronic Commerce",
+          "Software as a Service"
+        ],
+        "keywords": [
+          "operations management",
+          "project management",
+          "electronic commerce",
+          "software as a service"
+        ],
+        "phdInstitution": "National Tsing Hua University",
+        "profileUrl": "https://business-school.exeter.ac.uk/management/people/profile/index.php?username=ttn209"
+      },
+      "evidence": {
+        "currentRole": "https://business-school.exeter.ac.uk/management/people/profile/index.php?username=ttn209 — “Dr Thanh T. Nguyen”, “Lecturer”, “Operations and Analytics”. Live individual employer page opened successfully. It identifies previous teaching at Middlesex and IÉSEG and lists current 2026–2027 Exeter modules alongside earlier modules. Normal substantive UK academic lectureship; no visiting, honorary, postdoctoral or temporary qualifier. Department and operations/project-management interests are explicit on this page.",
+        "doctorateOrPapers": "https://pure.qub.ac.uk/en/activities/dissertation-committee-kellan-tuan-nguyen/ — fetched directly with HTTP 200 after the web reader returned a cache miss; identifies Kellan Tuan Nguyen, PhD external examination at National Tsing-Hua University, examiner R. Nishant. https://www.iss.nthu.edu.tw/faculty/Pei-Fang-Hsu — opened and also fetched directly with HTTP 200; the complete HTML identifies Tuan Kellan Nguyen as the supervised recipient of a 2021 doctoral-dissertation award (博士論文獎). https://www.ieseg.fr/en/news/new-professors-2021-2022-academic-year/ — opened, independently documents his subsequent postdoctoral appointment as Tuan Thanh Nguyen. Together these corroborate the doctorate; no graduation year inferred from award/examination dates. Current research is independently supported by https://link.springer.com/article/10.1007/s10257-024-00690-2 (opened, Tuan Kellan Nguyen explicitly affiliated with Exeter; published October 2024, volume 2025) and https://dblp.dagstuhl.de/pid/288/9389.html (opened, 2024 European Journal of Information Systems article with Nishant, Teo and Hsu).",
+        "vietnameseSignal": "Vietnamese given-name tokens Thanh and Tuan with Nguyen. Current employer publishes Thanh T. Nguyen and directly links ORCID 0000-0003-1248-9555. Publication discovery under Tuan (Kellan) Nguyen exposes exactly that ORCID and T.T.Nguyen@exeter.ac.uk, with the same Exeter operations appointment and Middlesex/IÉSEG history. The NTHU doctorate evidence resolves the Tuan/Kellan publication identity. Retained the current employer display name; no expansion of its initial or Vietnamese diacritics invented.",
+        "dedup": "Ran npm run find-roster-matches for both Thanh T. Nguyen and Tuan (Kellan) Nguyen, with the employer profile, https://experts.exeter.ac.uk/41266-thanht-nguyen, https://orcid.org/0000-0003-1248-9555 and https://dblp.org/pid/416/2599.html. No identity-URL match. Manually checked current and retired matches. Tuan-name hits vp-0308 (Vanderbilt education PhD), vp-0609 (Nottingham computer-science PhD; independently opened Greenwich profile), vp-0830/vp-0867 (clinical physicians), vp-1877 (German sociology), vp-2151 (Oregon economics PhD) and vp-2974 (Iowa State/security) are different people. Thanh-name hits include vp-0166 (Cornell/Purdue quantitative methods), vp-1807 (Griffith/JCU), and engineering, clinical and computing researchers with other degrees/identity URLs; none matches Exeter email, linked ORCID, NTHU/Hsu doctoral history or Middlesex/IÉSEG career. Examined earlier-run records behind already-proposed.txt: exact short names Thanh Nguyen (Nebraska Medical Center emergency-medicine research) and Tuan Nguyen (NIAAA biophotonics) are different identities; no earlier Exeter/Kellan proposal found. The current employer name is not in the skip list.",
+        "enrichment": "Research-area labels limited to employer teaching expertise and the opened Springer paper. Exeter Discovery is a JavaScript shell and yielded no additional facts. Publisher EJIS bio was discoverable but live publisher returned 403; no unsupported degree year or award imported from that blocked page. NTHU dissertation award is trainee-stage and deliberately omitted from honors. No verified personal homepage, Scholar profile, LinkedIn or vetted portrait found; no LinkedIn page fetched. City omitted because no person-specific location was established."
+      }
+    }
+  ],
+  "already_listed": [
+    {
+      "name": "Thinh Pham",
+      "id": "vp-1531",
+      "note": "Opened current Glasgow psychology profile; exact profile URL matched by npm run find-roster-matches. Newcastle PhD and prior Liverpool/Solent teaching resolve identity."
+    },
+    {
+      "name": "Cuong Cao",
+      "id": "vp-1416",
+      "note": "Opened current QUB profile, Reader in Biological Sciences; same micro/nanodiagnostics researcher. Name and profile matched by npm run find-roster-matches."
+    },
+    {
+      "name": "Quoc Vuong",
+      "id": "vp-1309",
+      "note": "Opened Newcastle psychology profile; exact profile matched by npm run find-roster-matches. Brown cognitive-science doctorate resolves abbreviated name."
+    },
+    {
+      "name": "Khoa Le",
+      "id": "vp-1065",
+      "note": "Opened Leeds profile; exact profile matched by npm run find-roster-matches. Kansas PhD 2015 and stochastic analysis match."
+    },
+    {
+      "name": "Canh Thien Dang",
+      "id": "vp-1076",
+      "note": "Opened current King’s profile; exact profile matched by npm run find-roster-matches. Nottingham economics PhD 2018 matches; current published title is Senior Lecturer in Economics (Education)."
+    },
+    {
+      "name": "Nguyen B. Truong",
+      "id": "vp-1592",
+      "note": "Opened Glasgow cybersecurity profile; exact profile matched by npm run find-roster-matches. LJMU PhD 2018 and Imperial research-associate history match."
+    },
+    {
+      "name": "Kiet Duong",
+      "id": "vp-0944",
+      "note": "npm run find-roster-matches matched stored York profile; no new identity inferred from discovery results. York live pages were generally 403 in this run."
+    },
+    {
+      "name": "Ngan Vo",
+      "id": "vp-1926",
+      "note": "Exeter academic-staff directory identifies the lecturer; npm run find-roster-matches returned exact stored Exeter Discovery identity. Already on roster."
+    }
+  ],
+  "possible_move": [],
+  "rejected": [
+    {
+      "name": "Quynh Tran",
+      "reason": "https://www.bristol.ac.uk/people/person/Quynh-Tran-e12e2e6f-1f26-457f-8b9e-58815d9558d6/ opened: BA, MSc, Lecturer (Management & Business Studies) in the central Centre for Academic Language and Development. No research doctorate, two recent employer papers, or eligible academic-school teaching ladder established; not accepted from lecturer title alone."
+    },
+    {
+      "name": "Penelope Gia Bao Huu Nguyen",
+      "reason": "https://sheffield.ac.uk/hpdh/people/dhi-staff and https://www.dhi.ac.uk/people/ opened: UKRI Doctoral Fellow; trainee excluded."
+    },
+    {
+      "name": "Tien Dung Nguyen",
+      "reason": "https://profiles.imperial.ac.uk/dung-tien.nguyen discovered with explicit Postdoctoral Research Associate biography. No eligible faculty appointment established; excluded at triage, not treated as a verified candidate."
+    },
+    {
+      "name": "Thao Nguyen (Newcastle NICRE)",
+      "reason": "https://www.ncl.ac.uk/nes/people/profile/thaonguyen2.html opened: Research Associate in Quantitative Data, Warwick PhD. Project leadership is documented but permanent faculty-equivalent appointment is not. Held out pending appointment evidence."
+    },
+    {
+      "name": "Thuy-vy T. Nguyen",
+      "reason": "https://www.durham.ac.uk/staff/thuy-vy-nguyen/ returned 403; https://dur.ac.uk/departments/academic/psychology/research/services/best/ opened but is a team listing without a current personal appointment. https://www.thuyvytnguyen.com/home opened and describes independent Solitude Lab directorship and Durham/Wolfson fellowship rather than a salaried continuing faculty post. Discovery also raised a resignation lead, which was not fetched from LinkedIn. Current eligible Russell Group appointment remains unverified; historical associate-professor news not sufficient."
+    },
+    {
+      "name": "Thai Han Phung",
+      "reason": "York CHE directory and June 2025 seminar discovery describe Research Fellow, an MSc and work on NIHR assessment programmes. https://www.york.ac.uk/che/people/ and https://www.york.ac.uk/che/events-and-seminars/events-seminars-2025/han-phung/ both returned 403 when opened. No live doctorate or permanent faculty-equivalent appointment evidence; held out."
+    },
+    {
+      "name": "Trong Khoa Pham",
+      "reason": "https://sheffield.ac.uk/mass-spectrometry/about/members opened: Biological Mass Spectrometry Facility Manager, proteomics. Page distinguishes this role from faculty lecturers. No documented permanent faculty equivalence; held out, not assumed faculty from doctorate or publications."
+    },
+    {
+      "name": "Viet Nguyen-Tien",
+      "reason": "https://www.lse.ac.uk/people/viet-nguyen-tien opened: Research Officer, CEP; UCL Guest Lecturer; Birmingham economics PhD. No permanent faculty-equivalent appointment evidence, and guest teaching is excluded."
+    },
+    {
+      "name": "Phuong Hua",
+      "reason": "https://www.qmul.ac.uk/find-an-expert/table/wolfson/ opened: Postdoctoral Research Fellow. Excluded."
+    },
+    {
+      "name": "Thuy-Quynh Truong-Hoang",
+      "reason": "Edinburgh PhD-supervisor lead is a collaboration with ESTACA in France. ESTACA official profile and project-announcement discovery identify the French employer; no Russell Group primary appointment established. Outside slice."
+    },
+    {
+      "name": "Minh-Quoc Nghiem",
+      "reason": "Manchester NaCTeM discovery identifies a KTP Associate, not a permanent faculty post; no current eligible Russell Group appointment established. Historical Manchester papers and a stale Vietnam lecturer page were not promoted to current UK appointment evidence."
+    }
+  ],
+  "coverage": [
+    {
+      "employer": "University of Birmingham",
+      "pagesExamined": [],
+      "note": "Given-name searches Huyen, Ngoc, Quang, Hien, Khanh, Thuy, Thanh and Trong; rare-surname cross-UK searches also covered this domain. Huyen economics lead was an external collaborator at Halle/Jena; no new eligible local faculty surfaced. Search-only coverage in this pass; earlier pass had opened the music postdoc profile."
+    },
+    {
+      "employer": "University of Bristol",
+      "pagesExamined": [
+        "https://www.bristol.ac.uk/people/person/Quynh-Tran-e12e2e6f-1f26-457f-8b9e-58815d9558d6/"
+      ],
+      "note": "Expanded Quynh, Ngoc, Hien, Huyen, Quang, Huy, Thanh and Trong search. Examined central language-development lecturer rather than only business-school surnames; fails this brief’s doctorate/recent-paper and track-evidence requirements."
+    },
+    {
+      "employer": "University of Cambridge",
+      "pagesExamined": [],
+      "note": "Given-name searches Thanh, Quynh, Huong, Lien, Hoang, Phuong, Viet, Hanh, Hieu and Thuy; rare-surname Nghiem/Trieu/Luu discovery. Cambridge results were students, external speakers or already-listed faculty; Phung Dao and previously proposed names skipped. NTHU page is cross-institution doctoral evidence for Exeter, not Cambridge appointment evidence. No Cambridge personal profile newly verified."
+    },
+    {
+      "employer": "Cardiff University",
+      "pagesExamined": [
+        "https://www.cardiff.ac.uk/about/organisation/colleges-schools/school-of-global-humanities/people"
+      ],
+      "note": "Broad given-name coverage Quynh, Minh, Tuan, Hanh, Linh, Phuong, Phuc, Thanh, Ngoc, Hai, Tung, Dinh, Doan and Phung. Opened long Global Humanities directory to extend prior pass beyond economics/computing; staff/student distinctions retained. Mai Le already proposed; Nick/Nhat Pham already rostered. No new verified candidate."
+    },
+    {
+      "employer": "Durham University",
+      "pagesExamined": [
+        "https://www.durham.ac.uk/staff/thuy-vy-nguyen/",
+        "https://dur.ac.uk/departments/academic/psychology/research/services/best/",
+        "https://www.thuyvytnguyen.com/home"
+      ],
+      "note": "Thuy, Nhung, Dung, Khanh, Quynh, Minh, Phuong and Quang queries. Psychology lead investigated beyond historical news; current faculty role could not be verified. Individual Durham profile 403; accessible team page did not settle appointment. Business-school student leads excluded."
+    },
+    {
+      "employer": "University of Edinburgh",
+      "pagesExamined": [
+        "https://edwebprofiles.ed.ac.uk/profile/james-kirby"
+      ],
+      "note": "Thuy, Minh, Huong, Thao, Quoc, Duy, Ngoc, Loan, Trang, Cuong, Nhung, Trinh and Quang searches. Extended across engineering, language education, clinical brain sciences and biomedical staff lists. Engineering co-supervisor Truong-Hoang belongs to ESTACA; course secretary and communications staff excluded. James Kirby page attempted but 403, and discovery describes honorary status; no new verified candidate."
+    },
+    {
+      "employer": "University of Exeter",
+      "pagesExamined": [
+        "https://business-school.exeter.ac.uk/management/people/profile/index.php?username=ttn209",
+        "https://business-school.exeter.ac.uk/management/people/academic/",
+        "https://experts.exeter.ac.uk/41266-thanht-nguyen",
+        "https://orcid.org/0000-0003-1248-9555"
+      ],
+      "note": "Deepened from earlier innovation-only directory into full management/operations directory and current lecturer profile. Thanh-led discovery produced one verified candidate, with Tuan/Kellan aliases resolved by ORCID, email, career history and doctoral coauthor. Ngan Vo already listed. Quynh, Thuy, Hien, Hanh, Huong, Linh, Phuong, Phuc, Ngoc, Hai, Tung, Dinh, Doan, Phung, Tuan and Lan queries added; student blogs screened out."
+    },
+    {
+      "employer": "University of Glasgow",
+      "pagesExamined": [
+        "https://www.gla.ac.uk/schools/psychologyneuroscience/staff/thinhpham/",
+        "https://www.gla.ac.uk/schools/computing/staff/nguyentruong/"
+      ],
+      "note": "Quynh, Minh, Huong, Thao, Quoc, Duy, Ngoc, Loan, Trang, Cuong, Nhung, Trinh and Quang queries. Examined psychology and cybersecurity biographies and publications. Thinh Pham and Nguyen Truong resolved to existing IDs; Khiem Nguyen already rostered. External coauthors and students not accepted."
+    },
+    {
+      "employer": "Imperial College London",
+      "pagesExamined": [],
+      "note": "Quynh, Hieu, Dung, Giang, Chau, Minh, Phuong, Thang and Quang domain searches plus rare-surname Trieu/Trinh queries. Tien Dung Nguyen is explicitly postdoctoral in discovery; Minh-Son Pham already listed; prior Doan move not duplicated. No newly qualifying lead requiring an additional person-page open."
+    },
+    {
+      "employer": "King's College London",
+      "pagesExamined": [
+        "https://www.kcl.ac.uk/people/canh-thien-dang"
+      ],
+      "note": "Quynh, Hieu, Dung, Giang, Chau, Minh, Phuong, Thang and Quang queries plus Trieu/Trinh. Current Canh Thien Dang profile opened and deduped; Huyen/Ngoc Khanh and An Nguyen already rostered. Vietnam-based collaborators and external supervisors not treated as King’s primary faculty."
+    },
+    {
+      "employer": "University of Leeds",
+      "pagesExamined": [
+        "https://eps.leeds.ac.uk/faculty-engineering-physical-sciences/staff/12207/khoa-le"
+      ],
+      "note": "Dung/Leeds query and cross-UK uncommon given/surname queries. Opened Khoa Le and checked doctoral/supervision identity; already listed. Earlier Chi Trinh and Hanh Pham proposals skipped. Leeds was less deeply re-examined than Exeter/Cardiff/Liverpool/York in this later pass."
+    },
+    {
+      "employer": "University of Liverpool",
+      "pagesExamined": [
+        "https://www.liverpool.ac.uk/computer-science-and-informatics/staff/"
+      ],
+      "note": "Thao, Ngoc, Dung, Hieu, Huong, Hanh, Linh, Phuong, Phuc, Quynh, Minh, Tung, Tuan, Hai, Dinh, Doan and Phung queries. Examined full computing staff directory; Anh and Van Huynh Nguyen already listed. Also screened English, chemistry and women’s/children’s-health directory discoveries: no new eligible research doctorate-holder established. Alumni and external paper-author hits excluded."
+    },
+    {
+      "employer": "London School of Economics and Political Science",
+      "pagesExamined": [
+        "https://www.lse.ac.uk/people/viet-nguyen-tien"
+      ],
+      "note": "Thanh, Quynh, Huong, Lien, Hoang, Phuong, Viet, Hanh, Hieu and Thuy searches, plus cross-UK rare surnames. Opened Viet Nguyen-Tien; career/permanent faculty equivalence remains unproven. Hanh-An Trinh discovery is a graduate teaching assistant; Quynh Le Vo is centre management rather than faculty."
+    },
+    {
+      "employer": "University of Manchester",
+      "pagesExamined": [],
+      "note": "Khanh, Quang, Phuong, Thu and Quynh searches, plus Nghiem/Minh-Quoc follow-up and Oanh/Uyen/Ngan discovery. Historical NaCTeM KTP lead lacks current faculty status; academic-English tutor has no doctorate or documented eligible ladder. Laura Bui and Hung Bui skipped as already proposed; listed page was in the earlier pass and was not reopened here."
+    },
+    {
+      "employer": "Newcastle University",
+      "pagesExamined": [
+        "https://www.ncl.ac.uk/nes/people/profile/thaonguyen2.html",
+        "https://www.ncl.ac.uk/psychology/people/profile/quocvuong.html"
+      ],
+      "note": "Expanded Huong, Thao, Quoc, Duy, Ngoc, Loan, Cuong, Nhung, Trinh and Quang searches. Read NICRE social/economic geography researcher and psychology faculty profiles; associate’s project leadership not mistaken for permanent faculty equivalence. Quoc Vuong already listed. Anh Phan and Minh Nguyen already proposed, skipped."
+    },
+    {
+      "employer": "University of Nottingham",
+      "pagesExamined": [],
+      "note": "Nhung, Trinh, Khanh, Dung, Quang, Thu, Phuong and Quynh searches. Search service reports robots blocking on this domain; no new candidate accepted from cached snippets. Prior roster already covers Linh Hoang Nguyen, Kim Cuong Ly, Hang Le and Tren Ma. No new personal page verified in this pass."
+    },
+    {
+      "employer": "University of Oxford",
+      "pagesExamined": [],
+      "note": "Thanh, Quynh, Huong, Lien, Hoang, Phuong, Viet, Hanh, Hieu and Thuy searches plus rare surnames. OUCRU Hanoi pages and research-event guests dominate new leads; Vietnam physical location or external employment screened out. Ngoc Son Bui already listed. Search-only coverage this pass; no new eligible personal profile surfaced."
+    },
+    {
+      "employer": "Queen Mary University of London",
+      "pagesExamined": [
+        "https://www.qmul.ac.uk/find-an-expert/table/wolfson/"
+      ],
+      "note": "Quynh, Hieu, Dung, Giang, Chau, Minh, Phuong, Thang and Quang searches, Trieu/Trinh queries. Expanded into population health/psychiatry expert directory: Phuong Hua explicitly postdoctoral. Toan Huynh is existing vp-0943 under fuller name; Diu Nguyen/Huy The Nguyen already listed. Vietnam project team physically based in Vietnam excluded."
+    },
+    {
+      "employer": "Queen's University Belfast",
+      "pagesExamined": [
+        "https://pure.qub.ac.uk/en/persons/cuong-cao/",
+        "https://pure.qub.ac.uk/en/activities/dissertation-committee-kellan-tuan-nguyen/"
+      ],
+      "note": "Nghiem, Huong, Thao, Quoc, Duy, Ngoc, Loan, Cuong, Nhung, Trinh and Quang searches. Cuong Cao opened/deduped; Mien Van, Hien Quoc Ngo and Thai Son Mai already listed. Examined official doctoral-exam activity via direct HTTP fetch as supporting Exeter evidence, not a QUB appointment. Vietnam-returned PhD alumni excluded."
+    },
+    {
+      "employer": "University of Sheffield",
+      "pagesExamined": [
+        "https://sheffield.ac.uk/hpdh/people/dhi-staff",
+        "https://www.dhi.ac.uk/people/",
+        "https://sheffield.ac.uk/mass-spectrometry/about/members"
+      ],
+      "note": "Expanded into digital humanities and bioscience facilities using Huu/Trong/Thao/Quynh/Thanh/Quang/Hien/Huyen/Ngoc queries. Doctoral fellow rejected; proteomics facility manager held out absent faculty equivalence. Existing economics/management faculty not proposed again."
+    },
+    {
+      "employer": "University of Southampton",
+      "pagesExamined": [],
+      "note": "Ngoc, Huyen, Quang, Hien, Huy, Trong and Quynh domain searches. Tan Viet Tuyen Nguyen and Blue/Hanh Nguyen already listed; Toan Huynh is already vp-0943 at Queen Mary, not a new Southampton identity. Historical Southampton affiliation not treated as a reverse move. Search-only new-lead coverage."
+    },
+    {
+      "employer": "University College London",
+      "pagesExamined": [],
+      "note": "Quynh, Hieu, Dung, Giang, Chau, Minh, Phuong, Thang and Quang domain searches, plus Trieu/Trinh/Luu/Diep across UK. Linh T. B. Nguyen and Quang Loc Le already listed; Phuong Leung research-associate lead lacked permanent faculty equivalence. NTHU page pertains only to Exeter doctorate verification, not UCL appointment. No new UCL individual profile opened."
+    },
+    {
+      "employer": "University of Warwick",
+      "pagesExamined": [],
+      "note": "Thanh, Quynh, Huong, Hoang, Phuong, Viet, Hanh, Hieu and Thuy searches plus rare-surname Nghiem. Student conference organisers and chemistry PhD-student leads screened out; established computing/engineering/business names already rostered. Search-only new-lead coverage."
+    },
+    {
+      "employer": "University of York",
+      "pagesExamined": [
+        "https://www.york.ac.uk/che/people/",
+        "https://www.york.ac.uk/che/events-and-seminars/events-seminars-2025/han-phung/",
+        "https://www.york.ac.uk/psychology/people/academicstaff/"
+      ],
+      "note": "Deepened into health economics, psychology and environment/geography discovery alongside business. Given-name queries Thuy, Huyen, Quang, Hanh, Huong, Linh, Phuong, Phuc, Quynh, Minh, Tung, Hai, Dinh, Doan and Phung. CHE fellow lacks doctorate/permanence verification and all three opened York pages returned 403. Kiet Duong and Tho Pham already listed. Many false hits were research-participant pseudonyms in one organizational-studies PDF; these were discarded, not treated as scholars."
+    }
+  ]
+}

@@ -25,6 +25,8 @@ const schemaFile = resolve('public/roster.schema.json');
 // faculty pages, or an explicit maiden-name pattern) — see the git history for the check —
 // are allowlisted so the test doesn't force a wrong "fix" on them.
 const surnameFirstAllowlist = new Set<string>([
+  'Vuong Chu', // University of Westminster directory titles the page "Chu, Vuong"; Chu is his surname and Vuong his given name.
+  'Hoang Le-Huy', // Université Laval homepage hoang-le-huy.fsg.ulaval.ca publishes "Hoang Le-Huy"; Le-Huy is his compound surname and Hoang his given name.
   'Phan Luu', // Neurosom/BEL leadership pages list "Phan Luu" (Chief Science Officer) and he publishes as "Luu, P." (EEG work with D. M. Tucker); Luu is his surname
   'Vuong N. Trieu', // Oncotelic leadership page lists "Vuong Trieu, Ph.D." (CEO/CSO) and he publishes as "Trieu, V. N."; Trieu is his surname
   'Hoang Dothe', // Johns Hopkins Winter 2020 in-memoriam notice names him "Hoang Dothe" (A&S 1987 MS/PhD) and he published under that spelling; Dothe is his surname

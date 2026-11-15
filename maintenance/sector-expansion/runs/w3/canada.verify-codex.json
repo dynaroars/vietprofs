@@ -1,0 +1,71 @@
+{
+  "verifier": "codex",
+  "input": "maintenance/sector-expansion/runs/w3/canada.codex.json",
+  "candidates": [
+    {
+      "name": "Alexander Quoc Huy Chung",
+      "verdict": "fixable",
+      "failedTests": [
+        1
+      ],
+      "reason": "The proposed central-directory URL returned HTTP 404 on two direct requests, although the web reader retained a substantive copy. Replace it with the live HTTP-200 faculty-published individual profile at https://www.fsa.ulaval.ca/personnel-expert/alexander-chung/ . That page names Alexander Chung as assistant professor in organizational information systems, supplies his Ottawa doctorate and Canadian office, and also spells out Alexander Quoc Huy Chung in its research-project listings. Quoc Huy supplies an affirmative Vietnamese given-name signal beyond Chung. Independent find-roster-matches runs using the proposed identity URLs and the replacement URL returned no roster or retired-ID matches. No name match in already-proposed.txt. Tests 2–5 pass.",
+      "correctedProfileUrl": "https://www.fsa.ulaval.ca/personnel-expert/alexander-chung/",
+      "correctedFields": {
+        "profileUrl": "https://www.fsa.ulaval.ca/personnel-expert/alexander-chung/"
+      }
+    },
+    {
+      "name": "Thi-Huong Dang",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "The proposed UQTR URL responds HTTP 200 and singles out Dang, Thi Huong as a professor under the regular-faculty heading, separately from associated faculty and course lecturers. It lists her Canadian office, Fall 2026/Winter 2027 teaching and Laval doctorate (2023). Thi Huong plus degrees in Hanoi and Ho Chi Minh City provides a Vietnamese signal beyond Dang. Independent find-roster-matches using the institutional and personal URLs returned no roster or retired-ID matches; absent from already-proposed.txt. All five tests pass.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Thuy Aurelie Nguyen",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "The proposed UQAR individual profile responds HTTP 200 and identifies a professor in psychosociology/social work at the Rimouski campus, with a UQAR letters doctorate (2020). The university interview https://www.uqar.ca/1522-la-migration-et-la-filiation-de-l-exil-a-la-transmission/ independently documents her father's departure from Vietnam and her second-generation immigrant background. The name hits were resolved against the actual roster: vp-0311 is a UNT-trained marketing scholar (2014 doctorate), vp-0614 is a Northampton banking/finance scholar, and vp-1929 is a Chiba Asian-economies scholar with a Tokyo Keizai doctorate (2008). Their fields and education differ from this Lyon-trained literature/research-creation scholar. No identity URL overlap or already-proposed match. All five tests pass.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Manh-Chien Vu",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "The proposed UQO individual profile responds HTTP 200 and identifies Manh-Chiên Vu, PhD, as an accounting professor, with teaching and a Saint-Jérôme, Québec, Canada office. The regular academic professorship has no adjunct, visitor or trainee qualifier. Manh-Chien supplies Vietnamese given-name signals beyond Vu. Independent find-roster-matches returned no roster or retired-ID matches using the proposed name and URL; absent from already-proposed.txt. All five tests pass. The profile does not supply the doctorate institution/year, which are appropriately omitted.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Minh Cao Ta",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "The proposed employer-published individual research profile was opened in the web reader and names Cao Minh Ta as a Sherbrooke engineering professor, with an ongoing associate-professor appointment from 2020, a Laval doctorate and Canadian employment location. The independently opened current department faculty directory https://www.usherbrooke.ca/genie-electrique-informatique/departement/corps-professoral names Minh Cao Ta as associate professor, resolving the name order. Vietnamese given-name tokens and the documented prior Hanoi academic career supply the identity signal; the Hanoi appointment ends in 2022. Independent find-roster-matches runs with the individual and department URLs found no roster or retired-ID matches; absent from already-proposed.txt. All five tests pass. Direct shell requests to both Sherbrooke pages returned HTTP 403, but the web reader exposed substantive university content; no login or bypass was used.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Hoang Le-Huy",
+      "verdict": "fixable",
+      "failedTests": [
+        1
+      ],
+      "reason": "The proposed central-directory URL returned HTTP 404 on two direct requests, although the web reader retained its professor listing. Replace it with https://hoang-le-huy.fsg.ulaval.ca/ , a live HTTP-200 faculty-hosted individual profile identifying the full professor, electrical/computer-engineering department and Québec, Canada office. It documents his Laval professorship since 1991 and Grenoble doctorate (1980). Hoang and Huy supply Vietnamese given-name signals beyond Le. Independent roster matching found vp-0923 and vp-1771; inspection resolves them as different people: an Aizu communications scholar with a 2021 doctorate and an Iowa-trained management/psychometrics scholar, respectively. Neither matches the candidate's power-engineering field and education. No already-proposed match. Tests 2–5 pass.",
+      "correctedProfileUrl": "https://hoang-le-huy.fsg.ulaval.ca/",
+      "correctedFields": {
+        "profileUrl": "https://hoang-le-huy.fsg.ulaval.ca/"
+      }
+    },
+    {
+      "name": "Hy Van Luong",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "The proposed University of Toronto individual Munk School page responds HTTP 200 and explicitly identifies Hy Van Luong as professor emeritus of anthropology, with a Harvard doctorate and Toronto institutional contact. This is a formally stated eligible Emeritus appointment, for which the maintenance guide exempts the current-career-role requirement. Hy Van supplies a Vietnamese given/middle-name signal beyond Luong; research in Vietnam alone was not used to establish identity or physical residence. The employer profile provides no indication of a Vietnam-based appointment. Independent find-roster-matches returned no roster or retired-ID matches; absent from already-proposed.txt. All five tests pass.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    }
+  ],
+  "possible_move": []
+}

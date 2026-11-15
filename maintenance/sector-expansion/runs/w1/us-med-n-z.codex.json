@@ -1,0 +1,730 @@
+{
+  "group": "university",
+  "agent": "codex",
+  "slice": "us-med-n-z",
+  "finishedAt": "2026-11-14T23:46:12Z",
+  "candidates": [
+    {
+      "entry": {
+        "name": "David Huy Nguyen",
+        "university": "University of California, San Francisco",
+        "rank": "Assistant Professor",
+        "track": "Research",
+        "department": "Medicine (Infectious Diseases)",
+        "city": "San Francisco",
+        "state": "California",
+        "researchAreas": [
+          "Primary immunodeficiency",
+          "CRISPR gene editing",
+          "Immune engineering"
+        ],
+        "phdInstitution": "Massachusetts Institute of Technology",
+        "phdYear": 2008,
+        "mdInstitution": "Stanford University",
+        "profileUrl": "https://profiles.ucsf.edu/david-huy.nguyen",
+        "country": "United States"
+      },
+      "evidence": {
+        "currentRole": "https://profiles.ucsf.edu/david-huy.nguyen — “Assistant Professor, Medicine”; physician-scientist with a gene-editing laboratory and UCSF attending responsibilities.",
+        "doctorateOrPapers": "https://profiles.ucsf.edu/david-huy.nguyen — education lists MIT PhD, Materials Science and Medical Engineering, 2008.",
+        "vietnameseSignal": "Vietnamese given name Huy is explicitly supplied by https://infectiousdiseases.ucsf.edu/fellowship/recentgraduates-research; same linked UCSF infectious-diseases identity.",
+        "dedup": "Ran npm run find-roster-matches -- \"David Huy Nguyen\" --url https://profiles.ucsf.edu/david-huy.nguyen. Name/retired-name hits: vp-0171, vp-0243, vp-0872, vp-3024, vp-3190, vp-3195. vp-0872 is an orthopaedics/rehabilitation physician at Brown, not the MIT-PhD Stanford-MD UCSF infectious-disease scientist; vp-3190 has Dartmouth PhD 2015 rather than MIT 2008. Other hits have different full names and research specialties.",
+        "notes": "Research track: current faculty-level laboratory appointment; former Marson lab identifies the subsequent in-residence role (https://marsonlab.org/people)."
+      }
+    },
+    {
+      "entry": {
+        "name": "Nhung Nguyen",
+        "university": "University of California, San Francisco",
+        "rank": "Assistant Professor",
+        "track": "Research",
+        "department": "Medicine (General Internal Medicine)",
+        "city": "San Francisco",
+        "state": "California",
+        "researchAreas": [
+          "Tobacco and cannabis co-use",
+          "Mobile health interventions",
+          "Substance use"
+        ],
+        "phdInstitution": "University of Texas Health Science Center at Houston",
+        "phdYear": 2014,
+        "undergradInstitution": "Hanoi University of Pharmacy",
+        "undergradYear": 2008,
+        "profileUrl": "https://profiles.ucsf.edu/nhung.nguyen",
+        "websiteUrl": "https://heartylab.ucsf.edu",
+        "country": "United States"
+      },
+      "evidence": {
+        "currentRole": "https://profiles.ucsf.edu/nhung.nguyen — “Assistant Professor, Medicine”; current substance-use research program and HEARTY laboratory.",
+        "doctorateOrPapers": "https://healthpolicy.ucsf.edu/profile/nhung-nguyen — PhD in Epidemiology, UTHealth Houston, 2014.",
+        "vietnameseSignal": "Vietnamese given name Nhung and Hanoi University of Pharmacy education, https://healthpolicy.ucsf.edu/profile/nhung-nguyen.",
+        "dedup": "Ran npm run find-roster-matches -- \"Nhung Nguyen\" --url https://profiles.ucsf.edu/nhung.nguyen https://heartylab.ucsf.edu. Name/retired-name hits: vp-0312, vp-1966, vp-3144. vp-0312 is a Kansas-trained communication scholar; vp-1966 is a business scholar; vp-3144 is Hong Nhung Nguyen, a Maryland-trained quantum physicist. None is the Hanoi Pharmacy/UTHealth epidemiologist.",
+        "notes": "The more specific employer title is Assistant Adjunct Professor at https://tobacco.ucsf.edu/content/nhung-nguyen-phd-pharmd. This is the eligible salaried UC adjunct research series exception, not an ordinary external adjunct. No student/trainee awards imported."
+      }
+    },
+    {
+      "entry": {
+        "name": "Thuy Tran",
+        "university": "Yale University",
+        "rank": "Assistant Professor",
+        "track": "Clinical",
+        "department": "Medicine (Medical Oncology)",
+        "researchAreas": [
+          "Melanoma",
+          "Brain metastases",
+          "Cancer immunotherapy"
+        ],
+        "phdInstitution": "Vanderbilt University",
+        "phdYear": 2011,
+        "mdInstitution": "Vanderbilt University",
+        "undergradInstitution": "Emory University",
+        "undergradYear": 2005,
+        "profileUrl": "https://medicine.yale.edu/profile/thuy-tran/",
+        "country": "United States"
+      },
+      "evidence": {
+        "currentRole": "https://medicine.yale.edu/profile/thuy-tran/ — “Assistant Professor of Medicine (Medical Oncology)”; physician-scientist and clinical-trial principal investigator.",
+        "doctorateOrPapers": "https://medicine.yale.edu/profile/thuy-tran/ — education explicitly lists Vanderbilt PhD, 2011, and MD, 2013.",
+        "vietnameseSignal": "Vietnamese given name Thuy together with Tran on the employer profile.",
+        "dedup": "Ran npm run find-roster-matches -- \"Thuy Tran\" --url https://medicine.yale.edu/profile/thuy-tran/. Name/retired-name hits: vp-0619, vp-1950, vp-1961, vp-2154, vp-2241. vp-2241 is the UCI surgical oncologist with UC San Diego medical training, not the Vanderbilt MD/PhD Yale medical oncologist. Other hits concern different full names and European/nonmedical training.",
+        "notes": "Clinical is proposed for her university-employed physician-scientist appointment; no claim of tenure is made. The UCI surgeon of the same name has a UC San Diego MD and a different specialty/training history."
+      }
+    },
+    {
+      "entry": {
+        "name": "Cuong V. Nguyen",
+        "university": "Northwestern University",
+        "rank": "Associate Professor",
+        "track": "Clinical",
+        "department": "Dermatology (Dermatopathology and Medical Dermatology)",
+        "city": "Chicago",
+        "state": "Illinois",
+        "researchAreas": [
+          "Oncodermatology",
+          "Cutaneous adverse effects of cancer treatment",
+          "Graft-versus-host disease"
+        ],
+        "profileUrl": "https://www.feinberg.northwestern.edu/faculty-profiles/az/profile.html?xid=45390",
+        "country": "United States"
+      },
+      "evidence": {
+        "currentRole": "https://www.feinberg.northwestern.edu/faculty-profiles/az/profile.html?xid=45390 — “Associate Professor”; dermatology and medicine appointments. Northwestern Medicine employment corroborated at https://www.nm.org/doctors/1669817128.",
+        "doctorateOrPapers": "Two current-employer papers verified through Europe PMC core records (author Cuong V Nguyen, Northwestern Dermatology affiliation): 2025-09-19, DOI 10.1016/j.jaad.2025.09.050, PMID 40976527 (https://pubmed.ncbi.nlm.nih.gov/40976527/); 2024-06-17, DOI 10.1007/s00520-024-08642-9, PMID 38880860 (https://pubmed.ncbi.nlm.nih.gov/38880860/). Both are within the last three years.",
+        "vietnameseSignal": "Vietnamese given name Cuong in the official faculty profile.",
+        "dedup": "Ran npm run find-roster-matches -- \"Cuong V. Nguyen\" --url https://www.feinberg.northwestern.edu/faculty-profiles/az/profile.html?xid=45390. Name/retired-name hits: vp-0257, vp-0456, vp-0785, vp-0950, vp-0982, vp-1125, vp-1752, vp-1785, vp-2584, vp-2925. vp-1785 is a Durham mathematician; vp-0982 is Cuong C. Nguyen, Mayo gastroenterology; vp-0456 is a Florida veterinary/immunology researcher. Other hits concern engineering, mathematics, finance or sociology, with different identities.",
+        "notes": "Clinical track proposed from the substantive university/health-system clinical appointment; no research doctorate asserted. The Durham mathematician Cuong V. Nguyen and Mayo gastroenterologist Cuong C. Nguyen are different people."
+      }
+    },
+    {
+      "entry": {
+        "name": "Son C. Nguyen",
+        "university": "University of Pennsylvania",
+        "rank": "Assistant Professor",
+        "track": "Research",
+        "department": "Genetics",
+        "city": "Philadelphia",
+        "state": "Pennsylvania",
+        "researchAreas": [
+          "Spatial genome organization",
+          "Oligopaint FISH",
+          "High-throughput microscopy"
+        ],
+        "phdInstitution": "Harvard University",
+        "phdYear": 2016,
+        "undergradInstitution": "Rutgers University",
+        "undergradYear": 2007,
+        "profileUrl": "https://genetics.med.upenn.edu/faculty-profile/8928628",
+        "country": "United States"
+      },
+      "evidence": {
+        "currentRole": "https://genetics.med.upenn.edu/faculty-profile/8928628 — “Research Assistant Professor of Genetics”; develops spatial-genomics and imaging methods in the Joyce laboratory.",
+        "doctorateOrPapers": "https://genetics.med.upenn.edu/faculty-profile/8928628 — PhD, Biological and Biomedical Sciences, Harvard University, 2016.",
+        "vietnameseSignal": "Vietnamese given name Son on the institutional faculty profile.",
+        "dedup": "Ran npm run find-roster-matches -- \"Son C. Nguyen\" --url https://genetics.med.upenn.edu/faculty-profile/8928628. Name/retired-name hits: vp-0572, vp-0625, vp-1631, vp-1718, vp-1879, vp-1962, vp-2438, vp-3165. Hits have different expanded names and specialties (Hung Son, Hai Son, Minh Son, Son Luu, Tien Son, Ngoc Son, Giang-Son and Son Van), not Harvard-trained Son C. Nguyen in Penn Genetics.",
+        "notes": "The web reader timed out, but a direct HTTPS GET returned HTTP 200 and the full person-specific profile in this run. Institutional faculty rank plus service at Penn since 2016 (lab manager, then senior investigator since 2022) establishes a career research appointment rather than a postdoc."
+      }
+    },
+    {
+      "entry": {
+        "name": "Linda Thuy Anh Doan",
+        "university": "University of California, Irvine",
+        "rank": "Associate Professor",
+        "track": "Clinical",
+        "department": "Dermatology and Pathology",
+        "city": "Orange",
+        "state": "California",
+        "researchAreas": [
+          "Dermatopathology",
+          "Melanoma diagnostics",
+          "Digital pathology"
+        ],
+        "phdInstitution": "University of California, Irvine",
+        "phdYear": 2013,
+        "mdInstitution": "University of California, Irvine",
+        "undergradInstitution": "Yale University",
+        "undergradYear": 2002,
+        "profileUrl": "https://scholarconnect.uci.edu/ldoan",
+        "country": "United States"
+      },
+      "evidence": {
+        "currentRole": "https://scholarconnect.uci.edu/ldoan — “Associate Professor of Dermatology and Pathology”; directs dermatopathology and a UCI clinical laboratory.",
+        "doctorateOrPapers": "https://www.faculty.uci.edu/profile/?facultyId=6721 — PhD in Developmental and Cell Biology, UCI, 2013.",
+        "vietnameseSignal": "Vietnamese given/middle names Thuy Anh appear in the full official name at https://scholarconnect.uci.edu/ldoan.",
+        "dedup": "Ran npm run find-roster-matches -- \"Linda Thuy Anh Doan\" --url https://scholarconnect.uci.edu/ldoan. Name/retired-name hits: vp-1357. vp-1357 is Thuy Doan, UCSF ophthalmology, University of Washington PhD/Stanford MD; proposed candidate is UCI dermatopathology, UCI PhD/MD.",
+        "notes": "Clinical track proposed for her UCI-employed clinical/research faculty role. Distinct from UCSF ophthalmologist Thuy Doan."
+      }
+    },
+    {
+      "entry": {
+        "name": "Hoa Nguyen",
+        "university": "UMass Chan Medical School",
+        "rank": "Professor",
+        "track": "Research",
+        "department": "Population and Quantitative Health Sciences (Epidemiology)",
+        "city": "Worcester",
+        "state": "Massachusetts",
+        "researchAreas": [
+          "Cardiovascular epidemiology",
+          "Hypertension interventions",
+          "Global health"
+        ],
+        "phdInstitution": "University of Massachusetts Medical School",
+        "msInstitution": "Harvard University",
+        "mdInstitution": "Hanoi Medical University",
+        "profileUrl": "https://profiles.umassmed.edu/display/14739427",
+        "country": "United States"
+      },
+      "evidence": {
+        "currentRole": "https://www.umassmed.edu/capes/about/faculty/ — “Hoa L. Nguyen, MD, MS, PhD”; Professor in Population and Quantitative Health Sciences, Epidemiology, and principal investigator of clinical research.",
+        "doctorateOrPapers": "https://profiles.umassmed.edu/display/14739427 — PhD, Clinical & Population Health, University of Massachusetts Medical School; MS, Harvard; MD, Hanoi Medical University. HTTP 200 direct fetch read.",
+        "vietnameseSignal": "Vietnamese given name Hoa and Hanoi Medical University MD in the employer profile.",
+        "dedup": "Ran npm run find-roster-matches -- \"Hoa Nguyen\" --url https://profiles.umassmed.edu/display/14739427. Name/retired-name hits: vp-0188, vp-0259, vp-0505, vp-0660, vp-0683, vp-0798, vp-1102, vp-1208, vp-1563, vp-1887. All hits have different documented identities and disciplines; the nearest biomedical hit vp-1208 is Hoa Huu Phuc Nguyen, Tübingen PhD 2004, human genetics in Bochum, not UMass epidemiology/Hanoi MD. Alias Hoa L. Nguyen was checked too.",
+        "notes": "The CAPES link resolves the Hoa L. Nguyen label to the profile whose header uses Hoa T Nguyen. Proposed name Hoa Nguyen preserves the consistent first and last names without choosing between conflicting initials. This is a US appointment with Vietnam collaborations."
+      }
+    },
+    {
+      "entry": {
+        "name": "Ha Ngan (Milkie) Vu",
+        "university": "Northwestern University",
+        "rank": "Assistant Professor",
+        "track": "Tenure-line",
+        "department": "Preventive Medicine",
+        "city": "Chicago",
+        "state": "Illinois",
+        "researchAreas": [
+          "Cancer prevention",
+          "HPV vaccination",
+          "Implementation science",
+          "Health equity"
+        ],
+        "profileUrl": "https://www.feinberg.northwestern.edu/faculty-profiles/az/profile.html?xid=55919",
+        "honors": [
+          {
+            "name": "William T. Grant Scholar",
+            "year": 2026,
+            "organization": "William T. Grant Foundation",
+            "source": "https://www.feinberg.northwestern.edu/sites/ipham/news/Vu-selected-for-William-T.-Grant-Scholar-Class-of-2031.html",
+            "category": "career_award"
+          }
+        ],
+        "country": "United States"
+      },
+      "evidence": {
+        "currentRole": "https://www.feinberg.northwestern.edu/faculty-profiles/az/profile.html?xid=55919 — “Assistant Professor, Preventive Medicine”; also Medical Social Sciences. Direct HTTPS HTTP 200 read in this run.",
+        "doctorateOrPapers": "https://www.cancer.northwestern.edu/research/membership/profile.html?id=c44229224a37c342b9abb601f8d5e06f identifies her PhD and current research program. Doctorate institution/year omitted because the live degree-detail page could not be read.",
+        "vietnameseSignal": "https://www.nucats.nubic.northwestern.edu/about/news/2024/vu-research.html explicitly describes her as a Vietnamese immigrant.",
+        "dedup": "Ran npm run find-roster-matches -- \"Ha Ngan (Milkie) Vu\" --url https://www.feinberg.northwestern.edu/faculty-profiles/az/profile.html?xid=55919. Name/retired-name hits: vp-1997, vp-2078. vp-1997 and vp-2078 are economics identities, not the preventive-medicine scientist explicitly identified as a Vietnamese immigrant. Additional Milkie Vu alias run found no matches.",
+        "notes": "Plain unqualified professorial rank on the university faculty directory mapped to Tenure-line; tenure itself is not asserted. Award announced April 15, 2026; cohort is labeled class of 2031, not award year 2031."
+      }
+    },
+    {
+      "entry": {
+        "name": "Thienkhai H. Vu",
+        "university": "University of California, San Francisco",
+        "rank": "Professor",
+        "track": "Clinical",
+        "department": "Radiology and Biomedical Imaging",
+        "city": "San Francisco",
+        "state": "California",
+        "researchAreas": [
+          "Thoracic imaging",
+          "Molecular imaging",
+          "MRI"
+        ],
+        "phdInstitution": "University of Oklahoma Health Sciences",
+        "phdYear": 1997,
+        "mdInstitution": "University of Oklahoma Health Sciences",
+        "profileUrl": "https://profiles.ucsf.edu/thienkhai.vu",
+        "country": "United States"
+      },
+      "evidence": {
+        "currentRole": "https://profiles.ucsf.edu/thienkhai.vu — “Professor, Radiology”; clinical imaging service at San Francisco General Hospital.",
+        "doctorateOrPapers": "https://profiles.ucsf.edu/thienkhai.vu — narrative explicitly lists PhD in Pathology, University of Oklahoma HSC, 1997, and MD, 1999.",
+        "vietnameseSignal": "Vietnamese given name Thienkhai in the official biography.",
+        "dedup": "Ran npm run find-roster-matches -- \"Thienkhai H. Vu\" --url https://profiles.ucsf.edu/thienkhai.vu. No roster or retired-ID matches.",
+        "notes": "Rank follows the current structured Professor title; narrative still uses the older Associate Clinical Professor title. UC-employed clinical faculty at SFGH qualify."
+      }
+    },
+    {
+      "entry": {
+        "name": "Thanh Nguyen",
+        "university": "University of Nebraska Medical Center",
+        "rank": "Assistant Professor",
+        "track": "Research",
+        "department": "Emergency Medicine",
+        "city": "Omaha",
+        "state": "Nebraska",
+        "researchAreas": [
+          "Innovation science",
+          "Health care disparities",
+          "Medical technology"
+        ],
+        "profileUrl": "https://www.unmc.edu/emergency/faculty/nguyen.html",
+        "country": "United States"
+      },
+      "evidence": {
+        "currentRole": "https://www.unmc.edu/emergency/faculty/nguyen.html — “Assistant Professor, UNMC Department of Emergency Medicine”; also Research Scientist.",
+        "doctorateOrPapers": "https://www.unmc.edu/emergency/faculty/nguyen.html lists Doctor of Philosophy. Degree institution and year are not published and are omitted.",
+        "vietnameseSignal": "Vietnamese given name Thanh on official profile; email thang.nguyen and older UNMC reports use Thang, which was also deduplicated.",
+        "dedup": "Ran npm run find-roster-matches -- \"Thanh Nguyen\" --url https://www.unmc.edu/emergency/faculty/nguyen.html. Name/retired-name hits: vp-0031, vp-0154, vp-0166, vp-0208, vp-0267, vp-0302, vp-0363, vp-0515, vp-0531, vp-0545, vp-0627, vp-0654, vp-0703, vp-0806, vp-0834, vp-0845, vp-0939, vp-1166, vp-1397, vp-1429, vp-1560, vp-1575, vp-1719, vp-1726, vp-1740, vp-1805, vp-1807, vp-1847, vp-1860, vp-1900, vp-1904, vp-1922, vp-1945, vp-1959, vp-2114, vp-2534, vp-2575, vp-2594, vp-3102, vp-0822, vp-0844, vp-1581. No matching identity URL. Biomedical hits vp-0363 (McGill-trained Boston neurointerventionalist), vp-1575 (La Trobe-trained Singapore autophagy researcher), vp-2114 (IUPUI-trained UAB computational biomedical engineer), and vp-0208 (Princeton-trained UConn materials engineer) are different people. Other hits have different expanded names/fields. Additional Thang Nguyen alias run returned vp-1566, vp-1697, vp-2093, vp-2213, vp-2480 and vp-3179: finance, engineering, computing and applied-science identities, not the long-serving UNMC emergency-medicine scientist.",
+        "notes": "Career status corroborated by https://www.unmc.edu/newsroom/2026/06/08/innovators-among-us-clone/ (joined UNMC in 2010). Research track reflects the explicit scientist role; tenure not asserted."
+      }
+    },
+    {
+      "entry": {
+        "name": "Thanh D. Nguyen",
+        "university": "Weill Cornell Medicine",
+        "rank": "Associate Professor",
+        "track": "Research",
+        "department": "Radiology",
+        "researchAreas": [
+          "Quantitative MRI",
+          "Multiple sclerosis",
+          "Magnetic susceptibility mapping"
+        ],
+        "phdInstitution": "Auburn University",
+        "phdYear": 1999,
+        "profileUrl": "https://scholars.weill.cornell.edu/thanh-d-nguyen",
+        "websiteUrl": "https://radiology.weill.cornell.edu/research/mri-research-institute-mriri/thanh-d-nguyen-laboratory",
+        "country": "United States"
+      },
+      "evidence": {
+        "currentRole": "https://scholars.weill.cornell.edu/thanh-d-nguyen — “Associate Professor of Physics Research in Radiology”; primary appointment since 2010. Direct HTTP 200 fetched and read.",
+        "doctorateOrPapers": "https://scholars.weill.cornell.edu/thanh-d-nguyen — PhD, Electrical Engineering, Auburn University, 1999.",
+        "vietnameseSignal": "Vietnamese given name Thanh on current employer profile.",
+        "dedup": "Ran npm run find-roster-matches -- \"Thanh D. Nguyen\" --url https://scholars.weill.cornell.edu/thanh-d-nguyen https://radiology.weill.cornell.edu/research/mri-research-institute-mriri/thanh-d-nguyen-laboratory. Name/retired-name hits: vp-0031, vp-0154, vp-0166, vp-0208, vp-0267, vp-0302, vp-0363, vp-0515, vp-0531, vp-0545, vp-0627, vp-0654, vp-0703, vp-0806, vp-0834, vp-0845, vp-0939, vp-1166, vp-1397, vp-1429, vp-1560, vp-1575, vp-1719, vp-1726, vp-1740, vp-1805, vp-1807, vp-1847, vp-1860, vp-1900, vp-1904, vp-1922, vp-1945, vp-1959, vp-2114, vp-2534, vp-2575, vp-2594, vp-3102, vp-0822, vp-0844, vp-1581. Exact-name hit vp-0208 is the UConn materials engineer, Princeton PhD 2013, not the Auburn electrical-engineering PhD 1999 in Cornell MRI research. Other Thanh-name hits have different full names, fields or training.",
+        "notes": "Distinct from UConn engineer Thanh D. Nguyen (Princeton PhD 2013), whose identity and education were inspected in the roster."
+      }
+    },
+    {
+      "entry": {
+        "name": "Thanh Phuong Pham Nguyen",
+        "university": "University of Pennsylvania",
+        "rank": "Assistant Professor",
+        "track": "Research",
+        "department": "Biostatistics, Epidemiology and Informatics",
+        "city": "Philadelphia",
+        "state": "Pennsylvania",
+        "researchAreas": [
+          "Pharmacoepidemiology",
+          "Medication safety",
+          "Parkinson disease"
+        ],
+        "msInstitution": "University of Pennsylvania",
+        "profileUrl": "https://www.med.upenn.edu/apps/faculty/index.php/g275/p9010882",
+        "country": "United States"
+      },
+      "evidence": {
+        "currentRole": "https://www.med.upenn.edu/apps/faculty/index.php/g275/p9010882 — “Research Assistant Professor of Biostatistics and Epidemiology”. https://www.med.upenn.edu/evdresearch/new-faculty/ records the October 2026 faculty appointment.",
+        "doctorateOrPapers": "Two current-employer 2025 journal papers on the official profile: Impact of Anticholinergic Burden and Clinical-Demographic Characteristics on Incident Dementia in Parkinson Disease (J Geriatr Psychiatry Neurol 38:254–263); Concomitant Use of Oral Anticoagulants with Oral Dipeptidyl Peptidase-4 Inhibitors and Serious Bleeding Events (Clin Pharmacol Ther 117:1012–1016). Both identify Pham Nguyen TP; the same profile documents Penn research employment.",
+        "vietnameseSignal": "Vietnamese given names Thanh Phuong and compound surname Pham Nguyen on official profile.",
+        "dedup": "Ran npm run find-roster-matches -- \"Thanh Phuong Pham Nguyen\" --url https://www.med.upenn.edu/apps/faculty/index.php/g275/p9010882. Name/retired-name hits: vp-0150, vp-0166, vp-0208, vp-0282, vp-0363, vp-0579, vp-0627, vp-0638, vp-0759, vp-0814, vp-0870, vp-0919, vp-0970, vp-1560, vp-1807, vp-1975, vp-2114, vp-3102, vp-0822, vp-0515, vp-0844, vp-0031, vp-1628. Penn PharmD/MS pharmacoepidemiologist has a different full name and training from these hits. Medical near-hits vp-0363 are Boston neurointervention, vp-0814 Colorado plastic surgery, vp-0870 Kansas anesthesiology and vp-2114 UAB computational biomedical engineering; others are engineering, physics, business or education identities. No matching identity URL.",
+        "notes": "PharmD is a professional degree, not a research PhD; eligibility uses the two recent papers. No PhD institution/year asserted. Older text on the same profile still says Research Associate; the current title and new-faculty appointment supersede it."
+      }
+    },
+    {
+      "entry": {
+        "name": "Dat Q. Tran",
+        "university": "University of Southern California",
+        "rank": "Assistant Professor",
+        "track": "Research",
+        "department": "Pathology",
+        "city": "Los Angeles",
+        "state": "California",
+        "researchAreas": [
+          "Host-defense peptides",
+          "Antimicrobial therapeutics",
+          "Immune modulation"
+        ],
+        "profileUrl": "https://keck.usc.edu/faculty-search/dat-q-tran/",
+        "country": "United States"
+      },
+      "evidence": {
+        "currentRole": "https://keck.usc.edu/faculty-search/dat-q-tran/ — “Assistant Professor Of Research Pathology”; institution lists him in its current faculty directory.",
+        "doctorateOrPapers": "https://keck.usc.edu/faculty-search/dat-q-tran/ and https://profiles.sc-ctsi.org/dat.tran explicitly identify PhD. Degree institution/year are not supplied.",
+        "vietnameseSignal": "Vietnamese given name Dat with surname Tran on both current institutional profiles.",
+        "dedup": "Ran npm run find-roster-matches -- \"Dat Q. Tran\" --url https://keck.usc.edu/faculty-search/dat-q-tran/. Name/retired-name hits: vp-0423, vp-1532, vp-2184, vp-2605, vp-3028. vp-0423 is Jesuit electrical engineer Dat Tran SJ; vp-1532 a Rowan mathematician; vp-2184 a Linköping materials researcher; vp-2605 Huy Dat Tran in infocomm; vp-3028 Dat T. Tran in Army energy/power. None is the USC pathology peptide researcher.",
+        "notes": "Career research status supported by the faculty-rank profile and a history of serving as principal investigator on NIH projects (2012–2024), rather than a training appointment."
+      }
+    }
+  ],
+  "already_listed": [
+    {
+      "name": "Don X. Nguyen",
+      "id": "vp-0480",
+      "note": "Yale cancer biologist; https://medicine.yale.edu/profile/don-nguyen/ matches existing Yale identity."
+    },
+    {
+      "name": "Thuan Nguyen",
+      "id": "vp-0409",
+      "note": "OHSU biostatistics; https://www.ohsu.edu/people/thuan-nguyen-phd matches existing identity."
+    },
+    {
+      "name": "Khanh P. Nguyen",
+      "id": "vp-0411",
+      "note": "OHSU vascular research; https://www.ohsu.edu/school-of-medicine/surgery/vascular-surgery-research-fellowship matches existing identity."
+    },
+    {
+      "name": "Tran N. H. Nguyen",
+      "id": "vp-0129",
+      "note": "UT Southwestern biomedical engineering; https://profiles.utsouthwestern.edu/profile/243422/tran-n-h-nguyen.html matches existing identity."
+    },
+    {
+      "name": "TuDung T. Nguyen",
+      "id": "vp-2840",
+      "note": "WashU medical genetics; https://physicians.wustl.edu/people/tudung-t-nguyen-md-phd/ matches existing identity."
+    },
+    {
+      "name": "Thu Truong",
+      "id": "vp-2373",
+      "note": "Minnesota medical-school faculty; https://med.umn.edu/bio/thu-truong matches existing identity."
+    },
+    {
+      "name": "Duc-Huy Nguyen",
+      "id": "vp-0289",
+      "note": "Wisconsin biomedical engineering; https://engineering.wisc.edu/directory/profile/duc-huy-nguyen/ matches existing identity."
+    },
+    {
+      "name": "Nathaniel M. Tran",
+      "id": "vp-1777",
+      "note": "UIC public health; https://publichealth.uic.edu/profiles/tran-nathaniel/ matches existing identity."
+    },
+    {
+      "name": "Elizabeth Dong Nguyen",
+      "id": "vp-1764",
+      "note": "Washington developmental biology; https://depts.washington.edu/cdbrm/wordpress/research-labs-center-for-developmental-biology-and-regenerative-medicine/nguyen-lab/investigator-profile-nguyen/ matches existing identity."
+    },
+    {
+      "name": "Danh Van Nguyen",
+      "id": "vp-0449",
+      "note": "UCI biostatistics; https://profiles.icts.uci.edu/danh.nguyen matches existing identity."
+    },
+    {
+      "name": "Andrew D. Nguyen",
+      "id": "vp-2375",
+      "note": "Saint Louis faculty directory uses Andy Nguyen; https://www.slu.edu/medicine/medical-education/graduate-programs/biomedical-sciences/pharmacology-physiology/about-us/faculty.php matches the existing pharmacology/physiology identity."
+    },
+    {
+      "name": "Ngoc Uyen Nhi Nguyen",
+      "id": "vp-1767",
+      "note": "USF cardiovascular researcher; https://health.usf.edu/medicine/heart-institute/faculty/ngocuyennhinguyen matches existing identity."
+    }
+  ],
+  "possible_move": [],
+  "rejected": [
+    {
+      "name": "Tammy Tran Nguyen",
+      "reason": "Current UMass Chan vascular-surgery faculty and research PhD verified, but no affirmative Vietnamese signal beyond Tran/Nguyen surnames located. Her Rice University namesake is a Houston attorney/businessperson, a different person. Do not transfer that biography. Sources: https://profiles.umassmed.edu/display/24240932 ; https://www.umassmed.edu/nguyen-lab/lab-members/ . Next action: find a first-person/institutional biography or Vietnamese-language signal for the surgeon."
+    },
+    {
+      "name": "Thanh Cong Bui",
+      "reason": "Deferred, not an eligibility rejection: employer profile/CV inaccessible during this run; search snippets alone do not meet live verification. Source attempted: https://healthpromotionresearch.org/ . Next action: open current employer biography/CV and confirm rank, doctorate, Vietnam medical education and identity before proposing."
+    },
+    {
+      "name": "Nhung Nguyen (University of Chicago)",
+      "reason": "Deferred: official research opportunity supports a biomechanics PI, but linked person profile repeatedly failed. https://surgbiomech.uchicago.edu/nhungnguyen/ . Distinct from the accepted UCSF epidemiologist. Next action: obtain a live person page and doctorate details."
+    },
+    {
+      "name": "Jonathan Pham",
+      "reason": "UCLA medical-physics faculty/PhD verified at https://www.uclahealth.org/departments/radonc/our-team/jonathan-pham-phd ; affirmative Vietnamese signal beyond surname not established. Distinct from existing Jonathan Pham physicians. Next action: verify heritage using an appropriate biography or language/education source."
+    },
+    {
+      "name": "Alana T. H. Nguyen",
+      "reason": "Weill Cornell clinical/research lead; no affirmative Vietnamese signal beyond surname established, and person page retrieval was unreliable. https://scholars.weill.cornell.edu/alana-nguyen . Next action: verify live employer profile and an affirmative heritage signal."
+    },
+    {
+      "name": "Ann M. Nguyen",
+      "reason": "Rutgers health-policy researcher at https://cshp.rutgers.edu/people/ann-m-nguyen-phd-mph ; no affirmative Vietnamese signal established and primary appointment is not in a medical school. Not accepted into this slice."
+    },
+    {
+      "name": "Dung Nguyen",
+      "reason": "Stanford clinical surgery professor at https://profiles.stanford.edu/dung-nguyen ; MD/PharmD are professional degrees. Did not establish a research doctorate or two current-employer papers within the last three years. Next action: check recent publication affiliations."
+    },
+    {
+      "name": "Thi A. Nguyen",
+      "reason": "https://www.rushu.rush.edu/faculty/thi-nguyen-phd lists Visiting Assistant Professor and Adjunct Instructor; excluded appointment types."
+    },
+    {
+      "name": "Huong Nguyen",
+      "reason": "https://medicine.utah.edu/internal-medicine/staff/huong-nguyen is an internal-medicine staff data-scientist page; career faculty-equivalent research appointment not established."
+    },
+    {
+      "name": "Daniel Nguyen",
+      "reason": "https://medicine.tulane.edu/departments/biochemistry-molecular-biology-lu-lab/graduate-student/daniel-nguyen identifies a graduate student; excluded."
+    },
+    {
+      "name": "Tanya Tran",
+      "reason": "https://www.urmc.rochester.edu/people/112363454-tanya-tran identifies Senior Instructor after recent postdoctoral training. Independent, stable career research role insufficiently resolved for acceptance. Next action: establish substantive career appointment and research independence."
+    }
+  ],
+  "coverage": [
+    {
+      "employer": "University of California, San Francisco",
+      "pagesExamined": [
+        "https://profiles.ucsf.edu/david-huy.nguyen",
+        "https://profiles.ucsf.edu/nhung.nguyen",
+        "https://heartylab.ucsf.edu",
+        "https://profiles.ucsf.edu/thienkhai.vu"
+      ],
+      "note": "Official person pages inspected for David Huy Nguyen; Nhung Nguyen; Thienkhai H. Vu. Surname and given-name searches also screened related departments. Accepted only current career faculty meeting the doctorate/recent-publication test; name and identity-URL deduplication completed. Direct HTTPS reads were used where the web reader timed out."
+    },
+    {
+      "employer": "Yale University",
+      "pagesExamined": [
+        "https://medicine.yale.edu/profile/thuy-tran/"
+      ],
+      "note": "Official person pages inspected for Thuy Tran. Surname and given-name searches also screened related departments. Accepted only current career faculty meeting the doctorate/recent-publication test; name and identity-URL deduplication completed. Direct HTTPS reads were used where the web reader timed out."
+    },
+    {
+      "employer": "Northwestern University",
+      "pagesExamined": [
+        "https://www.feinberg.northwestern.edu/faculty-profiles/az/profile.html?xid=45390",
+        "https://www.feinberg.northwestern.edu/faculty-profiles/az/profile.html?xid=55919"
+      ],
+      "note": "Official person pages inspected for Cuong V. Nguyen; Ha Ngan (Milkie) Vu. Surname and given-name searches also screened related departments. Accepted only current career faculty meeting the doctorate/recent-publication test; name and identity-URL deduplication completed. Direct HTTPS reads were used where the web reader timed out."
+    },
+    {
+      "employer": "University of Pennsylvania",
+      "pagesExamined": [
+        "https://genetics.med.upenn.edu/faculty-profile/8928628",
+        "https://www.med.upenn.edu/apps/faculty/index.php/g275/p9010882"
+      ],
+      "note": "Official person pages inspected for Son C. Nguyen; Thanh Phuong Pham Nguyen. Surname and given-name searches also screened related departments. Accepted only current career faculty meeting the doctorate/recent-publication test; name and identity-URL deduplication completed. Direct HTTPS reads were used where the web reader timed out."
+    },
+    {
+      "employer": "University of California, Irvine",
+      "pagesExamined": [
+        "https://scholarconnect.uci.edu/ldoan"
+      ],
+      "note": "Official person pages inspected for Linda Thuy Anh Doan. Surname and given-name searches also screened related departments. Accepted only current career faculty meeting the doctorate/recent-publication test; name and identity-URL deduplication completed. Direct HTTPS reads were used where the web reader timed out."
+    },
+    {
+      "employer": "UMass Chan Medical School",
+      "pagesExamined": [
+        "https://profiles.umassmed.edu/display/14739427"
+      ],
+      "note": "Official person pages inspected for Hoa Nguyen. Surname and given-name searches also screened related departments. Accepted only current career faculty meeting the doctorate/recent-publication test; name and identity-URL deduplication completed. Direct HTTPS reads were used where the web reader timed out."
+    },
+    {
+      "employer": "University of Nebraska Medical Center",
+      "pagesExamined": [
+        "https://www.unmc.edu/emergency/faculty/nguyen.html"
+      ],
+      "note": "Official person pages inspected for Thanh Nguyen. Surname and given-name searches also screened related departments. Accepted only current career faculty meeting the doctorate/recent-publication test; name and identity-URL deduplication completed. Direct HTTPS reads were used where the web reader timed out."
+    },
+    {
+      "employer": "Weill Cornell Medicine",
+      "pagesExamined": [
+        "https://scholars.weill.cornell.edu/thanh-d-nguyen",
+        "https://radiology.weill.cornell.edu/research/mri-research-institute-mriri/thanh-d-nguyen-laboratory"
+      ],
+      "note": "Official person pages inspected for Thanh D. Nguyen. Surname and given-name searches also screened related departments. Accepted only current career faculty meeting the doctorate/recent-publication test; name and identity-URL deduplication completed. Direct HTTPS reads were used where the web reader timed out."
+    },
+    {
+      "employer": "University of Southern California",
+      "pagesExamined": [
+        "https://keck.usc.edu/faculty-search/dat-q-tran/"
+      ],
+      "note": "Official person pages inspected for Dat Q. Tran. Surname and given-name searches also screened related departments. Accepted only current career faculty meeting the doctorate/recent-publication test; name and identity-URL deduplication completed. Direct HTTPS reads were used where the web reader timed out."
+    },
+    {
+      "employer": "Oregon Health & Science University",
+      "pagesExamined": [
+        "https://www.ohsu.edu/people/thuan-nguyen-phd",
+        "https://www.ohsu.edu/school-of-medicine/surgery/vascular-surgery-research-fellowship"
+      ],
+      "note": "Biostatistics and vascular-surgery leads resolve to existing Thuan Nguyen and Khanh P. Nguyen records; additional medicine/cardiology leads were already represented. No new verified candidate."
+    },
+    {
+      "employer": "University of Texas Southwestern Medical Center",
+      "pagesExamined": [
+        "https://profiles.utsouthwestern.edu/profile/243422/tran-n-h-nguyen.html"
+      ],
+      "note": "Biomedical-engineering lead Tran N. H. Nguyen is already listed; additional internal-medicine and immunology search leads screened against roster."
+    },
+    {
+      "employer": "Washington University in St. Louis",
+      "pagesExamined": [
+        "https://physicians.wustl.edu/people/tudung-t-nguyen-md-phd/"
+      ],
+      "note": "TuDung T. Nguyen is already listed; medicine and basic-science surname search pass found no additional fully verified new candidate."
+    },
+    {
+      "employer": "University of Minnesota",
+      "pagesExamined": [
+        "https://med.umn.edu/bio/thu-truong"
+      ],
+      "note": "Thu Truong is already listed. Search leads Hai Dang Nguyen, Helen Vuong and Ruby H. N. Nguyen also matched roster identities; no new candidate accepted."
+    },
+    {
+      "employer": "Rutgers University",
+      "pagesExamined": [
+        "https://cshp.rutgers.edu/people/ann-m-nguyen-phd-mph"
+      ],
+      "note": "Ann M. Nguyen's primary research appointment is in health policy rather than a primary medical-school appointment, and an affirmative Vietnamese signal was not established. Not accepted."
+    },
+    {
+      "employer": "New York University",
+      "pagesExamined": [],
+      "note": "Medical-school search pass identified existing Minh-Thu T. Nguyen (vp-0866); attempted https://med.nyu.edu/faculty/minh-thu-t-nguyen failed in the web reader, so its contents are not claimed as live-verified. Other search leads included research staff/trainees; none accepted."
+    },
+    {
+      "employer": "University of Pittsburgh",
+      "pagesExamined": [
+        "https://www.plasticsurgery.pitt.edu/people/vu-t-nguyen-md"
+      ],
+      "note": "Plastic-surgery chair Vu T. Nguyen examined during the institutional search pass; no new candidate accepted under the additional doctorate/two-recent-papers criterion."
+    },
+    {
+      "employer": "Northeast Ohio Medical University",
+      "pagesExamined": [
+        "https://www.neomed.edu/medicine/about/deans-office-leadership/"
+      ],
+      "note": "Leadership and faculty searches inspected; no new candidate with all required evidence located."
+    },
+    {
+      "employer": "New York Medical College",
+      "pagesExamined": [
+        "https://www.nymc.edu/directory/search/?alpha=N&directory_dept=all&directory_school=New+York+Medical+College"
+      ],
+      "note": "Directory and name searches screened; no fully verified new career researcher located."
+    },
+    {
+      "employer": "University of Maryland",
+      "pagesExamined": [
+        "https://www.medschool.umaryland.edu/profiles/pharmacology--physiology---all-faculty/"
+      ],
+      "note": "Basic-science faculty directory and surname searches inspected; no new verified candidate accepted."
+    },
+    {
+      "employer": "Temple University",
+      "pagesExamined": [
+        "https://medicine.temple.edu/departments-centers/research-centers/center-asian-health/faculty"
+      ],
+      "note": "Center for Asian Health faculty and medicine-name searches inspected; no new fully verified candidate."
+    },
+    {
+      "employer": "University of Utah",
+      "pagesExamined": [
+        "https://medicine.utah.edu/internal-medicine/staff/huong-nguyen"
+      ],
+      "note": "Huong Nguyen is a staff data scientist; a faculty-equivalent research appointment was not established. Other leads screened through searches."
+    },
+    {
+      "employer": "Rush University",
+      "pagesExamined": [
+        "https://www.rushu.rush.edu/faculty/thi-nguyen-phd"
+      ],
+      "note": "Thi A. Nguyen's live profile lists Visiting Assistant Professor and Adjunct Instructor, excluded appointment types."
+    },
+    {
+      "employer": "University of Texas Medical Branch",
+      "pagesExamined": [
+        "https://www.utmb.edu/obgyn/home/ob-gyn--directory"
+      ],
+      "note": "OB/GYN directory and institutional surname searches inspected; no additional candidate met every test."
+    },
+    {
+      "employer": "University of Wisconsin-Madison",
+      "pagesExamined": [
+        "https://engineering.wisc.edu/directory/profile/duc-huy-nguyen/"
+      ],
+      "note": "Biomedical-engineering lead Duc-Huy Nguyen resolves to existing vp-0289. Medical/basic-science search pass did not produce another fully verified candidate."
+    },
+    {
+      "employer": "University of Illinois Chicago",
+      "pagesExamined": [
+        "https://publichealth.uic.edu/profiles/tran-nathaniel/"
+      ],
+      "note": "Nathaniel M. Tran resolves to existing vp-1777. Additional medical-school searches produced no new fully verified candidate."
+    },
+    {
+      "employer": "University of Washington",
+      "pagesExamined": [
+        "https://depts.washington.edu/cdbrm/wordpress/research-labs-center-for-developmental-biology-and-regenerative-medicine/nguyen-lab/investigator-profile-nguyen/"
+      ],
+      "note": "Developmental-biology lead Elizabeth Dong Nguyen resolves to existing vp-1764; broader medical-school surname searches screened."
+    },
+    {
+      "employer": "University of Rochester",
+      "pagesExamined": [
+        "https://www.urmc.rochester.edu/people/112363454-tanya-tran"
+      ],
+      "note": "Tanya Tran is Senior Instructor after recent postdoctoral training; a sufficiently established independent career research role was not resolved. Left out."
+    },
+    {
+      "employer": "Tulane University",
+      "pagesExamined": [
+        "https://medicine.tulane.edu/departments/biochemistry-molecular-biology-lu-lab/graduate-student/daniel-nguyen"
+      ],
+      "note": "Daniel Nguyen is a graduate student; other names found during basic-science and clinical searches were not accepted without complete evidence."
+    },
+    {
+      "employer": "Wake Forest University",
+      "pagesExamined": [
+        "https://school.wakehealth.edu/research/labs/patel-lab/faculty-and-staff"
+      ],
+      "note": "Laboratory personnel page and institutional surname searches inspected; no new verified faculty candidate accepted."
+    },
+    {
+      "employer": "Stanford University",
+      "pagesExamined": [
+        "https://profiles.stanford.edu/dung-nguyen"
+      ],
+      "note": "Dung Nguyen has a clinical professorial role, but no research doctorate or two qualifying recent papers established in the inspected profile. Other clinical leads did not satisfy the strict publication/doctorate screen."
+    },
+    {
+      "employer": "University of California, Los Angeles",
+      "pagesExamined": [
+        "https://www.uclahealth.org/departments/radonc/our-team/jonathan-pham-phd"
+      ],
+      "note": "Jonathan Pham has an eligible faculty role and PhD, but an affirmative Vietnamese signal beyond surname was not verified. Existing namesakes in other specialties were distinguished."
+    },
+    {
+      "employer": "University of Oklahoma",
+      "pagesExamined": [],
+      "note": "Thanh Cong Bui is promising, but live employer/CV retrieval failed (healthpromotionresearch.org; browser gateway error and direct HTTPS certificate failure). Search snippets were not accepted as verification. Revisit the institutional profile/CV when accessible."
+    },
+    {
+      "employer": "University of Chicago",
+      "pagesExamined": [
+        "https://ccrf.uchicago.edu/content/undergraduate-research-assistant-computational-modeling-biological-thin-sheet-instabilities"
+      ],
+      "note": "Research-opportunity page supports Nhung Nguyen as a computational-biomechanics faculty PI. Her linked person page https://surgbiomech.uchicago.edu/nhungnguyen/ repeatedly failed; no person-specific live profile and complete degree evidence obtained. Kept out, distinct from UCSF epidemiologist."
+    },
+    {
+      "employer": "Saint Louis University",
+      "pagesExamined": [
+        "https://www.slu.edu/medicine/medical-education/graduate-programs/biomedical-sciences/pharmacology-physiology/about-us/faculty.php"
+      ],
+      "note": "Andy Nguyen/Andrew D. Nguyen faculty lead resolves to existing vp-2375."
+    },
+    {
+      "employer": "University of South Florida",
+      "pagesExamined": [
+        "https://health.usf.edu/medicine/heart-institute/faculty/ngocuyennhinguyen"
+      ],
+      "note": "Ngoc Uyen Nhi Nguyen resolves to existing vp-1767."
+    }
+  ]
+}

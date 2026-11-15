@@ -1,0 +1,166 @@
+{
+  "group": "French public research",
+  "agent": "codex",
+  "slice": "france-public-2",
+  "finishedAt": "2026-11-15T01:00:59+00:00",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Duy Duc Dao",
+        "university": "CNRS (Centre National de la Recherche Scientifique)",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Institut pluridisciplinaire Hubert Curien (IPHC), Département Recherches Subatomiques, Théorie",
+        "country": "France",
+        "researchAreas": [
+          "Nuclear Structure",
+          "Nuclear Many-Body Theory",
+          "Hartree-Fock Methods"
+        ],
+        "phdInstitution": "Université de Bordeaux",
+        "phdYear": 2019,
+        "profileUrl": "https://iphc.cnrs.fr/annuaire/fiche/?nom=Duy+Duc-DAO"
+      },
+      "evidence": {
+        "currentRole": "https://iphc.cnrs.fr/annuaire/fiche/?nom=Duy+Duc-DAO — live individual employer profile: \"Duy Duc DAO\", \"Chercheur\", \"Département DRS\", \"Groupe Théorie\", duc.dao@iphc.cnrs.fr. URL followed from the actual Voir la fiche link on the IPHC theory page; web tool returned Cache miss, but a direct Python urllib request returned the individual profile successfully. Permanent appointment independently established by https://section04.in2p3.fr/wp-content/uploads/2024/02/CR_session_automne_2023_vfinale.pdf, page 2: titularisation of Duy Duc DAO on 25 September 2023, following contractual recruitment in 2022. Both sources opened in this run.",
+        "doctorateOrPapers": "https://inspirehep.net/files/12a71b8061ffdd129f9e2d54f762fcc4 — opened doctoral dissertation (HAL tel-02887649; NNT 2019BORD0245), title pages identify Duy Duc Dao, Université de Bordeaux, doctoral specialty Astrophysique, Plasmas, Nucléaire; defended 26 November 2019. Thesis concerns Hartree-Fock calculations for deformed nuclei with general two-nucleon interactions and pairing correlations.",
+        "vietnameseSignal": "Vietnamese given-name combination Duy Duc with surname Dao on the individual employer profile. The same doctoral dissertation acknowledgments additionally describe meetings in Hanoi and Ho Chi Minh City and assistance returning to Bordeaux for doctoral study. No diacritics reconstructed.",
+        "dedup": "Ran npm run find-roster-matches -- \"Duy Duc Dao\" --url \"https://iphc.cnrs.fr/annuaire/fiche/?nom=Duy+Duc-DAO\" --url \"https://inspirehep.net/files/12a71b8061ffdd129f9e2d54f762fcc4\". Only hit: vp-1057 Duy Dao, University of Calgary, matched on name. Different person: opened https://profiles.ucalgary.ca/duy-dao, which identifies Business Technology Management, UC San Diego PhD 2017, and software/cybersecurity economics; candidate has Bordeaux nuclear-physics PhD 2019 and CNRS/IPHC nuclear theory appointment. No identity URL match. Checked already-proposed.txt: candidate absent."
+      }
+    }
+  ],
+  "already_listed": [],
+  "possible_move": [
+    {
+      "name": "Phu Nguyen-Van",
+      "id": "vp-0523",
+      "note": "Employer/track classification discrepancy, not a verified geographical move. Roster says Professor, Tenure-line, Université Paris Nanterre. Opened https://economix.fr/fr/membre/nguyen-van-phu?tab=dt: individual profile identifies Directeur de Recherche at CNRS, affiliated with EconomiX. It also states a current visiting professorship at UMT in Ho Chi Minh City, so physical location needs resolution before any eligibility conclusion. Dedup command with that URL and https://sites.google.com/view/nguyen-van/ matches vp-0523 by name and identical personal website. Other broad name hits are not the identity-resolved match. No roster changes or Issue created, per BRIEF2."
+    }
+  ],
+  "rejected": [
+    {
+      "name": "Bao-Anh Huynh",
+      "reason": "Opened https://fare.nancy.hub.inrae.fr/trombinoscope/personnel-non-permanent/huynh-bao-anh. Individual official page says Doctorante, 2023–2026, under Personnel non-permanent. Excluded trainee appointment."
+    },
+    {
+      "name": "Thi Ngoc Hanh Nguyen",
+      "reason": "Opened https://eng-umreva.rennes.hub.inrae.fr/teams/ecopeps/team/h.-nguyen. Individual page explicitly labels PhD student and describes her thesis. No verified subsequent permanent career appointment."
+    },
+    {
+      "name": "Hai Nam Pham",
+      "reason": "Opened https://www.hainam-pham.com/. Individual personal site identifies a computer-science PhD beginning in October 2026 at Inria Rennes/University of Rennes. Search snippet describing an Inria Research Scientist referred to his supervisor, Ferran Argelaguet. Excluded doctoral trainee."
+    },
+    {
+      "name": "Bich-Tram Huynh",
+      "reason": "Opened https://cesp.inserm.fr/fr/agent/huynh. Individual Inserm CESP page says Chercheur.se associé.e and explicitly identifies employer Institut Pasteur. Not evidence of employment by Inserm; not advanced as a candidate in this assigned Inserm/INRAE/IRD/Inria/CEA/CNRS-unit slice."
+    },
+    {
+      "name": "Aurelien Dinh",
+      "reason": "Opened https://cesp.inserm.fr/fr/agent/dinh. Individual page identifies employer Univ. Versailles St Quentin and title PU-PH. University appointment, outside this non-university slice; Vietnamese ancestry also not established from this French given name and surname alone."
+    },
+    {
+      "name": "Sabine Nguyen Ba",
+      "reason": "Discovery found an individual INRAE Ecodeveloppement profile at https://ecodeveloppement.paca.hub.inrae.fr/Media/pages_persos/sabine-nguyen-ba, but opening returned Cache miss. Search result describes an ingenieure d’etudes role in participatory research. Neither doctorate/recent-paper threshold nor affirmative Vietnamese signal verified; withheld, not accepted from search result."
+    },
+    {
+      "name": "Huong Giang Ly",
+      "reason": "Discovery found https://irhs.angers-nantes.hub.inrae.fr/recherche/imagerie-pour-l-horticulture-et-le-phenotypage/l-equipe_imhorphen/anciens-membres/huong-giang-ly, whose search result labels former L3 intern. Open attempt returned Cache miss. No current career appointment verified."
+    },
+    {
+      "name": "Gilles Phan",
+      "reason": "Discovery found individual CiTCoM profile https://www.citcom.cnrs.fr/annuaire/name/gilles-phan/; open attempt returned 502. Search result identifies Maitre de conferences, Universite Paris Cite. No verified CNRS employment or affirmative Vietnamese identity signal; outside lab-employer scope on available evidence."
+    },
+    {
+      "name": "Frederic Huynh",
+      "reason": "Opened individual CNES interview https://cnes.fr/actualites/suis-specialiste-applications-spatial-connaissance-scientifique, corroborating IRD/Data Terra research-infrastructure leadership. No affirmative Vietnamese signal beyond Huynh surname, and no verified doctorate or two qualifying recent papers. Withheld pending those checks."
+    },
+    {
+      "name": "Le-Duy Do",
+      "reason": "Discovery-only lead from MeLiS/SynatAc researcher listing and doctoral publication byline. No individual current-employer profile or adequately verified permanent appointment found. A unit listing and papers alone were not promoted to an individual-page candidate."
+    },
+    {
+      "name": "Quoc-Cuong Pham",
+      "reason": "CEA List discovery found career research/AI leadership evidence in search results, but only event pages, thesis advertisements and third-party biographies, without a verified live individual employer profile or opened personal fallback. Withheld under individual-pages-only requirement."
+    },
+    {
+      "name": "Thanh-Tra Nguyen",
+      "reason": "Discovery found a 2019 ILL workshop biography identifying CEA-Leti research engineer and INSA Rennes doctorate. No current individual CEA employer page verified; old conference biography cannot establish current appointment."
+    },
+    {
+      "name": "Thanh-Hai Nguyen",
+      "reason": "CEA List discovery found third-party and ORCID architecture/software-management descriptions. No live individual employer page or own-site verification of current eligible career research appointment completed; withheld."
+    },
+    {
+      "name": "Xuan-Hung Nguyen",
+      "reason": "Discovery found an old Academia.edu CV describing CEA Grenoble R&D employment since 2013 and INSA Toulouse doctorate. No current employer individual page verified; old CV not sufficient."
+    },
+    {
+      "name": "Kim Quyen Ly",
+      "reason": "Discovery found an old ENS-hosted CV describing Inria engineering in 2015, but newer VITAMIN project search result places her at Telecom Paris. No current Inria appointment verified; historical CV not accepted as current employer evidence."
+    },
+    {
+      "name": "Tuyen Tong Tiet",
+      "reason": "BETA/INRAE economics discovery found former postdoctoral descriptions and newer Ho Chi Minh University of Banking lecturer descriptions. No permanent current INRAE appointment or individual employer profile verified; withheld."
+    },
+    {
+      "name": "Dung Tran Di Caprio",
+      "reason": "IRCP/CNRS discovery found publications and historical researcher records, but no current individual employer profile verified. HAL publication page is discovery evidence only; not used as profileUrl."
+    },
+    {
+      "name": "Ngoc-Sa Nguyen Huu",
+      "reason": "IPBS discovery found historical publication bylines but no current individual employer profile or qualifying career appointment verified. Not advanced from name or publication affiliation alone."
+    }
+  ],
+  "coverage": [
+    {
+      "employer": "CNRS — IPHC (Strasbourg), IRCP, MeLiS/SynatAc, IPBS, CiTCoM, EconomiX and other units surfaced by given-name searches",
+      "pagesExamined": [
+        "https://iphc.cnrs.fr/annuaire/fiche/?nom=Duy+Duc-DAO",
+        "https://section04.in2p3.fr/wp-content/uploads/2024/02/CR_session_automne_2023_vfinale.pdf",
+        "https://inspirehep.net/files/12a71b8061ffdd129f9e2d54f762fcc4",
+        "https://profiles.ucalgary.ca/duy-dao",
+        "https://economix.fr/fr/membre/nguyen-van-phu?tab=dt",
+        "https://www.citcom.cnrs.fr/annuaire/name/gilles-phan/"
+      ],
+      "note": "Later-pass discovery used given tokens Huu, Ngoc, Duy, Khai, Kieu, Thuy, Thai, Son, Hao, Duc, Chinh, Nhan and Sang, plus less common family-name leads Dao, Luu, Quach, Ton and Lai. One new candidate verified on an individual employer page with doctorate and permanent-status evidence; Calgary collision resolved live. CiTCoM attempt failed 502. IPHC theory page https://iphc.cnrs.fr/la-recherche/drs-recherches-subatomiques/drs_theorie/ used only to follow its actual individual-profile link; no collective page used as a candidate profile. Already-proposed names were screened out. No claim that every CNRS unit was enumerated."
+    },
+    {
+      "employer": "INRAE — FARE, EVA/EcoPEPS, IRHS, Ecodeveloppement; discovery also reached BFP, MIAT, MaIAGE, PhAN, LIPME and RECOVER",
+      "pagesExamined": [
+        "https://fare.nancy.hub.inrae.fr/trombinoscope/personnel-non-permanent/huynh-bao-anh",
+        "https://eng-umreva.rennes.hub.inrae.fr/teams/ecopeps/team/h.-nguyen",
+        "https://ecodeveloppement.paca.hub.inrae.fr/Media/pages_persos/sabine-nguyen-ba",
+        "https://irhs.angers-nantes.hub.inrae.fr/recherche/imagerie-pour-l-horticulture-et-le-phenotypage/l-equipe_imhorphen/anciens-membres/huong-giang-ly"
+      ],
+      "note": "Given-name searches covered Thi, Huong, Thuy, Bich, Thanh, Phuong, Hanh, Quynh, Minh, Kien, Diep, Quang and Huyen, plus Dao/Huynh. Verified individual pages yielded trainees. Two additional individual-profile fetches failed as recorded above. Other units were search-result discovery only; their snippets were not accepted as appointment evidence. Earlier-proposed BFP and other names were skipped. No new fully verified candidate."
+    },
+    {
+      "employer": "Inserm — CESP, with discovery at MeLiS, Cochin and other biomedical units",
+      "pagesExamined": [
+        "https://cesp.inserm.fr/fr/agent/huynh",
+        "https://cesp.inserm.fr/fr/agent/dinh"
+      ],
+      "note": "Given-name searches covered Minh, Thao, Hien, Linh, Thanh, Thuy and Bich, supplemented with Dinh, Huynh and Ngo. Opened individual profiles proved employment at a different institution, not Inserm. Other discovery leads were trainees, contractual staff, administrative personnel, or already represented/proposed. Unit-level snippets were not used to verify candidates."
+    },
+    {
+      "employer": "Inria — Rennes, Nancy/LORIA, Saclay, Paris/ENS, Grenoble and Sophia Antipolis discovery",
+      "pagesExamined": [
+        "https://www.hainam-pham.com/"
+      ],
+      "note": "Given-name searches covered Quang, Khanh, Hiep, Huu, Tuong, Trinh, Nhat, Viet, Hai, Bao, Hoai, Cuong and Quoc; less-common surnames Dinh, Truong and Vo also searched. Results repeatedly returned PhD/postdoctoral/intern roles, old annual reports, staff without the degree/output threshold, and already-proposed cryptography candidates. Personal individual page resolved a misleading supervisor-title snippet for Hai Nam Pham. Historical Kim Quyen Ly CV not accepted as current Inria evidence. No new fully verified candidate."
+    },
+    {
+      "employer": "CEA — List, Leti/Liten, IRAMIS/SPEC, IRFU and biology-unit discovery",
+      "pagesExamined": [],
+      "note": "Search-led coverage used Minh, Tuan, Dung, Thanh, Hoang, Huu, Ngoc and Quoc-Cuong. Leads included Quoc-Cuong Pham, Thanh-Hai Nguyen, Xuan-Hung Nguyen and Thanh-Tra Nguyen, but no current individual CEA profile was verified for them. Repeated results were event programs, thesis advertisements, historical CVs, doctoral students and already-listed/proposed researchers. No collective listing or job advertisement promoted to a candidate. Empty pagesExamined intentionally distinguishes discovery searches from opened individual employer pages."
+    },
+    {
+      "employer": "IRD — environmental/remote-sensing and Vietnam-partnership discovery, including Data Terra",
+      "pagesExamined": [
+        "https://cnes.fr/actualites/suis-specialiste-applications-spatial-connaissance-scientifique"
+      ],
+      "note": "Search-led coverage used Thanh, Thi, Huong, Ngoc, Bui, Dinh, Hoang, Doan and Truong, followed by Frederic Huynh. Results primarily identified Vietnam-based partner researchers, students, administrators, and non-Vietnamese collaborators. CNES individual interview corroborates Huynh leadership but does not settle affirmative Vietnamese signal or doctorate/recent-paper threshold; withheld. No IRD individual page passed all three verification tests. Coverage is search-led, not an exhaustive staff census."
+    }
+  ]
+}

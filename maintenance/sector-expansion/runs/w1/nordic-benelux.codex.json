@@ -1,0 +1,413 @@
+{
+  "group": "university",
+  "agent": "codex",
+  "slice": "nordic-benelux",
+  "finishedAt": "2026-11-15T00:20:29.002847+00:00",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Mai Trang Vu",
+        "university": "Umeå University",
+        "track": "Tenure-line",
+        "rank": "Associate Professor",
+        "department": "Department of Language Studies",
+        "city": "Umeå",
+        "country": "Sweden",
+        "field": "Education",
+        "researchAreas": [
+          "Teacher education",
+          "Teacher professionalism",
+          "Critical pedagogy",
+          "Education policy",
+          "Applied linguistics"
+        ],
+        "phdInstitution": "Umeå University",
+        "phdYear": 2017,
+        "msInstitution": "University of Nottingham",
+        "undergradInstitution": "Vietnam National University, Hanoi",
+        "undergradYear": 2001,
+        "profileUrl": "https://www.umu.se/en/staff/trang-vu/"
+      },
+      "evidence": {
+        "currentRole": "https://www.umu.se/en/staff/trang-vu/ — \"Associate professor at Department of Language Studies Section: English\". Profile describes ongoing teaching and research, with current 2026 publications.",
+        "doctorateOrPapers": "https://www.umu.se/en/staff/trang-vu/ — explicitly lists PhD, Umeå University, 2017; MA, Nottingham, 2004; BA, Vietnam National University Hanoi, 2001.",
+        "vietnameseSignal": "https://www.umu.se/en/staff/trang-vu/ — Vietnamese given names Mai Trang and explicitly documented undergraduate education in Hanoi, Vietnam.",
+        "dedup": "Ran npm run find-roster-matches -- \"Mai Trang Vu\" --url https://www.umu.se/en/staff/trang-vu/. Hits: vp-0051, vp-0739, vp-2049, vp-3239. Resolved as different people: Tufts electrical engineer (Stanford PhD 2006), Monash NLP researcher (Monash PhD 2022), Monash management/Buddhist-ethics researcher, and Vittoria cell-therapy researcher (Rowan PhD). Candidate is a Umeå-trained education scholar (2017). Exact profile URL absent from roster; not in already-proposed.txt.",
+        "enrichment": "Official profile supplies education, research, and a staff photograph link (https://www.umu.se/globalassets/personalbilder/trang-vu/Profilbild.jpeg?quality=90&v=453272477&width=185); image retrieval failed, so no portraitSource proposed. No verified Scholar, LinkedIn, personal site, or qualifying honor recovered. No diacritic name inferred."
+      }
+    },
+    {
+      "entry": {
+        "name": "Dieu Tien Bui",
+        "university": "University of South-Eastern Norway",
+        "track": "Tenure-line",
+        "rank": "Professor",
+        "department": "Department of Business and IT",
+        "city": "Bø",
+        "country": "Norway",
+        "field": "Earth & Environmental Sciences",
+        "researchAreas": [
+          "Geospatial artificial intelligence",
+          "Geographic information systems",
+          "Remote sensing",
+          "Natural hazards",
+          "Engineering geology"
+        ],
+        "phdInstitution": "Norwegian University of Life Sciences",
+        "phdYear": 2013,
+        "profileUrl": "https://www.usn.no/english/about/contact-us/employees/dieu-tien-bui"
+      },
+      "evidence": {
+        "currentRole": "https://www.usn.no/english/about/contact-us/employees/dieu-tien-bui — \"Full professor in GIS/Geomatics\"; Department of Business and IT, USN School of Business, Campus Bø.",
+        "doctorateOrPapers": "https://www.usn.no/kontakt-oss/ansatte/dieu-tien-bui — explicitly records a doctorate in geomatics at Norges miljø- og biovitenskapelige universitet (NMBU), 2013.",
+        "vietnameseSignal": "https://www.usn.no/english/about/contact-us/employees/dieu-tien-bui — Vietnamese given names Dieu Tien; the page also documents extensive supervision and academic links with Hanoi University of Mining and Geology.",
+        "dedup": "Ran npm run find-roster-matches -- \"Dieu Tien Bui\" --url https://www.usn.no/english/about/contact-us/employees/dieu-tien-bui --url https://www.usn.no/kontakt-oss/ansatte/dieu-tien-bui. Only vp-0575 Tien D. Bui matched. Different identity: Concordia computer-science emeritus with Toronto PhD 1972 versus USN geomatics professor with NMBU PhD 2013. No exact URL collision; not in already-proposed.txt.",
+        "enrichment": "https://www.usn.no/english/about/contact-us/employees/dieu-tien-bui and https://www.usn.no/kontakt-oss/ansatte/dieu-tien-bui supply research and degree information. The page claims Global Highly Cited Researcher but gives no source/year sufficient to propose an honor. No verified Scholar, LinkedIn, or separate personal homepage recovered."
+      }
+    },
+    {
+      "entry": {
+        "name": "Duong Dang",
+        "university": "University of Vaasa",
+        "track": "Tenure-line",
+        "rank": "Lecturer",
+        "department": "Information Systems Science, School of Technology and Innovations",
+        "city": "Vaasa",
+        "country": "Finland",
+        "field": "Computer & Information Sciences",
+        "researchAreas": [
+          "Enterprise architecture",
+          "Cybersecurity",
+          "Digital transformation"
+        ],
+        "phdInstitution": "Tampere University",
+        "profileUrl": "https://www.uwasa.fi/en/person/1992449",
+        "websiteUrl": "https://sites.uwasa.fi/ddan/home/",
+        "scholarUrl": "https://scholar.google.com/citations?user=EVBD9BwAAAAJ"
+      },
+      "evidence": {
+        "currentRole": "https://www.uwasa.fi/en/person/1992449 — \"University Lecturer\". The linked university-hosted CV https://sites.uwasa.fi/ddan/home/ explicitly identifies the 2023–present Vaasa appointment as tenured, following an assistant professorship there during 2018–2023. Lecturer is retained as the published career level; tenure supports Tenure-line. The separate part-time VAMK teaching role is not the proposed appointment.",
+        "doctorateOrPapers": "https://sites.uwasa.fi/ddan/home/ — explicitly gives PhD in Business and Technology Management, Tampere University. No doctorate year stated; omitted. Retrieved HTTP 200 using Python requests after web tool cache misses.",
+        "vietnameseSignal": "https://www.uwasa.fi/en/person/1992449 — Vietnamese given name Duong alongside surname Dang. https://sites.uwasa.fi/ddan/home/ also states professional experience in Vietnam; no ancestry inferred from surname alone.",
+        "dedup": "Ran npm run find-roster-matches -- \"Duong Dang\" with official profile, university-hosted CV, and canonical Scholar URL: no roster or retired-id matches. Not in already-proposed.txt.",
+        "enrichment": "https://www.uwasa.fi/en/person/1992449 directly links Scholar user EVBD9BwAAAAJ, establishing ownership even though Scholar itself could not be fetched; URL normalized from scholar.google.fi. https://sites.uwasa.fi/ddan/home/ supplies tenure and doctorate. Routine conference paper awards and nominations omitted under honors rules. No LinkedIn or verified portrait proposed."
+      }
+    },
+    {
+      "entry": {
+        "name": "Vinh Dang",
+        "university": "Eindhoven University of Technology",
+        "track": "Tenure-line",
+        "rank": "Assistant Professor",
+        "department": "Operations Planning Accounting & Control, Department of Industrial Engineering and Innovation Sciences",
+        "country": "Netherlands",
+        "field": "Engineering",
+        "researchAreas": [
+          "Operations research",
+          "Manufacturing automation",
+          "Mobile robot planning",
+          "Warehouse logistics",
+          "Scheduling"
+        ],
+        "phdInstitution": "Aalborg University",
+        "phdYear": 2014,
+        "msInstitution": "Pusan National University",
+        "undergradInstitution": "Ho Chi Minh City University of Technology",
+        "profileUrl": "https://research.tue.nl/en/persons/qv-vinh-dang/"
+      },
+      "evidence": {
+        "currentRole": "https://research.tue.nl/en/persons/qv-vinh-dang/ — \"Assistant Professor\" in Operations Planning Accounting & Control. Current biography explicitly describes this appointment and research in manufacturing automation, material handling, and autonomous mobile robots.",
+        "doctorateOrPapers": "https://research.tue.nl/en/persons/qv-vinh-dang/ — academic background explicitly gives Operations Research PhD, Aalborg University, 2014; MSc, Pusan National University; BEng, Ho Chi Minh City University of Technology. Full live biography retrieved HTTP 200 using Python requests because the web tool excerpt omitted it.",
+        "vietnameseSignal": "https://research.tue.nl/en/persons/qv-vinh-dang/ — Vietnamese given name Vinh and explicit undergraduate education at Ho Chi Minh City University of Technology in Vietnam. Official display Q.V. (Vinh) Dang; initials not expanded.",
+        "dedup": "Ran npm run find-roster-matches -- \"Vinh Dang\" --url https://research.tue.nl/en/persons/qv-vinh-dang/. Hit vp-1195 Vinh N. Dang at Paul Scherrer Institute. Different person: PSI scholar has MIT PhD 1994 and nuclear/human reliability research; candidate has Aalborg PhD 2014 and robotics/operations research. Exact profile URL absent; not in already-proposed.txt.",
+        "enrichment": "https://research.tue.nl/en/persons/qv-vinh-dang/ supplies education and ORCID 0000-0001-9838-5073. No verified separate homepage, Scholar, LinkedIn, qualifying honor, or portrait source recovered."
+      }
+    }
+  ],
+  "already_listed": [
+    {
+      "name": "Nhan Nguyen",
+      "id": "vp-1131",
+      "note": "npm find-roster-matches run; University of Oulu; official profile https://www.oulu.fi/en/researchers/nhan-nguyen matches existing URL and wireless-communications identity."
+    },
+    {
+      "name": "Tan-Phat Huynh",
+      "id": "vp-2644",
+      "note": "npm find-roster-matches run; Åbo Akademi; https://research.abo.fi/en/persons/tan-phat-huynh/ matches the existing profile. Live page now says Professor; promotion is an existing-ID lead, not a new candidate."
+    },
+    {
+      "name": "Thanh Viet Nguyen",
+      "id": "vp-2534",
+      "note": "npm find-roster-matches run; University of Akureyri; https://www.unak.is/english/moya/news/dart-throwing-professor-with-passion-for-sustainable-fisheries confirms same natural-resource professor."
+    },
+    {
+      "name": "Dat Tran",
+      "id": "vp-2184",
+      "note": "npm find-roster-matches run; Linköping; exact official profile https://liu.se/en/employee/dattr18 matches semiconductor-materials entry."
+    },
+    {
+      "name": "Lisa Tran",
+      "id": "vp-1918",
+      "note": "npm find-roster-matches run; Utrecht physics; exact official URL https://www.uu.nl/staff/LTran matches existing record, distinct from Fullerton historian vp-0376."
+    },
+    {
+      "name": "Ngoc Duy Nguyen",
+      "id": "vp-1426",
+      "note": "npm find-roster-matches run; Liège physics; https://www.sciences.uliege.be/cms/c_3973650/en/facsc-repertoire?uid=u016698 identifies the same Vietnam-born physics professor."
+    },
+    {
+      "name": "Nhien Nguyen",
+      "id": "vp-1790",
+      "note": "npm find-roster-matches run; NTNU economics/innovation; https://www.ntnu.no/ansatte/nhien.nguyen matches existing scholar, distinct from Alcon namesake vp-3139."
+    },
+    {
+      "name": "Tran Nguyen Le",
+      "id": "vp-0809",
+      "note": "npm find-roster-matches run; DTU robotics; https://www.dtu.dk/english/person/tran-nguyen-le?id=220320 matches existing faculty identity."
+    },
+    {
+      "name": "Anh Khoa Doan",
+      "id": "vp-0544",
+      "note": "npm find-roster-matches run; TU Delft aerospace; https://www.tudelft.nl/en/staff/n.a.k.doan/ confirms same AI/fluid-mechanics assistant professor."
+    }
+  ],
+  "possible_move": [],
+  "rejected": [
+    {
+      "name": "Dinh Khoi Nguyen",
+      "reason": "Held out: current employer directory https://www.ou.nl/en/staff-science calls Khoi Nguyen a lecturer, but permanence/continuing teaching status was not established. Its linked https://www.ou.nl/profiel/dn2 redirects to a JavaScript-only employee-search app without person content. Older paper biographies calling him assistant professor do not settle the current track. Dedup found vp-0750, vp-1551, vp-2929, vp-3204 and retired vp-1146; those concern arts, electrical engineering, computer vision/AI, or accelerator physics rather than Groningen-trained information systems. Needs readable current person profile and contract/track evidence."
+    },
+    {
+      "name": "Iris Nguyen Duy",
+      "reason": "Held out: eligible-looking Agder law professor, but live English/Norwegian person pages failed with HTTP 403 or timeout. Search snippets alone are not verification. https://www.uia.no/english/about-uia/employees/irisnd/index.html and https://www.uia.no/om-uia/ansatte/irisnd/. Dedup found only Duy Nguyen namesakes vp-0213, vp-0707, vp-2202, vp-3153, vp-3237 in mathematics, engineering, social work and industrial research. No candidate accepted without a live person page."
+    },
+    {
+      "name": "Thierry Pham Hoang",
+      "reason": "Held out: UMONS person page https://orbi.umons.ac.be/profile?uid=501408 and live department team https://web.umons.ac.be/sepl/en/team/ verify forensic psychology leadership. https://web.umons.ac.be/fr/evenements/vtm2026-2027/ explicitly calls him a psychology doctor and UMONS professor (HTTP 200 via Python requests; web tool had TLS/502 failures). However, no affirmative Vietnamese signal beyond the surname/name-order variants was securely established. Dedup hits vp-0115, vp-0274 and vp-2161 are engineers/economist/physicist, distinct fields. Resolve heritage/name evidence before intake; do not infer it solely from Pham."
+    },
+    {
+      "name": "Dang Duong Bang",
+      "reason": "Held out: DTU historic faculty news and papers identify a Vietnamese microbiologist with Leiden doctorate, but no current live employer person profile or current permanent appointment was recovered. 2014/2015 and pandemic-era news are insufficient as current-role evidence. https://www.dtu.dk/english/news/all-news/nyhed?id=beb26cad-8753-4d5a-acac-6142f974926b; no roster/retired-id match."
+    },
+    {
+      "name": "Dinh Uy Tran",
+      "reason": "Held out: https://www.mn.uio.no/ifi/english/people/aca/dinhut/index.html lists associate professor but also current Head of Governance, Risk and Compliance at Gritera Security. Full-time primary university appointment not established; secondary/part-time role must be resolved."
+    },
+    {
+      "name": "Lam Van Nguyen",
+      "reason": "Held out: live https://www.ntnu.no/ansatte/lam.v.nguyen now says Forsker and documents NTNU doctorate; search indexing still calls him Postdoktor. Permanent faculty-equivalent career status was not established. Do not accept from the newer title alone."
+    },
+    {
+      "name": "Anh-Dao Katrin Tran",
+      "reason": "Held out: https://vietnameseiniceland.hi.is/researchersandcollaborations/ identifies a doctorate-holding researcher at University of Iceland and former 2015–2018 postdoctoral research, but does not establish a current permanent faculty-equivalent appointment."
+    },
+    {
+      "name": "Nha Nguyen",
+      "reason": "Excluded: https://www.sh.se/english/sodertorn-university/contact/researchers/nha-nguyen explicitly says Doctoral Student in Gender Studies."
+    },
+    {
+      "name": "Tuan Viet Nguyen",
+      "reason": "Excluded: https://www.utu.fi/en/people/tuan-viet-nguyen explicitly says Doctoral Researcher, Economics."
+    },
+    {
+      "name": "Annie (Kim Anh) Pham",
+      "reason": "Excluded: https://www.abo.fi/en/people/alumni-profile-annie-pham/ describes an alumna and trade consultant/entrepreneur, not a university researcher."
+    },
+    {
+      "name": "Van Thieu Nguyen",
+      "reason": "Held out: https://www.uni.lu/snt-en/people/van-thieu-nguyen/ returned a JavaScript robot verification page, not person content. No bypass attempted; career/permanence evidence remains unverified."
+    },
+    {
+      "name": "Sergul Nguyen",
+      "reason": "Held out: https://www.eur.nl/en/eshcc/people/sergul-nguyen gives an eligible-looking media/communication faculty role and Galatasaray PhD, but no affirmative Vietnamese identity signal beyond Nguyen. Turkish education/employment is not proof of ineligibility; heritage remains unresolved."
+    },
+    {
+      "name": "Tri Mikael Tran",
+      "reason": "Outside slice: discovery surfaced a former Groningen assistant professor, but current employer search result identifies Kühne Logistics University, Hamburg, since September 2026. Not proposed for Nordic/Benelux; no current Groningen appointment accepted."
+    }
+  ],
+  "coverage": [
+    {
+      "employer": "Umeå University",
+      "pagesExamined": [
+        "https://www.umu.se/en/staff/trang-vu/"
+      ],
+      "note": "Education/language studies verified in depth; Mai Trang Vu is new. Broader Swedish searches also surfaced already-listed business and engineering scholars."
+    },
+    {
+      "employer": "University of South-Eastern Norway",
+      "pagesExamined": [
+        "https://www.usn.no/english/about/contact-us/employees/dieu-tien-bui",
+        "https://www.usn.no/kontakt-oss/ansatte/dieu-tien-bui"
+      ],
+      "note": "Geomatics, environmental hazards, business and IT examined; new professor confirmed, with explicit doctoral evidence."
+    },
+    {
+      "employer": "University of Vaasa",
+      "pagesExamined": [
+        "https://www.uwasa.fi/en/person/1992449",
+        "https://sites.uwasa.fi/ddan/home/"
+      ],
+      "note": "Information systems and cybersecurity examined; linked CV explicitly establishes tenure, doctorate, and career history. University-hosted CV retrieved HTTP 200 via Python requests."
+    },
+    {
+      "employer": "Eindhoven University of Technology",
+      "pagesExamined": [
+        "https://research.tue.nl/en/persons/qv-vinh-dang/"
+      ],
+      "note": "Engineering/operations research and logistics examined; verified Vinh Dang and distinguished PSI namesake."
+    },
+    {
+      "employer": "Norwegian University of Science and Technology",
+      "pagesExamined": [
+        "https://www.ntnu.no/ansatte/nhien.nguyen",
+        "https://www.ntnu.no/ansatte/lam.v.nguyen"
+      ],
+      "note": "Innovation-management incumbent already listed; water-engineering researcher held for appointment permanence. Broader searches covered marine engineering and computer science."
+    },
+    {
+      "employer": "University of Oslo",
+      "pagesExamined": [
+        "https://www.mn.uio.no/ifi/english/people/aca/dinhut/index.html"
+      ],
+      "note": "Cybersecurity professor lead held because primary university employment is not established alongside external executive role."
+    },
+    {
+      "employer": "University of Agder",
+      "pagesExamined": [
+        "https://www.uia.no/english/about-uia/employees/irisnd/index.html",
+        "https://www.uia.no/om-uia/ansatte/irisnd/"
+      ],
+      "note": "Law lead Iris Nguyen Duy remains held: person-page access blocked. Engineering search surfaced already-rostered Van Khang Huynh; no additional candidate verified."
+    },
+    {
+      "employer": "Technical University of Denmark",
+      "pagesExamined": [
+        "https://www.dtu.dk/english/person/tran-nguyen-le?id=220320"
+      ],
+      "note": "Robotics profile already listed; microbiology/nanotechnology searches also surfaced Dang Duong Bang but no usable current person profile."
+    },
+    {
+      "employer": "University of Oulu",
+      "pagesExamined": [
+        "https://www.oulu.fi/en/researchers/nhan-nguyen"
+      ],
+      "note": "Wireless-communications profile matched vp-1131; education/AI searches surfaced already-listed Andy Nguyen. No new candidate verified."
+    },
+    {
+      "employer": "Åbo Akademi University",
+      "pagesExamined": [
+        "https://research.abo.fi/en/persons/tan-phat-huynh/",
+        "https://www.abo.fi/en/people/alumni-profile-annie-pham/"
+      ],
+      "note": "Molecular-science professor already listed; business alumna rejected. Professor-rank discrepancy for vp-2644 recorded in already_listed."
+    },
+    {
+      "employer": "Hanken School of Economics",
+      "pagesExamined": [
+        "https://www.hanken.fi/en/departments-centres/department-management-and-organisation/contact"
+      ],
+      "note": "Management directory examined; Dinh Nguyen listed as doctoral researcher. Marketing/supply-chain searches primarily surfaced doctoral leads."
+    },
+    {
+      "employer": "University of Turku",
+      "pagesExamined": [
+        "https://www.utu.fi/en/people/tuan-viet-nguyen"
+      ],
+      "note": "Economics person page identifies a doctoral researcher; broader computing and education searches also produced doctoral/postdoctoral leads."
+    },
+    {
+      "employer": "University of Jyväskylä",
+      "pagesExamined": [
+        "https://www.jyu.fi/en/people/khoi-nguyen"
+      ],
+      "note": "Attempted person page returned 403; search discovery indicated postdoctoral status. No verified career candidate accepted."
+    },
+    {
+      "employer": "Linköping University",
+      "pagesExamined": [
+        "https://liu.se/en/employee/dattr18"
+      ],
+      "note": "Physics/materials profile already listed; electrical-engineering searches likewise surfaced already-rostered Khac-Hoang Ngo and Hoang Nguyen."
+    },
+    {
+      "employer": "Södertörn University",
+      "pagesExamined": [
+        "https://www.sh.se/english/sodertorn-university/contact/researchers/nha-nguyen"
+      ],
+      "note": "Gender studies/humanities lead explicitly doctoral; excluded."
+    },
+    {
+      "employer": "University of Iceland",
+      "pagesExamined": [
+        "https://vietnameseiniceland.hi.is/researchersandcollaborations/"
+      ],
+      "note": "Education/social integration project examined; researcher Anh-Dao Katrin Tran held for lack of permanent faculty-equivalence evidence."
+    },
+    {
+      "employer": "University of Akureyri",
+      "pagesExamined": [
+        "https://www.unak.is/english/moya/news/dart-throwing-professor-with-passion-for-sustainable-fisheries"
+      ],
+      "note": "Natural-resource sciences/fisheries professor already listed as vp-2534."
+    },
+    {
+      "employer": "Delft University of Technology",
+      "pagesExamined": [
+        "https://www.tudelft.nl/en/staff/n.a.k.doan/"
+      ],
+      "note": "Aerospace/fluid mechanics profile matched vp-0544; no new person."
+    },
+    {
+      "employer": "Utrecht University",
+      "pagesExamined": [
+        "https://www.uu.nl/staff/LTran"
+      ],
+      "note": "Physics profile already listed; broader NLP, public law and media searches returned existing scholars."
+    },
+    {
+      "employer": "Open University of the Netherlands",
+      "pagesExamined": [
+        "https://www.ou.nl/en/staff-science",
+        "https://www.ou.nl/profiel/dn2",
+        "https://research.ou.nl/en/publications/leveraging-synergy-to-drive-digital-transformation-a-systems-theo/"
+      ],
+      "note": "Information systems lead Dinh Khoi Nguyen held for current person-page/teaching-permanence evidence; no search snippet accepted as current profile."
+    },
+    {
+      "employer": "Erasmus University Rotterdam",
+      "pagesExamined": [
+        "https://www.eur.nl/en/eshcc/people/sergul-nguyen"
+      ],
+      "note": "Communication faculty profile examined; Vietnamese signal unresolved for Sergul Nguyen. Search surfaced other already-listed communication scholars."
+    },
+    {
+      "employer": "University of Liège",
+      "pagesExamined": [
+        "https://www.sciences.uliege.be/cms/c_3973650/en/facsc-repertoire?uid=u016698"
+      ],
+      "note": "Physics official biography matched vp-1426. Broader physics, chemistry, engineering and neuroscience searches primarily returned rostered faculty."
+    },
+    {
+      "employer": "Université de Mons",
+      "pagesExamined": [
+        "https://orbi.umons.ac.be/profile?uid=501408",
+        "https://web.umons.ac.be/sepl/en/team/",
+        "https://web.umons.ac.be/fr/evenements/vtm2026-2027/"
+      ],
+      "note": "Forensic psychology lead verified professionally, held for affirmative Vietnamese signal. Department and event pages retrieved HTTP 200 through Python requests after web-tool TLS/502 errors."
+    },
+    {
+      "employer": "University of Luxembourg",
+      "pagesExamined": [
+        "https://www.uni.lu/snt-en/people/van-thieu-nguyen/"
+      ],
+      "note": "Computing/wireless searches surfaced doctoral/research-associate leads and existing roster members; attempted person page returned robot check, so no new candidate accepted."
+    },
+    {
+      "employer": "Regional search coverage",
+      "pagesExamined": [],
+      "note": "Searched all eight countries across engineering, computing, mathematics/statistics, natural sciences, biomedical/clinical research, business/economics, law, social sciences, education and humanities using Nguyen, Tran, Le, Pham, Vu, Vo, Bui, Dang, Do, Doan, Hoang, Huynh, Truong, Luong, Trinh, Ngo, Dinh, Phan and Dao leads. Also targeted Aalto, Tampere, LUT, KU Leuven, Ghent, VUB, Hasselt, Namur, Copenhagen, Aarhus, Southern Denmark, Aalborg, Chalmers, KTH, Uppsala, Lund, Jönköping, Luleå and Örebro. Those additional searches were discovery only, not live full-directory audits. Stopped after broad coverage and diminishing verified-new yield, below 25; coverage is a research pass, not an assertion of exhaustive enumeration. No LinkedIn page fetched, no login or robot-check bypass, no Issues/PRs or roster changes."
+    }
+  ]
+}

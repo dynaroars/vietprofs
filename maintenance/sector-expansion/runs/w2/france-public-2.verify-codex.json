@@ -1,0 +1,23 @@
+{
+  "verifier": "codex",
+  "input": "maintenance/sector-expansion/runs/w2/france-public-2.codex.json",
+  "candidates": [
+    {
+      "name": "Duy Duc Dao",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Independently fetched https://iphc.cnrs.fr/annuaire/fiche/?nom=Duy+Duc-DAO with Python urllib: HTTP 200; individual IPHC employer page names Duy Duc DAO as Chercheur in DRS/Groupe Theorie, with an IPHC email and building/office location. The web browser returned Cache miss, but the direct live fetch succeeded. Current team membership is independently corroborated at https://iphc.cnrs.fr/la-recherche/drs-recherches-subatomiques/drs_theorie/. Career status is established by https://section04.in2p3.fr/wp-content/uploads/2024/02/CR_session_automne_2023_vfinale.pdf, page 2, reporting his titularisation on 25 September 2023. Doctoral thesis https://inspirehep.net/files/12a71b8061ffdd129f9e2d54f762fcc4 identifies a Universite de Bordeaux physics doctorate defended 26 November 2019. Vietnamese signal is the distinctive given-name combination Duy Duc, beyond Dao alone, supported by thesis acknowledgments describing Hanoi/Ho Chi Minh City contacts and returning to Bordeaux for doctoral study. The current IPHC appointment is in Strasbourg, France; no Vietnam-based role found. Required find-roster-matches command with name and both identity URLs returned only vp-1057 Duy Dao. Independently opened https://profiles.ucalgary.ca/duy-dao: that scholar has a UC San Diego PhD (2017) and business/software-economics research, distinguishing him from the Bordeaux nuclear physicist (2019). No candidate match in maintenance/sector-expansion/already-proposed.txt.",
+      "correctedFields": {}
+    }
+  ],
+  "possible_move": [
+    {
+      "name": "Phu Nguyen-Van",
+      "id": "vp-0523",
+      "verdict": "moved",
+      "newEmployer": "CNRS (Centre National de la Recherche Scientifique)",
+      "url": "https://economix.fr/fr/membre/nguyen-van-phu?tab=dt",
+      "reason": "Current employer differs from the roster university field (Universite Paris Nanterre): the opened official EconomiX profile explicitly states Directeur de Recherche at CNRS, affiliated with the joint CNRS/Paris Nanterre unit EconomiX. His linked personal site https://sites.google.com/view/nguyen-van/ independently confirms CNRS employment and says he directs EconomiX from 1 January 2026. Thus moved denotes an employer/classification correction under this brief, not a demonstrated chronological or geographical move. Both pages also list a current visiting professorship at UMT in Ho Chi Minh City. That does not establish a change of primary employer, and his physical base remains unresolved; do not infer permanent relocation to Vietnam from this visiting appointment."
+    }
+  ]
+}

@@ -1,0 +1,509 @@
+{
+  "group": "university",
+  "agent": "codex",
+  "slice": "us-california",
+  "finishedAt": "2026-11-15T01:23:22.400860Z",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Linh Chuong",
+        "university": "California State University, Monterey Bay",
+        "rank": "Assistant Professor",
+        "track": "Tenure-line",
+        "department": "Health, Human Services and Public Policy",
+        "field": "Health Sciences",
+        "state": "California",
+        "country": "United States",
+        "researchAreas": [
+          "Health and social policy",
+          "Health equity",
+          "Translational science"
+        ],
+        "phdInstitution": "University of California, Los Angeles",
+        "phdYear": 2024,
+        "profileUrl": "https://researchprofiles.csumb.edu/en/persons/linh-chuong/"
+      },
+      "evidence": {
+        "currentRole": "https://researchprofiles.csumb.edu/en/persons/linh-chuong/ — \"Assistant Professor, Department of Health, Human Services and Public Policy\". https://csumb.edu/chshs/about/dean/ explicitly groups Dr. Linh Chuong under tenure-track faculty.",
+        "doctorateOrPapers": "https://luskin.ucla.edu/wp-content/uploads/2025/11/Ninez-Alafriz-Ponce-dossier-April-2025.pdf p. 6, dissertation-chair list: \"Linh Chuong (PhD 2024)\". UCLA affiliation and Health Policy and Management training independently corroborated by https://uvas.healthsciences.ucla.edu/leadership-team/collaborators-and-mentees (lists PhD) and https://orcid.org/0000-0002-0069-9611 (older training record).",
+        "vietnameseSignal": "Vietnamese given name Linh on the employer profile; additional first-person account of her Vietnamese immigrant mother: https://vietbao.com/p112a305210/2119/nguoi-viet-cua-nuoc-my-toi-hoat-dong-chinh-tri-thay-the-cho-me-toi (discovery result only; direct open returned cache miss, so not used for appointment verification).",
+        "dedup": "Ran npm run find-roster-matches with Linh Chuong, all discovered identity URLs (CSUMB person page, ORCID, PIVOT bio, UCLA CTSI person page); also ran Linh Hong Chuong alias. All returned no roster or retired-id matches. No match in already-proposed.txt.",
+        "enrichment": "Employer profile supplies research areas. https://www.pivotnetwork.org/profiles/linh-chuong supplies UC Berkeley MPH and Hendrix College undergraduate degrees; these are contextual sources, not current-employer evidence. Scholar search found no verified profile. Portrait lead linked by employer: https://researchprofiles.csumb.edu/files-asset/42264576/Linh_Chuong2.jpg?f=jpg&w=160; image fetch returned cache miss, so not proposed as portraitSource. No qualifying honor verified. City omitted because the current appointment sources examined did not explicitly establish it."
+      }
+    },
+    {
+      "entry": {
+        "name": "Phung N. Su",
+        "university": "University of California, Santa Barbara",
+        "rank": "Assistant Professor",
+        "track": "Tenure-line",
+        "department": "Sociology",
+        "field": "Social & Behavioral Sciences",
+        "city": "Santa Barbara",
+        "state": "California",
+        "country": "United States",
+        "researchAreas": [
+          "Gender",
+          "Globalization",
+          "Migration",
+          "Sociological theory",
+          "Qualitative methods"
+        ],
+        "phdInstitution": "University of California, Berkeley",
+        "profileUrl": "https://www.soc.ucsb.edu/people/phung-n-su",
+        "websiteUrl": "https://pnsu87.wixsite.com/profile"
+      },
+      "evidence": {
+        "currentRole": "https://www.soc.ucsb.edu/people/phung-n-su — \"Assistant Professor\". Department faculty page and linked maintained homepage both identify her current UCSB sociology appointment.",
+        "doctorateOrPapers": "https://www.soc.ucsb.edu/people/phung-n-su — \"Ph.D, Sociology, University of California, Berkeley\".",
+        "vietnameseSignal": "Vietnamese given name Phung on the official profile and self-introduction at https://pnsu87.wixsite.com/profile. Official bio documents extensive Vietnamese migration scholarship; surname Su alone was not the screening basis.",
+        "dedup": "Ran npm run find-roster-matches -- \"Phung N. Su\" with the official profile, personal homepage and linked Google Docs CV. No roster or retired-id matches. Manually checked name variants and already-proposed.txt; no duplicate.",
+        "enrichment": "Current profile supplies research areas and Santa Barbara, CA address. Website retrieved and confirms identity through same name, UCSB appointment, email and publications. Linked CV https://docs.google.com/document/d/1XvxVbxt5PNAZKHvGzFcGjQiXcGittsNl/edit did not expose usable CV text; no doctorate year inferred. Employer page has a named headshot link, but no portrait was downloaded or visually verified. No verified Scholar profile or qualifying honor found."
+      }
+    },
+    {
+      "entry": {
+        "name": "My Phung (Jenny) O",
+        "university": "California State University, East Bay",
+        "rank": "Professor",
+        "track": "Tenure-line",
+        "department": "Kinesiology",
+        "field": "Health Sciences",
+        "state": "California",
+        "country": "United States",
+        "researchAreas": [
+          "Sport and exercise psychology",
+          "Mental imagery",
+          "Motor learning",
+          "Observational learning",
+          "Equity in higher education"
+        ],
+        "phdInstitution": "Western University",
+        "phdYear": 2009,
+        "msInstitution": "University of Windsor",
+        "undergradInstitution": "Laurentian University",
+        "undergradYear": 2003,
+        "profileUrl": "https://csapps.csueastbay.edu/directory/profiles/kpe/ojenny.html"
+      },
+      "evidence": {
+        "currentRole": "https://csapps.csueastbay.edu/directory/profiles/kpe/ojenny.html — \"Professor, Co-Associate Chair\", Department of Kinesiology. Current page describes her research group and 2022–27 McNair PI role.",
+        "doctorateOrPapers": "https://www.csueastbay.edu/kin/files/docs/vitae/o.pdf p. 1 records Doctor of Philosophy, Kinesiology, University of Western Ontario, 2005–2009. https://www.csueastbay.edu/oaa/files/docs/homepage/faculty-directory.pdf explicitly records Ph.D., 2009; employer profile confirms institution and specialization. Western University is canonical name for University of Western Ontario.",
+        "vietnameseSignal": "Vietnamese given-name combination My Phung on current employer profile and employer-hosted CV, which spells full name MY PHUNG JENNY O. This lead came from given-name discovery rather than surname O.",
+        "dedup": "Ran npm run find-roster-matches for My Phung Jenny O, My Phung (Jenny) O, and Jenny O with current employer profile, hosted CV, and linked Google Docs CV. All returned no roster or retired-id matches. No match in already-proposed.txt.",
+        "enrichment": "Employer CV https://www.csueastbay.edu/kin/files/docs/vitae/o.pdf supports Windsor masters and Laurentian undergraduate completion in 2003. Current profile supplies research areas. Its newer CV link https://docs.google.com/document/d/1MavXSp1Of3H-ZUbcU9D_Kd0SPlFdIijnr9-6ScJLNZE/edit?usp=sharing returned a JavaScript notice. Historical CV awards are trainee awards or research grants, so no honors proposed. No verified Scholar profile found. Named portrait appears on official profile but was not visually inspected; city omitted."
+      }
+    },
+    {
+      "entry": {
+        "name": "Kieu-Linh Caroline Valverde",
+        "university": "University of California, Davis",
+        "rank": "Associate Professor",
+        "track": "Tenure-line",
+        "department": "Asian American Studies",
+        "field": "Social & Behavioral Sciences",
+        "city": "Davis",
+        "state": "California",
+        "country": "United States",
+        "researchAreas": [
+          "Southeast Asian American history",
+          "Diaspora and transnationalism",
+          "Mixed race and gender theories",
+          "Higher education",
+          "Social movements"
+        ],
+        "phdInstitution": "University of California, Berkeley",
+        "undergradInstitution": "University of California, Berkeley",
+        "profileUrl": "https://asa.ucdavis.edu/people/kieu-linh-valverde",
+        "websiteUrl": "https://www.kieulinh.com/"
+      },
+      "evidence": {
+        "currentRole": "https://asa.ucdavis.edu/people/kieu-linh-valverde — \"Associate Professor of Asian American Studies\". https://culturalstudies.ucdavis.edu/people/kieu-linh-caroline-valverde independently repeats the rank and primary department.",
+        "doctorateOrPapers": "https://asa.ucdavis.edu/people/kieu-linh-valverde explicitly states a Ph.D. in Ethnic Studies at UC Berkeley; no year supplied. Same completed doctorate appears on https://culturalstudies.ucdavis.edu/people/kieu-linh-caroline-valverde.",
+        "vietnameseSignal": "Vietnamese given-name tokens Kieu-Linh on both official employer profiles. This does not depend on interpreting surname Valverde as Vietnamese. No original Vietnamese surname or diacritics invented.",
+        "dedup": "Ran npm run find-roster-matches -- \"Kieu-Linh Caroline Valverde\" with both institutional profiles and the employer-linked personal website. No roster or retired-id matches. Manually searched Caroline, Valverde and Kieu-Linh variants; no duplicate. No match in already-proposed.txt.",
+        "enrichment": "Official profile supplies research areas, Davis address and Berkeley undergraduate degree. Personal website is directly linked by both institutional profiles but timed out when opened; retained only as an employer-supplied link. Official profiles mention Fulbright, Rockefeller and Luce fellowships, but career/trainee eligibility was not sufficiently resolved to propose honors. No verified Scholar profile found; no portrait downloaded."
+      }
+    }
+  ],
+  "already_listed": [
+    {
+      "name": "Uyen Minh Le",
+      "id": "vp-0218",
+      "note": "Exact name and employer-profile URL match; current CNU professor."
+    },
+    {
+      "name": "Linh Ho",
+      "id": "vp-2820",
+      "note": "Exact name and employer-profile URL match at California Northstate."
+    },
+    {
+      "name": "Tuan Tran",
+      "id": "vp-0365",
+      "note": "Exact CNU profile URL match; current department directory says Associate Professor while personal bio still says Assistant Professor; not a new person."
+    },
+    {
+      "name": "Simon Quach",
+      "id": "vp-1084",
+      "note": "Existing USC economics entry; rare-surname search rediscovery."
+    },
+    {
+      "name": "Wendy Quach",
+      "id": "vp-2226",
+      "note": "Existing SJSU speech-language pathology faculty; rare-surname search rediscovery."
+    },
+    {
+      "name": "Thuy Vo Dang",
+      "id": "vp-0193",
+      "note": "Existing UCLA information studies faculty; given-name search rediscovery."
+    },
+    {
+      "name": "Hanh-Phuc Le",
+      "id": "vp-0297",
+      "note": "Existing UCSD ECE faculty; given-name search rediscovery."
+    },
+    {
+      "name": "Truc Thanh Ngo",
+      "id": "vp-1074",
+      "note": "USD profile uses Truc Ngo; engineering field and vice-provost role resolve to existing person."
+    },
+    {
+      "name": "Thuy T. Le",
+      "id": "vp-0421",
+      "note": "SJSU electrical engineering, Berkeley doctorate; same person as Thuy Trong Le directory listing."
+    },
+    {
+      "name": "Thuy Tran",
+      "id": "vp-2241",
+      "note": "Existing UC Irvine surgery entry."
+    },
+    {
+      "name": "Hung Ton-That",
+      "id": "vp-1413",
+      "note": "Existing UCLA microbiology/dentistry professor; rare-surname rediscovery."
+    },
+    {
+      "name": "Justin Luong",
+      "id": "vp-2727",
+      "note": "Existing Berkeley ecology faculty; new-faculty news does not imply new identity."
+    },
+    {
+      "name": "Phung Huynh",
+      "id": "vp-0380",
+      "note": "Existing CSU Los Angeles faculty; historical LA Valley College/USC pages not new identity."
+    },
+    {
+      "name": "Tu-Uyen Nguyen",
+      "id": "vp-0370",
+      "note": "Already listed CSUF Asian American Studies faculty."
+    }
+  ],
+  "possible_move": [],
+  "rejected": [
+    {
+      "name": "Janice N. Phung",
+      "reason": "CSUSM official profile and current event bio confirm psychology faculty and UC Irvine PhD 2017, but no affirmative Vietnamese given-name/education/language/ancestry signal verified beyond surname. Search found a different Janice Phung in Vietnam/Pearson; not conflated. Sources: https://www.csusm.edu/profiles/index.html?u=jphung and https://www.csusm.edu/mindfulcsusm/ccp/presenters.html . Hold for identity evidence."
+    },
+    {
+      "name": "Alex C. Huynh",
+      "reason": "CSUSM psychology directory and research page establish current tenure-track faculty and Waterloo PhD. No affirmative Vietnamese signal beyond surname verified. Dedup name hit vp-0347 Alex Van Huynh at DeSales is a different biologist, not the CSUSM social psychologist. https://www.csusm.edu/psychology/maprogram/fac-research.html ; https://www.csusm.edu/psychology/directory.html ."
+    },
+    {
+      "name": "Eli Luong",
+      "reason": "Live UCI profile identifies clinical assistant professor and MD (UCLA 2012), but no affirmative Vietnamese signal or research doctorate/two recent current-employer papers verified for this brief. https://www.faculty.uci.edu/profile/?facultyId=6859 ."
+    },
+    {
+      "name": "Co Boi Nguyen",
+      "reason": "Redlands indexed official profile gives orchestral-studies professor and Vietnamese education, but lists music diplomas rather than a research doctorate. No two recent research papers verified; direct profile fetch also returned 502. Not accepted under BRIEF2 doctorate-or-papers test. https://prod.www.redlands.edu/faculty-and-staff-directory/music/co-boi-nguyen ."
+    },
+    {
+      "name": "Phuong Truong",
+      "reason": "UCSD news calls role adjunct lecturer/education specialist, without clear continuing full-time salaried adjunct-professor or teaching-ladder appointment. https://jacobsschool.ucsd.edu/news/release/3990?id=3990 ."
+    },
+    {
+      "name": "Vinh Nguyen - Berkeley",
+      "reason": "Charles B. Morrey Math Fellow is the renamed visiting assistant-professor post, a temporary appointment. https://math.berkeley.edu/people/vinh-nguyen ."
+    },
+    {
+      "name": "Peter Nghiem",
+      "reason": "Historical Santa Clara lecturer lead; no current continuing faculty appointment established. Not accepted from old catalog."
+    },
+    {
+      "name": "Dan Quynh Nguyen",
+      "reason": "Chico directory lists Lecturer only; no full-time continuing teaching appointment established. https://apps.csuchico.edu/directory/Employee/dnguyen79 ."
+    },
+    {
+      "name": "Thuy Le - CSU Dominguez Hills",
+      "reason": "Math directory lists Lecturer, without continuing full-time appointment evidence. https://www.csudh.edu/math/faculty/ ."
+    },
+    {
+      "name": "Gia Nguyen - CSU Dominguez Hills",
+      "reason": "Math directory lists Lecturer only. https://www.csudh.edu/math/faculty/ ."
+    },
+    {
+      "name": "Linh Ho Huerta",
+      "reason": "Chapman profile is a PhD student, despite publication appearing in an education faculty-articles repository. https://www.chapman.edu/education/graduate/phd-education/phd-in-education-student-profiles.aspx ."
+    },
+    {
+      "name": "Ngo Dinh Thinh",
+      "reason": "Only old Sacramento catalog and historical external biography found; no live current eligible appointment or formal emeritus person page established. https://oldcatalog.csus.edu/cat98/cat98/me.pdf ."
+    },
+    {
+      "name": "Bich-Dao Huynh",
+      "reason": "CSUDH catalog name is in emeriti staff, operations specialist, not faculty emeritus; search snippets interleaved adjacent faculty degrees. https://catalog.csudh.edu/general-information/emeriti-staff/emeriti-staff.pdf ."
+    },
+    {
+      "name": "Alan Khuu",
+      "reason": "Occidental lead appeared only in historical course lists; no current continuing appointment verified. https://alumni.oxy.edu/s/956/images/editor_documents/hfw14/10-24-14_open_classes.pdf ."
+    },
+    {
+      "name": "Jennifer Khuu",
+      "reason": "Southern California University of Health Sciences official faculty entry labels Adjunct Faculty. https://www.scuhs.edu/faculty/?url=Jennifer_Khuu.html ."
+    },
+    {
+      "name": "Thich Van Phung",
+      "reason": "Santiago Canyon College biography labels Adjunct Professor and describes outside practice. https://sites.google.com/view/scc-acct-dept/professors/thich-phung ."
+    },
+    {
+      "name": "Cheng-Ming Chuong",
+      "reason": "Taiwanese education/name evidence; no affirmative Vietnamese signal established. Similar surname spelling alone not sufficient."
+    },
+    {
+      "name": "Ma Vang",
+      "reason": "UC Merced biography explicitly describes Hmong refugee background from Laos; no Vietnamese identity signal established. https://www.ucmerced.edu/news/2024/untangling-hmong-history-uc-merced%E2%80%99s-ma-vang ."
+    }
+  ],
+  "coverage": [
+    {
+      "employer": "California university slice — later-pass method and stopping point",
+      "pagesExamined": [],
+      "note": "Supplemental given-name and rare-surname pass following the earlier surname sweep. Searched institution-restricted faculty/directory queries and broader California combinations for Quynh, Thuy, Ngoc, Thao, Minh, Quang, Linh, Dung, Thanh, Hien, Thinh, Hanh, Truc, Uyen, Bich, Nhu, Chinh, Hieu, Vinh, Diem, Quyen, Huan, Khai, Thien, Thuan, Ngan, Tram, Suong, and rarer surnames Khuu, Kieu, Quach, Nghiem, Diep, Luong, Chuong, Phung, Ton-That, Thach, Trieu and Vong. Four independently verified new candidates. Stopped after broad supplemental coverage and diminishing returns, not at 25. Not an exhaustive campus census. pagesExamined lists live opened pages; query-only coverage is explicitly marked. Names in already-proposed.txt were skipped, including Nhu Y Tran Stessman, Hieu P. Nguyen and earlier California candidates. No LinkedIn page was opened; incidental search results were not used for verification. Only this JSON file written; no roster changes, tests that stamp updates, IDs, Issues, PRs or git mutations."
+    },
+    {
+      "employer": "California State University, Monterey Bay",
+      "pagesExamined": [
+        "https://researchprofiles.csumb.edu/en/persons/linh-chuong/",
+        "https://csumb.edu/hhspp/faculty-staff/",
+        "https://csumb.edu/chshs/about/dean/"
+      ],
+      "note": "Deeper public-health faculty and college organization-chart check found Linh Chuong. General Pure person-directory endpoint returned 403; individual page and employer department pages worked. Linh, Thuy, Khanh, Trinh and Bui discovery searches; Phuong Tran Nguyen already covered by earlier pass."
+    },
+    {
+      "employer": "University of California, Santa Barbara",
+      "pagesExamined": [
+        "https://www.soc.ucsb.edu/people/phung-n-su",
+        "https://pnsu87.wixsite.com/profile"
+      ],
+      "note": "Phung given-name search found new sociology professor Phung N. Su. Retrieved employer and linked personal pages. Prior-pass An Bui skipped."
+    },
+    {
+      "employer": "California State University, East Bay",
+      "pagesExamined": [
+        "https://csapps.csueastbay.edu/directory/profiles/kpe/ojenny.html",
+        "https://www.csueastbay.edu/kin/files/docs/vitae/o.pdf"
+      ],
+      "note": "My Phung given-name combination found Jenny O, missed by conventional surname matching. Current profile and historical education CV agree. Also searched Quoc and Dinh faculty leads."
+    },
+    {
+      "employer": "University of California, Davis",
+      "pagesExamined": [
+        "https://asa.ucdavis.edu/people/kieu-linh-valverde",
+        "https://culturalstudies.ucdavis.edu/people/kieu-linh-caroline-valverde"
+      ],
+      "note": "Kieu-Linh found through given-name discovery. Both current institutional profiles confirm primary Asian American Studies appointment and Berkeley PhD. Thuan, Kieu, Truc and Uyen searches otherwise primarily alumni, trainees or existing entries."
+    },
+    {
+      "employer": "California State University, San Marcos",
+      "pagesExamined": [
+        "https://www.csusm.edu/profiles/index.html?u=jphung",
+        "https://www.csusm.edu/psychology/directory.html"
+      ],
+      "note": "Deeper psychology search surfaced Janice Phung and Alex Huynh; roles/degrees supported, affirmative Vietnamese evidence insufficient under brief. Given-name queries Thao, Minh, Phuong, Ngoc and Quynh mostly students. Legacy faculty.csusm.edu person URL unavailable; current campus profile worked."
+    },
+    {
+      "employer": "California Northstate University",
+      "pagesExamined": [
+        "https://pharmacy.cnsu.edu/directory/pbs.php",
+        "https://pharmacy.cnsu.edu/directory/bios/uyen-minh-le.php"
+      ],
+      "note": "PBS directory deeply screened; Uyen Minh Le and Linh Ho already rostered. CAS Tuan Tran also exact existing URL match. Current directory labels Hiep Nguyen volunteer, so not a new eligible faculty lead. No new candidate."
+    },
+    {
+      "employer": "California State University, Dominguez Hills",
+      "pagesExamined": [
+        "https://www.csudh.edu/math/faculty/"
+      ],
+      "note": "Math directory inspected directly: several Vietnamese names are lecturers without continuing full-time evidence. Bich-Dao Huynh historical catalog lead resolves to staff emerita. Phuong and Hoang queries mostly students and professional staff."
+    },
+    {
+      "employer": "University of California, Irvine",
+      "pagesExamined": [
+        "https://www.faculty.uci.edu/profile/?facultyId=6859"
+      ],
+      "note": "Given-name/rare-surname searches in medical and general faculty system: Eli Luong withheld for missing affirmative signal and brief research requirement; Thuy Tran already listed. Duy and Chinh leads primarily existing faculty or clinical profiles without additional research evidence."
+    },
+    {
+      "employer": "University of the Pacific",
+      "pagesExamined": [
+        "https://www.pacific.edu/campus-directory/katherine-diep"
+      ],
+      "note": "Thuy and Diep discovery searches; Katherine Diep directory page opened but no qualifying research-faculty role established. Pharmacy results heavily populated with adjunct preceptors; not treated as permanent faculty."
+    },
+    {
+      "employer": "University of California, Berkeley",
+      "pagesExamined": [
+        "https://nature.berkeley.edu/node/169"
+      ],
+      "note": "Rare-surname Luong new-faculty article resolved to existing Justin Luong. Vinh Nguyen math lead is temporary Morrey fellow. Given-name searches also resurfaced already-listed scholars."
+    },
+    {
+      "employer": "California State University, Channel Islands",
+      "pagesExamined": [],
+      "note": "Discovery-only given-name queries Thuy, Quynh, Hien, Dung, Minh and surname Nguyen; results mostly students, safety/professional staff or irrelevant historical publications. No new eligible profile found; no complete directory traversal claimed."
+    },
+    {
+      "employer": "California State University, Stanislaus",
+      "pagesExamined": [],
+      "note": "Discovery-only Dung, Quang, Nhu and Vo searches; Nhu Y Stessman already-proposed identity skipped. Student honors lists excluded."
+    },
+    {
+      "employer": "California State University, Bakersfield",
+      "pagesExamined": [],
+      "note": "Discovery-only Thanh, Dung and Tran searches; historical Natalie Tran teaching reference and student/consultant results did not establish a current new eligible appointment."
+    },
+    {
+      "employer": "California State Polytechnic University, Humboldt",
+      "pagesExamined": [],
+      "note": "Discovery-only Minh and Tran searches; student and alumni pages, old Cawa Tran research publication, and engineering scholarships dominated. No new eligible faculty lead."
+    },
+    {
+      "employer": "California State University, San Bernardino",
+      "pagesExamined": [],
+      "note": "Discovery-only Hien, Trinh and Vietnamese emeritus queries; student/deans-list results and international collaborators not mistaken for campus faculty."
+    },
+    {
+      "employer": "California State University, Chico",
+      "pagesExamined": [],
+      "note": "Discovery-only Huy, Quynh and lecturer searches; Dan Quynh Nguyen lacked continuing full-time appointment evidence. No new candidate accepted."
+    },
+    {
+      "employer": "California State University, Sacramento",
+      "pagesExamined": [],
+      "note": "Discovery-only Thinh and given-name searches; Ngo Dinh Thinh evidence historical only. No formal current emeritus profile established."
+    },
+    {
+      "employer": "California State University, Fresno",
+      "pagesExamined": [],
+      "note": "Discovery-only Vinh Nguyen faculty/finance lead; no current eligible new faculty profile found. Existing engineering coverage from earlier pass not rerun."
+    },
+    {
+      "employer": "California State University, Northridge",
+      "pagesExamined": [],
+      "note": "Discovery-only Quang and emeritus Vietnamese queries; no affirmative new eligible identity. Existing Huong/Hana Nguyen and Dat-Dao Nguyen already covered earlier."
+    },
+    {
+      "employer": "California Polytechnic State University, San Luis Obispo",
+      "pagesExamined": [],
+      "note": "Discovery-only Khanh faculty search returned senior projects and student/staff achievements rather than new faculty. No new candidate."
+    },
+    {
+      "employer": "California State Polytechnic University, Pomona",
+      "pagesExamined": [],
+      "note": "Discovery-only Duc and Kieu searches; primarily students and historical lecturer references. No current permanent research appointment verified."
+    },
+    {
+      "employer": "San Jose State University",
+      "pagesExamined": [],
+      "note": "Discovery-only Quyen and rare-surname Quach searches; Wendy Quach and Thuy T. Le already listed. Quyen Luu/Grant professional staff excluded. No new eligible identity."
+    },
+    {
+      "employer": "San Francisco State University",
+      "pagesExamined": [],
+      "note": "Discovery-only Tram, Thuy and given-name/rare-surname queries; existing Mai-Nhung Le, Loan Le and Isabelle Thuy Pelaud dominate. No new verified candidate."
+    },
+    {
+      "employer": "California State University, Long Beach",
+      "pagesExamined": [],
+      "note": "Discovery-only Binh and rare/given-name queries. Binh Goldstein is explicitly PT lecturer. Hieu P. Nguyen and Tang-Hung Nguyen already proposed. No new qualifying candidate."
+    },
+    {
+      "employer": "California State University, Fullerton",
+      "pagesExamined": [],
+      "note": "Discovery-only Ngan, Uyen, Linh and Vinh searches; Tu-Uyen Nguyen and Vietnamese program coordinator Linh K. Nguyen already listed. Temporary part-time lecturer pool not permanent faculty evidence."
+    },
+    {
+      "employer": "University of California, San Diego",
+      "pagesExamined": [],
+      "note": "Discovery-only Hanh, Truc, Quyen and Phuong Truong leads. Hanh-Phuc Le and Quyen Nguyen already represented; Phuong Truong held for unclear continuing status. No new person accepted."
+    },
+    {
+      "employer": "University of California, Los Angeles",
+      "pagesExamined": [],
+      "note": "Discovery-only Thien, Thuy, Ton-That and other given-name searches; Thuy Vo Dang and Hung Ton-That already listed; trainees/clinical leads lacking brief evidence excluded."
+    },
+    {
+      "employer": "University of California, Riverside",
+      "pagesExamined": [],
+      "note": "Discovery-only Thao and Quynh searches; community clinical-faculty list is not full-time employment evidence. Students and external scholars not counted."
+    },
+    {
+      "employer": "University of California, Santa Cruz",
+      "pagesExamined": [],
+      "note": "Discovery-only Linh and Thuy queries yielded no verified new faculty profile. Search coverage only."
+    },
+    {
+      "employer": "University of California, Merced",
+      "pagesExamined": [],
+      "note": "Discovery-only Minh/Bui faculty queries; NASA advisory-board member and student research contributors excluded. Ma Vang has affirmative Hmong/Laos biography rather than Vietnamese signal."
+    },
+    {
+      "employer": "Stanford University",
+      "pagesExamined": [],
+      "note": "Discovery-only Khai, Quynh and Diep searches; mainly unrelated names, existing clinical faculty and insufficiently researched medical leads. No new verified candidate; no complete directory traversal claimed."
+    },
+    {
+      "employer": "California Institute of Technology",
+      "pagesExamined": [],
+      "note": "Discovery-only Quang and uncommon-surname queries; JPL/visiting and external seminar identities not treated as Caltech university faculty."
+    },
+    {
+      "employer": "University of Southern California",
+      "pagesExamined": [],
+      "note": "Discovery-only Thien, Quach, Chuong and Vietnamese-studies queries; Simon Quach already listed, Cheng-Ming Chuong lacks affirmative Vietnamese signal, seminar visitors and students excluded."
+    },
+    {
+      "employer": "Santa Clara University",
+      "pagesExamined": [],
+      "note": "Discovery-only Minh, Quang, Thao, Thuy, Ngoc and Nghiem queries; standard faculty already covered earlier, Ngoc Nguyen-Mains is professional staff and Peter Nghiem historical part-time adjunct."
+    },
+    {
+      "employer": "University of San Francisco; University of San Diego",
+      "pagesExamined": [],
+      "note": "Discovery-only Truc/Hien and broader given-name searches. USD Truc Ngo resolves to existing Truc Thanh Ngo. USF results mostly students; earlier Joseph Nguyen proposal skipped."
+    },
+    {
+      "employer": "Chapman University",
+      "pagesExamined": [],
+      "note": "Discovery-only Linh search led to education publication repository; actual student profile identifies Linh Ho Huerta as PhD student. Not promoted from faculty-articles collection membership."
+    },
+    {
+      "employer": "Pepperdine University",
+      "pagesExamined": [],
+      "note": "Discovery-only Vietnamese and given-name queries found Tuan Hoang, already present in roster; Sarah Park adjunct workshop not evidence of Vietnamese identity or continuing eligible appointment."
+    },
+    {
+      "employer": "University of Redlands",
+      "pagesExamined": [],
+      "note": "Discovery-only Vietnamese query found Co Boi Nguyen music professor; official profile fetch failed 502 and listed credentials do not satisfy stricter BRIEF2 research-degree/papers requirement."
+    },
+    {
+      "employer": "Occidental College",
+      "pagesExamined": [],
+      "note": "Rare-surname Khuu search found historical Alan Khuu courses; no current appointment verification. No candidate accepted."
+    },
+    {
+      "employer": "Additional smaller private universities",
+      "pagesExamined": [],
+      "note": "Discovery-only given-name/Vietnamese queries also covered Loyola Marymount, California Lutheran, Azusa Pacific, Whittier, Dominican, Notre Dame de Namur, Saint Mary's College, Biola, California Baptist, Los Angeles Pacific, Western University of Health Sciences, Loma Linda, Scripps and Pitzer/Claremont. Most results were students, visitors, unrelated international partnerships, existing roster people, or professional staff. These were targeted searches rather than complete directory traversals; no search-only candidate accepted. Saint Mary's initial query used an alternate domain, so its negative result is weak and should not be treated as comprehensive."
+    }
+  ]
+}

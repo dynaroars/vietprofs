@@ -1,0 +1,60 @@
+{
+  "verifier": "codex",
+  "input": "maintenance/sector-expansion/runs/w3/taiwan-korea.codex.json",
+  "candidates": [
+    {
+      "name": "Thi Thu Ai Ho",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live employer full-time faculty directory names HO THI THU AI as Assistant Professor and records her Industrial Management PhD: https://icac.mcu.edu.tw/學程概況-about-us/師資介紹-faculty-and-staff/行政人員-program-secretary/專任教授-full-time-faculty/ . Her named biography is an acceptable department-directory entry, not an undifferentiated team listing. Thi Thu Ai supplies an affirmative Vietnamese given-name signal beyond Ho. Appointment and campus are in Taiwan. Independent find-roster-matches with the directory and linked ePortfolio returned no roster or retired-id matches; no normalized-name match in already-proposed.txt.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Ngoc-Thuy Mai",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live employer Finance faculty directory gives MAI, NGOC-THUY an individual biography block, Assistant Professor rank, National Taipei University of Technology PhD, Taiwan office and corporate-finance/trade-uncertainty specialties: https://ms.mcu.edu.tw/en/finance/ . The regular faculty appointment is eligible. Ngoc-Thuy is an affirmative Vietnamese given-name signal beyond Mai. Independent find-roster-matches with the directory and linked ePortfolio returned no roster or retired-id matches; absent from already-proposed.txt.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Minh Cong Dinh",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live individual employer teacher record identifies Minh Cong Dinh and his program: https://sys.ndhu.edu.tw/RD/TeacherTreasury/tlist.aspx?tcher=13682 . Independently fetched https://dmsi.ndhu.edu.tw/p/426-1208-11.php?Lang=zh-tw (HTTP 200) explicitly lists him as Assistant Professor. https://www-test.qmul.ac.uk/business-school/staff/academic/profiles/sungjun-park.html independently confirms his PhD was awarded in 2025 and his current NDHU assistant professorship. Minh Cong and Dinh provide an affirmative Vietnamese name signal. Current appointment is in Taiwan. Independent matching for both Minh Cong Dinh and Cong Minh Dinh, including employer URLs and ORCID, returned no roster or retired-id matches; absent from already-proposed.txt.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Duy Thanh Tran",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live employer person profile names Duy Thanh Tran as Professor in Nano Convergence Engineering: https://pure.jbnu.ac.kr/en/persons/duy-thanh-tran/ . Department individual record independently confirms identity, biosensor specialization and dttran@jbnu.ac.kr: https://top.jbnu.ac.kr/jbnuProfl/bintecheng/646/5293/artclView.do . This is a current university professorship in South Korea; the additional non-university doctorate/publication requirement does not apply. Duy Thanh is an affirmative Vietnamese given-name signal. Independent dedup returned only name matches: vp-0417 is a Rice electrical engineer with a Houston PhD; vp-0896 and vp-0975 are US physicians; retired vp-1190 is Boston College social-work scholar Thanh V. Tran. Full names, disciplines and identity URLs distinguish them from this materials/biosensor researcher. No identity-URL match and no already-proposed.txt match.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Phi-Hai Trinh",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live employer-hosted Professors page gives Phi-Hai Trinh a separate biography, office, institutional email and Research Professor appointment from 2023 to present, explicitly following a completed 2020–2023 postdoctoral appointment: https://smartgrid.kookmin.ac.kr/members/professors . The enduring research-faculty listing and separate chronology support a career Research appointment rather than a current postdoc. It confirms a Kookmin Electrical Engineering PhD (2020), Ho Chi Minh City University of Technology BS (2012), and Seoul location. Vietnamese education and Phi-Hai supply affirmative identity signals. Independent find-roster-matches returned no roster or retired-id matches; absent from already-proposed.txt.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Trong Thuy Tran",
+      "verdict": "fixable",
+      "failedTests": [
+        1
+      ],
+      "reason": "Test 1 fails for the submitted PDF: PDFs and faculty-development bulletins are explicitly prohibited as profileUrl. Replace it with the live employer faculty-directory entry at https://emi.asia.edu.tw/en/emi_active/EMI_Teachers/com , which individually names Tran Trong Thuy under Finance and states affiliations follow university records (full HTML independently fetched without login). The supplied employer PDF was independently downloaded and read; it confirms Assistant Professor in Finance and Vietnamese academic-book authorship. The Ministry directory https://udb.moe.edu.tw/ulist/Department?division_id=000021E834C8&institution_id=000021E82EF9&institution_name=亞洲大學 independently lists Trong Thuy Tran as full-time (專任) Finance faculty in Taiwan. Dedicated departmental profile discovered at https://fn.asia.edu.tw/zh_tw/師資陣容/陳重垂-Tran-33536108 currently returns Unreachable Server and is not proposed as a verified replacement. Independent dedup name hits vp-0619, vp-1950, vp-1991 and vp-2241 resolve to different chemistry, radiochemistry and medical scholars by full names, disciplines, degrees and identity URLs. No already-proposed.txt match.",
+      "correctedFields": {},
+      "correctedProfileUrl": "https://emi.asia.edu.tw/en/emi_active/EMI_Teachers/com"
+    }
+  ],
+  "possible_move": [
+    {
+      "name": "Nhu-Ngoc Dao",
+      "id": "vp-1262",
+      "verdict": "not_moved",
+      "url": "https://nndao.github.io/",
+      "reason": "Current employer agrees with the roster: Hallym University. Independently opened personal chronology explicitly dates Hallym Associate Professor from September 2026 to present and Sejong employment March 2020–August 2026. His current lab https://pshhlab.github.io/index.html also identifies Hallym. Matching Chung-Ang degrees, research subjects and linked lab establish identity. The live Sejong page https://prof.sejong.ac.kr/nndao/html/profile.do persists with an older Assistant Professor biography; its existence does not establish a move back to Sejong. No employer correction is indicated."
+    }
+  ]
+}

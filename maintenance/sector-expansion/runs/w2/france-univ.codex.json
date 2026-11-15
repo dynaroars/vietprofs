@@ -1,0 +1,642 @@
+{
+  "group": "university",
+  "agent": "codex",
+  "slice": "france-univ",
+  "finishedAt": "2026-11-15T00:52:42.797Z",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Thuy Luu Seran",
+        "university": "Université de Montpellier",
+        "rank": "Associate Professor",
+        "track": "Tenure-line",
+        "department": "Montpellier Management — Audit, Comptabilité, Contrôle, Finance",
+        "field": "Business & Economics",
+        "country": "France",
+        "profileUrl": "https://www.montpellier-management.fr/enseignant/thuy-seran/",
+        "researchAreas": [
+          "Management Accounting",
+          "Digital Transformation",
+          "Interorganizational Control",
+          "Coopetition"
+        ],
+        "phdInstitution": "Université de Montpellier",
+        "phdYear": 2012
+      },
+      "evidence": {
+        "currentRole": "https://www.montpellier-management.fr/enseignant/thuy-seran/ — “Maître de conférences HDR en sciences de gestion”. University employee; MRM member.",
+        "doctorateOrPapers": "https://www.montpellier-management.fr/wp-content/uploads/2025/10/CV_SERAN_LUU_T__fr.pdf — doctorate in management, Montpellier, 2012; department stated in CV.",
+        "vietnameseSignal": "Vietnamese given name Thuy; university CV publishes surname SERAN LUU. Original Vietnamese surname Luu retained before Seran in proposed name.",
+        "dedup": "Ran npm run find-roster-matches -- \"Thuy Luu Seran\" --url https://www.montpellier-management.fr/enseignant/thuy-seran/. No roster or retired-id matches. Also screened public/data.json name variants and maintenance/sector-expansion/already-proposed.txt."
+      }
+    },
+    {
+      "entry": {
+        "name": "Hien Laetitia Do Benoit",
+        "university": "Conservatoire National des Arts et Métiers",
+        "rank": "Associate Professor",
+        "track": "Tenure-line",
+        "department": "LIRSA",
+        "field": "Social & Behavioral Sciences",
+        "country": "France",
+        "profileUrl": "https://lirsa.cnam.fr/le-laboratoire/membres/hien-laetitia-do-benoit--831857.kjsp?RH=1337076011992",
+        "researchAreas": [
+          "International Relations",
+          "Political Sociology",
+          "Public Management",
+          "Foreign Policy"
+        ],
+        "phdInstitution": "Sciences Po",
+        "phdYear": 2007
+      },
+      "evidence": {
+        "currentRole": "https://lirsa.cnam.fr/le-laboratoire/membres/hien-laetitia-do-benoit--831857.kjsp?RH=1337076011992 — “Maître de conférences”; permanent faculty career at Cnam since 2013.",
+        "doctorateOrPapers": "Same profile explicitly records a political-science doctorate at IEP Paris in 2007. https://lirsa-en.cnam.fr/medias/fichier/cv-hien-laetitia-do-benoit-2021_1669021407446-pdf?ID_FICHE=34606&INLINE=FALSE also records Hanoi higher-education training.",
+        "vietnameseSignal": "Vietnamese given name Hien and surname Do; employer CV records higher education in Hanoi.",
+        "dedup": "Ran npm run find-roster-matches -- \"Hien Laetitia Do Benoit\" --url https://lirsa.cnam.fr/le-laboratoire/membres/hien-laetitia-do-benoit--831857.kjsp?RH=1337076011992. No roster or retired-id matches. Also screened public/data.json name variants and maintenance/sector-expansion/already-proposed.txt."
+      }
+    },
+    {
+      "entry": {
+        "name": "Hoai Diem Phuc Ngo",
+        "university": "Université de Lorraine",
+        "rank": "Associate Professor",
+        "track": "Tenure-line",
+        "department": "Computer Science, Faculté des Sciences et Technologies; LORIA — ADAGIo",
+        "field": "Computer & Information Sciences",
+        "country": "France",
+        "profileUrl": "https://members.loria.fr/HDPNgo/",
+        "researchAreas": [
+          "Discrete Geometry",
+          "Digital Topology",
+          "Computer Vision",
+          "Tomographic Imaging"
+        ],
+        "phdInstitution": "Université Paris-Est Marne-la-Vallée",
+        "phdYear": 2013
+      },
+      "evidence": {
+        "currentRole": "https://members.loria.fr/HDPNgo/ — “Maître de Conférences, HDR”; associate professor at Lorraine since September 2014, ADAGIo leader. Also https://adagio.loria.fr/people-fr.html lists current role.",
+        "doctorateOrPapers": "https://members.loria.fr/HDPNgo/ — PhD received October 2013 at Université Paris-Est Marne-la-Vallée; https://members.loria.fr/HDPNgo/files/pdf/CV_NGO.pdf documents computer-science doctorate.",
+        "vietnameseSignal": "Full Vietnamese given names Hoai Diem Phuc; employer-hosted CV documents undergraduate study at Da Nang Polytechnic, Vietnam.",
+        "dedup": "Ran npm run find-roster-matches -- \"Hoai Diem Phuc Ngo\" --url https://members.loria.fr/HDPNgo/ https://members.loria.fr/HDPNgo/. No roster or retired-id matches. Also screened public/data.json name variants and maintenance/sector-expansion/already-proposed.txt."
+      }
+    },
+    {
+      "entry": {
+        "name": "Tien Dung Le",
+        "university": "Université de Lorraine",
+        "rank": "Associate Professor",
+        "track": "Tenure-line",
+        "department": "IUT Nancy-Brabois; LEMTA — IRM pour l’Ingénierie",
+        "field": "Engineering",
+        "country": "France",
+        "profileUrl": "https://lemta.univ-lorraine.fr/tien-dung-le-laureat-projets-emergence-exploratoire-2023/",
+        "researchAreas": [
+          "Porous Media",
+          "Poromechanics",
+          "Carbon Dioxide Storage",
+          "Transport Phenomena"
+        ],
+        "phdInstitution": "Université de Lorraine",
+        "phdYear": 2013,
+        "undergradInstitution": "Hanoi University of Civil Engineering"
+      },
+      "evidence": {
+        "currentRole": "https://lemta.univ-lorraine.fr/annuaire/ — “Maître de conférences IUT Nancy-Brabois”, in permanent personnel. profileUrl is an employer feature devoted to this researcher, opened successfully by direct HTTP request (200) after web-tool timeout.",
+        "doctorateOrPapers": "https://docnum.univ-lorraine.fr/public/DDOC_T_2013_0097_LE.pdf — research doctorate in mechanics/energetics, Université de Lorraine, defended 2 October 2013.",
+        "vietnameseSignal": "Vietnamese given names Tien Dung; thesis cover explicitly identifies engineering degree from Hanoi civil engineering school, Vietnam.",
+        "dedup": "Ran npm run find-roster-matches -- \"Tien Dung Le\" --url https://lemta.univ-lorraine.fr/tien-dung-le-laureat-projets-emergence-exploratoire-2023/. Name-only hit vp-2699 is a different person: gastrointestinal oncologist Dung Le at Johns Hopkins; target is a Lorraine mechanics PhD (2013), Hanoi civil-engineering graduate and porous-media researcher. No shared identity URL. Also screened public/data.json name variants and maintenance/sector-expansion/already-proposed.txt."
+      }
+    },
+    {
+      "entry": {
+        "name": "Tuyet Tram Dang Ngoc",
+        "university": "CY Cergy Paris Université",
+        "rank": "Associate Professor",
+        "track": "Tenure-line",
+        "department": "Computer Science; ETIS",
+        "field": "Computer & Information Sciences",
+        "country": "France",
+        "profileUrl": "https://www.etis-lab.fr/2022/01/17/dang-ngoc-tuyet-tram/",
+        "researchAreas": [
+          "Data Mediation",
+          "Databases",
+          "University Pedagogy",
+          "Student Engagement"
+        ],
+        "phdInstitution": "Université de Versailles Saint-Quentin-en-Yvelines",
+        "phdYear": 2003
+      },
+      "evidence": {
+        "currentRole": "Employer joint-laboratory person page https://www.etis-lab.fr/2022/01/17/dang-ngoc-tuyet-tram/ identifies researcher and Cergy email. https://sipr.sorbonne-universite.fr/edition-2026-27-des-semiweb/ explicitly says “Maitre de conférences en Sciences Informatiques” at CY.",
+        "doctorateOrPapers": "https://cv.hal.science/tuyet-tram-dang-ngoc — doctoral thesis on XML data federation, Université de Versailles-Saint Quentin en Yvelines, 2003.",
+        "vietnameseSignal": "Vietnamese given names Tuyet Tram; diacritic forms appear in author's HAL records. No Vietnamese full-name reconstruction proposed.",
+        "dedup": "Ran npm run find-roster-matches -- \"Tuyet Tram Dang Ngoc\" --url https://www.etis-lab.fr/2022/01/17/dang-ngoc-tuyet-tram/. No roster or retired-id matches. Also screened public/data.json name variants and maintenance/sector-expansion/already-proposed.txt."
+      }
+    },
+    {
+      "entry": {
+        "name": "Thi Phuong Khanh Nguyen",
+        "university": "Université de Technologie Tarbes Occitanie Pyrénées",
+        "rank": "Professor",
+        "track": "Tenure-line",
+        "department": "Production Engineering Laboratory (LGP) — PRiSM",
+        "field": "Engineering",
+        "country": "France",
+        "profileUrl": "https://sites.google.com/view/khanhtpnguyen?usp=sharing",
+        "researchAreas": [
+          "Predictive Maintenance",
+          "System Reliability",
+          "Prognostics and Health Management",
+          "Artificial Intelligence"
+        ],
+        "confirmed": false,
+        "phdInstitution": "École Centrale de Nantes",
+        "phdYear": 2012,
+        "city": "Tarbes",
+        "undergradInstitution": "Ho Chi Minh City University of Technology"
+      },
+      "evidence": {
+        "currentRole": "https://sites.google.com/view/khanhtpnguyen?usp=sharing — “Full Professor”; career history gives promotion September 2025, permanent LGP member since 2017. Employer profile https://www.enit.fr/fr/_plugins/mypage/mypage/content/tnguyen.html returned HTTP 500. Official current thesis-supervision page https://www.lgp.enit.fr/fr/theses/theses-en-cours-1.html corroborates membership; unconfirmed because usable person page is self-published.",
+        "doctorateOrPapers": "Personal academic background explicitly records École Centrale de Nantes doctorate in automation/production engineering, 2012.",
+        "vietnameseSignal": "Vietnamese full given names Thi Phuong Khanh; personal academic history records electrical/electronics engineering degree at HCMUT, Vietnam.",
+        "dedup": "Ran npm run find-roster-matches -- \"Thi Phuong Khanh Nguyen\" --url https://sites.google.com/view/khanhtpnguyen?usp=sharing. Broad token-only hits vp-0025, vp-0282, vp-0411, vp-0476, vp-0638, vp-0769, vp-0814, vp-0870, vp-0970, vp-1975, vp-2994 and retired vp-1628/vp-2958 checked against roster. Target is woman with Centrale Nantes automation doctorate 2012, ENIT appointment 2017 and full professorship 2025. Hits are CS, construction, medicine, philosophy, power engineering, Taiwan industrial engineering (different 2018 doctorate), agriculture or beam-wave research; none shares full name, degree/career and identity URL. Also screened public/data.json name variants and maintenance/sector-expansion/already-proposed.txt."
+      }
+    },
+    {
+      "entry": {
+        "name": "Vinh Ta-Phuoc",
+        "university": "Université de Tours",
+        "rank": "Associate Professor",
+        "track": "Tenure-line",
+        "department": "Department of Physics; GREMAN",
+        "field": "Physics & Astronomy",
+        "country": "France",
+        "profileUrl": "https://www.univ-tours.fr/annuaire/m-vinh-ta-phuoc",
+        "researchAreas": [
+          "Condensed Matter Physics",
+          "Optical Spectroscopy",
+          "Strongly Correlated Materials"
+        ]
+      },
+      "evidence": {
+        "currentRole": "https://www.univ-tours.fr/annuaire/m-vinh-ta-phuoc — current physics faculty person page. https://greman.univ-tours.fr/medias/fichier/greman-sujet-stage-nanoplastiques_1760367121434-pdf?INLINE=FALSE identifies “Maître de Conférences HDR”.",
+        "doctorateOrPapers": "https://jmc17.sciencesconf.org/resource/page/id/2.html?lang=fr — speaker biography explicitly describes completed thesis on vortex dynamics in high-temperature superconductors. Doctoral institution and year not stated, so omitted.",
+        "vietnameseSignal": "Vietnamese given name Vinh with Vietnamese compound surname Ta-Phuoc on official university page.",
+        "dedup": "Ran npm run find-roster-matches -- \"Vinh Ta-Phuoc\" --url https://www.univ-tours.fr/annuaire/m-vinh-ta-phuoc. No roster or retired-id matches. Also screened public/data.json name variants and maintenance/sector-expansion/already-proposed.txt."
+      }
+    },
+    {
+      "entry": {
+        "name": "Thi Hong Hanh Pham",
+        "university": "Nantes Université",
+        "rank": "Associate Professor",
+        "track": "Tenure-line",
+        "department": "IAE Nantes — Économie et Management",
+        "field": "Business & Economics",
+        "country": "France",
+        "profileUrl": "https://www.univ-nantes.fr/thi-hong-hanh-pham-1",
+        "researchAreas": [
+          "International Economics",
+          "Macrofinance",
+          "Development Economics"
+        ],
+        "phdInstitution": "Université de Rouen Normandie",
+        "phdYear": 2010
+      },
+      "evidence": {
+        "currentRole": "https://www.univ-nantes.fr/thi-hong-hanh-pham-1 — “Maître de Conférences - HDR en Sciences économiques”. Opened successfully; alternative URL without -1 failed.",
+        "doctorateOrPapers": "https://www.persee.fr/authority/77217 links thesis authored by Thi Hong Hanh Pham (2010, Rouen, economics): accession to WTO and trade/finance. Topic and full name align with Nantes publications.",
+        "vietnameseSignal": "Vietnamese given names Thi Hong Hanh on official employer page.",
+        "dedup": "Ran npm run find-roster-matches -- \"Thi Hong Hanh Pham\" --url https://www.univ-nantes.fr/thi-hong-hanh-pham-1. Name-only hit vp-1749 is a different person: Leeds Hanh Pham has Copenhagen Business School PhD 2008 (https://business.leeds.ac.uk/faculty/staff/1464/dr-hanh-pham), while target has Rouen economics doctorate 2010. Thus earlier-proposed Hanh Pham is also not this target. Also screened public/data.json name variants and maintenance/sector-expansion/already-proposed.txt."
+      }
+    },
+    {
+      "entry": {
+        "name": "Liem Hoang-Ngoc",
+        "university": "Université Paris 1 Panthéon-Sorbonne",
+        "rank": "Associate Professor",
+        "track": "Tenure-line",
+        "department": "Sciences économiques; Centre d’économie de la Sorbonne",
+        "field": "Business & Economics",
+        "country": "France",
+        "profileUrl": "https://www.pantheonsorbonne.fr/page-perso/liem.hoang-ngoc@",
+        "researchAreas": [
+          "Labour Economics",
+          "Macroeconomics",
+          "Public Policy",
+          "European Studies"
+        ],
+        "phdInstitution": "Université Paris 1 Panthéon-Sorbonne",
+        "phdYear": 1994
+      },
+      "evidence": {
+        "currentRole": "https://www.pantheonsorbonne.fr/page-perso/liem.hoang-ngoc@ — “Maître de conférences”; profile includes teaching for 2025–26.",
+        "doctorateOrPapers": "Same university profile CV: economics doctorate defended 19 January 1994 at Paris I. The parenthetical 1992 is a regulatory decree, not doctorate year.",
+        "vietnameseSignal": "University profile CV explicitly records birth in Saigon, Vietnam; Vietnamese given name Liem.",
+        "dedup": "Ran npm run find-roster-matches -- \"Liem Hoang-Ngoc\" --url https://www.pantheonsorbonne.fr/page-perso/liem.hoang-ngoc@. No roster or retired-id matches. Also screened public/data.json name variants and maintenance/sector-expansion/already-proposed.txt."
+      }
+    },
+    {
+      "entry": {
+        "name": "Thi Kim Son Le",
+        "university": "Université du Littoral Côte d’Opale",
+        "rank": "Associate Professor",
+        "track": "Tenure-line",
+        "department": "ISCID-CO; Centre de Recherche sur l’Innovation et les Stratégies industrielles",
+        "field": "Business & Economics",
+        "country": "France",
+        "profileUrl": "https://riifr.univ-littoral.fr/rii/presentation-de-lequipe-5/",
+        "researchAreas": [
+          "Innovation Management",
+          "Circular Economy",
+          "Developing Economies",
+          "Resource Constraints"
+        ],
+        "phdInstitution": "Université Toulouse 1 Capitole",
+        "phdYear": 2018,
+        "undergradInstitution": "National Economics University",
+        "undergradYear": 2004,
+        "msInstitution": "University of Stirling",
+        "city": "Dunkerque"
+      },
+      "evidence": {
+        "currentRole": "https://riifr.univ-littoral.fr/rii/presentation-de-lequipe-5/ — “Maître de Conférence en Science de Gestion”; this is a single-person faculty page despite generic page title.",
+        "doctorateOrPapers": "https://riien.univ-littoral.fr/wp-content/uploads/2021/01/LE-Thi-Kim-Son-CV-Jan-English-2021.pdf — management doctorate at Toulouse School of Management, Toulouse 1 Capitole, December 2018.",
+        "vietnameseSignal": "University-hosted CV explicitly says Vietnamese nationality and undergraduate degree at Vietnam's National Economics University.",
+        "dedup": "Ran npm run find-roster-matches -- \"Thi Kim Son Le\" --url https://riifr.univ-littoral.fr/rii/presentation-de-lequipe-5/. Name-only hits vp-2122, vp-2123 and retired vp-2967 are different people: Louisiana Tech Son Le is the entrepreneurship/strategy professor with a distinct official directory identity; GMU Son Le is an electrical-engineering researcher with Brown PhD 2013. Target is the female ULCO innovation-management lecturer whose employer CV identifies a Toulouse 1 management doctorate 2018 and Vietnamese bachelor's degree 2004. Distinct profiles, CV and identity. Also screened public/data.json name variants and maintenance/sector-expansion/already-proposed.txt."
+      }
+    },
+    {
+      "entry": {
+        "name": "Thien-Phu Le",
+        "university": "University of Évry Paris-Saclay",
+        "rank": "Associate Professor",
+        "track": "Tenure-line",
+        "department": "IUT — Génie Mécanique et Productique; LMEE",
+        "field": "Engineering",
+        "country": "France",
+        "profileUrl": "https://www.lmee.univ-evry.fr/annuaire/membres/le-thien-phu.html",
+        "researchAreas": [
+          "Structural Dynamics",
+          "Operational Modal Analysis",
+          "Seismic Reliability"
+        ],
+        "phdInstitution": "École des Ponts ParisTech",
+        "phdYear": 2003,
+        "postdocInstitution": "Université de Sherbrooke"
+      },
+      "evidence": {
+        "currentRole": "https://www.lmee.univ-evry.fr/annuaire/membres/le-thien-phu.html — “MCF HDR”, university teacher-researcher. https://www.iut-evry.fr/le-thien-phu/ fetched HTTP 200, confirms university appointment since 2017.",
+        "doctorateOrPapers": "https://www.iut-evry.fr/le-thien-phu/ — doctorate at École des Ponts ParisTech, 2003, on wavelet structural diagnostics; subsequent completed postdoc at Université de Sherbrooke.",
+        "vietnameseSignal": "Vietnamese given names Thien-Phu with surname Le on employer profile.",
+        "dedup": "Ran npm run find-roster-matches -- \"Thien-Phu Le\" --url https://www.lmee.univ-evry.fr/annuaire/membres/le-thien-phu.html. No roster or retired-id matches. Also screened public/data.json name variants and maintenance/sector-expansion/already-proposed.txt."
+      }
+    },
+    {
+      "entry": {
+        "name": "Hoai Nam Nguyen",
+        "university": "Télécom SudParis",
+        "rank": "Associate Professor",
+        "track": "Tenure-line",
+        "department": "Electronics and Physics; SAMOVAR — ISTeC",
+        "field": "Engineering",
+        "country": "France",
+        "profileUrl": "https://samovar.telecom-sudparis.eu/index.php/acmes-2/hoai-nam-nguyen/",
+        "researchAreas": [
+          "Model Predictive Control",
+          "Robust Control",
+          "Constrained Systems",
+          "Optimization"
+        ],
+        "city": "Évry",
+        "phdInstitution": "Supélec",
+        "phdYear": 2012,
+        "postdocInstitution": "Technion – Israel Institute of Technology"
+      },
+      "evidence": {
+        "currentRole": "https://samovar.telecom-sudparis.eu/index.php/acmes-2/hoai-nam-nguyen/ — “Maître de Conférences”, ISTeC.",
+        "doctorateOrPapers": "https://www.telecom-paris.fr/wp-content-EvDsK19/uploads/2022/02/Hoai-NamNguyen_Presentation.pdf — self-authored short bio explicitly gives automatic-control PhD at Supélec (2009–2012), Technion postdoc (2012–2014), IFPEN (2014–2021), Télécom SudParis associate professorship since September 2021. Current SAMOVAR person page also supplies multiple 2025 control papers.",
+        "vietnameseSignal": "Vietnamese given names Hoai Nam on institutional person page.",
+        "dedup": "Ran npm run find-roster-matches -- \"Hoai Nam Nguyen\" --url https://samovar.telecom-sudparis.eu/index.php/acmes-2/hoai-nam-nguyen/. Name-only hits vp-0029, vp-0910, vp-0979, vp-2134, vp-3094 are different people: target's automatic-control doctorate at Supélec and Technion/IFPEN career resolve identity. Towson Nam Nguyen has Florida CS PhD; the other hits concern surgery, pharmacy, finance and commercial applied AI, not this documented French control-science career. No shared identity URL. Also screened public/data.json name variants and maintenance/sector-expansion/already-proposed.txt."
+      }
+    },
+    {
+      "entry": {
+        "name": "Thi Anh-Dao Tran",
+        "university": "University of Rouen Normandy",
+        "rank": "Associate Professor",
+        "track": "Tenure-line",
+        "department": "Department of Economics; LASTA",
+        "field": "Business & Economics",
+        "country": "France",
+        "profileUrl": "https://lasta.univ-rouen.fr/wp-content/uploads/sites/3/2025/04/english_cv_ttad_sept_2022.pdf",
+        "researchAreas": [
+          "Globalization",
+          "Sustainable Development",
+          "International Trade",
+          "Regional Integration"
+        ],
+        "phdInstitution": "Université Sorbonne Paris Nord",
+        "phdYear": 1996,
+        "city": "Rouen"
+      },
+      "evidence": {
+        "currentRole": "https://lasta.univ-rouen.fr/membres/ — current “Maître de conférences HDR”. profileUrl is her own university-hosted CV, opened in this run; it states economics associate professorship at Rouen since 2006.",
+        "doctorateOrPapers": "University-hosted CV, qualifications section, explicitly gives PhD in economics, Université Paris 13, 1996.",
+        "vietnameseSignal": "Vietnamese given names Thi Anh-Dao; employer-hosted CV lists fluent Vietnamese. Past Vietnam research assignments ended; current employer directory places her in Rouen.",
+        "dedup": "Ran npm run find-roster-matches -- \"Thi Anh-Dao Tran\" --url https://lasta.univ-rouen.fr/wp-content/uploads/sites/3/2025/04/english_cv_ttad_sept_2022.pdf. Name-only hits vp-0063, vp-0164, vp-0236, vp-0285, vp-0860, vp-1670, vp-2145, vp-3118, vp-3152 checked against roster. Different identities: target is born 1969, Paris 13 economics PhD 1996 and Rouen faculty since 2006; hits have different full names, disciplines/career and profile URLs. Texas State Anh Tran's finance/economics entry is not this documented long-running Rouen appointment. Also screened public/data.json name variants and maintenance/sector-expansion/already-proposed.txt. Additional distinguishing source https://www.anh-tran.com/assets/CV.pdf gives Texas State Anh Tran's Rochester finance doctorate 2018 and UConn/Bucknell/Texas State career, whereas target's doctorate is Paris 13, 1996."
+      }
+    },
+    {
+      "entry": {
+        "name": "Thi Phuong Thao Pham",
+        "university": "Université de Reims Champagne-Ardenne",
+        "rank": "Associate Professor",
+        "track": "Tenure-line",
+        "department": "IAE Reims-Troyes; CRIEG-REGARDS",
+        "field": "Business & Economics",
+        "country": "France",
+        "profileUrl": "https://www.univ-reims.fr/regards/l-equipe/les-membres/thao-pham%2C14879%2C39173.html",
+        "researchAreas": [
+          "Applied Economics",
+          "Environmental Economics",
+          "Energy Economics",
+          "Non-market Valuation"
+        ],
+        "phdInstitution": "Université Paris Dauphine - PSL",
+        "phdYear": 2015,
+        "websiteUrl": "https://thao-pham.weebly.com/cv.html",
+        "city": "Reims"
+      },
+      "evidence": {
+        "currentRole": "Official person page returned HTTP 200 via direct request and says “MCF 05”. Full-name university course page https://www.univ-reims.fr/formation/catalogue-de-formation/master-analyse-et-politique-economique%2C23515%2C38949.html?args=R9qFsCnMmKDtxCa17YTDkHVqaqbfYRXwwTnCVt2witCDUIiVoUdkeMDp%2AXGEGm2SMIhvMbuZ3_kOrRxvJlk6dOorIryuNioRCyFFyPAvhl9tCdwYdtHRrwAvNC1tDg_H&formation_id=1814 identifies Thi Phuong Thao PHAM with the same thao.pham@univ-reims.fr email. Web tool returned 502; direct HTTP retrieval used.",
+        "doctorateOrPapers": "https://thao-pham.weebly.com/cv.html — economics PhD at Université Paris Dauphine, 2015; full-time Reims position since 2019.",
+        "vietnameseSignal": "Vietnamese full given names Thi Phuong Thao, linked to shortened Thao Pham by identical employer email. Distinct from medical professor Thao Pham at Aix-Marseille.",
+        "dedup": "Ran npm run find-roster-matches -- \"Thi Phuong Thao Pham\" --url https://www.univ-reims.fr/regards/l-equipe/les-membres/thao-pham%2C14879%2C39173.html https://thao-pham.weebly.com/cv.html. Name-only hits vp-0759 (Taiwan physicist) and vp-1279 (Aix-Marseille rheumatologist) are different people. Target's official Reims email, energy-economics research, Dauphine PhD 2015 and full-time Reims position since 2019 establish separate identity. Earlier-proposed Thao Pham refers to a different full-name identity. Also screened public/data.json name variants and maintenance/sector-expansion/already-proposed.txt."
+      }
+    },
+    {
+      "entry": {
+        "name": "Thi-Muoi Le",
+        "university": "Université Polytechnique Hauts-de-France",
+        "rank": "Associate Professor",
+        "track": "Tenure-line",
+        "department": "LARSH",
+        "field": "Business & Economics",
+        "country": "France",
+        "profileUrl": "https://www.uphf.fr/larsh/membres/le_thi-muoi",
+        "researchAreas": [
+          "Supply Chain Management",
+          "Consumer Behaviour"
+        ],
+        "city": "Valenciennes"
+      },
+      "evidence": {
+        "currentRole": "Official LARSH person page fetched HTTP 200. https://www.uphf.fr/lamih/agenda/soutenance-thanh-tuan-nguyen-departement-informatique (December 2025) explicitly lists “Maître de conférences” at UPHF.",
+        "doctorateOrPapers": "https://www-test.uphf.fr/lamih/actualites/rapprochement-entre-lamih-vietnam-dans-domaine-reeducation-multi-pathologie — university calls her Dr. Thi Muoi LE; no doctorate year/institution inferred.",
+        "vietnameseSignal": "Vietnamese given names Thi-Muoi with surname Le on official employer person page and 2025 university doctoral-defense notice.",
+        "dedup": "Ran npm run find-roster-matches -- \"Thi-Muoi Le\" --url https://www.uphf.fr/larsh/membres/le_thi-muoi. No roster or retired-id matches. Also screened public/data.json name variants and maintenance/sector-expansion/already-proposed.txt."
+      }
+    }
+  ],
+  "already_listed": [
+    {
+      "name": "Thi Le My Duong Godefroy / Lemy Duong-Godefroy",
+      "id": "vp-2567",
+      "note": "Exact official profileUrl match: https://univ-cotedazur.fr/lemy-godefroy. Same GREDEG private-law faculty identity; not a new candidate."
+    },
+    {
+      "name": "Quynh-Lien Duong",
+      "id": "vp-2458",
+      "note": "Screened out against existing roster during given-name Quynh sweep; same UHA marketing appointment as search lead."
+    },
+    {
+      "name": "Minh Hieu Nguyen",
+      "id": "vp-1533",
+      "note": "Screened out against existing roster; search lead was Lorraine LCOMS MCF in optimization."
+    },
+    {
+      "name": "Khanh-Hung Tran",
+      "id": "vp-2574",
+      "note": "Screened out against existing roster; same Paris Nanterre energy/mechanics faculty lead."
+    },
+    {
+      "name": "Kieu Ngo",
+      "id": "vp-2617",
+      "note": "Screened out against existing roster during given-name Kieu sweep; Sorbonne engineering lead."
+    },
+    {
+      "name": "Cong Truc Nguyen",
+      "id": "vp-2537",
+      "note": "Screened out against existing roster; Gustave Eiffel faculty lead."
+    },
+    {
+      "name": "Thanh Duc Mai",
+      "id": "vp-2690",
+      "note": "Screened out against existing roster; Paris-Saclay analytical-chemistry faculty lead."
+    },
+    {
+      "name": "Ngoc Son Nguyen",
+      "id": "vp-1962",
+      "note": "Screened out against existing roster; Nantes civil-engineering faculty lead."
+    },
+    {
+      "name": "Nhu Huan Nguyen",
+      "id": "vp-3033",
+      "note": "Screened out against existing roster; Grenoble INP electronics faculty lead."
+    }
+  ],
+  "possible_move": [],
+  "rejected": [
+    {
+      "name": "Claudia Muracciole Bich",
+      "reason": "University page establishes permanent Montpellier faculty and ETH doctorate, but Bich alone (with Western given name Claudia) did not establish an affirmative Vietnamese signal. Not accepted from surname alone. Lead: https://ibmm.umontpellier.fr/annuaire/muracciole-bich-claudia/ (discovery search only)."
+    },
+    {
+      "name": "Alex Bao",
+      "reason": "New Sorbonne Paris Nord MCF lead, but Vietnamese signal unresolved; Bao with Western given name alone insufficient. No candidate accepted. https://cepn.univ-spn.fr/bienvenue-a-marion-beauvalet-alex-bao-et-elie-manauthon/ (search-only lead)."
+    },
+    {
+      "name": "Chi-Hieu Pham",
+      "reason": "Otherwise strong UBO medical-imaging MCU lead with IMT Atlantique doctorate 2018. No individual employer person page located; HAL CV is self-maintained but not used as substitute while a university directory exists. Hold for person-page discovery. https://cv.hal.science/chpham ; https://www.univ-brest.fr/faculte-medecine/sites/faculte-medecine.www.univ-brest.fr/files/2024-09/Liste%20enseignants%20UFR%20MSS%20septembre%202024.pdf . Name-only hit vp-1215 is a different scholar (UAH, Iowa State doctorate 2018), not a dedup exclusion."
+    },
+    {
+      "name": "Trung-Dung Le",
+      "reason": "Live CentraleSupélec research profile found, but precise career-rank/permanence source failed and publication feed includes namesake contamination. Hold pending functioning GeePs faculty listing or CV. https://www.centralesupelec.fr/chercheurs/trung-dung-le ; https://www.geeps.centralesupelec.fr/index.php?page=re_membres (404 via direct request); HAL pages denied access."
+    },
+    {
+      "name": "Van Dung Duong Le Flanchec",
+      "reason": "Employer faculty-author page verified live: https://sup.sorbonne-universite.fr/auteur/le-flanchec . Doctoral catalogue search lead https://www.diffusiontheses.fr/lang-en/29602-these-de-duong-le-flanchec-van-dung.html failed live in web tool, so doctorate not fully checked in this run. Hold out of verified candidates. npm matcher with employer URL returned vp-1822 (Newcastle accounting/finance) and vp-2699 (Johns Hopkins oncology), both different disciplines/identities."
+    },
+    {
+      "name": "Thi Hong Phu Dao Le Flecher",
+      "reason": "Évry management MCF lead with original Vietnamese surname Dao, but no individual employer person page verified and doctorate record was search-only. Hold: https://www.litem.univ-evry.fr/ateliers-de-recherche.html ; https://www.diffusiontheses.fr/67392-these-de-dao-thi-hong-phu.html . Name-only npm check returned no matches; not a verified candidate."
+    },
+    {
+      "name": "Cong Khanh Dinh / Minh Tuan Dinh / Nguyen Son Hoang",
+      "reason": "Grenoble LCIS discovery directory labels doctoral student, postdoc and doctoral student respectively. Excluded trainee roles; no faculty status inferred from adjacent directory rows. https://lcis.univ-grenoble-alpes.fr/fr/membres (search-stage triage)."
+    }
+  ],
+  "coverage": [
+    {
+      "employer": "Université de Montpellier",
+      "pagesExamined": [
+        "https://www.montpellier-management.fr/enseignant/thuy-seran/"
+      ],
+      "note": "Verified Thuy Luu Seran; given-name-led discovery. Employer-published person page or CV opened live."
+    },
+    {
+      "employer": "Conservatoire National des Arts et Métiers",
+      "pagesExamined": [
+        "https://lirsa.cnam.fr/le-laboratoire/membres/hien-laetitia-do-benoit--831857.kjsp?RH=1337076011992"
+      ],
+      "note": "Verified Hien Laetitia Do Benoit; given-name-led discovery. Employer-published person page or CV opened live."
+    },
+    {
+      "employer": "Université de Lorraine",
+      "pagesExamined": [
+        "https://members.loria.fr/HDPNgo/"
+      ],
+      "note": "Verified Hoai Diem Phuc Ngo; given-name-led discovery. Employer-published person page or CV opened live."
+    },
+    {
+      "employer": "Université de Lorraine",
+      "pagesExamined": [
+        "https://lemta.univ-lorraine.fr/tien-dung-le-laureat-projets-emergence-exploratoire-2023/"
+      ],
+      "note": "Verified Tien Dung Le; given-name-led discovery. Employer-published person page or CV opened live."
+    },
+    {
+      "employer": "CY Cergy Paris Université",
+      "pagesExamined": [
+        "https://www.etis-lab.fr/2022/01/17/dang-ngoc-tuyet-tram/"
+      ],
+      "note": "Verified Tuyet Tram Dang Ngoc; given-name-led discovery. Employer-published person page or CV opened live."
+    },
+    {
+      "employer": "Université de Technologie Tarbes Occitanie Pyrénées",
+      "pagesExamined": [
+        "https://sites.google.com/view/khanhtpnguyen?usp=sharing"
+      ],
+      "note": "Verified Thi Phuong Khanh Nguyen; given-name-led discovery. Only a functioning self-published person page; official ENIT endpoint returned HTTP 500."
+    },
+    {
+      "employer": "Université de Tours",
+      "pagesExamined": [
+        "https://www.univ-tours.fr/annuaire/m-vinh-ta-phuoc"
+      ],
+      "note": "Verified Vinh Ta-Phuoc; given-name-led discovery. Employer-published person page or CV opened live."
+    },
+    {
+      "employer": "Nantes Université",
+      "pagesExamined": [
+        "https://www.univ-nantes.fr/thi-hong-hanh-pham-1"
+      ],
+      "note": "Verified Thi Hong Hanh Pham; given-name-led discovery. Employer-published person page or CV opened live."
+    },
+    {
+      "employer": "Université Paris 1 Panthéon-Sorbonne",
+      "pagesExamined": [
+        "https://www.pantheonsorbonne.fr/page-perso/liem.hoang-ngoc@"
+      ],
+      "note": "Verified Liem Hoang-Ngoc; given-name-led discovery. Employer-published person page or CV opened live."
+    },
+    {
+      "employer": "Université du Littoral Côte d’Opale",
+      "pagesExamined": [
+        "https://riifr.univ-littoral.fr/rii/presentation-de-lequipe-5/"
+      ],
+      "note": "Verified Thi Kim Son Le; given-name-led discovery. Employer-published person page or CV opened live."
+    },
+    {
+      "employer": "University of Évry Paris-Saclay",
+      "pagesExamined": [
+        "https://www.lmee.univ-evry.fr/annuaire/membres/le-thien-phu.html"
+      ],
+      "note": "Verified Thien-Phu Le; given-name-led discovery. Employer-published person page or CV opened live."
+    },
+    {
+      "employer": "Télécom SudParis",
+      "pagesExamined": [
+        "https://samovar.telecom-sudparis.eu/index.php/acmes-2/hoai-nam-nguyen/"
+      ],
+      "note": "Verified Hoai Nam Nguyen; given-name-led discovery. Employer-published person page or CV opened live."
+    },
+    {
+      "employer": "University of Rouen Normandy",
+      "pagesExamined": [
+        "https://lasta.univ-rouen.fr/wp-content/uploads/sites/3/2025/04/english_cv_ttad_sept_2022.pdf"
+      ],
+      "note": "Verified Thi Anh-Dao Tran; given-name-led discovery. Employer-published person page or CV opened live."
+    },
+    {
+      "employer": "Université de Reims Champagne-Ardenne",
+      "pagesExamined": [
+        "https://www.univ-reims.fr/regards/l-equipe/les-membres/thao-pham%2C14879%2C39173.html"
+      ],
+      "note": "Verified Thi Phuong Thao Pham; given-name-led discovery. Employer-published person page or CV opened live."
+    },
+    {
+      "employer": "Université Polytechnique Hauts-de-France",
+      "pagesExamined": [
+        "https://www.uphf.fr/larsh/membres/le_thi-muoi"
+      ],
+      "note": "Verified Thi-Muoi Le; given-name-led discovery. Employer-published person page or CV opened live."
+    },
+    {
+      "employer": "Université de Lorraine — LEMTA, LORIA, CRAN and LCOMS",
+      "pagesExamined": [
+        "https://lemta.univ-lorraine.fr/annuaire/",
+        "https://adagio.loria.fr/people-fr.html",
+        "https://members.loria.fr/HDPNgo/files/pdf/CV_NGO.pdf",
+        "https://docnum.univ-lorraine.fr/public/DDOC_T_2013_0097_LE.pdf"
+      ],
+      "note": "Deeper laboratory sweep surfaced Tien Dung Le and Hoai Diem Phuc Ngo. Minh Hieu Nguyen already present. CRAN search results surfaced Viet Chuong Luong (doctoral student) and Duc Hoan Nguyen (postdoc); not candidates. Search-only CRAN leads were not promoted to verified facts."
+    },
+    {
+      "employer": "Université de Bretagne Occidentale",
+      "pagesExamined": [
+        "https://www.univ-brest.fr/faculte-medecine/sites/faculte-medecine.www.univ-brest.fr/files/2024-09/Liste%20enseignants%20UFR%20MSS%20septembre%202024.pdf",
+        "https://www.univ-brest.fr/latim/fr/page/equipe-action",
+        "https://cv.hal.science/chpham"
+      ],
+      "note": "Chi-Hieu Pham is listed as permanent MCU in medical imaging, with IMT Atlantique doctorate 2018 in self-maintained HAL CV. Team page worked through direct HTTP but the web-tool path redirected unexpectedly. No individual employer person page found; retained as unresolved/rejected for this strict output. No redirect content was treated as evidence."
+    },
+    {
+      "employer": "CentraleSupélec",
+      "pagesExamined": [
+        "https://www.centralesupelec.fr/chercheurs/trung-dung-le",
+        "https://www.geeps.centralesupelec.fr/index.php?page=re_membres",
+        "https://www.geeps.centralesupelec.fr/index.php?page=energie-membres",
+        "https://centralesupelec.hal.science/hal-05664212v1",
+        "https://centralesupelec.hal.science/hal-05664208v1"
+      ],
+      "note": "Trung-Dung Le has a live employer research page and recent power-engineering papers, but the lab pages supporting precise faculty rank failed live. HAL paper pages showed Anubis access denial; no bypass attempted. Employer publication feed contains evident namesake contamination, including particle physics, so did not accept the feed indiscriminately."
+    },
+    {
+      "employer": "Sorbonne Université",
+      "pagesExamined": [
+        "https://sup.sorbonne-universite.fr/auteur/le-flanchec",
+        "https://sup.sorbonne-universite.fr/catalogue/litteratures-francaises-comparee-et-langue/travaux-de-linguistique-et-de-stylistique-francaises/styles-genres-auteurs-13",
+        "https://www.diffusiontheses.fr/lang-en/29602-these-de-duong-le-flanchec-van-dung.html"
+      ],
+      "note": "Given-name Vân Dung surfaced faculty author Vân Dung Duong Le Flanchec. Employer author page returned 200 via direct HTTP and confirms MCF; doctoral catalogue page failed in web tool, so held out pending a live doctoral record. Kieu Ngo and Thanh-Thuy Nguyen Tu screened as existing names."
+    },
+    {
+      "employer": "Université Côte d'Azur",
+      "pagesExamined": [
+        "https://univ-cotedazur.fr/lemy-godefroy",
+        "https://univ-cotedazur.fr/medias/fichier/cv-l-godefroy-2021_1639598830203-pdf?ID_FICHE=1210&INLINE=FALSE",
+        "https://univ-cotedazur.fr/medias/fichier/liste-provisoire-cnu-21-04-23_1682005318315-pdf"
+      ],
+      "note": "Vietnamese given-name and original-surname sweep resolved Thi Le My Duong Godefroy to existing Lemy Duong-Godefroy, vp-2567, by exact profile URL."
+    },
+    {
+      "employer": "Additional regional universities and engineering schools (search-stage coverage)",
+      "pagesExamined": [],
+      "note": "Final site-restricted token sweeps: UTBM (Thi/Minh), Université Savoie Mont Blanc (Thanh), Université de Toulon (Huu), ENSTA (Duy), INSA Strasbourg (Minh), plus Limoges, Reims, Brest, Amiens, Besançon, Corse and Réunion with Thi/Huu/Quang/Khanh/Minh/Thanh/Thuy. No further employer-verified candidate was established. These are search-stage coverage only; no claim of complete directory inspection. Discovery also swept Thuy, Quynh, Huong, Dung, Hien, Khanh, Nhung, Kieu, Hanh, Hieu, Tuyet, Oanh, Phuoc, Liem, Nghia, Bao, Truc, Hoai, Ngoc, Bich, Chau, Hau, Huan, Quoc, Thang, Giang, Diem, Ngan, Thien, Tuan, Long and rare surname tokens Tong/Ta/Ton/Luong. Stopped after broad later-pass coverage with 15 accepted candidates, below cap; France is not claimed exhaustive."
+    }
+  ]
+}

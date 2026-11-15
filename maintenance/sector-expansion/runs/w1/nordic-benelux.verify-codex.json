@@ -1,0 +1,35 @@
+{
+  "verifier": "codex",
+  "input": "maintenance/sector-expansion/runs/w1/nordic-benelux.codex.json",
+  "candidates": [
+    {
+      "name": "Mai Trang Vu",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "The live employer profile https://www.umu.se/en/staff/trang-vu/ identifies her as Associate Professor in Language Studies, with a Umeå campus address and current teaching/research. It documents a 2017 Umeå doctorate and a 2001 Vietnam National University, Hanoi BA; the Vietnamese given names and Vietnamese education provide affirmative signals beyond the surname. The required roster-matching command returned vp-0051, vp-0739, vp-2049 and vp-3239. Their records identify, respectively, a Stanford-trained electrical engineer, a Monash-trained NLP researcher, a management/Buddhist-ethics scholar and a Rowan-trained cell-therapy researcher, distinct from this Umeå-trained education scholar. No identity URL matched, and the candidate is absent from already-proposed.txt. Current location is Sweden.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Dieu Tien Bui",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "The live employer profile https://www.usn.no/english/about/contact-us/employees/dieu-tien-bui identifies a full professor in GIS/geomatics at Campus Bø, Department of Business and IT. The Norwegian profile https://www.usn.no/kontakt-oss/ansatte/dieu-tien-bui independently supplies a 2013 NMBU geomatics doctorate and Vietnamese doctoral-supervision links. The distinctive Vietnamese given-name combination Dieu Tien supplies a signal beyond Bui. The required roster-matching command returned only vp-0575, a Concordia computer-science emeritus with a Toronto doctorate from 1972, clearly distinct by education, chronology and field. Neither identity URL matched; absent from already-proposed.txt. The current employer and campus establish a Norway-based eligible professorial appointment.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Duong Dang",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "The live official profile https://www.uwasa.fi/en/person/1992449 names Duong Dang as University Lecturer, Ph.D., in Information Systems Science and gives a Vaasa, Finland office address. Its linked university-hosted personal page https://sites.uwasa.fi/ddan/home/ was independently retrieved with HTTP 200 using requests after the browser fetch failed. That page explicitly describes the 2023–present appointment as tenured, following a 2018–2023 Vaasa assistant professorship, establishing an eligible stable appointment rather than semester teaching. It documents a Tampere doctorate, Vietnamese work/study experience, and a separate part-time VAMK appointment. Duong together with the Vietnam background supplies an affirmative signal beyond Dang. Roster matching with the official profile, personal site and Scholar identity URL found no active or retired matches; absent from already-proposed.txt. Published rank Lecturer is retained.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Vinh Dang",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "The live employer profile https://research.tue.nl/en/persons/qv-vinh-dang/ identifies Q.V. (Vinh) Dang as a current Assistant Professor in Operations Planning Accounting & Control, Eindhoven University of Technology, with ongoing research and teaching in the Netherlands. The biography documents a 2014 Aalborg operations-research doctorate, a Pusan MSc and an engineering degree from Ho Chi Minh City University of Technology in Vietnam. Vinh plus the Vietnamese undergraduate background supplies an affirmative signal beyond Dang. Required roster matching returned vp-1195 Vinh N. Dang at PSI; its MIT doctorate from 1994 and nuclear-safety/human-reliability research distinguish it from this Aalborg-trained robotics/operations-research scholar. No profile URL collision and no already-proposed.txt entry. No ineligible adjunct, visiting or trainee role is indicated.",
+      "correctedFields": {}
+    }
+  ],
+  "possible_move": []
+}

@@ -1,0 +1,89 @@
+{
+  "verifier": "codex",
+  "input": "maintenance/sector-expansion/runs/w1/us-california.codex.json",
+  "candidates": [
+    {
+      "name": "Hao Nguyen",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live employer profile https://scholars.csus.edu/esploro/profile/hao_nguyen identifies a current Biological Sciences professor, UT Dallas PhD 1995 and Rice BA 1987; https://www.csus.edu/college/natural-sciences-mathematics/biology/meet-us/ independently lists him among full-time faculty in Sacramento. The given name Hao together with Nguyen supplies a Vietnamese-name signal beyond surname alone; no contrary identity evidence found. Independently ran find-roster-matches with the proposed identity URLs. Matches vp-0837 (communication, Amsterdam PhD 2019), vp-1943 (Canh Hao, Kyoto bioinformatics), and vp-2692 (UCSF urology, Boston MD/PhD 2007) are different people. Not in already-proposed.txt.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Nhung Nguyen - University of California, San Francisco",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live official profile https://profiles.ucsf.edu/nhung.nguyen identifies Assistant Professor of Medicine, San Francisco address, UTHealth epidemiology PhD 2014 and Hanoi University of Pharmacy BS 2008. The Hanoi education and Vietnam Education Foundation fellowship supply affirmative Vietnamese signals. The unqualified professorial appointment is eligible under the university rules. Independently ran find-roster-matches with all proposed identity URLs; vp-0312 is a Kansas-trained communication scholar, vp-1966 a Northumbria business scholar, and vp-3144 a Maryland-trained physicist. Those identities differ from this epidemiologist. Not in already-proposed.txt. The institutional name suffix distinguishes the existing identical names.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "David Nguyen",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live official profile https://profiles.ucsf.edu/david-huy.nguyen states current Assistant Professor of Medicine, Infectious Diseases, UCSF attending physician and MIT PhD 2008 / Stanford MD 2012. Its San Francisco address and Berkeley-based lab establish a California appointment. UCSF-employed physician faculty qualify under the maintenance rules. The employer URL supplies Huy; https://www.hillphysicians.com/doctor/david-huy-nhu-nguyen-md identifies the physician as David-Huy Nhu Nguyen, an affirmative Vietnamese given-name signal. Independently ran find-roster-matches with proposed identity URLs: vp-1102 is David Hoa Khoa Nguyen, an Indiana-trained education scholar (PhD 2015), not this physician-scientist. Not in already-proposed.txt.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Kevin A. Nguyen",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live employer profile https://hutchins.sonoma.edu/faculty/kevin-nguyen identifies Associate Professor of STEM Education in the Hutchins School, with Sonoma email, office and education-research publications. https://aapicnorthbay.org/event-6103219 independently identifies the same SSU STEM education professor speaking on Vietnamese experience and the impact of war at an SSU/AAPIC commemoration, supplying a community signal beyond surname. Appointment is in California. Independently ran find-roster-matches: vp-1027 is Kevin H. Nguyen in health policy (Brown PhD 2021), and vp-1116 teaches physician assistants at Drexel; neither matches the Sonoma STEM education researcher. Not in already-proposed.txt.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Son C. Nguyen",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live employer profile https://naturalsciences.ucmerced.edu/people/son-c-nguyen identifies Associate Professor of Chemistry and Biochemistry, Berkeley PhD 2014, Vietnam University of Natural Sciences BS 2001, and Merced office/lab. These establish eligible California faculty status and an affirmative Vietnam connection. Independently ran find-roster-matches with profile and lab URLs. vp-0572, vp-0625, vp-1631, vp-1718, vp-1879, vp-1962, vp-2438 and vp-3165 differ in full name, discipline and/or doctorate: Warsaw computing, Lyon photonics, Lausanne law, FIT mathematics, Linkoping semiconductors, Nantes civil engineering, SINTEF biotechnology and IBM research respectively. None matches the Berkeley-2014 Merced photocatalysis scholar. Not in already-proposed.txt.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Hieu P. Nguyen",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live employer profile https://web.csulb.edu/colleges/cob/intranet/vita/public/resume.php?cid=119&username=hnguye47 identifies Professor of Marketing in Long Beach. https://www.csulb.edu/college-of-business/marketing/article/hieu-nguyen-2024-25-presidents-awards-for-outstanding-faculty explicitly documents tenure in 2014. The official 2016-17 faculty catalog lists Hanoi undergraduate education, Texas Christian MA and UT Arlington PhD, supporting identity and Vietnamese connection. Independently ran find-roster-matches: engineering/physics matches vp-0702, vp-0706, vp-0835, vp-1266, vp-1530, vp-1533 and vp-3192, psychologist vp-1801, and merged retired IDs vp-1132/vp-1245 are different people. Opened https://researchers.mq.edu.au/en/persons/hieu-nguyen/ for vp-1973: applied finance, H. Q. Nguyen publications and distinct research record, unlike this established marketing professor. Not in already-proposed.txt.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Tang-Hung Nguyen",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live employer profile https://www.csulb.edu/college-of-engineering/civil-engineering-construction-engineering-management/page/dr-tang-hung names Tang-Hung Nguyen as Professor, gives a Long Beach office, Penn State architectural-engineering PhD and faculty career since before joining CSULB in 2006. Eligible current California professorship. Tang-Hung/Hung combined with Nguyen is an affirmative Vietnamese given-name signal beyond surname alone. Independently ran find-roster-matches with proposed identity URLs. vp-0088, vp-0130, vp-0334, vp-0443, vp-0589, vp-0957, vp-2310 and vp-3114 have different expanded names and careers in chemistry, Dartmouth engineering, politics, mathematics, biomedical engineering, earth science, anesthesia and eBay research. None matches this Penn State-trained construction scholar. Not in already-proposed.txt.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Jennifer Kim-Anh Tran",
+      "verdict": "fixable",
+      "failedTests": [],
+      "reason": "The submitted URL is a live individual employer expert biography, not a news article, and establishes eligibility; no numbered eligibility test fails. Prefer its linked faculty-directory profile https://www.csueastbay.edu/directory/profiles/es/tranjennifer.html, which identifies Jennifer Kim-Anh Tran as Assistant Professor of Ethnic Studies, USC doctorate, UCSD undergraduate education and current Fall 2026 Hayward-campus courses. The expert bio explicitly lists Vietnamese language and Vietnamese Chamber of Commerce involvement, supplementing Kim-Anh as the Vietnamese signal. Independently ran find-roster-matches with proposed URLs and again with Jennifer Tran plus the corrected URL. No identity-URL matches; broad Kim/Anh hits vp-0063, vp-0236, vp-0285, vp-0860, vp-1670, vp-2275, vp-2343 and vp-3152 have distinct names, disciplines and educational histories; short-name check has no matches. Not in already-proposed.txt.",
+      "correctedProfileUrl": "https://www.csueastbay.edu/directory/profiles/es/tranjennifer.html",
+      "correctedFields": {
+        "profileUrl": "https://www.csueastbay.edu/directory/profiles/es/tranjennifer.html"
+      }
+    },
+    {
+      "name": "Joseph Nguyen",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live employer profile https://www.usfca.edu/faculty/joseph-nguyen explicitly lists Associate Professor and Full-Time Faculty in Theology and Religious Studies, Santa Clara sacred-theology doctorate 2015 and campus office. Eligible California faculty appointment. https://www.usfca.edu/magazine/may-2022/features/jesuits-live-the-mission explicitly states that this USF Jesuit professor was born in Vietnam and moved to the US in 1990. Independently ran find-roster-matches with proposed identity URLs. The only hit, vp-3019 Joseph Q. Nguyen, is an LBNL heavy-element chemist with UC Irvine PhD 2025, not the theologian. Not in already-proposed.txt.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "An Bui",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Fetched https://es.ucsb.edu/people/bui directly with ordinary HTTPS requests: HTTP 200, complete employer profile identifying Assistant Teaching Professor, UCSB PhD 2025, campus office and current Environmental Studies courses. Web-tool retrieval had a cache miss; direct retrieval succeeds. The named UC teaching-professor ladder is an eligible Teaching appointment in an academic program. CBS identifies UCSB graduate student An Bui as Vietnamese American: https://www.cbsnews.com/news/asian-families-hesitant-discuss-racism/ . Independently ran find-roster-matches with all proposed identity URLs. vp-1491 is Ton An Bui, an MIT-trained UBC mathematician; vp-2579 is Trong-An Bui, a National Chi Nan-trained aerospace/AI researcher. Neither matches the UCSB ecologist. Not in already-proposed.txt.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    }
+  ],
+  "possible_move": []
+}

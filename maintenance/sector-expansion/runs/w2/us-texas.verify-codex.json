@@ -1,0 +1,70 @@
+{
+  "verifier": "codex",
+  "input": "maintenance/sector-expansion/runs/w2/us-texas.codex.json",
+  "candidates": [
+    {
+      "name": "Quoc Nguyen",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live employer profile https://pge.utexas.edu/person/quoc-nguyen/ identifies a current Professor and J.H. Herring Centennial Professorship holder, with a faculty career beginning in 2005, Delft petroleum-engineering PhD (2003), and Vietnamese undergraduate education. The US appointment and distinctive given name plus Vietnamese education satisfy tests 3 and 5. Independently ran the roster matcher: vp-0144, vp-0993, vp-1370, vp-1412, vp-1803, vp-2450, vp-2557, vp-3178, vp-3213 and vp-3275 have different fields and/or doctoral histories; none is this petroleum engineer. Not in already-proposed.txt.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Huu Tuan Tran",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Independently fetched https://www.etamu.edu/people/huu-tuan-tran-ph-d/ with HTTP 200 using requests after web.open returned a cache miss. The employer page identifies Assistant Professor, East Texas A&M University, 2026-present, separately from prior Kansas/Kansas State postdocs; gives the Taiwan environmental-science doctorate (2020); and explicitly states birth in central Vietnam. Current university office and appointment place him outside Vietnam. Roster matcher hits vp-0365, vp-0391, vp-0494, vp-1780 and vp-2620 are pharmacy, psychology, mechanical engineering, infectious-disease and mathematics scholars with distinct identities. Not in already-proposed.txt.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Thanh Thuy Vu",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Profile application returned HTTP 200. Independently fetched the live employer record https://webapps.utrgv.edu/aa/dm/api/DMUser/GetDMuser?username=thuy.vu (HTTP 200), which names Thanh Thuy Vu, Associate Professor in Civil Engineering, Edinburg, with promotion-to-full-professor review and an associate appointment since 2019. Missouri civil-engineering PhD (2013), Vietnamese degrees and Hanoi teaching history establish identity and affirmative Vietnamese signals. The official directory script https://www.utrgv.edu/_files/faculty-staff-directory/v3/dir-faculty.js explicitly generates the submitted person-specific profile route. Matcher hits vp-3082 (UCLA-trained Amazon researcher), vp-1300 (virology) and vp-2134 (finance; fragment-stripping URL collision) are different people. Not in already-proposed.txt.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Thang Pham - The University of Texas Rio Grande Valley",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Profile application returned HTTP 200. Independently fetched https://webapps.utrgv.edu/aa/dm/api/DMUser/GetDMuser?username=thang.pham (HTTP 200): current Civil Engineering Associate Professor, Annual Review Tenured, Edinburg; Colorado Denver civil-engineering PhD (2009), Hanoi masters degree and former Vietnam Institute for Building Science and Technology leadership. These establish an eligible US appointment and affirmative Vietnamese signals beyond surname. The official directory script explicitly generates the submitted person-specific profile route. Independently resolved matcher hits vp-0118 (Berkeley/materials), vp-2535 (Amsterdam/oncology), vp-2618 (EPFL/mathematics) and vp-2134 (finance; fragment-stripping collision) as different people. Not in already-proposed.txt.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Kim Loan Nguyen Finn",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Profile application returned HTTP 200. Independently fetched https://webapps.utrgv.edu/aa/dm/api/DMUser/GetDMuser?username=kim.finn01 (HTTP 200): employer names Kim Loan Nguyen Finn, alternate surname Nguyen-Finn, Assistant Professor since September 2023, Tenure-Track 4th Probationary Review, Edinburg, and UTRGV rehabilitation-counseling PhD (2018). The current tenure-track rank supersedes explicitly dated earlier lecturer/adjunct appointments. Compound Vietnamese given names Kim Loan plus original surname Nguyen provide a signal beyond Kim alone. The official directory script generates the submitted profile route. Matcher hits vp-0525, vp-0694, vp-2417, vp-3211 and vp-2134 have different fields/education; vp-2134 is a fragment-stripping collision. Not in already-proposed.txt.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Chien Van Ha",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live profile https://www.depts.ttu.edu/pss/people/faculty/ha-chien/ha-chien.php identifies Research Assistant Professor since May 2023, Lubbock office, Vietnam Academy of Agricultural Sciences doctorate (2016), and substantive project leadership. Independently opened https://www.depts.ttu.edu/pss/people/faculty/, which lists him among departmental faculty, supporting genuine research-faculty status under the maintenance guide rather than inferring equivalence from title alone. Chien Van plus Vietnamese doctoral education provide affirmative Vietnamese signals. Ran matcher with name, employer profile and Scholar identity URL: no roster or retired-ID matches. Not in already-proposed.txt.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Huong T. Tran",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live employer profile https://facultyinfo.unt.edu/faculty-profile?profile=htt0018&type=name names Huong T. Tran, Principal Lecturer, Mathematics, with Denton campus office, Tulane mathematics PhD (1991) and current teaching. Independently opened https://newsletter.math.unt.edu/2021/: Huguette Tran advanced from lecturer in 2010 to Senior Lecturer in 2016 and Principal Lecturer, establishing a continuing teaching promotion ladder. Senior Lecturer is the proposed normalized supported rank; the published title remains Principal Lecturer. Huong plus Tran is a distinctive Vietnamese name combination beyond a shared surname alone. Matcher returned no matches for either Huong T. Tran or Huguette Tran. Not in already-proposed.txt.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Cassandra S. Diep",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live employer profile https://profiles.rice.edu/faculty/cassandra-s-diep identifies Associate Teaching Professor in Kinesiology, faculty service since 2017, Rice office and Texas A&M PhD; the teaching-professor ladder supports an eligible continuing Teaching appointment. Independently fetched and extracted https://pub.lucidpress.com/f9731f1c-e8eb-444b-b491-0f2a63b22441/document.pdf (HTTP 200): the Rice Vietnamese Student Association newsletter identifies her as faculty sponsor and VSA alumna, providing an affirmative Vietnamese-community signal beyond surname alone. Appointment and office are in Houston, outside Vietnam. Roster matcher returned no roster or retired-ID matches. Not in already-proposed.txt.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Linh Pham - Texas A&M University-Central Texas",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live employer profile https://www.tamuct.edu/directory/name/linh-pham/ explicitly identifies Tenured Associate Professor and describes a chemistry faculty appointment beginning in 2015, University of Florida chemistry PhD (2014), and Hanoi University of Technology undergraduate degree (2007). Tenure establishes eligibility; Linh plus Vietnamese education provides an affirmative Vietnamese signal beyond shared surname. The directory and university campus address place the appointment outside Vietnam. Independently ran matcher and compared hits: vp-0949 is an economist with Wisconsin-Milwaukee doctorate; vp-2962 is a quantum researcher with Harvard doctorate. Neither is this chemist. Not in already-proposed.txt.",
+      "correctedFields": {}
+    }
+  ],
+  "possible_move": []
+}

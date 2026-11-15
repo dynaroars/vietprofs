@@ -1,0 +1,486 @@
+{
+  "group": "university",
+  "agent": "codex",
+  "slice": "us-teaching-colleges",
+  "finishedAt": "2026-11-15T00:46:06Z",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Diep Phan",
+        "university": "Beloit College",
+        "track": "Tenure-line",
+        "rank": "Professor",
+        "department": "Economics & Business",
+        "city": "Beloit",
+        "state": "Wisconsin",
+        "country": "United States",
+        "researchAreas": [
+          "Development Economics",
+          "Globalization",
+          "Economic Growth",
+          "East and Southeast Asian Economies"
+        ],
+        "phdInstitution": "University of Wisconsin-Madison",
+        "phdYear": 2008,
+        "undergradInstitution": "Macalester College",
+        "profileUrl": "https://www.beloit.edu/live/profiles/9973-diep-phan"
+      },
+      "evidence": {
+        "currentRole": "https://www.beloit.edu/live/profiles/9973-diep-phan — \"Professor of Economics\"; also Director of the School of Business. Current faculty bio describes teaching and research, with service at Beloit since 2009.",
+        "doctorateOrPapers": "https://www.beloit.edu/live/profiles/9973-diep-phan — explicitly states PhD in Development Economics, University of Wisconsin-Madison, 2008; BA Economics, Macalester College.",
+        "vietnameseSignal": "https://www.beloit.edu/live/profiles/9973-diep-phan — bio explicitly identifies Hanoi, Vietnam, as her place of origin; given name Diep is also a Vietnamese signal.",
+        "dedup": "Ran npm run find-roster-matches -- \"Diep Phan\" --url https://www.beloit.edu/live/profiles/9973-diep-phan: no roster or retired-id matches. Also checked already-proposed.txt; absent."
+      }
+    },
+    {
+      "entry": {
+        "name": "Quynh-Anh Nguyen",
+        "university": "University of Indianapolis",
+        "track": "Tenure-line",
+        "rank": "Assistant Professor",
+        "department": "Mathematical Sciences",
+        "country": "United States",
+        "researchAreas": [
+          "Mathematical Biology",
+          "Computational Neuroscience",
+          "Neural Synchronization",
+          "Auditory Perception"
+        ],
+        "phdInstitution": "University of Iowa",
+        "phdYear": 2019,
+        "msInstitution": "University of Iowa",
+        "undergradInstitution": "San Jose State University",
+        "profileUrl": "https://www.uindy.edu/cas/mathematics/faculty",
+        "websiteUrl": "https://quynh-anh-nguyen.weebly.com/"
+      },
+      "evidence": {
+        "currentRole": "https://www.uindy.edu/cas/mathematics/faculty — named individual biography headed Dr. Quynh-Anh Nguyen, \"Assistant Professor\", Mathematical Sciences. The employer embeds full individual biographies on one departmental page. https://quynh-anh-nguyen.weebly.com/ corroborates appointment since August 2021 and current research grants.",
+        "doctorateOrPapers": "https://www.uindy.edu/cas/mathematics/faculty — PhD Applied Mathematical and Computational Sciences, University of Iowa; MS Mathematics, Iowa; BS Applied Mathematics, San Jose State. https://quynh-anh-nguyen.weebly.com/ explicitly dates the PhD to 2019 and describes the subsequent IUPUI postdoc.",
+        "vietnameseSignal": "Vietnamese given-name combination Quynh-Anh, used on both the employer biography and the linked personal homepage. This is an affirmative given-name signal, beyond the surname Nguyen.",
+        "dedup": "Ran npm run find-roster-matches -- \"Quynh-Anh Nguyen\" with employer bio, linked personal homepage, and ORCID 0000-0003-2843-1841. No URL hits. Inspected name hits vp-0026, vp-0597, vp-0639, vp-0684, vp-0965, vp-1660, vp-2107, vp-2637, vp-2947, vp-3116. The closest full-name hit vp-0965 is a Vanderbilt pharmacologist with UCSF PhD 2017 and Stanford undergraduate degree, distinct from this Iowa PhD 2019 mathematician with San Jose State undergraduate degree. Other hits differ in discipline and doctorate/career history. Absent from already-proposed.txt."
+      }
+    },
+    {
+      "entry": {
+        "name": "Paul Uyen",
+        "university": "College of the Ozarks",
+        "track": "Teaching",
+        "rank": "Assistant Professor",
+        "department": "Biblical and Theological Studies",
+        "city": "Point Lookout",
+        "state": "Missouri",
+        "country": "United States",
+        "researchAreas": [
+          "Theology",
+          "Apologetics",
+          "Ethics",
+          "Philosophy",
+          "Divine Illumination"
+        ],
+        "phdInstitution": "Trinity Evangelical Divinity School",
+        "phdYear": 2022,
+        "undergradInstitution": "Moody Bible Institute",
+        "undergradYear": 2007,
+        "profileUrl": "https://www.cofo.edu/Academics/Majors-Minors/Biblical-and-Theological-Studies/1000"
+      },
+      "evidence": {
+        "currentRole": "https://www.cofo.edu/Academics/Majors-Minors/Biblical-and-Theological-Studies/1000 — individual faculty biography: \"Assistant Professor of Biblical and Theological Studies\"; joined fall 2026. Teaching track is supported by the matching regular full-time theology/apologetics vacancy with August 2026 start: https://www.cofo.edu/Portals/0/Accolades/062880d9-ba21-43b5-89f0-ce8fa642cc1e.pdf?ver=9wajsn3UkSw2_h97jFrRtw%3D%3D . Posting gives a full-time appointment with no visiting or fixed-term limitation; no tenure claim is made.",
+        "doctorateOrPapers": "https://www.cofo.edu/Academics/Majors-Minors/Biblical-and-Theological-Studies/1000 — PhD, Trinity Evangelical Divinity School, 2022; BA Moody Bible Institute 2007; two MAs from Wheaton College, 2009 and 2012. Current scholar and author of the 2025 monograph In Your Light We See Light.",
+        "vietnameseSignal": "https://www.cofo.edu/Academics/Majors-Minors/Biblical-and-Theological-Studies/1000 — employer biography explicitly says he was born in Vietnam and grew up in California.",
+        "dedup": "Ran npm run find-roster-matches -- \"Paul Uyen\" --url https://www.cofo.edu/Academics/Majors-Minors/Biblical-and-Theological-Studies/1000: no roster or retired-id matches. Absent from already-proposed.txt."
+      }
+    },
+    {
+      "entry": {
+        "name": "Tuan Ho Quoc",
+        "university": "Central College",
+        "track": "Tenure-line",
+        "rank": "Assistant Professor",
+        "department": "Economics/Accounting/Management",
+        "city": "Pella",
+        "state": "Iowa",
+        "country": "United States",
+        "researchAreas": [
+          "Macroeconomics",
+          "Business Cycles",
+          "Fiscal Policy"
+        ],
+        "phdInstitution": "Oklahoma State University",
+        "undergradInstitution": "University of Economics Ho Chi Minh City",
+        "profileUrl": "https://central.edu/faculty/tuan-ho-quoc/"
+      },
+      "evidence": {
+        "currentRole": "https://central.edu/faculty/tuan-ho-quoc/ — \"Assistant Professor of Economics\"; Economics/Accounting/Management. https://news.central.edu/2026/02/central-professor-publishes-about-business-cycles-and-taxes/ corroborates current faculty role and active research. Published employer name retained; also appears as Tuan Ho-Quoc in the hiring announcement.",
+        "doctorateOrPapers": "https://central.edu/faculty/tuan-ho-quoc/ — PhD Oklahoma State University; BA University of Economics HCMC, Vietnam. https://news.central.edu/2024/08/central-college-welcomes-eight-new-faculty/ also records an MA from the University of Economics Ho Chi Minh City. No doctorate year inferred.",
+        "vietnameseSignal": "https://central.edu/faculty/tuan-ho-quoc/ — Vietnamese given name Tuan and an explicitly listed undergraduate degree in Vietnam.",
+        "dedup": "Ran npm run find-roster-matches -- \"Tuan Ho Quoc\" --url https://central.edu/faculty/tuan-ho-quoc/. Name-only hits vp-0947 Quoc Tuan Ho (Bristol accounting/finance, Manchester PhD, Melbourne masters) and vp-1433 Tuan A. Ho (Sandia geochemistry, Oklahoma PhD 2014) are different from the Central macroeconomist with Oklahoma State PhD and Vietnam economics education. No URL match; checked roster education and disciplines. Absent from already-proposed.txt."
+      }
+    },
+    {
+      "entry": {
+        "name": "Giang-Nguyen Thi Nguyen",
+        "university": "University of West Florida",
+        "track": "Tenure-line",
+        "rank": "Professor",
+        "department": "Teaching, Leadership, and Research",
+        "city": "Pensacola",
+        "state": "Florida",
+        "country": "United States",
+        "researchAreas": [
+          "Mathematics Education",
+          "Student Motivation",
+          "Mathematical Modeling",
+          "Teacher Education"
+        ],
+        "phdInstitution": "Florida State University",
+        "phdYear": 2011,
+        "msInstitution": "Florida State University",
+        "undergradInstitution": "Florida State University",
+        "undergradYear": 2004,
+        "profileUrl": "https://uwf.edu/soe/departments/teaching-leadership-and-research/faculty/dr-giang-nguyen-thi-nguyen.html",
+        "websiteUrl": "https://sites.google.com/uwf.edu/nguyen"
+      },
+      "evidence": {
+        "currentRole": "https://uwf.edu/soe/departments/teaching-leadership-and-research/faculty/dr-giang-nguyen-thi-nguyen.html — \"Professor\" in Teaching, Leadership, and Research. Employer-linked CV https://uwf.edu/media/university-of-west-florida/academic-affairs/departments/school-of-education/faculty-cvs/NguyenCV-(1).pdf explicitly documents associate professor with tenure, 2017–2023, and professor since 2023.",
+        "doctorateOrPapers": "https://uwf.edu/media/university-of-west-florida/academic-affairs/departments/school-of-education/faculty-cvs/NguyenCV-(1).pdf — PhD Mathematics Education May 2011, MS Mathematics Education December 2006, BS Actuarial Science December 2004, all Florida State University. Current official bio independently confirms these degree institutions.",
+        "vietnameseSignal": "Vietnamese given-name tokens Giang and Thi in the current employer's published full name; the linked CV and personal site corroborate identity. No Vietnamese spelling reconstructed.",
+        "dedup": "Ran npm run find-roster-matches -- \"Giang-Nguyen Thi Nguyen\" with official faculty bio, UWF research profile, CV, and linked personal website. Name-only hits vp-0143 (finance, UNC doctorate), vp-0476 (philosophy, UCLA doctorate), vp-0633 (robotics, Dresden doctorate), vp-3048 (Guide Labs, Auburn doctorate), vp-3051 (Meta, Iowa State doctorate) were checked against this FSU mathematics-education doctorate and UWF employment since 2011; all different people. No URL match. Absent from already-proposed.txt."
+      }
+    },
+    {
+      "entry": {
+        "name": "Dao Hoang Yen Nguyen",
+        "university": "Greensboro College",
+        "track": "Tenure-line",
+        "rank": "Assistant Professor",
+        "department": "Business Administration & Economics",
+        "city": "Greensboro",
+        "state": "North Carolina",
+        "country": "United States",
+        "researchAreas": [
+          "Marketing Management",
+          "Consumer Behavior",
+          "Sustainable Marketing",
+          "Wellbeing",
+          "Experiential Learning"
+        ],
+        "phdInstitution": "University of Otago",
+        "profileUrl": "https://www.greensboro.edu/faculty/dao-hoang-yen-nguyen/"
+      },
+      "evidence": {
+        "currentRole": "https://www.greensboro.edu/faculty/ — \"Assistant Professor of Business Administration\", listed in the Business Administration & Economics department, with a link to her individual biography at https://www.greensboro.edu/faculty/dao-hoang-yen-nguyen/ . Individual page and 2025–2026 college catalog identify the current faculty member; catalog records appointment in 2025.",
+        "doctorateOrPapers": "https://www.greensboro.edu/faculty/dao-hoang-yen-nguyen/ — doctorate in Marketing Management and Master of Marketing from the University of Otago; MBA Andrews University. No PhD year inferred. Research interests listed explicitly in the bio.",
+        "vietnameseSignal": "https://www.greensboro.edu/faculty/dao-hoang-yen-nguyen/ — Vietnamese given-name tokens Hoang Yen; biography describes 15 years of educational leadership in Vietnam before teaching in New Zealand and joining Greensboro.",
+        "dedup": "Ran npm run find-roster-matches with both \"Yen Nguyen\" and \"Dao Hoang Yen Nguyen\", plus the exact employer profile URL. No URL hits. Reviewed shorter-name hits vp-0232, vp-0261, vp-1928, vp-2418 and full-name token hits vp-0139, vp-0298, vp-0605, vp-0649, vp-0720, vp-0793, vp-0815, vp-1547, vp-1619, vp-1875, vp-1985, vp-2176, vp-2337, vp-2488, vp-2985, vp-3151. None matches this Otago marketing doctorate and education-sector career: disciplines, doctoral institutions, and career histories differ. In particular vp-0261 is a Vietnamese-language scholar, not this marketing scholar. Absent from already-proposed.txt."
+      }
+    },
+    {
+      "entry": {
+        "name": "Cu Phung",
+        "university": "Methodist University",
+        "track": "Tenure-line",
+        "rank": "Professor",
+        "department": "Chemistry & Physical Science",
+        "city": "Fayetteville",
+        "state": "North Carolina",
+        "country": "United States",
+        "researchAreas": [
+          "Computational Chemistry",
+          "NMR Chemical Shifts",
+          "Molecular Geometry"
+        ],
+        "phdInstitution": "Duke University",
+        "undergradInstitution": "Methodist College",
+        "profileUrl": "https://www.methodist.edu/directory/cu-phung-ph-d/"
+      },
+      "evidence": {
+        "currentRole": "https://www.methodist.edu/directory/cu-phung-ph-d/ — \"Professor of Chemistry\". https://www.methodist.edu/academics/ahs/natural-sciences/che-faculty/ places him explicitly among full-time faculty. Current 2026 employer feature also identifies his computational-chemistry teaching/research: https://www.methodist.edu/news/mutoday-ahs/ .",
+        "doctorateOrPapers": "https://www.methodist.edu/directory/cu-phung-ph-d/ — BS Methodist College; PhD Duke University. Thesis on ab initio NMR chemical shifts and optimized molecular geometries. No doctorate year inferred.",
+        "vietnameseSignal": "Vietnamese given name Cu together with surname Phung on the live employer page https://www.methodist.edu/directory/cu-phung-ph-d/ . This uses an affirmative Vietnamese given-name signal rather than a shared surname alone. A search also surfaced a historical campus-newsletter excerpt about birth in Saigon, but that secondary-hosted page could not be opened and is not used as verification evidence.",
+        "dedup": "Ran npm run find-roster-matches -- \"Cu Phung\" --url https://www.methodist.edu/directory/cu-phung-ph-d/: no roster or retired-id matches. Absent from already-proposed.txt."
+      }
+    }
+  ],
+  "already_listed": [
+    {
+      "name": "Linh Pham",
+      "id": "vp-0949",
+      "note": "Lake Forest College economics; exact employer profile URL match. Opened https://www.lakeforest.edu/academics/faculty/lpham ; current associate professor with Wisconsin-Milwaukee PhD."
+    },
+    {
+      "name": "Phat Vu",
+      "id": "vp-0112",
+      "note": "Soka University of America physics; exact profile URL and name match. Opened https://www.soka.edu/about/faculty-staff/phat-vu ."
+    },
+    {
+      "name": "Hanh Thi Nguyen",
+      "id": "vp-2293",
+      "note": "Hawaiʻi Pacific University applied linguistics; exact profile URL match. Opened https://www.hpu.edu/faculty/cla/hanh-thi-nguyen.html ."
+    },
+    {
+      "name": "Nguyet Nguyen",
+      "id": "vp-1809",
+      "note": "University of Alaska Southeast history; exact profile URL match at https://uas.alaska.edu/dir/ntnguyen2.html . Distinct from Youngstown mathematics namesake; current Alaska page also records an AY 2025–2026 visiting appointment in Sharjah, not a permanent move."
+    },
+    {
+      "name": "Thai Anh Nhan",
+      "id": "vp-0111",
+      "note": "Menlo mathematics scholar already listed as Thai Nhan. Initial shorter-name Anh Nhan query returned no match; fuller-name query resolved the existing ID. Opened employer page https://www.menlo.edu/people/thai-nhan/ ; same National University of Ireland mathematics doctorate and former Holy Names appointment."
+    },
+    {
+      "name": "Oanh Tran",
+      "id": "vp-1706",
+      "note": "CSU East Bay educational psychology; listed as Oanh Kim Tran. Same school psychology professor on https://www.csueastbay.edu/epsy/faculty.html ."
+    }
+  ],
+  "possible_move": [],
+  "rejected": [
+    {
+      "name": "Bich Do",
+      "reason": "Lewis & Clark employer biography explicitly says School Psychology Adjunct Professor and describes adjunct faculty status. Outside eligible tracks: https://graduate.lclark.edu/live/profiles/23764-bich-do ."
+    },
+    {
+      "name": "Justin Nghiem",
+      "reason": "Current Minnesota lab page identifies Postdoctoral Research Scientist, not a permanent faculty appointment. Broad search snippets juxtaposed other alumni's Bowdoin faculty positions with his name; live page resolves the role: https://surface.esci.umn.edu/people ."
+    },
+    {
+      "name": "Hanh-Huy Phan",
+      "reason": "Mankato official profile says Professor Emeritus, 1974–2018, outside this Tenure-line/Teaching slice; education describes doctoral coursework rather than an earned PhD: https://hss.mnsu.edu/academic-programs/ethnic-studies/faculty-and-staff/hanh-huy-phan/ ."
+    },
+    {
+      "name": "Bich-Phuong (Gigi) Bui",
+      "reason": "Hamilton directory/search leads identify Teaching Fellow in Chinese, with BA and MA. Continuing eligible appointment and research doctorate not established; not counted. Discovery sources: https://www.hamilton.edu/academics/departments/Chinese and https://my.hamilton.edu/news/stories/new-faculty-2025 . These were discovery results, not used as live verification."
+    },
+    {
+      "name": "Truc Nguyen",
+      "reason": "Live Mercy Health Sciences University profile verifies professor, PhD Wisconsin-Madison 2000, and chemistry teaching since 2008, but tenure status or an explicitly full-time continuing teaching appointment was not established. Hold for appointment-track confirmation, not an eligibility verdict: https://mercyhealthu.edu/about/college-directory/truc-nguyen/ . Name-only roster hits vp-0351, vp-0916, vp-1908 and vp-2537 concern other disciplines/identities."
+    },
+    {
+      "name": "Nhung Hendy",
+      "reason": "Towson current full-time management faculty list is promising and doctoral education is documented in its catalog; no roster match. However linked individual profile https://www.towson.edu/cbe/facultystaff/profile.html?FacMem=nhendy returned an empty profile shell, without the person's name or biography. Hold until a usable employer person page or qualifying personal site is located. Current listing: https://www.towson.edu/cbe/departments/management/faculty.html ."
+    },
+    {
+      "name": "Trang Phan",
+      "reason": "Skipped: exact name occurs in maintenance/sector-expansion/already-proposed.txt; Augustana search rediscovered the earlier proposal."
+    },
+    {
+      "name": "Hoa Ngo",
+      "reason": "Skipped: exact name occurs in maintenance/sector-expansion/already-proposed.txt; Hamilton directory search rediscovered the earlier proposal."
+    },
+    {
+      "name": "Linh N. Hoang",
+      "reason": "Final fresh check found this exact name in maintenance/sector-expansion/already-proposed.txt. Skipped under BRIEF2 despite successful live verification at Siena University; not counted as a new candidate."
+    }
+  ],
+  "coverage": [
+    {
+      "employer": "Beloit College",
+      "pagesExamined": [
+        "https://www.beloit.edu/live/profiles/9973-diep-phan"
+      ],
+      "note": "Given-name Diep search and economics/data-science faculty discovery led to a new verified professor."
+    },
+    {
+      "employer": "Siena University",
+      "pagesExamined": [
+        "https://www.siena.edu/faculty-and-staff/person/linh-hoang/",
+        "https://research.library.fordham.edu/dissertations/AAI3216914/"
+      ],
+      "note": "Linh given-name search and faculty-directory refinement verified the theology professor and distinguished unrelated roster name hits. Final fresh already-proposed.txt check found Linh N. Hoang, so excluded from candidate set."
+    },
+    {
+      "employer": "University of Indianapolis",
+      "pagesExamined": [
+        "https://www.uindy.edu/cas/mathematics/faculty",
+        "https://quynh-anh-nguyen.weebly.com/"
+      ],
+      "note": "Read the department's full set of individual mathematics biographies, including visiting and practice/instructor designations. Quynh-Anh is new. Linked personal CV fetch failed with cache miss; university education bio and personal homepage supplied doctorate and date."
+    },
+    {
+      "employer": "College of the Ozarks",
+      "pagesExamined": [
+        "https://www.cofo.edu/Academics/Majors-Minors/Biblical-and-Theological-Studies/1000",
+        "https://www.cofo.edu/Portals/0/Accolades/062880d9-ba21-43b5-89f0-ce8fa642cc1e.pdf?ver=9wajsn3UkSw2_h97jFrRtw%3D%3D"
+      ],
+      "note": "Uyen token discovered a fall-2026 hire; read all four department biographies and matching full-time recruitment specification."
+    },
+    {
+      "employer": "Central College",
+      "pagesExamined": [
+        "https://central.edu/faculty/tuan-ho-quoc/",
+        "https://news.central.edu/2026/02/central-professor-publishes-about-business-cycles-and-taxes/",
+        "https://news.central.edu/2024/08/central-college-welcomes-eight-new-faculty/"
+      ],
+      "note": "Quoc token discovery surfaced the macroeconomics faculty profile; distinguished him from Bristol and Sandia namesakes using degrees."
+    },
+    {
+      "employer": "University of West Florida",
+      "pagesExamined": [
+        "https://uwf.edu/soe/departments/teaching-leadership-and-research/faculty/dr-giang-nguyen-thi-nguyen.html",
+        "https://uwf.edu/media/university-of-west-florida/academic-affairs/departments/school-of-education/faculty-cvs/NguyenCV-(1).pdf",
+        "https://sites.google.com/uwf.edu/nguyen"
+      ],
+      "note": "Giang token discovered a new tenured education professor. Rare-surname Ta search also rediscovered existing vp-0846 Minh Quang Ta, excluded from new candidates at roster check."
+    },
+    {
+      "employer": "Greensboro College",
+      "pagesExamined": [
+        "https://www.greensboro.edu/faculty/",
+        "https://www.greensboro.edu/faculty/dao-hoang-yen-nguyen/"
+      ],
+      "note": "Yen token found a 2025 business hire; inspected the full faculty directory, which separates ordinary faculty and adjunct instructors, then followed her individual bio."
+    },
+    {
+      "employer": "Methodist University",
+      "pagesExamined": [
+        "https://www.methodist.edu/academics/ahs/natural-sciences/che-faculty/",
+        "https://www.methodist.edu/directory/cu-phung-ph-d/",
+        "https://www.methodist.edu/news/mutoday-ahs/"
+      ],
+      "note": "Less common surname Phung search; department explicitly separates full-time faculty from adjuncts. Verified Cu Phung."
+    },
+    {
+      "employer": "Menlo College",
+      "pagesExamined": [
+        "https://www.menlo.edu/people/thai-nhan/"
+      ],
+      "note": "Nhan search initially found Anh Nhan in catalog; full profile and fuller-name dedup resolved existing Thai Nhan vp-0111."
+    },
+    {
+      "employer": "Mercy Health Sciences University",
+      "pagesExamined": [
+        "https://mercyhealthu.edu/about/college-directory/truc-nguyen/"
+      ],
+      "note": "Truc token led to chemistry professor with doctorate; retained as an unresolved track lead, not a verified candidate."
+    },
+    {
+      "employer": "Towson University",
+      "pagesExamined": [
+        "https://www.towson.edu/cbe/departments/management/faculty.html",
+        "https://www.towson.edu/cbe/facultystaff/profile.html?FacMem=nhendy"
+      ],
+      "note": "Nhung token found current full-time professor with non-Vietnamese published surname. Individual page is an empty shell; held out."
+    },
+    {
+      "employer": "Lake Forest College",
+      "pagesExamined": [
+        "https://www.lakeforest.edu/academics/faculty/lpham"
+      ],
+      "note": "Linh token yielded existing economics scholar vp-0949."
+    },
+    {
+      "employer": "Soka University of America",
+      "pagesExamined": [
+        "https://www.soka.edu/about/faculty-staff/phat-vu"
+      ],
+      "note": "Phat token yielded existing physics scholar vp-0112."
+    },
+    {
+      "employer": "Hawaiʻi Pacific University",
+      "pagesExamined": [
+        "https://www.hpu.edu/faculty/cla/hanh-thi-nguyen.html"
+      ],
+      "note": "Hanh token yielded existing applied-linguistics scholar vp-2293. Ngoc Phan also surfaced in discovery searches; no new candidate asserted."
+    },
+    {
+      "employer": "University of Alaska Southeast",
+      "pagesExamined": [
+        "https://uas.alaska.edu/dir/ntnguyen2.html"
+      ],
+      "note": "Nguyet token yielded existing history scholar vp-1809. Visiting Sharjah history resolved from current home-employer page."
+    },
+    {
+      "employer": "California State University, East Bay",
+      "pagesExamined": [
+        "https://www.csueastbay.edu/epsy/faculty.html"
+      ],
+      "note": "Oanh token yielded existing educational-psychology scholar vp-1706."
+    },
+    {
+      "employer": "Minnesota State University, Mankato",
+      "pagesExamined": [
+        "https://hss.mnsu.edu/academic-programs/ethnic-studies/faculty-and-staff/hanh-huy-phan/"
+      ],
+      "note": "Hanh token revealed emeritus appointment; excluded from assigned tracks."
+    },
+    {
+      "employer": "Lewis & Clark College",
+      "pagesExamined": [
+        "https://graduate.lclark.edu/live/profiles/23764-bich-do"
+      ],
+      "note": "Bich token discovery resolved to adjunct faculty; excluded."
+    },
+    {
+      "employer": "University of Minnesota",
+      "pagesExamined": [
+        "https://surface.esci.umn.edu/people"
+      ],
+      "note": "Incidental rare-surname Nghiem lead checked to avoid false Bowdoin faculty attribution; current postdoc excluded."
+    },
+    {
+      "employer": "Hamilton College",
+      "pagesExamined": [],
+      "note": "Discovery-only searches of faculty directory, Chinese faculty and 2025 new-faculty announcement. Hoa Ngo already proposed; Bich-Phuong Bui teaching-fellow lead lacked qualifying doctorate/continuing appointment. No live faculty-page verification claimed."
+    },
+    {
+      "employer": "Augustana College",
+      "pagesExamined": [],
+      "note": "Discovery-only Vietnamese-identity search found Trang Phan, already in prior-proposal exclusion list; stopped."
+    },
+    {
+      "employer": "Winona State University",
+      "pagesExamined": [],
+      "note": "Discovery-only Linh faculty search mostly returned student and alumni names; no verified new faculty lead."
+    },
+    {
+      "employer": "Minnesota State University Moorhead",
+      "pagesExamined": [],
+      "note": "Discovery-only Vietnam faculty search returned student nursing testimonials and graduate faculty listing; no verified new lead."
+    },
+    {
+      "employer": "Bemidji State University",
+      "pagesExamined": [],
+      "note": "Discovery-only Vietnam faculty search returned students, historical administrators and a non-Vietnamese environmental scholar; no new verified lead."
+    },
+    {
+      "employer": "Millersville University of Pennsylvania",
+      "pagesExamined": [],
+      "note": "Discovery-only Vietnam professor search returned a Vietnam War historian without affirmative Vietnamese identity evidence; not proposed."
+    },
+    {
+      "employer": "Kutztown University of Pennsylvania",
+      "pagesExamined": [],
+      "note": "Discovery-only Vietnam professor search returned dean's lists and undergraduate research participants; not faculty candidates."
+    },
+    {
+      "employer": "University of Wisconsin-Stout",
+      "pagesExamined": [],
+      "note": "Discovery-only search surfaced Van Anh Nguyen, lecturer in mechanical engineering; appointment continuity not established. No new verified candidate asserted."
+    },
+    {
+      "employer": "Fort Lewis College",
+      "pagesExamined": [],
+      "note": "Discovery-only Vietnam faculty search returned a visiting English professor and unrelated psychology faculty; no verified Vietnamese faculty lead."
+    },
+    {
+      "employer": "University of Nebraska at Kearney",
+      "pagesExamined": [],
+      "note": "Discovery-only Linh/Vietnam professor searches returned alumni, students and conference authors affiliated elsewhere; no verified new faculty lead."
+    },
+    {
+      "employer": "University of Wisconsin-Parkside",
+      "pagesExamined": [],
+      "note": "Discovery-only Vietnam professor search yielded an adjunct alumnus and unrelated events. Lan Nguyen already appears in prior-proposal exclusion list."
+    },
+    {
+      "employer": "University of Wisconsin-Stevens Point",
+      "pagesExamined": [],
+      "note": "Discovery-only Vietnam professor search returned veterans, historical material and research about Vietnam; no affirmative eligible new identity."
+    },
+    {
+      "employer": "Eastern Washington University",
+      "pagesExamined": [],
+      "note": "Discovery-only Vietnam professor search returned historical newspapers, veterans and staff oral histories; no verified new eligible lead."
+    }
+  ]
+}

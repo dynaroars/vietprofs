@@ -1,0 +1,378 @@
+{
+  "group": "university",
+  "agent": "codex",
+  "slice": "us-cs",
+  "finishedAt": "2026-11-15T01:25:20Z",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Bang Tran",
+        "university": "Assumption University",
+        "track": "Tenure-line",
+        "rank": "Assistant Professor",
+        "department": "Mathematics and Computer Science",
+        "field": "Computer Science",
+        "city": "Worcester",
+        "state": "Massachusetts",
+        "country": "United States",
+        "researchAreas": [
+          "Machine Learning",
+          "Internet of Things Security and Privacy",
+          "Voice Assistant Privacy",
+          "Large Language Models for Cognitive Health"
+        ],
+        "keywords": [
+          "machine learning",
+          "IoT",
+          "privacy",
+          "security",
+          "large language models"
+        ],
+        "phdInstitution": "University of Massachusetts Boston",
+        "phdYear": 2023,
+        "undergradInstitution": "Vietnam National University, Hanoi",
+        "undergradYear": 2001,
+        "msInstitution": "Vietnam National University, Ho Chi Minh City",
+        "profileUrl": "https://www.assumption.edu/people-and-departments/directory/bang-benz-tran",
+        "websiteUrl": "https://benztran.com"
+      },
+      "evidence": {
+        "currentRole": "https://www.assumption.edu/people-and-departments/directory/bang-benz-tran — \"Assistant Professor of Computer Science\". Department and Worcester, Massachusetts location appear on the institutional profile. https://www.faculty.umb.edu/xiaohui.liang/mobcp.html explicitly identifies the alumni appointment as \"Tenure-track Assistant Professor at Assumption University, MA\".",
+        "doctorateOrPapers": "https://www.assumption.edu/people-and-departments/directory/bang-benz-tran — completed Computer Science PhD, University of Massachusetts Boston, 2023, advised by Xiaohui Liang; undergraduate IT degree in Hanoi in 2001 and software-engineering masters in Ho Chi Minh City in 2009.",
+        "vietnameseSignal": "https://www.assumption.edu/people-and-departments/directory/bang-benz-tran — education at Vietnamese national universities and prior employment at University of Transport and Communications, Vietnam (2003–2018); moved to the US in 2019.",
+        "dedup": "Ran npm run find-roster-matches -- \"Bang Tran\" with both entry identity URLs; exit 0, no URL matches. Only name hit vp-2636, Sy Bang Tran at CSU Sacramento, is a different person: roster records Nevada Reno PhD 2023, single-cell omics/bioinformatics and a different homepage; this candidate has UMass Boston PhD 2023, Xiaohui Liang supervision and voice/IoT privacy research. Manually inspected vp-2636. No same-person name in already-proposed.txt.",
+        "enrichment": "Official profile links https://benztran.com and the CV https://www.assumption.edu/wp-content/uploads/2024/05/Bang_Tran_s_Resume.pdf (opened). No qualifying major honor established: local teaching commendations and conference best-paper award omitted. No verified portrait source found; no LinkedIn fetched. Personal site returned HTTP 200 via requests; institutional profile opened successfully in web tool, although a separate requests fetch returned 403."
+      }
+    },
+    {
+      "entry": {
+        "name": "Trung Nguyen",
+        "university": "Winona State University",
+        "track": "Tenure-line",
+        "rank": "Associate Professor",
+        "department": "Computer Science",
+        "field": "Computer Science",
+        "city": "Winona",
+        "state": "Minnesota",
+        "country": "United States",
+        "researchAreas": [
+          "Machine Learning",
+          "Data Mining",
+          "Blockchain",
+          "Social Network Analysis",
+          "Swarm Robotics",
+          "Reinforcement Learning"
+        ],
+        "keywords": [
+          "machine learning",
+          "data mining",
+          "blockchain",
+          "swarm robotics"
+        ],
+        "phdInstitution": "University of Southern Mississippi",
+        "phdYear": 2020,
+        "profileUrl": "https://cs.winona.edu/cs-website/faculty/facpages/template2.php?username=tnguyen"
+      },
+      "evidence": {
+        "currentRole": "https://www.winona.edu/academics/colleges/science-engineering/computer-science-department/faculty-staff/ — Trung Nguyen, \"Associate Professor\", Computer Science, Watkins 108D. Current central directory supplies rank; the individual departmental biography at https://cs.winona.edu/cs-website/faculty/facpages/template2.php?username=tnguyen still says assistant professor, so that older rank is superseded.",
+        "doctorateOrPapers": "https://cs.winona.edu/cs-website/faculty/facpages/template2.php?username=tnguyen — Computational Sciences PhD, University of Southern Mississippi, 2020. The live individual biography describes machine-learning, data-mining, blockchain and swarm-robotics research.",
+        "vietnameseSignal": "https://cs.winona.edu/cs-website/faculty/facpages/template2.php?username=tnguyen — Vietnamese given name Trung alongside Nguyen on the institutional biography; not a surname-only inference.",
+        "dedup": "Ran npm run find-roster-matches -- \"Trung Nguyen\" with individual profile and current faculty directory; exit 0, no URL match. Checked all 16 active name hits plus retired vp-1245 (merged into vp-0706). Closest exact-name hits: vp-0293 works in SJSU sociology/diaspora studies; vp-2009 at AUT has Victoria University of Wellington PhD 2021. This person has Southern Mississippi computational-sciences PhD 2020 and the distinct Winona profile. Remaining hits concern chemical/mechanical/electrical/civil engineering, economics, education, mathematics, medicine, pharmacology or different fuller names. Earlier-proposed Thanh Trung Nguyen is Rowan mathematics, Brussels doctorate, not this person. No same-person exclusion.",
+        "enrichment": "Individual profile supplies research areas and PhD year. Its Personal Website link resolves back to the same departmental profile, so websiteUrl omitted. Portrait lead linked by that page: https://cs.winona.edu/cs-website/Faculty/img/tnguyen.png ; image fetch returned cache miss and requires downstream visual vetting. No qualifying honors or additional identity-resolved links established. Individual page opened successfully through web; a separate requests retry timed out."
+      }
+    },
+    {
+      "entry": {
+        "name": "Duy Ho",
+        "university": "California State University, Fullerton",
+        "track": "Tenure-line",
+        "rank": "Assistant Professor",
+        "department": "Computer Science",
+        "field": "Computer Science",
+        "city": "Fullerton",
+        "state": "California",
+        "country": "United States",
+        "researchAreas": [
+          "AI-Empowered Robotics",
+          "Mixed Reality",
+          "Web and Mobile Applications",
+          "3D Applications"
+        ],
+        "keywords": [
+          "robotics",
+          "artificial intelligence",
+          "mixed reality",
+          "web applications"
+        ],
+        "phdInstitution": "University of Missouri-Kansas City",
+        "profileUrl": "https://news.fullerton.edu/feature/2024-25-new-faculty/",
+        "websiteUrl": "https://duyhho.vercel.app",
+        "scholarUrl": "https://scholar.google.com/citations?user=FwwK_JQAAAAJ"
+      },
+      "evidence": {
+        "currentRole": "https://news.fullerton.edu/feature/2024-25-new-faculty/ — Duy Ho, \"assistant professor of computer science\", in the employer’s new tenure-track faculty biographies. https://news.fullerton.edu/spotlight/students-showcase-summer-research-at-csuf/ (August 31, 2026) independently identifies him as the current CS faculty research mentor. https://github.com/duyhho also explicitly states tenure-track status and Fullerton location.",
+        "doctorateOrPapers": "https://news.fullerton.edu/feature/2024-25-new-faculty/ — completed PhD in Computer Science, University of Missouri-Kansas City. Employer biography provides robotics, mixed-reality and application research interests. PhD year not supplied and omitted.",
+        "vietnameseSignal": "https://news.fullerton.edu/feature/2024-25-new-faculty/ — Vietnamese given name Duy. https://apu.edu.vn/ho-hoang-duy (opened) additionally profiles APU Vietnam alumnus Ho Hoang Duy pursuing a UMKC CS doctorate; matching UMKC/robotics background supports the identity, but no expanded or diacritized name is reconstructed.",
+        "dedup": "Ran npm run find-roster-matches -- \"Duy Ho\" with employer biography, GitHub profile, personal homepage and Scholar identity URL; exit 0, no URL matches. Only name hit vp-1407 Quoc Duy Ho is a different person: Stavanger mathematics/physics and Bremen PhD 2019, computational materials science; this candidate has UMKC computer-science doctorate and robotics/mixed-reality work. Manually inspected vp-1407. No same-person name in already-proposed.txt.",
+        "enrichment": "profileUrl is the live employer-published individual mini-biography within a multi-person new-faculty feature, not a standalone directory record. The CS faculty directory’s dynamic listing did not yield a dedicated individual URL. Current GitHub profile https://github.com/duyhho links the personal homepage and exact Scholar ID. Personal site returned HTTP 200 but contains older doctoral-candidate text, so it is used only as an identity link, not current-role evidence. Employer photo lead: https://news.fullerton.edu/feature/2024-25-new-faculty/_assets/images/faculty/Duy-Ho.jpg ; image fetch returned cache miss, requiring downstream visual vetting. No qualifying honors established; no LinkedIn fetched."
+      }
+    }
+  ],
+  "already_listed": [
+    {
+      "name": "Ni Trieu",
+      "id": "vp-0049",
+      "note": "ASU computer science lead resolves to the existing Arizona State University entry."
+    },
+    {
+      "name": "Sy Bang Tran",
+      "id": "vp-2636",
+      "note": "Sacramento CS lead, also found as Bang Tran, is already listed; distinct from the Assumption candidate."
+    },
+    {
+      "name": "Thuan L. Nguyen",
+      "id": "vp-0249",
+      "note": "UNT data-analytics/clinical faculty lead is already listed at University of North Texas."
+    },
+    {
+      "name": "Nhu Nguyen",
+      "id": "vp-0338",
+      "note": "URI data-science faculty lead matches the existing Rhode Island entry."
+    },
+    {
+      "name": "Phung Lai",
+      "id": "vp-0705",
+      "note": "Opened https://www.albany.edu/cehc/faculty/phung-lai ; current Albany role matches existing entry."
+    },
+    {
+      "name": "Xuan Phuong Tran",
+      "id": "vp-1561",
+      "note": "Little Rock CS/cybersecurity lead published as Tran Phuong matches existing entry."
+    },
+    {
+      "name": "Tung T. Nguyen",
+      "id": "vp-1696",
+      "note": "Opened https://tungprime.github.io/ ; Elmhurst mathematics/CS lead already listed. Name and homepage dedup agree."
+    },
+    {
+      "name": "Tung Thanh Nguyen",
+      "id": "vp-0267",
+      "note": "Texas A&M CS given-name search lead is already listed."
+    },
+    {
+      "name": "Huy T. Vo",
+      "id": "vp-0050",
+      "note": "CUNY computer-science lead is already listed at City College of New York."
+    }
+  ],
+  "possible_move": [],
+  "rejected": [
+    {
+      "name": "Quoc-Nam Tran",
+      "reason": "Southeastern Louisiana CS lead: https://www.southeastern.edu/employee/quoc-nam-tran/ returned 403 in both web and requests. Search discovery and cached catalog information cannot replace live individual-page verification. Not accepted; prior-pass coverage also recorded this access gap."
+    },
+    {
+      "name": "Dung Nguyen (UTSA)",
+      "reason": "https://www.utsa.edu/newfaculty/ was opened and lists incoming CS assistant professor beginning January 2027, with PhD designation. No identity-resolved individual employer or current personal profile found; doctorate institution unresolved. Do not conflate with the Haverford visiting faculty member of the same name."
+    },
+    {
+      "name": "Hien Nguyen (Penn State Harrisburg)",
+      "reason": "Departmental directory https://cs.hbg.psu.edu/cs/csfaculty.html was retrievable via requests and lists assistant professor and New Mexico State doctorate, but its linked individual LDAP page returned 404. Other support was dated 2022–2023. No current individual profile found; not confused with vp-0738 Hien M. Nguyen at UW–Whitewater, whose doctorate is UConn."
+    },
+    {
+      "name": "Kien A. Hua",
+      "reason": "Opened https://www.cs.ucf.edu/person/kienhua/ and verified UCF professor/doctorate. Could not establish an affirmative Vietnamese signal rather than an ambiguous romanized-name resemblance; excluded pending ancestry/education evidence."
+    },
+    {
+      "name": "Tan Le (Hampton)",
+      "reason": "Former ODU computing lead now points to Hampton electrical/computer engineering, outside this CS/CIS department slice; not proposed from an old affiliation."
+    },
+    {
+      "name": "Manh Nguyen (Kennesaw State)",
+      "reason": "Discovery surfaced a limited-term assistant-professor appointment in information technology. Temporary appointment is excluded."
+    },
+    {
+      "name": "Duc Ta (San Francisco State)",
+      "reason": "Lecturer discovery established a masters degree but no research doctorate or at least two current-employer papers within three years. Does not clear this brief’s additional research qualification."
+    },
+    {
+      "name": "Thien-Ngo Le (MSU Denver)",
+      "reason": "Lecturer lead; personal biography https://thienngole.github.io/ describes masters-level preparation. No research doctorate or two recent current-employer papers established; excluded under the brief’s research qualification."
+    },
+    {
+      "name": "Paul Tuan Nguyen (SJSU iSchool)",
+      "reason": "Listed on the opened BSISDA faculty page, but no verified research doctorate, two recent current-employer papers, or continuing full-time career appointment established."
+    },
+    {
+      "name": "Duy Do (SJSU lead)",
+      "reason": "Search lead did not establish a current eligible faculty/career-research appointment; not accepted from a conference-attendee match."
+    }
+  ],
+  "coverage": [
+    {
+      "employer": "Slice-wide later-pass searches",
+      "pagesExamined": [],
+      "note": "Given-name and uncommon-surname discovery followed by employer verification; earlier-pass surname results and already-proposed.txt were screened out. Added targeted searches for Oanh, Quyen, Nhat, Loan, Thuy, Khoa, Toan and Luu in the final sweep. Broad R1/R2 discovery was supplemented by regional-university and iSchool directories. Search results alone were not accepted as candidate verification. Stopped on diminishing returns with three verified new identities, below the 25-person cap; this is substantial later-pass coverage, not a claim that every US R1/R2 directory was exhaustively inspected."
+    },
+    {
+      "employer": "Assumption University",
+      "pagesExamined": [
+        "https://www.assumption.edu/people-and-departments/directory/bang-benz-tran",
+        "https://www.assumption.edu/wp-content/uploads/2024/05/Bang_Tran_s_Resume.pdf",
+        "https://benztran.com",
+        "https://www.faculty.umb.edu/xiaohui.liang/mobcp.html"
+      ],
+      "note": "New Bang Tran identity verified; current role, doctorate, Vietnamese education and tenure-track status resolved."
+    },
+    {
+      "employer": "Winona State University",
+      "pagesExamined": [
+        "https://www.winona.edu/academics/colleges/science-engineering/computer-science-department/faculty-staff/",
+        "https://cs.winona.edu/cs-website/faculty/facpages/template2.php?username=tnguyen"
+      ],
+      "note": "Inspected current faculty directory and individual biography; use current associate-professor rank. New Trung Nguyen identity distinguished from AUT, SJSU and earlier-proposed Rowan mathematician."
+    },
+    {
+      "employer": "California State University, Fullerton",
+      "pagesExamined": [
+        "https://www.fullerton.edu/ecs/cs/",
+        "https://www.fullerton.edu/ecs/cs/faculty-staff/index.html",
+        "https://news.fullerton.edu/feature/2024-25-new-faculty/",
+        "https://news.fullerton.edu/spotlight/students-showcase-summer-research-at-csuf/",
+        "https://github.com/duyhho",
+        "https://duyhho.vercel.app",
+        "https://apu.edu.vn/ho-hoang-duy"
+      ],
+      "note": "Duy Ho verified using employer mini-biography plus current 2026 employer research report; directory AJAX listing was not useful for a dedicated profile. Personal identity links inspected."
+    },
+    {
+      "employer": "Iowa State University",
+      "pagesExamined": [
+        "https://www.cs.iastate.edu/people/faculty"
+      ],
+      "note": "Opened and parsed faculty directory for given-name and uncommon-surname signals; no additional verified Vietnamese candidate. Endowment donor names were not treated as faculty."
+    },
+    {
+      "employer": "Old Dominion University",
+      "pagesExamined": [
+        "https://www.odu.edu/computer-science/directory"
+      ],
+      "note": "Opened current directory and followed computing leads; no additional eligible new identity. Historical Tan Le lead is no longer current ODU CS evidence."
+    },
+    {
+      "employer": "California State University, San Bernardino",
+      "pagesExamined": [
+        "https://www.csusb.edu/cse/faculty-staff"
+      ],
+      "note": "Opened and parsed faculty/staff directory; no additional identity clearing Vietnamese-signal and current-career tests."
+    },
+    {
+      "employer": "Wichita State University",
+      "pagesExamined": [
+        "https://www.wichita.edu/academics/engineering/SoC/faculty-staff.php"
+      ],
+      "note": "Inspected School of Computing faculty/staff list; no additional eligible Vietnamese-signal lead."
+    },
+    {
+      "employer": "University of Missouri–St. Louis",
+      "pagesExamined": [
+        "https://www.umsl.edu/cmpsci/directory/index.html",
+        "https://www.umsl.edu/cmpsci/files/external-links/ComputerScienceDepartmentFaculty.html"
+      ],
+      "note": "Inspected CS directory and separate faculty list; no additional verified candidate."
+    },
+    {
+      "employer": "University of Nevada, Las Vegas",
+      "pagesExamined": [
+        "https://www.unlv.edu/cs/directory"
+      ],
+      "note": "Opened CS directory and parsed accessible listing. Dynamic/paginated content limits completeness; no new identity verified from accessible names."
+    },
+    {
+      "employer": "East Carolina University",
+      "pagesExamined": [
+        "https://cet.ecu.edu/csci/about-us/faculty-staff/"
+      ],
+      "note": "Opened CS faculty/staff page through web tool; separate requests fetch was blocked. No new verified candidate."
+    },
+    {
+      "employer": "University of Washington iSchool",
+      "pagesExamined": [
+        "https://ischool.uw.edu/people/faculty/"
+      ],
+      "note": "Opened and parsed extensive faculty directory for Vietnamese given-name and uncommon-surname signals; no new candidate. Ambiguous Korean/Chinese names were not inferred Vietnamese."
+    },
+    {
+      "employer": "San Jose State University iSchool",
+      "pagesExamined": [
+        "https://ischool.sjsu.edu/bsisda-faculty"
+      ],
+      "note": "Inspected information-science/data-analytics faculty list. Paul Tuan Nguyen remained unqualified under research-degree/recent-paper and career-appointment checks."
+    },
+    {
+      "employer": "Pennsylvania State University, Harrisburg",
+      "pagesExamined": [
+        "https://cs.hbg.psu.edu/cs/csfaculty.html",
+        "https://h3turing.hbg.psu.edu/cs/csfaculty.html",
+        "http://www.psu.edu/cgi-bin/ldap/ldap_query.cgi?uid=hzn5099"
+      ],
+      "note": "Hien Nguyen lead unresolved. Department directory retrievable with requests; alternate host and individual page failed. Do not count cached/old profiles as current verification."
+    },
+    {
+      "employer": "Southeastern Louisiana University",
+      "pagesExamined": [
+        "https://www.southeastern.edu/employee/quoc-nam-tran/"
+      ],
+      "note": "Individual profile access blocked (403); Quoc-Nam Tran not accepted."
+    },
+    {
+      "employer": "University of Texas at San Antonio",
+      "pagesExamined": [
+        "https://www.utsa.edu/newfaculty/"
+      ],
+      "note": "Incoming Dung Nguyen lead found on official page, but no resolved individual profile; held out rather than combining same-name people."
+    },
+    {
+      "employer": "University of Central Florida",
+      "pagesExamined": [
+        "https://www.cs.ucf.edu/person/kienhua/"
+      ],
+      "note": "Kien A. Hua role/doctorate verified; affirmative Vietnamese signal not established."
+    },
+    {
+      "employer": "University at Albany",
+      "pagesExamined": [
+        "https://www.albany.edu/cehc/faculty/phung-lai"
+      ],
+      "note": "Individual lead resolves to existing vp-0705."
+    },
+    {
+      "employer": "Elmhurst University",
+      "pagesExamined": [
+        "https://tungprime.github.io/"
+      ],
+      "note": "Tung T. Nguyen personal academic page resolves to existing vp-1696."
+    },
+    {
+      "employer": "University of Arizona",
+      "pagesExamined": [
+        "https://cs.arizona.edu/person/tuan-ngo-nguyen"
+      ],
+      "note": "Opened individual CS page; doctoral student rather than eligible career faculty."
+    },
+    {
+      "employer": "University of Akron",
+      "pagesExamined": [
+        "https://www.cs.uakron.edu/facultystaff.html"
+      ],
+      "note": "Directory open timed out. Search discovery did not produce a new independently verified identity; access gap remains."
+    },
+    {
+      "employer": "Southern Illinois University Carbondale",
+      "pagesExamined": [
+        "https://cs.siu.edu/faculty-staff/continuing_faculty.php"
+      ],
+      "note": "Legacy continuing-faculty URL returned 410 Gone; no new candidate accepted from legacy search snippets."
+    }
+  ]
+}

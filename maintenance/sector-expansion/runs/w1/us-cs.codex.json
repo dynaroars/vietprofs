@@ -1,0 +1,775 @@
+{
+  "group": "university",
+  "agent": "codex",
+  "slice": "us-cs",
+  "finishedAt": "2026-11-14T23:42:58Z",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Thao Minh Le",
+        "university": "Pennsylvania State University",
+        "country": "United States",
+        "department": "Artificial Intelligence, Engineering Division (Great Valley)",
+        "rank": "Assistant Professor",
+        "track": "Tenure-line",
+        "researchAreas": [
+          "Computer Vision",
+          "Machine Learning",
+          "Vision and Language Reasoning"
+        ],
+        "profileUrl": "https://greatvalley.psu.edu/person/thao-minh-le",
+        "websiteUrl": "https://thaolmk54.github.io/",
+        "scholarUrl": "https://scholar.google.com/citations?user=0irkZtkAAAAJ",
+        "phdInstitution": "Deakin University",
+        "phdYear": 2021,
+        "msInstitution": "Tokyo Institute of Technology",
+        "undergradInstitution": "Hanoi University of Science and Technology",
+        "postdocInstitution": "Deakin University"
+      },
+      "evidence": {
+        "currentRole": "https://greatvalley.psu.edu/person/thao-minh-le — \"Assistant Professor of Artificial Intelligence\"; https://thaolmk54.github.io/ explicitly identifies the appointment as tenure-track, beginning August 2025.",
+        "doctorateOrPapers": "https://greatvalley.psu.edu/person/thao-minh-le identifies a completed Computer Science PhD at Deakin; https://thaolmk54.github.io/ explicitly gives 2021.",
+        "vietnameseSignal": "https://greatvalley.psu.edu/person/thao-minh-le lists undergraduate education at Hanoi University of Science and Technology, Vietnam; Vietnamese given names Thao Minh.",
+        "dedup": "Ran npm run find-roster-matches -- \"Thao Minh Le\" with all three entry identity URLs. No URL matches. Name hits vp-1025 (real estate; Penn State PhD), vp-1802 (biomedical sciences; Queensland PhD 2012), vp-3039 (family/consumer sciences; UC Davis PhD 2004), and retired vp-1334 merged into vp-0666 (NUS medicine) are different people. Candidate's Deakin CS PhD 2021, AI field, homepage and Scholar establish distinct identity.",
+        "enrichment": "Official profile supplies research areas, undergraduate/master's institutions and completed Deakin postdoc; its Google Scholar link supplies the identity-resolved Scholar URL (Scholar itself returned 429). Portrait lead: https://greatvalley.psu.edu/sites/greatvalley/files/styles/person_headshot/public/2025-08/thaole.png?itok=r-TcQLR9 ; official page labels it Thao Minh Le headshot. Image needs downstream visual vetting. Student thesis medals omitted."
+      }
+    },
+    {
+      "entry": {
+        "name": "Tu Le",
+        "university": "University of Alabama",
+        "country": "United States",
+        "department": "Computer Science",
+        "rank": "Assistant Professor",
+        "track": "Tenure-line",
+        "researchAreas": [
+          "Security and Privacy",
+          "Human-Computer Interaction",
+          "Internet of Things",
+          "Generative AI"
+        ],
+        "profileUrl": "https://eng.ua.edu/eng-directory/dr-tu-le/",
+        "websiteUrl": "https://lenhattu.com/",
+        "scholarUrl": "https://scholar.google.com/citations?user=JS1jU8IAAAAJ",
+        "phdInstitution": "University of Virginia",
+        "phdYear": 2023,
+        "undergradInstitution": "Portland State University",
+        "undergradYear": 2018,
+        "postdocInstitution": "University of California, Irvine"
+      },
+      "evidence": {
+        "currentRole": "https://eng.ua.edu/eng-directory/dr-tu-le/ — \"Assistant Professor in the Department of Computer Science\"; https://lenhattu.com/ explicitly says tenure track.",
+        "doctorateOrPapers": "https://eng.ua.edu/eng-directory/dr-tu-le/ explicitly lists Computer Science PhD, University of Virginia, 2023.",
+        "vietnameseSignal": "https://lenhattu.com/CV_TuLe.pdf lists Advanced Program in Computer Science, VNU-HCM University of Science (2016); Vietnamese given name Tu.",
+        "dedup": "Ran npm run find-roster-matches -- \"Tu Le\" with profile, personal homepage and Scholar. No URL matches. Name hits vp-1324 (RMIT engineering/materials), vp-1362 (Sherbrooke surgery), vp-1391 (cardiovascular sciences; Sungkyunkwan PhD 2008) differ from this computer scientist with Virginia PhD 2023 and Portland State BS 2018.",
+        "enrichment": "Official profile supplies research areas and BS institution/year. Personal CV explicitly gives completed UC Irvine postdoc, 2023–2025, and identity-linked Scholar URL. Portrait lead from official profile: https://eng.ua.edu/wp-content/uploads/2025/09/2601007_BH_059_Tu_Le-e1769616285728.jpg ; visual vetting required. No qualifying honor asserted."
+      }
+    },
+    {
+      "entry": {
+        "name": "Cao Thang Bui",
+        "university": "California State University, Monterey Bay",
+        "country": "United States",
+        "department": "School of Computing and Design",
+        "rank": "Assistant Professor",
+        "track": "Tenure-line",
+        "researchAreas": [
+          "Access Control",
+          "Computer Security"
+        ],
+        "profileUrl": "https://csumb.edu/scd/scd-faculty-and-staff/cao-thang-bui/",
+        "phdInstitution": "Stony Brook University",
+        "phdYear": 2021,
+        "msInstitution": "Stony Brook University",
+        "undergradInstitution": "Stony Brook University",
+        "undergradYear": 2016
+      },
+      "evidence": {
+        "currentRole": "https://csumb.edu/scd/scd-faculty-and-staff/cao-thang-bui/ — \"Title: Assistant Professor\"; describes former WVU Tech assistant professorship and current CSUMB role.",
+        "doctorateOrPapers": "https://csumb.edu/scd/scd-faculty-and-staff/cao-thang-bui/ explicitly states Computer Science PhD, Stony Brook University, 2021.",
+        "vietnameseSignal": "Official profile https://csumb.edu/scd/scd-faculty-and-staff/cao-thang-bui/ publishes the Vietnamese given/middle-name combination Cao Thang, together with Bui; not a surname-only lead.",
+        "dedup": "Ran npm run find-roster-matches -- \"Cao Thang Bui\" --url https://csumb.edu/scd/scd-faculty-and-staff/cao-thang-bui/ . No URL match. vp-0275 Thang N. Bui has MIT PhD 1985 and Penn State emeritus career; vp-2035 Thang Bui has Cambridge PhD and ANU machine-learning appointment. Candidate's Stony Brook PhD 2021 and access-control/WVU Tech history rule out both.",
+        "enrichment": "Official profile supplies bachelor's institution/year, master's institution, research on management/enforcement of access-control policies. Portrait lead, labeled thang bui profile pic: https://pxl01-csumbedu.terminalfour.net/filters:format(webp)/filters:quality(75)/prod01/channel_2/media/csumb/legacy/legacy-site-images/section-editors/college-of-science/school-of-computing-and-design/thang-bui.PNG ; visual vetting required. No personal/Scholar/LinkedIn identity URL or qualifying honor verified."
+      }
+    },
+    {
+      "entry": {
+        "name": "Hang Dinh",
+        "vietnameseName": "Đinh Trung Hằng",
+        "university": "Indiana University South Bend",
+        "country": "United States",
+        "city": "South Bend",
+        "state": "Indiana",
+        "department": "Computer and Information Sciences",
+        "rank": "Associate Professor",
+        "track": "Tenure-line",
+        "researchAreas": [
+          "Quantum Computing",
+          "Post-Quantum Cryptography",
+          "Computer Security",
+          "Algorithms"
+        ],
+        "profileUrl": "https://www.cs.iusb.edu/people/dinh.html",
+        "websiteUrl": "https://htdinh.pages.iu.edu/",
+        "phdInstitution": "University of Connecticut",
+        "phdYear": 2010,
+        "msInstitution": "Asian Institute of Technology",
+        "undergradInstitution": "Vietnam National University, Hanoi",
+        "undergradYear": 2000
+      },
+      "evidence": {
+        "currentRole": "https://www.cs.iusb.edu/people/dinh.html — \"Title: Associate Professor\"; describes joining in August 2010 as full-time faculty. Personal homepage corroborates current associate professorship.",
+        "doctorateOrPapers": "https://www.cs.iusb.edu/people/dinh.html explicitly lists 2010 PhD in Computer Science & Engineering, University of Connecticut.",
+        "vietnameseSignal": "https://www.cs.iusb.edu/people/dinh.html describes growing up in Central Vietnam and Vietnamese undergraduate education. https://htdinh.pages.iu.edu/ explicitly spells \"Đinh Trung Hằng\".",
+        "dedup": "Ran npm run find-roster-matches -- \"Hang Dinh\" with official profile and homepage: no roster or retired-id matches. Also checked published Vietnamese-name and reordered-name variants against local roster.",
+        "enrichment": "Official profile supplies education and research areas; personal homepage supplies department wording and South Bend, Indiana mailing address. Portrait lead: https://www.cs.iusb.edu/docs/faculty/HangDinh.jpg from official profile. Student scholarships and routine paper awards omitted; no qualifying faculty-level honor found."
+      }
+    },
+    {
+      "entry": {
+        "name": "Hanh Pham",
+        "university": "State University of New York at New Paltz",
+        "country": "United States",
+        "city": "New Paltz",
+        "state": "New York",
+        "department": "Computer Science",
+        "rank": "Associate Professor",
+        "track": "Tenure-line",
+        "researchAreas": [
+          "Multi-Agent Systems",
+          "Distributed Systems",
+          "E-Commerce"
+        ],
+        "profileUrl": "https://webapps.newpaltz.edu/directory/profile/hanhpham",
+        "websiteUrl": "https://cs.newpaltz.edu/~phamh/",
+        "phdInstitution": "National Technical University of Ukraine",
+        "phdYear": 1997
+      },
+      "evidence": {
+        "currentRole": "https://webapps.newpaltz.edu/directory/profile/hanhpham — \"Associate Professor\", \"Department: Computer Science\"; current courses corroborated by Fall 2025 syllabus https://cs.newpaltz.edu/~phamh/aos/OS-ol-f2025.pdf .",
+        "doctorateOrPapers": "https://csis.pace.edu/hvcet/hanhpham.html explicitly states Computer Science PhD in 1997 from National Technical University of the Ukraine; matching New Paltz email, field and phone establish identity. Fetched successfully via Python HTTPS after browser-tool fetch failed. Current-employer homepage frame https://cs.newpaltz.edu/~phamh/hp/frame.htm also says Ph.D.",
+        "vietnameseSignal": "Vietnamese given name Hanh on current official New Paltz profile; maintained institution-hosted contact document https://cs.newpaltz.edu/~phamh/hp/contact.htm is titled Miss Pham Hong Hanh and identifies Dr. Hanh H. Pham. No diacritics reconstructed.",
+        "dedup": "Ran npm run find-roster-matches -- \"Hanh Pham\" with official profile and homepage. Only vp-1749, University of Leeds Business School, matched by name, no URL match. That record concerns international business/trade; this candidate is Hanh H. Pham, computer scientist with Ukraine PhD 1997, longtime New Paltz appointment and identity-linked institutional pages.",
+        "enrichment": "Research areas from identity-resolved Pace bio and New Paltz research page https://cs.newpaltz.edu/~phamh/hp/research.htm ; location from official profile. Portrait lead: https://webapps.newpaltz.edu/directory/storage/photos/228x319/AHKgMO4MMeMs23mCHl7PcB0eKHmFM24h from individual directory profile; visual vetting required. No verified Scholar, LinkedIn or qualifying honor found."
+      }
+    },
+    {
+      "entry": {
+        "name": "Nhut Nguyen",
+        "university": "University of Texas at Dallas",
+        "country": "United States",
+        "department": "Computer Science",
+        "rank": "Professor",
+        "track": "Teaching",
+        "profileUrl": "https://profiles.utdallas.edu/nhut.nguyen",
+        "phdInstitution": "University of Tokyo",
+        "phdYear": 1983,
+        "msInstitution": "University of Tokyo",
+        "undergradInstitution": "University of Tokyo",
+        "undergradYear": 1978
+      },
+      "evidence": {
+        "currentRole": "https://profiles.utdallas.edu/nhut.nguyen — \"Senior Lecturer II - Computer Science\"; latest official 2026 catalog https://catalog.utdallas.edu/2026/undergraduate/home/faculty-roster explicitly gives \"Professor of Instruction, Computer Science\". Use latest catalog career rank Professor, Teaching track; profile title lags.",
+        "doctorateOrPapers": "https://profiles.utdallas.edu/nhut.nguyen explicitly lists Electronics Engineering PhD, University of Tokyo, 1983; BS/MS institutions and years also explicit.",
+        "vietnameseSignal": "Vietnamese given name Nhut together with Nguyen on https://profiles.utdallas.edu/nhut.nguyen .",
+        "dedup": "Ran npm run find-roster-matches -- \"Nhut Nguyen\" --url https://profiles.utdallas.edu/nhut.nguyen . Only vp-1003 Nhut Hoang Nguyen (AUT finance, Massey PhD) matched by name. Distinct from Tokyo electronics PhD 1983, UTD CS teaching faculty; no URL matches.",
+        "enrichment": "Instruction career ladder documented by university catalog; continuous Senior Lecturer/Professor of Instruction listings from 2017 through 2026 support career teaching appointment. Official profile provides portrait lead https://profiles.utdallas.edu/storage/media/1187/conversions/Nguyen_Nhut_2-medium.jpg ; visual vetting required. Linked former personal homepage https://personal.utdallas.edu/~nhutnn redirects to a generic IT policy page, so websiteUrl omitted. No research areas or qualifying honors invented."
+      }
+    },
+    {
+      "entry": {
+        "name": "Tung L. Nguyen",
+        "university": "University of South Florida",
+        "country": "United States",
+        "department": "Bellini College of Artificial Intelligence, Cybersecurity and Computing",
+        "rank": "Assistant Professor",
+        "track": "Teaching",
+        "researchAreas": [
+          "Changepoint Detection",
+          "Time Series Analysis",
+          "Optimization",
+          "Survival Analysis",
+          "Regression"
+        ],
+        "profileUrl": "https://www.usf.edu/ai-cybersecurity-computing/people/faculty/tung-nguyen.aspx",
+        "scholarUrl": "https://scholar.google.com/citations?user=tvbpjPUAAAAJ",
+        "linkedinUrl": "https://www.linkedin.com/in/tung-l-nguyen",
+        "phdInstitution": "Northern Arizona University",
+        "phdYear": 2026,
+        "msInstitution": "Hanoi University of Science and Technology",
+        "undergradInstitution": "Hanoi University of Science and Technology",
+        "undergradYear": 2020
+      },
+      "evidence": {
+        "currentRole": "https://www.usf.edu/ai-cybersecurity-computing/people/faculty/tung-nguyen.aspx — \"Assistant Professor of Instruction\"; biography explicitly says joined Fall 2026. Named instruction-professor career ladder supports Teaching track.",
+        "doctorateOrPapers": "https://www.usf.edu/ai-cybersecurity-computing/people/faculty/tung-nguyen.aspx lists PhD in Informatics and Computing, Northern Arizona University, 2022–2026.",
+        "vietnameseSignal": "Official profile lists BSc and completed MSc at Hanoi University of Science and Technology, Vietnam; Vietnamese given name Tung.",
+        "dedup": "Ran npm run find-roster-matches -- \"Tung L. Nguyen\" with official profile, linked Scholar and linked LinkedIn URLs. No URL matches. vp-0267 Tung Thanh Nguyen has Iowa State PhD 2013 and software-engineering teaching career; vp-1696 has Chicago mathematics PhD 2020. Other name hits vp-0467/vp-0852 are clinicians, vp-0833 civil engineering and vp-1726 economics. Northern Arizona PhD 2026 and linked identity distinguish this candidate.",
+        "enrichment": "All research areas and degrees from official page. Coursework-only Missouri State MSc and visiting PhD exchange omitted as completed degrees. Scholar and LinkedIn URLs directly linked from official profile; LinkedIn was not fetched. Portrait lead: https://www.usf.edu/ai-cybersecurity-computing/images/00-faculty/tung-nguyen.jpg ; visual vetting required. Student research scholarship omitted."
+      }
+    },
+    {
+      "entry": {
+        "name": "Huong Le",
+        "university": "New Jersey Institute of Technology",
+        "country": "United States",
+        "department": "Computer Science",
+        "rank": "Lecturer",
+        "track": "Teaching",
+        "researchAreas": [
+          "Spectral Clustering",
+          "Computer Networking",
+          "Machine Learning",
+          "Blockchain",
+          "Data Analytics",
+          "Deep Learning"
+        ],
+        "profileUrl": "https://people.njit.edu/profile/hyl4",
+        "phdInstitution": "New Jersey Institute of Technology",
+        "phdYear": 2021,
+        "undergradInstitution": "Louisiana State University",
+        "undergradYear": 2005
+      },
+      "evidence": {
+        "currentRole": "https://people.njit.edu/profile/hyl4 — \"University Lecturer, Computer Science\" and Fall 2026 courses. https://cs.njit.edu/faculty lists her under University Lecturers alongside a separate Senior University Lecturer ladder; official hiring story establishes career faculty appointment from 2021.",
+        "doctorateOrPapers": "https://people.njit.edu/profile/hyl4 explicitly lists Computer Science PhD, NJIT, 2021.",
+        "vietnameseSignal": "Vietnamese given name Huong on https://people.njit.edu/profile/hyl4 ; not based on ambiguous surname Le alone.",
+        "dedup": "Ran npm run find-roster-matches -- \"Huong Le\" --url https://people.njit.edu/profile/hyl4 . No URL match. vp-1018 is business faculty with LSU PhD 2015; vp-1456 is CQU human resource management; vp-1969 is CDU education; vp-2952 is policy researcher with National Chengchi doctorate. NJIT CS PhD 2021 and computing lecturer history identify a different person.",
+        "enrichment": "Research areas from employer hiring story https://news.njit.edu/ying-wu-college-computing-welcomes-new-faculty-2021-2022-academic-year ; official current profile supplies bachelor's institution/year. Portrait lead: https://uws.njit.edu/ldapimage.php?format=full&uid=hyl4 ; visual vetting required. No verified personal homepage, Scholar, LinkedIn, or qualifying honor found."
+      }
+    },
+    {
+      "entry": {
+        "name": "Quynh Nguyen",
+        "university": "Stockton University",
+        "country": "United States",
+        "city": "Galloway",
+        "state": "New Jersey",
+        "department": "Computer Information Systems",
+        "rank": "Associate Professor",
+        "track": "Tenure-line",
+        "researchAreas": [
+          "Human Interactions with Artificial Intelligence",
+          "Information Security",
+          "Business Intelligence",
+          "Business Analytics"
+        ],
+        "profileUrl": "https://www.stockton.edu/business/faculty-adjuncts.html#modal-d19e802",
+        "phdInstitution": "University of North Texas",
+        "phdYear": 2019,
+        "undergradInstitution": "University of Economics Ho Chi Minh City",
+        "undergradYear": 2010
+      },
+      "evidence": {
+        "currentRole": "https://www.stockton.edu/business/faculty-adjuncts.html#modal-d19e802 — individual modal profile states \"Associate Professor of Computer Information Systems\"; https://stockton.edu/faculty-senate/documents/election_materials/2022_atlarge_committeechair/AtLarge_CandidateProfiles2022.pdf explicitly gives expected tenure year 2025.",
+        "doctorateOrPapers": "https://stockton.edu/board-of-trustees/documents/2021.05.05_BOTOPSMTG_FINALPostin.pdf , printed page 98, explicitly lists PhD, University of North Texas, 2019. Current faculty profile independently confirms PhD institution.",
+        "vietnameseSignal": "Employer's 2021 board background statement gives B.A., University of Economics Ho Chi Minh City, Vietnam, 2010; Vietnamese given name Quynh.",
+        "dedup": "Ran npm run find-roster-matches -- \"Quynh Nguyen\" with official modal profile URL. No URL matches. vp-0639 has ETH political-science PhD 2018; vp-2107 has Bournemouth PhD 2019; vp-1903 is Quynh-Trang Nguyen with Chung Yuan doctorate; vp-0431/vp-0965/vp-1383/vp-1660 concern medicine/pharmacology/public health/nursing. Candidate's UNT information-systems doctorate 2019 and Stockton appointment distinguish her.",
+        "enrichment": "Official board background statement supplies research interests, bachelor's education and Galloway, NJ appointment location. MBA is not mapped to msInstitution. The university embeds her individual faculty bio as modal id modal-d19e802 on the faculty page; there is no separate individual URL linked there. Portrait lead: https://www.stockton.edu/business/images/faculty/business/nguyen_quyen.jpg ; the surrounding page explicitly labels it Quynh Nguyen. Visual vetting required."
+      }
+    },
+    {
+      "entry": {
+        "name": "Hai Le",
+        "university": "Emory University",
+        "country": "United States",
+        "department": "Computer Science (Oxford College)",
+        "rank": "Assistant Professor",
+        "track": "Teaching",
+        "researchAreas": [
+          "Simulation and Modeling",
+          "Agent-Based Simulation",
+          "Genetic Algorithms",
+          "Data Mining"
+        ],
+        "profileUrl": "https://app.oxford.emory.edu/WebApps/Directory/index.cfm/view/10094",
+        "phdInstitution": "Georgia State University",
+        "phdYear": 2023,
+        "msInstitution": "University of Central Arkansas",
+        "undergradInstitution": "University of Central Arkansas",
+        "undergradYear": 2013
+      },
+      "evidence": {
+        "currentRole": "https://app.oxford.emory.edu/WebApps/Directory/index.cfm/view/10094 — \"Assistant Professor of Computer Science\"; biography says joined Oxford College in fall 2023. Employer catalog https://oxford.emory.edu/catalog/documents/25-26-ox-catalog.pdf specifies Assistant Teaching Professor, so use Teaching track. The named teaching-professor ladder supports career teaching status.",
+        "doctorateOrPapers": "Current individual employer profile explicitly says earned Computer Science PhD at Georgia State University and lists PhD 2023. The catalog has a stale expected-2023 label; completed degree uses the current bio.",
+        "vietnameseSignal": "Current employer profile explicitly states Hai Le grew up in Ho Chi Minh City, Vietnam.",
+        "dedup": "npm run find-roster-matches -- \"Hai Le\" --url https://app.oxford.emory.edu/WebApps/Directory/index.cfm/view/10094 : no roster or retired-id matches.",
+        "enrichment": "Research areas and BS/MS institutions and bachelor's year from current profile. Profile fetched HTTP 200 via Python HTTPS after browser tool timed out. Catalog fetched HTTP 200 and extracted entirely in memory via pdftotext; named teaching track confirmed. No personal homepage, identity-linked Scholar/LinkedIn URL or qualifying honor verified; portrait not imported."
+      }
+    }
+  ],
+  "already_listed": [
+    {
+      "name": "Hieu Bui",
+      "id": "vp-0001",
+      "note": "npm run find-roster-matches with name and https://engineering.catholic.edu/connect-contact/faculty-directory/hieu-bui matched vp-0001; same institution/field or linked faculty-placement identity. Already listed; no new candidate proposed."
+    },
+    {
+      "name": "Tommy Dang",
+      "id": "vp-0002",
+      "note": "npm run find-roster-matches with name and https://www.depts.ttu.edu/cs/faculty/tommy_dang/index.php matched vp-0002; same institution/field or linked faculty-placement identity. Already listed; no new candidate proposed."
+    },
+    {
+      "name": "Nghia Hoang",
+      "id": "vp-0008",
+      "note": "npm run find-roster-matches with name and https://school.eecs.wsu.edu/directory/wsu-profile/trongnghia.hoang/ matched vp-0008; same institution/field or linked faculty-placement identity. Already listed; no new candidate proposed."
+    },
+    {
+      "name": "Thang Hoang",
+      "id": "vp-0009",
+      "note": "npm run find-roster-matches with name and https://website.cs.vt.edu/people/faculty/thang-hoang.html matched vp-0009; same institution/field or linked faculty-placement identity. Already listed; no new candidate proposed."
+    },
+    {
+      "name": "Viet Tung Hoang",
+      "id": "vp-0010",
+      "note": "npm run find-roster-matches with name and https://www.cs.fsu.edu/department/faculty/tvhoang/ matched vp-0010; same institution/field or linked faculty-placement identity. Already listed; no new candidate proposed."
+    },
+    {
+      "name": "Dung T. Huynh",
+      "id": "vp-0011",
+      "note": "npm run find-roster-matches with name and https://profiles.utdallas.edu/huynh matched vp-0011; same institution/field or linked faculty-placement identity. Already listed; no new candidate proposed."
+    },
+    {
+      "name": "Truong-Son Hy",
+      "id": "vp-0012",
+      "note": "npm run find-roster-matches with name and https://san1.tucc.uab.edu/cas/computerscience/people/faculty-directory/faculty/truong-son-hy matched vp-0012; same institution/field or linked faculty-placement identity. Already listed; no new candidate proposed."
+    },
+    {
+      "name": "Thuy-Ngoc Nguyen",
+      "id": "vp-0301",
+      "note": "npm run find-roster-matches with name and https://udayton.edu/directory/artssciences/computerscience/cv/nguyen-ngoc-cv-2025.pdf matched vp-0301; same institution/field or linked faculty-placement identity. Already listed; no new candidate proposed."
+    },
+    {
+      "name": "Vinhthuy Phan",
+      "id": "vp-0042",
+      "note": "npm run find-roster-matches with name and https://www.memphis.edu/cs/people/faculty_pages/vinhthuy-phan.php matched vp-0042; same institution/field or linked faculty-placement identity. Already listed; no new candidate proposed."
+    },
+    {
+      "name": "Linh Ngo",
+      "id": "vp-0479",
+      "note": "npm run find-roster-matches with name and https://www.cs.wcupa.edu/LNGO/ matched vp-0479; same institution/field or linked faculty-placement identity. Already listed; no new candidate proposed."
+    },
+    {
+      "name": "Nguyen Ho",
+      "id": "vp-0749",
+      "note": "npm run find-roster-matches with name and https://www.loyola.edu/academics/computer-science/faculty/directory-faculty/Ho-Nguyen.html matched vp-0749; same institution/field or linked faculty-placement identity. Already listed; no new candidate proposed."
+    },
+    {
+      "name": "Hoang Truong",
+      "id": "vp-0240",
+      "note": "Official CU Boulder page publishes Hoang Truong / teaching appointment; matcher identifies vp-0240 under roster name Truong Hoang through identical profileUrl. Same person, not a new ID."
+    },
+    {
+      "name": "Truong X. Tran",
+      "id": "vp-0020",
+      "note": "npm run find-roster-matches with name and https://harrisburg.psu.edu/faculty-and-staff/truong-tran-phd matched vp-0020; same institution/field or linked faculty-placement identity. Already listed; no new candidate proposed."
+    },
+    {
+      "name": "Thao Nguyen",
+      "id": "vp-0737",
+      "note": "npm run find-roster-matches with name and https://www.haverford.edu/users/tnguyen3 matched vp-0737; same institution/field or linked faculty-placement identity. Already listed; no new candidate proposed."
+    },
+    {
+      "name": "Sy Bang Tran",
+      "id": "vp-2636",
+      "note": "Sacramento directory calls him Bang Tran; exact linked homepage resolves to vp-2636 Sy Bang Tran. Distinct from Bang (Benz) Tran at Assumption. No new ID."
+    },
+    {
+      "name": "Nhu Nguyen",
+      "id": "vp-0338",
+      "note": "npm run find-roster-matches with name and https://web.uri.edu/data-science/meet/nhu-nguyen/ matched vp-0338; same institution/field or linked faculty-placement identity. Already listed; no new candidate proposed."
+    },
+    {
+      "name": "Thai-Hoang Pham",
+      "id": "vp-0352",
+      "note": "npm run find-roster-matches with name and https://phamlab.io/ matched vp-0352; same institution/field or linked faculty-placement identity. Already listed; no new candidate proposed."
+    },
+    {
+      "name": "Phung Lai",
+      "id": "vp-0705",
+      "note": "Hai Phan's alumni page names Phung Lai's tenure-track University at Albany placement; matcher returns vp-0705 in the same cybersecurity field. Placement lead already listed."
+    }
+  ],
+  "possible_move": [],
+  "rejected": [
+    {
+      "name": "Tri Dao",
+      "reason": "University slice exclusion: Princeton's employer profile discovered at https://www.cs.princeton.edu/node/76 says Visiting Research Scholar and previously assistant professor; live opening returned 403. Matcher additionally identifies retired vp-0003, explicitly retired for this same reason. Personal site still says assistant professor and is not accepted over the employer record. Industry appointment at Together AI is outside this slice."
+    },
+    {
+      "name": "Wilson Nguyen",
+      "reason": "https://c.rypto.systems/files/wilson_nguyen_cv_2025_12_03.pdf describes NYU Assistant Professor/Faculty Fellow. This Courant faculty-fellow title is a temporary/fellowship appointment, not established as a continuing faculty role in this run. No candidate proposed."
+    },
+    {
+      "name": "Dung Nguyen (Haverford)",
+      "reason": "https://www.haverford.edu/computer-science/faculty-staff explicitly lists Visiting Assistant Professor; https://dnguyens.space/ likewise says visiting. Excluded."
+    },
+    {
+      "name": "Manh Nguyen (Kennesaw State)",
+      "reason": "https://campus.kennesaw.edu/colleges-departments/ccse/academics/information-technology/faculty-staff.php lists Limited Term Assistant Professor. Excluded as temporary."
+    },
+    {
+      "name": "Hieu Mai",
+      "reason": "https://compas.cs.stonybrook.edu/~hqmai/ identifies a Computer Science PhD candidate. Not career faculty."
+    },
+    {
+      "name": "Zhe Dang",
+      "reason": "https://school.eecs.wsu.edu/directory/wsu-profile/zdang/ supplies Nanjing/Nankai Chinese education and no affirmative Vietnamese signal. Shared surname Dang alone does not pass this brief."
+    },
+    {
+      "name": "Cheng Thao",
+      "reason": "https://www.metrostate.edu/about/directory/cheng-thao lists eligible CS faculty rank and doctorate, but Cheng Thao does not provide an affirmative Vietnamese signal; do not infer Vietnamese identity from Thao alone."
+    },
+    {
+      "name": "Quoc-Nam Tran",
+      "reason": "Promising Southeastern Louisiana CS professor lead, but https://www.southeastern.edu/employee/quoc-nam-tran/ returned 403 in both browser-tool and ordinary Python fetch. Only search snippets supported current appointment, so excluded from verified candidates under live-page rule. Recheck accessible employer profile in a later run."
+    },
+    {
+      "name": "Duy Ho",
+      "reason": "CSUF employer news https://news.fullerton.edu/feature/2024-25-new-faculty/ announces tenure-track CS role and UMKC doctorate; current 2026 university research story also names him. Individual employer profile was not located: https://www.fullerton.edu/ecs/cs/faculty-staff/index.html exposed staff/emeriti and an AJAX faculty region only. Personal https://www.duyhho.com/ returned a JavaScript shell and its search-indexed bio is stale (PhD candidate). Held out rather than substitute a multi-person news article for a verified individual profile. Name-match vp-1407 is a different mathematician with Bremen PhD 2019."
+    },
+    {
+      "name": "Hung Nguyen (West Chester)",
+      "reason": "Historical department handbook https://www.wcupa.edu/sciences-mathematics/computerScience/documents/CSC_Handbook_2205.pdf names a CS assistant professor with VCU PhD, but current faculty directory https://www-dr.wcupa.edu/sciences-mathematics/computerScience/faculty.aspx no longer lists him. Current eligible employer not resolved; no candidate proposed."
+    },
+    {
+      "name": "Hien Nguyen (Penn State Harrisburg)",
+      "reason": "Historical 2023 research-area PDF and ResearchGate lead, but current employer CS/math directory https://harrisburg.psu.edu/science-engineering-technology/computer-science-mathematics-program/faculty omits this name. Current appointment not verified."
+    },
+    {
+      "name": "Ken Nguyen (Clayton State)",
+      "reason": "https://facultyprofiles.clayton.edu/faculty/knguyen27 supplies eligible computing professorship and doctorate, but no Vietnamese given name, Vietnamese education or other affirmative identity signal was verified. Surname Nguyen plus Western given name alone is insufficient under this brief's stricter rule. Deferred."
+    },
+    {
+      "name": "Ton-Chanh Le",
+      "reason": "2021 Stevens research-scientist news is historical. A current stable university faculty-equivalent role was not verified; older supervisor CV describes postdoctoral supervision. No candidate proposed from old job title."
+    },
+    {
+      "name": "Kurt Lemai-Nguyen",
+      "reason": "https://ischool.utexas.edu/people/search explicitly identifies PhD Student, not eligible faculty."
+    }
+  ],
+  "coverage": [
+    {
+      "employer": "US university CS/CIS, iSchools and data science: cross-state discovery",
+      "pagesExamined": [],
+      "note": "Broad surname and Vietnamese given-name searches, newer-hire searches, state-cluster searches across US regions, and direct directory checks. Repeated searches predominantly returned existing IDs. Stopped with 10 verified additions and documented unresolved leads; this is not a census certifying every R1/R2 department exhaustively examined. No LinkedIn pages fetched, no IDs assigned, no GitHub actions, no roster edits."
+    },
+    {
+      "employer": "Pennsylvania State University",
+      "pagesExamined": [
+        "https://greatvalley.psu.edu/person/thao-minh-le",
+        "https://harrisburg.psu.edu/faculty-and-staff/truong-tran-phd",
+        "https://harrisburg.psu.edu/science-engineering-technology/computer-science-mathematics-program/faculty",
+        "https://sites.psu.edu/mathandcompsci/faculty/"
+      ],
+      "note": "New Thao Minh Le at Great Valley; Truong X. Tran and Thang N. Bui already listed. Historical Hien Nguyen lead not current."
+    },
+    {
+      "employer": "University of Alabama",
+      "pagesExamined": [
+        "https://cs.ua.edu/faculty-staff/our-new-fall-2025-faculty/",
+        "https://eng.ua.edu/eng-directory/dr-tu-le/"
+      ],
+      "note": "New Tu Le; official individual profile and personal CV verified."
+    },
+    {
+      "employer": "New Jersey Institute of Technology",
+      "pagesExamined": [
+        "https://cs.njit.edu/faculty",
+        "https://people.njit.edu/profile/hyl4",
+        "https://news.njit.edu/ying-wu-college-computing-welcomes-new-faculty-2021-2022-academic-year",
+        "https://cs.njit.edu/joint-faculty"
+      ],
+      "note": "New Huong Le. Hai Phan, Thanh Nguyen and Phung Lai alumni placement already rostered; teaching ladder checked."
+    },
+    {
+      "employer": "University of Texas at Dallas",
+      "pagesExamined": [
+        "https://profiles.utdallas.edu/nhut.nguyen",
+        "https://catalog.utdallas.edu/2026/undergraduate/home/faculty-roster",
+        "https://profiles.utdallas.edu/huynh",
+        "https://personal.utdallas.edu/~tien.n.nguyen/students.html"
+      ],
+      "note": "New Nhut Nguyen, Teaching. Latest catalog rank differs from older individual profile; retained current catalog rank. Dung Huynh and Tien Nguyen already listed; alumni names screened."
+    },
+    {
+      "employer": "University of South Florida",
+      "pagesExamined": [
+        "https://www.usf.edu/ai-cybersecurity-computing/people/faculty/tung-nguyen.aspx"
+      ],
+      "note": "New Fall 2026 computing instruction faculty Tung L. Nguyen; employer-linked identities and degrees verified."
+    },
+    {
+      "employer": "Emory University",
+      "pagesExamined": [
+        "https://app.oxford.emory.edu/WebApps/Directory/index.cfm/view/10094",
+        "https://oxford.emory.edu/catalog/documents/25-26-ox-catalog.pdf"
+      ],
+      "note": "Hai Le current individual profile fetched HTTP 200 through Python after browser fetch timed out. Catalog identifies teaching career track; new eligible candidate."
+    },
+    {
+      "employer": "California State University, Monterey Bay",
+      "pagesExamined": [
+        "https://csumb.edu/scd/scd-faculty-and-staff/cao-thang-bui/"
+      ],
+      "note": "New Cao Thang Bui, PhD 2021; distinguished from two existing Thang Bui entries."
+    },
+    {
+      "employer": "Indiana University South Bend",
+      "pagesExamined": [
+        "https://www.cs.iusb.edu/people/dinh.html",
+        "https://htdinh.pages.iu.edu/"
+      ],
+      "note": "New Hang Dinh; explicit Vietnamese-name spelling and completed doctorate verified."
+    },
+    {
+      "employer": "State University of New York at New Paltz",
+      "pagesExamined": [
+        "https://webapps.newpaltz.edu/directory/search?entity_id=124",
+        "https://webapps.newpaltz.edu/directory/profile/hanhpham",
+        "https://cs.newpaltz.edu/~phamh/",
+        "https://cs.newpaltz.edu/~phamh/hp/contact.htm",
+        "https://cs.newpaltz.edu/~phamh/hp/research.htm",
+        "https://csis.pace.edu/hvcet/hanhpham.html"
+      ],
+      "note": "New Hanh Pham. Current official individual directory profile plus historical identity-resolved doctorate bio; framed personal site examined via its actual frame links. Pace page fetched HTTP 200 through Python after browser failed."
+    },
+    {
+      "employer": "Stockton University",
+      "pagesExamined": [
+        "https://www.stockton.edu/business/faculty-adjuncts.html#modal-d19e802",
+        "https://stockton.edu/board-of-trustees/documents/2021.05.05_BOTOPSMTG_FINALPostin.pdf"
+      ],
+      "note": "New Quynh Nguyen in Computer Information Systems. Individual profile is an embedded modal; current rank and doctorate verified."
+    },
+    {
+      "employer": "University of Illinois Urbana-Champaign",
+      "pagesExamined": [
+        "https://ischool.illinois.edu/people/faculty",
+        "https://ischool.illinois.edu/people/directory"
+      ],
+      "note": "iSchool faculty roster scanned for surnames and given-name signals. No new qualifying lead; Le Quéré not treated as Vietnamese on Le alone."
+    },
+    {
+      "employer": "University of Washington",
+      "pagesExamined": [
+        "https://ischool.uw.edu/people/faculty/core"
+      ],
+      "note": "iSchool directory scanned; no new affirmative Vietnamese faculty lead."
+    },
+    {
+      "employer": "The University of Texas at Austin",
+      "pagesExamined": [
+        "https://ischool.utexas.edu/people/search"
+      ],
+      "note": "iSchool directory scanned; Kurt Lemai-Nguyen is a PhD student, Carol Le Boeuf an administrative associate. Neither proposed."
+    },
+    {
+      "employer": "University of Maryland",
+      "pagesExamined": [
+        "https://ischool.umd.edu/",
+        "https://info.umd.edu/directory/",
+        "https://info.umd.edu/directory?nfilter="
+      ],
+      "note": "iSchool moved to info.umd.edu. Examined directory interface and first page; pagination limits mean this is partial coverage, not a full faculty census."
+    },
+    {
+      "employer": "University of North Carolina at Chapel Hill",
+      "pagesExamined": [
+        "https://sils.unc.edu/",
+        "https://sdis.unc.edu/"
+      ],
+      "note": "Old SILS URL redirects to SDIS; target inaccessible in this run. No claim of full iSchool coverage."
+    },
+    {
+      "employer": "Syracuse University",
+      "pagesExamined": [
+        "https://ischool.syr.edu/"
+      ],
+      "note": "iSchool endpoint timed out; surname discovery searches did not yield a verified new lead. Directory not fully covered."
+    },
+    {
+      "employer": "Indiana University Bloomington",
+      "pagesExamined": [
+        "https://informatics.indiana.edu/contact/people-directory.html",
+        "https://luddy.indiana.edu/contact/people-directory.html",
+        "https://luddy.iu.edu/people/index.html"
+      ],
+      "note": "Older Informatics directory redirects to dynamic Luddy directory, which exposed no faculty details in fetched text. Discovery primarily returned already-listed Thai Le; incomplete directory coverage."
+    },
+    {
+      "employer": "Columbia University",
+      "pagesExamined": [
+        "https://www.cs.columbia.edu/people/directory/"
+      ],
+      "note": "Full directory scanned; David Nguyen is a student and Vietnamese-name leads did not yield a new faculty appointment."
+    },
+    {
+      "employer": "University of California, Berkeley",
+      "pagesExamined": [
+        "https://www2.eecs.berkeley.edu/Faculty/Lists/faculty.html"
+      ],
+      "note": "Full EECS faculty list scanned; Clark Nguyen already rostered. No new qualified name lead."
+    },
+    {
+      "employer": "University of Michigan",
+      "pagesExamined": [
+        "https://cse.engin.umich.edu/people/faculty/"
+      ],
+      "note": "Employer page failed live with 403; search-indexed faculty list used only for discovery, no candidate accepted from it. Long Nguyen affiliate/statistics lead already covered in roster context."
+    },
+    {
+      "employer": "Virginia Tech",
+      "pagesExamined": [
+        "https://cs.vt.edu/people/faculty.html",
+        "https://website.cs.vt.edu/people/faculty/thang-hoang.html"
+      ],
+      "note": "Faculty list scanned; Thang Hoang and Tu Vu already listed."
+    },
+    {
+      "employer": "Texas State University",
+      "pagesExamined": [
+        "https://cs.txst.edu/people/faculty.html",
+        "https://phamlab.io/"
+      ],
+      "note": "Faculty list scanned; Thai-Hoang Pham already vp-0352. Newer appointment date does not create new identity."
+    },
+    {
+      "employer": "University of Wyoming",
+      "pagesExamined": [
+        "https://www.uwyo.edu/eecs/faculty-staff/index.html"
+      ],
+      "note": "Faculty list scanned; Duong Ngoc Nguyen and Nga Nguyen already rostered."
+    },
+    {
+      "employer": "Auburn University",
+      "pagesExamined": [
+        "https://www.eng.auburn.edu/csse/people/index.html",
+        "https://www.eng.auburn.edu/directory/tcn0015.html"
+      ],
+      "note": "Department list and Tin Nguyen discovery lead examined. Anh Nguyen already rostered; Tin name requires care because multiple scholars share it, no new ID proposed."
+    },
+    {
+      "employer": "The Catholic University of America",
+      "pagesExamined": [
+        "https://engineering.catholic.edu/research-and-faculty/faculty-profiles/computer-science/hieu-bui/index.html"
+      ],
+      "note": "Official page redirects to new faculty directory; Hieu Bui already vp-0001."
+    },
+    {
+      "employer": "University of Memphis",
+      "pagesExamined": [
+        "https://www.memphis.edu/cs/people/faculty_pages/vinhthuy-phan.php"
+      ],
+      "note": "Vinhthuy Phan already vp-0042."
+    },
+    {
+      "employer": "Texas Tech University",
+      "pagesExamined": [
+        "https://www.depts.ttu.edu/cs/faculty/tommy_dang/index.php"
+      ],
+      "note": "Tommy Dang already vp-0002; name/given-name discovery also returned known roster names."
+    },
+    {
+      "employer": "Washington State University",
+      "pagesExamined": [
+        "https://school.eecs.wsu.edu/directory/wsu-profile/trongnghia.hoang/",
+        "https://school.eecs.wsu.edu/directory/wsu-profile/zdang/"
+      ],
+      "note": "Nghia Hoang already vp-0008; Zhe Dang lacks affirmative Vietnamese signal."
+    },
+    {
+      "employer": "California State University, Fullerton",
+      "pagesExamined": [
+        "https://www.fullerton.edu/ecs/cs/faculty-staff/index.html",
+        "https://news.fullerton.edu/feature/2024-25-new-faculty/"
+      ],
+      "note": "Duy Ho promising eligible lead but individual employer profile not exposed; deferred. Thuyuyen Nguyen-Newby already rostered."
+    },
+    {
+      "employer": "Princeton University",
+      "pagesExamined": [
+        "https://www.cs.princeton.edu/node/76",
+        "https://www.cs.princeton.edu/people/research",
+        "https://tridao.me/"
+      ],
+      "note": "Official pages blocked on direct fetch; discovered employer title conflicts with personal site. Retired-id ledger confirms previous removal of Tri Dao for visiting status; not a new university candidate."
+    },
+    {
+      "employer": "Southeastern Louisiana University",
+      "pagesExamined": [
+        "https://www.southeastern.edu/employee/quoc-nam-tran/"
+      ],
+      "note": "Quoc-Nam Tran individual employer page blocked with 403; retained as unresolved rejection, not verified candidate."
+    },
+    {
+      "employer": "San Francisco State University",
+      "pagesExamined": [
+        "https://www.sfsu.edu/departments/computer-science/people-computer-science"
+      ],
+      "note": "Direct fetch blocked; search discovery identifies Yuki Huynh as office manager, not eligible faculty."
+    },
+    {
+      "employer": "Haverford College",
+      "pagesExamined": [
+        "https://www.haverford.edu/computer-science/faculty-staff",
+        "https://www.haverford.edu/users/tnguyen3",
+        "https://dnguyens.space/"
+      ],
+      "note": "Thao Nguyen already vp-0737; Dung Nguyen visiting and excluded."
+    },
+    {
+      "employer": "West Chester University of Pennsylvania",
+      "pagesExamined": [
+        "https://www.cs.wcupa.edu/LNGO/",
+        "https://www-dr.wcupa.edu/sciences-mathematics/computerScience/faculty.aspx"
+      ],
+      "note": "Linh Ngo already vp-0479; historical Hung Nguyen appointment not current in directory."
+    },
+    {
+      "employer": "Loyola University Maryland",
+      "pagesExamined": [
+        "https://www.loyola.edu/academics/computer-science/faculty/directory-faculty/Ho-Nguyen.html"
+      ],
+      "note": "Nguyen Ho already vp-0749 despite easily reversed published name."
+    },
+    {
+      "employer": "University of Colorado Boulder",
+      "pagesExamined": [
+        "https://www.colorado.edu/cs/hoang-truong",
+        "https://experts.colorado.edu/display/fisid_172198"
+      ],
+      "note": "Hoang Truong resolves via exact official profile URL to existing vp-0240."
+    },
+    {
+      "employer": "University of Rhode Island",
+      "pagesExamined": [
+        "https://web.uri.edu/data-science/meet/nhu-nguyen/",
+        "https://web.uri.edu/data-science/people/"
+      ],
+      "note": "Data-science Nhu Nguyen is already vp-0338."
+    },
+    {
+      "employer": "University of Florida",
+      "pagesExamined": [
+        "https://cise.ufl.edu/people/faculty/faculty-profiles/name/dung-tran/"
+      ],
+      "note": "Dung Tran already rostered as Dung H. Tran, vp-0046; no new person."
+    },
+    {
+      "employer": "Kennesaw State University",
+      "pagesExamined": [
+        "https://campus.kennesaw.edu/colleges-departments/ccse/academics/information-technology/faculty-staff.php"
+      ],
+      "note": "Manh Nguyen explicitly limited term; Linh Le and Tu Nguyen already rostered."
+    },
+    {
+      "employer": "Clayton State University",
+      "pagesExamined": [
+        "https://facultyprofiles.clayton.edu/faculty/knguyen27"
+      ],
+      "note": "Ken Nguyen eligible-role lead held out because affirmative Vietnamese signal not verified."
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "verifier": "codex",
+  "input": "maintenance/sector-expansion/runs/w3/au-institutes-2.codex.json",
+  "candidates": [
+    {
+      "name": "Quan Hua",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Independently opened https://www.ansto.gov.au/people/dr-quan-hua and fetched it directly with HTTP 200. The employer identifies a current Senior Principal Research Scientist in the Environment Research and Technology Group, a career staff research role, based at Lucas Heights, Australia. It states a University of Sydney radiocarbon/Earth Sciences PhD and a physics BSc from Dalat University, Vietnam, providing an affirmative Vietnamese connection beyond surname. The required find-roster-matches command with the employer profile and ORCID 0000-0003-0179-8539 returned no roster or retired-id matches. Absent from maintenance/sector-expansion/already-proposed.txt. All five tests pass.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Thach Tran",
+      "verdict": "fail",
+      "failedTests": [
+        1
+      ],
+      "reason": "The proposed https://www.garvan.org.au/people/researchers/thach-tran appears in the browser tool as a cached page crawled five months ago, but independent direct live requests, with and without a browser User-Agent and trailing slash, returned HTTP 404. The Garvan homepage and researcher directory returned HTTP 200, so this is a dead person-profile URL rather than a general site outage. No valid replacement employer person page or qualifying personal-site fallback was found. Do not treat the cached biography as a live current-employer profile. The cached biography supports a longstanding Senior Research Officer role from 2014, a Prince of Songkla University clinical-epidemiology PhD in 1999, and migration from Vietnam to Australia in 2011; these otherwise support tests 2, 3 and 5, subject to re-establishing the current appointment. The required find-roster-matches command with the proposed profile and ResearchGate identity URL returned vp-2661 Thach Duc Tran at Monash. Independently opened https://research.monash.edu/en/persons/thach-tran/: its Melbourne International Health PhD awarded in 2014 and women/child mental-health career differ from the Garvan researcher's 1999 doctorate and bone/fracture epidemiology, resolving the name hit as a different person. Absent from maintenance/sector-expansion/already-proposed.txt. Recheck eligibility when a live current-role profile is available; no guessed corrected URL supplied.",
+      "correctedFields": {}
+    }
+  ],
+  "possible_move": []
+}

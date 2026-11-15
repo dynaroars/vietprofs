@@ -1,0 +1,33 @@
+{
+  "verifier": "codex",
+  "input": "maintenance/sector-expansion/runs/w3/us-cs.codex.json",
+  "candidates": [
+    {
+      "name": "Bang Tran",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Independently opened https://www.assumption.edu/people-and-departments/directory/bang-benz-tran: current individual employer profile identifies an Assistant Professor of Computer Science, UMass Boston PhD (2023), Vietnamese university education and prior employment in Vietnam, followed by a move to the US. https://www.faculty.umb.edu/xiaohui.liang/mobcp.html independently identifies his Assumption appointment as tenure-track. Worcester campus appointment is outside Vietnam. Ran find-roster-matches with the submitted profile and personal-site URLs: no URL matches; sole name hit vp-2636 Sy Bang Tran is distinct (Nevada Reno PhD, bioinformatics/single-cell research), compared directly against the roster. Neither this identity nor its Bang/Benz name appears in already-proposed.txt.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Trung Nguyen",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Independently opened the submitted individual Winona employer biography: current computer-science faculty appointment, Southern Mississippi Computational Sciences PhD (2020), Minnesota office. The current central directory https://www.winona.edu/academics/colleges/science-engineering/computer-science-department/faculty-staff/ confirms Associate Professor, superseding the individual biography's older assistant-professor wording. An identity-matched speaker biography at https://events.vtools.ieee.org/m/381665 additionally documents undergraduate and master's computer-science degrees from HCM University of Technology, Vietnam: affirmative Vietnamese signal beyond surname. Ran find-roster-matches with both employer URLs and inspected all returned active roster records: no matching URLs or identity. Exact-name SJSU hit vp-0293 is a sociologist; AUT hit vp-2009 has a Wellington PhD (2021); other hits differ in field, education or identity. The already-proposed Thanh Trung Nguyen is Rowan mathematics with a Brussels doctorate, verified in the earlier proposal file, and is distinct. No same-person exclusion in already-proposed.txt.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Duy Ho",
+      "verdict": "fixable",
+      "failedTests": [
+        1
+      ],
+      "reason": "The submitted https://news.fullerton.edu/feature/2024-25-new-faculty/ is a news feature, expressly excluded as profileUrl by VERIFY2.md. Opened it independently: tenure-track faculty context, assistant professor of computer science and UMKC doctorate support eligibility. Current employment is corroborated by https://news.fullerton.edu/spotlight/students-showcase-summer-research-at-csuf/ (2026-08-31). No usable individual employer profile was found: the CS directory's faculty content is dynamically loaded and its linked information-block endpoint returned an empty response. Use the personally maintained https://github.com/duyhho profile as the fallback: it explicitly identifies the current tenure-track Fullerton role and US location, and links the submitted personal website and Scholar ID; set confirmed=false. The separate vercel website still describes a UMKC doctoral candidate and cannot establish the current role. Vietnamese given name Duy supplies a signal beyond Ho; https://apu.edu.vn/ho-hoang-duy further supports the matching Vietnamese-school/UMKC identity. Ran find-roster-matches with all submitted identity URLs and GitHub: sole hit vp-1407 Quoc Duy Ho is distinct (Bremen doctorate, Stavanger computational materials research), checked against the roster. No same-person already-proposed exclusion.",
+      "correctedProfileUrl": "https://github.com/duyhho",
+      "correctedFields": {
+        "confirmed": false
+      }
+    }
+  ],
+  "possible_move": []
+}

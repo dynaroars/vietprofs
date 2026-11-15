@@ -1,0 +1,523 @@
+{
+  "group": "university",
+  "agent": "codex",
+  "slice": "us-math-stat",
+  "finishedAt": "2026-11-15T01:20:11.121775Z",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Duy Ngo",
+        "university": "Western Michigan University",
+        "track": "Tenure-line",
+        "rank": "Associate Professor",
+        "department": "Statistics",
+        "city": "Kalamazoo",
+        "state": "Michigan",
+        "researchAreas": [
+          "Bayesian statistics",
+          "Time series",
+          "Spectral analysis",
+          "Causal inference",
+          "Deep learning"
+        ],
+        "phdInstitution": "University of California, Irvine",
+        "phdYear": 2018,
+        "profileUrl": "https://wmich.edu/statistics/directory/ngo",
+        "websiteUrl": "https://duyngostats.github.io/DuyNgo/",
+        "country": "United States"
+      },
+      "evidence": {
+        "currentRole": "https://wmich.edu/statistics/directory/ngo — \"Duy Ngo\", \"Associate Professor\", Department of Statistics; current employer profile opened successfully. Its linked homepage https://duyngostats.github.io/DuyNgo/ independently confirms the same appointment and research. Employer mailing address supplies Kalamazoo, Michigan.",
+        "doctorateOrPapers": "https://wmich.edu/statistics/directory/ngo — \"Ph.D. Statistics, University of California, Irvine, 2018\".",
+        "vietnameseSignal": "Vietnamese given name Duy together with surname Ngo on the employer profile; not a surname-only inference.",
+        "dedup": "Ran npm run find-roster-matches -- \"Duy Ngo\" with separate --url arguments for the employer profile and linked homepage. Only vp-1691 Duy Trong Ngo matched by name; no URL match. Inspected that roster record: Newcastle engineering/wireless communications, McGill PhD and UNSW/Alberta education, versus this Irvine statistics PhD and statistics career. Distinct people. Not in already-proposed.txt."
+      }
+    },
+    {
+      "entry": {
+        "name": "Thien Minh Le",
+        "university": "University of Tennessee at Chattanooga",
+        "track": "Tenure-line",
+        "rank": "Assistant Professor",
+        "department": "Mathematics",
+        "researchAreas": [
+          "Statistical network models",
+          "Infectious disease modeling",
+          "Statistical consulting"
+        ],
+        "phdInstitution": "Michigan State University",
+        "phdYear": 2020,
+        "undergradInstitution": "Quy Nhon University",
+        "undergradYear": 2008,
+        "msInstitution": "Ho Chi Minh City University of Science",
+        "websiteUrl": "https://thienlemsu.wixsite.com/mysite",
+        "profileUrl": "https://www.utc.edu/arts-and-sciences/mathematics/faculty-and-staff",
+        "country": "United States"
+      },
+      "evidence": {
+        "currentRole": "https://www.utc.edu/arts-and-sciences/mathematics/faculty-and-staff — individual faculty block \"Thien Le\", \"PhD\", \"Assistant Professor\". The block links directly to https://thienlemsu.wixsite.com/mysite, whose heading gives the fuller name Thien Minh Le. This is the employer-published named directory block, not the Harvard postdoc of a similar name.",
+        "doctorateOrPapers": "https://thienlemsu.wixsite.com/mysite/about-me — PhD in Statistics, Michigan State University, May 2020; prior Harvard Biostatistics postdoc 2020–2023. Also explicitly lists MS at Ho Chi Minh City University of Science and BS at Quy Nhon University, June 2008.",
+        "vietnameseSignal": "https://thienlemsu.wixsite.com/mysite — \"In Vietnamese, my name means a bright sky.\" Vietnamese university education is additionally documented on the linked About page.",
+        "dedup": "Ran npm run find-roster-matches for both \"Thien Le\" and \"Thien Minh Le\", with separate --url arguments for UTC directory, homepage and About page. Short name: no matches. Fuller name: retired vp-1334 Minh T. N. Le, merged into vp-0666. Inspected vp-0666: Thi Nguyet Minh Le, NUS pharmacology/extracellular-vesicle researcher with NUS doctorate; distinct from the MSU statistics PhD at UTC. No identity URL match. Neither candidate name is in already-proposed.txt."
+      }
+    },
+    {
+      "entry": {
+        "name": "Khanh Ngoc Dinh",
+        "university": "Columbia University",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Statistics and Irving Institute for Cancer Dynamics",
+        "city": "New York",
+        "state": "New York",
+        "researchAreas": [
+          "Cancer evolution",
+          "Statistical inference",
+          "Computational biology",
+          "Chromosomal instability"
+        ],
+        "phdInstitution": "University of Alabama",
+        "profileUrl": "https://cancerdynamics.columbia.edu/khanh-ngoc-dinh-phd",
+        "websiteUrl": "https://dinhngockhanh.github.io/",
+        "country": "United States"
+      },
+      "evidence": {
+        "currentRole": "https://cancerdynamics.columbia.edu/khanh-ngoc-dinh-phd — \"Research Scientist in the Herbert and Florence Irving Institute for Cancer Dynamics and in the Department of Statistics\". The official page explicitly distinguishes his completed 2019–2023 postdoctoral appointment. Career/lab leadership evidence: https://dinhngockhanh.github.io/ records promotion to Research Scientist on July 1, 2026 and an ongoing independent lab; https://dinhngockhanh.github.io/news/announcement_260429/ identifies him as lead PI of NCI R01CA310281. Faculty-equivalent career scientist, not an ongoing postdoc. Official profile address supplies New York.",
+        "doctorateOrPapers": "https://cancerdynamics.columbia.edu/news/faces-iicd-khanh-dinh-phd — university biography explicitly states a Mathematics PhD from University of Alabama under Roger Sidje. No degree year inferred.",
+        "vietnameseSignal": "https://cancerdynamics.columbia.edu/news/faces-iicd-khanh-dinh-phd — bachelor degree in Mathematics at University of Sciences in Ho Chi Minh City, Vietnam. Full Vietnamese given-name sequence Khanh Ngoc is also published.",
+        "dedup": "Ran npm run find-roster-matches -- \"Khanh Ngoc Dinh\" with separate --url arguments for the current employer profile and lab homepage; also ran against the employer biographical article. Only vp-1304 Khanh T. Dinh matched by name. Inspected it: UMass Lowell psychology, University of Washington PhD 1999; distinct from this Alabama computational-mathematics PhD/Columbia cancer modeler. No URL match. Absent from already-proposed.txt. Current Research Scientist title supersedes the April 2026 article’s Associate Research Scientist title."
+      }
+    },
+    {
+      "entry": {
+        "name": "Trung Hoa Dinh",
+        "university": "Troy University",
+        "track": "Tenure-line",
+        "rank": "Associate Professor",
+        "department": "Mathematics and Statistics",
+        "city": "Troy",
+        "state": "Alabama",
+        "researchAreas": [
+          "Matrix theory",
+          "Operator theory",
+          "Functional analysis"
+        ],
+        "phdInstitution": "Kazan Federal University",
+        "phdYear": 2010,
+        "profileUrl": "https://www.troy.edu/academics/colleges-schools/college-science-engineering/departments/mathematics-department/faculty-staff.html",
+        "country": "United States"
+      },
+      "evidence": {
+        "currentRole": "https://www.troy.edu/academics/colleges-schools/college-science-engineering/departments/mathematics-department/faculty-staff.html — named individual block \"Dr. Hoa Dinh\", \"Associate Professor\", thdinh@troy.edu. https://today.troy.edu/archive/faculty-staff/troy-welcomes-new-faculty-members/ gives the full Western-order name Trung Hoa Dinh and original 2018 mathematics appointment. https://today.troy.edu/news/troy-university-professor-helps-lead-vietnams-first-provincial-quantum-year-and-international-quantum-hackathon/ confirms the current department in August 2026; its generic word professor does not override the directory’s Associate Professor rank. Directory footer supplies Troy, Alabama.",
+        "doctorateOrPapers": "https://www.troy.edu/academics/colleges-schools/college-science-engineering/departments/mathematics-department/faculty-staff.html explicitly states Kazan Federal University doctorate. https://www.troy.edu/_assets/catalogs/_documents/2022-23/undergraduate/17u-bot-and-faculty.pdf lists Dinh, Trung Hoa, PhD Kazan Federal University 2010.",
+        "vietnameseSignal": "Vietnamese given-name tokens Trung Hoa in the university hiring announcement; current 2026 Troy article also publishes Vietnamese-order Dinh Trung Hoa and describes his Vietnam quantum-education work. No diacritics invented.",
+        "dedup": "Ran npm run find-roster-matches -- \"Trung Hoa Dinh\" with --url for the current official faculty page. No roster or retired-id matches. Cross-checked surname-first Dinh Trung Hoa and shortened Hoa Dinh against roster names; no same-person record or identity URL found. Not in already-proposed.txt."
+      }
+    },
+    {
+      "entry": {
+        "name": "Yen Q. Do",
+        "university": "University of Virginia",
+        "track": "Tenure-line",
+        "rank": "Associate Professor",
+        "department": "Mathematics",
+        "city": "Charlottesville",
+        "state": "Virginia",
+        "researchAreas": [
+          "Harmonic analysis",
+          "Probability",
+          "Random polynomials"
+        ],
+        "phdInstitution": "University of California, Los Angeles",
+        "phdYear": 2010,
+        "profileUrl": "https://profile.virginia.edu/yqd3p",
+        "country": "United States"
+      },
+      "evidence": {
+        "currentRole": "https://profile.virginia.edu/yqd3p — \"Associate Professor\", \"AS-Mathematics\"; maintained institutional person page with Spring 2026 teaching and current papers. Linked CV https://profile.virginia.edu/sites/g/files/jsddwu351/files/yqd3p/CV_web.pdf lists Associate Professor 2020–present and gives Charlottesville, Virginia address. Used the central profile because the department’s /people/yqd3p/ endpoint timed out.",
+        "doctorateOrPapers": "https://profile.virginia.edu/sites/g/files/jsddwu351/files/yqd3p/CV_web.pdf — \"2010: Ph.D. in Mathematics, University of California, Los Angeles.\"",
+        "vietnameseSignal": "Vietnamese given name Yen combined with Do on the employer profile; fuller published form Yen Q. Do in the linked CV. This meets the given-name signal requirement without relying on ambiguous surname Do alone.",
+        "dedup": "Ran npm run find-roster-matches for \"Yen Do\" and \"Yen Q. Do\" with opened official profile URLs and linked Scholar URL https://scholar.google.com/citations?hl=en&user=wqhWaYsAAAAJ. Only vp-0774 Yen Do at Nanhua International Business matched by name. Inspected its department, full Vietnamese name Do Thi Yen and business research: distinct from UVA harmonic-analysis mathematician, UCLA PhD 2010. No identity URL match. Scholar fetch returned 429; no facts accepted from Scholar and scholarUrl omitted. Not in already-proposed.txt."
+      }
+    },
+    {
+      "entry": {
+        "name": "Ngoc T. Do",
+        "university": "Missouri State University",
+        "track": "Tenure-line",
+        "rank": "Associate Professor",
+        "department": "Mathematics",
+        "city": "Springfield",
+        "state": "Missouri",
+        "researchAreas": [
+          "Inverse problems",
+          "Radon transforms",
+          "Hybrid imaging",
+          "Mathematical physics",
+          "Spectral theory",
+          "Nanomaterials"
+        ],
+        "phdInstitution": "Texas A&M University",
+        "phdYear": 2016,
+        "profileUrl": "https://search.missouristate.edu/people/ngocdo",
+        "country": "United States"
+      },
+      "evidence": {
+        "currentRole": "https://search.missouristate.edu/people/ngocdo — \"Associate Professor\", \"Brian and Anna Tobben Professorship in Mathematics\", department Mathematics, role Faculty, campus Springfield. Official postal address supplies Missouri. The named professorship is reported here as appointment context; no unsourced honor year proposed.",
+        "doctorateOrPapers": "https://www.missouristate.edu/BOG/_Files/_Agendas/Agenda-BOG-5-16-19.pdf, PDF page 76 — Ngoc Do, Mathematics; \"Ph.D. Texas A&M University, 2016\". Same official hiring record documents prior University of Arizona mathematics postdoc, resolving identity with the current applied-mathematics profile.",
+        "vietnameseSignal": "Vietnamese given name Ngoc, with middle initial T. and surname Do, on the official person profile; not a surname-only inference.",
+        "dedup": "Ran npm run find-roster-matches -- \"Ngoc T. Do\" --url https://search.missouristate.edu/people/ngocdo. No roster or retired-id matches. Checked name-order variants and public/data.json identity URLs; no same-person record. The already-proposed name Ngoc Dao is a different surname, not this Do record; candidate full name is absent from the exclusion list."
+      }
+    },
+    {
+      "entry": {
+        "name": "Hai Dang",
+        "university": "Mississippi State University",
+        "track": "Tenure-line",
+        "rank": "Professor",
+        "department": "Mathematics and Statistics",
+        "city": "Mississippi State",
+        "state": "Mississippi",
+        "researchAreas": [
+          "Partial differential equations",
+          "Ordinary differential equations",
+          "p-Laplacian boundary value problems"
+        ],
+        "phdInstitution": "Ho Chi Minh City University",
+        "phdYear": 1990,
+        "profileUrl": "https://www.math.msstate.edu/directory/hdang",
+        "country": "United States"
+      },
+      "evidence": {
+        "currentRole": "https://www.math.msstate.edu/directory/hdang — \"Professor of Mathematics\", Faculty-Mathematics; the current department page gives active research in nonlinear boundary-value problems and the Mississippi State, MS mailing address. Degree and role are both on the same employer person page.",
+        "doctorateOrPapers": "https://www.math.msstate.edu/directory/hdang — \"Ph.D. in Mathematics, 1990\" from Department of Mathematics, Ho Chi Minh City University, Vietnam. Retained the historical institution name actually published, without silently substituting a successor university.",
+        "vietnameseSignal": "Vietnamese doctorate institution explicitly identified on the official page; Hai is also a Vietnamese given-name signal in combination with Dang.",
+        "dedup": "Ran npm run find-roster-matches -- \"Hai Dang\" --url https://www.math.msstate.edu/directory/hdang. Six name-only hits: vp-0067, vp-0307, vp-0613, vp-1812, vp-2889, vp-3305. Inspected all six records: Alabama mathematician Hai-Dang Nguyen has Wayne State PhD 2018; the others are Minnesota pharmacology, Nottingham business, Grinnell literature, NTU computing, and World Bank economics. None is this Ho Chi Minh City mathematics PhD 1990; surnames/full identities differ. No URL match or already-proposed entry."
+      }
+    },
+    {
+      "entry": {
+        "name": "Duong Nguyen - Hanover College",
+        "university": "Hanover College",
+        "track": "Tenure-line",
+        "rank": "Assistant Professor",
+        "department": "Mathematics",
+        "city": "Hanover",
+        "state": "Indiana",
+        "researchAreas": [
+          "Non-stationary dynamical systems"
+        ],
+        "phdInstitution": "University of Houston",
+        "msInstitution": "University of Houston",
+        "undergradInstitution": "University of North Texas",
+        "profileUrl": "https://math.hanover.edu/faculty.php",
+        "websiteUrl": "https://sites.google.com/view/dbnguyen",
+        "country": "United States"
+      },
+      "evidence": {
+        "currentRole": "https://www.hanover.edu/academics/programs/datascience/ — named faculty block \"Duong Nguyen Assistant Professor of Mathematics\", nguyen@hanover.edu. https://math.hanover.edu/faculty.php has a dedicated Dr. Duong Nguyen biography: joined Hanover Fall 2024 after Kalamazoo. Its linked personal homepage confirms Assistant Professor of Mathematics at Hanover and distinguishes her prior visiting position at Kalamazoo. Institutional postal address supplies Hanover, Indiana. profileUrl points to the opened employer-published individual biography block.",
+        "doctorateOrPapers": "https://math.hanover.edu/faculty.php — explicitly lists PhD and MS in Mathematics, University of Houston, and BA Mathematics, University of North Texas. https://sites.google.com/view/dbnguyen independently identifies Houston doctoral advisor William Ott. Google Sites failed in the web reader but normal HTTP retrieval returned 200 and the person’s readable page; no login or bot-check bypass used.",
+        "vietnameseSignal": "Vietnamese given name Duong and surname Nguyen on the employer faculty listing; not surname alone.",
+        "dedup": "Ran npm run find-roster-matches -- \"Duong Nguyen\" with separate --url arguments for Hanover faculty biography, Data Science faculty listing and linked personal homepage. Name-only hits vp-0023, vp-0358, vp-1228, vp-1248, vp-1630. Inspected records: Wyoming computing PhD Michigan State 2021, ASU electrical engineering PhD UBC 2020, NETL materials PhD Ulsan 2013, MRC structural biology PhD Cambridge 2015, Copenhagen pharmacology. Different identities from Houston mathematics/William Ott/non-stationary dynamics. No URL match. Added Hanover suffix because two roster people already share the unsuffixed published name. No exclusion-list identity match."
+      }
+    },
+    {
+      "entry": {
+        "name": "Mau Nam Nguyen",
+        "university": "Portland State University",
+        "track": "Tenure-line",
+        "rank": "Professor",
+        "department": "Fariborz Maseeh Department of Mathematics and Statistics",
+        "city": "Portland",
+        "state": "Oregon",
+        "researchAreas": [
+          "Variational analysis",
+          "Convex analysis",
+          "Optimization"
+        ],
+        "phdInstitution": "Wayne State University",
+        "phdYear": 2007,
+        "undergradInstitution": "Hue University",
+        "msInstitution": "Hue University",
+        "profileUrl": "https://www.pdx.edu/profile/exists?id=mnn3",
+        "country": "United States"
+      },
+      "evidence": {
+        "currentRole": "https://www.pdx.edu/profile/exists?id=mnn3 — \"Mau Nam Nguyen\", \"Professor\", Fariborz Maseeh Mathematics and Statistics, mau.nam.nguyen@pdx.edu. Followed the individual link from https://www.pdx.edu/math/department-directory, which also lists him as Professor. Profile supplies Portland, Oregon address. https://www.pdx.edu/math/mathematics-statistics-faculty-research places him in variational/convex analysis and computational mathematics/optimization.",
+        "doctorateOrPapers": "https://www.pdx.edu/profile/exists?id=mnn3 — PhD 2007, Wayne State University. https://www.math.lsu.edu/~malisoff/LCMCT/MCT07/nn.pdf independently gives the 2007 Wayne State doctorate with Boris Mordukhovich and BS/MS from Hue University.",
+        "vietnameseSignal": "https://www.math.lsu.edu/~malisoff/LCMCT/MCT07/nn.pdf — biography explicitly says Nguyen Mau Nam was born in Vietnam and received BS/MS in Mathematics from Hue University, Vietnam. Employer publishes the Western-order form Mau Nam Nguyen.",
+        "dedup": "Ran npm run find-roster-matches -- \"Mau Nam Nguyen\" with separate --url arguments for the current person profile, directory and linked Google Site. Five name-only hits vp-0029, vp-0910, vp-0979, vp-2134, vp-3094. Inspected records: Towson CS PhD Florida 2013, USC surgery, Xavier pharmacy, UTRGV finance, Capital One applied research. Different full names, fields and identities from this Wayne State 2007 optimization mathematician. No URL match. The Google Site was not fetchable, so websiteUrl omitted. Candidate is absent from already-proposed.txt."
+      }
+    }
+  ],
+  "already_listed": [
+    {
+      "name": "Diem M. Nguyen",
+      "id": "vp-0290",
+      "note": "Bowling Green mathematics education; same department/doctoral institution. find-roster-matches confirmed existing record; not a new candidate."
+    },
+    {
+      "name": "Tuyen Tran",
+      "id": "vp-1645",
+      "note": "Loyola Chicago mathematics/optimization. find-roster-matches returned exact profile URL match https://www.luc.edu/math/profiles/trantuyen.shtml."
+    },
+    {
+      "name": "Phuc Cong Nguyen",
+      "id": "vp-1774",
+      "note": "LSU nonlinear PDE mathematician, also published surname-first Nguyen Cong Phuc. Exact homepage match https://www.math.lsu.edu/~pcnguyen/."
+    },
+    {
+      "name": "Trang Quynh Nguyen",
+      "id": "vp-1383",
+      "note": "Johns Hopkins mental health/biostatistics researcher already listed; same institution and full name. Employer profile blocked this run, so no appointment update proposed."
+    },
+    {
+      "name": "Thinh Kieu",
+      "id": "vp-1465",
+      "note": "University of North Georgia mathematician already listed; re-found by Kieu/given-name searches."
+    },
+    {
+      "name": "Khang Tran",
+      "id": "vp-0369",
+      "note": "Fresno mathematics; existing person re-found in search. No new entry proposed or promotion applied."
+    },
+    {
+      "name": "Duy Nguyen",
+      "id": "vp-0213",
+      "note": "Marist mathematics; existing University of Georgia PhD mathematician, not WMU Duy Ngo."
+    }
+  ],
+  "possible_move": [],
+  "rejected": [
+    {
+      "name": "Martin Luu",
+      "reason": "Current UC Davis Associate Professor and Princeton PhD verified at https://www.math.ucdavis.edu/people/general-profile?fac_id=mluu, but affirmative Vietnamese signal not established; Luu surname alone does not meet BRIEF2. No roster/retired matches."
+    },
+    {
+      "name": "Viet Dung Nguyen - Ohio University",
+      "reason": "Live https://www.ohio.edu/cas/nguyend2 and https://www.ohio.edu/zanesville/about/faculty-staff-directory/nguyend2 redirect to generic directory. Search-result role/education alone cannot satisfy live individual employer-page rule. Hold for working profile. Name matches vp-2613 plasma/process-engineering scholar in France and retired vp-1513 unsupported Khalifa placeholder; neither establishes this mathematician’s identity."
+    },
+    {
+      "name": "Hanh Tran - Sacramento State",
+      "reason": "https://www.csus.edu/college/natural-sciences-mathematics/mathematics-statistics/meet-us/ lists Lecturer; no full-time continuing appointment verified."
+    },
+    {
+      "name": "Dan Quynh Nguyen; Vinh Van Nguyen - Chico",
+      "reason": "https://apps.csuchico.edu/directory/department/math lists Lecturer roles; continuing/full-time appointment evidence not established."
+    },
+    {
+      "name": "Phuoc Ho - CSU Channel Islands",
+      "reason": "https://ext.csuci.edu/programs/graduate/ms-mathematics/faculty.htm lists Lecturer; insufficient continuing/full-time evidence."
+    },
+    {
+      "name": "Trinh Bui - University of Houston-Downtown",
+      "reason": "https://www.uhd.edu/academics/sciences/mathematics-statistics/directory.html lists Lecturer; insufficient continuing/full-time appointment evidence."
+    },
+    {
+      "name": "Binh Nguyen - Arkansas State University",
+      "reason": "https://www.astate.edu/about/faculty-and-staff-directory/binh-nguyen.html identifies Instructor. No doctorate or current qualifying research established, and appointment permanence unresolved. Do not mistake neighboring statistics faculty search text for his title."
+    },
+    {
+      "name": "Linh Nguyen - Florida A&M University",
+      "reason": "https://www.famu.edu/info/faculty-staff/profiles/cst/linh-nguyen.php explicitly says Visiting Assistant Professor, 2025–current; excluded temporary appointment."
+    },
+    {
+      "name": "Vinh Nguyen - University of California, Berkeley",
+      "reason": "https://math.berkeley.edu/people/vinh-nguyen identifies Charles B. Morrey Jr. Math Fellow, formerly Morrey Visiting Assistant Professor; temporary fellowship excluded."
+    },
+    {
+      "name": "BaoChi Nguyen - Mount San Antonio College",
+      "reason": "MIT PhD and full-time current professorship verified, but tenure/tenure-track status at current community college not independently established. https://www.mtsac.edu/profiles/bnguyen56.html only explicitly identifies the earlier Bakersfield role as tenure-track. Hold rather than assume current track."
+    },
+    {
+      "name": "Harris Quach",
+      "reason": "https://medicine.temple.edu/directory/harris-quach-phd lists Biomedical Education and Data Science, outside the specified departments; no affirmative Vietnamese signal beyond surname found. Excluded from this slice."
+    },
+    {
+      "name": "Dung Le - University of Texas at San Antonio",
+      "reason": "No live eligible current professor/emeritus profile established. Retirement lead at https://www.utsa.edu/excellenceawards/documents/2025%20University%20Excellence%20Awards%20Program%202025.pdf remained search-only and was not accepted as verified fact. Older mathematics references are insufficient. UT Austin Dung Le is a separate PhD-student lead, also ineligible."
+    }
+  ],
+  "coverage": [
+    {
+      "employer": "Western Michigan University",
+      "pagesExamined": [
+        "https://wmich.edu/statistics/directory/ngo",
+        "https://duyngostats.github.io/DuyNgo/"
+      ],
+      "note": "Verified new candidate Duy Ngo. Individual appointment and doctorate evidence are recorded above; name/URL matches resolved before acceptance."
+    },
+    {
+      "employer": "University of Tennessee at Chattanooga",
+      "pagesExamined": [
+        "https://www.utc.edu/arts-and-sciences/mathematics/faculty-and-staff",
+        "https://thienlemsu.wixsite.com/mysite"
+      ],
+      "note": "Verified new candidate Thien Minh Le. Individual appointment and doctorate evidence are recorded above; name/URL matches resolved before acceptance."
+    },
+    {
+      "employer": "Columbia University",
+      "pagesExamined": [
+        "https://cancerdynamics.columbia.edu/khanh-ngoc-dinh-phd",
+        "https://dinhngockhanh.github.io/"
+      ],
+      "note": "Verified new candidate Khanh Ngoc Dinh. Individual appointment and doctorate evidence are recorded above; name/URL matches resolved before acceptance."
+    },
+    {
+      "employer": "Troy University",
+      "pagesExamined": [
+        "https://www.troy.edu/academics/colleges-schools/college-science-engineering/departments/mathematics-department/faculty-staff.html"
+      ],
+      "note": "Verified new candidate Trung Hoa Dinh. Individual appointment and doctorate evidence are recorded above; name/URL matches resolved before acceptance."
+    },
+    {
+      "employer": "University of Virginia",
+      "pagesExamined": [
+        "https://profile.virginia.edu/yqd3p"
+      ],
+      "note": "Verified new candidate Yen Q. Do. Individual appointment and doctorate evidence are recorded above; name/URL matches resolved before acceptance."
+    },
+    {
+      "employer": "Missouri State University",
+      "pagesExamined": [
+        "https://search.missouristate.edu/people/ngocdo"
+      ],
+      "note": "Verified new candidate Ngoc T. Do. Individual appointment and doctorate evidence are recorded above; name/URL matches resolved before acceptance."
+    },
+    {
+      "employer": "Mississippi State University",
+      "pagesExamined": [
+        "https://www.math.msstate.edu/directory/hdang"
+      ],
+      "note": "Verified new candidate Hai Dang. Individual appointment and doctorate evidence are recorded above; name/URL matches resolved before acceptance."
+    },
+    {
+      "employer": "Hanover College",
+      "pagesExamined": [
+        "https://math.hanover.edu/faculty.php",
+        "https://sites.google.com/view/dbnguyen"
+      ],
+      "note": "Verified new candidate Duong Nguyen - Hanover College. Individual appointment and doctorate evidence are recorded above; name/URL matches resolved before acceptance."
+    },
+    {
+      "employer": "Portland State University",
+      "pagesExamined": [
+        "https://www.pdx.edu/profile/exists?id=mnn3"
+      ],
+      "note": "Verified new candidate Mau Nam Nguyen. Individual appointment and doctorate evidence are recorded above; name/URL matches resolved before acceptance."
+    },
+    {
+      "employer": "United States university slice — discovery strategy",
+      "pagesExamined": [],
+      "note": "Later-pass search led with Vietnamese given-name tokens across mathematics, statistics, biostatistics and operations research: Hanh, Thuy, Khoa, Oanh, Diem, Lien, Hiep, Hieu, Duy, Quynh, Phuoc, Bich, Dung, Huong, Minh, Nhat, Hau, Linh, Tung, Thien, Thanh, Dzung, Quang, Tuan, Huan, Quy, Khanh, Nhan, Huy, Tri, Luong, Ngoc, Chinh, Liem, Khuong, Vinh, Bao, Kiet, Chien, Manh, Hai, Toan, Binh, Thong, Thu and Hoa. Supplementary lower-frequency surname searches included Luu, Ton-That, Nghiem, Diep, Doan, Chu, Cao, To, Quach, Trieu and Phung. Checked prior w1 coverage and extended to Western Michigan, UT Chattanooga, Missouri State, Troy, Hanover, Portland State, Mississippi State, Chico, Channel Islands, Murray State, Bradley and William Paterson. Broad discovery searches are not claimed as complete institutional censuses. Stopped after broad token coverage and regional-directory saturation with nine well-supported new candidates, below the 25-candidate cap. Exclusion-list identities were skipped; no public roster or GitHub changes made."
+    },
+    {
+      "employer": "University of California, Davis",
+      "pagesExamined": [
+        "https://www.math.ucdavis.edu/people/general-profile?fac_id=mluu"
+      ],
+      "note": "Martin Luu is a current Associate Professor, Princeton PhD 2011, but no affirmative Vietnamese signal beyond surname was located. Held out under BRIEF2 rather than inferring ancestry. Deduced no identity from name alone."
+    },
+    {
+      "employer": "Ohio University",
+      "pagesExamined": [
+        "https://www.ohio.edu/cas/nguyend2",
+        "https://www.ohio.edu/zanesville/about/faculty-staff-directory/nguyend2",
+        "https://www.ohio.edu/cas/math/about/contact/faculty-directory"
+      ],
+      "note": "Viet Dung Nguyen indexed as mathematics Professor; both individual URLs redirected live to generic /directory/, and current math directory rendered no usable individual block. Excluded pending a live person page; no guessed profile URL. Roster vp-2613 is a France plasma/process-engineering namesake, not proof of a move."
+    },
+    {
+      "employer": "California State University, Chico",
+      "pagesExamined": [
+        "https://apps.csuchico.edu/directory/department/math"
+      ],
+      "note": "Read mathematics/statistics directory. Dan Quynh Nguyen and Vinh Van Nguyen have Lecturer titles; no current full-time continuing appointment evidence established. Not proposed on title alone."
+    },
+    {
+      "employer": "California State University, Sacramento",
+      "pagesExamined": [
+        "https://www.csus.edu/college/natural-sciences-mathematics/mathematics-statistics/meet-us/"
+      ],
+      "note": "Read faculty directory, including Hanh Tran Lecturer and Nhan Truong block lacking a rank. No new eligible appointment verified."
+    },
+    {
+      "employer": "California State University, Channel Islands",
+      "pagesExamined": [
+        "https://ext.csuci.edu/programs/graduate/ms-mathematics/faculty.htm"
+      ],
+      "note": "Phuoc Ho is listed as Lecturer; permanence/full-time status not established. Excluded pending stronger appointment evidence."
+    },
+    {
+      "employer": "University of Houston-Downtown",
+      "pagesExamined": [
+        "https://www.uhd.edu/academics/sciences/mathematics-statistics/directory.html"
+      ],
+      "note": "Read mathematics/statistics directory. Trinh Bui Lecturer lacks sufficient full-time/continuing evidence for acceptance in this run."
+    },
+    {
+      "employer": "Murray State University",
+      "pagesExamined": [
+        "https://www.murraystate.edu/Academics/CollegesDepartments/CollegeOfScienceEngineeringandTechnology/CollegeOfSciencePrograms/mathStats/faculty.aspx"
+      ],
+      "note": "Examined current Mathematics and Statistics faculty/staff list and retired-faculty section. No additional affirmative Vietnamese-name lead requiring candidate verification surfaced."
+    },
+    {
+      "employer": "Bradley University",
+      "pagesExamined": [
+        "https://www.bradley.edu/academics/departments/mathematics/faculty/"
+      ],
+      "note": "Examined current mathematics faculty list, including full professors, associate professors, assistant professors and visiting/lecturer roles. No additional qualifying lead found."
+    },
+    {
+      "employer": "William Paterson University",
+      "pagesExamined": [
+        "https://www.wpunj.edu/cosh/departments/mathematical-sciences/faculty-staff"
+      ],
+      "note": "Examined current Mathematical Sciences faculty/staff directory. No affirmative Vietnamese-identity lead found; did not infer identity from ambiguous East Asian names."
+    },
+    {
+      "employer": "Arkansas State University",
+      "pagesExamined": [
+        "https://www.astate.edu/about/faculty-and-staff-directory/binh-nguyen.html"
+      ],
+      "note": "Binh Nguyen is an Instructor, not the Assistant Professor of Statistics suggested by nearby search-result text. No doctorate/current research or continuing appointment established; not proposed."
+    },
+    {
+      "employer": "Florida A&M University",
+      "pagesExamined": [
+        "https://www.famu.edu/info/faculty-staff/profiles/cst/linh-nguyen.php"
+      ],
+      "note": "Linh Nguyen optimization mathematician has Visiting Assistant Professor appointment. Excluded."
+    },
+    {
+      "employer": "University of California, Berkeley",
+      "pagesExamined": [
+        "https://math.berkeley.edu/people/vinh-nguyen"
+      ],
+      "note": "Vinh Nguyen holds Charles B. Morrey Jr. Math Fellow role, explicitly formerly Morrey Visiting Assistant Professor. Excluded temporary research/teaching fellowship."
+    },
+    {
+      "employer": "Mount San Antonio College",
+      "pagesExamined": [
+        "https://www.mtsac.edu/profiles/bnguyen56.html",
+        "https://www.mtsac.edu/math/faculty/nguyenbaochi.html"
+      ],
+      "note": "BaoChi Nguyen has MIT PhD 2003 and full-time Professor role since 2010. Biography explicitly calls her earlier Bakersfield appointment tenure-track, but this run did not verify tenure/tenure-track at current community college. Conservatively held out under the community-college permanence rule; no unsupported track proposed."
+    },
+    {
+      "employer": "Temple University",
+      "pagesExamined": [
+        "https://medicine.temple.edu/directory/harris-quach-phd"
+      ],
+      "note": "Harris Quach is Assistant Professor in Biomedical Education and Data Science with Penn State statistics PhD 2022. Outside the specified department slice and no affirmative Vietnamese signal beyond surname established; not included."
+    },
+    {
+      "employer": "Johns Hopkins University",
+      "pagesExamined": [
+        "https://publichealth.jhu.edu/faculty/3328/trang-q-nguyen"
+      ],
+      "note": "Trang Quynh Nguyen matched existing vp-1383. Individual page returned 403 in this run, so no new claims accepted from the indexed result."
+    }
+  ]
+}

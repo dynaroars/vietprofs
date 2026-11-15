@@ -1,0 +1,87 @@
+{
+  "verifier": "codex",
+  "input": "maintenance/sector-expansion/runs/w1/au-go8.codex.json",
+  "candidates": [
+    {
+      "name": "Thien-Minh Nguyen",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live UQ person profile confirms current Lecturer in Robotics in Mechanical and Mining Engineering, not his former NTU postdoctoral role; it records NTU PhD 2020 and Ho Chi Minh City University of Technology undergraduate degree 2014. Vietnamese given names and Vietnam education provide the affirmative signal. Australian university appointment. Ran find-roster-matches with name and profile URL: no URL hit; fuzzy matches have different fields and/or doctorates, including vp-0163 (Hawaii 2023), vp-0551 (Auckland 2012), vp-1615 (Houston 2015), and vp-3279 (ANU 2019). Source: https://about.uq.edu.au/experts/52005?page=0 . Not present in maintenance/sector-expansion/already-proposed.txt.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Thu-Ha (Hannah) Nguyen",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live Monash profile confirms Senior Lecturer in Banking & Finance, UQ PhD and appointment since 2015. Monash official awards archive independently names Thu-Ha (Hannah) Nguyen in Monash Business School, an affirmative Vietnamese given-name signal: https://www.monash.edu/records-archives/archives/officers-and-awards/vice-chancellors-awards/citation-for-outstanding-contribution-to-student-learning . Australian faculty appointment. Ran find-roster-matches under full and Hannah names, profile and ORCID: no URL matches. Hannah-Hanh D. Nguyen has Michigan State PhD 2006; Greenwich Thu Nguyen has Aston accounting PhD, confirmed at https://www.gre.ac.uk/people/rep/faculty-of-business/thu-nguyen ; neither is this UQ-trained finance scholar. Current profile: https://research.monash.edu/en/persons/hannah-nguyen/ . Not present in maintenance/sector-expansion/already-proposed.txt.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Hung Nguyen",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live Adelaide University employer profile confirms Professor in Computer Science and Information Technology, Cyber-AI group leadership and ongoing professorial appointment; it records EPFL PhD 2004–2008 and Vietnamese reading/writing/speaking competence. Australian role and Vietnamese-language competence provide location and identity signals. Ran find-roster-matches with name, employer URL and Scholar identity: no URL match. Name hits differ by full name, research identity and/or doctorate; notably vp-0524 has Aix-Marseille PhD 2010, vp-0572 Warsaw PhD 1997, vp-3213 Tsukuba PhD 2023, and vp-1803 has a different full name and Scholar identity. Source: https://researchers.adelaide.edu.au/profile/hung.nguyen . Not present in maintenance/sector-expansion/already-proposed.txt.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "TriThang Tran",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live Melbourne individual profile names current Lecturer in School of Mathematics and Statistics. The university MSLC annual report documents Level B promotion and academic confirmation in 2022, supporting a substantive continuing academic appointment rather than semester teaching: https://ms.unimelb.edu.au/__data/assets/pdf_file/0010/4683790/MSLC-Annual-Report-2022.pdf (PDF page 4). Research and teaching continue on his maintained site, https://sites.google.com/site/trithangtran/trithang-tran . TriThang is the affirmative Vietnamese given-name signal. Australian appointment. Ran find-roster-matches with full name and both identity URLs: no active or retired matches. Current employer profile: https://findanexpert.unimelb.edu.au/profile/184709-trithang-tran . Not present in maintenance/sector-expansion/already-proposed.txt.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Nam Tran",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live MBS faculty profile confirms Associate Professor of Accounting and Associate Dean, employed since 2011; eligibility rests on that faculty appointment. It lists Oregon accounting PhD, UNSW master degree, Hanoi National Economics University BA and earlier Deloitte Vietnam employment. Nam plus Vietnam education establishes an affirmative Vietnamese signal. Australian employment. Ran find-roster-matches with name, MBS profile and Melbourne expert profile: no URL matches. Name hits include engineers, physicians, an Amazon researcher and vp-0583 Binh Tran-Nam (UNSW PhD 1986), distinct from this Oregon-trained accountant. Source: https://mbs.edu/faculty-and-research/faculty/nam-tran . Not present in maintenance/sector-expansion/already-proposed.txt.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Cameron Truong",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live Monash employer profile confirms Professor in Accounting and appointment since 2009: https://research.monash.edu/en/persons/cameron-truong/ . Auckland doctorate independently recorded in AFAANZ June 2007 newsletter, PDF page 4: https://www.afaanz.org/sites/default/files/uploaded-content/website-content/newsletter_june_07.pdf . The submitted circular-economy article alone is insufficient for ancestry. Stronger affirmative signal: VACPA newsletter describes overseas speakers as Vietnamese academics (PDF page 5) and names Cameron Trương of Monash (page 6): https://vacpa.org.vn/upload/newsimage/20210915140611/15092021%20-%20Ban%20tin%20thang%208%20-%20so%2026.pdf . This is identity-resolved contextual evidence beyond surname. Australian appointment. Ran find-roster-matches with name, profile, personal site and ORCID: no active or retired matches. Not present in maintenance/sector-expansion/already-proposed.txt.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "An Duy Tran",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live individual Melbourne profile confirms Associate Professor and head of the Health Economics and Simulation Modelling unit: https://clinicalresearch.mdhs.unimelb.edu.au/our-people/staff-profiles/an-duy-tran . Stable research-faculty career corroborated by official full-time Senior Research Fellow appointment notice: https://mspgh.unimelb.edu.au/centres-institutes/centre-for-health-policy/melbourne-health-economics/he-newsletter/he-news/newsletter-issue-1-november-2016/issue-1/dr-an-duy-tran-joins-health-economics-unit2 . CEPAR annual report 2018 PDF page 55 records BSc Hue, MSc/PhD Wageningen: https://www.cepar.edu.au/sites/default/files/CEPAR_AnnualReport_2018_Web.pdf . Vietnamese given names and Hue education; Australian employment. Ran find-roster-matches: sole name hit vp-0159 is a Colorado Boulder PhD 2014 marketing scholar, distinct from this health economist; no URL hit. Not present in maintenance/sector-expansion/already-proposed.txt.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Thanh Tran",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live UNSW employer profile confirms Professor, School of Mathematics & Statistics, UNSW doctorate and Sydney office; research is computational mathematics and numerical PDE methods. Thanh is an affirmative Vietnamese given-name signal beyond surname. Australian faculty appointment. Ran find-roster-matches with name and employer URL: no URL hit. Fuzzy-name matches differ in field and doctorate, notably Rice electrical engineer vp-0417 (Houston PhD 2001), vp-0585 (Sydney PhD 1986) and computer scientist vp-0748 (Southampton PhD 2011); retired vp-1190 is Boston College social-work scholar Thanh V. Tran, a different person. Source: https://www.unsw.edu.au/staff/thanh-tran . Not present in maintenance/sector-expansion/already-proposed.txt.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Quoc Thong Le Gia",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live UNSW individual employer page explicitly identifies Quoc Thong Le Gia as Associate Professor in Mathematics & Statistics, Sydney, and lists Texas A&M mathematics PhD 2003, MS 2000 and UNSW BSc 1998. Quoc Thong supplies the affirmative Vietnamese given-name signal. Eligible Australian faculty appointment. Ran find-roster-matches with full name, both UNSW identity URLs and Scholar URL: no URL hit. Sole fuzzy-name hit vp-2913 Quoc V. Le is Stanford PhD 2013, with different Scholar identity and machine-learning field, not this numerical analyst. Source: https://www.unsw.edu.au/staff/quoc-le-gia . Not present in maintenance/sector-expansion/already-proposed.txt.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Peter Kien Pham",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live Sydney employer profile confirms Professor of Finance and School of Finance membership: https://profiles.sydney.edu.au/peter.pham . Its linked personal homepage explicitly supplies Peter Kien Pham, Monash finance PhD 2004 and current Sydney professorship: https://sites.google.com/view/peterkienpham/home . Kien provides the affirmative Vietnamese given-name signal. Australian faculty appointment. Ran find-roster-matches with full name, employer profile, personal site and ORCID: no URL matches. Name hits vp-2245 Peter H. Pham (radiology) and vp-2898 Kien Pham (Florida PhD 2013, pathology) are different scholars. Not present in maintenance/sector-expansion/already-proposed.txt.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    }
+  ],
+  "possible_move": []
+}

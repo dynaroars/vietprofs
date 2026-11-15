@@ -1,0 +1,403 @@
+{
+  "group": "university",
+  "agent": "codex",
+  "slice": "us-social-hum",
+  "finishedAt": "2026-11-15T01:19:36.854776Z",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Trinh Tran",
+        "university": "Middlebury College",
+        "track": "Tenure-line",
+        "rank": "Assistant Professor",
+        "department": "Anthropology/Education Studies",
+        "field": "Social & Behavioral Sciences",
+        "city": "Middlebury",
+        "state": "Vermont",
+        "country": "United States",
+        "researchAreas": [
+          "Urban Sociology",
+          "Education",
+          "Social Networks",
+          "Immigration",
+          "Qualitative Methods"
+        ],
+        "phdInstitution": "University of California, Berkeley",
+        "msInstitution": "University of California, Berkeley",
+        "undergradInstitution": "University of Chicago",
+        "profileUrl": "https://www.middlebury.edu/college/people/trinh-tran"
+      },
+      "evidence": {
+        "currentRole": "https://www.middlebury.edu/college/people/trinh-tran — 'Assistant Professor of Anthropology/Education Studies'. Current individual faculty page; leave is not departure. https://www.middlebury.edu/stories/archive/2017/09/middlebury-welcomes-new-faculty-members explicitly identifies her appointment as tenure-track.",
+        "doctorateOrPapers": "https://www.middlebury.edu/stories/archive/2017/09/middlebury-welcomes-new-faculty-members — sociology PhD and MA at UC Berkeley; BA at Chicago. Research keywords are from this employer announcement.",
+        "vietnameseSignal": "Vietnamese given-name token Trinh together with Tran on the official individual page: https://www.middlebury.edu/college/people/trinh-tran",
+        "dedup": "npm run find-roster-matches -- 'Trinh Tran' --url https://www.middlebury.edu/college/people/trinh-tran => no roster or retired-id matches. Manually checked roster name variants and already-proposed.txt; no match.",
+        "enrichment": "Official individual page uses a generic profile placeholder, so no portrait proposed. Searches for an identity-resolved Scholar profile found none; no LinkedIn fetched. No qualifying honors established."
+      }
+    },
+    {
+      "entry": {
+        "name": "Angie Ngoc Tran",
+        "vietnameseName": "Angie Ngọc Trần",
+        "university": "California State University, Monterey Bay",
+        "track": "Tenure-line",
+        "rank": "Professor",
+        "department": "Department of Social Sciences and Global Studies",
+        "field": "Social & Behavioral Sciences",
+        "country": "United States",
+        "researchAreas": [
+          "Labor Migration",
+          "Labor Movements",
+          "Political Economy",
+          "Corporate Social Responsibility"
+        ],
+        "phdInstitution": "University of Southern California",
+        "profileUrl": "https://researchprofiles.csumb.edu/en/persons/angie-ngoc-tran/"
+      },
+      "evidence": {
+        "currentRole": "https://researchprofiles.csumb.edu/en/persons/angie-ngoc-tran/ — 'Professor, Department of Social Sciences and Global Studies'. Employer bio describes faculty service since 1996 and ongoing research and teaching.",
+        "doctorateOrPapers": "https://researchprofiles.csumb.edu/en/persons/angie-ngoc-tran/ — doctorate in political economy from University of Southern California.",
+        "vietnameseSignal": "https://researchprofiles.csumb.edu/en/persons/angie-ngoc-tran/ explicitly says born and raised in Saigon, Vietnam, and spells 'Angie Ngọc Trần'.",
+        "dedup": "npm run find-roster-matches -- 'Angie Ngoc Tran' --url https://researchprofiles.csumb.edu/en/persons/angie-ngoc-tran/ => retired vp-0435 Ngoc Tran, formerly UT Austin mathematics. Different person: this candidate earned a USC political-economy doctorate and has taught at CSUMB since 1996; retired vp-0435 was a UT Austin mathematician who left academia in 2022 for Chicago Trading Company. Roster and prior-proposal name/URL checks found no matching person.",
+        "portraitSource": "https://researchprofiles.csumb.edu/files-asset/39847763/Angie_Tran_May_2024.jpg?w=160&f=jpg — individual portrait IMG labelled Angie Ngoc Tran in the live employer profile; candidate source only, not downloaded or committed.",
+        "enrichment": "No identity-resolved Scholar or personal homepage found. No qualifying honors established. Degree year and location omitted because this profile does not explicitly supply them."
+      }
+    },
+    {
+      "entry": {
+        "name": "Diem-My Bui",
+        "university": "University of Illinois Chicago",
+        "track": "Clinical",
+        "rank": "Associate Professor",
+        "department": "Communication",
+        "field": "Social & Behavioral Sciences",
+        "city": "Chicago",
+        "state": "Illinois",
+        "country": "United States",
+        "researchAreas": [
+          "Transnational Gender and Media Studies",
+          "Critical Cultural Studies",
+          "Ethnic Studies",
+          "Popular Culture",
+          "Film"
+        ],
+        "phdInstitution": "University of Illinois Urbana-Champaign",
+        "msInstitution": "University of Illinois Urbana-Champaign",
+        "undergradInstitution": "Grinnell College",
+        "profileUrl": "https://comm.uic.edu/profiles/diem-my-bui/"
+      },
+      "evidence": {
+        "currentRole": "https://comm.uic.edu/profiles/diem-my-bui/ — 'Clinical Associate Professor and Director of Undergraduate Studies'. Career clinical-faculty ladder corroborated by formal promotion effective 2020–2021 in https://www.trustees.uillinois.edu/trustees/agenda/July-23-2020/009-jul-Promotion-Tenure.pdf (Diem-My Thi Bui, Communication and Global Asian Studies, clinical associate professor). Current enduring departmental faculty profile supports stable substantive appointment.",
+        "doctorateOrPapers": "https://comm.uic.edu/profiles/diem-my-bui/ lists PhD in Communications Research and MA in Sociology at Illinois Urbana-Champaign; BA at Grinnell. Same profile describes ongoing research and published scholarship.",
+        "vietnameseSignal": "Distinctive Vietnamese given-name combination Diem-My with Bui on https://comm.uic.edu/profiles/diem-my-bui/; not a shared-surname-only lead.",
+        "dedup": "npm run find-roster-matches -- 'Diem-My Bui' --url https://comm.uic.edu/profiles/diem-my-bui/ => no roster or retired-id matches. Manual roster and already-proposed checks found no matching person.",
+        "portraitSource": "https://comm.uic.edu/wp-content/uploads/sites/260/2018/06/dbui-profile-157x180.jpg — employer profile IMG labelled Photo of Bui, Diem-My; source for downstream portrait review only.",
+        "enrichment": "No identity-resolved Scholar or separate personal homepage found. No qualifying honors established; degree years omitted."
+      }
+    },
+    {
+      "entry": {
+        "name": "Anh Sy Huy Le",
+        "vietnameseName": "Lê Sỹ Huy Anh",
+        "university": "Muhlenberg College",
+        "track": "Tenure-line",
+        "rank": "Assistant Professor",
+        "department": "History",
+        "field": "Humanities",
+        "city": "Allentown",
+        "state": "Pennsylvania",
+        "country": "United States",
+        "researchAreas": [
+          "Chinese Migration",
+          "Diaspora",
+          "Modern China",
+          "French Colonial Vietnam",
+          "Transregional History"
+        ],
+        "phdInstitution": "Michigan State University",
+        "phdYear": 2021,
+        "msInstitution": "University at Buffalo",
+        "undergradInstitution": "Wabash College",
+        "profileUrl": "https://www.muhlenberg.edu/directory/anh-le/",
+        "websiteUrl": "https://anhsyhuyle.owlstown.net/"
+      },
+      "evidence": {
+        "currentRole": "https://www.muhlenberg.edu/directory/anh-le/ — 'Assistant Professor, Modern Chinese History'. Official page links his personal site, which resolves full name and the earlier St. Norbert affiliation. Current employer is Muhlenberg, not St. Norbert.",
+        "doctorateOrPapers": "https://www.muhlenberg.edu/directory/anh-le/ lists PhD Michigan State, MA University at Buffalo and BA Wabash. https://anhsyhuyle.owlstown.net/ explicitly dates the completed Michigan State PhD to 2021.",
+        "vietnameseSignal": "https://anhsyhuyle.owlstown.net/ explicitly identifies his Vietnamese name as 'Lê Sỹ Huy Anh'; official employer directly links this site.",
+        "dedup": "npm run find-roster-matches -- 'Anh Sy Huy Le' --url https://www.muhlenberg.edu/directory/anh-le/ https://anhsyhuyle.owlstown.net/ => vp-0147, vp-1698, vp-1771, vp-2012, vp-3215. All resolved as different people: Penn State finance/NYU PhD 2008; RMIT economics/finance; UTSA management/Iowa PhD; CQU business/UTS PhD; Netflix data science/Duke PhD 2018. Candidate is the Michigan State history PhD 2021, formerly St. Norbert, now Muhlenberg. No shared identity URLs. Prior-proposal list has no match.",
+        "portraitSource": "https://www.muhlenberg.edu/wp-content/uploads/Anh-Le.jpg — individual image data-src labelled Anh Le in the official faculty page; source for downstream review only.",
+        "enrichment": "Official personal-site link verified. Scholar search found no identity-resolved profile. Named fellowships on personal site lack dates/career-stage detail, so no honors proposed."
+      }
+    },
+    {
+      "entry": {
+        "name": "Thien-Huong Ninh Villarreal",
+        "university": "San Joaquin Delta College",
+        "track": "Tenure-line",
+        "rank": "Associate Professor",
+        "department": "Sociology and Ethnic Studies",
+        "field": "Social & Behavioral Sciences",
+        "city": "Stockton",
+        "state": "California",
+        "country": "United States",
+        "phdInstitution": "University of Southern California",
+        "profileUrl": "https://www.deltacollege.edu/about/faculty-staff-directory/thien-huong-villarreal"
+      },
+      "evidence": {
+        "currentRole": "https://www.deltacollege.edu/about/faculty-staff-directory/thien-huong-villarreal — 'Faculty Researcher/Associate Professor', Sociology and Ethnic Studies, Stockton campus. https://piedmontexedra.com/2026/11/these-part-time-professors-make-big-money-teaching-dozens-of-classes-online-are-their-students-learning reports tenure at San Joaquin Delta in 2025 and a concurrent tenured CRC role. Thus this is a permanent community-college appointment. Linked board tenure record https://go.boarddocs.com/ca/delta/Board.nsf/goto?id=DC4QJ6697BF5&open= returned 403; tenure detail is supported by the opened CalMatters report, not the inaccessible board record.",
+        "doctorateOrPapers": "https://crc.losrios.edu/catalog/compiled-catalog/crc-catalog-a_20468.pdf — live 2026–2027 official catalog, PDF page 648, lists Ninh Villareal, Thien-Huong, sociology, PhD University of Southern California. Current Delta page explicitly retains the former surname Ninh, resolving identity. Earlier Westcliff catalog also lists her sociology PhD: https://www.westcliff.edu/wp-content/uploads/2021/12/2021-2022-Catalog-and-Student-Handbook-v.1.2-1.pdf .",
+        "vietnameseSignal": "Vietnamese given-name combination Thien-Huong and original surname Ninh on the live employer page; name proposed as Thien-Huong Ninh Villarreal to retain the original Vietnamese surname under the repository surname-change rule.",
+        "dedup": "npm run find-roster-matches -- 'Thien-Huong Ninh Villarreal' --url https://www.deltacollege.edu/about/faculty-staff-directory/thien-huong-villarreal https://crc.losrios.edu/about-us/contact-us/employee-directory/employee?id=1617857&xid=x78807 => no roster or retired-id matches. Manual Ninh/Villarreal/name-variant checks and already-proposed.txt found no match. Delta and CRC are one person, not two candidates.",
+        "enrichment": "No degree year inferred. Multiple appointments are documented; propose one entry at Delta with its live individual profile. No verified personal site, Scholar, portrait asset URL or qualifying honors established. Direct shell access to Delta returned 403, but the web open returned the named profile."
+      }
+    }
+  ],
+  "already_listed": [
+    {
+      "name": "Monica M. Trieu",
+      "id": "vp-2230",
+      "note": "Purdue Asian American Studies; same scholar as Monica Trieu search hit. npm find-roster-matches rerun with roster profile URL confirmed the ID."
+    },
+    {
+      "name": "Uyen T. Nguyen",
+      "id": "vp-1119",
+      "note": "Harvard history; same institutional profile. npm find-roster-matches rerun with roster profile URL confirmed the ID."
+    },
+    {
+      "name": "Uyen Diep",
+      "id": "vp-1549",
+      "note": "Virginia Tech communication; same profile and LSU doctorate. npm find-roster-matches rerun with roster profile URL confirmed the ID."
+    },
+    {
+      "name": "Nhung Nguyen",
+      "id": "vp-0312",
+      "note": "South Alabama multimedia journalism; full-name Nhung Thi Nguyen is not new. npm find-roster-matches rerun with roster profile URL confirmed the ID."
+    },
+    {
+      "name": "Thao Le",
+      "id": "vp-3039",
+      "note": "Hawaii family and consumer sciences; institution-specific identity match. npm find-roster-matches rerun with roster profile URL confirmed the ID."
+    },
+    {
+      "name": "Tuyet Mai Ha Hoang",
+      "id": "vp-2051",
+      "note": "Illinois social work; same researcher, not new. npm find-roster-matches rerun with roster profile URL confirmed the ID."
+    },
+    {
+      "name": "Oanh Kim Tran",
+      "id": "vp-1706",
+      "note": "CSU East Bay educational psychology; Oanh Tran short form resolves to this ID. npm find-roster-matches rerun with roster profile URL confirmed the ID."
+    },
+    {
+      "name": "Linh K. Nguyen",
+      "id": "vp-0372",
+      "note": "CSU Fullerton Vietnamese; same published middle initial and profile. npm find-roster-matches rerun with roster profile URL confirmed the ID."
+    },
+    {
+      "name": "Hanh Thi Nguyen",
+      "id": "vp-2293",
+      "note": "HPU applied linguistics; identical official profile. npm find-roster-matches rerun with roster profile URL confirmed the ID."
+    },
+    {
+      "name": "Quang D. Tran",
+      "id": "vp-2276",
+      "note": "SLU psychology; identical institutional profile. npm find-roster-matches rerun with roster profile URL confirmed the ID."
+    },
+    {
+      "name": "Huynh-Nhu Le",
+      "id": "vp-1363",
+      "note": "GW psychology; Mimi alias resolves to this entry. npm find-roster-matches rerun with roster profile URL confirmed the ID."
+    }
+  ],
+  "possible_move": [],
+  "rejected": [
+    {
+      "name": "Jane M. Tram",
+      "reason": "Deferred, not deemed ineligible: current Pacific University professor and Notre Dame PhD verified at https://www.pacificu.edu/about/directory/people/jane-m-tram-phd . npm dedup found no matches, but the page and follow-up searches did not establish the brief-required affirmative Vietnamese signal beyond surname Tram. Next action: find an identity-resolved autobiographical or institutional source."
+    },
+    {
+      "name": "Janice N. Phung",
+      "reason": "Deferred: https://www.csusm.edu/profiles/index.html?u=jphung verifies UCI PhD 2017 and continuing faculty work; employer conference page reports associate professor. npm dedup found no matches. No affirmative Vietnamese signal beyond surname Phung established; do not use a different Janice Phung in Vietnam. Next action: verify personal background with an identity-resolved source."
+    },
+    {
+      "name": "Thuy Karafa",
+      "reason": "Deferred: https://www.fredonia.edu/academics/colleges-schools/college-liberal-arts-sciences/psychology/faculty/Thuy-Karafa returned Senior Lecturer, but did not establish research doctorate/recent-paper requirement or continuing full-time status. npm dedup found no matches. Next action: obtain current CV and appointment details; resolve original surname before proposing canonical name."
+    },
+    {
+      "name": "Mary (Hanh) Dinh",
+      "reason": "Excluded appointment: https://vermontstate.edu/directory/mary-dinh/ identifies Staff, Associate Director of Multilingual Students Services, Academic Support/Student Success. No independently qualifying continuing faculty appointment established; past Albany CV describes adjunct/visiting work."
+    },
+    {
+      "name": "Huong T. V. Vo",
+      "reason": "Deferred under this brief’s stricter research-doctorate-or-two-recent-papers rule: https://www.angelo.edu/live/profiles/13545-huong-vo and https://www.angelo.edu/faculty/cv/hvo.pdf establish tenure-track assistant professor since 2023, a clinical PsyD (2023) and Tay Nguyen BA. CV shows one 2023 paper; no research PhD or two qualifying recent papers established. Broader roster academia rules may accept this role, but this run does not override BRIEF2. Dedup hit vp-0300 Thu-Huong Nguyen-Vo is a different UCLA humanities scholar."
+    },
+    {
+      "name": "Nhi Le",
+      "reason": "Deferred: https://www.sfasu.edu/acadaffairs/new-faculty redirects to https://www.sfasu.edu/acadaffairs/faculty and lists current Government and Sociology assistant professor. No individual employer profile or completed research doctorate resolved. SHSU doctoral-student Nhi N. H. Le is only an unconfirmed possible identity, not evidence of a completed degree. npm dedup found no matches. Next action: inspect SFA faculty CV directory."
+    },
+    {
+      "name": "Kim-Phuong Truong-Vu",
+      "reason": "Deferred live-verification gap: Miami department returned 403, employer publication pages could not be opened, and personal site timed out. Search leads and personal CV suggest sociology assistant professor/Miami and Colorado PhD 2022, but no accepted live person page was obtained. Dedup hits vp-1191 (CSULB psychologist), vp-2086 (RMIT), vp-3244 (Aridis) are different subject/affiliation identities. Next action: open a current Miami individual profile or maintained personal page."
+    },
+    {
+      "name": "Huu Dat Tran",
+      "reason": "Deferred: employer August 2026 news https://liberalarts.vt.edu/news/academic-news/2026/august.html announces tenure-track communication appointment, but current faculty directory https://liberalarts.vt.edu/departments-and-schools/school-of-communication/faculty.html lacks his individual profile. Earlier LSU publication bio says doctoral student, and degree completion was not verified. Next action: verify a current person page and completed doctorate; do not infer a degree from hiring."
+    },
+    {
+      "name": "Yer J. Thao",
+      "reason": "Excluded identity: Portland State self-bio https://web.pdx.edu/~thaoy/index.htm explicitly identifies Mong culture and Laos background. Thao alone is not Vietnamese evidence."
+    },
+    {
+      "name": "Sunjung Kim Thao",
+      "reason": "Excluded identity signal: https://uca.edu/csd/facultystaff/sunjung-kim-ph-d/ describes Korean education and published Sunjung Kim name; no affirmative Vietnamese signal established. Thao surname alone is insufficient."
+    },
+    {
+      "name": "Phuong Nguyen; Giang-Nguyen Thi Nguyen; Hung Cam Thai; Laura Bui; Thao Ha",
+      "reason": "Skipped names on maintenance/sector-expansion/already-proposed.txt; not re-proposed in this later pass."
+    }
+  ],
+  "coverage": [
+    {
+      "employer": "US universities — cross-institution discovery",
+      "pagesExamined": [],
+      "note": "Later-pass token sweep across psychology, sociology/anthropology, education, humanities/history, law, communication, arts/design/music. Given-name queries included Thuy, Quynh, Dung, Oanh, Hanh, Thao, Uyen, Ngoc, Huong, Tram, Hien, Nhung, Lien, Bich, Ngan, Diem, Tuyet, Huyen, Phuong, Duyen, Quyen, Linh, Khanh, Nhu, Binh, Thu, Huy, Hue, Yen, Hieu, Nhi, Quang, Tam, Nguyet, Phuoc, Buu, Hao, Khai, Bao, Giang. Less-common surname searches included Trieu, Nghiem, Quach, Trinh, Phung, Luong, Ton-That, Ninh and Ton. Search results were discovery leads only. Law and arts/design queries mostly returned existing, outside-US, nonfaculty or unsourced leads; no new candidate accepted there. Stopped after broad token and regional-institution coverage produced repeated duplicates and verification gaps, not because the 25-candidate cap was reached. Coverage is a bounded search, not an exhaustive census."
+    },
+    {
+      "employer": "Middlebury College",
+      "pagesExamined": [
+        "https://www.middlebury.edu/college/people/trinh-tran",
+        "https://www.middlebury.edu/stories/archive/2017/09/middlebury-welcomes-new-faculty-members",
+        "https://www.middlebury.edu/stories/archive/2016/11/five-postdoctoral-fellows-are-part-program-diversify-faculty"
+      ],
+      "note": "Current faculty profile plus career transition from postdoc to explicit tenure-track appointment; one verified candidate."
+    },
+    {
+      "employer": "California State University, Monterey Bay",
+      "pagesExamined": [
+        "https://researchprofiles.csumb.edu/en/persons/angie-ngoc-tran/"
+      ],
+      "note": "One verified candidate. Phuong Nguyen discovered in humanities/communication but name is on prior-proposal exclusion list."
+    },
+    {
+      "employer": "University of Illinois Chicago",
+      "pagesExamined": [
+        "https://comm.uic.edu/profiles/diem-my-bui/",
+        "https://www.trustees.uillinois.edu/trustees/agenda/July-23-2020/009-jul-Promotion-Tenure.pdf"
+      ],
+      "note": "Verified communication clinical-faculty career ladder and doctorate."
+    },
+    {
+      "employer": "Muhlenberg College / St. Norbert College",
+      "pagesExamined": [
+        "https://www.muhlenberg.edu/directory/anh-le/",
+        "https://anhsyhuyle.owlstown.net/"
+      ],
+      "note": "Given-name Huy search surfaced St. Norbert historian; current employer profile resolves his move to Muhlenberg. Different person from five roster name hits."
+    },
+    {
+      "employer": "San Joaquin Delta College / Cosumnes River College",
+      "pagesExamined": [
+        "https://www.deltacollege.edu/about/faculty-staff-directory/thien-huong-villarreal",
+        "https://crc.losrios.edu/about-us/contact-us/employee-directory/employee?id=1617857&xid=x78807",
+        "https://crc.losrios.edu/catalog/compiled-catalog/crc-catalog-a_20468.pdf"
+      ],
+      "note": "Less-common surname Ninh led to current changed surname. One person with multiple faculty appointments; one candidate. Delta tenure board link blocked; opened reporting identifies tenure in 2025."
+    },
+    {
+      "employer": "California State University, East Bay",
+      "pagesExamined": [
+        "https://www.csueastbay.edu/directory/profiles/bycollege.html",
+        "https://www.csueastbay.edu/directory/profiles/epsy/tranoanh.html"
+      ],
+      "note": "Scanned broad college directory including social-science, humanities and education departments; Oanh Tran resolves to listed Oanh Kim Tran vp-1706."
+    },
+    {
+      "employer": "Hawaiʻi Pacific University",
+      "pagesExamined": [
+        "https://www.hpu.edu/faculty/cla/hanh-thi-nguyen.html"
+      ],
+      "note": "Applied linguistics professor and doctorate verified; already vp-2293."
+    },
+    {
+      "employer": "Fredonia",
+      "pagesExamined": [
+        "https://www.fredonia.edu/academics/colleges-schools/college-liberal-arts-sciences/psychology/faculty/Thuy-Karafa"
+      ],
+      "note": "Given-name Thuy lead; current teaching role confirmed, research-degree and permanence evidence insufficient."
+    },
+    {
+      "employer": "Pacific University",
+      "pagesExamined": [
+        "https://www.pacificu.edu/about/directory/people/jane-m-tram-phd"
+      ],
+      "note": "Psychology professor and PhD confirmed; affirmative Vietnamese signal remains unresolved."
+    },
+    {
+      "employer": "California State University San Marcos",
+      "pagesExamined": [
+        "https://www.csusm.edu/profiles/index.html?u=jphung"
+      ],
+      "note": "Lower-frequency Phung surname lead; verified doctorate and current work, identity signal remains unresolved."
+    },
+    {
+      "employer": "Vermont State University",
+      "pagesExamined": [
+        "https://vermontstate.edu/directory/mary-dinh/"
+      ],
+      "note": "Current role is student-support staff; excluded from candidate array."
+    },
+    {
+      "employer": "Angelo State University",
+      "pagesExamined": [
+        "https://www.angelo.edu/departments/psychology/contact.php",
+        "https://www.angelo.edu/live/profiles/13545-huong-vo",
+        "https://www.angelo.edu/faculty/cv/hvo.pdf"
+      ],
+      "note": "Regional psychology directory and individual CV examined; clinical PsyD does not establish this brief’s research doctorate condition."
+    },
+    {
+      "employer": "Stephen F. Austin State University",
+      "pagesExamined": [
+        "https://www.sfasu.edu/acadaffairs/new-faculty",
+        "https://www.sfasu.edu/acadaffairs/faculty"
+      ],
+      "note": "Current assistant professor Nhi Le discovered; individual profile and research doctorate unresolved."
+    },
+    {
+      "employer": "Virginia Tech",
+      "pagesExamined": [
+        "https://liberalarts.vt.edu/departments-and-schools/school-of-communication/faculty.html"
+      ],
+      "note": "Communication directory scanned; Uyen Diep already vp-1549. Huu Dat Tran surfaced in indexed 2026 appointment news; individual profile/degree gap retained as deferred."
+    },
+    {
+      "employer": "University of Miami",
+      "pagesExamined": [
+        "https://sociology.as.miami.edu/people/",
+        "https://www.kimtruong-vu.com/"
+      ],
+      "note": "Attempts returned 403 and timeout respectively; Kim-Phuong Truong-Vu not accepted from snippets."
+    },
+    {
+      "employer": "Las Positas College",
+      "pagesExamined": [
+        "https://www.laspositascollege.edu/catalog/2023-2024/sec/faculty.php",
+        "https://laspositascollege.edu/catalog/current/sec/_archives/faculty.pdf"
+      ],
+      "note": "Indexed Ninh degree leads both returned live 404 pages; not used as evidence."
+    },
+    {
+      "employer": "Westcliff University",
+      "pagesExamined": [
+        "https://www.westcliff.edu/wp-content/uploads/2021/12/2021-2022-Catalog-and-Student-Handbook-v.1.2-1.pdf"
+      ],
+      "note": "Historical sociology PhD corroboration for Ninh only; historical employer not proposed as current."
+    },
+    {
+      "employer": "Additional regional institutions — search-only checks",
+      "pagesExamined": [],
+      "note": "Institution-restricted given-name searches at Wichita State (Thao), Missouri State (Hanh), CSU San Bernardino (Thao), Texas State (Huong), UNC Greensboro (Hanh), CSU Stanislaus (Thuy), Wisconsin–Eau Claire (Linh), Central Missouri (Thao), Winthrop (Hien) did not produce new eligible candidates. No directory-wide coverage claimed for these institutions. CSU Fullerton Linh search resolved listed vp-0372. Purdue Trieu, Harvard Uyen, Hawaii Thao, SLU Quang and GW Nhu searches resolved listed identities."
+    }
+  ]
+}

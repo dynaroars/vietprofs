@@ -1,0 +1,434 @@
+{
+  "group": "university",
+  "agent": "codex",
+  "slice": "japan",
+  "finishedAt": "2026-11-15T00:58:15.088640Z",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Hieu Hanh Le",
+        "university": "Ochanomizu University",
+        "country": "Japan",
+        "rank": "Associate Professor",
+        "track": "Tenure-line",
+        "department": "Humanities Data Engineering, Faculty of Transdisciplinary Engineering",
+        "field": "Computer & Information Sciences",
+        "researchAreas": [
+          "Data Engineering",
+          "Databases",
+          "Information Storage Systems",
+          "Privacy",
+          "Information Retrieval"
+        ],
+        "phdInstitution": "Tokyo Institute of Technology",
+        "phdYear": 2015,
+        "undergradInstitution": "Tokyo Institute of Technology",
+        "undergradYear": 2008,
+        "msInstitution": "Tokyo Institute of Technology",
+        "profileUrl": "https://researchers2.ao.ocha.ac.jp/html/200000922_en.html",
+        "websiteUrl": "https://www.de-lab.te.ocha.ac.jp/en/members_e/"
+      },
+      "evidence": {
+        "currentRole": "https://researchers2.ao.ocha.ac.jp/html/200000922_en.html — 'Position Associate Professor'; current faculty affiliation and appointments beginning 2023/2024. https://www.ocha.ac.jp/introduction/publication/d004147_d/fil/R6_rikoujyoukyou_bunjo.pdf places Le Hieu Hanh among dedicated faculty (専), with the ordinary 准教授 title, rather than 特任.",
+        "doctorateOrPapers": "https://researchers2.ao.ocha.ac.jp/html/200000922_en.html explicitly records engineering doctorate, Tokyo Institute of Technology, April 2015. https://www.de-lab.te.ocha.ac.jp/wp-content/uploads/2025/06/FullCV.pdf explicitly gives bachelor's/master's/doctorate institutions and 2008/2010/2015 years, along with the research interests used above.",
+        "vietnameseSignal": "The university-linked CV and lab page publish Hieu Hanh LE: Hieu Hanh is an affirmative Vietnamese given-name combination beyond the ambiguous surname Le.",
+        "dedup": "Ran npm run find-roster-matches with Hieu Hanh Le and the official profile, lab page, and linked researchmap URL https://researchmap.jp/LeHieuHanh. Only vp-0753 Hieu Le matched by name; that record is a Stony Brook 2020 computer-vision PhD at UNC Charlotte, whereas this person earned a Tokyo Tech 2015 doctorate and works in data engineering. No URL or retired-id match. Not in already-proposed.txt."
+      }
+    },
+    {
+      "entry": {
+        "name": "Thi Tuyet Nhung Tran",
+        "university": "Aichi Toho University",
+        "country": "Japan",
+        "rank": "Associate Professor",
+        "track": "Tenure-line",
+        "department": "Department of Business, Faculty of Business Administration",
+        "field": "Business & Economics",
+        "researchAreas": [
+          "Marketing",
+          "International Business",
+          "Emerging Markets",
+          "Retailing",
+          "Dynamic Capabilities"
+        ],
+        "phdInstitution": "Kyoto University",
+        "profileUrl": "https://www.aichi-toho.ac.jp/about/outline/kyoin/trannhung"
+      },
+      "evidence": {
+        "currentRole": "https://www.aichi-toho.ac.jp/about/outline/kyoin/trannhung — '准教授'; university faculty biography identifies the business department, teaching responsibilities, and current research. Ordinary associate-professor faculty appointment, with no 特任, visiting, or adjunct designation.",
+        "doctorateOrPapers": "Same employer biography explicitly records completion of Kyoto University's Graduate School of Economics doctoral program and the awarded economics doctorate. No degree year is stated, so none proposed.",
+        "vietnameseSignal": "Same institutional biography gives Tran Thi Tuyet Nhung. Thi Tuyet Nhung supplies affirmative Vietnamese given/middle-name evidence beyond Tran.",
+        "dedup": "Ran matcher with Thi Tuyet Nhung Tran, the employer profile, and its linked https://researchmap.jp/trannhung. Name hits: vp-0164 (UT San Antonio MIS doctorate), vp-0641 (UCLA-trained Toronto historian), vp-2145 (Southern Cross education doctorate), vp-3118 (Houston chemistry doctorate). This candidate is a Kyoto-trained economist/business scholar; identities and fields differ. No shared identity URL. Not in already-proposed.txt. In particular, do not merge into Toronto's Nhung Tuyet Tran."
+      }
+    },
+    {
+      "entry": {
+        "name": "Thi Phuong Thao Nguyen - Hamamatsu University School of Medicine",
+        "university": "Hamamatsu University School of Medicine",
+        "country": "Japan",
+        "rank": "Assistant Professor",
+        "track": "Tenure-line",
+        "department": "Department of Regenerative Medicine",
+        "field": "Biological & Biomedical Sciences",
+        "researchAreas": [
+          "Regenerative Medicine"
+        ],
+        "phdInstitution": "Hiroshima University",
+        "phdYear": 2011,
+        "undergradInstitution": "University of Medicine and Pharmacy at Ho Chi Minh City",
+        "undergradYear": 2006,
+        "profileUrl": "https://www.hama-med.ac.jp/education/fac-med/dept/regen-med/faculty.html"
+      },
+      "evidence": {
+        "currentRole": "https://www.hama-med.ac.jp/education/fac-med/dept/regen-med/faculty.html — '助教 NGUYEN THI PHUONG THAO'. The live departmental page contains her individual biography; the English counterpart https://www.hama-med.ac.jp/uni-e/academics/fac-med/dept/regen-med/faculty.html independently labels her Assistant Professor. Japanese title is ordinary 助教, with separately labeled 特任研究員 elsewhere on the same page.",
+        "doctorateOrPapers": "The Japanese employer biography explicitly states Hiroshima dentistry doctorate completed September 2011 and Ho Chi Minh City medicine/pharmacy dentistry graduation July 2006. English page confirms 2011 PhD. Do not use the professor Makoto Sahara's degree table or specialties for her.",
+        "vietnameseSignal": "Employer biography explicitly documents her Vietnamese undergraduate education, as well as the Vietnamese Thi Phuong Thao given-name combination.",
+        "dedup": "Ran matcher with Thi Phuong Thao Nguyen and both employer pages. Resolved exact-name vp-1931 through live https://www.sanken.osaka-u.ac.jp/en/organization/nnc/nnc04.html and direct HTTP 200 https://rd.iai.osaka-u.ac.jp/en/02717dffdb91cb1d.html: that researcher studies first-principles magnetism, attended Hue 2010–2014 and Osaka 2015–2021, and currently remains at SANKEN. Hamamatsu's dentistry researcher earned Hiroshima doctorate in 2011 and has Hiroshima/Kagoshima medical appointments. Different people, not a move. Adelaide vp-0689 has a South Australia 2013 doctorate, also different. Other matches concern engineering, computing, philosophy, clinical specialties, or industrial research and have no identity URL overlap. Appended employer to distinguish the genuinely identical roster name. Not in already-proposed.txt."
+      }
+    },
+    {
+      "entry": {
+        "name": "Thi Ngoc Huyen Vu",
+        "university": "Tohoku University",
+        "country": "Japan",
+        "rank": "Assistant Professor",
+        "track": "Tenure-line",
+        "department": "Institute for Materials Research, Multi-Functional Materials Science",
+        "field": "Physics & Astronomy",
+        "researchAreas": [
+          "First-Principles Calculations",
+          "Point Defects",
+          "Spintronics",
+          "Magnetism",
+          "Materials Science"
+        ],
+        "phdInstitution": "Osaka University",
+        "profileUrl": "https://www.r-info.tohoku.ac.jp/en/6ce5c739d28ac2963beb497496e6ac1a.html",
+        "websiteUrl": "https://kumagailab.imr.tohoku.ac.jp/en/member/",
+        "scholarUrl": "https://scholar.google.com/citations?user=aiKAgucAAAAJ"
+      },
+      "evidence": {
+        "currentRole": "https://www.r-info.tohoku.ac.jp/en/6ce5c739d28ac2963beb497496e6ac1a.html — 'Institute for Materials Research, Tohoku University Assistant Professor', April 2024–present. https://www.sc.imr.tohoku.ac.jp/eng/center/organization.html explicitly distinguishes the former Specially Appointed Assistant Professor post ending March 2024 from the regular assistant-professor appointment beginning April 2024. Current https://kumagailab.imr.tohoku.ac.jp/en/member/ confirms the group and links the Scholar account.",
+        "doctorateOrPapers": "https://www.sc.imr.tohoku.ac.jp/public_info/pdf/ccmsnews/ccmsnews20200623.pdf, printed p.13: 'after I graduated from a doctoral program at Osaka University'. Official current researcher biography independently records Osaka doctoral studies and lists multiple 2025–2026 papers. Degree year omitted rather than inferred from the education interval.",
+        "vietnameseSignal": "https://www.sc.imr.tohoku.ac.jp/public_info/pdf/ccmsnews/ccmsnews20200623.pdf, printed p.13: 'I originally come from Vietnam.' Current researcher biography also records Hanoi National University of Education degrees.",
+        "dedup": "Ran matcher with Thi Ngoc Huyen Vu, the individual institutional page, lab page, university-linked Scholar, https://researchmap.jp/VuHuyen, and https://orcid.org/0009-0005-9628-5956: no roster or retired-id matches. Not in already-proposed.txt. Old special-appointment listings refer to her previous job, not her current title."
+      }
+    },
+    {
+      "entry": {
+        "name": "Phuong Thao Tran",
+        "university": "Nagaoka University of Technology",
+        "country": "Japan",
+        "rank": "Assistant Professor",
+        "track": "Tenure-line",
+        "department": "Electrical, Electronics and Information Engineering",
+        "field": "Engineering",
+        "researchAreas": [
+          "Motion Control",
+          "Deep Learning",
+          "Artificial Intelligence"
+        ],
+        "phdInstitution": "Nagaoka University of Technology",
+        "phdYear": 2013,
+        "msInstitution": "Nagaoka University of Technology",
+        "profileUrl": "https://whs.nagaokaut.ac.jp/elemech/member/THAO.html"
+      },
+      "evidence": {
+        "currentRole": "https://whs.nagaokaut.ac.jp/elemech/member/THAO.html — 'Tran Phuong Thao' and '職位 助教'. This is the person's live Miyazaki Laboratory biography, notwithstanding the erroneous browser title mentioning another lab member. https://www.nagaokaut.ac.jp/admissions/exam/assets/gaiyou_syushi_r8.pdf was opened and confirms the 2026 faculty list; the individual biography and current lab research match it. Ordinary 助教, not 特任.",
+        "doctorateOrPapers": "https://whs.nagaokaut.ac.jp/elemech/member/THAO.html explicitly gives Nagaoka University of Technology electrical-engineering PhD 2013 and M.Eng. 2010.",
+        "vietnameseSignal": "The individual university biography explicitly identifies origin as Vietnam, Ho Chi Minh City (出身 ベトナム ホーチミン市).",
+        "dedup": "Ran matcher with Phuong Thao Tran and the individual employer biography. Name hits vp-0463 (mathematics/statistics education), vp-1750 (Bristol business/operations), vp-2156 (Purdue-trained language scholar), and vp-2540 (Paris-Sorbonne environmental geography) have different fields and histories from this Nagaoka electrical-engineering doctorate. No URL match. Not in already-proposed.txt."
+      }
+    },
+    {
+      "entry": {
+        "name": "Thi My Loan Phan",
+        "university": "Osaka University",
+        "country": "Japan",
+        "city": "Minoh",
+        "rank": "Associate Professor",
+        "track": "Tenure-line",
+        "department": "Graduate School of Humanities, Division of Foreign Studies",
+        "field": "Humanities",
+        "researchAreas": [
+          "Vietnamese Studies",
+          "Linguistics",
+          "Ageing and Elder Care",
+          "Vietnamese Migrants in Japan",
+          "Translation and Interpreting Education"
+        ],
+        "phdInstitution": "Osaka University of Foreign Studies",
+        "phdYear": 2006,
+        "profileUrl": "https://www.sfs.osaka-u.ac.jp/teacher/696/"
+      },
+      "evidence": {
+        "currentRole": "https://www.sfs.osaka-u.ac.jp/teacher/696/ — '准教授 PHAN THI MY LOAN'. Dedicated faculty biography identifies Vietnamese studies and the Minoh campus address. Linked https://rd.iai.osaka-u.ac.jp/en/315a70d2ac848830.html returned HTTP 200 via direct request after browser-tool 502 errors; it confirms the Graduate School of Humanities, Division of Foreign Studies appointment from October 2022 to present. Non-特任 professorial ladder, following lecturer and assistant-professor posts.",
+        "doctorateOrPapers": "https://ir.library.osaka-u.ac.jp/repo/ouka/all/58803/gk00066_Abstract.pdf records the Japanese-language/culture doctorate awarded September 27, 2006. Her live university researcher page explicitly identifies the 2006 doctoral dissertation at Osaka University of Foreign Studies, distinguishing the historical awarding institution from the current employer/archive host.",
+        "vietnameseSignal": "Official researcher profile documents undergraduate study at Ho Chi Minh City University and Vietnamese publications; Thi My Loan is also an affirmative Vietnamese given-name combination. No unsourced diacritics proposed.",
+        "dedup": "Ran matcher with Thi My Loan Phan, dedicated faculty profile, full university researcher profile, and department-linked https://sites.google.com/view/vietnamexploration-vn/. Only vp-1724 My V.T. Phan matched by name: that is an Oxford-trained viral-genomics researcher at Arizona State, with Flinders undergraduate study. Distinct from this Vietnamese/Japanese linguistics scholar. No identity URL overlap or retired-id match. Not in already-proposed.txt."
+      }
+    },
+    {
+      "entry": {
+        "name": "Vu Quynh Anh Cao",
+        "university": "University of Tokyo",
+        "country": "Japan",
+        "city": "Tokyo",
+        "rank": "Assistant Professor",
+        "track": "Tenure-line",
+        "department": "Department of Civil Engineering, Graduate School of Engineering",
+        "field": "Earth & Environmental Sciences",
+        "researchAreas": [
+          "Climate Change Adaptation",
+          "Flood Early Warning Systems",
+          "Flood Risk Management",
+          "Disaster Risk Reduction",
+          "Human Behavior"
+        ],
+        "phdInstitution": "University of Tokyo",
+        "phdYear": 2022,
+        "msInstitution": "University of Tokyo",
+        "undergradInstitution": "Ritsumeikan Asia Pacific University",
+        "undergradYear": 2017,
+        "profileUrl": "https://www.u-tokyo.ac.jp/focus/en/people/k0001_05901.html",
+        "websiteUrl": "https://sites.google.com/g.ecc.u-tokyo.ac.jp/anh-cao/home"
+      },
+      "evidence": {
+        "currentRole": "https://www.u-tokyo.ac.jp/focus/en/people/k0001_05901.html returned HTTP 200 and the actual individual biography via direct request; browser fetches timed out. It lists Graduate School of Engineering and translates the rank as 'Research Associate'. Current https://hydro.t.u-tokyo.ac.jp/member/index.html labels her 'Assistant Professor', distinct from project faculty. https://www.t.u-tokyo.ac.jp/topics/tp2026-09-30-001 is the institutional September 2026 corroborating lead explicitly calling her 社会基盤学専攻 助教. Regular current 助教 replaces the older IIS 特任 researcher/assistant-professor listings.",
+        "doctorateOrPapers": "The opened individual university page explicitly states PhD. Its university-lab-linked personal page https://sites.google.com/g.ecc.u-tokyo.ac.jp/anh-cao/home gives University of Tokyo Sustainability Science PhD September 2022, master's September 2019, and Ritsumeikan Asia Pacific undergraduate degree September 2017. Tokyo address is explicit there.",
+        "vietnameseSignal": "CAO Vu Quynh Anh is the full name on the employer biography and university-linked personal page. Vu Quynh Anh is an affirmative Vietnamese given-name combination beyond Cao; not a surname-only inference.",
+        "dedup": "Ran matcher with Vu Quynh Anh Cao and both the institutional individual page and personal page. Name hits vp-1862 (Dublin finance scholar) and vp-3013 (Minnesota 2013 battery-chemistry PhD at Argonne) differ from this University of Tokyo 2022 sustainability-science PhD. No URL match. Not in already-proposed.txt. Older project-role records were not treated as the current appointment."
+      }
+    },
+    {
+      "entry": {
+        "name": "Hoang-Nam Tran",
+        "university": "Tokushima University",
+        "country": "Japan",
+        "rank": "Associate Professor",
+        "track": "Tenure-line",
+        "department": "International Center",
+        "field": "Education",
+        "researchAreas": [
+          "Intercultural Communication",
+          "Sociology of Education",
+          "Public Health",
+          "Medicine"
+        ],
+        "phdInstitution": "Tokushima University",
+        "phdYear": 2010,
+        "profileUrl": "https://web.db.tokushima-u.ac.jp/cgi-bin/edb_browse?EID=321995"
+      },
+      "evidence": {
+        "currentRole": "https://web.db.tokushima-u.ac.jp/cgi-bin/edb_browse?EID=321995 returned HTTP 200 via direct request after browser timeout. It explicitly records '准教授', starting October 1, 2024, classified as regular primary faculty (本務教員) and full time (常勤). Current organization is International Center from April 1, 2026. This is a faculty appointment, not an ordinary international-office staff job. Display name HoangNam Tran; hyphenated Hoang-Nam also appears in the research record.",
+        "doctorateOrPapers": "Same live employer record explicitly gives Ph.D. (Medical Science), awarding institution Tokushima University, and award date September 24, 2010. Research fields are listed in the employer's standard English display. No doctorate inferred from a title.",
+        "vietnameseSignal": "Hoang-Nam is an affirmative Vietnamese given-name combination beyond Tran. The university profile additionally lists Japan–Vietnam Partnership activities and Vietnamese public-health/obstetrics society memberships.",
+        "dedup": "Ran matcher with HoangNam Tran, Hoang Nam Tran, Nam Hoang Tran, and Tran Hoang-Nam, plus the institutional profile and employer-listed https://orcid.org/0000-0002-9985-5628. Expanded-name hits: vp-0471 neurology/neurosurgery, vp-0941 Arkansas-trained asphalt engineer, vp-1033 UNE economist, vp-1145 Pittsburgh-trained computational mathematician, vp-2249 UC Davis pathology/laboratory medicine scholar. None has the Tokushima 2010 doctorate, intercultural/education role, or identity URL. No retired-id match. The generic earlier-proposed Nam Tran is not this fuller-name identity; no exact or reordered full-name entry in already-proposed.txt."
+      }
+    }
+  ],
+  "already_listed": [
+    {
+      "name": "Van-Nam Huynh",
+      "id": "vp-0843",
+      "note": "Opened https://fp.jaist.ac.jp/public/Default2.aspx?id=370&l=0; current JAIST professor, Vietnam Academy mathematics PhD 1999. Matcher confirms identity."
+    },
+    {
+      "name": "Thi Mai Lam Huynh",
+      "id": "vp-1198",
+      "note": "Opened https://trios.tsukuba.ac.jp/researcher/0000005237; current Tsukuba associate professor from April 2026. Matcher resolves to roster's Lam Thi Mai Huynh; not new."
+    },
+    {
+      "name": "Viet Ton Ta",
+      "id": "vp-0990",
+      "note": "Opened https://ag.kyushu-u.ac.jp/english/organization/teacher/prof/ta_viet_ton/; current Kyushu agriculture associate professor. Matcher confirms name and stored portrait-source URL."
+    },
+    {
+      "name": "Binh Nghiem-Phu",
+      "id": "vp-1307",
+      "note": "Opened https://www.u-hyogo.ac.jp/g3s/gba/researchfield/nghiem_phu_binh/index.html; current Hyogo associate professor, Keio doctorate, marketing/consumer behavior. Matcher confirms identity."
+    },
+    {
+      "name": "Duy Phuoc Tran",
+      "id": "vp-1580",
+      "note": "Opened https://strdb.s.isct.ac.jp/html/100002523_en.html and https://www.kitao.bio.titech.ac.jp/duyE.html; Science Tokyo assistant professor, Tokyo PhD 2018. Matcher confirms existing biography URL. Tran Phuoc Duy name order is the same person."
+    }
+  ],
+  "possible_move": [],
+  "rejected": [
+    {
+      "name": "Cuong Tan Huynh",
+      "reason": "Current Gakushuin professor verified on https://www.univ.gakushuin.ac.jp/fis/academics/english/teacher/huynh.html. However, the opened official 2026 faculty appointment roster https://www.univ.gakushuin.ac.jp/about/docs/gakushuin_kokusaibunkakoryukenkyuka_2508nsecchi_meibo.pdf lists Master of International Management, not a doctorate. No two qualifying recent papers at this employer established. Does not clear this brief's doctorate-or-papers gate; do not borrow credentials from engineering namesakes."
+    },
+    {
+      "name": "Thi Mai Dung Do",
+      "reason": "Current ordinary Nagaoka assistant-professor role verified in https://etigo.nagaokaut.ac.jp/english/people/people.html, with long-running regular appointment supported by the 2018–2025 official staff material. Doctorate is a strong lead from J-GLOBAL and the American Ceramic Society biography. Excluded from verified candidates because an opened individual employer profile/biography was not found: the employer staff listing contains only her name/title. Do not substitute a guessed URL or a society profile for this brief's profileUrl requirement. Matcher found only unrelated vp-0438 Mai Do, a Johns Hopkins-trained Tulane public-health scholar."
+    },
+    {
+      "name": "Thi Nhu Quynh Phan",
+      "reason": "https://tsg.hiroshima-u.ac.jp/research/ surfaced a 2025 award story calling this collaborator Prof.; no individual current Japanese employer biography or permanent Japanese appointment was verified. Remains an unverified lead, not a candidate."
+    },
+    {
+      "name": "Thi Thanh Huyen Tran",
+      "reason": "Opened https://www.vision.is.tohoku.ac.jp/?team=tran-thi-thanh-huyen-2, which says EMCR Assistant Professor. This run did not establish permanent appointment terms or doctorate evidence for this individual. Generic Tohoku EMCR vacancies include initial fixed terms, but those vacancy terms must not be attributed to her without identity-specific evidence. Held out pending permanent-role verification."
+    },
+    {
+      "name": "Duc Tung Ta",
+      "reason": "Search-discovered Keio researcher directory https://k-ris.keio.ac.jp/search?k=1&kc=1&l=ja&m=affiliation&o=name-a&p=131&pp=10 explicitly labels the associate-professor lead 准教授（有期）, a fixed-term appointment. Outside the permanent-only slice; not promoted from search lead to verified candidate."
+    },
+    {
+      "name": "Van An Dinh",
+      "reason": "Already listed as vp-1339, but current Osaka sources surfaced in this sweep label the role 特任教授 / Specially Appointed Professor: https://rd.iai.osaka-u.ac.jp/en/0c551756e7e7190f.html and https://prec.eng.osaka-u.ac.jp/06/. Outside this slice's non-特任 constraint. No roster edit made."
+    },
+    {
+      "name": "Minh Huong Nguyen / Huong Minh Nguyen",
+      "reason": "Jichi bacteriology staff lead https://www.jichi.ac.jp/bacteriology/member.html identifies the earlier post as 特命助教 and places the person among departures to a company. No current permanent university appointment established."
+    },
+    {
+      "name": "Thi Nhu Ngoc Do",
+      "reason": "Nagoya climate-science lead https://profs.provost.nagoya-u.ac.jp/html/100014863_en.html is designated Assistant Professor (特任). Outside non-特任 scope."
+    }
+  ],
+  "coverage": [
+    {
+      "employer": "Japan-wide university discovery",
+      "pagesExamined": [],
+      "note": "Later-pass search, not a first surname sweep. Searched ac.jp with given-name tokens Thanh, Hieu, Quynh, Thuy, Khuong, Cuong, Tuyet, Nhung, Hanh, Dung, Bich, Diep, Huyen, Toan, Lien, Hoai, Hau, Hien, Loan, Thang, Ngoc, Thinh, Chau, Giang, Viet, Chinh, Duy, Bao, Huy, Thien, Huong, Tung, Minh, Quang, Duc and Linh, and less-common surnames Huynh, Phung, Luu, Nghiem, Ta, Luong, Kieu, Quach, Dinh and Trinh. English and Japanese rank terms were used. Many results were Vietnam-based visitors, students, papers, or already listed. Search results were discovery only; eight candidates were verified on live employer pages. Broad targeted coverage achieved, not a claim of an exhaustive census. No LinkedIn pages fetched, no login, no Issues/PRs, no roster changes."
+    },
+    {
+      "employer": "Ochanomizu University",
+      "pagesExamined": [
+        "https://researchers2.ao.ocha.ac.jp/html/200000922_en.html",
+        "https://www.de-lab.te.ocha.ac.jp/en/members_e/",
+        "https://www.de-lab.te.ocha.ac.jp/wp-content/uploads/2025/06/FullCV.pdf",
+        "https://www.ocha.ac.jp/introduction/publication/d004147_d/fil/R6_rikoujyoukyou_bunjo.pdf"
+      ],
+      "note": "Hieu/Hanh given-name discovery found a new data-engineering associate professor; full-time faculty corroboration and degrees checked."
+    },
+    {
+      "employer": "Aichi Toho University",
+      "pagesExamined": [
+        "https://www.aichi-toho.ac.jp/about/outline/kyoin/trannhung"
+      ],
+      "note": "Tuyet/Nhung sweep reached this smaller private university. New business/economics candidate distinguished from Toronto historian."
+    },
+    {
+      "employer": "Hamamatsu University School of Medicine",
+      "pagesExamined": [
+        "https://www.hama-med.ac.jp/education/fac-med/dept/regen-med/faculty.html",
+        "https://www.hama-med.ac.jp/uni-e/academics/fac-med/dept/regen-med/faculty.html"
+      ],
+      "note": "Thao discovery reached regenerative medicine. Individual biography checked in both languages; the same-name Osaka materials researcher was independently resolved."
+    },
+    {
+      "employer": "Nagaoka University of Technology",
+      "pagesExamined": [
+        "https://whs.nagaokaut.ac.jp/elemech/member/THAO.html",
+        "https://etigo.nagaokaut.ac.jp/english/people/people.html",
+        "https://www.nagaokaut.ac.jp/admissions/exam/assets/gaiyou_syushi_r8.pdf"
+      ],
+      "note": "New motion-control assistant professor verified. Mai Dung Do held out because no individual employer biography was opened. Staff tables clearly distinguish visiting and ordinary faculty."
+    },
+    {
+      "employer": "Tohoku University",
+      "pagesExamined": [
+        "https://www.r-info.tohoku.ac.jp/en/6ce5c739d28ac2963beb497496e6ac1a.html",
+        "https://kumagailab.imr.tohoku.ac.jp/en/member/",
+        "https://www.sc.imr.tohoku.ac.jp/eng/center/organization.html",
+        "https://www.sc.imr.tohoku.ac.jp/public_info/pdf/ccmsnews/ccmsnews20200623.pdf",
+        "https://www.vision.is.tohoku.ac.jp/?team=tran-thi-thanh-huyen-2"
+      ],
+      "note": "Huyen sweep found materials and computer-vision leads. One regular assistant professor verified after resolving historical 特任 status; EMCR appointment held out. The old web.imr newsletter URL failed; the discovered sc.imr university PDF opened."
+    },
+    {
+      "employer": "Osaka University",
+      "pagesExamined": [
+        "https://www.sfs.osaka-u.ac.jp/teacher/",
+        "https://www.sfs.osaka-u.ac.jp/teacher/696/",
+        "https://rd.iai.osaka-u.ac.jp/en/315a70d2ac848830.html",
+        "https://ir.library.osaka-u.ac.jp/repo/ouka/all/58803/gk00066_Abstract.pdf",
+        "https://www.sanken.osaka-u.ac.jp/en/organization/nnc/nnc04.html",
+        "https://rd.iai.osaka-u.ac.jp/en/02717dffdb91cb1d.html",
+        "https://spin.otri.osaka-u.ac.jp/member/"
+      ],
+      "note": "Loan discovery found new Vietnamese-studies faculty. Live direct HTTP requests recovered individual research profiles after web-tool 502s. Current SANKEN profile resolved Hamamatsu namesake. Vietnamese-language 特任 teachers were not candidates."
+    },
+    {
+      "employer": "University of Tokyo",
+      "pagesExamined": [
+        "https://hydro.t.u-tokyo.ac.jp/member/index.html",
+        "https://sites.google.com/g.ecc.u-tokyo.ac.jp/anh-cao/home",
+        "https://www.u-tokyo.ac.jp/focus/en/people/k0001_05901.html",
+        "https://www.u-tokyo.ac.jp/focus/en/people/index.php?Submit=&pageID=28"
+      ],
+      "note": "Quynh token reached a new regular civil-engineering assistant professor. Individual faculty biography returned HTTP 200 via shell; browser directory search redirected to maintenance. Older IIS project appointments were distinguished from current engineering appointment."
+    },
+    {
+      "employer": "Tokushima University",
+      "pagesExamined": [
+        "https://web.db.tokushima-u.ac.jp/cgi-bin/edb_browse?EID=321995"
+      ],
+      "note": "Thuy search exposed HoangNam Tran through research records. Live individual EDB page establishes regular full-time primary faculty, current International Center affiliation from April 2026, and explicitly dated doctorate. Browser timeout resolved by direct HTTP 200 fetch."
+    },
+    {
+      "employer": "Gakushuin University",
+      "pagesExamined": [
+        "https://www.univ.gakushuin.ac.jp/fis/academics/english/teacher/index.html",
+        "https://www.univ.gakushuin.ac.jp/fis/academics/english/teacher/huynh.html",
+        "https://www.univ.gakushuin.ac.jp/about/docs/gakushuin_kokusaibunkakoryukenkyuka_2508nsecchi_meibo.pdf"
+      ],
+      "note": "Less-common Huynh sweep reached business-English faculty. Current appointment verified but doctorate-or-recent-papers requirement not met; official degree is a master's."
+    },
+    {
+      "employer": "University of Hyogo",
+      "pagesExamined": [
+        "https://www.u-hyogo.ac.jp/g3s/gba/researchfield/nghiem_phu_binh/index.html"
+      ],
+      "note": "Nghiem sweep returned vp-1307; not a new candidate."
+    },
+    {
+      "employer": "Kyushu University",
+      "pagesExamined": [
+        "https://ag.kyushu-u.ac.jp/english/organization/teacher/prof/ta_viet_ton/"
+      ],
+      "note": "Ta/given-name sweep returned vp-0990; already listed."
+    },
+    {
+      "employer": "University of Tsukuba",
+      "pagesExamined": [
+        "https://trios.tsukuba.ac.jp/researcher/0000005237"
+      ],
+      "note": "Huynh/given-name sweep returned vp-1198 under reordered published name; already listed."
+    },
+    {
+      "employer": "Japan Advanced Institute of Science and Technology",
+      "pagesExamined": [
+        "https://fp.jaist.ac.jp/public/Default2.aspx?id=370&l=0"
+      ],
+      "note": "Huynh sweep returned vp-0843. Existing JAIST-heavy roster was used to avoid re-proposing names."
+    },
+    {
+      "employer": "Institute of Science Tokyo",
+      "pagesExamined": [
+        "https://strdb.s.isct.ac.jp/html/100002523_en.html",
+        "https://www.kitao.bio.titech.ac.jp/duyE.html"
+      ],
+      "note": "Duy discovery verified existing vp-1580 under Tran Phuoc Duy / Duy Phuoc Tran order variants."
+    },
+    {
+      "employer": "Hiroshima University",
+      "pagesExamined": [],
+      "note": "Search-scoped Quynh and other given names. Award-story collaborator Thi Nhu Quynh Phan lacked an individual current employer/appointment verification; not counted. Student and Vietnam-based collaborator results rejected during triage."
+    },
+    {
+      "employer": "Regional/private-university follow-up searches",
+      "pagesExamined": [],
+      "note": "Additional institution-scoped searches targeted Kochi, Toyohashi University of Technology, Akita, Fukui, Okayama, Kyushu Institute of Technology, Saga, Yamaguchi, Ehime, Ryukoku and Setsunan with given-name tokens and faculty terms. These were search-level probes, not full directory audits; no additional individually verified permanent candidate resulted. Mixed-OR queries often returned generic directories, so single-token institution queries were also tried. They should not be interpreted as complete negative institutional censuses."
+    },
+    {
+      "employer": "Enrichment limitations",
+      "pagesExamined": [],
+      "note": "No unsourced Vietnamese diacritics, doctorate years, or locations were manufactured. Personal/lab links retained only where employer-linked and identity-resolved. No qualifying major honors were established in this pass; routine poster/paper awards omitted. Portraits not downloaded or proposed without visual verification. Scholar link supplied only for the account explicitly linked by the current Tohoku lab. Some researchmap links returned 403 and were used only as identity URLs in local dedup, not verification evidence."
+    }
+  ]
+}

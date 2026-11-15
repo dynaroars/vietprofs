@@ -1,0 +1,23 @@
+{
+  "verifier": "codex",
+  "input": "maintenance/sector-expansion/runs/w3/us-bio.codex.json",
+  "candidates": [
+    {
+      "name": "Cuong Diep",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Independently opened https://www.iup.edu/biology/faculty/cuong-diep/index.html: live individual employer profile with education, teaching, and current research. The current departmental directory, https://www.iup.edu/biology/faculty/index.html, lists him as Professor in its regular Faculty section, with a Pennsylvania office and institutional contact details. This supports an eligible regular professorial appointment outside Vietnam. The individual profile confirms the Pennsylvania State University PhD (2000–06), Messiah College BS (1996–2000), and Harvard Medical School/Massachusetts General Hospital postdoctoral fellowship (2006–10). Cuong is an affirmative Vietnamese given-name signal beyond the surname, consistent with the maintenance guide; no diacritics are inferred. Independently ran npm run find-roster-matches with his name, employer profile, and linked personal lab URL https://cuongdiep.weebly.com/: no roster or retired-id matches. His name is absent from maintenance/sector-expansion/already-proposed.txt.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Quyen Aoh",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Independently opened https://ww4.gannon.edu/facultyprofiles.aspx?profile=aoh001: live individual employer profile identifying Associate Professor of Biology, with assistant professorship in 2013–2018 followed by associate professorship from 2018 to current. It confirms the University of Virginia Cell Biology PhD (2009), James Madison University BS (2000), and UNC Chapel Hill postdoctoral research (2009–2012). The current employer directory, https://www.gannon.edu/academic-offerings/health-professions-and-sciences/school-of-sciences/department-of-biology/faculty/, independently lists her as Associate Professor and Biology chairperson, separately distinguishing visiting, teaching, and adjunct titles; the directory places the department in Erie, Pennsylvania. This supports an eligible regular faculty appointment outside Vietnam. Quyen is an affirmative Vietnamese given-name signal beyond the surname under the maintenance guide; no ancestry, maiden surname, or diacritics are invented. Independently ran npm run find-roster-matches with her name and employer profile: no roster or retired-id matches. Her name is absent from maintenance/sector-expansion/already-proposed.txt.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    }
+  ],
+  "possible_move": []
+}

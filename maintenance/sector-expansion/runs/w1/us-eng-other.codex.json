@@ -1,0 +1,571 @@
+{
+  "group": "university",
+  "agent": "codex",
+  "slice": "us-eng-other",
+  "finishedAt": "2026-11-14T23:37:25.143156+00:00",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Phu Nguyen",
+        "university": "University of California, Irvine",
+        "department": "Civil and Environmental Engineering",
+        "rank": "Associate Professor",
+        "track": "Research",
+        "country": "United States",
+        "field": "Engineering",
+        "researchAreas": [
+          "Hydrology",
+          "Flood Modeling and Forecasting",
+          "Satellite Precipitation"
+        ],
+        "keywords": [
+          "Hydrology",
+          "Flood Modeling and Forecasting",
+          "Satellite Precipitation"
+        ],
+        "profileUrl": "https://engineering.uci.edu/users/phu-nguyen",
+        "phdInstitution": "University of California, Irvine",
+        "phdYear": 2014,
+        "city": "Irvine",
+        "state": "California",
+        "msInstitution": "University of Melbourne",
+        "undergradInstitution": "Bach Khoa University",
+        "undergradYear": 2003,
+        "portraitSource": "https://engineering.uci.edu/_migrated-binaries/files/phu-nguyen.png"
+      },
+      "evidence": {
+        "currentRole": "https://engineering.uci.edu/users/phu-nguyen — “Associate Adjunct Professor”; associate director of the Center for Hydrometeorology & Remote Sensing. UC salaried adjunct-series exception, Research track; rank normalized to Associate Professor.",
+        "doctorateOrPapers": "https://engineering.uci.edu/users/phu-nguyen — Ph.D., University of California, Irvine, 2014.",
+        "vietnameseSignal": "Official profile states a civil-engineering bachelor’s degree from Bach Khoa University HCMC Vietnam (2003); Vietnamese given name Phu.",
+        "dedup": "npm run find-roster-matches -- \"Phu Nguyen\" --url https://engineering.uci.edu/users/phu-nguyen returned vp-0523, vp-2092 and vp-2437. All are different: vp-2092 has a Delft doctorate and structural/fracture research (live https://research.monash.edu/en/persons/phu-nguyen/); this candidate has a UCI 2014 doctorate and hydrometeorology research. vp-0523 is an economist (Strasbourg PhD); vp-2437 is a SINTEF software researcher (Luxembourg PhD). Exact identity URL absent from roster. UC salaried Adjunct Professor series qualifies on Research under the maintenance exception; live title is Associate Adjunct Professor. Employer page returned HTTP 200 through requests after web tool timeouts. Final command rerun with every stored profile/website/Scholar URL; results consistent with the resolved name matches above."
+      }
+    },
+    {
+      "entry": {
+        "name": "Hien N. Pham",
+        "university": "University of New Mexico",
+        "department": "Chemical and Biological Engineering",
+        "rank": "Assistant Professor",
+        "track": "Research",
+        "country": "United States",
+        "field": "Engineering",
+        "researchAreas": [
+          "Catalysis",
+          "Materials Characterization",
+          "Hydrothermally Stable Catalyst Supports"
+        ],
+        "keywords": [
+          "Catalysis",
+          "Materials Characterization",
+          "Hydrothermally Stable Catalyst Supports"
+        ],
+        "profileUrl": "https://cbe.unm.edu/faculty-staff/research-faculty/hien-pham.html",
+        "phdInstitution": "University of New Mexico",
+        "msInstitution": "University of New Mexico",
+        "undergradInstitution": "University of New Mexico",
+        "city": "Albuquerque",
+        "state": "New Mexico",
+        "portraitSource": "https://cbe.unm.edu/faculty-staff/research-faculty/affil-photos/hien-pham.jpg"
+      },
+      "evidence": {
+        "currentRole": "https://cbe.unm.edu/faculty-staff/research-faculty/hien-pham.html — “Research Assistant Professor”, Chemical and Biological Engineering. Current research-faculty listing and linked historical CV support a continuing faculty-level appointment; rank normalized to Assistant Professor.",
+        "doctorateOrPapers": "https://cbe.unm.edu/faculty-staff/research-faculty/hien-pham-cv.pdf — Ph.D. in Chemical Engineering, University of New Mexico; no year stated. CV and current departmental research-faculty profile identify the same email hipham@unm.edu.",
+        "vietnameseSignal": "Vietnamese given name Hien together with surname Pham, on official profile and linked CV.",
+        "dedup": "npm run find-roster-matches -- \"Hien N. Pham\" --url https://cbe.unm.edu/faculty-staff/research-faculty/hien-pham.html https://cbe.unm.edu/faculty-staff/research-faculty/hien-pham-cv.pdf returned vp-1470, vp-1633, vp-2325. Different people: urban studies/Sherbrooke PhD, economics/Toulouse PhD, and clinical hospital medicine, respectively. Candidate is a UNM-trained chemical engineer with decades of catalysis publications. No exact identity URL match. Final command rerun with every stored profile/website/Scholar URL; results consistent with the resolved name matches above."
+      }
+    },
+    {
+      "entry": {
+        "name": "Ha Van Vo",
+        "university": "Mercer University",
+        "department": "Biomedical Engineering",
+        "rank": "Professor",
+        "track": "Tenure-line",
+        "country": "United States",
+        "field": "Engineering",
+        "researchAreas": [
+          "Prosthetics",
+          "Orthotics",
+          "Biomechanics"
+        ],
+        "keywords": [
+          "Prosthetics",
+          "Orthotics",
+          "Biomechanics"
+        ],
+        "profileUrl": "https://engineering.mercer.edu/meet-the-faculty/dr-ha-van-vo/",
+        "city": "Macon",
+        "state": "Georgia"
+      },
+      "evidence": {
+        "currentRole": "https://engineering.mercer.edu/meet-the-faculty/dr-ha-van-vo/ — “Eminent Scholar and Distinguished University Professor and Professor of Biomedical Engineering”. Current faculty profile corroborated by https://mom.mercer.edu/vietnam/ (2027 program faculty).",
+        "doctorateOrPapers": "https://den.mercer.edu/mercer-on-mission-vietnam-where-a-promise-became-a-mission/ — employer article dated October 5, 2026 identifies Ha Van Vo with M.D., Ph.D., D.P.M. credentials. Retrieved successfully with requests (HTTP 200) after the web tool could not retrieve it; doctorate institution/year omitted because not verified in a live source.",
+        "vietnameseSignal": "https://den.mercer.edu/engineering-professor-dr-ha-vo-recognized-with-healthcare-hero-award/ explicitly says he grew up in South Vietnam. The October 2026 employer article also describes his Vietnamese birthplace and upbringing.",
+        "dedup": "npm run find-roster-matches -- \"Ha Van Vo\" --url https://engineering.mercer.edu/meet-the-faculty/dr-ha-van-vo/ https://faculty.mercer.edu/vo_hv/ returned vp-0938 Van Vo, a UNLV assistant professor in personalized medicine. Different person: this candidate is the longstanding Mercer biomedical-engineering professor and prosthetic-device inventor with MD/PhD/DPM credentials. No exact URL match. Final command rerun with every stored profile/website/Scholar URL; results consistent with the resolved name matches above."
+      }
+    },
+    {
+      "entry": {
+        "name": "Samantha Hoang",
+        "university": "Seattle University",
+        "department": "Mechanical Engineering",
+        "rank": "Assistant Professor",
+        "track": "Tenure-line",
+        "country": "United States",
+        "field": "Engineering",
+        "researchAreas": [
+          "Dynamics and Controls",
+          "Engineering Education",
+          "Multirotor Drones"
+        ],
+        "keywords": [
+          "Dynamics and Controls",
+          "Engineering Education",
+          "Multirotor Drones"
+        ],
+        "profileUrl": "https://www.seattleu.edu/directory/profiles/samantha-hoang-phd.php",
+        "phdInstitution": "University of Washington",
+        "msInstitution": "University of Washington",
+        "undergradInstitution": "Harvey Mudd College",
+        "city": "Seattle",
+        "state": "Washington",
+        "portraitSource": "https://www.seattleu.edu/media/seattle-university/directory/faculty--staff-directory/images/scieng/Hoang,-Samantha.jpg"
+      },
+      "evidence": {
+        "currentRole": "https://www.seattleu.edu/directory/profiles/samantha-hoang-phd.php — “Assistant Professor” in Mechanical Engineering. Faculty biography describes active research and undergraduate supervision.",
+        "doctorateOrPapers": "https://www.seattleu.edu/directory/profiles/samantha-hoang-phd.php — biography reports M.S. and Ph.D. in Mechanical Engineering from the University of Washington; year not stated.",
+        "vietnameseSignal": "https://ojs.library.queensu.ca/index.php/IJESJP/article/download/19022/12649/57002 — her coauthored autobiographical paper (2025), Sam’s Story, describes US birth to Vietnamese refugee parents. Linked as a publication on the official profile; same affiliation/email.",
+        "dedup": "npm run find-roster-matches -- \"Samantha Hoang\" --url https://www.seattle.edu/directory/profiles/samantha-hoang-phd.php and rerun with canonical https://www.seattleu.edu/directory/profiles/samantha-hoang-phd.php: no roster or retired-id matches. Final command rerun with every stored profile/website/Scholar URL; results consistent with the resolved name matches above."
+      }
+    },
+    {
+      "entry": {
+        "name": "Tran Duong Nguyen",
+        "university": "University of Wyoming",
+        "department": "Civil and Architectural Engineering and Construction Management",
+        "rank": "Assistant Professor",
+        "track": "Tenure-line",
+        "country": "United States",
+        "field": "Engineering",
+        "researchAreas": [
+          "Sustainable Construction",
+          "Building Information Modeling",
+          "Digital Twins",
+          "Modular Construction"
+        ],
+        "keywords": [
+          "Sustainable Construction",
+          "Building Information Modeling",
+          "Digital Twins",
+          "Modular Construction"
+        ],
+        "profileUrl": "https://www.uwyo.edu/civil/faculty_staff/faculty/tran-nguyen/index.html",
+        "phdInstitution": "Georgia Institute of Technology",
+        "phdYear": 2026,
+        "msInstitution": "Kennesaw State University",
+        "undergradInstitution": "National University of Civil Engineering",
+        "undergradYear": 2007,
+        "scholarUrl": "https://scholar.google.com/citations?hl=en&oi=ao&user=hdhXx80AAAAJ"
+      },
+      "evidence": {
+        "currentRole": "https://www.uwyo.edu/civil/faculty_staff/faculty/tran-nguyen/index.html — “Incoming Assistant Professor”; experience section dates the University of Wyoming assistant professorship from 2027. Official accepted incoming appointment qualifies under maintenance rules; precise month/day is not supplied.",
+        "doctorateOrPapers": "https://www.uwyo.edu/civil/faculty_staff/faculty/tran-nguyen/index.html — Ph.D. in Building Construction, Georgia Institute of Technology, 2026.",
+        "vietnameseSignal": "Same official profile gives B.A., Architecture and Planning Design, National University of Civil Engineering, Vietnam, 2007, plus Vietnamese architect registration.",
+        "dedup": "npm run find-roster-matches -- \"Tran Duong Nguyen\" --url https://www.uwyo.edu/civil/faculty_staff/faculty/tran-nguyen/index.html returned vp-0023, vp-0105, vp-0129, vp-0358, vp-0503, vp-0788, vp-0983, vp-2340. Different people in EECS, environmental chemistry, biomedical engineering, electrical engineering, computer science or clinical medicine. Particularly vp-0023 is Wyoming EECS faculty with Michigan State PhD 2021, while candidate has Georgia Tech Building Construction PhD 2026. Official identity URL and Scholar ID do not occur in the roster. Incoming appointment starts in 2027; do not present it as already begun. Final command rerun with every stored profile/website/Scholar URL; results consistent with the resolved name matches above."
+      }
+    },
+    {
+      "entry": {
+        "name": "Tho V. Le",
+        "university": "Purdue University",
+        "department": "School of Engineering Technology (Industrial Engineering Technology)",
+        "rank": "Assistant Professor",
+        "track": "Tenure-line",
+        "country": "United States",
+        "field": "Engineering",
+        "researchAreas": [
+          "Transportation and Logistics",
+          "Supply Chain Engineering",
+          "Operations Research",
+          "Applied Machine Learning"
+        ],
+        "keywords": [
+          "Transportation and Logistics",
+          "Supply Chain Engineering",
+          "Operations Research",
+          "Applied Machine Learning"
+        ],
+        "profileUrl": "https://polytechnic.purdue.edu/profile/thovle",
+        "phdInstitution": "Purdue University",
+        "msInstitution": "Purdue University",
+        "city": "West Lafayette",
+        "state": "Indiana",
+        "websiteUrl": "https://thovle.weebly.com/",
+        "scholarUrl": "https://scholar.google.com/citations?hl=en&user=e5FTFqgAAAAJ"
+      },
+      "evidence": {
+        "currentRole": "https://polytechnic.purdue.edu/profile/thovle — “tenure-track Assistant Professor of Industrial Engineering Technology”; directs Smart Logistics Systems Research Lab.",
+        "doctorateOrPapers": "https://polytechnic.purdue.edu/profile/thovle — Ph.D. in Transportation Systems, Purdue University. Linked lab site https://thovle.weebly.com/ gives fuller degree name Transportation and Infrastructure Systems Engineering; no year supplied.",
+        "vietnameseSignal": "Vietnamese given name Tho, with surname Le, on official Purdue profile. Lab contact publishes fuller name Tho V. Le.",
+        "dedup": "npm run find-roster-matches -- \"Tho Le\" --url https://polytechnic.purdue.edu/profile/thovle returned vp-0507 Tho Le-Ngoc. Rerun using \"Tho V. Le\" with employer URL, https://thovle.weebly.com/ and https://scholar.google.com/citations?hl=en&user=e5FTFqgAAAAJ returned the same single hit. Different person: vp-0507 is McGill electrical engineering professor (McGill PhD 1983), candidate is Purdue industrial-engineering-technology faculty with Purdue transportation PhD. No exact identity URL match. Final command rerun with every stored profile/website/Scholar URL; results consistent with the resolved name matches above."
+      }
+    },
+    {
+      "entry": {
+        "name": "Phuong Tung Hoang",
+        "university": "University of Guam",
+        "department": "Civil Engineering, School of Engineering",
+        "rank": "Assistant Professor",
+        "track": "Tenure-line",
+        "country": "United States",
+        "field": "Engineering",
+        "researchAreas": [
+          "Geotechnical Engineering",
+          "Soil Stabilization"
+        ],
+        "keywords": [
+          "Geotechnical Engineering",
+          "Soil Stabilization"
+        ],
+        "profileUrl": "https://www.uog.edu/directory/?.=Search&departments_name=School%2Bof%2BEngineering&employee_type=&keywords=&name=",
+        "city": "Mangilao",
+        "state": "Guam",
+        "portraitSource": "https://www.uog.edu/_resources/images/_directory/phuong-tung-hoang-300.png"
+      },
+      "evidence": {
+        "currentRole": "https://www.uog.edu/directory/?.=Search&departments_name=School%2Bof%2BEngineering&employee_type=&keywords=&name= — “Assistant Professor of Civil Engineering”. Directory is a filtered departmental directory containing his named profile; October 2026 university research announcement corroborates active appointment. Guam is included as a US territory.",
+        "doctorateOrPapers": "https://www.uog.edu/news-announcements/2026-2027/UOG-EPSCoRECORE-awards-seed-funding-to-advance-local-research-and-workforce-development — October 2, 2026 university research announcement identifies Phuong Tung Hoang, Ph.D., as civil-engineering assistant professor and PI of a soil-stabilization project. Institution/year not supplied; omitted.",
+        "vietnameseSignal": "Vietnamese given names Phuong Tung with surname Hoang on the official university directory.",
+        "dedup": "npm run find-roster-matches -- \"Phuong Tung Hoang\" --url \"https://www.uog.edu/directory/?.=Search&departments_name=School%2Bof%2BEngineering&employee_type=&keywords=&name=\" returned vp-1663 Phuong Hoang. Different person: vp-1663 is ORNL electrical/grid researcher Peter Hoang with Clemson PhD 2021; candidate is a civil/geotechnical engineering faculty member at Guam. No exact profile URL match. Final command rerun with every stored profile/website/Scholar URL; results consistent with the resolved name matches above."
+      }
+    }
+  ],
+  "already_listed": [
+    {
+      "name": "Jonathan T. Pham",
+      "id": "vp-0098",
+      "note": "Cincinnati materials directory and research profile identify existing Jonathan T. Pham; no new ID. npm run find-roster-matches was run with roster name and profile URL and returned this ID."
+    },
+    {
+      "name": "Christine Nguyen - Northern Illinois University",
+      "id": "vp-0116",
+      "note": "NIU industrial engineering department chair; same USC doctorate. npm run find-roster-matches was run with roster name and profile URL and returned this ID."
+    },
+    {
+      "name": "Thang Pham",
+      "id": "vp-0118",
+      "note": "Virginia Tech Thang Pham, Berkeley materials PhD 2018. npm run find-roster-matches was run with roster name and profile URL and returned this ID."
+    },
+    {
+      "name": "Quan Nguyen",
+      "id": "vp-0119",
+      "note": "USC robotics faculty Quan Nguyen, CMU PhD 2017. npm run find-roster-matches was run with roster name and profile URL and returned this ID."
+    },
+    {
+      "name": "Nhut Tan Ho",
+      "id": "vp-0122",
+      "note": "CSUN mechanical engineering professor Nhut Tan Ho. npm run find-roster-matches was run with roster name and profile URL and returned this ID."
+    },
+    {
+      "name": "Kytai Truong Nguyen",
+      "id": "vp-0123",
+      "note": "UTA bioengineering faculty Kytai Nguyen; shortened name matches Kytai Truong Nguyen. npm run find-roster-matches was run with roster name and profile URL and returned this ID."
+    },
+    {
+      "name": "The Nguyen",
+      "id": "vp-0126",
+      "note": "Fresno State mechanical engineering faculty The Nguyen. npm run find-roster-matches was run with roster name and profile URL and returned this ID."
+    },
+    {
+      "name": "Thao D. (Vicky) Nguyen",
+      "id": "vp-0132",
+      "note": "JHU mechanical engineering professor Thao (Vicky) Nguyen. npm run find-roster-matches was run with roster name and profile URL and returned this ID."
+    },
+    {
+      "name": "Vinh Nguyen - Michigan Technological University",
+      "id": "vp-0134",
+      "note": "Michigan Tech mechanical and aerospace faculty Vinh Nguyen. npm run find-roster-matches was run with roster name and profile URL and returned this ID."
+    },
+    {
+      "name": "Win PV Nguyen",
+      "id": "vp-0242",
+      "note": "Virginia Tech collegiate faculty Win PV Nguyen. npm run find-roster-matches was run with roster name and profile URL and returned this ID."
+    },
+    {
+      "name": "Dung Trung Nguyen",
+      "id": "vp-0281",
+      "note": "SPU Dung Nguyen is existing Dung Trung Nguyen; same QUT PhD 2015. npm run find-roster-matches was run with roster name and profile URL and returned this ID."
+    },
+    {
+      "name": "Duc-Huy Nguyen",
+      "id": "vp-0289",
+      "note": "Wisconsin biomedical engineering faculty Duc-Huy Nguyen. npm run find-roster-matches was run with roster name and profile URL and returned this ID."
+    },
+    {
+      "name": "Tam Nguyen - University of Maryland, College Park",
+      "id": "vp-0339",
+      "note": "Maryland aerospace faculty Tam Nguyen. npm run find-roster-matches was run with roster name and profile URL and returned this ID."
+    },
+    {
+      "name": "Long Duy Nguyen",
+      "id": "vp-0392",
+      "note": "FGCU Long Nguyen is existing Long Duy Nguyen; same Berkeley civil PhD 2007. npm run find-roster-matches was run with roster name and profile URL and returned this ID."
+    },
+    {
+      "name": "Quang Ngoc Vinh Tran",
+      "id": "vp-0404",
+      "note": "Michigan Tech civil/environmental/geospatial faculty Quang Ngoc Vinh Tran. npm run find-roster-matches was run with roster name and profile URL and returned this ID."
+    },
+    {
+      "name": "Thang Tien Nguyen",
+      "id": "vp-1697",
+      "note": "TAMU-Corpus Christi engineering faculty Thang Tien Nguyen. npm run find-roster-matches was run with roster name and profile URL and returned this ID."
+    },
+    {
+      "name": "Thomas Tran",
+      "id": "vp-1784",
+      "note": "Cincinnati mechanical engineering educator Thomas Tran already listed. npm run find-roster-matches was run with roster name and profile URL and returned this ID."
+    },
+    {
+      "name": "Ngoc Cindy Pham",
+      "id": "vp-2739",
+      "note": "NYU visiting research appointment belongs to existing Brooklyn College marketing faculty Ngoc Cindy Pham; no new ID; not a primary engineering appointment. npm run find-roster-matches was run with roster name and profile URL and returned this ID."
+    },
+    {
+      "name": "Vicky Doan-Nguyen",
+      "id": "vp-2965",
+      "note": "Historical Ohio State materials/mechanical appointment belongs to existing Vicky Doan-Nguyen, now rostered at Aerospace Corporation. Old university seminar is not current evidence. npm run find-roster-matches was run with roster name and profile URL and returned this ID."
+    }
+  ],
+  "possible_move": [],
+  "rejected": [
+    {
+      "name": "Peter (Anh Hung) Nguyen",
+      "reason": "https://me.lafayette.edu/faculty-and-staff/ lists Visiting Assistant Professor; visiting roles excluded."
+    },
+    {
+      "name": "Vu Nguyen (University of Louisiana at Lafayette)",
+      "reason": "https://louisiana.edu/directory/people/vu-nguyen lists Instructor and a doctorate, but no affirmative full-time/continuing appointment or established teaching ladder was verified. Withheld."
+    },
+    {
+      "name": "Cac M. Dao",
+      "reason": "https://www.caem.engineering.arizona.edu/faculty-staff/faculty/cac-dao shows Professor of Practice and Adjunct Lecturer. Own site https://www.cacdao.com/ says he leads the Arizona microcampus program in Phnom Penh; US physical base and permanent full-time US appointment not established."
+    },
+    {
+      "name": "Nhan Nguyen (Santa Clara University)",
+      "reason": "https://www.scu.edu/engineering/academic-programs/aerospace-engineering-program/faculty-and-staff/ lists Adjunct Lecturer, with primary NASA role; outside this university slice."
+    },
+    {
+      "name": "Khanh D. Pham",
+      "reason": "https://ece.unm.edu/faculty-staff/research-faculty-profiles/khanh-pham.html lists Adjunct Research Professor and primary AFRL role; outside this university engineering slice."
+    },
+    {
+      "name": "Minh Hung Nguyen (Georgia Tech)",
+      "reason": "https://ae.gatech.edu/instructors-record-spring-2026 is an instructors-of-record page; no stable faculty appointment or completed doctorate established. Teaching a course is insufficient."
+    },
+    {
+      "name": "Van Anh Nguyen (UW-Stout)",
+      "reason": "Live employer-hosted CV https://www.uwstout.edu/sites/default/files/cv/2025-08/Nguyen-CV-2025.pdf reports Lecturer in Mechanical Engineering and Osaka doctorate 2018, but does not establish full-time/continuing employment. Overlapping Vietnam lecturer dates further require clarification; withheld under Teaching-track permanence rule."
+    },
+    {
+      "name": "Troy Nguyen (Florida Tech)",
+      "reason": "https://www.fit.edu/faculty-profiles/n/nguyen-troy/ establishes professor role and Colorado State mechanical PhD 2000, but affirmative Vietnamese signal beyond surname not located. Same-name search hits were unrelated people; withheld under BRIEF2."
+    },
+    {
+      "name": "Gia Huy Pham",
+      "reason": "https://directory.statler.wvu.edu/faculty-staff-directory/gia-huy-pham is in Fundamentals of Engineering, outside the assigned departmental slice; page opening returned 403, so search extract alone was not accepted as verification."
+    },
+    {
+      "name": "Trang Pham",
+      "reason": "https://sites.google.com/view/phamtrang identifies public-affairs/policy researcher at SUSS, not US engineering faculty."
+    }
+  ],
+  "coverage": [
+    {
+      "employer": "University of California, Irvine",
+      "pagesExamined": [
+        "https://engineering.uci.edu/users/phu-nguyen"
+      ],
+      "note": "Civil/environmental research faculty; live HTTP 200 profile, UC adjunct-series exception. New candidate."
+    },
+    {
+      "employer": "University of New Mexico",
+      "pagesExamined": [
+        "https://cbe.unm.edu/faculty-staff/research-faculty/hien-pham.html",
+        "https://cbe.unm.edu/faculty-staff/research-faculty/hien-pham-cv.pdf",
+        "https://ece.unm.edu/faculty-staff/research-faculty-profiles/khanh-pham.html"
+      ],
+      "note": "Chemical/biological research faculty candidate; AFRL adjunct excluded from slice."
+    },
+    {
+      "employer": "Mercer University",
+      "pagesExamined": [
+        "https://engineering.mercer.edu/meet-the-faculty/dr-ha-van-vo/",
+        "https://mom.mercer.edu/vietnam/",
+        "https://den.mercer.edu/engineering-professor-dr-ha-vo-recognized-with-healthcare-hero-award/",
+        "https://den.mercer.edu/mercer-on-mission-vietnam-where-a-promise-became-a-mission/"
+      ],
+      "note": "Biomedical engineering professor verified. Last article fetched HTTP 200 with requests; web tool could not retrieve it. Research-associate program team names not promoted to candidates without faculty-equivalence/doctorate evidence."
+    },
+    {
+      "employer": "Seattle University",
+      "pagesExamined": [
+        "https://www.seattleu.edu/directory/profiles/samantha-hoang-phd.php",
+        "https://ojs.library.queensu.ca/index.php/IJESJP/article/download/19022/12649/57002"
+      ],
+      "note": "Mechanical engineering faculty and affirmative Vietnamese ancestry verified. Correct canonical domain seattleu.edu opens normally; initial seattle.edu mirror had web-tool failures."
+    },
+    {
+      "employer": "University of Wyoming",
+      "pagesExamined": [
+        "https://www.uwyo.edu/civil/faculty_staff/faculty/tran-nguyen/index.html"
+      ],
+      "note": "Civil/construction incoming 2027 candidate distinct from existing EECS Duong Nguyen."
+    },
+    {
+      "employer": "Purdue University",
+      "pagesExamined": [
+        "https://polytechnic.purdue.edu/profile/thovle",
+        "https://thovle.weebly.com/"
+      ],
+      "note": "Industrial engineering technology tenure-line faculty verified. Employer-linked Scholar identity captured; Scholar fetch 403, no bypass attempted."
+    },
+    {
+      "employer": "University of Guam",
+      "pagesExamined": [
+        "https://www.uog.edu/directory/?.=Search&departments_name=School%2Bof%2BEngineering&employee_type=&keywords=&name=",
+        "https://www.uog.edu/news-announcements/2026-2027/UOG-EPSCoRECORE-awards-seed-funding-to-advance-local-research-and-workforce-development"
+      ],
+      "note": "US-territory civil faculty candidate; current employer identifies PhD without institution/year."
+    },
+    {
+      "employer": "Florida Gulf Coast University",
+      "pagesExamined": [
+        "https://www.fgcu.edu/directory/lnguyen"
+      ],
+      "note": "Civil/construction faculty Long Nguyen resolved to vp-0392 Long Duy Nguyen."
+    },
+    {
+      "employer": "University of Cincinnati",
+      "pagesExamined": [
+        "https://www.ceas.uc.edu/academics/departments/mechanical-materials-engineering/People/materials-science-faculty.html",
+        "https://researchdirectory.uc.edu/p/phamj5",
+        "https://www.ceas.uc.edu/academics/departments/mechanical-materials-engineering/People/mechanical-engineering-faculty.html"
+      ],
+      "note": "Materials and mechanical directories searched; Jonathan Pham and Thomas Tran already listed. Search-discovery pages; not accepted as new candidate evidence."
+    },
+    {
+      "employer": "Virginia Tech",
+      "pagesExamined": [
+        "https://mse.vt.edu/faculty-staff/Faculty/thangpham.html",
+        "https://www.ise.vt.edu/people/faculty/nguyen_win.html"
+      ],
+      "note": "Materials and industrial leads already listed; search-discovery coverage."
+    },
+    {
+      "employer": "University of Texas at Arlington",
+      "pagesExamined": [
+        "https://www.uta.edu/academics/schools-colleges/engineering/academics/departments/bioengineering/faculty-directory"
+      ],
+      "note": "Bioengineering Kytai Nguyen already listed under fuller name; search-discovery coverage."
+    },
+    {
+      "employer": "Michigan Technological University",
+      "pagesExamined": [
+        "https://www.mtu.edu/mechanical-aerospace/people/faculty/nguyen/",
+        "https://www.mtu.edu/cege/people/faculty-staff/faculty/tran/index.html"
+      ],
+      "note": "Mechanical/aerospace and civil leads already listed; search-discovery coverage."
+    },
+    {
+      "employer": "University of Southern California",
+      "pagesExamined": [
+        "https://viterbi.usc.edu/directory/faculty/Nguyen/Quan"
+      ],
+      "note": "Aerospace/mechanical lead already listed; search-discovery coverage."
+    },
+    {
+      "employer": "University of Maryland, College Park",
+      "pagesExamined": [
+        "https://aero.umd.edu/clark/faculty/1926/Tam-Nguyen"
+      ],
+      "note": "Aerospace lead already listed; search-discovery coverage."
+    },
+    {
+      "employer": "University of Wisconsin-Madison",
+      "pagesExamined": [
+        "https://engineering.wisc.edu/directory/profile/duc-huy-nguyen/"
+      ],
+      "note": "Biomedical faculty already listed; search-discovery coverage."
+    },
+    {
+      "employer": "Seattle Pacific University",
+      "pagesExamined": [
+        "https://spu.edu/academics/college-business-technology/faculty-staff/dung-nguyen-profile"
+      ],
+      "note": "Mechanical faculty already listed under full name; search-discovery coverage."
+    },
+    {
+      "employer": "Johns Hopkins University",
+      "pagesExamined": [
+        "https://engineering.jhu.edu/faculty/thao-vicky-nguyen/"
+      ],
+      "note": "Mechanical faculty already listed; search-discovery coverage."
+    },
+    {
+      "employer": "California State University, Northridge",
+      "pagesExamined": [
+        "https://academics.csun.edu/faculty/nhut.ho"
+      ],
+      "note": "Mechanical faculty already listed; search-discovery coverage."
+    },
+    {
+      "employer": "California State University, Fresno",
+      "pagesExamined": [
+        "https://engineering.fresnostate.edu/about/directory/mechanical/nguyen-the.html"
+      ],
+      "note": "Mechanical faculty already listed; search-discovery coverage."
+    },
+    {
+      "employer": "Northern Illinois University",
+      "pagesExamined": [
+        "https://www.niu.edu/cnguyen/"
+      ],
+      "note": "Industrial faculty already listed; search-discovery coverage."
+    },
+    {
+      "employer": "Florida Institute of Technology",
+      "pagesExamined": [
+        "https://www.fit.edu/faculty-profiles/n/nguyen-troy/"
+      ],
+      "note": "Mechanical/civil faculty lead withheld pending affirmative Vietnamese signal; search-discovery coverage."
+    },
+    {
+      "employer": "Lafayette College",
+      "pagesExamined": [
+        "https://me.lafayette.edu/faculty-and-staff/"
+      ],
+      "note": "Visiting mechanical faculty excluded; search-discovery coverage."
+    },
+    {
+      "employer": "University of Wisconsin-Stout",
+      "pagesExamined": [
+        "https://www.uwstout.edu/sites/default/files/cv/2025-08/Nguyen-CV-2025.pdf"
+      ],
+      "note": "Materials/manufacturing doctorate and mechanical lecturer lead; continuing full-time status unresolved."
+    },
+    {
+      "employer": "New York University",
+      "pagesExamined": [
+        "https://engineering.nyu.edu/academics/departments/technology-management-and-innovation/people",
+        "https://engineering.nyu.edu/faculty/ngoc-cindy-pham"
+      ],
+      "note": "Industrial directory search yielded misleading adjacent title for Ngoc Cindy Pham; opened individual profile confirms visiting role and existing Brooklyn marketing faculty."
+    },
+    {
+      "employer": "Slice-wide discovery",
+      "pagesExamined": [],
+      "note": "Broad searches covered Mechanical, Civil/Environmental, Chemical/Biomolecular, Materials, Aerospace, Industrial and Biomedical Engineering using Nguyen, Tran, Pham, Le, Bui, Hoang, Ngo, Vo, Phan, Dang, Do and Duong plus Vietnam/Vietnamese signals. Yield dominated by existing roster entries, out-of-country appointments, trainees and transient roles. Stopped after broad coverage and seven verified new candidates, below 25 cap. Not an exhaustive census. Every selected name checked against already-proposed.txt; none included. Profile URLs opened live, using requests only where the web reader failed. No LinkedIn pages fetched, no login or bot-check bypass, no GitHub actions, and no roster or other repository file writes. Portrait source URLs are employer-page image links for downstream visual review, not downloaded or independently portrait-validated. Omitted unsourced degree years, diacritics and locations. All new candidates are universities, so institutionType omitted."
+    }
+  ]
+}

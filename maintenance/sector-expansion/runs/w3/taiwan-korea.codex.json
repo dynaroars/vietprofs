@@ -1,0 +1,324 @@
+{
+  "group": "university",
+  "agent": "codex",
+  "slice": "taiwan-korea",
+  "finishedAt": "2026-11-15T01:34:05.338323Z",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Thi Thu Ai Ho",
+        "university": "Ming Chuan University",
+        "country": "Taiwan",
+        "department": "Information Technology and Management",
+        "track": "Tenure-line",
+        "rank": "Assistant Professor",
+        "field": "Computer & Information Sciences",
+        "researchAreas": [
+          "Programming",
+          "Optimization"
+        ],
+        "phdInstitution": "National Taiwan University of Science and Technology",
+        "profileUrl": "https://icac.mcu.edu.tw/學程概況-about-us/師資介紹-faculty-and-staff/行政人員-program-secretary/專任教授-full-time-faculty/"
+      },
+      "evidence": {
+        "currentRole": "https://icac.mcu.edu.tw/學程概況-about-us/師資介紹-faculty-and-staff/行政人員-program-secretary/專任教授-full-time-faculty/ — Under Full-time Faculty: \"Assistant Professor\"; named HO THI THU AI. Regular full-time faculty listing, separate from administrative staff.",
+        "doctorateOrPapers": "https://icac.mcu.edu.tw/學程概況-about-us/師資介紹-faculty-and-staff/行政人員-program-secretary/專任教授-full-time-faculty/ — Education gives a Ph.D. in Industrial Management at National Taiwan University of Science and Technology.",
+        "vietnameseSignal": "https://icac.mcu.edu.tw/學程概況-about-us/師資介紹-faculty-and-staff/行政人員-program-secretary/專任教授-full-time-faculty/ — Vietnamese given-name sequence Thi Thu Ai, published in surname-first form HO THI THU AI; normalized to surname-last without reconstructing diacritics.",
+        "dedup": "npm run find-roster-matches -- \"Thi Thu Ai Ho\" --url <official faculty page> <linked ePortfolio tno=1141202>: no roster or retired-id matches. Also checked published surname-first form against public/data.json and already-proposed.txt.",
+        "limitations": "Linked ePortfolio returned an empty document; retained the opened employer faculty biography as profileUrl. No degree year or diacritic name inferred."
+      }
+    },
+    {
+      "entry": {
+        "name": "Ngoc-Thuy Mai",
+        "university": "Ming Chuan University",
+        "country": "Taiwan",
+        "department": "Finance",
+        "track": "Tenure-line",
+        "rank": "Assistant Professor",
+        "field": "Business & Economics",
+        "researchAreas": [
+          "Corporate Finance",
+          "Trade Uncertainty"
+        ],
+        "phdInstitution": "National Taipei University of Technology",
+        "profileUrl": "https://ms.mcu.edu.tw/en/finance/"
+      },
+      "evidence": {
+        "currentRole": "https://ms.mcu.edu.tw/en/finance/ — \"MAI, NGOC-THUY\" / \"ASSISTANT PROFESSOR\" in the Finance faculty directory.",
+        "doctorateOrPapers": "https://ms.mcu.edu.tw/en/finance/ — \"PH.D. National Taipei University of Technology\" appears in her own faculty block.",
+        "vietnameseSignal": "https://ms.mcu.edu.tw/en/finance/ — Affirmative Vietnamese given name Ngoc-Thuy, paired with Mai; not accepted from the surname alone.",
+        "dedup": "npm run find-roster-matches -- \"Ngoc-Thuy Mai\" --url https://ms.mcu.edu.tw/en/finance/ <linked ePortfolio tno=1141424>: no roster or retired-id matches. Published Mai Ngoc Thuy form and already-proposed.txt checked.",
+        "limitations": "Linked ePortfolio returned an empty document. Profile block supplies no PhD year."
+      }
+    },
+    {
+      "entry": {
+        "name": "Minh Cong Dinh",
+        "university": "National Dong Hwa University",
+        "country": "Taiwan",
+        "department": "Bachelor Program of Digital Marketing and Service Innovation",
+        "track": "Tenure-line",
+        "rank": "Assistant Professor",
+        "field": "Business & Economics",
+        "phdYear": 2025,
+        "profileUrl": "https://sys.ndhu.edu.tw/RD/TeacherTreasury/tlist.aspx?tcher=13682"
+      },
+      "evidence": {
+        "currentRole": "https://dmsi.ndhu.edu.tw/p/426-1208-11.php?Lang=zh-tw — \"Assistant Professor, Minh Cong Dinh\" in the program faculty directory; links directly to https://sys.ndhu.edu.tw/RD/TeacherTreasury/tlist.aspx?tcher=13682. Both employer pages returned HTTP 200 and identified him (requests used where web reader failed).",
+        "doctorateOrPapers": "https://www-test.qmul.ac.uk/business-school/staff/academic/profiles/sungjun-park.html — His doctoral supervisor lists Minh Cong Dinh among completed supervision, explicitly stating PhD awarded in 2025. Opened successfully by requests (HTTP 200); institution awarding the doctorate not inferred.",
+        "vietnameseSignal": "https://dmsi.ndhu.edu.tw/p/426-1208-11.php?Lang=zh-tw — Vietnamese given-name tokens Minh and Cong, and uncommon surname Dinh, on the current employer page. Published alternate form Cong-Minh Dinh appears in https://orcid.org/0000-0002-0157-7448 (discovery/alias lead).",
+        "dedup": "npm run find-roster-matches run for both \"Minh Cong Dinh\" and \"Cong Minh Dinh\", with official TeacherTreasury URL, program faculty URL and ORCID 0000-0002-0157-7448: no roster or retired-id matches. already-proposed.txt checked.",
+        "limitations": "TeacherTreasury personal-data tab returns its navigation shell; appointment is independently present on the program faculty page. Name retains the employer’s surname-last spelling; no diacritics reconstructed."
+      }
+    },
+    {
+      "entry": {
+        "name": "Duy Thanh Tran",
+        "university": "Jeonbuk National University",
+        "country": "South Korea",
+        "department": "Nano Convergence Engineering",
+        "track": "Tenure-line",
+        "rank": "Professor",
+        "field": "Engineering",
+        "researchAreas": [
+          "Biosensors",
+          "Electrocatalysis",
+          "Water Electrolysis"
+        ],
+        "profileUrl": "https://pure.jbnu.ac.kr/en/persons/duy-thanh-tran/"
+      },
+      "evidence": {
+        "currentRole": "https://pure.jbnu.ac.kr/en/persons/duy-thanh-tran/ — \"Duy Thanh Tran\" / \"Professor\", Department of Nano Convergence Engineering. Also listed in the department Faculty directory https://top.jbnu.ac.kr/bintecheng/8753/subview.do; individual detail https://top.jbnu.ac.kr/jbnuProfl/bintecheng/646/5293/artclView.do gives biosensor specialty and dttran@jbnu.ac.kr.",
+        "doctorateOrPapers": "Two identity-linked employer publication records opened: https://pure.jbnu.ac.kr/en/publications/advanced-interface-engineering-of-manganesedoped-biphasic-nickel-/ (Journal of Colloid and Interface Science, 2026-02-15, DOI 10.1016/j.jcis.2025.139348) and https://pure.jbnu.ac.kr/en/publications/charge-deficient-ptcu-clusters-stabilized-vacancy-engineered-mosu/ (Advanced Functional Materials, 2026-02-05, DOI 10.1002/adfm.202515741). Each lists him with the current department, links to this same person record, and shares coauthors Nam Hoon Kim and Joong Hee Lee. No doctorate institution/year inferred from unrelated namesakes.",
+        "vietnameseSignal": "https://pure.jbnu.ac.kr/en/persons/duy-thanh-tran/ — Duy Thanh is an affirmative Vietnamese given-name sequence, with Tran; employer identifies the complete name rather than only a shared surname.",
+        "dedup": "npm run find-roster-matches -- \"Duy Thanh Tran\" --url <Pure profile> <department individual profile> https://orcid.org/0000-0002-8076-7513: fuzzy name hits vp-0417 (Rice electrical engineering), vp-0896 and vp-0975 (US physicians), and retired vp-1190 (Thanh V. Tran, Boston College). Resolved as different people: full names, employer profiles/identity URLs and subject areas differ; no shared identity URL. Read current roster records. already-proposed.txt has no Duy Thanh Tran."
+      }
+    },
+    {
+      "entry": {
+        "name": "Phi-Hai Trinh",
+        "university": "Kookmin University",
+        "city": "Seoul",
+        "country": "South Korea",
+        "department": "Electrical Engineering",
+        "track": "Research",
+        "rank": "Professor",
+        "field": "Engineering",
+        "phdInstitution": "Kookmin University",
+        "phdYear": 2020,
+        "undergradInstitution": "Ho Chi Minh City University of Technology",
+        "undergradYear": 2012,
+        "profileUrl": "https://smartgrid.kookmin.ac.kr/members/professors"
+      },
+      "evidence": {
+        "currentRole": "https://smartgrid.kookmin.ac.kr/members/professors — \"Research Professor, School of Electrical Engineering\" (2023–Present). Employer-hosted Professors page separates his current research-faculty appointment from his former 2020–2023 postdoctoral position; ongoing career faculty role rather than a current trainee appointment.",
+        "doctorateOrPapers": "https://smartgrid.kookmin.ac.kr/members/professors — Ph.D. (combined M.S./Ph.D.) in Electrical Engineering, Kookmin University, 2020.",
+        "vietnameseSignal": "https://smartgrid.kookmin.ac.kr/members/professors — Undergraduate degree at Ho Chi Minh City University of Technology, Vietnam, 2012, plus Vietnamese given name Phi-Hai.",
+        "dedup": "npm run find-roster-matches -- \"Phi-Hai Trinh\" --url https://smartgrid.kookmin.ac.kr/members/professors: no roster or retired-id matches. already-proposed.txt checked. Research Professor maps to rank Professor on Research track.",
+        "limitations": "No researchAreas or honors inferred from the laboratory name or an institution-local award."
+      }
+    },
+    {
+      "entry": {
+        "name": "Trong Thuy Tran",
+        "university": "Asia University",
+        "country": "Taiwan",
+        "department": "Finance",
+        "track": "Tenure-line",
+        "rank": "Assistant Professor",
+        "field": "Business & Economics",
+        "researchAreas": [
+          "Organizational Behavior",
+          "Strategic Modeling"
+        ],
+        "phdInstitution": "Asia University",
+        "profileUrl": "https://trfdc.asia.edu.tw/uploads/asset/data/68f5ca178ccb5c7ffbe13eb8/%E7%AC%AC131%E6%9C%9F%E5%B0%88%E5%88%8A_V5.pdf"
+      },
+      "evidence": {
+        "currentRole": "https://trfdc.asia.edu.tw/uploads/asset/data/68f5ca178ccb5c7ffbe13eb8/%E7%AC%AC131%E6%9C%9F%E5%B0%88%E5%88%8A_V5.pdf — University-published faculty biography in the 131st faculty development bulletin: \"Dr. Trong Thuy Tran is an Assistant Professor in the Department of Finance at Asia University.\" Retrieved HTTP 200 and read in memory with pdftotext. Also named in current faculty certification directory https://emi.asia.edu.tw/en/emi_active/EMI_Teachers/com; Taiwan Ministry of Education https://udb.moe.edu.tw/ulist/Department?division_id=000021E834C8&institution_id=000021E82EF9&institution_name=%E4%BA%9E%E6%B4%B2%E5%A4%A7%E5%AD%B8 lists him as full-time (專任), specializing in organizational behavior and strategic modeling.",
+        "doctorateOrPapers": "https://doi.nrct.go.th/ListDoi/Download/628299?Resolve_DOI=10.14456%2Fabacj.2021.6 — Opened HTTP 200 and read in memory. ABAC Journal 41(4), 2021, author biography gives Lobel Trong Thuy Tran a PhD in Business Economic and Strategy from Asia University. Same full name and Vietnam business/marketing career as his university biography. Year not stated; omitted.",
+        "vietnameseSignal": "https://trfdc.asia.edu.tw/uploads/asset/data/68f5ca178ccb5c7ffbe13eb8/%E7%AC%AC131%E6%9C%9F%E5%B0%88%E5%88%8A_V5.pdf — Current employer biography identifies him as an author of Vietnamese academic books and describes scientific advisory work in Vietnam; affirmative given-name tokens Trong Thuy.",
+        "dedup": "npm run find-roster-matches -- \"Trong Thuy Tran\" --url <opened employer biography PDF> https://emi.asia.edu.tw/en/emi_active/EMI_Teachers/com: name-only hits vp-0619, vp-1950, vp-1991, vp-2241. Read each roster record: these are analytical chemistry, oncology/radiochemistry, organic chemistry (Griffith PhD) and surgical oncology, respectively; all different from this Asia University business PhD/finance faculty member. No shared identity URL. already-proposed.txt checked.",
+        "limitations": "Department homepage https://fn.asia.edu.tw/ returned an Unreachable Server page. Used the successfully opened official faculty biography PDF as profileUrl; downstream may replace it with a dedicated HTML profile when available. No personal site substituted for employer evidence."
+      }
+    }
+  ],
+  "already_listed": [
+    {
+      "name": "Duc-Kien Thai",
+      "id": "vp-1427",
+      "note": "Same civil-engineering scholar; current Sejong institutional profile opened: https://prof.sejong.ac.kr/thaiduckien/html/profile.do . No new candidate."
+    },
+    {
+      "name": "Ngoc Cuong Nguyen",
+      "id": "vp-1125",
+      "note": "Same mathematician and Jagiellonian PhD at KAIST: https://pure.kaist.ac.kr/en/persons/ngoc-cuong-nguyen/ opened. No new candidate."
+    },
+    {
+      "name": "Thi Tuyet Trinh Pham",
+      "id": "vp-1582",
+      "note": "Discovery lead Trinh Pham and https://www.trinhttpham.com/index.html resolve to the existing KDI School entry through the same personal-domain identity and economics research. No new candidate; discovery search only, not an appointment re-audit."
+    }
+  ],
+  "possible_move": [
+    {
+      "name": "Nhu-Ngoc Dao",
+      "id": "vp-1262",
+      "note": "Roster says Associate Professor, Hallym University. Opened https://prof.sejong.ac.kr/nndao/html/profile.do says Assistant Professor, Computer Science and Engineering, Sejong University, and Chung-Ang PhD 2019. Identity matches; possible stale page versus move, not a verified direction of movement. npm run find-roster-matches with full name and opened URL returned vp-1262. Reconcile dated evidence before editing; never create a new ID."
+    }
+  ],
+  "rejected": [
+    {
+      "name": "Thien-Phuc Doan",
+      "reason": "https://aisrc.ssu.ac.kr/team-1 identifies him in the research center, but https://phucdt.com/ and https://orcid.org/0000-0001-7988-5953 discovery results explicitly say Visiting Professor at Soongsil. Excluded visiting appointment; not promoted from a center listing."
+    },
+    {
+      "name": "Duy-Linh Nguyen",
+      "reason": "https://islab.ulsan.ac.kr/blog.php?m=nguyenduylinhqbu discovery result calls him Research Professor but explicitly gives Status: Post.Doc Researcher. Excluded current trainee/uncertain faculty-equivalent permanence."
+    },
+    {
+      "name": "Trong Hieu Phan",
+      "reason": "Opened Dongshin individual page by requests, HTTP 200: https://cess.dsu.ac.kr/inst/index.php?pCode=MN9000014&pg=2&mode=view&idx=1246 . Assistant Professor in International Studies; education lists only BA and MA at Honam. No research doctorate or two recent current-employer papers verified, so fails this brief’s extra doctorate/papers test. Different from finance professor vp-0135 returned by dedup."
+    },
+    {
+      "name": "Ngoc Quynh Nhu Tran",
+      "reason": "Official program faculty listing https://tdpba.cycu.edu.tw/en/introduction-en/faculty-en names an Assistant Professor of Accounting, but no doctorate or recent publication evidence could be verified; linked individual research page failed to fetch. Accounting department English full-time directory https://ac.cycu.edu.tw/en/full-time-teachers/ did not name her. Deferred rather than treating a sparse listing as a verified candidate. Dedup name-only hits vp-2306 (Stanford clinician), retired vp-0435 (UT Austin mathematics) and retired vp-1518 (unverifiable Innsbruck record); no identity match established."
+    },
+    {
+      "name": "Thi Xuan Hoai Nguyen",
+      "reason": "Opened https://qclab.korea.ac.kr/QCLab/index.php/Nguyen,_Thi_Xuan_Hoai via requests, HTTP 200. Research Professor page was last edited in February 2020 and simultaneously identifies her as a lecturer in Danang, Vietnam. Current primary Korea-based career appointment not established; excluded from verified candidates."
+    },
+    {
+      "name": "Kieu The Loan Trinh",
+      "reason": "Discovered Gachon research-professor and publication leads, but no live current employer-published person page verified in this run. Dedup returned no roster or retired-ID matches; not included based on third-party profiles."
+    },
+    {
+      "name": "Danh Cuong Do",
+      "reason": "POSTECH newspaper interview is about an outside scholar; current official VinUniversity profile https://vinuni.edu.vn/people/do-danh-cuong/ discovery result places him in Hanoi, Vietnam. Outside geographic scope."
+    },
+    {
+      "name": "Thi Linh Nguyen",
+      "reason": "https://sealc.nccu.edu.tw/PageStaffing/Detail?fid=10230&id=3265 discovery result explicitly labels Exchange Assistant Professor and lists primary work at VNU Hanoi. Exchange/Vietnam-based appointment excluded."
+    },
+    {
+      "name": "Huy-Bich Nguyen",
+      "reason": "https://www.me.ncu.edu.tw/關於機械系/師資/客座教授/ discovery result lists a guest professorship and primary current professorship at Nong Lam University in Vietnam. Excluded visiting/Vietnam-based role."
+    },
+    {
+      "name": "Thi Hoang Phuong Tran",
+      "reason": "https://flc.nccu.edu.tw/en/member/pro discovery result lists Contracted Lecturer; no research doctorate or two recent papers and no continuing eligible career appointment verified."
+    }
+  ],
+  "coverage": [
+    {
+      "employer": "Cross-slice discovery",
+      "pagesExamined": [],
+      "note": "Later-pass given-name sweeps used Hieu, Dung, Duc, Quynh, Huu, Linh, Truc, Phuc, Quang, Thao, Loan, Thuy, Kiet, Duy, Chau, Bich, Phuong, Cuong, Vinh, Nhat, Tien, Huyen, Hanh, Loc, Hoai, Khuong, Quyen, Tuyet, Nhut and Giang; uncommon-surname leads used Dinh, Trinh, Ho, Mai, Luong, Nghiem, Luu, Huynh and Ta. Search engines used only to discover leads. Read already-proposed.txt and local Taiwan/South Korea roster before research; skipped prior-proposed aliases including Hien/Hien X. Bui and Trung Hieu Pham (published Pham Trung Hieu). Additional institution-specific searches covered Chien Hsin, I-Shou, Kun Shan, Daegu, Kangwon, Kunsan, Sunchon and Chungbuk; these searches yielded no additional employer-verified eligible candidate. Search-only institutions are not claimed as directory audits. Stopped after broad later-pass coverage and detailed resolution of the viable leads, not because the 25-candidate ceiling was reached."
+    },
+    {
+      "employer": "Ming Chuan University",
+      "pagesExamined": [
+        "https://icac.mcu.edu.tw/學程概況-about-us/師資介紹-faculty-and-staff/行政人員-program-secretary/專任教授-full-time-faculty/",
+        "https://ms.mcu.edu.tw/en/finance/",
+        "https://www2.mcu.edu.tw/ePortfolio/Teacher/html/ePortfolioPost_Any.asp?lang=E&tno=1141202",
+        "https://www2.mcu.edu.tw/ePortfolio/Teacher/html/ePortfolioPost_Any.asp?lang=E&tno=1141424"
+      ],
+      "note": "Information Technology and Management full-time faculty and Finance faculty blocks examined; two new candidates. Linked ePortfolios empty, not treated as sources for additional facts."
+    },
+    {
+      "employer": "National Dong Hwa University",
+      "pagesExamined": [
+        "https://management.ndhu.edu.tw/p/412-1013-85.php?Lang=zh-tw",
+        "https://dmsi.ndhu.edu.tw/",
+        "https://dmsi.ndhu.edu.tw/p/426-1208-11.php?Lang=zh-tw",
+        "https://sys.ndhu.edu.tw/RD/TeacherTreasury/tlist.aspx?tcher=13682",
+        "https://sys.ndhu.edu.tw/RD/TeacherTreasury/TcherData/profile.aspx?tcher=13682"
+      ],
+      "note": "Went beyond indexed search into new Digital Marketing and Service Innovation program; requests retrieved current faculty directory and its exact individual-profile link. One candidate. Personal-data tab was only a navigation shell."
+    },
+    {
+      "employer": "Jeonbuk National University",
+      "pagesExamined": [
+        "https://pure.jbnu.ac.kr/en/persons/duy-thanh-tran/",
+        "https://top.jbnu.ac.kr/bintecheng/8753/subview.do",
+        "https://top.jbnu.ac.kr/jbnuProfl/bintecheng/646/5293/artclView.do",
+        "https://pure.jbnu.ac.kr/en/publications/advanced-interface-engineering-of-manganesedoped-biphasic-nickel-/",
+        "https://pure.jbnu.ac.kr/en/publications/charge-deficient-ptcu-clusters-stabilized-vacancy-engineered-mosu/"
+      ],
+      "note": "Nano Convergence Engineering faculty directory, individual detail and two current publications; one new candidate."
+    },
+    {
+      "employer": "Kookmin University",
+      "pagesExamined": [
+        "https://smartgrid.kookmin.ac.kr/members/professors"
+      ],
+      "note": "Professors page with degree and full professional chronology; distinguishes current research professor from former postdoc. One candidate."
+    },
+    {
+      "employer": "Asia University",
+      "pagesExamined": [
+        "https://fn.asia.edu.tw/",
+        "https://trfdc.asia.edu.tw/uploads/asset/data/68f5ca178ccb5c7ffbe13eb8/%E7%AC%AC131%E6%9C%9F%E5%B0%88%E5%88%8A_V5.pdf",
+        "https://emi.asia.edu.tw/en/emi_active/EMI_Teachers/com"
+      ],
+      "note": "Finance department server error documented. Official faculty-development bulletin successfully retrieved in memory and faculty certification list opened; one candidate with university-published PDF biography. Also encountered Dinh-Trung Vu already on roster (vp-2580)."
+    },
+    {
+      "employer": "Chung Yuan Christian University",
+      "pagesExamined": [
+        "https://cob.cycu.edu.tw/en/member/faculty/",
+        "https://tdpba.cycu.edu.tw/en/introduction-en/faculty-en",
+        "https://ac.cycu.edu.tw/",
+        "https://ac.cycu.edu.tw/en/full-time-teachers/",
+        "https://itouch.cycu.edu.tw/active_project/cycu2500h_01/paperv3/list/NSCstyle.jsp?idcode=12685"
+      ],
+      "note": "Business college, international program and accounting faculty examined. Known Quynh Trang Nguyen and Viet Hai Nguyen were already listed; accounting lead deferred for missing degree/publications verification. Individual research URL failed."
+    },
+    {
+      "employer": "Dongshin University",
+      "pagesExamined": [
+        "https://cess.dsu.ac.kr/inst/index.php?pCode=MN9000014&pg=2",
+        "https://cess.dsu.ac.kr/inst/index.php?pCode=MN9000014&pg=2&mode=view&idx=1246"
+      ],
+      "note": "International Studies second faculty-directory page and Trong Hieu Phan individual profile retrieved. Only BA/MA documented; no verified candidate."
+    },
+    {
+      "employer": "Kyungsung University",
+      "pagesExamined": [
+        "https://kscms.ks.ac.kr/gc/CMS/ProfessorMgr/list.do?mCode=MN058",
+        "https://kscms.ks.ac.kr/gs/CMS/Contents/Contents.do?mCode=MN027"
+      ],
+      "note": "Global IT Engineering and School of Global Studies faculty examined. Pham Trung Hieu is earlier-proposed Trung Hieu Pham; skipped. Other Global IT faculty listed as visiting."
+    },
+    {
+      "employer": "Soongsil University",
+      "pagesExamined": [
+        "https://aisrc.ssu.ac.kr/team-1"
+      ],
+      "note": "AI Security Research Center lead checked; Doan is visiting per own-site/ORCID discovery evidence, so excluded."
+    },
+    {
+      "employer": "Korea University",
+      "pagesExamined": [
+        "https://qclab.korea.ac.kr/QCLab/index.php/Nguyen,_Thi_Xuan_Hoai"
+      ],
+      "note": "Quantum Control Lab individual page retrieved by requests. Old 2020 biography and concurrent Vietnam primary appointment prevent current eligibility verification."
+    },
+    {
+      "employer": "Sejong University",
+      "pagesExamined": [
+        "https://prof.sejong.ac.kr/thaiduckien/html/profile.do",
+        "https://prof.sejong.ac.kr/nndao/html/profile.do"
+      ],
+      "note": "Two individual profiles examined. Duc-Kien Thai already listed; Nhu-Ngoc Dao produces a conflicting-institution finding, not a new candidate."
+    },
+    {
+      "employer": "KAIST",
+      "pagesExamined": [
+        "https://pure.kaist.ac.kr/en/persons/ngoc-cuong-nguyen/"
+      ],
+      "note": "Official mathematician profile opened; same Ngoc Cuong Nguyen already listed as vp-1125. No duplicate proposed."
+    }
+  ]
+}

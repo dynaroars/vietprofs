@@ -1,0 +1,802 @@
+{
+  "group": "university",
+  "agent": "codex",
+  "slice": "us-social-hum",
+  "finishedAt": "2026-11-15T00:14:36Z",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Hung Cam Thai",
+        "university": "Pomona College",
+        "track": "Tenure-line",
+        "rank": "Professor",
+        "department": "Sociology and Asian American Studies",
+        "country": "United States",
+        "city": "Claremont",
+        "state": "California",
+        "field": "Social & Behavioral Sciences",
+        "researchAreas": [
+          "Immigration",
+          "Transnational families",
+          "Vietnamese diaspora",
+          "Marriage markets"
+        ],
+        "phdInstitution": "University of California, Berkeley",
+        "msInstitution": "University of California, Berkeley",
+        "undergradInstitution": "University of Florida",
+        "profileUrl": "https://www.pomona.edu/directory/people/hung-cam-thai",
+        "honors": [
+          {
+            "name": "Best Book in the Social Sciences Award",
+            "year": 2016,
+            "organization": "Association for Asian American Studies",
+            "source": "https://www.pomona.edu/directory/people/hung-cam-thai"
+          },
+          {
+            "name": "Best Book on Transnational Asia Award",
+            "year": 2015,
+            "organization": "American Sociological Association",
+            "source": "https://www.pomona.edu/directory/people/hung-cam-thai"
+          }
+        ]
+      },
+      "evidence": {
+        "currentRole": "https://www.pomona.edu/directory/people/hung-cam-thai — \"Professor of Sociology and Asian American Studies\"; current faculty directory also identifies him as sociology chair.",
+        "doctorateOrPapers": "https://www.pomona.edu/directory/people/hung-cam-thai — education section identifies a PhD from UC Berkeley.",
+        "vietnameseSignal": "Vietnamese given names Hung Cam on the official profile; page documents research on Vietnamese diaspora and marriages.",
+        "dedup": "Ran npm run find-roster-matches -- 'Hung Cam Thai' --url https://www.pomona.edu/directory/people/hung-cam-thai: no roster or retired-id matches. Manually checked name and identity URL in public/data.json. Final dedup also included any extracted headshot URL, with no additional identity matches.",
+        "portraitSource": "https://www.pomona.edu/sites/default/files/styles/person/public/images/person/hung-thai.jpg?h=49d56988&itok=JS-EV8Gy",
+        "enrichment": "Education, location, research areas and two disciplinary book awards are sourced to the profile. Headshot URL comes from the image labelled with his name; image not downloaded."
+      }
+    },
+    {
+      "entry": {
+        "name": "Trian Nguyen",
+        "university": "Bates College",
+        "track": "Tenure-line",
+        "rank": "Associate Professor",
+        "department": "Art and Visual Culture",
+        "country": "United States",
+        "city": "Lewiston",
+        "state": "Maine",
+        "field": "Arts & Design",
+        "researchAreas": [
+          "Asian art history",
+          "Vietnamese Buddhist sculpture",
+          "Daoist ritual art"
+        ],
+        "phdInstitution": "University of California, Berkeley",
+        "undergradInstitution": "San Francisco State University",
+        "profileUrl": "https://www.bates.edu/faculty/profile/trian-nguyen/",
+        "honors": [
+          {
+            "name": "Fulbright Scholar Award",
+            "year": 2003,
+            "organization": "Fulbright Program",
+            "source": "https://www.bates.edu/news/2003/09/02/fulbright-vietnam-professor/"
+          }
+        ]
+      },
+      "evidence": {
+        "currentRole": "https://www.bates.edu/faculty/profile/trian-nguyen/ — \"Associate Professor of Art and Visual Culture\"; faculty member since 2000.",
+        "doctorateOrPapers": "https://www.bates.edu/faculty/profile/trian-nguyen/ — Asian art history PhD at UC Berkeley.",
+        "vietnameseSignal": "https://www.bates.edu/news/2003/09/02/fulbright-vietnam-professor/ — institutional biography identifies Vietnam as his native country and says he came to the US in 1981.",
+        "dedup": "Ran npm run find-roster-matches -- 'Trian Nguyen' --url https://www.bates.edu/faculty/profile/trian-nguyen/: no roster or retired-id matches. Manual name/URL check found no duplicate. Final dedup also included any extracted headshot URL, with no additional identity matches.",
+        "portraitSource": "https://www.bates.edu/faculty/files/2015/08/Trian-Nguyen-227x300.webp",
+        "enrichment": "Official profile supplies doctorate, undergraduate institution, research areas and college address. News announcement verifies the 2003 Fulbright award; no second Fulbright year inferred. Portrait URL is the labelled faculty image, not downloaded."
+      }
+    },
+    {
+      "entry": {
+        "name": "Dung Q. Tran",
+        "vietnameseName": "Dũng Q. Trần",
+        "university": "Gonzaga University",
+        "track": "Tenure-line",
+        "rank": "Associate Professor",
+        "department": "Organizational Leadership",
+        "country": "United States",
+        "field": "Education",
+        "researchAreas": [
+          "Servant leadership",
+          "Organizational ethics",
+          "Workplace spirituality",
+          "Jesuit higher education"
+        ],
+        "phdInstitution": "Gonzaga University",
+        "msInstitution": "Loyola Marymount University",
+        "undergradInstitution": "Loyola Marymount University",
+        "profileUrl": "https://www.gonzaga.edu/academics/faculty-listing/detail?person=dung-q-tran-phd-8e3bb7e1"
+      },
+      "evidence": {
+        "currentRole": "https://www.gonzaga.edu/academics/faculty-listing/detail?person=dung-q-tran-phd-8e3bb7e1 — \"Associate Professor, Organizational Leadership\". The substantive appointment is in the MA program; separately described adjunct appointments in other programs are secondary.",
+        "doctorateOrPapers": "Same Gonzaga profile: PhD in Leadership Studies from Gonzaga University.",
+        "vietnameseSignal": "Same official profile explicitly identifies him as the son of Vietnamese refugees and spells his name Dũng Q. Trần.",
+        "dedup": "Ran npm run find-roster-matches with name and official profile URL. Hits: vp-0046/vp-1642 (merged), vp-0811, vp-1920, vp-1964, vp-2978. Different identities: computer science/Vanderbilt; mathematics education/Missouri; engineering; Maastricht quantitative methodology; Microsoft/Johns Hopkins. Candidate is a Gonzaga-trained leadership scholar with LMU education and this unique profile; no identity URL match. Final dedup also included any extracted headshot URL, with no additional identity matches.",
+        "enrichment": "Name spelling, education and research areas are from the current Gonzaga biography. No doctorate year guessed. Profile opened successfully through web; a later requests fetch returned 403, so no portrait URL was extracted."
+      }
+    },
+    {
+      "entry": {
+        "name": "Hai B. Pho",
+        "university": "University of Massachusetts Lowell",
+        "track": "Emeritus",
+        "rank": "Professor",
+        "department": "Political Science",
+        "country": "United States",
+        "city": "Lowell",
+        "state": "Massachusetts",
+        "field": "Social & Behavioral Sciences",
+        "researchAreas": [
+          "Southeast Asian politics",
+          "Vietnamese history",
+          "International relations",
+          "Refugee policy"
+        ],
+        "profileUrl": "https://www.uml.edu/fahss/political-science/faculty/pho-hai.aspx"
+      },
+      "evidence": {
+        "currentRole": "https://www.uml.edu/fahss/political-science/faculty/pho-hai.aspx — \"Professor Emeritus\"; active institutional emeritus biography in Political Science.",
+        "doctorateOrPapers": "Same institutional page identifies him as Hai B. Pho, Ph.D.; awarding institution and year are not provided and are omitted.",
+        "vietnameseSignal": "Vietnamese given name Hai on official profile, with Vietnamese history and refugee-policy scholarship documented.",
+        "dedup": "Ran npm run find-roster-matches -- 'Hai B. Pho' --url https://www.uml.edu/fahss/political-science/faculty/pho-hai.aspx: no roster or retired-id matches. Manual name/URL check clear. Final dedup also included any extracted headshot URL, with no additional identity matches.",
+        "portraitSource": "https://www.uml.edu/Images/Pho-Hai-1400-opt_tcm18-276237.jpg?w=x",
+        "enrichment": "Role, research areas and Lowell address are from the official biography. Portrait candidate is its labelled image; not downloaded."
+      }
+    },
+    {
+      "entry": {
+        "name": "Trang Phan",
+        "university": "California State University, Fresno",
+        "track": "Tenure-line",
+        "rank": "Associate Professor",
+        "department": "Advanced Studies in Education",
+        "country": "United States",
+        "field": "Education",
+        "researchAreas": [
+          "Learning design and technology",
+          "Design thinking",
+          "Teacher education",
+          "Massive open online courses"
+        ],
+        "phdInstitution": "University of Houston",
+        "phdYear": 2016,
+        "msInstitution": "The University of Texas Rio Grande Valley",
+        "undergradInstitution": "Hue University",
+        "undergradYear": 2006,
+        "profileUrl": "https://kremen.fresnostate.edu/about/directory/phan-trang.html",
+        "scholarUrl": "https://scholar.google.com/citations?user=Kbx1UzQAAAAJ",
+        "websiteUrl": "https://www.trangphan.us/"
+      },
+      "evidence": {
+        "currentRole": "https://kremen.fresnostate.edu/about/directory/phan-trang.html — \"Associate Professor\"; current header identifies Advanced Studies in Education. Biography retains an older Curriculum and Instruction department label; proposed department follows the header.",
+        "doctorateOrPapers": "Same official page: University of Houston PhD in Learning Design & Technology, 2016.",
+        "vietnameseSignal": "Same official page: bachelor's degree at Hue University, Vietnam, in 2006; Vietnamese given name Trang.",
+        "dedup": "Ran npm run find-roster-matches with Trang Phan, official profile, linked Scholar ID and linked personal site. Hits vp-1260 and vp-1559 are different people: chemistry PhD at Université de la Méditerranée (2001), and Vietnamese linguistics PhD at Sheffield (2013), respectively. Candidate's Houston education doctorate (2016), field and identity URLs are distinct. Final dedup also included any extracted headshot URL, with no additional identity matches.",
+        "portraitSource": "https://kremen.fresnostate.edu/images/headshots/trang-phan.jpg",
+        "enrichment": "Degree details and research areas come from the employer profile. Scholar ID is explicitly linked there, establishing identity without guessing. Linked personal portfolio opened and discusses Fresno State education projects. Portrait URL extracted from faculty page; not downloaded."
+      }
+    },
+    {
+      "entry": {
+        "name": "Peter Nguyen",
+        "university": "College of the Holy Cross",
+        "track": "Tenure-line",
+        "rank": "Associate Professor",
+        "department": "Religious Studies",
+        "country": "United States",
+        "city": "Worcester",
+        "state": "Massachusetts",
+        "field": "Humanities",
+        "researchAreas": [
+          "Systematic theology",
+          "Christian martyrdom",
+          "Spiritual theology",
+          "Totalitarianism"
+        ],
+        "phdInstitution": "University of Toronto",
+        "profileUrl": "https://www.holycross.edu/academics/people/peter-nguyen"
+      },
+      "evidence": {
+        "currentRole": "https://www.holycross.edu/academics/people/peter-nguyen — \"Associate Professor, Catholic Studies Advisor\"; primary department is Religious Studies.",
+        "doctorateOrPapers": "Same profile identifies a PhD from the University of St. Michael's College, University of Toronto, and an additional STD from Regis College, University of Toronto.",
+        "vietnameseSignal": "https://www.holycross.edu/community/mission-service/jesuit-community/members — Jesuit community biography identifies Peter Nguyen as born in Saigon, Vietnam, and raised in Chicago.",
+        "dedup": "Ran npm run find-roster-matches with name and official profile URL. vp-0158 is Miami University marketing, Western University PhD (2019); vp-0653 is Alberta physiology. Candidate is a Jesuit theologian with Holy Cross profile and theology doctorate, a different person despite Toronto also appearing in the physiologist's education. No identity URL match. Final dedup also included any extracted headshot URL, with no additional identity matches.",
+        "portraitSource": "https://www.holycross.edu/sites/default/files/styles/portrait_full_xxsml/public/image/people-headshot-photo/2026/08/revpeternguyensj_aug2024_10x15lg_1_1.jpg.webp?itok=KWLbRTat",
+        "enrichment": "Doctorate, research topics and Worcester address are from employer profile. No PhD year inferred. Portrait URL is labelled Peter Nguyen in the official page; not downloaded."
+      }
+    },
+    {
+      "entry": {
+        "name": "Brian Trung Lam",
+        "university": "California State University, Long Beach",
+        "track": "Tenure-line",
+        "rank": "Professor",
+        "department": "Social Work",
+        "country": "United States",
+        "field": "Social & Behavioral Sciences",
+        "researchAreas": [
+          "Acculturation",
+          "Ethnic identity",
+          "Vietnamese American adolescents",
+          "Multicultural social work"
+        ],
+        "phdInstitution": "Columbia University",
+        "msInstitution": "California State University, Long Beach",
+        "profileUrl": "https://www.csulb.edu/college-of-health-human-services/school-of-social-work/page/brian-trung-lam"
+      },
+      "evidence": {
+        "currentRole": "https://www.csulb.edu/college-of-health-human-services/school-of-social-work/page/brian-trung-lam — \"Professor\" and \"Tenured\" in the School of Social Work.",
+        "doctorateOrPapers": "Same official page: Columbia University PhD; CSULB MSW.",
+        "vietnameseSignal": "Official profile uses the Vietnamese given name Trung and documents extensive research on Vietnamese Americans.",
+        "dedup": "Ran npm run find-roster-matches -- 'Brian Trung Lam' --url https://www.csulb.edu/college-of-health-human-services/school-of-social-work/page/brian-trung-lam: no roster or retired-id matches. Manual name/URL check clear. Final dedup also included any extracted headshot URL, with no additional identity matches.",
+        "portraitSource": "https://www.csulb.edu/sites/default/files/images/brian_trung_lam.png",
+        "enrichment": "Research areas, tenure and education are explicit on employer page. No degree year guessed. Portrait candidate is the labelled image on the page; not downloaded."
+      }
+    },
+    {
+      "entry": {
+        "name": "Linh N. Hoang",
+        "university": "Siena University",
+        "track": "Tenure-line",
+        "rank": "Professor",
+        "department": "Religious Studies",
+        "country": "United States",
+        "city": "Loudonville",
+        "state": "New York",
+        "field": "Humanities",
+        "researchAreas": [
+          "Asian American theology",
+          "Vietnamese Catholicism",
+          "Migration",
+          "Comparative religion"
+        ],
+        "phdInstitution": "Fordham University",
+        "msInstitution": "Catholic Theological Union",
+        "undergradInstitution": "Catholic University of Louvain",
+        "profileUrl": "https://www.siena.edu/faculty-and-staff/person/linh-hoang/"
+      },
+      "evidence": {
+        "currentRole": "https://www.siena.edu/faculty-and-staff/person/linh-hoang/ — \"Professor of Religious Studies\"; current department directory independently lists him at this rank.",
+        "doctorateOrPapers": "Same institutional profile: Fordham University PhD in Theology. No completion year provided.",
+        "vietnameseSignal": "Vietnamese given name Linh on official page; profile documents research on Vietnamese refugee Catholic identities. This is an affirmative given-name signal, rather than surname Hoang alone.",
+        "dedup": "Ran npm run find-roster-matches with Linh N. Hoang and official profile. Hits vp-0948 (Linh Hoang Nguyen, Nottingham finance, Exeter PhD) and vp-1425 (Linh Cao Hoang, Danish civil/mechanical engineering) are distinct from the Fordham-trained Siena theologian. No identity URL overlap. Final dedup also included any extracted headshot URL, with no additional identity matches.",
+        "portraitSource": "https://www.siena.edu/files/people/portrait-classic-xxsml-901381893.jpg",
+        "enrichment": "Employer currently calls itself Siena University (formerly Siena College), matching the existing roster employer spelling. Degrees, location and research are sourced to the current official profile. Portrait URL extracted from labelled faculty image; not downloaded."
+      }
+    },
+    {
+      "entry": {
+        "name": "Yarran Hominh",
+        "university": "Bard College",
+        "track": "Tenure-line",
+        "rank": "Assistant Professor",
+        "department": "Philosophy",
+        "country": "United States",
+        "city": "Annandale-on-Hudson",
+        "state": "New York",
+        "field": "Humanities",
+        "researchAreas": [
+          "Moral psychology",
+          "Social and political philosophy",
+          "Philosophy of law",
+          "Asian philosophy"
+        ],
+        "phdInstitution": "Columbia University",
+        "undergradInstitution": "University of Sydney",
+        "profileUrl": "https://www.bard.edu/faculty/yarran-hominh"
+      },
+      "evidence": {
+        "currentRole": "https://www.bard.edu/faculty/yarran-hominh — \"Assistant Professor of Philosophy\"; institutional biography states he joined Bard in 2022.",
+        "doctorateOrPapers": "Same official profile lists MPhil and PhD at Columbia University, and Sydney undergraduate degrees.",
+        "vietnameseSignal": "https://philosophy.columbia.edu/content/minorities-and-philosophy-initiative — his self-description in an institutional graduate biography identifies him as Vietnamese-Australian. Current Bard page and Columbia education resolve identity.",
+        "dedup": "Ran npm run find-roster-matches with Yarran Hominh, Bard profile and the homepage linked by Bard: no roster or retired-id matches. Manual name/URL check clear. Final dedup also included any extracted headshot URL, with no additional identity matches.",
+        "enrichment": "Research, degree institutions and New York address are from Bard. Linked personal homepage https://www.yarranhominh.com could not be fetched, so websiteUrl omitted; no portrait direct URL established."
+      }
+    },
+    {
+      "entry": {
+        "name": "Kiet Huynh",
+        "university": "University of Massachusetts Boston",
+        "track": "Tenure-line",
+        "rank": "Assistant Professor",
+        "department": "Counseling, School Psychology & Sport",
+        "country": "United States",
+        "city": "Boston",
+        "state": "Massachusetts",
+        "field": "Social & Behavioral Sciences",
+        "researchAreas": [
+          "Counseling psychology",
+          "LGBTQ mental health",
+          "Intersectionality",
+          "Minority stress",
+          "Psychometrics"
+        ],
+        "phdInstitution": "University of Miami",
+        "phdYear": 2020,
+        "profileUrl": "https://www.umb.edu/directory/kiethuynh/",
+        "websiteUrl": "https://intersectionalwellbeinglab.wordpress.com/team/"
+      },
+      "evidence": {
+        "currentRole": "https://www.umb.edu/directory/kiethuynh/ — \"Assistant Professor\", Counseling, School Psychology & Sport. Current UMass Boston profile takes precedence over the still-live UNT faculty record.",
+        "doctorateOrPapers": "https://www.umb.edu/directory/kiethuynh/ identifies University of Miami counseling psychology PhD; https://facultyinfo.unt.edu/faculty-profile?profile=kdh0380 explicitly dates the same PhD to 2020.",
+        "vietnameseSignal": "https://intersectionalwellbeinglab.wordpress.com/team/ — linked from his UMass Boston profile; he identifies himself as an immigrant from Vietnam.",
+        "dedup": "Ran npm run find-roster-matches with Kiet Huynh, UMass Boston profile, linked lab/team page and former UNT profile: no roster or retired-id matches. Manual URL/name check clear. Final dedup also included any extracted headshot URL, with no additional identity matches.",
+        "portraitSource": "https://www.umb.edu/media/umassboston/content-assets/profiles/kiet.huynh.jpg",
+        "enrichment": "UMass Boston degree and publication list, linked lab biography and current department directory resolve the move from UNT. Research terms are from the linked lab. Portrait URL is the labelled Kiet Huynh headshot on the department directory, not downloaded."
+      }
+    },
+    {
+      "entry": {
+        "name": "Thao Ha",
+        "university": "MiraCosta College",
+        "track": "Tenure-line",
+        "rank": "Professor",
+        "department": "Sociology",
+        "country": "United States",
+        "city": "Oceanside",
+        "state": "California",
+        "field": "Social & Behavioral Sciences",
+        "researchAreas": [
+          "Race",
+          "Immigration",
+          "Vietnamese American experiences"
+        ],
+        "phdInstitution": "The University of Texas at Austin",
+        "phdYear": 2012,
+        "undergradInstitution": "University of Houston",
+        "profileUrl": "https://foundation.miracosta.edu/why-give/profiles-donor/thao-ha.html"
+      },
+      "evidence": {
+        "currentRole": "https://foundation.miracosta.edu/why-give/profiles-donor/thao-ha.html — \"Professor Ha\". Current 2026–2027 full-time faculty catalog https://catalog.miracosta.edu/aboutmiracosta/faculty/ also lists Thao Ha in Sociology. https://www.unmpress.com/9780826370174/love-letters-to-the-dirty-south/ explicitly documents her tenured professorship at MiraCosta.",
+        "doctorateOrPapers": "MiraCosta profile documents UT Austin sociology doctorate completed in 2012 and University of Houston bachelor's degree; the live University of New Mexico Press author biography corroborates doctorate and current professorship.",
+        "vietnameseSignal": "MiraCosta profile explicitly describes her as an immigrant from Vietnam; the current publisher biography corroborates Vietnamese refugee background.",
+        "dedup": "Ran npm run find-roster-matches with Thao Ha and MiraCosta profile: hit vp-1394 Thao Ha at Arizona State University. Distinct people: candidate's UT Austin sociology PhD (2012), Houston undergraduate degree and MiraCosta appointment versus ASU developmental psychologist's Radboud University degrees (PhD 2013). No matching identity URLs. Final dedup also included any extracted headshot URL, with no additional identity matches.",
+        "portraitSource": "https://foundation.miracosta.edu/why-give/profiles-donor/_media/thao-ha.jpg",
+        "enrichment": "Employer profile supplies education and Vietnamese background; publisher supplies explicit tenure evidence, satisfying the permanent community-college appointment rule. Portrait candidate extracted from official profile; not downloaded."
+      }
+    }
+  ],
+  "already_listed": [
+    {
+      "name": "Long T. Bui",
+      "id": "vp-0179",
+      "note": "Already in public/data.json at University of California, Irvine; npm run find-roster-matches with published name and stored identity URLs confirmed this ID. No new entry proposed."
+    },
+    {
+      "name": "Duy Lap Nguyen",
+      "id": "vp-0227",
+      "note": "Already in public/data.json at University of Houston; npm run find-roster-matches with published name and stored identity URLs confirmed this ID. No new entry proposed."
+    },
+    {
+      "name": "Huyen Nguyen - Kansas State University",
+      "id": "vp-0258",
+      "note": "Already in public/data.json at Kansas State University; npm run find-roster-matches with published name and stored identity URLs confirmed this ID. No new entry proposed."
+    },
+    {
+      "name": "Hoa T.H. Nguyen",
+      "id": "vp-0259",
+      "note": "Already in public/data.json at Columbia University; npm run find-roster-matches with published name and stored identity URLs confirmed this ID. No new entry proposed."
+    },
+    {
+      "name": "Thuy D. Tranviet",
+      "id": "vp-0262",
+      "note": "Already in public/data.json at Cornell University; npm run find-roster-matches with published name and stored identity URLs confirmed this ID. No new entry proposed."
+    },
+    {
+      "name": "Ha Nguyen - University of Washington",
+      "id": "vp-0322",
+      "note": "Already in public/data.json at University of Washington; npm run find-roster-matches with published name and stored identity URLs confirmed this ID. No new entry proposed."
+    },
+    {
+      "name": "Vy Nguyen - Augusta University",
+      "id": "vp-0337",
+      "note": "Already in public/data.json at Augusta University; npm run find-roster-matches with published name and stored identity URLs confirmed this ID. No new entry proposed."
+    },
+    {
+      "name": "Josef Nguyen",
+      "id": "vp-0340",
+      "note": "Already in public/data.json at University of Michigan; npm run find-roster-matches with published name and stored identity URLs confirmed this ID. No new entry proposed."
+    },
+    {
+      "name": "Trai Le",
+      "id": "vp-0735",
+      "note": "Already in public/data.json at University of Notre Dame; npm run find-roster-matches with published name and stored identity URLs confirmed this ID. No new entry proposed."
+    },
+    {
+      "name": "Marguerite Nguyen",
+      "id": "vp-1494",
+      "note": "Already in public/data.json at Duke University; npm run find-roster-matches with published name and stored identity URLs confirmed this ID. No new entry proposed."
+    },
+    {
+      "name": "Uyen Diep",
+      "id": "vp-1549",
+      "note": "Already in public/data.json at Virginia Tech; npm run find-roster-matches with published name and stored identity URLs confirmed this ID. No new entry proposed."
+    },
+    {
+      "name": "Van Tran Nguyen",
+      "id": "vp-1708",
+      "note": "Already in public/data.json at Georgetown University; npm run find-roster-matches with published name and stored identity URLs confirmed this ID. No new entry proposed."
+    },
+    {
+      "name": "Josephine H. Pham",
+      "id": "vp-1763",
+      "note": "Already in public/data.json at University of California, Santa Cruz; npm run find-roster-matches with published name and stored identity URLs confirmed this ID. No new entry proposed."
+    },
+    {
+      "name": "Thu Suong Thi Nguyen",
+      "id": "vp-1779",
+      "note": "Already in public/data.json at Indiana University Indianapolis; npm run find-roster-matches with published name and stored identity URLs confirmed this ID. No new entry proposed."
+    },
+    {
+      "name": "Nguyet Nguyen - University of Alaska Southeast",
+      "id": "vp-1809",
+      "note": "Already in public/data.json at University of Alaska Southeast; npm run find-roster-matches with published name and stored identity URLs confirmed this ID. No new entry proposed."
+    },
+    {
+      "name": "Jennifer Huynh",
+      "id": "vp-1811",
+      "note": "Already in public/data.json at University of Notre Dame; npm run find-roster-matches with published name and stored identity URLs confirmed this ID. No new entry proposed."
+    },
+    {
+      "name": "Henry Tran",
+      "id": "vp-2059",
+      "note": "Already in public/data.json at University of South Carolina; npm run find-roster-matches with published name and stored identity URLs confirmed this ID. No new entry proposed."
+    },
+    {
+      "name": "Allen Tran",
+      "id": "vp-2087",
+      "note": "Already in public/data.json at Bucknell University; npm run find-roster-matches with published name and stored identity URLs confirmed this ID. No new entry proposed."
+    },
+    {
+      "name": "Andrea Hoa Pham",
+      "id": "vp-2157",
+      "note": "Already in public/data.json at University of Florida; npm run find-roster-matches with published name and stored identity URLs confirmed this ID. No new entry proposed."
+    },
+    {
+      "name": "Stacey N. Doan",
+      "id": "vp-2634",
+      "note": "Already in public/data.json at Claremont McKenna College; npm run find-roster-matches with published name and stored identity URLs confirmed this ID. No new entry proposed."
+    },
+    {
+      "name": "Martin Nguyen",
+      "id": "vp-2815",
+      "note": "Already in public/data.json at Fairfield University; npm run find-roster-matches with published name and stored identity URLs confirmed this ID. No new entry proposed."
+    },
+    {
+      "name": "Nancy N. Truong",
+      "id": "vp-2834",
+      "note": "Already in public/data.json at Arizona State University; npm run find-roster-matches with published name and stored identity URLs confirmed this ID. No new entry proposed."
+    },
+    {
+      "name": "Jacques Nguyen",
+      "id": "vp-2843",
+      "note": "Already in public/data.json at Baylor University; npm run find-roster-matches with published name and stored identity URLs confirmed this ID. No new entry proposed."
+    },
+    {
+      "name": "Alisia (Giac-Thao) Tran",
+      "id": "vp-2865",
+      "note": "Already in public/data.json at Arizona State University; npm run find-roster-matches with published name and stored identity URLs confirmed this ID. No new entry proposed."
+    }
+  ],
+  "possible_move": [],
+  "rejected": [
+    {
+      "name": "Federick Ngo",
+      "reason": "Not retained: no affirmative Vietnamese signal. Live UNLV institutional interview describes Cambodian refugee parents and Cambodian roots; surname Ngo alone is insufficient. https://www.unlv.edu/news/article/interview-federick-ngo"
+    },
+    {
+      "name": "Sofia Pham",
+      "reason": "Current associate professorship and Temple doctorate verified, but no affirmative Vietnamese signal beyond surname found in the PCOM biography; do not infer ancestry from surname. https://www.pcom.edu/academics/faculty/sofia-pham.html"
+    },
+    {
+      "name": "Ann W. Nguyen",
+      "reason": "Discovery lead held: social-work faculty and doctorate surfaced, but no affirmative Vietnamese given-name, education, language or diaspora signal verified; surname alone insufficient. Lead: https://case.edu/socialwork/about/directory-faculty-and-staff/ann-w-nguyen"
+    },
+    {
+      "name": "Kim Doan",
+      "reason": "Discovery lead held: West Chester special-education professor, but ambiguous given name Kim and surname Doan were not supplemented by verified affirmative Vietnamese evidence. Lead: https://www.wcupa.edu/_admin/research/forms/ram-research-directory/profile.aspx?id=166"
+    },
+    {
+      "name": "Anh Alan Nguyen",
+      "reason": "Official live Kansas State page explicitly identifies a visiting assistant professorship; excluded despite doctorate and relevant scholarship. https://www.k-state.edu/social-transformation/about/faculty-staff/nguyen/"
+    },
+    {
+      "name": "Kate (Thi) Nguyen",
+      "reason": "Live employer-hosted CV explicitly identifies Visiting Assistant Professor of Psychology at University of Tampa; excluded. https://www.ut.edu/uploadedFiles/Directory/NguyenKateCV.pdf"
+    },
+    {
+      "name": "Anh Tran — Wichita State University",
+      "reason": "Held, current eligibility unresolved: older faculty profile is live but retirement surfaced in discovery. The 2019 annual-report URL now redirects to the college homepage, and current appointment or formal emeritus status could not be established. https://www.wichita.edu/academics/education/stl/People/anh_tran.php ; https://www.wichita.edu/academics/applied_studies/Deans_Office/documents/2019_CAS_Annual_Report.pdf"
+    },
+    {
+      "name": "Huong Tran Nguyen",
+      "reason": "Live CSULB retirement article identifies 2025 retirement; current appointment or formally conferred emerita status not verified. Do not treat older professor CV as current appointment. https://www.csulb.edu/college-of-education/article/tears-and-triumph-video-resurfaces-of-professors-emotional-disney"
+    },
+    {
+      "name": "Huu Dat Tran",
+      "reason": "Held: live Virginia Tech August 2026 announcement confirms tenure-track Communication hire, but no current employer person profile located and no maintained personal site opened to satisfy profileUrl requirement. ORCID is a lead, not the required person/employer page. https://liberalarts.vt.edu/news/academic-news/2026/august.html ; https://orcid.org/0000-0003-0576-0466"
+    },
+    {
+      "name": "A. Minh Nguyen — Florida Gulf Coast University",
+      "reason": "Held: current employer department directory lists professor and APA biography supplies Columbia doctorate and Vietnamese upbringing. The linked individual employer URL returned HTTP 200 with an empty body, so it did not return a person's page. No qualifying personal profile opened. https://www.fgcu.edu/cas/departments/commphil/commphilfacultystaff ; https://www.fgcu.edu/directory/atnguyen?list=1 ; https://www.apaonline.org/news/642712/A.-Minh-Nguyen-and-Eileen-Nutting-Receive-the-Chairs-Volunteer-Service-Award.htm"
+    },
+    {
+      "name": "Jade Hidle",
+      "reason": "Held pending explicit permanent/tenured appointment evidence and a person profile: full-time English faculty status and UCSD doctorate established by current MiraCosta catalog; Vietnamese background established by DVAN. Tenure committee membership surfaced, but the underlying old committee and contract PDFs now return 404. Do not infer community-college tenure from longevity or full-time title alone. https://catalog.miracosta.edu/aboutmiracosta/faculty/ ; https://dvan.org/2024/07/hair-a-my-lai-memoir/"
+    },
+    {
+      "name": "Dung Ngo",
+      "reason": "Held: current career psychology appointment/person profile not verified. Employer handbooks, course syllabi and committee lists surfaced, but did not supply the required current individual profile and sufficiently clear career appointment. Leads: https://www.tamucc.edu/liberal-arts/assets/documents/graduate-student-handbook/2024-2025-ma-clinical-psychology-handbook.pdf ; https://www.tamucc.edu/liberal-arts/assets/documents/cla-25-26-committees-members.pdf"
+    },
+    {
+      "name": "Trang Tran — University of Alaska Anchorage",
+      "reason": "Held: education-policy appointment surfaced, but discovery catalog calls it a term research assistant professorship. Current catalog PDF fetch timed out, and stable career-faculty status was not verified; no candidate proposed from the graduation announcement alone. https://www.colorado.edu/education/2025/05/01/trang-trans-journey-learning-affirmation-and-growth ; https://catalog.uaa.alaska.edu/directory/directory.pdf"
+    },
+    {
+      "name": "Teri Hong-Phuc Nguyen",
+      "reason": "Held: discovery profile has inconsistent teaching/visiting labels; live profile fetch failed and research doctorate or two recent current-employer papers not verified under BRIEF2's stricter bar. https://www.law.seattleu.edu/faculty/directory/profiles/nguyen-teri-hong-phuc.html"
+    },
+    {
+      "name": "Ho Phi Huynh",
+      "reason": "Outside assigned US slice: current employer is Australian National University; older Texas A&M San Antonio pages are stale leads. https://iceds.anu.edu.au/members/all-members/dr-ho-phi-huynh"
+    }
+  ],
+  "coverage": [
+    {
+      "employer": "Pomona College",
+      "pagesExamined": [
+        "https://www.pomona.edu/directory/people/hung-cam-thai"
+      ],
+      "note": "Verified proposed Hung Cam Thai; doctorate and Vietnamese signal sources and any namesake resolution are recorded in evidence."
+    },
+    {
+      "employer": "Bates College",
+      "pagesExamined": [
+        "https://www.bates.edu/faculty/profile/trian-nguyen/"
+      ],
+      "note": "Verified proposed Trian Nguyen; doctorate and Vietnamese signal sources and any namesake resolution are recorded in evidence."
+    },
+    {
+      "employer": "Gonzaga University",
+      "pagesExamined": [
+        "https://www.gonzaga.edu/academics/faculty-listing/detail?person=dung-q-tran-phd-8e3bb7e1"
+      ],
+      "note": "Verified proposed Dung Q. Tran; doctorate and Vietnamese signal sources and any namesake resolution are recorded in evidence."
+    },
+    {
+      "employer": "University of Massachusetts Lowell",
+      "pagesExamined": [
+        "https://www.uml.edu/fahss/political-science/faculty/pho-hai.aspx"
+      ],
+      "note": "Verified proposed Hai B. Pho; doctorate and Vietnamese signal sources and any namesake resolution are recorded in evidence."
+    },
+    {
+      "employer": "California State University, Fresno",
+      "pagesExamined": [
+        "https://kremen.fresnostate.edu/about/directory/phan-trang.html"
+      ],
+      "note": "Verified proposed Trang Phan; doctorate and Vietnamese signal sources and any namesake resolution are recorded in evidence."
+    },
+    {
+      "employer": "College of the Holy Cross",
+      "pagesExamined": [
+        "https://www.holycross.edu/academics/people/peter-nguyen"
+      ],
+      "note": "Verified proposed Peter Nguyen; doctorate and Vietnamese signal sources and any namesake resolution are recorded in evidence."
+    },
+    {
+      "employer": "California State University, Long Beach",
+      "pagesExamined": [
+        "https://www.csulb.edu/college-of-health-human-services/school-of-social-work/page/brian-trung-lam"
+      ],
+      "note": "Verified proposed Brian Trung Lam; doctorate and Vietnamese signal sources and any namesake resolution are recorded in evidence."
+    },
+    {
+      "employer": "Siena University",
+      "pagesExamined": [
+        "https://www.siena.edu/faculty-and-staff/person/linh-hoang/"
+      ],
+      "note": "Verified proposed Linh N. Hoang; doctorate and Vietnamese signal sources and any namesake resolution are recorded in evidence."
+    },
+    {
+      "employer": "Bard College",
+      "pagesExamined": [
+        "https://www.bard.edu/faculty/yarran-hominh"
+      ],
+      "note": "Verified proposed Yarran Hominh; doctorate and Vietnamese signal sources and any namesake resolution are recorded in evidence."
+    },
+    {
+      "employer": "University of Massachusetts Boston",
+      "pagesExamined": [
+        "https://www.umb.edu/directory/kiethuynh/"
+      ],
+      "note": "Verified proposed Kiet Huynh; doctorate and Vietnamese signal sources and any namesake resolution are recorded in evidence."
+    },
+    {
+      "employer": "MiraCosta College",
+      "pagesExamined": [
+        "https://foundation.miracosta.edu/why-give/profiles-donor/thao-ha.html"
+      ],
+      "note": "Verified proposed Thao Ha; doctorate and Vietnamese signal sources and any namesake resolution are recorded in evidence."
+    },
+    {
+      "employer": "Cornell University",
+      "pagesExamined": [
+        "https://einaudi.cornell.edu/discover/people/thuy-tranviet"
+      ],
+      "note": "Vietnamese language teaching ladder; Thuy D. Tranviet is already vp-0262."
+    },
+    {
+      "employer": "University of California, Irvine",
+      "pagesExamined": [
+        "https://faculty.sites.uci.edu/longbui/"
+      ],
+      "note": "Global/International Studies lead Long T. Bui already vp-0179. Live fetch timed out; dedup resolved from exact stored homepage and name."
+    },
+    {
+      "employer": "University of Houston",
+      "pagesExamined": [
+        "https://www.campusnet.uh.edu/class/mcl/faculty/nguyen-d/index.php"
+      ],
+      "note": "Comparative literature lead Duy Lap Nguyen already vp-0227; employer page fetch failed, so no update proposed."
+    },
+    {
+      "employer": "Baylor University",
+      "pagesExamined": [
+        "https://psychologyneuroscience.artsandsciences.baylor.edu/person/jacques-nguyen-phd"
+      ],
+      "note": "Psychology/neuroscience discovery identified Jacques Nguyen, already vp-2843. Attempted official person-page open returned 403; no new candidate or roster update proposed."
+    },
+    {
+      "employer": "University of Notre Dame",
+      "pagesExamined": [
+        "https://law.nd.edu/directory/trai-le/",
+        "https://americanstudies.nd.edu/faculty/jennifer-huynh/"
+      ],
+      "note": "Opened law and American Studies profiles. Trai Le and Jennifer Huynh already vp-0735 and vp-1811."
+    },
+    {
+      "employer": "Kansas State University",
+      "pagesExamined": [
+        "https://www.k-state.edu/media-communication/about/faculty/huyen-nguyen.html",
+        "https://www.k-state.edu/social-transformation/about/faculty-staff/nguyen/"
+      ],
+      "note": "Communication: Huyen Nguyen already vp-0258; Anh Alan Nguyen excluded as visiting."
+    },
+    {
+      "employer": "Augusta University",
+      "pagesExamined": [
+        "https://www.augusta.edu/faculty/directory/view.php?id=TUONGUYEN"
+      ],
+      "note": "Psychological Sciences faculty Vy Nguyen already vp-0337."
+    },
+    {
+      "employer": "Arizona State University",
+      "pagesExamined": [
+        "https://search.asu.edu/profile/3722740",
+        "https://search.asu.edu/profile/2162867"
+      ],
+      "note": "Counseling/psychology: Nancy N. Truong and Thao Ha already vp-2834 and vp-1394. ASU Thao Ha distinguished from MiraCosta sociologist by degrees and field."
+    },
+    {
+      "employer": "Bucknell University",
+      "pagesExamined": [
+        "https://www.bucknell.edu/fac-staff/allen-tran"
+      ],
+      "note": "Anthropologist Allen Tran already vp-2087."
+    },
+    {
+      "employer": "University of Alaska Southeast",
+      "pagesExamined": [
+        "https://uas.alaska.edu/dir/ntnguyen2.html"
+      ],
+      "note": "History professor Nguyet Nguyen already vp-1809."
+    },
+    {
+      "employer": "Georgetown University",
+      "pagesExamined": [
+        "https://performingarts.georgetown.edu/profiles/van-tran-nguyen/"
+      ],
+      "note": "Performing arts artist-scholar Van Tran Nguyen already vp-1708."
+    },
+    {
+      "employer": "Philadelphia College of Osteopathic Medicine",
+      "pagesExamined": [
+        "https://www.pcom.edu/academics/faculty/sofia-pham.html",
+        "https://researchprofiles.library.pcom.edu/en/persons/sofia-pham/"
+      ],
+      "note": "School psychology: live PCOM profile verified role/doctorate; affirmative Vietnamese signal absent. Research-portal fetch failed."
+    },
+    {
+      "employer": "University of Nevada, Las Vegas",
+      "pagesExamined": [
+        "https://www.unlv.edu/news/article/interview-federick-ngo",
+        "https://fngo.faculty.unlv.edu/"
+      ],
+      "note": "Education lead Federick Ngo held for lack of Vietnamese signal; employer interview identifies Cambodian background. Faculty homepage fetch timed out."
+    },
+    {
+      "employer": "Wichita State University",
+      "pagesExamined": [
+        "https://www.wichita.edu/academics/education/stl/People/anh_tran.php",
+        "https://www.wichita.edu/academics/applied_studies/Deans_Office/documents/2019_CAS_Annual_Report.pdf"
+      ],
+      "note": "Education lead Anh Tran held for unresolved current/emeritus status; requests opened old person page, annual-report URL redirects."
+    },
+    {
+      "employer": "Florida Gulf Coast University",
+      "pagesExamined": [
+        "https://www.fgcu.edu/cas/departments/commphil/",
+        "https://www.fgcu.edu/cas/departments/commphil/commphilfacultystaff",
+        "https://www.fgcu.edu/directory/atnguyen?list=1"
+      ],
+      "note": "Philosophy lead A. Minh Nguyen has department listing but individual profile returned empty content; held."
+    },
+    {
+      "employer": "Virginia Tech",
+      "pagesExamined": [
+        "https://liberalarts.vt.edu/news/academic-news/2026/august.html",
+        "https://liberalarts.vt.edu/departments-and-schools/school-of-communication/faculty.html"
+      ],
+      "note": "Communication: Uyen Diep already vp-1549; Huu Dat Tran hire confirmed but required person profile not located."
+    },
+    {
+      "employer": "University of Tampa",
+      "pagesExamined": [
+        "https://www.ut.edu/uploadedFiles/Directory/NguyenKateCV.pdf"
+      ],
+      "note": "Psychology lead Kate Nguyen excluded: live CV states visiting appointment."
+    },
+    {
+      "employer": "Seattle University",
+      "pagesExamined": [
+        "https://www.law.seattleu.edu/faculty/directory/profiles/nguyen-teri-hong-phuc.html"
+      ],
+      "note": "Law lead Teri Hong-Phuc Nguyen held; current profile fetch failed and BRIEF2 research-doctorate/recent-paper bar not established."
+    },
+    {
+      "employer": "Columbia University",
+      "pagesExamined": [
+        "https://philosophy.columbia.edu/content/minorities-and-philosophy-initiative"
+      ],
+      "note": "Historical institutional biography provides affirmative Vietnamese-Australian signal for current Bard faculty member Yarran Hominh; not mistaken for current Columbia employment."
+    },
+    {
+      "employer": "MiraCosta College",
+      "pagesExamined": [
+        "https://catalog.miracosta.edu/aboutmiracosta/faculty/",
+        "https://www.miracosta.edu/governance/academic-senate/_docs/agenda-091622.pdf"
+      ],
+      "note": "Current full-time catalog examined in addition to Thao Ha profile. Jade Hidle held; old tenure committee PDF returned 404."
+    },
+    {
+      "employer": "California State University, Long Beach",
+      "pagesExamined": [
+        "https://www.csulb.edu/college-of-education/article/tears-and-triumph-video-resurfaces-of-professors-emotional-disney"
+      ],
+      "note": "Education retirement check held Huong Tran Nguyen; social-work faculty Brian Trung Lam separately verified as new."
+    },
+    {
+      "employer": "University of North Texas",
+      "pagesExamined": [
+        "https://facultyinfo.unt.edu/faculty-profile?profile=kdh0380",
+        "https://psychology.unt.edu/counseling-psychology-faculty"
+      ],
+      "note": "Older live Kiet Huynh records cross-checked; current UMass Boston person profile and linked updated lab establish present employer. PhD year sourced from UNT."
+    },
+    {
+      "employer": "University of Alaska Anchorage",
+      "pagesExamined": [
+        "https://catalog.uaa.alaska.edu/directory/directory.pdf"
+      ],
+      "note": "Catalog fetch timed out. Trang Tran lead held; term-appointment signal not resolved."
+    },
+    {
+      "employer": "Australian National University",
+      "pagesExamined": [
+        "https://iceds.anu.edu.au/members/all-members/dr-ho-phi-huynh"
+      ],
+      "note": "Boundary check: Ho Phi Huynh is outside US slice despite older Texas appointment."
+    }
+  ]
+}

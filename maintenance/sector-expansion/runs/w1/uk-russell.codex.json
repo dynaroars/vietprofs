@@ -1,0 +1,478 @@
+{
+  "group": "university",
+  "agent": "codex",
+  "slice": "uk-russell",
+  "finishedAt": "2026-11-15T00:09:11.263098+00:00",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Mai Le",
+        "university": "Cardiff University",
+        "rank": "Professor",
+        "department": "Cardiff Business School",
+        "city": "Cardiff",
+        "field": "Business & Economics",
+        "researchAreas": [
+          "Applied Macroeconomics",
+          "Macroeconomic Modelling",
+          "Monetary Policy",
+          "Financial Frictions",
+          "International Trade"
+        ],
+        "phdInstitution": "Cardiff University",
+        "phdYear": 2008,
+        "msInstitution": "Cardiff University",
+        "undergradInstitution": "Cardiff University",
+        "undergradYear": 2003,
+        "profileUrl": "https://profiles.cardiff.ac.uk/staff/levp",
+        "country": "United Kingdom",
+        "track": "Tenure-line"
+      },
+      "evidence": {
+        "currentRole": "https://profiles.cardiff.ac.uk/staff/levp — “Professor of Economics”; current Cardiff Business School profile opened successfully.",
+        "doctorateOrPapers": "https://profiles.cardiff.ac.uk/staff/levp — “Phd Economics (Cardiff University) 2008”.",
+        "vietnameseSignal": "https://profiles.cardiff.ac.uk/staff/levp identifies her executive-board membership of the Vietnamese Intellectual Society in the UK and Ireland. This is affirmative community evidence beyond the ambiguous tokens Mai/Le.",
+        "dedup": "npm run find-roster-matches -- \"Mai Le\" --url https://profiles.cardiff.ac.uk/staff/levp returned vp-0223 Mai-Nhung Le (Asian American Studies, San Francisco State) and vp-1362 Le Mai Tu (surgery, Sherbrooke). Different names, fields, and institutions; neither shares the Cardiff profile. Cardiff macroeconomist has Cardiff PhD 2008 and prior Sheffield/Swansea appointments. No identical identity URL in the roster. Not in already-proposed.txt.",
+        "enrichment": "Degree fields and research keywords come from the same Cardiff profile. Its portrait link was found but could not be opened; no portrait proposed. Listed doctoral/postdoctoral scholarships were not imported as faculty honors. No verified personal LinkedIn or Scholar URL found."
+      }
+    },
+    {
+      "entry": {
+        "name": "Hung Bui",
+        "university": "University of Manchester",
+        "rank": "Lecturer",
+        "department": "Pure Mathematics",
+        "field": "Mathematics",
+        "researchAreas": [
+          "Analytic Number Theory",
+          "L-functions",
+          "Riemann Zeta Function"
+        ],
+        "phdInstitution": "University of Bristol",
+        "phdYear": 2008,
+        "profileUrl": "https://research.manchester.ac.uk/en/persons/hung.bui",
+        "country": "United Kingdom",
+        "track": "Tenure-line"
+      },
+      "evidence": {
+        "currentRole": "https://research.manchester.ac.uk/en/persons/hung.bui — “Lecturer in Pure Mathematics”; official research profile describes appointment beginning November 2015.",
+        "doctorateOrPapers": "https://research.manchester.ac.uk/en/persons/hung.bui — completed Bristol PhD in March 2008; education section explicitly gives award date 5 March 2008.",
+        "vietnameseSignal": "Vietnamese given name Hung together with surname Bui on https://research.manchester.ac.uk/en/persons/hung.bui. Also appears as a Manchester speaker at https://icms.ac.uk/archive/workshop/uk-vietnam-mathematics-joint-meeting/ (opened).",
+        "dedup": "npm run find-roster-matches -- \"Hung Bui\" --url https://research.manchester.ac.uk/en/persons/hung.bui https://personalpages.manchester.ac.uk/staff/hung.bui/ returned no roster or retired-id matches. Manually checked name and exact URLs. Not in already-proposed.txt.",
+        "enrichment": "Research keywords supported by current employer publication titles and the opened ICMS programme. Personal homepage timed out and is omitted. Employer HTML exposes a potential portrait at https://research.manchester.ac.uk/files-asset/48050542/Hung01.JPG/; not visually vetted, so omitted from entry. No verified Scholar/LinkedIn found; search hits for the DeepMind computer scientist are a different person."
+      }
+    },
+    {
+      "entry": {
+        "name": "Laura Bui",
+        "university": "University of Manchester",
+        "rank": "Senior Lecturer",
+        "department": "Criminology",
+        "field": "Social & Behavioral Sciences",
+        "researchAreas": [
+          "Psychology of Violence",
+          "Metascience",
+          "Cross-cultural Studies",
+          "Antisocial Behaviour"
+        ],
+        "phdInstitution": "University of Cambridge",
+        "msInstitution": "Boston University",
+        "undergradInstitution": "University of California, Irvine",
+        "profileUrl": "https://research.manchester.ac.uk/en/persons/laura.bui",
+        "country": "United Kingdom",
+        "track": "Tenure-line"
+      },
+      "evidence": {
+        "currentRole": "https://research.manchester.ac.uk/en/persons/laura.bui — “Senior Lecturer in Criminology”; official current profile opened successfully.",
+        "doctorateOrPapers": "https://research.manchester.ac.uk/en/persons/laura.bui explicitly identifies her PhD from the Institute of Criminology, University of Cambridge; no year supplied.",
+        "vietnameseSignal": "https://diacritics.org/2021/02/beyond-war-talk/ — her first-person essay says “In Vietnamese diasporic writing I recognise myself”. Contributor bio identifies the same Manchester criminologist. Both essay and employer page opened; signal is not surname alone.",
+        "dedup": "npm run find-roster-matches -- \"Laura Bui\" --url https://research.manchester.ac.uk/en/persons/laura.bui returned no roster or retired-id matches. Manually checked name and exact URL. Not in already-proposed.txt.",
+        "enrichment": "Research and education fields from the official profile. Employer HTML exposes a potential portrait at https://research.manchester.ac.uk/files-asset/1551834168/Bui.jpg/; not visually vetted, so omitted from entry. Book commendation was not treated as an eligible major award. No verified Scholar or personal LinkedIn found."
+      }
+    },
+    {
+      "entry": {
+        "name": "Chi Trinh",
+        "university": "University of Leeds",
+        "rank": "Lecturer",
+        "department": "School of Molecular and Cellular Biology",
+        "field": "Biological & Biomedical Sciences",
+        "researchAreas": [
+          "Structural Biology",
+          "Macromolecular X-ray Crystallography",
+          "Protein Crystallography"
+        ],
+        "phdInstitution": "University of Leeds",
+        "phdYear": 1998,
+        "undergradInstitution": "University of Bath",
+        "undergradYear": 1994,
+        "profileUrl": "https://biologicalsciences.leeds.ac.uk/molecular-and-cellular-biology/staff/413/dr-chi-trinh",
+        "country": "United Kingdom",
+        "track": "Tenure-line"
+      },
+      "evidence": {
+        "currentRole": "https://biologicalsciences.leeds.ac.uk/molecular-and-cellular-biology/staff/413/dr-chi-trinh — “Lecturer in Structural Biology”. Current school profile opened. https://biologicalsciences.leeds.ac.uk/facilities/doc/pixc/page/3 additionally distinguishes his former facility-manager role from his current lectureship.",
+        "doctorateOrPapers": "https://biologicalsciences.leeds.ac.uk/molecular-and-cellular-biology/staff/413/dr-chi-trinh — “Biochemistry and Molecular Biology PhD, 1994-1998 University of Leeds”.",
+        "vietnameseSignal": "Vietnamese given name Chi together with surname Trinh, as published on the current Leeds profile. No Vietnamese diacritics invented.",
+        "dedup": "npm run find-roster-matches -- \"Chi Trinh\" --url https://biologicalsciences.leeds.ac.uk/molecular-and-cellular-biology/staff/413/dr-chi-trinh returned no roster or retired-id matches. Manually checked name and exact URL. Not in already-proposed.txt.",
+        "enrichment": "Expertise, degree institutions and completion years explicitly listed on the profile. No city inferred. No eligible honor, usable portrait, personal website, Scholar or personal LinkedIn verified."
+      }
+    },
+    {
+      "entry": {
+        "name": "Anh Phan",
+        "university": "Newcastle University",
+        "rank": "Professor",
+        "department": "School of Engineering",
+        "city": "Newcastle upon Tyne",
+        "field": "Engineering",
+        "researchAreas": [
+          "Process Intensification",
+          "Kinetic Modelling",
+          "Biofuel Processing",
+          "Cold Plasma Technologies",
+          "Chemical Recycling"
+        ],
+        "profileUrl": "https://www.ncl.ac.uk/engineering/staff/profile/anhphan.html",
+        "scholarUrl": "https://scholar.google.co.uk/citations?user=0Whd4kQAAAAJ&hl=en",
+        "country": "United Kingdom",
+        "track": "Tenure-line"
+      },
+      "evidence": {
+        "currentRole": "https://www.ncl.ac.uk/engineering/staff/profile/anhphan.html — “Professor Anh Phan” and “Chair of Circular Chemical Engineering”; current official profile opened.",
+        "doctorateOrPapers": "Current-employer profile https://www.ncl.ac.uk/engineering/staff/profile/anhphan.html lists two 2025 coauthored articles: hydrothermal-carbonisation/bio-oil carbon dots (Journal of Materials Chemistry C 13(5), 2172–2182; https://eprint.ncl.ac.uk/302838), and intensified palm-oil glycerolysis (ACS Sustainable Chemistry and Engineering 13(29), 11301–11314; https://eprint.ncl.ac.uk/306848). Both listed under this current Newcastle faculty member. Individual repository links failed; evidence is the successfully opened employer publication list, with long-running Newcastle teaching also documented there. Doctoral institution/year omitted because not verified on the employer page.",
+        "vietnameseSignal": "Vietnamese given name Anh with surname Phan on https://www.ncl.ac.uk/engineering/staff/profile/anhphan.html.",
+        "dedup": "npm run find-roster-matches -- \"Anh Phan\" --url https://www.ncl.ac.uk/engineering/staff/profile/anhphan.html \"https://scholar.google.co.uk/citations?user=0Whd4kQAAAAJ&hl=en\" returned vp-0121, vp-0667, vp-1203, vp-1219 and vp-1454; all resolved as other people. Closest match vp-1219 is the Surrey molecular-simulation lecturer: https://www.surrey.ac.uk/people/anh-phan opened and confirms UCL PhD 2016, UCL postdoc 2018–2021, and different publications. Newcastle professor has distinct process-intensification publications and taught Newcastle courses before 2018. Other hits are different fuller names or higher-education research. No shared identity URL. Not in already-proposed.txt.",
+        "enrichment": "Scholar URL is linked directly by the employer profile and therefore identity resolved; Scholar itself returned 403. Exact city and department from profile address. No PhD year inferred. No eligible honor or vetted portrait proposed; plain chair title not assumed endowed. Downstream may disambiguate display name with Newcastle University, given existing namesakes."
+      }
+    }
+  ],
+  "already_listed": [
+    {
+      "name": "Kim Nguyen",
+      "id": "vp-0694",
+      "note": "Same Sheffield economics profile; Nottingham doctorate and behavioural finance match. npm run find-roster-matches run in this session with the name and available profile URL."
+    },
+    {
+      "name": "Thach Nguyen",
+      "id": "vp-0695",
+      "note": "Same Sheffield finance profile URL. npm run find-roster-matches run in this session with the name and available profile URL."
+    },
+    {
+      "name": "Trang Nguyen",
+      "id": "vp-1573",
+      "note": "Same Bristol finance scholar; personal-site identity and Glasgow history match. npm run find-roster-matches run in this session with the name and available profile URL."
+    },
+    {
+      "name": "Thinh Pham",
+      "id": "vp-1531",
+      "note": "Exact Glasgow psychology profile match. npm run find-roster-matches run in this session with the name and available profile URL."
+    },
+    {
+      "name": "Nguyen B. Truong",
+      "id": "vp-1592",
+      "note": "Exact Glasgow computing profile; Liverpool John Moores doctorate and Imperial history match. npm run find-roster-matches run in this session with the name and available profile URL."
+    },
+    {
+      "name": "Phung Dao",
+      "id": "vp-0518",
+      "note": "Exact Cambridge education profile match. npm run find-roster-matches run in this session with the name and available profile URL."
+    },
+    {
+      "name": "Tan Viet Tuyen Nguyen",
+      "id": "vp-1593",
+      "note": "Exact Southampton profile match. npm run find-roster-matches run in this session with the name and available profile URL."
+    },
+    {
+      "name": "Xuan-Vinh Doan",
+      "id": "vp-0517",
+      "note": "Exact Warwick Business School profile match. npm run find-roster-matches run in this session with the name and available profile URL."
+    },
+    {
+      "name": "Ngoc Khanh Nguyen",
+      "id": "vp-0568",
+      "note": "Exact King’s College London profile match. npm run find-roster-matches run in this session with the name and available profile URL."
+    },
+    {
+      "name": "Linh Hoang Nguyen",
+      "id": "vp-0948",
+      "note": "Exact Nottingham Business School profile match. npm run find-roster-matches run in this session with the name and available profile URL."
+    },
+    {
+      "name": "Kiet Duong",
+      "id": "vp-0944",
+      "note": "Exact stored York profile matched by dedup; live open returned 403, so no current-role inference. npm run find-roster-matches run in this session with the name and available profile URL."
+    },
+    {
+      "name": "Linh T. B. Nguyen",
+      "id": "vp-2234",
+      "note": "Stored UCL profile exact-match dedup; UCL institutional network page also names biomaterials lecturer Linh Nguyen. Person-page open failed. npm run find-roster-matches run in this session with the name and available profile URL."
+    },
+    {
+      "name": "Ngoc Son Bui",
+      "id": "vp-0590",
+      "note": "Same Oxford Asian-laws professor; opened St Hugh’s biography matches education and current role. npm run find-roster-matches run in this session with the name and available profile URL."
+    },
+    {
+      "name": "Bach Nguyen",
+      "id": "vp-1602",
+      "note": "Exeter directory lists same entrepreneurship professor. npm run find-roster-matches run in this session with the name and available profile URL."
+    },
+    {
+      "name": "Huynh Nguyen",
+      "id": "vp-1264",
+      "note": "Same person as protected roster name Van Huynh Nguyen: exact Liverpool profile and homepage, UTS doctorate 2022. npm run find-roster-matches run in this session with the name and available profile URL."
+    },
+    {
+      "name": "Dong Nguyen",
+      "id": "vp-0600",
+      "note": "Durham education blog is a 2024 historical lead. Roster already identifies this educational-leadership scholar at Macau, with Durham portrait and matching education/research. Do not create a Durham duplicate or treat old blog as a reverse move; current Macau profile open returned 403. npm run find-roster-matches run in this session with the name and available profile URL."
+    }
+  ],
+  "possible_move": [
+    {
+      "name": "Anh Khoa Doan",
+      "id": "vp-0544",
+      "note": "Roster says Assistant Professor, Faculty of Aerospace Engineering, Delft University of Technology. Successfully opened https://profiles.imperial.ac.uk/n.doan gives Associate Professor in Aerospace Engineering, Imperial College London, January 2026–present, and Delft assistant professorship March 2021–31 December 2025 followed by guest researcher status. Cambridge PhD 2018 and field resolve identity. npm run find-roster-matches -- \"Nguyen Anh Khoa Doan\" --url https://profiles.imperial.ac.uk/n.doan returned vp-0544 among token matches. Existing ID; propose no new entry."
+    }
+  ],
+  "rejected": [
+    {
+      "name": "Thu-Nga Nguyen",
+      "reason": "https://profiles.cardiff.ac.uk/staff/nguyentn opened: PhD candidate despite Marie Curie Fellow label; trainee excluded."
+    },
+    {
+      "name": "Martha Nguyen",
+      "reason": "https://profiles.cardiff.ac.uk/staff/nguyend3 opened: PhD Student/Research Assistant; excluded."
+    },
+    {
+      "name": "My Hang Thi Bui",
+      "reason": "https://newn.cam.ac.uk/person/my-hang-thi-my-hang-bui opened, but her Margaret Anstee fellowship is explicitly nonrenewable, three years eleven months from October 2025 under https://newn.cam.ac.uk/sites/default/files/2025-01/MAC%20Fellowship%20FP%202025.pdf (opened). Temporary early-career fellowship excluded."
+    },
+    {
+      "name": "Nguyen Van Bao",
+      "reason": "https://www.birmingham.ac.uk/staff/profiles/music/van-bao-nguyen opened: Postdoctoral Researcher; excluded."
+    },
+    {
+      "name": "Van Huy Nguyen",
+      "reason": "https://research.manchester.ac.uk/en/persons/van-huy-nguyen/ opened: Research Associate described as postdoctoral associate; excluded."
+    },
+    {
+      "name": "Van Nguyen",
+      "reason": "https://biology.ed.ac.uk/plant-shape-lab/team/team-members opened: Research Technician on ERC DynaLines project; stable faculty-equivalent research appointment not established."
+    },
+    {
+      "name": "Nguyen Le",
+      "reason": "https://profiles.imperial.ac.uk/nguyen.le opened: Academic Visitor; excluded."
+    },
+    {
+      "name": "Hoang Nguyen (Liverpool chemistry)",
+      "reason": "https://www.liverpool.ac.uk/people/hoang-nguyen opened: Research Fellow on EPSRC Cleaner Futures project; permanent faculty-equivalent status not established. Not accepted from title alone."
+    },
+    {
+      "name": "Hien Nguyen (Queen’s University Belfast)",
+      "reason": "https://pure.qub.ac.uk/en/persons/hien-nguyen/ opened: Research Fellow; no evidence establishing permanent faculty-equivalent appointment."
+    },
+    {
+      "name": "Trang Tran (Leeds transport)",
+      "reason": "https://environment.leeds.ac.uk/transport/staff/10054/dr-trang-tran opened: Research Fellow with project work; stable faculty-equivalent appointment not established."
+    },
+    {
+      "name": "Viet Nguyen-Tien",
+      "reason": "https://www.lse.ac.uk/people/viet-nguyen-tien opened: Research Officer and UCL Guest Lecturer; no documented permanent faculty-equivalent appointment. Guest teaching alone is excluded."
+    },
+    {
+      "name": "Thuy-vy Nguyen",
+      "reason": "Current Russell Group appointment could not be verified. Durham staff page inaccessible; old university news and repository articles are insufficient current-role evidence. Not retained as verified candidate; https://www.thuyvytnguyen.com/ opened but did not establish a current eligible university role."
+    },
+    {
+      "name": "Jonathan Nguyen-Van-Tam",
+      "reason": "Discovery found historical Nottingham professorial and leadership sources plus later Senior Strategy Adviser descriptions. No current employer person page establishing a qualifying underlying academic appointment was verified; held out, not assumed ineligible. Name-only dedup returned no matches."
+    }
+  ],
+  "coverage": [
+    {
+      "employer": "University of Birmingham",
+      "pagesExamined": [
+        "https://www.birmingham.ac.uk/staff/profiles/music/van-bao-nguyen"
+      ],
+      "note": "Nguyen surname plus Hoang/Quang/Dinh given-name searches; strongest new lead was a postdoc. Existing roster includes Duc Truong Pham and Manh Hong Duong."
+    },
+    {
+      "employer": "University of Bristol",
+      "pagesExamined": [
+        "https://www.bristol.ac.uk/people/person/Trang-Nguyen-5eeb6fc9-1ba5-4839-8238-7d32b5649766/"
+      ],
+      "note": "Nguyen, Hoang and Phan searches; Trang deduped; no new verified faculty."
+    },
+    {
+      "employer": "University of Cambridge",
+      "pagesExamined": [
+        "https://faculty.educ.cam.ac.uk/people/staff/dao",
+        "https://newn.cam.ac.uk/person/my-hang-thi-my-hang-bui",
+        "https://newn.cam.ac.uk/sites/default/files/2025-01/MAC%20Fellowship%20FP%202025.pdf"
+      ],
+      "note": "Nguyen, Vietnamese, Quang, Duy, Bui searches; Phung Dao listed, My Hang Bui temporary fellowship excluded."
+    },
+    {
+      "employer": "Cardiff University",
+      "pagesExamined": [
+        "https://profiles.cardiff.ac.uk/staff/levp",
+        "https://profiles.cardiff.ac.uk/staff/nguyentn",
+        "https://profiles.cardiff.ac.uk/staff/nguyend3"
+      ],
+      "note": "Nguyen, Tran, Vo, Duong and Mai Le searches; Mai Le verified; two student profiles excluded. Nhat/Nick Pham is already rostered vp-2170."
+    },
+    {
+      "employer": "Durham University",
+      "pagesExamined": [
+        "https://staffblog.webspace.durham.ac.uk/meet-dr-dong-nyugen-school-of-education/",
+        "https://www.durham.ac.uk/staff/dong-nguyen/",
+        "https://www.durham.ac.uk/departments/academic/psychology/about-us/staff/"
+      ],
+      "note": "Nguyen and Thuy-vy searches; live staff paths returned 403. Dong already rostered at Macau; historical Durham material not accepted as a current move."
+    },
+    {
+      "employer": "University of Edinburgh",
+      "pagesExamined": [
+        "https://biology.ed.ac.uk/plant-shape-lab/team/team-members"
+      ],
+      "note": "Nguyen, Tran, Bui, Hoang, Dinh, Dao and Hieu searches across subjects; technician, students and research-manager leads did not establish faculty equivalence. No verified new candidate."
+    },
+    {
+      "employer": "University of Exeter",
+      "pagesExamined": [
+        "https://business-school.exeter.ac.uk/management/people/innovation/"
+      ],
+      "note": "Nguyen, Tran, Pham and Vietnamese/Le searches; Bach Nguyen already listed. No new verified faculty."
+    },
+    {
+      "employer": "University of Glasgow",
+      "pagesExamined": [
+        "https://www.gla.ac.uk/schools/psychologyneuroscience/staff/thinhpham/",
+        "https://www.gla.ac.uk/schools/computing/staff/nguyentruong/"
+      ],
+      "note": "Nguyen, Tran, Pham, Le, Phan and Huynh searches; eligible leads mostly already listed; research associates not assumed permanent."
+    },
+    {
+      "employer": "Imperial College London",
+      "pagesExamined": [
+        "https://profiles.imperial.ac.uk/n.doan",
+        "https://profiles.imperial.ac.uk/nguyen.le"
+      ],
+      "note": "Nguyen, Tran and Linh searches plus Doan follow-up; Anh Khoa Doan possible move; Nguyen Le visiting excluded."
+    },
+    {
+      "employer": "King's College London",
+      "pagesExamined": [
+        "https://www.kcl.ac.uk/people/ngoc-khanh-nguyen"
+      ],
+      "note": "Pham, Tran, Phuong and Huynh searches; Ngoc Khanh Nguyen already listed; Huyen Nguyen/Canh Dang leads also match existing roster."
+    },
+    {
+      "employer": "University of Leeds",
+      "pagesExamined": [
+        "https://biologicalsciences.leeds.ac.uk/molecular-and-cellular-biology/staff/413/dr-chi-trinh",
+        "https://environment.leeds.ac.uk/transport/staff/10054/dr-trang-tran"
+      ],
+      "note": "Tran, Dinh, Trinh and Vietnamese-led searches; Chi Trinh verified, project research-fellow lead held out."
+    },
+    {
+      "employer": "University of Liverpool",
+      "pagesExamined": [
+        "https://www.liverpool.ac.uk/people/huynh-nguyen",
+        "https://www.liverpool.ac.uk/people/hoang-nguyen"
+      ],
+      "note": "Nguyen and Dang searches; Huynh resolved to Van Huynh Nguyen; project fellow excluded."
+    },
+    {
+      "employer": "London School of Economics and Political Science",
+      "pagesExamined": [
+        "https://www.lse.ac.uk/people/viet-nguyen-tien"
+      ],
+      "note": "Nguyen, Tran, Phan and Vietnamese searches; research officer/guest lecturer lead lacks permanent faculty-equivalence evidence. No new verified faculty."
+    },
+    {
+      "employer": "University of Manchester",
+      "pagesExamined": [
+        "https://research.manchester.ac.uk/en/persons/hung.bui",
+        "https://research.manchester.ac.uk/en/persons/laura.bui",
+        "https://research.manchester.ac.uk/en/persons/van-huy-nguyen/"
+      ],
+      "note": "Nguyen, Vu, Phan, Bui and given-name searches; Hung and Laura Bui verified; Van Huy Nguyen postdoc excluded."
+    },
+    {
+      "employer": "Newcastle University",
+      "pagesExamined": [
+        "https://www.ncl.ac.uk/engineering/staff/profile/anhphan.html",
+        "https://www.surrey.ac.uk/people/anh-phan"
+      ],
+      "note": "Nguyen and Anh Phan searches; Newcastle process engineer distinguished from Surrey namesake; verified new candidate. Minh Nguyen skipped under already-proposed.txt."
+    },
+    {
+      "employer": "University of Nottingham",
+      "pagesExamined": [
+        "https://www.nottingham.ac.uk/business/people/lizln1.phtml"
+      ],
+      "note": "Nguyen, Tran, Pham, Hoang, Bui, Truong, Quang and Quach searches; Linh Nguyen already listed. Jonathan Nguyen-Van-Tam current underlying academic role not established."
+    },
+    {
+      "employer": "University of Oxford",
+      "pagesExamined": [
+        "https://www.st-hughs.ox.ac.uk/people/professor-ngoc-son-bui/"
+      ],
+      "note": "Vietnamese, Hien and Nguyen searches; eligible UK faculty mostly already listed; Oxford-linked OUCRU Vietnam and visiting leads screened out by location/appointment. No new verified faculty."
+    },
+    {
+      "employer": "Queen Mary University of London",
+      "pagesExamined": [
+        "https://www.qmul.ac.uk/maths/people/academic-staff/index.html",
+        "https://www.qmul.ac.uk/maths/profiles/nguyenhthe.html"
+      ],
+      "note": "Nguyen, Hoang and Vietnamese/Le searches; Huy The Nguyen is already vp-2104; Diu Nguyen already vp-1793. No new verified faculty."
+    },
+    {
+      "employer": "Queen's University Belfast",
+      "pagesExamined": [
+        "https://pure.qub.ac.uk/en/persons/hien-nguyen/"
+      ],
+      "note": "Nguyen and research-centre searches; established faculty already well represented in roster, research-fellow lead lacked permanence evidence."
+    },
+    {
+      "employer": "University of Sheffield",
+      "pagesExamined": [
+        "https://sheffield.ac.uk/economics/staff/academic/kim-nguyen",
+        "https://sheffield.ac.uk/management/people/academic-staff/afm/thach-nguyen"
+      ],
+      "note": "Nguyen, Pham and Le/Vietnamese searches; Kim, Thach and Lien Le Monkhouse already listed. Facility managers/research associates not inferred faculty-equivalent."
+    },
+    {
+      "employer": "University of Southampton",
+      "pagesExamined": [
+        "https://www.southampton.ac.uk/people/659l2y/doctor-tan-viet-tuyen-nguyen?page=1"
+      ],
+      "note": "Nguyen and Tran searches; Tuyen, Hanh/Blue Nguyen and Long Tran-Thanh already listed. Legacy Tri-Dung Nguyen Southampton page not treated as current move from Kent."
+    },
+    {
+      "employer": "University College London",
+      "pagesExamined": [
+        "https://profiles.ucl.ac.uk/63531-linh-nguyen"
+      ],
+      "note": "Nguyen, Duc and Vo searches plus institutional therapeutic-innovation network results. Linh Nguyen profile failed to open; exact roster URL matched. Student and research-assistant leads excluded."
+    },
+    {
+      "employer": "University of Warwick",
+      "pagesExamined": [
+        "https://www.wbs.ac.uk/about/person/xuan-doan"
+      ],
+      "note": "Nguyen, Tran, Le/Vietnamese and Phuong searches; Xuan-Vinh Doan already listed; Long Tran-Thanh and other obvious faculty leads also already rostered."
+    },
+    {
+      "employer": "University of York",
+      "pagesExamined": [
+        "https://www.york.ac.uk/business-society/people/kiet-duong/"
+      ],
+      "note": "Nguyen, Tran, Vu, Hoang, Ngoc and Vietnamese/Do searches; profile returned 403; Kiet already listed by exact URL, Tho Pham already vp-0747. No new candidate verified."
+    }
+  ]
+}

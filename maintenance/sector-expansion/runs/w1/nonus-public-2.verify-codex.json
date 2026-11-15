@@ -1,0 +1,56 @@
+{
+  "verifier": "codex",
+  "input": "maintenance/sector-expansion/runs/w1/nonus-public-2.codex.json",
+  "candidates": [
+    {
+      "name": "The-Anh Nguyen",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "The individual FOKUS profile is live and identifies a Berlin Research Associate/Scientist who transitioned from research assistant after his January 2023 master’s thesis. Independently fetched employer publication records https://publica.fraunhofer.de/handle/publica/469640 (2024-05-22) and https://publica.fraunhofer.de/handle/publica/517790 (2026-07-02) name him with FOKUS affiliation, satisfying the two-paper route without claiming a doctorate. The-Anh supplies a Vietnamese given-name signal beyond Nguyen. Roster matches vp-0026/vp-0597 have earlier computing doctorates; vp-0126/vp-0684 are mechanical/chemical engineers; vp-2637/vp-2947/vp-3116 are business, economics and clinical researchers, distinct from this HTW/FOKUS educational-technology identity. No identity URL match or already-proposed entry; Germany location supported.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Truong-Sinh An",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live individual FOKUS biography identifies a Berlin R&D project manager/scientific assistant working there since 2020, with an earlier 2014 TU Berlin diploma and subsequent research/software career, rather than a trainee role. Independently fetched employer records https://publica.fraunhofer.de/handle/publica/469640 (2024) and https://publica.fraunhofer.de/handle/publica/490661 (2025) name An with FOKUS affiliation; the publication route qualifies without a doctorate. Truong-Sinh is an affirmative Vietnamese compound given name. The required matcher returned no roster or retired-ID matches, and already-proposed.txt has no entry. Current workplace is Berlin, Germany.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Bach Do",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live individual FOKUS page identifies a Berlin Research Associate/Scientist with a completed master’s degree and educational-technology R&D responsibilities. Employer publication records https://publica.fraunhofer.de/handle/publica/469791 (2024-05-22) and https://publica.fraunhofer.de/handle/publica/490661 (2025-08-14), independently opened, name Do with FOKUS affiliation, meeting publication eligibility without asserting a doctorate; future 2027 work is unnecessary. Bach supplies a Vietnamese given-name signal alongside Do. The required matcher returned no roster or retired-ID matches, and already-proposed.txt has no entry. Employer contact places him in Berlin, Germany.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Binh Duong Nguyen",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live individual Jülich employer profile explicitly names Dr. Binh Duong Nguyen, Senior Scientist, IAS-9 Materials Data Science and Informatics, with a German institutional address. This supports a doctorate and a career scientist role; doctoral institution/year remain unstated. Binh Duong is an affirmative Vietnamese given-name combination. Matcher hits vp-0023/vp-0358 are electrical/computing researchers with Michigan State/UBC doctorates, vp-1528 is the NUS-trained Wellington researcher, and vp-3148 is a Macquarie-trained insect researcher; their full identities, disciplines and education differ from this materials scientist. No identity URL match or already-proposed entry.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Thuc Han Tran",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live individual IOER profile records Research Associate in Dresden from 2024 to present, separately identifying earlier postdoctoral jobs, and explicitly records the 2014 architecture PhD at Victoria University of Wellington. Its Hanoi Architecture University bachelor’s degree supplies an affirmative Vietnamese connection, alongside the Vietnamese full name. The required matcher returned no roster or retired-ID matches; already-proposed.txt contains no entry. The current appointment is in Dresden, Germany, not the historical Hanoi roles.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Hung Hoang Viet Nguyen",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "The exact DIE profile returned HTTP 200 and the complete named biography by direct HTTP GET, although the browser tool could not fetch it. It identifies a Bonn Research Associate in Organisation and Programme Planning, employed at DIE since 2024, and a completed 2019–2025 political-science PhD at Bremen International Graduate School of Social Sciences. The Ho Chi Minh City University bachelor’s degree is an affirmative Vietnamese connection. All matcher hits were compared with roster identities: the closest political-science hit vp-0334 is George Mason emeritus Hung M. Nguyen; the others have different full names, disciplines or doctoral histories. Retired vp-1574 is the Melbourne economist; vp-1513 is an unrelated unsupported Khalifa placeholder. No identity URL match or already-proposed entry; Germany location supported.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Phong Trieu Le",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live individual NICT page names Le Trieu Phong as Senior Researcher (主任研究員), records joining NICT in 2009, cryptography/privacy-preserving machine-learning research, and a completed Tokyo Institute of Technology doctorate in 2009. Trieu Phong supplies an affirmative Vietnamese given-name combination beyond Le. Required matcher runs for both name orders produced vp-0106 (Buffalo-trained mathematician), vp-2200 (cancer biologist), vp-3021 (Illinois-trained hydrologist) and vp-2199. The latter’s linked https://lephong.github.io/ independently confirms an Amsterdam-trained NLP researcher with Edinburgh/Manchester/Amazon history, distinct from the Tokyo Tech/NICT cryptographer. No identity URL match or already-proposed entry; the current employer/laboratory is in Japan.",
+      "correctedFields": {}
+    }
+  ],
+  "possible_move": []
+}

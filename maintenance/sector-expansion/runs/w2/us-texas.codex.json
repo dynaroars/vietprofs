@@ -1,0 +1,480 @@
+{
+  "group": "university",
+  "agent": "codex",
+  "slice": "us-texas",
+  "finishedAt": "2026-11-15T00:50:54.969826Z",
+  "candidates": [
+    {
+      "entry": {
+        "country": "United States",
+        "name": "Quoc Nguyen",
+        "university": "The University of Texas at Austin",
+        "track": "Tenure-line",
+        "rank": "Professor",
+        "department": "Petroleum and Geosystems Engineering",
+        "researchAreas": [
+          "Enhanced Oil Recovery",
+          "Geologic Carbon Storage",
+          "Reservoir Engineering",
+          "Unconventional Resources"
+        ],
+        "phdInstitution": "Delft University of Technology",
+        "phdYear": 2003,
+        "msInstitution": "Wageningen University",
+        "undergradInstitution": "Vietnam-Tokyo Polytechniques University",
+        "undergradYear": 1996,
+        "profileUrl": "https://pge.utexas.edu/person/quoc-nguyen/",
+        "honors": [
+          {
+            "name": "J.H. Herring Centennial Professorship",
+            "category": "distinguished_professorship",
+            "organization": "The University of Texas at Austin",
+            "source": "https://pge.utexas.edu/person/quoc-nguyen/"
+          }
+        ]
+      },
+      "evidence": {
+        "currentRole": "https://pge.utexas.edu/person/quoc-nguyen/ — Current faculty profile: \"Professor J.H. Herring Centennial Professorship\". Faculty appointment since 2005 and current petroleum-engineering research described.",
+        "doctorateOrPapers": "https://pge.utexas.edu/person/quoc-nguyen/ — Educational qualifications explicitly give petroleum-engineering PhD, Delft University of Technology, 2003; MS Wageningen 1999; undergraduate institution and year 1996. MBA is not mapped into MS.",
+        "vietnameseSignal": "https://pge.utexas.edu/person/quoc-nguyen/ — Vietnamese given name Quoc and Vietnamese undergraduate education; not surname alone.",
+        "dedup": "Ran npm run find-roster-matches -- \"Quoc Nguyen\" --url https://pge.utexas.edu/person/quoc-nguyen/. Hits vp-0144, vp-0993, vp-1370, vp-1412, vp-1803, vp-2450, vp-2557, vp-3178, vp-3213 and vp-3275 were checked against their stored departments and degree histories. None matches petroleum engineering/Delft PhD 2003: the hits concern finance, economics, medicine, AI, mathematics or law with different doctorate institutions. No shared identity URL. Absent from already-proposed.txt."
+      }
+    },
+    {
+      "entry": {
+        "country": "United States",
+        "name": "Huu Tuan Tran",
+        "university": "East Texas A&M University",
+        "track": "Tenure-line",
+        "rank": "Assistant Professor",
+        "department": "Biological and Environmental Sciences",
+        "city": "Commerce",
+        "state": "Texas",
+        "researchAreas": [
+          "Bioremediation",
+          "Water-Food-Energy Nexus",
+          "Solid and Hazardous Waste Management"
+        ],
+        "phdInstitution": "National Kaohsiung University of Science and Technology",
+        "phdYear": 2020,
+        "msInstitution": "Ho Chi Minh City University of Technology",
+        "undergradInstitution": "Industrial University of Ho Chi Minh City",
+        "undergradYear": 2010,
+        "profileUrl": "https://www.etamu.edu/people/huu-tuan-tran-ph-d/"
+      },
+      "evidence": {
+        "currentRole": "https://www.etamu.edu/people/huu-tuan-tran-ph-d/ — \"Assistant Professor, East Texas A&M University, 2026-Present\"; faculty appointment, research interests and teaching described. Opened live with Python requests: HTTP 200 and full person biography; web.open repeatedly returned cache miss.",
+        "doctorateOrPapers": "https://www.etamu.edu/people/huu-tuan-tran-ph-d/ — Education explicitly gives environmental-science PhD at National Kaohsiung University of Science and Technology, 2020. Previous Kansas and Kansas State appointments are explicitly postdoctoral; the new East Texas appointment is faculty.",
+        "vietnameseSignal": "https://www.etamu.edu/people/huu-tuan-tran-ph-d/ — Biography says \"I was born in central Vietnam\" and lists two Vietnamese degrees.",
+        "dedup": "Ran npm run find-roster-matches -- \"Huu Tuan Tran\" --url https://www.etamu.edu/people/huu-tuan-tran-ph-d/. Name hits vp-0365 (pharmacy/Oregon State doctorate), vp-0391 (psychology/South Carolina), vp-0494 (mechanical engineering/UIUC), vp-1780 (infectious diseases) and vp-2620 (mathematics/Free University Berlin) are different people from this environmental scientist with a 2020 Taiwan doctorate and 2023–2026 Kansas State postdoc. No shared identity URL. Absent from already-proposed.txt."
+      }
+    },
+    {
+      "entry": {
+        "country": "United States",
+        "name": "Thanh Thuy Vu",
+        "university": "The University of Texas Rio Grande Valley",
+        "track": "Tenure-line",
+        "rank": "Associate Professor",
+        "department": "Civil Engineering",
+        "city": "Edinburg",
+        "state": "Texas",
+        "researchAreas": [
+          "Deep Foundations",
+          "Geosynthetics",
+          "Geothermal Energy",
+          "Probabilistic Geotechnical Engineering"
+        ],
+        "phdInstitution": "University of Missouri",
+        "phdYear": 2013,
+        "msInstitution": "National University of Civil Engineering",
+        "profileUrl": "https://webapps.utrgv.edu/aa/dm/#/user/thuy.vu"
+      },
+      "evidence": {
+        "currentRole": "https://webapps.utrgv.edu/aa/dm/api/DMUser/GetDMuser?username=thuy.vu — Public employer faculty record reports \"Associate Professor\" and review type \"Promotion to Full Professor\". Appointment history gives associate professor since 2019. https://www.utrgv.edu/cecs/about/leadership/index.htm additionally identifies her as interim associate dean for faculty affairs. Underlying professorship determines track.",
+        "doctorateOrPapers": "https://webapps.utrgv.edu/aa/dm/api/DMUser/GetDMuser?username=thuy.vu — EDUCATION explicitly lists PhD in Civil Engineering, University of Missouri, Columbia, 2013; MS at National University of Civil Engineering in Vietnam, 2002.",
+        "vietnameseSignal": "https://webapps.utrgv.edu/aa/dm/api/DMUser/GetDMuser?username=thuy.vu — Full name Thanh Thuy Vu, Vietnamese MS education, and earlier teaching at Hanoi Architectural University.",
+        "dedup": "Ran npm run find-roster-matches -- \"Thanh Thuy Vu\" --url https://webapps.utrgv.edu/aa/dm/#/user/thuy.vu. vp-3082 Thuy Vu is an Amazon language/ML researcher with UCLA PhD 2017, distinct from this Missouri civil-engineering PhD 2013. vp-2134 Nam H. Nguyen is a false URL hit caused by hash-fragment stripping: /#/user/namhoang.nguyen versus /#/user/thuy.vu; finance professor and civil engineer are different people. Absent from already-proposed.txt. Reran with shorter published name Thuy Vu and exact public person API URL; name hits were vp-3082 (Amazon language/ML researcher) and vp-1300 Vu Thuy Khanh Le-Trilling (virology researcher at Duisburg-Essen). The latter is a different full name and biomedical field, not Thanh Thuy Vu, Missouri civil-engineering PhD 2013; no shared API URL.",
+        "profileAccess": "The full-profile URL was discovered in the university directory JavaScript, then opened live (HTTP 200). It is a JavaScript application. Its exact person-specific public API record was also fetched live (HTTP 200) and supplied the substantive verification, rather than relying on the app shell. Directory source: https://www.utrgv.edu/cecs/departments/cive/faculty/index.htm; script https://www.utrgv.edu/_files/faculty-staff-directory/v3/dir-faculty.js."
+      }
+    },
+    {
+      "entry": {
+        "country": "United States",
+        "name": "Thang Pham - The University of Texas Rio Grande Valley",
+        "university": "The University of Texas Rio Grande Valley",
+        "track": "Tenure-line",
+        "rank": "Associate Professor",
+        "department": "Civil Engineering",
+        "city": "Edinburg",
+        "state": "Texas",
+        "researchAreas": [
+          "Geotechnical Engineering",
+          "Geosynthetic-Reinforced Soil"
+        ],
+        "phdInstitution": "University of Colorado Denver",
+        "phdYear": 2009,
+        "msInstitution": "Hanoi University of Civil Engineering",
+        "profileUrl": "https://webapps.utrgv.edu/aa/dm/#/user/thang.pham"
+      },
+      "evidence": {
+        "currentRole": "https://webapps.utrgv.edu/aa/dm/api/DMUser/GetDMuser?username=thang.pham — Current public faculty record: \"Associate Professor\", review type \"Annual Review Tenured\". Department Civil Engineering. https://www.utrgv.edu/cecs/departments/cive/research/index.htm independently lists him in the geotechnical faculty group.",
+        "doctorateOrPapers": "https://webapps.utrgv.edu/aa/dm/api/DMUser/GetDMuser?username=thang.pham — Explicit PhD, Civil Engineering, University of Colorado, location Denver, Colorado, 2009; dissertation concerns composite behavior of geosynthetic-reinforced soil. MS Hanoi University of Civil Engineering, 2001.",
+        "vietnameseSignal": "https://webapps.utrgv.edu/aa/dm/api/DMUser/GetDMuser?username=thang.pham — Vietnamese given name Thang plus Vietnamese MS education and earlier leadership at Vietnam Institute for Building Science and Technology.",
+        "dedup": "Ran npm run find-roster-matches -- \"Thang Pham\" --url https://webapps.utrgv.edu/aa/dm/#/user/thang.pham. Distinct from vp-0118 (Berkeley 2018/materials science), vp-2535 (Amsterdam 2005/medical oncology) and vp-2618 (EPFL 2017/mathematics); this person has Colorado Denver civil-engineering PhD 2009. vp-2134 is the fragment-stripping false URL hit to Nam H. Nguyen, a finance professor. Name suffix disambiguates the existing identical published name. Absent from already-proposed.txt. Reran with exact person API URL; same three distinct Thang Pham name hits, no API-URL match.",
+        "profileAccess": "Official full-profile URL discovered in directory JavaScript and opened HTTP 200; exact person-specific public API record also opened HTTP 200. JS application requires the API for readable contents; both URLs retained here."
+      }
+    },
+    {
+      "entry": {
+        "country": "United States",
+        "name": "Kim Loan Nguyen Finn",
+        "university": "The University of Texas Rio Grande Valley",
+        "track": "Tenure-line",
+        "rank": "Assistant Professor",
+        "department": "School of Rehabilitation Services and Counseling",
+        "city": "Edinburg",
+        "state": "Texas",
+        "researchAreas": [
+          "Trauma",
+          "Gender Identity",
+          "Veterans Issues",
+          "Anxiety and Depressive Disorders",
+          "Psychiatric Disabilities"
+        ],
+        "phdInstitution": "The University of Texas Rio Grande Valley",
+        "phdYear": 2018,
+        "msInstitution": "The University of Texas at San Antonio",
+        "profileUrl": "https://webapps.utrgv.edu/aa/dm/#/user/kim.finn01"
+      },
+      "evidence": {
+        "currentRole": "https://webapps.utrgv.edu/aa/dm/api/DMUser/GetDMuser?username=kim.finn01 — Current faculty record gives \"Assistant Professor\" and \"Tenure-Track 4th Probationary Review\". Full name Kim Loan Nguyen Finn, alternative name Nguyen-Finn. Current handbook corroborates faculty role: https://www.utrgv.edu/cohp/_files/phd.handbook.25-26.pdf.",
+        "doctorateOrPapers": "https://webapps.utrgv.edu/aa/dm/api/DMUser/GetDMuser?username=kim.finn01 — EDUCATION gives PhD in Rehabilitation Counseling, University of Texas Rio Grande Valley, December 2018, with completion verified by the university. MS-level counseling education at UTSA also listed.",
+        "vietnameseSignal": "https://webapps.utrgv.edu/aa/dm/api/DMUser/GetDMuser?username=kim.finn01 — Compound Vietnamese given names Kim Loan and preserved original surname Nguyen in the employer record; this is not an inference from Kim alone.",
+        "dedup": "Ran npm run find-roster-matches -- \"Kim Loan Nguyen Finn\" --url https://webapps.utrgv.edu/aa/dm/#/user/kim.finn01. vp-0525 is computer science/Paris-Sud PhD 2008; vp-0694 is economics/Nottingham; vp-2417 is pediatric hospital medicine at Baylor; vp-3211 is German cryptography/Essen PhD 2001. All differ from this rehabilitation counselor with UTRGV PhD 2018. vp-2134 is fragment-stripping collision with Nam H. Nguyen, a finance professor. Checked published surname variant Nguyen-Finn by manual roster inspection; absent from already-proposed.txt. Reran with published alias Kim Nguyen-Finn and exact person API URL; the same distinct vp-0525, vp-0694 and vp-3211 name hits recurred, with no API-URL match.",
+        "profileAccess": "Employer full-profile URL discovered from public directory script and opened HTTP 200; the exact API record was fetched HTTP 200 and verified the individual. Original Vietnamese surname is retained in proposed name."
+      }
+    },
+    {
+      "entry": {
+        "country": "United States",
+        "name": "Chien Van Ha",
+        "university": "Texas Tech University",
+        "track": "Research",
+        "rank": "Assistant Professor",
+        "department": "Plant and Soil Science",
+        "city": "Lubbock",
+        "state": "Texas",
+        "researchAreas": [
+          "Plant Physiology",
+          "Chemical Biology",
+          "Genetics and Epigenetics",
+          "Abiotic Stress Tolerance"
+        ],
+        "phdInstitution": "Vietnam Academy of Agricultural Sciences",
+        "phdYear": 2016,
+        "profileUrl": "https://www.depts.ttu.edu/pss/people/faculty/ha-chien/ha-chien.php",
+        "scholarUrl": "https://scholar.google.com/citations?user=dMaj8qYAAAAJ"
+      },
+      "evidence": {
+        "currentRole": "https://www.depts.ttu.edu/pss/people/faculty/ha-chien/ha-chien.php — \"Research Assistant Professor\". The department includes him in its Faculty Directory, distinct from its research-staff/postdoctoral listing; biography dates faculty appointment to May 2023. https://www.depts.ttu.edu/pss/people/faculty/ also opened/discovered; continuing current faculty page in 2026 supports career faculty status.",
+        "doctorateOrPapers": "https://www.depts.ttu.edu/pss/people/faculty/ha-chien/ha-chien.php — Explicit Doctor of Philosophy from Vietnam Academy of Agricultural Sciences in collaboration with RIKEN, 2016. Current research projects in crop stress resilience described.",
+        "vietnameseSignal": "https://www.depts.ttu.edu/pss/people/faculty/ha-chien/ha-chien.php — Vietnamese given names Chien Van plus doctorate from Vietnam Academy of Agricultural Sciences, Hanoi.",
+        "dedup": "Ran npm run find-roster-matches -- \"Chien Van Ha\" --url https://www.depts.ttu.edu/pss/people/faculty/ha-chien/ha-chien.php https://scholar.google.com/citations?user=dMaj8qYAAAAJ: no roster or retired-id matches. Absent from already-proposed.txt.",
+        "links": "Scholar URL is directly linked by the official faculty profile and therefore identity-resolved; opening the linked Google Scholar page returned 403. No Scholar-only facts are used."
+      }
+    },
+    {
+      "entry": {
+        "country": "United States",
+        "name": "Huong T. Tran",
+        "university": "University of North Texas",
+        "track": "Teaching",
+        "rank": "Senior Lecturer",
+        "department": "Mathematics",
+        "city": "Denton",
+        "state": "Texas",
+        "researchAreas": [
+          "Mathematics",
+          "Actuarial Science Education"
+        ],
+        "phdInstitution": "Tulane University",
+        "phdYear": 1991,
+        "profileUrl": "https://facultyinfo.unt.edu/faculty-profile?profile=htt0018&type=name"
+      },
+      "evidence": {
+        "currentRole": "https://facultyinfo.unt.edu/faculty-profile?profile=htt0018&type=name — \"Principal Lecturer\"; current mathematics directory also lists Huong Tran: https://cos.unt.edu/math/people/index.html. Published name alias Huguette Tran uses the same office/email. https://newsletter.math.unt.edu/2021/ documents lecturer appointment 2010, promotion to senior lecturer 2016 and principal-lecturer promotion, establishing a continuing teaching career ladder. Rank normalized to supported Senior Lecturer level; principal title retained in evidence.",
+        "doctorateOrPapers": "https://facultyinfo.unt.edu/faculty-profile?profile=htt0018&type=name — Explicit mathematics PhD, Tulane University, 1991. The UNT newsletter also reports a second doctorate in Marketing and Logistics at UNT in 2016; the primary mathematical doctorate is proposed.",
+        "vietnameseSignal": "https://facultyinfo.unt.edu/faculty-profile?profile=htt0018&type=name — Official full given name Huong and surname Tran; no reconstructed diacritics.",
+        "dedup": "Ran npm run find-roster-matches -- \"Huong T. Tran\" --url https://facultyinfo.unt.edu/faculty-profile?profile=htt0018&type=name: no roster or retired-id matches. Manual roster check of Huong Tran and Huguette Tran found no identity match. Absent from already-proposed.txt. Also ran the matcher with published alias Huguette Tran and the same official profile: no matches."
+      }
+    },
+    {
+      "entry": {
+        "country": "United States",
+        "name": "Cassandra S. Diep",
+        "university": "Rice University",
+        "track": "Teaching",
+        "rank": "Associate Professor",
+        "department": "Kinesiology",
+        "researchAreas": [
+          "Health Disparities",
+          "Childhood Obesity Prevention",
+          "Asian American Health",
+          "Behavioral Theory and Health Behaviors"
+        ],
+        "phdInstitution": "Texas A&M University",
+        "msInstitution": "Texas A&M University",
+        "undergradInstitution": "Rice University",
+        "postdocInstitution": "Baylor College of Medicine",
+        "profileUrl": "https://profiles.rice.edu/faculty/cassandra-s-diep"
+      },
+      "evidence": {
+        "currentRole": "https://profiles.rice.edu/faculty/cassandra-s-diep — \"Associate Teaching Professor\"; continuing teaching promotion ladder and Rice faculty member since 2017. Also maintains an explicit research program in health disparities.",
+        "doctorateOrPapers": "https://profiles.rice.edu/faculty/cassandra-s-diep — Explicit \"Doctor of Philosophy in Health Education\" from Texas A&M University; MS at same institution, BA Rice, completed postdoctoral fellowship Baylor College of Medicine. Degree year omitted because the opened profile does not state it.",
+        "vietnameseSignal": "https://pub.lucidpress.com/f9731f1c-e8eb-444b-b491-0f2a63b22441/document.pdf — Rice Vietnamese Student Association newsletter identifies Cassandra Diep as faculty sponsor and explicitly a VSA alumna. Affirmative community affiliation supports the lead beyond surname Diep alone; nationality/ancestry is not asserted more specifically.",
+        "dedup": "Ran npm run find-roster-matches -- \"Cassandra S. Diep\" --url https://profiles.rice.edu/faculty/cassandra-s-diep: no roster or retired-id matches. Absent from already-proposed.txt."
+      }
+    },
+    {
+      "entry": {
+        "country": "United States",
+        "name": "Linh Pham - Texas A&M University-Central Texas",
+        "university": "Texas A&M University-Central Texas",
+        "track": "Tenure-line",
+        "rank": "Associate Professor",
+        "department": "Science and Mathematics",
+        "researchAreas": [
+          "Nanomaterial Chemistry",
+          "Magnetochemistry",
+          "Biochemistry",
+          "HIV-1 Proteases"
+        ],
+        "phdInstitution": "University of Florida",
+        "phdYear": 2014,
+        "undergradInstitution": "Hanoi University of Technology",
+        "undergradYear": 2007,
+        "profileUrl": "https://www.tamuct.edu/directory/name/linh-pham/"
+      },
+      "evidence": {
+        "currentRole": "https://www.tamuct.edu/directory/name/linh-pham/ — \"Tenured Associate Professor\"; department page https://www.tamuct.edu/academics/college-of-arts-sciences/department-of-science-mathematics/ identifies chemistry specialization.",
+        "doctorateOrPapers": "https://www.tamuct.edu/directory/name/linh-pham/ — Explicit chemistry PhD at University of Florida, 2014, with minor in Biochemistry and Molecular Biology; chemical-engineering undergraduate degree at Hanoi University of Technology, 2007.",
+        "vietnameseSignal": "https://www.tamuct.edu/directory/name/linh-pham/ — Vietnamese given name Linh plus Hanoi undergraduate education.",
+        "dedup": "Ran npm run find-roster-matches -- \"Linh Pham\" --url https://www.tamuct.edu/directory/name/linh-pham/. vp-0949 is an economist with Wisconsin-Milwaukee doctorate; vp-2962 is an MIT Lincoln Laboratory quantum researcher with Harvard doctorate. This chemist has Florida PhD 2014 and Hanoi chemical-engineering undergraduate degree 2007, so both are distinct. Name suffix disambiguates the existing exact name. Absent from already-proposed.txt."
+      }
+    }
+  ],
+  "already_listed": [
+    {
+      "name": "Khai Nguyen",
+      "id": "vp-1838",
+      "note": "Official current Texas A&M Statistics profile opened: https://artsci.tamu.edu/statistics/contact/profiles/khai-nguyen.html. Name dedup found vp-1838; same statistics appointment."
+    },
+    {
+      "name": "Hien Van Nguyen",
+      "id": "vp-0081",
+      "note": "https://profilesrns.times.uh.edu/display/177747 opened; University of Houston Electrical and Computer Engineering. Name dedup matched vp-0081; current page says Professor while roster says Associate Professor; existing-record rank lead, not a new candidate."
+    },
+    {
+      "name": "Nam H. Nguyen",
+      "id": "vp-2134",
+      "note": "Public UTRGV GetDMList record namhoang.nguyen identifies same finance associate professor; name dedup matched vp-2134. Distinct from all three new UTRGV candidates despite shared application base URL."
+    },
+    {
+      "name": "Phat Vinh Luong",
+      "id": "vp-1096",
+      "note": "UTPB directory opened: https://www.utpb.edu/directory/; Phat Luong is management faculty. Name dedup matched vp-1096, whose department and profile identity match. Not a new ID."
+    }
+  ],
+  "possible_move": [],
+  "rejected": [
+    {
+      "name": "Dung Le (UT Austin statistics)",
+      "reason": "Opened https://stat.utexas.edu/directory/dung-le: explicitly PhD Student; excluded."
+    },
+    {
+      "name": "Dung Le (UTSA mathematics)",
+      "reason": "Graduate catalog lead conflicts with retirement evidence in https://www.utsa.edu/excellenceawards/documents/2025%20University%20Excellence%20Awards%20Program%202025.pdf. A current individual profile and formally conferred emeritus status were not verified; hold for a later pass, do not infer continued eligibility from catalog."
+    },
+    {
+      "name": "Hien Thu Nguyen (UT Dallas)",
+      "reason": "2026 employer catalog supports Assistant Professor of Instruction and UTD PhD 2023 (https://catalog.utdallas.edu/2026/undergraduate/home/faculty-roster), but individual live profile was not obtained. JSOM faculty pages repeatedly timed out in web.open and shell HTTPS certificate validation failed. Search snippets are discovery only. Not included as verified; revisit https://jsom.utdallas.edu/faculty/api.php?area=om and obtain a person profile. Name dedup was run and returned several other Hien/Thu Nguyen identities, not an exact URL match."
+    },
+    {
+      "name": "Huong Nguyen (Texas Tech plant science)",
+      "reason": "https://www.depts.ttu.edu/igcast/Research/lab-tran/Tran_Lab.php opened. Shared Research Assistant Professor/Lab Manager heading is ambiguous; https://www.depts.ttu.edu/pss/people/staff/index.php lists Research Scientist, and 2023 report says visiting scientist. Current faculty equivalence/permanence not independently established; do not promote staff status from the heading."
+    },
+    {
+      "name": "Chuong Nguyen; Hoa Thi Nguyen (Texas Tech)",
+      "reason": "Opened Tran Lab page explicitly places both under Ph.D. Student. Excluded."
+    },
+    {
+      "name": "Thuy P. Dang (UNT)",
+      "reason": "Teaching Fellow on https://facultyinfo.unt.edu/faculty-profile?profile=tpd0039; no established career faculty appointment or doctorate. Discovery-only result; not counted."
+    },
+    {
+      "name": "Ngoc Yen Nhu Ha (UNT)",
+      "reason": "Teaching Fellow on https://facultyinfo.unt.edu/faculty-profile?profile=nh0343; no established career appointment or doctorate. Discovery-only result; not counted."
+    },
+    {
+      "name": "Quyen M. Huynh (Prairie View A&M)",
+      "reason": "Employer biosketch https://www.pvamu.edu/uma/wp-content/uploads/sites/15/Quyen_Huynh_Updated_UMA_biosketch.pdf describes Clinical Assistant Professor but highest stated degree is MS Mathematics. Brief requires doctorate or two recent current-employer papers; not established."
+    },
+    {
+      "name": "James Nguyen (Texas A&M University-Texarkana)",
+      "reason": "Live official profile and CV opened (https://www.tamut.edu/directory/james-nguyen.html; https://www.tamut.edu/faculty/vita/NguyenJames.pdf): career finance professor, University of New Orleans PhD. Affirmative Vietnamese signal beyond surname was not established; do not count surname-only lead."
+    },
+    {
+      "name": "Rita Ngoc To (Tarleton State University)",
+      "reason": "Opened https://www.tarleton.edu/mscdais/faculty-staff/: Assistant Professor with Fort Worth office; catalog also uses Ngoc To. A doctoral institution/completion source or two verified recent current-employer papers and person-specific profile were not obtained. Retained as a follow-up lead, not a verified candidate."
+    },
+    {
+      "name": "Robert Huy Gip (Texas A&M University)",
+      "reason": "Employer catalog and https://cte.tamu.edu/news-and-highlights/2026-2027-montague-cte-scholars.html discovery results support tenure-track faculty/PhD. Person-specific employer page not obtained; https://hmgt.tamu.edu/ opened but rendered only an iframe in web extraction. Promising uncommon-surname/given-name lead for follow-up."
+    },
+    {
+      "name": "Minh Nguyen (UT Tyler)",
+      "reason": "Already-proposed.txt contains Minh Nguyen; skipped per brief despite UT Tyler directory lead."
+    },
+    {
+      "name": "Nhut Nguyen (UT Dallas)",
+      "reason": "Already-proposed.txt contains Nhut Nguyen; skipped per brief."
+    },
+    {
+      "name": "Nam Ngoc Nguyen (UTRGV)",
+      "reason": "Live public faculty API record identifies Senior Lecturer, highest listed degree MS in Mathematical Science (2004). Brief doctorate/two-recent-papers threshold not established. Different from already-listed Nam H. Nguyen in finance."
+    }
+  ],
+  "coverage": [
+    {
+      "employer": "The University of Texas at Austin",
+      "pagesExamined": [
+        "https://stat.utexas.edu/directory/dung-le",
+        "https://pge.utexas.edu/person/quoc-nguyen/"
+      ],
+      "note": "Given-name sweep included Quoc, Dung, Thuy, Hien, Khuong, Viet, Huu and Duy; petroleum/geosystems faculty yielded a new candidate; statistics student excluded. Other results were existing faculty, students or administrative roles. Not an exhaustive employee census."
+    },
+    {
+      "employer": "The University of Texas Rio Grande Valley",
+      "pagesExamined": [
+        "https://www.utrgv.edu/cecs/departments/cive/faculty/index.htm",
+        "https://www.utrgv.edu/cecs/departments/cive/research/index.htm",
+        "https://www.utrgv.edu/cecs/about/leadership/index.htm",
+        "https://webapps.utrgv.edu/aa/dm/api/DMUser/GetDMList",
+        "https://webapps.utrgv.edu/aa/dm/api/DMUser/GetDMuser?username=thuy.vu",
+        "https://webapps.utrgv.edu/aa/dm/api/DMUser/GetDMuser?username=thang.pham",
+        "https://webapps.utrgv.edu/aa/dm/api/DMUser/GetDMuser?username=kim.finn01",
+        "https://webapps.utrgv.edu/aa/dm/api/DMUser/GetDMuser?username=nam.nguyen"
+      ],
+      "note": "Deep pass beyond indexed surname results: scanned all names in the live public faculty list, then exact faculty records. Three new verified candidates; existing Nam H. Nguyen and Mai P. Trinh are represented already. API records supplied education, appointment review type, name variants and current research."
+    },
+    {
+      "employer": "East Texas A&M University",
+      "pagesExamined": [
+        "https://www.etamu.edu/people/huu-tuan-tran-ph-d/"
+      ],
+      "note": "Given-name Huu/Tuan lead reached a new 2026 environmental-science hire missed by older passes. Live requests retrieval succeeded despite web cache misses. Biology/environmental-science fields examined; broader Linh, Dung, Huy, Bui and Phuong discovery queries also used."
+    },
+    {
+      "employer": "Texas A&M University-Central Texas",
+      "pagesExamined": [
+        "https://www.tamuct.edu/academics/college-of-arts-sciences/department-of-science-mathematics/",
+        "https://www.tamuct.edu/directory/name/linh-pham/"
+      ],
+      "note": "Regional-campus follow-up found Linh Pham, tenured chemistry faculty. Identity resolved against same-name economics and quantum-research records."
+    },
+    {
+      "employer": "Texas Tech University",
+      "pagesExamined": [
+        "https://www.depts.ttu.edu/igcast/Research/lab-tran/Tran_Lab.php",
+        "https://www.depts.ttu.edu/pss/people/faculty/ha-chien/ha-chien.php"
+      ],
+      "note": "Given-name Huong and Chien searches led deeper into plant/soil science and IGCAST. Chien confirmed as research faculty; Huong left unresolved because rank/staff evidence conflicts; graduate students excluded. Existing Tech roster names used to avoid repeating prior CS/math/health coverage."
+    },
+    {
+      "employer": "University of North Texas",
+      "pagesExamined": [
+        "https://facultyinfo.unt.edu/faculty-profile?profile=htt0018&type=name",
+        "https://cos.unt.edu/math/people/index.html",
+        "https://newsletter.math.unt.edu/2021/"
+      ],
+      "note": "Given-name searches Hien, Quyen, Quang, Kien, Quynh and Huong; mathematics directory and career promotion history produced Huong T. Tran. Teaching-fellow results were not accepted as faculty."
+    },
+    {
+      "employer": "Rice University",
+      "pagesExamined": [
+        "https://profiles.rice.edu/faculty/cassandra-s-diep",
+        "https://pub.lucidpress.com/f9731f1c-e8eb-444b-b491-0f2a63b22441/document.pdf"
+      ],
+      "note": "Less-common surname Diep yielded an eligible teaching professor with active health-disparities research and affirmative Vietnamese student-association history. Bao and Quynh queries also screened; Chinese-name collisions not assumed Vietnamese."
+    },
+    {
+      "employer": "University of Texas at Dallas",
+      "pagesExamined": [
+        "https://catalog.utdallas.edu/2026/undergraduate/home/faculty-roster",
+        "https://catalog.utdallas.edu/2024/undergraduate/programs/jsom/supply-chain-management"
+      ],
+      "note": "Catalog across fields examined; Hien Thu Nguyen promising but live individual profile unresolved. Already-listed My Linh/Lena/Tien/Anh identities and already-proposed Nhut were excluded. JSOM individual verification limited by timeout/certificate failure."
+    },
+    {
+      "employer": "The University of Texas at San Antonio",
+      "pagesExamined": [
+        "https://www.utsa.edu/excellenceawards/documents/2025%20University%20Excellence%20Awards%20Program%202025.pdf"
+      ],
+      "note": "Given-name Hanh, Thien, Diem and Dung queries; graduate faculty catalog discovery surfaced Dung Le but retirement signal requires emeritus confirmation. Catalog open timed out. Existing Huy Le, Vu Hoang and Luan Vu not re-proposed. No new verified candidate."
+    },
+    {
+      "employer": "The University of Texas Permian Basin",
+      "pagesExamined": [
+        "https://www.utpb.edu/directory/"
+      ],
+      "note": "Large live university-wide directory examined, including management candidate Phat Luong, already vp-1096. No new verified candidate."
+    },
+    {
+      "employer": "University of Houston",
+      "pagesExamined": [
+        "https://profilesrns.times.uh.edu/display/177747"
+      ],
+      "note": "Given-name Hien, Hieu, Phuong, Khang, Truc and Duy searches; existing Hien Van Nguyen confirmed. Current/old student and outside-speaker results not treated as new faculty. Regional UHD/UHCL queries added Trinh, Quach, Thuy, Hanh and Vietnamese identity terms; no new verified candidate."
+    },
+    {
+      "employer": "Texas A&M University-Texarkana",
+      "pagesExamined": [
+        "https://www.tamut.edu/directory/james-nguyen.html",
+        "https://www.tamut.edu/faculty/vita/NguyenJames.pdf"
+      ],
+      "note": "Regional-campus career-finance appointment verified, but Vietnamese affirmative signal beyond surname missing; excluded conservatively."
+    },
+    {
+      "employer": "Tarleton State University",
+      "pagesExamined": [
+        "https://www.tarleton.edu/mscdais/faculty-staff/",
+        "https://www.tarleton.edu/research/blog/page/2/"
+      ],
+      "note": "Ngoc token uncovered Rita To/Ngoc To in marketing; current faculty listing opened. Doctorate/person-profile verification remains incomplete; lead explicitly retained in rejected."
+    },
+    {
+      "employer": "Texas A&M University",
+      "pagesExamined": [
+        "https://artsci.tamu.edu/statistics/contact/profiles/khai-nguyen.html",
+        "https://hmgt.tamu.edu/"
+      ],
+      "note": "University-wide faculty catalog discovered and screened across fields; existing Nguyen P. Nguyen, Khanh Nguyen, Tung Nguyen, Han Duc Tran and Peter Phuong Nghiem recognized from roster. Given-name Khai result opened separately at https://artsci.tamu.edu/statistics/contact/profiles/khai-nguyen.html and matched vp-1838. Robert Huy Gip remains a follow-up; main department homepage opened at https://hmgt.tamu.edu/ but yielded no readable faculty profile. Search-only catalog facts were not accepted for new candidates."
+    },
+    {
+      "employer": "Texas A&M International University; Texas A&M University-Kingsville; Texas A&M University-Corpus Christi; Texas A&M University-San Antonio; West Texas A&M University",
+      "pagesExamined": [],
+      "note": "Regional extension of later-pass discovery using Linh, Ngoc, Thao, Phuong, Huy and affirmative Vietnamese-education terms. Results mostly students, routine staff or already-listed Long Pham. Query-only coverage for these employers; no new verified candidate and no claim of directory completeness."
+    },
+    {
+      "employer": "Baylor University; Southern Methodist University",
+      "pagesExamined": [],
+      "note": "Given-name and less-common surname discovery included Thien, Linh, Quang, Truong, Trinh, Dinh, Phuc and Vietnamese identity terms. Results mostly students, outside speakers or historical appointments; Singapore Management University collisions excluded. Incidental Baylor College of Medicine results not accepted without this brief’s doctorate/paper and stable-role verification. Query-only coverage; no verified additions."
+    },
+    {
+      "employer": "The University of Texas at Arlington; The University of Texas at El Paso; The University of Texas at Tyler",
+      "pagesExamined": [],
+      "note": "Later-pass discovery included Dung, Thao, Tuong, Phuong, Tuan, Khanh, Trieu and Thinh. UT Tyler Minh Nguyen was skipped as already proposed; UTEP/UTA results mostly students, existing faculty, or historical adjuncts. Query-only coverage except UT Tyler directory fetched in discovery; no exhaustive-directory claim."
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "verifier": "codex",
+  "input": "maintenance/sector-expansion/runs/w1/us-institutes-2.codex.json",
+  "candidates": [
+    {
+      "name": "Huy Nguyen",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Independently fetched the supplied Dana-Farber employer page with HTTP 200. Although it is a team page, it singles him out with an individual biography, email, and CDDR Staff Scientist appointment, identifying his computational biology work in the D’Andrea laboratory. It therefore meets test 1. The bio describes a career staff role and Harvard/Toronto master's degrees, not a doctorate. Verified the publication alternative: The splicing factor CCAR1 regulates the Fanconi anemia/BRCA pathway (2024-07-17, DOI 10.1016/j.molcel.2024.06.031, https://pubmed.ncbi.nlm.nih.gov/39025073/) and CHAMP1 complex directs heterochromatin assembly and promotes homology-directed DNA repair (2025-02-17, DOI 10.1038/s41467-025-56834-6, https://www.nature.com/articles/s41467-025-56834-6). Both name Huy Nguyen at Dana-Farber with D’Andrea coauthors and fall within 2023-11-14 to 2026-11-14. Nature was fetched directly with HTTP 200 after the web tool encountered a redirect. Huy together with Nguyen supplies the affirmative Vietnamese given-name signal. Ran find-roster-matches with his name and supplied identity URLs: fourteen name-only hits, no URL matches. Inspected all fourteen records; their disciplines and degree histories differ, including vp-3190, a Dartmouth-PhD spatial-genomics researcher rather than this Harvard/Toronto master's-trained computational biologist. Not listed in already-proposed.txt. Current Boston appointment is outside Vietnam.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Paul Linh Nguyen",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Opened the supplied current Dana-Farber individual profile, https://www.dana-farber.org/find-a-doctor/paul-l-nguyen. It confirms a senior physician appointment, genitourinary radiation-oncology leadership, ongoing clinical research and trial leadership, and an MD from Harvard Medical School, satisfying the clinical-research doctorate exception. His Harvard professorship is also documented. Independently fetched https://connects.catalyst.harvard.edu/profiles/display/Person/3917 with HTTP 200; the institutional profile's embedded data explicitly names Paul Linh Nguyen, M.D., Full Professor of Radiation Oncology, with a Brigham and Women's Hospital Boston address. Linh together with Nguyen is an affirmative Vietnamese name signal beyond surname alone; the full name is institutionally supported. Ran find-roster-matches for Paul Linh Nguyen and Paul L. Nguyen with identity URLs. The six name-only hits are different people: vp-0256 is Christopher Paul Nguyen in management; vp-0372, vp-0677, vp-1951, vp-2234 and vp-2285 work in languages, finance, business, biomaterials and dental medicine, respectively. No identity-URL match and no entry in already-proposed.txt. The Boston appointment is outside Vietnam.",
+      "correctedFields": {}
+    }
+  ],
+  "possible_move": []
+}

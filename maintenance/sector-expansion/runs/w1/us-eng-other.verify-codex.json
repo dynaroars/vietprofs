@@ -1,0 +1,67 @@
+{
+  "verifier": "codex",
+  "input": "maintenance/sector-expansion/runs/w1/us-eng-other.codex.json",
+  "candidates": [
+    {
+      "name": "Phu Nguyen",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live employer profile https://engineering.uci.edu/users/phu-nguyen returned HTTP 200 via requests after the web reader timed out. It names an Associate Adjunct Professor in Civil and Environmental Engineering and CHRS associate director in Irvine. The UC salaried Adjunct Professor-series exception supports Research track and normalized Associate Professor rank. It verifies UCI PhD 2014 and Bach Khoa University HCMC Vietnam undergraduate education, providing a Vietnamese signal beyond surname. Independently ran find-roster-matches: vp-0523 is an economist with Strasbourg PhD, vp-2092 a Delft-trained fracture-mechanics researcher, and vp-2437 a Luxembourg-trained software researcher. The Monash profile https://research.monash.edu/en/persons/phu-nguyen/ independently confirms the distinct Delft identity. No identity-URL match or already-proposed entry; US appointment, no Vietnam base indicated.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Hien N. Pham",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live https://cbe.unm.edu/faculty-staff/research-faculty/hien-pham.html names Research Assistant Professor, Chemical and Biological Engineering, with Albuquerque office and hipham@unm.edu. The current research-faculty directory https://cbe.unm.edu/faculty-staff/research-faculty/index.html lists the same appointment separately from postdocs and affiliated faculty. The linked https://cbe.unm.edu/faculty-staff/research-faculty/hien-pham-cv.pdf uses Hien N. Pham and the same email, verifies UNM chemical-engineering PhD, and documents this research-faculty role already in the 2012 CV, supporting an enduring career appointment rather than training. Hien is an affirmative Vietnamese given-name signal alongside Pham, rather than surname alone. Independently reran dedup with profile and CV: vp-1470 is an urban-studies scholar with Sherbrooke PhD, vp-1633 a Toulouse-trained economist, and vp-2325 a hospital-medicine physician. No identity-URL match or already-proposed entry; physically based in New Mexico.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Ha Van Vo",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live https://engineering.mercer.edu/meet-the-faculty/dr-ha-van-vo/ identifies Eminent Scholar and Distinguished University Professor and Professor of Biomedical Engineering, an eligible professorial appointment in Macon. The employer article https://den.mercer.edu/engineering-professor-dr-ha-vo-recognized-with-healthcare-hero-award/ explicitly describes native Vietnam and South Vietnamese upbringing; service visits to Vietnam do not establish a Vietnam employment base. Independently ran dedup with current and historical employer profile URLs: only vp-0938 Van Vo matched by name. Its live https://www.unlv.edu/people/van-vo-phd lists a distinct UNLV Assistant Research Professor, whereas the candidate is the longstanding Mercer biomedical-engineering professor and prosthetics researcher documented by Mercer since at least 2018. No identity-URL match or already-proposed entry.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Samantha Hoang",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live https://www.seattleu.edu/directory/profiles/samantha-hoang-phd.php identifies Mechanical Engineering Assistant Professor at Seattle University, First Hill, and verifies Washington MS/PhD and Harvey Mudd undergraduate degree. Her identity-resolved coauthored autobiographical paper https://ojs.library.queensu.ca/index.php/IJESJP/article/download/19022/12649/57002 names her Seattle email, explicitly describes the tenure-track appointment on page 2 and Vietnamese immigrant/refugee parents in Sam’s Story on page 3. Independently ran find-roster-matches with the employer profile: no roster or retired-ID matches. Absent from already-proposed.txt; current Seattle appointment establishes a base outside Vietnam.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Tran Duong Nguyen",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live official https://www.uwyo.edu/civil/faculty_staff/faculty/tran-nguyen/index.html identifies Incoming Assistant Professor and dates the Wyoming appointment 2027–Present. This passes the maintenance guide’s explicit accepted-incoming-appointment exception; it must remain described as incoming until its 2027 start. It verifies Georgia Tech Building Construction PhD 2026, Kennesaw MS 2022, Vietnam undergraduate degree and Vietnamese architect registration. The latest preceding employment is Georgia Tech Instructor, 2023–2026, supporting a US rather than Vietnam base. Independently ran dedup with employer and Scholar URLs. vp-0023 is a different Wyoming EECS scholar with Michigan State PhD 2021; vp-0105, vp-0129, vp-0358, vp-0503, vp-0788, vp-0983 and vp-2340 have distinct environmental-toxicology, biomedical, electrical/computing or medical identities and education. No identity-URL match or already-proposed entry.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Tho V. Le",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live https://polytechnic.purdue.edu/profile/thovle explicitly identifies tenure-track Assistant Professor of Industrial Engineering Technology at Purdue, West Lafayette, and verifies Purdue PhD and MS. Employer-linked https://thovle.weebly.com/ supplies the fuller Tho V. Le name and matching Purdue email and office. Independently opened https://engineering.ucdavis.edu/news/postdoc-profile-tho-le, a historical profile of the same transportation researcher with matching Purdue/Hiroshima education: it describes upbringing near Hanoi and a Vietnam undergraduate degree, strengthening the Vietnamese signal beyond surname. The historical postdoc role is superseded by the current Purdue faculty profile. Independently reran dedup with employer, own-site and Scholar URLs: vp-0507 Tho Le-Ngoc is a distinct McGill electrical-engineering professor with McGill PhD 1983. No identity-URL match or already-proposed entry; current base is Indiana.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Phuong Tung Hoang",
+      "verdict": "fixable",
+      "failedTests": [
+        1
+      ],
+      "reason": "Replace the submitted multi-person School of Engineering directory query with the live individual employer profile https://www.uog.edu/directory/hoang-phuong-tung. The directory itself links this profile; its .php URL redirects to the extensionless canonical page. Both requests and the web reader verified the individual profile naming Assistant Professor of Civil Engineering with Guam office/contact details. The live employer announcement https://www.uog.edu/news-announcements/2026-2027/UOG-EPSCoRECORE-awards-seed-funding-to-advance-local-research-and-workforce-development dated October 2, 2026 confirms PhD, faculty role and a soil-stabilization research award. Vietnamese given names Phuong Tung alongside Hoang supply a signal beyond surname alone. Independently reran dedup with the original and corrected URLs: vp-1663 is a distinct ORNL electrical/grid researcher with Clemson PhD 2021. The already-proposed Tung Hoang is identified in maintenance/sector-expansion/non-us-public-labs.agy.json as a CSIRO energy/chemistry researcher with Griffith PhD 2002, a different identity from the Guam civil/geotechnical professor. No exact already-proposed name or identity-URL match. Guam is outside Vietnam.",
+      "correctedProfileUrl": "https://www.uog.edu/directory/hoang-phuong-tung",
+      "correctedFields": {
+        "profileUrl": "https://www.uog.edu/directory/hoang-phuong-tung"
+      }
+    }
+  ],
+  "possible_move": []
+}

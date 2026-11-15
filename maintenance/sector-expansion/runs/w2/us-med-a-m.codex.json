@@ -1,0 +1,484 @@
+{
+  "group": "university",
+  "agent": "codex",
+  "slice": "us-med-a-m",
+  "finishedAt": "2026-11-15T00:47:15Z",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Phuong Thanh Nguyen",
+        "university": "Baylor College of Medicine",
+        "track": "Clinical",
+        "rank": "Professor",
+        "department": "Psychiatry & Behavioral Sciences",
+        "city": "Houston",
+        "state": "Texas",
+        "country": "United States",
+        "field": "Health Sciences",
+        "researchAreas": [
+          "Clinical psychology",
+          "Psychology training"
+        ],
+        "phdInstitution": "University of Massachusetts",
+        "phdYear": 2009,
+        "undergradInstitution": "University of Houston",
+        "undergradYear": 2000,
+        "profileUrl": "https://www.bcm.edu/people-search/phuong-nguyen-27665"
+      },
+      "evidence": {
+        "currentRole": "https://www.bcm.edu/people-search/phuong-nguyen-27665 — \"Professor\"; Psychiatry & Behav Sciences, Houston. Current page also identifies the psychology services and fellowship training directorships. Read through web.open and independently fetched HTTP 200 with Python. The search index still says Associate Professor; the directly fetched page says Professor. Clinical track reflects the substantive clinical-psychology appointment; tenure is not asserted.",
+        "doctorateOrPapers": "https://www.bcm.edu/people-search/phuong-nguyen-27665 — PhD from University of Massachusetts, explicitly dated 01/2009; BS from University of Houston, explicitly dated 01/2000. The page locates the doctorate in Boston but does not name a campus, so no campus is inferred.",
+        "vietnameseSignal": "Vietnamese given-name tokens Phuong and Thanh in the full name on the employer profile; no reconstructed diacritics.",
+        "dedup": "Ran npm run find-roster-matches -- \"Phuong Thanh Nguyen\" --url https://www.bcm.edu/people-search/phuong-nguyen-27665 --url https://profiles.viictr.org/display/BCM/phuong-nguyen. No identity-URL match. Exact-name hit vp-1560 is a different person: computer-science PhD, University of Jena (2012), L'Aquila computer science; this candidate has a Massachusetts doctorate (2009) and a Houston clinical-psychology career. Other token hits: vp-0166, vp-0208, vp-0282, vp-0363, vp-0627, vp-0638, vp-0814, vp-0870, vp-0970, vp-1807, vp-1975, vp-2114, vp-3102 and retired vp-0822/vp-0844/vp-1628 concern different full names, disciplines and identity URLs. Direct manual roster check completed; absent from already-proposed.txt."
+      }
+    },
+    {
+      "entry": {
+        "name": "Vincent Huy Tran",
+        "university": "Baylor College of Medicine",
+        "track": "Clinical",
+        "rank": "Assistant Professor",
+        "department": "Psychiatry & Behavioral Sciences",
+        "city": "Carrollton",
+        "state": "Texas",
+        "country": "United States",
+        "field": "Health Sciences",
+        "researchAreas": [
+          "Clinical psychology"
+        ],
+        "phdInstitution": "University of Texas Southwestern Medical Center",
+        "undergradInstitution": "Rice University",
+        "profileUrl": "https://www.bcm.edu/people-search/vincent-tran-32068"
+      },
+      "evidence": {
+        "currentRole": "https://www.bcm.edu/people-search/vincent-tran-32068 — \"Assistant Professor\"; Psychiatry & Behav Sciences, Baylor; VA office in Carrollton, Texas. Also present in the current live departmental psychology faculty list: https://www.bcm.edu/departments/psychiatry-and-behavioral-sciences/programs-divisions/psychology/faculty. Both individual page and current department page fetched HTTP 200 with Python. Stable clinical-psychology faculty/VA appointment; no tenure claim.",
+        "doctorateOrPapers": "https://www.bcm.edu/people-search/vincent-tran-32068 — PhD from UT Southwestern Medical Center; BA from Rice University. No doctorate year published.",
+        "vietnameseSignal": "Vietnamese given-name token Huy, combined with Tran, on the employer profile.",
+        "dedup": "Ran npm run find-roster-matches -- \"Vincent Huy Tran\" --url https://www.bcm.edu/people-search/vincent-tran-32068. No URL match. Token hits vp-0131 (aerospace engineering), vp-3087 (chemistry at NanoVation), retired vp-1594 (merged aerospace duplicate), vp-3015 (Argonne materials postdoc), and vp-3009 (NASA BS-only record) are different people/fields. Retired vp-1510 is an unsupported generic Huy Tran / Vienna placeholder with no established identity; no evidence links it to this fuller-named UT Southwestern psychology doctorate. Manual name/URL check found no existing Vincent Huy Tran. Absent from already-proposed.txt."
+      }
+    },
+    {
+      "entry": {
+        "name": "Mai-Linh N. Tran",
+        "university": "Loma Linda University",
+        "track": "Clinical",
+        "rank": "Associate Professor",
+        "department": "Family Medicine",
+        "country": "United States",
+        "field": "Health Sciences",
+        "researchAreas": [
+          "Lifestyle medicine",
+          "Obesity medicine",
+          "Medical education"
+        ],
+        "profileUrl": "https://llu.edu/academics/faculty/tran-mai-linh"
+      },
+      "evidence": {
+        "currentRole": "https://llu.edu/academics/faculty/tran-mai-linh — \"Associate Professor, Family Medicine\"; School of Medicine. University-employed clinical faculty; corroborated by https://experts.llu.edu/en/persons/mai-linh-tran/. Both employer person pages opened successfully.",
+        "doctorateOrPapers": "MD documented on both employer profiles. Two peer-reviewed papers within three years, linked to this exact faculty identity by LLU: American Family Physician 113(1):71–79, January 2026 (HIV complications), and American Journal of Lifestyle Medicine 19(3 Suppl):41S–49S, November 2025 (integrating lifestyle/obesity medicine in residency). https://experts.llu.edu/en/persons/mai-linh-tran/ lists both and names Tran, M. L. N. as author. No medical-school institution inferred from the post-baccalaureate certificate.",
+        "vietnameseSignal": "Vietnamese given-name compound Mai-Linh on both employer profiles; surname Tran.",
+        "dedup": "Ran npm run find-roster-matches -- \"Mai-Linh N. Tran\" --url https://llu.edu/academics/faculty/tran-mai-linh --url https://experts.llu.edu/en/persons/mai-linh-tran/. No URL match. Hits vp-0700 (Monash TESOL), vp-1792 (Bristol business), vp-1555 (Griffith epidemiology lecturer), and vp-2248 (UCLA computational-biology PhD/lung research) differ from the LLU family-medicine MD and full published name. Manually compared roster fields and identity URLs. Absent from already-proposed.txt."
+      }
+    },
+    {
+      "entry": {
+        "name": "Minh Truong Do",
+        "university": "The University of Texas MD Anderson Cancer Center",
+        "track": "Research",
+        "rank": "Assistant Professor",
+        "department": "Thoracic-Head & Neck Medical Oncology",
+        "city": "Houston",
+        "state": "Texas",
+        "country": "United States",
+        "field": "Biological & Biomedical Sciences",
+        "researchAreas": [
+          "Lung cancer",
+          "Cancer immunogenomics",
+          "Molecular pharmacology"
+        ],
+        "phdInstitution": "Chungnam National University",
+        "phdYear": 2014,
+        "postdocInstitution": "Duke-NUS Medical School",
+        "profileUrl": "https://faculty.mdanderson.org/profiles/minhtruong_do.html"
+      },
+      "evidence": {
+        "currentRole": "https://faculty.mdanderson.org/profiles/minhtruong_do.html — \"Assistant Professor\" in the current primary appointment, Thoracic Head/Neck Medical Oncology-Research, Houston, Texas. Research track explicitly supported by the appointment wording; the history shows a prior Instructor appointment, 2021–2026, after postdoctoral training ended in 2021.",
+        "doctorateOrPapers": "https://faculty.mdanderson.org/profiles/minhtruong_do.html documents Biological Pharmacy PhD, Chungnam National University, 2014; completed Duke-NUS molecular-pharmacology postdoc, 2014–2018, and MD Anderson cancer-biology/immunogenomics postdoc, 2018–2021. Current lung-cancer research and recent peer-reviewed publications also appear on the same page.",
+        "vietnameseSignal": "Vietnamese given names Minh Truong; employer appointment history explicitly documents a lectureship at Thai Nguyen University of Sciences, Vietnam (2008–2016).",
+        "dedup": "Ran npm run find-roster-matches -- \"Minh Truong Do\" --url https://faculty.mdanderson.org/profiles/minhtruong_do.html. Hits vp-0005 (Minh N. Do, EPFL doctorate 2001, electrical engineering at Illinois) and vp-1599 (Minh Do, Toronto doctorate, political science at Guelph) are different people from the Chungnam biological-pharmacy PhD (2014). No shared identity URL; manual roster check completed. Absent from already-proposed.txt."
+      }
+    },
+    {
+      "entry": {
+        "name": "Tuyet-Trinh Truong",
+        "university": "Icahn School of Medicine at Mount Sinai",
+        "track": "Clinical",
+        "rank": "Associate Professor",
+        "department": "Medicine, Hospital Medicine",
+        "city": "New York",
+        "state": "New York",
+        "country": "United States",
+        "field": "Health Sciences",
+        "researchAreas": [
+          "Hospital at home",
+          "Clinical decision support",
+          "Hospital medicine"
+        ],
+        "mdInstitution": "Temple University School of Medicine",
+        "profileUrl": "https://profiles.icahn.mssm.edu/tuyet-trinh-truong"
+      },
+      "evidence": {
+        "currentRole": "https://profiles.icahn.mssm.edu/tuyet-trinh-truong — \"ASSOCIATE PROFESSOR | Medicine, Hospital Medicine\"; New York office; MD from Temple. Also listed at https://icahn.mssm.edu/about/departments-offices/medicine/hospital/teaching-education. The research database headline retains an older Assistant Professor title; the current faculty profile and department both say Associate Professor.",
+        "doctorateOrPapers": "MD plus two current-employer peer-reviewed research articles within three years, identity-linked on https://scholars.mssm.edu/en/persons/tuyet-trinh-truong/: Journal of Medical Systems 48:89, December 2024 (AI-assisted clinical decision support implementation), and Supportive Care in Cancer 34(4):353, April 2026 (oncology hospital care at home). Both are classified as peer-reviewed articles, independently of the additional 2025 comment and letter.",
+        "vietnameseSignal": "Vietnamese given-name compound Tuyet-Trinh on official employer profiles, combined with Truong.",
+        "dedup": "Ran npm run find-roster-matches -- \"Tuyet-Trinh Truong\" --url https://profiles.icahn.mssm.edu/tuyet-trinh-truong --url https://scholars.mssm.edu/en/persons/tuyet-trinh-truong/. Output: no roster or retired-id matches. Manual roster check and already-proposed.txt check also clean."
+      }
+    },
+    {
+      "entry": {
+        "name": "Huynh Cao",
+        "university": "Loma Linda University",
+        "track": "Clinical",
+        "rank": "Assistant Professor",
+        "department": "Medicine, Hematology and Oncology",
+        "country": "United States",
+        "field": "Health Sciences",
+        "researchAreas": [
+          "Acute myeloid leukemia",
+          "Cell therapy",
+          "Cancer immunotherapy"
+        ],
+        "mdInstitution": "University of California, Los Angeles",
+        "undergradInstitution": "University of California, Los Angeles",
+        "undergradYear": 2003,
+        "profileUrl": "https://lluh.org/sites/lluh.org/files/docs/cancer-center/research/cao-biosketch.pdf",
+        "city": "Loma Linda",
+        "state": "California"
+      },
+      "evidence": {
+        "currentRole": "https://medicine.llu.edu/research/graduate-programs/cancer-developmental-and-regenerative-biology-cdrb/cancer-developmental-and-regenerative-biology-cdrb-faculty — \"Assistant Professor, Medicine\"; also current primary faculty in https://llucatalog.llu.edu/medicine/professional/department-medicine/ (catalog fetched using Python). Individual official employer biosketch opened successfully at profileUrl; it documents the ongoing faculty appointment beginning 2017. Limitation: the individual HTML provider link https://lluh.org/provider/cao-huynh returned 403 in a direct fetch, and the legacy university profile redirect could not be opened. The official individual biosketch PDF is used alongside the current faculty directory, rather than the blocked HTML page.",
+        "doctorateOrPapers": "Official employer biosketch gives UCLA MD (2008) and UCLA BS (2003). Two peer-reviewed papers within three years establish the publication test: https://experts.llu.edu/en/publications/development-of-a-competitive-nutrient-based-t-cell-immunotherapy-/ (October 2024; DOI 10.3390/biomedicines12102250, first author), and https://www.mdpi.com/1422-0067/25/15/8532 (5 August 2024; DOI 10.3390/ijms25158532). Both opened successfully. The second paper was also opened at https://pubmed.ncbi.nlm.nih.gov/39126100/ and explicitly assigns Cao to LLU Hematology and Oncology and Cancer Center, Loma Linda, California. Both have matching leukemia collaborators Xu, Baylink and Reeves. Employer publication record for the second paper missed cache, so verified via the publisher and PubMed instead.",
+        "vietnameseSignal": "https://news.llu.edu/research/prompting-leukemia-cells-die explicitly states that Cao is originally from Vietnam; opened in this run. This supplies affirmative ancestry/origin evidence beyond the surname.",
+        "dedup": "Ran npm run find-roster-matches -- \"Huynh Cao\" --url https://lluh.org/sites/lluh.org/files/docs/cancer-center/research/cao-biosketch.pdf. Output: no roster or retired-id matches. Manual roster and already-proposed.txt checks clean."
+      }
+    }
+  ],
+  "already_listed": [
+    {
+      "name": "Thu Huynh",
+      "id": "vp-1723",
+      "note": "Exact Midwestern University profile URL and biochemistry appointment match; find-roster-matches confirmed."
+    },
+    {
+      "name": "Saundra Ngoc-Yen Nguyen",
+      "id": "vp-2418",
+      "note": "Baylor General Medicine profile opened; exact roster identity confirmed by find-roster-matches."
+    },
+    {
+      "name": "MaiLan T. Nguyen",
+      "id": "vp-2420",
+      "note": "Baylor pediatric rheumatology lead already listed; command matched stored identity URL."
+    },
+    {
+      "name": "Hiep X. Nguyen",
+      "id": "vp-0219",
+      "note": "California Northstate official biography opened; same pharmacist/PhD from Mercer, exact roster match."
+    },
+    {
+      "name": "Phuoc T. Tran",
+      "id": "vp-0428",
+      "note": "MD Anderson radiation-oncology lead already listed; matched profile URL."
+    },
+    {
+      "name": "Hao T. Duong",
+      "id": "vp-2752",
+      "note": "Baylor health-services-research directory lead already listed; command matched identity."
+    },
+    {
+      "name": "Jonathan Nguyen",
+      "id": "vp-2411",
+      "note": "Morehouse surgery lead already listed; command matched stored profile URL."
+    },
+    {
+      "name": "Thao T. Dang",
+      "id": "vp-0790",
+      "note": "Indiana clinical genetics PhD lead already listed; command matched stored profile URL."
+    },
+    {
+      "name": "Bon Trinh",
+      "id": "vp-1529",
+      "note": "Harvard fellowship page is historical; roster already has current University of Virginia appointment; command matched stored identity."
+    }
+  ],
+  "possible_move": [],
+  "rejected": [
+    {
+      "name": "Quang Xuan Nguyen",
+      "reason": "Not a verified current candidate. web.open returned an older Baylor person-page representation, but direct HTTP fetch returned 404 twice and the directly fetched current psychology faculty list omitted him. Do not infer current employment from cached/indexed pages. Previously deduped; token collisions were different disciplines/doctorates. Sources: https://www.bcm.edu/people-search/quang-nguyen-27666 ; https://www.bcm.edu/departments/psychiatry-and-behavioral-sciences/programs-divisions/psychology/faculty ."
+    },
+    {
+      "name": "Ngoc-Anh A. Nguyen",
+      "reason": "Strong Houston Methodist digital-health researcher, MD and recent papers verified, but official page explicitly labels the Cornell university appointment Voluntary. Excluded from this university slice; no independent full-time university appointment established. Could be evaluated separately for a nonprofit research-institute slice. https://scholars.houstonmethodist.org/en/persons/ngoc-anh-a-nguyen/ ."
+    },
+    {
+      "name": "Jamie Thuy Lai",
+      "reason": "Baylor pediatric rheumatology faculty and MD verified (individual page fetched HTTP 200 using Python after web errors), clean roster dedup. Did not establish a research doctorate or two papers in the past three years under this stricter brief. https://www.bcm.edu/people-search/jamie-lai-41451 ."
+    },
+    {
+      "name": "Thanh Thuy Truong",
+      "reason": "Baylor psychiatry faculty/MD verified; known cariprazine publication dates to 2021/2022. Did not establish two recent papers or a research doctorate. https://www.bcm.edu/people-search/thanh-thuy-truong-31929 ; https://doi.org/10.1111/ajad.13241 ."
+    },
+    {
+      "name": "Linh A. Tieu",
+      "reason": "LLU assistant-professor/DO role verified; employer research page lists only old 2011–2017 projects, and two recent papers were not established. https://llu.edu/academics/faculty/tieu-linh/research ."
+    },
+    {
+      "name": "Vi A. Dinh",
+      "reason": "LLU professorship and Vietnamese-language signal verified; only one paper since November 2023 found in the employer publication record. Does not satisfy this brief's research-doctorate-or-two-recent-papers test on available evidence. https://llu.edu/academics/faculty/dinh-vi ; https://experts.llu.edu/en/persons/vi-dinh/ ; https://lluh.org/provider/dinh-vi ."
+    },
+    {
+      "name": "Khai Hoan Tram",
+      "reason": "New Emory appointment verified by the 2026 institutional announcement and magazine; only MD identified and two papers at the newly joined employer not established. No individual current employer profile found. https://sph.emory.edu/magazine/2026/fall/new-and-notable ; https://news.emory.edu/stories/2026/08/emory-welcomes-new-faculty-academic-year ."
+    },
+    {
+      "name": "Thuy-Van Hang",
+      "reason": "Emory assistant-professor/MD biography opened, with substantial clinical research leads, but two recent peer-reviewed papers were not fully verified during this pass. Source representations varied: the general directory returned biography while the department profile returned mostly navigation. https://med.emory.edu/directory/profile/?u=TTPHAM8 ."
+    },
+    {
+      "name": "Thi Thanh Thoa Tran",
+      "reason": "Indiana profile now says Could not find faculty member on direct HTTP inspection; historical acknowledgement is insufficient evidence of current role. https://medicine.iu.edu/faculty/63593/tran-thi-thanh-thoa ."
+    },
+    {
+      "name": "Chloe Hoang",
+      "reason": "Baylor psychology faculty/PhD lead; affirmative Vietnamese signal beyond surname was not identity-resolved. Other Chloe Hoang search hits concerned different people and were not adopted. https://www.bcm.edu/people-search/chloe-hoang-23210 ."
+    },
+    {
+      "name": "Hanh My Truong",
+      "reason": "Emory employer lab listing explicitly identifies a postdoctoral fellow. https://med.emory.edu/departments/human-genetics/research/caspary.html ."
+    },
+    {
+      "name": "Hanh Hoang",
+      "reason": "Emory Lead Research Specialist with doctorate and Vietnamese origin, but university faculty equivalence/permanence not established; do not promote a specialist title to faculty. https://med.emory.edu/departments/biochemistry/research-labs/bou-nader/team/current-members.html ."
+    },
+    {
+      "name": "Long Nguyen (Meharry lead)",
+      "reason": "Personal lab page describes a Meharry appointment, while other discovery evidence says previously at Meharry. Current employer/appointment not resolved; not included from a stale personal page. https://litpuvn.github.io/myweb/ ."
+    },
+    {
+      "name": "Ngoc-Quynh Thi Chu",
+      "reason": "MUSC new-faculty announcement lead surfaced after MSK training; individual current employer profile and recent publication test not fully resolved. Do not include from a name/provider registry alone. https://medicine.musc.edu/content-hub/News/2024/10/16/welcome-new-faculty ."
+    },
+    {
+      "name": "Linh T. Chung",
+      "reason": "EVMS/ODU directory lead explicitly says Resident. https://www.evms.edu/directory/?page=13 ."
+    },
+    {
+      "name": "Linh Nguyen (Medical College of Wisconsin)",
+      "reason": "Employer page identifies MSTP student, not career faculty. https://www.mcw.edu/education/medical-scientist-training-program/people/linh-nguyen ."
+    },
+    {
+      "name": "Thao T. Doan",
+      "reason": "Loyola/AbbVie lead is an affiliate/adjunct university appointment; already belongs to an industry-research investigation rather than this university slice. https://www.luc.edu/stritch/molecularpharmacologyandneuroscience/people/faculty/?filter=pharmPrimary ."
+    },
+    {
+      "name": "Lan Chi T. Luu",
+      "reason": "LSU employer-hosted CV identifies adjunct Instructor roles; excluded. https://www.medschool.lsuhsc.edu/faculty/docs/LuuCV_12Aug10.pdf ."
+    }
+  ],
+  "coverage": [
+    {
+      "employer": "Baylor College of Medicine",
+      "pagesExamined": [
+        "https://www.bcm.edu/departments/psychiatry-and-behavioral-sciences/programs-divisions/psychology/faculty",
+        "https://www.bcm.edu/people-search/phuong-nguyen-27665",
+        "https://www.bcm.edu/people-search/vincent-tran-32068",
+        "https://www.bcm.edu/people-search/quang-nguyen-27666",
+        "https://www.bcm.edu/people-search/saundra-nguyen-91516",
+        "https://www.bcm.edu/people-search/thanh-thuy-truong-31929",
+        "https://www.bcm.edu/people-search/jamie-lai-41451",
+        "https://www.bcm.edu/departments/medicine/sections/health-services-research/faculty"
+      ],
+      "note": "Deepest sweep: given tokens Thao, Thuy, Hanh, Diem, Huyen, Oanh, Uyen, Linh, Duy, Trang, Tuyet, Khanh, Hien and Nhu; less-common surnames Khuong, Diep, Duong, Dinh, Trinh, Luong, Bui and Pham. Current full psychology directory independently fetched to catch stale indexed faculty. Two new candidates; multiple roster duplicates and held clinical leads."
+    },
+    {
+      "employer": "Loma Linda University",
+      "pagesExamined": [
+        "https://llucatalog.llu.edu/faculty/",
+        "https://llu.edu/academics/faculty/tran-mai-linh",
+        "https://experts.llu.edu/en/persons/mai-linh-tran/",
+        "https://llu.edu/academics/faculty/tieu-linh/research",
+        "https://llu.edu/academics/faculty/dinh-vi",
+        "https://experts.llu.edu/en/persons/vi-dinh/",
+        "https://medicine.llu.edu/research/graduate-programs/cancer-developmental-and-regenerative-biology-cdrb/cancer-developmental-and-regenerative-biology-cdrb-faculty",
+        "https://lluh.org/sites/lluh.org/files/docs/cancer-center/research/cao-biosketch.pdf",
+        "https://news.llu.edu/research/prompting-leukemia-cells-die"
+      ],
+      "note": "Read full 2026–27 faculty catalog via Python; swept Linh, Thuy, Ngoc, Hanh, Huyen, Quynh, Dung, Kieu and uncommon surnames Cao, Tieu, Dinh, Ngo, Phung, Quach, Luu, Dao, Luong and Huynh. Two new candidates. Bio PDF used for Cao because both HTML profile routes failed; current role independently corroborated."
+    },
+    {
+      "employer": "The University of Texas MD Anderson Cancer Center",
+      "pagesExamined": [
+        "https://faculty.mdanderson.org/profiles/minhtruong_do.html",
+        "https://www.mdanderson.org/research/departments-labs-institutes/departments-divisions/experimental-therapeutics/faculty-staff.html"
+      ],
+      "note": "Swept Quynh, Thuy, Diep, Trinh, Liem, Khiem, Tuan, Huy, Phuong, Linh, Duc, Minh, Anh, Thanh, Trang, Ngoc and Thien. New 2026 research-faculty promotion Minh Truong Do cleared. Known Phuoc Tran and Quynh-Nhu Nguyen were already listed; several research assistants not inferred to be faculty."
+    },
+    {
+      "employer": "Icahn School of Medicine at Mount Sinai",
+      "pagesExamined": [
+        "https://icahn.mssm.edu/about/departments-offices/medicine/hospital/teaching-education",
+        "https://profiles.icahn.mssm.edu/tuyet-trinh-truong",
+        "https://scholars.mssm.edu/en/persons/tuyet-trinh-truong/",
+        "https://profiles.icahn.mssm.edu/vinh-tung-nguyen"
+      ],
+      "note": "Given-name sweep into hospital medicine produced one candidate with two recent research articles. Vinh-Tung role verified, but only one recent paper established, so not promoted to candidate. Linh T Vuong Instructor lead lacks stable faculty-equivalence evidence."
+    },
+    {
+      "employer": "Houston Methodist",
+      "pagesExamined": [
+        "https://scholars.houstonmethodist.org/en/persons/ngoc-anh-a-nguyen/"
+      ],
+      "note": "Ngoc-Anh digital-health research thoroughly verified but Cornell external appointment explicitly voluntary; excluded from university slice."
+    },
+    {
+      "employer": "Emory University",
+      "pagesExamined": [
+        "https://med.emory.edu/directory/profile/?u=TTPHAM8",
+        "https://med.emory.edu/departments/medicine/profile/?u=TTPHAM8"
+      ],
+      "note": "Swept Tram, Hanh, Thuy, Quynh, Linh, Huyen and given-name combinations. Discovery leads included new Khai Hoan Tram appointment, Hanh Hoang specialist, Hanh My Truong postdoc and Thuy-Van Hang clinician. None passed every brief test in this run; no exhaustive-coverage claim."
+    },
+    {
+      "employer": "Indiana University",
+      "pagesExamined": [
+        "https://medicine.iu.edu/faculty/63593/tran-thi-thanh-thoa"
+      ],
+      "note": "Swept Quynh, Thuy, Diem, Huong, Hanh, Tuong, Luu, Hiep, Khanh, Oanh, Thanh, Quang, Bich and Phung. Thao T Dang already listed. Thoa Tran historical link fails current person lookup."
+    },
+    {
+      "employer": "Midwestern University",
+      "pagesExamined": [
+        "https://facultyprofiles.midwestern.edu/1670-thu-huynh"
+      ],
+      "note": "Biochemistry given-name lead Thu Huynh resolves to vp-1723."
+    },
+    {
+      "employer": "California Northstate University",
+      "pagesExamined": [
+        "https://pharmacy.cnsu.edu/directory/bios/hiep-nguyen.php"
+      ],
+      "note": "Given-name/Vietnamese-education lead Hiep X Nguyen is vp-0219; no duplicate proposed."
+    },
+    {
+      "employer": "Harvard University",
+      "pagesExamined": [
+        "https://occe.hms.harvard.edu/paths-leadership/faculty-fellowship/hms-faculty-fellows"
+      ],
+      "note": "Swept Tuyet, Hau, Tram, Dung, Trinh and Dinh. Bon Trinh page is historical and person is already listed at UVA; no new candidate inferred from fellowship page."
+    },
+    {
+      "employer": "Medical College of Wisconsin",
+      "pagesExamined": [],
+      "note": "Search-only coverage: Thao, Linh, Thuy, Ngoc, Hanh, Hien, Khuong, Diem, Tuong, Trinh, Bui, Huynh and Phung; indexed results primarily students, residents and alumni. No verified new faculty. Search-only results are not employer verification."
+    },
+    {
+      "employer": "Albert Einstein College of Medicine",
+      "pagesExamined": [],
+      "note": "Search-only coverage: Thao, Huong, Linh, Thuy, Hanh, Ngoc and uncommon surnames Luu, Dinh, Trinh, Pham, Tran. Johnny Tran MD and Ken C Q Nguyen MS surfaced, but the brief's research/doctorate test not verified; no candidate added."
+    },
+    {
+      "employer": "Augusta University / Medical College of Georgia",
+      "pagesExamined": [],
+      "note": "Search-only sweep: Thao, Linh, Hanh, Ngoc, Truong and Quach. Khoi Nguyen neurosurgery and Justin Nguyen pediatrics surfaced; Tran Ha Nguyen public-health and Vy Nguyen psychology outside the clinical/basic-science focus. No fully verified new candidate."
+    },
+    {
+      "employer": "Mayo Clinic College of Medicine and Science",
+      "pagesExamined": [
+        "https://www.mayoclinic.org/biographies/vu-linh-h-m-d/bio-20571086"
+      ],
+      "note": "Given tokens Huyen, Quynh, Hanh, Linh, Phuong and Dung, plus Liem, Huynh, Luong, Luu and Cao. Linh H Vu MD research role verified, but no published academic faculty rank established. Cellular-microsystems lab PhD staff not assumed permanent faculty."
+    },
+    {
+      "employer": "Drexel University",
+      "pagesExamined": [],
+      "note": "Search-only sweep: Thuy, Linh, Trang and Quynh. Results mostly students, technicians and IT staff; no new eligible appointment verified."
+    },
+    {
+      "employer": "Albany Medical College",
+      "pagesExamined": [],
+      "note": "Search-only given-token sweep: Linh and Thuy. Linh Nguyen and Thuy Duong Le results are residents; Thuy Le alumnus has a different current employer."
+    },
+    {
+      "employer": "Macon & Joan Brock Virginia Health Sciences / Eastern Virginia Medical School",
+      "pagesExamined": [],
+      "note": "Search-only sweep: Thuy, Linh and uncommon surnames Ngo. Leads were medical students and residents; no career faculty established."
+    },
+    {
+      "employer": "Mercer University",
+      "pagesExamined": [],
+      "note": "Search-only sweep: Ngoc, Linh, Bui and Tran in medicine. Results were graduates, nursing clinical instructors, and premedical students; no verified clinical/basic-science research faculty candidate."
+    },
+    {
+      "employer": "Morehouse School of Medicine",
+      "pagesExamined": [],
+      "note": "Search-only surname/Vietnam and faculty sweep; Jonathan Nguyen resolves to existing vp-2411."
+    },
+    {
+      "employer": "Meharry Medical College",
+      "pagesExamined": [
+        "https://litpuvn.github.io/myweb/"
+      ],
+      "note": "A current-employer profile could not be established for the Long Nguyen personal-lab lead; conflicting current/former affiliation signals kept out of candidates."
+    },
+    {
+      "employer": "Loyola University Chicago",
+      "pagesExamined": [],
+      "note": "Search-only given-name sweep Thao and related clinical leads; Thao T Doan is an adjunct/affiliate with AbbVie primary work. Nursing leads not treated as medical-school clinical/basic-science appointments."
+    },
+    {
+      "employer": "Louisiana State University Health Sciences Center",
+      "pagesExamined": [],
+      "note": "Search-only sweep Luu, Quynh, Thao, Linh, Ngoc, Huynh and Phung; Lan Chi Luu CV says adjunct; Anh Quynh Nguyen lead appears trainee-level; no current qualifying faculty verified."
+    },
+    {
+      "employer": "Brown University",
+      "pagesExamined": [],
+      "note": "Search-only Thao and Quynh sweep. Quynh-Lan Dao clinician-educator lead surfaced, but research-doctorate/recent-two-paper requirement not established."
+    },
+    {
+      "employer": "Boston University",
+      "pagesExamined": [],
+      "note": "Search-only Huyen, Phuong, Trinh, Dang and Vuong sweeps; results mainly students, research support and already-known faculty."
+    },
+    {
+      "employer": "Johns Hopkins University",
+      "pagesExamined": [],
+      "note": "Search-only Quynh, Uyen, Thao and Diem sweeps. Most results trainees/support staff or existing Thao D Nguyen; no new verified candidate."
+    },
+    {
+      "employer": "Case Western Reserve University / Cleveland Clinic",
+      "pagesExamined": [],
+      "note": "Search-only Thao, Quynh and Trinh sweeps. Thao-Vi Dao faculty lead surfaced; research/publication test not completed, so not included."
+    },
+    {
+      "employer": "Cincinnati Children's / University of Cincinnati",
+      "pagesExamined": [],
+      "note": "Search-only Thuy, Ngoc, Phuong and Dinh sweeps; Ngoc Ly bioinformatician and other laboratory staff not promoted to permanent faculty without evidence."
+    },
+    {
+      "employer": "Medical University of South Carolina",
+      "pagesExamined": [],
+      "note": "Search-only Thao, Quynh, Linh and Thuy sweeps; Ngoc-Quynh Chu new-faculty lead recorded as unresolved rather than accepted from registry/search evidence."
+    },
+    {
+      "employer": "Memorial Sloan Kettering Cancer Center",
+      "pagesExamined": [],
+      "note": "Search-only Vietnamese-origin and given-token Linh, Quynh and Thao sweeps; Chi Linh Nguyen and Thinh Tran leads were trainees, not verified career faculty."
+    },
+    {
+      "employer": "Slice-wide method and limits",
+      "pagesExamined": [],
+      "note": "Later-pass given-name and uncommon-surname sweep, with deeper full-directory inspection at Baylor and LLU and targeted clinical-research checks elsewhere. Stopped after broad targeted coverage and six retained candidates, not at the numerical cap. Coverage is a research log, not a claim that every A–M medical school or faculty page has been exhausted. No LinkedIn pages fetched, no login, no Issues/PRs, no roster edits, no state-changing git commands. Prior-proposal exclusion file checked. Search-only coverage entries deliberately have empty pagesExamined arrays."
+    }
+  ]
+}

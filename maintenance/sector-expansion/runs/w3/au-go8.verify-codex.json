@@ -1,0 +1,28 @@
+{
+  "verifier": "codex",
+  "input": "maintenance/sector-expansion/runs/w3/au-go8.codex.json",
+  "candidates": [
+    {
+      "name": "Rosie Thuy Pham-Henderson",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Opened https://research-repository.uwa.edu.au/en/persons/thuy-pham/ live: individual UWA employer profile identifies a Lecturer in Marketing, explicitly tenure-track since January 2024, based in Perth, Australia. Biography explicitly states she was born and raised in Saigon, Vietnam. QUT Marketing PhD awarded in 2022 is confirmed. Independently ran find-roster-matches with the proposed name and both UWA and older UQ identity URLs. The two name hits are different people: vp-2069 is an electrical/mechanical/biomedical engineering lecturer at UTS (live https://profiles.uts.edu.au/Thuy.Pham, different ORCID 0000-0002-7153-0135 versus candidate 0000-0003-4041-5924); vp-2185 is environmental/resource economist Thi Thanh Thuy Pham with a 2013 Tromso marine-resource-economics PhD (live https://uit.no/ansatte/thanh.thuy), unlike this 2022 QUT marketing graduate. No identity-URL match and not in maintenance/sector-expansion/already-proposed.txt.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Hien Duong",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Opened https://profiles.sydney.edu.au/hien.duong live: individual current employer profile lists Academic Fellow - Senior Lecturer in Pharmaceutical Sciences, Sydney Pharmacy School, and separates her present lecturer appointment from earlier postdoctoral roles. Academic Fellow is a substantive Sydney academic employment category, not sufficient reason to classify her as a temporary postdoc: clause 128 of the employer-published agreement https://www.sydney.edu.au/content/dam/intranet/public-documents/employment/enterprise-agreement/enterprise-agreement.pdf preserves the earlier Academic Fellowship provisions; the 2018 agreement provides a continuing academic career and promotion pathway (https://rafausyd.com/wp-content/uploads/2022/08/ea-usyd.pdf). Affirmative Vietnamese signal beyond surname: the Australian government scholarship recipient register https://internationaleducation.gov.au/Scholarships/Scholarships-and-Fellowships/2019/Documents/2007-2018%20Endeavour%20Scholarship%20and%20Fellowship%20recipients.pdf, PDF page 98, lists Hien Duong, Vietnam, UNSW, incoming 2007 Endeavour Postgraduate Award; identity aligns with her employer biography naming the same award and PhD commencement year. Employer profile places her academic appointment at Sydney in Australia; Vietnam collaboration is not evidence of a Vietnam-based primary appointment. Independently ran find-roster-matches with proposed name, profile and Scholar identity URLs: no roster or retired-id matches. Not in maintenance/sector-expansion/already-proposed.txt.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Phuong D. (Yun) Trieu",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Opened https://profiles.sydney.edu.au/phuong.trieu live: individual Sydney employer profile currently lists Senior Lecturer - Medical Imaging Science, School of Health Sciences; biography explicitly identifies Phuong D Trieu (Yun), senior lecturer and BREAST Co-Academic Director. This establishes an academic teaching/research appointment rather than a hospital conjoint title or trainee role. Vietnamese signal is the Vietnamese given name Phuong together with Trieu and her explicitly documented leadership of research/training in Vietnam, rather than surname alone. The employer-published Sydney Vietnam Engagement booklet https://www.sydney.edu.au/content/dam/corporate/documents/sydney-southeast-asia-centre/svan/sydney-vietnam-engagement.pdf, printed page 14, independently names her as a VIETRAD project lead collaborating with Vietnamese hospitals. Her current employer profile establishes the Sydney, Australia appointment; overseas project leadership does not imply a Vietnam-based appointment. Independently ran find-roster-matches with the exact proposed name, current profile URL and older faculty-profile identity URL: no roster or retired-id matches. Not in maintenance/sector-expansion/already-proposed.txt. No full middle name or diacritics inferred.",
+      "correctedFields": {}
+    }
+  ],
+  "possible_move": []
+}

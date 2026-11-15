@@ -1,0 +1,724 @@
+{
+  "group": "university",
+  "agent": "codex",
+  "slice": "nz-ireland",
+  "finishedAt": "2026-11-15T01:06:26.495904Z",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Mina Cu",
+        "university": "University of Waikato",
+        "track": "Tenure-line",
+        "rank": "Lecturer",
+        "department": "Waikato Management School",
+        "city": "Hamilton",
+        "country": "New Zealand",
+        "field": "Business & Economics",
+        "researchAreas": [
+          "Digital business",
+          "Business information systems",
+          "Business analytics",
+          "Data management"
+        ],
+        "phdInstitution": "Renmin University of China",
+        "phdYear": 2015,
+        "profileUrl": "https://profiles.waikato.ac.nz/thithanhhuong.cu"
+      },
+      "evidence": {
+        "currentRole": "https://profiles.waikato.ac.nz/thithanhhuong.cu — \"Lecturer in Digital Business\"; academic employment section identifies Hamilton, New Zealand, 16 October 2023–present. Opened and read both through web and a normal JavaScript-rendered browser.",
+        "doctorateOrPapers": "https://profiles.waikato.ac.nz/thithanhhuong.cu — degrees section records a Doctor in Laws, International Studies track, Renmin University of China, 2012–2015; the Waikato academic calendar also styles this PhD(Laws).",
+        "vietnameseSignal": "https://profiles.waikato.ac.nz/thithanhhuong.cu — Hanoi University bachelor degree; Vietnamese language listed; institutional email includes thithanhhuong.cu.",
+        "dedup": "Ran npm run find-roster-matches -- \"Mina Cu\" --url https://profiles.waikato.ac.nz/thithanhhuong.cu: no roster or retired-id matches. Also checked the earlier-proposal exclusion list."
+      }
+    },
+    {
+      "entry": {
+        "name": "Linh Tu Ho",
+        "university": "Lincoln University",
+        "track": "Tenure-line",
+        "rank": "Senior Lecturer",
+        "department": "Department of Financial and Business Systems",
+        "country": "New Zealand",
+        "field": "Business & Economics",
+        "researchAreas": [
+          "Risk management",
+          "Sustainable investment",
+          "Financial technology",
+          "Green finance",
+          "Financial econometrics"
+        ],
+        "phdInstitution": "Lincoln University",
+        "profileUrl": "https://researchers.lincoln.ac.nz/linh-ho",
+        "scholarUrl": "https://scholar.google.com/citations?hl=en&user=yBOjh7MAAAAJ"
+      },
+      "evidence": {
+        "currentRole": "https://researchers.lincoln.ac.nz/linh-ho — \"Senior Lecturer\"; academic positions document Senior Lecturer in Finance, 2024–present, following Lecturer in Finance, 2021–2024. Read live in JavaScript-rendered browser. Official 2026 calendar https://www.lincoln.ac.nz/assets/Academic-Calendar.pdf uses the fuller name Linh Tu Ho.",
+        "doctorateOrPapers": "https://researchers.lincoln.ac.nz/linh-ho — PhD, Lincoln University. Degree year omitted because the current profile does not give one.",
+        "vietnameseSignal": "https://researchers.lincoln.ac.nz/linh-ho — BA from National Economics University, Hanoi, Vietnam; prior lecturer appointment at Hue University; Vietnamese language. Fuller name is in the official 2026 calendar.",
+        "dedup": "Ran npm run find-roster-matches -- \"Linh Tu Ho\" --url https://researchers.lincoln.ac.nz/linh-ho https://scholar.google.com/citations?hl=en&user=yBOjh7MAAAAJ. Name hit vp-2820 Linh Ho is a different person: UCSF doctorate and pharmaceutical/biomedical sciences at California Northstate University, versus Lincoln finance doctorate, finance research, and Hue/Lincoln career. No identity-URL hit.",
+        "links": "Scholar URL is linked directly from the current Lincoln profile; no LinkedIn page fetched."
+      }
+    },
+    {
+      "entry": {
+        "name": "Linh Bui",
+        "university": "University of Auckland",
+        "track": "Tenure-line",
+        "rank": "Lecturer",
+        "department": "Department of Management and International Business",
+        "country": "New Zealand",
+        "field": "Business & Economics",
+        "researchAreas": [
+          "Team dynamics",
+          "Creativity",
+          "Well-being",
+          "Emotions in organisations",
+          "Organisational behaviour"
+        ],
+        "phdInstitution": "Australian National University",
+        "phdYear": 2025,
+        "msInstitution": "International University of Japan",
+        "undergradInstitution": "Hanoi University of Culture",
+        "profileUrl": "https://profiles.auckland.ac.nz/linh-bui"
+      },
+      "evidence": {
+        "currentRole": "https://profiles.auckland.ac.nz/linh-bui — \"Lecturer\" in Management & International Business; biography explicitly identifies the current lecturer appointment at Auckland Business School. Opened and read in JavaScript-rendered browser.",
+        "doctorateOrPapers": "https://profiles.auckland.ac.nz/linh-bui — PhD in Organisational Behaviour and Human Resource Management, Australian National University; degree dates end 5 February 2025.",
+        "vietnameseSignal": "https://profiles.auckland.ac.nz/linh-bui — Hanoi University of Culture bachelor degree, Vietnamese language, and eight years at Da Nang Department of Home Affairs.",
+        "dedup": "Ran npm run find-roster-matches -- \"Linh Bui\" --url https://profiles.auckland.ac.nz/linh-bui. Hit vp-1083 Linh N. Bui is different: public-health scholar with Oregon State doctorate, University of Sydney masters and Berkeley/Sutter postdoc. Candidate has ANU organisational-behaviour PhD and International University of Japan masters. No URL hit. Earlier-proposed Linh Bui-Raborn is different: https://dceg.cancer.gov/about/staff-directory/bui-raborn-linh identifies an NCI genomics staff scientist with a University of Iowa molecular-biology/genetics doctorate and TGen/Indiana postdoctoral history. Candidate is an ANU organisational-behaviour PhD, ORCID 0000-0003-1964-5709, corroborated at https://researchportalplus.anu.edu.au/en/persons/linh-thi-thu-bui/ .",
+        "honors": "Profile lists dissertation awards, conference best-paper award, FHEA and government student scholarships. None imported under the roster honors rules."
+      }
+    },
+    {
+      "entry": {
+        "name": "Toan Pham",
+        "university": "University of Auckland",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Auckland Bioengineering Institute",
+        "country": "New Zealand",
+        "field": "Biological & Biomedical Sciences",
+        "researchAreas": [
+          "Mitochondrial bioenergetics",
+          "Cardiac physiology",
+          "Metabolic disease",
+          "Cell physiology"
+        ],
+        "phdInstitution": "University of Auckland",
+        "phdYear": 2018,
+        "profileUrl": "https://profiles.auckland.ac.nz/toan-pham",
+        "scholarUrl": "https://scholar.google.com/citations?user=3-UBhesAAAAJ&hl=en"
+      },
+      "evidence": {
+        "currentRole": "https://profiles.auckland.ac.nz/toan-pham — \"Senior Research Fellow\". The live institutional biography says he returned to ABI in 2021 to establish his own independent laboratory and currently leads a multidisciplinary group. It also records accredited doctoral supervision. These establish an enduring independent research appointment beyond a postdoctoral training role. Read in JavaScript-rendered browser.",
+        "doctorateOrPapers": "https://profiles.auckland.ac.nz/toan-pham — PhD in Physiology, University of Auckland; listed dates end 16 November 2018.",
+        "vietnameseSignal": "https://profiles.auckland.ac.nz/toan-pham — Vietnamese given name Toan and surname Pham; current employer profile explicitly lists Vietnamese language ability.",
+        "dedup": "Ran npm run find-roster-matches -- \"Toan Pham\" --url https://profiles.auckland.ac.nz/toan-pham https://scholar.google.com/citations?user=3-UBhesAAAAJ&hl=en. Hit vp-2015 is the Adelaide School of Education/TESOL scholar, distinct from Auckland cardiac physiologist and ABI laboratory leader. No identity-URL hit.",
+        "links": "Scholar URL is linked directly by the official profile."
+      }
+    },
+    {
+      "entry": {
+        "name": "Ha Hoang",
+        "university": "Victoria University of Wellington",
+        "track": "Tenure-line",
+        "rank": "Lecturer",
+        "department": "School of Linguistics and Applied Language Studies",
+        "country": "New Zealand",
+        "field": "Humanities",
+        "researchAreas": [
+          "Applied linguistics",
+          "TESOL",
+          "English for Academic Purposes",
+          "Curriculum design",
+          "Teacher agency",
+          "Metaphor in second language learning"
+        ],
+        "phdInstitution": "Victoria University of Wellington",
+        "profileUrl": "https://people.wgtn.ac.nz/ha.hoang"
+      },
+      "evidence": {
+        "currentRole": "https://people.wgtn.ac.nz/ha.hoang — \"Lecturer in Applied Linguistics\". Read live in normal JavaScript-rendered browser. Current research profile describes over 25 years in teaching, teacher education, curriculum and research. Secondary departmental URL https://www.wgtn.ac.nz/lals/about/staff/ha-hoang returned 410, so the working institutional research profile is used.",
+        "doctorateOrPapers": "https://people.wgtn.ac.nz/ha.hoang — PhD in Applied Linguistics, Victoria University of Wellington. No year given.",
+        "vietnameseSignal": "Vietnamese given name Ha with surname Hoang; TESOL contributor biography https://www.tesol.org/media/05cpj51m/14109-contributors-biographies-doc.pdf identifies teaching experience in Vietnam and New Zealand and the same Wellington applied-linguistics PhD. This is distinct from the Wellington Education PhD holder with the same name described by English Language Partners. TESOL PDF retrieved successfully by direct HTTP (200) and its text read with pdftotext after the web reader failed.",
+        "dedup": "Ran npm run find-roster-matches -- \"Ha Hoang\" --url https://people.wgtn.ac.nz/ha.hoang. Hits vp-0496 Viet Ha Hoang (NTU mathematics), vp-2051 Tuyet Mai Ha Hoang (Illinois social work), and vp-2125 Qui Ha Hoang Nguyen (UNCW film) are different fields/full names and appointments. No identity URL hit; candidate is the Wellington applied linguist."
+      }
+    },
+    {
+      "entry": {
+        "name": "Anh Duong Trinh",
+        "university": "Technological University Dublin",
+        "track": "Tenure-line",
+        "rank": "Lecturer",
+        "department": "School of Informatics and Cybersecurity",
+        "country": "Ireland",
+        "field": "Computer & Information Sciences",
+        "researchAreas": [
+          "Human-machine interaction",
+          "Conversational AI",
+          "Natural language processing",
+          "Data analytics",
+          "Health informatics",
+          "Cybersecurity"
+        ],
+        "phdInstitution": "Technological University Dublin",
+        "phdYear": 2023,
+        "profileUrl": "https://www.tudublin.ie/explore/faculties-and-schools/computing-digital-data/informatics-and-cybersecurity/people/academic-staff/dr-anh-duong-trinh.php"
+      },
+      "evidence": {
+        "currentRole": "https://www.tudublin.ie/explore/faculties-and-schools/computing-digital-data/informatics-and-cybersecurity/people/academic-staff/dr-anh-duong-trinh.php — \"Lecturer in Computer Science\". Current individual academic-staff profile and linked school staff directory both identify the appointment; location is Blanchardstown Campus. Former National College of Ireland programme-director and Trinity postdoctoral positions are explicitly past roles.",
+        "doctorateOrPapers": "https://www.tudublin.ie/explore/faculties-and-schools/computing-digital-data/informatics-and-cybersecurity/people/academic-staff/dr-anh-duong-trinh.php — PhD in Computer Science, Technological University Dublin, 2023; current research and supervision activity described.",
+        "vietnameseSignal": "https://www.tudublin.ie/explore/faculties-and-schools/computing-digital-data/informatics-and-cybersecurity/people/academic-staff/dr-anh-duong-trinh.php — Vietnamese given names Anh Duong with surname Trinh; published alias Senja is explicitly linked to the same individual by the employer. No ancestry inferred from the surname alone.",
+        "dedup": "Ran npm run find-roster-matches -- \"Anh Duong Trinh\" --url https://www.tudublin.ie/explore/faculties-and-schools/computing-digital-data/informatics-and-cybersecurity/people/academic-staff/dr-anh-duong-trinh.php: no roster or retired-id matches. Checked earlier-proposal list."
+      }
+    },
+    {
+      "entry": {
+        "name": "Luan Trinh",
+        "university": "Technological University of the Shannon",
+        "track": "Tenure-line",
+        "rank": "Lecturer",
+        "department": "Department of Built Environment",
+        "city": "Limerick",
+        "country": "Ireland",
+        "field": "Engineering",
+        "researchAreas": [
+          "Structural mechanics",
+          "Composite materials",
+          "Offshore renewable energy",
+          "Finite element analysis",
+          "Computational modelling"
+        ],
+        "phdInstitution": "Northumbria University",
+        "phdYear": 2017,
+        "undergradInstitution": "Ho Chi Minh City University of Technology",
+        "msInstitution": "Ho Chi Minh City University of Technology",
+        "profileUrl": "https://tus.ie/staff-directory/dr-luan-trinh/"
+      },
+      "evidence": {
+        "currentRole": "https://tus.ie/staff-directory/dr-luan-trinh/ — \"Lecturer\", Department of Built Environment, Moylish Campus, Limerick City. Opened the individual employer page. Employer research biography https://tus.ie/rdi/research/centres-groups/matsimlab/ identifies structural-engineering teaching, research and funded-project leadership.",
+        "doctorateOrPapers": "https://infrastructure.eng.unimelb.edu.au/scs/people/scs-people/former-phd-students/trinh-luan — Northumbria civil-engineering PhD, 2014–2017; explicitly lists TUS lecturer employment from 2022 after UL research associate work, 2018–2022. The page is a former-research-group profile, not a claim that Melbourne awarded the PhD.",
+        "vietnameseSignal": "Same identity-resolved Melbourne university biography records bachelor and masters degrees at Ho Chi Minh City University of Technology and former lecturer employment in Vietnam. Vietnamese given name Luan and surname Trinh.",
+        "dedup": "Ran npm run find-roster-matches -- \"Luan Trinh\" --url https://tus.ie/staff-directory/dr-luan-trinh/: no roster or retired-id matches. Earlier check also used TUS MatSimLab URL with no matches. Checked earlier-proposal list."
+      }
+    },
+    {
+      "entry": {
+        "name": "Allie Tran",
+        "university": "Dublin City University",
+        "track": "Tenure-line",
+        "rank": "Assistant Professor",
+        "department": "School of Computing",
+        "country": "Ireland",
+        "field": "Computer & Information Sciences",
+        "researchAreas": [
+          "Multimodal retrieval",
+          "Human-computer interaction",
+          "Data visualisation",
+          "Lifelog question answering"
+        ],
+        "phdInstitution": "Dublin City University",
+        "phdYear": 2024,
+        "undergradInstitution": "VNU-HCM University of Science",
+        "profileUrl": "https://allietran.com/",
+        "scholarUrl": "https://scholar.google.ch/citations?user=FWVnlZkAAAAJ",
+        "confirmed": false
+      },
+      "evidence": {
+        "currentRole": "https://allietran.com/ — \"Assistant Professor at the School of Computing, Dublin City University\". Own CV https://allietran.com/cv (opened successfully by direct HTTP) dates this appointment August 2026–present and separately dates the ended postdoc October 2024–July 2026 and part-time teaching from January 2024. No individual employer faculty profile located in the examined DCU School of Computing staff directory; using the brief's own-site exception with confirmed:false. Employer announcement https://www.dcu.ie/research/news/2026/aug/22-dcu-researchers-appointed-royal-irish-academy-committees-2026-2030-term corroborates continuing DCU affiliation under Ly-Duyen Tran, but does not independently establish the professorial rank.",
+        "doctorateOrPapers": "https://allietran.com/cv — PhD in Computing, Dublin City University, 2019–2024. Employer thesis catalogue https://doras.dcu.ie/view/year/2024.default.html identifies Ly-Duyen Tran, matching ORCID 0000-0002-9597-1832, and the 2024 PhD thesis on lifelog retrieval/question answering.",
+        "vietnameseSignal": "https://allietran.com/ — expressly identifies Duyên as her Vietnamese name. CV records VNU-HCM University of Science bachelor degree. Full Vietnamese name omitted because the personal page spells only the given name with diacritics.",
+        "dedup": "Ran npm run find-roster-matches -- \"Allie Tran\" --url https://allietran.com/ https://scholar.google.ch/citations?user=FWVnlZkAAAAJ: no matches. Also ran alias \"Ly-Duyen Tran\": retired vp-1177 Ly Tran is the Deakin education professor merged into vp-1156 Ly Thi Tran (Melbourne PhD 2009), a different person from the DCU computing PhD 2024. No new ID assigned.",
+        "links": "Scholar link obtained directly from the personal site. No LinkedIn page fetched.",
+        "honors": "Local awards, AFHEA and conference search-challenge awards omitted. RIA committee membership is corroborating affiliation, not academy election."
+      }
+    }
+  ],
+  "already_listed": [
+    {
+      "name": "Hoang D. Nguyen",
+      "id": "vp-0793",
+      "note": "Current UCC profile https://research.ucc.ie/en/persons/hoang-d-nguyen/ explicitly identifies Harry Nguyen as Hoang D. Nguyen, Associate Professor (Senior Lecturer). Dedup returned the same ID by name and exact profile URL."
+    },
+    {
+      "name": "Van-Dinh Nguyen",
+      "id": "vp-0840",
+      "note": "Opened https://www.tcd.ie/scss/people/academic-staff/nguyenva/; Assistant Professor in Computer Science. Dedup matched this ID by name and exact institutional profile URL."
+    }
+  ],
+  "possible_move": [],
+  "rejected": [
+    {
+      "name": "Tra Dinh",
+      "reason": "Auckland physics lead: current individual employer profile was not located in the live directory/sitemap. Historical 2020 news and 2023 calendar are insufficient for a current verified candidate. Sources examined: https://www.auckland.ac.nz/en/news/2020/10/29/climate-change-and-climate-science-initiative.html ; https://www.climate.ac.nz/people/ (502)."
+    },
+    {
+      "name": "Hannah Nguyen — Lincoln University",
+      "reason": "Official 2026 calendar confirms Lecturer and Massey PhD, but no individual employer profile was located in the current Lincoln researcher sitemap. Own page https://hantt251.wixsite.com/website still gives Massey contact details. Held back rather than use a calendar as the required person profile. Dedup hits vp-0172 and vp-0367 have different fields/doctoral institutions (Michigan State management; UCLA human services)."
+    },
+    {
+      "name": "Lien Luu — Technological University Dublin",
+      "reason": "Current lecturer role confirmed on https://www.tudublin.ie/explore/faculties-and-schools/sciences-health/school-chemical-biopharmaceutical-sciences/people/academic-staff/lien-luu.php ; no identity-resolved research doctorate or two recent current-employer papers established. Did not borrow the University of London history doctorate from the different Coventry scholar. Dedup: no roster or retired-id matches."
+    },
+    {
+      "name": "Dinh Linh Le",
+      "reason": "Very recent Limerick construction-management lead surfaced only in search results for a LinkedIn announcement; no LinkedIn page fetched. No live employer person page or own current appointment page located; excluded from verified list. UL sitemap checked. Dedup name hits vp-0912 NYU medicine and vp-2120 Kennesaw IT are different people."
+    },
+    {
+      "name": "Lan Le-Ngoc",
+      "reason": "https://profiles.canterbury.ac.nz/Lan-Le-Ngoc opened and rendered: Senior Research Engineer from August 2025, Canterbury PhD 1990, Vietnamese language, former Callaghan Principal Research Scientist. Current university faculty equivalence/permanence not established sufficiently, so not counted as verified. Dedup vp-2953 Lan N. Le at ADB is a different field and career."
+    },
+    {
+      "name": "Nhung Nghiem — Otago",
+      "reason": "Current individual Otago profile returned access/security verification; stopped without evasion. Historical BODE3 research-fellow evidence does not establish current permanent faculty equivalence. Name hit vp-1061 is ANU genome-sciences scholar; identity not conclusively resolved. Not recorded as a move."
+    },
+    {
+      "name": "Ngan Tran — Queen's University Belfast",
+      "reason": "Additional Northern Ireland check: individual supervisor page returned 403; centre staff search result describes Wellcome Early Career Fellow, a time-limited fellowship. No independently verified permanent appointment; not counted."
+    },
+    {
+      "name": "Huy-Qui Bui / Qui Bui",
+      "reason": "https://www.math.canterbury.ac.nz/~q.bui/ is an old retained Senior Lecturer page with obsolete links. Current Canterbury researcher sitemap did not include him; old 1986 appointment notice and 2013 teaching page do not prove an eligible current or formally conferred emeritus appointment."
+    },
+    {
+      "name": "Khanh Tuoc Trinh / Tuoc Trinh",
+      "reason": "Massey evidence found was a 2013 personnel calendar and an undated external editorial biography. No current employer person page or emeritus conferral established."
+    },
+    {
+      "name": "Linh N. K. Duong",
+      "reason": "Otago supervision mentions are historical/collaborative leads; not in current Otago Management staff list https://www.otago.ac.nz/management/staff/people . Search results point to UK appointments; not a verified New Zealand candidate."
+    },
+    {
+      "name": "Thuy Truong — Griffith College",
+      "reason": "https://www.griffith.ie/people?page=36 lists Associate Lecturer in Computing. Continuing full-time status not established; do not equate this with a permanent university lecturer appointment."
+    },
+    {
+      "name": "Thi Phi Yen Nguyen",
+      "reason": "https://www.universityofgalway.ie/ietsbio3/people/ opened live: explicitly Postdoc."
+    },
+    {
+      "name": "Giang Dang",
+      "reason": "https://profiles.canterbury.ac.nz/Giang-Dang opened and rendered: Adjunct Professor of Practice; excluded adjunct appointment."
+    },
+    {
+      "name": "Khoa Tran",
+      "reason": "https://profiles.canterbury.ac.nz/Khoa-Tran opened and rendered: Chemical Formulation Technician; ordinary technical appointment."
+    },
+    {
+      "name": "Ngoc Anh Thu Ho",
+      "reason": "https://profiles.canterbury.ac.nz/Thu-Ho opened and rendered: Postdoctoral Fellow."
+    },
+    {
+      "name": "Jessica Doan",
+      "reason": "https://academics.aut.ac.nz/jessica.doan opened: Research Assistant; career faculty-equivalent appointment not established."
+    },
+    {
+      "name": "Ha Truong",
+      "reason": "https://academics.aut.ac.nz/ha.truong opened: Doctoral Candidate."
+    },
+    {
+      "name": "Alice Bui — AUT",
+      "reason": "https://academics.aut.ac.nz/alice.bui opened: Postdoctoral Fellow."
+    },
+    {
+      "name": "Tram Nguyen — AUT",
+      "reason": "https://academics.aut.ac.nz/tram.nguyen opened and rendered: Teaching Assistant; not eligible faculty."
+    },
+    {
+      "name": "Hong Thuy (Christina) Nguyen",
+      "reason": "https://academics.aut.ac.nz/christina.nguyen opened and rendered: Doctoral Candidate; academic tutor role ended June 2026."
+    },
+    {
+      "name": "Nhu Nguyen — AUT",
+      "reason": "https://academics.aut.ac.nz/nhu.nguyen opened and rendered: Research Officer, PhD 2026. Stable faculty equivalence/permanence not established."
+    },
+    {
+      "name": "Le Nguyen — Auckland",
+      "reason": "https://profiles.auckland.ac.nz/le-nguyen opened and rendered: Professional Teaching Fellow alongside multiple research-assistant, graduate-teaching and academic-casual roles. Continuing full-time appointment not established."
+    },
+    {
+      "name": "Hai Anh Le",
+      "reason": "https://profiles.auckland.ac.nz/hai-anh-le opened and rendered: Research Fellow starting October 2026 after a 2025 doctorate. No evidence of permanent faculty equivalence; not promoted from a recent research fellowship into eligible faculty."
+    },
+    {
+      "name": "Giang Nguyen — Waikato",
+      "reason": "https://profiles.waikato.ac.nz/giang.nguyen discovery result describes international recruitment/partnerships professional role; no qualifying faculty appointment."
+    },
+    {
+      "name": "Daniel Quach",
+      "reason": "https://profiles.auckland.ac.nz/daniel-quach — live employer profile: Academic Casual Staff / Graduate Teaching Assistant; not an eligible career faculty appointment."
+    },
+    {
+      "name": "Hai Ly Bui",
+      "reason": "https://profiles.auckland.ac.nz/hai-ly-bui — live employer profile: Doctoral Candidate; not an eligible career faculty appointment."
+    },
+    {
+      "name": "Alice Bui — Auckland",
+      "reason": "https://profiles.auckland.ac.nz/a-bui — live employer profile: Programme Adviser; not an eligible career faculty appointment."
+    },
+    {
+      "name": "Benjamin Quach",
+      "reason": "https://profiles.auckland.ac.nz/benjamin-quach — live employer profile: Teaching Assistant; not an eligible career faculty appointment."
+    },
+    {
+      "name": "Linh Do",
+      "reason": "https://profiles.auckland.ac.nz/linh-do — live employer profile: Doctoral Candidate / professional casual staff; not an eligible career faculty appointment."
+    },
+    {
+      "name": "Tram Bui",
+      "reason": "https://profiles.auckland.ac.nz/tram-bui — live employer profile: Doctoral Candidate / professional casual staff; not an eligible career faculty appointment."
+    },
+    {
+      "name": "Linh Tran",
+      "reason": "https://profiles.auckland.ac.nz/linh-tran — live employer profile: Doctoral Candidate / Graduate Teaching Assistant; not an eligible career faculty appointment."
+    },
+    {
+      "name": "Chi Minh Truong",
+      "reason": "https://profiles.auckland.ac.nz/chi-minh-truong — live employer profile: Doctoral Candidate / Graduate Teaching Assistant; not an eligible career faculty appointment."
+    },
+    {
+      "name": "Minh Thuy (Jean) Ha",
+      "reason": "https://profiles.auckland.ac.nz/thuy-ha — live employer profile: Doctoral Candidate and casual teaching/marking appointments; not an eligible career faculty appointment."
+    },
+    {
+      "name": "Phuong Bui",
+      "reason": "https://profiles.auckland.ac.nz/phuong-bui — live employer profile: Doctoral Candidate; not an eligible career faculty appointment."
+    },
+    {
+      "name": "Khai Doan",
+      "reason": "https://profiles.auckland.ac.nz/khai-doan — live employer profile: Business Analyst in UniServices Finance; not an eligible career faculty appointment."
+    },
+    {
+      "name": "Thanh Cong Vu",
+      "reason": "https://profiles.auckland.ac.nz/thanh-cong-vu — live employer profile: Doctoral Candidate; not an eligible career faculty appointment."
+    },
+    {
+      "name": "Linh Nguyen — Auckland",
+      "reason": "https://profiles.auckland.ac.nz/linh-nguyen — live employer profile: Postdoctoral Fellow; not an eligible career faculty appointment."
+    },
+    {
+      "name": "Duy Nguyen — Auckland",
+      "reason": "https://profiles.auckland.ac.nz/d-h-nguyen — live employer profile: Doctoral Candidate; not an eligible career faculty appointment."
+    },
+    {
+      "name": "Thy Le",
+      "reason": "https://profiles.auckland.ac.nz/thy-le — live employer profile: Doctoral Candidate and casual/assistant positions; not an eligible career faculty appointment."
+    },
+    {
+      "name": "Vu Nam Le",
+      "reason": "https://profiles.auckland.ac.nz/vu-nam-le — live employer profile: Doctoral Candidate; not an eligible career faculty appointment."
+    },
+    {
+      "name": "Tan Le",
+      "reason": "https://profiles.auckland.ac.nz/tan-le — live employer profile: Doctoral Candidate; not an eligible career faculty appointment."
+    },
+    {
+      "name": "Tran Anh Thu Ho",
+      "reason": "https://profiles.auckland.ac.nz/tran-anh-thu-ho — live employer profile: Doctoral Candidate; not an eligible career faculty appointment."
+    },
+    {
+      "name": "Lieu Hoang",
+      "reason": "https://profiles.auckland.ac.nz/lieu-hoang — live employer profile: Doctoral Candidate; not an eligible career faculty appointment."
+    },
+    {
+      "name": "Xinh Nguyen",
+      "reason": "https://profiles.auckland.ac.nz/xinh-nguyen — live employer profile: Teaching Assistant; not an eligible career faculty appointment."
+    },
+    {
+      "name": "Khoa Nguyen",
+      "reason": "https://profiles.auckland.ac.nz/khoa-nguyen — live employer profile: Doctoral Candidate; not an eligible career faculty appointment."
+    },
+    {
+      "name": "Huyen (Victoria) Nguyen",
+      "reason": "https://profiles.auckland.ac.nz/huyen-nguyen — live employer profile: Doctoral Candidate; not an eligible career faculty appointment."
+    },
+    {
+      "name": "Harry Ngo",
+      "reason": "https://profiles.auckland.ac.nz/harry-ngo — live employer profile: Doctoral Candidate; not an eligible career faculty appointment."
+    },
+    {
+      "name": "Lan Nguyen",
+      "reason": "https://profiles.auckland.ac.nz/l-h-nguyen — live employer profile: Doctoral Candidate; not an eligible career faculty appointment."
+    },
+    {
+      "name": "Mimi Nguyen",
+      "reason": "https://profiles.auckland.ac.nz/mimi-nguyen — live employer profile: Teaching Assistant; not an eligible career faculty appointment."
+    },
+    {
+      "name": "Bryant Tran",
+      "reason": "https://profiles.auckland.ac.nz/bryant-tran — live employer profile: Doctoral Candidate; not an eligible career faculty appointment."
+    },
+    {
+      "name": "Michelle Pham",
+      "reason": "https://profiles.auckland.ac.nz/michelle-pham — live employer profile: Research Programme Coordinator; not an eligible career faculty appointment."
+    },
+    {
+      "name": "Thu Le",
+      "reason": "https://profiles.auckland.ac.nz/thu-le — live employer profile: Doctoral Candidate; not an eligible career faculty appointment."
+    },
+    {
+      "name": "Thai Nguyen",
+      "reason": "https://profiles.auckland.ac.nz/thai-nguyen — live employer profile: Exam Supervisor / Academic Casual Staff; not an eligible career faculty appointment."
+    },
+    {
+      "name": "Luan Pham",
+      "reason": "https://profiles.auckland.ac.nz/l-pham — live employer profile: Honorary Academic; not an eligible career faculty appointment."
+    },
+    {
+      "name": "Trang Nguyen — Auckland",
+      "reason": "https://profiles.auckland.ac.nz/trang-nguyen — live employer profile: Research Programme Coordinator; not an eligible career faculty appointment."
+    },
+    {
+      "name": "Lam Nguyen",
+      "reason": "https://profiles.auckland.ac.nz/lam-nguyen — live employer profile: Doctoral Candidate; not an eligible career faculty appointment."
+    },
+    {
+      "name": "Tasha Le",
+      "reason": "https://profiles.auckland.ac.nz/tasha-le — live employer profile: Research Grants and Contracts Manager; not an eligible career faculty appointment."
+    },
+    {
+      "name": "Sandra Barre-Nguyen",
+      "reason": "https://profiles.auckland.ac.nz/sandra-barre-nguyen — live employer profile: Research Technician with casual appointments; not an eligible career faculty appointment."
+    },
+    {
+      "name": "Binh Tran",
+      "reason": "https://profiles.auckland.ac.nz/binh-tran — live employer profile: Doctoral Candidate and casual staff appointments; not an eligible career faculty appointment."
+    },
+    {
+      "name": "Kim Le",
+      "reason": "https://profiles.auckland.ac.nz/kim-le — live employer profile: Senior Research Programme Coordinator; not an eligible career faculty appointment."
+    },
+    {
+      "name": "Hannah Nguyen — Auckland",
+      "reason": "https://profiles.auckland.ac.nz/h-p-nguyen — live employer profile: Group Services Coordinator / Research Assistant; not an eligible career faculty appointment."
+    }
+  ],
+  "coverage": [
+    {
+      "employer": "University of Auckland",
+      "pagesExamined": [
+        "https://profiles.auckland.ac.nz/sitemap.xml",
+        "https://profiles.auckland.ac.nz/linh-bui",
+        "https://profiles.auckland.ac.nz/toan-pham",
+        "https://profiles.auckland.ac.nz/daniel-quach",
+        "https://profiles.auckland.ac.nz/hai-ly-bui",
+        "https://profiles.auckland.ac.nz/a-bui",
+        "https://profiles.auckland.ac.nz/benjamin-quach",
+        "https://profiles.auckland.ac.nz/linh-do",
+        "https://profiles.auckland.ac.nz/tram-bui",
+        "https://profiles.auckland.ac.nz/linh-tran",
+        "https://profiles.auckland.ac.nz/chi-minh-truong",
+        "https://profiles.auckland.ac.nz/thuy-ha",
+        "https://profiles.auckland.ac.nz/phuong-bui",
+        "https://profiles.auckland.ac.nz/khai-doan",
+        "https://profiles.auckland.ac.nz/thanh-cong-vu",
+        "https://profiles.auckland.ac.nz/linh-nguyen",
+        "https://profiles.auckland.ac.nz/d-h-nguyen",
+        "https://profiles.auckland.ac.nz/thy-le",
+        "https://profiles.auckland.ac.nz/vu-nam-le",
+        "https://profiles.auckland.ac.nz/tan-le",
+        "https://profiles.auckland.ac.nz/tran-anh-thu-ho",
+        "https://profiles.auckland.ac.nz/lieu-hoang",
+        "https://profiles.auckland.ac.nz/xinh-nguyen",
+        "https://profiles.auckland.ac.nz/khoa-nguyen",
+        "https://profiles.auckland.ac.nz/huyen-nguyen",
+        "https://profiles.auckland.ac.nz/harry-ngo",
+        "https://profiles.auckland.ac.nz/l-h-nguyen",
+        "https://profiles.auckland.ac.nz/mimi-nguyen",
+        "https://profiles.auckland.ac.nz/bryant-tran",
+        "https://profiles.auckland.ac.nz/michelle-pham",
+        "https://profiles.auckland.ac.nz/thu-le",
+        "https://profiles.auckland.ac.nz/thai-nguyen",
+        "https://profiles.auckland.ac.nz/l-pham",
+        "https://profiles.auckland.ac.nz/trang-nguyen",
+        "https://profiles.auckland.ac.nz/lam-nguyen",
+        "https://profiles.auckland.ac.nz/tasha-le",
+        "https://profiles.auckland.ac.nz/sandra-barre-nguyen",
+        "https://profiles.auckland.ac.nz/binh-tran",
+        "https://profiles.auckland.ac.nz/kim-le",
+        "https://profiles.auckland.ac.nz/h-p-nguyen"
+      ],
+      "note": "Deep public-sitemap and JavaScript-rendered profile sweep across business, education, law, humanities, sciences, engineering, medicine and bioengineering. Given-name tokens included Linh, Thanh, Thuy, Phuong, Huy, Ngoc, Duy, Toan, Thu, Khoa, Khanh, Giang, Viet and Xuan; less common surnames included Quach, Bui, Doan, Truong and Ho. Individual outcomes recorded above. Tra Dinh not located in current sitemap."
+    },
+    {
+      "employer": "University of Waikato",
+      "pagesExamined": [
+        "https://profiles.waikato.ac.nz/sitemap.xml",
+        "https://profiles.waikato.ac.nz/thithanhhuong.cu",
+        "https://www.waikato.ac.nz/int/about/calendar/staff-and-honours/staff-of-the-university/waikato-management-school/"
+      ],
+      "note": "Public researcher sitemap and management-school calendar examined, plus given-name searches for Hien, Tuan, Phuong, Khoa, Giang. Verified Mina Cu in Hamilton. Separated Vietnam-based offshore teaching jobs from eligible New Zealand appointments. Giang Nguyen recruitment lead excluded."
+    },
+    {
+      "employer": "Lincoln University",
+      "pagesExamined": [
+        "https://researchers.lincoln.ac.nz/sitemap.xml",
+        "https://researchers.lincoln.ac.nz/linh-ho",
+        "https://www.lincoln.ac.nz/assets/Academic-Calendar.pdf",
+        "https://www.lincoln.ac.nz/study/study-programmes/programme-search/doctor-of-philosophy-phd/available-masters-and-phd-supervisors/",
+        "https://livingheritage.lincoln.ac.nz/pages/CoE_TA"
+      ],
+      "note": "Examined complete public researcher sitemap (227 URLs when first fetched) and current 2026 personnel calendar, including agriculture/life sciences and agribusiness departments. Linh Ho profile rendered live. Main-site personnel/supervisor routes returned 403; no bot-check evasion. Hannah Nguyen held back for missing person-profile verification. Do not mistake Korean biochemist Hannah Lee for a Vietnamese candidate."
+    },
+    {
+      "employer": "Auckland University of Technology",
+      "pagesExamined": [
+        "https://academics.aut.ac.nz/sitemap.xml",
+        "https://academics.aut.ac.nz/jessica.doan",
+        "https://academics.aut.ac.nz/ha.truong",
+        "https://academics.aut.ac.nz/alice.bui",
+        "https://academics.aut.ac.nz/christina.nguyen",
+        "https://academics.aut.ac.nz/tram.nguyen",
+        "https://academics.aut.ac.nz/nhu.nguyen"
+      ],
+      "note": "Public sitemap (1,150 URLs) screened by given names and uncommon surnames across all listed fields. Existing faculty largely already rostered; deeper hits were trainee, assistant, or insufficiently documented research appointments. Earlier-proposed names skipped."
+    },
+    {
+      "employer": "Victoria University of Wellington",
+      "pagesExamined": [
+        "https://people.wgtn.ac.nz/sitemap.xml",
+        "https://people.wgtn.ac.nz/ha.hoang",
+        "https://www.wgtn.ac.nz/lals/about/staff/ha-hoang",
+        "https://www.wgtn.ac.nz/explore/postgraduate-programmes/master-of-tesol/people"
+      ],
+      "note": "Screened public sitemap and given-name searches beyond economics/computing; examined Ha Hoang live. Distinguish applied-linguistics faculty member from other Ha Hoang identities, including Education PhD and mathematics student. Several existing Vietnamese faculty profiles already in roster; no edits made."
+    },
+    {
+      "employer": "University of Canterbury",
+      "pagesExamined": [
+        "https://profiles.canterbury.ac.nz/sitemap.xml",
+        "https://profiles.canterbury.ac.nz/Khoa-Tran",
+        "https://profiles.canterbury.ac.nz/Lan-Le-Ngoc",
+        "https://profiles.canterbury.ac.nz/Giang-Dang",
+        "https://profiles.canterbury.ac.nz/Thu-Ho",
+        "https://www.math.canterbury.ac.nz/~q.bui/"
+      ],
+      "note": "Deep current-profile sitemap and rendered-page sweep reached mechanical/electrical engineering, product design, biological sciences and older mathematics pages. No additional verified faculty; Lan Le-Ngoc needs university faculty-equivalence/permanence confirmation. Existing Chat Le Nguyen and Huong Dieu Dang already rostered."
+    },
+    {
+      "employer": "University of Otago",
+      "pagesExamined": [
+        "https://www.otago.ac.nz/management/staff/people",
+        "https://www.otago.ac.nz/wellington/departments/publichealth/staff/nhung-nghiem-department-of-public-health"
+      ],
+      "note": "Given-name/uncommon-surname searches included Linh, Duong, Nghiem, Hien and Thuy; management staff list read live. Wellington public-health candidate profile was blocked by security verification and was not bypassed. Historical BODE3 material and supervision mentions retained only as unverified leads. No current permanent candidate asserted from blocked pages."
+    },
+    {
+      "employer": "Massey University",
+      "pagesExamined": [
+        "https://www.massey.ac.nz/robots.txt"
+      ],
+      "note": "Search-based given-name and uncommon-surname sweep included Thuy, Hien, Huong, Thinh and Trinh, alongside current roster comparison. Tuoc Trinh results were historical; no current eligible person profile established. This employer received lighter directory coverage than the six sitemap-enabled NZ institutions; excluded offshore Vietnam appointments and student results."
+    },
+    {
+      "employer": "Technological University Dublin",
+      "pagesExamined": [
+        "https://www.tudublin.ie/explore/faculties-and-schools/computing-digital-data/informatics-and-cybersecurity/people/academic-staff/dr-anh-duong-trinh.php",
+        "https://www.tudublin.ie/explore/faculties-and-schools/computing-digital-data/informatics-and-cybersecurity/people/academic-staff/",
+        "https://www.tudublin.ie/explore/faculties-and-schools/sciences-health/school-chemical-biopharmaceutical-sciences/people/academic-staff/lien-luu.php",
+        "https://researchprofiles.tudublin.ie/en/organisations/school-of-chemical-and-biopharmaceutical-science-2/persons/"
+      ],
+      "note": "Went beyond earlier mainstream university sweep into Blanchardstown Informatics/Cybersecurity and Chemical/Biopharmaceutical Sciences. Verified Anh Duong Trinh; held Lien Luu back for missing doctorate/paper evidence. Pure organisation route returned 403. No LinkedIn fetched."
+    },
+    {
+      "employer": "Technological University of the Shannon",
+      "pagesExamined": [
+        "https://tus.ie/staff-directory/dr-luan-trinh/",
+        "https://tus.ie/rdi/research/centres-groups/matsimlab/"
+      ],
+      "note": "Read individual lecturer directory and multidisciplinary research-group biographies (mechanical, materials, applied science, biomedical and built environment); verified Luan Trinh, previously UL research associate. Searches for Thanh, Duy and Bui produced no further verified candidates."
+    },
+    {
+      "employer": "Dublin City University",
+      "pagesExamined": [
+        "https://www.dcu.ie/computing/people",
+        "https://allietran.com/",
+        "https://allietran.com/cv",
+        "https://www.dcu.ie/research/news/2026/aug/22-dcu-researchers-appointed-royal-irish-academy-committees-2026-2030-term"
+      ],
+      "note": "Examined computing staff directory and current research-affiliation announcement, then identity-resolved Ly-Duyen/Allie Tran via own site and CV. Employer announcement corroborates affiliation, while current Assistant Professor rank remains own-site evidence: confirmed:false. Prior postdoc and part-time appointments are not the proposed appointment. Given-name searches included Thanh, Linh, Hien and Thuy."
+    },
+    {
+      "employer": "University College Cork",
+      "pagesExamined": [
+        "https://research.ucc.ie/en/persons/hoang-d-nguyen/",
+        "https://www.ucc.ie/en/misl/people/laphan/",
+        "https://www.ucc.ie/en/chemistry/news/2016/adjunct-professor-exceeds-10k-citation-mark.html"
+      ],
+      "note": "Verified Harry Nguyen alias as existing vp-0793. Followed computer-science/lab leads and uncommon-surname chemistry result; Linh-An Phan is postdoc; John Luong result explicitly adjunct. Earlier-proposed Mai Le and Long Hoang skipped."
+    },
+    {
+      "employer": "Trinity College Dublin",
+      "pagesExamined": [
+        "https://www.tcd.ie/scss/people/academic-staff/nguyenva/",
+        "https://www.tcd.ie/asian/people/"
+      ],
+      "note": "Given-name follow-up included Hien, Thanh, Quang and Dinh; Van-Dinh Nguyen verified as existing vp-0840. Search results for Vietnamese-language area studies did not establish a new Vietnamese candidate; existing Viet Quoc Pham/Binh-Son Hua remain rostered."
+    },
+    {
+      "employer": "University College Dublin",
+      "pagesExamined": [],
+      "note": "Search-only follow-up using Vietnamese given names Hien, Quynh, Ngoc, Huy, Phuong, Linh and Truong; yielded students, old research mentions and existing rostered faculty. No new individual appointment verified. Do not interpret absence of a result as absence of Vietnamese faculty."
+    },
+    {
+      "employer": "University of Limerick",
+      "pagesExamined": [
+        "https://www.ul.ie/sitemap.xml",
+        "https://www.ul.ie/sitemap.xml?page=1",
+        "https://www.ul.ie/sitemap.xml?page=2"
+      ],
+      "note": "Examined both public sitemap parts and searched Tuan, Quynh, Dinh, Thuy. New Dinh Linh Le announcement could not be corroborated on an employer/own person page; not counted. Luan Trinh is currently TUS, not UL. Existing Tram Nguyen remains rostered."
+    },
+    {
+      "employer": "University of Galway",
+      "pagesExamined": [
+        "https://www.universityofgalway.ie/ietsbio3/people/"
+      ],
+      "note": "Given-name searches Huong, Quang, Hai and uncommon-surname research leads across energy, engineering and biosciences. Live IETSBIO3 roster identifies Thi Phi Yen Nguyen as postdoc; other surfaced names were students or historical project members. No new permanent appointment verified."
+    },
+    {
+      "employer": "Maynooth University",
+      "pagesExamined": [],
+      "note": "Search-only given-name/uncommon-surname pass: Dung, Trinh, Quynh, Thao and Bui. Results included student profiles and a term-limited researcher lead (Tri-Thuc Bui). No verified new career faculty person page. Existing Chau Minh Nguyen already rostered."
+    },
+    {
+      "employer": "Munster Technological University",
+      "pagesExamined": [
+        "https://biologicalsciences.mtu.ie/staff",
+        "https://messo.mtu.ie/people"
+      ],
+      "note": "Examined biosciences staff and mechanical/energy systems research-team search results; Quang An Phan is a PhD alumnus with Vietnam career evidence, not established current MTU faculty. Given-name follow-up Quang, Hien, Ngoc and Truong. No new verified candidate."
+    },
+    {
+      "employer": "South East Technological University",
+      "pagesExamined": [
+        "https://www.setu.ie/department-of-education/department-of-education-staff"
+      ],
+      "note": "Education staff directory examined in discovery results; token searches Vietnamese, Hien, Tuan and Trinh across institution. Results mostly students, publications or Vietnam partnerships, not new eligible appointments. No new individual profile verified."
+    },
+    {
+      "employer": "Atlantic Technological University",
+      "pagesExamined": [],
+      "note": "Search-only follow-up with Vietnam, Hien, Phuong, Minh and Dinh; surfaced student/partnership material, no new eligible individual appointment. Lighter coverage than TU Dublin and TUS; absence of verified candidates is not a census finding."
+    },
+    {
+      "employer": "National College of Ireland",
+      "pagesExamined": [],
+      "note": "Search-only follow-up: Nguyen/Luu/Trinh and degree repository leads. Anh Duong Trinh now TU Dublin; student theses are not faculty evidence. No additional verified current faculty appointment."
+    },
+    {
+      "employer": "Griffith College",
+      "pagesExamined": [
+        "https://www.griffith.ie/people?page=36"
+      ],
+      "note": "Broadened beyond universities to inspect Thuy Truong computing lead. Associate Lecturer alone did not establish continuing full-time status; excluded."
+    },
+    {
+      "employer": "Queen's University Belfast / Ulster University",
+      "pagesExamined": [
+        "https://www.qub.ac.uk/schools/mdbs/Research/find-a-phd-supervisor/ngan-tran.html"
+      ],
+      "note": "Additional geographic check outside Republic of Ireland: given-name and uncommon-surname searches Trinh, Thuy, Linh, Hien; Ngan Tran person page 403 and time-limited early-career fellowship evidence. No Northern Ireland candidate counted."
+    }
+  ]
+}

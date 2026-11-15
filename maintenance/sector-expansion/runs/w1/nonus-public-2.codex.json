@@ -1,0 +1,361 @@
+{
+  "group": "Non-US public research",
+  "agent": "codex",
+  "slice": "nonus-public-2",
+  "finishedAt": "2026-11-15T00:25:00.461330Z",
+  "candidates": [
+    {
+      "entry": {
+        "name": "The-Anh Nguyen",
+        "university": "Fraunhofer Society",
+        "institutionType": "Independent nonprofit research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Fraunhofer Institute for Open Communication Systems (FOKUS), Future Applications and Media (FAME)",
+        "researchAreas": [
+          "Adaptive learning systems",
+          "Educational interoperability",
+          "Learning analytics"
+        ],
+        "city": "Berlin",
+        "country": "Germany",
+        "profileUrl": "https://www.fokus.fraunhofer.de/en/usr/the-anh_nguyen.html"
+      },
+      "evidence": {
+        "currentRole": "https://www.fokus.fraunhofer.de/en/usr/the-anh_nguyen.html — “Research Associate”; individual biography describes transition from research assistant after the January 2023 master’s thesis. The contact card identifies him as a scientist in Berlin. Current staff role, not a student/postdoc listing.",
+        "doctorateOrPapers": "https://www.fokus.fraunhofer.de/en/usr/the-anh_nguyen.html — Employer-generated publications identify him as author of a 2024 conference paper on rights/access-control middleware and a 2026 conference paper on learning analytics metadata and LRS functionality. These are two distinct research papers within the last three years in the current Fraunhofer role; no doctorate is claimed.",
+        "vietnameseSignal": "https://www.fokus.fraunhofer.de/en/usr/the-anh_nguyen.html — The-Anh is an affirmative Vietnamese given-name combination beyond Nguyen.",
+        "dedup": "Ran npm run find-roster-matches -- \"The-Anh Nguyen\" --url https://www.fokus.fraunhofer.de/en/usr/the-anh_nguyen.html. Partial hits vp-0026, vp-0126, vp-0597, vp-0684, vp-2637, vp-2947, vp-3116 were checked against roster biographies: computing/robotics PhDs at Colorado Boulder and IIT, mechanical/chemical engineering faculty, accounting, economics and clinical development differ from this 2023 HTW master’s graduate in educational technology. No matching identity or URL; exact-name GitHub Issue search returned none."
+      }
+    },
+    {
+      "entry": {
+        "name": "Truong-Sinh An",
+        "university": "Fraunhofer Society",
+        "institutionType": "Independent nonprofit research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Fraunhofer Institute for Open Communication Systems (FOKUS), Future Applications and Media (FAME)",
+        "researchAreas": [
+          "Educational technology",
+          "Learning analytics",
+          "Artificial intelligence"
+        ],
+        "city": "Berlin",
+        "country": "Germany",
+        "profileUrl": "https://www.fokus.fraunhofer.de/en/usr/truong-sinh_an.html"
+      },
+      "evidence": {
+        "currentRole": "https://www.fokus.fraunhofer.de/en/usr/truong-sinh_an.html — “Scientific Assistant and Project Manager”; biography says he returned to FOKUS in 2020 and is currently employed in FAME. The staff card calls him a scientist; duties explicitly include R&D.",
+        "doctorateOrPapers": "https://www.fokus.fraunhofer.de/en/usr/truong-sinh_an.html — Current employer’s individual profile lists distinct 2024 conference papers on educational AI assistants and adaptive learning paths, and 2025 research on language-model-assisted course search. Uses the recent-publication route, not a claimed PhD; 2027 items were ignored.",
+        "vietnameseSignal": "https://www.fokus.fraunhofer.de/en/usr/truong-sinh_an.html — Truong-Sinh is a Vietnamese compound given name; affirmative name signal beyond the family name An.",
+        "dedup": "npm run find-roster-matches -- \"Truong-Sinh An\" --url https://www.fokus.fraunhofer.de/en/usr/truong-sinh_an.html: no roster or retired-id matches. Exact-name GitHub Issue search returned none."
+      }
+    },
+    {
+      "entry": {
+        "name": "Bach Do",
+        "university": "Fraunhofer Society",
+        "institutionType": "Independent nonprofit research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Fraunhofer Institute for Open Communication Systems (FOKUS), Future Applications and Media (FAME)",
+        "researchAreas": [
+          "Adaptive learning",
+          "Artificial intelligence in education",
+          "Learning technology"
+        ],
+        "city": "Berlin",
+        "country": "Germany",
+        "profileUrl": "https://www.fokus.fraunhofer.de/en/usr/bach_do.html"
+      },
+      "evidence": {
+        "currentRole": "https://www.fokus.fraunhofer.de/en/usr/bach_do.html — Individual staff page identifies a current FAME research associate/scientist, describes educational-technology research, and gives a Berlin staff contact. The biography describes work after a master’s degree rather than trainee enrollment.",
+        "doctorateOrPapers": "https://www.fokus.fraunhofer.de/en/usr/bach_do.html — Individual employer profile lists a 2024 adaptive-learning-paths conference paper and a distinct 2025 journal article on language-model-assisted course search, with Do as author in the current employer’s research programme. It also lists 2026 work. Uses publication eligibility; no PhD is asserted. Future 2027 item was ignored.",
+        "vietnameseSignal": "https://www.fokus.fraunhofer.de/en/usr/bach_do.html — Bach is a Vietnamese given name paired with Do; this is an affirmative given-name signal, not surname-only inference.",
+        "dedup": "npm run find-roster-matches -- \"Bach Do\" --url https://www.fokus.fraunhofer.de/en/usr/bach_do.html: no roster or retired-id matches. Exact-name GitHub Issue search returned none."
+      }
+    },
+    {
+      "entry": {
+        "name": "Binh Duong Nguyen",
+        "university": "Forschungszentrum Jülich",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Institute for Advanced Simulation, Materials Data Science and Informatics (IAS-9)",
+        "city": "Jülich",
+        "country": "Germany",
+        "profileUrl": "https://www.fz-juelich.de/profile/nguyen_bi"
+      },
+      "evidence": {
+        "currentRole": "https://www.fz-juelich.de/profile/nguyen_bi — “Senior Scientist”; current individual employer profile, last modified 2025-11-04. Senior staff role rather than a postdoctoral/visiting/student appointment.",
+        "doctorateOrPapers": "https://www.fz-juelich.de/profile/nguyen_bi — Employer’s individual staff profile identifies him with the doctoral title Dr. in a materials-science research role. The profile does not state doctoral institution or year, so those fields are omitted.",
+        "vietnameseSignal": "https://www.fz-juelich.de/profile/nguyen_bi — Binh Duong is an affirmative Vietnamese given-name combination beyond Nguyen.",
+        "dedup": "npm run find-roster-matches -- \"Binh Duong Nguyen\" --url https://www.fz-juelich.de/profile/nguyen_bi returned vp-0023, vp-0358, vp-1528 and vp-3148. Roster comparison: Wyoming and ASU Duong Nguyen work in electrical/computing systems (Michigan State 2021 and UBC 2020 PhDs); Binh P. Nguyen is a Wellington medical/data scientist (NUS 2014); EntoZyme Binh Nguyen is an insect biologist (Macquarie 2021). Different full names, research programmes and identities from the IAS-9 materials senior scientist. No URL match. Exact-name Issue search returned none."
+      }
+    },
+    {
+      "entry": {
+        "name": "Thuc Han Tran",
+        "university": "Leibniz Institute of Ecological Urban and Regional Development",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "researchAreas": [
+          "Urban sustainability",
+          "Sustainability indicators",
+          "Energy transition",
+          "Decarbonisation"
+        ],
+        "city": "Dresden",
+        "country": "Germany",
+        "phdInstitution": "Victoria University of Wellington",
+        "phdYear": 2014,
+        "profileUrl": "https://www.ioer.de/en/institute/staff/tran"
+      },
+      "evidence": {
+        "currentRole": "https://www.ioer.de/en/institute/staff/tran — “Research Associate”; professional experience explicitly lists the current Dresden institute appointment from 2024 to present, separately from earlier postdoctoral and consulting roles.",
+        "doctorateOrPapers": "https://www.ioer.de/en/institute/staff/tran — Individual employer CV explicitly records a 2014 doctorate in architecture from Victoria University of Wellington.",
+        "vietnameseSignal": "https://www.ioer.de/en/institute/staff/tran — Individual employer CV records a 2005 Bachelor of Architecture at Hanoi Architecture University, Vietnam.",
+        "dedup": "npm run find-roster-matches -- \"Thuc Han Tran\" --url https://www.ioer.de/en/institute/staff/tran: no roster or retired-id matches. Exact-name GitHub Issue search returned none."
+      }
+    },
+    {
+      "entry": {
+        "name": "Hung Hoang Viet Nguyen",
+        "university": "German Institute for Adult Education – Leibniz Centre for Lifelong Learning",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Organisation and Programme Planning",
+        "researchAreas": [
+          "Political methodology",
+          "Comparative political science",
+          "Computational social science",
+          "Social policy"
+        ],
+        "city": "Bonn",
+        "country": "Germany",
+        "phdInstitution": "Bremen International Graduate School of Social Sciences",
+        "phdYear": 2025,
+        "profileUrl": "https://www.die-bonn.de/en/institute/staff/dr-hung-hoang-viet-nguyen/"
+      },
+      "evidence": {
+        "currentRole": "https://www.die-bonn.de/en/institute/staff/dr-hung-hoang-viet-nguyen/ — “Research Associate, Organisation and Programme Planning”; professional history gives employment at DIE since 2024. Current staff biography distinguishes him from doctoral researcher listings.",
+        "doctorateOrPapers": "https://www.die-bonn.de/en/institute/staff/dr-hung-hoang-viet-nguyen/ — Individual employer biography explicitly records a 2019–2025 Doctor of Philosophy in Political Science at Bremen International Graduate School of Social Sciences. The doctorate is completed in the current staff biography.",
+        "vietnameseSignal": "https://www.die-bonn.de/en/institute/staff/dr-hung-hoang-viet-nguyen/ — Individual employer education section records a 2011–2015 bachelor’s degree in international relations at Ho Chi Minh City University of Social Sciences and Humanities.",
+        "dedup": "Ran npm run find-roster-matches -- \"Hung Hoang Viet Nguyen\" --url https://www.die-bonn.de/en/institute/staff/dr-hung-hoang-viet-nguyen/ https://orcid.org/0000-0001-9496-6217. Many token-only hits, no URL/exact identity match. Checked all returned roster entries: doctorate/discipline mismatches include chemistry vp-0088, engineering vp-0130, literature vp-0298, computer science vp-0524/vp-0793, finance/economics vp-0139/vp-0605/vp-0675/vp-1547, clinical/biomedical vp-0589/vp-2310/vp-2337/vp-2488, and AI researchers vp-2985/vp-3114/vp-3151. Closest politics hit vp-0334 is George Mason emeritus Hung M. Nguyen, not this 2025 Bremen political-science graduate. Other engineering/mathematics/earth-science hits differ in full identity and field. Retired vp-1574 is merged into Melbourne economist vp-0675; retired vp-1513 is an unsupported Khalifa placeholder, unrelated to the documented Bremen/DIE identity. Exact-name Issue search returned none. Browser open failed, but direct HTTP GET returned 200 and the complete named biography."
+      }
+    },
+    {
+      "entry": {
+        "name": "Phong Trieu Le",
+        "university": "National Institute of Information and Communications Technology",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Cybersecurity Research Institute, Security Fundamentals Laboratory",
+        "researchAreas": [
+          "Cryptography",
+          "Privacy-preserving machine learning"
+        ],
+        "country": "Japan",
+        "phdInstitution": "Tokyo Institute of Technology",
+        "phdYear": 2009,
+        "profileUrl": "https://sfl.nict.go.jp/people/le-trieu-phong.html"
+      },
+      "evidence": {
+        "currentRole": "https://sfl.nict.go.jp/people/le-trieu-phong.html — “主任研究員” (Senior Researcher). Individual employer biography says he joined NICT in 2009 and undertakes cryptography and privacy-preserving machine-learning R&D.",
+        "doctorateOrPapers": "https://sfl.nict.go.jp/people/le-trieu-phong.html — Individual employer biography explicitly records completion of the Tokyo Institute of Technology doctoral programme in 2009 and a doctorate (博士（学術）).",
+        "vietnameseSignal": "https://sfl.nict.go.jp/people/le-trieu-phong.html — Published name Le Trieu Phong includes the affirmative Vietnamese given-name combination Trieu Phong beyond the ambiguous surname Le. Canonical name reordered to given/middle/family order without reconstructing diacritics.",
+        "dedup": "Ran npm run find-roster-matches for both \"Phong Trieu Le\" and \"Le Trieu Phong\", with https://sfl.nict.go.jp/people/le-trieu-phong.html. Hits vp-0106 (Toledo functional analysis, Buffalo PhD 2007), vp-2200 (Loyola cancer biology) and vp-3021 (ORNL hydrology, UIUC PhD 2016) differ in discipline/education. Opened vp-2199’s linked homepage https://lephong.github.io/: its NLP researcher has an Amsterdam PhD and Edinburgh/Manchester/Amazon history, distinct from NICT cryptographer with Tokyo Tech PhD 2009. No matching identity/URL. Exact published-name Issue search returned none."
+      }
+    }
+  ],
+  "already_listed": [],
+  "possible_move": [],
+  "rejected": [
+    {
+      "name": "An Tran / Dang-Bao-An Tran",
+      "reason": "Same NPL metrologist: https://www.npl.co.uk/our-people/an-tran. Already proposed under Dang-Bao-An Tran in already-proposed.txt and open Issue #1314. Excluded after alias resolution, despite clean roster identity check. Not a new candidate."
+    },
+    {
+      "name": "Tra Thi Huong Dinh",
+      "reason": "Opened individual RIKEN biographies https://www.riken.jp/en/about/people/2025summer-2/index.html and https://web.brc.riken.jp/en/diversity/interview2024/20240521. Research/development scientist and Tsukuba PhD are supported, and local dedup finds no matches. However, closed Issue #1059 explicitly rejected this same person because permanent/career non-term-limited status was not established. The individual pages opened here do not resolve that prior concern, so not reproposed."
+    },
+    {
+      "name": "Thi Minh Ha Pham",
+      "reason": "https://www.leibniz-inm.de/en/staff/dr-pham-thi-minh-ha/ opened successfully and says Dr. / Research Scientist, but has no career, education, department or research details. Local dedup returns vp-0420, vp-1733 and retired vp-1154. The sparse individual profile is insufficient to resolve these namesakes under the individual-staff-page-only restriction; held out rather than treating a name-only match as cleared."
+    },
+    {
+      "name": "Paul Nguyen",
+      "reason": "https://leibniz-ifl.de/en/institute-1/people/nguyen-paul opened: current researcher and recent papers, but no affirmative Vietnamese signal beyond the surname, even though it is written Nguyễn. Excluded under BRIEF2 surname-only rule."
+    },
+    {
+      "name": "Cong Nghia Nguyen",
+      "reason": "https://www.earth.sinica.edu.tw/en/member/detail/512 opened: explicitly Postdoctoral Fellow. Ineligible."
+    },
+    {
+      "name": "Viet Anh Khoa Tran",
+      "reason": "https://www.fz-juelich.de/profile/tran_v opened: explicitly PhD student (NeuroAI). Ineligible."
+    },
+    {
+      "name": "Tam V. Nguyen",
+      "reason": "https://www.ufz.de/index.php?en=46415&trk=public_profile_topcard-website&urlhash=e-VZ opened: CV identifies current role since 2019 as postdoc. Ineligible."
+    },
+    {
+      "name": "Hoa Nguyen",
+      "reason": "https://www.meeresforschung-sh.de/institutes/coastal_systems_analysis_modeling/matter_transport_ecosystem_dynamics/team/102857/index.php.en opened: headline says Scientist, but current experience explicitly says Postdoc since August 2021. Excluded."
+    },
+    {
+      "name": "Nguyen Thi Thao",
+      "reason": "https://www.hereon.de/institutes/coastal_systems_analysis_modeling/hydrodynamics_data_assimilation/team/098758/index.php.en opened: explicitly PhD Student. Ineligible."
+    },
+    {
+      "name": "Quoc Khanh Tran",
+      "reason": "https://www.fz-juelich.de/profile/tran_qu opened: Dr. and institute/contact address, but no appointment title or career details. Discovery surfaced catalysis group leadership, but an individual staff page supporting that role was not found. No promotion to verified on group-page evidence. Local roster vp-1408 is an electrical/lighting professor with Ilmenau PhD 1996, likely a different person; that alone does not establish this lead’s eligible role."
+    },
+    {
+      "name": "Hong Quan Nguyen (Frank Nguyen)",
+      "reason": "https://www.itri.org.tw/english/ListStyle.aspx?DisplayStyle=01_content&MGID=1311546600016331255&MmmID=617731531422621676&SiteID=1 opened: Vietnamese hometown and PhD supported. Individual story describes power-electronics design/integration duties but does not establish a career research appointment or publication activity. Omitted rather than inferring research from employer/degree."
+    },
+    {
+      "name": "Kelly Nguyen",
+      "reason": "https://imprs-ml.mpg.de/Kelly-Nguyen opened: an MPG teaching/school profile, but the stated career appointment is programme leader at MRC Laboratory of Molecular Biology, UK. Not evidence of a current employer appointment in this assigned Max Planck slice."
+    },
+    {
+      "name": "Duc Thien Ngo",
+      "reason": "Discovered NIMS individual profile https://samurai.nims.go.jp/profiles/ngo_duc_thien and its publication profile; employer describes Postdoctoral Research Fellow. Not advanced to candidate."
+    },
+    {
+      "name": "Thi Kim Ngan Nguyen",
+      "reason": "Discovered individual URL https://samurai.nims.go.jp/profiles/nguyen_thikimngan. Browser failed; direct HTTP 200 body was Request Rejected rather than a person page. Not verified; no bot-check evasion attempted."
+    },
+    {
+      "name": "Dao Minh-Son; Anh Khoa Tran; Thi Mai Phuong Nguyen; Duy Thanh Pham; Nam Khanh Nguyen",
+      "reason": "NICT discovery leads. Search results offered team/member listings or older multi-person news/PDFs; no current individual employer staff biography was successfully located. Not candidates under the individual-page-only restriction."
+    },
+    {
+      "name": "Cuong Nguyen; Anh Tran",
+      "reason": "NRC Canada discovery leads. Found older reports/conference references, but no current individual employer staff page supporting all eligibility tests. Not verified."
+    },
+    {
+      "name": "Minh Chau Nguyen; Trung Kien Nguyen",
+      "reason": "ETRI discovery leads. Found conference/paper records or search-index references, but no qualifying current individual ETRI staff page. No LinkedIn pages fetched."
+    },
+    {
+      "name": "Thanh-Vinh Nguyen; Diep Thi Ngoc Nguyen; Thuy Nguyen",
+      "reason": "AIST discovery leads. Search results offered conference/annual-report, brochure or team evidence; no qualifying current individual employer staff page was located. Not verified."
+    }
+  ],
+  "coverage": [
+    {
+      "employer": "Max Planck institutes",
+      "pagesExamined": [
+        "https://imprs-ml.mpg.de/Kelly-Nguyen"
+      ],
+      "note": "Second-pass discovery searches across mpg.de used Nguyen, Tran, Pham, Bui and Vietnam/staff/scientist terms. Promising results were school/visitor/alumni/trainee profiles rather than new current career appointments. Nhuong Van Nguyen and Duy Nguyen-Tuong were skipped as already proposed. Kim Pham Research IT and Anthony Pham engineering leads were not advanced without affirmative eligibility/ancestry evidence. No claim of exhaustive institute coverage."
+    },
+    {
+      "employer": "Helmholtz centres",
+      "pagesExamined": [
+        "https://www.fz-juelich.de/profile/nguyen_bi",
+        "https://www.fz-juelich.de/profile/tran_qu",
+        "https://www.fz-juelich.de/profile/tran_v",
+        "https://www.ufz.de/index.php?en=46415&trk=public_profile_topcard-website&urlhash=e-VZ",
+        "https://www.meeresforschung-sh.de/institutes/coastal_systems_analysis_modeling/matter_transport_ecosystem_dynamics/team/102857/index.php.en",
+        "https://www.hereon.de/institutes/coastal_systems_analysis_modeling/hydrodynamics_data_assimilation/team/098758/index.php.en"
+      ],
+      "note": "Searched Jülich, UFZ, Hereon, DESY, DLR, DKFZ, HZDR and Helmholtz-Berlin. One senior-scientist candidate; several explicit student/postdoc exclusions. HZDR reported robots blocking. Truong-Vinh Hoang already proposed and skipped. Group/project search results used only as leads."
+    },
+    {
+      "employer": "Fraunhofer Society",
+      "pagesExamined": [
+        "https://www.fokus.fraunhofer.de/en/usr/the-anh_nguyen.html",
+        "https://www.fokus.fraunhofer.de/en/usr/truong-sinh_an.html",
+        "https://www.fokus.fraunhofer.de/en/usr/bach_do.html"
+      ],
+      "note": "Three individual FOKUS scientist profiles support career research and recent employer publications. Minh Nguyen and Nguyen-Truong Le skipped per already-proposed.txt. Broader surname searches across Fraunhofer returned group contacts or former staff; these were not accepted as individual verification."
+    },
+    {
+      "employer": "Leibniz institutes",
+      "pagesExamined": [
+        "https://www.ioer.de/en/institute/staff/tran",
+        "https://www.die-bonn.de/en/institute/staff/dr-hung-hoang-viet-nguyen/",
+        "https://leibniz-ifl.de/en/institute-1/people/nguyen-paul",
+        "https://www.leibniz-inm.de/en/staff/dr-pham-thi-minh-ha/",
+        "https://www.leibniz-inm.de/mitarbeiter/dr-nguyen-tan-binh/"
+      ],
+      "note": "Two candidates from IOER/DIE individual CVs. INM Pham held for unresolved dedup; Paul Nguyen lacks affirmative identity signal. Tan Binh Nguyen page failed browser fetch and discovery labels guest scientist. University of Hannover results were treated as outside this institute slice. No directory-only candidate accepted."
+    },
+    {
+      "employer": "RIKEN",
+      "pagesExamined": [
+        "https://www.riken.jp/en/about/people/2025summer-2/index.html",
+        "https://web.brc.riken.jp/en/diversity/interview2024/20240521"
+      ],
+      "note": "Individual staff interviews verified Dinh’s research and doctorate but did not resolve the previous permanence rejection in Issue #1059. Nguyen/Tran/Le/Vietnam searches otherwise produced visitors, students, postdocs, historical laboratory pages or Vietnam-based collaborators. Lam-Son Phan Tran’s old laboratory page was not used as a current individual appointment."
+    },
+    {
+      "employer": "National Institute for Materials Science",
+      "pagesExamined": [
+        "https://samurai.nims.go.jp/profiles/nguyen_thikimngan"
+      ],
+      "note": "Individual profile attempt returned a rejection body, not a staff biography. Search discovery covered Nguyen, Tran, Pham and Ngo; current Ngo lead is explicitly postdoctoral. ICYS, junior and graduate appointments were not treated as career staff. No candidate accepted on publications, directories or brochure snippets alone."
+    },
+    {
+      "employer": "National Institute of Advanced Industrial Science and Technology",
+      "pagesExamined": [],
+      "note": "Repeated employer-domain searches with Nguyen, Tran, Pham, Vietnamese education and staff/researcher terms. Truong Thao Nguyen already proposed and skipped. Other Thanh-Vinh/Diep Thi Ngoc/Thuy leads did not yield a current individual employer staff page. Team cards, seminars and reports were discovery only; no verified candidate."
+    },
+    {
+      "employer": "National Institute of Information and Communications Technology",
+      "pagesExamined": [
+        "https://sfl.nict.go.jp/people/le-trieu-phong.html"
+      ],
+      "note": "One current individual senior-researcher biography found. Original and canonical name variants deduped. Do-Van Nguyen and Hoang-Quoc Nguyen-Son already proposed and skipped. Other big-data/wireless leads lacked an opened current individual staff page. Broken English toggle returned 404; Japanese staff biography was used."
+    },
+    {
+      "employer": "Korea Institute of Science and Technology",
+      "pagesExamined": [],
+      "note": "Employer-domain Nguyen/Tran/Vietnam/researcher/staff searches returned graduate trainees, postdoctoral or partnership/Vietnam-based records. No qualifying individual staff biography located; no candidate accepted from lab lists or paper bylines."
+    },
+    {
+      "employer": "Electronics and Telecommunications Research Institute",
+      "pagesExamined": [],
+      "note": "Nguyen/Tran/Vietnam/researcher/staff and targeted Minh Chau/Trung Kien searches yielded papers or older conference profiles, not current individual employer staff biographies. No verified candidate."
+    },
+    {
+      "employer": "KAIST institutes",
+      "pagesExamined": [],
+      "note": "Institute/researcher/staff and Vietnamese-name searches primarily yielded PhD/MS students, postdocs and university faculty. These were not converted into institute staff candidates; no current individual qualifying institute biography located."
+    },
+    {
+      "employer": "Academia Sinica",
+      "pagesExamined": [
+        "https://www.earth.sinica.edu.tw/en/member/detail/512"
+      ],
+      "note": "Nguyen/Tran/Pham/Vietnam research and staff searches yielded trainee/research-assistant leads. Individual Cong Nghia Nguyen page explicitly says postdoctoral fellow. Other leads lacked individual career-staff evidence; no verified candidate."
+    },
+    {
+      "employer": "Industrial Technology Research Institute (Taiwan)",
+      "pagesExamined": [
+        "https://www.itri.org.tw/english/ListStyle.aspx?DisplayStyle=01_content&MGID=1311546600016331255&MmmID=617731531422621676&SiteID=1"
+      ],
+      "note": "Individual Frank Nguyen employee story establishes Vietnamese background and PhD but insufficient career-research evidence. Nguyen and researcher/Vietnam searches found no stronger individual candidate."
+    },
+    {
+      "employer": "National Research Council Canada",
+      "pagesExamined": [],
+      "note": "Nguyen/Tran/Pham, research-officer and science-professionals directory searches found report and group-contact leads but no qualifying current individual researcher biography. Manufacturing/clinical-material facility and procurement roles were not treated as research appointments. Coverage limited by individual-profile availability."
+    },
+    {
+      "employer": "National Physical Laboratory (UK)",
+      "pagesExamined": [
+        "https://www.npl.co.uk/our-people/an-tran"
+      ],
+      "note": "An Tran’s individual profile passes role/degree tests but resolves to already-proposed Dang-Bao-An Tran (Issue #1314), so excluded. Nguyen/Tran/Pham/Hoang/Vietnam searches and Van-Thuy Hoang follow-up found no additional qualifying individual staff page."
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "verifier": "codex",
+  "input": "maintenance/sector-expansion/runs/w1/us-bio.codex.json",
+  "candidates": [
+    {
+      "name": "Son Nguyen",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Independently opened https://www.bowdoin.edu/profiles/faculty/s.nguyen/index.html and https://www.bowdoin.edu/biology/faculty-and-staff/index.html. Both identify a current Assistant Professor of Biology and Biochemistry in Brunswick, Maine; the individual profile describes his teaching and undergraduate research laboratory, Penn Cell and Molecular Biology PhD (2020), Union BS (2014), and completed MIT postdoc (2020–2025). This supports an eligible regular faculty appointment outside Vietnam. Vietnamese given name Son together with Nguyen supplies a name signal beyond surname alone. Ran npm run find-roster-matches with his name, employer profile and institution-linked Scholar URL. All eight hits are distinct: vp-0572 mathematics/Warsaw PhD 1997; vp-0625 nanophotonics/UPMC PhD 2011; vp-1631 law; vp-1718 mathematics/Wayne State PhD 2010; vp-1879 semiconductor physics; vp-1962 civil engineering/Lyon PhD 2009; vp-2438 biotechnology/Greifswald PhD 2010; vp-3165 electronic materials/Brown PhD 1981. None has his identity URLs or educational trajectory. Checked already-proposed.txt: no matching candidate. No correction required.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Hao Nguyen",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Independently opened https://scholars.csus.edu/esploro/profile/hao_nguyen and https://www.csus.edu/college/natural-sciences-mathematics/biology/meet-us/. The employer-published individual profile identifies a current Biological Sciences Professor; the current department directory separately lists him among faculty, above its Lecturers section, with cell/molecular biology and colon carcinogenesis specialties. Education is Rice BA (1987), UT Dallas MS (1991) and PhD (1995); the prior appointment is Tennessee at Martin. These sources support an eligible professorial appointment in Sacramento, United States. Vietnamese given-name spelling Hao combined with Nguyen supplies the signal beyond surname alone. Ran npm run find-roster-matches with his name and both individual identity URLs. vp-0837 is an Amsterdam communication scholar (PhD 2019). vp-1943 is Canh Hao Nguyen, whose independently opened Kyoto profile https://www.bic.kyoto-u.ac.jp/pathway/canhhao/index.html establishes a different computational/machine-learning career. vp-2692 is a different physician: https://profiles.ucsf.edu/hao.nguyen documents Berkeley BA 1999 and Boston University MD/PhD 2007, incompatible with this Rice/UT Dallas trajectory. No URL matches. Checked already-proposed.txt: absent. No correction required.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Phuong Pham",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Independently opened https://dornsife.usc.edu/profile/phuong-pham/: current Assistant Professor (Research) of Molecular and Cellular Biosciences, with a USC office and telephone, Genetics PhD from St. Petersburg State University (1993), and completed NIEHS training (1999–2004). Independently opened https://cataloguepubs.usc.edu/cat2014/schools/college/bisc.html, which lists him under Assistant Professors (Research), separately from adjuncts and staff. The longstanding documented research-faculty rank plus current employer profile establishes a career faculty appointment rather than a trainee position. His current profile supports the proposed DNA replication/repair, mutagenesis, APOBEC and ssDNA-protein research fields. USC appointment is in the United States, with no Vietnam-based role indicated. Vietnamese given name Phuong with Pham provides an affirmative naming signal beyond surname alone. Ran npm run find-roster-matches with name and profile URL. Four name-only hits are distinct: vp-0759 materials physics; vp-0904 Phuong-Chi Pham, nephrology; vp-1671 Thu Phuong Pham, accounting/economics; vp-3117 Hang-Phuong Pham, data science with a Pierre and Marie Curie doctorate. None matches the USC molecular biologist and St. Petersburg/NIEHS education. No identity-URL match; absent from already-proposed.txt. No correction required.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    }
+  ],
+  "possible_move": []
+}

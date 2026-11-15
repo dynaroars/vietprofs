@@ -1,0 +1,108 @@
+{
+  "verifier": "codex",
+  "input": "maintenance/sector-expansion/runs/w2/uk-other.codex.json",
+  "candidates": [
+    {
+      "name": "Hien Bui",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Opened the York St John staff profile: current marketing lecturer and MSc programme director in York Business School, with research and teaching responsibilities and no temporary or visiting qualifier. The institutional repository https://ray.yorksj.ac.uk/profile/2377 links Hien and Hien Thu Bui through ORCID 0000-0002-3146-7098; Hien Thu supplies a Vietnamese given-name signal beyond Bui. Matcher run with both name forms, staff/repository/Scholar/ORCID URLs found no roster or retired-id matches. Not in already-proposed.txt. Appointment is in York, UK, outside Vietnam.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Khanh Nguyen",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Opened https://pure.northampton.ac.uk/en/persons/khanh-nguyen/ and https://www.northampton.ac.uk/directories/people/khanh-nguyen/: current Senior Lecturer in Accounting at Northampton, with an auditing PhD and previous Australian academic appointments. Khanh is a Vietnamese given-name signal beyond Nguyen. Matcher run with both employer URLs and ORCID: vp-0025, vp-0411, vp-0568, vp-1412, vp-1542, vp-1614, vp-1842, vp-1854, vp-1895, vp-2994 and retired vp-2958 concern computing, medicine, engineering, education, healthcare modelling or microwave research; none matches this forensic-accounting specialist and career. Not already proposed. UK appointment, no excluded role indicated.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Mai Khanh Tran",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Opened the LSBU employer profile: current Senior Lecturer in Digital Marketing, accepting PhD students; it records a marketing PhD completed in 2019. Opened https://www.lsbu.ac.uk/about-us/news/vietnamese-green-fashion-could-help-world-meet-1.5c-warming-target, which explicitly connects Mai Khanh Tran with Mika; the employer-hosted megachurches paper biography independently gives Birmingham PhD 2019. Mai Khanh and the documented Vietnam career provide signals beyond Tran. Matcher run under Mai Khanh Tran and Mika Khanh with employer/ORCID URLs: vp-1555 is a Griffith epidemiology/public-health scholar, distinct from this marketing researcher. Not already proposed. Career university appointment in London, outside Vietnam.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Lien Luu",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Opened https://pureportal.coventry.ac.uk/en/persons/lien-luu/: current Associate Professor and financial-planning curriculum lead, with teaching and research responsibilities. Opened https://www.coventry.ac.uk/life-on-campus/staff-directory/business-and-law/dr-lien-luu/, which documents University of London economic-history PhD 1997 and a substantial university teaching career. Lien supplies a Vietnamese given-name signal beyond Luu. Matcher with both employer URLs found no roster or retired-id matches; absent from already-proposed.txt. Coventry UK appointment; no visiting, adjunct or temporary qualifier.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Duc Do",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Opened https://www.bangor.ac.uk/staff/bbs/duc-do-602693/en: current banking-and-finance lecturer, module leader and PhD supervisor with a finance PhD. Duc supplies a Vietnamese given-name signal beyond ambiguous Do. Matcher run under Duc Do and published variant Duc Trung Do with employer/ORCID URLs: vp-0180 is sociology, vp-2524 robotics, vp-2685 control/mechanical engineering, and vp-2819 coastal/civil engineering; these differ from the banking/finance scholar with Swansea and Manchester experience. No identity-URL matches or already-proposed entry. Bangor UK appointment; no excluded appointment qualifier.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Bao Kha Nguyen",
+      "verdict": "fixable",
+      "failedTests": [
+        1
+      ],
+      "reason": "The submitted /about URL repeatedly failed in the web tool, and a direct HTTP fetch returned only a JavaScript shell. The canonical employer profile https://profiles.sussex.ac.uk/p420275-bao-kha-nguyen opened successfully and names the current Associate Professor in Control Engineering in the School of Engineering and Informatics; it explicitly records a South Korean mechatronics PhD in 2007. Replace profileUrl with this verified canonical URL. Bao Kha supplies Vietnamese given-name signals beyond Nguyen. Matcher with original/canonical/legacy/ORCID URLs returns vp-0679 (optometry), vp-1748 (Oxford-trained chemistry) and vp-2489 (ANU-trained economics), all distinct. Not already proposed. Sussex UK appointment, outside Vietnam.",
+      "correctedProfileUrl": "https://profiles.sussex.ac.uk/p420275-bao-kha-nguyen",
+      "correctedFields": {}
+    },
+    {
+      "name": "Nguyet Nguyen",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Opened https://pure.roehampton.ac.uk/portal/en/persons/nguyet-nguyen/: current Senior Lecturer in the Faculty of Business and Law, with Kent accounting-and-finance PhD awarded 2 January 2017 and accounting research outputs. Nguyet supplies a Vietnamese given-name signal beyond Nguyen. Matcher with employer and ORCID URLs returns vp-1030 (Florida State mathematics PhD 2014), vp-1809 (American University history PhD 2019) and vp-2364 (pulmonary medicine), distinct from this Kent-trained accountant. Not already proposed. Roehampton UK university appointment, with no excluded qualifier.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Duyen Chu",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Opened https://www.bcu.ac.uk/subject-areas/business-and-management/staff/dr-duyen-chu: current Senior Lecturer in Business, management PhD, active research projects, PhD supervision and established academic leadership duties. Duyen supplies a Vietnamese given-name signal beyond shared surname Chu. Matcher with name and employer profile found no roster or retired-id matches; absent from already-proposed.txt. Substantive university appointment in Birmingham, UK, with no adjunct, visiting, trainee or temporary qualifier.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Thu Ba Nguyen",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Opened https://researchportal.beds.ac.uk/p/en/persons/thu-ba-nguyen: current Senior Lecturer in Business Analytics, joined Bedfordshire March 2023; manufacturing systems/operations-research PhD awarded 1 June 2015. Thu Ba supplies Vietnamese given-name signals beyond Nguyen. Matcher returns vp-0251 (chemistry education), vp-0269 (Seoul-trained language teaching), vp-0981 (radiology), vp-1907 (management accounting/corporate governance), vp-3134 (Stony Brook-trained computational biology) and vp-3200 (Stanford-trained mechanical systems); these differ from this manufacturing/logistics optimisation researcher and education history. No URL match and not already proposed. UK appointment, no excluded qualifier.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Mi Tran",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Opened https://www.lboro.ac.uk/schools/business-school/our-people/mi-tran/: current International Business, Strategy and Innovation lecturer since April 2024, with Huddersfield MSc and PhD, research and module responsibilities. The official profile explicitly gives a Foreign Trade University bachelor degree in Vietnam and earlier NGO work there, providing an affirmative Vietnamese connection beyond Tran. Matcher with name, employer profile and employer-linked Scholar URL found no roster or retired-id matches. Not in already-proposed.txt. Current Loughborough UK appointment, no excluded qualifier.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Thang Ho",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Opened https://www.bradford.ac.uk/staff/mtho: current Assistant Professor (Lecturer) in Finance, appointed October 2022, with Lancaster finance PhD and MSc, research publications and teaching/supervision responsibilities. Thang supplies a Vietnamese given-name signal beyond shared surname Ho. Matcher with name, employer profile and employer-linked personal-site URL found no roster or retired-id matches; absent from already-proposed.txt. Bradford UK appointment, with no visiting, adjunct or temporary qualifier.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Thang Truong",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Opened https://www.sunderland.ac.uk/about/academic-staff/thang-truong: current Lecturer in Medicinal Chemistry since September 2022, following a completed three-year postdoc. Explicit Northumbria BSc 2016 and PhD 2019 support proposed degrees. Thang supplies a Vietnamese given-name signal beyond Truong. Matcher returns vp-0921 Cong Thang Truong, an Aizu multimedia/computer-science scholar with KAIST PhD 2006, distinct from this Northumbria-trained medicinal chemist. No URL match or already-proposed entry. Sunderland UK faculty appointment, outside Vietnam.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Vuong Chu",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Opened https://www.westminster.ac.uk/about-us/our-people/directory/chu-vuong: current finance/FinTech lecturer since 2024 in Accounting, Finance and Economics, with Essex BSc, MSc and PhD and current undergraduate/postgraduate teaching. Vuong supplies a Vietnamese given-name signal beyond shared surname Chu. Matcher with name and employer profile found no roster or retired-id matches; absent from already-proposed.txt. Profile gives a London UK workplace and no excluded appointment qualifier.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Tuan Vuong",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Opened https://www.gre.ac.uk/people/rep/faculty-of-engineering-and-science/tuan-vuong: current Senior Lecturer in Computer Science (Cyber-physical Security), security PhD and multiple module-lead responsibilities. Tuan and the documented GP Bank/Hanoi Telecom career provide Vietnamese signals beyond Vuong. Matcher returns vp-1956 Nguyen Dinh Tuan Vuong, a Tsukuba development/environmental economist with Wisconsin-Madison PhD 2024, distinct from this software/cybersecurity scholar. No URL match or already-proposed entry. Greenwich UK appointment; no visiting, adjunct or temporary qualifier.",
+      "correctedFields": {}
+    }
+  ],
+  "possible_move": []
+}

@@ -1,0 +1,14 @@
+{
+  "verifier": "codex",
+  "input": "maintenance/sector-expansion/runs/w1/south-east-europe.codex.json",
+  "candidates": [
+    {
+      "name": "Binh Thi Nguyen Slavicka",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Independently opened the proposed employer profile, https://uas.ff.cuni.cz/ustav/profily-akademiku/binh-slavicka/ : it identifies Ing. Binh Slavická, Ph.D., lists her Institute of Asian Studies appointment from 1992 onward, current teaching and Charles University doctoral study. The employer directory https://vietnam.ff.cuni.cz/o-nas/lide/ lists her among its three internal teachers, separately from external instructors. The first-person interview https://www.asiaskop.cz/asie-cr/lidska-hloupost-je-vsude-stejna-svejka-si-ve-vietnamu-pochvaluji-rika-prekladatelka-binh-slavicka explicitly states that she moved from external teaching to full-time employment in 1992 and subsequently led the program. Together these establish an enduring Teaching appointment rather than semester teaching. The interview also describes her Vietnamese schooling and selection by Vietnam for study in Czechoslovakia, affirming Vietnamese identity beyond the name. The current employer WhoIS entry https://is.cuni.cz/webapps/whois2/osoba/1058204373463705/?lang=en locates her office in Prague, Czech Republic. Retrieved https://iforum.cuni.cz/IFORUM-5832-version1.pdf live (HTTP 200) and extracted its text in memory: the author is identified as Slavická, Nguyen Thi Binh; its book title, publisher, year and ISBN match her employer profile, supporting the retained original surname and proposed normalized name. Ran npm run find-roster-matches with the full proposed name and all three identity URLs: name-only hits vp-0476, vp-1528 and vp-3148 are different people. Their roster records concern Utah philosophy (UCLA doctorate, 2011), Wellington data science (NUS doctorate, 2014), and EntoZyme insect research (Macquarie doctorate, 2021), respectively; none matches her Charles University Vietnamese-linguistics doctorate or appointment history. Also reran the matcher with Binh Slavicka and Nguyen Thi Binh Slavicka. Checked maintenance/sector-expansion/already-proposed.txt: no matching candidate or name variant.",
+      "correctedFields": {}
+    }
+  ],
+  "possible_move": []
+}

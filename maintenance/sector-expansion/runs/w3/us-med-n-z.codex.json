@@ -1,0 +1,396 @@
+{
+  "group": "university",
+  "agent": "codex",
+  "slice": "us-med-n-z",
+  "finishedAt": "2026-11-15T01:20:34.744628Z",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Thuy T. Koll",
+        "university": "University of Nebraska Medical Center",
+        "track": "Clinical",
+        "rank": "Assistant Professor",
+        "department": "Internal Medicine (Geriatrics, Gerontology and Palliative Medicine)",
+        "field": "Health Sciences",
+        "city": "Omaha",
+        "state": "Nebraska",
+        "country": "United States",
+        "researchAreas": [
+          "Geriatric Oncology",
+          "Cognitive Function",
+          "Hematopoietic Cell Transplantation",
+          "Advance Care Planning"
+        ],
+        "mdInstitution": "Creighton University School of Medicine",
+        "profileUrl": "https://www.unmc.edu/intmed/divisions/geriatrics/faculty/koll.html"
+      },
+      "evidence": {
+        "currentRole": "https://www.unmc.edu/intmed/divisions/geriatrics/faculty/koll.html — \"Assistant Professor, UNMC Division of Geriatrics, Gerontology and Palliative Medicine\"; page identifies Nebraska Medicine hospital appointment and research mentorship. Clinical track maps this university-health-system physician appointment; tenure is not asserted. Page directly retrieved HTTP 200.",
+        "doctorateOrPapers": "Two recent current-employer papers independently opened: https://pubmed.ncbi.nlm.nih.gov/40542321/ (online 2025-06-20; journal issue August 2026), Pattern of change and predictors of cognitive function in older adults receiving allogeneic hematopoietic cell transplantation using the Montreal cognitive assessment, first author Thuy T Koll, explicitly UNMC geriatrics with thuy.koll@unmc.edu; https://pmc.ncbi.nlm.nih.gov/articles/PMC12395534/ (2025), Enhancing Advance Care Planning in Primary Care: A Three-Year Implementation Study in Nebraska, author Thuy Koll explicitly affiliated to the same UNMC division. This satisfies the brief through papers; the MD is not represented as a research PhD.",
+        "vietnameseSignal": "https://www.unmc.edu/intmed/divisions/geriatrics/faculty/koll.html — Vietnamese given-name token Thuy, retained in the employer heading. No Vietnamese spelling or original surname is inferred from the published surname Koll.",
+        "dedup": "Ran npm run find-roster-matches -- \"Thuy T. Koll\" --url https://www.unmc.edu/intmed/divisions/geriatrics/faculty/koll.html; output: no roster or retired-id matches. Manual roster name/URL check also found none; not in already-proposed.txt.",
+        "portrait": "Official page embeds https://www.unmc.edu/intmed/_images/geriatrics/faculty/thuykoll.jpeg with alt=\"Thuy T. Koll, MD\"; source candidate only, image not downloaded or visually vetted.",
+        "education": "https://www.unmc.edu/intmed/divisions/geriatrics/faculty/koll.html lists Creighton medical school (2011), internal-medicine residency at Creighton (2014), and UNMC geriatric-medicine fellowship (2015). No research doctorate claimed."
+      }
+    },
+    {
+      "entry": {
+        "name": "Phuong Mai",
+        "university": "University of Pittsburgh",
+        "track": "Clinical",
+        "rank": "Associate Professor",
+        "department": "Obstetrics, Gynecology and Reproductive Sciences",
+        "field": "Health Sciences",
+        "city": "Pittsburgh",
+        "state": "Pennsylvania",
+        "country": "United States",
+        "researchAreas": [
+          "Cancer Genetics",
+          "Hereditary Cancer",
+          "Genetic Testing",
+          "Li-Fraumeni Syndrome"
+        ],
+        "mdInstitution": "University of Texas Medical Branch at Galveston",
+        "profileUrl": "https://www.obgyn.pitt.edu/people/phuong-mai-md-ms"
+      },
+      "evidence": {
+        "currentRole": "https://www.obgyn.pitt.edu/people/phuong-mai-md-ms — \"Associate Professor, Department of Obstetrics, Gynecology & Reproductive Sciences\" and \"Medical Director, Cancer Genetics\". University page lists UPMC Magee-Womens Hospital address. Clinical track maps the university-health-system clinical appointment; tenure is not asserted. Direct HTTPS HTTP 200.",
+        "doctorateOrPapers": "Two 2025 papers with explicit University of Pittsburgh medical-school affiliations: https://pubmed.ncbi.nlm.nih.gov/41126324/ — A quantitative, Bayesian-informed approach to gene-specific variant classification: Updated Expert Panel recommendations improve classification of TP53 germline variants for Li-Fraumeni syndrome (2025-10-22), author Phuong L Mai, affiliation 5 matches this department and its Center for Clinical Genetics and Genomics; https://link.springer.com/article/10.1007/s10689-025-00471-x — Detection rates of multigene panel and exome testing in patients with previous negative BRCA1/2 results (2025-05-26), author Phuong L. Mai explicitly linked to the same department. Publisher page retrieved directly HTTP 200 after PubMed 40418377 returned only an HHS footer. Matching department, cancer-genetics specialty, author name, and collaborators resolve identity. MD itself is not claimed as a research doctorate.",
+        "vietnameseSignal": "https://www.obgyn.pitt.edu/people/phuong-mai-md-ms — Phuong is the affirmative Vietnamese given-name token; not relying on the ambiguous surname Mai alone.",
+        "dedup": "Ran npm run find-roster-matches -- \"Phuong Mai\" --url https://www.obgyn.pitt.edu/people/phuong-mai-md-ms https://hillmanresearch.upmc.edu/researchers/phuong-mai-1ff2e405-4167-924e-0fc5-595639b9. Only hit: vp-1337 Phuong Mai Dinh, theoretical physicist at CNRS in Toulouse, PhD Toulouse III 2005. Different person: Pittsburgh oncologist/clinical geneticist has an MD from UTMB and clinical training in internal medicine/oncology. Exact profile URL absent from roster; not in already-proposed.txt. Repeated with published variant \"Phuong L. Mai\", the official profile, publisher article URL, and publisher-linked ORCID 0000-0002-7486-4974; same unrelated vp-1337 hit only.",
+        "portrait": "Official person page embeds https://www.obgyn.pitt.edu/sites/default/files/person-images/MAI_PHUONG_MD_OBG_20160825_.jpg; source candidate only, image not downloaded or visually vetted.",
+        "education": "https://www.obgyn.pitt.edu/people/phuong-mai-md-ms states MD, University of Texas Medical Branch at Galveston; residency, Tulane University School of Medicine; fellowship, University of Texas Health Science Center at San Antonio. Degree years omitted because the official profile does not give them."
+      }
+    },
+    {
+      "entry": {
+        "name": "Thanh Cong Bui",
+        "university": "University of Oklahoma Health Sciences",
+        "track": "Tenure-line",
+        "rank": "Associate Professor",
+        "department": "Family and Preventive Medicine",
+        "field": "Health Sciences",
+        "city": "Oklahoma City",
+        "state": "Oklahoma",
+        "country": "United States",
+        "researchAreas": [
+          "Cancer Prevention",
+          "Tobacco Cessation",
+          "Mobile Health",
+          "HPV Vaccination",
+          "Health Behavior"
+        ],
+        "phdInstitution": "University of Texas Health Science Center at Houston",
+        "phdYear": 2010,
+        "mdInstitution": "Pham Ngoc Thach University of Medicine",
+        "postdocInstitution": "University of Texas Health Science Center at Houston",
+        "profileUrl": "https://healthpromotionresearch.org/Faculty/Details/thanh-c-bui-md-drph"
+      },
+      "evidence": {
+        "currentRole": "https://healthpromotionresearch.org/Faculty/Details/thanh-c-bui-md-drph — \"Associate Professor, Department of Family and Preventive Medicine\". Linked current CV https://healthpromotionresearch.org/Portals/1005a/Assets/Documents/CVs/Bui%20CV%202026.pdf?ver=KLDucS3W28rA-98uZMejAg%3D%3D lists Associate Professor, 2024–Present; Assistant Professor, 2020–2024; earlier Assistant Professor of Research, 2017–2020. Current plain professorial rank is used for Tenure-line; the obsolete research-prefixed rank is not carried forward. Research faculty page and CV document a substantive career appointment, with ongoing NCI-funded PI projects. Employer spelling normalized to the existing University of Oklahoma Health Sciences roster value.",
+        "doctorateOrPapers": "https://healthpromotionresearch.org/Faculty/Details/thanh-c-bui-md-drph states DrPH, University of Texas Health Science Center, Houston, 2010. https://healthpromotionresearch.org/Portals/1005a/Assets/Documents/CVs/Bui%20CV%202026.pdf?ver=KLDucS3W28rA-98uZMejAg%3D%3D explicitly gives Doctor of Public Health, 2006–2010, UTHealth Houston, with dissertation and advisor, followed by two completed postdoctoral research fellowships. phdInstitution/phdYear represent the sourced DrPH research doctorate, not the MD.",
+        "vietnameseSignal": "https://healthpromotionresearch.org/Faculty/Details/thanh-c-bui-md-drph and https://healthpromotionresearch.org/Portals/1005a/Assets/Documents/CVs/Bui%20CV%202026.pdf?ver=KLDucS3W28rA-98uZMejAg%3D%3D document MD at Pham Ngoc Thach University of Medicine, Ho Chi Minh City, Vietnam, 2002; full given names Thanh Cong are printed in the CV. Name is First Middle Last order.",
+        "dedup": "Ran npm run find-roster-matches -- \"Thanh Cong Bui\" --url https://healthpromotionresearch.org/Faculty/Details/thanh-c-bui-md-drph https://www.ncbi.nlm.nih.gov/myncbi/thanh.bui.1/cv/71337/. Only hit: vp-1893 Thanh Bui, economics/finance lecturer at University of St Andrews. Different identity: cancer-prevention DrPH/MD at Oklahoma, not the economist; no matching profile URL. Also ran a preliminary name+employer-homepage check. Not in already-proposed.txt. Earlier w1 record deferred this same person due inaccessible employer pages; it did not propose him. Live namesake profile opened at https://research-portal.st-andrews.ac.uk/en/persons/thanh-bui: joined St Andrews in 2022, pronoun her, economics teaching, 2019 Visiting PhD Fellowship and development-economics paper with Katsushi Imai. Oklahoma CV instead documents DrPH completed 2010 and uninterrupted Oklahoma appointments since 2016. These independent career timelines and research records establish different people.",
+        "retrieval": "Web reader returned timeout/502 and Python default TLS reported unable to get local issuer certificate. Direct requests with certificate verification disabled successfully retrieved the employer homepage, linked Faculty directory, exact person page, and linked 2026 CV, each HTTP 200. PDF text read in memory with pdftotext, no auxiliary file written. The person-page URL was discovered in the live Faculty page, not constructed. Transport certificate limitation is recorded for downstream review.",
+        "portrait": "Employer person page links /Portals/1005a/EasyGalleryImages/199/15867/Bui_OTRC_.png; absolute candidate source https://healthpromotionresearch.org/Portals/1005a/EasyGalleryImages/199/15867/Bui_OTRC_.png. Image not downloaded or visually vetted.",
+        "honors": "CV examined. Routine memberships, student/trainee fellowships, and local awards were not proposed as roster honors."
+      }
+    }
+  ],
+  "already_listed": [
+    {
+      "name": "Thuy Ngo",
+      "id": "vp-0094",
+      "note": "Given-name search; opened https://www.ohsu.edu/people/thuy-ngo-phd. Same molecular/medical-genetics faculty at Oregon Health & Science University; name+profile command confirms duplicate."
+    },
+    {
+      "name": "Thao Ho",
+      "id": "vp-1440",
+      "note": "Opened https://health.usf.edu/medicine/pediatrics/neonatology/faculty/tho1. Same USF neonatology physician-scientist, also published as Tina Ho. Name+profile dedup confirms identity."
+    },
+    {
+      "name": "Ngoc Uyen Nhi Nguyen",
+      "id": "vp-1767",
+      "note": "Opened https://health.usf.edu/medicine/heart-institute/faculty/ngocuyennhinguyen. Same USF cardiac-regeneration molecular biologist, 2015 National Cheng Kung PhD. Name+URL dedup confirms existing entry despite alternate department URL."
+    },
+    {
+      "name": "Tran Ngoc Huyen Nguyen",
+      "id": "vp-0129",
+      "note": "New-appointment given-name lead; matched existing Tran N. H. Nguyen, UT Southwestern biomedical engineering, Purdue PhD 2020. Opened https://gsbs.utsouthwestern.edu/programs/biomedical-engineering/program-faculty.html; name+identity URL command returned vp-0129. Protected roster name is retained; no edit made."
+    },
+    {
+      "name": "Ngan Nguyen",
+      "id": "vp-2278",
+      "note": "Oakland medical anatomy/simulation faculty, Western University PhD; name+URL command resolves to Ngan Nguyen - Oakland University. Search-index biography checked against roster; attempted wwwt person-page retrieval failed, so no claim of a fresh live rank verification."
+    },
+    {
+      "name": "Thu Truong",
+      "id": "vp-2373",
+      "note": "University of Minnesota biochemistry/molecular biology faculty; name+profile command confirms existing entry. Attempted https://med.umn.edu/dm_profile/6441 timed out; no current-rank claim based on that failed fetch."
+    },
+    {
+      "name": "Thuy L. Phung",
+      "id": "vp-1360",
+      "note": "UT Health San Antonio pathology given-name lead Thuy Phung matches existing Thuy L. Phung. Name+official profile https://directory.uthscsa.edu/academics/profile/phungl dedup confirms existing identity."
+    },
+    {
+      "name": "Uyen-Sa D. T. Nguyen",
+      "id": "vp-2064",
+      "note": "Opened https://www.unthealth.edu/tcom/public-health/dr-uyen-sa-d-t-nguyen.html; same UNT Health epidemiologist with Boston University DSc. Name+URL command matched vp-2064 directly."
+    },
+    {
+      "name": "Quynh A. Truong",
+      "id": "vp-0389",
+      "note": "Given-name lead at Weill Cornell radiology. Name+stored official identity URL command confirms existing entry; no new candidate."
+    },
+    {
+      "name": "Quynh-Nhu Nguyen",
+      "id": "vp-0431",
+      "note": "Given-name lead at UT MD Anderson radiation oncology. Name+stored official identity URL command confirms existing entry; no new candidate."
+    },
+    {
+      "name": "Quynh-Thu Le",
+      "id": "vp-0708",
+      "note": "Stanford radiation-oncology given-name lead; name+official identity URL command confirms existing entry."
+    }
+  ],
+  "possible_move": [],
+  "rejected": [
+    {
+      "name": "Huy Tran (University of New Mexico)",
+      "reason": "Deferred under the brief additional research test, not rejected as faculty: https://hsc.unm.edu/directory/tran-huy.html opened live and documents MD plus neurointensive-care research/BOOST-3 PI work, but its selected publications are from 2018. Could not establish a research doctorate or two identity-resolved current-employer papers from the last three years. Name+URL command surfaced multiple namesakes including vp-0131 aerospace engineer, vp-2424 Baylor neuroradiologist, vp-3087 chemistry researcher, and retired vp-1510 Vienna record; do not assign or restore an ID without resolving these. Next step: verify two recent UNM publications and distinguish retired identity."
+    },
+    {
+      "name": "Ngoc-Tram Huynh",
+      "reason": "Live Touro Nevada OMM Assistant Professor profile opened: https://tun.touro.edu/programs/osteopathic-medicine/faculty--staff/omm/faculty-members/ngoc-tram-huynh.php. DO and stable teaching since 2022 supported; research doctorate or two qualifying recent papers not established. Excluded from verified candidates under this brief additional research requirement."
+    },
+    {
+      "name": "Phat Linh Tran",
+      "reason": "Deferred. https://www.ttuhsc.edu/medicine/ophthalmology/lubbock lists Phat Tran, PhD among researchers; 2023 institutional news describes a research instructor, and older catalogs identify an instructor. Current faculty-directory link timed out; no live person-specific employer profile and sufficiently resolved current faculty rank obtained. Do not promote instructor to professorial rank. Next step: retrieve current official person page and establish stable faculty-equivalent rank."
+    },
+    {
+      "name": "Christina Truong",
+      "reason": "Opened https://ohsu.elsevierpure.com/en/persons/christina-truong/; appointment is School of Dentistry, and page shows only 2022/2023 articles, no research doctorate or Vietnamese given-name/education signal. Does not establish this medical-school slice and brief research test."
+    },
+    {
+      "name": "Hieu Vo",
+      "reason": "Search led to UTHSC nephrology Associate Professor and Vietnamese medical education, but university full-time appointment and current-employer research evidence were not independently resolved; private-practice affiliations also surfaced. Defer rather than infer full-time eligibility. Discovery sources: https://www.uthsc.edu/faculty/profile/search.php?lastName=v and https://uthsc.edu/afsa/faculty-affairs/awards-honors-recognition/promotion-tenure/2024-tenure-promotion.php ."
+    },
+    {
+      "name": "Thao Doan",
+      "reason": "UT Southwestern discovery result identifies a physician assistant with MHS rather than an eligible research-faculty appointment; no qualifying career research role or doctorate/two-paper evidence established. Discovery URL https://utswmed.org/doctors/thao-doan/ ."
+    },
+    {
+      "name": "Linh Le (University of Rochester)",
+      "reason": "Institutional lab and alumni discovery pages identify a recent graduate/student/postdoctoral lead; eligible career faculty role not established. Sources: https://www.urmc.rochester.edu/labs/o-labs/lab-members and https://www.urmc.rochester.edu/labs/majewska/lab-members/alumni . No candidate proposed from the PhD alone."
+    },
+    {
+      "name": "Nhu Tran",
+      "reason": "USC discovery result explicitly says Clinical Associate Professor of Pediatrics (Part Time), excluded. Source: https://keck.usc.edu/faculty-search/nhu-tran/ ."
+    },
+    {
+      "name": "Ngoc Tran (Oklahoma pathology historical lead)",
+      "reason": "Opened https://www.ouhsc.edu/pathologyJTY/Tool/About-Us.htm; dated 2017 and explicitly identifies trainee editors for 2016–2018, not a current faculty appointment. Historical lead not accepted."
+    },
+    {
+      "name": "Nhu-Thuy Mai",
+      "reason": "Research-profile discovery result places this person in Architecture at University of Houston; outside this medical-school slice. Source: https://profilesrns.times.uh.edu/display/177033 ."
+    },
+    {
+      "name": "Huong Nguyen (New Mexico discovery lead)",
+      "reason": "Search results resolve to a law student/community organizer or oncology nursing staff, not medical-school research faculty; do not conflate with an eligible faculty namesake."
+    }
+  ],
+  "coverage": [
+    {
+      "employer": "University of Nebraska Medical Center",
+      "pagesExamined": [
+        "https://www.unmc.edu/intmed/divisions/geriatrics/faculty/koll.html",
+        "https://pubmed.ncbi.nlm.nih.gov/40542321/",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC12395534/"
+      ],
+      "note": "Later-pass Thuy/Linh/Khanh/Dung/Minh/Chau searches; geriatric oncology pursued beyond the earlier emergency-medicine Thanh Nguyen coverage. Thuy T. Koll newly verified with two recent papers."
+    },
+    {
+      "employer": "University of Pittsburgh",
+      "pagesExamined": [
+        "https://www.obgyn.pitt.edu/people/m",
+        "https://www.obgyn.pitt.edu/people/phuong-mai-md-ms",
+        "https://pubmed.ncbi.nlm.nih.gov/41126324/",
+        "https://link.springer.com/article/10.1007/s10689-025-00471-x"
+      ],
+      "note": "Phuong search reached cancer genetics and OB/GYN beyond earlier plastic-surgery coverage. Phuong Mai verified, unrelated CNRS name hit resolved. Hillman researcher page timed out; it was not used as live verification."
+    },
+    {
+      "employer": "University of Oklahoma Health Sciences",
+      "pagesExamined": [
+        "https://healthpromotionresearch.org/",
+        "https://healthpromotionresearch.org/Faculty",
+        "https://healthpromotionresearch.org/Faculty/Details/thanh-c-bui-md-drph",
+        "https://healthpromotionresearch.org/Portals/1005a/Assets/Documents/CVs/Bui%20CV%202026.pdf?ver=KLDucS3W28rA-98uZMejAg%3D%3D",
+        "https://medicine.ouhsc.edu/academic-departments/cell-biology/our-people/category/faculty-1",
+        "https://www.ouhsc.edu/pathologyJTY/Tool/About-Us.htm"
+      ],
+      "note": "Given-token/less-common-surname searches and live cancer-prevention faculty/CV investigation. Revisited earlier unverified Thanh Cong Bui lead and verified via direct employer retrieval; TLS limitation recorded in evidence. Cell-biology directory also read; old Ngoc Tran trainee page excluded."
+    },
+    {
+      "employer": "University of New Mexico",
+      "pagesExamined": [
+        "https://hsc.unm.edu/directory/",
+        "https://hsc.unm.edu/directory/tran-huy.html"
+      ],
+      "note": "Institution not covered in the prior slice report. Huy and Huong searches, neurosurgery faculty lead and individual neurointensivist page. Directory web extraction was JS-sparse. Huy Tran deferred for recent-publication and identity gaps."
+    },
+    {
+      "employer": "Texas Tech University Health Sciences Center",
+      "pagesExamined": [
+        "https://www.ttuhsc.edu/medicine/ophthalmology/lubbock"
+      ],
+      "note": "Institution absent from prior slice coverage. Linh, Khanh and Phung searches reached Phat Linh Tran, with official ophthalmology research roster read. Person-specific faculty-directory request timed out; instructor status was not assumed to qualify."
+    },
+    {
+      "employer": "Touro University Nevada",
+      "pagesExamined": [
+        "https://tun.touro.edu/programs/osteopathic-medicine/faculty--staff/omm/faculty-members/ngoc-tram-huynh.php"
+      ],
+      "note": "Institution absent from prior slice coverage. Ngoc-Tram given-name lead followed from cross-Touro directory to live OMM biography. DO/teaching appointment supported; brief research test unresolved."
+    },
+    {
+      "employer": "Oregon Health & Science University",
+      "pagesExamined": [
+        "https://www.ohsu.edu/people/thuy-ngo-phd",
+        "https://ohsu.elsevierpure.com/en/persons/christina-truong/"
+      ],
+      "note": "Thuy/Hanh/Truong lead sweep; Thuy Ngo already listed. Dentistry namesake lead not accepted into medical-school candidates."
+    },
+    {
+      "employer": "University of South Florida",
+      "pagesExamined": [
+        "https://health.usf.edu/medicine/pediatrics/neonatology/faculty/tho1",
+        "https://health.usf.edu/medicine/heart-institute/faculty/ngocuyennhinguyen"
+      ],
+      "note": "Thao and Uyen/Nhi given-token searches; neonatal physician-scientist and cardiac-regeneration biologist both already listed."
+    },
+    {
+      "employer": "University of Texas Southwestern Medical Center",
+      "pagesExamined": [
+        "https://gsbs.utsouthwestern.edu/programs/biomedical-engineering/program-faculty.html"
+      ],
+      "note": "Thao/Khanh/Trinh/Dinh/Ngoc/Tran searches reached recent biomedical-engineering appointment, clinical trainees, and hospitalists. Tran N. H. Nguyen matched existing vp-0129; 2025 appointment not a new person."
+    },
+    {
+      "employer": "University of North Texas Health Science Center",
+      "pagesExamined": [
+        "https://www.unthealth.edu/tcom/public-health/dr-uyen-sa-d-t-nguyen.html"
+      ],
+      "note": "Uyen-Sa research-doctorate faculty found with given-name search and deduplicated to vp-2064; separate UNT marketing Thuy Nguyen result outside slice."
+    },
+    {
+      "employer": "University of Tennessee Health Science Center",
+      "pagesExamined": [
+        "https://uthsc.edu/cardiology/faculty/index.php"
+      ],
+      "note": "Thuy/Quynh/Phuong/Viet/Tri searches and live cardiovascular faculty roster. Phuong-Anh Thi Pham lead not used without full appointment/research verification; Hieu Vo deferred."
+    },
+    {
+      "employer": "University of Texas Health Science Center at San Antonio",
+      "pagesExamined": [],
+      "note": "Search-only Thuy/given-name catalog sweep identified existing pathology professor Thuy L. Phung, plus professional staff and clinician leads. Name+identity URL dedup confirms vp-1360; no additional person accepted."
+    },
+    {
+      "employer": "Oakland University",
+      "pagesExamined": [],
+      "note": "Institution absent from prior slice coverage. Ngan given-name search found anatomy/simulation faculty; command resolves vp-2278. Alternate wwwt person page failed to open; search snippet not used for new-candidate verification."
+    },
+    {
+      "employer": "University of Minnesota",
+      "pagesExamined": [],
+      "note": "Thu Truong resurfaced; dedup confirms vp-2373. Alternate dm_profile page timed out. No new record."
+    },
+    {
+      "employer": "New York Medical College",
+      "pagesExamined": [],
+      "note": "Search-only Thuy/Quynh/Khanh/Vietnam/Huynh pass; directory hits included Touro Nevada faculty and historical residents, followed to appropriate institutions. No new verified NYMC faculty."
+    },
+    {
+      "employer": "Northeast Ohio Medical University",
+      "pagesExamined": [],
+      "note": "Search-only Vietnamese-token pass principally returned students, student leaders and commencement records. No new verified career researcher."
+    },
+    {
+      "employer": "University of South Alabama",
+      "pagesExamined": [],
+      "note": "Search-only Linh/Duc/Nguyen pass principally returned students and already-proposed communication scholar Nhung Nguyen, outside medical slice. No addition."
+    },
+    {
+      "employer": "University of Toledo",
+      "pagesExamined": [],
+      "note": "Search-only Trang/Phuong/Quoc medical leads; results did not establish eligible new faculty with complete research evidence."
+    },
+    {
+      "employer": "Wright State University",
+      "pagesExamined": [],
+      "note": "Search-only Linh/Trang/Huynh medicine sweep primarily returned nursing students and honor-roll material, not verified faculty."
+    },
+    {
+      "employer": "University of Utah",
+      "pagesExamined": [],
+      "note": "Search-only Thuy given-token pass led principally to nursing/medical-assistant staff and trainees. Dongngan Truong lead matches existing Emory pediatric cardiologist in roster, not accepted as new Utah candidate."
+    },
+    {
+      "employer": "Pacific Northwest University of Health Sciences",
+      "pagesExamined": [],
+      "note": "Institution absent from prior slice coverage. Search-only Vietnam/Khanh terms returned students, conference participants and unrelated biographies; no new verified researcher."
+    },
+    {
+      "employer": "Western University of Health Sciences",
+      "pagesExamined": [],
+      "note": "Search-only faculty/doctorate sweep reached Hieu T.M. Nguyen, Huan Mark Nguyen and Lena Nguyen clinical/professional-degree leads; none accepted without the brief research requirement being established."
+    },
+    {
+      "employer": "University of Nevada, Las Vegas",
+      "pagesExamined": [],
+      "note": "Institution absent from prior slice coverage. Search-only Linh/Khanh medical queries principally returned Linh M. Nguyen in dental education; Linh Nguyen is already-proposed and dentistry is not pursued into this medical slice."
+    },
+    {
+      "employer": "University of South Dakota",
+      "pagesExamined": [],
+      "note": "Institution absent from prior slice coverage. Search-only Thao/Vietnam/doctorate sweep returned student honor rolls and misleading multi-person NIH roster snippets; no appointment inferred from mixed snippets."
+    },
+    {
+      "employer": "University of Louisville",
+      "pagesExamined": [],
+      "note": "Institution absent from prior slice coverage. Search-only Thuy pass returned an old psychiatry resident and unrelated business professional; no new current faculty verified."
+    },
+    {
+      "employer": "Rowan University",
+      "pagesExamined": [],
+      "note": "Institution absent from prior slice coverage. Search-only Linh/Kieu/Luong/Phung medical queries returned students/coauthors, no independently verifiable eligible person."
+    },
+    {
+      "employer": "Saint Louis University",
+      "pagesExamined": [],
+      "note": "Search-only Quang and new-faculty announcements: Quang Tran is psychology in Arts and Sciences, outside this slice. Medical new-faculty results did not establish another candidate."
+    },
+    {
+      "employer": "Tulane University",
+      "pagesExamined": [],
+      "note": "Search-only Thuy/Quynh/Khoa given-token pass and medical people-index leads; no additional identity-complete candidate accepted."
+    },
+    {
+      "employer": "Stanford University",
+      "pagesExamined": [],
+      "note": "Given-name and less-common-surname discovery returned existing Quynh-Thu Le and Ngoc Nhu Tran; Robert Diep remained surname-only without affirmative Vietnamese evidence. No new candidate."
+    },
+    {
+      "employer": "University of Rochester",
+      "pagesExamined": [],
+      "note": "Search-only Dung/Linh/PhD leads reached Linh Le in trainee/alumni lists rather than current career faculty."
+    },
+    {
+      "employer": "Slice-wide method and stopping rationale",
+      "pagesExamined": [],
+      "note": "Read BRIEF2.md, ROSTER_MAINTENANCE.md, README.md, both university/intake playbooks, already-proposed.txt, and prior w1 slice coverage. Given tokens included Thuy, Linh, Thao, Quynh, Ngoc, Khanh, Phuong, Hien, Duc, Dung, Uyen, Ngan, Huy, Khoa, Kiet, Nhu, Chau, Chinh, Tram, Vy, Loan, Dieu and Bao; less-common surname leads included Phung, Trinh, Dinh, Nghiem, Khuu, Luu, Luong and Diep. Several multi-query searches had broad/noisy results; only independently opened employer pages were accepted for candidates. Additional search-only screens included Rutgers, NYU, Northwestern, Penn State, Temple, Stony Brook, VCU, UVM, Wake Forest, Vanderbilt, Washington University, WSU and UNE, with no newly verified candidate. Stopped after broad later-pass coverage and diminishing yields; 3 verified candidates, below cap 25. Coverage notes distinguish pages actually opened from discovery snippets and failed retrievals. No LinkedIn page fetched, login attempted, GitHub item created, public data changed, IDs assigned, tests that stamp public data run, or git state-changing command used."
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "verifier": "codex",
+  "input": "maintenance/sector-expansion/runs/w3/uk-russell.codex.json",
+  "candidates": [
+    {
+      "name": "Thanh T. Nguyen",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Independently opened the live employer profile https://business-school.exeter.ac.uk/management/people/profile/index.php?username=ttn209: it identifies Dr Thanh T. Nguyen as Lecturer in Operations and Analytics, names earlier Middlesex and IESEG employment, links ORCID 0000-0003-1248-9555, and lists current 2026–2027 modules. The employer academic directory https://business-school.exeter.ac.uk/management/people/academic/ independently lists him as Lecturer, with Exeter as his location; it distinguishes postdoctoral, temporary and honorary appointments elsewhere. Together these support a substantive UK academic lectureship outside Vietnam, with no excluded appointment qualifier. Thanh and the independently resolved Tuan alias provide Vietnamese given-name signals beyond Nguyen alone. Opened https://dblp.dagstuhl.de/pid/288/9389.html: Tuan (Kellan) Nguyen has the same ORCID and publications with Pei-Fang Hsu. Opened https://link.springer.com/article/10.1007/s10257-024-00690-2: Tuan Kellan Nguyen is affiliated with Exeter, UK, on the SaaS paper. Opened https://www.iss.nthu.edu.tw/faculty/Pei-Fang-Hsu: Hsu explicitly names supervised doctoral student Tuan Kellan Nguyen in the 2021 doctoral-dissertation award, supporting the proposed National Tsing Hua doctorate. Ran find-roster-matches independently for Thanh T. Nguyen and Tuan Kellan Nguyen with employer, ORCID and both DBLP identity URLs: only name matches, no URL matches. Examined returned roster identities: business-related vp-0154, vp-0166 and vp-1807 have Oklahoma State, Cornell and Griffith doctorates; vp-0609 has a Nottingham computing doctorate, vp-2151 an Oregon economics doctorate; other hits have different names, fields, degrees and profiles. Retired Thanh hits are documented merges into unrelated Oregon computing, UCL chemistry and Kyoto physics identities. No matching Exeter/NTHU/Hsu identity was found. The candidate and Kellan aliases are absent from already-proposed.txt; its shorter Thanh Nguyen and Tuan Nguyen records were traced to w1/us-med-n-z.codex.json (UNMC emergency medicine) and w1/nih-irp.codex.json (NIAAA biophotonics), respectively, which are different people. The QUB examination URL returned a web cache miss and was not relied on; the ORCID page was a JavaScript shell. No LinkedIn page fetched.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    }
+  ],
+  "possible_move": []
+}

@@ -1,0 +1,315 @@
+{
+  "group": "lab",
+  "agent": "codex",
+  "slice": "nih-irp",
+  "finishedAt": "2026-11-15T00:24:19.297605Z",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Phuc Hoang",
+        "university": "National Cancer Institute",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Division of Cancer Epidemiology and Genetics, Integrative Tumor Epidemiology Branch",
+        "country": "United States",
+        "researchAreas": [
+          "Cancer Genetics",
+          "Bioinformatics",
+          "Lung Cancer",
+          "Melanoma"
+        ],
+        "profileUrl": "https://dceg.cancer.gov/about/staff-directory/hoang-phuc",
+        "phdInstitution": "Institute of Cancer Research, University of London"
+      },
+      "evidence": {
+        "currentRole": "https://dceg.cancer.gov/about/staff-directory/hoang-phuc — “Staff Scientist”; biography dates staff-scientist appointment to 2023 after joining ITEB in 2020. Current DCEG personnel directory independently identifies him as Employee, not Contractor: https://dceg2.cancer.gov/cgi-bin/Personnel.pl?1=ALL .",
+        "doctorateOrPapers": "https://dceg.cancer.gov/about/staff-directory/hoang-phuc — Biography states a Ph.D. in cancer genetics and bioinformatics from the Institute of Cancer Research/University of London. Year is not stated and is omitted.",
+        "vietnameseSignal": "https://dceg.cancer.gov/about/staff-directory/hoang-phuc — Vietnamese given name Phuc together with surname Hoang; affirmative name signal beyond surname alone. No diacritics reconstructed.",
+        "dedup": "> vietacademia@0.1.0 find-roster-matches\n> node scripts/find-roster-matches.ts Phuc Hoang --url https://dceg.cancer.gov/about/staff-directory/hoang-phuc\n\nno roster or retired-id matches\nNo earlier-proposal name match in maintenance/sector-expansion/already-proposed.txt."
+      }
+    },
+    {
+      "entry": {
+        "name": "Linh Bui-Raborn",
+        "university": "National Cancer Institute",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Division of Cancer Epidemiology and Genetics, Laboratory of Translational Genomics",
+        "country": "United States",
+        "researchAreas": [
+          "Cancer Genetics",
+          "Melanoma",
+          "Functional Genomics",
+          "Single-Cell Genomics"
+        ],
+        "profileUrl": "https://dceg.cancer.gov/about/staff-directory/bui-raborn-linh",
+        "phdInstitution": "University of Iowa"
+      },
+      "evidence": {
+        "currentRole": "https://dceg.cancer.gov/about/staff-directory/bui-raborn-linh — “Staff Scientist”; joined the Kevin Brown laboratory in September 2023. Current DCEG personnel directory identifies Linh T. Bui Raborn as Employee: https://dceg2.cancer.gov/cgi-bin/Personnel.pl?1=ALL .",
+        "doctorateOrPapers": "https://dceg.cancer.gov/about/staff-directory/bui-raborn-linh — Biography explicitly identifies a Ph.D. in molecular biology and genetics from the University of Iowa Biology Department. No degree year taken from search snippets.",
+        "vietnameseSignal": "https://dceg.cancer.gov/about/staff-directory/bui-raborn-linh — Vietnamese given name Linh with original surname Bui retained in the published Bui-Raborn name. The original Vietnamese surname is already present; no name reconstruction needed.",
+        "dedup": "> vietacademia@0.1.0 find-roster-matches\n> node scripts/find-roster-matches.ts Linh Bui-Raborn --url https://dceg.cancer.gov/about/staff-directory/bui-raborn-linh https://orcid.org/0000-0003-3152-8978\n\nvp-1083 Linh N. Bui | Assistant Professor, Public Health, California State University, Bakersfield | matched on name\n\nTreat each hit as the same person until ruled out (compare former affiliations, PhD, lab, Scholar, LinkedIn).\nSame person: update that entry in place, or restore a retired id (npm run retire-profile-id). Never add a new id.\nResolved vp-1083 as a different person: rostered Linh N. Bui is a public-health/health-policy scholar with Oregon State doctorate and Berkeley/Sutter postdoc; NCI Linh Bui-Raborn has an Iowa molecular-biology/genetics doctorate and TGen single-cell-genomics postdoc. NCI biography explicitly supports the latter identity. No earlier-proposal name match."
+      }
+    },
+    {
+      "entry": {
+        "name": "Tuan Nguyen",
+        "university": "National Institute on Alcohol Abuse and Alcoholism",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Laboratory of Biophotonics and Quantum Biology",
+        "country": "United States",
+        "researchAreas": [
+          "Biophotonics",
+          "Fluorescence Microscopy",
+          "Biosensors",
+          "Protein Interactions"
+        ],
+        "profileUrl": "https://www.niaaa.nih.gov/about-niaaa/our-staff/tuan-nguyen"
+      },
+      "evidence": {
+        "currentRole": "https://www.niaaa.nih.gov/about-niaaa/our-staff/tuan-nguyen — “Staff Scientist”. https://www.niaaa.nih.gov/research/division-intramural-clinical-and-biological-research/laboratory-biophotonics-and-quantum-biology independently lists him among current staff scientists and describes the lab’s biosensor and imaging research. Individual page opened successfully in this run.",
+        "doctorateOrPapers": "https://www.niaaa.nih.gov/about-niaaa/our-staff/tuan-nguyen — Heading explicitly identifies “Tuan Nguyen, Ph.D.”. Doctoral institution and year are not provided on the employer pages and are omitted. The employer lab bibliography identifies his fluorescence/biosensor work with Henry Puhl and Steven Vogel, distinguishing him from clinical and social-science namesakes.",
+        "vietnameseSignal": "https://www.niaaa.nih.gov/about-niaaa/our-staff/tuan-nguyen — Vietnamese given name Tuan with surname Nguyen. No diacritics or expanded middle name inferred from publication initials.",
+        "dedup": "> vietacademia@0.1.0 find-roster-matches\n> node scripts/find-roster-matches.ts Tuan Nguyen --url https://www.niaaa.nih.gov/about-niaaa/our-staff/tuan-nguyen https://www.niaaa.nih.gov/research/division-intramural-clinical-and-biological-research/laboratory-biophotonics-and-quantum-biology\n\nvp-0308 Tuan D. Nguyen | Associate Professor, Educational Leadership and Policy Analysis, University of Missouri | matched on name\nvp-0448 Ninh Tuan Nguyen | Professor, Surgery, University of California, Irvine | matched on name\nvp-0502 Tuan Van Nguyen | Professor, School of Electrical, Mechanical and Biomedical Engineering, University of Technology Sydney | matched on name\nvp-0609 Tuan T. Nguyen | Associate Professor, School of Computing and Mathematical Sciences, University of Greenwich | matched on name\nvp-0805 Tuan Anh Nguyen - Hong Kong University of Science and Technology | Associate Professor, Division of Life Science, Hong Kong University of Science and Technology | matched on name\nvp-0830 Tuan M. Nguyen | Assistant Professor, Obstetrics and Gynecology, Northwestern University | matched on name\nvp-0867 Tuan Nguyen | Assistant Professor, Pediatrics, NYU Grossman Long Island School of Medicine, New York University | matched on name\nvp-0905 Tony Tuan H. Nguyen | Assistant Professor, Clinical Science, Kaiser Permanente Bernard J. Tyson School of Medicine | matched on name\nvp-1135 Tuan Minh Nguyen | Researcher, Materials Science Division, Physical and Life Sciences Directorate, Lawrence Livermore National Laboratory | matched on name\nvp-1176 Tuan Anh Nguyen - Swinburne University of Technology | Associate Professor, Iverson Health Innovation Research Institute, Swinburne University of Technology | matched on name\nvp-1406 Tuan Hung Nguyen | Assistant Professor, Department of Materials Science and Engineering, National Taiwan University | matched on name\nvp-1770 An Tuan Nguyen | Assistant Professor, Asian American Studies Center, University of Houston | matched on name\nvp-1804 Tuan-Khoa Nguyen | Lecturer, College of Science and Engineering, Flinders University | matched on name\nvp-1872 Van Tuan Nguyen | Assistant Professor, Department of Bio-Nano Technology, Gachon University | matched on name\nvp-1877 M. Tuan Nguyen | Professor, Sociology and Labour Market Policy, University of Applied Labour Studies | matched on name\nvp-1923 Anh Tuan Nguyen | Assistant Professor, Department of Mechanical Engineering, Lunghwa University of Science and Technology | matched on name\nvp-1956 Nguyen Dinh Tuan Vuong | Assistant Professor, Institute of Humanities and Social Sciences, University of Tsukuba | matched on name\nvp-2151 Tuan Nguyen - Central College | Associate Professor, Economics, Accounting, and Business Management, Central College | matched on name\nvp-2597 Tuan Huy Nguyen | Researcher, Center for Research in Transplantation and Translational Immunology (CR2TI), UMR 1064, Inserm (Institut National de la Santé et de la Recherche Médicale) | matched on name\nvp-2974 Tuan H. Nguyen | Researcher, Global Security Directorate / Center for Global Security Research, Lawrence Livermore National Laboratory | matched on name\nvp-1511 (retired) Dinh Tuan Nguyen | TU Wien | removed: Created 2026-09-12 without a real source (its profileUrl was a placeholder or non-existent DOI, or a bare homepage) and dropped by the fc655f5 overwrite. Not restored. If the person is found on an official profile, add them through a candidate Issue; find-roster-matches will point back to this id to reuse.\n\nTreat each hit as the same person until ruled out (compare former affiliations, PhD, lab, Scholar, LinkedIn).\nSame person: update that entry in place, or restore a retired id (npm run retire-profile-id). Never add a new id.\nNo URL matches. Name hits reviewed against the NIAAA microscopy/biosensor identity and employer bibliography (Nguyen TA with Puhl/Vogel, including 2017 and 2018 methods papers). Exact-name vp-0867 is an NYU pediatric hospitalist; vp-0805 studies RNA/microRNA and trained at KAIST/Seoul, rather than NIAAA fluorescence microscopy; vp-1135/vp-2974 are LLNL materials/security researchers. Other hits concern computing, engineering, obstetrics, surgery, Asian studies, sociology, economics or transplantation, and the retired TU Wien record has no matching identity URL or topic. These do not identify the NIAAA scientist. No earlier-proposal name match."
+      }
+    },
+    {
+      "entry": {
+        "name": "An Ngoc Dang Do",
+        "university": "Eunice Kennedy Shriver National Institute of Child Health and Human Development",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Unit on Cellular Stress in Development and Diseases",
+        "country": "United States",
+        "researchAreas": [
+          "Cellular Stress Responses",
+          "Pediatric Neurogenetics",
+          "Batten Disease",
+          "MEHMO Syndrome"
+        ],
+        "profileUrl": "https://annualreport.nichd.nih.gov/dangdo.html"
+      },
+      "evidence": {
+        "currentRole": "https://www.nichd.nih.gov/about/org/dir/osd/mt/cd/staff — “An Dang Do, M.D., Ph.D., Clinical Tenure-Track Investigator”. The linked individual 2025 research report, https://annualreport.nichd.nih.gov/dangdo.html, names her head of the Unit on Cellular Stress in Development and Diseases and describes her independent clinical/basic research. This current tenure-track listing supersedes the older Porter-lab Assistant Clinical Investigator label.",
+        "doctorateOrPapers": "https://annualreport.nichd.nih.gov/dangdo.html — Individual investigator heading includes MD and PhD; lists two 2025 publications on MEHMO syndrome and neuronal ceroid lipofuscinoses. Doctoral institution/year not stated and omitted.",
+        "vietnameseSignal": "https://www.nibib.nih.gov/labs-at-nibib/besip/besip-projects-2024/do-zampieri-matsubara-2024 — NIH mentor listing spells the fuller name An Ngoc Dang Do; Vietnamese given/middle name Ngoc, beyond surname alone. The individual report uses An N. Dang Do and the same an.dangdo@nih.gov contact. No diacritics invented.",
+        "dedup": "> vietacademia@0.1.0 find-roster-matches\n> node scripts/find-roster-matches.ts An Ngoc Dang Do --url https://annualreport.nichd.nih.gov/dangdo.html https://www.nichd.nih.gov/about/org/dir/osd/mt/cd/staff https://www.nibib.nih.gov/labs-at-nibib/besip/besip-projects-2024/do-zampieri-matsubara-2024\n\nvp-0450 An H. Do | Associate Professor, Neurology, University of California, Irvine | matched on name\n\nTreat each hit as the same person until ruled out (compare former affiliations, PhD, lab, Scholar, LinkedIn).\nSame person: update that entry in place, or restore a retired id (npm run retire-profile-id). Never add a new id.\nResolved vp-0450 as a different person: An H. Do at UC Irvine works on brain-computer interfaces/neurorehabilitation; this NICHD investigator publishes as An N. Dang Do, runs the cellular-stress/neurogenetic-disorders unit, and uses an.dangdo@nih.gov. Fuller name comes from the NIH mentor page, not inferred from initials. No earlier-proposal name match."
+      }
+    }
+  ],
+  "already_listed": [
+    {
+      "name": "Joe T. Nguyen",
+      "id": "vp-1668",
+      "note": "Exact employer profile URL and name match. > vietacademia@0.1.0 find-roster-matches\n> node scripts/find-roster-matches.ts Joe T. Nguyen --url https://irp.nih.gov/pi/joe-nguyen\n\nvp-1668 Joe T. Nguyen | Researcher, Center for Cancer Research, Surgical Oncology Program, National Cancer Institute | matched on name; profileUrl irp.nih.gov/pi/joe-nguyen\n\nTreat each hit as the same person until ruled out (compare former affiliations, PhD, lab, Scholar, LinkedIn).\nSame person: update that entry in place, or restore a retired id (npm run retire-profile-id). Never add a new id."
+    },
+    {
+      "name": "Rosa Nguyen",
+      "id": "vp-1669",
+      "note": "Exact employer profile URL and name match. > vietacademia@0.1.0 find-roster-matches\n> node scripts/find-roster-matches.ts Rosa Nguyen --url https://irp.nih.gov/pi/rosa-nguyen\n\nvp-1669 Rosa Nguyen | Researcher, Center for Cancer Research, Pediatric Oncology Branch, National Cancer Institute | matched on name; profileUrl irp.nih.gov/pi/rosa-nguyen\n\nTreat each hit as the same person until ruled out (compare former affiliations, PhD, lab, Scholar, LinkedIn).\nSame person: update that entry in place, or restore a retired id (npm run retire-profile-id). Never add a new id."
+    },
+    {
+      "name": "Quynh Nguyen",
+      "id": "vp-1660",
+      "note": "Same NINR investigator; roster has name Quynh T. Nguyen and identical profileUrl. Other Quynh-name hits are distinct institutions/topics. > vietacademia@0.1.0 find-roster-matches\n> node scripts/find-roster-matches.ts Quynh Nguyen --url https://irp.nih.gov/pi/quynh-nguyen\n\nvp-0431 Quynh-Nhu Nguyen | Professor, Thoracic Radiation Oncology, The University of Texas MD Anderson Cancer Center | matched on name\nvp-0639 Quynh Nguyen | Associate Professor, Institute of Political Science, University of Bern | matched on name\nvp-0965 Quynh Anh Nguyen | Assistant Professor, Pharmacology, Vanderbilt University | matched on name\nvp-1383 Trang Quynh Nguyen | Associate Professor, Department of Mental Health, Johns Hopkins University | matched on name\nvp-1660 Quynh T. Nguyen | Researcher, NIH Intramural Research Program, National Institute of Nursing Research | matched on name; profileUrl irp.nih.gov/pi/quynh-nguyen\nvp-1903 Quynh-Trang Nguyen | Assistant Professor, Department of Business Administration, Chung Yuan Christian University | matched on name\nvp-2107 Quynh Nguyen - Bournemouth University | Lecturer, Bournemouth University Business School, Bournemouth University | matched on name\n\nTreat each hit as the same person until ruled out (compare former affiliations, PhD, lab, Scholar, LinkedIn).\nSame person: update that entry in place, or restore a retired id (npm run retire-profile-id). Never add a new id."
+    }
+  ],
+  "possible_move": [],
+  "rejected": [
+    {
+      "name": "Huu Tho Nguyen",
+      "reason": "Current NIMH White-lab page places him under Postdoctoral Fellows and describes him as a research fellow; prior staff-scientist work in Hanoi does not establish a current career NIH role. https://www.nimh.nih.gov/research/research-conducted-at-nimh/research-areas/clinics-and-labs/snf/lab-members"
+    },
+    {
+      "name": "Chi U. Nguyen",
+      "reason": "DCEG directory identifies Research Assoc I as Contractor, excluded. https://dceg2.cancer.gov/cgi-bin/Personnel.pl?1=ALL"
+    },
+    {
+      "name": "Tam-Anh Tran",
+      "reason": "DCEG directory identifies Fellow, not career research staff. https://dceg2.cancer.gov/cgi-bin/Personnel.pl?1=ALL"
+    },
+    {
+      "name": "Thi Van Trinh Tran",
+      "reason": "Current NCI profile explicitly says Postdoctoral Fellow. https://dceg.cancer.gov/fellowship-training/fellowship-experience/meet-fellows/iteb/tran-thi-van-trinh"
+    },
+    {
+      "name": "Kimberly T. Truong",
+      "reason": "NIEHS directory explicitly says Contractor - Data Scientist, excluded. https://portal.niehs.nih.gov/staff/allScientists"
+    },
+    {
+      "name": "Kim-Thu Tran",
+      "reason": "NIMH locator lists Data Scientist; no individual profile with a doctorate or two identity-resolved recent publications established. Not verified, not a finding of ineligibility. https://www.nimh.nih.gov/about/staff-directories/intramural-research-irp-organizational-locator"
+    },
+    {
+      "name": "Trang Nguyen (NIMH)",
+      "reason": "NIMH locator identifies Professional Services Contractor, excluded. https://www.nimh.nih.gov/about/staff-directories/intramural-research-irp-organizational-locator"
+    },
+    {
+      "name": "Phuc Tran (NIMH)",
+      "reason": "NIMH locator identifies Postdoc Fellow (Visiting Fellow), excluded. https://www.nimh.nih.gov/about/staff-directories/intramural-research-irp-organizational-locator"
+    },
+    {
+      "name": "Thanh Lan Tran",
+      "reason": "NIMH locator lists Program Specialist; lab staff page lists administrative support. No eligible career research appointment established. https://www.nimh.nih.gov/research/research-conducted-at-nimh/research-areas/clinics-and-labs/mib/spns/staff"
+    },
+    {
+      "name": "Duy Le",
+      "reason": "NHLBI lab page says Postbaccalaureate Fellow, excluded. https://www.nhlbi.nih.gov/science/cellular-and-molecular-therapeutics"
+    },
+    {
+      "name": "Janet Le",
+      "reason": "NHLBI lab page identifies former postbaccalaureate fellow, now at Medical College of Wisconsin; not a current career NIH appointment. https://www.nhlbi.nih.gov/science/lymphoid-malignancies"
+    },
+    {
+      "name": "Thai-Vu T. Ton",
+      "reason": "Current NIEHS individual page verifies career biologist and research, but no research doctorate is stated. Only one full paper within the rolling three-year window was verified (2024 PLOS ONE); listed January 2023 paper is outside the window as of November 2026. 2025 conference abstract not used to satisfy the second-paper test. https://www.niehs.nih.gov/research/atniehs/labs/cmp/mole-path/staff/ton"
+    },
+    {
+      "name": "Cu Nguyen",
+      "reason": "Search-discovered former CBIIT Staff Scientist URL now redirects to a general organizational page and no longer returns the person. Cannot use the indexed biography as a current profile. https://datascience.cancer.gov/about/staff-directory/cu-nguyen"
+    },
+    {
+      "name": "Dac-Trung Nguyen",
+      "reason": "NCATS data export exposes a biography labeled Informatics Scientists and Software Developers (old); GSRS team page places Trung Nguyen under Alumni. No current individual employer profile established, so not a verified candidate. https://ncats.nih.gov/data?page=7 ; https://gsrs.ncats.nih.gov/about"
+    },
+    {
+      "name": "Lon Phan",
+      "reason": "NCBI sources show ongoing scientific participation, but no usable current individual employer profile and affirmative Vietnamese signal beyond the surname were established. Do not infer identity from surname alone. https://ncbiinsights.ncbi.nlm.nih.gov/2026/10/27/mgv-team-at-conferences/"
+    },
+    {
+      "name": "Han Nguyen",
+      "reason": "NIGMS extramural branch chief/program officer, outside assigned IRP PI/staff-scientist slice. Discovery source: https://beta.nih.gov/nigms/organization/division-biophysics-biomedical-technology-and-computational-biosciences/han-nguyen"
+    },
+    {
+      "name": "Emerald Nguyen",
+      "reason": "NIA extramural program officer, outside assigned IRP PI/staff-scientist slice. https://www.nia.nih.gov/about/naca/january-2022-directors-status-report"
+    },
+    {
+      "name": "Christine Nguyen (FDA)",
+      "reason": "Current FDA scientific leadership mentioned in 2026 press release and prior speaker bios, but no current individual scientist page established; Vietnamese signal beyond surname also not verified. https://www.fda.gov/news-events/press-announcements/fda-approves-first-treatment-children-menkes-disease"
+    },
+    {
+      "name": "Tam Nguyen (FDA)",
+      "reason": "2023 FDA poster-gallery author/contact is a lead, not a current individual career-scientist profile. https://www.fda.gov/drugs/news-events-human-drugs/2023-scientific-computing-days-poster-gallery"
+    },
+    {
+      "name": "Ty Ngoc Nguyen (FDA)",
+      "reason": "FDA poster-gallery research author identified, but no current individual scientist page, career appointment and doctorate/two recent papers verified. https://www.fda.gov/drugs/news-events-human-drugs/2023-scientific-computing-days-poster-gallery"
+    },
+    {
+      "name": "Kevin Tran (FDA)",
+      "reason": "Skipped: exact name is in maintenance/sector-expansion/already-proposed.txt. No repeat proposal."
+    },
+    {
+      "name": "Cuc H. Tran (CDC)",
+      "reason": "CDC papers surfaced, but no current individual employer scientist page established. Historical EIS/2018-2020 publication evidence does not establish a current career role. https://www.cdc.gov/mmwr/volumes/69/wr/mm6937e3.htm"
+    },
+    {
+      "name": "Duc Nguyen (CDC)",
+      "reason": "Historical CDC publications are leads; no current individual employer scientist page established. https://www.cdc.gov/mmwr/preview/mmwrhtml/mm6408a6.htm?id=617"
+    },
+    {
+      "name": "Anthony Tran",
+      "reason": "CDC speaker material identifies him with California Department of Public Health after leaving FDA, outside this slice; a CDC-hosted bio does not make him a CDC employee. https://www.cdc.gov/safe-labs/php/echo-biosafety-2023/public-health-laboratory-professional-burnout-and-effect-on-safety.html"
+    }
+  ],
+  "coverage": [
+    {
+      "employer": "NIH Intramural Research Program — all institutes, including NCI",
+      "pagesExamined": [
+        "https://irp.nih.gov/pi",
+        "https://irp.nih.gov/our-research/principal-investigators/name",
+        "https://irp.nih.gov/pi/joe-nguyen",
+        "https://irp.nih.gov/pi/rosa-nguyen",
+        "https://irp.nih.gov/pi/quynh-nguyen"
+      ],
+      "note": "Read all-institute alphabetical PI directory and screened profile-link names across Vietnamese surnames (Nguyen, Tran, Pham, Phan, Huynh, Truong, Bui, Dang, Dinh, Do, Le, Ly, Vu, Vo, Hoang, Ngo, Duong, Mai, Ha, Lam). Three clear leads, all already listed. Expanded beyond central directory because it misses some NICHD investigators. Search engines used for discovery only; candidates verified on opened employer pages."
+    },
+    {
+      "employer": "National Cancer Institute",
+      "pagesExamined": [
+        "https://dceg2.cancer.gov/cgi-bin/Personnel.pl?1=ALL",
+        "https://dceg.cancer.gov/about/staff-directory/hoang-phuc",
+        "https://dceg.cancer.gov/about/staff-directory/bui-raborn-linh",
+        "https://datascience.cancer.gov/about/staff-directory/cu-nguyen"
+      ],
+      "note": "Screened entire DCEG personnel table with employee/contractor/fellow distinctions; verified two new staff scientists. Supplementary CCR surname/staff-scientist searches chiefly returned existing PIs, trainees and publication bylines. CBIIT former Cu Nguyen page redirects to generic organization, not accepted."
+    },
+    {
+      "employer": "National Institute on Alcohol Abuse and Alcoholism",
+      "pagesExamined": [
+        "https://www.niaaa.nih.gov/about-niaaa/our-staff/tuan-nguyen",
+        "https://www.niaaa.nih.gov/research/division-intramural-clinical-and-biological-research/laboratory-biophotonics-and-quantum-biology"
+      ],
+      "note": "Verified Tuan Nguyen on individual staff page and current laboratory roster. Employer states PhD but no doctoral institution/year; those fields deliberately absent."
+    },
+    {
+      "employer": "Eunice Kennedy Shriver National Institute of Child Health and Human Development",
+      "pagesExamined": [
+        "https://www.nichd.nih.gov/about/org/dir/osd/mt/cd/staff",
+        "https://annualreport.nichd.nih.gov/dangdo.html",
+        "https://www.nibib.nih.gov/labs-at-nibib/besip/besip-projects-2024/do-zampieri-matsubara-2024",
+        "https://annualreport.nichd.nih.gov/2024/clinical_director.html",
+        "https://www.nichd.nih.gov/research/atNICHD/Investigators/porter/personnel"
+      ],
+      "note": "Followed current clinical-director staff link to individual Dang Do research report. Clinical tenure-track role supports eligibility; older assistant-clinical-investigator label not used as current role. Weinstein personnel URL with preview query failed to fetch; no claim verified from it."
+    },
+    {
+      "employer": "National Institute of Mental Health",
+      "pagesExamined": [
+        "https://www.nimh.nih.gov/about/staff-directories/intramural-research-irp-organizational-locator",
+        "https://www.nimh.nih.gov/research/research-conducted-at-nimh/research-areas/clinics-and-labs/snf/lab-members"
+      ],
+      "note": "Read locator and checked Nguyen/Tran leads plus White-lab biographies. Found trainees, contractors and an unresolved data scientist, not verified additions. Direct shell request to NIMH failed with network unreachable; browser tool successfully opened employer pages."
+    },
+    {
+      "employer": "National Institute of Environmental Health Sciences",
+      "pagesExamined": [
+        "https://portal.niehs.nih.gov/staff/allScientists",
+        "https://www.niehs.nih.gov/research/atniehs/labs/cmp/staff",
+        "https://www.niehs.nih.gov/research/atniehs/labs/cmp/mole-path/staff/ton"
+      ],
+      "note": "Screened scientists directory and molecular-pathology staff. Contractor Kimberly Truong excluded. Thai-Vu Ton research role verified but doctorate/two qualifying recent papers not established."
+    },
+    {
+      "employer": "National Heart, Lung, and Blood Institute",
+      "pagesExamined": [
+        "https://www.nhlbi.nih.gov/science/cellular-and-molecular-therapeutics",
+        "https://www.nhlbi.nih.gov/science/lymphoid-malignancies"
+      ],
+      "note": "Checked names surfaced by staff-scientist and biologist searches. Duy Le and Janet Le are trainees/former trainees, not career staff."
+    },
+    {
+      "employer": "National Human Genome Research Institute / NCATS / other NIH institutes",
+      "pagesExamined": [
+        "https://www.genome.gov/staff-search-inside?page=39",
+        "https://ncats.nih.gov/data?page=7"
+      ],
+      "note": "NHGRI page identifies Tam Tran as MS bioinformatician, not evidence of a research doctorate; no new candidate accepted. NCATS old personnel data not treated as current. Supplementary institute-specific searches covered NIAID, NIDDK, NINDS, NIDCR, NIA, NLM/NCBI and general NIH staff scientist roles; many results were trainee profiles, extramural staff or coauthor mentions. All institutes covered through central PI list; staff-scientist sweep is broad discovery coverage, not a census of every lab."
+    },
+    {
+      "employer": "U.S. Food and Drug Administration",
+      "pagesExamined": [
+        "https://www.fda.gov/about-fda/science-research-nctr/nctr-principal-investigators",
+        "https://www.fda.gov/about-fda/science-research-nctr/kristina-feye",
+        "https://www.fda.gov/drugs/news-events-human-drugs/2023-scientific-computing-days-poster-gallery"
+      ],
+      "note": "Examined NCTR PI index (browser extraction did not expose a usable scientist-name roster) and sample linked bios; searched CBER, CDER and NCTR scientists across Nguyen, Tran, Pham, Huynh, Bui, Hoang. Clear leads lacked current individual scientist pages or were fellows, regulatory/project staff, external speakers or already proposed. No FDA candidate promoted from search snippets, FDA application paperwork or conference author lists."
+    },
+    {
+      "employer": "Centers for Disease Control and Prevention",
+      "pagesExamined": [
+        "https://www.cdc.gov/safe-labs/php/echo-biosafety-2023/public-health-laboratory-professional-burnout-and-effect-on-safety.html",
+        "https://www.cdc.gov/mmwr/volumes/69/wr/mm6937e3.htm",
+        "https://www.cdc.gov/mmwr/preview/mmwrhtml/mm6408a6.htm?id=617"
+      ],
+      "note": "Searched current scientist/leadership/biography pages and checked whether hosted speakers actually work at CDC. No new current individual scientist profiles verified. Cuc Tran, Duc Nguyen, Antoinette Nguyen, Duong Tony Nguyen and Emmy Tran surfaced mainly through papers, external bios or historical material; those alone were not accepted as current individual profiles. Cau D. Pham is already rostered as vp-3026; no current individual CDC page established for reconfirmation in this run."
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+us-cs	university	US universities, Computer Science and Computer/Information Science departments (all US R1 and R2 universities; also iSchools and data science departments).
+us-ece	university	US universities, Electrical and Computer Engineering departments.
+us-eng-other	university	US universities, Mechanical, Civil/Environmental, Chemical/Biomolecular, Materials, Aerospace, Industrial and Biomedical Engineering departments.
+us-med-a-m	university	US medical schools and academic medical centers, institutions whose names start A–M: clinical and basic-science faculty (Clinical track allowed per ROSTER_MAINTENANCE.md).
+us-med-n-z	university	US medical schools and academic medical centers, institutions whose names start N–Z: clinical and basic-science faculty (Clinical track allowed per ROSTER_MAINTENANCE.md).
+us-health-other	university	US schools of nursing, pharmacy, dentistry, public health, and allied health.
+us-bio	university	US universities, Biology, Molecular/Cell Biology, Biochemistry, Neuroscience, Microbiology, Ecology departments (outside medical schools).
+us-physical	university	US universities, Chemistry, Physics, Astronomy, Earth/Atmospheric/Ocean Sciences departments.
+us-math-stat	university	US universities, Mathematics, Statistics, Biostatistics, Operations Research departments.
+us-business	university	US business schools and Economics departments (finance, accounting, marketing, management, information systems, economics).
+us-social-hum	university	US universities, Social sciences, Psychology, Education, Humanities, Law, Communication, Arts and Design departments.
+us-teaching-colleges	university	US liberal-arts colleges, regional public universities, and community-college-free four-year teaching institutions (all fields; Tenure-line and Teaching tracks).
+us-california	university	California public and private universities (UC campuses, CSU campuses, USC, Stanford, Caltech, Santa Clara, etc.), all fields — the largest Vietnamese-American region; sweep directories by Vietnamese surname.
+us-texas	university	Texas universities (UT system, Texas A&M system, Houston, Rice, UTSA, UTD, Texas Tech, UNT, Baylor, SMU), all fields.
+au-go8	university	Australian Group of Eight universities (Melbourne, Sydney, UNSW, Monash, ANU, Queensland, UWA, Adelaide), all fields.
+au-other	university	Other Australian universities (RMIT, UTS, Deakin, Griffith, QUT, Macquarie, Swinburne, La Trobe, Western Sydney, Curtin, Wollongong, Newcastle, Victoria, Flinders, etc.), all fields.
+uk-russell	university	UK Russell Group universities, all fields.
+uk-other	university	Other UK universities, all fields.
+canada	university	Canadian universities, all fields (Toronto, UBC, McGill, Montreal, Laval, Waterloo, Alberta, Calgary, Ottawa, York, Concordia, Sherbrooke, Simon Fraser, etc.).
+france-univ	university	French universities and grandes écoles (maîtres de conférences and professeurs des universités), all fields.
+dach	university	Germany, Austria, Switzerland universities (including ETH, EPFL, TU9), all fields; permanent professorships and permanent research staff only.
+japan	university	Japanese universities, all fields; permanent (non-特任) appointments only.
+taiwan-korea	university	Taiwanese and South Korean universities, all fields.
+sg-hk-asia	university	Singapore, Hong Kong, Malaysia, Thailand, and other Asian universities outside Vietnam, all fields.
+nordic-benelux	university	Nordic (Norway, Sweden, Denmark, Finland, Iceland) and Benelux (Netherlands, Belgium, Luxembourg) universities, all fields.
+nz-ireland	university	New Zealand and Irish universities, all fields.
+south-east-europe	university	Italy, Spain, Portugal, Poland, Czechia, Hungary and other European universities not covered elsewhere, all fields.
+middle-east	university	Middle East universities (Qatar, UAE, Saudi Arabia incl. KAUST, Israel, Turkey), all fields.
+nonus-public-2	lab	Second pass, non-US public research: Max Planck institutes, Helmholtz centres, Fraunhofer, Leibniz institutes; RIKEN, NIMS, AIST, NICT; KIST, ETRI, KAIST institutes; Academia Sinica, ITRI (Taiwan); NRC Canada; NPL (UK). Use individual staff pages only.
+france-public-2	lab	Second pass, French public research: Inserm, INRAE, IRD, Inria, CEA units, CNRS units not covered in the first pass; individual pages only.
+au-institutes-2	lab	Second pass, Australian institutes: Garvan, Peter MacCallum, Florey, Hudson, Baker, Kirby, CMRI, Harry Perkins, QIMR, Doherty, Burnet, ANSTO, DSTG, CSIRO divisions not covered.
+ai-labs	lab	Corporate AI labs re-sweep: Google DeepMind, Google Research, Microsoft Research, Meta FAIR, NVIDIA Research, Apple MLR, Amazon Science, IBM Research, Adobe Research, Salesforce AI Research, Qualcomm AI Research, Samsung, Sony AI, Baidu/Alibaba/Tencent research outside Vietnam.
+nih-irp	lab	NIH Intramural Research Program PIs and staff scientists (irp.nih.gov/pi directory), all institutes including NCI, plus FDA and CDC scientists with individual pages.
+doe-labs-2	lab	Second pass, US DOE national labs staff directories by Vietnamese surname and given-name tokens: Argonne, ORNL, PNNL, LLNL, LANL, Sandia, LBNL, Brookhaven, INL, SLAC, Fermilab, NLR.
+us-institutes-2	lab	Second pass, US nonprofit research institutes: Broad, Salk, Scripps, Fred Hutch, St. Jude, MSK, Dana-Farber, Allen, Janelia, Jackson Lab, Van Andel, Stowers, Wistar, La Jolla Institute, Sanford Burnham Prebys, Gladstone, Whitehead, Cold Spring Harbor.
+canada-asia-public	lab	Canadian and Asian public research institutes outside those above: provincial research institutes (Lunenfeld-Tanenbaum, Princess Margaret, SickKids Research Institute, BC Cancer), A*STAR institutes second pass, Hong Kong research centres.

@@ -1,0 +1,279 @@
+{
+  "group": "Australian medical research institutes and public laboratories",
+  "agent": "codex",
+  "slice": "au-institutes-2",
+  "finishedAt": "2026-11-15T01:39:54.421943Z",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Quan Hua",
+        "university": "Australian Nuclear Science and Technology Organisation",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Environment Research and Technology Group",
+        "city": "Lucas Heights",
+        "state": "New South Wales",
+        "country": "Australia",
+        "researchAreas": [
+          "Radiocarbon Dating",
+          "Quaternary Science",
+          "Climate Change",
+          "Archaeology"
+        ],
+        "phdInstitution": "University of Sydney",
+        "profileUrl": "https://www.ansto.gov.au/people/dr-quan-hua"
+      },
+      "evidence": {
+        "currentRole": "https://www.ansto.gov.au/people/dr-quan-hua — \"Senior Principal Research Scientist\". Opened with web and independently fetched HTTP 200; the live biography places him in the Environment Research and Technology Group and describes over 30 years of relevant work. Career staff ladder, not a trainee or visiting role.",
+        "doctorateOrPapers": "https://www.ansto.gov.au/people/dr-quan-hua — \"PhD in Radiocarbon and Earth Sciences, University of Sydney\". No doctorate year stated.",
+        "vietnameseSignal": "https://www.ansto.gov.au/people/dr-quan-hua explicitly lists his undergraduate physics degree from Dalat University, Vietnam; affirmative Vietnamese education signal, not surname inference.",
+        "dedup": "Ran npm run find-roster-matches -- \"Quan Hua\" --url https://www.ansto.gov.au/people/dr-quan-hua http://orcid.org/0000-0003-0179-8539: no roster or retired-id matches. Not in already-proposed.txt. gh issue list --state all --search '\"Quan Hua\"' returned []."
+      }
+    },
+    {
+      "entry": {
+        "name": "Thach Tran",
+        "university": "Garvan Institute of Medical Research",
+        "institutionType": "Independent nonprofit research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Center Lab",
+        "country": "Australia",
+        "researchAreas": [
+          "Osteoporosis Epidemiology",
+          "Fragility Fractures",
+          "Post-fracture Mortality",
+          "Biostatistics"
+        ],
+        "phdInstitution": "Prince of Songkla University",
+        "phdYear": 1999,
+        "profileUrl": "https://www.garvan.org.au/people/researchers/thach-tran"
+      },
+      "evidence": {
+        "currentRole": "https://www.garvan.org.au/people/researchers/thach-tran — \"Senior Research Officer\"; \"Center Lab\". Live employer biography describes his research since joining Garvan in 2014, longitudinal cohort analysis and fracture/mortality modelling. Longstanding career research officer, not a postdoctoral or visiting title.",
+        "doctorateOrPapers": "https://www.garvan.org.au/people/researchers/thach-tran explicitly states a completed clinical-epidemiology PhD at Prince of Songkla University in 1999, following medical and obstetrics/gynaecology training.",
+        "vietnameseSignal": "https://www.garvan.org.au/people/researchers/thach-tran states he worked as a senior obstetrics/gynaecology consultant and university lecturer in Vietnam before migrating to Australia in 2011; Vietnamese given name Thach also supports the signal.",
+        "dedup": "Ran npm run find-roster-matches -- \"Thach Tran\" --url https://www.garvan.org.au/people/researchers/thach-tran https://www.researchgate.net/profile/Thach-Tran-8. Name hit vp-2661 Thach Duc Tran at Monash was resolved as a DIFFERENT person: https://research.monash.edu/en/persons/thach-tran/ describes global/women's health, a University of Melbourne International Health PhD awarded 3 August 2014 and Vietnam public-health work 1998–2010; Garvan describes a Prince of Songkla PhD in 1999, clinical OG work and migration in 2011. Garvan bone epidemiology also matches the discovery lead https://www.researchgate.net/profile/Thach-Tran-8. Not in already-proposed.txt. GitHub search returned #518 and #1033; #1033 body proposes the Monash Thach Duc Tran, not this Garvan researcher. No new ID assigned."
+      }
+    }
+  ],
+  "already_listed": [
+    {
+      "name": "Minh Huynh",
+      "id": "vp-1241",
+      "note": "find-roster-matches matched exact employer profile https://people.csiro.au/h/m/minh-huynh; live page confirms the CSIRO Astronomical Data Archive leadership role. Same person; vp-0468 radiology name hit is different."
+    },
+    {
+      "name": "Hoa Nguyen",
+      "id": "vp-1563",
+      "note": "find-roster-matches matched exact profile https://people.csiro.au/n/h/hoa-nguyen. CSIRO Quantum Systems scientist with Melbourne PhD in 2025 and UIT-HCM degrees; same person as roster CSIRO entry."
+    },
+    {
+      "name": "Quan Huynh",
+      "id": "vp-1287",
+      "note": "find-roster-matches name hit; https://research.monash.edu/en/persons/quan-huynh/ describes the Baker research group leader, matching the roster employer and cardiometabolic research. No new person."
+    }
+  ],
+  "possible_move": [],
+  "rejected": [
+    {
+      "name": "Van To",
+      "reason": "Peter Mac employer search result https://www.petermac.org/staff-details/van-to explicitly labels Postdoctoral Research Fellow; excluded. Direct web open returned cache miss, so no candidate verification claimed."
+    },
+    {
+      "name": "Nhi Thao Tran",
+      "reason": "Opened https://hudson.org.au/researcher-profile/nhi-tran/: Postdoctoral Scientist in Bioenergetics in Reproduction. PhD and award history do not override the trainee-role exclusion."
+    },
+    {
+      "name": "Sabrina Nguyen",
+      "reason": "Opened https://hudson.org.au/researcher-profile/sabrina-nguyen/: Honours Student; excluded."
+    },
+    {
+      "name": "Minh Tien Pham",
+      "reason": "Opened https://www.qimrb.edu.au/about/our-people/minh-tien-pham: Visiting Scientist; excluded."
+    },
+    {
+      "name": "To Ha Loi",
+      "reason": "Opened https://www.cmrijeansforgenes.org.au/research/research-teams/eye-genetics: Postdoctoral Research Officer; excluded."
+    },
+    {
+      "name": "Mia Nguyen",
+      "reason": "https://www.cmrijeansforgenes.org.au/research/research-teams/translational-vectorology was opened and lists Mia among former team members, Research Assistant. No verified eligible current appointment."
+    },
+    {
+      "name": "Chau Tran",
+      "reason": "https://florey.edu.au/neuropix/ identifies the Personalised Therapeutics lead as a PhD student in its 2025 entrants. No career appointment established."
+    },
+    {
+      "name": "Hoang Linh Ngo",
+      "reason": "Peter Mac Foundation grant announcement https://foundation.petermac.org/about/our-donors/endowment-fund?id=610&view=article and conference lead https://a-rna-2024.p.asnevents.com.au/speaker/612447 identify a principal research assistant and circRNA work. No research doctorate or two identity-resolved recent papers at the employer verified; not promoted from a grant-recipient lead alone."
+    },
+    {
+      "name": "Jonathan Nguyen",
+      "reason": "Opened https://www.garvan.org.au/people/researchers/jonathan-nguyen. Employer describes program management, ethics/governance, communications and laboratory management. Eligible research appointment and doctorate/paper threshold not established."
+    },
+    {
+      "name": "James Quach",
+      "reason": "Opened https://people.csiro.au/q/j/james-quach: current CSIRO Science Leader and Melbourne Physics PhD 2013; dedup with that URL and ORCID 0000-0002-3619-2505 returned no matches. Held out because affirmative Vietnamese signal could only be located in an unsupported old blog https://tinhomnay.wordpress.com/2012/08/22/big-bang-einstein-of-the-21st-cencutry-james-quach-big-bang-no-big-chill-australian-scientists-challenge-universe-creation-theory/. English given name plus Quach surname alone does not pass BRIEF2; other Vietnamese James Quach search hits are unrelated identities."
+    },
+    {
+      "name": "Cuong Tran",
+      "reason": "CSIRO gut-health lead, no roster/retired match from command with https://research.csiro.au/guthealthco/. Official brochure https://research.csiro.au/guthealthco/wp-content/uploads/sites/218/2018/10/18-00385_HB_BROCHURE_GutPermeability4ppDL_WEB_180807.pdf is from 2018; team site returned 403. External conference/education biographies support an older scientist role but a live current employer person page was not obtained. Retain as an unverified lead, not a candidate."
+    },
+    {
+      "name": "Khoa Nguyen (CSIRO Data61)",
+      "reason": "ResearchGate lead https://www.researchgate.net/profile/Khoa-Nguyen-4 describes a Sydney CS PhD and predictive analytics role. Could not locate and open a current employer person page or personal site. Dedup produced multiple name-only hits, including vp-1968 at Wollongong and vp-1981 at Adelaide, plus unrelated retired IDs; identity remains unresolved. No guessed profile URL used."
+    },
+    {
+      "name": "Mai Ngoc Vu",
+      "reason": "Doherty/nanoparticle-vaccine lead. University news https://biomedicalsciences.unimelb.edu.au/news-and-events/sbs-researchers-nhmrc-investigator-grants-2026 announces an Investigator Grant, but current permanent career title was not verified. Doherty site presented an access challenge. A grant announcement alone is insufficient; held for later verification."
+    },
+    {
+      "name": "Lien Tran",
+      "reason": "External WHO Collaborating Centre/Doherty hepatitis researcher lead at https://www.worldhepatitisalliance.org/news/2022-elections/. Current employer profile, doctorate/recent-paper threshold and career status not verified; Doherty access blocked."
+    },
+    {
+      "name": "Hong Nguyen (Hudson)",
+      "reason": "Only old Hudson student handbook/news evidence (2016–2017) surfaced for the endometrial researcher. No verified current appointment; not included."
+    },
+    {
+      "name": "Tram Phan",
+      "reason": "Opened CSIRO article https://www.csiro.au/en/news/All/Articles/2020/April/covid-19-researchers-tram-phan. It is a 2020 profile describing experimental science and QA work; no current doctorate or qualifying recent-publication evidence established."
+    },
+    {
+      "name": "Loan Le; Vu Nguyen (ANSTO); Thien Dinh; Tung Hoang; Duy Nong; Thi Nguyen; Quan Nguyen",
+      "reason": "Skipped as earlier-proposed names in maintenance/sector-expansion/already-proposed.txt; no duplicate candidate proposed. This also covers name-order aliases encountered during discovery."
+    }
+  ],
+  "coverage": [
+    {
+      "employer": "Garvan Institute of Medical Research",
+      "pagesExamined": [
+        "https://www.garvan.org.au/people/researchers",
+        "https://www.garvan.org.au/about-us/governance/leadership",
+        "https://www.garvan.org.au/people/researchers/thach-tran",
+        "https://www.garvan.org.au/people/researchers/jonathan-nguyen",
+        "https://www.garvan.org.au/research/labs-groups/center-lab"
+      ],
+      "note": "Given-name searches Minh, Thao, Hien, Linh, Phuong, Uyen, Chau, Thach, and less-common-surname leads. Directory and Center Lab page did not expose full team content. External training-course link led to the actual opened Thach profile. One verified new candidate."
+    },
+    {
+      "employer": "Peter MacCallum Cancer Centre",
+      "pagesExamined": [
+        "https://www.petermac.org/",
+        "https://www.petermac.org/staff-details/van-to",
+        "https://foundation.petermac.org/about/our-donors/endowment-fund?id=610&view=article"
+      ],
+      "note": "Search sweeps Minh, Thao, Linh, Hien, Duc, Thi and less common surnames; Van To postdoc excluded; Hoang Linh Ngo inspected as a circRNA/assistant lead, insufficient qualifying evidence. Home fetched HTTP 200; Van To direct web retrieval failed."
+    },
+    {
+      "employer": "The Florey",
+      "pagesExamined": [
+        "https://florey.edu.au/our-research/researchers-and-groups/",
+        "https://florey.edu.au/our-research/researchers-and-groups/researchers/page/2/",
+        "https://florey.edu.au/our-research/researchers-and-groups/researchers/page/5/",
+        "https://florey.edu.au/neuropix/"
+      ],
+      "note": "Given-name and uncommon-surname searches included Minh, Thao, Linh, Hien, Ngoc, Huynh and Tran; Chau Tran is a student. Tried directory pages 1–10 through shell; 403 responses. Web pages 6 and 7 were inaccessible. Partial directory coverage, not an assertion that no eligible staff exist."
+    },
+    {
+      "employer": "Hudson Institute of Medical Research",
+      "pagesExamined": [
+        "https://hudson.org.au/",
+        "https://hudson.org.au/researcher-profile/",
+        "https://hudson.org.au/researcher-profile/nhi-tran/",
+        "https://hudson.org.au/researcher-profile/sabrina-nguyen/"
+      ],
+      "note": "Deeper sweep by given names and Luu/Huynh, including Nhi Thao Tran and old Hong Nguyen/graduate-list leads. Scientist search exposed no results in readable HTML and shell access returned 403. Verified exclusions are student/postdoctoral; no new eligible candidate."
+    },
+    {
+      "employer": "Baker Heart and Diabetes Institute",
+      "pagesExamined": [
+        "https://baker.edu.au/",
+        "https://www.baker.edu.au/research/labs",
+        "https://www.baker.edu.au/news/innovative-heart-projects",
+        "https://research.monash.edu/en/persons/quan-huynh/"
+      ],
+      "note": "Linh/Minh/Ngoc/Thi and Huynh searches; known Kevin and Quan Huynh already listed; Cuong Pham already proposed. Current lab directory exposes filters without readable team results; no new verified candidate."
+    },
+    {
+      "employer": "Kirby Institute",
+      "pagesExamined": [
+        "https://www.kirby.unsw.edu.au/",
+        "https://www.kirby.unsw.edu.au/about/contact-us",
+        "https://www.kirby.unsw.edu.au/research/groups/neglected-tropical-diseases-research-group"
+      ],
+      "note": "Searches Trang, Hanh, Dinh, Thuy, Nghiem and Vietnamese-given-name leads. NTD page mentions a photographer Dinh Ng Nguyen but does not establish an eligible role. Homepage timeout; group page readable. Prior Quan/Thi Nguyen proposals skipped. No new verified candidate."
+    },
+    {
+      "employer": "Children's Medical Research Institute",
+      "pagesExamined": [
+        "https://www.cmrijeansforgenes.org.au/research/research-teams/eye-genetics",
+        "https://www.cmrijeansforgenes.org.au/research/research-teams/translational-vectorology",
+        "https://www.cmrijeansforgenes.org.au/research/research-teams/cell-biology",
+        "https://www.cmrijeansforgenes.org.au/research/research-teams/genome-integrity"
+      ],
+      "note": "Given-name Linh/Phuong and less-common-surname Huynh/Truong discovery searches; deeper team rosters surfaced To Ha Loi (postdoctoral) and Mia Nguyen (former assistant), not qualifying new career scientists. Cell Biology and Genome Integrity team content examined via search results; Eye Genetics and Translational Vectorology directly opened."
+    },
+    {
+      "employer": "Harry Perkins Institute of Medical Research",
+      "pagesExamined": [
+        "https://perkins.org.au/",
+        "https://perkins.org.au/research/labs/",
+        "https://perkins.org.au/about-perkins/our-people/",
+        "https://perkins.org.au/research/labs/cancer-program/",
+        "https://perkins.org.au/research/labs/cmm-program/",
+        "https://perkins.org.au/research/labs/genome-biology-genetics-program/"
+      ],
+      "note": "Deeper review across all three research programs and Our People, plus Minh/Linh/Thuy/Ngoc/Phuong/Mai/Huynh searches. No new eligible lead established. Historic Heng-lab Linh assistant lead is an alumnus; no present Perkins appointment established."
+    },
+    {
+      "employer": "QIMR Berghofer Medical Research Institute",
+      "pagesExamined": [
+        "https://www.qimrb.edu.au/",
+        "https://www.qimrb.edu.au/researchers-and-labs",
+        "https://www.qimrb.edu.au/about/our-people/minh-tien-pham"
+      ],
+      "note": "Used current qimrb.edu.au domain after old-domain searches. Hien/Huyen/Minh/Thi/Trinh searches surfaced visiting Minh Tien Pham and prior Quan Nguyen proposal. JS directory returned no readable lab cards; no new eligible candidate."
+    },
+    {
+      "employer": "Peter Doherty Institute for Infection and Immunity",
+      "pagesExamined": [
+        "https://www.doherty.edu.au/",
+        "https://biomedicalsciences.unimelb.edu.au/departments/microbiology-Immunology/bespoke-group/Kent-Laboratory-Blog",
+        "https://biomedicalsciences.unimelb.edu.au/news-and-events/sbs-researchers-nhmrc-investigator-grants-2026"
+      ],
+      "note": "Thao/Linh/Mai given-name searches, Mai Ngoc Vu and Lien Tran leads. Doherty homepage returned only an access-challenge iframe; no evasion attempted. University lab blog and grant announcement surfaced current research activity but do not settle career/permanent status. Coverage limited by access."
+    },
+    {
+      "employer": "Australian Nuclear Science and Technology Organisation",
+      "pagesExamined": [
+        "https://www.ansto.gov.au/",
+        "https://profiles.ansto.gov.au/search?by=text&type=user",
+        "https://www.ansto.gov.au/people/dr-quan-hua"
+      ],
+      "note": "Given-name Thi/Hoang and Dinh leads, followed Vietnamese-education and rare Hua-surname lead. New profiles directory rendered no readable records. Quan Hua current employer page independently HTTP-200 fetched and verified. Loan Le and Vu Nguyen earlier proposals skipped."
+    },
+    {
+      "employer": "Defence Science and Technology Group",
+      "pagesExamined": [
+        "https://www.dst.defence.gov.au/sites/default/files/publications/documents/DST%20Annual%20Review%202016-17.pdf"
+      ],
+      "note": "Discovery searches by Minh, Linh, Khanh, Hien, Quoc and Bui. Results principally historical reports/publications: Minh-Tuan Nguyen operations analysis and Linh Nguyen electronics. Linh already proposed. No live current employer person page and qualifying current career evidence for a new name; historical reports not accepted as current profiles. Report examined through search extraction."
+    },
+    {
+      "employer": "CSIRO",
+      "pagesExamined": [
+        "https://people.csiro.au/h/m/minh-huynh",
+        "https://people.csiro.au/n/h/hoa-nguyen",
+        "https://people.csiro.au/N/C/Chuong-Nguyen",
+        "https://people.csiro.au/D/T/Thien-Dinh.aspx",
+        "https://people.csiro.au/q/j/james-quach",
+        "https://www.csiro.au/en/news/All/Articles/2020/April/covid-19-researchers-tram-phan",
+        "https://research.csiro.au/guthealthco/"
+      ],
+      "note": "Expanded beyond earlier surname sweep into Space/Astronomy, quantum batteries and systems, mineral-process CFD, manufacturing/biologics, health/gut physiology, climate/land/water, aquaculture, predictive analytics and agricultural teams. Tokens searched included Thanh, Duc, Hien, Thao, Quynh, Linh, Ngoc, Huy, Khoa, Tram, Phuc, Hiep, Tien, Quang, Huong, Giang, Cuong, Nhan, Bao, Hung; less common surnames Dinh/Trinh/Nghiem/Quach/Luu/Diep. Existing or previously proposed people excluded. James Quach lacks strong affirmative Vietnamese signal; Cuong Tran and Khoa Nguyen remain unverified leads. Individual URLs above either directly opened or returned live employer search-result content; guthealthco direct open returned 403."
+    }
+  ]
+}

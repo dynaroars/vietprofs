@@ -1,0 +1,408 @@
+{
+  "group": "university",
+  "agent": "codex",
+  "slice": "us-health-other",
+  "finishedAt": "2026-11-15T00:41:04.080897Z",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Thao Griffith",
+        "university": "Loyola University Chicago",
+        "track": "Tenure-line",
+        "rank": "Associate Professor",
+        "department": "Family and Community Health Nursing, Marcella Niehoff School of Nursing",
+        "field": "Health Sciences",
+        "city": "Maywood",
+        "state": "Illinois",
+        "country": "United States",
+        "researchAreas": [
+          "Neonatal nursing",
+          "Preterm infant oral feeding",
+          "Biobehavioral epigenetics",
+          "Parent-guided interventions"
+        ],
+        "phdInstitution": "University of Illinois Chicago",
+        "phdYear": 2017,
+        "undergradInstitution": "University of Illinois Chicago",
+        "undergradYear": 2012,
+        "profileUrl": "https://www.luc.edu/nursing/facultyandstaff/facultydirectory/profiles/griffiththao.shtml"
+      },
+      "evidence": {
+        "currentRole": "https://www.luc.edu/universityconvocation/facultyrecognition/ — Under Tenure and Promotion, 2026-2027: \"Thao Griffith, PhD, Associate Professor, Family and Community Health Nursing\". The individual profile https://www.luc.edu/nursing/facultyandstaff/facultydirectory/profiles/griffiththao.shtml remains live but still shows the older Assistant Professor rank. The newer employer promotion page establishes rank and tenure-line status. Profile supplies research areas and Maywood, Illinois campus address.",
+        "doctorateOrPapers": "https://www.luc.edu/media/lucedu/nursing/faculty/cv/T_Griffith_CV_04.08.21.pdf — PhD in Nursing, University of Illinois at Chicago, 2017; BSN there, 2012. Same education is on https://www.luc.edu/nursing/facultyandstaff/facultydirectory/profiles/griffiththao.shtml.",
+        "vietnameseSignal": "https://www.luc.edu/nursing/facultyandstaff/facultydirectory/profiles/griffiththao.shtml — Vietnamese given-name token Thao, explicitly permitted as an affirmative signal by BRIEF2.md. No diacritics or original surname reconstructed. The similarly named Meta policy professional Thao Griffiths is a different person and was not used as identity evidence.",
+        "dedup": "Ran npm run find-roster-matches -- \"Thao Griffith\" --url https://www.luc.edu/nursing/facultyandstaff/facultydirectory/profiles/griffiththao.shtml https://www.luc.edu/media/lucedu/nursing/faculty/cv/T_Griffith_CV_04.08.21.pdf https://www.luc.edu/universityconvocation/facultyrecognition/; result: no roster or retired-id matches. Also inspected roster names and Loyola entries; not in already-proposed.txt.",
+        "enrichment": "Profile links an individual headshot at https://www.luc.edu/media/lucedu/nursing/faculty/2023headshots/Thao_Headshot-18%20%28003%29.PNG, but image fetch returned cache miss; portraitSource therefore omitted. Targeted Scholar search did not produce an identity-verified profile."
+      }
+    },
+    {
+      "entry": {
+        "name": "Quyen Phan",
+        "university": "Emory University",
+        "track": "Clinical",
+        "rank": "Associate Professor",
+        "department": "Nell Hodgson Woodruff School of Nursing",
+        "field": "Health Sciences",
+        "city": "Atlanta",
+        "state": "Georgia",
+        "country": "United States",
+        "researchAreas": [
+          "Public health nursing",
+          "Primary care",
+          "Nursing education",
+          "Academic-practice partnerships",
+          "Health workforce development"
+        ],
+        "undergradInstitution": "University of Ottawa",
+        "undergradYear": 1999,
+        "msInstitution": "Emory University",
+        "profileUrl": "https://www.nursing.emory.edu/faculty-staff/quyen-phan",
+        "honors": [
+          {
+            "name": "Fellow of the American Academy of Nursing",
+            "year": 2024,
+            "organization": "American Academy of Nursing",
+            "source": "https://www.nursing.emory.edu/faculty-staff/quyen-phan"
+          },
+          {
+            "name": "Fellow of the American Academy of Nurse Practitioners",
+            "year": 2025,
+            "organization": "American Academy of Nurse Practitioners",
+            "source": "https://www.nursing.emory.edu/faculty-staff/quyen-phan"
+          },
+          {
+            "name": "Isabel Hampton Robb Award for Outstanding Leadership in Clinical Practice, Evidence-Based Practice and Interprofessional Collaboration",
+            "year": 2026,
+            "organization": "National League for Nursing",
+            "source": "https://news.emory.edu/stories/2026/09/emory-school-nursings-quyen-phan-honored-national-league-nursing"
+          }
+        ]
+      },
+      "evidence": {
+        "currentRole": "https://www.nursing.emory.edu/faculty-staff/quyen-phan — \"Associate Clinical Professor\". Employer-hosted CV https://www.nursing.emory.edu/sites/default/files/profiles/cv/69eaf6b747fb625e7d8b605a_152297288_quyen_phan_cv_1.25.2026.docx fetched successfully with Python requests (HTTP 200) and parsed in memory: Assistant Clinical Professor 09/2018–08/2023, Associate Clinical Professor 09/2023–present. This establishes an enduring clinical-faculty promotion ladder. Official September 29, 2026 news https://news.emory.edu/stories/2026/09/emory-school-nursings-quyen-phan-honored-national-league-nursing independently confirms the appointment and ongoing HRSA-funded programs. Profile/CV establish Atlanta location, research interests and degree institutions.",
+        "doctorateOrPapers": "Qualifies through recent publications, not a research doctorate: DNP/FNP, Augusta University, 2016 (professional degree; no phdInstitution proposed). Two identity-resolved papers at current employer: (1) 2025 nursing preparedness-simulation evaluation, DOI 10.1017/dmp.2025.28, https://pubmed.ncbi.nlm.nih.gov/39949207/ and https://www.cambridge.org/core/services/aop-cambridge-core/content/view/3FF9384B4B8E62827D9A98D538908235/S193578932500028Xa.pdf/div-class-title-integrating-disease-investigation-escape-room-and-preparedness-simulation-into-nursing-education-div.pdf ; publisher discovery record names Quyen To Phan, Emory Nursing, and qphan@emory.edu. PubMed open returned no substantive text, so it was not used alone. (2) 2024 ARCHWAy workforce-program evaluation, DOI 10.1186/s13690-024-01422-1, https://link.springer.com/article/10.1186/s13690-024-01422-1 opened successfully: Quyen Phan is an author with Emory Nursing affiliation. Both papers are also listed on her live employer profile, with matching coauthors.",
+        "vietnameseSignal": "https://www.nursing.emory.edu/faculty-staff/quyen-phan — Vietnamese given-name Quyen with surname Phan. Her employer-hosted CV additionally lists Vietnamese community health service and Vietnamese refugee sponsorship activities. Augusta University discovery result describes her flight from Vietnam, but https://jagwire.augusta.edu/from-refugee-to-dnp-the-story-of-quyen-phan-part-4/ returned 403 when opened and is not needed to establish the signal.",
+        "dedup": "Ran npm run find-roster-matches -- \"Quyen Phan\" --url https://www.nursing.emory.edu/faculty-staff/quyen-phan; no roster or retired-id matches. Reran with full publishing variant \"Quyen To Phan\" and profile plus employer-hosted CV URL; no matches. Not in already-proposed.txt; manual Emory/Phan roster check found no identity match.",
+        "enrichment": "Degree years 1999 (BScN) and 2003 (MSN) supplied by the employer-hosted 2026 CV; msYear omitted because not required by brief. Honors and years from live employer profile; national NLN award and date corroborated by https://news.emory.edu/stories/2026/09/emory-school-nursings-quyen-phan-honored-national-league-nursing. No identity-verified Scholar or LinkedIn URL found; LinkedIn was not fetched. No biography generated."
+      }
+    }
+  ],
+  "already_listed": [
+    {
+      "name": "Huong Nguyen",
+      "id": "vp-0252",
+      "note": "Same Minnesota nursing researcher; exact profile URL matched. https://lcc.umn.edu/people/huong-nguyen"
+    },
+    {
+      "name": "Lien Quach",
+      "id": "vp-2225",
+      "note": "Same UMass Boston Urban Public Health faculty; name and profile URL matched. https://www.umb.edu/directory/lienquach/"
+    },
+    {
+      "name": "Uyen Minh Le",
+      "id": "vp-0218",
+      "note": "Same California Northstate pharmacy professor; exact profile URL matched. https://www.pharmacy.cnsu.edu/directory/bios/uyen-minh-le.php (web open timed out)."
+    },
+    {
+      "name": "Linh Ho",
+      "id": "vp-2820",
+      "note": "Same California Northstate pharmacy faculty; exact profile URL matched. https://pharmacy.cnsu.edu/directory/bios/linh-ho.php"
+    },
+    {
+      "name": "Uyen-Sa D. T. Nguyen",
+      "id": "vp-2064",
+      "note": "Same UNT Health public-health epidemiologist; name and official profile URL matched. https://www.unthealth.edu/tcom/public-health/dr-uyen-sa-d-t-nguyen.html"
+    },
+    {
+      "name": "Giang Vu",
+      "id": "vp-0731",
+      "note": "Same UCF health management/informatics dental public-health researcher; employer, doctorate and field agree. https://healthprofessions.ucf.edu/person/giang-vu/"
+    },
+    {
+      "name": "My Hanh (Theresa) Nguyen",
+      "id": "vp-2274",
+      "note": "Same University of San Diego nursing faculty; publishing variant and institution matched. Official catalog discovered: https://catcher.sandiego.edu/items/admissions/2025-2026_Graduate_Catalog_3.11.26.pdf"
+    },
+    {
+      "name": "Dieu-My T. Tran",
+      "id": "vp-2102",
+      "note": "Same UNLV nursing professor; exact official profile URL matched. https://www.unlv.edu/people/dieu-my-tran"
+    },
+    {
+      "name": "Hanh Q. Trinh",
+      "id": "vp-1023",
+      "note": "Same UWM health-care administration emeritus; exact profile matched. https://uwm.edu/biomedical-sciences-healthcare-administration/directory/trinh-hanh/"
+    },
+    {
+      "name": "Van T. Nghiem",
+      "id": "vp-2231",
+      "note": "Same UAB Health Policy and Organization faculty; manually resolved by institution and field. https://www.uab.edu/soph/home/about/faculty/nghiem-van-t"
+    },
+    {
+      "name": "Hung Ton-That",
+      "id": "vp-1413",
+      "note": "Same UCLA oral biology researcher; name, institution and lab agree. https://dentistry.ucla.edu/research/labs/ton-that-lab"
+    },
+    {
+      "name": "Nhung Le",
+      "id": "vp-2396",
+      "note": "Same AUHS pharmaceutical-sciences faculty; different from other name hits vp-0223 and vp-0690. https://www.auhs.edu/department-of-pharmaceutical-science"
+    },
+    {
+      "name": "Toan Ha",
+      "id": "vp-2805",
+      "note": "Same Pitt infectious diseases/public health faculty; exact profile URL matched. https://www.publichealth.pitt.edu/directory/toan-ha"
+    },
+    {
+      "name": "Minh Tung Phung",
+      "id": "vp-1378",
+      "note": "Roster already reflects Wisconsin appointment; older Michigan page is not a new candidate or evidence of a move back. https://www.globalhealthequity.umich.edu/member/minh-tung-phung"
+    }
+  ],
+  "possible_move": [],
+  "rejected": [
+    {
+      "name": "Trieu Nguyen",
+      "reason": "Not retained: live Northstate profile https://pharmacy.cnsu.edu/directory/bios/trieu-nguyen.php says Research Assistant Professor but he is absent from current department directory https://pharmacy.cnsu.edu/directory/pbs.php . Discovery results from current employer https://sharedresearchfacilities.wvu.edu/staff and https://www.ohio.edu/ascent/high-tech-highlands put him at WVU as microfabrication cleanroom manager and date Northstate to 2021–2022. WVU live fetch returned 403. Current faculty equivalence and slice eligibility unverified; no roster/retired-id matches. Stale profile must not support a new pharmacy candidate."
+    },
+    {
+      "name": "Monica Chang Chuong",
+      "reason": "MCPHS emerita profile opened: https://www.mcphs.edu/directory/0034223 . No roster matches, but no affirmative Vietnamese signal beyond surname could be established; Chang/Chuong can be ambiguous. Excluded rather than infer ancestry."
+    },
+    {
+      "name": "Thuy Lam Lynch",
+      "reason": "2017 UAH hiring story is a lead, not current appointment proof. Searches did not locate a current employer faculty profile. https://dailynurse.springerpub.com/careers-and-recruitment/university-alabama-huntsville-welcomes-new-nursing-professor-dr-thuy-lam-lynch/ ; https://louis.uah.edu/rceu-hcr/327/ is a 2019 student poster, not current-role evidence."
+    },
+    {
+      "name": "Huyen Nguyen - Clayton State University",
+      "reason": "Current faculty profile https://facultyprofiles.clayton.edu/faculty/hnguyen35 lists BSN/MSN, while directory https://www.clayton.edu/health/nursing/faculty-and-research.php says Instructor. No research doctorate or two recent current-employer papers established; not retained under stricter BRIEF2 bar."
+    },
+    {
+      "name": "Minh-Phuoc (Tina) Ho",
+      "reason": "UWF clinical practice faculty with DNP; research doctorate or two recent papers not established. https://uwf.edu/ukcoh/departments/school-of-nursing/faculty/"
+    },
+    {
+      "name": "Christine Nguyen - Hawaii Pacific University",
+      "reason": "Full-time nursing faculty listing, DNP; research doctorate/two recent papers and affirmative Vietnamese signal beyond surname not established. https://catalog.hpu.edu/about/hpumembers/faculty/l-r"
+    },
+    {
+      "name": "Carrie Luong",
+      "reason": "Official profile explicitly describes visiting professorship. https://www.nursing.gwu.edu/carrie-luong"
+    },
+    {
+      "name": "Hue Trinh-Ta",
+      "reason": "Adjunct faculty in private clinical practice, not eligible. https://www.scuhs.edu/faculty/?url=Hue_TrinhTa.html (search discovery text; open failed)."
+    },
+    {
+      "name": "Nhu To-Haynes",
+      "reason": "Official profile explicitly says adjunct instructor. https://www.pdx.edu/center-for-public-service/profile/nhu-haynes"
+    },
+    {
+      "name": "Diep Leahy",
+      "reason": "CSUCI directory lists MSN and generic Faculty; continuing/full-time appointment and doctorate/recent-paper requirement not established. https://www.csuci.edu/arts-sciences/nursing/faculty.html"
+    },
+    {
+      "name": "Khanh N. C. Duong",
+      "reason": "Utah profile says PhD student. Later employer thesis-defense news says returned to Vietnam as lecturer, so neither record establishes eligible US faculty. https://pharmacy.utah.edu/staff/khanh-nc-duong ; https://pharmacy.utah.edu/news/2026/01/celebrating-2025-phd-thesis-defenses"
+    },
+    {
+      "name": "Sandra Khuu",
+      "reason": "Touro discovery listing suggested dental faculty, but the opened directory version did not corroborate a current person page, research doctorate/recent papers or affirmative Vietnamese signal. https://dental.touro.edu/faculty/?specialty=Dental+Anesthesiology"
+    },
+    {
+      "name": "Thao Rodriguez",
+      "reason": "UCLA nursing doctoral student. https://nursing.ucla.edu/people/thao-rodriguez-bs-msn"
+    },
+    {
+      "name": "Thoa Khuu",
+      "reason": "Sociology appointment at Colorado Boulder; outside assigned schools/units. Not proposed for this health-school slice. https://www.colorado.edu/sociology/thoa-khuu"
+    },
+    {
+      "name": "Minh Tan Nguyen",
+      "reason": "UCLA Ton-That lab explicitly lists postdoc. https://dentistry.ucla.edu/research/labs/ton-that-lab"
+    }
+  ],
+  "coverage": [
+    {
+      "employer": "Loyola University Chicago",
+      "pagesExamined": [
+        "https://www.luc.edu/nursing/facultyandstaff/facultydirectory/profiles/griffiththao.shtml",
+        "https://www.luc.edu/universityconvocation/facultyrecognition/",
+        "https://www.luc.edu/media/lucedu/nursing/faculty/cv/T_Griffith_CV_04.08.21.pdf",
+        "https://www.luc.edu/nursing/facultyandstaff/facultydirectory/"
+      ],
+      "note": "Nursing directory and individual CV/profile/promotion trail; new Thao Griffith. Used newer 2026 promotion over stale individual rank."
+    },
+    {
+      "employer": "Emory University",
+      "pagesExamined": [
+        "https://www.nursing.emory.edu/faculty-staff/quyen-phan",
+        "https://news.emory.edu/stories/2026/09/emory-school-nursings-quyen-phan-honored-national-league-nursing",
+        "https://www.nursing.emory.edu/sites/default/files/profiles/cv/69eaf6b747fb625e7d8b605a_152297288_quyen_phan_cv_1.25.2026.docx",
+        "https://link.springer.com/article/10.1186/s13690-024-01422-1"
+      ],
+      "note": "Quyen given-name lead; verified career clinical ladder, two 2024–2025 papers and awards. CV fetched/parsed in memory, no downloaded file."
+    },
+    {
+      "employer": "California Northstate University",
+      "pagesExamined": [
+        "https://pharmacy.cnsu.edu/directory/pbs.php",
+        "https://pharmacy.cnsu.edu/directory/bios/trieu-nguyen.php"
+      ],
+      "note": "Deep department pass: Uyen Minh Le, Linh Ho and Hiep Nguyen already rostered. Trieu lead rejected after stale-profile check. Initial www-host profile opens for Uyen/Linh failed; did not accept failed opens as new-candidate evidence."
+    },
+    {
+      "employer": "MCPHS University",
+      "pagesExamined": [
+        "https://www.mcphs.edu/directory",
+        "https://www.mcphs.edu/directory/0034223"
+      ],
+      "note": "Directory rendered no searchable people list; followed pharmaceutical-sciences surname Chuong to live emerita profile. Vietnamese signal unresolved. Institution-specific Linh/Hanh searches yielded no additional eligible lead."
+    },
+    {
+      "employer": "University of New England",
+      "pagesExamined": [
+        "https://www.une.edu/pharmacy/people"
+      ],
+      "note": "Examined pharmacy faculty directory; no new lead with affirmative Vietnamese given-name/surname combination. Targeted Thuy/Ngoc searches also unproductive."
+    },
+    {
+      "employer": "Rosalind Franklin University of Medicine and Science",
+      "pagesExamined": [
+        "https://www.rosalindfranklin.edu/academics/faculty/?school=18"
+      ],
+      "note": "Examined pharmacy faculty list and searched given-name tokens; no verified new pharmacy/allied-health candidate. Medicine-only hits were outside slice."
+    },
+    {
+      "employer": "Western University of Health Sciences",
+      "pagesExamined": [
+        "https://www.westernu.edu/pharmacy/faculty-staff/faculty/"
+      ],
+      "note": "Pharmacy faculty directory: Quang Le, Huan (Mark) Nguyen, David Pham and Rebecca Tran already present in roster; no new eligible lead from remaining list."
+    },
+    {
+      "employer": "Clayton State University",
+      "pagesExamined": [
+        "https://www.clayton.edu/health/nursing/faculty-and-research.php"
+      ],
+      "note": "Huyen lead investigated; profile discovered but research qualification missing. No entry added from title alone."
+    },
+    {
+      "employer": "University of West Florida",
+      "pagesExamined": [
+        "https://uwf.edu/ukcoh/departments/school-of-nursing/faculty/"
+      ],
+      "note": "Nursing directory given-name pass found Minh-Phuoc (Tina) Ho; DNP/clinical teaching evidence did not establish brief research threshold."
+    },
+    {
+      "employer": "Hawaii Pacific University",
+      "pagesExamined": [
+        "https://catalog.hpu.edu/about/hpumembers/faculty/l-r"
+      ],
+      "note": "Full-time listing includes Christine Nguyen (DNP, nursing); research requirement not verified. Hanh Thi Nguyen is applied linguistics, outside slice."
+    },
+    {
+      "employer": "University of Massachusetts Boston",
+      "pagesExamined": [
+        "https://www.umb.edu/nursing-health-sciences/departments-centers/urban-public-health/faculty/"
+      ],
+      "note": "Urban public-health faculty directory; Lien Quach already listed."
+    },
+    {
+      "employer": "University of Minnesota",
+      "pagesExamined": [
+        "https://lcc.umn.edu/people/huong-nguyen"
+      ],
+      "note": "Huong given-name pass; current nursing researcher already listed."
+    },
+    {
+      "employer": "University of North Texas Health Science Center",
+      "pagesExamined": [
+        "https://www.unthealth.edu/tcom/public-health/dr-uyen-sa-d-t-nguyen.html"
+      ],
+      "note": "Uyen-Sa given-name lead; live profile/education confirms same already-listed epidemiologist."
+    },
+    {
+      "employer": "University of Central Florida",
+      "pagesExamined": [
+        "https://healthprofessions.ucf.edu/person/giang-vu/"
+      ],
+      "note": "Giang given-name pass into Health Professions and Sciences; same already-listed dental-public-health/health-informatics scholar."
+    },
+    {
+      "employer": "University of Alabama at Birmingham",
+      "pagesExamined": [
+        "https://www.uab.edu/soph/home/about/faculty/nghiem-van-t"
+      ],
+      "note": "Less-common surname Nghiem; Van T. Nghiem already listed."
+    },
+    {
+      "employer": "University of Wisconsin-Milwaukee",
+      "pagesExamined": [
+        "https://uwm.edu/biomedical-sciences-healthcare-administration/directory/trinh-hanh/"
+      ],
+      "note": "Hanh given-name and Trinh surname; official emeritus record already rostered."
+    },
+    {
+      "employer": "University of Pittsburgh",
+      "pagesExamined": [
+        "https://www.publichealth.pitt.edu/directory/toan-ha"
+      ],
+      "note": "Toan given name resolves ambiguous Ha surname; current DrPH public-health professor already listed."
+    },
+    {
+      "employer": "University of California, Los Angeles",
+      "pagesExamined": [
+        "https://dentistry.ucla.edu/research/labs/ton-that-lab"
+      ],
+      "note": "Ton-That uncommon surname and Thao nursing searches; lab PI already listed, Minh Tan Nguyen postdoc excluded. No new qualified dental candidate."
+    },
+    {
+      "employer": "Touro University",
+      "pagesExamined": [
+        "https://dental.touro.edu/faculty/?specialty=Dental+Anesthesiology"
+      ],
+      "note": "Less-common Khuu surname dental-directory lead; insufficient current person/ancestry/research verification."
+    },
+    {
+      "employer": "California State University Channel Islands",
+      "pagesExamined": [
+        "https://www.csuci.edu/arts-sciences/nursing/faculty.html"
+      ],
+      "note": "Examined nursing directory for given names; Diep Leahy lacks qualifying doctorate/recent-paper and appointment-status evidence."
+    },
+    {
+      "employer": "George Washington University",
+      "pagesExamined": [
+        "https://www.nursing.gwu.edu/carrie-luong"
+      ],
+      "note": "Luong surname lead is visiting faculty; excluded."
+    },
+    {
+      "employer": "Portland State University",
+      "pagesExamined": [
+        "https://www.pdx.edu/center-for-public-service/profile/nhu-haynes"
+      ],
+      "note": "Nhu given-name lead; adjunct public-health instructor excluded."
+    },
+    {
+      "employer": "University of Utah",
+      "pagesExamined": [
+        "https://pharmacy.utah.edu/staff/khanh-nc-duong"
+      ],
+      "note": "Khanh pharmacy lead is trainee/returned-to-Vietnam, not new US faculty."
+    },
+    {
+      "employer": "Southern California University of Health Sciences",
+      "pagesExamined": [
+        "https://www.scuhs.edu/faculty/?url=Hue_TrinhTa.html"
+      ],
+      "note": "Hue Trinh-Ta allied-health lead; search page text identifies adjunct role. Open failed; not counted as verified candidate."
+    },
+    {
+      "employer": "US health-school discovery sweep",
+      "pagesExamined": [],
+      "note": "Broad search-engine discovery covered nursing, pharmacy, dentistry, public health, physical/occupational therapy, speech and audiology. Given-name tokens included Thuy, Hien, Quynh, Oanh, Phuong, Dung, Thao, Huong, Hanh, Lien, Linh, Uyen, Bich, Trang, Khanh, Giang, Tuyet, Ngoc, Toan, Huyen, Hoai, Vinh, Truc, Thuan, Diem, Chinh, Loan, Liem, Nhu, Nhan, Hau, Ngan, Huan, Dieu, Hang, Kien, Tram, Minh, Chi, Yen, Tien, Luan, Phu, Nhat, Thoa, Trieu, Quyen, Nguyet. Less-common surnames included Khuu, Nghiem, Trinh, Ton-That, Diep, Luong, Luu, Ta, Cao, Chuong, Phung, Pho, Thai, Tong and Lai. Additional targeted searches at Duquesne, Shenandoah, A.T. Still, Husson, Roseman, Campbell and Regis yielded no verified new in-slice candidate; those search-only attempts are not represented as opened directories. Stopped after broad token sweep plus deeper directories reached diminishing returns, below cap; coverage is substantial but not a census of every US school."
+    }
+  ]
+}

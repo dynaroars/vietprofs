@@ -1,0 +1,20 @@
+{
+  "verifier": "codex",
+  "input": "maintenance/sector-expansion/runs/w3/dach.codex.json",
+  "candidates": [
+    {
+      "name": "Trung Van Tran",
+      "verdict": "fixable",
+      "failedTests": [
+        1
+      ],
+      "reason": "Eligible emeritus mathematician; correct the URL role under VERIFY2. The submitted URL is explicitly his personal Home Page, so retain it as websiteUrl. The live official faculty directory https://www.uni-due.de/mathematik/mathematik_arbeitsgruppen_en.php individually names Prof. Dr. Trung van Tran under Professors emeritae and emeriti and links that homepage; use this explicit department directory entry as profileUrl. The homepage independently establishes a 1970 University of Saigon degree, a 1976 Heidelberg research doctorate, mathematics research, and an Essen, Germany institutional address. Vietnamese given/middle names plus Saigon education provide an affirmative signal beyond surname alone. Ran find-roster-matches for both Trung Van Tran and Tran Van Trung with the identity URLs: vp-0353 is a sociologist (Harvard, 2011), vp-2138 a geospatial researcher (Oklahoma), and vp-2460 a French-literature scholar (Paris-Sorbonne, 2004); inspected their roster records and resolved all as different people. No identity-URL or retired-ID match was returned, and neither name order appears in already-proposed.txt. Tests 2–5 pass.",
+      "correctedProfileUrl": "https://www.uni-due.de/mathematik/mathematik_arbeitsgruppen_en.php",
+      "correctedFields": {
+        "profileUrl": "https://www.uni-due.de/mathematik/mathematik_arbeitsgruppen_en.php",
+        "websiteUrl": "https://www.uni-due.de/members/van_tran/trung_van_tran"
+      }
+    }
+  ],
+  "possible_move": []
+}

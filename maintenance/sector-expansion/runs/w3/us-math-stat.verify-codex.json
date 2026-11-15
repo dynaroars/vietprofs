@@ -1,0 +1,79 @@
+{
+  "verifier": "codex",
+  "input": "maintenance/sector-expansion/runs/w3/us-math-stat.codex.json",
+  "candidates": [
+    {
+      "name": "Duy Ngo",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live employer profile https://wmich.edu/statistics/directory/ngo identifies Duy Ngo as Associate Professor of Statistics in Kalamazoo and documents the UC Irvine statistics PhD (2018). The linked personal site independently agrees. Vietnamese given name Duy together with Ngo supplies a signal beyond surname alone. Ran find-roster-matches with both identity URLs: vp-1691 is a different person, a Newcastle engineering scholar with a McGill doctorate. No already-proposed match; current appointment is outside Vietnam.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Thien Minh Le",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live UTC mathematics directory https://www.utc.edu/arts-and-sciences/mathematics/faculty-and-staff contains a distinct Thien Le entry, Assistant Professor, with office and a link to his personal site. This is an acceptable official department directory entry. https://thienlemsu.wixsite.com/mysite identifies the fuller name, current UTC appointment and Vietnamese meaning of his name; /about-me confirms the MSU statistics PhD (2020) and completed Harvard postdoc. Ran find-roster-matches with employer and personal URLs: retired vp-1334 leads to vp-0666, an NUS pharmacology researcher with an NUS doctorate, a different identity. No already-proposed match; based in Chattanooga, United States.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Khanh Ngoc Dinh",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live official profile https://cancerdynamics.columbia.edu/khanh-ngoc-dinh-phd identifies Research Scientist at IICD and Statistics, distinguishes completed postdoctoral appointments, and gives a New York address. Faculty-equivalent career research is supported by the independent lab and lead-PI R01 announcement at https://dinhngockhanh.github.io/news/announcement_260429/ and July 2026 promotion recorded on the lab homepage. Official biography https://cancerdynamics.columbia.edu/news/faces-iicd-khanh-dinh-phd confirms the Alabama mathematics doctorate and Vietnamese undergraduate education. Ran find-roster-matches with official and lab URLs: vp-1304 is a UMass Lowell psychologist with Washington PhD (1999), a different person. No already-proposed match.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Trung Hoa Dinh",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live Troy mathematics directory https://www.troy.edu/academics/colleges-schools/college-science-engineering/departments/mathematics-department/faculty-staff.html contains an individual Hoa Dinh block with Associate Professor rank, institutional email and Kazan doctorate. An employer directory entry satisfies test 1. https://today.troy.edu/archive/faculty-staff/troy-welcomes-new-faculty-members/ resolves the fuller name Trung Hoa Dinh to the mathematics appointment. Trung Hoa supplies a Vietnamese given-name signal beyond Dinh alone. Ran find-roster-matches against the official directory: no current or retired matches; no already-proposed match. Current Troy, Alabama faculty appointment is outside Vietnam.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Yen Q. Do",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live official individual page https://profile.virginia.edu/yqd3p identifies Associate Professor in UVA Mathematics. Its linked CV https://profile.virginia.edu/sites/g/files/jsddwu351/files/yqd3p/CV_web.pdf gives the fuller name Yen Q. Do, UCLA mathematics PhD (2010), and UVA associate appointment since 2020. Vietnamese given name Yen in combination with Do supplies a signal beyond surname alone. Ran find-roster-matches with the official profile: vp-0774 is Do Thi Yen in Nanhua International Business, a different field and identity from this harmonic-analysis mathematician. No already-proposed match; current Charlottesville appointment is outside Vietnam.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Ngoc T. Do",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live individual employer directory page https://search.missouristate.edu/people/ngocdo identifies Ngoc T. Do as Associate Professor, Mathematics faculty, with the Brian and Anna Tobben Professorship and Springfield, Missouri contact details. Eligible current university faculty appointment. Ngoc supplies a Vietnamese given-name signal beyond surname Do alone. Ran find-roster-matches with the employer identity URL: no current or retired matches. No already-proposed identity match; Ngoc Dao on that list has a different surname. Current employer location is outside Vietnam.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Hai Dang",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live official profile https://www.math.msstate.edu/directory/hdang identifies Professor of Mathematics, current research, a Mississippi State address and a mathematics PhD from Ho Chi Minh City University, Vietnam (1990), supporting the Vietnamese connection as well as the given name Hai. Ran find-roster-matches with the official URL and inspected all six hits: vp-0067 is Hai-Dang Nguyen, a Wayne State 2018 mathematics PhD; vp-0307, vp-0613, vp-1812, vp-2889 and vp-3305 have different full names and pharmacology, business, literature, computing or economics identities. None is this mathematician. No already-proposed match; based outside Vietnam.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Duong Nguyen - Hanover College",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live employer page https://math.hanover.edu/faculty.php includes a dedicated Duong Nguyen biography documenting Houston mathematics PhD/MS and arrival in fall 2024. https://www.hanover.edu/academics/programs/datascience/ explicitly identifies Assistant Professor of Mathematics. The linked personal site https://sites.google.com/view/dbnguyen was independently retrieved by ordinary HTTP (200) after the web reader failed; it confirms the current Hanover appointment and identifies Kalamazoo as a prior visiting role. Duong together with Nguyen supplies a Vietnamese given-name signal. Ran find-roster-matches with both identity URLs; vp-0023, vp-0358, vp-1228, vp-1248 and vp-1630 have different degrees and engineering, materials, structural-biology or pharmacology identities. No already-proposed match; based in Indiana.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Mau Nam Nguyen",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live individual employer profile https://www.pdx.edu/profile/exists?id=mnn3 identifies Mau Nam Nguyen as Professor of Mathematics and Statistics and documents Wayne State PhD (2007), with Portland contact details. https://www.math.lsu.edu/~malisoff/LCMCT/MCT07/nn.pdf independently resolves Nguyen Mau Nam through the same degree/year and explicitly documents birth in Vietnam and Hue BS/MS. Ran find-roster-matches with the employer URL: vp-0029 is a Florida 2013 CS PhD; vp-0910, vp-0979, vp-2134 and vp-3094 have surgery, pharmacy, finance or industry research identities distinct from this optimization mathematician. No already-proposed match; current appointment is outside Vietnam.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    }
+  ],
+  "possible_move": []
+}

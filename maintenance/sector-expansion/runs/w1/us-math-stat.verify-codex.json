@@ -1,0 +1,142 @@
+{
+  "verifier": "codex",
+  "input": "maintenance/sector-expansion/runs/w1/us-math-stat.codex.json",
+  "candidates": [
+    {
+      "name": "Hieu D. Nguyen",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live Rowan individual faculty profile confirms Professor of Mathematics, a US office and Berkeley mathematics doctorate; https://users.rowan.edu/~nguyen/ confirms full name and 1996 PhD. Vietnamese given name Hieu supplies a naming signal beyond Nguyen alone. All supplied identity URLs were checked with find-roster-matches: no URL match; the 11 name/retired hits concern engineering, psychology, finance or other fuller identities, not this Berkeley-trained mathematician. Checked maintenance/sector-expansion/already-proposed.txt; no same-person exclusion. The verified appointment is based outside Vietnam.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Thanh Trung Nguyen",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live Rowan individual profile confirms Associate Professor of Mathematics and a US office. Its Vietnam National University BS/MS education is an affirmative Vietnamese signal, and its Vrije Universiteit Brussel engineering-mathematics doctorate resolves identity. No URL matches. The 14 name/retired hits differ in full identity or field; closest reordered-name hits vp-0834 and vp-1904 have Giessen and Birmingham doctorates, respectively; vp-0166 has Cornell and vp-2009 Wellington. Checked maintenance/sector-expansion/already-proposed.txt; no same-person exclusion. The verified appointment is based outside Vietnam.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Minh Lam Nguyen",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live UT Tyler individual profile confirms Assistant Professor of Mathematics, Texas office and Arkansas PhD 2022; the linked personal site was independently fetched successfully and confirms the full name and current role. Minh Lam is a Vietnamese given-name sequence beyond surname alone. No identity-URL matches; the 10 name/retired hits differ in field or degree, including IBM vp-2930 with Lehigh PhD 2018. The already-proposed Minh Nguyen was resolved in maintenance/sector-expansion/non-us-public-labs.agy.json as the Fraunhofer multimedia researcher with Klagenfurt PhD 2023, a different person. Checked maintenance/sector-expansion/already-proposed.txt; no same-person exclusion. The verified appointment is based outside Vietnam.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Chi Hoang Do Phan",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live SHSU individual employee profile identifies Chi Phan as Assistant Professor of Mathematics, with Huntsville office and chp007 email. The institutional catalog record at https://catalog.shsu.edu/archives/2023-2024/undergraduate/colleges-academic-departments/science-and-engineering-technology/mathematics-statistics/mathematics-statistics.pdf identifies that same chp007 as Chi Hoang Do Phan, with South Florida doctorate. The full Vietnamese name sequence supplies a signal beyond Phan alone. The sole roster name hit, vp-3107 Hoang Do, is a Brown-trained Meta audio researcher, not this mathematician; no URL match. Checked maintenance/sector-expansion/already-proposed.txt; no same-person exclusion. The verified appointment is based outside Vietnam.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Chap T. Le",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live Minnesota individual directory profile confirms Professor Emeritus in Biostatistics & Health Data Science and a Minneapolis address, an eligible Emeritus appointment. https://www.biostat.umn.edu/~chap/ explicitly says he was born in Vietnam and resolves the full name Chap T. Le. find-roster-matches returned no roster or retired-ID matches. Checked maintenance/sector-expansion/already-proposed.txt; no same-person exclusion. The verified appointment is based outside Vietnam.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Nham Vo Ngo",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live UNG individual profile confirms Professor and a Gainesville office. https://faculty.ung.edu/nvngo/ confirms the full name and Georgia mathematics PhD 2012. Its linked CV https://faculty.ung.edu/nvngo/cv.pdf records a BS in Mathematics and Informatics at Vietnam National University, Ho Chi Minh City, providing affirmative Vietnamese evidence. No roster or retired-ID matches. Checked maintenance/sector-expansion/already-proposed.txt; no same-person exclusion. The verified appointment is based outside Vietnam.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Hai Long Dao",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live Kansas individual faculty profile confirms Professor of Mathematics and US office. https://hailongdao.github.io/ independently confirms the current role. The identity-resolved Texas State colloquium biography at https://bpb-us-e1.wpmucdn.com/wp.txstate.edu/dist/6/4122/files/2023/03/Math-Colloquium-Dao.pdf explicitly describes him as originally from Vietnam and Michigan-trained. No URL match; sole name hit vp-2746 Hai T. Dao is a Scripps-trained chemical biologist at St. Jude, a different person. Checked maintenance/sector-expansion/already-proposed.txt; no same-person exclusion. The verified appointment is based outside Vietnam.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Thu Nguyen",
+      "verdict": "fixable",
+      "failedTests": [],
+      "reason": "Live https://mathstat.umbc.edu/faculty/ singles her out in a named individual directory block with Assistant Professor, office MP407, thu.nguyen email, Lille PhD 2014 and Wayne State PhD 2020; this satisfies the permitted department-directory-entry route. A fuller official name, Thu Thi Le Nguyen, is independently published at https://my3.my.umbc.edu/groups/research/posts/143819 and distinguishes roster namesakes, so use it under the roster naming rule. That Vietnamese name sequence is an affirmative naming signal. The individual options.umbc.edu profile surfaced in search but failed live fetch (502/DNS); do not substitute that URL or rely on its extra biographical claims. No URL match; 20 roster name hits differ in field/doctorate, especially vp-0462 with Harvard ScD 2014. Checked maintenance/sector-expansion/already-proposed.txt; no same-person exclusion. The verified appointment is based outside Vietnam.",
+      "correctedFields": {
+        "name": "Thu Thi Le Nguyen"
+      }
+    },
+    {
+      "name": "Hung P. Tong-Viet",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live Binghamton individual profile confirms Professor of Mathematics and Statistics and a US office. https://sites.google.com/binghamton.edu/tongviet/home confirms full published name, tenure in 2020 and full professorship in 2023. The Vietnamese given name Hung together with Tong-Viet provides a naming signal beyond surname alone. No roster or retired-ID matches. Checked maintenance/sector-expansion/already-proposed.txt; no same-person exclusion. The verified appointment is based outside Vietnam.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Dat Cao",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live Minnesota State Mankato individual faculty profile confirms Associate Professor, US office and Missouri mathematics PhD 2015. The Vietnamese given name Dat is an affirmative naming signal beyond the shared surname Cao. No roster or retired-ID matches. Checked maintenance/sector-expansion/already-proposed.txt; no same-person exclusion. The verified appointment is based outside Vietnam.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Thi-Thao-Phuong Hoang",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live Auburn individual profile confirms Associate Professor of Mathematics and Statistics, US office and Paris VI PhD 2013. https://webhome.auburn.edu/~tzh0059/ confirms tenure-track service followed by promotion, and Ho Chi Minh City University of Education undergraduate education, an affirmative Vietnamese signal. The supplied 2021 NSF CAREER honor is also confirmed live at https://ocm.auburn.edu/research-magazine/2021-fall/articles/article-15.php. No URL match; sole name hit vp-1663 is an ORNL electrical-grid researcher with Clemson PhD 2021. Checked maintenance/sector-expansion/already-proposed.txt; no same-person exclusion. The verified appointment is based outside Vietnam.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Trung Truong",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live Marshall individual faculty profile confirms Assistant Professor and US office. https://mupages.marshall.edu/truongt/ confirms Mathematics and Physics appointment, Kansas State mathematics PhD August 2023 and Ho Chi Minh City University of Education bachelor degree 2018, an affirmative Vietnamese signal. No URL match; sole name hit vp-1646 Tuyen Trung Truong is the Oslo complex geometer with Indiana PhD 2012, a different person. Checked maintenance/sector-expansion/already-proposed.txt; no same-person exclusion. The verified appointment is based outside Vietnam.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Hanh Van Nguyen",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live Alabama individual departmental profile confirms Assistant Professor and Tuscaloosa office. Its linked https://math.ua.edu/wp-content/uploads/2021/09/HanhCV-2021.pdf confirms full name, Missouri PhD 2016, Hue University undergraduate/master degrees and Vietnamese Mathematical Olympiad participation. The older instructor appointment in that 2021 CV does not override the current employer profile. No URL match; the four name hits concern nursing, family medicine, economics and Axon, not this harmonic analyst. Checked maintenance/sector-expansion/already-proposed.txt; no same-person exclusion. The verified appointment is based outside Vietnam.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Thi Hanh Vo",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live Purdue individual profile confirms Assistant Professor of Practice in Mathematics in Indianapolis; https://hanhv.github.io/ corroborates the current role and Luxembourg doctorate. Teaching-track stability is independently established by the employer-authored https://www.mathjobs.org/jobs/list/29134, which describes the same departmental Indianapolis practice ladder as non-tenure-track faculty with multi-year contracts and promotion. Thi Hanh is a Vietnamese given-name sequence beyond Vo alone. No URL match; vp-0099 Thi Vo is the Johns Hopkins chemical engineer with Columbia PhD 2017, a different person. Checked maintenance/sector-expansion/already-proposed.txt; no same-person exclusion. The verified appointment is based outside Vietnam.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Lan Nguyen - Western Kentucky University",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live WKU individual faculty directory entry confirms Professor of Mathematics with Bowling Green office and distinct lan.nguyen email. Its linked https://people.wku.edu/lan.nguyen/ confirms identity and doctorate, although its older Associate Professor title is superseded by the current directory. Lan used as given name with Nguyen supplies a Vietnamese full-name signal beyond surname alone; no separate nationality claim is made. No URL matches; all 20 roster name hits have different fuller names, disciplines or educational identities. Distinct from the simultaneously listed Parkside number theorist with UCLA PhD 2005; WKU research at https://people.wku.edu/lan.nguyen/research.html is operator/evolution-equation theory. Checked maintenance/sector-expansion/already-proposed.txt; no same-person exclusion. The verified appointment is based outside Vietnam.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Ngoc Nguyen",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live WKU individual faculty entry confirms Professor of Mathematics, US office and Bowling Green State statistics PhD 2010. Its National Economics University, Vietnam, BS 2003 provides affirmative Vietnamese evidence. No URL matches. The 32 broad roster/retired hits have different fuller identities or degrees; closest mathematicians vp-1125 and vp-2463 have Jagiellonian and Paris-Saclay doctorates, not the BGSU-trained WKU statistician. Retired Ngoc Thi Nguyen and Khoa Ngoc Nguyen are different full identities. Checked maintenance/sector-expansion/already-proposed.txt; no same-person exclusion. The verified appointment is based outside Vietnam.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Lan Nguyen - University of Wisconsin-Parkside",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live Parkside individual faculty profile confirms Associate Professor of Mathematics, Wisconsin contact and UCLA PhD 2005; publications concern number theory. Lan used as given name with Nguyen supplies a Vietnamese full-name signal beyond surname alone; no separate nationality claim is made. No URL matches; 20 roster name hits differ in discipline or educational identity. Distinct from WKU operator theorist Lan Nguyen: separate active individual employer profiles, email identities and research programs. Checked maintenance/sector-expansion/already-proposed.txt; no same-person exclusion. The verified appointment is based outside Vietnam.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Thang Nguyen",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live Florida State individual faculty profile confirms Assistant Professor, Tallahassee office and Indiana PhD 2016; https://sites.google.com/view/thangnguyen7/home independently confirms the current role and geometry/dynamics identity. Vietnamese given name Thang supplies a signal beyond Nguyen alone. No URL match; six roster name hits differ in field/degree, including Zillow vp-3179 with Maryland PhD 2019. Checked maintenance/sector-expansion/already-proposed.txt; no same-person exclusion. The verified appointment is based outside Vietnam.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Hung Dang Nguyen",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live Tennessee individual faculty profile confirms Assistant Professor, Knoxville office and Tulane doctorate. https://sites.google.com/view/hungdnguyen/home explicitly supplies Nguyen Dang Hung in Vietnamese diacritics (Nguyễn Đăng Hưng), confirms current role and Tulane PhD May 2018. No URL matches. The 11 name hits differ in full identity/field, including Akron vp-0443 Nguyen Ngoc Hung, an algebraist studying finite groups, rather than this stochastic analyst. Checked maintenance/sector-expansion/already-proposed.txt; no same-person exclusion. The verified appointment is based outside Vietnam.",
+      "correctedFields": {}
+    }
+  ],
+  "possible_move": []
+}

@@ -1,0 +1,76 @@
+{
+  "verifier": "codex",
+  "input": "maintenance/sector-expansion/runs/w1/canada.codex.json",
+  "candidates": [
+    {
+      "name": "Lisa Dang",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live employer profile https://uwaterloo.ca/physics-astronomy/profile/l24dang identifies an Assistant Professor in Physics and Astronomy, with McGill PhD 2022 and BSc 2016 and Canadian appointment. Her identity-resolved exoplanet site https://lisadang27.github.io/ gives kha.han.lisa.dang@umontreal.ca: Kha Han supplies Vietnamese given-name evidence beyond Dang alone. Its older postdoc description does not override the current employer profile. find-roster-matches with profile, personal site and McGill CV returned no roster or retired-ID matches; absent from already-proposed.txt.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Van Troi Tran",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live official professor-directory entry https://professeurs.uqam.ca/professeur/tran.van_troi/ identifies a regular professor in urban and tourism studies in Montreal, with current teaching and research, Laval PhD 2010 and Harvard postdoc 2012. Van Troi provides Vietnamese given/middle-name evidence beyond Tran. Dedup returned vp-0353 Van C. Tran, a CUNY sociologist with Harvard PhD 2011, a different identity from this Laval-trained ethnologist. No identity URL match; absent from already-proposed.txt.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Xuan-Tan Pham",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Web-tool timeout was resolved by an ordinary live urllib request (HTTP 200) to https://www.etsmtl.ca/etudier-a-lets/corps-professoral/tpham. The employer profile identifies Tan Pham as a mechanical-engineering professor in Montreal, gives Polytechnique Saigon undergraduate training and Polytechnique Montreal PhD, and lists 2026 teaching. Its own publications use Xuan-Tan Pham, resolving the fuller name and providing Vietnamese given-name evidence. Dedup hit vp-2264 Xuan Pham, an Art Studio assistant professor at Mount Holyoke, a different person by discipline and appointment. Absent from already-proposed.txt.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Dinh N. Nguyen",
+      "verdict": "fixable",
+      "failedTests": [],
+      "reason": "Live official person-specific emeritus profile https://www.ulaval.ca/notre-universite/prix-et-distinctions/emeritat/dinh-n-nguyen documents formally conferred emeritus status after a Laval mechanical-engineering career beginning in 1968, with Laval undergraduate and doctoral studies. This is eligible under the maintenance guide emeritus exception. Dinh supplies Vietnamese given-name evidence beyond Nguyen. Dedup returned broad token matches and retired IDs, but their fuller names, fields and career histories differ; none identifies this Laval mechanical-engineering professor. Absent from already-proposed.txt; no evidence of a Vietnam base. Correct rank to Professor; Emeritus belongs in track.",
+      "correctedFields": {
+        "rank": "Professor"
+      }
+    },
+    {
+      "name": "Tri Nhu Do",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live employer profile https://www.polymtl.ca/expertises/do-tri-nhu identifies an Assistant Professor of Electrical Engineering at Polytechnique Montreal, Quebec, Canada. It explicitly states birth in Da Nang, Vietnam, Hongik doctorate in August 2018, and earlier Vietnamese education. This establishes current eligible faculty appointment, Vietnamese signal and location outside Vietnam. find-roster-matches with official profile and linked lab returned no roster or retired-ID matches; absent from already-proposed.txt.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Huy Ong",
+      "verdict": "fixable",
+      "failedTests": [],
+      "reason": "Live employer profile https://pharm.umontreal.ca/en/faculte/lequipe/autre-personnel-enseignant/fiche/in/in14830/sg/Huy%20Ong/ explicitly lists Professor Emeritus in Montreal; concurrent associate affiliation does not invalidate the emeritus appointment. https://www.umontreal.ca/en/the-university-of-montreal-and-of-the-world/huy-ong/ explicitly records birth in Vietnam. The official centenary biography confirms Montreal pharmacology doctorate 1979 and promotion to full professor in 1992. Dedup with all three institutional URLs returned no matches; absent from already-proposed.txt. Correct rank to Professor; keep track Emeritus.",
+      "correctedFields": {
+        "rank": "Professor"
+      }
+    },
+    {
+      "name": "Trung Dung Ngo",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live university-library person profile https://islandscholar.ca/people/tngo?solr_nav%5Bid%5D=ec79f8ffdb5d172c1ad6 marks him Current and identifies a full professor at UPEI, Aalborg robotics PhD 2008 and Vietnam National University Hanoi BSc 2000. https://www.upei.ca/directory/department/engineering independently lists him as Professor in Sustainable Design Engineering and links that profile. Trung Dung and Vietnamese education provide the affirmative Vietnamese signal. Dedup hit vp-2037 Trung Ngo, a UTS civil/geotechnical engineer with Wollongong PhD 2013, clearly different. Canadian location confirmed; absent from already-proposed.txt.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Trong-On Do",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live official faculty profile https://www.ulaval.ca/la-recherche/repertoire-corps-professoral/trong-on-do identifies a full professor at Laval, with active chemical-engineering supervision and 2024-2029 research funding. Trong-On supplies Vietnamese given-name evidence beyond Do. The Quebec university appointment establishes a base outside Vietnam. Dedup with the official profile, faculty website, department page and cited paper URL returned no roster or retired-ID matches; absent from already-proposed.txt. The cited RSC degree-evidence PDF returned HTTP 403 in both web and ordinary urllib requests, so its degree details could not be independently reverified; university eligibility rests on the verified faculty appointment.",
+      "correctedFields": {}
+    }
+  ],
+  "possible_move": [
+    {
+      "name": "Christine H. Tran",
+      "id": "vp-0587",
+      "verdict": "moved",
+      "newEmployer": "Alberta University of the Arts",
+      "url": "https://www.auarts.ca/about-auarts/faculty-and-staff/dr-christine-h-tran",
+      "reason": "Ordinary live urllib request returned HTTP 200 after the web tool returned 502. The official AUArts person profile identifies Christine H. Tran as Assistant Professor, Liberal Studies, School of Critical and Creative Studies, with AUArts email and linked thechristinet.com. Twitch, digital labor, feminist media and platform research match vp-0587, currently stored under University of Toronto; this is the same scholar at a different current employer. The other dedup hit, vp-2498 Christine Tran Quang, researches leukemia at Institut Cochin and is a different person."
+    }
+  ]
+}

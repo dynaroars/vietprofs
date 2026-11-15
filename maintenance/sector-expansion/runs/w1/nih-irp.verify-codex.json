@@ -1,0 +1,40 @@
+{
+  "verifier": "codex",
+  "input": "maintenance/sector-expansion/runs/w1/nih-irp.codex.json",
+  "candidates": [
+    {
+      "name": "Phuc Hoang",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live employer profile https://dceg.cancer.gov/about/staff-directory/hoang-phuc identifies a current NCI Staff Scientist, appointed in 2023, with a PhD in cancer genetics and bioinformatics from the Institute of Cancer Research/University of London and an NCI Shady Grove workplace in the United States. The live personnel directory https://dceg2.cancer.gov/cgi-bin/Personnel.pl?1=ALL independently lists Phuc Hoang as Staff Scientist and Employee, distinguishing employees from contractors and fellows. Phuc with Hoang supplies a Vietnamese given-name-and-surname signal beyond surname alone. Independently ran find-roster-matches with the name and employer profile URL: no roster or retired-ID matches. No match in already-proposed.txt.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Linh Bui-Raborn",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live employer profile https://dceg.cancer.gov/about/staff-directory/bui-raborn-linh identifies a current NCI Staff Scientist since September 2023, with a University of Iowa molecular biology and genetics PhD, previous TGen postdoctoral work, and an NCI Shady Grove workplace in the United States. The live personnel directory https://dceg2.cancer.gov/cgi-bin/Personnel.pl?1=ALL lists Linh T. Bui Raborn as Staff Scientist and Employee, not contractor or fellow. Linh together with Bui supplies the Vietnamese name signal. Independently ran find-roster-matches with the name, employer profile, and supplied ORCID URL: only vp-1083 Linh N. Bui matched by name. Independently opened https://www.csub.edu/publichealth/public-health-faculty.shtml: that scholar has an Oregon State public-health PhD and Berkeley/Sutter postdoctoral training, resolving her as a different person from the Iowa/TGen molecular geneticist. No identity URL match and no match in already-proposed.txt.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Tuan Nguyen",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live individual employer profile https://www.niaaa.nih.gov/about-niaaa/our-staff/tuan-nguyen explicitly identifies Tuan Nguyen, PhD, as Staff Scientist. The live laboratory page https://www.niaaa.nih.gov/research/division-intramural-clinical-and-biological-research/laboratory-biophotonics-and-quantum-biology independently lists him among current Staff Scientists at the Bethesda, Maryland laboratory and describes microscopy/biosensor research, including Nguyen TA publications with Puhl and Vogel. This is a career staff role rather than a trainee listing; the doctorate is explicit, although its institution is not given. Tuan with Nguyen supplies the Vietnamese name signal. Independently ran find-roster-matches with the name and both employer URLs: no URL matches. Reviewed every returned roster record: the education, economics, sociology, humanities, computing/engineering, materials/security, clinical medicine, transplantation, RNA/microRNA and public-health/dementia identities differ from the NIAAA microscopy researcher. In particular, independently opened https://nyulangone.org/doctors/1902267925/tuan-nguyen: exact-name vp-0867 is a pediatric hospitalist with a 2016 Oklahoma State DO, distinct from this PhD scientist already publishing NIAAA microscopy research in 2017. Retired vp-1511 is Dinh Tuan Nguyen at TU Wien, with no corresponding identity URL or research match. No match in already-proposed.txt.",
+      "correctedFields": {}
+    },
+    {
+      "name": "An Ngoc Dang Do",
+      "verdict": "fixable",
+      "failedTests": [
+        1
+      ],
+      "reason": "The submitted https://annualreport.nichd.nih.gov/dangdo.html is an annual research report, a publication excluded as profileUrl by VERIFY2.md. Replace it with https://www.nichd.nih.gov/about/org/dir/osd/mt/cd/staff, the live current-employer staff directory, which individually names and links An Dang Do, MD, PhD, as Clinical Tenure-Track Investigator under Principal & Clinical Investigators. This explicitly singled-out directory entry establishes a career investigator appointment rather than a postdoctoral or visiting role. The annual report corroborates her headship of the Unit on Cellular Stress in Development and Diseases. Independently opened https://www.nibib.nih.gov/labs-at-nibib/besip/besip-projects-2024/do-zampieri-matsubara-2024, which gives the full name An Ngoc Dang Do and the matching an.dangdo@nih.gov email; Ngoc with Dang Do supplies a Vietnamese name signal. NIH clinical research is based in Bethesda, United States. Independently ran find-roster-matches with the full name and all three NIH URLs: only vp-0450 matched by name. Independently opened https://www.faculty.uci.edu/profile/?facultyId=6080: its An Hong Do studies neurorehabilitation and brain-computer interfaces at UC Irvine, distinct from this NICHD cellular-stress/pediatric-neurogenetics investigator. No identity URL match and no match in already-proposed.txt.",
+      "correctedProfileUrl": "https://www.nichd.nih.gov/about/org/dir/osd/mt/cd/staff",
+      "correctedFields": {
+        "profileUrl": "https://www.nichd.nih.gov/about/org/dir/osd/mt/cd/staff"
+      }
+    }
+  ],
+  "possible_move": []
+}

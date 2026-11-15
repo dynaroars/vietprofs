@@ -1,0 +1,497 @@
+{
+  "group": "lab",
+  "agent": "codex",
+  "slice": "au-institutes-2",
+  "finishedAt": "2026-11-15T00:25:34Z",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Cuong Pham - Baker Heart and Diabetes Institute",
+        "university": "Baker Heart and Diabetes Institute",
+        "institutionType": "Independent nonprofit research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Molecular Imaging and Nanotherapeutics",
+        "country": "Australia",
+        "researchAreas": [
+          "Biomaterials",
+          "Extracellular Vesicles",
+          "Lipid Nanoparticles",
+          "mRNA Therapeutics"
+        ],
+        "phdInstitution": "Deakin University",
+        "profileUrl": "https://baker.edu.au/our-people/cuong-pham",
+        "phdYear": 2022
+      },
+      "evidence": {
+        "currentRole": "https://baker.edu.au/our-people/cuong-pham — \"Research Officer\". Current employer research-staff profile; career staff role rather than a listed student, postdoc, visiting or adjunct appointment.",
+        "doctorateOrPapers": "https://baker.edu.au/our-people/cuong-pham — The official bio explicitly dates his Medical Biotechnology PhD to October 2022.",
+        "vietnameseSignal": "Cuong is a Vietnamese given name; the same employer bio documents his 2013 student award at Hanoi University of Pharmacy.",
+        "dedup": "Executed npm run find-roster-matches -- \"Cuong Pham\" --url https://baker.edu.au/our-people/cuong-pham. Name-only hits vp-0493 (robotics; Sorbonne 2009), vp-1055 (accounting/finance), vp-1223 (catalysis; Strasbourg 1991), vp-1403 (computer science; UMass Boston 2012), and vp-2371 (Minnesota physician with Minnesota MD) are distinct from this Deakin 2022 medical-biotechnology researcher. 5 name-match records. Also ran gh issue list --state all --search '\"Cuong Pham\"'; no matching candidate at this employer identified in returned issues."
+      }
+    },
+    {
+      "entry": {
+        "name": "Thi Nguyen",
+        "university": "Burnet Institute",
+        "institutionType": "Independent nonprofit research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Surveillance and Data Linkage; Modelling and Biostatistics",
+        "country": "Australia",
+        "researchAreas": [
+          "Healthcare Data Science",
+          "Biostatistics",
+          "Natural Language Processing",
+          "Machine Learning"
+        ],
+        "phdInstitution": "La Trobe University",
+        "profileUrl": "https://www.burnet.edu.au/about-us/our-people-and-structure/our-people/thi-nguyen/",
+        "phdYear": 2013,
+        "city": "Melbourne"
+      },
+      "evidence": {
+        "currentRole": "https://www.burnet.edu.au/about-us/our-people-and-structure/our-people/thi-nguyen/ — \"2025–present: Data Scientist, Burnet Institute, Melbourne\". Current employer research-staff profile; career staff role rather than a listed student, postdoc, visiting or adjunct appointment.",
+        "doctorateOrPapers": "https://www.burnet.edu.au/about-us/our-people-and-structure/our-people/thi-nguyen/ — Qualifications explicitly list a 2013 Computer Science PhD from La Trobe University.",
+        "vietnameseSignal": "The current employer names him Thi Nguyen: Vietnamese given-name token Thi, in addition to surname Nguyen.",
+        "dedup": "Executed npm run find-roster-matches -- \"Thi Nguyen\" --url https://www.burnet.edu.au/about-us/our-people-and-structure/our-people/thi-nguyen/. Broad token matching returned longer names and namesakes (including vp-0476, Utah philosopher; vp-0845, computer-science faculty with Monash 2025 PhD; vp-1248, MRC structural biologist; and retired records). Inspected roster fields: none combines La Trobe Computer Science PhD 2013, NUS research fellowship 2013–2015, and Burnet data-science career since 2019. No identity-URL match. 45 name-match records. Also ran gh issue list --state all --search '\"Thi Nguyen\"'; no matching candidate at this employer identified in returned issues."
+      }
+    },
+    {
+      "entry": {
+        "name": "Vu Nguyen - ANSTO",
+        "university": "Australian Nuclear Science and Technology Organisation (ANSTO)",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "LifeSciences",
+        "country": "Australia",
+        "researchAreas": [
+          "Radiopharmacology",
+          "Radiotracer Evaluation",
+          "Cancer Imaging",
+          "Neuroimaging"
+        ],
+        "phdInstitution": "University of Sydney",
+        "profileUrl": "https://www.ansto.gov.au/people/dr-vu-nguyen",
+        "city": "Lucas Heights",
+        "state": "New South Wales"
+      },
+      "evidence": {
+        "currentRole": "https://www.ansto.gov.au/people/dr-vu-nguyen — \"Radiopharmacology Interface/Radiotracer Evaluation Co-ordinator\". Current employer research-staff profile; career staff role rather than a listed student, postdoc, visiting or adjunct appointment.",
+        "doctorateOrPapers": "https://www.ansto.gov.au/people/dr-vu-nguyen — Qualifications explicitly identify a Pharmacology PhD at Sydney University (canonicalized to University of Sydney).",
+        "vietnameseSignal": "Vu is a Vietnamese given-name token on the employer profile, in addition to surname Nguyen.",
+        "dedup": "Executed npm run find-roster-matches -- \"Vu Nguyen\" --url https://www.ansto.gov.au/people/dr-vu-nguyen. Name-only matches vp-0215, vp-0444, vp-0836, vp-1140, vp-1266, vp-1616, vp-2261, vp-2414 and vp-2983. In particular vp-1140 is a different CSIRO materials scientist (Monash PhD 2003); the ANSTO scientist trained in pharmacy and has a Sydney Pharmacology PhD. Other hits have distinct full names, specialties, degree histories or physician careers. No identity-URL match. 9 name-match records. Also ran gh issue list --state all --search '\"Vu Nguyen\"'; no matching candidate at this employer identified in returned issues."
+      }
+    },
+    {
+      "entry": {
+        "name": "Thien Dinh",
+        "university": "CSIRO",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "CFD Modelling",
+        "country": "Australia",
+        "researchAreas": [
+          "Computational Fluid Dynamics",
+          "Multiphase Flow",
+          "Mineral Processing",
+          "Metallurgical Flows"
+        ],
+        "phdInstitution": "Ritsumeikan University",
+        "profileUrl": "https://people.csiro.au/d/t/thien-dinh",
+        "phdYear": 2007
+      },
+      "evidence": {
+        "currentRole": "https://people.csiro.au/d/t/thien-dinh — \"Senior Research Scientist\". Current employer research-staff profile; career staff role rather than a listed student, postdoc, visiting or adjunct appointment.",
+        "doctorateOrPapers": "https://people.csiro.au/d/t/thien-dinh — Academic Qualifications explicitly list Mechanical Engineering PhD, Ritsumeikan University, 2007.",
+        "vietnameseSignal": "Vietnamese given-name token Thien; the same page documents his 2002 graduation distinction at Ho Chi Minh City University of Technology.",
+        "dedup": "Executed npm run find-roster-matches -- \"Thien Dinh\" --url https://people.csiro.au/d/t/thien-dinh. No roster or retired-id matches. 0 name-match records. Also ran gh issue list --state all --search '\"Thien Dinh\"'; no matching candidate at this employer identified in returned issues."
+      }
+    },
+    {
+      "entry": {
+        "name": "Duy Nong",
+        "university": "CSIRO",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Foresight",
+        "country": "Australia",
+        "researchAreas": [
+          "Computable General Equilibrium Modelling",
+          "Climate Change Economics",
+          "Food Security",
+          "Energy Economics"
+        ],
+        "phdInstitution": "University of New England",
+        "profileUrl": "https://people.csiro.au/n/d/duy-nong",
+        "phdYear": 2017
+      },
+      "evidence": {
+        "currentRole": "https://people.csiro.au/n/d/duy-nong — \"Senior Research Scientist\". Current employer research-staff profile; ongoing research career also documented since 2020.",
+        "doctorateOrPapers": "https://people.csiro.au/n/d/duy-nong — Academic Qualifications explicitly list Climate Change Economics PhD, University of New England, 2017. Professional Experiences states 2020–Present at CSIRO.",
+        "vietnameseSignal": "Vietnamese given-name token Duy on the official profile; corroborating UNE research-student table lists Ngoc Duy Nong, Vietnam, with a CGE climate-mitigation thesis: https://www.une.edu.au/about-une/faculty-of-science-agriculture-business-and-law/unebs/research/development-markets-and-growth?result_253809_result_page=2 . Identity links are UNE doctorate, climate economics and CGE modelling, not the unrelated Houston civic educator Truong Duy Nong.",
+        "dedup": "Executed npm run find-roster-matches -- \"Duy Nong\" --url https://people.csiro.au/n/d/duy-nong. No roster or retired-id matches. 0 name-match records. Also ran gh issue list --state all --search '\"Duy Nong\"'; no matching candidate at this employer identified in returned issues."
+      }
+    },
+    {
+      "entry": {
+        "name": "Hoa Ngo",
+        "university": "CSIRO",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Australian e-Health Research Centre",
+        "country": "Australia",
+        "researchAreas": [
+          "Natural Language Processing",
+          "Health Informatics",
+          "Knowledge Graphs",
+          "Machine Learning"
+        ],
+        "phdInstitution": "University of Montpellier II",
+        "profileUrl": "https://people.csiro.au/n/h/hoa-ngo"
+      },
+      "evidence": {
+        "currentRole": "https://people.csiro.au/n/h/hoa-ngo — \"Senior Research Scientist\". Current employer research-staff profile; career staff role rather than a listed student, postdoc, visiting or adjunct appointment. Header says Senior Research Scientist; Current Roles says Research Scientist. Previous postdoc explicitly ended 2019.",
+        "doctorateOrPapers": "https://people.csiro.au/n/h/hoa-ngo — Biography and qualifications both establish a Computer Science doctorate at Montpellier II. Biography says 2013, qualifications say 2012: phdYear deliberately omitted because the employer page conflicts internally.",
+        "vietnameseSignal": "Vietnamese given-name token Hoa; official employment history includes Hanoi University of Science and Technology, Viet Nam, 2005–2009.",
+        "dedup": "Executed npm run find-roster-matches -- \"Hoa Ngo\" --url https://people.csiro.au/n/h/hoa-ngo. No roster or retired-id matches. 0 name-match records. Also ran gh issue list --state all --search '\"Hoa Ngo\"'; no matching candidate at this employer identified in returned issues."
+      }
+    },
+    {
+      "entry": {
+        "name": "Ha Truong - CSIRO",
+        "university": "CSIRO",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Aquaculture Nutrition, Agriculture and Food",
+        "country": "Australia",
+        "researchAreas": [
+          "Aquaculture Nutrition",
+          "Nutrient Digestion",
+          "Sustainable Aquafeeds",
+          "Waste Valorisation"
+        ],
+        "phdInstitution": "University of Sydney",
+        "profileUrl": "https://people.csiro.au/t/h/ha-truong"
+      },
+      "evidence": {
+        "currentRole": "https://people.csiro.au/t/h/ha-truong — \"Team Leader\". Current employer research-staff profile; career staff role rather than a listed student, postdoc, visiting or adjunct appointment.",
+        "doctorateOrPapers": "https://people.csiro.au/t/h/ha-truong — Official biography explicitly states a University of Sydney PhD on nutrient digestion dynamics.",
+        "vietnameseSignal": "Vietnamese given name Ha combined with surname Truong on the current employer profile; no diacritics inferred.",
+        "dedup": "Executed npm run find-roster-matches -- \"Ha Truong\" --url https://people.csiro.au/t/h/ha-truong --url https://www.csiro.au/en/work-with-us/funding-programs/SME/CSIRO-Kick-Start/Case-studies/Food-Recycle. Name-only hits vp-1048 (RMIT finance; Monash PhD 2023) and vp-1292 (UCSF medicine; Washington PhD 2002) are different people from the Sydney-trained aquaculture nutritionist. No identity-URL match. 2 name-match records. Also ran gh issue list --state all --search '\"Ha Truong\"'; no matching candidate at this employer identified in returned issues."
+      }
+    },
+    {
+      "entry": {
+        "name": "Quoc Anh Nguyen",
+        "university": "CSIRO",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Environmental Economics Analysis",
+        "country": "Australia",
+        "researchAreas": [
+          "Environmental Economics",
+          "Urban Economics",
+          "Econometrics",
+          "Environmental Input-Output Modelling"
+        ],
+        "phdInstitution": "University of Melbourne",
+        "profileUrl": "https://people.csiro.au/n/q/quocanh-nguyen",
+        "phdYear": 2025
+      },
+      "evidence": {
+        "currentRole": "https://people.csiro.au/n/q/quocanh-nguyen — \"Experimental Scientist\". Current employer research-staff profile; career staff role rather than a listed student, postdoc, visiting or adjunct appointment.",
+        "doctorateOrPapers": "https://people.csiro.au/n/q/quocanh-nguyen — Official biography and Academic Qualifications both explicitly identify Economics doctorate, University of Melbourne, 2025.",
+        "vietnameseSignal": "Vietnamese given/middle-name combination Quoc Anh on the official employer profile, in addition to surname Nguyen.",
+        "dedup": "Executed npm run find-roster-matches -- \"Quoc Anh Nguyen\" --url https://people.csiro.au/n/q/quocanh-nguyen. Name-only hits vp-0026, vp-0144, vp-0597, vp-0684, vp-2637, vp-2947 and vp-3116. Compared degrees and fields: DePaul finance has Illinois 2013 PhD, CMU business has Columbia 2018 PhD, IMF economist has ISM 2021 PhD; computer science, chemical engineering and clinical-development hits have different identities. None is this Melbourne 2025 environmental economist; no identity-URL match. 7 name-match records. Also ran gh issue list --state all --search '\"Quoc Anh Nguyen\"'; no matching candidate at this employer identified in returned issues."
+      }
+    },
+    {
+      "entry": {
+        "name": "Loan Le",
+        "university": "Australian Nuclear Science and Technology Organisation (ANSTO)",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Health Research and Technology Group",
+        "country": "Australia",
+        "researchAreas": [
+          "Radiopharmaceuticals",
+          "Radionuclide Therapy",
+          "Preclinical Imaging",
+          "Radiobiology"
+        ],
+        "phdInstitution": "University of Sydney",
+        "profileUrl": "https://profiles.ansto.gov.au/loan.le",
+        "phdYear": 2013
+      },
+      "evidence": {
+        "currentRole": "https://profiles.ansto.gov.au/loan.le — \"Senior/Principal Research Biologist\". Current employer research-staff profile; career staff role rather than a listed student, postdoc, visiting or adjunct appointment. Read using Playwright after the simple text fetch returned a JavaScript shell; rendered page identifies Loan and her full bio. Independent older employer page: https://www.ansto.gov.au/people/dr-loan-le",
+        "doctorateOrPapers": "https://profiles.ansto.gov.au/loan.le — Live rendered employer profile explicitly lists University of Sydney PhD, 2013; older ANSTO bio independently gives Biomedical Sciences PhD in 2013.",
+        "vietnameseSignal": "The live employer profile explicitly lists Vietnamese under Languages, with ability to read, write, speak, understand and peer review. Also Vietnamese given name Loan.",
+        "dedup": "Executed npm run find-roster-matches -- \"Loan Le\" --url https://profiles.ansto.gov.au/loan.le --url https://www.ansto.gov.au/people/dr-loan-le. Only name hit vp-0222, Loan K. Le, Asian American Studies (Berkeley PhD 2010), is a different person from the Sydney 2013 biomedical scientist. Both ANSTO profile URLs checked; no identity-URL match. 1 name-match records. Also ran gh issue list --state all --search '\"Loan Le\"'; no matching candidate at this employer identified in returned issues."
+      }
+    }
+  ],
+  "already_listed": [
+    {
+      "name": "Chuong Nguyen",
+      "id": "vp-1141",
+      "note": "Exact official-profile match; CSIRO computer vision researcher, Monash PhD 2010. Distinct from Apple namesake vp-3000. Opened https://people.csiro.au/N/C/Chuong-Nguyen and ran npm run find-roster-matches with name and URL."
+    },
+    {
+      "name": "Hoa Nguyen",
+      "id": "vp-1563",
+      "note": "Exact official-profile match; Quantum Systems research scientist, Melbourne PhD 2025. Opened https://people.csiro.au/n/h/hoa-nguyen and ran npm run find-roster-matches with name and URL."
+    },
+    {
+      "name": "Yen Tran",
+      "id": "vp-1565",
+      "note": "Exact official-profile match; Private & Confidential AI, UNSW PhD 2023. Opened https://people.csiro.au/t/y/yen-tran and ran npm run find-roster-matches with name and URL."
+    }
+  ],
+  "possible_move": [],
+  "rejected": [
+    {
+      "name": "Jonathan Nguyen",
+      "reason": "Garvan program manager handling governance, communications and laboratory management; profile supplies a Masters in Orthoptics, but no doctorate or qualifying two-paper research record. https://www.garvan.org.au/people/researchers/jonathan-nguyen"
+    },
+    {
+      "name": "Quan Nguyen (The Florey)",
+      "reason": "Skipped: already-proposed.txt explicitly lists Quan Nguyen. The opened Florey page additionally describes a Senior Technical Officer supporting animal care, with no doctorate or qualifying research record established. https://florey.edu.au/researcher/quan-nguyen/"
+    },
+    {
+      "name": "Thomas Nguyen / Phu Minh Triet (Thomas) Nguyen",
+      "reason": "Florey official research-group page identifies a PhD student. https://florey.edu.au/research-group/translational-neurodegeneration-group/"
+    },
+    {
+      "name": "Chau Tran",
+      "reason": "Florey Neuropix listing identifies a PhD student; excluded trainee. https://florey.edu.au/neuropix/"
+    },
+    {
+      "name": "Nhi Thao Tran",
+      "reason": "Hudson profile explicitly says Postdoctoral Scientist. https://hudson.org.au/researcher-profile/nhi-tran/"
+    },
+    {
+      "name": "Thanh Nha Uyen Le",
+      "reason": "Hudson Sex Development team explicitly lists Postdoctoral Scientist. https://hudson.org.au/research-group/sex-development/"
+    },
+    {
+      "name": "Trang Nguyen / Trang Tran (Hudson)",
+      "reason": "Search leads describe research-support staff / PhD student, respectively; no independently verified eligible career role. https://hudson.org.au/research-group/hormone-cancer-therapeutics/"
+    },
+    {
+      "name": "Leanni Nguyen",
+      "reason": "Harry Perkins T3mPLATE team lists Masters Student. https://perkins.org.au/research/labs/cmm-program/t3mplate-team-members/"
+    },
+    {
+      "name": "Mia Nguyen",
+      "reason": "CMRI profile lists Research Assistant but supplies no doctorate or qualifying recent publication evidence. https://www.cmrijeansforgenes.org.au/researchers/mia-nguyen"
+    },
+    {
+      "name": "Wilson Nguyen (QIMR Berghofer)",
+      "reason": "Current Research Officer and two 2024 employer-listed papers found, but this run did not establish the brief-required affirmative Vietnamese signal beyond surname. Kept out of verified candidates. Distinct from vp-3129, Stanford-trained Microsoft cryptographer. https://www.qimrb.edu.au/about/our-people/dr-wilson-nguyen ; https://www.qimrb.edu.au/researchers-and-labs/emerging-viral-diseases"
+    },
+    {
+      "name": "Hung Nguyen (Baker)",
+      "reason": "Listed among scientific staff but no individual bio/role detail or verified doctorate found; Dr prefix alone insufficient. https://baker.edu.au/research/molecular-imaging-nanotherapeutics"
+    },
+    {
+      "name": "Anne Nguyen",
+      "reason": "Baker team lists Senior Technical Officer; no independently verified doctorate or qualifying two-paper research record. https://baker.edu.au/research/molecular-imaging-nanotherapeutics"
+    },
+    {
+      "name": "Phillip Luong",
+      "reason": "Burnet mathematical modeller has bachelors degrees and recent publications listed, but affirmative Vietnamese signal beyond surname was not found. https://www.burnet.edu.au/about-us/our-people-and-structure/our-people/phillip-luong/"
+    },
+    {
+      "name": "Long Nguyen (Burnet)",
+      "reason": "Data Manager; no independently established qualifying research role and doctorate/two-paper record. https://www.burnet.edu.au/about-us/our-people-and-structure/working-groups/surveillance-and-data-linkage-group/"
+    },
+    {
+      "name": "Oanh Nguyen (Doherty)",
+      "reason": "Old research-fellow lead found, but no current stable appointment verified. Current directory and old article rendered only iframe shells. https://www.doherty.edu.au/people ; https://doherty.edu.au/impact-report-2020/mapping-the-immune-response-to-COVID-19/"
+    },
+    {
+      "name": "Phillip Nguyen (Peter Mac)",
+      "reason": "2025 news lead names a clinician-scientist, but direct page fetch returned 403; no live career appointment or doctorate verified. https://www.petermac.org/about-us/news-and-events/news/details/peter-mac-researcher-awarded-fellowship-to-advance-car-t-cell-therapy"
+    },
+    {
+      "name": "Vivian Nguyen",
+      "reason": "DSTG workforce-modelling lead found; direct employer team page returned 403 and doctorate or two recent papers not established. https://www.dst.defence.gov.au/research-facility/next-generation-workforce-planning-capability/people"
+    },
+    {
+      "name": "Long Nguyen (DSTG)",
+      "reason": "STEM careers discovery lead; direct employer careers fetch returned 403, so no live eligible current role verified. https://www.dst.defence.gov.au/careers/stem-careers"
+    },
+    {
+      "name": "Minh N. Tran (ANSTO)",
+      "reason": "Research-impact-report lead only; no opened current individual employer profile and explicit doctorate identified. Not accepted from a report or Dr prefix alone."
+    },
+    {
+      "name": "Chi Nguyen",
+      "reason": "CSIRO page supplies Monash PhD 2021 but no current role: not enough to establish career appointment. https://people.csiro.au/n/c/chi-nguyen"
+    },
+    {
+      "name": "Sonny Truong",
+      "reason": "CSIRO page supplies Monash PhD 2022 and Vietnamese undergraduate education but no current role; career rather than postdoctoral employment not verified. https://people.csiro.au/t/s/sonny-truong"
+    },
+    {
+      "name": "Duy Nguyen",
+      "reason": "CSIRO profile gives a 2023–2026 Impossible Without You fellowship; no separate permanent appointment established. https://people.csiro.au/n/d/duy-nguyen"
+    },
+    {
+      "name": "Helen Le",
+      "reason": "CSIRO Research Projects Officer; no doctorate and two recent papers established, and no affirmative Vietnamese signal beyond surname. https://people.csiro.au/l/h/helen-le"
+    },
+    {
+      "name": "Hong Nguyen",
+      "reason": "CSIRO Senior HSE Advisor, not an eligible research role. https://people.csiro.au/n/h/hong-nguyen"
+    },
+    {
+      "name": "Tina Nguyen",
+      "reason": "CSIRO strategy consultant with bachelors degree; not an established doctorate-holding career researcher. https://people.csiro.au/n/t/tina-nguyen"
+    },
+    {
+      "name": "Tracee Nguyen; Thi Hoang; Huy Pham; Ngoc My Hanh Duong",
+      "reason": "Opened CSIRO pages were bare contact shells, without qualifying role and doctorate/papers. https://people.csiro.au/n/t/tracee-nguyen ; https://people.csiro.au/h/t/thi-hoang ; https://people.csiro.au/p/h/huy-pham ; https://people.csiro.au/d/n/ngocmyhanh-duong"
+    },
+    {
+      "name": "Mario Dinh",
+      "reason": "CSIRO page lists bachelors/masters qualifications and research topics, but no eligible career role or doctorate/two recent papers established. https://people.csiro.au/d/m/mario-dinh"
+    },
+    {
+      "name": "Ben Tran; Quan Nguyen; Yen Pham; Dang Quan Nguyen; Hoang Duong; James Hoang; Tung Hoang",
+      "reason": "Skipped under already-proposed.txt; no new proposal in this run. This is a skip list, not an eligibility rejection."
+    }
+  ],
+  "coverage": [
+    {
+      "employer": "Garvan Institute of Medical Research",
+      "pagesExamined": [
+        "https://www.garvan.org.au/people/researchers",
+        "https://www.garvan.org.au/people/researchers/jonathan-nguyen",
+        "https://www.garvan.org.au/people"
+      ],
+      "note": "Searched Nguyen, Tran, Pham and Vietnamese coauthor leads; Jonathan screened out. Old osteoporosis bylines did not establish current employment. /people is a not-found page; current researcher directory was opened. No new verified candidate."
+    },
+    {
+      "employer": "Peter MacCallum Cancer Centre",
+      "pagesExamined": [
+        "https://www.petermac.org/about-us/news-and-events/news/details/peter-mac-researcher-awarded-fellowship-to-advance-car-t-cell-therapy"
+      ],
+      "note": "Surname searches included Nguyen, Tran and Huynh. Ben Tran skipped as already proposed. Phillip Nguyen lead held because direct fetch returned 403 and career/degree not verified; publication bylines alone not accepted. Access-limited coverage."
+    },
+    {
+      "employer": "The Florey",
+      "pagesExamined": [
+        "https://florey.edu.au/our-research/researchers-and-groups/",
+        "https://florey.edu.au/researcher/quan-nguyen/",
+        "https://florey.edu.au/research-group/translational-neurodegeneration-group/"
+      ],
+      "note": "Nguyen/Tran and broader Pham/Huynh/Phan/Le/Vietnam searches; surfaced support staff and students, no new verified career researcher."
+    },
+    {
+      "employer": "Hudson Institute of Medical Research",
+      "pagesExamined": [
+        "https://hudson.org.au/researcher-profile/",
+        "https://hudson.org.au/researcher-profile/nhi-tran/",
+        "https://hudson.org.au/research-group/sex-development/"
+      ],
+      "note": "Nguyen/Tran and given-name Uyen/Le searches. Nhi Tran and Uyen Le explicitly postdoctoral. Main directory dynamic; direct shell fetch 403. Support-staff/student leads held."
+    },
+    {
+      "employer": "Baker Heart and Diabetes Institute",
+      "pagesExamined": [
+        "https://baker.edu.au/research/staff",
+        "https://baker.edu.au/our-people/cuong-pham",
+        "https://baker.edu.au/research/molecular-imaging-nanotherapeutics"
+      ],
+      "note": "Verified Cuong Pham on live employer profile, also rendered in Playwright (HTTP 200). Scientific-staff teams screened; Hung Nguyen role/doctorate unresolved and Anne Nguyen technical. Canonical employer spelling checked against roster."
+    },
+    {
+      "employer": "Kirby Institute, UNSW Sydney",
+      "pagesExamined": [
+        "https://www.kirby.unsw.edu.au/our-people"
+      ],
+      "note": "Nguyen/Tran/Vietnam and given-name searches yielded mainly collaborators and publication authors, not new stable career appointments. Public listing exposes first page only; direct shell fetch 403. University-hosted centre: do not presume independent nonprofit employment from institute name. No new verified candidate."
+    },
+    {
+      "employer": "Children's Medical Research Institute",
+      "pagesExamined": [
+        "https://www.cmrijeansforgenes.org.au/research/research-teams",
+        "https://www.cmrijeansforgenes.org.au/researchers/mia-nguyen"
+      ],
+      "note": "Nguyen/Tran/Pham/Huynh/Le and Vietnam searches plus team directory; Mia Nguyen research-assistant profile lacks qualifying degree/paper evidence. No new verified candidate."
+    },
+    {
+      "employer": "Harry Perkins Institute of Medical Research",
+      "pagesExamined": [
+        "https://perkins.org.au/about-perkins/our-people/",
+        "https://perkins.org.au/research/labs/cmm-program/t3mplate-team-members/"
+      ],
+      "note": "Nguyen/Tran/Pham/Huynh/Vietnam searches and leadership/team listings. Leanni Nguyen is a masters student. No new verified candidate."
+    },
+    {
+      "employer": "QIMR Berghofer Medical Research Institute",
+      "pagesExamined": [
+        "https://www.qimrb.edu.au/about/our-people/dr-wilson-nguyen",
+        "https://www.qimrb.edu.au/researchers-and-labs/emerging-viral-diseases"
+      ],
+      "note": "Nguyen/Tran and institute lab searches. Quan Nguyen skipped as already proposed. Wilson Nguyen passes career/publication screening but affirmative Vietnamese signal unresolved, so withheld. No new verified candidate."
+    },
+    {
+      "employer": "Peter Doherty Institute for Infection and Immunity",
+      "pagesExamined": [
+        "https://www.doherty.edu.au/people",
+        "https://doherty.edu.au/impact-report-2020/mapping-the-immune-response-to-COVID-19/"
+      ],
+      "note": "Nguyen/Oanh/Tran searches. Dynamic iframe pages impeded current verification; old Oanh Nguyen fellowship evidence insufficient. University-hosted context also requires actual employing appointment resolution. Access-limited coverage."
+    },
+    {
+      "employer": "Burnet Institute",
+      "pagesExamined": [
+        "https://www.burnet.edu.au/about-us/our-people-and-structure/our-people/thi-nguyen/",
+        "https://www.burnet.edu.au/about-us/our-people-and-structure/our-people/phillip-luong/",
+        "https://www.burnet.edu.au/about-us/our-people-and-structure/working-groups/surveillance-and-data-linkage-group/"
+      ],
+      "note": "Nguyen/Tran and modeller/team searches. Verified Thi Nguyen, including fresh browser render HTTP 200. Phillip Luong held for identity signal; Long Nguyen data-manager lead not accepted."
+    },
+    {
+      "employer": "Australian Nuclear Science and Technology Organisation (ANSTO)",
+      "pagesExamined": [
+        "https://www.ansto.gov.au/people/dr-vu-nguyen",
+        "https://www.ansto.gov.au/people/dr-loan-le",
+        "https://profiles.ansto.gov.au/loan.le",
+        "https://www.ansto.gov.au/search?page=6&query=work+with+us+careers+ansto+gov+au"
+      ],
+      "note": "Nguyen/Tran/Le searches and official people search. Verified Vu Nguyen with fresh browser HTTP 200 and Loan Le on live rendered employer profile; Vietnamese language explicitly documented for Loan. Minh N. Tran remained report-only lead. No degree years inferred."
+    },
+    {
+      "employer": "Defence Science and Technology Group",
+      "pagesExamined": [
+        "https://www.dst.defence.gov.au/careers/stem-careers",
+        "https://www.dst.defence.gov.au/research-facility/next-generation-workforce-planning-capability/people"
+      ],
+      "note": "Nguyen/Tran scientist searches identified Vivian/Long leads; employer pages returned 403. No bot-check evasion or unverified acceptance. Coverage limited by access; not claimed exhausted."
+    },
+    {
+      "employer": "CSIRO",
+      "pagesExamined": [
+        "https://people.csiro.au/search%20index",
+        "https://people.csiro.au/d/t/thien-dinh",
+        "https://people.csiro.au/n/d/duy-nong",
+        "https://people.csiro.au/n/h/hoa-ngo",
+        "https://people.csiro.au/t/h/ha-truong",
+        "https://people.csiro.au/n/q/quocanh-nguyen"
+      ],
+      "note": "Broad official alphabetical staff index screened across Vietnamese surname/given-name tokens; opened profiles across mineral processing, climate economics, environmental economics, aquaculture, e-health, water/climate and Data61. Verified five new career researchers. Existing exact matches Chuong Nguyen, Hoa Nguyen and Yen Tran recorded separately; already-proposed list excluded. Bare profiles, postdoc/fellowship leads and non-research roles withheld. No claim that every CSIRO employee is publicly indexed."
+    }
+  ]
+}

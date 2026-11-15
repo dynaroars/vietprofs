@@ -1,0 +1,304 @@
+{
+  "group": "lab",
+  "agent": "codex",
+  "slice": "doe-labs-2",
+  "finishedAt": "2026-11-15T01:06:14.720126Z",
+  "candidates": [
+    {
+      "entry": {
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "country": "United States",
+        "name": "Truc Nguyen",
+        "university": "National Laboratory of the Rockies",
+        "department": "Computational Science",
+        "researchAreas": [
+          "Cybersecurity",
+          "Privacy-preserving machine learning",
+          "Artificial intelligence for energy systems"
+        ],
+        "phdInstitution": "University of Florida",
+        "phdYear": 2023,
+        "profileUrl": "https://research-hub.nlr.gov/en/persons/truc-nguyen/"
+      },
+      "evidence": {
+        "currentRole": "https://research-hub.nlr.gov/en/persons/truc-nguyen/ — opened successfully; title: \"Researcher III-Cyber Security & Resilience\" in Computational Science. This is the current numbered career research ladder. The 2023 internship article at https://www.nlr.gov/news/detail/program/2023/nrel-interns-of-2023-share-appreciation-for-their-mentors is historical, superseded by this current profile.",
+        "doctorateOrPapers": "https://undergraduateawards.com/gua-alumni-truc-nguyen/ — opened the award organization’s interview; Nguyen identifies University of Florida computer-engineering graduate study and explicitly reports earning his PhD in 2023. Independently, opened two distinct employer-linked papers: https://research-hub.nlr.gov/en/publications/discovering-the-most-severe-k-point-failure-based-on-reinforcemen-2/ (2026, DOI 10.1109/GreenTech68285.2026.11471593) and https://research-hub.nlr.gov/en/publications/applications-of-explainable-artificial-intelligence-in-renewable-/ (2025, Energy Reports). Both link Truc Nguyen to the same employer profile; a preprint and final version of one paper were not counted separately.",
+        "vietnameseSignal": "The live employer profile spells the Vietnamese given-name token Truc together with Nguyen; affirmative given-name signal, beyond surname alone. No diacritics reconstructed.",
+        "dedup": "Ran npm run find-roster-matches -- \"Truc Nguyen\" --url with the employer profile, employer-linked ORCID https://orcid.org/0000-0002-5836-5884, and the interview URL. Four name-only hits, no URL hit: vp-0351 Nguyen-Truc-Dao Nguyen (Wayne State mathematics PhD 2021), vp-0916 Truc-Anh Nguyen (Arizona anesthesiology), vp-1908 Truc Nguyen (Greenwich ethical leadership/cross-cultural management), and vp-2537 Cong Truc Nguyen (Gustave Eiffel porous materials/acoustics). Their roster education and disciplines are distinct from this Florida 2023 computer-engineering PhD and cybersecurity publication identity. Checked maintenance/sector-expansion/already-proposed.txt: Truc Nguyen is absent."
+      }
+    },
+    {
+      "entry": {
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "country": "United States",
+        "name": "Minh Duong Nguyen",
+        "university": "National Laboratory of the Rockies",
+        "department": "Materials Science",
+        "researchAreas": [
+          "Perovskite solar cells for space applications",
+          "Semiconductor patterning",
+          "Colloidal semiconductor nanocrystals"
+        ],
+        "phdInstitution": "Hanyang University",
+        "profileUrl": "https://research-hub.nlr.gov/en/persons/minh-duong-nguyen/"
+      },
+      "evidence": {
+        "currentRole": "https://research-hub.nlr.gov/en/persons/minh-duong-nguyen/ — opened successfully; title: \"Research Technologist III-Materials Science\". The profile describes original perovskite solar-cell research and lists 2025–2026 research output. The numbered career role supersedes the historical postdoctoral appointment described elsewhere.",
+        "doctorateOrPapers": "https://research-hub.nlr.gov/en/persons/minh-duong-nguyen/ — education explicitly lists \"PhD, Material Chemistry, Hanyang University\". No degree year inferred. Current employer page also links research on perovskite-device stability and semiconductor interfaces.",
+        "vietnameseSignal": "The employer page uses Minh Duong Nguyen as its heading and Duong Nguyen Minh in its biography, both containing affirmative Vietnamese given-name tokens Minh/Duong. Used the employer heading, without invented diacritics.",
+        "dedup": "Ran npm run find-roster-matches for both \"Minh Duong Nguyen\" and \"Duong Nguyen Minh\", with the employer profile and its linked Scholar URL https://scholar.google.com/citations?hl=en&user=mtGoq3sAAAAJ. Nine name-only hits, no identity-URL match: vp-0023, vp-0163, vp-0358, vp-0458, vp-0551, vp-1577, vp-1731, vp-1765, vp-2339. Inspected each roster record. The closest engineering hits are Wyoming’s Michigan State computer-science PhD (2021) and Arizona State’s UBC electrical-engineering PhD (2020); others are business, sociology, computer vision, radiology, ophthalmology or rehabilitation. None has the Hanyang materials-chemistry doctorate/perovskite identity. Scholar returned 429; no facts accepted from it and it is omitted from proposed fields. This person was an earlier name-collision hold in us-national-labs.codex.json and was subsequently identity-resolved in us-national-labs.holds-codex.json; independently rechecked here. The full name is absent from already-proposed.txt; generic Minh Nguyen entries there were not treated as proof of identity."
+      }
+    },
+    {
+      "entry": {
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "country": "United States",
+        "name": "Duc P. Truong",
+        "university": "Los Alamos National Laboratory",
+        "department": "Theoretical Division, T-5",
+        "researchAreas": [
+          "Tensor factorization",
+          "Scientific machine learning",
+          "High-dimensional numerical simulation"
+        ],
+        "phdInstitution": "Southern Methodist University",
+        "profileUrl": "https://tensors.lanl.gov/team/"
+      },
+      "evidence": {
+        "currentRole": "https://tensors.lanl.gov/team/ — opened successfully; Duc Truong section is headed Scientist and states \"Duc Truong is a staff in T-5.\" This resolves the older 2021 paper biography that called him a postdoctoral researcher. The official team page establishes a career staff role.",
+        "doctorateOrPapers": "https://tensors.lanl.gov/team/ — biography explicitly gives a PhD in Computational and Applied Mathematics from Southern Methodist University. Degree year omitted. The same biography describes tensor algorithms for large scientific simulations.",
+        "vietnameseSignal": "Duc Truong on the live employer team page supplies the Vietnamese given-name token Duc alongside surname Truong. The employer research portal search result also displays Duc P Truong and publication-name variant Phan Minh Duc Truong; retained the abbreviated published name rather than guessing how to expand or reorder it.",
+        "dedup": "Ran npm run find-roster-matches for \"Duc P. Truong\" and \"Phan Minh Duc Truong\", with https://tensors.lanl.gov/team/ and https://laro.lanl.gov/esploro/profile/phan_minh_duc_truong/output/all?institution=01LANL_INST. Combined name-only hits: vp-0542 Duc Truong Pham (Birmingham, Canterbury mechanical-engineering PhD 1979), vp-2848 Duc Phan (RMIT accounting, Swinburne PhD), vp-2886 Phan T. Truong (Sacred Heart chemistry, Georgia PhD 2018). Inspected those roster entries: different degrees, disciplines and identities from the SMU applied-mathematics scientist. No identity URL hit. The research-portal open returned only a JavaScript shell, so it is not used as profileUrl or as independent verification. None of the source name variants is in already-proposed.txt."
+      }
+    }
+  ],
+  "already_listed": [
+    {
+      "name": "Hoang Tran",
+      "id": "vp-1145",
+      "note": "Opened https://www.ornl.gov/staff/hoang-a-tran/; same Pittsburgh applied-mathematics PhD 2013 and computational-mathematics research as roster. find-roster-matches found vp-1145 along with unrelated name hits. No new ID."
+    },
+    {
+      "name": "Nhan Tran",
+      "id": "vp-1236",
+      "note": "Opened https://cms.fnal.gov/people/; current Scientific Staff list calls him Scientist. find-roster-matches resolves to Nhan Viet Tran at Fermilab, same particle-physics/AI identity. No new ID."
+    },
+    {
+      "name": "Hogan Nguyen",
+      "id": "vp-3018",
+      "note": "Opened https://astro.fnal.gov/people/; Senior Scientist in the Cosmic Physics Center. find-roster-matches returned the same name and employer at vp-3018."
+    },
+    {
+      "name": "Ruby Nguyen",
+      "id": "vp-1138",
+      "note": "Opened https://inl.gov/education/joint-appointees/; INL/WSU joint-appointee listing. find-roster-matches returned vp-1138 among unrelated Ruby names. Same INL systems/supply-chain researcher, not a new candidate."
+    },
+    {
+      "name": "Phung Le",
+      "id": "vp-1664",
+      "note": "Opened https://www.pnnl.gov/people/phung-le; electrochemical materials scientist, Grenoble doctorate and VNU HCM background. find-roster-matches returned exact profile-URL hit vp-1664."
+    }
+  ],
+  "possible_move": [],
+  "rejected": [
+    {
+      "name": "Allan Tuan",
+      "reason": "https://www.pnnl.gov/people/allan-tuan-phd-mba opened: commercialization manager. Doctorate is documented, but current job commercializes technology; a current research appointment was not established."
+    },
+    {
+      "name": "Thuy Le",
+      "reason": "https://www.pnnl.gov/people/thuy-le opened: heading says Materials Scientist but biography explicitly describes a postdoctoral researcher. Excluded trainee appointment."
+    },
+    {
+      "name": "Truc Trang-Le",
+      "reason": "https://www.pnnl.gov/people/truc-trang-le opened: Technician. Recent items are laboratory technical reports, not verified qualifying peer-reviewed/preprint papers, and no doctorate or career researcher appointment was established."
+    },
+    {
+      "name": "Hieu Anh Doan",
+      "reason": "https://hieuadoan.github.io/files/Doan-CV.pdf opened: Argonne Computational Materials Scientist appointment explicitly ended April 2024. Older lab-related news and publication affiliations cannot establish a current Argonne job."
+    },
+    {
+      "name": "Richard Tran Mills",
+      "reason": "Official profile https://www.anl.gov/profile/richard-tran-mills returned 403. https://openearthscience.org/~rmills/ was surfaced as a personal-site lead, but this run did not establish an affirmative Vietnamese signal beyond the name token Tran; withheld rather than assume ancestry or current verification."
+    },
+    {
+      "name": "Nga Thi Thuy Nguyen-Fotiadis",
+      "reason": "Opened https://laro.lanl.gov/esploro/profile/nga_nguyenfotiadis: employer repository identifies her but supplies no job title. Staff-scientist/doctorate descriptions found were in a 2020 event report; a sufficiently current career-appointment source was not established. Promising unresolved lead, not an assertion of ineligibility."
+    },
+    {
+      "name": "Thuy-Ai Dang Nguyen",
+      "reason": "An official 2020 staff-conversion report was found at https://cdn.lanl.gov/files/annual-progress-report-2020-overview-final_f3080.pdf but open returned 403. Other surfaced material was old publications or third-party biographies. No usable current employer person page established; withheld."
+    },
+    {
+      "name": "Hau Thi Bich Nguyen",
+      "reason": "Strong LANL enzyme-research lead. https://www.newswise.com/articles/accelerating-the-future-of-plastic-reduction-and-upcycling opened and is explicitly authored by LANL (2025), calling Hau Nguyen a scientist. However https://laro.lanl.gov/esploro/profile/hau_nguyen/output/undefined timed out in web open; direct HTTP returned only the JavaScript shell. No usable employer person page was opened, so withheld under the brief’s profileUrl rule. Name-only dedup hits vp-0280 (Emory economics) and vp-0476 (Utah philosophy) are different disciplines, not asserted moves."
+    },
+    {
+      "name": "Phan Nguyen",
+      "reason": "https://data-science.llnl.gov/applied-statistics-group-news opened. Its legend marks Phan Nguyen with an asterisk denoting ASG alumni; this does not establish departure from LLNL, but the historical news entries and third-party scientist bios did not establish a current employer appointment. Withheld."
+    },
+    {
+      "name": "Long Phan Nguyen",
+      "reason": "LLNL pharmacology lead found in UC Davis 2024 seminar newsletters; no live current employer person page established. Seminar affiliation alone is insufficient."
+    },
+    {
+      "name": "Khanh Quoc Dang",
+      "reason": "Employer repository profile surfaced at https://laro.lanl.gov/esploro/profile/khanh_dang, plus older papers; current staff role was not verified on an opened employer page. Third-party records also suggest a possible later industry role; identity/current employer remains unresolved."
+    },
+    {
+      "name": "Kandy Phan",
+      "reason": "Opened https://www.sandia.gov/labnews/2023/02/09/sandia-cyber-specialists-are-turning-purple-and-thats-a-good-thing/. Research role is plausible, but no doctorate or two qualifying papers from the last three years were verified. A master’s degree and technical security activity alone do not satisfy the credential/publication test."
+    },
+    {
+      "name": "Tu-Thach Quach",
+      "reason": "Sandia research/patent leads and a UNM dissertation surfaced, but no usable current employer person page was verified. https://neuroscience.sandia.gov/neural-computing/ was a discovery result with older publications; patents alone are not qualifying recent papers."
+    },
+    {
+      "name": "Tu-Toan Quach",
+      "reason": "Older Sandia award report surfaced; later third-party employment biography places him at Human Interest after leaving Sandia in 2019. No current Sandia appointment established. Distinct from Tu-Thach Quach."
+    },
+    {
+      "name": "Linh Pham",
+      "reason": "https://linhphambuzz.github.io/portfolio/about/ describes Fermilab Accelerator Operator and a physics bachelor’s degree. No career research appointment with doctorate or qualifying recent publication record established."
+    },
+    {
+      "name": "Linh Nguyen - Brookhaven",
+      "reason": "Opened https://www.bnl.gov/orgcharts/ad.pdf and https://indico.bnl.gov/event/28082/contributions/115375/attachments/65897/113203/AI4EIC_2025_Nguyen_presentation.pdf. Current staff/AI engineering work is plausible; no doctorate or two fully verified recent papers established, and no employer person profile found. Withheld rather than elevate a presentation into a second publication."
+    },
+    {
+      "name": "Daniel Trieu",
+      "reason": "https://www.bnl.gov/education/staff.php surfaced as Educational Programs Representative, an education-support rather than career research role."
+    },
+    {
+      "name": "Quynh L. Nguyen",
+      "reason": "https://qfarm.stanford.edu/people/quynh-nguyen opened: current heading says Casual - Nonexempt at SLAC. Doctorate exists, but career/full-time research appointment is not established. This name also appears in already-proposed.txt and is skipped as a new candidate."
+    },
+    {
+      "name": "Richard Phuoc Dinh Truong",
+      "reason": "Stanford/SLAC staff-directory search result identifies Principal Installation Tech; no career research appointment or qualifying doctorate/publication record established. Directory open returned cache miss."
+    },
+    {
+      "name": "Duy Dinh",
+      "reason": "Opened https://abpdu.lbl.gov/news/new-abpdu-team-members-2021/: historical Research Associate introduction. No doctorate or qualifying recent papers/current career research appointment established."
+    },
+    {
+      "name": "Jenny Duong",
+      "reason": "Opened https://abpdu.lbl.gov/news/new-abpdu-team-members-2021/: historical Research Associate introduction and biomanufacturing training. No doctorate or qualifying recent publication record established."
+    },
+    {
+      "name": "Khanh Nguyen Cu",
+      "reason": "NREL/NLR research-engineer lead, with https://www.nrel.gov/docs/fy24osti/90261.pdf surfaced as a technical report and a Texas A&M master’s thesis. No current employer person page or doctorate/two qualifying papers independently verified."
+    }
+  ],
+  "coverage": [
+    {
+      "employer": "Argonne National Laboratory",
+      "pagesExamined": [
+        "https://www.anl.gov/profile/richard-tran-mills",
+        "https://hieuadoan.github.io/files/Doan-CV.pdf"
+      ],
+      "note": "Targeted given-name searches Minh, Hai, Trung, Linh, Giang, Khoa; uncommon-surname follow-up Trinh and Doan. Argonne search results mostly exposed old reports/org charts rather than current profiles. Richard Tran Mills official profile returned 403; Doan’s own CV establishes an ended appointment. Bounded indexed-page coverage, not a complete staff export."
+    },
+    {
+      "employer": "Oak Ridge National Laboratory",
+      "pagesExamined": [
+        "https://www.ornl.gov/staff/hoang-a-tran/"
+      ],
+      "note": "Given-name searches Quang, Tuan, Khanh, Hieu, Kiet, Chinh and Phuoc, plus Luong follow-up. Current Hoang Tran profile is already listed. Historical Tuan Vo-Dinh material and external visitors were not accepted as current lab appointments. Staff directory and division-list discovery results were also screened; not every paginated staff record was downloaded."
+    },
+    {
+      "employer": "Pacific Northwest National Laboratory",
+      "pagesExamined": [
+        "https://www.pnnl.gov/people/allan-tuan-phd-mba",
+        "https://www.pnnl.gov/people/phung-le",
+        "https://www.pnnl.gov/people/thuy-le",
+        "https://www.pnnl.gov/people/truc-trang-le"
+      ],
+      "note": "Given-name sweeps Tuan, Minh, Truc, Chau, Luan, Diem, Hung, Hien, Thinh; Doan follow-up. Resolved Phung Le as existing; differentiated scientist headings from explicit postdoctoral biographies and screened commercialization/technician roles. EMSL external-user pages were not treated as staff directories."
+    },
+    {
+      "employer": "Lawrence Livermore National Laboratory",
+      "pagesExamined": [
+        "https://data-science.llnl.gov/applied-statistics-group-news"
+      ],
+      "note": "Given-name searches Minh, Quang, Duc, Quoc, Huong; less-common surname searches Bui and Luu; Phan/Long Nguyen follow-up. ASG alumni legend prevented interpreting old Phan Nguyen news as current appointment proof. Third-party seminars were leads only."
+    },
+    {
+      "employer": "Los Alamos National Laboratory",
+      "pagesExamined": [
+        "https://tensors.lanl.gov/team/",
+        "https://laro.lanl.gov/esploro/profile/nga_nguyenfotiadis",
+        "https://laro.lanl.gov/esploro/profile/phan_minh_duc_truong/output/all?institution=01LANL_INST",
+        "https://laro.lanl.gov/esploro/profile/hau_nguyen/output/undefined",
+        "https://cdn.lanl.gov/files/annual-progress-report-2020-overview-final_f3080.pdf",
+        "https://www.newswise.com/articles/accelerating-the-future-of-plastic-reduction-and-upcycling"
+      ],
+      "note": "Deepened from given-name searches Thao, Thuy, Nga, Cuong, Duc, Hau and Khanh to SmartTensors team and research repository identities. Verified Duc’s staff conversion through current team biography. Two repository opens produced shells/timeouts; annual report returned 403. Preserved promising Hau/Nga/Thuy-Ai leads as unresolved instead of verified candidates."
+    },
+    {
+      "employer": "Sandia National Laboratories",
+      "pagesExamined": [
+        "https://www.sandia.gov/labnews/2023/02/09/sandia-cyber-specialists-are-turning-purple-and-thats-a-good-thing/"
+      ],
+      "note": "Given-name searches Khanh, Trung, Vinh; uncommon-surname searches Quach and Phat Doan; followed Tu-Thach/Tu-Toan and Kandy Phan. Older patents and research reports insufficient for current profile verification. Vinh Dang is on already-proposed.txt and was skipped."
+    },
+    {
+      "employer": "Lawrence Berkeley National Laboratory",
+      "pagesExamined": [
+        "https://abpdu.lbl.gov/news/new-abpdu-team-members-2021/",
+        "https://m-group.lbl.gov/people/"
+      ],
+      "note": "Given-name searches Thuy, Duy, Hanh, Quang, Thinh, Tien, Giang plus Luu follow-up; examined bioscience research-staff/postdoc/student/alumni categories. Duy Masuno appears in group alumni rather than verified current staff. Historical research-associate introductions lacked the required doctorate/recent papers."
+    },
+    {
+      "employer": "Brookhaven National Laboratory",
+      "pagesExamined": [
+        "https://www.bnl.gov/moltensalts/people/postdocs.php",
+        "https://www.bnl.gov/orgcharts/ad.pdf",
+        "https://indico.bnl.gov/event/28082/contributions/115375/attachments/65897/113203/AI4EIC_2025_Nguyen_presentation.pdf"
+      ],
+      "note": "Given-name searches Huy, Phuong, Tuan, Hieu, Bich; uncommon surnames Dao, Dinh, Pham, Huynh, Nghiem, Kieu, Luong, Trieu; deeper Accelerator Division staff-chart and Linh Nguyen AI/ML follow-up. Some hits were external collaborators, students, or support staff. Hung Nguyen in MSEE is a graduate student and also appears on already-proposed.txt; skipped."
+    },
+    {
+      "employer": "Idaho National Laboratory",
+      "pagesExamined": [
+        "https://inl.gov/education/joint-appointees/"
+      ],
+      "note": "Given-name searches Ngoc, Duy, Minh, Quang, Thang, Huy, plus Tran and Phan research searches. Joint-appointee listing checked against rostered Ruby Nguyen. Tuan Q. Tran material was from 2007, and Quang Nguyen material was older facility reporting; neither accepted as current appointment evidence. INL search hits often came from its digitized historical reports."
+    },
+    {
+      "employer": "SLAC National Accelerator Laboratory",
+      "pagesExamined": [
+        "https://qfarm.stanford.edu/people/quynh-nguyen",
+        "https://profiles.stanford.edu/browse/stanford?affiliations=capStaff&name=t&org=slac-national-accelerator-laboratory&p=7&ps=10"
+      ],
+      "note": "Given-name searches Thanh, Phuoc, Quynh plus Nghiem; Stanford/SLAC directory search results screened for installation, fabrication, engineering, finance and research roles. Directory open returned cache miss; QFARM page opened and identifies a casual appointment. No current verified new career researcher retained."
+    },
+    {
+      "employer": "Fermi National Accelerator Laboratory",
+      "pagesExamined": [
+        "https://cms.fnal.gov/people/",
+        "https://astro.fnal.gov/people/"
+      ],
+      "note": "Deep examination of complete CMS scientific staff/research associates and Cosmic Physics Center members/postdocs, supplemented by Dung, Nhan, Linh and Vietnamese-physics searches. Nhan Tran and Hogan Nguyen already listed. Linh Pham accelerator operations lead failed career-research/credential verification."
+    },
+    {
+      "employer": "National Laboratory of the Rockies",
+      "pagesExamined": [
+        "https://research-hub.nlr.gov/en/persons/truc-nguyen/",
+        "https://research-hub.nlr.gov/en/persons/minh-duong-nguyen/",
+        "https://research-hub.nlr.gov/en/publications/discovering-the-most-severe-k-point-failure-based-on-reinforcemen-2/",
+        "https://research-hub.nlr.gov/en/publications/applications-of-explainable-artificial-intelligence-in-renewable-/",
+        "https://www.nlr.gov/news/detail/program/2023/nrel-interns-of-2023-share-appreciation-for-their-mentors",
+        "https://undergraduateawards.com/gua-alumni-truc-nguyen/"
+      ],
+      "note": "Searched both former nrel.gov and current nlr.gov/research-hub.nlr.gov names, with Khanh, Truc and Minh Duong follow-ups and Trinh search. Current numbered staff ladders resolve older intern/postdoc descriptions for the two retained candidates. Khanh Nguyen Cu held for missing person-page and credential evidence. Coverage complete for this bounded later pass; no claim that all lab staff were enumerated."
+    }
+  ]
+}

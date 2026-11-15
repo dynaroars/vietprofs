@@ -1,0 +1,340 @@
+{
+  "group": "US independent nonprofit biomedical research institutes, second pass",
+  "agent": "codex",
+  "slice": "us-institutes-2",
+  "finishedAt": "2026-11-15T01:46:15.978373Z",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Thanh Pham Cardenas",
+        "university": "Allen Institute",
+        "institutionType": "Independent nonprofit research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Molecular Biology, RNASeq Core",
+        "city": "Seattle",
+        "state": "Washington",
+        "country": "United States",
+        "researchAreas": [
+          "Single-cell RNA Sequencing",
+          "Single-nucleus RNA Sequencing",
+          "Molecular Biology",
+          "Brain Cell Types"
+        ],
+        "undergradInstitution": "University of Washington",
+        "profileUrl": "https://alleninstitute.org/person/thanh-cardenas"
+      },
+      "evidence": {
+        "currentRole": "https://alleninstitute.org/person/thanh-cardenas — \"Research Associate, Sr.\" Live employer person page opened with web and independently fetched HTTP 200. Describes her current Molecular Biology/RNASeq Core work and prior Arcadia Biosciences employment. Also in the current employer staff directory, https://alleninstitute.org/people/staff-directory. Senior career research staff, with no trainee or term-limited designation.",
+        "doctorateOrPapers": "No doctorate claimed; qualifies through two distinct recent papers with Allen affiliation: (1) https://pmc.ncbi.nlm.nih.gov/articles/PMC12589121/ — Nature, 2025-11-05, DOI 10.1038/s41586-025-09644-1, author Trangthanh Cardenas; the employer person page itself features this paper, resolving Thanh to published Trangthanh. (2) https://pmc.ncbi.nlm.nih.gov/articles/PMC13125632/ — Nature Communications, 2026-04-28, DOI 10.1038/s41467-026-72147-8, author Trangthanh Cardenas, Allen Institute for Brain Science. Both full-text pages opened live; same single-cell sequencing research and overlapping Allen coauthors. Nature direct opens encountered an inaccessible identity redirect, so verification uses the live PMC full texts. The 2024 preprint and 2025 final publication of paper (1) are counted only once.",
+        "vietnameseSignal": "Vietnamese given name Thanh on the employer page; published form Trangthanh in both recent papers. Original surname Pham retained in proposed display name: the same developing-visual-cortex study lists Trangthanh Pham in its 2024 preprint, https://pmc.ncbi.nlm.nih.gov/articles/PMC11741437/, and Trangthanh Cardenas in its 2025 final publication, https://pmc.ncbi.nlm.nih.gov/articles/PMC12589121/. Identity resolved through the same study, same Allen affiliation, same sequencing contribution and employer profile linking the final paper. No diacritics reconstructed.",
+        "dedup": "Ran npm run find-roster-matches for Thanh Cardenas, Trangthanh Cardenas, Trangthanh Pham, and Trangthanh Pham Cardenas with employer/publication identity URLs: no roster or retired-id matches for these variants. Final check used the exact proposed display name Thanh Pham Cardenas and all URLs (employer, both PMC finals, PMC preprint, PubMed and Nature pages): name-only hits vp-0579 Thanh Pham and vp-0919 Thanh V. Pham. Resolved both as different people against the local roster: vp-0579 is a Monash education scholar with a Monash PhD (2011), profile https://research.monash.edu/en/persons/thanh-pham; vp-0919 is a Shizuoka communications engineer with a University of Aizu PhD (2019), profile https://tdb.shizuoka.ac.jp/rdb/public/Default2.aspx?id=11326&l=0. Allen candidate has a UW chemistry bachelor degree, Arcadia Biosciences employment and current RNASeq-core work; neither matched ID has matching profile URLs, education, field or career history. GitHub Issue exact/alias searches with gh issue list --state all returned no results. Checked already-proposed.txt; candidate and aliases absent."
+      }
+    }
+  ],
+  "already_listed": [
+    {
+      "name": "Hai T. Dao",
+      "id": "vp-2746",
+      "note": "https://www.stjude.org/people/d/hai-dao.html opened live: Assistant Member, St. Jude Faculty, Chemical Biology & Therapeutics. npm run find-roster-matches -- \"Hai T. Dao\" --url https://www.stjude.org/people/d/hai-dao.html matched both name and exact profile URL. Same person and same employer; no move."
+    }
+  ],
+  "possible_move": [],
+  "rejected": [
+    {
+      "name": "Triet Minh Bui",
+      "reason": "Held for stronger career-appointment/profile verification. Dana-Farber employer news dated 2026-04-16 explicitly calls him an instructor with a PhD: https://blog.dana-farber.org/insight/2026/04/immune-activity-shift-a-key-early-step-in-breast-cancer-formation/. However, no individual employer profile establishing a stable career faculty/research appointment was found; a program page still presents him as a T32 trainee (https://danafarbercancerbiologytraining.org/trainees-2/). Do not use the news article as a person profile or infer permanence from instructor alone. Roster matcher returned retired vp-1170 Minh Bui, merged into vp-0557 Quang Minh Bui; checked local vp-0557: ANU computer scientist, Vienna PhD, distinct from this Northwestern-trained cancer immunologist. Not an already-listed match. No LinkedIn page fetched."
+    },
+    {
+      "name": "Phuong Chung",
+      "reason": "Live Janelia profile https://www.janelia.org/people/phuong-chung establishes a continuing Research Specialist role and bachelor degree, but no doctorate. Only one distinct paper in the last three years was located, DOI 10.1016/j.cub.2025.12.058 (2026); its 2025 preprint is the same study, not a second paper. Older 2011, 2015, 2017 and 2020 papers do not satisfy the recent-publication alternative."
+    },
+    {
+      "name": "Nhan-Kiet Ngo",
+      "reason": "https://alleninstitute.org/person/nhan-kiet-ngo opened live: Research Associate III in Imaging, oversees two-photon/optical-projection tomography; associate and bachelor degrees only. Employer features one 2023 paper and one 2014 paper. No doctorate or two distinct papers in the last three years verified."
+    },
+    {
+      "name": "Grace Huynh",
+      "reason": "https://alleninstitute.org/person/grace-huynh opened live: Executive Director, Artificial Intelligence Applications; UCSF/UC Berkeley PhD and Stanford MD. No affirmative Vietnamese signal beyond the surname was identity-resolved. Search hits for Vietnamese-language names concerned other Grace Huynhs. Not verified under BRIEF2 surname-only rule."
+    },
+    {
+      "name": "Michael Tieu",
+      "reason": "https://alleninstitute.org/person/michael-tieu opened live: Research Associate III with many recent publications. No affirmative Vietnamese given-name, education, language or ancestry signal was identity-resolved beyond surname Tieu. Search result about a Vietnamese immigrant Michael Tieu concerns a Texas manufacturing CEO, a different person."
+    },
+    {
+      "name": "Katrina Nguyen",
+      "reason": "https://alleninstitute.org/person/katrina-nguyen opened live: Research Associate III, bachelor degree, recent research contributions. No affirmative Vietnamese signal beyond surname verified under the brief; not counted."
+    },
+    {
+      "name": "Jessica Trinh",
+      "reason": "Found in current Allen directory as Research Associate III. Linked profile https://alleninstitute.org/person/jessica-trinh failed to fetch in web. Vietnamese-language search hits concern a Mayo medical student, a lawyer and a photographer; none was identity-resolved to the Allen researcher. Not verified."
+    },
+    {
+      "name": "Kevin Nguyen",
+      "reason": "Current Allen directory lists Research Associate I. No doctorate/two recent identity-resolved papers or affirmative Vietnamese signal beyond surname established. Not verified."
+    },
+    {
+      "name": "Kenny C. Dang",
+      "reason": "Current Allen directory lists Supervisor, Lab Ops. No qualifying research role plus doctorate/two recent identity-resolved papers established, nor affirmative Vietnamese signal beyond the surname."
+    },
+    {
+      "name": "Quoc Phong Nguyen",
+      "reason": "Van Andel official people/postdoctoral-program listings identify a postdoctoral fellow in the Worden Laboratory: https://www.vai.org/research/postdoctoral-programs/?tabUrl=program-details. Trainee excluded. People listing was also searched, but its direct live rendering exposed filters rather than people cards."
+    },
+    {
+      "name": "Kim Nguyen",
+      "reason": "Van Andel indexed employer people listing identifies a B.S.-holding research technician. No doctorate or two recent identity-resolved papers established; surname-only signal also insufficient. Not verified."
+    },
+    {
+      "name": "Giang Nguyen",
+      "reason": "Van Andel indexed employer people listing identifies Research Data Technician. No doctorate or two recent identity-resolved papers established. Not verified."
+    },
+    {
+      "name": "Minh-Tu Nguyen",
+      "reason": "https://labs.stowers.org/piotrowski/team opened live; listed under undergraduate researchers/lab technicians alumni, 2007–2010, not current career staff."
+    },
+    {
+      "name": "Khoa Nguyen",
+      "reason": "Official Stowers news discovery hit identifies him as a Piotrowski Lab postdoc in 2025: https://www.stowers.org/news/news/p3. Excluded trainee lead; no eligible current career role verified."
+    },
+    {
+      "name": "Tran Nguyen",
+      "reason": "https://www.wistar.org/resources/genomics-facility/ opened live: M.S., Associate Managing Director/Gene Expression Assay Specialist. No doctorate or two recent identity-resolved papers established."
+    },
+    {
+      "name": "Quinton Minh",
+      "reason": "https://www.lji.org/labs/saphire-lab/ opened live: Research Tech III. No doctorate or two recent identity-resolved papers established."
+    },
+    {
+      "name": "Nathan Tran",
+      "reason": "Live employer lab page https://www.lji.org/labs/myers-lab/ lists Ph.D., Postdoctoral Fellow. Excluded trainee."
+    },
+    {
+      "name": "Elaine Thai",
+      "reason": "https://www.lji.org/labs/saphire-lab/ lists Ph.D., Postdoctoral Fellow. Excluded trainee."
+    },
+    {
+      "name": "Sophia Chau",
+      "reason": "Live employer lab page https://www.lji.org/labs/myers-lab/ lists Student Trainee. Excluded."
+    },
+    {
+      "name": "Nhi Tran",
+      "reason": "Live employer lab page https://www.lji.org/labs/rao-lab/ lists Student Trainee. Excluded."
+    },
+    {
+      "name": "Benjamin Nguyen",
+      "reason": "Live employer lab page https://www.lji.org/labs/reina-lab/ lists Student Volunteer. Excluded."
+    },
+    {
+      "name": "Uyen Vuong",
+      "reason": "https://research.fredhutch.org/greenberg/en/lab-members.html opened live lists Lab Aide; no eligible career researcher role established. Salk-related discovery hit was a 2023 undergraduate summer program, not a career appointment."
+    },
+    {
+      "name": "An-Hoa Giang",
+      "reason": "Dana-Farber Spiegelman lab people discovery hit is an alumni lead, not proof of current employment; a Tufts institutional publication places her in the 2017 medical graduating class after earlier Dana-Farber technician work. No current Dana-Farber career research appointment verified."
+    },
+    {
+      "name": "Cun Lan Chuong",
+      "reason": "https://www.broadinstitute.org/scientific-community/science/programs/cancer/team opened live places this person among staff scientists. A recent paper was found, but no doctorate or second identity-resolved recent paper, and no affirmative Vietnamese signal sufficient to resolve the ancestry ambiguity. Not verified."
+    },
+    {
+      "name": "Thuy Aziz",
+      "reason": "The Hung lab personal lab listing surfaces Senior Research Associate as a lead (https://www.thehunglaboratory.com/people), but no live individual employer profile and no doctorate or two recent identity-resolved papers were verified. Not counted."
+    },
+    {
+      "name": "Minh Hieu (Harry) Nguyen",
+      "reason": "Broad employer discovery page https://www.broadinstitute.org/bios/harry-nguyen describes a rising sophomore and summer research project. Student excluded."
+    },
+    {
+      "name": "Kaitlyn Trinh",
+      "reason": "Scripps employer discovery page https://www.scripps.edu/zorrilla/members/Index.html places this person under undergraduate interns. Excluded."
+    },
+    {
+      "name": "Ngoc Thanh Nam (Nathan) Dao",
+      "reason": "Scripps 2025 graduation discovery page https://www.scripps.edu/news-events/news/20250522-graduation/ documents completion of a PhD, not a current Scripps career appointment. No qualifying current role verified."
+    }
+  ],
+  "coverage": [
+    {
+      "employer": "Broad Institute",
+      "pagesExamined": [
+        "https://www.broadinstitute.org/scientific-community/science/programs/cancer/team",
+        "https://www.broadinstitute.org/scientific-community/science/core-faculty-labs/hung-lab/current-lab-members",
+        "https://www.thehunglaboratory.com/people"
+      ],
+      "note": "Cancer team opened live, including staff-scientist, computational, technician and trainee categories. Given-token searches: Linh, Phuong, Hieu, Thuy; unusual-name lead Cun Lan Chuong checked. Hung lab web listings disagree in age/composition, so no current career appointment inferred from an older list. Already-proposed names skipped."
+    },
+    {
+      "employer": "Salk Institute for Biological Studies",
+      "pagesExamined": [
+        "https://www.salk.edu/science/directory/faculty/?sort=name"
+      ],
+      "note": "Faculty directory opened live. Searches used Hien, Thao, Hanh, Uyen and less-common surname Huynh. Uyen Vuong surfaced only as an undergraduate-program lead. Conference attendee listings were discovery only, not appointment evidence. No new verified candidate."
+    },
+    {
+      "employer": "Scripps Research",
+      "pagesExamined": [
+        "https://www.scripps.edu/faculty/directory/"
+      ],
+      "note": "Faculty directory opened live, including Research Professors & Investigators category. Searches used Tuan, Hien, Ngoc, Quang, Phuoc and Trinh/Diep. Undergraduate intern and recent graduate leads rejected. Scripps Health and Scripps College search noise was excluded from this research-institute slice."
+    },
+    {
+      "employer": "Fred Hutchinson Cancer Center",
+      "pagesExamined": [
+        "https://research.fredhutch.org/greenberg/en/lab-members.html",
+        "https://research.fredhutch.org/paddison/en/lab-members/former-lab-members.html",
+        "https://matsen.fredhutch.org/team.html"
+      ],
+      "note": "Greenberg current lab list opened live; Paddison alumni and Matsen team discovery results screened. Searches used Thuy, Huyen, Quang, Duc, Thien, Uyen and Diep. Current Uyen Vuong listing is Lab Aide. Alumni, trainees and IT roles did not qualify."
+    },
+    {
+      "employer": "St. Jude Children's Research Hospital",
+      "pagesExamined": [
+        "https://www.stjude.org/people",
+        "https://www.stjude.org/people/d/hai-dao.html"
+      ],
+      "note": "Directory and Hai Dao person page opened live. The directory is dynamically rendered and exposed no complete faculty list in text; searches supplemented it with Linh, Huong, Khanh, Quoc, Huy, Thao, Nhat and Trinh. Hai Dao is already vp-2746. Unrelated fundraising names and St. Jude Medical/other hospitals excluded."
+    },
+    {
+      "employer": "Memorial Sloan Kettering Cancer Center",
+      "pagesExamined": [
+        "https://www.mskcc.org/research-areas/faculty-staff"
+      ],
+      "note": "Research faculty/staff directory opened live. Given-token searches: Hien, Quynh, Thao, Trung, Thuy, Hanh, Hieu. Results included trainees, regulatory staff, former clinical fellows and Vietnamese patient-information pages; none supplied a new fully verified candidate. Did not claim to read all 6,000+ directory records."
+    },
+    {
+      "employer": "Dana-Farber Cancer Institute",
+      "pagesExamined": [
+        "https://labs.dana-farber.org/bianchilab/people/minh-nguyen-phd",
+        "https://blog.dana-farber.org/insight/2026/04/immune-activity-shift-a-key-early-step-in-breast-cancer-formation/",
+        "https://labs.dana-farber.org/spiegelmanlab/people"
+      ],
+      "note": "Bianchi person page and current employer news opened live; Spiegelman people discovery results screened. Searches used Minh, Thuy, Huyen, Giang and Triet. Minh Nguyen was on already-proposed.txt and not reconsidered. Triet Bui held for career-role/person-profile verification; ANU name match independently resolved as different."
+    },
+    {
+      "employer": "Allen Institute",
+      "pagesExamined": [
+        "https://alleninstitute.org/people/staff-directory",
+        "https://alleninstitute.org/people/staff-directory?3afc8966_page=2",
+        "https://alleninstitute.org/people/staff-directory?3afc8966_page=3",
+        "https://alleninstitute.org/people/staff-directory?3afc8966_page=4",
+        "https://alleninstitute.org/people/staff-directory?3afc8966_page=5",
+        "https://alleninstitute.org/people/staff-directory?3afc8966_page=6",
+        "https://alleninstitute.org/people/staff-directory?3afc8966_page=7",
+        "https://alleninstitute.org/people/staff-directory?3afc8966_page=8",
+        "https://alleninstitute.org/person/thanh-cardenas",
+        "https://alleninstitute.org/person/nhan-kiet-ngo",
+        "https://alleninstitute.org/person/grace-huynh",
+        "https://alleninstitute.org/person/michael-tieu",
+        "https://alleninstitute.org/person/katrina-nguyen",
+        "https://alleninstitute.org/person/jessica-trinh"
+      ],
+      "note": "All eight live staff-directory pages fetched by following their actual Next Page links. Screened every displayed name for Vietnamese given/middle tokens and uncommon surnames. Verified one candidate through the two-paper alternative. Jessica Trinh profile failed to fetch. Thuc Nghi Nguyen publication bylines do not establish current Allen employment; no current directory card found, so not proposed from historical papers."
+    },
+    {
+      "employer": "HHMI Janelia Research Campus",
+      "pagesExamined": [
+        "https://www.janelia.org/people/phuong-chung"
+      ],
+      "note": "Phuong Chung person page opened live. Searches included Linh, Ngoc, Phuong, Thuc and recent Phuong Chung publications. Long career specialist role established, but two distinct recent papers could not be verified. A preprint and its final paper were not double-counted."
+    },
+    {
+      "employer": "The Jackson Laboratory",
+      "pagesExamined": [
+        "https://www.jax.org/",
+        "https://www.jax.org/research-and-faculty/research-labs",
+        "https://www.jax.org/research-and-faculty/faculty/research-scientists"
+      ],
+      "note": "Homepage, labs and research-scientist directory opened live. Labs page remained Loading and scientist directory exposed no usable people list. Searches used Thuy, Dinh, Minh, Dung, Hanh, Kien and Vietnam. Mouse strain/citation database hits were excluded as employment evidence. Coverage limited by dynamic directories; no new verified candidate."
+    },
+    {
+      "employer": "Van Andel Institute",
+      "pagesExamined": [
+        "https://www.vai.org/people/",
+        "https://www.vai.org/research/postdoctoral-programs/?tabUrl=program-details"
+      ],
+      "note": "People page opened live but rendered filters without people cards; indexed listing provided discovery leads only. Searches included Minh/Linh/Hien/Thuy/Tuan, Thao, Dinh and Nguyen. No new verified career researcher; Quoc Phong Nguyen is a postdoc, Kim Nguyen a technician, Giang Nguyen a data technician."
+    },
+    {
+      "employer": "Stowers Institute for Medical Research",
+      "pagesExamined": [
+        "https://labs.stowers.org/piotrowski/team",
+        "https://research.stowers.org/linhenglilab/lab-members.html",
+        "https://www.stowers.org/news/news/p3",
+        "https://www.stowers.org/people"
+      ],
+      "note": "Piotrowski current/alumni team opened live. Linheng Li lab and news discovery results screened. Searches included Minh, Linh, Hien, Thuy, Tuan, Duc, Trang, Phuong and Bui. Minh-Tu Nguyen is historical technician/undergraduate alumni; Khoa Nguyen postdoc. Top-level /people was inaccessible; no claim of complete staff-directory coverage."
+    },
+    {
+      "employer": "The Wistar Institute",
+      "pagesExamined": [
+        "https://www.wistar.org/articles/our-scientists/",
+        "https://www.wistar.org/resources/genomics-facility/"
+      ],
+      "note": "Scientists and Genomics Facility opened live, going beyond PI names to core personnel. Searches used Minh/Linh/Hien/Thuy/Tuan, Huyen, Diem, Chau and Huynh/Trinh. Tran Nguyen has an M.S.; doctorate/two-recent-paper alternative not established. No new verified candidate."
+    },
+    {
+      "employer": "La Jolla Institute for Immunology",
+      "pagesExamined": [
+        "https://www.lji.org/labs/ay/",
+        "https://www.lji.org/labs/benedict/",
+        "https://www.lji.org/labs/cheroutre-lab/",
+        "https://www.lji.org/labs/crotty-lab/",
+        "https://www.lji.org/labs/einav-lab/",
+        "https://www.lji.org/labs/grifoni-lab/",
+        "https://www.lji.org/labs/hastie-lab/",
+        "https://www.lji.org/labs/hogan-lab/",
+        "https://www.lji.org/labs/kronenberg-lab/",
+        "https://www.lji.org/labs/li-lab/",
+        "https://www.lji.org/labs/myers-lab/",
+        "https://www.lji.org/labs/peters-lab/",
+        "https://www.lji.org/labs/rad-lab/",
+        "https://www.lji.org/labs/ramirez-lab/",
+        "https://www.lji.org/labs/rao-lab/",
+        "https://www.lji.org/labs/reina-lab/",
+        "https://www.lji.org/labs/saphire-lab/",
+        "https://www.lji.org/labs/schmiedel-lab/",
+        "https://www.lji.org/labs/schoenberger-lab/",
+        "https://www.lji.org/labs/sette-lab/",
+        "https://www.lji.org/labs/sharma-lab/",
+        "https://www.lji.org/labs/shresta-lab/",
+        "https://www.lji.org/labs/vijayanand-lab/",
+        "https://www.lji.org/labs/weiskopf-lab/"
+      ],
+      "note": "All 24 lab links actually published in the Saphire lab navigation fetched live, HTTP 200 each, and full text scanned for Vietnamese given-name tokens and surnames. Saphire also opened through web. New leads were postdocs, students or an unqualified technician. Quynh Nguyen appeared as a postdoc and was already in already-proposed.txt, so skipped."
+    },
+    {
+      "employer": "Sanford Burnham Prebys",
+      "pagesExamined": [
+        "https://sbpdiscovery.org/",
+        "https://sbpdiscovery.org/scientists/",
+        "https://labs.sbpdiscovery.org/Pages/Home.aspx",
+        "https://sbpdiscovery.org/events/rising-stars-symposium-2023/"
+      ],
+      "note": "Current main-site scientist directory opened live: 51 listings, including research faculty. Legacy labs directory timed out. Searches used Thao, Minh, Ngoc, Linh and Truong/Huynh/Phan. Rising Stars event lead Linh Vuong belongs to UC Irvine, not this employer. No new verified candidate."
+    },
+    {
+      "employer": "Gladstone Institutes",
+      "pagesExamined": [
+        "https://gladstone.org/",
+        "https://gladstone.org/people/"
+      ],
+      "note": "Homepage and people directory opened live, including investigator and research-investigator titles. Searches used Linh, Bich, Hao, Thien, Tram, Quynh. Linh Huynh discovery hit is a DEI leadership role, not research. No new verified candidate."
+    },
+    {
+      "employer": "Whitehead Institute",
+      "pagesExamined": [
+        "https://wi.mit.edu/",
+        "https://wi.mit.edu/people"
+      ],
+      "note": "Homepage and complete Members and Fellows listing opened live. Searches used Thuy, Duy, Linh, Vietnam and Vietnamese. Search engines repeatedly broadened these queries to unrelated MIT pages; those were not accepted as Whitehead evidence. No new verified career researcher."
+    },
+    {
+      "employer": "Cold Spring Harbor Laboratory",
+      "pagesExamined": [
+        "https://www.cshl.edu/research/faculty-staff/"
+      ],
+      "note": "Faculty/staff directory opened live. Searches used Linh, Thao, Thi, Anh, Duy and Quynh while excluding meetings subdomain when possible. Most results were visiting conference attendees or unrelated coauthors; attendance and repository citations were not treated as current employment. No new verified candidate."
+    }
+  ]
+}

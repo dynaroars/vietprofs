@@ -1,0 +1,118 @@
+{
+  "verifier": "codex",
+  "input": "maintenance/sector-expansion/runs/w2/france-univ.codex.json",
+  "candidates": [
+    {
+      "name": "Thuy Luu Seran",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Opened the current Montpellier Management person page: Maître de conférences HDR at Université de Montpellier. Its linked 2026 CV (https://www.montpellier-management.fr/wp-content/uploads/2025/03/CV_academique_Thuy_SERAN_2026.pdf) corroborates the doctorate in 2012 and an MBA in Vietnam in 1997; the page and CV link the Seran and Seran-Luu publication names. Thuy plus Luu and documented Vietnamese education provide a signal beyond surname alone. France appointment; no roster/retired-ID match or already-proposed identity.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Hien Laetitia Do Benoit",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Opened the Cnam person profile: current Maître de conférences in Paris since 2013, political-science doctorate at IEP Paris in 2007. Independently fetched the employer-hosted CV at https://lirsa-en.cnam.fr/medias/fichier/cv-hien-laetitia-do-benoit-2021_1669021407446-pdf?ID_FICHE=34606&INLINE=FALSE (HTTP 200); it records language/interpreting education in Hanoi, supporting the Vietnamese given-name signal Hien. Eligible continuing French faculty appointment; no roster/retired-ID match or already-proposed identity.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Hoai Diem Phuc Ngo",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Opened the employer-hosted person homepage and https://adagio.loria.fr/people-fr.html: both identify the Lorraine associate professor; the official team directory lists her as current team leader and Maître de conférences in Nancy. Opened https://members.loria.fr/HDPNgo/files/pdf/CV_NGO.pdf: doctorate 2013 and school/undergraduate study in Vietnam, including Danang Polytechnic. This independently supports Vietnamese identity and a France base. No roster/retired-ID match or already-proposed identity.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Tien Dung Le",
+      "verdict": "fixable",
+      "failedTests": [
+        1
+      ],
+      "reason": "The submitted URL is a July 2023 award news article, explicitly disallowed by test 1, even though direct retrieval returned HTTP 200. Replace it with the official permanent-personnel directory: its individual LE / Tien Dung row specifies Maître de conférences, IUT Nancy-Brabois, IRM pour l’ingénierie and telephone 0372744285. Opened the 2013 Lorraine thesis at https://docnum.univ-lorraine.fr/public/DDOC_T_2013_0097_LE.pdf: mechanics/energetics doctorate and Hanoi civil-engineering degree, providing a Vietnamese signal beyond surname. Roster match vp-2699 is the Johns Hopkins oncology professor, a different discipline/career. No already-proposed identity; France base.",
+      "correctedFields": {},
+      "correctedProfileUrl": "https://lemta.univ-lorraine.fr/annuaire/"
+    },
+    {
+      "name": "Tuyet Tram Dang Ngoc",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Opened the official ETIS individual researcher page, with Cergy institutional email and Cergy laboratory address. Independently opened https://sipr.sorbonne-universite.fr/edition-2026-27-des-semiweb/: the 2026-27 program expressly identifies Tuyet Tram Dang Ngoc as Maître de conférences in computer science at CY Cergy Paris Université. The distinctive Vietnamese given names Tuyet Tram, rather than surname alone, support test 3. Continuing faculty role in France; no roster/retired-ID match or already-proposed identity.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Thi Phuong Khanh Nguyen",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Opened the personal site: full professor at UTTOP/ENIT, Tarbes, since September 2025, permanent LGP member since 2017; Centrale Nantes doctorate 2012 and HCMUT engineering education. The latter and full given names Thi Phuong Khanh supply the Vietnamese signal. The employer person URL https://www.enit.fr/fr/_plugins/mypage/mypage/content/tnguyen.html still returns HTTP 500 on direct retrieval, so the supplied personal-page fallback is acceptable only with confirmed:false, already present. Roster name hits vp-0025, vp-0282, vp-0411, vp-0476, vp-0638, vp-0769, vp-0814, vp-0870, vp-0970, vp-1975, vp-2994 and retired vp-1628/vp-2958 have different degrees, fields or career identities; in particular vp-0769 has a Taiwan doctorate in 2018. No already-proposed identity; France base.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Vinh Ta-Phuoc",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Opened the Tours individual staff profile: physics enseignant-chercheur at GREMAN. Directly fetched the employer document https://greman.univ-tours.fr/medias/fichier/greman-sujet-stage-nanoplastiques_1760367121434-pdf?INLINE=FALSE (HTTP 200); it explicitly identifies Vinh TA PHUOC as Maître de Conférences HDR and gives the same Tours email, establishing the eligible rank. Vietnamese given name Vinh together with the compound Ta-Phuoc name supplies a signal beyond a shared surname. Tours, France; no roster/retired-ID match or already-proposed identity.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Thi Hong Hanh Pham",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Opened the Nantes person profile, updated September 2026: Maître de Conférences HDR in economics at IAE Nantes, France. The full Vietnamese given names Thi Hong Hanh provide a signal beyond Pham alone. The supplied Persée URL is the supervisor’s authority record, but its supervised-theses section explicitly lists this candidate’s 2010 Rouen economics thesis. Independently opened vp-1749’s Leeds profile: its Copenhagen Business School PhD in 2008 and UK/Denmark career distinguish that Hanh Pham (also already-proposed) from this Nantes economist. No matching roster/retired-ID or already-proposed identity.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Liem Hoang-Ngoc",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Opened the Paris 1 individual institutional profile: current Maître de conférences in economics, CES affiliation and current teaching. Its CV explicitly records birth in Saigon, Vietnam and the Paris 1 economics doctorate defended 19 January 1994. These establish Vietnamese-diaspora eligibility beyond surname and a current France appointment. No roster/retired-ID match or already-proposed identity.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Thi Kim Son Le",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Opened the submitted URL: despite its generic title, this is a single-person institutional profile for LE Thi Kim Son, Maître de Conférence at ISCID-CO/ULCO, with Dunkerque address and institutional email. Opened its linked 2024 CV at https://riifr.univ-littoral.fr/wp-content/uploads/2024/06/LE-Thi-Kim-Son-CV_francais-2024.pdf: Toulouse 1 management doctorate 2018, National Economics University Vietnam undergraduate degree 2004, ULCO faculty since September 2020. Vietnamese given names and education support test 3. vp-2122 is the Louisiana Tech entrepreneurship/strategy professor (official profile opened); vp-2123 and retired duplicate vp-2967 are the Brown-2013 electrical engineer. Different identities; no already-proposed identity; France base.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Thien-Phu Le",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Opened the LMEE individual profile: Enseignant-Chercheur, MCF HDR, IUT GMP. Directly fetched https://www.iut-evry.fr/le-thien-phu/ (HTTP 200), confirming the 2003 École des Ponts doctorate, Sherbrooke postdoc and Évry appointment since 2017. Vietnamese given names Thien-Phu provide a signal beyond Le alone. Eligible continuing appointment in France; no roster/retired-ID match or already-proposed identity.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Hoai Nam Nguyen",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Opened the SAMOVAR individual profile: Maître de Conférences, ISTeC, Télécom SudParis, Évry, with current research publications. Opened https://www.telecom-paris.fr/wp-content-EvDsK19/uploads/2022/02/Hoai-NamNguyen_Presentation.pdf: Supélec automatic-control doctorate 2012, Technion postdoc, IFPEN 2014-2021 and Télécom SudParis faculty since 2021. Hoai Nam is an affirmative Vietnamese given-name signal beyond surname alone. Roster hits vp-0029, vp-0910, vp-0979, vp-2134 and vp-3094 differ in degree/discipline/career; Towson’s Nam Nguyen has a Florida CS doctorate. No already-proposed identity; France base.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Thi Anh-Dao Tran",
+      "verdict": "fixable",
+      "failedTests": [
+        1
+      ],
+      "reason": "The submitted profileUrl is a PDF CV, explicitly disallowed by test 1. The current employer directory at https://lasta.univ-rouen.fr/membres/ has a distinct TRAN Thi Anh-Dao entry under Maître de conférences HDR, with her institutional email, individual research summary and linked CV; use that directory entry as the profile source. Opened the CV: Paris 13 economics doctorate 1996, Rouen faculty since 2006, fluent Vietnamese and French office address; the Vietnam secondment ended in 2020. Vietnamese given names plus language support test 3. Name hits vp-0063, vp-0164, vp-0236, vp-0285, vp-0860, vp-1670, vp-2145, vp-3118 and vp-3152 differ by discipline, degree or career (Texas State’s Anh Tran has Rochester finance PhD 2018). No already-proposed identity.",
+      "correctedFields": {},
+      "correctedProfileUrl": "https://lasta.univ-rouen.fr/membres/"
+    },
+    {
+      "name": "Thi Phuong Thao Pham",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Directly fetched the submitted official Reims person page (HTTP 200; web-tool retrieval returned 502): it specifies MCF 05, IAE Reims-Troyes, a France postal address and environmental/energy economics research, and links to the supplied Weebly site. Independently fetched https://thao-pham.weebly.com/cv.html: full-time Reims economics faculty since 2019 and Paris Dauphine economics PhD 2015. The full given names Thi Phuong Thao are an affirmative Vietnamese signal beyond Pham alone. Roster name hits vp-0759 (Taiwan physicist) and vp-1279 (Aix-Marseille rheumatologist, doctorate 2006) are distinct identities. No matching already-proposed identity.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Thi-Muoi Le",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Directly fetched the official LARSH individual profile (HTTP 200): Thi-Muoi LE, LARSH, Valenciennes. Independently opened/fetched https://www.uphf.fr/lamih/agenda/soutenance-thanh-tuan-nguyen-departement-informatique: the employer identifies her as Maître de conférences at UPHF and thesis co-supervisor. This corroborates an eligible continuing faculty role rather than inferring rank from bare membership. Vietnamese given names Thi-Muoi supply a signal beyond Le alone. France base; no roster/retired-ID match or already-proposed identity.",
+      "correctedFields": {}
+    }
+  ],
+  "possible_move": []
+}

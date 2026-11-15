@@ -1,0 +1,76 @@
+{
+  "verifier": "codex",
+  "input": "maintenance/sector-expansion/runs/w2/au-other.codex.json",
+  "candidates": [
+    {
+      "name": "Mai Ngo",
+      "verdict": "fixable",
+      "failedTests": [],
+      "reason": "Opened https://www.flinders.edu.au/people/mai.ngo: current Associate Professor in TESOL and Applied Linguistics, Adelaide; UNSW Education doctorate, Hanoi University undergraduate degree and former Hanoi leadership provide affirmative Vietnamese signals. Eligible substantive academic appointment. Independently ran roster matching: vp-0287 is the Wisconsin chemical engineer with Illinois PhD (2021), vp-2568 is the French economics professor, and vp-2569 is the French law researcher with a 2003 doctorate; different identities and education. Absent from already-proposed.txt. Use the fuller published name to distinguish her from vp-0287: the Flinders publication record https://researchnow.flinders.edu.au/en/publications/university-governance-in-vietnam-and-east-asian-higher-education-/ names Mai Tuyet Ngo in the matching education field. The five numbered tests pass; the correction is name disambiguation.",
+      "correctedFields": {
+        "name": "Mai Tuyet Ngo"
+      }
+    },
+    {
+      "name": "Thao Phuong Trinh",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Opened https://staff-profiles.cqu.edu.au/home/view/23852: current Lecturer - Project Management, School of Engineering and Technology, Melbourne. Biography explicitly gives Thao Phuong Trinh, a CQU academic appointment since 2018, current lecturer status, research supervision and RMIT PhD (2012). This is a substantive Australian academic role, with no adjunct, visiting or sessional qualifier. Thao Phuong supplies affirmative Vietnamese given-name evidence beyond Trinh. Independent roster matching found no roster or retired-id matches; absent from already-proposed.txt.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Quynh Nhu Dinh",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Opened https://www.rmit.edu.au/profiles/d/quynh-dinh and https://academics.rmit.edu.au/quynh-dinh: current Lecturer, Health and Biomedical Sciences, Bundoora West, Australia. These identify a substantive school academic appointment rather than her former postdoc. Opened https://ish-world.com/portfolio-investigator/quynh-nhu-dinh: the historical firsthand interview supplies fuller name, Monash PhD (2017) and matching hypertension/inflammation research; it is identity/education evidence, not evidence of the current employer. Quynh Nhu provides affirmative Vietnamese given-name signals. Independent matching with employer and interview URLs found no roster or retired-id matches; absent from already-proposed.txt.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Kevin Huu Phat Thai",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Opened https://www.rmit.edu.au/profiles/t/kevin-thai: current Lecturer in Accounting, Melbourne, since January 2022; doctoral supervision, active research and Queensland PhD (2016–2023) support a substantive academic role. RMIT links ORCID 0000-0002-0925-1688. Independently fetched https://pub.orcid.org/v3.0/0000-0002-0925-1688/person with HTTP 200: given names Kevin Huu Phat, family name Thai. Huu Phat is affirmative Vietnamese given-name evidence beyond Thai. Independent roster matching with employer and ORCID URLs found no roster or retired-id matches; absent from already-proposed.txt.",
+      "correctedFields": {}
+    },
+    {
+      "name": "David Phu Hai Ho",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Opened https://www.rmit.edu.au/profiles/h/hai-ho2: current Lecturer in Advertising, School of Media and Communication, Melbourne, 2025–present; the Vietnam appointment explicitly ended in 2025. Current school teaching, research and PhD supervision establish the substantive academic role. Bio explicitly identifies David (Phu Hai) Ho, supplying affirmative Vietnamese given-name evidence. Independent roster matching found vp-3241 David G. Ho; that entry is a UCLA-trained medicinal chemist at Athos, a different person from this advertising/brand-community researcher. No identity URL match; absent from already-proposed.txt.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Thong Nguyen-Huy",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Opened https://staffprofile.unisq.edu.au/Profile/thong-nguyen-huy and https://staffprofile.unisq.edu.au/departmentstaff/203400: current Senior Research Fellow in the School of Science, Engineering and Digital Technologies, Toowoomba, with UniSQ PhD, ongoing course teaching and research supervision. The enduring individual academic profile plus senior school research appointment and teaching/supervision support faculty-equivalent career Research status; not relying solely on the fellow title. Vietnamese accredited-translator competence and VNU-HCM education provide affirmative signals. Independently resolved name hits vp-0171/0243/0872/3024/3160/3190/3195 against stored fields, degrees and identity URLs: management, mechanical engineering, orthopaedics, embedded systems, Reka AI (NUS PhD), spatial genomics (Dartmouth PhD), and quantum computing (Michigan PhD), respectively; none is this UniSQ-trained climate/geospatial researcher. Absent from already-proposed.txt.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Cam Minh Tri Tien",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Opened https://staffprofile.unisq.edu.au/Profile/CamMinhTri-Tien and https://staffprofile.unisq.edu.au/departmentstaff/203400: current Senior Research Fellow (Digital Engineering for Composite Structures), Toowoomba, with UniSQ computational-engineering doctorate. Individual profile documents current undergraduate/postgraduate engineering teaching and six years of tertiary teaching, alongside extensive senior engineering experience; the enduring school academic listing and substantive duties support faculty-equivalent career Research status. Both live pages now agree on the role descriptor. Ho Chi Minh City University of Technology education and Minh Tri given-name tokens supply affirmative Vietnamese signals. Independent roster matching found no roster or retired-id matches; absent from already-proposed.txt.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Kien Thanh Nguyen",
+      "verdict": "fixable",
+      "failedTests": [],
+      "reason": "Opened https://www.qut.edu.au/about/our-people/academic-profiles/k.nguyenthanh: current Senior Research Fellow in Electrical Engineering and Robotics, QUT doctorate, course teaching, principal doctoral supervision and completed supervision back to 2018 establish an enduring faculty-equivalent research career in Australia. Opened the Australian government recipient register https://internationaleducation.gov.au/scholarships/Scholarships-and-Fellowships/alumni/Documents/2007-2017%20Recipients.pdf: page 74 identifies Kien Nguyen Thanh, Vietnamese citizenship, QUT PhD scholarship (2009). Independently matched both name orders and identity URLs. Stored fields/degrees rule out vp-0166/0208/0363/1807/2114/3102 and the retired UCL/Oregon identities. Opened https://dblp.org/pid/68/5068.html: explicitly distinguishes QUT Kien Nguyen Thanh (ORCID 0000-0002-3466-9218) from Chiba Kien Nguyen (vp-0918; ORCID 0000-0003-0400-3084). Absent from already-proposed.txt. The five tests pass, but retain the employer-published name order rather than inventing a reordered form.",
+      "correctedFields": {
+        "name": "Kien Nguyen Thanh"
+      }
+    }
+  ],
+  "possible_move": [
+    {
+      "name": "Vi Khanh Truong",
+      "id": "vp-1235",
+      "verdict": "moved",
+      "newEmployer": "Flinders University",
+      "url": "https://www.flinders.edu.au/people/vikhanh.truong",
+      "reason": "Roster currently stores Khalifa University. Opened the Flinders individual staff profile and https://researchnow.flinders.edu.au/en/persons/vi-khanh-truong/: current Associate Professor / ARC Future Fellow, College of Medicine and Public Health, Adelaide, leading biomedical nanoengineering research. Same full name, biomedical/nanomaterials field and Swinburne PhD (2012) resolve identity to vp-1235. These are current employer profiles establishing the Flinders appointment, not merely a publication affiliation."
+    }
+  ]
+}

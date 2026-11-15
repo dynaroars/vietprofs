@@ -1,0 +1,537 @@
+{
+  "group": "university",
+  "agent": "codex",
+  "slice": "canada",
+  "finishedAt": "2026-11-15T00:12:15Z",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Lisa Dang",
+        "university": "University of Waterloo",
+        "track": "Tenure-line",
+        "rank": "Assistant Professor",
+        "department": "Department of Physics and Astronomy",
+        "country": "Canada",
+        "field": "Physics & Astronomy",
+        "researchAreas": [
+          "Exoplanet Atmospheres",
+          "Exoplanet Mapping",
+          "Gravitational Microlensing",
+          "Planetary Climate"
+        ],
+        "phdInstitution": "McGill University",
+        "phdYear": 2022,
+        "undergradInstitution": "McGill University",
+        "undergradYear": 2016,
+        "profileUrl": "https://uwaterloo.ca/physics-astronomy/profile/l24dang",
+        "websiteUrl": "https://lisadang27.github.io/"
+      },
+      "evidence": {
+        "currentRole": "https://uwaterloo.ca/physics-astronomy/profile/l24dang — \"Assistant Professor\"; research description and courses taught in 2026 establish active research faculty.",
+        "doctorateOrPapers": "https://uwaterloo.ca/physics-astronomy/profile/l24dang — \"2022 PhD Physics, McGill University\"; also BSc in 2016.",
+        "vietnameseSignal": "https://lisadang27.github.io/ — her own identity-resolved exoplanet-science page supplies the Vietnamese given-name tokens Kha Han in kha.han.lisa.dang@umontreal.ca. The same Lisa Dang, McGill doctorate and exoplanet research resolve the older Montreal page to the Waterloo professor; surname alone was not used.",
+        "dedup": "npm run find-roster-matches -- \"Lisa Dang\" --url https://uwaterloo.ca/physics-astronomy/profile/l24dang https://lisadang27.github.io/ https://www.physics.mcgill.ca/~khadang/cv.pdf => no roster or retired-id matches. Also manually checked Canadian roster and already-proposed.txt.",
+        "notes": "Personal site still describes an earlier postdoc; current official Waterloo faculty profile takes precedence. Student/postdoc fellowships omitted from honors."
+      }
+    },
+    {
+      "entry": {
+        "name": "Van Troi Tran",
+        "university": "Université du Québec à Montréal",
+        "track": "Tenure-line",
+        "rank": "Professor",
+        "department": "Département d'études urbaines et touristiques",
+        "country": "Canada",
+        "field": "Social & Behavioral Sciences",
+        "researchAreas": [
+          "Anthropology",
+          "Food and Globalization",
+          "Material Culture",
+          "Ethnography",
+          "Cultural Heritage Tourism"
+        ],
+        "phdInstitution": "Université Laval",
+        "phdYear": 2010,
+        "msInstitution": "Université Laval",
+        "postdocInstitution": "Harvard University",
+        "profileUrl": "https://professeurs.uqam.ca/professeur/tran.van_troi/"
+      },
+      "evidence": {
+        "currentRole": "https://professeurs.uqam.ca/professeur/tran.van_troi/ — \"Professeur\"; regular departmental professor directory, current 2024–2026 research project and 2026–2027 teaching.",
+        "doctorateOrPapers": "https://professeurs.uqam.ca/professeur/tran.van_troi/ — \"PhD, Université Laval, Ethnologie (2010)\"; MA in History in 2005 and Harvard anthropology postdoc in 2012.",
+        "vietnameseSignal": "Vietnamese given/middle names Van Troi with surname Tran, published on https://professeurs.uqam.ca/professeur/tran.van_troi/.",
+        "dedup": "npm run find-roster-matches -- \"Van Troi Tran\" --url https://professeurs.uqam.ca/professeur/tran.van_troi/ => vp-0353 Van C. Tran. Different person: vp-0353 is a CUNY sociologist with Harvard PhD 2011; this UQAM ethnologist has Laval PhD 2010 and Harvard postdoc 2012. No shared identity URL; manually checked roster and already-proposed.txt.",
+        "notes": "MA is a master's degree, mapped to msInstitution as the roster's generic master's institution field. Rank normalized from French Professeur; precise promotion level is not published."
+      }
+    },
+    {
+      "entry": {
+        "name": "Xuan-Tan Pham",
+        "university": "École de technologie supérieure",
+        "track": "Tenure-line",
+        "rank": "Professor",
+        "department": "Département de génie mécanique",
+        "country": "Canada",
+        "field": "Engineering",
+        "researchAreas": [
+          "Solid Mechanics",
+          "Finite Element Methods",
+          "Heat Transfer",
+          "Materials Forming",
+          "Welding"
+        ],
+        "phdInstitution": "Polytechnique Montréal",
+        "undergradInstitution": "Polytechnique Saigon",
+        "profileUrl": "https://www.etsmtl.ca/etudier-a-lets/corps-professoral/tpham"
+      },
+      "evidence": {
+        "currentRole": "https://www.etsmtl.ca/etudier-a-lets/corps-professoral/tpham — \"Professeur\", mechanical engineering; lists Autumn 2026 courses and doctoral supervision. Opened successfully with ordinary Python urllib, HTTP 200, after web-tool timeouts.",
+        "doctorateOrPapers": "https://www.etsmtl.ca/etudier-a-lets/corps-professoral/tpham — \"Ph.D. (Polytechnique Montréal)\". Current publications on that same person page use the fuller name Xuan-Tan Pham, resolving it to the profile headed Tan Pham.",
+        "vietnameseSignal": "Same official profile gives undergraduate engineering education at Polytechnique Saigon and the Vietnamese given names Xuan-Tan in its publication list.",
+        "dedup": "npm run find-roster-matches -- \"Xuan-Tan Pham\" --url https://www.etsmtl.ca/etudier-a-lets/corps-professoral/tpham => vp-2264 Xuan Pham. Different person: vp-2264 is an Art Studio assistant professor at Mount Holyoke; this scholar is a mechanical engineering professor, Saigon engineering graduate and Polytechnique Montréal PhD. Manually checked roster and already-proposed.txt.",
+        "portraitSource": "https://www.etsmtl.ca/uploads/P20220926-pham-tan-002.jpg",
+        "portraitNote": "Official profile img element labels this Portrait de Tan Pham. Source lead only; not downloaded or visually vetted.",
+        "notes": "PhD year unavailable. The published D.E.A. was not equated to an MSc."
+      }
+    },
+    {
+      "entry": {
+        "name": "Dinh N. Nguyen",
+        "university": "Université Laval",
+        "track": "Emeritus",
+        "rank": "Professor Emeritus",
+        "department": "Département de génie mécanique",
+        "country": "Canada",
+        "field": "Engineering",
+        "researchAreas": [
+          "Mechanical Engineering",
+          "Computer-Aided Design",
+          "Thermodynamics",
+          "Engineering Education"
+        ],
+        "phdInstitution": "Université Laval",
+        "undergradInstitution": "Université Laval",
+        "profileUrl": "https://www.ulaval.ca/notre-universite/prix-et-distinctions/emeritat/dinh-n-nguyen"
+      },
+      "evidence": {
+        "currentRole": "https://www.ulaval.ca/notre-universite/prix-et-distinctions/emeritat/dinh-n-nguyen — \"Professeur émérite\"; official emeritus conferral profile details his mechanical-engineering career and former departmental leadership.",
+        "doctorateOrPapers": "https://www.ulaval.ca/notre-universite/prix-et-distinctions/emeritat/dinh-n-nguyen — official biography explicitly states bachelor's and doctoral study at Université Laval before joining mechanical engineering in 1968. No degree year inferred.",
+        "vietnameseSignal": "Vietnamese given name Dinh together with Nguyen, as published on the official emeritus profile. No diacritics or expanded middle name inferred.",
+        "dedup": "npm run find-roster-matches -- \"Dinh N. Nguyen\" --url https://www.ulaval.ca/notre-universite/prix-et-distinctions/emeritat/dinh-n-nguyen => broad Dinh/Nguyen token hits including vp-0107, vp-0495, vp-0840, vp-0994, vp-1249, vp-1370, vp-1551, vp-1622, vp-1868, vp-1956, vp-2068, vp-2406, vp-2439, vp-2557, vp-3205, vp-3206 and retired vp-1146/vp-1511. None is the Laval mechanical-engineering professor who joined in 1968; their fuller names, employers and disciplines differ. Manual roster search finds no Dinh N. Nguyen / Ngoc Dinh Nguyen identity. already-proposed.txt checked.",
+        "notes": "Official emeritus status established; no death or plain-retirement inference used."
+      }
+    },
+    {
+      "entry": {
+        "name": "Tri Nhu Do",
+        "university": "Polytechnique Montréal",
+        "track": "Tenure-line",
+        "rank": "Assistant Professor",
+        "department": "Département de génie électrique",
+        "city": "Montréal",
+        "state": "Quebec",
+        "country": "Canada",
+        "field": "Engineering",
+        "researchAreas": [
+          "Wireless Communications",
+          "Telecommunications Networks",
+          "Artificial Intelligence",
+          "Machine Learning"
+        ],
+        "phdInstitution": "Hongik University",
+        "phdYear": 2018,
+        "msInstitution": "Hongik University",
+        "undergradInstitution": "Posts and Telecommunications Institute of Technology",
+        "undergradYear": 2012,
+        "profileUrl": "https://www.polymtl.ca/expertises/do-tri-nhu",
+        "websiteUrl": "http://tnd-lab.work"
+      },
+      "evidence": {
+        "currentRole": "https://www.polymtl.ca/expertises/do-tri-nhu — \"Professeur adjoint\", electrical engineering; biography explicitly locates appointment at Polytechnique Montréal in Quebec, Canada.",
+        "doctorateOrPapers": "https://www.polymtl.ca/expertises/do-tri-nhu — degree section explicitly gives Hongik University doctorate in electronic and computer engineering, August 2018, master's February 2015, and Vietnamese undergraduate degree February 2012.",
+        "vietnameseSignal": "https://www.polymtl.ca/expertises/do-tri-nhu — \"Il est né à Da Nang, au Vietnam.\" Also records education at Vietnam’s Posts and Telecommunications Institute of Technology.",
+        "dedup": "npm run find-roster-matches -- \"Tri Nhu Do\" --url https://www.polymtl.ca/expertises/do-tri-nhu http://tnd-lab.work => no roster or retired-id matches. Manually checked roster and already-proposed.txt.",
+        "notes": "Lab link recorded exactly as linked by official profile."
+      }
+    },
+    {
+      "entry": {
+        "name": "Huy Ong",
+        "university": "Université de Montréal",
+        "track": "Emeritus",
+        "rank": "Professor Emeritus",
+        "department": "Faculté de pharmacie",
+        "city": "Montréal",
+        "state": "Quebec",
+        "country": "Canada",
+        "field": "Health Sciences",
+        "researchAreas": [
+          "Cardiovascular Pharmacology",
+          "Metabolic Pharmacology",
+          "Endocrinology",
+          "Therapeutic Target Discovery"
+        ],
+        "phdInstitution": "Université de Montréal",
+        "phdYear": 1979,
+        "profileUrl": "https://pharm.umontreal.ca/en/faculte/lequipe/autre-personnel-enseignant/fiche/in/in14830/sg/Huy%20Ong/"
+      },
+      "evidence": {
+        "currentRole": "https://pharm.umontreal.ca/en/faculte/lequipe/autre-personnel-enseignant/fiche/in/in14830/sg/Huy%20Ong/ — \"Professeur émérite\"; also lists associate affiliation and active research projects. Official emeritus title establishes the eligible track despite concurrent associate status.",
+        "doctorateOrPapers": "https://pharm.umontreal.ca/en/centenaire/100-membres-du-conseil-du-centenaire/ — Huy ONG section explicitly documents doctorate in pharmacology, Université de Montréal Faculty of Medicine, 1979, and progression through assistant, associate and full professor ranks.",
+        "vietnameseSignal": "https://www.umontreal.ca/en/the-university-of-montreal-and-of-the-world/huy-ong/ — \"Born in Vietnam to a family of pharmacists\"; also explains his Vietnamese given name.",
+        "dedup": "npm run find-roster-matches -- \"Huy Ong\" --url https://pharm.umontreal.ca/en/faculte/lequipe/autre-personnel-enseignant/fiche/in/in14830/sg/Huy%20Ong/ => no roster or retired-id matches. Manual roster and already-proposed.txt checks clean.",
+        "notes": "Local teaching/service awards omitted. No unverified portrait or LinkedIn content fetched."
+      }
+    },
+    {
+      "entry": {
+        "name": "Trung Dung Ngo",
+        "university": "University of Prince Edward Island",
+        "track": "Tenure-line",
+        "rank": "Professor",
+        "department": "Faculty of Sustainable Design Engineering",
+        "country": "Canada",
+        "field": "Engineering",
+        "researchAreas": [
+          "Multi-Robot Systems",
+          "Modular Robotics",
+          "Human-Robot Cooperation",
+          "Robotics and Intelligent Systems"
+        ],
+        "phdInstitution": "Aalborg University",
+        "phdYear": 2008,
+        "msInstitution": "University of Southern Denmark",
+        "undergradInstitution": "Vietnam National University, Hanoi",
+        "undergradYear": 2000,
+        "profileUrl": "https://islandscholar.ca/people/tngo?solr_nav%5Bid%5D=ec79f8ffdb5d172c1ad6",
+        "websiteUrl": "http://www.morelab.org"
+      },
+      "evidence": {
+        "currentRole": "https://islandscholar.ca/people/tngo?solr_nav%5Bid%5D=ec79f8ffdb5d172c1ad6 — \"Full Professor at University of Prince Edward Island\"; status current. https://www.upei.ca/directory/department/engineering independently lists Professor in Sustainable Design Engineering and links this IslandScholar record.",
+        "doctorateOrPapers": "https://islandscholar.ca/people/tngo?solr_nav%5Bid%5D=ec79f8ffdb5d172c1ad6 — Aalborg PhD in electrical and electronic engineering (robotics), 2008; Southern Denmark MSc 2004; Vietnam National University Hanoi BSc 2000.",
+        "vietnameseSignal": "Vietnamese given/middle names Trung Dung and Vietnamese undergraduate education explicitly documented on the official IslandScholar biography.",
+        "dedup": "npm run find-roster-matches -- \"Trung Dung Ngo\" --url 'https://islandscholar.ca/people/tngo?solr_nav%5Bid%5D=ec79f8ffdb5d172c1ad6' http://www.morelab.org => vp-2037 Trung Ngo. Different person: vp-2037 is a UTS civil-engineering scholar with University of Wollongong PhD 2013; candidate is a robotics professor with Aalborg PhD 2008. Manual roster and already-proposed.txt checks clean.",
+        "notes": "Local faculty-association award and IEEE Senior Member status omitted from honors."
+      }
+    },
+    {
+      "entry": {
+        "name": "Trong-On Do",
+        "university": "Université Laval",
+        "track": "Tenure-line",
+        "rank": "Professor",
+        "department": "Département de génie chimique",
+        "city": "Québec",
+        "state": "Quebec",
+        "country": "Canada",
+        "field": "Engineering",
+        "researchAreas": [
+          "Photocatalysis",
+          "Nanomaterials",
+          "Solar Fuels",
+          "Carbon Dioxide Conversion"
+        ],
+        "phdInstitution": "Pierre and Marie Curie University",
+        "phdYear": 1989,
+        "msInstitution": "Pierre and Marie Curie University",
+        "profileUrl": "https://www.ulaval.ca/la-recherche/repertoire-corps-professoral/trong-on-do"
+      },
+      "evidence": {
+        "currentRole": "https://www.ulaval.ca/la-recherche/repertoire-corps-professoral/trong-on-do — \"Professeur titulaire\"; active NSERC project 2024–2029 and current graduate supervision. Chemical engineering unit corroborated by https://www.fsg.ulaval.ca/departements/departement-de-genie-chimique/la-recherche-en-genie-chimique and authored paper.",
+        "doctorateOrPapers": "https://pubs.rsc.org/en/content/getauthorversionpdf/c4nr07224c — author biography (PDF text near end) explicitly states MSc 1986 and PhD 1989 at University of P. and M. Curie (Paris 6, France); identifies him as Laval chemical engineering full professor. Institutional address in same paper gives Québec, Canada.",
+        "vietnameseSignal": "Vietnamese given names Trong-On with surname Do, published in the official Laval directory and identity-resolved author biography.",
+        "dedup": "npm run find-roster-matches -- \"Trong-On Do\" --url https://www.ulaval.ca/la-recherche/repertoire-corps-professoral/trong-on-do https://trong-on-do.fsg.ulaval.ca/ https://pubs.rsc.org/en/content/getauthorversionpdf/c4nr07224c => no roster or retired-id matches. Manual roster and already-proposed.txt checks clean.",
+        "notes": "The redesigned faculty subsite contains obvious template text and incongruous computer-engineering degree claims; none imported. Degree sourced from authored RSC paper instead. PMC returned a browser check and was not used as evidence; no evasion attempted."
+      }
+    }
+  ],
+  "already_listed": [
+    {
+      "name": "Huong Nguyen",
+      "id": "vp-0514",
+      "note": "Official profile opened: https://www.mcgill.ca/plant/nguyen-huong. Exact profile URL match, same plant-science appointment and Iowa State PhD 2022; find-roster-matches run."
+    },
+    {
+      "name": "Hien Tran",
+      "id": "vp-2108",
+      "note": "https://telfer.uottawa.ca/en/directory/hien-tran/ opened; exact profile URL and same strategy/entrepreneurship scholar. find-roster-matches run."
+    },
+    {
+      "name": "Nhat Truong Nguyen",
+      "id": "vp-0659",
+      "note": "https://www.concordia.ca/faculty/nhattruong-nguyen.html opened; exact URL, chemical/materials engineering and associate-professor rank match. find-roster-matches run."
+    },
+    {
+      "name": "Uyen Trang Nguyen",
+      "id": "vp-1758",
+      "note": "https://www.eecs.yorku.ca/~unguyen/ opened; exact URL, computer networking and Toronto PhD 2003 match. find-roster-matches run."
+    },
+    {
+      "name": "Ha Tran",
+      "id": "vp-1756",
+      "note": "https://apps.ualberta.ca/directory/person/htran2 opened; exact URL and Augustana number theory/cryptography appointment match. Name also occurs on already-proposed.txt, so not proposed."
+    },
+    {
+      "name": "Huu Thai Nguyen",
+      "id": "vp-1535",
+      "note": "Laval actuarial science profile discovered at https://www.ulaval.ca/la-recherche/repertoire-corps-professoral/huu-thai-nguyen. Match to existing Thai Nguyen resolved through same actuarial department and email/name variant; find-roster-matches run."
+    },
+    {
+      "name": "Vinh Nguyen",
+      "id": "vp-0513",
+      "note": "find-roster-matches returned existing McMaster English/refugee-studies scholar. Same McMaster doctorate and personal site https://vinhnguyen.ca/ as older Waterloo English pages; https://experts.mcmaster.ca/people/nguyev27 opened. Do not create second identity from older Waterloo listing."
+    },
+    {
+      "name": "Minh Dang Nguyen",
+      "id": "vp-0655",
+      "note": "https://profiles.ucalgary.ca/minh-dang-nguyen opened; exact profile URL, neuroscience appointment and McGill PhD match. find-roster-matches run."
+    }
+  ],
+  "possible_move": [
+    {
+      "name": "Christine H. Tran",
+      "id": "vp-0587",
+      "note": "Roster says University of Toronto, Institute of Communication, Culture, Information and Technology. Current employer https://www.auarts.ca/about-auarts/faculty-and-staff/dr-christine-h-tran returned HTTP 200 via ordinary urllib and states Assistant Professor, Liberal Studies, School of Critical and Creative Studies, Alberta University of the Arts. Same Twitch/game-streaming research, name and personal-site identity; find-roster-matches with AUArts URL and https://thechristinet.com returned vp-0587 (unrelated vp-2498 ruled out by biomedical research and different surname). New faculty appointment also recorded at https://www.auarts.ca/sites/default/files/2026-01/20250929_Approved_GFC_Minutes.pdf. Review existing ID; no new candidate."
+    }
+  ],
+  "rejected": [
+    {
+      "name": "Duy Tin Vo / Tin D. Vo",
+      "reason": "Unresolved current appointment, not an eligibility rejection. https://www.lakeheadu.ca/users/V/tdvo opened but has no content; https://duytinvo.github.io/ claims assistant professor and SUTD PhD 2017, but linked CV https://duytinvo.github.io/figs/fullCV.pdf is explicitly last updated November 28, 2020. No live employer role confirmation found; withheld rather than promote a six-year-old self-report. Both full and shortened names plus URLs return no roster or retired-id matches."
+    },
+    {
+      "name": "Linda Trinh (University of Toronto)",
+      "reason": "Eligible-looking exercise-oncology professor with Alberta doctorate, but no affirmative Vietnamese signal beyond surname located for this specific person. https://kpe.utoronto.ca/faculty/trinh-linda opened. Vietnamese-Canadian author Linda Trinh in Winnipeg and UCI's Linda Trinh Vo are different people; their identity evidence was not transferred."
+    },
+    {
+      "name": "Philippe Phan",
+      "reason": "Ottawa official profile https://www.uottawa.ca/faculty-medicine/directory/dr-philippe-phan identifies associate professor and Montréal PhD 2014, but no affirmative Vietnamese signal beyond surname found. Withheld pending identity evidence."
+    },
+    {
+      "name": "Lyn Hoang",
+      "reason": "Western lists Limited Duties teaching at https://nest.uwo.ca/graduate/faculty.html; no continuing/permanent faculty appointment verified. Doctoral and internship-coordinator mentions do not establish eligibility."
+    },
+    {
+      "name": "Bao Anh Nguyen",
+      "reason": "Ottawa employer experts page https://web5.uottawa.ca/www2/mcs-smc/media/experts-details-998205.html explicitly describes part-time professor; excluded from university slice."
+    },
+    {
+      "name": "Thanh Son Nguyen",
+      "reason": "https://www.uottawa.ca/faculty-engineering/department-civil-engineering/directory/thanh-son-nguyen identifies adjunct professor and primary Canadian Nuclear Safety Commission role. University appointment ineligible; non-university employer outside this slice."
+    },
+    {
+      "name": "Anh Tran",
+      "reason": "https://www.uottawa.ca/faculty-medicine/directory/dr-anh-tran search lead identifies adjunct university professor and primary NRC research officer. Not a qualifying university appointment; non-university employer outside slice."
+    },
+    {
+      "name": "Thuy-Linh Christiane Nguyen",
+      "reason": "Laval directory https://www.ulaval.ca/la-recherche/repertoire-corps-professoral/thuy-linh-christiane-nguyen identifies professeure associée (affiliate/adjunct), not an eligible primary appointment."
+    },
+    {
+      "name": "Annick Nguyen",
+      "reason": "https://www.usherbrooke.ca/droit/recherche/chercheuses-et-chercheurs/jeunes-chercheuses-et-chercheurs/annick-nguyen identifies master's student."
+    },
+    {
+      "name": "Michel Nguyen",
+      "reason": "https://www.usherbrooke.ca/dep-medecine/recherche/profil-des-chercheurs/cardiologie opened and lists professeur-médecin, but full-time/continuing appointment, research-doctorate/recent-paper threshold and affirmative Vietnamese signal were not all established; withheld."
+    },
+    {
+      "name": "Quang Nguyen-Luong",
+      "reason": "Older Toronto-hosted CV mentions McMaster/Sheridan, but live search surfaced current American University of Paris professor at https://graduate.aup.edu/quang-nguyen-luong; outside Canadian slice."
+    },
+    {
+      "name": "Qing-Lai Dang",
+      "reason": "Lakehead forestry profile https://www.lakeheadu.ca/users/D/qdang gives Chinese undergraduate education and no affirmative Vietnamese signal; shared surname insufficient."
+    },
+    {
+      "name": "Duy Nguyen (UPEI)",
+      "reason": "https://www.upei.ca/directory/department/engineering opened; engineering technologist, not faculty-equivalent research appointment."
+    },
+    {
+      "name": "Tin Nguyen (UPEI)",
+      "reason": "Same UPEI employer directory lists Success Centre Coordinator; ordinary support staff, excluded."
+    },
+    {
+      "name": "Tuan Nguyen (UPEI)",
+      "reason": "Same UPEI employer directory lists graduate lab instructor; no eligible career faculty appointment established."
+    },
+    {
+      "name": "Nhien Nguyen (UNB)",
+      "reason": "https://www.unb.ca/faculty-staff/directory/student-services-saint-john/index.html opened; Arrivals Advisor, ordinary student-services staff."
+    },
+    {
+      "name": "Trung Nguyen (UVic CAPI)",
+      "reason": "https://www.uvic.ca/research/centres/capi/about/home/researchers/index.php opened; research associate/affiliation and visiting-research activity do not establish an eligible permanent primary faculty appointment."
+    }
+  ],
+  "coverage": [
+    {
+      "employer": "University of Toronto",
+      "pagesExamined": [
+        "https://www.utm.utoronto.ca/biology/people",
+        "https://kpe.utoronto.ca/academics-researchresearch-units-labs-centres/exercise-oncology-lab",
+        "https://kpe.utoronto.ca/faculty/trinh-linda"
+      ],
+      "note": "Screened biology, chemistry, architecture, pharmacy, dentistry, public health and kinesiology leads. Many roster matches. Linda Trinh held out for insufficient identity signal; Christine Tran move recorded separately."
+    },
+    {
+      "employer": "University of British Columbia",
+      "pagesExamined": [
+        "https://scarp.ubc.ca/directory/martino-tran"
+      ],
+      "note": "Computer science, mathematics, chemistry, planning and clinical leads screened; many already-listed names. Martino Tran already present as vp-0645. Chemistry results included students and postdocs, which were excluded."
+    },
+    {
+      "employer": "McGill University",
+      "pagesExamined": [
+        "https://www.mcgill.ca/plant/nguyen-huong"
+      ],
+      "note": "Plant science, civil engineering, anatomy, dentistry, respiratory medicine, nephrology and psychiatry searched. Huong Nguyen is already listed; existing roster covers most strong leads. Clinical names without research-doctorate/recent-paper or stable appointment evidence were not promoted."
+    },
+    {
+      "employer": "Université de Montréal",
+      "pagesExamined": [
+        "https://pharm.umontreal.ca/en/faculte/lequipe/autre-personnel-enseignant/fiche/in/in14830/sg/Huy%20Ong/",
+        "https://pharm.umontreal.ca/en/centenaire/100-membres-du-conseil-du-centenaire/",
+        "https://www.umontreal.ca/en/the-university-of-montreal-and-of-the-world/huy-ong/"
+      ],
+      "note": "Medicine, neuroscience, dentistry, pharmacy and public health searched. Huy Ong verified; several clinical directory names lacked sufficient full-time/continuing role or doctorate/recent-paper evidence."
+    },
+    {
+      "employer": "Université Laval",
+      "pagesExamined": [
+        "https://www.ulaval.ca/notre-universite/prix-et-distinctions/emeritat/dinh-n-nguyen",
+        "https://www.ulaval.ca/la-recherche/repertoire-corps-professoral/trong-on-do"
+      ],
+      "note": "Central faculty directory, actuarial science, chemistry, chemical engineering, medicine, theology and emeritus leads screened. Dinh N. Nguyen and Trong-On Do verified; Thai/Huu Thai Nguyen is already listed. Subsite template degree claims were not accepted."
+    },
+    {
+      "employer": "University of Waterloo",
+      "pagesExamined": [
+        "https://uwaterloo.ca/physics-astronomy/profile/l24dang",
+        "https://lisadang27.github.io/"
+      ],
+      "note": "Physics, English, chemistry, economics, finance, civil engineering and optometry leads searched. Lisa Dang verified; Vinh Nguyen resolved to existing ID. Several strong leads already present."
+    },
+    {
+      "employer": "University of Alberta",
+      "pagesExamined": [
+        "https://apps.ualberta.ca/directory/person/htran2"
+      ],
+      "note": "Mathematics, computing, physiology, pediatrics, medicine, neurology and public-health leads screened. Ha Tran exact roster match. No extra candidate accepted on title alone."
+    },
+    {
+      "employer": "University of Calgary",
+      "pagesExamined": [
+        "https://profiles.ucalgary.ca/minh-dang-nguyen"
+      ],
+      "note": "Neuroscience, mathematics, social work, veterinary medicine and clinical leads screened. Minh Dang Nguyen exact existing match; Trang, Ngo, Dao and other prominent leads already rostered."
+    },
+    {
+      "employer": "University of Ottawa",
+      "pagesExamined": [
+        "https://telfer.uottawa.ca/en/directory/hien-tran/"
+      ],
+      "note": "Strategy, computer science, biology, surgery, radiology and civil engineering searched. Hien Tran exact roster match. Adjunct/part-time leads excluded; Philippe Phan lacked affirmative Vietnamese identity signal."
+    },
+    {
+      "employer": "York University",
+      "pagesExamined": [
+        "https://www.eecs.yorku.ca/~unguyen/"
+      ],
+      "note": "Engineering/computing, economics, education and social-science leads screened. Uyen Trang Nguyen already listed; student and sessional leads excluded."
+    },
+    {
+      "employer": "Concordia University",
+      "pagesExamined": [
+        "https://www.concordia.ca/faculty/nhattruong-nguyen.html"
+      ],
+      "note": "Chemical/materials engineering, building/civil engineering, neuroscience and emeritus leads searched. Nhat Truong Nguyen exact existing match; no historical professor mention treated as current appointment."
+    },
+    {
+      "employer": "Université de Sherbrooke",
+      "pagesExamined": [
+        "https://www.usherbrooke.ca/dep-medecine/recherche/profil-des-chercheurs/cardiologie"
+      ],
+      "note": "Medicine, radiology, engineering, microbiology and law searched. Student and affiliate leads excluded. Michel Nguyen held out because required verification incomplete."
+    },
+    {
+      "employer": "Simon Fraser University",
+      "pagesExamined": [
+        "https://www.sfu.ca/content/sfu/economics/about/faculty/current.html"
+      ],
+      "note": "Economics, science and Vietnamese-name searches produced no verified new candidate. Historical Ly Vu page not treated as a new identity; roster already has Ly Vu at UBC."
+    },
+    {
+      "employer": "École de technologie supérieure",
+      "pagesExamined": [
+        "https://www.etsmtl.ca/etudier-a-lets/corps-professoral/tpham"
+      ],
+      "note": "Ordinary urllib opened official person page successfully despite web-tool timeout. Xuan-Tan Pham verified. Kim Khoa Nguyen and Thien-My Dao already in roster."
+    },
+    {
+      "employer": "Polytechnique Montréal",
+      "pagesExamined": [
+        "https://www.polymtl.ca/expertises/do-tri-nhu"
+      ],
+      "note": "Electrical and mechanical engineering leads searched. Tri Nhu Do verified; historical Bui-Quoc materials publications alone did not establish a current appointment."
+    },
+    {
+      "employer": "Université du Québec à Montréal",
+      "pagesExamined": [
+        "https://professeurs.uqam.ca/professeur/tran.van_troi/"
+      ],
+      "note": "Anthropology/tourism and existing urban studies/economics names screened. Van Troi Tran verified and distinguished from CUNY Van C. Tran."
+    },
+    {
+      "employer": "University of Prince Edward Island",
+      "pagesExamined": [
+        "https://www.upei.ca/directory/department/engineering",
+        "https://islandscholar.ca/people/tngo?solr_nav%5Bid%5D=ec79f8ffdb5d172c1ad6"
+      ],
+      "note": "Trung Dung Ngo verified; university directory links authoritative IslandScholar profile. Technologists, graduate instructors and coordinators excluded."
+    },
+    {
+      "employer": "Lakehead University",
+      "pagesExamined": [
+        "https://www.lakeheadu.ca/users/V/tdvo",
+        "https://duytinvo.github.io/",
+        "https://duytinvo.github.io/figs/fullCV.pdf"
+      ],
+      "note": "Computer-science and forestry leads examined. Duy Tin Vo employer page empty and self-report dated 2020; withheld. Qing-Lai Dang lacks affirmative Vietnamese signal."
+    },
+    {
+      "employer": "University of Victoria",
+      "pagesExamined": [
+        "https://www.uvic.ca/research/centres/capi/about/home/researchers/index.php"
+      ],
+      "note": "Math directory and Asian/Pacific research-affiliate leads screened. No additional permanent primary faculty appointment verified."
+    },
+    {
+      "employer": "University of New Brunswick",
+      "pagesExamined": [
+        "https://www.unb.ca/faculty-staff/directory/student-services-saint-john/index.html"
+      ],
+      "note": "Central directory and Vietnamese-name searches primarily yielded student-services staff, recruiters and graduate students; no verified new candidate."
+    },
+    {
+      "employer": "Alberta University of the Arts",
+      "pagesExamined": [
+        "https://www.auarts.ca/about-auarts/faculty-and-staff/dr-christine-h-tran"
+      ],
+      "note": "HTTP 200 via ordinary urllib. Current appointment of existing Christine Tran recorded under possible_move. No roster edit made."
+    },
+    {
+      "employer": "McMaster University",
+      "pagesExamined": [
+        "https://experts.mcmaster.ca/people/nguyev27"
+      ],
+      "note": "Vinh Nguyen identity already listed. Other clinical/teaching leads without required research or stability evidence were not accepted."
+    },
+    {
+      "employer": "Other Canadian universities",
+      "pagesExamined": [],
+      "note": "Additional discovery searches covered Manitoba, Saskatchewan, Western, Queen's, Guelph, Windsor, Regina, Brock, Ontario Tech, Dalhousie, Memorial, Moncton, UQAC, UQTR and smaller institutions. Results largely matched existing roster or were students/adjuncts. Coverage is a broad targeted discovery sweep, not a claim of exhaustive department-by-department enumeration. Stopped with eight solid new candidates rather than weaken evidence to reach 25."
+    }
+  ]
+}

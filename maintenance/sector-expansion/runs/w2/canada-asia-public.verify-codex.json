@@ -1,0 +1,33 @@
+{
+  "verifier": "codex",
+  "input": "maintenance/sector-expansion/runs/w2/canada-asia-public.codex.json",
+  "candidates": [
+    {
+      "name": "Ngoc Chi Nam Doan",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live https://www.aimfg.sg/team/ singles out Doan Ngoc Chi Nam in an individual biography as Senior Scientist II and Manufacturing Decision Support Section manager at A*STAR SIMTech in Singapore. This is a career research role, not a trainee appointment. https://www.aimfg.sg/about/ establishes A*STAR/MTI ownership. The author biography on page 290 of https://www.jstage.jst.go.jp/article/ijat/9/3/9_283/_pdf documents the 2013 University of Ulsan PhD and 2008 Ho Chi Minh City University of Technology degree; the full Vietnamese name and Vietnamese education supply affirmative identity signals. Independently ran find-roster-matches with the name and both URLs: no roster or retired-ID matches. Absent from already-proposed.txt. Singapore appointment satisfies the location test.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Thanh Son Nguyen",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live https://www.aimfg.sg/team/ contains an individual Nguyen Thanh Son biography identifying Senior Scientist II, A*STAR IAIC, and an SMU PhD. Employer-operated centre status is established at https://www.aimfg.sg/about/. https://sites.google.com/view/tsnguyen/ independently confirms the Singapore research appointment, SMU PhD supervised by Hady Lauw, and VNU Hanoi undergraduate degree, supporting Vietnamese identity beyond surname. Independently ran find-roster-matches with employer, personal-site and ORCID URLs: name-only hits vp-0166, vp-0208, vp-0363, vp-1807, vp-2114, vp-3102 and retired vp-0822/vp-0844; inspected those records and the retired IDs’ surviving records vp-0515/vp-0031. Their degrees and research fields distinguish Cornell market design, Princeton biomaterials, clinical neurology, Griffith finance, IUPUI biomedical AI, Amazon software verification, East London nanomaterials and USC multi-agent systems from this SMU review-mining researcher. No identity-URL match. Not listed in already-proposed.txt; its shorter Son Nguyen is not this full name. Based in Singapore.",
+      "correctedProfileUrl": "",
+      "correctedFields": {}
+    },
+    {
+      "name": "Linh Nguyen",
+      "verdict": "fixable",
+      "failedTests": [],
+      "reason": "All five eligibility tests pass. Live https://www.occupationalcancer.ca/team-biographies/ provides an individual biography identifying a career Senior Research Associate on the Exposure team and a University of Toronto Environmental Sciences PhD. https://www.occupationalcancer.ca/about-ocrc/ lists her as staff, separately from students, and locates the centre at Ontario Health in Toronto. https://www.torontomu.ca/occupational-public-health/about/people/adjuncts-and-associate-members/linh-nguyen/ independently corroborates the research employment and doctorate; eligibility rests on OCRC employment. Linh plus Nguyen is an affirmative Vietnamese given-name/surname combination. Independently ran find-roster-matches with both biography URLs and inspected all 17 active name hits plus retired vp-1606 (merged into vp-0573): their fields/degrees differ from this Toronto environmental-health and occupational-exposure researcher; no URL matches. Absent from already-proposed.txt and based in Canada. Correct the display name under the maintenance guide’s identical-name rule: vp-0677 already uses the exact name Linh Nguyen for a different finance researcher, so append the employer.",
+      "correctedProfileUrl": "",
+      "correctedFields": {
+        "name": "Linh Nguyen - Ontario Health"
+      }
+    }
+  ],
+  "possible_move": []
+}

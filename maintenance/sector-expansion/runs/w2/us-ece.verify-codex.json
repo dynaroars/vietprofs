@@ -1,0 +1,49 @@
+{
+  "verifier": "codex",
+  "input": "maintenance/sector-expansion/runs/w2/us-ece.codex.json",
+  "candidates": [
+    {
+      "name": "Lim Nguyen",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Opened https://engineering.unl.edu/person/lim-nguyen/ and https://engineering.unl.edu/ece/about/faculty-staff/ live: both identify him as Professor in Electrical and Computer Engineering at Nebraska. The current heading and directory supersede the old assistant-professor wording in his biography. His profile explicitly states birth in Hue and childhood in Da Nang, Viet Nam, and lists Rice EE PhD 1996. The US university appointment establishes a base outside Vietnam. Independently ran find-roster-matches with the name and profile URL: no roster or retired-ID matches. Not in maintenance/sector-expansion/already-proposed.txt.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Quan Khanh Luu",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Opened https://engineering.unl.edu/ece/person/quan-luu/ and its linked https://quan-luu.github.io/: the employer identifies a current Nebraska ECE Assistant Professor, and the linked personal site supplies the full name Quan Khanh Luu. Official education lists HCMUT, Vietnam, BEng 2018 and JAIST PhD 2024, providing an affirmative Vietnamese connection beyond the surname. His current appointment and Nebraska office establish a US base; the Purdue postdoctoral role is explicitly previous. Independently ran find-roster-matches with the full name, employer URL, personal site and Scholar URL: no roster or retired-ID matches. Not in already-proposed.txt.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Hoan Thanh Ngo",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Opened https://floridapoly.edu/faculty/bios/hoan-ngo/: the employer identifies Dr. Hoan Thanh Ngo as its Assistant Professor of electrical, computer, and cybersecurity engineering since 2025, following Florida Southern College. The page lists Duke biomedical-engineering PhD 2017, a 2006 undergraduate degree in Ho Chi Minh City, Vietnam, and a Vietnam Education Foundation fellowship, supporting the Vietnamese connection. This is a current Florida appointment, not his earlier Vietnam role. Independent find-roster-matches using name, profile and Scholar URLs returned only vp-1197 (Massey PhD 2015; aviation/economics) and vp-1702 (Florida Atlantic PhD 2007; finance), demonstrably different from this Duke-trained biomedical engineer. No URL matches; absent from already-proposed.txt.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Hung Cao",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Opened https://profiles.icts.uci.edu/hung.cao and https://eng81.banjo.eng.uci.edu/users/hung-cao: current UCI Associate Professor in EECS, with an Irvine office. The engineering biography documents undergraduate education at Hanoi University of Science and Technology, Vietnam, and subsequent teaching at Vietnam Maritime University, supporting the Vietnamese connection. It explicitly lists UT Arlington EE PhD 2012; UCI Profiles independently confirms the doctorate and 2017 NSF CAREER award. Independent find-roster-matches with both institutional URLs returned only vp-1342 (Sydney civil/steel structures, Sydney PhD 2010) and vp-1568 (finance, Memphis PhD 2024), different people. No URL matches and absent from already-proposed.txt.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Thuan Nguyen",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Opened https://www.etsu.edu/cas/applied-design/faculty-staff/nguyent.php: current Assistant Professor of Electrical Engineering at ETSU, following explicitly past Tufts and WPI postdoctoral roles. It lists Oregon State EE PhD 2021, Hanoi undergraduate education in 2013, and a Vietnam National Olympic Mathematics Competition gold medal, providing affirmative Vietnamese signals. The current ETSU office establishes a US base. Independent find-roster-matches returned name-only hits vp-0249 (Nova Southeastern information systems PhD 2016), vp-0409 (UC Davis biostatistics PhD 2008), vp-1039 (Mississippi doctorate; accounting/finance), and vp-3181 (Ghent doctorate; BASF plant biotechnology); all differ in education and field from this Oregon State electrical engineer. No URL match; absent from already-proposed.txt.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Hung (Harry) Le",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Opened https://www.ece.uh.edu/faculty/le-harry: current Instructional Associate Professor, with Houston office, Houston EE doctorate and Alberta MSc. The Vietnamese given-name signal Hung alongside Le goes beyond a surname-only match. Opened https://www.uh.edu/provost/faculty/faculty-policies/non-tenure-track/documents/ntt-policy-2022-2023.pdf: instructional faculty are full-time, promotion-eligible NTT faculty with a renewable appointment pathway, establishing an eligible Teaching ladder. The current associate heading supersedes older assistant wording. Employer hiring news https://www.egr.uh.edu/news/201709/brilliance-descending-uh-new-engineering-faculty-join-cullen-college supports his Houston doctorate year and earlier engineering career. Independent find-roster-matches with name, profile and Scholar URLs returned vp-0014 (Oregon State PhD 2018; algorithms), vp-0247 (Tennessee mathematics teaching faculty, independently opened https://math.utk.edu/people/hung-le/), and vp-2077 (Deakin doctorate; AI), different from this Houston-trained hardware engineer. No URL matches; absent from already-proposed.txt.",
+      "correctedFields": {}
+    }
+  ],
+  "possible_move": []
+}

@@ -1,0 +1,348 @@
+{
+  "group": "university",
+  "agent": "codex",
+  "slice": "us-bio",
+  "finishedAt": "2026-11-15T01:15:55.487289Z",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Cuong Diep",
+        "university": "Indiana University of Pennsylvania",
+        "track": "Tenure-line",
+        "rank": "Professor",
+        "department": "Biology",
+        "country": "United States",
+        "field": "Biological & Biomedical Sciences",
+        "researchAreas": [
+          "Fungal drug resistance",
+          "Yeast genetics",
+          "Mitochondrial stress responses"
+        ],
+        "keywords": [
+          "fungal drug resistance",
+          "yeast",
+          "mitochondrial DNA"
+        ],
+        "phdInstitution": "Pennsylvania State University",
+        "phdYear": 2006,
+        "undergradInstitution": "Messiah College",
+        "undergradYear": 2000,
+        "postdocInstitution": "Harvard Medical School / Massachusetts General Hospital",
+        "profileUrl": "https://www.iup.edu/biology/faculty/cuong-diep/index.html",
+        "websiteUrl": "https://cuongdiep.weebly.com/"
+      },
+      "evidence": {
+        "currentRole": "https://www.iup.edu/biology/faculty/index.html — “Dr. Cuong Diep”; “Professor”; “Fungal Drug Resistance”. The individual employer profile was opened successfully: https://www.iup.edu/biology/faculty/cuong-diep/index.html . Regular professorial faculty listing in a university biology department outside its medical schools.",
+        "doctorateOrPapers": "https://www.iup.edu/biology/faculty/cuong-diep/index.html — “PhD 2000–06 (Pennsylvania State University, College of Medicine)”. The same profile explicitly lists BS 1996–2000 at Messiah College and postdoctoral fellowship 2006–10 at Harvard Medical School/Massachusetts General Hospital. https://cuongdiep.weebly.com/ describes his current yeast resistance and mitochondrial DNA research.",
+        "vietnameseSignal": "Vietnamese given name Cuong on the employer individual profile https://www.iup.edu/biology/faculty/cuong-diep/index.html ; this is a given-name signal, not a surname-only inference.",
+        "dedup": "Ran npm run find-roster-matches -- \"Cuong Diep\" --url https://www.iup.edu/biology/faculty/cuong-diep/index.html --url https://cuongdiep.weebly.com/ : no roster or retired-id matches. Also checked the canonical roster and already-proposed.txt; not present."
+      }
+    },
+    {
+      "entry": {
+        "name": "Quyen Aoh",
+        "university": "Gannon University",
+        "track": "Tenure-line",
+        "rank": "Associate Professor",
+        "department": "Biology",
+        "country": "United States",
+        "field": "Biological & Biomedical Sciences",
+        "researchAreas": [
+          "Membrane trafficking",
+          "Cell biology of disease",
+          "Cell survival and metabolism"
+        ],
+        "keywords": [
+          "membrane trafficking",
+          "yeast",
+          "neurodegeneration",
+          "cancer"
+        ],
+        "phdInstitution": "University of Virginia",
+        "phdYear": 2009,
+        "undergradInstitution": "James Madison University",
+        "undergradYear": 2000,
+        "postdocInstitution": "University of North Carolina at Chapel Hill",
+        "profileUrl": "https://ww4.gannon.edu/facultyprofiles.aspx?profile=aoh001"
+      },
+      "evidence": {
+        "currentRole": "https://ww4.gannon.edu/facultyprofiles.aspx?profile=aoh001 — “Associate Professor”; “Biology Department”. Professional Experience records her associate professorship from 2018 to current, following assistant professorship 2013–2018. The current department directory independently lists her associate professorship and department chair role: https://www.gannon.edu/academic-offerings/health-professions-and-sciences/school-of-sciences/department-of-biology/faculty/ . Research studies membrane trafficking in disease using mammalian cells and yeast.",
+        "doctorateOrPapers": "https://ww4.gannon.edu/facultyprofiles.aspx?profile=aoh001 — education explicitly records PhD in Cell Biology, University of Virginia, 2009; BS in Biology, James Madison University, 2000; and completed postdoctoral research at University of North Carolina at Chapel Hill, 2009–2012.",
+        "vietnameseSignal": "Vietnamese given name Quyen on the live employer profile https://ww4.gannon.edu/facultyprofiles.aspx?profile=aoh001 . The given-name sweep surfaced her despite the uncommon published surname Aoh. No diacritic form or maiden surname is inferred.",
+        "dedup": "Ran npm run find-roster-matches -- \"Quyen Aoh\" --url \"https://ww4.gannon.edu/facultyprofiles.aspx?profile=aoh001\" : no roster or retired-id matches. Also checked canonical roster and already-proposed.txt; not present. Portrait link was found on the employer profile but its image fetch failed (cache miss), so portraitSource is omitted."
+      }
+    }
+  ],
+  "already_listed": [
+    {
+      "name": "Phuong Dao",
+      "id": "vp-0481",
+      "note": "Official UT Austin profile https://integrativebio.utexas.edu/directory/phuong-dao opened; assistant professor in Integrative Biology, Toronto PhD. Dedup matched both name and exact profile URL; same person, already updated to Texas."
+    },
+    {
+      "name": "Hanh Lam",
+      "id": "vp-0323",
+      "note": "https://lam.biol.vt.edu/people/ opened; assistant professor and Cornell PhD agree with roster. Name+URL dedup matched vp-0323."
+    },
+    {
+      "name": "Quynh Chu-LaGraff",
+      "id": "vp-2810",
+      "note": "https://www.union.edu/biology/faculty-staff/quynh-chu-lagraff opened; biology professor and department chair. Dedup matched exact name and profile URL."
+    },
+    {
+      "name": "Nhu H. Nguyen",
+      "id": "vp-0459",
+      "note": "https://manoa.hawaii.edu/tpss/people/nhu-nguyen/ opened; professor, soil microbial ecology, Berkeley microbiology PhD. Dedup matched exact employer profile; other partial-name hits concern different people."
+    },
+    {
+      "name": "Justin Luong",
+      "id": "vp-2727",
+      "note": "https://ourenvironment.berkeley.edu/people/justin-luong opened; assistant professor of working lands and restoration ecology. Name+URL dedup matched vp-2727; same employer and research program."
+    },
+    {
+      "name": "Tommy Vo",
+      "id": "vp-1781",
+      "note": "https://directory.natsci.msu.edu/directory/Profiles/Person/103046 opened; assistant professor in Biochemistry and Molecular Biology at Michigan State. Dedup matched name; same department and linked Tommy Vo lab as roster."
+    },
+    {
+      "name": "An-Phu Tran",
+      "id": "vp-1722",
+      "note": "https://uwm.edu/biology/about/directory/tran-an-phu/ opened; assistant professor, Biological Sciences; Tuebingen PhD 2015. Dedup matched name and exact profile URL. Partial hits An Tran (marketing) and Phu Tran (pediatrics) are different people."
+    },
+    {
+      "name": "Le Trinh",
+      "id": "vp-1336",
+      "note": "https://dornsife.usc.edu/profile/le-trinh/ opened; Associate Professor (Research) of Molecular and Cellular Biosciences. Dedup matched exact profile and roster name Le A. Trinh. No new ID."
+    },
+    {
+      "name": "Trang T.H. Nguyen",
+      "id": "vp-0216",
+      "note": "Trang Nguyen discovery through USC Levine lab alumni https://dornsife.usc.edu/levine/our-group/ . Name dedup already identifies an Arkansas State Biological Sciences entry, so no new candidate; current Arkansas State directory search also corroborates microbiology appointment. Not treated as a move."
+    }
+  ],
+  "possible_move": [],
+  "rejected": [
+    {
+      "name": "Khanh T. Le / Khanh-Tuoc Le",
+      "reason": "Held out pending explicit permanent/tenure-line appointment evidence for community college inclusion. Live individual page https://www.deltacollege.edu/about/faculty-staff-directory/khanh-le lists Biology Professor; employer catalog https://archive.deltacollege.edu/dept/ar/catalog/current/1834.htm documents McGill PhD. Name+profile dedup found vp-0191 (CUNY linguistics, CUNY PhD 2022), vp-1300, vp-1412, vp-1895, vp-2010; education and fields rule those out, but appointment permanence still needs verification. Do not add based on professor title alone."
+    },
+    {
+      "name": "Duc Pham",
+      "reason": "Held out pending current permanent/tenure-line status and institution resolution. Live https://www.smc.edu/directory/pham-duc.php lists Assistant Professor and Cornell PhD 2020; current https://profiles.santarosa.edu/duc-pham and https://biologicalsciences.santarosa.edu/staff/duc-pham list anatomy instructor/faculty with 2025–26 classes. No tenure-line/permanent evidence found at Santa Rosa, so do not propose stale Santa Monica appointment. Dedup with all three employer URLs returned only different people (engineering, business, pathology; vp-0542, vp-1078, vp-1626, vp-1640, vp-2319, vp-2510; retired vp-1400)."
+    },
+    {
+      "name": "Julie Luu",
+      "reason": "Held out: surname-only Vietnamese signal. Employer faculty listing https://www.canadacollege.edu/biologicalsciences/meetthefaculty.php and alumni profile https://neuroscience.ucdavis.edu/people/julie-luu verify biology appointment and UC Davis neuroscience PhD 2015. Tenure was announced in a 2024 employer search result, but no additional affirmative Vietnamese signal was established for this identity. Other Vietnamese Julie Luu results belong to a K–2 teacher or younger business graduate and must not be conflated. Name+alumni-profile dedup: no roster or retired-id matches."
+    },
+    {
+      "name": "Karen P. Luong",
+      "reason": "Held out: surname alone insufficient. Opened employer profile https://www.gcc.edu/Home/Academics/Graduate-Online-Programs/MA-in-Economics/Program-Faculty/karen-p-luong confirming Assistant Professor of Biology, Grove City College. Penn State graduate announcement surfaced plant pathology PhD. No Vietnamese given-name, education, or other affirmative signal was established."
+    },
+    {
+      "name": "Diep Burbridge",
+      "reason": "Held out: https://www.lbcc.edu/faculty-staff-life-sciences verifies associate professor, but research doctorate or two recent papers was not verified on employer sources. A separate faculty association seniority document surfaced an education doctorate lead; not enough verified evidence for this brief. No LinkedIn page was fetched."
+    },
+    {
+      "name": "Quynh Quach",
+      "reason": "https://clay.tulane.edu/home/people/ opened and explicitly lists Lab Manager. No doctorate or documented permanent faculty-equivalent appointment; excluded from university Research track."
+    },
+    {
+      "name": "Thuy (Violet) Tran",
+      "reason": "https://www.merrimack.edu/academics/arts-and-sciences/biology-old/faculty/ opened; Laboratory Manager in Staff section, outside the separate full-time faculty section. No eligible faculty-equivalent role established."
+    },
+    {
+      "name": "Khanh Ha",
+      "reason": "SUNY Polytechnic discovery result explicitly identifies Visiting Assistant Professor. Attempted live profile open failed with cache miss; not a verified candidate, and visiting appointment is excluded."
+    },
+    {
+      "name": "Ngoc Uyen Nhi Nguyen",
+      "reason": "USF employer discovery result locates appointment in Morsani College of Medicine, Internal Medicine/Cardiology; outside this non-medical-school slice."
+    },
+    {
+      "name": "Quynh Anh Dac Nguyen",
+      "reason": "Vanderbilt employer discovery results locate pharmacology appointment in School of Medicine; outside this slice."
+    },
+    {
+      "name": "Lien Nguyen",
+      "reason": "University of Florida Center for NeuroGenetics discovery result locates Molecular Genetics and Microbiology appointment in College of Medicine; outside this slice."
+    },
+    {
+      "name": "Hanh Hoang",
+      "reason": "Emory employer discovery result identifies Lead Research Specialist in School of Medicine; medical-school role and no faculty-equivalence evidence. Outside slice."
+    },
+    {
+      "name": "Thao Nguyen (Syracuse biology)",
+      "reason": "Syracuse department discovery result explicitly identifies Research Technician (Jao), not eligible faculty."
+    },
+    {
+      "name": "Linh Huynh",
+      "reason": "Texas Tech employer discovery result identifies Assistant Professor of Applied Mathematics in Honors College. Mathematical-biology research does not place appointment within assigned departments."
+    },
+    {
+      "name": "Than Dam",
+      "reason": "Clemson employer discovery result identifies Climate-smart Postdoctoral Fellow; trainee role excluded."
+    }
+  ],
+  "coverage": [
+    {
+      "employer": "US universities — later-pass search strategy",
+      "pagesExamined": [],
+      "note": "Searched Vietnamese given-name tokens in biology, microbiology, biochemistry, neuroscience, and ecology: Thuy, Hanh, Khuong, Uyen, Linh, Hien, Dung, Ngoc, Quynh, Bich, Huong, Nhu, Tuong, Khanh, Diep, Tram, Tuyet, Huyen, Thien, Phuong, Cuong, Thao, Duy, Nghia, Lien, Tuan, Liem, Kiet, Thinh, Toan, Duc, Binh, Hiep, Viet, Bao, Truc, Vinh, Ngan, Vy, Thanh, Hoai, Huu, Nhung, Minh, Hai, Hung, Anh, Tien, Chinh, Giang, Tung, Hong, Quang, Trung, Phong, Trang, Khoa, Thuan, Diem, Quyen. Lower-frequency surname queries included Trinh, Quach, Ta, Ninh, Luong, Trieu, Ton, Luu, Dam, Chau, Hua, Thai, Vo, Phung, Khue, Doan, Nghiem, Kieu. Search results used only as discovery; candidates verified on opened live employer pages. Earlier w1 us-bio coverage reviewed, and already-proposed.txt excluded. Stopped after broad token/surname coverage and deeper regional/college directory checks repeatedly yielded existing entries or exclusions; not a claim of exhaustive US coverage."
+    },
+    {
+      "employer": "Indiana University of Pennsylvania",
+      "pagesExamined": [
+        "https://www.iup.edu/biology/faculty/index.html",
+        "https://www.iup.edu/biology/faculty/cuong-diep/index.html",
+        "https://cuongdiep.weebly.com/"
+      ],
+      "note": "New verified Cuong Diep; full departmental faculty list and individual education read."
+    },
+    {
+      "employer": "Gannon University",
+      "pagesExamined": [
+        "https://www.gannon.edu/academic-offerings/health-professions-and-sciences/school-of-sciences/department-of-biology/faculty/",
+        "https://ww4.gannon.edu/facultyprofiles.aspx?profile=aoh001"
+      ],
+      "note": "New verified Quyen Aoh through given-name query; full directory and individual career/degree/research sections read. Portrait image fetch failed; omitted."
+    },
+    {
+      "employer": "Grove City College",
+      "pagesExamined": [
+        "https://www.gcc.edu/Home/Academics/Graduate-Online-Programs/MA-in-Economics/Program-Faculty/karen-p-luong"
+      ],
+      "note": "Karen Luong lead held out for lack of affirmative Vietnamese signal."
+    },
+    {
+      "employer": "San Joaquin Delta College",
+      "pagesExamined": [
+        "https://www.deltacollege.edu/about/faculty-staff-directory/khanh-le",
+        "https://archive.deltacollege.edu/dept/ar/catalog/current/1834.htm"
+      ],
+      "note": "Individual profile and degree catalog opened; namesake dedup resolved, appointment permanence not established."
+    },
+    {
+      "employer": "Santa Monica College",
+      "pagesExamined": [
+        "https://www.smc.edu/directory/pham-duc.php",
+        "https://www.smc.edu/academics/academic-departments/life-sciences/faculty.php"
+      ],
+      "note": "Full-time versus adjunct lists and Duc Pham profile read; newer Santa Rosa presence prevented assuming Santa Monica is current."
+    },
+    {
+      "employer": "Santa Rosa Junior College",
+      "pagesExamined": [
+        "https://biologicalsciences.santarosa.edu/staff/duc-pham",
+        "https://profiles.santarosa.edu/duc-pham"
+      ],
+      "note": "Current anatomy teaching and Cornell doctorate verified; tenure-line/permanent status not established."
+    },
+    {
+      "employer": "Cañada College",
+      "pagesExamined": [
+        "https://www.canadacollege.edu/biologicalsciences/meetthefaculty.php",
+        "https://neuroscience.ucdavis.edu/people/julie-luu"
+      ],
+      "note": "Faculty list and Julie Luu alumni profile opened; held out for surname-only Vietnamese signal."
+    },
+    {
+      "employer": "Long Beach City College",
+      "pagesExamined": [
+        "https://www.lbcc.edu/faculty-staff-life-sciences"
+      ],
+      "note": "Full life sciences directory read; Diep Burbridge lead held out pending verified doctorate/research evidence."
+    },
+    {
+      "employer": "Central Michigan University",
+      "pagesExamined": [
+        "https://www.cmich.edu/academics/colleges/college-science-engineering/departments-schools/biology/staff"
+      ],
+      "note": "Faculty/staff/emeriti directory opened and screened; no additional eligible Vietnamese-name lead found."
+    },
+    {
+      "employer": "Murray State University",
+      "pagesExamined": [
+        "https://www.murraystate.edu/academics/CollegesDepartments/CollegeOfScienceEngineeringandTechnology/CollegeOfSciencePrograms/biologyDept/faculty/index.aspx"
+      ],
+      "note": "Biology faculty and staff directory opened and screened; no additional eligible lead found."
+    },
+    {
+      "employer": "University of Central Arkansas",
+      "pagesExamined": [
+        "https://uca.edu/biology/faculty-research-interests/"
+      ],
+      "note": "Research-active biology faculty list opened and screened; no additional eligible lead found."
+    },
+    {
+      "employer": "Merrimack College",
+      "pagesExamined": [
+        "https://www.merrimack.edu/academics/arts-and-sciences/biology-old/faculty/"
+      ],
+      "note": "Full-time faculty, staff, adjunct sections read; Thuy Tran is lab manager."
+    },
+    {
+      "employer": "Tulane University",
+      "pagesExamined": [
+        "https://clay.tulane.edu/home/people/"
+      ],
+      "note": "Ecology/evolutionary biology lab current and alumni lists read; Quynh Quach is lab manager."
+    },
+    {
+      "employer": "University of Wisconsin-Milwaukee",
+      "pagesExamined": [
+        "https://uwm.edu/biology/about/directory/tran-an-phu/"
+      ],
+      "note": "An-Phu Tran already listed, exact profile match."
+    },
+    {
+      "employer": "Michigan State University",
+      "pagesExamined": [
+        "https://directory.natsci.msu.edu/directory/Profiles/Person/103046"
+      ],
+      "note": "Tommy Vo already listed; biochemistry appointment confirmed."
+    },
+    {
+      "employer": "University of California, Berkeley",
+      "pagesExamined": [
+        "https://ourenvironment.berkeley.edu/people/justin-luong"
+      ],
+      "note": "Restoration ecology lead Justin Luong already listed."
+    },
+    {
+      "employer": "The University of Texas at Austin",
+      "pagesExamined": [
+        "https://integrativebio.utexas.edu/directory/phuong-dao"
+      ],
+      "note": "Phuong Dao already listed at current institution."
+    },
+    {
+      "employer": "University of Southern California",
+      "pagesExamined": [
+        "https://dornsife.usc.edu/profile/le-trinh/",
+        "https://dornsife.usc.edu/levine/our-group/"
+      ],
+      "note": "Le Trinh already listed; Levine alumni lead Trang Nguyen resolved to existing Arkansas State record."
+    },
+    {
+      "employer": "Virginia Tech",
+      "pagesExamined": [
+        "https://lam.biol.vt.edu/people/"
+      ],
+      "note": "Hanh Lam already listed; Cornell PhD and role agree."
+    },
+    {
+      "employer": "Union College",
+      "pagesExamined": [
+        "https://www.union.edu/biology/faculty-staff/quynh-chu-lagraff"
+      ],
+      "note": "Quynh Chu-LaGraff already listed."
+    },
+    {
+      "employer": "University of Hawaiʻi at Mānoa",
+      "pagesExamined": [
+        "https://manoa.hawaii.edu/tpss/people/nhu-nguyen/"
+      ],
+      "note": "Nhu H. Nguyen already listed; professor and microbiology doctorate verified."
+    }
+  ]
+}

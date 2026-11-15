@@ -1,0 +1,18 @@
+{
+  "verifier": "codex",
+  "input": "maintenance/sector-expansion/runs/w3/nih-irp.codex.json",
+  "candidates": [
+    {
+      "name": "Mary T. Thanh Hai",
+      "verdict": "fixable",
+      "failedTests": [],
+      "reason": "All five eligibility tests pass. Independently opened https://www.fda.gov/about-fda/center-drug-evaluation-and-research-cder/mary-thanh-hai: the individual current-employer biography identifies the Office of New Drugs director, a career FDA medical officer and scientific leader overseeing clinical/nonclinical investigations, with an MD from Georgetown University. This qualifies under Government & Defense and the clinical-research MD exception. The published compound name Thanh Hai supplies an affirmative Vietnamese-name signal beyond a shared surname alone. The official office page https://www.fda.gov/about-fda/cder-offices-and-divisions/office-new-drugs locates her office in Silver Spring, Maryland, outside Vietnam. The required name/profile-URL matcher returned no roster or retired-ID matches for Mary T. Thanh Hai; an additional Mary Tran Thanh Hai / Mary Thanh Hai check returned partial-name matches vp-0142, vp-0390, vp-0417, vp-0718 (and its merged retired vp-0719), vp-0896, vp-0975, vp-3100 and retired vp-1190. These are distinct people: their fields and/or degree institutions differ from this Georgetown-trained FDA endocrinologist. She is absent from already-proposed.txt. One education-field correction is required: the source documents an MD, not a PhD. Remove phdInstitution (null below denotes removal) and use mdInstitution per ROSTER_MAINTENANCE.md.",
+      "correctedProfileUrl": "https://www.fda.gov/about-fda/center-drug-evaluation-and-research-cder/mary-thanh-hai",
+      "correctedFields": {
+        "phdInstitution": null,
+        "mdInstitution": "Georgetown University"
+      }
+    }
+  ],
+  "possible_move": []
+}

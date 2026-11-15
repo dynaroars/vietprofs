@@ -1,0 +1,14 @@
+{
+  "verifier": "codex",
+  "input": "maintenance/sector-expansion/runs/w3/south-east-europe.codex.json",
+  "candidates": [
+    {
+      "name": "Thi Thu Huong Nguyen",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Independently opened the live employer profile https://chemistry.ujep.cz/rndr-thu-huong-nguyen-thi-ph-d/ and assistant-professor directory https://chemistry.ujep.cz/odborni-asistenti/; both identify this chemistry academic at UJEP in Czechia. The individual profile provides a local office, institutional contact, teaching responsibilities, research interests and a Charles University organic-chemistry PhD awarded in 1997. Independently downloaded and extracted the employer accreditation PDF https://www.fzp.ujep.cz/wp-content/uploads/2025/01/P%C5%99%C3%ADloha-3-Udr%C5%BEitelnost-obnoviteln%C3%BDch-zdroj%C5%AF-surovin-AS-F%C5%BDP.pdf (web fetch timed out, direct HTTPS download succeeded): page 80 records full-time indefinite employment (PP 1,0 doba neurcita); page 140 records 40 hours, assistant-professor service since 2001, and Charles University Mgr. (1992) and PhD (1997). This supports the continuing Teaching appointment and proposed rank. The full Vietnamese given/middle-name sequence Thi Thu Huong, corroborated by the employer name variants, supplies a signal beyond surname alone; no diacritics are inferred. Ran the required name-and-URL roster matching. The eight name-only hits are different people: vp-0251 has a Michigan State doctorate; vp-0252 is a Chicago-trained nursing scholar; vp-0476 is a UCLA-trained philosopher; vp-0514 is an Iowa State-trained plant scientist; vp-1907 works in accounting/finance; vp-2029 is a Melbourne-trained management scholar; vp-3134 is a Stony Brook-trained computational biologist; vp-3200 is a Stanford-trained medical-device researcher. None matches this Charles University 1997 chemist. No identity-URL match or matching candidate identity in already-proposed.txt. The current employer office and permanent appointment establish a Czechia base rather than Vietnam.",
+      "correctedFields": {}
+    }
+  ],
+  "possible_move": []
+}

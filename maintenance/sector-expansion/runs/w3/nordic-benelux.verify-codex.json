@@ -1,0 +1,42 @@
+{
+  "verifier": "codex",
+  "input": "maintenance/sector-expansion/runs/w3/nordic-benelux.codex.json",
+  "candidates": [
+    {
+      "name": "Tu Dac Ho",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Independently opened https://www.ntnu.edu/employees/tu.d.ho: current Associate Professor, Department of Information Security and Communication Technology, Trondheim; Waseda MSc 2005 and PhD 2011. Opened https://www.ntnu.edu/iik/communication-technology: explicitly listed under Permanent Academic Staff, separately from adjunct/affiliated staff. The distinctive Vietnamese given-name combination Tu Dac supplies a signal beyond surname Ho. find-roster-matches with name, NTNU profile, Scholar, LinkedIn URL (not fetched), and ResearchGate URL returned no roster or retired-id matches. Not in already-proposed.txt. Norway location is explicit.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Viet Thuy Vu",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Independently opened https://www.bth.se/english/staff-landing-page/viet-thuy-vu: current Senior Lecturer/Docent, Mathematics and Natural Sciences, Karlskrona; BTH doctorate 2011 and departmental career since 2013. Senior Lecturer is the employment rank; docent is a qualification. BTH employer recruitment page https://web106.reachmee.com/ext/i002/1363/job?job_id=1308&lang=uk&site=8&validator=62a6a4796cc0941a5d5b4b3a1358c097 explicitly describes the senior-lecturer endpoint as permanent and tenured, supporting Tenure-line classification. Viet Thuy supplies an affirmative Vietnamese given-name signal beyond Vu. find-roster-matches returned vp-3082 Thuy Vu; independently inspected the record: UCLA PhD 2017, Amazon Applied Science, versus this BTH PhD 2011 radar researcher, establishing different identities. Also inspected vp-1534 TuongThuy Vu: different full name, Curtin civil/construction engineering and doctorate year 2022. Not in already-proposed.txt. Swedish location is explicit.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Maria Dung Cao",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Independently opened https://www.hiof.no/hvo/shb/english/people/aca/mdc/index.html: current Associate Professor in Nursing, Health and Laboratory Science, Fredrikstad, with teaching duties and active publication list. The official profile confirms NTNU PhD in Molecular Medicine 2008–2012, NTNU master 2006–2008, and Østfold bachelor 2001–2004. This is an ordinary substantive associate-professor appointment with no visiting, adjunct, postdoctoral or other temporary qualifier. Vietnamese given name Dung combined with Cao supplies the affirmative signal beyond a shared surname. find-roster-matches with name and official profile returned no roster or retired-id matches. Not in already-proposed.txt. Norwegian location is explicit.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Bao Quoc Ta",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Independently opened https://www.usn.no/english/about/contact-us/employees/bao-quoc-ta: current Associate Professor, Department of Microsystems, Campus Vestfold; CV explicitly dates the associate professorship 2017–present, and documents both teaching and research. Confirms PhD 2010–2014 at University College of Buskerud and Vestfold and MSc 2008–2010 at University College of Vestfold. Bao Quoc supplies a Vietnamese given-name signal, corroborated by HCM City University of Technology education and earlier Vietnamese faculty positions. find-roster-matches with name and profile returned no roster or retired-id matches. Independently inspected similar-name vp-1384 Bao Quoc Tang: Graz mathematician, Graz PhD 2015, a different person. Not in already-proposed.txt. Current campus is in Norway, not the former Vietnamese employers.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Tuan Thien Tran",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Independently opened https://www.uu.se/en/contact-and-organisation/staff?query=N17-1987: current Researcher Docent, Materials Physics, Uppsala, with ANU PhD, KU Leuven master and HCM City undergraduate education. Opened current official supervisor CV https://www.uu.se/download/18.281eec13195c8a4b921285e/1770969373441/N11-1921.pdf, page 4: his 2017–2022 postdoctoral period is completed and his destination is now staff scientist at UU. The explicit transition out of postdoctoral training, current institutional researcher/docent profile, and continuing research activity support an enduring faculty-equivalent Research appointment under the maintenance guide. Stability is inferred from this combined institutional evidence; neither source explicitly states permanent contractual status. Tuan Thien and Vietnamese undergraduate education supply the affirmative identity signal. find-roster-matches with name, profile and ORCID returned vp-0365, vp-0391, vp-0494, vp-1643, vp-1780 and vp-2620. Independently inspected all six records: pharmacy/Oregon State, psychology/South Carolina, mechanical engineering/UIUC, civil engineering/Virginia Tech, infectious diseases, and mathematics/Free University of Berlin respectively; these differ from the ANU-trained ion-beam/materials physicist, with no shared identity URLs. Not in already-proposed.txt. Swedish address is explicit.",
+      "correctedFields": {}
+    }
+  ],
+  "possible_move": []
+}

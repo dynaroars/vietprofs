@@ -1,0 +1,245 @@
+{
+  "group": "Non-US public research",
+  "agent": "codex",
+  "slice": "nonus-public-2",
+  "finishedAt": "2026-11-15T01:38:58.006313Z",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Cao Nguyen Duong",
+        "university": "Leibniz Institute for New Materials",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Fluorescence Microscopy",
+        "country": "Germany",
+        "researchAreas": [
+          "Fluorescence microscopy",
+          "Engineered living materials"
+        ],
+        "profileUrl": "https://www.leibniz-inm.de/en/staff/dr-duong-cao-nguyen/"
+      },
+      "evidence": {
+        "currentRole": "https://www.leibniz-inm.de/en/staff/dr-duong-cao-nguyen/ — “Head of Fluorescence Microscopy”. Individual current employer staff profile identifies a core-facility head with research publications, rather than a trainee or visitor.",
+        "doctorateOrPapers": "https://www.leibniz-inm.de/en/staff/dr-duong-cao-nguyen/ identifies him as Dr.; also lists his 2025 papers DOI 10.1021/acsbiomaterials.5c00325 and 10.1016/j.jconrel.2025.114264, and 2026 DOI 10.1088/1758-5090/ae7206. Doctoral institution/year omitted because the individual employer profile does not state them.",
+        "vietnameseSignal": "Cao Nguyen is an affirmative Vietnamese given-name combination on the employer profile. Additionally, opened individual former-institution biography https://www.uni-muenster.de/CiM-IMPRS/students/alumni/duong_cao_nguyen.html states “from Thanhhoa, Vietnam”; its molecular-biomedicine project matches his microscopy/cell-biology identity.",
+        "dedup": "Ran npm run find-roster-matches -- \"Cao Nguyen Duong\" --url https://www.leibniz-inm.de/en/staff/dr-duong-cao-nguyen/ https://orcid.org/0000-0002-0298-3042 https://www.uni-muenster.de/CiM-IMPRS/students/alumni/duong_cao_nguyen.html. Returned vp-0023 and vp-0358, name-token matches only. Inspected both roster records: Wyoming Duong Nguyen has Michigan State 2021 computer/electrical-engineering doctorate; ASU Duong Nguyen has UBC 2020 electrical-engineering doctorate. Different people from the INM microscopy head and Münster molecular-biomedicine alumnus; different surname ordering, discipline, training and URLs. Exact-name gh issue list --state all returned []. Not in already-proposed.txt."
+      }
+    },
+    {
+      "entry": {
+        "name": "Van Duc Dinh",
+        "university": "Paul Drude Institute for Solid State Electronics",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Epitaxy",
+        "country": "Germany",
+        "researchAreas": [
+          "Nitride semiconductors",
+          "Molecular beam epitaxy",
+          "X-ray photoelectron spectroscopy"
+        ],
+        "profileUrl": "https://www.pdi-berlin.de/de/people/people-directory/dr-van-duc-dinh-1"
+      },
+      "evidence": {
+        "currentRole": "https://www.pdi-berlin.de/de/people/people-directory/dr-van-duc-dinh-1 — “Scientist”, Epitaxy; individual staff page assigns responsibility for MBE-9 and XPS and identifies current nitride research projects. Listed as a staff scientist rather than postdoc/visitor.",
+        "doctorateOrPapers": "https://www.pdi-berlin.de/de/people/people-directory/dr-van-duc-dinh-1 — “Dr. Van Duc Dinh” in semiconductor research. Research doctorate supported by doctoral title on the employer scientist profile; institution/year not stated and omitted.",
+        "vietnameseSignal": "https://www.pdi-berlin.de/de/people/people-directory/dr-van-duc-dinh-1 — Van Duc is an affirmative Vietnamese given/middle-name combination paired with Dinh. No diacritics reconstructed.",
+        "dedup": "Ran npm run find-roster-matches -- \"Van Duc Dinh\" --url https://www.pdi-berlin.de/de/people/people-directory/dr-van-duc-dinh-1: no roster or retired-id matches. Exact-name gh issue list --state all returned []. Not in already-proposed.txt."
+      }
+    },
+    {
+      "entry": {
+        "name": "Ngoc Duyen Tanja Tu",
+        "university": "Leibniz Institute for the German Language",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Grammar",
+        "city": "Mannheim",
+        "country": "Germany",
+        "researchAreas": [
+          "Corpus linguistics",
+          "Large language models",
+          "Machine learning",
+          "Natural language processing"
+        ],
+        "phdInstitution": "University of Mannheim",
+        "phdYear": 2022,
+        "profileUrl": "https://perso.ids-mannheim.de/seiten/tu.html"
+      },
+      "evidence": {
+        "currentRole": "https://perso.ids-mannheim.de/seiten/tu.html — “Wissenschaftliche Mitarbeiterin in der Abteilung Grammatik”; staff chronology dates IDS employment from February 2017 onward. Current individual institutional page distinguishes staff employment from the completed doctorate and 2022 guest visit. The 2025 Leibniz PostDoc Network co-speaker line is a service activity, not her employment title.",
+        "doctorateOrPapers": "https://perso.ids-mannheim.de/seiten/tu.html — “2019-2022: Promotion” in German language/media studies at Universität Mannheim; dissertation concerns corpus-linguistic analysis of lexical diversity in speech-introduction expressions. Completed research doctorate, not current doctoral enrollment.",
+        "vietnameseSignal": "https://perso.ids-mannheim.de/seiten/tu.html — Ngoc Duyen is an affirmative Vietnamese given-name combination, beyond the potentially ambiguous surname Tu.",
+        "dedup": "Ran npm run find-roster-matches -- \"Ngoc Duyen Tanja Tu\" --url https://perso.ids-mannheim.de/seiten/tu.html https://orcid.org/0000-0002-7586-0617: no roster or retired-id matches. Exact-name gh issue list --state all returned []. Not in already-proposed.txt."
+      }
+    }
+  ],
+  "already_listed": [
+    {
+      "name": "Nguyen Dinh Dang",
+      "id": "vp-1249",
+      "note": "Opened https://ribf.riken.jp/~dang/page3.html. Nuclear-physics career and RIKEN identity match vp-1249, including the stored same personal institutional site. Ran find-roster-matches with both opened biography URL and stored root URL; exact identity already listed."
+    }
+  ],
+  "possible_move": [],
+  "rejected": [
+    {
+      "name": "Duc Truyen Le",
+      "reason": "Opened https://ithems.riken.jp/ja/members/duc-truyen-le. IPA doctoral program and primary Saitama University doctoral enrollment explicitly stated; student, despite misleading standalone Ph.D. text on page."
+    },
+    {
+      "name": "Tra Thi Huong Dinh",
+      "reason": "Opened https://www.riken.jp/en/about/people/2025summer-2/index.html; career R&D scientist role, Tsukuba PhD and Vietnamese education supported. Earlier same-slice run records closed Issue #1059 rejecting this identity because permanent/non-term-limited status was not established. This individual interview does not resolve that specific concern; not reproposed."
+    },
+    {
+      "name": "Paul Nguyen",
+      "reason": "Opened https://leibniz-ifl.de/institut/personen/nguyen-paul. Researcher with publications, but no affirmative Vietnamese signal beyond surname Nguyễn. Excluded under BRIEF2, irrespective of possible publication eligibility."
+    },
+    {
+      "name": "Thanh Van Nguyen",
+      "reason": "Opened https://www.izw-berlin.de/en/thanh-van-nguyen-en.html: explicitly Doctoral student; CV also gives Hanoi research affiliation. Excluded."
+    },
+    {
+      "name": "Eileen Nguyen",
+      "reason": "Opened https://leibniz-lib.de/de/ueber-das-lib/mitarbeitende/eileen-nguyen.html: technical-assistance role, no affirmative Vietnamese signal beyond surname. Recent papers do not establish a qualifying career scientist appointment or satisfy ancestry screen."
+    },
+    {
+      "name": "Quoc Khanh Tran",
+      "reason": "Opened https://www.fz-juelich.de/profile/tran_qu. Dr. and IET-4 affiliation/contact supported, but page supplies no role or career history. Group-leader search leads cannot replace individual staff-page evidence. Not verified."
+    },
+    {
+      "name": "Tom Luu / Thomas Luu",
+      "reason": "Opened https://www.fz-juelich.de/profile/luu_t. Prof. and IAS-4 affiliation supported, but no affirmative Vietnamese given name, education, language or identity signal on individual page. Surname-only lead; not verified."
+    },
+    {
+      "name": "Thi Minh Ha Pham",
+      "reason": "Opened https://www.leibniz-inm.de/en/staff/dr-pham-thi-minh-ha/. Sparse Dr./Research Scientist/contact profile supplies no education or career history. Earlier run held identity unresolved against vp-0420, vp-1733 and retired vp-1154. No new individual-page evidence resolving those identities obtained; left out. The shorter Ha Pham also occurs in already-proposed.txt and was not assumed to be a new person."
+    },
+    {
+      "name": "Hoai My Van",
+      "reason": "Individual employer portrait discovered at https://safe-intelligence.fraunhofer.de/artikel/portraet-hoai-my-van-elektrotechnik-und-informationstechnik-war-mein-bwl; browser open failed (Cache miss). Search discovery supports research-engineer role and Vietnamese family background, but no doctorate or two recent papers verified on an individual staff page. Not a candidate."
+    },
+    {
+      "name": "Anh Tuan Vu",
+      "reason": "Discovery supports Dr.-Ing. and Fraunhofer IPT research, but results were project/technology pages, publication repositories and third-party profiles. No individual employer staff biography located; not verified under the individual-page-only restriction."
+    },
+    {
+      "name": "Nhu Ngoc Quynh Vo",
+      "reason": "Search discovery shows current RIKEN Research Scientist listing, separately from postdocs, but only team pages and older postdoctoral news/conference material surfaced. No individual current employer staff page found; current role not verified to the required page standard."
+    },
+    {
+      "name": "Hieu Duy Nguyen; Thang Dinh Phan",
+      "reason": "NIMS publication/symposium leads only; no individual current staff page supporting career role successfully located. Not verified; did not infer appointment from publications."
+    },
+    {
+      "name": "Phuong Lan Pham; Phuong Mai Le; Phuong Vo; Minh Tan Ton-That",
+      "reason": "NRC Canada leads surfaced in publication archives, conference biographies and third-party directories. No individual current employer staff page supporting all tests located. Not verified."
+    },
+    {
+      "name": "Capucine Nghiem",
+      "reason": "AIST rare-surname search lead; discovery describes a postdoctoral move following 2025 doctorate. No qualifying individual employer career staff page or affirmative Vietnamese signal obtained; not a candidate."
+    },
+    {
+      "name": "Willy Quach",
+      "reason": "CISPA rare-surname discovery found individual profile https://cispa.de/de/people/c01wiqu and employer interview https://cispa.de/en/willy-quach, but no affirmative Vietnamese signal beyond surname. Not advanced to candidate or opened as verification; surname alone is insufficient."
+    }
+  ],
+  "coverage": [
+    {
+      "employer": "Max Planck institutes",
+      "pagesExamined": [],
+      "note": "Given-name searches across mpg.de: Hieu, Thuy, Tuan, Minh, Huu, Bich, Hoai, Ngoc, Khanh, Hanh, Truc, Duy, Thanh, Tung, Hien, Hiep; lower-frequency surnames Huynh, Phung, Trinh, Nghiem, Ton-That. Discovery reached biochemistry, immunobiology, multidisciplinary sciences, polymer research, physics, mathematics, informatics, molecular plant physiology and sustainable materials. Leads were trainees, alumni, visitors or publication-only records. No new qualifying individual staff page opened; no directory result accepted as evidence."
+    },
+    {
+      "employer": "Helmholtz centres",
+      "pagesExamined": [
+        "https://www.fz-juelich.de/profile/tran_qu",
+        "https://www.fz-juelich.de/profile/luu_t"
+      ],
+      "note": "Given-name/rare-surname searches covered Jülich, DLR, DESY, DKFZ, HZB, HZDR, UFZ, AWI, GFZ, Helmholtz Munich and CISPA, including Tuan, Thang, Huong, Huyen, Duc, Tien, Quang, Phuc, Bich, Thao, Huy, Ngo, Quach. Sparse individual contact profiles and postdoctoral/team/publication results did not support new eligible candidates. CISPA was a deeper extension beyond the earlier run."
+    },
+    {
+      "employer": "Fraunhofer Society",
+      "pagesExamined": [
+        "https://safe-intelligence.fraunhofer.de/artikel/portraet-hoai-my-van-elektrotechnik-und-informationstechnik-war-mein-bwl"
+      ],
+      "note": "Given-name and less-common-surname searches across IEM, IPT, IKS, IAO, IPA, ISE, SIT and FOKUS used Hieu, Quang, Tuan, Thien, Hoai, Bui, Luu, Quach and targeted fuller names. Portrait URL open failed; no candidate accepted from search snippets, project contacts or multi-person pages. Already-proposed FOKUS candidates were skipped."
+    },
+    {
+      "employer": "Leibniz institutes",
+      "pagesExamined": [
+        "https://www.leibniz-inm.de/en/staff/dr-duong-cao-nguyen/",
+        "https://www.pdi-berlin.de/de/people/people-directory/dr-van-duc-dinh-1",
+        "https://perso.ids-mannheim.de/seiten/tu.html",
+        "https://leibniz-ifl.de/institut/personen/nguyen-paul",
+        "https://www.izw-berlin.de/en/thanh-van-nguyen-en.html",
+        "https://leibniz-lib.de/de/ueber-das-lib/mitarbeitende/eileen-nguyen.html",
+        "https://www.leibniz-inm.de/en/staff/dr-pham-thi-minh-ha/",
+        "https://www.uni-muenster.de/CiM-IMPRS/students/alumni/duong_cao_nguyen.html"
+      ],
+      "note": "Deeper coverage of INM microscopy, Paul Drude epitaxy and IDS computational/corpus linguistics produced three candidates. Additional searches reached IfL, IZW, LIB, IPHT, HKI, ZALF and IOS; surname-only, trainee and unresolved sparse-profile leads were excluded. IDS and Paul Drude extend beyond the earlier run. Münster individual alumni biography was used solely for identity/Vietnamese background; current-role evidence is INM."
+    },
+    {
+      "employer": "RIKEN",
+      "pagesExamined": [
+        "https://ithems.riken.jp/ja/members/duc-truyen-le",
+        "https://www.riken.jp/en/about/people/2025summer-2/index.html",
+        "https://ribf.riken.jp/~dang/page3.html"
+      ],
+      "note": "Given-name/rare-surname searches used Quang, Duc, Hieu, Thanh, Quynh, Truong, Khuong, Bach and targeted full names. Reached iTHEMS, BRC, CSRS and Nishina. Students and unresolved term-status leads excluded; Nguyen Dinh Dang is already listed. Research Scientist team-list lead Nhu Ngoc Quynh Vo was not accepted without an individual page."
+    },
+    {
+      "employer": "National Institute for Materials Science",
+      "pagesExamined": [],
+      "note": "Queries used Ngoc, Hiep, Thang, Bach, Dinh, Bui, Ngo and targeted Hieu Duy Nguyen, Thang Dinh Phan and Thuc Anh Ngo; SAMURAI discovery mostly returned group publication records, postdoctoral/student roles and conference material. No qualifying individual career staff page verified. No guessed SAMURAI profile URLs fetched."
+    },
+    {
+      "employer": "National Institute of Advanced Industrial Science and Technology",
+      "pagesExamined": [],
+      "note": "Given-name/rare-surname searches used Tuan, Hoang, Quoc, Bui, Tran and Nghiem; reached digital architecture, mobility services, computational omics and media interaction discovery. Returned team or publication records and postdoctoral leads, no verified individual career staff page."
+    },
+    {
+      "employer": "National Institute of Information and Communications Technology",
+      "pagesExamined": [],
+      "note": "Queries used Phuc, Huu and Kieu and targeted Trinh Viet Phuc. Results were publications/team history, not qualifying individual current staff pages. Already-proposed Hoang-Quoc Nguyen-Son and Phong Trieu Le were skipped."
+    },
+    {
+      "employer": "Korea Institute of Science and Technology",
+      "pagesExamined": [],
+      "note": "Queries used Huy, Quang, Bich, Ngoc, Tien, Trinh and Doan. Discovery mainly found students, internship announcements or unrelated results. No individual eligible staff page verified; this is a search-coverage limitation, not evidence that no eligible staff exist."
+    },
+    {
+      "employer": "Electronics and Telecommunications Research Institute",
+      "pagesExamined": [],
+      "note": "Queries used Dung, Hoang, Quoc, Khanh and Thuy. Results were conference/paper records and external lab alumni rather than individual employer staff biographies. No new verified candidate."
+    },
+    {
+      "employer": "KAIST research institutes",
+      "pagesExamined": [],
+      "note": "Given-name searches used Hieu, including institute/lab research-role terms. Results identified undergraduate, masters and doctoral researchers, rather than career institute scientists; no eligible individual staff page found. University faculty were not silently recast as lab employees."
+    },
+    {
+      "employer": "Academia Sinica",
+      "pagesExamined": [],
+      "note": "Queries used Dinh, Hien, Khuong, Thuy, Quynh and Vietnam/research-fellow terms. Results were mostly students, postdocs, visiting speakers or unrelated Chinese-name matches. No qualifying individual current staff page verified."
+    },
+    {
+      "employer": "Industrial Technology Research Institute, Taiwan",
+      "pagesExamined": [],
+      "note": "Queries used Phuong, Tuan, Trinh and Ngoc. No new individual career research staff page located; no candidates accepted from paper bylines, conference records or industrial roles alone."
+    },
+    {
+      "employer": "National Research Council Canada",
+      "pagesExamined": [],
+      "note": "Queries used Phuong, Huy, Linh, Minh, Tuan, Dinh, Bui and Ton-That and followed fuller-name leads Phuong Lan Pham, Phuong Mai Le, Phuong Vo and Minh Tan Ton-That. Results predominantly publication archives, team contacts and third-party directories; no qualifying individual current employer biography located."
+    },
+    {
+      "employer": "National Physical Laboratory, United Kingdom",
+      "pagesExamined": [],
+      "note": "Queries used Linh, Duc, Quang, Dung, Truong, Bui and a supplementary Nguyen discovery search. Linh N. T. Nguyen surfaced only in LinkedIn search results, which were not fetched. No qualifying individual staff page found."
+    }
+  ]
+}

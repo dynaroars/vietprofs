@@ -1,0 +1,844 @@
+{
+  "group": "university",
+  "agent": "codex",
+  "slice": "us-california",
+  "finishedAt": "2026-11-15T00:14:11Z",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Hao Nguyen",
+        "university": "California State University, Sacramento",
+        "rank": "Professor",
+        "track": "Tenure-line",
+        "department": "Biological Sciences",
+        "field": "Biological & Biomedical Sciences",
+        "country": "United States",
+        "state": "California",
+        "researchAreas": [
+          "Cell and Molecular Biology",
+          "Colon Carcinogenesis"
+        ],
+        "keywords": [
+          "Cell and Molecular Biology",
+          "Colon Carcinogenesis"
+        ],
+        "profileUrl": "https://scholars.csus.edu/esploro/profile/hao_nguyen",
+        "phdInstitution": "University of Texas at Dallas",
+        "phdYear": 1995,
+        "city": "Sacramento",
+        "portraitSource": "https://www.csus.edu/college/natural-sciences-mathematics/biology/meet-us/_internal/photos/full-time/s_nguyen_hao.jpg",
+        "undergradInstitution": "Rice University",
+        "undergradYear": 1987,
+        "msInstitution": "University of Texas at Dallas"
+      },
+      "evidence": {
+        "currentRole": "https://scholars.csus.edu/esploro/profile/hao_nguyen — \"Professor, Department of Biological Sciences\".",
+        "doctorateOrPapers": "https://scholars.csus.edu/esploro/profile/hao_nguyen — 1995, PhD, University of Texas at Dallas.",
+        "vietnameseSignal": "Hao is a Vietnamese given name paired with Nguyen on the official profile.",
+        "dedup": "Ran npm run find-roster-matches -- \"Hao Nguyen\" with --url for every proposed profile, website, Scholar and portrait-source URL; exit 0. No identity-URL matches. Name/retired-ID hits: vp-0837, vp-1943, vp-2692. Different people: vp-0837 studies communication (Amsterdam PhD 2019), vp-1943 is Canh Hao in Kyoto bioinformatics, and vp-2692 is a UCSF urologist (Boston University MD/PhD 2007). This candidate is the Sacramento biologist with UT Dallas PhD 1995; current department directory corroborates the role. Manually checked roster names and aliases; checked already-proposed.txt and none of the candidate names is on it.",
+        "enrichment": "https://www.csus.edu/college/natural-sciences-mathematics/biology/meet-us/ confirms current full-time faculty listing, research topics and portrait; campus address is Sacramento. Degree history is on the official research profile. PortraitSource is a proposed image URL extracted from the person's employer profile; visual inspection is still required before storing a portrait."
+      }
+    },
+    {
+      "entry": {
+        "name": "Nhung Nguyen - University of California, San Francisco",
+        "university": "University of California, San Francisco",
+        "rank": "Assistant Professor",
+        "track": "Tenure-line",
+        "department": "Medicine",
+        "field": "Health Sciences",
+        "country": "United States",
+        "state": "California",
+        "researchAreas": [
+          "Tobacco and Cannabis Co-use",
+          "Mobile Health",
+          "Ecological Momentary Assessment",
+          "Machine Learning"
+        ],
+        "keywords": [
+          "Tobacco and Cannabis Co-use",
+          "Mobile Health",
+          "Ecological Momentary Assessment",
+          "Machine Learning"
+        ],
+        "profileUrl": "https://profiles.ucsf.edu/nhung.nguyen",
+        "phdInstitution": "University of Texas Health Science Center at Houston",
+        "phdYear": 2014,
+        "city": "San Francisco",
+        "undergradInstitution": "Hanoi University of Pharmacy",
+        "undergradYear": 2008,
+        "websiteUrl": "https://heartylab.ucsf.edu",
+        "portraitSource": "https://researcherprofiles.org/profile/Modules/CustomViewPersonGeneralInfo/PhotoHandler.ashx?NodeID=173248&cachekey=a1fe3c8c-3bf8-4550-b895-f72bacb1f27b"
+      },
+      "evidence": {
+        "currentRole": "https://profiles.ucsf.edu/nhung.nguyen — \"Assistant Professor, Medicine\".",
+        "doctorateOrPapers": "https://profiles.ucsf.edu/nhung.nguyen — University of Texas Health Science Center at Houston | PhD | 2014.",
+        "vietnameseSignal": "Official profile lists Hanoi University of Pharmacy, Vietnam, BS 2008; Nhung is also a Vietnamese given name.",
+        "dedup": "Ran npm run find-roster-matches -- \"Nhung Nguyen\" with --url for every proposed profile, website, Scholar and portrait-source URL; exit 0. No identity-URL matches. Name/retired-ID hits: vp-0312, vp-1966, vp-3144. Different people: vp-0312 has Kansas communication PhD 2024; vp-1966 researches HR management at Northumbria; vp-3144 has Maryland physics PhD 2024. This candidate holds UTHealth epidemiology PhD 2014 and Hanoi pharmacy BS 2008. Manually checked roster names and aliases; checked already-proposed.txt and none of the candidate names is on it.",
+        "enrichment": "Role, degrees, research, lab link and labeled photo are on the official profile. Local and trainee awards were screened out; no honors proposed. PortraitSource is a proposed image URL extracted from the person's employer profile; visual inspection is still required before storing a portrait."
+      }
+    },
+    {
+      "entry": {
+        "name": "David Nguyen",
+        "university": "University of California, San Francisco",
+        "rank": "Assistant Professor",
+        "track": "Tenure-line",
+        "department": "Medicine, Division of Infectious Diseases",
+        "field": "Biological & Biomedical Sciences",
+        "country": "United States",
+        "state": "California",
+        "researchAreas": [
+          "Primary Immunodeficiency",
+          "CRISPR Genome Editing",
+          "Gene Therapy"
+        ],
+        "keywords": [
+          "Primary Immunodeficiency",
+          "CRISPR Genome Editing",
+          "Gene Therapy"
+        ],
+        "profileUrl": "https://profiles.ucsf.edu/david-huy.nguyen",
+        "phdInstitution": "Massachusetts Institute of Technology",
+        "phdYear": 2008,
+        "city": "San Francisco",
+        "mdInstitution": "Stanford University",
+        "websiteUrl": "https://innovativegenomics.org/nguyenlab/",
+        "portraitSource": "https://researcherprofiles.org/profile/Modules/CustomViewPersonGeneralInfo/PhotoHandler.ashx?NodeID=174237&cachekey=f9d6b258-c987-483a-b948-0891682c94a3"
+      },
+      "evidence": {
+        "currentRole": "https://profiles.ucsf.edu/david-huy.nguyen — \"Assistant Professor, Medicine\".",
+        "doctorateOrPapers": "https://profiles.ucsf.edu/david-huy.nguyen — MIT, HST, Cambridge, MA | PhD | 2008.",
+        "vietnameseSignal": "Official profile URL identifies david-huy.nguyen; Huy is a Vietnamese given name. Independent provider record spells David-Huy Nhu Nguyen: https://www.hillphysicians.com/doctor/david-huy-nhu-nguyen-md.",
+        "dedup": "Ran npm run find-roster-matches -- \"David Nguyen\" with --url for every proposed profile, website, Scholar and portrait-source URL; exit 0. No identity-URL matches. Name/retired-ID hits: vp-1102. Different person from vp-1102, an Indiana-trained education scholar (PhD 2015); this candidate is the MIT-trained physician-scientist (PhD 2008, Stanford MD 2012). Berkeley's affiliated David N Nguyen and the IGI lab are the same UCSF PI, not a second candidate. Manually checked roster names and aliases; checked already-proposed.txt and none of the candidate names is on it.",
+        "enrichment": "Official UCSF profile links the IGI lab and states Stanford MD (2012), primary-immunodeficiency research and the labeled photo. https://innovativegenomics.org/nguyenlab/ independently corroborates the same lab and PI. PortraitSource is a proposed image URL extracted from the person's employer profile; visual inspection is still required before storing a portrait."
+      }
+    },
+    {
+      "entry": {
+        "name": "Kevin A. Nguyen",
+        "university": "Sonoma State University",
+        "rank": "Associate Professor",
+        "track": "Tenure-line",
+        "department": "Hutchins School of Liberal Studies",
+        "field": "Education",
+        "country": "United States",
+        "state": "California",
+        "researchAreas": [
+          "STEM Education",
+          "Informal Learning",
+          "Citizen Science",
+          "Active Learning"
+        ],
+        "keywords": [
+          "STEM Education",
+          "Informal Learning",
+          "Citizen Science",
+          "Active Learning"
+        ],
+        "profileUrl": "https://hutchins.sonoma.edu/faculty/kevin-nguyen",
+        "phdInstitution": "University of Texas at Austin"
+      },
+      "evidence": {
+        "currentRole": "https://hutchins.sonoma.edu/faculty/kevin-nguyen — \"Associate Professor of STEM Education\".",
+        "doctorateOrPapers": "https://commencement.sonoma.edu/sites/commencement/files/2024-06/Sonoma%20State%20Commencement%20Program%20v17.pdf: Kevin Nguyen, Ph.D., University of Texas at Austin (faculty list, p. 58).",
+        "vietnameseSignal": "https://aapicnorthbay.org/event-6103219 identifies the same SSU STEM education professor as the speaker on Vietnamese Experience & the Impact of War. https://caase.sonoma.edu/monthly-newsletter spells Kevin A. Nguyen.",
+        "dedup": "Ran npm run find-roster-matches -- \"Kevin A. Nguyen\" with --url for every proposed profile, website, Scholar and portrait-source URL; exit 0. No identity-URL matches. Name/retired-ID hits: vp-1027, vp-1116. Different people: vp-1027 holds Brown health-policy PhD 2021; vp-1116 is a Drexel physician-assistant educator with Temple education. This candidate is Sonoma's STEM education scholar with UT Austin PhD; matched SSU email nguyenkevi@sonoma.edu links university profile and Kevin A. Nguyen newsletter. Manually checked roster names and aliases; checked already-proposed.txt and none of the candidate names is on it.",
+        "enrichment": "The STEM education title and school are on the official profile; the 2024 university commencement faculty list supplies the doctorate. No PhD year or city is asserted."
+      }
+    },
+    {
+      "entry": {
+        "name": "Son C. Nguyen",
+        "university": "University of California, Merced",
+        "rank": "Associate Professor",
+        "track": "Tenure-line",
+        "department": "Chemistry and Biochemistry",
+        "field": "Chemistry",
+        "country": "United States",
+        "state": "California",
+        "researchAreas": [
+          "Nanomaterial Photocatalysis",
+          "Spectroscopy",
+          "Green Synthesis",
+          "Solar Energy Harvesting"
+        ],
+        "keywords": [
+          "Nanomaterial Photocatalysis",
+          "Spectroscopy",
+          "Green Synthesis",
+          "Solar Energy Harvesting"
+        ],
+        "profileUrl": "https://naturalsciences.ucmerced.edu/people/son-c-nguyen",
+        "phdInstitution": "University of California, Berkeley",
+        "phdYear": 2014,
+        "undergradInstitution": "University of Natural Sciences, Vietnam",
+        "undergradYear": 2001,
+        "websiteUrl": "https://sites.ucmerced.edu/son"
+      },
+      "evidence": {
+        "currentRole": "https://naturalsciences.ucmerced.edu/people/son-c-nguyen — \"Associate Professor, Chemistry & Biochemistry\".",
+        "doctorateOrPapers": "https://naturalsciences.ucmerced.edu/people/son-c-nguyen — Ph.D., 2014 - UC Berkeley.",
+        "vietnameseSignal": "Official profile lists B.S., 2001 - University of Natural Sciences, Vietnam; Son is a Vietnamese given name.",
+        "dedup": "Ran npm run find-roster-matches -- \"Son C. Nguyen\" with --url for every proposed profile, website, Scholar and portrait-source URL; exit 0. No identity-URL matches. Name/retired-ID hits: vp-0572, vp-0625, vp-1631, vp-1718, vp-1879, vp-1962, vp-2438, vp-3165. Different people: vp-0572 (Warsaw CS PhD 1997), vp-0625 (UPMC PhD 2011, photonics), vp-1631 (Swiss law), vp-1718 (Wayne State math PhD 2010), vp-1879 (Tien Son, Linkoping semiconductor research), vp-1962 (Ecole Centrale de Lyon civil engineering PhD 2009), vp-2438 (Greifswald biotechnology PhD 2010), vp-3165 (Brown PhD 1981). Candidate's Berkeley chemistry PhD 2014, Vietnam BS 2001 and Merced photocatalysis appointment resolve his identity. Manually checked roster names and aliases; checked already-proposed.txt and none of the candidate names is on it.",
+        "enrichment": "Role, research, education and lab link come from the official profile; no city or unsupported doctorate-year inference added."
+      }
+    },
+    {
+      "entry": {
+        "name": "Hieu P. Nguyen",
+        "university": "California State University, Long Beach",
+        "rank": "Professor",
+        "track": "Tenure-line",
+        "department": "Marketing",
+        "field": "Business & Economics",
+        "country": "United States",
+        "state": "California",
+        "researchAreas": [
+          "Consumer Research",
+          "Visual Communication",
+          "Vietnamese Propaganda Posters"
+        ],
+        "keywords": [
+          "Consumer Research",
+          "Visual Communication",
+          "Vietnamese Propaganda Posters"
+        ],
+        "profileUrl": "https://web.csulb.edu/colleges/cob/intranet/vita/public/resume.php?cid=119&username=hnguye47",
+        "phdInstitution": "University of Texas at Arlington",
+        "city": "Long Beach",
+        "undergradInstitution": "Hanoi Foreign Studies University",
+        "msInstitution": "Texas Christian University",
+        "portraitSource": "https://web.csulb.edu/colleges/cob/intranet/vita/pictures/hnguye47.jpg"
+      },
+      "evidence": {
+        "currentRole": "https://web.csulb.edu/colleges/cob/intranet/vita/public/resume.php?cid=119&username=hnguye47 — \"Professor, Marketing\".",
+        "doctorateOrPapers": "https://web.csulb.edu/divisions/academic_affairs/catalog/2016-2017/faculty/faculty_n-r.html: Ph.D., University of Texas at Arlington.",
+        "vietnameseSignal": "https://web.csulb.edu/divisions/academic_affairs/catalog/2016-2017/faculty/faculty_n-r.html lists Hanoi Foreign Studies University, Vietnam, BA. https://www.csulb.edu/cob-graduate-programs/december-2017 spells Hieu P. Nguyen.",
+        "dedup": "Ran npm run find-roster-matches -- \"Hieu P. Nguyen\" with --url for every proposed profile, website, Scholar and portrait-source URL; exit 0. No identity-URL matches. Name/retired-ID hits: vp-0702, vp-0706, vp-0835, vp-1266, vp-1530, vp-1533, vp-1801, vp-1973, vp-3192, vp-1132, vp-1245. Different people: engineering/physics names vp-0702, vp-0706, vp-0835, vp-1266, vp-1530, vp-1533 and vp-3192 do not match this UTA-trained marketing professor. vp-1801 is a Massey psychologist. vp-1973 is a current Macquarie applied-finance researcher publishing as H. Q. Nguyen (official page opened), while CSULB's Hieu P. Nguyen remains actively listed and tenured since 2014. Retired vp-1132 and vp-1245 merge into the engineering names vp-0835/vp-0706, not this candidate. Manually checked roster names and aliases; checked already-proposed.txt and none of the candidate names is on it.",
+        "enrichment": "https://www.csulb.edu/college-of-business/marketing/article/hieu-nguyen-2024-25-presidents-awards-for-outstanding-faculty documents tenure in 2014 and research on consumer behavior and Vietnamese propaganda posters. Degree history comes from the university's 2016-17 faculty catalog; current title and portrait come from the live COB profile. University-local faculty award omitted. PortraitSource is a proposed image URL extracted from the person's employer profile; visual inspection is still required before storing a portrait."
+      }
+    },
+    {
+      "entry": {
+        "name": "Tang-Hung Nguyen",
+        "university": "California State University, Long Beach",
+        "rank": "Professor",
+        "track": "Tenure-line",
+        "department": "Civil Engineering and Construction Engineering Management",
+        "field": "Engineering",
+        "country": "United States",
+        "state": "California",
+        "researchAreas": [
+          "Construction Visualization",
+          "3D Visualization",
+          "Building Design",
+          "Information Technology in Construction"
+        ],
+        "keywords": [
+          "Construction Visualization",
+          "3D Visualization",
+          "Building Design",
+          "Information Technology in Construction"
+        ],
+        "profileUrl": "https://www.csulb.edu/college-of-engineering/civil-engineering-construction-engineering-management/page/dr-tang-hung",
+        "phdInstitution": "Pennsylvania State University",
+        "city": "Long Beach",
+        "portraitSource": "https://www.csulb.edu/sites/default/files/images/2025-10/Hung%20Nguyen_0.JPG"
+      },
+      "evidence": {
+        "currentRole": "https://www.csulb.edu/college-of-engineering/civil-engineering-construction-engineering-management/page/dr-tang-hung — \"Dr. Tang-Hung Nguyen / Professor\".",
+        "doctorateOrPapers": "https://www.csulb.edu/college-of-engineering/civil-engineering-construction-engineering-management/page/dr-tang-hung — He holds a PhD in Architectural Engineering from Pennsylvania State University.",
+        "vietnameseSignal": "Tang-Hung/Hung is a Vietnamese given-name signal paired with Nguyen on the official profile.",
+        "dedup": "Ran npm run find-roster-matches -- \"Tang-Hung Nguyen\" with --url for every proposed profile, website, Scholar and portrait-source URL; exit 0. No identity-URL matches. Name/retired-ID hits: vp-0088, vp-0130, vp-0334, vp-0443, vp-0589, vp-0957, vp-2310, vp-3114. Different people: vp-0088 has Rutgers chemistry PhD 2016; vp-0130 has MIT engineering PhD 2019; vp-0334 is political science; vp-0443 mathematics; vp-0589 biomedical engineering (Newcastle PhD 1984); vp-0957 earth sciences (SUTD PhD); vp-2310 is UCSF anesthesia; vp-3114 is eBay research. None matches the Penn State architectural-engineering PhD and CSULB construction-management professor. Official profile resolves T. Hung/Hung/Tang-Hung variants to one person. Manually checked roster names and aliases; checked already-proposed.txt and none of the candidate names is on it.",
+        "enrichment": "Facts and portrait link come from the retrieved official profile. PortraitSource is a proposed image URL extracted from the person's employer profile; visual inspection is still required before storing a portrait."
+      }
+    },
+    {
+      "entry": {
+        "name": "Jennifer Kim-Anh Tran",
+        "university": "California State University, East Bay",
+        "rank": "Assistant Professor",
+        "track": "Tenure-line",
+        "department": "Ethnic Studies",
+        "field": "Social & Behavioral Sciences",
+        "country": "United States",
+        "state": "California",
+        "researchAreas": [
+          "Critical Refugee Studies",
+          "Comparative Ethnic Studies",
+          "Gender and Sexuality",
+          "Urban Studies"
+        ],
+        "keywords": [
+          "Critical Refugee Studies",
+          "Comparative Ethnic Studies",
+          "Gender and Sexuality",
+          "Urban Studies"
+        ],
+        "profileUrl": "https://www.csueastbay.edu/news-center/experts/tran-jennifer.html",
+        "phdInstitution": "University of Southern California",
+        "undergradInstitution": "University of California, San Diego",
+        "portraitSource": "https://www.csueastbay.edu/news-center/images/experts-images/jennifer-tran-expert.jpg"
+      },
+      "evidence": {
+        "currentRole": "https://www.csueastbay.edu/news-center/experts/tran-jennifer.html — \"Assistant Professor of Ethnic Studies\".",
+        "doctorateOrPapers": "https://www.csueastbay.edu/news-center/experts/tran-jennifer.html — Ph.D. in American Studies and Ethnicity from the University of Southern California.",
+        "vietnameseSignal": "Official profile spells Kim-Anh and explicitly lists Vietnamese among languages spoken; it also documents leadership of Oakland Vietnamese Chamber of Commerce.",
+        "dedup": "Ran npm run find-roster-matches -- \"Jennifer Kim-Anh Tran\" with --url for every proposed profile, website, Scholar and portrait-source URL; exit 0. No identity-URL matches. Name/retired-ID hits: vp-0063, vp-0236, vp-0285, vp-0860, vp-1670, vp-2275, vp-2343, vp-3152. Different people: vp-0063 is mathematics; vp-0236 theology; vp-0285 electrical engineering; vp-0860 psychiatry; vp-1670 finance; vp-2275 nursing; vp-2343 family medicine; vp-3152 industrial process modeling. Candidate is USC-trained ethnic-studies scholar; additional short-name check for Jennifer Tran returned no roster or retired-id matches. Manually checked roster names and aliases; checked already-proposed.txt and none of the candidate names is on it.",
+        "enrichment": "Official expert profile supplies degrees, research interests, languages, portrait and faculty role. Its linked faculty homepage can be consulted during intake; PhD year is omitted because the profile does not state it. PortraitSource is a proposed image URL extracted from the person's employer profile; visual inspection is still required before storing a portrait."
+      }
+    },
+    {
+      "entry": {
+        "name": "Joseph Nguyen",
+        "university": "University of San Francisco",
+        "rank": "Associate Professor",
+        "track": "Tenure-line",
+        "department": "Theology and Religious Studies",
+        "field": "Humanities",
+        "country": "United States",
+        "state": "California",
+        "researchAreas": [
+          "Christian Spirituality",
+          "Ignatian Spirituality",
+          "Buddhist-Christian Dialogue"
+        ],
+        "keywords": [
+          "Christian Spirituality",
+          "Ignatian Spirituality",
+          "Buddhist-Christian Dialogue"
+        ],
+        "profileUrl": "https://www.usfca.edu/faculty/joseph-nguyen",
+        "phdInstitution": "Santa Clara University",
+        "phdYear": 2015,
+        "city": "San Francisco",
+        "undergradInstitution": "Saint Louis University",
+        "portraitSource": "https://www.usfca.edu/sites/default/files/styles/1_1_360x360/public/2024-01/J.%20Nguyen%20%282024%29%20headshot.jpg.jpeg?h=6b9bf2e9&itok=Gx3zGTqX"
+      },
+      "evidence": {
+        "currentRole": "https://www.usfca.edu/faculty/joseph-nguyen — \"Associate Professor / Full-Time Faculty\".",
+        "doctorateOrPapers": "https://www.usfca.edu/faculty/joseph-nguyen — doctorate in sacred theology from the Jesuit School of Theology at Santa Clara University in 2015.",
+        "vietnameseSignal": "https://www.usfca.edu/magazine/may-2022/features/jesuits-live-the-mission: Joseph Nguyen was born in Vietnam and moved to the U.S. with his family in 1990.",
+        "dedup": "Ran npm run find-roster-matches -- \"Joseph Nguyen\" with --url for every proposed profile, website, Scholar and portrait-source URL; exit 0. No identity-URL matches. Name/retired-ID hits: vp-3019. Different person from vp-3019 Joseph Q. Nguyen, the LBNL heavy-element chemist with UC Irvine PhD 2025. Candidate is the USF Jesuit theologian with Santa Clara sacred-theology doctorate 2015 and former Gonzaga teaching. Manually checked roster names and aliases; checked already-proposed.txt and none of the candidate names is on it.",
+        "enrichment": "Official profile explicitly labels Full-Time Faculty, gives the research doctorate S.T.D. (sacred theology), degree year, research, books and photo. University magazine supplies the Vietnam birth signal. PortraitSource is a proposed image URL extracted from the person's employer profile; visual inspection is still required before storing a portrait."
+      }
+    },
+    {
+      "entry": {
+        "name": "An Bui",
+        "university": "University of California, Santa Barbara",
+        "rank": "Assistant Professor",
+        "track": "Teaching",
+        "department": "Environmental Studies",
+        "field": "Earth & Environmental Sciences",
+        "country": "United States",
+        "state": "California",
+        "researchAreas": [
+          "Community Ecology",
+          "Field Ecology",
+          "Data Science",
+          "Restoration Ecology",
+          "Pedagogy"
+        ],
+        "keywords": [
+          "Community Ecology",
+          "Field Ecology",
+          "Data Science",
+          "Restoration Ecology",
+          "Pedagogy"
+        ],
+        "profileUrl": "https://es.ucsb.edu/people/bui",
+        "phdInstitution": "University of California, Santa Barbara",
+        "phdYear": 2025,
+        "city": "Santa Barbara",
+        "websiteUrl": "https://an-bui.com/",
+        "scholarUrl": "https://scholar.google.com/citations?user=IqNX7swAAAAJ&hl=en",
+        "msInstitution": "University of California, Santa Barbara",
+        "undergradInstitution": "University of California, Santa Barbara",
+        "undergradYear": 2015,
+        "portraitSource": "https://es.ucsb.edu/sites/default/files/styles/max_325x325/public/2026-08/IMG_9141.png?itok=T-dAUzCl"
+      },
+      "evidence": {
+        "currentRole": "https://es.ucsb.edu/people/bui — \"Assistant Teaching Professor\".",
+        "doctorateOrPapers": "https://es.ucsb.edu/people/bui — 2025: PhD, Ecology and Evolution, UCSB.",
+        "vietnameseSignal": "An is a Vietnamese given-name signal paired with Bui on the official profile.",
+        "dedup": "Ran npm run find-roster-matches -- \"An Bui\" with --url for every proposed profile, website, Scholar and portrait-source URL; exit 0. No identity-URL matches. Name/retired-ID hits: vp-1491, vp-2579. Different people: vp-1491 Ton An Bui is a UBC mathematician trained at MIT; vp-2579 Trong-An Bui is an aerospace/AI scholar with National Chi Nan PhD 2022. Candidate is a UCSB ecologist with UCSB PhD 2025 and continuing teaching-professor appointment. Manually checked roster names and aliases; checked already-proposed.txt and none of the candidate names is on it.",
+        "enrichment": "Employer profile retrieved successfully over HTTPS with Python requests (HTTP 200), after web open returned cache miss. https://an-bui.com/ was also opened and independently confirms PhD in 2025 and current appointment. UC Assistant Teaching Professor is the named continuing teaching-professor ladder; appointment is in the academic Environmental Studies program. Linked Scholar URL taken directly from the personal homepage. PortraitSource is a proposed image URL extracted from the person's employer profile; visual inspection is still required before storing a portrait."
+      }
+    }
+  ],
+  "already_listed": [
+    {
+      "name": "Thao Nguyen, S.J.",
+      "id": "vp-1810",
+      "note": "Santa Clara religious-studies profile and Graduate Theological Union doctorate match; https://www.scu.edu/cas/religious-studies/faculty--staff/thao-nguyen-sj/ . Exact profile-URL match from npm dedup."
+    },
+    {
+      "name": "Huong (Hana) Nguyen",
+      "id": "vp-1082",
+      "note": "CSUN business-law faculty, Georgia State PhD 2024. Exact official catalog profile matched by npm dedup: https://catalog.csun.edu/academics/blaw/faculty/nguyen-huong-hana/ . Main csun.edu profile returned 403; catalog page opened."
+    },
+    {
+      "name": "Brian Kha Tran",
+      "id": "vp-1181",
+      "note": "CSULB applied mathematics hire; current university faculty announcement agrees with roster. https://www.csulb.edu/college-of-natural-sciences-and-mathematics/article/new-faculty-cnsm"
+    },
+    {
+      "name": "Andrew Le",
+      "id": "vp-1826",
+      "note": "CSULB statistics hire; UCSC PhD and institution match existing entry. Same university announcement as Brian Kha Tran."
+    },
+    {
+      "name": "Thuy Le - California State University, Long Beach",
+      "id": "vp-1760",
+      "note": "CSULB applied-mathematics hire from UNC Charlotte and NC State; matches existing university-specific record, not the SJSU Thuy T. Le namesake."
+    },
+    {
+      "name": "Trung Nguyen",
+      "id": "vp-0293",
+      "note": "SJSU ethnic-studies scholar also publishing as Trung PQ Nguyen; same department, UCSC doctorate and university email."
+    },
+    {
+      "name": "Frank K. Huynh",
+      "id": "vp-2626",
+      "note": "SJSU biological-sciences faculty, UBC doctorate. npm name check matched existing record; not a new candidate."
+    },
+    {
+      "name": "Sy Bang Tran",
+      "id": "vp-2636",
+      "note": "Sacramento CS scholar also listed as Bang S Tran/Bang Tran. Official researcher profile confirms Nevada Reno PhD 2023 and s.tran@csus.edu: https://scholars.csus.edu/esploro/profile/sy_bang_tran . Old faculty booklet erroneously says Penn State 2016; use researcher profile and CV."
+    },
+    {
+      "name": "My Hanh (Theresa) Nguyen",
+      "id": "vp-2274",
+      "note": "USD nursing scholar; apparent My Hahn misspelling in graduate catalog resolves to the roster's My Hanh name. Official personal faculty profile, department and USD nursing doctorate agree. https://www.sandiego.edu/nursing/about/directory/biography.php?profile_id=17361"
+    },
+    {
+      "name": "Oanh Kim Tran",
+      "id": "vp-1706",
+      "note": "CSU East Bay educational psychology professor; Oregon PhD 2007 matches. https://csapps.csueastbay.edu/directory/profiles/epsy/tranoanh.html"
+    },
+    {
+      "name": "Phuong Tran Nguyen",
+      "id": "vp-1495",
+      "note": "CSU Monterey Bay humanities scholar published as Phuong Nguyen. Employer bio, USC doctorate and refugee-history scholarship match. https://researchprofiles.csumb.edu/en/persons/phuong-nguyen/"
+    },
+    {
+      "name": "Joyce Pham",
+      "id": "vp-2906",
+      "note": "CSUSB chemistry associate professor, Iowa State PhD 2018; exact current employer profile already stored. https://www.csusb.edu/profile/joyce.pham"
+    },
+    {
+      "name": "Lyannie Q. Tran",
+      "id": "vp-1761",
+      "note": "Cal Poly Pomona architecture faculty; official architecture directory and roster agree."
+    },
+    {
+      "name": "Yvonne N. Bui",
+      "id": "vp-0419",
+      "note": "SFSU special education faculty; published as Yvonne Bui. Current special-education directory agrees."
+    },
+    {
+      "name": "Duy H. N. Nguyen",
+      "id": "vp-0707",
+      "note": "SDSU electrical engineering professor with McGill PhD 2013; biography agrees with roster identity. https://nguyen.sdsu.edu/bio.html"
+    },
+    {
+      "name": "The Nguyen",
+      "id": "vp-0126",
+      "note": "Fresno mechanical-engineering associate professor (also The Leo Nguyen); university engineering directory matches existing entry."
+    },
+    {
+      "name": "Steve Nguyen",
+      "id": "vp-2240",
+      "note": "UCSD public-health faculty; Minnesota epidemiology doctorate and institution match existing roster."
+    },
+    {
+      "name": "Annie Nguyen",
+      "id": "vp-2257",
+      "note": "UCSD healthy-aging researcher; existing roster already reflects move from USC."
+    },
+    {
+      "name": "Cassandra J. Nguyen",
+      "id": "vp-2855",
+      "note": "UC Davis nutrition faculty; Illinois doctorate and ACORN lab match roster. https://www.nutrition.ucdavis.edu/people/cassandra-nguyen"
+    },
+    {
+      "name": "Alex A. T. Bui",
+      "id": "vp-2678",
+      "note": "UCLA radiological-sciences professor also published as Alex Anh-Tuan Bui; UCLA CS PhD 2000, imaging-informatics group and institution match."
+    },
+    {
+      "name": "Nam Tran - University of California, Davis",
+      "id": "vp-2249",
+      "note": "UC Davis clinical-chemistry researcher; official pathology and health-informatics pages match existing record."
+    },
+    {
+      "name": "Trung Hoang Minh Pham",
+      "id": "vp-2254",
+      "note": "Stanford pediatric infectious-disease and immunology faculty; same full name and research match roster."
+    },
+    {
+      "name": "Hong-Ha M. Truong",
+      "id": "vp-1292",
+      "note": "UCSF medicine professor, Washington pathobiology doctorate; existing roster identity matched."
+    },
+    {
+      "name": "Kim Tran",
+      "id": "vp-2275",
+      "note": "CSU Channel Islands nursing assistant professor, PhD; university nursing directory agrees."
+    },
+    {
+      "name": "Dat-Dao Nguyen",
+      "id": "vp-0167",
+      "note": "CSUN accounting/information-systems scholar. Current catalog describes emeritus status; existing identity retained, no new entry proposed."
+    },
+    {
+      "name": "Lan Ngo",
+      "id": "vp-0400",
+      "note": "LMU Asian and Asian American Studies clinical faculty; Georgetown doctorate and role match roster."
+    },
+    {
+      "name": "Viet-Huong Nguyen",
+      "id": "vp-0384",
+      "note": "Chapman pharmacy faculty; profile is already represented."
+    },
+    {
+      "name": "Natalia Duong",
+      "id": "vp-0350",
+      "note": "UC Davis Asian American Studies/STS faculty; official page, Berkeley performance-studies PhD 2020 and roster match."
+    }
+  ],
+  "possible_move": [],
+  "rejected": [
+    {
+      "name": "Mike Nguyen (SJSU electrical engineering lead)",
+      "reason": "Search index described an assistant professor with Tokyo PhD, but opening https://www.sjsu.edu/people/mike.nguyen01/ returned HTTP 300 Multiple Choices and no person's page; direct HTTPS requests independently confirmed it. No live current-employer personal profile verified. Not the listed UCLA education scholar Mike Hoa Nguyen (vp-0188). Excluded pending a working employer profile."
+    },
+    {
+      "name": "Huong Tran Nguyen",
+      "reason": "Recent employer article reports retirement. https://www.csulb.edu/college-of-education/article/tears-and-triumph-video-resurfaces-of-professors-emotional-disney . Old professor pages do not settle current or formally conferred emeritus status; not proposed."
+    },
+    {
+      "name": "Thuc-Doan Nguyen",
+      "reason": "Only historical CSULB marketing faculty catalog evidence located; current COB directory omits this person. Current appointment not verified, so old doctorate and rank were not accepted as current."
+    },
+    {
+      "name": "Thang N. Nguyen",
+      "reason": "CSULB employer announcement reports planned retirement in spring 2021; formal current emeritus/person profile not verified. https://www.csulb.edu/college-of-business/office-of-the-dean/article/faculty-news-summer-2020"
+    },
+    {
+      "name": "Thang Le",
+      "reason": "CSULB news calls him a professor, but current individual faculty page says Lecturer; no full-time continuing teaching appointment or research-doctorate/publication evidence established. https://www.csulb.edu/college-of-engineering/civil-engineering-construction-engineering-management/page/thang-le"
+    },
+    {
+      "name": "Richard P. Nguyen; Thinh V. Nguyen; Loc T. Nguyen",
+      "reason": "CSULB historical emeriti catalog is a lead, but no current individual employer profile was verified. Loc's historical degree listing also lacks a research doctorate. Not promoted from old lists into verified candidates."
+    },
+    {
+      "name": "Han V. Nguyen; Thuan K. Nguyen",
+      "reason": "CPP emeritus resolutions/directories provide historical leads and doctorate evidence, but no retrieved individual employer profile established for this run; not counted as verified candidates."
+    },
+    {
+      "name": "Nhan Nguyen (Santa Clara aerospace)",
+      "reason": "Adjunct lecturer; primary NASA career is outside this university slice and already represented as vp-3007. https://www.scu.edu/engineering/academic-programs/aerospace-engineering-program/faculty-and-staff/-nguyen-.html"
+    },
+    {
+      "name": "Hien T. Nguyen (Caltech)",
+      "reason": "Current Caltech catalog says Visiting Associate in Physics and Lecturer; principal research role is at JPL. University visiting appointment is excluded. https://www.catalog.caltech.edu/current/trustees-administration-faculty/officers-and-faculty/"
+    },
+    {
+      "name": "Nhi Le; Caroline Nguyen (SJSU public health)",
+      "reason": "Department lists them in Lecturer Faculty, separate from Tenure/Tenure Track and Senior Lecturer Faculty; full-time continuing status not established. https://gcp-web.sjsu.edu/ph/about-us/faculty/index.php"
+    },
+    {
+      "name": "Courtney Tran; Tuan Anh Nguyen (CSUSB nursing)",
+      "reason": "Lecturer appointments; no documented continuing full-time teaching ladder. https://www.csusb.edu/nursing/nursing-faculty-staff"
+    },
+    {
+      "name": "Vinh V. Nguyen; Dan Quynh Nguyen (Chico mathematics)",
+      "reason": "Directory/catalog leads do not establish continuing full-time appointments; Vinh is identified as a lecturer in indexed catalog. Live catalog retrieval encountered a JavaScript interstitial. Not proposed."
+    },
+    {
+      "name": "Cynthia Nguyen; Jennifer Hongnhung Nguyen; TuyetTrinh Nguyen; Uyen Nguyen; John Ngo (CPP mathematics)",
+      "reason": "Official mathematics page explicitly labels this group Part-time Faculty. https://www.cpp.edu/sci/mathematics-statistics/faculty-and-staff/part-time.shtml"
+    },
+    {
+      "name": "Thang Q. Nguyen (CPP)",
+      "reason": "Official faculty interview explicitly identifies part-time teaching; exclude. https://www.cpp.edu/cba/technology-and-operations-management/news-and-events/faculty-highlight-news/interview-with-thang-nguyen.shtml"
+    },
+    {
+      "name": "Thanh Nguyen; Nhi Nguyen; Huong Luu (CPP computer science)",
+      "reason": "Lecturer directory alone does not establish a full-time continuing teaching role. https://www.cpp.edu/sci/computer-science/faculty-and-staff/lecturers.shtml"
+    },
+    {
+      "name": "Thi Tran; Van Thu Tran (USF)",
+      "reason": "University profiles explicitly say Adjunct Professor and Part-Time Faculty. https://www.usfca.edu/faculty/thi-tran ; https://www.usfca.edu/faculty/van-tran"
+    },
+    {
+      "name": "Lan-Huong T. (Nicole) Nguyen (USF management)",
+      "reason": "Teaching lead located, but no current individual employer profile or research doctorate verified. Historical accreditation appendix lists MBA 1989 and term assistant-professor category. No verified proposal."
+    },
+    {
+      "name": "Michael V. Nguyen (Sacramento)",
+      "reason": "Current role is vice president/chief diversity officer; profile mentions past professorship but no substantial current underlying academic appointment. Administrative title alone does not satisfy university eligibility. https://www.csus.edu/president/inclusive-excellence/meet-the-cdo.html"
+    },
+    {
+      "name": "Nguyen K. Tran (Stanford)",
+      "reason": "Research biostatistician/epidemiologist lead; permanence and university faculty equivalence not established. A PhD and research work alone do not establish the university Research track."
+    },
+    {
+      "name": "David Nguyen (Stanford Digital Economy Lab)",
+      "reason": "Research scientist lead; permanent faculty-equivalent university appointment not established. Distinct from the proposed UCSF physician-scientist."
+    },
+    {
+      "name": "Savannah Pham",
+      "reason": "Stanford academic coach in a central teaching-support unit; doctorate does not turn this professional-support role into eligible faculty. https://ctl.stanford.edu/people/savannah-pham-phd"
+    },
+    {
+      "name": "Tiffany Duong (UCSD)",
+      "reason": "Official profile says Postdoctoral Scholar, Medicine. https://profiles.ucsd.edu/tiffany.duong"
+    },
+    {
+      "name": "Hanh Tran (Stanislaus nursing)",
+      "reason": "Official employer person page says Lecturer; continuing full-time teaching and research qualification not established. https://www.csustan.edu/people/ms-hanh-tran"
+    },
+    {
+      "name": "Michelle Dang",
+      "reason": "Eligible-looking Sacramento nursing professor with UC Davis doctorate, but surname Dang plus Western given name alone is insufficient under this brief, and no affirmative Vietnamese signal was established. https://www.csus.edu/faculty/d/dang/ . Not a verified candidate."
+    },
+    {
+      "name": "Bao Lo",
+      "reason": "Sacramento ethnic-studies faculty lead specializes in Hmong American Studies. No affirmative Vietnamese connection established; Hmong scholarship and a name lead do not satisfy this brief. https://www.csus.edu/faculty/l/lo/"
+    },
+    {
+      "name": "Carolee Tran",
+      "reason": "UC Davis article documents Vietnamese identity and a doctorate, but also private practice; no full-time university appointment verified. https://diversity.ucdavis.edu/news/why-i-dei-dr-carolee-tran"
+    }
+  ],
+  "coverage": [
+    {
+      "employer": "California university slice — scope and stopping point",
+      "pagesExamined": [],
+      "note": "Broad surname-first pass over UC campuses, many CSU campuses and major private universities, all fields. Queries covered Nguyen, Tran, Le, Pham, Bui, Huynh and selected rarer surnames; directory leads were checked against current roster and already-proposed.txt. Ten new candidates verified; stopped after broad institutional coverage and diminishing returns. This is not an exhaustive census of every campus or surname. Coverage entries below distinguish retrieved pages from discovery-only leads. No Issues/PRs, roster mutations, ID assignments, portrait-file downloads or test-generated timestamp changes were made."
+    },
+    {
+      "employer": "California State University, Sacramento",
+      "pagesExamined": [
+        "https://scholars.csus.edu/esploro/profile/hao_nguyen",
+        "https://www.csus.edu/college/natural-sciences-mathematics/biology/meet-us/",
+        "https://scholars.csus.edu/esploro/profile/sy_bang_tran",
+        "https://www.csus.edu/president/inclusive-excellence/meet-the-cdo.html"
+      ],
+      "note": "Biology, computer science, electrical engineering, accounting, history, nursing, ethnic studies and academic leadership leads screened. Hao Nguyen is new; Sy Bang Tran is already vp-2636. Nursing Michelle Dang left unproposed for missing affirmative Vietnamese signal, leadership Michael Nguyen for missing underlying current appointment. Historical booklet's Bang Tran doctorate conflicts with live profile; not copied."
+    },
+    {
+      "employer": "University of California, San Francisco",
+      "pagesExamined": [
+        "https://profiles.ucsf.edu/nhung.nguyen",
+        "https://profiles.ucsf.edu/david-huy.nguyen",
+        "https://merc.ucsf.edu/core-faculty",
+        "https://innovativegenomics.org/nguyenlab/"
+      ],
+      "note": "Medicine, tobacco/substance-use research, infectious disease, immunology and broader surname searches. Nhung Nguyen and David Nguyen are new. Other discovered UCSF names including Hao G Nguyen and Hong-Ha Truong were already listed. Candidate profile images and lab URLs captured; optional portrait sources require visual review before downstream ingestion."
+    },
+    {
+      "employer": "Sonoma State University",
+      "pagesExamined": [
+        "https://hutchins.sonoma.edu/faculty/kevin-nguyen",
+        "https://caase.sonoma.edu/monthly-newsletter",
+        "https://commencement.sonoma.edu/sites/commencement/files/2024-06/Sonoma%20State%20Commencement%20Program%20v17.pdf",
+        "https://aapicnorthbay.org/event-6103219"
+      ],
+      "note": "Hutchins STEM education candidate Kevin A. Nguyen verified. University profile retrieved via web tool; later shell fetch got a 403 interstitial and was not bypassed. Doctorate established by employer commencement faculty list, identity signal by joint SSU/community event. Teresa P Nguyen in psychology already listed."
+    },
+    {
+      "employer": "University of California, Merced",
+      "pagesExamined": [
+        "https://naturalsciences.ucmerced.edu/people/son-c-nguyen"
+      ],
+      "note": "Official chemistry profile retrieved with web tool and names Associate Professor, Berkeley doctorate 2014 and Vietnam undergraduate degree 2001. Later shell fetch got 403; not bypassed. Natural-sciences faculty and student/alumni directory searches otherwise mainly returned student and already-listed leads."
+    },
+    {
+      "employer": "California State University, Long Beach",
+      "pagesExamined": [
+        "https://web.csulb.edu/colleges/cob/intranet/vita/public/resume.php?cid=119&username=hnguye47",
+        "https://www.csulb.edu/college-of-business/marketing/article/hieu-nguyen-2024-25-presidents-awards-for-outstanding-faculty",
+        "https://www.csulb.edu/cob-graduate-programs/december-2017",
+        "https://www.csulb.edu/college-of-engineering/civil-engineering-construction-engineering-management/page/dr-tang-hung",
+        "https://web.csulb.edu/divisions/academic_affairs/catalog/2016-2017/faculty/faculty_n-r.html",
+        "https://web.csulb.edu/divisions/academic_affairs/catalog/2016-2017/faculty/emeriti_n-r.html"
+      ],
+      "note": "Marketing, civil/construction engineering, math/statistics, education, psychology, health science, chemistry and emeriti leads. Hieu P Nguyen and Tang-Hung Nguyen verified as new. Recent mathematics hires already in roster. Retirement and temporary-teaching leads withheld. Historical catalog only used for education and leads, with current roles verified separately."
+    },
+    {
+      "employer": "California State University, East Bay",
+      "pagesExamined": [
+        "https://www.csueastbay.edu/news-center/experts/tran-jennifer.html",
+        "https://csapps.csueastbay.edu/directory/profiles/epsy/tranoanh.html"
+      ],
+      "note": "Ethnic studies, educational psychology, accounting, mathematics and engineering surname searches. Jennifer Kim-Anh Tran is new; Oanh Kim Tran already vp-1706. Adjunct/accounting and technician leads not promoted to candidates."
+    },
+    {
+      "employer": "University of San Francisco",
+      "pagesExamined": [
+        "https://www.usfca.edu/faculty/joseph-nguyen",
+        "https://www.usfca.edu/magazine/may-2022/features/jesuits-live-the-mission"
+      ],
+      "note": "Theology, management, mathematics, nursing and psychology leads. Joseph Nguyen verified as new with research doctorate and full-time appointment. Nicole/Lan-Huong Nguyen lacked verified doctorate/current profile; adjunct psychology and mathematics leads excluded."
+    },
+    {
+      "employer": "University of California, Santa Barbara",
+      "pagesExamined": [
+        "https://es.ucsb.edu/people/faculty",
+        "https://es.ucsb.edu/people/bui",
+        "https://an-bui.com/"
+      ],
+      "note": "An Bui is new on the continuing teaching-professor ladder, with current ecology research and PhD 2025. Employer person page returned cache miss through web but HTTP 200 and complete faculty profile through ordinary Python requests. Other searches covered Nguyen, Tran and Bui; Thuc-Quyen Nguyen already listed."
+    },
+    {
+      "employer": "Santa Clara University",
+      "pagesExamined": [
+        "https://www.scu.edu/cas/religious-studies/faculty--staff/thao-nguyen-sj/"
+      ],
+      "note": "Religious studies, engineering, theology and mathematics/CS surname leads. Thao Nguyen exact profile URL matched vp-1810; Dat Tran, Nicholas Tran and Anh Tran already represented. Nhan Nguyen is an adjunct university lecturer whose primary NASA appointment belongs to another slice."
+    },
+    {
+      "employer": "San Jose State University",
+      "pagesExamined": [
+        "https://www.sjsu.edu/people/mike.nguyen01/",
+        "https://gcp-web.sjsu.edu/ph/about-us/faculty/index.php",
+        "https://www.engineering.sjsu.edu/siss/about-us/faculty.php"
+      ],
+      "note": "Electrical engineering, biological sciences, ethnic studies, public health, communication, English and education lead searches. Mike Nguyen's indexed page was dead (300); sociology directory alternate hostname inaccessible; public-health directory retrieved. Existing Trung Nguyen, Hien Duc Do, Frank Huynh, Christopher Pham, Thuy Le and Tan Van Nguyen dominate leads. No new candidate accepted from this campus."
+    },
+    {
+      "employer": "San Francisco State University",
+      "pagesExamined": [
+        "https://sped.sfsu.edu/faculty-and-staff"
+      ],
+      "note": "Special education plus surname searches across Asian American studies, nursing, mathematics, chemistry and staff directory. Yvonne Bui already vp-0419; Mai-Nhung Le, Loan Le, Isabelle Pelaud and Nga Ho-Dac already represented. Lecturer/staff leads did not establish eligible continuing appointments."
+    },
+    {
+      "employer": "San Diego State University",
+      "pagesExamined": [
+        "https://nguyen.sdsu.edu/bio.html"
+      ],
+      "note": "ECE, mathematics and university faculty-listing leads. Duy H N Nguyen and Nguyen-Truc-Dao Nguyen already represented; no verified new hire."
+    },
+    {
+      "employer": "California State University, Northridge",
+      "pagesExamined": [
+        "https://catalog.csun.edu/academics/blaw/faculty/nguyen-huong-hana/"
+      ],
+      "note": "Business law, accounting/information systems and psychology leads. Huong/Hana Nguyen already vp-1082; Dat-Dao Nguyen already vp-0167. Main csun.edu faculty page returned 403; catalog successfully retrieved."
+    },
+    {
+      "employer": "California State Polytechnic University, Pomona",
+      "pagesExamined": [
+        "https://www.cpp.edu/env/architecture/about/faculty-staff.shtml",
+        "https://www.cpp.edu/sci/computer-science/faculty-and-staff/lecturers.shtml"
+      ],
+      "note": "Architecture, engineering, chemistry/materials, computer science, business, psychology and mathematics leads. Lyannie Q Tran and Ha Thu Le already listed. Part-time/adjunct/lecturer and historical emeritus leads withheld where individual current profile or continuing status was missing."
+    },
+    {
+      "employer": "California State University, Fresno",
+      "pagesExamined": [
+        "https://engineering.fresnostate.edu/about/directory/index.html"
+      ],
+      "note": "Engineering directory and broader faculty-directory searches. The Nguyen already vp-0126; Khang Tran already vp-0369. Health/human-services and arts/humanities directory search leads produced no verified new candidate."
+    },
+    {
+      "employer": "California State University, Chico",
+      "pagesExamined": [
+        "https://catalog.csuchico.edu/faculty-az/faculty-az.pdf"
+      ],
+      "note": "Mathematics Nguyen leads surfaced from indexed campus directory; live catalog retrieval returned JavaScript-disabled interstitial. No bypass attempted. Vinh Van Nguyen and Dan Quynh Nguyen not counted; old Cawa Tran references resolve to the listed University of San Diego faculty member vp-2137."
+    },
+    {
+      "employer": "California State University, Monterey Bay",
+      "pagesExamined": [
+        "https://researchprofiles.csumb.edu/en/persons/phuong-nguyen/"
+      ],
+      "note": "Phuong Nguyen resolves to Phuong Tran Nguyen vp-1495 through USC doctorate, department and refugee-history scholarship."
+    },
+    {
+      "employer": "California State University, Channel Islands",
+      "pagesExamined": [
+        "https://alpha.csuci.edu/arts-sciences/nursing/faculty.html"
+      ],
+      "note": "Nursing lead Kim Tran already vp-2275. Other indexed Nguyen results were safety/professional staff; no new eligible role verified."
+    },
+    {
+      "employer": "California State University, Stanislaus",
+      "pagesExamined": [
+        "https://www.csustan.edu/people/ms-hanh-tran"
+      ],
+      "note": "Nursing Tran lead is a lecturer without continuing full-time evidence. Other search leads were students or unrelated results."
+    },
+    {
+      "employer": "Stanford University",
+      "pagesExamined": [
+        "https://profiles.stanford.edu/browse/stanford?name=t&p=10&ps=100"
+      ],
+      "note": "Faculty/profile surname searches for Nguyen, Tran, Pham, Bui and Le. Most clinical faculty found were already listed; postdocs, adjunct/affiliated clinicians, research professionals and unproven faculty-equivalent scientist roles excluded. No new verified candidate."
+    },
+    {
+      "employer": "California Institute of Technology",
+      "pagesExamined": [
+        "https://www.catalog.caltech.edu/current/trustees-administration-faculty/officers-and-faculty/"
+      ],
+      "note": "Central faculty catalog examined. Hien T Nguyen is visiting/lecturer with JPL primary role and excluded from university slice. Huy Tuan Pham's old Caltech/Stanford references were not treated as current appointments (roster places him at Chicago). Nga Lee Ng was not assumed Vietnamese from a syllable match."
+    },
+    {
+      "employer": "University of California, Los Angeles",
+      "pagesExamined": [
+        "https://bioscience.ucla.edu/people/alex-bui-ph-d/"
+      ],
+      "note": "Surname searches in bioscience, engineering, neurology, education and humanities. Alex Anh-Tuan Bui resolves to vp-2678; Thuy Vo Dang, Cindy Anh Nguyen and other prominent leads already represented. Trainee/clinical-instructor leads lacking established continuing role were not proposed."
+    },
+    {
+      "employer": "University of California, San Diego",
+      "pagesExamined": [
+        "https://hwsph.ucsd.edu/people/faculty/faculty-directory.html"
+      ],
+      "note": "Public health and broader biology, medicine, ethnic-studies and engineering surname searches. Steve Nguyen, Annie Nguyen, Mai Thi Nguyen, Quyen Nguyen and other leads already listed; postdoc Tiffany Duong excluded."
+    },
+    {
+      "employer": "University of California, Davis",
+      "pagesExamined": [
+        "https://www.nutrition.ucdavis.edu/people/cassandra-nguyen"
+      ],
+      "note": "Nutrition, public health, atmospheric sciences, pathology, Asian American Studies and STS leads. Cassandra Nguyen, Natalia Duong, Tran B Nguyen and Nam Tran already represented. Private-practice psychology lead lacked full-time university evidence."
+    },
+    {
+      "employer": "University of California, Berkeley",
+      "pagesExamined": [
+        "https://biology.berkeley.edu/people/david-n-nguyen",
+        "https://innovativegenomics.org/nguyenlab/"
+      ],
+      "note": "Nguyen and Tran faculty searches across biology, engineering, education and humanities. Clark Nguyen already vp-0022; David N Nguyen's Berkeley affiliation resolves to the one proposed UCSF PI. Affiliated title was not used to create a second appointment/person."
+    },
+    {
+      "employer": "University of San Diego",
+      "pagesExamined": [
+        "https://graduate.catalog.sandiego.edu/academics/graduatefaculty",
+        "https://www.sandiego.edu/nursing/about/directory/biography.php?profile_id=17361"
+      ],
+      "note": "Nursing, biology and business leads. My Hahn catalog spelling resolves to My Hanh (Theresa) Nguyen vp-2274; roster already holds the candidate under the correct name. No new record proposed."
+    },
+    {
+      "employer": "University of Southern California",
+      "pagesExamined": [
+        "https://sites.usc.edu/tranlab/people/"
+      ],
+      "note": "Nguyen and Tran searches covered engineering, psychology, human biology, film/humanities and medical research. Most identified people (Quan Nguyen, Viet Thanh Nguyen, Lan Duong, Denise Tran, David Dinh Tran) already listed. Tran lab person page returned HTTP 520 during direct retrieval; indexed Son Le research-faculty lead not accepted without live employer page."
+    },
+    {
+      "employer": "Other California public/private campuses — discovery-only searches",
+      "pagesExamined": [],
+      "note": "Searches also covered CSU San Marcos, CSU Dominguez Hills, CSU San Bernardino (Joyce Pham profile was retrieved), CSU Bakersfield, Cal Poly San Luis Obispo, Cal Poly Humboldt, Loyola Marymount, Chapman, Pepperdine, Pomona, Scripps, Claremont McKenna and Occidental. Results chiefly existing roster people, students, adjuncts, speaker announcements or unrelated names. These institutions did not all receive a complete directory traversal; no search-only result was counted as a verified candidate."
+    }
+  ]
+}

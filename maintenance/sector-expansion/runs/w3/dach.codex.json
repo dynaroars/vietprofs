@@ -1,0 +1,305 @@
+{
+  "group": "university",
+  "agent": "codex",
+  "slice": "dach",
+  "finishedAt": "2026-11-15T01:31:02Z",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Trung Van Tran",
+        "university": "University of Duisburg-Essen",
+        "track": "Emeritus",
+        "rank": "Emeritus",
+        "department": "Faculty of Mathematics, Institute for Experimental Mathematics",
+        "field": "Mathematics",
+        "city": "Essen",
+        "country": "Germany",
+        "researchAreas": [
+          "Group Theory",
+          "Finite Geometry",
+          "Combinatorial Designs",
+          "Cryptology"
+        ],
+        "phdInstitution": "Heidelberg University",
+        "phdYear": 1976,
+        "undergradInstitution": "University of Saigon",
+        "undergradYear": 1970,
+        "profileUrl": "https://www.uni-due.de/members/van_tran/trung_van_tran"
+      },
+      "evidence": {
+        "currentRole": "https://www.uni-due.de/mathematik/mathematik_arbeitsgruppen_en.php — Under “Professors emeritae and emeriti”: “Algebra, Combinatorics and Cryptology, Prof. Dr. Trung van Tran”. Live faculty directory and person page both opened. Proposed on the expressly permitted Emeritus track, not as an active salaried professor. The person page also supplies the Essen institutional address and research subjects.",
+        "doctorateOrPapers": "https://www.uni-due.de/members/van_tran/trung_van_tran — Education lists “Dr. rer.nat. (1976)” at Ruprecht-Karls-Universität Heidelberg, and a 1970 licence at University of Saigon. The page lists research publications through 2024. Research doctorate directly established; no inference from a professional degree or publication count.",
+        "vietnameseSignal": "https://www.uni-due.de/members/van_tran/trung_van_tran — Vietnamese given name Trung and middle name Van; undergraduate education at University of Saigon. Published forms Tran van Trung and Trung van Tran resolve through the identical university page, institutional email, combinatorics publications and 1976 Heidelberg doctorate. Name normalized to First Middle Last without inferred diacritics.",
+        "dedup": "Ran npm run find-roster-matches with both Trung Van Tran and Tran Van Trung, the opened personal institutional profile and faculty directory URLs. Hits: vp-0353 Van C. Tran (sociology, Harvard doctorate 2011), vp-2138 Trung V. Tran (GIS/remote sensing, Oklahoma doctorate), and vp-2460 Trung Tran (French Renaissance literature, Paris-Sorbonne doctorate 2004). Inspected all three local entries: different disciplines, doctoral institutions and career histories from the Duisburg-Essen mathematician (Heidelberg doctorate 1976); none shares the institutional identity URL. No retired-id match. Checked already-proposed.txt; neither name order appears. Scholar search did not establish a person-specific Scholar profile. Official portrait link was found but image retrieval failed, so no portrait field proposed."
+      }
+    }
+  ],
+  "already_listed": [
+    {
+      "name": "Minh Nguyen",
+      "id": "vp-1577",
+      "note": "Name/official-profile dedup identifies the Bielefeld social anthropologist. Opened https://www.uni-bielefeld.de/fakultaeten/soziologie/fakultaet/arbeitsbereiche/ab6/neu/ ; same social anthropology career and University of East Anglia doctorate. Not a new ID."
+    },
+    {
+      "name": "Tami Dinh",
+      "id": "vp-2751",
+      "note": "Name/URL dedup and opened official CV https://www.unisg.ch/en/university/about-us/organisation/detail/person-id/3e6a3b80-9c93-4c42-a104-1de352739f35/ identify the same St. Gallen accounting professor, Augsburg doctorate 2010."
+    },
+    {
+      "name": "Huu Phuc Nguyen",
+      "id": "vp-1208",
+      "note": "Name/URL dedup returns Hoa Huu Phuc Nguyen at Ruhr University Bochum. Opened https://www.ruhr-uni-bochum.de/monndi/members/pi/index.html.en ; same human-genetics department and institutional email/telephone. Shorter current published name is not a new identity."
+    }
+  ],
+  "possible_move": [],
+  "rejected": [
+    {
+      "name": "Maik Luu",
+      "reason": "Outside permanent-only appointment restriction at present. Opened https://www.ukw.de/palliativmedizin/aktuelle-meldungen/news/anerkennung-dessen-was-war-und-sein-kann/ : junior tenure-track professorship converts to a permanent lifetime professorship only after successful evaluation. Also opened https://www.uni-wuerzburg.de/en/news-and-events/einblick/single/news/people-16-june-2026/ : reappointed junior professor effective 24 May 2026, rather than evidence of conversion. Human-biology doctorate and Vietnamese parents are supported by official reporting. Name/profile dedup: no roster or retired-id matches. Revisit after documented permanent appointment."
+    },
+    {
+      "name": "Thuy Duong Oesterreich",
+      "reason": "Permanent current appointment not established. Discovery announcement https://www.hs-osnabrueck.de/nachrichten/2023/09/neue-professorinnen-und-professoren-an-der-hochschule-osnabrueck-1/ describes administration of a vacant professorship, not a permanent appointment; open returned 403. Old university CV https://www.wiwi.uni-osnabrueck.de/fachgebiete_und_institute/unternehmensrechnung_und_wirtschaftsinformatik_prof_teuteberg/team/oesterreich.html failed on redirect. No fact accepted solely from these snippets. Name/URL dedup: no roster or retired-id matches. Requires live current institutional CV and explicit permanent appointment evidence; retain original Vietnamese surname if a sourced name history later supplies it."
+    },
+    {
+      "name": "Le Thi Kieu",
+      "reason": "Opened https://www.kgbauko.tu-darmstadt.de/kgbauko/mitarbeiter_kgbauko/mitarbeiter_details_kgbauko_98432.de.jsp : Dr.-Ing., scientific employee since 2020, Vietnamese architecture education. No permanent employment statement or faculty-equivalent rank established. Name/URL dedup: no roster or retired-id matches. Longevity and doctorate do not establish permanence."
+    },
+    {
+      "name": "Bich-Diep Nguyen",
+      "reason": "Opened https://www.maschinenbau.tu-darmstadt.de/stfs/institute_stfs/staff_stfs/sfts_staff_detail_193920.de.jsp : Dr.-Ing., iron-combustion research, Darmstadt institutional contact. No appointment permanence established. Name/URL dedup returned partial matches vp-0145, vp-0548 and vp-1769; no shared URL. Appointment fails the slice requirement regardless, so no candidate proposed and those identity leads are not claimed fully resolved."
+    },
+    {
+      "name": "Huy Nguyen Pham",
+      "reason": "Opened https://people.epfl.ch/huy.pham?lang=en : scientist in Sustainability Robotics. The title does not establish a permanent appointment. Name/URL dedup with the official profile and its linked personal homepage returned several partial Huy Nguyen matches, including vp-3212 Hai Huy Nguyen Pham at Hitachi. Identity against that near match remains unresolved; no candidate proposed. Requires permanence evidence, doctorate verification and complete identity resolution."
+    },
+    {
+      "name": "Van Quoc Phuong Huynh",
+      "reason": "Opened https://www.jku.at/en/institute-for-application-oriented-knowledge-processing/about-us/team/van-quoc-phuong-huynh/ : Research Assistant; https://research.jku.at/en/persons/van-quoc-huynh/ supports doctorate and recent research outputs. No permanent/full-time career research appointment established. Name and both URL dedup: no roster or retired-id matches. Requires contract-status evidence, not inference from recurring teaching or publications."
+    },
+    {
+      "name": "Sarah Quynh-Giang Ho",
+      "reason": "Opened https://www.iwu.kit.edu/hyd/english/Staff_1283.php and https://www.cedim.kit.edu/english/3029.php : doctorate and hydrology research supported, but no permanent appointment. Person page even shows an obfuscated does-not-exist email domain. Name/URL dedup: no roster or retired-id matches. Do not treat a retained project/staff page as proof of permanent current employment."
+    },
+    {
+      "name": "Peter Huy",
+      "reason": "Opened https://www.huy.chemie.uni-rostock.de/peter-huy/ : W2 organic-chemistry professor and Cologne doctorate supported. No affirmative Vietnamese signal established beyond the ambiguous token Huy, which is published as the surname here. Searches for ancestry did not resolve it; unrelated Vietnamese namesakes are not evidence. Name/URL dedup: no roster or retired-id matches. Do not infer Vietnamese identity from this surname alone."
+    },
+    {
+      "name": "Andrea Dung",
+      "reason": "Opened https://www.hs-bremen.de/person/adung/ : architecture professorship supported, but no affirmative Vietnamese given name, education or other identity signal established. Dung can be a non-Vietnamese surname; no candidate proposed. Research doctorate/current qualifying-paper requirement also not established."
+    },
+    {
+      "name": "Isabel Nha Minh Le",
+      "reason": "Opened https://www.cs.cit.tum.de/sccs/personen/isabel-nha-minh-le/ : explicitly a doctoral candidate/research associate since 2023. Excluded trainee appointment."
+    },
+    {
+      "name": "Kieu Hieu Nguyen",
+      "reason": "Opened https://www.uni-muenster.de/FB10/Service/show_perspage.shtml?id=1663 : explicitly an alumni member with former contact details. Not evidence of current permanent employment at Münster."
+    },
+    {
+      "name": "Thanh Thuy Hoang",
+      "reason": "Opened https://wwz.unibas.ch/de/personen/thanh-thuy-hoang/ : student assistant and student in the Faculty of Business and Economics. Excluded trainee role."
+    },
+    {
+      "name": "Minh-Hieu Nguyen",
+      "reason": "Opened https://www.uni-marburg.de/en/fb20/departments/mh/psychiatry/workgroups : B.Sc. with student email in psychiatric control systems. No permanent doctorate-holding career research appointment."
+    },
+    {
+      "name": "Hai Minh Ha; Quynh Ngo",
+      "reason": "Opened https://kstr.med.ovgu.de/Klinik/Das%2BTeam/%C3%84rzte.html : both listed as resident physicians (Assistenzarzt/Assistenzärztin), not permanent professorial or faculty-equivalent research appointments."
+    },
+    {
+      "name": "Danh Le-Phuoc",
+      "reason": "Opened official TU Wien visiting-professor notice https://www.tuwien.at/en/all-news?cHash=f9160b835798aefe3c11898b92715bd6&tx_news_pi1%5Baction%5D=detail&tx_news_pi1%5Bcontroller%5D=News&tx_news_pi1%5Bnews%5D=204947 : Vienna role explicitly visiting for 27 October–21 November 2025. It describes a Berlin DFG principal-investigator role and Galway doctorate, but does not establish permanent university employment there. Excluded from Vienna and not promoted as a verified Berlin candidate."
+    },
+    {
+      "name": "Do Minh Nguyen",
+      "reason": "Opened https://www.tu-braunschweig.de/iwf/fup/abp : M.Sc., department head in automated battery production. Leadership alone establishes neither research doctorate/qualifying papers nor permanent employment. Not proposed."
+    }
+  ],
+  "coverage": [
+    {
+      "employer": "DACH universities, later-pass cross-field sweep",
+      "pagesExamined": [],
+      "note": "Read BRIEF2.md, ROSTER_MAINTENANCE.md, README.md, discover_new_faculty.md, candidate_intake.md, already-proposed.txt, and the earlier w1 DACH output. Searched by given-name tokens Minh, Thuy, Quynh, Kieu, Dung, Hien, Bich, Huong, Phuc, Diem, Hanh, Tuan, Duc, Truc, Cuong, Liem, Nhan, Ngoc, Thanh, Viet, Huy, Hoai, Quang, Duy, Huu, Tung, Phuong, Lien, Uyen, Nhu, Hau, Thuan, Tuong, Ngan, Phuoc, Nhat, Kien, Bao and Sang; supplemented less common surname leads Ton/Ton That, Khuu, Quach, Diep, Banh, Tong and Ta. Covered engineering/computing, mathematics/physics, chemistry/biology/medicine, economics/business, social sciences, humanities, architecture and music. Bounded broad search coverage with focused live-page verification, not an exhaustive directory census. Formal Emeritus track retained because BRIEF2 explicitly permits it; no junior or acting professorship accepted as permanent. No skip-list candidate proposed. No LinkedIn URLs fetched, logins, challenge evasion, Issues/PRs, roster changes, tests that stamp roster timestamps, or git state changes."
+    },
+    {
+      "employer": "ETH Zurich",
+      "pagesExamined": [],
+      "note": "Given-name and Vietnamese-education searches for permanent/senior scientist and professorial roles. Search results mainly alumni, postdocs, guests and research about Vietnam; no new permanent appointment established. Search-level coverage only; no ETH candidate accepted from snippets."
+    },
+    {
+      "employer": "École Polytechnique Fédérale de Lausanne",
+      "pagesExamined": [
+        "https://people.epfl.ch/huy.pham?lang=en"
+      ],
+      "note": "Robotics scientist lead screened live but permanence and near-name identity unresolved. Searches also used scientist/senior scientist and French scientific-staff terms across subjects. Existing Suong Nguyen and Minh Quang Tran not reproposed."
+    },
+    {
+      "employer": "Technical University of Munich",
+      "pagesExamined": [
+        "https://www.cs.cit.tum.de/sccs/personen/isabel-nha-minh-le/"
+      ],
+      "note": "New quantum-computing given-name lead explicitly doctoral. Existing Minh Duc Bui not reproposed."
+    },
+    {
+      "employer": "Technical University of Darmstadt",
+      "pagesExamined": [
+        "https://www.kgbauko.tu-darmstadt.de/kgbauko/mitarbeiter_kgbauko/mitarbeiter_details_kgbauko_98432.de.jsp",
+        "https://www.maschinenbau.tu-darmstadt.de/stfs/institute_stfs/staff_stfs/sfts_staff_detail_193920.de.jsp"
+      ],
+      "note": "Deeper architecture/urbanism and reactive-fluid staff leads; doctorates/current university contacts supported but permanence not established. Lighting searches resurfaced rostered Quoc Khanh Tran."
+    },
+    {
+      "employer": "TU Braunschweig",
+      "pagesExamined": [
+        "https://www.tu-braunschweig.de/iwf/fup/abp"
+      ],
+      "note": "Given-name searches reached battery manufacturing department leadership; M.Sc. title and department head role insufficient for doctorate and permanent-career tests."
+    },
+    {
+      "employer": "Karlsruhe Institute of Technology",
+      "pagesExamined": [
+        "https://www.iwu.kit.edu/hyd/english/Staff_1283.php",
+        "https://www.cedim.kit.edu/english/3029.php"
+      ],
+      "note": "Deeper hydrology/disaster-risk coverage yielded Sarah Quynh-Giang Ho; no permanent appointment verified. Speech-recognition and machine-learning searches mostly yielded trainee or course listings."
+    },
+    {
+      "employer": "RWTH Aachen University",
+      "pagesExamined": [],
+      "note": "Given-name searches reached continuum-mechanics staff, including Khiem Vu and Xuan Thang Duong, without verified permanent appointments. Open attempt on https://rwthcontacts.rwth-aachen.de/organization/ORG-68WDG/PER-HLFEBUD failed with cache miss; no candidate accepted from search excerpts. Existing Xuan-Thang Vu not reproposed."
+    },
+    {
+      "employer": "Technical University of Berlin",
+      "pagesExamined": [],
+      "note": "Given-name searches across aerospace and computing; staff-page open https://www.tu.berlin/raumfahrttechnik/fachgebiet/mitarbeiterinnen returned 403. Vienna official source independently identifies Danh Le-Phuoc as Berlin project PI, but no permanent Berlin appointment established."
+    },
+    {
+      "employer": "TU Dresden",
+      "pagesExamined": [],
+      "note": "Given-name searches reached manufacturing research associate Tuyen Nguyen and logic research associate Hoang Duy Nhu (M.Sc.). No permanent doctorate-holding appointment verified. Existing Giang T. Nguyen not reproposed. Search-level coverage."
+    },
+    {
+      "employer": "Leibniz University Hannover",
+      "pagesExamined": [],
+      "note": "Given-name searches reached finance, chemistry and environmental publications. Coauthors were not assumed to be current Hannover staff. Existing Giang Nghiem and Trung Thanh Nguyen not reproposed. Search-level coverage."
+    },
+    {
+      "employer": "University of Stuttgart",
+      "pagesExamined": [],
+      "note": "Given-name searches across research staff and biosciences produced historical theses and existing NLP faculty. Existing Ngoc Thang Vu not reproposed. No new permanent role verified; search-level coverage."
+    },
+    {
+      "employer": "University of Duisburg-Essen",
+      "pagesExamined": [
+        "https://www.uni-due.de/members/van_tran/trung_van_tran",
+        "https://www.uni-due.de/mathematik/mathematik_arbeitsgruppen_en.php"
+      ],
+      "note": "Deeper mathematics coverage identified an unlisted formally listed emeritus, Trung Van Tran; doctorate, Vietnamese educational signal and identity checked. Current faculty directory resolves the unqualified Professor label on his personal institutional page."
+    },
+    {
+      "employer": "University of Würzburg",
+      "pagesExamined": [
+        "https://www.uni-wuerzburg.de/en/news-and-events/einblick/single/news/people-16-june-2026/",
+        "https://www.ukw.de/palliativmedizin/aktuelle-meldungen/news/anerkennung-dessen-was-war-und-sein-kann/"
+      ],
+      "note": "Less common surname lead Maik Luu checked through two appointment-status pages; 2026 reappointment remains junior, and permanent conversion is conditional. Not counted as verified permanent."
+    },
+    {
+      "employer": "University of Rostock",
+      "pagesExamined": [
+        "https://www.huy.chemie.uni-rostock.de/peter-huy/"
+      ],
+      "note": "Peter Huy professor/doctorate verified, Vietnamese signal unresolved. Does not qualify on ambiguous surname alone."
+    },
+    {
+      "employer": "Bremen University of Applied Sciences",
+      "pagesExamined": [
+        "https://www.hs-bremen.de/person/adung/"
+      ],
+      "note": "Architecture professor Andrea Dung screened; no affirmative Vietnamese identity signal established."
+    },
+    {
+      "employer": "University / University of Applied Sciences Osnabrück",
+      "pagesExamined": [],
+      "note": "New given-name lead Thuy Duong Oesterreich followed across both institutions. News open returned 403 and old university profile redirect failed. Acting-professorship discovery evidence not treated as a verified permanent role."
+    },
+    {
+      "employer": "Johannes Kepler University Linz",
+      "pagesExamined": [
+        "https://www.jku.at/en/institute-for-application-oriented-knowledge-processing/about-us/team/van-quoc-phuong-huynh/",
+        "https://research.jku.at/en/persons/van-quoc-huynh/"
+      ],
+      "note": "Deeper knowledge-processing institute coverage found doctorate-holding researcher Van Quoc Phuong Huynh. Recent papers and institute membership verified; employment permanence remains unverified."
+    },
+    {
+      "employer": "TU Wien",
+      "pagesExamined": [
+        "https://www.tuwien.at/en/all-news?cHash=f9160b835798aefe3c11898b92715bd6&tx_news_pi1%5Baction%5D=detail&tx_news_pi1%5Bcontroller%5D=News&tx_news_pi1%5Bnews%5D=204947"
+      ],
+      "note": "Visiting-professor lead Danh Le-Phuoc explicitly temporary, not a Vienna permanent appointment. Existing Duy Ha Nguyen not reproposed."
+    },
+    {
+      "employer": "University of Vienna; Salzburg; Leoben; Klagenfurt; Austrian applied-sciences universities",
+      "pagesExamined": [],
+      "note": "Given-name queries and Vietnamese researcher/community searches supplemented the earlier pass. Results included visiting scholars, students and Vienna postdoctoral historian Thuc Linh Nguyen Vu; no new permanent role verified. Search-level coverage, not a claim of complete departmental inspection."
+    },
+    {
+      "employer": "University of Basel",
+      "pagesExamined": [
+        "https://wwz.unibas.ch/de/personen/thanh-thuy-hoang/"
+      ],
+      "note": "Economics given-name lead Thanh Thuy Hoang explicitly student assistant. Search-discovery suggestion that Bich Diep Nguyen moved to Bern was not accepted: fuller source result instead identified a Vietnam university lecturer."
+    },
+    {
+      "employer": "University of St. Gallen",
+      "pagesExamined": [
+        "https://www.unisg.ch/en/university/about-us/organisation/detail/person-id/3e6a3b80-9c93-4c42-a104-1de352739f35/"
+      ],
+      "note": "Tami Dinh identity verified against roster; already listed."
+    },
+    {
+      "employer": "Otto von Guericke University Magdeburg",
+      "pagesExamined": [
+        "https://kstr.med.ovgu.de/Klinik/Das%2BTeam/%C3%84rzte.html"
+      ],
+      "note": "Deeper clinical and VR staff searches. Vietnamese-name radiotherapy leads are residents, not permanent professorial/research appointments. Historical doctoral and industry alumni not counted as current university faculty."
+    },
+    {
+      "employer": "Philipps University Marburg",
+      "pagesExamined": [
+        "https://www.uni-marburg.de/en/fb20/departments/mh/psychiatry/workgroups"
+      ],
+      "note": "Psychiatry/control-systems given-name lead Minh-Hieu Nguyen is B.Sc. with student email; excluded."
+    },
+    {
+      "employer": "University of Münster",
+      "pagesExamined": [
+        "https://www.uni-muenster.de/FB10/Service/show_perspage.shtml?id=1663"
+      ],
+      "note": "Kieu Hieu Nguyen explicitly alumni; old institutional contact details not proof of current appointment."
+    },
+    {
+      "employer": "Bielefeld University; Ruhr University Bochum",
+      "pagesExamined": [
+        "https://www.uni-bielefeld.de/fakultaeten/soziologie/fakultaet/arbeitsbereiche/ab6/neu/",
+        "https://www.ruhr-uni-bochum.de/monndi/members/pi/index.html.en"
+      ],
+      "note": "Social-anthropology and human-genetics given-name leads already listed, identity resolved by discipline, doctorate or exact institutional contacts."
+    },
+    {
+      "employer": "University of Hamburg",
+      "pagesExamined": [
+        "https://www.aai.uni-hamburg.de/soa/ueber-die-abteilung/archiv/newsletter/24-04-newsletter.pdf"
+      ],
+      "note": "Humanities/Vietnamese-studies lead expansion; newsletter contributors and invited visitors not assumed to be faculty. Chemistry searches also surfaced doctoral staff. No new permanent role verified."
+    },
+    {
+      "employer": "Fribourg; Neuchâtel; USI; ZHAW; HES-SO; FHNW; Greifswald; Halle; Kiel; Bonn; Ulm",
+      "pagesExamined": [],
+      "note": "Additional institution-targeted given-name searches beyond earlier coverage. Results often graduation lists, theses, coauthored papers and student/clinical contacts rather than permanent appointments. No additions from these unverified search results. Search-level coverage only."
+    }
+  ]
+}

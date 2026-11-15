@@ -1,0 +1,449 @@
+{
+  "group": "university",
+  "agent": "codex",
+  "slice": "us-business",
+  "finishedAt": "2026-11-15T00:40:40.777891Z",
+  "candidates": [
+    {
+      "entry": {
+        "country": "United States",
+        "track": "Tenure-line",
+        "field": "Business & Economics",
+        "name": "Can Trinh",
+        "university": "Troy University",
+        "rank": "Assistant Professor",
+        "department": "Marketing",
+        "researchAreas": [
+          "Consumer Behavior and Decision-Making",
+          "Psychological Drivers of Market Trends",
+          "Social Impact of Marketing Strategies"
+        ],
+        "phdInstitution": "University of Tennessee",
+        "profileUrl": "https://www.troy.edu/academics/colleges-schools/business/departments/economics-finance-risk-management-insurance/faculty-staff.html"
+      },
+      "evidence": {
+        "currentRole": "https://www.troy.edu/academics/colleges-schools/business/departments/economics-finance-risk-management-insurance/faculty-staff.html — Named faculty biography headed \"Can Trinh, Ph.D.\" and \"Assistant Professor\"; marketing teaching and research are expressly described. This is the university’s combined faculty biography page.",
+        "doctorateOrPapers": "https://www.troy.edu/academics/colleges-schools/business/departments/economics-finance-risk-management-insurance/faculty-staff.html — Explicitly identifies a doctorate in Business Administration, Marketing, from the University of Tennessee.",
+        "vietnameseSignal": "https://www.troy.edu/academics/colleges-schools/business/departments/economics-finance-risk-management-insurance/faculty-staff.html — Vietnamese given name Can together with surname Trinh, rather than surname alone. No reconstructed diacritics. ORCID search also surfaced Vietnam education, but that claim is not used because the opened ORCID page required JavaScript.",
+        "dedup": "Ran npm run find-roster-matches -- \"Can Trinh\" with --url for the opened employer biography and ORCID 0000-0003-2127-0985: no roster or retired-id matches. Checked already-proposed.txt: absent."
+      }
+    },
+    {
+      "entry": {
+        "country": "United States",
+        "track": "Tenure-line",
+        "field": "Business & Economics",
+        "name": "Hieu Nguyen",
+        "university": "California State University, Long Beach",
+        "rank": "Professor",
+        "department": "Marketing",
+        "city": "Long Beach",
+        "state": "California",
+        "phdInstitution": "University of Texas at Arlington",
+        "undergradInstitution": "Hanoi Foreign Studies University",
+        "msInstitution": "Texas Christian University",
+        "profileUrl": "https://web.csulb.edu/colleges/cob/intranet/vita/public/resume.php?cid=119&username=hnguye47"
+      },
+      "evidence": {
+        "currentRole": "https://web.csulb.edu/colleges/cob/intranet/vita/public/resume.php?cid=119&username=hnguye47 — \"Professor, Marketing\". The individual institutional faculty page opened and identifies Hieu Nguyen and hieu.nguyen@csulb.edu; its footer supplies Long Beach, California.",
+        "doctorateOrPapers": "https://web.csulb.edu/divisions/academic_affairs/catalog/2016-2017/faculty/faculty_n-r.html — The Hieu Nguyen Marketing record explicitly lists the University of Texas at Arlington doctorate; the historical catalog is used only for education, with the current individual profile establishing employment.",
+        "vietnameseSignal": "https://web.csulb.edu/divisions/academic_affairs/catalog/2016-2017/faculty/faculty_n-r.html — Vietnamese given name Hieu and undergraduate education at Hanoi Foreign Studies University, Vietnam.",
+        "dedup": "Ran npm run find-roster-matches -- \"Hieu Nguyen\" --url for the exact individual profile. Name-only hits: vp-0702, vp-0706, vp-0835, vp-1266, vp-1530, vp-1533, vp-1801, vp-1973, vp-3192; retired vp-1132 and vp-1245 merge into existing engineering IDs. Checked their roster departments, education and URLs: none shares this profile or the marketing career/UT Arlington doctorate. Opened vp-1973’s Macquarie employer profile: applied finance, lending papers with Jansen/Sheedy, distinct from CSULB marketing. Also distinct from the Southwestern economist below (Tennessee doctorate). Already-proposed.txt has Hieu D./P. Nguyen, not this person; published-name and identity comparisons found no match."
+      }
+    },
+    {
+      "entry": {
+        "country": "United States",
+        "track": "Tenure-line",
+        "field": "Business & Economics",
+        "name": "Hieu Minh Nguyen",
+        "university": "Southwestern University",
+        "rank": "Assistant Professor",
+        "department": "Economics and Business",
+        "city": "Georgetown",
+        "state": "Texas",
+        "phdInstitution": "University of Tennessee",
+        "msInstitution": "University of Pittsburgh",
+        "undergradInstitution": "American University in Bulgaria",
+        "profileUrl": "https://www.southwestern.edu/live/profiles/49669-hieu-nguyen",
+        "websiteUrl": "https://www.hnecon.net/home",
+        "researchAreas": [
+          "College Affordability",
+          "Health Behavior and Policy",
+          "Behavioral and Experimental Economics"
+        ]
+      },
+      "evidence": {
+        "currentRole": "https://www.southwestern.edu/live/profiles/49669-hieu-nguyen — \"Assistant Professor of Economics\"; individual faculty profile identifies nguyen23@southwestern.edu. The opened departmental directory independently lists the same appointment.",
+        "doctorateOrPapers": "https://www.hnecon.net/home — Personal homepage explicitly states a Ph.D. in Economics from the University of Tennessee. Opened with web and independently fetched normally with requests (HTTP 200); the HTML contains the degree, current appointment, full published name, research areas and Georgetown address even though the web text extractor omitted most of the body. No degree year inferred.",
+        "vietnameseSignal": "https://www.hnecon.net/home — Vietnamese given names Hieu Minh with Nguyen; the page title supplies the full name.",
+        "dedup": "Ran npm run find-roster-matches for both \"Hieu Nguyen\" and \"Hieu Minh Nguyen\", with --url for the official profile and personal homepage. No URL matches. Name-only hits vp-0163, vp-0458, vp-0551, vp-0702, vp-0835, vp-1533, vp-1577, vp-1731, vp-1765, vp-1801, vp-1973, vp-2339 and retired vp-1132. Compared roster fields/education: engineering, medicine, sociology, psychology and computing hits differ in field/degree; business hits vp-0163 (Hawaii doctorate, IT/operations), vp-1731 (Reading doctorate, Newcastle), and vp-1973 (Macquarie applied-finance lending research) differ from Tennessee experimental/public-policy economist. Distinct from CSULB marketing professor, whose doctorate is UT Arlington. Absent from already-proposed.txt after checking Hieu-name variants."
+      }
+    },
+    {
+      "entry": {
+        "country": "United States",
+        "track": "Tenure-line",
+        "field": "Business & Economics",
+        "name": "Hazel Thu-Hien Nguyen",
+        "university": "Southwestern University",
+        "rank": "Associate Professor",
+        "department": "Economics and Business",
+        "city": "Georgetown",
+        "state": "Texas",
+        "phdInstitution": "University of Arkansas",
+        "msInstitution": "Boston University",
+        "undergradInstitution": "Ho Chi Minh City University of Technology",
+        "profileUrl": "https://www.southwestern.edu/live/profiles/28355-hazel-nguyen",
+        "researchAreas": [
+          "Corporate Finance",
+          "Textual Analysis",
+          "Gender Communications"
+        ],
+        "honors": [
+          {
+            "name": "Floyd and Annetta Jones Chair",
+            "category": "distinguished_professorship",
+            "organization": "Southwestern University",
+            "source": "https://www.southwestern.edu/live/profiles/28355-hazel-nguyen"
+          }
+        ]
+      },
+      "evidence": {
+        "currentRole": "https://www.southwestern.edu/live/profiles/28355-hazel-nguyen — \"Associate Professor of Economics and Business\"; also department chair and holder of the Floyd and Annetta Jones Chair. The underlying professorship determines the track.",
+        "doctorateOrPapers": "https://www.southwestern.edu/live/profiles/28355-hazel-nguyen — Biography explicitly gives a Finance doctorate from University of Arkansas, Fayetteville; MS in Information Systems from Boston University and BS in Electrical Engineering in Vietnam.",
+        "vietnameseSignal": "https://www.southwestern.edu/live/profiles/28355-hazel-nguyen — Vietnamese given names Thu-Hien and explicit undergraduate education/work in Vietnam.",
+        "dedup": "Ran npm run find-roster-matches for \"Hazel Thu-Hien Nguyen\" and \"Hazel Nguyen\", with --url for this profile. Hazel Nguyen returned no matches; expanded-name search produced vp-0087, vp-0251, vp-0738, vp-1907, vp-3134, vp-3200, all name-only. Compared roster departments, doctorate institutions and URLs: chemistry, computer science, computational biology and engineering differ; vp-1907 is Greenwich management accounting, with a different published name and profile, versus Hazel’s Arkansas Finance doctorate, Vietnam engineering BS and Southwestern career. No identity URL overlap. Absent from already-proposed.txt."
+      }
+    },
+    {
+      "entry": {
+        "country": "United States",
+        "track": "Tenure-line",
+        "field": "Business & Economics",
+        "name": "Tung (Francis) Cu",
+        "university": "Northeastern Illinois University",
+        "rank": "Associate Professor",
+        "department": "Accounting, Business Law and Finance",
+        "phdInstitution": "Louisiana State University",
+        "undergradInstitution": "National University of Sciences, Vietnam",
+        "profileUrl": "https://www.neiu.edu/faculty/assistant-professor",
+        "researchAreas": [
+          "Internet of Things",
+          "Artificial Intelligence for Security",
+          "Social Media Analytics"
+        ]
+      },
+      "evidence": {
+        "currentRole": "https://www.neiu.edu/faculty/assistant-professor — Individual institutional profile headed \"Tung (Francis) Cu\" and \"Associate Professor\" in Accounting, Business Law and Finance; teaches Management Information Systems.",
+        "doctorateOrPapers": "https://www.neiu.edu/faculty/assistant-professor — Education lists research doctorates in Information Systems (Louisiana State University) and Business Administration (Old Dominion University). Only one phdInstitution field is available, so the IS doctorate is proposed; second doctorate retained here.",
+        "vietnameseSignal": "https://www.neiu.edu/faculty/assistant-professor — Vietnamese given name Tung, less common surname Cu, and explicit BS education at National University of Sciences, Vietnam.",
+        "dedup": "Ran npm run find-roster-matches -- \"Tung Francis Cu\" --url for the exact profile, and separately \"Tung Cu\": no roster or retired-id matches. Absent from already-proposed.txt."
+      }
+    },
+    {
+      "entry": {
+        "country": "United States",
+        "track": "Tenure-line",
+        "field": "Business & Economics",
+        "name": "Duc (Steve) Vu",
+        "university": "University of Michigan-Flint",
+        "rank": "Assistant Professor",
+        "department": "Management and Marketing",
+        "profileUrl": "https://blogs.umflint.edu/honors-program/2026/05/20/dr-duc-steve-vu/laurast/",
+        "researchAreas": [
+          "Operations and Supply Chain Management",
+          "Human Behavior in Operations Decisions"
+        ]
+      },
+      "evidence": {
+        "currentRole": "https://blogs.umflint.edu/honors-program/2026/05/20/dr-duc-steve-vu/laurast/ — Official university Faculty Spotlight identifies an \"Assistant Professor of Operations and Supply Chain Management\". Opened 2026 employer biography supplies the person-specific institutional page. https://www.umflint.edu/som/contact-us/management-and-marketing-faculty/ independently lists Duc Vu as Assistant Professor of Supply Chain Management in Management and Marketing. Central directory link was opened but returned no person text / a bot check on ordinary requests; it is not proposed as profileUrl.",
+        "doctorateOrPapers": "https://blogs.umflint.edu/honors-program/2026/05/20/dr-duc-steve-vu/laurast/ — Employer biography explicitly identifies Duc Vu as PhD and discusses his current research program. Doctorate institution/year omitted because the UTD placement page did not successfully open.",
+        "vietnameseSignal": "https://blogs.umflint.edu/honors-program/2026/05/20/dr-duc-steve-vu/laurast/ — Vietnamese given name Duc with Vu; published English nickname Steve is supplied by the employer headline.",
+        "dedup": "Ran npm run find-roster-matches for \"Duc Vu\" and \"Duc Steve Vu\", including --url for the employer spotlight and linked central directory. Expanded name returned no matches; short name hit vp-0931 Vu Duc Tran only. Roster inspection: vp-0931 is a JAIST doctorate/NLP academic at JAIST, not the UM-Flint operations scholar. No identity URL overlap. Absent from already-proposed.txt."
+      }
+    },
+    {
+      "entry": {
+        "country": "United States",
+        "track": "Tenure-line",
+        "field": "Business & Economics",
+        "name": "Ngoc Dao",
+        "university": "Kean University",
+        "rank": "Assistant Professor",
+        "department": "Criminal Justice and Public Affairs",
+        "phdInstitution": "Indiana University Bloomington",
+        "profileUrl": "https://www.kean.edu/directory/ngoc-dao",
+        "researchAreas": [
+          "Economics of Aging",
+          "Tax Policy",
+          "Labor Policy",
+          "Economics of Caregiving"
+        ]
+      },
+      "evidence": {
+        "currentRole": "https://www.kean.edu/directory/ngoc-dao — Individual employer page identifies Assistant Professor in the College of Business and Public Management. https://www.kean.edu/academics/college-business-and-public-management/department-criminal-justice-and-public-affairs-0 corroborates an Assistant Professor of Public Administration and explicitly describes her as an applied economist; included within this business-school slice for retirement/labor/caregiving economics.",
+        "doctorateOrPapers": "https://www.kean.edu/academics/college-business-and-public-management/department-criminal-justice-and-public-affairs-0 — Explicit Public Affairs doctorate from Indiana University, Bloomington.",
+        "vietnameseSignal": "https://www.kean.edu/directory/ngoc-dao — Vietnamese given name Ngoc with surname Dao; affirmative given-name signal, not Dao alone.",
+        "dedup": "Ran npm run find-roster-matches -- \"Ngoc Dao\" --url for the exact profile. Name-only hits vp-1262 Nhu-Ngoc Dao and vp-2614 Thi Ngoc Anh Dao. Inspected roster education/fields: Chung-Ang PhD/network computing at Hallym and JAIST PhD/materials chemistry at Nagasaki, respectively; distinct from Indiana Public Affairs PhD/retirement economist at Kean. No URL matches. Absent from already-proposed.txt."
+      }
+    }
+  ],
+  "already_listed": [
+    {
+      "name": "Hieu Tran",
+      "id": "vp-0304",
+      "note": "Dedup with https://www.umb.edu/directory/hieutran/ matched name and exact profile URL. Opened current UMass Boston page: Assistant Professor of Finance, Georgia doctorate. Same person; no new proposal."
+    },
+    {
+      "name": "Ngoc Cindy Pham",
+      "id": "vp-2739",
+      "note": "find-roster-matches matched the Brooklyn College marketing scholar. Employer article opened: https://www.brooklyn.edu/bc-brief/business-students-close-out-2024-with-a-bang/. Same institution/field; no new proposal."
+    },
+    {
+      "name": "Mindy Truong",
+      "id": "vp-2719",
+      "note": "find-roster-matches matched UCR management scholar. Opened https://business.ucr.edu/news/2024/04/16/school-business-offers-new-dei-courses; same management research and USC doctorate. No new proposal."
+    },
+    {
+      "name": "Thuy D. Nguyen",
+      "id": "vp-0311",
+      "note": "find-roster-matches with https://cob.unt.edu/people/thuy-nguyen.html matched existing UNT marketing scholar. Opened employer profile identifies Clinical Associate Professor; same person. No new proposal."
+    }
+  ],
+  "possible_move": [],
+  "rejected": [
+    {
+      "name": "Nhung Hendy",
+      "reason": "Promising eligible lead, held out for profile verification, not an ancestry rejection. https://www.towson.edu/cbe/departments/management/faculty.html opened and lists Professor; https://www.towson.edu/cbe/about/documents/baltimore_business_review_2023.pdf opened and gives VCU PhD, 2002. Nhung is a Vietnamese given-name signal. Linked individual profile https://www.towson.edu/cbe/facultystaff/profile.html?FacMem=nhendy opened but did not return her biography; ordinary requests received 403. find-roster-matches for Nhung Hendy found no matches. Next action: obtain a working person-specific institutional profile; resolve published Nhung T. Nguyen / Hendy naming history before proposing a protected full name."
+    },
+    {
+      "name": "Duy Hinh Khieu",
+      "reason": "Promising eligible less-common-surname lead, held out because no working person-specific profile was found. https://www.pvamu.edu/business/about-us/faculty-and-staff/ opened and lists Professor in AFIS. TAMUS search lead gives Kentucky PhD, 2009, but not opened/accepted as verified degree evidence. Duy Hinh is a Vietnamese given-name signal; find-roster-matches found no matches. Next action: locate and open current individual PVAMU profile/CV and doctorate evidence."
+    },
+    {
+      "name": "Thao Vuong",
+      "reason": "Opened https://www.villanova.edu/university/business/about-vsb/news/pressreleases/2024/0911.html explicitly describes a visiting assistant teaching appointment. Current directory extraction https://www.villanova.edu/university/business/faculty-and-research/faculty-by-department.html omitted faculty names. Search snippets/personal-site title suggest Assistant Teaching Professor, but continuing status was not verified on a live employer page. Hold pending current status evidence; do not treat omission of visiting in a search snippet as a permanent appointment. Dedup name hit vp-1699 has Deakin doctorate/RMIT career, different from Vuong’s Washington University and Georgia Tech doctorates."
+    },
+    {
+      "name": "Huyen Curtis",
+      "reason": "https://robins.richmond.edu/faculty/hpham/ opened and shows Lecturer of Economics. No doctorate details or full-time/continuing appointment evidence on that page. Dedup with name and URL found no matches. Huyen provides a Vietnamese given-name signal, but Pham surname history must be sourced before adding a fuller protected name. Hold until doctorate and eligible teaching status are documented."
+    },
+    {
+      "name": "Quoc Phan",
+      "reason": "Current Colorado appointment verified on https://www.colorado.edu/facultyaffairs/whos-who-new-faculty-cohort-2026 and https://www.colorado.edu/business/news/2026/08/25/leeds-welcomes-new-faculty-fall-2026: new Assistant Teaching Professor, Finance, on a named promotion ladder. Neither supplies an individual profile/doctorate. https://www.hartford.edu/unotes/2024/09/welcome-new-faculty.aspx opened, but describes the earlier visiting Hartford position. Held out pending person-specific employer profile and doctorate verification. Dedup hit vp-1428 is NCKU mechanical engineering/NCKU PhD 2011, distinct from finance/Manitoba lead."
+    },
+    {
+      "name": "Thuc-Doan Nguyen",
+      "reason": "Older Woodbury catalog/news leads show professor of marketing, Utah doctorate, Vietnam education. No current individual employer profile successfully located/opened; do not use 2023–24 catalog posted in 2026 as proof of a current appointment. Dedup name hits vp-2005 (Greater Manchester accountancy) and vp-3017 (Los Alamos magnet physics) differ in field/degree. Hold for current Woodbury employment and profile verification."
+    },
+    {
+      "name": "Minh Q. Huynh",
+      "reason": "Employer profile https://www.southeastern.edu/employee/minh-huynh/ could not be opened (403); ordinary requests also returned 403. Search snippets suggest MIS faculty but are discovery-only. No candidate retained from snippets. Dedup name hits vp-0468 radiology and vp-1241 CSIRO astronomy differ in field; current employer biography and doctorate still need live verification."
+    },
+    {
+      "name": "Huong Nguyen",
+      "reason": "https://louisiana.edu/directory/people/huong-nguyen opened and identifies Senior Instructor in Economics & Finance with endowed professorships. Need explicit full-time/continuing or documented teaching promotion ladder; title alone is insufficient. Search surfaced an earlier visiting appointment, which does not establish present permanence. Dedup name/URL search found no URL match and multiple namesakes, including vp-1082 CSUN business law, vp-2029 La Trobe management, vp-2506 IPAG finance; held out before final identity/track resolution."
+    },
+    {
+      "name": "Vu T. Trieu",
+      "reason": "Directory search lead resolved to IT Support Services director at Southern Connecticut State University, not eligible business research faculty. find-roster-matches found no matches. Outside qualifying academic appointment scope."
+    },
+    {
+      "name": "Dung Nguyen — UTSA new-faculty lead",
+      "reason": "Opened https://www.utsa.edu/newfaculty/: incoming Computer Science Assistant Professor starting January 2027, outside the assigned business/economics slice. Not counted or proposed here."
+    },
+    {
+      "name": "Tran Huu Dung",
+      "reason": "Opened https://research.wright.edu/en/persons/tran-h-dung/ and found economics emeritus listing. Historical/deceased-status and doctoral evidence were not resolved in this current-employer-focused pass, so held out rather than guessing current status. Dedup name hits vp-0046 computer science, vp-0811 education, vp-2978 Microsoft applied sciences are different fields."
+    }
+  ],
+  "coverage": [
+    {
+      "employer": "Slice-wide discovery method",
+      "pagesExamined": [
+        "https://www.southwestern.edu/economics-and-business/our-faculty/",
+        "https://www.pvamu.edu/business/about-us/faculty-and-staff/",
+        "https://www.neiu.edu/faculty/assistant-professor"
+      ],
+      "note": "Later-pass searches used Vietnamese given-name tokens across finance, accounting, marketing, management, MIS and economics: Thuy, Hien, Quynh, Linh, Nhung, Quoc, Diem, Hanh, Khanh, Thao, Uyen, Huyen, Phuong, Nhu, Thuc, Tram, Dung, Kieu, Tuyet, Oanh, Khuong, Truc, Bich, Thien, Hiep, Duy, Hieu, Quyen, Ngan, Huong, Liem, Huan, Nhan, Quang, Chau, Tung, Trieu, Trung, Phuoc, Ngoc, Giang, Vy, Kiet, Huu and Thinh; less-common surnames included Cu, Khieu, Nghiem, Luu, Phung, Luong, Vuong, Quach and Ton. Country-filtered .edu searches reduced Vietnam/Australia noise. Stopped after broad token/discipline coverage and repeated duplicate, visiting, out-of-slice or unverifiable leads, with seven fully supported candidates rather than padding to 25. Every retained entry was compared with the roster and already-proposed.txt. Search results used only as leads; no LinkedIn pages fetched, login or bot-check evasion performed."
+    },
+    {
+      "employer": "Southwestern University",
+      "pagesExamined": [
+        "https://www.southwestern.edu/economics-and-business/our-faculty/",
+        "https://www.southwestern.edu/live/profiles/49669-hieu-nguyen",
+        "https://www.southwestern.edu/live/profiles/28355-hazel-nguyen",
+        "https://www.southwestern.edu/live/files/11896-2025-2027-southwestern-university-catalogpdf",
+        "https://www.hnecon.net/home"
+      ],
+      "note": "Read Economics and Business faculty directory, followed individual profiles, checked official catalog and personal degree evidence. Two distinct new candidates, including Hazel/Thu-Hien name variation."
+    },
+    {
+      "employer": "Troy University",
+      "pagesExamined": [
+        "https://www.troy.edu/academics/colleges-schools/business/departments/economics-finance-risk-management-insurance/faculty-staff.html"
+      ],
+      "note": "Read combined economics/finance/marketing biographies; Can Trinh verified with explicit marketing doctorate and research role."
+    },
+    {
+      "employer": "California State University, Long Beach",
+      "pagesExamined": [
+        "https://web.csulb.edu/colleges/cob/intranet/vita/public/resume.php?cid=119&username=hnguye47",
+        "https://web.csulb.edu/divisions/academic_affairs/catalog/2016-2017/faculty/faculty_n-r.html",
+        "https://www.csulb.edu/college-of-business/marketing/article/hieu-nguyen-2024-25-presidents-awards-for-outstanding-faculty"
+      ],
+      "note": "Current individual marketing profile and explicit historical degree record; resolved Hieu Nguyen namesakes. News page text extraction was incomplete, so proposal relies on profile/catalog."
+    },
+    {
+      "employer": "Northeastern Illinois University",
+      "pagesExamined": [
+        "https://www.neiu.edu/faculty/assistant-professor"
+      ],
+      "note": "Verified less-common surname Cu via full individual biography, two doctorates and Vietnam undergraduate education."
+    },
+    {
+      "employer": "University of Michigan-Flint",
+      "pagesExamined": [
+        "https://www.umflint.edu/som/contact-us/management-and-marketing-faculty/",
+        "https://directory.umflint.edu/school-of-management-som/ducvu",
+        "https://blogs.umflint.edu/honors-program/2026/05/20/dr-duc-steve-vu/laurast/"
+      ],
+      "note": "Read management/marketing roster and current official faculty spotlight. Central directory was empty/bot-blocked, so used the opened university person-specific spotlight as profileUrl. Explicit employer PhD designation supplies doctorate requirement; no degree institution guessed."
+    },
+    {
+      "employer": "Kean University",
+      "pagesExamined": [
+        "https://www.kean.edu/directory/ngoc-dao",
+        "https://www.kean.edu/academics/college-business-and-public-management/department-criminal-justice-and-public-affairs-0"
+      ],
+      "note": "Read individual profile and school faculty biographies; Ngoc Dao is an applied economist in the business/public-management college. Confirmed Indiana doctorate; ruled out computing/materials namesakes."
+    },
+    {
+      "employer": "Towson University",
+      "pagesExamined": [
+        "https://www.towson.edu/cbe/departments/management/faculty.html",
+        "https://www.towson.edu/cbe/facultystaff/profile.html?FacMem=nhendy",
+        "https://www.towson.edu/cbe/about/documents/baltimore_business_review_2023.pdf"
+      ],
+      "note": "Management directory and doctorate evidence obtained for Nhung Hendy; individual profile did not return her content. Retained as held-out lead with next action, not verified candidate."
+    },
+    {
+      "employer": "Prairie View A&M University",
+      "pagesExamined": [
+        "https://www.pvamu.edu/business/",
+        "https://www.pvamu.edu/business/about-us/faculty-and-staff/"
+      ],
+      "note": "Read business faculty/staff roster and found Duy Hinh Khieu; individual profile and opened degree evidence remain missing."
+    },
+    {
+      "employer": "University of Colorado Boulder",
+      "pagesExamined": [
+        "https://www.colorado.edu/business/faculty-research/faculty-directory",
+        "https://www.colorado.edu/business/news/2026/08/25/leeds-welcomes-new-faculty-fall-2026",
+        "https://www.colorado.edu/facultyaffairs/whos-who-new-faculty-cohort-2026"
+      ],
+      "note": "New-faculty teaching ladder verified; Quoc Phan held out for individual profile and degree evidence. Faculty directory body not rendered."
+    },
+    {
+      "employer": "University of Hartford",
+      "pagesExamined": [
+        "https://www.hartford.edu/unotes/2024/09/welcome-new-faculty.aspx"
+      ],
+      "note": "Earlier Quoc Phan visiting role; cross-checked Colorado lead, did not propose Hartford as current employer."
+    },
+    {
+      "employer": "Villanova University",
+      "pagesExamined": [
+        "https://www.villanova.edu/university/business/faculty-and-research/faculty-by-department.html",
+        "https://www.villanova.edu/university/business/about-vsb/news/pressreleases/2024/0911.html"
+      ],
+      "note": "Thao Vuong doctorate evidence and earlier visiting status; current continuing appointment unresolved."
+    },
+    {
+      "employer": "University of Richmond",
+      "pagesExamined": [
+        "https://robins.richmond.edu/faculty/directory.html",
+        "https://robins.richmond.edu/faculty/hpham/"
+      ],
+      "note": "Examined full Robins directory and Huyen Curtis page; lecturer eligibility/doctorate unresolved."
+    },
+    {
+      "employer": "University of Louisiana at Lafayette",
+      "pagesExamined": [
+        "https://louisiana.edu/directory/people/huong-nguyen"
+      ],
+      "note": "Senior Instructor/finance profile opened; continuing/full-time proof unresolved."
+    },
+    {
+      "employer": "Southeastern Louisiana University",
+      "pagesExamined": [
+        "https://www.southeastern.edu/employee/minh-huynh/"
+      ],
+      "note": "403 blocked both web open and ordinary requests. Did not accept snippets as live verification."
+    },
+    {
+      "employer": "University of Massachusetts Boston",
+      "pagesExamined": [
+        "https://www.umb.edu/directory/hieutran/"
+      ],
+      "note": "Given-token accounting search found Hieu Manh Tran; exact employer URL is vp-0304, already listed."
+    },
+    {
+      "employer": "University of North Texas",
+      "pagesExamined": [
+        "https://cob.unt.edu/people/thuy-nguyen.html"
+      ],
+      "note": "Thuy D. Nguyen is already listed as vp-0311."
+    },
+    {
+      "employer": "Brooklyn College, City University of New York",
+      "pagesExamined": [
+        "https://www.brooklyn.edu/bc-brief/business-students-close-out-2024-with-a-bang/"
+      ],
+      "note": "Ngoc Cindy Pham deduped to vp-2739."
+    },
+    {
+      "employer": "University of California, Riverside",
+      "pagesExamined": [
+        "https://business.ucr.edu/news/2024/04/16/school-business-offers-new-dei-courses"
+      ],
+      "note": "Mindy Truong deduped to vp-2719."
+    },
+    {
+      "employer": "Macquarie University",
+      "pagesExamined": [
+        "https://researchers.mq.edu.au/en/persons/hieu-nguyen/"
+      ],
+      "note": "Identity comparison only: vp-1973 applied-finance scholar differs from CSULB marketing and Southwestern economics candidates."
+    },
+    {
+      "employer": "Wright State University",
+      "pagesExamined": [
+        "https://research.wright.edu/en/persons/tran-h-dung/"
+      ],
+      "note": "Economics emeritus found; historical status/doctorate not sufficiently resolved for this output."
+    },
+    {
+      "employer": "The University of Texas at San Antonio",
+      "pagesExamined": [
+        "https://www.utsa.edu/newfaculty/"
+      ],
+      "note": "Read 2026 new-faculty list; Dung Nguyen belongs to computer science, outside slice."
+    },
+    {
+      "employer": "Slippery Rock University of Pennsylvania",
+      "pagesExamined": [
+        "https://www.sru.edu/academics/colleges-and-departments/cob/school-of-business/meet-the-faculty"
+      ],
+      "note": "Open failed with 502; Thuy Bui already appears in local roster as vp-1101. No live facts accepted from discovery snippet."
+    },
+    {
+      "employer": "The University of Texas at Dallas",
+      "pagesExamined": [
+        "https://jindal.utdallas.edu/phd-programs/management-science/operations-management/"
+      ],
+      "note": "Placement page open failed with 502. Search lead about Duc Vu not used to populate a doctorate institution/year."
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "verifier": "codex",
+  "input": "maintenance/sector-expansion/runs/w3/us-california.codex.json",
+  "candidates": [
+    {
+      "name": "Linh Chuong",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "The live employer profile https://researchprofiles.csumb.edu/en/persons/linh-chuong/ identifies her as Assistant Professor in Health, Human Services and Public Policy. The employer organization chart https://csumb.edu/chshs/about/dean/ explicitly places her among tenure-track faculty. The Vietnamese given name Linh supplies a signal beyond surname Chuong; https://www.pivotnetwork.org/profiles/linh-chuong independently identifies the same public-health scholar as the daughter of refugee immigrants and a Vietnamese-American organization leader. An independently retrieved search result for her first-person Vietnamese-immigrant-mother essay corroborates identity, although opening https://vietbaoonline.com/p112a305210/2/nguoi-viet-cua-nuoc-my-toi-hoat-dong-chinh-tri-thay-the-cho-me-toi returned cache miss. Her eligible California appointment establishes an outside-Vietnam base. find-roster-matches returned no roster or retired-ID matches for Linh Chuong and Linh Hong Chuong with employer, ORCID and PIVOT URLs; no already-proposed name match.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Phung N. Su",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "The live current-employer profile https://www.soc.ucsb.edu/people/phung-n-su identifies an Assistant Professor of Sociology with a Berkeley sociology PhD and a Santa Barbara office. The linked personal site https://pnsu87.wixsite.com/profile independently confirms the UCSB appointment. Affirmative Vietnamese-American identity is explicit in the introduction of her coauthored first-person article https://www.frontiersin.org/journals/sociology/articles/10.3389/fsoc.2023.1154435/full; this is not inferred from surname Su or research topic. The article names Phung N. Su and Phi Hong Su and identifies both sisters as Vietnamese American. find-roster-matches returned no roster or retired-ID matches for Phung N. Su and Phung Su with employer, personal-site and CV URLs; no already-proposed name match. No excluded appointment or Vietnam base found.",
+      "correctedFields": {}
+    },
+    {
+      "name": "My Phung (Jenny) O",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "The live employer profile https://csapps.csueastbay.edu/directory/profiles/kpe/ojenny.html identifies Professor and Co-Associate Chair of Kinesiology, with current teaching and a continuing research program in California. The official faculty directory https://www.csueastbay.edu/oaa/files/docs/homepage/faculty-directory.pdf documents her earlier Associate Professor rank and 2009 PhD; https://www.csueastbay.edu/kin/files/docs/vitae/o.pdf verifies the same scholar and degree history. These support the established professorial career rather than a temporary lecturer appointment; old lecturer listings do not override the current professor profile. The employer-published full given-name combination My Phung is an affirmative Vietnamese naming signal beyond surname O, consistent with the maintenance guide's explicit acceptance of Vietnamese given-name evidence; no separate ancestry biography was located. find-roster-matches returned no roster or retired-ID matches for the proposed name and Jenny O with profile and CV URLs; no already-proposed name match.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Kieu-Linh Caroline Valverde",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "The live primary-department profile https://asa.ucdavis.edu/people/kieu-linh-valverde identifies Associate Professor of Asian American Studies, Berkeley BA and PhD, and a Davis office. https://culturalstudies.ucdavis.edu/people/kieu-linh-caroline-valverde corroborates the primary appointment; this is not admission based solely on an affiliated Cultural Studies role. In the independently opened interview https://diacritics.org/2013/01/kieu-linh-caroline-valverde-were-not-just-boat-people/ she explicitly identifies herself as overseas Vietnamese and born in Vietnam. Current employment is in California. find-roster-matches with the full name, both employer profiles and personal-site URL returned no roster or retired-ID matches; no already-proposed name match. No field correction is required by the five verification tests.",
+      "correctedFields": {}
+    }
+  ],
+  "possible_move": []
+}

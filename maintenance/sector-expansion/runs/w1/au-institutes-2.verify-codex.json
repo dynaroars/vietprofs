@@ -1,0 +1,70 @@
+{
+  "verifier": "codex",
+  "input": "maintenance/sector-expansion/runs/w1/au-institutes-2.codex.json",
+  "candidates": [
+    {
+      "name": "Cuong Pham - Baker Heart and Diabetes Institute",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live HTTP 200 employer profile https://baker.edu.au/our-people/cuong-pham identifies a current Research Officer in Molecular Imaging and Nanotherapeutics and explicitly gives a Deakin Medical Biotechnology PhD, October 2022. The institute research appointment is eligible; the separate honorary/adjunct university appointments are not the basis for eligibility. Vietnamese given name Cuong plus documented Hanoi University of Pharmacy education/award supplies a signal beyond surname. The role is at the Australian Baker institute, with no Vietnam-based appointment indicated. Re-ran find-roster-matches with Cuong Pham and the profile URL: five name-only hits, no URL hit. vp-0493 is a Sorbonne-2009 robotics researcher; vp-1055 is an accounting/finance academic; vp-1223 is a Strasbourg-1991 catalysis researcher; vp-1403 is a UMass-Boston-2012 computer scientist; vp-2371 is a Minnesota-trained physician. None is this Deakin-2022 biomaterials researcher. Not in already-proposed.txt.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Thi Nguyen",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Employer profile https://www.burnet.edu.au/about-us/our-people-and-structure/our-people/thi-nguyen/ independently opened and rendered in Playwright with HTTP 200 (plain urllib returned 403). It lists a current Data Scientist appointment in Melbourne, 2025-present, research in healthcare machine learning/NLP, and La Trobe Computer Science PhD, 2013. This is a current institute research staff role, distinct from the former data-manager job and former NUS fellowship. Vietnamese given-name token Thi combined with Nguyen supplies the beyond-surname name signal under the roster name rules; no diacritics inferred. Re-ran find-roster-matches with name and URL: 45 name-only hits including three retired records, no URL hit. Compared fields and degrees: none matches this La Trobe-2013 computer scientist with NUS 2013-2015 and Burnet since 2019. In particular vp-0845 has Monash-2025 training, vp-1248 Cambridge-2015 structural biology, and vp-0476 UCLA-2011 philosophy; the other active and retired records have different fields or education. Not in already-proposed.txt.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Vu Nguyen - ANSTO",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live HTTP 200 current employer profile https://www.ansto.gov.au/people/dr-vu-nguyen identifies the Radiopharmacology Interface/Radiotracer Evaluation Co-ordinator at Lucas Heights, Australia. The role description establishes radiotracer research and principal-investigator work, and qualifications explicitly give a Pharmacology PhD from Sydney University (University of Sydney). Vu is a Vietnamese given-name signal in addition to Nguyen. Re-ran find-roster-matches with Vu Nguyen and URL: nine name-only hits, no URL hit. The closest exact-name Australian hit vp-1140 is a CSIRO materials scientist with Monash PhD 2003, unlike this Sydney-trained pharmacologist; vp-2983 is a Deakin-2015 search researcher; the remaining hits are different molecular-biology, rehabilitation, microsystems, mechanics, communications, music or clinical identities. Not in already-proposed.txt.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Thien Dinh",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live HTTP 200 current employer profile https://people.csiro.au/d/t/thien-dinh explicitly lists Senior Research Scientist, CFD Modelling, and Mechanical Engineering PhD, Ritsumeikan University, 2007. Its current CSIRO mineral-processing research follows an earlier Japanese team-leader job; the listed JSPS postdoc ended in 2013. Thien plus the documented Ho Chi Minh City University of Technology graduation distinction supplies an affirmative Vietnamese signal beyond Dinh. Current employment is with the Australian CSIRO, with no Vietnam-based role indicated. Re-ran find-roster-matches with name and URL: no roster or retired-id matches. Not in already-proposed.txt.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Duy Nong",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live HTTP 200 employer profile https://people.csiro.au/n/d/duy-nong identifies the CSIRO Foresight team lead and Senior Research Scientist, 2020-present, with University of New England Climate Change Economics PhD, 2017. This establishes a career research role in Australia. Vietnamese given name Duy is corroborated by the opened UNE research-student table at https://www.une.edu.au/about-une/faculty-of-science-agriculture-business-and-law/unebs/research/development-markets-and-growth?result_253809_result_page=2: Ngoc Duy Nong, country Vietnam, PhD on Australian greenhouse-gas mitigation using CGE modelling, matching the CSIRO biography and doctorate. Re-ran find-roster-matches with Duy Nong and URL: no roster or retired-id matches. Not in already-proposed.txt.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Hoa Ngo",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live HTTP 200 employer profile https://people.csiro.au/n/h/hoa-ngo identifies a current Senior Research Scientist in its heading and Research Scientist in the Australian e-Health Research Centre current-role section. The historical postdoctoral appointment explicitly ended in 2019. The biography and qualifications confirm a Montpellier II Computer Science PhD but disagree on year (2013 versus 2012); omitting phdYear as proposed is appropriate. Vietnamese given-name token Hoa and documented Hanoi University of Science and Technology employment provide the beyond-surname signal. Current appointment is in the Australian e-Health Research Centre, with no Vietnam-based role indicated. Re-ran find-roster-matches with name and URL: no roster or retired-id matches. Not in already-proposed.txt.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Ha Truong - CSIRO",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live HTTP 200 employer profile https://people.csiro.au/t/h/ha-truong identifies a current Team Leader and Aquaculture Nutritionist conducting CSIRO research on prawns, fish, feeds and nutrient digestion, and explicitly states a University of Sydney PhD. The full name combines Vietnamese given name Ha with surname Truong, rather than relying on an ambiguous surname alone. The biography identifies work for Australian aquaculture and the Australian CSIRO appointment, with no Vietnam-based role indicated. Re-ran find-roster-matches with Ha Truong, the profile URL and the supplied CSIRO Food-Recycle case-study URL: two name-only hits, no URL hit. vp-1048 is a Monash-2023 finance researcher and vp-1292 is a Washington-2002 medical researcher, distinct from this Sydney-trained aquaculture nutritionist. Not in already-proposed.txt.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Quoc Anh Nguyen",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Live HTTP 200 employer profile https://people.csiro.au/n/q/quocanh-nguyen labels him Economist in the header and Experimental Scientist, Environmental Economics Analysis, in the current-role section, describing substantive environmental economics research. Both biography and qualifications give University of Melbourne Economics PhD, 2025. This is a career scientist role, with no student/postdoctoral/fixed-term fellowship label. Quoc Anh is an affirmative Vietnamese given/middle-name combination beyond Nguyen. Current employment is at the Australian CSIRO, with no Vietnam-based role indicated. Re-ran find-roster-matches with name and URL: seven name-only hits, no URL hit. vp-0144 has Illinois-2013 finance training, vp-2637 Columbia-2018 business training, vp-2947 ISM-2021 economics training; the remaining hits have different computer-science, chemical-engineering or physician identities. None matches this Melbourne-2025 economist. Not in already-proposed.txt.",
+      "correctedFields": {}
+    },
+    {
+      "name": "Loan Le",
+      "verdict": "pass",
+      "failedTests": [],
+      "reason": "Submitted employer profile https://profiles.ansto.gov.au/loan.le returns HTTP 200 and was independently rendered in Playwright: it names Loan Le as Senior/Principal Research Biologist in ANSTO Health Research and Technology, states she joined ANSTO in November 2019 after postdoctoral training ended, and explicitly gives University of Sydney PhD, 2013. Its Languages section lists Vietnamese reading, writing, speaking, understanding and peer review, an explicit affirmative Vietnamese signal. The separate employer page https://www.ansto.gov.au/people/dr-loan-le corroborates the doctorate, research duties and Lucas Heights location in Australia. The JavaScript profile is valid as supplied and needs no URL correction. Re-ran find-roster-matches with Loan Le and both employer URLs: only vp-0222, a Berkeley-2010 Asian American Studies scholar, is a name hit; no URL hit. Different person. Not in already-proposed.txt.",
+      "correctedFields": {}
+    }
+  ],
+  "possible_move": []
+}
