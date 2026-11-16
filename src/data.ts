@@ -634,6 +634,14 @@ const FIELD_OVERRIDES = new Map([
     'Biological & Biomedical Sciences',
   ],
   ['Theoretical Biology and Biophysics|Los Alamos National Laboratory', 'Mathematics'],
+  [
+    'Genomics and Machine Learning Lab|QIMR Berghofer Medical Research Institute',
+    'Biological & Biomedical Sciences',
+  ],
+  [
+    'Human Development and Community Wellbeing Team|The Kids Research Institute Australia',
+    'Business & Economics',
+  ],
   ['LISN (Fluid Mechanics and Energetics)|Université Paris-Saclay', 'Physics & Astronomy'],
   ['Obstetrics and Gynecology|Loyola University Chicago', 'Health Sciences'],
   ['Radiation Oncology|University of Washington', 'Health Sciences'],

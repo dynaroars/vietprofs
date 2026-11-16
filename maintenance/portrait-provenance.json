@@ -20944,6 +20944,36 @@
       ],
       "retrievedAt": "2026-11-16T03:15:40.312Z",
       "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-3327": {
+      "name": "Quan Nguyen - QIMR Berghofer Medical Research Institute",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-16T03:18:01.973Z",
+      "note": "rejected on review 2026-11-16: QIMR profile image is a photoshoot frame with two faces (portrait_faces: multiple)"
+    },
+    "vp-3328": {
+      "name": "Ha Nguyen - The Kids Research Institute Australia",
+      "outcome": "found",
+      "pageUrl": "https://www.thekids.org.au/contact-us/our-people/n/ha-nguyen/",
+      "imageUrl": "https://www.thekids.org.au/globalassets/media/images/pagessections/people-profiles/n/ha_nguyen.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-16T03:18:06.801Z"
+    },
+    "vp-3329": {
+      "name": "Vu Vuong",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-16T03:18:10.192Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     }
   }
 }
