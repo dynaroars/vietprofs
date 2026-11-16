@@ -642,6 +642,16 @@ const FIELD_OVERRIDES = new Map([
     'Human Development and Community Wellbeing Team|The Kids Research Institute Australia',
     'Business & Economics',
   ],
+  [
+    'Institute of High Performance Computing (IHPC)|Agency for Science, Technology and Research',
+    'Physics & Astronomy',
+  ],
+  [
+    'Institute of High Performance Computing (IHPC), Green Technologies for Marine, Offshore, Oil & Gas Engineering|Agency for Science, Technology and Research',
+    'Engineering',
+  ],
+  ['Aquaculture|CSIRO', 'Agricultural & Natural Resource Sciences'],
+  ['Mineral Resources, Alloy Processes|CSIRO', 'Engineering'],
   ['LISN (Fluid Mechanics and Energetics)|Université Paris-Saclay', 'Physics & Astronomy'],
   ['Obstetrics and Gynecology|Loyola University Chicago', 'Health Sciences'],
   ['Radiation Oncology|University of Washington', 'Health Sciences'],
