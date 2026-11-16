@@ -20836,6 +20836,114 @@
       ],
       "retrievedAt": "2026-11-14T22:49:49.650Z",
       "note": "candidate failed 120x120 or portrait-aspect validation"
+    },
+    "vp-3318": {
+      "name": "Howard Hang",
+      "outcome": "found",
+      "pageUrl": "https://www.scripps.edu/faculty/hang/",
+      "imageUrl": "https://www.scripps.edu/wp-content/uploads/resized/2026/02/1080x1080_hao_hang-696x696-c-center.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-16T03:15:39.289Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-3319": {
+      "name": "Tam Tran",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-16T03:14:38.706Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3320": {
+      "name": "An Ngoc Dang Do",
+      "outcome": "found",
+      "pageUrl": "https://annualreport.nichd.nih.gov/dangdo.html",
+      "imageUrl": "https://annualreport.nichd.nih.gov/images/dangdo_an.png",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-16T03:15:39.768Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-3321": {
+      "name": "Nhan Tran",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-16T03:14:42.197Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3322": {
+      "name": "Tony Nguyen - Pacific Northwest National Laboratory",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-16T03:14:43.092Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3323": {
+      "name": "Minh Duong Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://research-hub.nlr.gov/en/persons/minh-duong-nguyen/",
+      "imageUrl": "https://research-hub.nlr.gov/files-asset/109389606/duong-nguyenminh.jpg?w=160&f=jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-16T03:15:40.052Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-3324": {
+      "name": "Bang L. H. Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-16T03:14:44.202Z",
+      "note": "rejected on visual review 2026-11-16: homepage image is a wide outdoor conference photo, not a headshot"
+    },
+    "vp-3325": {
+      "name": "Binh Pham",
+      "outcome": "found",
+      "pageUrl": "https://inl.elsevierpure.com/en/persons/binh-pham/",
+      "imageUrl": "https://inl.elsevierpure.com/files-asset/54418117/Binh_Pham.jpg?w=160&f=jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-16T03:14:45.566Z"
+    },
+    "vp-3326": {
+      "name": "Tin Thien Phan",
+      "outcome": "found",
+      "pageUrl": "https://tintphan.wixsite.com/academics",
+      "imageUrl": "https://static.wixstatic.com/media/90b8bd_2434769c1d0346298980ece55b47a01e~mv2.jpg/v1/fill/w_220,h_215,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/website_photo_edited_edited.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "department",
+        "stored_roster_url",
+        "profile_markup"
+      ],
+      "retrievedAt": "2026-11-16T03:15:40.312Z",
+      "note": "MEDIUM candidate stored after visual review"
     }
   }
 }

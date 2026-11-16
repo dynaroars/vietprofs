@@ -629,6 +629,11 @@ const FIELD_OVERRIDES = new Map([
     'Biological & Biomedical Sciences',
   ],
   ['Research and Development|Aridis Pharmaceuticals', 'Biological & Biomedical Sciences'],
+  [
+    "Department of Pathology, Advanced Technology and Genomics Core|St. Jude Children's Research Hospital",
+    'Biological & Biomedical Sciences',
+  ],
+  ['Theoretical Biology and Biophysics|Los Alamos National Laboratory', 'Mathematics'],
   ['LISN (Fluid Mechanics and Energetics)|Université Paris-Saclay', 'Physics & Astronomy'],
   ['Obstetrics and Gynecology|Loyola University Chicago', 'Health Sciences'],
   ['Radiation Oncology|University of Washington', 'Health Sciences'],
