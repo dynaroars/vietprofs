@@ -665,6 +665,7 @@ const FIELD_OVERRIDES = new Map([
     'Chemistry',
   ],
   ['Makutu Project-Team|Inria', 'Mathematics'],
+  ['Network Systems and Security Research Lab|Nokia Bell Labs', 'Computer & Information Sciences'],
   ['LISN (Fluid Mechanics and Energetics)|Université Paris-Saclay', 'Physics & Astronomy'],
   ['Obstetrics and Gynecology|Loyola University Chicago', 'Health Sciences'],
   ['Radiation Oncology|University of Washington', 'Health Sciences'],
