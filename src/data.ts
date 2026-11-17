@@ -652,6 +652,20 @@ const FIELD_OVERRIDES = new Map([
   ],
   ['Aquaculture|CSIRO', 'Agricultural & Natural Resource Sciences'],
   ['Mineral Resources, Alloy Processes|CSIRO', 'Engineering'],
+  [
+    'Fraunhofer Institute for Open Communication Systems (FOKUS)|Fraunhofer Society',
+    'Computer & Information Sciences',
+  ],
+  [
+    "CEA List, Laboratoire des Systèmes Embarqués et Autonomes (LSEA)|Commissariat à l'énergie atomique et aux énergies alternatives (CEA)",
+    'Computer & Information Sciences',
+  ],
+  [
+    'Institut Charles Gerhardt Montpellier (ICGM)|CNRS (Centre National de la Recherche Scientifique)',
+    'Chemistry',
+  ],
+  ['Makutu Project-Team|Inria', 'Mathematics'],
+  ['Network Systems and Security Research Lab|Nokia Bell Labs', 'Computer & Information Sciences'],
   ['LISN (Fluid Mechanics and Energetics)|Université Paris-Saclay', 'Physics & Astronomy'],
   ['Obstetrics and Gynecology|Loyola University Chicago', 'Health Sciences'],
   ['Radiation Oncology|University of Washington', 'Health Sciences'],
