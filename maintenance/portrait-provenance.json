@@ -21067,6 +21067,51 @@
       "identitySignals": [],
       "retrievedAt": "2026-11-16T03:23:20.657Z",
       "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3338": {
+      "name": "James Hoang",
+      "outcome": "found",
+      "pageUrl": "https://hvdthong.github.io/",
+      "imageUrl": "https://hvdthong.github.io/assets/images/james.jpg",
+      "sourceType": "personal_homepage",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "institution",
+        "department",
+        "stored_roster_url",
+        "profile_markup"
+      ],
+      "retrievedAt": "2026-11-17T03:21:20.186Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-3339": {
+      "name": "Nguyen-Truong Le",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-17T03:19:58.798Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3340": {
+      "name": "Dang-Bao-An Tran",
+      "outcome": "found",
+      "pageUrl": "https://www.npl.co.uk/our-people/an-tran",
+      "imageUrl": "https://www.npl.co.uk/getattachment/ce2483fa-1b2c-4a21-8979-ea3efe8f6377/An-Tran.jpg?lang=en-GB",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-17T03:20:01.611Z"
+    },
+    "vp-3341": {
+      "name": "Minh Nguyen - Fraunhofer Society",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-17T03:20:04.458Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     }
   }
 }
