@@ -21341,6 +21341,156 @@
         "stored_roster_url"
       ],
       "retrievedAt": "2026-11-17T17:54:40.665Z"
+    },
+    "vp-3603": {
+      "name": "Tuan-Hung Vu",
+      "outcome": "found",
+      "pageUrl": "https://tuanhungvu.github.io/",
+      "imageUrl": "https://tuanhungvu.github.io/images/ava.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-17T19:16:39.444Z"
+    },
+    "vp-3604": {
+      "name": "Dong Quan Vu",
+      "outcome": "found",
+      "pageUrl": "https://dongquan-vu.github.io/",
+      "imageUrl": "https://dongquan-vu.github.io/img/avatar.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-17T19:16:40.221Z"
+    },
+    "vp-3605": {
+      "name": "Lan Hoang",
+      "outcome": "found",
+      "pageUrl": "https://research.ibm.com/people/lan-hoang",
+      "imageUrl": "https://research.ibm.com/_next/image?url=https%3A%2F%2Fresearch-website-prod-ibmers-images.s3.us-east.cloud-object-storage.appdomain.cloud%2F4133&w=3840&q=75",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-17T19:17:38.279Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-3606": {
+      "name": "Ha Trinh",
+      "outcome": "found",
+      "pageUrl": "https://www.microsoft.com/en-us/research/people/trinhha/",
+      "imageUrl": "https://www.microsoft.com/en-us/research/wp-content/uploads/2024/04/ha_photo_msr.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "institution",
+        "department",
+        "stored_roster_url",
+        "profile_markup"
+      ],
+      "retrievedAt": "2026-11-17T19:17:38.890Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-3607": {
+      "name": "Huy V. Vo",
+      "outcome": "needs_review",
+      "pageUrl": "https://huyvvo.github.io/",
+      "imageUrl": "https://huyvvo.github.io/profile_image_349.png",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "institution",
+        "department",
+        "stored_roster_url",
+        "profile_markup"
+      ],
+      "retrievedAt": "2026-11-17T19:16:42.763Z",
+      "note": "candidate requires visual review before acceptance"
+    },
+    "vp-3608": {
+      "name": "Dieu-Thu Le",
+      "outcome": "found",
+      "pageUrl": "https://www.amazon.science/author/thu-le",
+      "imageUrl": "https://cdn.amazon.science/dims4/default/ae7e30a/2147483647/strip/true/crop/568x768+4+0/resize/340x460!/quality/90/?url=https%3A%2F%2Famzn-science-production-science.s3.us-east-1.amazonaws.com%2Fscience%2Fbadgephoto_b6decf34-4d81-4d37-89c5-fe3a3946b890",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-17T19:17:39.172Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-3609": {
+      "name": "Vinh Thinh Ho",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-17T19:16:45.837Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3610": {
+      "name": "Tuan Le - Pfizer",
+      "outcome": "found",
+      "pageUrl": "https://tuanle618.github.io/",
+      "imageUrl": "https://tuanle618.github.io/assets/img/prof_pic.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "institution",
+        "department",
+        "stored_roster_url",
+        "profile_markup"
+      ],
+      "retrievedAt": "2026-11-17T19:17:39.489Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-3611": {
+      "name": "Terri Bui",
+      "outcome": "needs_review",
+      "pageUrl": "https://yhb8r4.github.io/",
+      "imageUrl": "https://yhb8r4.github.io/images/bio_memoji.png",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "institution",
+        "department",
+        "stored_roster_url",
+        "profile_markup"
+      ],
+      "retrievedAt": "2026-11-17T19:17:05.401Z",
+      "note": "candidate requires visual review before acceptance"
+    },
+    "vp-3612": {
+      "name": "Mai N. Nguyen-Huynh",
+      "outcome": "found",
+      "pageUrl": "https://divisionofresearch.kaiserpermanente.org/researchers/nguyen-huynh-mai/",
+      "imageUrl": "https://divisionofresearch.kaiserpermanente.org/wp-content/uploads/2022/11/Nguyen-Huynh_Mai.webp",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-17T19:17:05.505Z"
     }
   }
 }

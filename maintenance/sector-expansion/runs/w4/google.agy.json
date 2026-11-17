@@ -1,0 +1,222 @@
+{
+  "slice": "google",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Khoa Trinh",
+        "university": "Google Research",
+        "institutionType": "Corporate research lab",
+        "track": "Industry Research",
+        "rank": "Researcher",
+        "department": "Theoretical Computer Science and Machine Learning",
+        "city": "Mountain View",
+        "state": "California",
+        "country": "United States",
+        "researchAreas": [
+          "Theoretical Computer Science",
+          "Machine Learning",
+          "Efficient Deep Learning",
+          "Approximation Algorithms"
+        ],
+        "phdInstitution": "University of California, Berkeley",
+        "phdYear": 2019,
+        "profileUrl": "https://research.google/people/khoa-trinh/"
+      },
+      "evidence": {
+        "currentRole": "https://research.google/people/khoa-trinh/ — \"Research Scientist at Google Research\"",
+        "doctorateOrPapers": "PhD in Computer Science from University of California, Berkeley (2019), advised by Alistair Sinclair",
+        "vietnameseSignal": "Vietnamese given name Khoa and surname Trinh",
+        "dedup": "npm run find-roster-matches -- \"Khoa Trinh\" --url https://research.google/people/khoa-trinh/ returned no roster or retired-id matches; not in already-proposed.txt"
+      }
+    },
+    {
+      "entry": {
+        "name": "Huan Nguyen",
+        "university": "Google",
+        "institutionType": "Corporate research lab",
+        "track": "Industry Research",
+        "rank": "Researcher",
+        "department": "Linux Kernel",
+        "city": "Sunnyvale",
+        "state": "California",
+        "country": "United States",
+        "researchAreas": [
+          "Software Systems",
+          "Binary Analysis",
+          "System Security",
+          "Linux Kernel Development"
+        ],
+        "phdInstitution": "Stony Brook University",
+        "phdYear": 2025,
+        "profileUrl": "https://research.google/people/huan-nguyen/",
+        "websiteUrl": "https://github.com/nhuhuan"
+      },
+      "evidence": {
+        "currentRole": "https://research.google/people/huan-nguyen/ — \"researcher and engineer on the Linux kernel team at Google\"",
+        "doctorateOrPapers": "PhD in Computer Science from Stony Brook University (2025), dissertation \"Scalable Binary Analysis\"",
+        "vietnameseSignal": "Vietnamese given name Huan (Nhu Huan) and surname Nguyen",
+        "dedup": "npm run find-roster-matches checked against vp-1647, vp-2384, vp-3033; all distinct scholars; not in already-proposed.txt"
+      }
+    },
+    {
+      "entry": {
+        "name": "Bao N. Nguyen",
+        "university": "Google",
+        "institutionType": "Corporate research lab",
+        "track": "Industry Research",
+        "rank": "Researcher",
+        "department": "Continuous Integration and Deployment",
+        "city": "Mountain View",
+        "state": "California",
+        "country": "United States",
+        "researchAreas": [
+          "Software Testing",
+          "Continuous Integration",
+          "Distributed Systems",
+          "Software Automation"
+        ],
+        "phdInstitution": "University of Maryland, College Park",
+        "phdYear": 2013,
+        "profileUrl": "https://research.google/people/bao-n-nguyen/"
+      },
+      "evidence": {
+        "currentRole": "https://research.google/people/bao-n-nguyen/ — \"Senior Software Engineer at Google Research... works on Google-wide Continuous Integration and Continuous Deployment (CI/CD) systems\"",
+        "doctorateOrPapers": "PhD in Computer Science from University of Maryland, College Park (2013); co-author of \"Taming Google-Scale Continuous Testing\" (ICSE)",
+        "vietnameseSignal": "Vietnamese given name Bao and surname Nguyen",
+        "dedup": "npm run find-roster-matches checked against vp-0679, vp-1748, vp-1913, vp-2489, vp-2490, vp-3345; all distinct; not in already-proposed.txt"
+      }
+    },
+    {
+      "entry": {
+        "name": "Viet Dang",
+        "university": "Google",
+        "institutionType": "Corporate research lab",
+        "track": "Industry Research",
+        "rank": "Researcher",
+        "department": "Speech Technology",
+        "researchAreas": [
+          "Speech Technology",
+          "Machine Learning",
+          "Text-to-Speech"
+        ],
+        "phdInstitution": "University of Southampton",
+        "phdYear": 2004,
+        "profileUrl": "https://research.google/people/viet-dang/"
+      },
+      "evidence": {
+        "currentRole": "https://research.google/people/viet-dang/ — \"Software Engineer at Google... Research Interests: Speech technology and machine learning\"",
+        "doctorateOrPapers": "PhD in Computer Science from University of Southampton (2004); co-author of \"LibriTTS: A Corpus Derived from LibriSpeech for Text-to-Speech\" (Interspeech)",
+        "vietnameseSignal": "Vietnamese given name Viet and surname Dang",
+        "dedup": "npm run find-roster-matches checked against vp-0615, vp-0782, vp-1058; all distinct faculty members; not in already-proposed.txt"
+      }
+    },
+    {
+      "entry": {
+        "name": "Tuan Anh Le",
+        "university": "Google DeepMind",
+        "institutionType": "Corporate research lab",
+        "track": "Industry Research",
+        "rank": "Researcher",
+        "confirmed": false,
+        "department": "Machine Learning",
+        "city": "London",
+        "country": "United Kingdom",
+        "researchAreas": [
+          "Probabilistic Programming",
+          "Generative Modeling",
+          "Amortized Inference",
+          "Bayesian Inference"
+        ],
+        "phdInstitution": "University of Oxford",
+        "phdYear": 2019,
+        "profileUrl": "https://tuananhle.co.uk/",
+        "websiteUrl": "https://tuananhle.co.uk/"
+      },
+      "evidence": {
+        "currentRole": "https://tuananhle.co.uk/ — \"I am a research scientist at Google DeepMind. Before that, I was a research scientist at Google Research. Before that, I was a postdoctoral associate in Josh Tenenbaums Computational Cognitive Science Lab in the Department of Brain and Cognitive Sciences at MIT.\"",
+        "doctorateOrPapers": "DPhil in Machine Learning from University of Oxford (2019), advised by Frank Wood and Yee Whye Teh",
+        "vietnameseSignal": "Distinctive Vietnamese given-name sequence Tuan Anh and surname Le",
+        "dedup": "npm run find-roster-matches checked against vp-1544 (Tuan Anh Le, Middlesex) and others; confirmed distinct person; not in already-proposed.txt"
+      }
+    },
+    {
+      "entry": {
+        "name": "Chau Pham",
+        "university": "Waymo",
+        "institutionType": "Corporate research lab",
+        "track": "Industry Research",
+        "rank": "Researcher",
+        "confirmed": false,
+        "department": "Perception",
+        "researchAreas": [
+          "Multimodal Learning",
+          "Computer Vision",
+          "Multimodal Large Language Models"
+        ],
+        "phdInstitution": "Boston University",
+        "phdYear": 2026,
+        "profileUrl": "https://mchaupham.com",
+        "websiteUrl": "https://mchaupham.com"
+      },
+      "evidence": {
+        "currentRole": "https://mchaupham.com — \"May 2026: I joined Waymo Perception team to work on multimodal learning and MLLMs for scene understanding.\"",
+        "doctorateOrPapers": "PhD in Computer Science from Boston University (2026), advised by Bryan A. Plummer; papers in NeurIPS, ICLR, WACV",
+        "vietnameseSignal": "Undergraduate degree from Ho Chi Minh City University of Technology (HCMUT), Vietnam; surname Pham, given name Chau",
+        "dedup": "npm run find-roster-matches checked against vp-0664 (Chau Pham, Manitoba) and vp-2428 (Christine Thanh Chau Pham, Baylor); confirmed distinct person; not in already-proposed.txt"
+      }
+    }
+  ],
+  "possible_move": [
+    {
+      "name": "Philip Pham",
+      "id": "vp-2997",
+      "note": "roster says Google DeepMind, live page says Waymo https://research.google/people/philippham/"
+    }
+  ],
+  "rejected": [
+    {
+      "name": "Dustin Tran",
+      "reason": "Left Google Brain/DeepMind and joined xAI; no longer at Google or Alphabet"
+    },
+    {
+      "name": "Hieu Pham",
+      "reason": "Former Research Scientist at Google Brain; stepped back from frontier AI labs in Feb 2026 and returned to Vietnam"
+    },
+    {
+      "name": "Laurent Dinh",
+      "reason": "Former Google Brain/DeepMind researcher; now Machine Learning Researcher at Apple"
+    },
+    {
+      "name": "Vinh Q. Tran",
+      "reason": "Former Senior Staff Research Scientist at Google DeepMind; left to co-found Polyphron"
+    },
+    {
+      "name": "An Nguyen",
+      "reason": "Product Engineer and Tech Lead Manager at Google Cloud; engineering/product role rather than career research ladder"
+    },
+    {
+      "name": "Peggy Bui",
+      "reason": "Product Manager at Google Health and internal medicine physician at UCSF; product/clinical role, not a career researcher at Alphabet"
+    },
+    {
+      "name": "Trung Dang",
+      "reason": "PhD student at UT Austin; was Summer 2026 student researcher in Google Market Algorithms Team (student/intern role is ineligible per rule 3)"
+    },
+    {
+      "name": "Hoang H. Nguyen",
+      "reason": "PhD candidate at Georgia Tech; co-author of AlphaGeometry2 as a student collaborator/intern with DeepMind (student/intern role is ineligible per rule 3)"
+    },
+    {
+      "name": "Karen Truong",
+      "reason": "PhD student at Stanford University; contributor to Vision Banana as an academic collaborator/student"
+    },
+    {
+      "name": "Bao Tran",
+      "reason": "Sequencing Facility researcher at Frederick National Laboratory for Cancer Research / NCI; collaborator on DeepSomatic, not employed by Google"
+    },
+    {
+      "name": "Trung V. Phan",
+      "reason": "Theoretical physicist and postdoc at Princeton/Yale; external collaborator with Google Quantum AI, not Alphabet staff"
+    }
+  ]
+}

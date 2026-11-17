@@ -1,0 +1,142 @@
+{
+  "slice": "pharma-biotech",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Tuan Le",
+        "university": "Pfizer",
+        "institutionType": "Corporate research lab",
+        "track": "Industry Research",
+        "rank": "Researcher",
+        "department": "Machine Learning and Computational Chemistry",
+        "city": "Berlin",
+        "country": "Germany",
+        "researchAreas": [
+          "Generative AI",
+          "Molecular Design",
+          "Computational Chemistry",
+          "Machine Learning"
+        ],
+        "phdInstitution": "Freie Universität Berlin",
+        "phdYear": 2022,
+        "profileUrl": "https://tuanle618.github.io/",
+        "websiteUrl": "https://tuanle618.github.io/"
+      },
+      "evidence": {
+        "currentRole": "https://tuanle618.github.io/ — \"I work on generative models for molecular design at Pfizer.\"",
+        "doctorateOrPapers": "PhD in Computer Science, Freie Universität Berlin (2022); published research papers on molecular design, flow matching, and diffusion models with Pfizer R&D",
+        "vietnameseSignal": "Native Vietnamese heritage, full name Tuan Le, secondary/undergraduate education background",
+        "dedup": "Checked via find-roster-matches -- \"Tuan Le\"; all existing roster entries (vp-0017, vp-0335, vp-0997, vp-1544, vp-1849, vp-1980, vp-2922, vp-2943) ruled out (different disciplines/institutions). Clean against already-proposed.txt."
+      }
+    },
+    {
+      "entry": {
+        "name": "Trang T. Le",
+        "university": "Bristol Myers Squibb",
+        "institutionType": "Corporate research lab",
+        "track": "Industry Research",
+        "rank": "Researcher",
+        "department": "Data Science",
+        "city": "Cambridge",
+        "state": "Massachusetts",
+        "country": "United States",
+        "researchAreas": [
+          "Biomedical Data Science",
+          "Bioinformatics",
+          "Computational Genetics",
+          "Machine Learning"
+        ],
+        "phdInstitution": "University of Tulsa",
+        "phdYear": 2017,
+        "profileUrl": "https://trang.page/",
+        "websiteUrl": "https://trang.page/"
+      },
+      "evidence": {
+        "currentRole": "https://trang.page/ — \"I am a data scientist at Bristol Myers Squibb.\"",
+        "doctorateOrPapers": "PhD in Mathematics, University of Tulsa (2017); postdoctoral fellowship in computational genetics at UPenn; extensive publication record in bioinformatics and biomedical data science",
+        "vietnameseSignal": "Native Vietnamese heritage, Vietnamese schooling, full name Trang Thuy Le",
+        "dedup": "Checked via find-roster-matches -- \"Trang Le\"; existing roster entries (vp-1161, vp-1808, vp-1827) ruled out. Clean against already-proposed.txt."
+      }
+    },
+    {
+      "entry": {
+        "name": "Terri Bui",
+        "university": "Merck",
+        "institutionType": "Corporate research lab",
+        "track": "Industry Research",
+        "rank": "Researcher",
+        "department": "Computational Chemistry and Data Science",
+        "city": "Rahway",
+        "state": "New Jersey",
+        "country": "United States",
+        "researchAreas": [
+          "Computational Chemistry",
+          "Knowledge Representation",
+          "Solid-State NMR",
+          "Data Science"
+        ],
+        "phdInstitution": "Purdue University",
+        "phdYear": 2021,
+        "profileUrl": "https://yhb8r4.github.io/",
+        "websiteUrl": "https://yhb8r4.github.io/"
+      },
+      "evidence": {
+        "currentRole": "https://yhb8r4.github.io/ — \"Terri, a Senior Scientist in the pharmaceutical industry\" / Head Primary Investigator for Merck-Purdue Data Mine collaboration",
+        "doctorateOrPapers": "PhD in Chemistry, Purdue University (2021); co-authored peer-reviewed research papers at Merck including: \"SHACL-SKOS based Knowledge Representation of Material Safety Data Sheet (SDS) for the Pharmaceutical Industry\" & \"Cloud based solid state NMR automated processing (SNAP)\"",
+        "vietnameseSignal": "Full Vietnamese name Yen Huong Bui / Terri Bui, native Vietnamese descent",
+        "dedup": "Checked via find-roster-matches -- \"Terri Bui\" and \"Yen Bui\"; zero hits. Clean against already-proposed.txt."
+      }
+    }
+  ],
+  "possible_move": [],
+  "rejected": [
+    {
+      "name": "Amelia Tran",
+      "reason": "Biostatistics intern at Regeneron Pharmaceuticals and current M.S. student (fails strict research-role test, Rule 3)"
+    },
+    {
+      "name": "Dominique Dang",
+      "reason": "Graduate intern at AbbVie (fails strict research-role test, Rule 3)"
+    },
+    {
+      "name": "Lucas Tran",
+      "reason": "Short-term contractor at Moderna (fails strict research-role test, Rule 3)"
+    },
+    {
+      "name": "Thao Nguyen",
+      "reason": "Machine learning research intern at Genentech Prescient Design and current PhD candidate at UIUC (fails strict research-role test, Rule 3)"
+    },
+    {
+      "name": "Nam V. Nguyen",
+      "reason": "Former Computational Scientist at Genentech; no live confirmation of current active appointment at Genentech on personal site (Rule 1)"
+    },
+    {
+      "name": "Thanh V. Q. Nguyen",
+      "reason": "AstraZeneca researcher; no live employer scientist profile or personal website stating current role (only literature/third-party affiliations, Rule 1)"
+    },
+    {
+      "name": "Minhkhoi Nguyen",
+      "reason": "Senior Scientist at Amgen; no live employer scientist profile or personal website stating current role (only ORCID/journal publications, Rule 1)"
+    },
+    {
+      "name": "Mai Bui",
+      "reason": "Computational Pathology researcher at AstraZeneca; no live employer scientist profile or personal website stating current role (only past PhD lab page and conference papers, Rule 1)"
+    },
+    {
+      "name": "Linh Nguyen",
+      "reason": "Former Clinical Pharmacologist at Genentech; transitioned to consulting at A2-Ai (no active Genentech appointment)"
+    },
+    {
+      "name": "Tram Tran",
+      "reason": "Former VP at Gilead Sciences; transitioned to Chief Medical Officer at Glympse Bio and Board Director at Arbutus Biopharma"
+    },
+    {
+      "name": "Quang Nguyen",
+      "reason": "Biostatistician at Regeneron Pharmaceuticals; already in roster as vp-3098 (Early Clinical Development, Regeneron Pharmaceuticals)"
+    },
+    {
+      "name": "Nhung T.H. Nguyen",
+      "reason": "Scientist in NLP at Johnson & Johnson Innovative Medicine; name matches existing entry 'Nhung Nguyen' in maintenance/sector-expansion/already-proposed.txt"
+    }
+  ]
+}

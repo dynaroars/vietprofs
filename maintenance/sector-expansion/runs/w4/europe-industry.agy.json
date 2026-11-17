@@ -1,0 +1,145 @@
+{
+  "slice": "europe-industry",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Tuan-Hung Vu",
+        "university": "valeo.ai",
+        "institutionType": "Corporate research lab",
+        "track": "Industry Research",
+        "rank": "Researcher",
+        "department": "valeo.ai",
+        "city": "Paris",
+        "country": "France",
+        "researchAreas": [
+          "Computer Vision",
+          "Autonomous Driving",
+          "Domain Adaptation",
+          "Visual Foundation Models",
+          "Generative Modeling"
+        ],
+        "phdInstitution": "École Normale Supérieure",
+        "phdYear": 2018,
+        "profileUrl": "https://tuanhungvu.github.io/",
+        "websiteUrl": "https://tuanhungvu.github.io/",
+        "scholarUrl": "https://scholar.google.com/citations?user=QIHrPZQAAAAJ"
+      },
+      "evidence": {
+        "currentRole": "https://tuanhungvu.github.io/ — \"Senior Research Scientist (R&D Technical Manager, Valeo Expert) at valeo.ai\"",
+        "doctorateOrPapers": "Ph.D. in Computer Vision from École Normale Supérieure (2018), supervised by Ivan Laptev",
+        "vietnameseSignal": "Valedictorian, B.Sc. in Computer Science from University of Science, Vietnam National University Ho Chi Minh City (2010); Vietnamese given name (Tuan-Hung) and surname (Vu)",
+        "dedup": "Checked public/data.json (vp-0472, vp-1665, vp-2112 are different individuals) and maintenance/sector-expansion/already-proposed.txt."
+      }
+    },
+    {
+      "entry": {
+        "name": "Dong Quan Vu",
+        "university": "Safran",
+        "institutionType": "Corporate research lab",
+        "track": "Industry Research",
+        "rank": "Researcher",
+        "department": "Safran Tech, Mathematics and Algorithms for Temporal Data (MATD) Lab",
+        "city": "Magny-les-Hameaux",
+        "state": "Île-de-France",
+        "country": "France",
+        "researchAreas": [
+          "Game Theory",
+          "Machine Learning",
+          "Bayesian Learning",
+          "Optimization",
+          "Sequential Learning"
+        ],
+        "phdInstitution": "Sorbonne Université",
+        "phdYear": 2020,
+        "profileUrl": "https://dongquan-vu.github.io/",
+        "websiteUrl": "https://dongquan-vu.github.io/"
+      },
+      "evidence": {
+        "currentRole": "https://dongquan-vu.github.io/ — \"Research Engineer at the Mathematics and Algorithms for Temporal Data (MATD) Lab of Safran Tech (Safran Group)\"",
+        "doctorateOrPapers": "Ph.D. in Computer Science / Applied Mathematics from Sorbonne Université (2020)",
+        "vietnameseSignal": "B.Sc. in Mathematics from HCMC University of Education, Vietnam (2014); Vietnamese given name (Dong Quan) and surname (Vu)",
+        "dedup": "Checked public/data.json (vp-2079 is Quan Vu at Deakin University) and maintenance/sector-expansion/already-proposed.txt."
+      }
+    },
+    {
+      "entry": {
+        "name": "Thi Quynh Van Hoang",
+        "university": "Thales",
+        "institutionType": "Corporate research lab",
+        "track": "Industry Research",
+        "rank": "Researcher",
+        "department": "Research and Technology",
+        "city": "Palaiseau",
+        "state": "Île-de-France",
+        "country": "France",
+        "researchAreas": [
+          "Antenna Design",
+          "Electromagnetic Modeling",
+          "Microwave Components",
+          "Metamaterials",
+          "Electromagnetic Compatibility"
+        ],
+        "phdInstitution": "Université Nice-Sophia Antipolis",
+        "phdYear": 2012,
+        "profileUrl": "https://genius.sorbonne-universite.fr/en/team/thi-quynh-van-hoang"
+      },
+      "evidence": {
+        "currentRole": "https://genius.sorbonne-universite.fr/en/team/thi-quynh-van-hoang — \"Research Engineer at Thales Research and Technology, Palaiseau, France\"",
+        "doctorateOrPapers": "Ph.D. in Electronics from Université Nice-Sophia Antipolis (2012)",
+        "vietnameseSignal": "B.E. in Electronics and Telecommunication from Ho Chi Minh University of Technology, Vietnam (2007); Vietnamese given name (Thi Quynh Van) and surname (Hoang)",
+        "dedup": "Checked public/data.json (vp-0966 is Quynh Hoang at University of Leicester) and maintenance/sector-expansion/already-proposed.txt."
+      }
+    }
+  ],
+  "possible_move": [],
+  "rejected": [
+    {
+      "name": "Pham Tran Anh Quang",
+      "reason": "Senior Researcher at Huawei Technologies France. Holds PhD in Computer Science from Université de Rennes 1 (2017), but lacks a live employer author page or personal website (only LinkedIn profile https://www.linkedin.com/in/quang-pham-86430085 and Google Scholar)."
+    },
+    {
+      "name": "Dung Pham Van",
+      "reason": "Senior Researcher at Ericsson Research in Kista, Sweden. Holds PhD in Telecommunications from Scuola Superiore Sant Anna (2014), but Ericsson publishes no individual staff profile page and he maintains no personal website."
+    },
+    {
+      "name": "Le-Hang Nguyen",
+      "reason": "Wireless communications researcher at Nokia Bell Labs in Stuttgart, Germany. Holds PhD from University of Konstanz, but Nokia publishes no individual staff profile page and she maintains no personal website."
+    },
+    {
+      "name": "Sy Dat Le",
+      "reason": "Fiber Optics Technology Task Leader at Airbus (Toulouse, France). Holds PhD from Université de Rennes 1 (2013), but Airbus publishes no individual profile page and he maintains no personal website."
+    },
+    {
+      "name": "Minh-Quyen Nguyen",
+      "reason": "Engineering Program Manager at Criteo (product/program management ladder, not career research ladder per Rule 3)."
+    },
+    {
+      "name": "Trung-Kien Tran",
+      "reason": "Lead Research Scientist at Bosch Center for Artificial Intelligence (BCAI), Germany. Already in maintenance/sector-expansion/already-proposed.txt (line 328)."
+    },
+    {
+      "name": "Duy Nguyen-Tuong",
+      "reason": "Senior Research Manager at Bosch Center for Artificial Intelligence (BCAI), Germany. Already in maintenance/sector-expansion/already-proposed.txt (line 65)."
+    },
+    {
+      "name": "Thanh Trung Nguyen",
+      "reason": "Research Scientist at Philips Research, Eindhoven. Already in maintenance/sector-expansion/already-proposed.txt (line 265)."
+    },
+    {
+      "name": "Do Le Quoc",
+      "reason": "Formerly Principal Research Engineer at Huawei Munich Research Center, but left Huawei to join STACKIT Cloud (Schwarz Digits) as Confidential Computing Expert; STACKIT Cloud is outside this sector slice."
+    },
+    {
+      "name": "Dinh-Hieu Tran",
+      "reason": "Formerly Senior Research Specialist at Nokia Bell Labs France (2022-2024), but moved back to University of Luxembourg as Research Associate in SnT."
+    },
+    {
+      "name": "Son Thai Le",
+      "reason": "Formerly Member of Technical Staff at Nokia Bell Labs Stuttgart, but moved to Nubis Communications in the US."
+    },
+    {
+      "name": "Miroslav Phan",
+      "reason": "Researcher at IBM Research Europe / ETH Zurich. Lacks affirmative Vietnamese signal beyond surname (Slavic given name Miroslav, Swiss/Czech background)."
+    }
+  ]
+}

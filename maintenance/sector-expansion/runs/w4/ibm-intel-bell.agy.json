@@ -1,0 +1,118 @@
+{
+  "slice": "ibm-intel-bell",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Lan Hoang",
+        "university": "IBM Research",
+        "institutionType": "Corporate research lab",
+        "track": "Industry Research",
+        "rank": "Researcher",
+        "department": "IBM Research Europe",
+        "city": "Manchester",
+        "country": "United Kingdom",
+        "researchAreas": [
+          "Deep Reinforcement Learning",
+          "Safe Reinforcement Learning",
+          "Decision Support Systems",
+          "Water Resource Management"
+        ],
+        "phdInstitution": "University of Leeds",
+        "phdYear": 2013,
+        "profileUrl": "https://research.ibm.com/people/lan-hoang"
+      },
+      "evidence": {
+        "currentRole": "https://research.ibm.com/people/lan-hoang — \"Program Manager, AI Infrastructure for Data Model Factory; Senior Inventor\"",
+        "doctorateOrPapers": "PhD from University of Leeds (2013), EPSRC doctoral project; published papers at AAAI, IJCAI, AAMAS, and INFORMS",
+        "vietnameseSignal": "Full name Ngoc Lan Hoang (Vietnamese name tokens \"Ngoc Lan\" and Vietnamese surname Hoang)",
+        "dedup": "Checked against public/data.json (vp-1603 Lan Anh Hoang and vp-2587 Lan Hoang Nguyen are different individuals) and maintenance/sector-expansion/already-proposed.txt"
+      }
+    }
+  ],
+  "possible_move": [
+    {
+      "name": "Minh Tran",
+      "id": "vp-3280",
+      "note": "roster says LinkedIn profileUrl with confirmed: false, live employer page exists at https://research.ibm.com/people/minh-tran quoting title Research Scientist at IBM Quantum"
+    },
+    {
+      "name": "Dinh-Hieu Tran",
+      "id": "vp-1509",
+      "note": "retired id vp-1509 was at University of Luxembourg, worked as Senior Research Specialist at Nokia Bell Labs (2022-2024), now Research Associate at University of Luxembourg https://www.uni.lu/"
+    }
+  ],
+  "rejected": [
+    {
+      "name": "Binh Pham",
+      "reason": "Former researcher in Parallel Computing Lab at Intel Labs, now Chip Architect at NVIDIA"
+    },
+    {
+      "name": "Vy Ai Vo",
+      "reason": "Former AI/ML Research Scientist at Intel Labs, now at Thomson Reuters; already rostered as vp-3130"
+    },
+    {
+      "name": "Nhan H. Pham",
+      "reason": "Former Staff Research Scientist at IBM Research, moved to JPMorganChase as VP and AI/ML Lead"
+    },
+    {
+      "name": "Trong Nghia Hoang",
+      "reason": "Former Research Staff Member at IBM Research (MIT-IBM Watson AI Lab), now Assistant Professor at Washington State University"
+    },
+    {
+      "name": "Son Thai Le",
+      "reason": "Former Member of Technical Staff at Nokia Bell Labs, moved to Nubis Communications in 2022"
+    },
+    {
+      "name": "Cuong Tran",
+      "reason": "Member of Technical Staff at Nokia Bell Labs, but employer publishes no profile page and he has no personal website (only ResearchGate/DBLP/LinkedIn)"
+    },
+    {
+      "name": "Quoc-Huy Tran",
+      "reason": "Former Member of Technical Staff at NEC Labs America, now Co-Founder and CTO of Retrocausal"
+    },
+    {
+      "name": "Luan Tran",
+      "reason": "Former intern collaborator at NEC Labs America, now at Meta"
+    },
+    {
+      "name": "Toan Tran",
+      "reason": "Senior Staff Engineer at Qualcomm AI Research, but physically based in Vietnam (Qualcomm AI Research Vietnam)"
+    },
+    {
+      "name": "Dat Quoc Nguyen",
+      "reason": "Principal Researcher at Qualcomm AI Research, but physically based in Vietnam (Qualcomm AI Research Vietnam)"
+    },
+    {
+      "name": "Hue Nguyen",
+      "reason": "Samsung AI Center Toronto; holds an MSc degree and does not meet the >= 2 employer papers requirement"
+    },
+    {
+      "name": "Minh Ngoc Le",
+      "reason": "University of Toronto and Vector Institute student/researcher collaborating with Samsung AI Center Toronto; not permanent career research staff"
+    },
+    {
+      "name": "Vincent Nguyen",
+      "reason": "HPE Fellow at Hewlett Packard Enterprise; systems architect without research doctorate or qualifying peer-reviewed research publications"
+    },
+    {
+      "name": "Leonard Truong",
+      "reason": "Collaborated with Intel Labs as an undergraduate student intern at UC Berkeley, now at Stanford"
+    },
+    {
+      "name": "Huy Khiem Le",
+      "reason": "Co-authored with IBM Research as a PhD student at University of Notre Dame; not career staff"
+    },
+    {
+      "name": "Dat Thanh Le",
+      "reason": "Co-authored with IBM Quantum from University of Queensland; not an employee"
+    },
+    {
+      "name": "Holt Bui",
+      "reason": "IBM Almaden collaborator; identity resolves to Ngoc Bui, already on roster as vp-0097 at University of Oklahoma"
+    },
+    {
+      "name": "Minh-Ngoc Tran",
+      "reason": "Former AI Researcher at IBM Research Ireland, now Professor at University of Sydney; already on roster as vp-0540"
+    }
+  ]
+}

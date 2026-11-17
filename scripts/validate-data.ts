@@ -31,6 +31,7 @@ const surnameFirstAllowlist = new Set<string>([
   'Vuong N. Trieu', // Oncotelic leadership page lists "Vuong Trieu, Ph.D." (CEO/CSO) and he publishes as "Trieu, V. N."; Trieu is his surname
   'Hoang Dothe', // Johns Hopkins Winter 2020 in-memoriam notice names him "Hoang Dothe" (A&S 1987 MS/PhD) and he published under that spelling; Dothe is his surname
   'Do Sang Kim', // PKNU publishes "Do Sang Kim"; ORCID 0000-0003-4191-2295 explicitly gives "Do Sang" as given names and "Kim" as family name.
+  'Mai N. Nguyen-Huynh', // Kaiser Permanente Division of Research profile lists her as "Nguyen-Huynh, Mai N."; Nguyen-Huynh is her surname and Mai her given name.
   'Mai Har Sham', // CUHK's current profile labels her "Professor SHAM Mai Har" and its English biography calls her "Professor Sham"; Sham is her surname.
   'Mai M. Khalaf', // ORCID 0000-0003-0599-9928 explicitly gives Mai as given name and Khalaf as family name; KFU publishes "Mai Mostafa Khalaf".
   'Nguyen-Thi Dang', // IMO Orsay member page lists Nguyen-Thi Dang (Maîtresse de conférences); she publishes as "Nguyen-Thi Dang" with Dang as surname

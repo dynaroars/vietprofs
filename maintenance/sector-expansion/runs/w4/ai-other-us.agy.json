@@ -1,0 +1,194 @@
+{
+  "slice": "ai-other-us",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Hong-Quang Pham",
+        "university": "Salesforce AI Research",
+        "institutionType": "Corporate research lab",
+        "track": "Industry Research",
+        "rank": "Researcher",
+        "department": "Salesforce AI Research",
+        "researchAreas": [
+          "Artificial Intelligence",
+          "Machine Learning",
+          "Time Series Analysis"
+        ],
+        "phdInstitution": "Singapore Management University",
+        "phdYear": 2022,
+        "profileUrl": "https://www.salesforce.com/blog/author/hong-quang-pham/",
+        "scholarUrl": "https://scholar.google.com/citations?user=q3o7o08AAAAJ"
+      },
+      "evidence": {
+        "currentRole": "https://www.salesforce.com/blog/author/hong-quang-pham/ — \"Senior Research Scientist at Salesforce AI Research\"",
+        "doctorateOrPapers": "PhD in Computer Science from Singapore Management University (2022); research papers include MoiraiAgent (2024), FSNet (ICLR 2022) at Salesforce AI Research",
+        "vietnameseSignal": "Vietnamese full name Phạm Hồng Quang, Bachelor degree from Vietnam National University, Ho Chi Minh City in 2015",
+        "dedup": "find-roster-matches and grep checked; distinct from vp-0493 (Quang-Cuong Pham, NTU), vp-1640 (Duc Quang Pham, CUNEF), vp-1649 (Quang Trung Pham, Hiroshima), vp-2322 (David Quang-Nam Pham, UT Southwestern), vp-2904 (Quang Hung Pham, UVA), vp-3233 (Quang Long Pham, MilliporeSigma), and vp-3263 (Minh-Quang Pham, Mistral AI); not in already-proposed.txt"
+      }
+    },
+    {
+      "entry": {
+        "name": "Xuan-Phi Nguyen",
+        "university": "Salesforce AI Research",
+        "institutionType": "Corporate research lab",
+        "track": "Industry Research",
+        "rank": "Researcher",
+        "department": "Salesforce AI Research",
+        "researchAreas": [
+          "Artificial Intelligence",
+          "Reinforcement Learning",
+          "Natural Language Processing"
+        ],
+        "phdInstitution": "Nanyang Technological University",
+        "profileUrl": "https://www.salesforce.com/blog/author/xuan-phi-nguyen/",
+        "websiteUrl": "https://nxphi47.github.io/",
+        "scholarUrl": "https://scholar.google.com/citations?user=Dh_4cyQAAAAJ"
+      },
+      "evidence": {
+        "currentRole": "https://www.salesforce.com/blog/author/xuan-phi-nguyen/ — \"Senior Research Scientist at Salesforce AI Research\"",
+        "doctorateOrPapers": "PhD in Computer Science & Artificial Intelligence from Nanyang Technological University; research papers include SFR-RAG (2024), SFR-DeepResearch (2024), SFR-VibeTrain (2024) at Salesforce AI Research",
+        "vietnameseSignal": "Vietnamese full name Nguyễn Xuân Phi (Phi), native Vietnamese scholar, undergraduate and doctoral researcher in Southeast Asian and multilingual AI",
+        "dedup": "find-roster-matches and grep checked; matched only vp-1742 (Xuan Nguyen, Deakin) and vp-1778 (Phi Nguyen, UIC), both distinct individuals; not in already-proposed.txt"
+      }
+    },
+    {
+      "entry": {
+        "name": "Nhan H. Pham",
+        "university": "JPMorganChase",
+        "institutionType": "Corporate research lab",
+        "track": "Industry Research",
+        "rank": "Researcher",
+        "department": "AI/ML",
+        "city": "New York",
+        "state": "NY",
+        "country": "United States",
+        "researchAreas": [
+          "Artificial Intelligence",
+          "Machine Learning",
+          "Optimization",
+          "Natural Language Processing"
+        ],
+        "phdInstitution": "University of North Carolina at Chapel Hill",
+        "phdYear": 2021,
+        "profileUrl": "https://nhpham.com/",
+        "websiteUrl": "https://nhpham.com/",
+        "scholarUrl": "https://scholar.google.com/citations?user=31W07m4AAAAJ",
+        "confirmed": false
+      },
+      "evidence": {
+        "currentRole": "https://nhpham.com/ — \"Vice President & AI/ML Lead at JPMorganChase (JPMC)\"",
+        "doctorateOrPapers": "PhD in Operations Research from University of North Carolina at Chapel Hill (2021); previously Staff Research Scientist at IBM Thomas J. Watson Research Center",
+        "vietnameseSignal": "Vietnamese full name Nhan H. Pham (Phạm Hồng Nhân), Bachelor of Engineering from Ho Chi Minh City University of Technology (HCMUT) in 2013",
+        "dedup": "find-roster-matches and grep returned 0 matches; not in already-proposed.txt"
+      }
+    },
+    {
+      "entry": {
+        "name": "Thang Minh Pham",
+        "university": "Adobe Research",
+        "institutionType": "Corporate research lab",
+        "track": "Industry Research",
+        "rank": "Researcher",
+        "department": "Machine Learning",
+        "city": "San Jose",
+        "state": "CA",
+        "country": "United States",
+        "researchAreas": [
+          "Artificial Intelligence",
+          "Natural Language Processing",
+          "Machine Learning"
+        ],
+        "phdInstitution": "Auburn University",
+        "phdYear": 2024,
+        "profileUrl": "https://thangpm.github.io/",
+        "websiteUrl": "https://thangpm.github.io/",
+        "confirmed": false
+      },
+      "evidence": {
+        "currentRole": "https://thangpm.github.io/ — \"Senior Machine Learning Engineer @ Adobe\"",
+        "doctorateOrPapers": "PhD in Computer Science from Auburn University (2024); publications include SlimLM (ACL 2024) and PiC (EACL 2023) with Adobe Research",
+        "vietnameseSignal": "Vietnamese full name Phạm Minh Thắng, Bachelor degree from University of Science, VNU-HCM (HCMUS)",
+        "dedup": "find-roster-matches matched vp-0118 (Thang Pham, Virginia Tech), vp-2535 (Thang Pham, Amsterdam UMC), vp-2618 (Thang Pham, Xidian), and already-proposed Thang Pham (UTRGV), all distinct individuals"
+      }
+    }
+  ],
+  "possible_move": [],
+  "rejected": [
+    {
+      "name": "Duc Nguyen",
+      "reason": "Publishes AI finance research at Bloomberg (ICAIF) but Bloomberg does not host an individual profile page and no personal homepage exists to verify current title per Rule 1."
+    },
+    {
+      "name": "Ngoc-Uyen Nguyen",
+      "reason": "Publishes on Semantic Scholar benchmarking (AstaBench at ICLR) at the Allen Institute for AI, but has no personal homepage or Ai2 directory page to verify current appointment."
+    },
+    {
+      "name": "Henry Hung Le",
+      "reason": "Former researcher at Salesforce Research, now co-founded an AI startup."
+    },
+    {
+      "name": "Bac Nguyen",
+      "reason": "Former AI Research Scientist at Sony AI, now at Mirelo."
+    },
+    {
+      "name": "Phuc Nguyen",
+      "reason": "Former researcher at Hugging Face, now at Nous Research."
+    },
+    {
+      "name": "Karina Nguyen",
+      "reason": "Former researcher at Anthropic and OpenAI, now founded Thoughtful."
+    },
+    {
+      "name": "Kevin Tran",
+      "reason": "Already proposed in maintenance/sector-expansion/already-proposed.txt."
+    },
+    {
+      "name": "Duy Nguyen-Tuong",
+      "reason": "Already proposed in maintenance/sector-expansion/already-proposed.txt."
+    },
+    {
+      "name": "Trung Kien Tran",
+      "reason": "Already proposed in maintenance/sector-expansion/already-proposed.txt."
+    },
+    {
+      "name": "Viet Lai",
+      "reason": "Already on roster as vp-3042."
+    },
+    {
+      "name": "Lucas Vinh Tran",
+      "reason": "Already on roster as vp-3064."
+    },
+    {
+      "name": "Brandon Huynh",
+      "reason": "Already on roster as vp-3125."
+    },
+    {
+      "name": "Cuong Xuan Chu",
+      "reason": "Already on roster as vp-3122."
+    },
+    {
+      "name": "Cindy M. Nguyen",
+      "reason": "Already on roster as vp-3136."
+    },
+    {
+      "name": "Allen Tran",
+      "reason": "Already on roster as vp-3138."
+    },
+    {
+      "name": "Anh Le",
+      "reason": "Already on roster as vp-3215."
+    },
+    {
+      "name": "Nam H. Nguyen",
+      "reason": "Already on roster as vp-3094."
+    },
+    {
+      "name": "Tung The Nguyen",
+      "reason": "Already on roster as vp-3355."
+    },
+    {
+      "name": "Thanh Pham Cardenas",
+      "reason": "Already on roster as vp-3586."
+    }
+  ]
+}

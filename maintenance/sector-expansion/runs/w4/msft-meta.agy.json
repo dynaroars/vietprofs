@@ -1,0 +1,284 @@
+{
+  "slice": "msft-meta",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Ha Trinh",
+        "university": "Microsoft Research",
+        "institutionType": "Corporate research lab",
+        "track": "Industry Research",
+        "rank": "Researcher",
+        "department": "Catalyst Lab",
+        "city": "Redmond",
+        "state": "Washington",
+        "country": "United States",
+        "researchAreas": [
+          "Artificial Intelligence",
+          "Human-Computer Interaction",
+          "Data Platforms and Analytics"
+        ],
+        "phdInstitution": "University of Dundee",
+        "phdYear": 2014,
+        "profileUrl": "https://www.microsoft.com/en-us/research/people/trinhha/"
+      },
+      "evidence": {
+        "currentRole": "https://www.microsoft.com/en-us/research/people/trinhha/ — \"Senior Data Scientist\"",
+        "doctorateOrPapers": "Ph.D. in Computing (HCI/NLP) from University of Dundee (2014); co-author of foundational GraphRAG research paper 'From Local to Global: A Graph RAG Approach to Query-Focused Summarization' (arXiv:2404.16130, 2024)",
+        "vietnameseSignal": "Vietnamese given name Ha and Vietnamese surname Trinh",
+        "dedup": "Checked against public/data.json (vp-0484 and vp-1303 are distinct academic faculty) and already-proposed.txt"
+      }
+    },
+    {
+      "entry": {
+        "name": "Huy V. Vo",
+        "university": "Meta FAIR",
+        "institutionType": "Corporate research lab",
+        "track": "Industry Research",
+        "rank": "Researcher",
+        "department": "Fundamental AI Research",
+        "city": "Paris",
+        "country": "France",
+        "researchAreas": [
+          "Computer Vision",
+          "Self-Supervised Learning",
+          "Foundation Models",
+          "Object Detection"
+        ],
+        "phdInstitution": "École normale supérieure",
+        "phdYear": 2022,
+        "profileUrl": "https://huyvvo.github.io/",
+        "confirmed": false
+      },
+      "evidence": {
+        "currentRole": "https://huyvvo.github.io/ — \"I am currently a Research Scientist at FAIR, Meta.\"",
+        "doctorateOrPapers": "Ph.D. in Computer Science from École normale supérieure (defended Nov 28, 2022); co-author of Meta vision foundation models DINOv2 and DINOv3",
+        "vietnameseSignal": "Vietnamese given name Huy and Vietnamese surname Vo",
+        "dedup": "Checked against public/data.json (vp-0050 Huy T. Vo is distinct faculty at CCNY) and already-proposed.txt"
+      }
+    },
+    {
+      "entry": {
+        "name": "Linh Tran",
+        "university": "Meta",
+        "institutionType": "Corporate research lab",
+        "track": "Industry Research",
+        "rank": "Researcher",
+        "department": "Fundamental AI Research",
+        "city": "Menlo Park",
+        "state": "California",
+        "country": "United States",
+        "researchAreas": [
+          "Computer Vision",
+          "Generative Models",
+          "Representation Learning",
+          "Machine Learning"
+        ],
+        "phdInstitution": "Imperial College London",
+        "phdYear": 2022,
+        "profileUrl": "http://www.linht.com",
+        "websiteUrl": "https://github.com/narthnil",
+        "confirmed": false
+      },
+      "evidence": {
+        "currentRole": "http://www.linht.com and https://github.com/narthnil — \"Research Scientist @ Meta\"",
+        "doctorateOrPapers": "Ph.D. in Computer Science from Imperial College London (2022); research publications on deep generative models, Joinable, GAGAN, and Masktune at Meta",
+        "vietnameseSignal": "Vietnamese given name Linh and Vietnamese surname Tran",
+        "dedup": "Checked against public/data.json (vp-0620, vp-0700, vp-1792, vp-2248, vp-3527 are distinct academic faculty) and already-proposed.txt"
+      }
+    },
+    {
+      "entry": {
+        "name": "Khoi Viet Pham",
+        "university": "Meta",
+        "institutionType": "Corporate research lab",
+        "track": "Industry Research",
+        "rank": "Researcher",
+        "department": "Reality Labs",
+        "city": "Menlo Park",
+        "state": "California",
+        "country": "United States",
+        "researchAreas": [
+          "Computer Vision",
+          "Deep Learning",
+          "Visual Attributes",
+          "Representation Learning"
+        ],
+        "phdInstitution": "University of Maryland, College Park",
+        "phdYear": 2023,
+        "profileUrl": "https://github.com/vkhoi",
+        "scholarUrl": "https://scholar.google.com/citations?user=o7hS8EcAAAAJ",
+        "confirmed": false
+      },
+      "evidence": {
+        "currentRole": "https://scholar.google.com/citations?user=o7hS8EcAAAAJ and OpenReview — \"Research Scientist at Meta\"",
+        "doctorateOrPapers": "Ph.D. in Computer Science from University of Maryland, College Park (2023, advised by Abhinav Shrivastava); publications include 'Composing Object Relations and Attributes for Image-Text Matching' (CVPR 2024), 'Disentangling Visual Embeddings for Attributes and Objects' (CVPR 2022)",
+        "vietnameseSignal": "Vietnamese given name Khoi, middle name Viet, surname Pham",
+        "dedup": "Checked against public/data.json (no match) and already-proposed.txt"
+      }
+    },
+    {
+      "entry": {
+        "name": "Dat T. Nguyen",
+        "university": "Meta",
+        "institutionType": "Corporate research lab",
+        "track": "Industry Research",
+        "rank": "Researcher",
+        "department": "Reality Labs",
+        "city": "Redmond",
+        "state": "Washington",
+        "country": "United States",
+        "researchAreas": [
+          "Wireless Technologies",
+          "Signal Processing",
+          "Human-Centric Sensing",
+          "Metamaterials"
+        ],
+        "phdInstitution": "National University of Singapore",
+        "phdYear": 2023,
+        "profileUrl": "https://dattnguyen.com/",
+        "confirmed": false
+      },
+      "evidence": {
+        "currentRole": "https://dattnguyen.com/ — \"Research Scientist at Meta Reality Labs\"",
+        "doctorateOrPapers": "Ph.D. in Electrical and Computer Engineering from National University of Singapore (2023); publications include 'Ambient Health Sensing on Passive Surfaces Using Metamaterials' in Science Advances (2024)",
+        "vietnameseSignal": "Vietnamese given name Dat, middle initial T., surname Nguyen",
+        "dedup": "Checked against public/data.json (no match) and already-proposed.txt"
+      }
+    },
+    {
+      "entry": {
+        "name": "Tuyen Tran",
+        "university": "Meta",
+        "institutionType": "Corporate research lab",
+        "track": "Industry Research",
+        "rank": "Researcher",
+        "department": "Reality Labs",
+        "city": "Redmond",
+        "state": "Washington",
+        "country": "United States",
+        "researchAreas": [
+          "Wearable AI",
+          "Vision-Language Models",
+          "Multimodal Foundation Models",
+          "Mobile Edge Computing"
+        ],
+        "phdInstitution": "Rutgers University",
+        "phdYear": 2018,
+        "undergradInstitution": "Hanoi University of Science and Technology",
+        "profileUrl": "https://wearable-ai-workshop.github.io/",
+        "confirmed": false
+      },
+      "evidence": {
+        "currentRole": "https://wearable-ai-workshop.github.io/ — \"Dr. Tuyen (Harry) Tran, Research Scientist and Technical Lead at Meta Reality Labs\"",
+        "doctorateOrPapers": "Ph.D. in Electrical and Computer Engineering from Rutgers University (2018); author on 'EgoWearBench: A Benchmark Suite for Long-Context, Conversational, and Proactive Egocentric AI' (2024)",
+        "vietnameseSignal": "Vietnamese given name Tuyen, surname Tran, B.Eng. from Hanoi University of Science and Technology",
+        "dedup": "Checked against public/data.json (vp-1645 is a math professor at Loyola University Chicago, distinct person) and already-proposed.txt"
+      }
+    },
+    {
+      "entry": {
+        "name": "Tuan A. Tran",
+        "university": "Meta FAIR",
+        "institutionType": "Corporate research lab",
+        "track": "Industry Research",
+        "rank": "Researcher",
+        "department": "Fundamental AI Research",
+        "city": "Stuttgart",
+        "country": "Germany",
+        "researchAreas": [
+          "Natural Language Processing",
+          "Machine Translation",
+          "Generative Models",
+          "Watermarking"
+        ],
+        "phdInstitution": "Leibniz University Hannover",
+        "phdYear": 2018,
+        "profileUrl": "https://antoine-tran.github.io/",
+        "confirmed": false
+      },
+      "evidence": {
+        "currentRole": "https://antoine-tran.github.io/ — \"I am a Machine Learning Engineer at Meta, with experience in different areas of Natural Language Processing...\" and OpenReview affiliation: \"Meta (Facebook Artificial Intelligence Research)\"",
+        "doctorateOrPapers": "Ph.D. from Leibniz University Hannover (2018); co-author on Meta papers 'SeamlessM4T' (2023), 'How Good is Post-Hoc Watermarking With Language Model Rephrasing?' (ICML 2024), 'Transferable Black-Box One-Shot Forging of Watermarks via Image Preference Models' (NeurIPS 2024 Spotlight)",
+        "vietnameseSignal": "Vietnamese given name Tuan and Vietnamese surname Tran",
+        "dedup": "Checked against public/data.json (vp-0093, vp-0365, vp-0391, vp-0494, vp-1390, vp-1432, vp-1780, vp-1927, vp-2620, vp-3545, vp-3569 are all distinct people) and already-proposed.txt"
+      }
+    },
+    {
+      "entry": {
+        "name": "Hieu Hoang",
+        "university": "Microsoft",
+        "institutionType": "Corporate research lab",
+        "track": "Industry Research",
+        "rank": "Researcher",
+        "department": "Machine Translation",
+        "city": "Edinburgh",
+        "country": "United Kingdom",
+        "researchAreas": [
+          "Machine Translation",
+          "Natural Language Processing",
+          "Large Language Models"
+        ],
+        "phdInstitution": "University of Edinburgh",
+        "profileUrl": "https://hieuhoang.github.io/",
+        "confirmed": false
+      },
+      "evidence": {
+        "currentRole": "https://hieuhoang.github.io/ — \"October 2019: Senior Research Scientist at Microsoft\"",
+        "doctorateOrPapers": "Ph.D. in Computer Science from University of Edinburgh; co-author on 'Dynamic Lagging for Simultaneous Translation' (Interspeech / Microsoft Research, 2024)",
+        "vietnameseSignal": "Vietnamese given name Hieu, middle name Trong, surname Hoang",
+        "dedup": "Checked against public/data.json (vp-3466 is Trung-Hieu Hoang at Google Research, distinct person) and already-proposed.txt"
+      }
+    }
+  ],
+  "possible_move": [],
+  "rejected": [
+    {
+      "name": "John Nguyen",
+      "reason": "Left Meta AI / FAIR to join AMI Labs as Member of Technical Staff (johnlnguyen.com)"
+    },
+    {
+      "name": "Chau Tran",
+      "reason": "Left Meta AI / FAIR to join Glean as Software Engineer (glean.com)"
+    },
+    {
+      "name": "Kenneth Tran",
+      "reason": "Left Microsoft Research to found Koidra (koidra.ai)"
+    },
+    {
+      "name": "Tonya Nguyen",
+      "reason": "Was a PhD research intern at Microsoft Research NYC; now a postdoctoral researcher at Stanford University (tonyanguyen.com)"
+    },
+    {
+      "name": "Buu Phan",
+      "reason": "Was a research intern at Microsoft Research; currently a PhD student at the University of Toronto"
+    },
+    {
+      "name": "Chau Minh Pham",
+      "reason": "Was an undergraduate research intern at Microsoft Research Montreal; currently a PhD student at University of Maryland"
+    },
+    {
+      "name": "Lindy Le",
+      "reason": "Former software engineer at Microsoft Azure/Windows who collaborated with MSR; currently a PhD student at University of Michigan"
+    },
+    {
+      "name": "Toan Tran",
+      "reason": "PhD student at Emory University who co-authored a paper with Microsoft Research collaborators, not an employee"
+    },
+    {
+      "name": "An Dinh Vuong",
+      "reason": "PhD student at MBZUAI who collaborated with former Meta researchers, not an employee"
+    },
+    {
+      "name": "David Tran",
+      "reason": "Wearables AI researcher at Meta, but lacking affirmative Vietnamese signal beyond a shared surname (Rule 5)"
+    },
+    {
+      "name": "Hailey Nguyen",
+      "reason": "Research contributor on Llama at Meta, but lacking affirmative Vietnamese signal beyond a shared surname (Rule 5)"
+    },
+    {
+      "name": "Minh Pham",
+      "reason": "Already listed in maintenance/sector-expansion/already-proposed.txt"
+    }
+  ]
+}

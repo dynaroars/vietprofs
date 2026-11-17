@@ -1,0 +1,23 @@
+{
+  "slice": "france-public",
+  "candidates": [],
+  "possible_move": [],
+  "rejected": [
+    {
+      "name": "Christophe Nguyen",
+      "reason": "Already on the roster as vp-2500, and the live INRAE profile matches the stored person and profile URL: https://ispa.hub.inrae.fr/equipes/bionet/personnel-de-l-equipe-bionet/nguyen-christophe. Roster match checked with npm run find-roster-matches."
+    },
+    {
+      "name": "Tai Olivier Pham",
+      "reason": "The Inserm directory lists him as an epidemiologist and researcher, but his CV identifies his current post as a contractual hospital practitioner, not a permanent Inserm career research appointment. The directory is a listing, not an individual annuaire page: https://cesp.inserm.fr/fr/annuaire/P?order=title&sort=asc ; https://cesp.inserm.fr/sites/default/files/Pham_T%C3%A0i_CV.pdf"
+    },
+    {
+      "name": "Hai Son Nguyen",
+      "reason": "The INL directory describes him as a maître de conférences at École Centrale de Lyon, a university appointment outside this public-employer slice; no qualifying individual employer annuaire page was verified: https://inl.cnrs.fr/annuaire/"
+    },
+    {
+      "name": "Nam-Anh Tran",
+      "reason": "The Inria annual activity report identifies him as a PhD student, so he does not meet the career-researcher requirement: https://radar.inria.fr/report/2025/sistm/index.html"
+    }
+  ]
+}

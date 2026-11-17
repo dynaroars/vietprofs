@@ -1,0 +1,63 @@
+{
+  "slice": "us-institutes",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Mai N. Nguyen-Huynh",
+        "university": "Kaiser Permanente Division of Research",
+        "institutionType": "Independent nonprofit research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Health Care Delivery and Policy",
+        "researchAreas": [
+          "Stroke and transient ischemic attack epidemiology",
+          "Acute stroke management",
+          "Cardiovascular outcomes"
+        ],
+        "profileUrl": "https://divisionofresearch.kaiserpermanente.org/researchers/nguyen-huynh-mai/",
+        "phdInstitution": "University of California, San Francisco"
+      },
+      "evidence": {
+        "currentRole": "https://divisionofresearch.kaiserpermanente.org/researchers/nguyen-huynh-mai/ — \"Research Scientist II, Division of Research, Kaiser Permanente Northern California\"",
+        "doctorateOrPapers": "https://divisionofresearch.kaiserpermanente.org/researchers/nguyen-huynh-mai/ — profile lists 2025 and 2026 research papers. Her clinical research role and MD are documented on the profile; the listed UCSF training is supported by https://divisionofresearch.kaiserpermanente.org/5-questions-for-mai-nguyen-huynh/.",
+        "vietnameseSignal": "https://divisionofresearch.kaiserpermanente.org/5-questions-for-mai-nguyen-huynh/ — says her father died in a re-education camp run by the government of Vietnam.",
+        "dedup": "Ran find-roster-matches for her name and profile URL; the Mai Nguyen hits were at Minnesota, Manchester Metropolitan, Central Queensland, and Griffith, with no identity match. Grepped public/data.json for Nguyen-Huynh."
+      }
+    }
+  ],
+  "possible_move": [],
+  "rejected": [
+    {
+      "name": "Chi L. Nguyen",
+      "reason": "MSK profile reports her current role as Senior Life Science Specialist at L.E.K. Consulting and an MSK end year of 2024; not current at the target employer. https://www.mskcc.org/research-areas/labs/members/chi-nguyen"
+    },
+    {
+      "name": "Duy Nguyen",
+      "reason": "Dana-Farber lab page identifies him as a PhD student; trainee role is excluded. https://labs.dana-farber.org/viswanathanlab/people/duy-nguyen"
+    },
+    {
+      "name": "Kevin Nguyen",
+      "reason": "Allen Institute page lists Research Associate I and a BS, with no research doctorate or two qualifying recent papers shown. https://alleninstitute.org/person/kevin-nguyen"
+    },
+    {
+      "name": "Vu Nguyen",
+      "reason": "City of Hope page lists Staff Scientist but also describes his professional experience as postdoctoral fellow; the current career appointment is unclear, so not included. https://www.cityofhope.org/research/find-a-scientist/vu-nguyen"
+    },
+    {
+      "name": "Phuong Nguyen",
+      "reason": "Broad Institute page lists her among research technicians and undergraduate students, not as career research staff. https://www.broadinstitute.org/scientific-community/science/core-faculty-labs/hung-lab/current-lab-members"
+    },
+    {
+      "name": "Long Nguyen",
+      "reason": "Fred Hutch lab page lists him as Bioinformatics Analyst, without a documented research appointment or doctorate. https://research.fredhutch.org/newell/en/lab-members.html"
+    },
+    {
+      "name": "Trong Nghia Nguyen",
+      "reason": "MSK page lists Graduate Research Assistant, a trainee role. https://www.mskcc.org/research/ski/labs/members/trong-nghia-nguyen"
+    },
+    {
+      "name": "Mai N. Nguyen-Huynh",
+      "reason": "Not a new candidate: roster search surfaced Mai Nguyen entries at other institutions, but the checked fields and identity URL did not match this Kaiser Permanente researcher."
+    }
+  ]
+}

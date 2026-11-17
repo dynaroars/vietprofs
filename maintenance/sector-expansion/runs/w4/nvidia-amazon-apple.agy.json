@@ -1,0 +1,262 @@
+{
+  "slice": "nvidia-amazon-apple",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Dieu-Thu Le",
+        "university": "Amazon Science",
+        "institutionType": "Corporate research lab",
+        "track": "Industry Research",
+        "rank": "Researcher",
+        "department": "Amazon AGI",
+        "city": "Berlin",
+        "country": "Germany",
+        "researchAreas": [
+          "Conversational AI",
+          "Natural Language Processing",
+          "Machine Learning"
+        ],
+        "phdInstitution": "University of Trento",
+        "phdYear": 2014,
+        "profileUrl": "https://www.amazon.science/author/thu-le",
+        "vietnameseName": "Lê Diệu Thu"
+      },
+      "evidence": {
+        "currentRole": "https://www.amazon.science/author/thu-le — \"Senior Applied Scientist\"",
+        "doctorateOrPapers": "PhD in Information and Communication Technology, University of Trento, 2014, dissertation: \"Exploiting Text Corpora for Data Enrichment in Language and Vision Applications\". Recent papers at Amazon: \"Towards self-improving error diagnosis in multi-agent systems\" (ACL 2024), \"Reducing cohort bias in natural language understanding systems with targeted self-training scheme\" (ACL 2023).",
+        "vietnameseSignal": "Vietnamese given name Dieu-Thu; name spelled Lê Diệu Thu in academic publications and joint work with Vietnam National University Hanoi researchers",
+        "dedup": "Checked against public/data.json and already-proposed.txt; distinct from other Le entries on roster (vp-0708, vp-1018, vp-1541, vp-2113, vp-2267, vp-2952, vp-3432)"
+      }
+    },
+    {
+      "entry": {
+        "name": "Quynh Do",
+        "university": "Amazon Science",
+        "institutionType": "Corporate research lab",
+        "track": "Industry Research",
+        "rank": "Researcher",
+        "department": "Alexa AI",
+        "city": "Aachen",
+        "country": "Germany",
+        "researchAreas": [
+          "Spoken Language Understanding",
+          "Natural Language Understanding",
+          "Cross-Lingual Transfer Learning"
+        ],
+        "phdInstitution": "KU Leuven",
+        "profileUrl": "https://www.amazon.science/author/quynh-do",
+        "vietnameseName": "Đỗ Quỳnh Ngọc Thi"
+      },
+      "evidence": {
+        "currentRole": "https://www.amazon.science/author/quynh-do — \"Applied Scientist\"",
+        "doctorateOrPapers": "Doctoral research in Computer Science at KU Leuven (Language Intelligence and Information Retrieval lab); recent publications at Amazon include \"Towards need-based spoken language understanding model updates: What have we learned?\" (EMNLP 2022 / Amazon Science)",
+        "vietnameseSignal": "Vietnamese full name Đỗ Quỳnh Ngọc Thi with Vietnamese given and middle names",
+        "dedup": "Checked against public/data.json and already-proposed.txt; distinct from vp-1105 Quynh Do (Lancaster University, Management Science)"
+      }
+    },
+    {
+      "entry": {
+        "name": "Hieu Duy Nguyen",
+        "university": "Amazon Science",
+        "institutionType": "Corporate research lab",
+        "track": "Industry Research",
+        "rank": "Researcher",
+        "department": "Alexa AI",
+        "city": "Seattle",
+        "state": "WA",
+        "country": "United States",
+        "researchAreas": [
+          "Automatic Speech Recognition",
+          "Large Language Models",
+          "Quantization-Aware Training",
+          "Hardware-Software Co-Design"
+        ],
+        "phdInstitution": "National University of Singapore",
+        "phdYear": 2012,
+        "profileUrl": "https://www.amazon.science/author/hieu-duy-nguyen",
+        "scholarUrl": "https://scholar.google.com/citations?user=Hd-n6q8AAAAJ"
+      },
+      "evidence": {
+        "currentRole": "https://www.amazon.science/author/hieu-duy-nguyen — \"Applied Science Manager\"",
+        "doctorateOrPapers": "PhD in Electrical and Computer Engineering from National University of Singapore (2012); papers at Amazon include \"Sub-8-bit quantization for on-device speech recognition: a regularization-free approach\" (2024), \"Sub-8-Bit Quantization Aware Training for 8-Bit Neural Network Accelerator with On-Device Speech Recognition\" (2023)",
+        "vietnameseSignal": "Vietnamese surname Nguyen and Vietnamese given name Hieu Duy",
+        "dedup": "Checked against public/data.json and already-proposed.txt; distinct from vp-0213, vp-0702, vp-0707, vp-0835, vp-1973, vp-2202, vp-3007, vp-3153, vp-3237, vp-3403, vp-3425"
+      }
+    },
+    {
+      "entry": {
+        "name": "Tung-Long Vuong",
+        "university": "Amazon Science",
+        "institutionType": "Corporate research lab",
+        "track": "Industry Research",
+        "rank": "Researcher",
+        "department": "Amazon Machine Learning",
+        "city": "Melbourne",
+        "country": "Australia",
+        "researchAreas": [
+          "Recommender Systems",
+          "Deep Learning",
+          "Representation Learning"
+        ],
+        "phdInstitution": "Monash University",
+        "undergradInstitution": "VNU University of Engineering and Technology",
+        "profileUrl": "https://www.amazon.science/author/long-vuong",
+        "vietnameseName": "Vương Tùng Long"
+      },
+      "evidence": {
+        "currentRole": "https://www.amazon.science/author/long-vuong — \"Applied Scientist\"",
+        "doctorateOrPapers": "PhD in Computer Science from Monash University; paper at Amazon: \"On the Mechanisms of Collaborative Learning in VAE Recommenders\" (ICLR 2024/2026 / Amazon Science)",
+        "vietnameseSignal": "Name Vương Tùng Long with Vietnamese diacritics in academic sources; B.S. from VNU University of Engineering and Technology (VNU-UET)",
+        "dedup": "Checked against public/data.json and already-proposed.txt; no matches on roster or retired IDs"
+      }
+    },
+    {
+      "entry": {
+        "name": "Vinh Thinh Ho",
+        "university": "Amazon Science",
+        "institutionType": "Corporate research lab",
+        "track": "Industry Research",
+        "rank": "Researcher",
+        "department": "Alexa AI",
+        "city": "Berlin",
+        "country": "Germany",
+        "researchAreas": [
+          "Knowledge Graphs",
+          "Information Extraction",
+          "Semantic Search",
+          "Natural Language Processing"
+        ],
+        "phdInstitution": "Saarland University",
+        "phdYear": 2022,
+        "profileUrl": "https://www.amazon.science/author/vinh-thinh-ho",
+        "vietnameseName": "Hồ Vĩnh Thịnh"
+      },
+      "evidence": {
+        "currentRole": "https://www.amazon.science/author/vinh-thinh-ho — \"Applied Scientist\"",
+        "doctorateOrPapers": "PhD from Universität des Saarlandes / Max Planck Institute for Informatics (2022), dissertation: \"Entities with Quantities: Extraction, Search and Ranking\"; paper at Amazon: \"Learning Rules from KGs Guided by Language Models\" (2024)",
+        "vietnameseSignal": "Vietnamese name Hồ Vĩnh Thịnh cited in news sources; Vietnam National Olympiad in Informatics winner",
+        "dedup": "Checked against public/data.json and already-proposed.txt; no matches on roster or retired IDs"
+      }
+    },
+    {
+      "entry": {
+        "name": "Cuong Hoang",
+        "university": "Amazon Science",
+        "institutionType": "Corporate research lab",
+        "track": "Industry Research",
+        "rank": "Researcher",
+        "department": "AWS AI Labs",
+        "city": "Palo Alto",
+        "state": "CA",
+        "country": "United States",
+        "researchAreas": [
+          "Neural Machine Translation",
+          "Natural Language Processing",
+          "Deep Learning"
+        ],
+        "phdInstitution": "University of Amsterdam",
+        "phdYear": 2017,
+        "profileUrl": "https://www.amazon.science/author/cuong-hoang",
+        "websiteUrl": "https://hoangcuong2011.github.io/",
+        "vietnameseName": "Hoàng Cường"
+      },
+      "evidence": {
+        "currentRole": "https://www.amazon.science/author/cuong-hoang — \"Applied Scientist\"",
+        "doctorateOrPapers": "PhD from University of Amsterdam (2017); publications at Amazon include: \"Improving Retrieval Augmented Neural Machine Translation by Controlling Source and Fuzzy-Match Interactions\" (2023), \"Sockeye 3: Fast Neural Machine Translation with PyTorch\" (2022)",
+        "vietnameseSignal": "Vietnamese given name Cuong, surname Hoang, name spelled Hoàng Cường on personal site",
+        "dedup": "Checked against public/data.json and already-proposed.txt; no matches on roster or retired IDs"
+      }
+    },
+    {
+      "entry": {
+        "name": "Nhan Nguyen",
+        "university": "Amazon Science",
+        "institutionType": "Corporate research lab",
+        "track": "Industry Research",
+        "rank": "Researcher",
+        "department": "Amazon Web Services",
+        "country": "United States",
+        "researchAreas": [
+          "Conversational AI",
+          "Machine Learning",
+          "Agentic Systems",
+          "Large Language Models"
+        ],
+        "profileUrl": "https://www.amazon.science/author/nhan-nguyen"
+      },
+      "evidence": {
+        "currentRole": "https://www.amazon.science/author/nhan-nguyen — \"Applied Scientist\"",
+        "doctorateOrPapers": "3 papers at Amazon: \"Deploying programmatic tool calling with pre-execution validation for production agentic systems\" (2026), \"Rethinking MCQ benchmarks: Mandatory reasoning evaluation reveals significant performance drops in large language models\" (NeurIPS 2025), \"Prompt-tuned multi-task taxonomic transformer (PTMTTaxoFormer)\" (EMNLP 2024)",
+        "vietnameseSignal": "Vietnamese surname Nguyen and Vietnamese given name Nhan",
+        "dedup": "Checked against public/data.json and already-proposed.txt; distinct from vp-0773, vp-0929, vp-1131, vp-3007"
+      }
+    }
+  ],
+  "possible_move": [],
+  "rejected": [
+    {
+      "name": "Long Nguyen",
+      "reason": "PhD student at University of Tübingen / ELLIS Institute Tübingen; visiting/intern at NVIDIA ASPIRE Group; not a permanent career researcher"
+    },
+    {
+      "name": "Matthieu Le",
+      "reason": "NVIDIA Learning and Perception Research. In French thesis records surname is Lê, but Le is also a common Breton surname in France and Matthieu is a French given name; lacks affirmative Vietnamese signal beyond the surname Le"
+    },
+    {
+      "name": "Justin Tran",
+      "reason": "NVIDIA Seattle Robotics Lab co-author of HumanoidMimicGen; no doctoral degree or independent research profile confirming career staff status"
+    },
+    {
+      "name": "Lan N. Pham",
+      "reason": "Intern alumni at NVIDIA Seattle Robotics Lab (PhD University of Utah 2021); not career staff at NVIDIA"
+    },
+    {
+      "name": "Chuong Huynh",
+      "reason": "Applied Scientist Intern at Amazon (CVPR 2025 CoLLM paper); intern role, not permanent career staff"
+    },
+    {
+      "name": "Luan Pham",
+      "reason": "Applied Scientist Intern at Amazon Web Services (EventADL paper); now Postdoctoral Fellow at UNSW Sydney; intern role"
+    },
+    {
+      "name": "Minh Le",
+      "reason": "Applied Scientist Intern at Amazon (CSE PhD from Sungkyunkwan University); now Research Scientist at Meta; Amazon was an internship"
+    },
+    {
+      "name": "Lam Ngo",
+      "reason": "PhD student at RMIT University; co-author with Amazon scientists, not an Amazon employee"
+    },
+    {
+      "name": "Tuan Dinh",
+      "reason": "Amazon intern (co-author on LoRA LLM rescoring and Code-LLM papers); currently postdoctoral fellow at UCSF / Maze Therapeutics"
+    },
+    {
+      "name": "Viet Anh Trinh",
+      "reason": "Applied Scientist Intern on Alexa Speech Acoustic Modeling team; CUNY PhD graduate and former postdoc at WPI; intern role"
+    },
+    {
+      "name": "Luu Tran",
+      "reason": "Senior Principal Engineer at Amazon (Alexa); non-doctorate engineering leader without primary peer-reviewed scientific research publications"
+    },
+    {
+      "name": "Tai Nguyen",
+      "reason": "Research Engineer at Apple (Apple Intelligence); M.S. graduate from UPenn; lacks a research doctorate or >=2 papers at current employer"
+    },
+    {
+      "name": "Thanh Tran",
+      "reason": "Author on Amazon Science (https://www.amazon.science/author/thanh-tran); skipped because name Thanh Tran is in maintenance/sector-expansion/already-proposed.txt (line 264) and roster (vp-0417, vp-3361)"
+    },
+    {
+      "name": "Quoc-Tuan Truong",
+      "reason": "Former Applied Scientist at Amazon; moved to Pinterest"
+    },
+    {
+      "name": "Toan Q. Nguyen",
+      "reason": "Former Applied Scientist at Amazon (Alexa AI); moved to Zoom"
+    },
+    {
+      "name": "Laura Dang",
+      "reason": "ChipNeMo co-author at NVIDIA; lacks affirmative Vietnamese signal (Dang is ambiguous Chinese/Vietnamese with English given name Laura) and lacks research doctorate record"
+    }
+  ]
+}
