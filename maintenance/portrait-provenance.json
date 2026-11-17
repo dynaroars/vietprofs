@@ -22466,6 +22466,92 @@
       ],
       "retrievedAt": "2026-11-17T22:02:17.056Z",
       "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-3682": {
+      "name": "Kien Lam Ung",
+      "outcome": "found",
+      "pageUrl": "https://www.ipbs.fr/biochemistry-and-structural-biology-of-Membrane-Protein/",
+      "imageUrl": "https://www.ipbs.fr/wp-content/uploads/2025/03/Lam_UNG_carre-300x300.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-17T22:08:29.186Z"
+    },
+    "vp-3683": {
+      "name": "Van Dai Nguyen",
+      "outcome": "not_found",
+      "pageUrl": "https://www.imec-int.com/en/articles/bringing-sot-mram-technology-closer-last-level-cache-memory-specifications",
+      "imageUrl": "https://www.imec-int.com/_next/image?url=https%3A%2F%2Fdrupal.imec-int.com%2Fsites%2Fdefault%2Ffiles%2F2021-12%2FVan%2520Dai%2520Nguyen.jpg&w=3840&q=75",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-17T22:08:30.832Z",
+      "note": "candidate failed 120x120 or portrait-aspect validation"
+    },
+    "vp-3684": {
+      "name": "Frederic Nguyen Van Dau",
+      "outcome": "found",
+      "pageUrl": "https://laboratoire-albert-fert.cnrs-thales.fr/team/nguyen-van-dau-frederic/",
+      "imageUrl": "https://laboratoire-albert-fert.cnrs-thales.fr/wp-content/uploads/2023/11/Nguyen-Van-Dau-Frederic.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-17T22:08:34.847Z"
+    },
+    "vp-3685": {
+      "name": "Tram Thi Ngoc Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-17T22:08:36.383Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3686": {
+      "name": "Du Nguyen Duy",
+      "outcome": "not_found",
+      "pageUrl": "https://www.scch.at/team/du.nguyen-duy",
+      "imageUrl": "https://www.scch.at/team/assets/images/a/Du_Nguyen_Duy_2442_Web-3a27547e.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-17T22:08:44.139Z",
+      "note": "candidate image could not be downloaded"
+    },
+    "vp-3687": {
+      "name": "Thanh Le - NICT",
+      "outcome": "found",
+      "pageUrl": "https://www2.nict.go.jp/wslab/en/thanh.html",
+      "imageUrl": "https://www2.nict.go.jp/wslab/assets/p/thanh.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-17T22:08:46.405Z"
     }
   }
 }
