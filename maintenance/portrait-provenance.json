@@ -21112,6 +21112,142 @@
       "identitySignals": [],
       "retrievedAt": "2026-11-17T03:20:04.458Z",
       "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3342": {
+      "name": "Thanh Binh Nguyen - CNRS",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-17T03:20:05.749Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3343": {
+      "name": "Quang-Duy Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://nqduy35.github.io/",
+      "imageUrl": "https://nqduy35.github.io/images/duy.png",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-17T03:21:20.603Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-3344": {
+      "name": "Minh-Ha Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://research.pasteur.fr/en/member/minh-ha-nguyen/",
+      "imageUrl": "https://research.pasteur.fr/wp-content/uploads/2022/11/research_pasteur-minh-ha-nguyen-imgp2936-970x1024.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-17T03:20:08.661Z"
+    },
+    "vp-3345": {
+      "name": "Long Hoang Bao Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-17T03:20:10.806Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3346": {
+      "name": "Ha Pham - Inria",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-17T03:20:12.672Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3347": {
+      "name": "Quynh-Trang Bui",
+      "outcome": "found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-17T03:21:22.451Z",
+      "note": "MEDIUM candidate stored after visual review",
+      "pageUrl": "https://bfp.bordeaux-aquitaine.hub.inrae.fr/personnel/pages-web-personnelles/bui-quynh-trang",
+      "imageUrl": "https://bfp.bordeaux-aquitaine.hub.inrae.fr/var/hub_internet_bordeaux_bfp/storage/images/_aliases/square_picture_personne/personnel/les-pages-personnelles/bui-quynh-trang/46916-1-fre-FR/Bui-Quynh-Trang.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM"
+    },
+    "vp-3348": {
+      "name": "Phong Nguyen - CNRS",
+      "outcome": "found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-17T03:21:23.705Z",
+      "note": "MEDIUM candidate stored after visual review",
+      "pageUrl": "https://institut-curie.org/person/phong-nguyen",
+      "imageUrl": "https://cdn.curie.fr/media/person_image/1074180_0.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM"
+    },
+    "vp-3349": {
+      "name": "Tuan Ngo Dac",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-17T03:20:20.942Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3350": {
+      "name": "Van Thien Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://thienjnguyen.github.io/",
+      "imageUrl": "https://thienjnguyen.github.io/assets/images/Thien_profile.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "department",
+        "rank",
+        "stored_roster_url",
+        "profile_markup"
+      ],
+      "retrievedAt": "2026-11-17T03:21:24.237Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-3351": {
+      "name": "Tinh-Suong Nguyen",
+      "outcome": "found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-17T03:21:25.746Z",
+      "note": "MEDIUM candidate stored after visual review",
+      "pageUrl": "https://bioger.versailles-saclay.hub.inrae.fr/equipes-et-plateaux/eplm-effecteurs-et-pathogenese-chez-leptosphaeria-maculans/composition-equipe-eplm/portraits-eplm/nguyen-tinh-suong",
+      "imageUrl": "https://bioger.versailles-saclay.hub.inrae.fr/var/hub_internet_versailles_grignon_bioger/storage/images/_aliases/square_picture_personne/9/2/5/4/64529-1-fre-FR/f382c87a923b-nguyen_ts.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM"
+    },
+    "vp-3352": {
+      "name": "Thao Dang - CNRS",
+      "outcome": "found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-17T03:21:27.030Z",
+      "note": "MEDIUM candidate stored after visual review",
+      "pageUrl": "https://www-verimag.imag.fr/~tdang/",
+      "imageUrl": "https://www-verimag.imag.fr/~tdang/ThaoIDs.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM"
     }
   }
 }
