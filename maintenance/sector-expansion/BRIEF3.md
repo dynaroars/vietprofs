@@ -44,11 +44,15 @@ eligibility/name rules in `ROSTER_MAINTENANCE.md`. Spell each employer the way e
    employer needs identity resolution (field, education); if it is the same person, list them in
    `possible_move`, not `candidates`. Skip every name in
    `maintenance/sector-expansion/already-proposed.txt`.
-8. Do not list the same person twice. At most 25 candidates; 8 solid beat 25 shaky.
+8. `city` is required: the city where the person works, sourced from their own page, the
+   employer page, a CV, or a recent paper affiliation that names the city/site (e.g. "Amazon,
+   Berlin"). Put the source in `evidence.location`. A company headquarters is not a source.
+   Candidates without a sourced city are held by the auditor, so look for it.
+9. Do not list the same person twice. At most 25 candidates; 8 solid beat 25 shaky.
 
 ## Hard limits
 
-Do not edit any file, run state-changing git commands, create GitHub Issues/PRs, log in anywhere,
+Do not create or edit any file (no `curl -o`, no saved pages; read pages to stdout), run state-changing git commands, create GitHub Issues/PRs, log in anywhere,
 fetch LinkedIn, or evade bot checks.
 
 ## Output
@@ -67,6 +71,7 @@ Your FINAL reply must be ONLY this JSON object (no prose, no code fence):
       "evidence": { "currentRole": "<url> — \"<quoted title>\"",
                     "doctorateOrPapers": "<url or paper list>",
                     "vietnameseSignal": "<what and where>",
+                    "location": "<url> — \"<quoted text naming the city>\"",
                     "dedup": "<what you checked>" } }
   ],
   "possible_move": [ { "name": "...", "id": "vp-....", "note": "roster says X, live page says Y <url>" } ],

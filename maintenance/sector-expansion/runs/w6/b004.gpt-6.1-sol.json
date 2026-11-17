@@ -1,0 +1,285 @@
+{
+  "results": [
+    {
+      "name": "Trần Trung Tình",
+      "found": false,
+      "note": "Searched the supplied name and education institution, including NIEM pages. Found Vietnamese institutional news identifying a researcher at the National Academy of Education Management in Hanoi, but no staff profile or personal CV proving a current title. Opening the NIEM result returned HTTP 503. The supplied Washington affiliation remains unverified."
+    },
+    {
+      "name": "Khanh T Do",
+      "found": false,
+      "note": "Searched name variants with Moderna and its official domain. Found oncology publications and a Doximity listing, but no employer profile, personal site, or CV proving a current role."
+    },
+    {
+      "name": "Tat‐Thang Vo",
+      "found": true,
+      "profileUrl": "https://imrb.inserm.fr/equipes/e-sbidian/",
+      "pageName": "Tat-Thang Vo",
+      "title": "Enseignant-Chercheur",
+      "employer": "IMRB – Inserm U955",
+      "department": "EPILOGY",
+      "city": "Créteil",
+      "phd": "Ghent University and The University of Paris, 2020; stated in personal CV.",
+      "vietnameseSignal": "Personal CV records a Pharm.D. at Hanoi University of Pharmacy, 2014.",
+      "otherUrls": [
+        "https://tatthangvo.com/",
+        "https://tatthangvo.com/resume.pdf"
+      ],
+      "note": "Official team page lists him among teaching researchers. The opened CV, last updated August 27, 2023, states a junior-professor chair in biostatistics at University Paris Est Créteil beginning September 2023. Personal homepage returned HTTP 502."
+    },
+    {
+      "name": "My H. Vu",
+      "found": true,
+      "profileUrl": "https://www.chla.org/research/core/biostatistics-informatics-and-data-management/team",
+      "pageName": "My H. Vu, MS",
+      "title": "Senior Biostatistician",
+      "employer": "Children’s Hospital Los Angeles",
+      "department": "Biostatistics, Informatics, and Data Management Core",
+      "city": "",
+      "phd": "",
+      "vietnameseSignal": "",
+      "otherUrls": [],
+      "note": "Current core-team listing. The page displays an MS credential; it does not state a doctorate."
+    },
+    {
+      "name": "Barry Chi Hong Lai",
+      "found": true,
+      "profileUrl": "https://www.aps.anl.gov/aps_directory/profile/Barry__Lai",
+      "pageName": "Barry Lai",
+      "title": "Senior Physicist, Group Leader",
+      "employer": "Argonne National Laboratory",
+      "department": "Microscopy • X-ray Science Division",
+      "city": "",
+      "phd": "University of Wisconsin-Madison, Physics, 1990.",
+      "vietnameseSignal": "",
+      "otherUrls": [],
+      "note": "Official APS profile uses the shorter name Barry Lai. Research concerns X-ray microscopy and fluorescence imaging. No Vietnamese connection is stated."
+    },
+    {
+      "name": "Anh Phong Nguyen",
+      "found": true,
+      "profileUrl": "https://lacliniqueducoureur.com/conferenciers/",
+      "pageName": "Anh Phong Nguyen",
+      "title": "Enseignant, cours",
+      "employer": "La Clinique Du Coureur",
+      "department": "",
+      "city": "",
+      "phd": "",
+      "vietnameseSignal": "",
+      "otherUrls": [
+        "https://lacliniqueducoureur.com/conferenciers/anh-phong-nguyen/"
+      ],
+      "note": "Instructor directory displays PhD among his credentials. His individual biography still describes doctoral training begun in 2018 and labels him a doctoral candidate at UCLouvain; no completion year is supplied. The individual page describes clinical experience in Belgium."
+    },
+    {
+      "name": "Long Tan Le",
+      "found": true,
+      "profileUrl": "https://longtanle.github.io/",
+      "pageName": "Long Tan Le",
+      "title": "Research Data Scientist",
+      "employer": "Intersect Australia",
+      "department": "Advanced Analytics & AI (3AI)",
+      "city": "Sydney",
+      "phd": "The University of Sydney, Computer Science, 2025.",
+      "vietnameseSignal": "Gives Vietnamese name Lê Tấn Long and an undergraduate degree from HCMUT.",
+      "otherUrls": [],
+      "note": "Personal site states a current Intersect appointment. The supplied Google affiliation was not corroborated; identity correspondence with the Google publication record remains unresolved."
+    },
+    {
+      "name": "Khoi Le",
+      "found": false,
+      "note": "Searched the exact name with Vividion, its official domain, and biography terms. Found a cancer-research publication naming a Vividion-affiliated author, but no employer profile, personal site, or CV stating a current title. Opening the journal result returned HTTP 403."
+    },
+    {
+      "name": "Ngoc Vu",
+      "found": false,
+      "note": "Searched the name with Calico and opened Calico’s publications and people pages. Publications list Ngoc Vu, but the people directory did not provide a matching role profile. No personal site or CV proving a current title was found."
+    },
+    {
+      "name": "Binh T. Vu",
+      "found": true,
+      "profileUrl": "https://www.pmvpharma.com/about/",
+      "pageName": "Binh Vu, Ph.D.",
+      "title": "Senior Vice President, Drug Discovery and CMC",
+      "employer": "PMV Pharma",
+      "department": "",
+      "city": "",
+      "phd": "University of California, Los Angeles, Chemistry; year not stated.",
+      "vietnameseSignal": "",
+      "otherUrls": [],
+      "note": "Current management biography says he joined PMV in 2013 and previously worked at Roche. The page omits the middle initial."
+    },
+    {
+      "name": "Maï-Lan Tran",
+      "found": false,
+      "note": "Searched accented and unaccented name variants with ANSES and its official domain. Found publications and reports, but no employer staff biography, personal site, or CV stating a current role. Other same-name profiles were not identity matches."
+    },
+    {
+      "name": "Hai Trieu Phan",
+      "found": true,
+      "profileUrl": "https://www.cea-tech.fr/cea-tech/liten/english/Pages/CEA-Liten/HDR/PHAN-Hai-Trieu.aspx",
+      "pageName": "Hai Trieu PHAN",
+      "title": "Senior Expert",
+      "employer": "CEA",
+      "department": "CEA-Liten",
+      "city": "",
+      "phd": "Grenoble Alpes University, fluid mechanics and energetics, 2010.",
+      "vietnameseSignal": "",
+      "otherUrls": [],
+      "note": "Profile also describes him as Research Director and states that he joined CEA in 2017. The page does not establish Paris as his work location."
+    },
+    {
+      "name": "Gia Ngoc Phung",
+      "found": false,
+      "note": "Searched the exact name, shortened variants, and PTB’s official domain. Found PTB reports, seminar programs, publications, and contact information, but no staff profile, personal site, or CV establishing a current title."
+    },
+    {
+      "name": "Danh Le-Phuoc",
+      "found": true,
+      "profileUrl": "https://danhlephuoc.info/CV__Danh_Le_Phuoc.pdf",
+      "pageName": "Danh Le-Phuoc, PhD",
+      "title": "Senior Researcher",
+      "employer": "Fraunhofer FOKUS",
+      "department": "",
+      "city": "Berlin",
+      "phd": "National University of Ireland, Galway, Computer Science, 2013.",
+      "vietnameseSignal": "CV records undergraduate and master’s education at Hue University.",
+      "otherUrls": [
+        "https://danhlephuoc.info/",
+        "https://scholar.google.de/citations?user=7-k4HCoAAAAJ"
+      ],
+      "note": "Personal CV lists the Fraunhofer role from January 2021 onward and a concurrent investigator appointment at Technical University Berlin. No CV update date was visible; the personal homepage describes a TU Berlin position."
+    },
+    {
+      "name": "Nghia Trong Vo",
+      "found": true,
+      "profileUrl": "https://www.bnl.gov/staff/nvo",
+      "pageName": "Nghia Vo",
+      "title": "beamline scientist",
+      "employer": "Brookhaven National Laboratory",
+      "department": "National Synchrotron Light Source II",
+      "city": "Upton",
+      "phd": "Describes PhD study at the National University of Singapore; completion year not stated.",
+      "vietnameseSignal": "Records bachelor’s and master’s degrees in physics from the University of Science, VNUHCM, Vietnam.",
+      "otherUrls": [],
+      "note": "Biography states that he joined Brookhaven in 2022 and works at the HEX beamline in the hard-X-ray methods program."
+    },
+    {
+      "name": "Trieu Mai",
+      "found": true,
+      "profileUrl": "https://www.esig.energy/working-groups/large-loads/",
+      "pageName": "Trieu Mai",
+      "title": "Senior Director of Programs and Research",
+      "employer": "ESIG",
+      "department": "",
+      "city": "",
+      "phd": "University of California, Santa Cruz, Physics; year not stated.",
+      "vietnameseSignal": "",
+      "otherUrls": [],
+      "note": "Current employer working-group biography states this role and describes his 16 years at NREL as prior employment."
+    },
+    {
+      "name": "Viet Loan Dao Thi",
+      "found": true,
+      "profileUrl": "https://www.klinikum.uni-heidelberg.de/personen/dr-viet-loan-dao-thi-8527/",
+      "pageName": "Dr. Viet Loan Dao Thi",
+      "title": "Mitarbeiterin",
+      "employer": "Universitätsklinikum Heidelberg",
+      "department": "Molekulare Virologie",
+      "city": "Heidelberg",
+      "phd": "École Normale Supérieure in Lyon; year not stated on the linked lab site.",
+      "vietnameseSignal": "",
+      "otherUrls": [
+        "https://daothilab.com/"
+      ],
+      "note": "Official hospital profile links to her lab, where she is identified as Principal Investigator. DZIF’s staff page also places her at Heidelberg University Hospital rather than Braunschweig."
+    },
+    {
+      "name": "Minh Lê",
+      "found": true,
+      "profileUrl": "https://hopital-bichat.aphp.fr/dr-le-minh",
+      "pageName": "Dr MINH LE",
+      "title": "",
+      "employer": "Bichat - Claude-Bernard, AP-HP",
+      "department": "Service de Pharmacologie",
+      "city": "",
+      "phd": "",
+      "vietnameseSignal": "",
+      "otherUrls": [],
+      "note": "Official clinician page confirms the pharmacology service and consultation hospital. It supplies the honorific Dr but no employment rank, doctorate details, or Inserm appointment."
+    },
+    {
+      "name": "Van‐Hoan Le",
+      "found": false,
+      "note": "Searched the name with CEA and CEA-Leti. Opened an official CEA-Leti conference page listing him as a paper coauthor, but it supplies no individual current title. No staff profile, personal site, or CV proving the role was found."
+    },
+    {
+      "name": "Emeline Chu‐Van",
+      "found": true,
+      "profileUrl": "https://decision-for-liver.eu/partner/commissariat-a-lenergie-atomique-et-aux-energies-alternatives/",
+      "pageName": "Emeline Chu-Van",
+      "title": "Technician Metabolomics / Lipidomics",
+      "employer": "CEA",
+      "department": "SPI",
+      "city": "Gif sur Yvette",
+      "phd": "",
+      "vietnameseSignal": "",
+      "otherUrls": [],
+      "note": "Evidence is the DECISION research consortium’s CEA partner-team page, rather than an individual profile on CEA’s domain. It identifies her among CEA team staff; no doctorate is stated."
+    },
+    {
+      "name": "Thi H. O. Nguyen",
+      "found": true,
+      "profileUrl": "https://findanexpert.unimelb.edu.au/profile/598602-oanh-nguyen",
+      "pageName": "Oanh Nguyen",
+      "title": "Principal Research Fellow",
+      "employer": "The University of Melbourne",
+      "department": "Department of Microbiology and Immunology",
+      "city": "Parkville",
+      "phd": "Monash University, 2010; stated in the university’s researcher biography.",
+      "vietnameseSignal": "",
+      "otherUrls": [
+        "https://biomedicalsciences.unimelb.edu.au/research/emcra/researcher-profiles/oanh-nguyen"
+      ],
+      "note": "Current expert profile also displays A/Prof. The university biography connects Oanh Nguyen to the Kedzierska laboratory at the Doherty Institute and human influenza/COVID-19 immunology."
+    },
+    {
+      "name": "Le Ngoc Tram",
+      "found": false,
+      "note": "Searched Leiden staff pages, personal-site leads, and name variants. The Max Planck profile could not be opened. Opened a VARNET team page describing an older Max Planck postdoctoral role and a USTH page containing no readable title. No accessible page proving the current Leiden role was found."
+    },
+    {
+      "name": "Christopher Kim Pham",
+      "found": true,
+      "profileUrl": "https://okeanos.uac.pt/member-christopher-pham",
+      "pageName": "Christopher Pham",
+      "title": "Assistant researcher",
+      "employer": "OKEANOS, Universidade dos Açores",
+      "department": "",
+      "city": "Horta",
+      "phd": "",
+      "vietnameseSignal": "",
+      "otherUrls": [],
+      "note": "Membership category is Integrated (regular). The biography also calls him a Research Associate and says he leads the Azores marine-litter research group."
+    },
+    {
+      "name": "Lien Anh Ha Do",
+      "found": true,
+      "profileUrl": "https://www.mcri.edu.au/researcher-details/lien-anh-ha-do",
+      "pageName": "Dr Lien Anh Ha Do",
+      "title": "Senior Research Officer",
+      "employer": "Murdoch Children’s Research Institute",
+      "department": "New Vaccines",
+      "city": "Melbourne",
+      "phd": "Education section lists Wellcome Trust, United Kingdom, 2009–2013; no degree-awarding university is identified.",
+      "vietnameseSignal": "",
+      "otherUrls": [],
+      "note": "Biography places her in New Vaccines; structured group metadata instead says Tropical Diseases. Also lists an honorary fellowship at the University of Melbourne for 2023–2027."
+    },
+    {
+      "name": "My‐Hanh Lam",
+      "found": false,
+      "note": "Searched name variants with Pfizer, its official domain, and biography terms. Found oncology publications and an author-index page, but no employer profile, personal site, or CV proving a current role."
+    }
+  ]
+}
