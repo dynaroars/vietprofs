@@ -830,7 +830,7 @@ test('profile pages honor dark mode through the shared stylesheet', async () => 
   const seeAlso = page
     .locator('.man-section')
     .filter({ has: page.locator('h2', { hasText: 'SEE ALSO' }) });
-  assert.equal(await seeAlso.locator('nav.links a').count(), 6);
+  assert.equal(await seeAlso.locator('nav.links a').count(), 5);
   assert.equal(await seeAlso.locator('a[href="../connections.html"]').count(), 1);
   assert.equal(await page.locator('footer.man-footer').count(), 0);
   const profileStar = page.locator('.name-title .favorite-toggle');

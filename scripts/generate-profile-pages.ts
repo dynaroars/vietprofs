@@ -532,13 +532,6 @@ if (button) {
       : `${site}${directoryPage}?${sectorParam}loc=${encodeURIComponent(countryTarget === 'United States' ? 'US' : countryTarget)}`;
 
   return `<!doctype html>
-<!--
-          _/\\
-         /  \\      VietProfs
-        /_/\\_\\     ${escapeHtml(name)} (${escapeHtml(person.id)})
-          ||
-     view source encouraged · https://github.com/dynaroars/vietprofs
--->
 <html lang="${lang}">
 <head>
   <meta charset="UTF-8">
@@ -579,7 +572,7 @@ if (button) {
         <section class="man-section name-section"><h2>${vi ? 'TÊN' : 'NAME'}</h2><div class="identity profile-identity">${portrait}<div class="identity-details"><div class="name-heading"><div class="name-title"><h1>${escapeHtml(vi ? nativeName || name : name)}</h1>${favoriteToggle}</div><div class="profile-actions" aria-label="${vi ? 'Thao tác' : 'Roster actions'}"><a class="self-claim-link" href="${escapeHtml(selfUrl)}">${vi ? 'Đây là bạn?' : 'Is this you?'}</a><a class="self-claim-link lang-switch" href="${site}${vi ? basePath : langPath(basePath, 'vi')}" hreflang="${vi ? 'en' : 'vi'}" lang="${vi ? 'en' : 'vi'}">${vi ? 'English' : 'Tiếng Việt'}</a></div></div><p id="profile-save-status" role="status" hidden></p><p class="native">${escapeHtml(vi ? name : nativeName)} <a class="loc-badge-link" href="${countryTargetUrl}" title="${vi ? `Xem những người ở ${escapeHtml(placeVi(person.country || 'United States'))}` : `Filter people in ${escapeHtml(person.country || 'United States')}`}"><span class="loc-badge" title="${escapeHtml(vi ? placeVi(person.country || 'United States') : person.country || 'United States')}"><span class="country-flag" aria-hidden="true">${countryFlag(person.country)}</span></span></a></p><p class="record-id">${escapeHtml(person.id)}</p></div></div></section>
         <section class="man-section"><h2>${vi ? 'TÓM TẮT' : 'SYNOPSIS'}</h2><p class="synopsis">${escapeHtml(role)}${vi ? (place ? ` · ${escapeHtml(place)}` : '') : locationOf(person) ? ` · ${escapeHtml(locationOf(person))}` : ''}</p><div class="tags"><a href="../${fieldPath(personField)}" class="tag" title="${vi ? `Xem ngành ${escapeHtml(fieldVi(personField))} trên VietProfs` : `Explore ${escapeHtml(personField)} on VietProfs`}">${escapeHtml(vi ? fieldVi(personField) : personField)}</a>${person.track ? `<a href="${site}${directoryPage}?${sectorParam}track=${encodeURIComponent(person.track)}" class="tag${person.track === 'Emeritus' ? ' tag-emeritus' : person.track === 'Deceased' ? ' tag-deceased' : ''}" title="${vi ? 'Lọc theo' : 'Filter by'} ${escapeHtml(vi ? trackVi(person.track) : person.track)}">${person.track === 'Emeritus' ? `🎓 ${vi ? 'Danh dự' : 'Emeritus'}` : person.track === 'Deceased' ? `🏛️ ${vi ? 'Đã mất' : 'Deceased'}` : escapeHtml(vi ? trackVi(person.track) : person.track)}</a>` : ''}${person.institutionType && person.institutionType !== 'University' ? `<a href="${site}${directoryPage}?${sectorParam}institutionType=${encodeURIComponent(person.institutionType)}" class="tag" title="${vi ? 'Lọc theo' : 'Filter by'} ${escapeHtml(vi ? institutionTypeVi(person.institutionType) : person.institutionType)}">${escapeHtml(vi ? institutionTypeVi(person.institutionType) : person.institutionType)}</a>` : ''}${person.confirmed === false ? `<span class="tag tag-unconfirmed">${vi ? 'Chưa xác nhận' : 'Unconfirmed'}</span>` : ''}</div></section>
         ${research}${educationSection}${honors}${connectionSection}${relatedSections(person, personField, related, lang)}${linkSection}${missingSection}
-        <section class="man-section"><h2>${vi ? 'THÔNG TIN HỒ SƠ' : 'ROSTER METADATA'}</h2><dl class="roster-metadata"><div><dt>${vi ? 'mã hồ sơ' : 'record'}</dt><dd>${escapeHtml(person.id)}</dd></div><div><dt>${vi ? 'xác nhận' : 'confirmation'}</dt><dd>${person.confirmed === false ? (vi ? 'Chưa xác nhận — có nguồn đáng tin cậy nhưng không chính thức' : 'Unconfirmed — reliable non-official evidence') : vi ? 'Đã xác nhận' : 'Confirmed'}</dd></div><div><dt>${vi ? 'kiểm tra lần cuối' : 'last verified'}</dt><dd>${escapeHtml(formatRosterDate(person.lastUpdatedAt || ''))}</dd></div><div><dt>build</dt><dd><a href="https://github.com/dynaroars/vietprofs/commit/${escapeHtml(commit)}">${escapeHtml(commit)}</a></dd></div></dl><details class="raw-record"><summary>${vi ? 'xem dữ liệu gốc' : 'view raw record'}</summary><pre><code>${rawRecord}</code></pre></details></section>
+        <section class="man-section"><h2>${vi ? 'THÔNG TIN HỒ SƠ' : 'ROSTER METADATA'}</h2><dl class="roster-metadata"><div><dt>${vi ? 'mã hồ sơ' : 'record'}</dt><dd>${escapeHtml(person.id)}</dd></div><div><dt>${vi ? 'xác nhận' : 'confirmation'}</dt><dd>${person.confirmed === false ? (vi ? 'Chưa xác nhận — có nguồn đáng tin cậy nhưng không chính thức' : 'Unconfirmed — reliable non-official evidence') : vi ? 'Đã xác nhận' : 'Confirmed'}</dd></div><div><dt>${vi ? 'kiểm tra lần cuối' : 'last verified'}</dt><dd>${escapeHtml(formatRosterDate(person.lastUpdatedAt || ''))}</dd></div><div><dt>build</dt><dd>${escapeHtml(commit)}</dd></div></dl><details class="raw-record"><summary>${vi ? 'xem dữ liệu gốc' : 'view raw record'}</summary><pre><code>${rawRecord}</code></pre></details></section>
         ${renderSeeAlso(site)}
       </article>
     </main>
@@ -783,13 +776,6 @@ function categoryHubPage(config: HubConfig) {
     .join('\n            ');
 
   return `<!doctype html>
-<!--
-          _/\\
-         /  \\      VietProfs Hub
-        /_/\\_\\     ${escapeHtml(config.categoryName)}
-          ||
-     view source encouraged · https://github.com/dynaroars/vietprofs
--->
 <html lang="${lang}">
 <head>
   <meta charset="UTF-8">
@@ -860,7 +846,7 @@ function categoryHubPage(config: HubConfig) {
           <dl class="roster-metadata">
             <div><dt>${vi ? 'danh mục' : 'category'}</dt><dd>${escapeHtml(vi ? CATEGORY_TYPE_VI[config.categoryType] : config.categoryType)} · ${escapeHtml(config.categoryName)}</dd></div>
             <div><dt>${vi ? 'số người' : 'people count'}</dt><dd>${sortedPeople.length}</dd></div>
-            <div><dt>build</dt><dd><a href="https://github.com/dynaroars/vietprofs/commit/${escapeHtml(commit)}">${escapeHtml(commit)}</a></dd></div>
+            <div><dt>build</dt><dd>${escapeHtml(commit)}</dd></div>
           </dl>
         </section>
       </article>
