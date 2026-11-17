@@ -21310,6 +21310,37 @@
       ],
       "retrievedAt": "2026-11-17T03:32:04.035Z",
       "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-3601": {
+      "name": "Van Khe Tran",
+      "outcome": "found",
+      "pageUrl": "https://en.wikipedia.org/wiki/Tr%E1%BA%A7n_V%C4%83n_Kh%C3%AA",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Tr%E1%BA%A7n_V%C4%83n_Kh%C3%AA.jpg/250px-Tr%E1%BA%A7n_V%C4%83n_Kh%C3%AA.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-17T17:54:52.894Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-3602": {
+      "name": "Quang Rieu Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://rahist.nrao.edu/nguyen_bio-memoir.shtml",
+      "imageUrl": "https://rahist.nrao.edu/Nguyen-Quang-Rieu-Vjisonline.org.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-17T17:54:40.665Z"
     }
   }
 }
