@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-16T12:00:00.000Z",
+  "updatedAt": "2026-11-17T14:00:00.000Z",
   "relationships": [
     {
       "id": "rel-coauthor-vp-0015-vp-0018",
@@ -5950,6 +5950,111 @@
       "works": [],
       "verifiedAt": "2026-11-16T12:00:00.000Z",
       "notes": "Affiliation of the advisor is not stated on the page; inferred from SOKENDAI Informatics only."
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-3338",
+      "role": "mentor",
+      "name": "David Lo",
+      "affiliation": "Singapore Management University",
+      "url": "",
+      "sources": [
+        "https://hvdthong.github.io/"
+      ],
+      "evidence": "Thong Hoang's maintained academic homepage says he received his Ph.D. from the School of Computing and Information Systems, Singapore Management University, where he worked under the supervision of Professor David Lo.",
+      "works": [],
+      "verifiedAt": "2026-11-17T14:00:00.000Z",
+      "notes": ""
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-3352",
+      "role": "mentee",
+      "name": "Alexandre Donzé",
+      "affiliation": "",
+      "url": "",
+      "sources": [
+        "https://www-verimag.imag.fr/~tdang/"
+      ],
+      "evidence": "Thao Dang's maintained Verimag homepage lists Alexandre Donzé among his PhD students with a thesis title defended in June 2007 (co-advisor with Oded Maler).",
+      "works": [],
+      "verifiedAt": "2026-11-17T14:00:00.000Z",
+      "notes": "Co-supervision stated on the source page."
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-3352",
+      "role": "mentee",
+      "name": "Alexandre Rocca",
+      "affiliation": "",
+      "url": "",
+      "sources": [
+        "https://www-verimag.imag.fr/~tdang/"
+      ],
+      "evidence": "Thao Dang's maintained Verimag homepage lists Alexandre Rocca among his PhD students with a thesis title defended in May 2018 (joint supervision with Eric Fanchon).",
+      "works": [],
+      "verifiedAt": "2026-11-17T14:00:00.000Z",
+      "notes": "Co-supervision stated on the source page."
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-3352",
+      "role": "mentee",
+      "name": "Mohammad Al Khatib",
+      "affiliation": "",
+      "url": "",
+      "sources": [
+        "https://www-verimag.imag.fr/~tdang/"
+      ],
+      "evidence": "Thao Dang's maintained Verimag homepage lists Mohammad Al Khatib among his PhD students with a thesis title defended in September 2017 (joint supervision with Antoine Girard).",
+      "works": [],
+      "verifiedAt": "2026-11-17T14:00:00.000Z",
+      "notes": "Co-supervision stated on the source page."
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-3352",
+      "role": "mentee",
+      "name": "Romain Testylier",
+      "affiliation": "",
+      "url": "",
+      "sources": [
+        "https://www-verimag.imag.fr/~tdang/"
+      ],
+      "evidence": "Thao Dang's maintained Verimag homepage lists Romain Testylier among his PhD students with a thesis title defended in December 2012.",
+      "works": [],
+      "verifiedAt": "2026-11-17T14:00:00.000Z",
+      "notes": ""
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-3352",
+      "role": "mentee",
+      "name": "Tarik Nahhal",
+      "affiliation": "",
+      "url": "",
+      "sources": [
+        "https://www-verimag.imag.fr/~tdang/"
+      ],
+      "evidence": "Thao Dang's maintained Verimag homepage lists Tarik Nahhal among his PhD students with a thesis title defended in October 2007.",
+      "works": [],
+      "verifiedAt": "2026-11-17T14:00:00.000Z",
+      "notes": ""
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-3352",
+      "role": "mentee",
+      "name": "Tommaso Dreossi",
+      "affiliation": "",
+      "url": "",
+      "sources": [
+        "https://www-verimag.imag.fr/~tdang/"
+      ],
+      "evidence": "Thao Dang's maintained Verimag homepage lists Tommaso Dreossi among his PhD students with a thesis title defended in January 2017 (joint supervision with Carla Piazza).",
+      "works": [],
+      "verifiedAt": "2026-11-17T14:00:00.000Z",
+      "notes": "Co-supervision stated on the source page."
     }
   ]
 }
