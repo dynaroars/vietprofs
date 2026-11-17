@@ -51,7 +51,7 @@ How to use them (2026-11-14):
 producers alternated agy and Codex, and a fresh Codex session verified each producer file. Outputs
 are in `runs/<wave>/`. The run stopped after three waves at 298 verified (target was 500): the
 agy half of every wave produced nothing, so in practice this was a Codex-only run. Claude's audit
-added 247 (vp-3317 onward) and recorded the rest in `AUDIT-2026-11-14.md`.
+added 247 (merged as vp-3356 to vp-3600; 2 were already in from #1312) and recorded the rest in `AUDIT-2026-11-14.md`.
 
 Per-slice yield across all three waves ("Added" is after the audit):
 

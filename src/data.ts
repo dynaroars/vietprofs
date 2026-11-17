@@ -630,6 +630,43 @@ const FIELD_OVERRIDES = new Map([
     'Biological & Biomedical Sciences',
   ],
   ['Research and Development|Aridis Pharmaceuticals', 'Biological & Biomedical Sciences'],
+  [
+    "Department of Pathology, Advanced Technology and Genomics Core|St. Jude Children's Research Hospital",
+    'Biological & Biomedical Sciences',
+  ],
+  ['Theoretical Biology and Biophysics|Los Alamos National Laboratory', 'Mathematics'],
+  [
+    'Genomics and Machine Learning Lab|QIMR Berghofer Medical Research Institute',
+    'Biological & Biomedical Sciences',
+  ],
+  [
+    'Human Development and Community Wellbeing Team|The Kids Research Institute Australia',
+    'Business & Economics',
+  ],
+  [
+    'Institute of High Performance Computing (IHPC)|Agency for Science, Technology and Research',
+    'Physics & Astronomy',
+  ],
+  [
+    'Institute of High Performance Computing (IHPC), Green Technologies for Marine, Offshore, Oil & Gas Engineering|Agency for Science, Technology and Research',
+    'Engineering',
+  ],
+  ['Aquaculture|CSIRO', 'Agricultural & Natural Resource Sciences'],
+  ['Mineral Resources, Alloy Processes|CSIRO', 'Engineering'],
+  [
+    'Fraunhofer Institute for Open Communication Systems (FOKUS)|Fraunhofer Society',
+    'Computer & Information Sciences',
+  ],
+  [
+    "CEA List, Laboratoire des Systèmes Embarqués et Autonomes (LSEA)|Commissariat à l'énergie atomique et aux énergies alternatives (CEA)",
+    'Computer & Information Sciences',
+  ],
+  [
+    'Institut Charles Gerhardt Montpellier (ICGM)|CNRS (Centre National de la Recherche Scientifique)',
+    'Chemistry',
+  ],
+  ['Makutu Project-Team|Inria', 'Mathematics'],
+  ['Network Systems and Security Research Lab|Nokia Bell Labs', 'Computer & Information Sciences'],
   ['LISN (Fluid Mechanics and Energetics)|Université Paris-Saclay', 'Physics & Astronomy'],
   ['Obstetrics and Gynecology|Loyola University Chicago', 'Health Sciences'],
   ['Radiation Oncology|University of Washington', 'Health Sciences'],

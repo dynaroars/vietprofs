@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-14T14:02:59.000Z",
+  "updatedAt": "2026-11-17T14:00:00.000Z",
   "relationships": [
     {
       "id": "rel-coauthor-vp-0015-vp-0018",
@@ -4054,6 +4054,41 @@
       "notes": ""
     },
     {
+      "id": "rel-coauthor-vp-2635-vp-3324",
+      "type": "coauthor",
+      "sourceId": "vp-2635",
+      "targetId": "vp-3324",
+      "sources": [
+        "https://doi.org/10.1109/access.2023.3273292",
+        "https://doi.org/10.1016/j.epsr.2021.107510",
+        "https://doi.org/10.1016/j.apenergy.2023.122602"
+      ],
+      "evidence": "OpenAlex (keyed) lists both as authors of at least 15 small-team works with Clarkson University affiliations for both; three are retained here (3-6 authors each). Identity matches via the Clarkson affiliation and the power-systems topic, and the advisor/advisee link above.",
+      "works": [
+        {
+          "identifier": "doi:10.1109/access.2023.3273292",
+          "title": "Spatial-Temporal Recurrent Graph Neural Networks for Fault Diagnostics in Power Distribution Systems",
+          "date": "2023-01-01",
+          "url": "https://doi.org/10.1109/access.2023.3273292"
+        },
+        {
+          "identifier": "doi:10.1016/j.epsr.2021.107510",
+          "title": "Distributed dynamic state-input estimation for power networks of Microgrids and Active Distribution Systems",
+          "date": "2021-08-17",
+          "url": "https://doi.org/10.1016/j.epsr.2021.107510"
+        },
+        {
+          "identifier": "doi:10.1016/j.apenergy.2023.122602",
+          "title": "Physics-informed graphical neural network for power system state estimation",
+          "date": "2024-01-05",
+          "url": "https://doi.org/10.1016/j.apenergy.2023.122602"
+        }
+      ],
+      "verifiedAt": "2026-11-16T12:00:00.000Z",
+      "direct": false,
+      "notes": "Retained 3 of many shared works."
+    },
+    {
       "id": "rel-coauthor-vp-2657-vp-2694",
       "type": "coauthor",
       "sourceId": "vp-2657",
@@ -4420,6 +4455,20 @@
       "evidence": "Hung Q. Nguyen's maintained CV says \"Ph.D. in Policy and Planning Sciences, University of Tsukuba, Applied Stochastic Systems Laboratory, supervised by Professor Tuan Phung-Duc\" (04/2020-03/2023); the laboratory's member page lists Nguyen Quoc Hung as a doctoral graduate (March 2023). vp-2180 is Tuan Phung-Duc, University of Tsukuba.",
       "works": [],
       "verifiedAt": "2026-11-12T23:03:31.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-doctoral-advisor-vp-2635-vp-3324",
+      "type": "doctoral-advisor",
+      "sourceId": "vp-2635",
+      "targetId": "vp-3324",
+      "sources": [
+        "https://nlebang.github.io/cv/"
+      ],
+      "evidence": "Bang Nguyen's (vp-3324) own CV lists a PhD at Clarkson University (2019-2022) and, under References, states \"Tuyen Vu is my PhD advisor. He guided me through my doctoral program\"; this matches vp-2635 (Tuyen V. Vu, Clarkson University Electrical and Computer Engineering).",
+      "works": [],
+      "verifiedAt": "2026-11-16T12:00:00.000Z",
       "direct": false,
       "notes": ""
     },
@@ -5886,6 +5935,126 @@
       "works": [],
       "verifiedAt": "2026-11-12T23:03:31.000Z",
       "notes": ""
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-3337",
+      "role": "mentor",
+      "name": "Isao Echizen",
+      "affiliation": "SOKENDAI",
+      "url": "",
+      "sources": [
+        "https://sites.google.com/site/nshquoc/"
+      ],
+      "evidence": "Hoang-Quoc Nguyen-Son's own homepage says he obtained his doctorate in 2015 from the Informatics Department at SOKENDAI, Japan, under the guidance of Professor Isao Echizen.",
+      "works": [],
+      "verifiedAt": "2026-11-16T12:00:00.000Z",
+      "notes": "Affiliation of the advisor is not stated on the page; inferred from SOKENDAI Informatics only."
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-3338",
+      "role": "mentor",
+      "name": "David Lo",
+      "affiliation": "Singapore Management University",
+      "url": "",
+      "sources": [
+        "https://hvdthong.github.io/"
+      ],
+      "evidence": "Thong Hoang's maintained academic homepage says he received his Ph.D. from the School of Computing and Information Systems, Singapore Management University, where he worked under the supervision of Professor David Lo.",
+      "works": [],
+      "verifiedAt": "2026-11-17T14:00:00.000Z",
+      "notes": ""
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-3352",
+      "role": "mentee",
+      "name": "Alexandre Donzé",
+      "affiliation": "",
+      "url": "",
+      "sources": [
+        "https://www-verimag.imag.fr/~tdang/"
+      ],
+      "evidence": "Thao Dang's maintained Verimag homepage lists Alexandre Donzé among his PhD students with a thesis title defended in June 2007 (co-advisor with Oded Maler).",
+      "works": [],
+      "verifiedAt": "2026-11-17T14:00:00.000Z",
+      "notes": "Co-supervision stated on the source page."
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-3352",
+      "role": "mentee",
+      "name": "Alexandre Rocca",
+      "affiliation": "",
+      "url": "",
+      "sources": [
+        "https://www-verimag.imag.fr/~tdang/"
+      ],
+      "evidence": "Thao Dang's maintained Verimag homepage lists Alexandre Rocca among his PhD students with a thesis title defended in May 2018 (joint supervision with Eric Fanchon).",
+      "works": [],
+      "verifiedAt": "2026-11-17T14:00:00.000Z",
+      "notes": "Co-supervision stated on the source page."
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-3352",
+      "role": "mentee",
+      "name": "Mohammad Al Khatib",
+      "affiliation": "",
+      "url": "",
+      "sources": [
+        "https://www-verimag.imag.fr/~tdang/"
+      ],
+      "evidence": "Thao Dang's maintained Verimag homepage lists Mohammad Al Khatib among his PhD students with a thesis title defended in September 2017 (joint supervision with Antoine Girard).",
+      "works": [],
+      "verifiedAt": "2026-11-17T14:00:00.000Z",
+      "notes": "Co-supervision stated on the source page."
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-3352",
+      "role": "mentee",
+      "name": "Romain Testylier",
+      "affiliation": "",
+      "url": "",
+      "sources": [
+        "https://www-verimag.imag.fr/~tdang/"
+      ],
+      "evidence": "Thao Dang's maintained Verimag homepage lists Romain Testylier among his PhD students with a thesis title defended in December 2012.",
+      "works": [],
+      "verifiedAt": "2026-11-17T14:00:00.000Z",
+      "notes": ""
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-3352",
+      "role": "mentee",
+      "name": "Tarik Nahhal",
+      "affiliation": "",
+      "url": "",
+      "sources": [
+        "https://www-verimag.imag.fr/~tdang/"
+      ],
+      "evidence": "Thao Dang's maintained Verimag homepage lists Tarik Nahhal among his PhD students with a thesis title defended in October 2007.",
+      "works": [],
+      "verifiedAt": "2026-11-17T14:00:00.000Z",
+      "notes": ""
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-3352",
+      "role": "mentee",
+      "name": "Tommaso Dreossi",
+      "affiliation": "",
+      "url": "",
+      "sources": [
+        "https://www-verimag.imag.fr/~tdang/"
+      ],
+      "evidence": "Thao Dang's maintained Verimag homepage lists Tommaso Dreossi among his PhD students with a thesis title defended in January 2017 (joint supervision with Carla Piazza).",
+      "works": [],
+      "verifiedAt": "2026-11-17T14:00:00.000Z",
+      "notes": "Co-supervision stated on the source page."
     }
   ]
 }

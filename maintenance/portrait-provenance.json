@@ -20836,6 +20836,480 @@
       ],
       "retrievedAt": "2026-11-14T22:49:49.650Z",
       "note": "candidate failed 120x120 or portrait-aspect validation"
+    },
+    "vp-3318": {
+      "name": "Howard Hang",
+      "outcome": "found",
+      "pageUrl": "https://www.scripps.edu/faculty/hang/",
+      "imageUrl": "https://www.scripps.edu/wp-content/uploads/resized/2026/02/1080x1080_hao_hang-696x696-c-center.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-16T03:15:39.289Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-3319": {
+      "name": "Tam Tran",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-16T03:14:38.706Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3320": {
+      "name": "An Ngoc Dang Do",
+      "outcome": "found",
+      "pageUrl": "https://annualreport.nichd.nih.gov/dangdo.html",
+      "imageUrl": "https://annualreport.nichd.nih.gov/images/dangdo_an.png",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-16T03:15:39.768Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-3321": {
+      "name": "Nhan Tran",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-16T03:14:42.197Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3322": {
+      "name": "Tony Nguyen - Pacific Northwest National Laboratory",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-16T03:14:43.092Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3323": {
+      "name": "Minh Duong Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://research-hub.nlr.gov/en/persons/minh-duong-nguyen/",
+      "imageUrl": "https://research-hub.nlr.gov/files-asset/109389606/duong-nguyenminh.jpg?w=160&f=jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-16T03:15:40.052Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-3324": {
+      "name": "Bang L. H. Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-16T03:14:44.202Z",
+      "note": "rejected on visual review 2026-11-16: homepage image is a wide outdoor conference photo, not a headshot"
+    },
+    "vp-3325": {
+      "name": "Binh Pham",
+      "outcome": "found",
+      "pageUrl": "https://inl.elsevierpure.com/en/persons/binh-pham/",
+      "imageUrl": "https://inl.elsevierpure.com/files-asset/54418117/Binh_Pham.jpg?w=160&f=jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-16T03:14:45.566Z"
+    },
+    "vp-3326": {
+      "name": "Tin Thien Phan",
+      "outcome": "found",
+      "pageUrl": "https://tintphan.wixsite.com/academics",
+      "imageUrl": "https://static.wixstatic.com/media/90b8bd_2434769c1d0346298980ece55b47a01e~mv2.jpg/v1/fill/w_220,h_215,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/website_photo_edited_edited.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "department",
+        "stored_roster_url",
+        "profile_markup"
+      ],
+      "retrievedAt": "2026-11-16T03:15:40.312Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-3327": {
+      "name": "Quan Nguyen - QIMR Berghofer Medical Research Institute",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-16T03:18:01.973Z",
+      "note": "rejected on review 2026-11-16: QIMR profile image is a photoshoot frame with two faces (portrait_faces: multiple)"
+    },
+    "vp-3328": {
+      "name": "Ha Nguyen - The Kids Research Institute Australia",
+      "outcome": "found",
+      "pageUrl": "https://www.thekids.org.au/contact-us/our-people/n/ha-nguyen/",
+      "imageUrl": "https://www.thekids.org.au/globalassets/media/images/pagessections/people-profiles/n/ha_nguyen.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-16T03:18:06.801Z"
+    },
+    "vp-3329": {
+      "name": "Vu Vuong",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-16T03:18:10.192Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3330": {
+      "name": "Thanh Xuan Hoang",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-16T03:22:50.569Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3331": {
+      "name": "Neil Hoai Nguyen Huynh",
+      "outcome": "found",
+      "pageUrl": "https://research.a-star.edu.sg/researcher/neil-hoai-nguyen-huynh/",
+      "imageUrl": "https://research.a-star.edu.sg/wp-content/uploads/2024/09/1.-neil-hoai-nguyen-huynh-e1727710607926.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-16T03:23:03.525Z"
+    },
+    "vp-3332": {
+      "name": "Vinh-Tan Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://research.a-star.edu.sg/researcher/vinh-tan-nguyen/",
+      "imageUrl": "https://research.a-star.edu.sg/wp-content/uploads/2023/07/vinh-tan-nguyen-2-e1690204470522.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-16T03:23:07.551Z"
+    },
+    "vp-3333": {
+      "name": "Tung Hoang",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-16T03:23:10.628Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3334": {
+      "name": "Hoang Duong",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-16T03:23:12.727Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3335": {
+      "name": "Truong Vinh Hoang",
+      "outcome": "found",
+      "pageUrl": "https://www.fz-juelich.de/en/profile/hoang_vi",
+      "imageUrl": "https://www.fz-juelich.de/profile/hoang_vi/@@images/image-600-fcb6cac275ecf8e42f69e5f4bfd07e64.jpeg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-16T03:23:41.135Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-3336": {
+      "name": "Truong Thao Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://www.digiarc.aist.go.jp/en/team/ccart/",
+      "imageUrl": "https://www.digiarc.aist.go.jp/en/team/ccart/img/photo-nguyen.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url",
+        "profile_markup"
+      ],
+      "retrievedAt": "2026-11-16T03:23:42.398Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-3337": {
+      "name": "Hoang-Quoc Nguyen-Son",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-16T03:23:20.657Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3338": {
+      "name": "James Hoang",
+      "outcome": "found",
+      "pageUrl": "https://hvdthong.github.io/",
+      "imageUrl": "https://hvdthong.github.io/assets/images/james.jpg",
+      "sourceType": "personal_homepage",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "institution",
+        "department",
+        "stored_roster_url",
+        "profile_markup"
+      ],
+      "retrievedAt": "2026-11-17T03:21:20.186Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-3339": {
+      "name": "Nguyen-Truong Le",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-17T03:19:58.798Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3340": {
+      "name": "Dang-Bao-An Tran",
+      "outcome": "found",
+      "pageUrl": "https://www.npl.co.uk/our-people/an-tran",
+      "imageUrl": "https://www.npl.co.uk/getattachment/ce2483fa-1b2c-4a21-8979-ea3efe8f6377/An-Tran.jpg?lang=en-GB",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-17T03:20:01.611Z"
+    },
+    "vp-3341": {
+      "name": "Minh Nguyen - Fraunhofer Society",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-17T03:20:04.458Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3342": {
+      "name": "Thanh Binh Nguyen - CNRS",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-17T03:20:05.749Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3343": {
+      "name": "Quang-Duy Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://nqduy35.github.io/",
+      "imageUrl": "https://nqduy35.github.io/images/duy.png",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-17T03:21:20.603Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-3344": {
+      "name": "Minh-Ha Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://research.pasteur.fr/en/member/minh-ha-nguyen/",
+      "imageUrl": "https://research.pasteur.fr/wp-content/uploads/2022/11/research_pasteur-minh-ha-nguyen-imgp2936-970x1024.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-17T03:20:08.661Z"
+    },
+    "vp-3345": {
+      "name": "Long Hoang Bao Nguyen",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-17T03:20:10.806Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3346": {
+      "name": "Ha Pham - Inria",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-17T03:20:12.672Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3347": {
+      "name": "Quynh-Trang Bui",
+      "outcome": "found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-17T03:21:22.451Z",
+      "note": "MEDIUM candidate stored after visual review",
+      "pageUrl": "https://bfp.bordeaux-aquitaine.hub.inrae.fr/personnel/pages-web-personnelles/bui-quynh-trang",
+      "imageUrl": "https://bfp.bordeaux-aquitaine.hub.inrae.fr/var/hub_internet_bordeaux_bfp/storage/images/_aliases/square_picture_personne/personnel/les-pages-personnelles/bui-quynh-trang/46916-1-fre-FR/Bui-Quynh-Trang.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM"
+    },
+    "vp-3348": {
+      "name": "Phong Nguyen - CNRS",
+      "outcome": "found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-17T03:21:23.705Z",
+      "note": "MEDIUM candidate stored after visual review",
+      "pageUrl": "https://institut-curie.org/person/phong-nguyen",
+      "imageUrl": "https://cdn.curie.fr/media/person_image/1074180_0.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM"
+    },
+    "vp-3349": {
+      "name": "Tuan Ngo Dac",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-17T03:20:20.942Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3350": {
+      "name": "Van Thien Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://thienjnguyen.github.io/",
+      "imageUrl": "https://thienjnguyen.github.io/assets/images/Thien_profile.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "department",
+        "rank",
+        "stored_roster_url",
+        "profile_markup"
+      ],
+      "retrievedAt": "2026-11-17T03:21:24.237Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-3351": {
+      "name": "Tinh-Suong Nguyen",
+      "outcome": "found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-17T03:21:25.746Z",
+      "note": "MEDIUM candidate stored after visual review",
+      "pageUrl": "https://bioger.versailles-saclay.hub.inrae.fr/equipes-et-plateaux/eplm-effecteurs-et-pathogenese-chez-leptosphaeria-maculans/composition-equipe-eplm/portraits-eplm/nguyen-tinh-suong",
+      "imageUrl": "https://bioger.versailles-saclay.hub.inrae.fr/var/hub_internet_versailles_grignon_bioger/storage/images/_aliases/square_picture_personne/9/2/5/4/64529-1-fre-FR/f382c87a923b-nguyen_ts.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM"
+    },
+    "vp-3352": {
+      "name": "Thao Dang - CNRS",
+      "outcome": "found",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-17T03:21:27.030Z",
+      "note": "MEDIUM candidate stored after visual review",
+      "pageUrl": "https://www-verimag.imag.fr/~tdang/",
+      "imageUrl": "https://www-verimag.imag.fr/~tdang/ThaoIDs.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM"
+    },
+    "vp-3353": {
+      "name": "Van-Quan Pham",
+      "outcome": "needs_review",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-17T03:20:25.628Z",
+      "note": "audit 2026-11-17: headshot found on the official profile page and checked visually",
+      "pageUrl": "https://www.nokia.com/people/quan-pham-van/",
+      "imageUrl": "https://www.nokia.com/sites/default/files/styles/nokia_blog_author_medium/public/nbl/original_images/quan-pham-van.jpg.webp",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM"
+    },
+    "vp-3354": {
+      "name": "Tuan M. Hoang Trong",
+      "outcome": "needs_review",
+      "pageUrl": "https://research.ibm.com/people/tuan-hoang-trong",
+      "imageUrl": "https://research.ibm.com/_next/image?url=https%3A%2F%2Fresearch-website-prod-ibmers-images.s3.us-east.cloud-object-storage.appdomain.cloud%2F2292&w=3840&q=75",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-17T03:20:25.965Z",
+      "note": "candidate requires visual review before acceptance"
+    },
+    "vp-3355": {
+      "name": "Tung The Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://www.jp.honda-ri.com/en/members/nguyen-tung/",
+      "imageUrl": "https://www.jp.honda-ri.com/assets/uploads/2021/11/tung.nguyen-1.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-17T03:20:27.240Z"
+    },
+    "vp-0833": {
+      "name": "Duc Tung Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://www.hsu-hh.de/massivb/en/team/",
+      "imageUrl": "https://www.hsu-hh.de/massivb/wp-content/uploads/sites/847/2020/09/DSC_5153-Copy-1-e1633415494617.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-17T03:32:04.035Z",
+      "note": "MEDIUM candidate stored after visual review"
     }
   }
 }
