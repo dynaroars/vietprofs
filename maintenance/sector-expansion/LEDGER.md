@@ -103,3 +103,32 @@ Takeaways for the next sweep:
 - Ask producers for an individual profile page and the person's exact title quoted from it: most
   holds were team pages, list pages, or pages with no title.
 - Tell the verifier to reject "incoming" appointments that have not started.
+
+## Non-academic sweep (2026-11-17)
+
+Owner goal: 500 more non-academic people, produced by Codex/agy and audited by Claude, added
+directly (no Issues). Briefs: `BRIEF3.md` (discovery), `LEADS3.md` (lead lists), `FIND3.md`
+(find the page for a named lead); slices in `slices3.tsv`; outputs in `runs/w4`–`runs/w9`.
+
+| Run | Producer | Input | Output | Added |
+| :-- | :-- | :-- | --: | --: |
+| w4 | agy gemini-3.8-flash (7 shards before quota) + Codex gpt-6-luna (22) | 22 slices | 33 | 10 |
+| w5 test | gpt-reserve, gpt-6.1-terra | 2 slices | 0–3 each | 0 |
+| w6 | gpt-6.1-sol FIND3 | 1,121 OpenAlex leads (>=15 works, >=3 since 2024) | 567 pages | 37 |
+| w7 | gpt-6.1-sol BRIEF3 | 22 slices | 40 | 24 |
+| w8 | gpt-6.1-sol FIND3 | 919 OpenAlex leads (>=6 works) | 327 pages | 8 |
+| w9 | gpt-6.1-sol FIND3 rescue | 55 held people | 48 pages | 6 |
+
+Lessons:
+
+- Cheaper Codex models (gpt-6-luna, gpt-reserve, gpt-6.1-terra) quit after 1–5 minutes with
+  almost nothing, whatever the task. gpt-6.1-sol works (~5 min per 25-person batch).
+- agy finds real people but its account quota runs out after ~7 long shards and did not
+  recover the same day. `--dangerously-skip-permissions` is blocked; `--sandbox` works.
+- OpenAlex leads (last known institution type company/government/facility/nonprofit, outside
+  Vietnam, Vietnamese surname + given name via `name-screen.ts`, not on the roster) are the
+  richest pool, but OpenAlex mislabels many university and hospital people, and many authors
+  are students, postdocs, technicians or already listed under a name variant.
+- Most rejections are evidence, not eligibility: team/member-list pages, alumni pages at a
+  former employer, no stated title, and no sourced work city (Amazon, Salesforce, DeepMind,
+  multi-site institutes). Without a looser evidence rule the remaining pool is small.
