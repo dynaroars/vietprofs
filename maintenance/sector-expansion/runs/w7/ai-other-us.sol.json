@@ -1,0 +1,132 @@
+{
+  "slice": "ai-other-us",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Tuan Dung Ngo",
+        "university": "JPMorganChase",
+        "institutionType": "Corporate research lab",
+        "track": "Industry Research",
+        "rank": "Researcher",
+        "department": "AI Research",
+        "city": "New York",
+        "state": "New York",
+        "country": "United States",
+        "researchAreas": [
+          "Machine learning",
+          "Algorithmic game theory",
+          "Differential privacy",
+          "Federated learning",
+          "Uncertainty quantification"
+        ],
+        "phdInstitution": "University of Minnesota",
+        "profileUrl": "https://dtngo.com/",
+        "confirmed": false
+      },
+      "evidence": {
+        "currentRole": "https://dtngo.com/ — \"AI Research Scientist\" at J.P. Morgan Chase AI Research. Personal-site fallback; no individual employer-published profile found. His CV separately records a permanent AI Research Associate appointment beginning January 2025.",
+        "doctorateOrPapers": "https://dtngo.com/ — \"I received a Ph.D. in Computer Science at the University of Minnesota\".",
+        "vietnameseSignal": "https://dtngo.com/Daniel_Ngo_CV_Feb_25.pdf identifies him as Tuan Dung (Daniel) Ngo; Tuan Dung supplies affirmative Vietnamese given-name evidence beyond the surname.",
+        "location": "https://dtngo.com/Daniel_Ngo_CV_Feb_25.pdf — \"AI Researcher, New York City, NY\"; the current employment section also states \"J.P.Morgan AI Research New York, NY\".",
+        "dedup": "Searched public/data.json and already-proposed.txt for Tuan Dung Ngo, Dung Tuan Ngo, Daniel Ngo, and dtngo.com; no matching entry or proposal. Ran find-roster-matches with name variants, personal-site URL, CV URL, and LinkedIn identity URL. The name hit vp-0539 is a different person: University of Melbourne structural engineering professor with a 2001 Melbourne doctorate, versus this Minnesota computer science doctorate."
+      }
+    }
+  ],
+  "possible_move": [
+    {
+      "name": "Cuong Nguyen",
+      "id": "vp-2925",
+      "note": "Roster lists Adobe Research. His live personal page says he is a Senior Research Scientist at Google and dates his previous Adobe appointment October 2017–June 2026: https://cuongnd.com/ . Identity matches the roster's exact personal URL and Portland State University PhD, 2017. Preserve the existing ID."
+    }
+  ],
+  "rejected": [
+    {
+      "name": "Xuan Phi Nguyen",
+      "reason": "Held for missing sourced work city. Salesforce's individual author page verifies Senior Research Scientist, and his personal page verifies the doctorate, but the opened personal page and CV provide only United States for the current appointment. Third-party location listings do not satisfy the brief. https://www.salesforce.com/blog/author/xuan-phi-nguyen/ ; https://nxphi47.github.io/"
+    },
+    {
+      "name": "Quang Pham",
+      "reason": "Salesforce affiliation appeared in third-party leads, but no qualifying current Salesforce individual profile was established. His opened personal page instead describes an I2R A*STAR appointment, leaving the current employer unresolved. https://sites.google.com/view/quangpham93"
+    },
+    {
+      "name": "Tuan Duc Ngo",
+      "reason": "Current PhD student; Adobe Research and Snap Research appointments were internships. His own page explicitly distinguishes these positions from career employment. https://ngoductuanlhp.github.io/"
+    },
+    {
+      "name": "Bac Nguyen",
+      "reason": "Former Sony AI employee. His current personal page identifies him as a Research Scientist at Mirelo in Berlin, outside the assigned employer slice. https://bacnguyencong.github.io/"
+    },
+    {
+      "name": "William Thong",
+      "reason": "Former Sony AI researcher. His current personal page states Machine Learning Engineer at Apple Zurich, outside this slice. https://twuilliam.github.io/"
+    },
+    {
+      "name": "Vien Anh Ngo",
+      "reason": "Former Bosch Center for AI researcher. His personal page dates Bosch employment 2020–2025 and identifies a subsequent VinGroup Robotics leadership appointment, outside this slice. https://vienngo.github.io/"
+    },
+    {
+      "name": "Phi Nguyen",
+      "reason": "Toyota Research Institute lead describes a summer 2026 robotics internship, not a career research appointment. https://www.phinguyen.site/"
+    },
+    {
+      "name": "Cuong Tran",
+      "reason": "Honda Research Institute leads were historical CV and university alumni records. No qualifying current Honda individual profile or current appointment was established. https://cvrr.ucsd.edu/team-members"
+    },
+    {
+      "name": "Victor Tuan Vu Pham",
+      "reason": "Honda Research Institute Europe publication leads did not establish a current permanent career appointment through an individual employer page or personal site. Doctoral-program and paper appearances alone were insufficient. https://www.honda-ri.de/"
+    },
+    {
+      "name": "Duc V. Le",
+      "reason": "Visa publications establish research authorship, but no qualifying current Visa individual profile was found and the current staff directory did not establish his appointment. Publication authorship alone cannot establish current employment. https://usa.visa.com/about-visa/visa-research/publications.html ; https://usa.visa.com/about-visa/visa-research/people.html"
+    },
+    {
+      "name": "Duc Nguyen",
+      "reason": "Bloomberg AI leadership appeared in third-party leads, but no qualifying employer or personal profile, doctorate, and identity-resolved recent publication record were established."
+    },
+    {
+      "name": "Khoa Le",
+      "reason": "Salesforce author biography identifies a product management executive, rather than a qualifying career research appointment. https://www.salesforce.com/blog/author/khoa-le/?bc=OTH"
+    },
+    {
+      "name": "Hien Van Nguyen",
+      "reason": "His current personal page identifies a University of Houston faculty appointment; Uber employment was historical, not a current appointment in this slice. https://www.hvnguyen.com/"
+    },
+    {
+      "name": "Karina Nguyen",
+      "reason": "Her current personal site describes OpenAI and Anthropic research appointments as previous positions; no current appointment at either scoped employer was established. https://karinanguyen.com/"
+    },
+    {
+      "name": "Duc Phong Nguyen",
+      "reason": "OpenAI contributor credits supplied a lead, but no qualifying individual current-employer or personal profile and no doctorate or two identity-resolved qualifying research papers were established."
+    },
+    {
+      "name": "Minh Le",
+      "reason": "Anthropic employment is corroborated by the 2026 Nature paper, but no qualifying individual employer or personal profile and no doctorate or second distinct qualifying paper were established. The 2025 preprint and 2026 Nature publication are the same work; acknowledgments in other papers are not authorship. https://www.nature.com/articles/s41586-026-10319-8.pdf"
+    },
+    {
+      "name": "Minh Duc Chu",
+      "reason": "His personal page identifies a current USC PhD candidacy and an Anthropic AI Safety Fellowship for summer 2026. Student and fixed-term fellowship appointments are excluded. https://www.chud.guru/"
+    },
+    {
+      "name": "Duong H. Le",
+      "reason": "His personal profile identifies an Allen Institute for AI predoctoral researcher appointment. No verified promotion to an eligible career appointment was established; later paper authorship alone does not establish that change. https://lehduong.github.io/"
+    },
+    {
+      "name": "Cecile Nguyen",
+      "reason": "Allen Institute for AI software engineering lead did not establish a research doctorate or two qualifying recent research papers. Directory membership alone does not satisfy the research requirement. https://allenai.org/team"
+    },
+    {
+      "name": "Vu Ha",
+      "reason": "His personal page describes the Allen Institute for AI incubator technical director appointment in the past tense; no current eligible Ai2 appointment was established. https://vha14.com/"
+    },
+    {
+      "name": "Phuc Nguyen",
+      "reason": "His current personal page states that he works at Nous Research in Paris and describes Hugging Face as previous employment. Nous Research is outside the assigned slice. https://phuchnguyen.com/index.html"
+    },
+    {
+      "name": "Xuan-Son Nguyen",
+      "reason": "Hugging Face software engineer with no sourced research doctorate. Only one distinct identity-resolved paper, SmolLM2, was established, below the required two. Papers by the similarly named Cergy/ETIS researcher were not attributed to him. https://ngxson.com/fr/print/ ; https://huggingface.co/ngxson/papers"
+    }
+  ]
+}

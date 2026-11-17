@@ -1,0 +1,197 @@
+{
+  "slice": "nvidia-amazon-apple",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Van Nhat Huy Phan",
+        "university": "Amazon Science",
+        "institutionType": "Corporate research lab",
+        "track": "Industry Research",
+        "rank": "Researcher",
+        "department": "Worldwide Returns, ReCommerce & Sustainability",
+        "city": "Bellevue",
+        "state": "Washington",
+        "country": "United States",
+        "researchAreas": [
+          "Adversarial Machine Learning",
+          "Generative AI Safety",
+          "Model Compression"
+        ],
+        "phdInstitution": "Rutgers University",
+        "phdYear": 2024,
+        "profileUrl": "https://sites.google.com/view/huyvnphan/home",
+        "websiteUrl": "https://sites.google.com/view/huyvnphan/home",
+        "scholarUrl": "https://scholar.google.com/citations?user=oxGbVmYAAAAJ",
+        "confirmed": false
+      },
+      "evidence": {
+        "currentRole": "https://sites.google.com/view/huyvnphan/home — \"Applied Scientist at Amazon\". His experience page documents the continuing position from July 2024 and research on diffusion-model safety, including WACV 2025 publication. No employer-owned personal profile was located; the personal-site exception is used.",
+        "doctorateOrPapers": "https://sites.google.com/view/huyvnphan/home — explicitly reports completing his Rutgers PhD in 2024 under Bo Yuan.",
+        "vietnameseSignal": "https://sites.google.com/view/huyvnphan/home — documents undergraduate enrollment at International University, Vietnam National University HCMC. The linked Scholar profile supplies the fuller name Van Nhat Huy Phan.",
+        "location": "https://sites.google.com/view/huyvnphan/experience — \"Amazon - Worldwide Returns and Recommerce, Bellevue, WA, USA\", dated July 2024 to present.",
+        "dedup": "Literal searches of public/data.json found no candidate name, name-order variant, personal URL, or Scholar ID. Ran npm run find-roster-matches with the full name, homepage, experience URL, and Scholar URL, plus a separate Huy Phan search. Name-only matches were resolved as different people: vp-1193 has a Sydney education doctorate, vp-1203 a Kyushu Institute of Technology doctorate, vp-1269 a Paris-Sud photonics doctorate, and vp-3047 a Lubeck doctorate and Meta biosignal research career. Candidate has Rutgers 2024 credentials and a distinct Scholar identity. Neither full nor shortened candidate name occurs in already-proposed.txt."
+      }
+    },
+    {
+      "entry": {
+        "name": "Huy Anh Nguyen",
+        "university": "Amazon Science",
+        "institutionType": "Corporate research lab",
+        "track": "Industry Research",
+        "rank": "Researcher",
+        "city": "Seattle",
+        "state": "Washington",
+        "country": "United States",
+        "researchAreas": [
+          "Educational Technology",
+          "Machine Learning",
+          "Learning Analytics"
+        ],
+        "phdInstitution": "Carnegie Mellon University",
+        "phdYear": 2024,
+        "profileUrl": "https://www.cs.cmu.edu/~hn1/",
+        "websiteUrl": "https://www.cs.cmu.edu/~hn1/",
+        "scholarUrl": "https://scholar.google.com/citations?user=Vuu49TkAAAAJ",
+        "confirmed": false
+      },
+      "evidence": {
+        "currentRole": "https://www.cs.cmu.edu/~hn1/ — \"Applied Scientist, Amazon\". His personally maintained homepage explicitly announces starting the full-time position in May 2024. https://www.cs.cmu.edu/~hcdl/ independently identifies him as an Amazon AI researcher. No employer-owned personal profile was located; the personal-site exception is used.",
+        "doctorateOrPapers": "https://www.cs.cmu.edu/~hn1/resume/huy_cv.pdf — identifies the Carnegie Mellon PhD in Human-Computer Interaction. https://www.cs.cmu.edu/~hcdl/ explicitly records graduation in 2024.",
+        "vietnameseSignal": "https://www.cs.cmu.edu/~hn1/ — the full published name includes the Vietnamese given-name combination Huy Anh, beyond the surname Nguyen.",
+        "location": "https://www.cs.cmu.edu/~hn1/ — the May 2024 announcement of his full-time Amazon appointment states: \"If you happen to be in Seattle, let's connect!\"",
+        "dedup": "Literal searches of public/data.json found no full name, Nguyen Huy Anh variant, homepage, or Scholar ID. Ran npm run find-roster-matches with the name, homepage, both linked CV URLs, and Scholar URL. Its 13 name-only matches were compared against roster education and research fields; none has this Carnegie Mellon 2024 HCI doctorate or identity URLs. In particular, vp-2637 is a Columbia-trained accounting researcher, despite also being at Carnegie Mellon. The exact full name is absent from already-proposed.txt."
+      }
+    }
+  ],
+  "possible_move": [],
+  "rejected": [
+    {
+      "name": "Nhan Nguyen",
+      "reason": "https://www.amazon.science/author/nhan-nguyen confirms Applied Scientist and multiple recent AWS publications, but no qualifying source established his work city. Roster name collisions also remain insufficiently resolved for inclusion."
+    },
+    {
+      "name": "Khoa Nguyen",
+      "reason": "https://www.amazon.science/author/khoa-nguyen confirms Applied Scientist. Michigan sources document a doctorate and an initial Amazon NYC placement, but a current work city was not established from the brief's permitted location sources; identity linkage to the otherwise sparse employer profile remains incomplete."
+    },
+    {
+      "name": "Hoang Tran",
+      "reason": "https://www.amazon.science/author/hoang-tran confirms Applied Scientist. A Boston University dissertation lead supports a 2025 doctorate, but the employer profile supplies neither education nor city; identity linkage and current work city were not sufficiently established."
+    },
+    {
+      "name": "Gordon Trang",
+      "reason": "https://www.amazon.science/author/gordon-trang confirms Senior Applied Scientist with AWS Life Sciences and two 2026 publications. No affirmative Vietnamese signal beyond the shared surname was established."
+    },
+    {
+      "name": "Jacob Luong",
+      "reason": "https://www.amazon.science/author/jacob-luong confirms Applied Scientist, but no doctorate, qualifying recent publication record, sourced city, or affirmative Vietnamese signal beyond the surname was established."
+    },
+    {
+      "name": "An La",
+      "reason": "The employer author page labels him Applied Scientist, but https://anla-cs.github.io/events.html explicitly identifies the Amazon work as an internship, including an October 2026 update. His CV lists an ongoing UMass Amherst doctorate with anticipated graduation in 2027."
+    },
+    {
+      "name": "Man Minh Ho",
+      "reason": "The Amazon author page survives, but https://minhmanho.github.io/ identifies his current work with SpreeAI and the University of Utah, including a January 2026 SpreeAI promotion. Outside this employer slice."
+    },
+    {
+      "name": "Hien Pham",
+      "reason": "https://www.amazon.science/author/hien-pham confirms Applied Scientist. Only FAIRLABEL was identity-resolved; its preprint is dated November 1, 2023, outside the three-year window. No doctorate was verified."
+    },
+    {
+      "name": "Bach Bui",
+      "reason": "https://www.amazon.science/author/bach-bui lists research publications through 2022 but does not state a current title. A current career appointment and sourced work city were not established."
+    },
+    {
+      "name": "Thai T. Pham",
+      "reason": "https://www.amazon.science/author/thai-t-pham lists a 2019 publication without a current title. Current appointment, doctorate or qualifying recent papers, and work city were not established."
+    },
+    {
+      "name": "Hieu Duy Nguyen",
+      "reason": "https://www.amazon.science/author/hieu-duy-nguyen contains publications but no current title. A current career appointment and sourced work city were not established."
+    },
+    {
+      "name": "Quynh Ngoc Thi Do",
+      "reason": "https://www.amazon.science/author/quynh-ngoc-thi-do contains historical publications without a current title. Current appointment and work city were not established."
+    },
+    {
+      "name": "Long Vuong",
+      "reason": "The Amazon publication author page does not establish a career role. https://vu-nguyen.org/ identifies the relevant 2025 Amazon appointment as Applied Scientist Intern."
+    },
+    {
+      "name": "Hieu Man",
+      "reason": "https://hieum98.github.io/ identifies him as a University of Oregon PhD student and documents the Amazon appointment as a June–September 2025 research internship."
+    },
+    {
+      "name": "Vy Nguyen",
+      "reason": "https://www.amazon.science/author/vy-nguyen confirms Applied Scientist but lists one identity-resolved paper, presented at two venues. No doctorate or second distinct qualifying paper, and no sourced city, were established."
+    },
+    {
+      "name": "Thien Nguyen",
+      "reason": "https://www.amazon.science/author/thien-nguyen identifies an Amazon Scholar appointment, without evidence of a qualifying primary career appointment at Amazon."
+    },
+    {
+      "name": "Johnny Nguyen",
+      "reason": "Indexed directory results supplied an Applied Scientist lead, but an individual employer profile, identity-resolved doctorate or publication record, and work city were not verified. No profile URL was constructed."
+    },
+    {
+      "name": "Huyen Do",
+      "reason": "Amazon-affiliated publication leads were found, but no current individual employer page or personal site establishing the current Amazon role and city was verified."
+    },
+    {
+      "name": "Tuan Dinh",
+      "reason": "Amazon Alexa publication leads include multiple identities. No current individual employer page or personal site resolved the identity and established a current qualifying Amazon appointment."
+    },
+    {
+      "name": "Quoc-Tuan Truong",
+      "reason": "https://qtuantruong.github.io/ identifies Pinterest as the current employer and Amazon as previous employment. Outside this slice."
+    },
+    {
+      "name": "Viet Ha-Thuc",
+      "reason": "Third-party leads describe a principal-scientist role at Amazon, but no individual current-employer page or personal site establishing that role was verified."
+    },
+    {
+      "name": "Thang To",
+      "reason": "https://research.nvidia.com/labs/srl/authors/thang-to/ is a publication author page without a current title. A current career research appointment, doctorate or qualifying recent papers, and permitted-source work city were not established."
+    },
+    {
+      "name": "Bao Thach",
+      "reason": "https://research.nvidia.com/labs/srl/authors/bao-thach/ supplies publications without a current NVIDIA title. https://robot-learning.cs.utah.edu/people lists Google as his post-PhD placement, so the NVIDIA author page does not establish current NVIDIA employment."
+    },
+    {
+      "name": "Justin Tran",
+      "reason": "NVIDIA robotics publication bylines surfaced the name, but no individual page established a current career research appointment, doctorate or qualifying publication record, and work city."
+    },
+    {
+      "name": "Duc Hoang",
+      "reason": "Apple publications also use Scott Hoang and Duc N.M Hoang. https://scotthoang.github.io/ identifies the Apple position as Research intern and the doctorate as ongoing; no verified career appointment superseded that evidence."
+    },
+    {
+      "name": "Tien Dung Tran",
+      "reason": "Apple publication pages and paper affiliations establish research output and Cupertino, but no individual employer page or personal site stating a current career title was located."
+    },
+    {
+      "name": "Hoang Long Nguyen",
+      "reason": "Apple publication bylines were found, but no individual employer page or personal site established a current career title. The same-name Louisville roster entry cannot be treated as a move without identity evidence."
+    },
+    {
+      "name": "Henry Tran",
+      "reason": "Apple's 2026 SCLATE publication supplies a byline, but no individual current-role page, doctorate or second qualifying paper, affirmative Vietnamese signal beyond the surname, or sourced work city was established."
+    },
+    {
+      "name": "Han Tran",
+      "reason": "Apple's ChipChat publication supplies a byline, but no individual current-role page, doctorate or qualifying recent publication record, affirmative Vietnamese signal, and sourced work city were established."
+    },
+    {
+      "name": "Leo Le",
+      "reason": "Apple's multilingual music-search publication supplies one byline. No current individual profile, doctorate or second qualifying paper, affirmative Vietnamese signal beyond the shared surname, or sourced city was established."
+    },
+    {
+      "name": "Lucas Vinh Tran",
+      "reason": "https://www.lucasvinhtran.com/home identifies JPMorganChase as the current employer and Apple as previous employment. Outside this slice."
+    },
+    {
+      "name": "Anh Nguyen",
+      "reason": "Apple agent-research bylines were found, but multiple namesakes prevented identity resolution. No verified individual employer page or personal site established the byline author's current Apple career role and city."
+    }
+  ]
+}

@@ -1,0 +1,165 @@
+{
+  "slice": "france-public",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Minh Tuan Nguyen",
+        "university": "IFP Energies nouvelles",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Process Experimentation",
+        "city": "Solaize",
+        "country": "France",
+        "researchAreas": [
+          "Heterogeneous Catalysis",
+          "Chemical Reaction Kinetics",
+          "Hydroprocessing",
+          "Biofuels",
+          "Chemical Recycling"
+        ],
+        "phdYear": 2016,
+        "profileUrl": "https://www.ifpenergiesnouvelles.fr/page/minh-tuan-nguyen"
+      },
+      "evidence": {
+        "currentRole": "https://www.ifpenergiesnouvelles.fr/page/minh-tuan-nguyen — \"ingénieur de recherche\"; the individual employer profile states that he joined Process Experimentation in 2017 and describes his continuing catalytic-materials and process research.",
+        "doctorateOrPapers": "https://www.ifpenergiesnouvelles.com/page/minh-tuan-nguyen — confirms completion of a research PhD in October 2016, concerning catalysis, kinetics and chemical engineering. The awarding institution is not explicitly identified.",
+        "vietnameseSignal": "https://www.ifpenergiesnouvelles.com/page/minh-tuan-nguyen — Vietnamese given names Minh Tuan and an engineering degree from Da-Nang University of Technology, Vietnam, completed in 2012.",
+        "location": "https://backoffice.biblio.ugent.be/download/01KHB9KAWMZ8Q8TTR9WDXQ6S0T/01KHB9MB4V60RC8WWVHFJPQ2RF — the 2025 paper Performance comparison of tire pyrolysis oils in hydrotreating toward high-quality fuel identifies him with affiliation \"IFP Energies nouvelles, Rond-point de l’échangeur de Solaize, BP 3, Solaize, 69360, France\".",
+        "dedup": "Checked public/data.json and already-proposed.txt for Minh Tuan Nguyen, Tuan Minh Nguyen, Nguyen Minh Tuan, hyphenation-normalized names and the employer profile URL. Ran npm run find-roster-matches with his name, profile URL and employer-linked ORCID 0000-0003-1284-9354. No identity-URL match or already-proposed match. The close reversed-name hit vp-1135, Tuan Minh Nguyen at LLNL, has a UC Irvine doctorate and combustion/materials research; this candidate has a 2016 catalysis doctorate and an IFPEN career since 2017. Other returned partial-name matches have different fields and identities."
+      }
+    },
+    {
+      "entry": {
+        "name": "Quang Huy Tran",
+        "university": "IFP Energies nouvelles",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Direction Sciences et Technologies du Numérique — Département Mathématiques Appliquées",
+        "city": "Rueil-Malmaison",
+        "country": "France",
+        "researchAreas": [
+          "Numerical Analysis",
+          "Partial Differential Equations",
+          "Reactive Transport",
+          "Scientific Computing",
+          "Numerical Optimization"
+        ],
+        "phdInstitution": "École Nationale Supérieure des Mines de Paris",
+        "phdYear": 1994,
+        "profileUrl": "https://www.ifpenergiesnouvelles.fr/page/quang-huy-tran"
+      },
+      "evidence": {
+        "currentRole": "https://www.ifpenergiesnouvelles.fr/page/quang-huy-tran — \"ingénieur de recherche spécialisé en Calcul Scientifique\"; the individual employer profile describes numerical-methods research, doctoral supervision and responsibility for doctoral training.",
+        "doctorateOrPapers": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=93282 — the Mathematics Genealogy record linked directly from his employer profile identifies a PhD from École Nationale Supérieure des Mines de Paris in 1994, supervised by Alain Bamberger. The employer-linked ORCID https://orcid.org/0000-0001-7771-3154 independently indexes the same doctorate.",
+        "vietnameseSignal": "https://www.ifpenergiesnouvelles.fr/page/quang-huy-tran — the employer identifies him by the Vietnamese given-name combination Quang Huy, beyond the surname Tran.",
+        "location": "https://www.ifpenergiesnouvelles.fr/page/quang-huy-tran — his personal departmental postal address explicitly names \"92852 Rueil-Malmaison Cedex\".",
+        "dedup": "Checked public/data.json and already-proposed.txt for Quang Huy Tran, Tran Quang Huy, normalized hyphenation and the employer profile URL. Ran npm run find-roster-matches with his name, profile URL and employer-linked ORCID 0000-0001-7771-3154. No exact-name, identity-URL or already-proposed match. Partial-name hits vp-0131, vp-2276 and vp-3087 have different doctorates and fields: Georgia Tech aerospace, Boston College psychology and Ottawa chemistry respectively. Retired Huy Tran records likewise have different identities or unresolved placeholder records; none matches this identified 1994 Mines Paris doctorate and IFPEN career."
+      }
+    }
+  ],
+  "possible_move": [],
+  "rejected": [
+    {
+      "name": "Ngoc Minh Nguyen",
+      "reason": "Already present in maintenance/sector-expansion/already-proposed.txt; excluded from this batch. Opened the current individual profile: https://institut-curie.org/person/ngoc-minh-nguyen."
+    },
+    {
+      "name": "Phong Thanh Tran",
+      "reason": "Already rostered and already proposed; excluded from this batch."
+    },
+    {
+      "name": "Thi Lan Anh Nguyen",
+      "reason": "Individual employer profile explicitly lists PhD Student: https://institut-curie.org/person/thi-lan-anh-nguyen."
+    },
+    {
+      "name": "Clara Phan",
+      "reason": "Individual employer profile explicitly lists PhD Student and a 2023–2026 doctoral grant: https://institut-curie.org/person/clara-phan."
+    },
+    {
+      "name": "Kim Cao",
+      "reason": "Individual Curie profile identifies a hospital practitioner in radiation oncology; a qualifying career research appointment and research doctorate were not established: https://institut-curie.org/person/kim-cao."
+    },
+    {
+      "name": "Minh Tuan Dau",
+      "reason": "Individual CRHEA annuaire profile identifies Maître de conférences, rather than employment by the non-university bodies in this slice: https://www.crhea.cnrs.fr/pages-perso/page-mtd.asp."
+    },
+    {
+      "name": "Thi Thu Thuy Nguyen",
+      "reason": "CEA SPHYNX lists an associate professorship at ALDV, and her teaching-employer profile confirms an Enseignant-Chercheur appointment. A current CEA employment appointment was not established: https://iramis.cea.fr/en/spec/sphynx/team-sphynx/ and https://www.esilv.fr/en/team/thi-thu-thuy-nguyen/."
+    },
+    {
+      "name": "Thanh-Julie Nguyen",
+      "reason": "Individual INRAE page identifies a doctoral appointment, not a permanent research role: https://maiage.inrae.fr/node/2858."
+    },
+    {
+      "name": "Minh-Lien Nguyen",
+      "reason": "INRAE describes a 2023–2024 postdoctoral project; no qualifying current permanent individual staff profile was verified: https://pepr-agroeconum.custom.hub.inrae.fr/les-projets-finances/socio-ecosysteme/theses-postdoc/optimisation-de-la-selection-varietale-multi-criteres-et-estimation-en-presence-d-alea."
+    },
+    {
+      "name": "Ngoc Bao Nguyen",
+      "reason": "INRAE RECOVER's RHAX personnel listing labels the appointment CDD; no permanent appointment was established: https://recover.paca.hub.inrae.fr/qui-sommes-nous/membres-du-laboratoire/equipe-rhax."
+    },
+    {
+      "name": "Sabine Nguyen Ba",
+      "reason": "Permanent individual INRAE profile lists Ingénieur d'Etude. A research doctorate or two recent identity-resolved research papers was not established: https://ecodeveloppement.paca.hub.inrae.fr/nous-connaitre/trombinoscope/permanents/nguyen-ba-sabine."
+    },
+    {
+      "name": "Viet Tran-Khac",
+      "reason": "CARRTEL directory identifies an INRAE research engineer, but no qualifying individual employer profile was located; the team directory cannot serve as profileUrl: https://fr-carrtel.lyon-grenoble.hub.inrae.fr/rubriques-verticales/annuaire-people."
+    },
+    {
+      "name": "Tai Olivier Pham",
+      "reason": "CESP identifies a university MCU-PH appointment at Université Paris-Saclay. This is outside the non-university-employer slice: https://cesp.inserm.fr/fr/agent/pham."
+    },
+    {
+      "name": "Chi-Hong Duong",
+      "reason": "CESP lists a researcher, but permanence and current Inserm employment could not be established; recent evidence also identifies a scientific-project role at Haute Autorité de Santé. Held rather than treating the CESP listing as proof of current permanent employment."
+    },
+    {
+      "name": "Phuoc Quy Long Nguyen",
+      "reason": "CESP directory identifies Doctorant.e: https://cesp.inserm.fr/fr/annuaire/N."
+    },
+    {
+      "name": "Thi Anh Dao Nguyen",
+      "reason": "IPHC directory lists administration staff; a qualifying research role was not established: https://iphc.cnrs.fr/annuaire/."
+    },
+    {
+      "name": "Thanh Hung Pham",
+      "reason": "IPHC directory identifies technical staff in electronics, but an individual employer page quoting a qualifying current research title was not obtained. Not proposed from the group directory or publication leads alone: https://iphc.cnrs.fr/en/directory/."
+    },
+    {
+      "name": "Thierry Tran",
+      "reason": "A CIRAD/CIAT scientist profile and doctorate were found, but an affirmative Vietnamese signal beyond the shared surname was not established: https://alliancebioversityciat.org/who-we-are/thierry-tran."
+    },
+    {
+      "name": "Thang Nguyen-Quoc",
+      "reason": "Individual IRD DIAL page identifies Doctorant, rather than a current permanent researcher: https://dial.ird.fr/membres/doctorants-ater-post-doc/nguyen-quoc-thang/."
+    },
+    {
+      "name": "Pascal Nguyen",
+      "reason": "Individual IRD author page identifies a journalist, not a career researcher: https://lemag.ird.fr/fr/pascal-nguyen."
+    },
+    {
+      "name": "Huyen Thanh Tran",
+      "reason": "IRD evidence describes doctoral research associated with Vietnam; no qualifying permanent appointment outside Vietnam was verified: https://lemag.ird.fr/index.php/fr/huyen-thanh-tran-surveiller-et-anticiper-les-effets-de-la-circulation-cotiere."
+    },
+    {
+      "name": "Gia-Tuong Hoang",
+      "reason": "CEA IRFM directory supplies a name and organizational unit, but no individual employer profile establishing the exact current career title was verified: https://irfm.cea.fr/annuaire/."
+    },
+    {
+      "name": "Clement Nguyen Thanh Dao",
+      "reason": "Found in the CEA IRFM annuaire, but a qualifying individual profile with current title, doctorate and career appointment was not verified."
+    },
+    {
+      "name": "Ba-Huy Pham",
+      "reason": "ONERA thesis-supervision material supplies a research lead, but no individual current employer annuaire profile was located. PDF supervision material cannot satisfy profileUrl."
+    },
+    {
+      "name": "Minh Bao Le",
+      "reason": "IRSN technical material supplies a lead, but no individual current employer annuaire profile establishing an eligible current appointment was verified."
+    }
+  ]
+}

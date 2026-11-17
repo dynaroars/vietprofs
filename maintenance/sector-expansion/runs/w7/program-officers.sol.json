@@ -1,0 +1,84 @@
+{
+  "slice": "program-officers",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Tram Kim Lam",
+        "university": "National Cancer Institute",
+        "institutionType": "Public research institute",
+        "track": "Government & Defense",
+        "rank": "Administrator",
+        "department": "Environmental Epidemiology Branch, Epidemiology and Genomics Research Program, Division of Cancer Control and Population Sciences",
+        "city": "Rockville",
+        "state": "Maryland",
+        "country": "United States",
+        "researchAreas": [
+          "Cancer Epidemiology",
+          "Environmental Exposures",
+          "Infectious Agents and Cancer",
+          "Lifestyle Factors and Cancer Risk"
+        ],
+        "phdInstitution": "Johns Hopkins University",
+        "profileUrl": "https://epi.grants.cancer.gov/staff/lam.html"
+      },
+      "evidence": {
+        "currentRole": "[Individual NCI profile](https://epi.grants.cancer.gov/staff/lam.html), opened this run — \"Branch Chief\"; Environmental Epidemiology Branch. The biography describes leadership of program directors and oversight of an extramural research-grant portfolio.",
+        "doctorateOrPapers": "[NCI profile](https://epi.grants.cancer.gov/staff/lam.html) — Ph.D. in Epidemiology, Johns Hopkins University, Bloomberg School of Public Health.",
+        "vietnameseSignal": "Vietnamese given-name token Tram appears explicitly in the full name Tram Kim Lam on the [employer profile](https://epi.grants.cancer.gov/staff/lam.html); this signal is additional to the ambiguous surname Lam.",
+        "location": "[EGRP visitor information](https://epi.grants.cancer.gov/about/) — \"Location\", \"4th Floor, East Tower\", \"9609 Medical Center Drive\", \"Rockville, MD 20850\". This is her program's physical worksite, distinguished on the page from its Bethesda postal address.",
+        "dedup": "Checked public/data.json for Tram Kim Lam, Kim Tram Lam, Lam Kim Tram, and the profile URL; no matches. Ran npm run find-roster-matches for Tram Kim Lam and Lam Kim Tram with the profile URL; both returned \"no roster or retired-id matches\". No exact name-order matches in maintenance/sector-expansion/already-proposed.txt. Confirmed existing employer spelling National Cancer Institute."
+      }
+    }
+  ],
+  "possible_move": [],
+  "rejected": [
+    {
+      "name": "Han Nguyen",
+      "reason": "Already rostered as vp-2975 at the same employer, with matching doctorate and scientific portfolio. The accessible [individual NIGMS biography](https://www.nigms.nih.gov/about/staff/87916) confirms the appointment; no new ID or employer move."
+    },
+    {
+      "name": "Emerald Nguyen",
+      "reason": "Already rostered as vp-2976 at the National Institute on Aging. [NIA evidence](https://www.nia.nih.gov/about/naca/january-2022-directors-status-report) matches the program-officer appointment and education."
+    },
+    {
+      "name": "Tristan N. Nguyen",
+      "reason": "Already rostered as vp-2954 at the Air Force Office of Scientific Research. The [stored employer listing](https://www.afrl.af.mil/About-Us/Fact-Sheets/Fact-Sheet-Display/Article/2282109/afosr-information-and-networks/) returned 403 during this run; no new candidate."
+    },
+    {
+      "name": "Hoang Le",
+      "reason": "The [NIDA director's report](https://nida.nih.gov/sites/default/files/may2023directorsreport.pdf) identifies a doctorate-holding program officer, but no acceptable individual current-employer profile was located. The NIDA organization page presented a bot check. Historical reports and funding announcements do not satisfy the required profileUrl."
+    },
+    {
+      "name": "Que Dang",
+      "reason": "The [NIH workshop biographies](https://www.oar.nih.gov/trans-nih-hiv-research-program/hiv-early-career-resources/nih-office-aids-research-workshop-early-career-investigators-hivaids/participant-bios) identify a NIAID program officer with a Ph.D., but this is a multiperson event page. No acceptable individual current-employer profile was located."
+    },
+    {
+      "name": "Jimmy T. Le",
+      "reason": "The [NEI organizational directory](https://www.nei.nih.gov/contact-us/organizational-phone-list) lists a program director, and an employer workshop PDF documents an Sc.D. However, no acceptable individual employer profile or affirmative Vietnamese signal beyond the surname was established."
+    },
+    {
+      "name": "Lynn Uyen Tran",
+      "reason": "NSF program-director leads and doctorate evidence were found, but no acceptable individual current-employer profile was successfully opened. The [NSF staff directory](https://www.nsf.gov/staff) presented a bot check; funding contacts and former-employer biographies cannot replace the required profile."
+    },
+    {
+      "name": "Khoa Nguyen",
+      "reason": "The opened [individual NIDDK profile](https://www.niddk.nih.gov/about-niddk/staff-directory/biography/nguyen-khoa) states \"Health Program Specialist\" and PharmD. A research doctorate or two qualifying recent papers at the current employer was not established."
+    },
+    {
+      "name": "Daniel Tam",
+      "reason": "The [ONR program-officer directory](https://www.onr.navy.mil/our-research/our-program-officers?order=field_name) lists \"Mr. Daniel Tam\". No individual employer profile, qualifying doctorate/publication evidence, or affirmative Vietnamese signal was established; unrelated namesakes were not used."
+    },
+    {
+      "name": "Phay Ho",
+      "reason": "Appears in an older [DOE BES organization-chart presentation](https://science.osti.gov/-/media/bes/besac/pdf/meetings/2024/April/3-BESACBESApril04092024-for-Postingv2.pdf), but no individual current-employer profile establishing a current eligible program-management appointment was located."
+    },
+    {
+      "name": "Van Nguyen",
+      "reason": "Appears in older [DOE BES organization materials](https://sc-drcds.osti.gov/-/media/bes/besac/pdf/meetings/2023/3-BESACBESDecember-12122023.pdf). Current appointment, doctorate, and an acceptable individual employer profile were not established."
+    },
+    {
+      "name": "Norah Nguyen",
+      "reason": "The [NCI Healthcare Delivery Research Program staff directory](https://healthcaredelivery.cancer.gov/about/staff/) identifies a \"Summer Fellow\", which fails the career-role requirement."
+    }
+  ]
+}

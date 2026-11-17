@@ -1,0 +1,336 @@
+{
+  "slice": "germany-dach-public",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Chuyen Pham",
+        "university": "Forschungszentrum Jülich",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Helmholtz Institute Erlangen-Nürnberg for Renewable Energy (IET-2), Catalyst Synthesis",
+        "city": "Nuremberg",
+        "country": "Germany",
+        "researchAreas": [
+          "Electrocatalysis",
+          "Nanomaterials",
+          "Fuel cells",
+          "Water electrolysis"
+        ],
+        "phdInstitution": "University of Freiburg",
+        "phdYear": 2015,
+        "profileUrl": "https://www.fz-juelich.de/profile/pham_c",
+        "scholarUrl": "https://scholar.google.com/citations?user=0Sl3rJEAAAAJ"
+      },
+      "evidence": {
+        "currentRole": "https://www.fz-juelich.de/profile/pham_c — \"Gruppenleiter\"; career history records leadership of catalyst synthesis since May 2021, separately from earlier postdoctoral positions.",
+        "doctorateOrPapers": "https://www.fz-juelich.de/profile/pham_c — records Dr. rer. nat., University of Freiburg, 2012–2015.",
+        "vietnameseSignal": "https://www.fz-juelich.de/profile/pham_c — bachelor's and master's education in chemical engineering at Hanoi University of Technology, Vietnam.",
+        "location": "https://www.fz-juelich.de/profile/pham_c — \"Building HIERN-Auf-AEG / Room 0224\". https://www.hi-ern.de/de/kontakt/anfahrt/standort-nuernberg-auf-aeg identifies this site as \"90429 Nürnberg\". Used the current office site rather than the generic Jülich address or Erlangen in the career narrative.",
+        "dedup": "Searched public/data.json and already-proposed.txt for name, name variants, profile URL and Scholar ID; ran find-roster-matches for Chuyen Pham and Chuyen Van Pham with identity URLs. No identity match. Variant-name hit vp-0865 is a clinical psychologist with a Catholic University of America doctorate in 2002, distinct from this Freiburg-trained electrochemist."
+      }
+    },
+    {
+      "entry": {
+        "name": "Viet Dung Nguyen",
+        "university": "GFZ Helmholtz Centre for Geosciences",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Section 4.4 Hydrology",
+        "city": "Potsdam",
+        "country": "Germany",
+        "researchAreas": [
+          "Hydrological modeling",
+          "Hydraulic modeling",
+          "Flood risk analysis",
+          "Stochastic weather generators"
+        ],
+        "phdInstitution": "University of Stuttgart",
+        "phdYear": 2011,
+        "profileUrl": "https://www.gfz.de/staff/viet.dung.nguyen"
+      },
+      "evidence": {
+        "currentRole": "https://www.gfz.de/staff/viet.dung.nguyen — \"Research Scientist\"; career history records an ongoing GFZ research-scientist appointment since 2012.",
+        "doctorateOrPapers": "https://www.gfz.de/staff/viet.dung.nguyen — records doctoral study during 2007–2011 at GFZ and the University of Stuttgart, resulting in Dr. Ing.; dissertation concerns automatic calibration of hydrodynamic models.",
+        "vietnameseSignal": "https://www.gfz.de/staff/viet.dung.nguyen — bachelor's and master's degrees at Vietnam National University Ho Chi Minh City and earlier employment at the Southern Institute of Water Resources Research.",
+        "location": "https://www.gfz.de/staff/viet.dung.nguyen — \"Telegrafenberg\" and \"14473 Potsdam\", office C4/2.32.",
+        "dedup": "Checked public/data.json, retired IDs and already-proposed.txt; ran find-roster-matches with name, employer profile and ORCID 0000-0002-2649-2520. vp-2613 is a different Viet Dung Nguyen: the live https://www.lspm.cnrs.fr/en/pages-perso/viet-dung-nguyen-translated/ identifies an assistant professor in LSPM/3PE, matching the roster's plasma/process-engineering identity rather than this Stuttgart-trained hydrologist. Retired vp-1513 is an unsupported Khalifa University placeholder with no evidence connecting it to this person. No matching profile URL or ORCID."
+      }
+    },
+    {
+      "entry": {
+        "name": "Hoang Thai Duong Vu",
+        "university": "Karlsruhe Institute of Technology",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Institute for Water and Environment, Hydraulic Engineering and Water Resources Management, Section Numerical Hydraulics",
+        "city": "Karlsruhe",
+        "country": "Germany",
+        "researchAreas": [
+          "Numerical hydraulics",
+          "Flood management",
+          "Coastal engineering",
+          "GIS and remote sensing"
+        ],
+        "phdInstitution": "Karlsruhe Institute of Technology",
+        "phdYear": 2018,
+        "profileUrl": "https://www.iwu.kit.edu/wb/staff_vu_d.php"
+      },
+      "evidence": {
+        "currentRole": "https://www.iwu.kit.edu/wb/staff_vu_d.php — \"Research Associate\"; career history records this research appointment since 2016, continuing after the doctorate, with current projects and 2026 publications.",
+        "doctorateOrPapers": "https://www.bgu.kit.edu/english/dissertationen_ws2017_18.php — lists the doctorate examination on 28 March 2018 for Land Use Based Flood Hazards Analysis for the Mekong Delta. The current personal staff page also identifies Dr.-Ing. and lists the KIT doctoral period.",
+        "vietnameseSignal": "https://www.iwu.kit.edu/wb/staff_vu_d.php — bachelor's education at Water Resources University, Vietnam, and joint master's education involving that institution; Vietnamese given names Hoang Thai Duong.",
+        "location": "https://www.iwu.kit.edu/wb/staff_vu_d.php — career section specifies \"KIT, Karlsruhe, Germany\" and current office CS 10.88/102. A 2025 current-employer paper also supplies the Karlsruhe affiliation: https://publikationen.bibliothek.kit.edu/1000180356/158235653.",
+        "dedup": "Checked public/data.json, already-proposed.txt and profile URL; ran find-roster-matches with name and both KIT identity URLs. Name-only hits are distinct: vp-1666 is an atomic-clock physicist with Georgia Tech PhD 2013; vp-2127 is a mathematics professor studying PDEs; vp-3334 is a metallurgist with La Trobe PhD 1997. This candidate's identity is hydraulic/coastal engineering, KIT doctorate 2018."
+      }
+    },
+    {
+      "entry": {
+        "name": "Pham Huy Nguyen",
+        "university": "Empa",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Laboratory of Sustainability Robotics",
+        "city": "Dübendorf",
+        "country": "Switzerland",
+        "researchAreas": [
+          "Soft robotics",
+          "Bio-inspired robotics",
+          "Aerial-aquatic robots",
+          "Environmental sustainability"
+        ],
+        "phdInstitution": "Arizona State University",
+        "phdYear": 2020,
+        "profileUrl": "https://mechphnguyen.com/about/",
+        "websiteUrl": "https://mechphnguyen.com/",
+        "scholarUrl": "https://scholar.google.com/citations?user=qW9Q1f8AAAAJ",
+        "confirmed": false
+      },
+      "evidence": {
+        "currentRole": "https://mechphnguyen.com/about/ — \"Research Scientist (Senior Researcher)\", January 2025–present, Empa & EPFL. The career record explicitly separates this appointment from the Empa postdoctoral position ending December 2024. No individual Empa profile was located; personal-site fallback is marked confirmed:false. The linked joint-employer profile https://people.epfl.ch/huy.pham?lang=en independently identifies a scientist in the same laboratory and links back to this personal site.",
+        "doctorateOrPapers": "https://mechphnguyen.com/about/ — Ph.D. in Systems Engineering, Arizona State University, 2020; dissertation on soft wearable robotic limbs.",
+        "vietnameseSignal": "Vietnamese given name Huy in the personal biography and joint-employer profile https://people.epfl.ch/huy.pham?lang=en; the latter supplies the name variant Huy Nguyên Pham and links the identical personal website.",
+        "location": "https://mechphnguyen.com/about/ — current-position entry specifies \"Dübendorf, Switzerland\".",
+        "dedup": "Checked public/data.json and already-proposed.txt for full-name variants, personal URLs, Scholar ID and ORCID; ran find-roster-matches with those identity URLs and the EPFL profile. No URL or identifier match. Resolved nine name-only hits by field and education: marketing/management, Missouri acoustics, Brown orthopaedics, Lincoln Laboratory embedded systems, Bruker genomics, Quantinuum atomic physics, Hitachi biotechnology and Dana-Farber computational biology are distinct from this ASU-2020 soft-robotics researcher. The generic queued Huy Nguyen name does not establish this full identity."
+      }
+    }
+  ],
+  "possible_move": [],
+  "rejected": [
+    {
+      "name": "Thi Minh Ha Pham",
+      "reason": "Current INM personal profile identifies Research Scientist, but the available biography does not establish a permanent career appointment rather than a postdoctoral position. Held under the slice's permanent-staff restriction. https://www.leibniz-inm.de/en/staff/dr-pham-thi-minh-ha/"
+    },
+    {
+      "name": "Thu Thi Pham",
+      "reason": "Current MDC personal page identifies Scientist, but no career history or appointment evidence establishes permanence following the recent doctorate. Not treated as a verified permanent staff scientist. https://www.mdc-berlin.de/person/dr-thu-thi-pham"
+    },
+    {
+      "name": "Gia Ngoc Phung",
+      "reason": "PTB research activity and doctorate are supported, but searches located publication records, project contacts and annual-report material rather than an individual current-employer profile quoting the current title. https://oar.ptb.de/resources/show/10.7795/EMPIR.14IND02.CA.20211104A"
+    },
+    {
+      "name": "Anh Tuan Vu",
+      "reason": "Fraunhofer IPT project and technology pages provide current contact information, but no qualifying individual employer profile with the current title was located. https://www.ipt.fraunhofer.de/de/technologien/umformen-urformen/materialcharakterisierung.html"
+    },
+    {
+      "name": "Quoc Hung Nguyen",
+      "reason": "Current Fraunhofer EMFT project contacts were found, but no qualifying personal employer page establishing the current career appointment was located. https://www.emft.fraunhofer.de/en/projects-fraunhofer-emft/pfas-semiconductor-manufacturing.html"
+    },
+    {
+      "name": "Nhu-Nguyen Do",
+      "reason": "Fraunhofer evidence located was a past-project contact, insufficient for a current permanent appointment and individual profile. https://www.cimd.fraunhofer.de/en/research/projects/pastprojects/test-system-rheumatoid-arthritis.html"
+    },
+    {
+      "name": "Y Lan Pham",
+      "reason": "Fraunhofer IVV service/news contact found, but no qualifying individual employer profile or evidence establishing a permanent career appointment. https://www.ivv.fraunhofer.de/en/news/voc-analyses-for-tailor-made-product-development.html"
+    },
+    {
+      "name": "Thanh Huyen Vuong",
+      "reason": "Current LIKAT research output and EPR platform responsibilities are supported, but no own employer profile quoting an eligible current title was located. A platform directory cannot serve as profileUrl. https://www.catalysis.de/en/institute/service-departments/translate-to-en-operando-plattform"
+    },
+    {
+      "name": "Quoc Khanh Tran",
+      "reason": "Jülich personal page supplies doctorate and affiliation but no exact current job title or evidence establishing the required permanent appointment. https://www.fz-juelich.de/profile/tran_qu"
+    },
+    {
+      "name": "Chi Huan Nguyen",
+      "reason": "PSI personal page supplies contact and address but no current title; the laboratory directory likewise does not establish a permanent staff-scientist appointment. https://www.psi.ch/de/people/chi-huan-nguyen"
+    },
+    {
+      "name": "Thi Kim Loan Nguyen",
+      "reason": "PSI personal contact page does not establish an eligible current research title, doctorate or permanent appointment. https://www.psi.ch/en/people/thi-kim-loan-nguyen"
+    },
+    {
+      "name": "Paul Nguyen",
+      "reason": "Leibniz IfL scientist page found, but permanent appointment and affirmative Vietnamese connection beyond the shared surname were not established. https://leibniz-ifl.de/institut/personen/nguyen-paul"
+    },
+    {
+      "name": "Stefan Pham",
+      "reason": "Fraunhofer FOKUS directory lead, but affirmative Vietnamese evidence beyond the surname and a permanent qualifying research appointment were not established. https://www.fokus.fraunhofer.de/en/fame/about-fame/team.html"
+    },
+    {
+      "name": "Ha-Chi Nguyen",
+      "reason": "Max Planck microscopy employee profile found, but research doctorate or two qualifying recent current-employer papers were not established. https://www.mpip-mainz.mpg.de/person/113856/133610"
+    },
+    {
+      "name": "Phuc Thu Uyen Nguyen",
+      "reason": "Predoctoral Fellow, excluded. https://www.mpib-berlin.mpg.de/person/111173/2549"
+    },
+    {
+      "name": "Dieu Anh Tran",
+      "reason": "Doctoral researcher, excluded. https://www.bgc-jena.mpg.de/person/121806/2206"
+    },
+    {
+      "name": "Ngan Lisa Kim Thi Nguyen",
+      "reason": "Max Planck directory identifies Postdoctoral Researcher, excluded. https://www.mpi-marburg.mpg.de/staff?letter=S&page=1"
+    },
+    {
+      "name": "Thuy An Nguyen",
+      "reason": "Listed under PhD Students rather than Staff Scientists. https://www.biochem.mpg.de/schwille/people"
+    },
+    {
+      "name": "Huan Hoang Dang",
+      "reason": "Doctoral-student lead, excluded. https://www.mpip-mainz.mpg.de/person/134636/121045"
+    },
+    {
+      "name": "Uyen Bui",
+      "reason": "Doctoral researcher rather than permanent staff scientist. https://www.bgc-jena.mpg.de/bgi/team"
+    },
+    {
+      "name": "Thanh Nhut Do",
+      "reason": "Guest doctoral-candidate listing, excluded. https://www.mpq.mpg.de/4914518/staff"
+    },
+    {
+      "name": "Thanh Dat Hoang",
+      "reason": "Doctoral student, excluded. https://www.mpifr-bonn.mpg.de/8764215/team"
+    },
+    {
+      "name": "Van-Thang Nguyen",
+      "reason": "Postdoc, excluded. https://www.mpinat.mpg.de/de/hell/staff"
+    },
+    {
+      "name": "Vu H. Nguyen",
+      "reason": "Guest Scientist rather than permanent Max Planck staff. https://is.mpg.de/hi/publications/javot23-whcd-capt"
+    },
+    {
+      "name": "Dieu Linh Bui Dao",
+      "reason": "Research Group Officer role concerns administrative coordination; qualifying career research appointment was not established. https://www.mpiwg-berlin.mpg.de/people/dbuidao"
+    },
+    {
+      "name": "Kelly Nguyen",
+      "reason": "Max Planck programme page does not establish a started, current permanent appointment there; available biography still describes the MRC role. https://imprs-ml.mpg.de/Kelly-Nguyen"
+    },
+    {
+      "name": "Minh Nhat Nguyen",
+      "reason": "Current KIT personal page explicitly identifies Postdoctoral researcher, excluded. https://www.iamt.kit.edu/21_189.php"
+    },
+    {
+      "name": "Phuong Bich Trinh",
+      "reason": "KIT career record identifies the current appointment as Postdoctoral Researcher, excluded. https://www.iamt.kit.edu/21_232.php"
+    },
+    {
+      "name": "Xuan Quy Tran",
+      "reason": "KIT INT team identifies Postdoc, excluded. https://www.int.kit.edu/9714.php"
+    },
+    {
+      "name": "Thi Thu Trang Pham",
+      "reason": "GFZ personal page identifies Doktorandin, excluded. https://www.gfz.de/staff/thi.thu.trang.pham"
+    },
+    {
+      "name": "Linh Hoang Gia",
+      "reason": "Jülich lead identifies a postdoctoral appointment, excluded. https://www.fz-juelich.de/en/inm/inm-9/news/focus/fzj-vnu-keylab-initiative/keylab-phd-students"
+    },
+    {
+      "name": "Huyen Nguyen",
+      "reason": "Jülich personal page identifies Master Student, excluded. https://www.fz-juelich.de/en/ias/ias-6/ueber-uns/mitarbeiter/huyen-nguyen"
+    },
+    {
+      "name": "Trang Anh Nguyen-Le",
+      "reason": "Recent HZDR publication lead, but current permanent role and qualifying personal employer profile could not be verified. The employer site was blocked by robots.txt."
+    },
+    {
+      "name": "Le Hoang Nguyen",
+      "reason": "Located an old university-hosted astroparticle-group affiliation, insufficient to establish current permanent DESY employment. DESY access was blocked by robots.txt."
+    },
+    {
+      "name": "Viet Tran Ba",
+      "reason": "DKFZ current team identifies Ph.D Student, excluded. https://www.dkfz.de/en/imsy/our-team"
+    },
+    {
+      "name": "Duc Truong Nguyen",
+      "reason": "DKFZ current team identifies PhD student, excluded. https://www.dkfz.de/en/physical-activity-cancer-prevention-and-survivorship/team"
+    },
+    {
+      "name": "Minh-Phung Vuong",
+      "reason": "Search lead did not survive the live current-team check; no qualifying personal current-employer profile or permanent appointment established. https://www.dkfz.de/en/molecular-neurogenetics/our-team"
+    },
+    {
+      "name": "Cong Tran",
+      "reason": "DKFZ team listing does not supply an eligible permanent research title or qualifying individual profile. https://www.dkfz.de/en/pediatric-neurooncology/our-team"
+    },
+    {
+      "name": "Nga Phung",
+      "reason": "HZB publication lead reflects a former appointment; primary university biography places the researcher at Eindhoven in a postdoctoral role. https://www.eng.kyushu-u.ac.jp/_cms_dir/uploads/2026/03/eng_pamphlet2022.pdf"
+    },
+    {
+      "name": "Quang Khai Dao",
+      "reason": "Recent Max Planck polymer-research publication found, but no own employer profile establishing a permanent career title. https://pubs.acs.org/accacs/article/doi/10.1021/acscatal.6c05978/5363760/Excited-Perylene-Radical-as-Strong-Photoreductant"
+    },
+    {
+      "name": "Quy Hien Le",
+      "reason": "PSI team identifies PhD Student, excluded. https://www.psi.ch/en/lxn/our-research-team"
+    },
+    {
+      "name": "Hieu Quang Pham",
+      "reason": "Listed as former PSI postdoc, 2019–2021. https://www.psi.ch/it/lbs/former-team-members"
+    },
+    {
+      "name": "Thi Thu Dieu Nguyen",
+      "reason": "Listed as former PSI postdoc, 2021–2023. https://www.psi.ch/it/lbs/former-team-members"
+    },
+    {
+      "name": "Hung Tri Tran",
+      "reason": "Former PSI doctoral-student listing, not current permanent staff. https://www.psi.ch/de/lmb/cellular-structural-biology-and-imaging"
+    },
+    {
+      "name": "Manh-Thuong Nguyen",
+      "reason": "Empa former-member listing covers 2007–2011, insufficient for current employment. https://www.empa.ch/fr/web/s205/former-members"
+    },
+    {
+      "name": "Christine Tran",
+      "reason": "Head Assistant role is administrative rather than a qualifying research-scientist appointment. https://www.empa.ch/web/s205/christine-tran"
+    },
+    {
+      "name": "Thu Trang Nguyen",
+      "reason": "Eawag current organisation listing identifies PhD Student, excluded. https://www.eawag.ch/en/department/umik/organisation/"
+    },
+    {
+      "name": "Tina Tu Trinh Nguyen",
+      "reason": "CERN listing identifies Graduate, a temporary early-career category rather than permanent research staff. https://staff-asociation.web.cern.ch/article/staff-council-election-2026"
+    },
+    {
+      "name": "Don Duy Nguyen",
+      "reason": "EMBL evidence is a historical EIPOD postdoctoral-fellowship listing, not a current permanent appointment. https://www.embl.org/about/info/postdoctoral-programme/eipod4-fellowship-programme/recruited-eipods-to-date/"
+    },
+    {
+      "name": "Huong Thi Thu Nguyen",
+      "reason": "EMBL Hamburg administrative staff, outside both the Heidelberg scope and qualifying research roles. https://www.embl.org/administration/hamburg/"
+    },
+    {
+      "name": "Thanh Van Nguyen",
+      "reason": "Leibniz IZW personal page identifies a doctoral-student appointment, excluded. https://www.izw-berlin.de/en/thanh-van-nguyen-en.html"
+    },
+    {
+      "name": "Tan Binh Nguyen",
+      "reason": "INM personal page identifies Guest Scientist, excluded. https://www.leibniz-inm.de/mitarbeiter/dr-nguyen-tan-binh/"
+    },
+    {
+      "name": "Quan Tran",
+      "reason": "Leibniz LSB profile identifies PhD candidate, excluded. https://portal.fis.leibniz-lsb.tum.de/en/persons/quan-tran/"
+    }
+  ]
+}

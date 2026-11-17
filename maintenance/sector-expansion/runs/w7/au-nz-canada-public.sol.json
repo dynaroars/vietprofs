@@ -1,0 +1,225 @@
+{
+  "slice": "au-nz-canada-public",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Phuc Bao Uyen Nguyen",
+        "university": "Defence Research and Development Canada",
+        "institutionType": "Public research institute",
+        "track": "Government & Defense",
+        "rank": "Researcher",
+        "department": "Centre for Operational Research and Analysis",
+        "city": "Ottawa",
+        "country": "Canada",
+        "researchAreas": [
+          "Operations research",
+          "Combinatorial optimization",
+          "Stochastic processes",
+          "Autonomous systems"
+        ],
+        "phdInstitution": "McGill University",
+        "phdYear": 1993,
+        "profileUrl": "https://pbaounguyen.wixsite.com/drdc",
+        "confirmed": false
+      },
+      "evidence": {
+        "currentRole": "https://pbaounguyen.wixsite.com/drdc — \"senior scientist\" at Defence R&D Canada. This personal website was opened; no individual current-employer biography was located. The site lists July 2026 research publications.",
+        "doctorateOrPapers": "https://pbaounguyen.wixsite.com/drdc — biography explicitly records a PhD in theoretical particle physics from McGill University in 1993. https://journals.sagepub.com/doi/abs/10.1177/1548512916649698 independently corroborates the degree and research appointment.",
+        "vietnameseSignal": "https://pbaounguyen.wixsite.com/drdc — biography explicitly states that Uyen (Michael) Bao was born in Saigon, Vietnam. His listed July 2026 intercept-time paper identifies him by the full published name Phuc Bao Uyen Nguyen: https://www.emerald.com/jdal/article/10/1/75/1388544/Convexity-of-intercept-time-in-short-range-re",
+        "location": "https://www.emerald.com/jdal/article/10/1/75/1388544/Convexity-of-intercept-time-in-short-range-re — July 2026 author affiliation: \"Centre for Operational Research and Analysis, Defence Research and Development Canada\" and \"Ottawa\".",
+        "dedup": "Searched public/data.json and already-proposed.txt for the full name, name variants, Michael Bao, and the personal-site URL. Ran find-roster-matches for Bao Nguyen, Phuc Bao Uyen Nguyen, Bao Uyen Nguyen, and Michael Bao. No URL match; Michael Bao returned no matches. Token-name hits describe optometry, chemistry, life sciences, history, management, animation, or autonomous-driving researchers with different education or career histories. None matches this McGill 1993 theoretical physicist and longstanding DRDC scientist. Paul Uyen on the exclusion list is a College of the Ozarks theologian with a 2022 doctorate, a different person."
+      }
+    }
+  ],
+  "possible_move": [],
+  "rejected": [
+    {
+      "name": "Dang Quang Nguyen",
+      "reason": "Held for unresolved identity comparison with vp-1965, Quang Nguyen at Westminster; its profile returned HTTP 429. The Kids profile otherwise establishes a research-focused Scientific Software Developer role, Sydney PhD, Vietnamese education, and current research output: https://www.thekids.org.au/contact-us/our-people/n/dang-quang-nguyen/ . Ran find-roster-matches and inspected the returned roster records; several other homonyms were distinguishable, but the Westminster comparison remained unsettled."
+    },
+    {
+      "name": "James Quach",
+      "reason": "CSIRO profile confirms Science Leader and Melbourne PhD, but no affirmative Vietnamese signal beyond the surname or adequately sourced current work city was established: https://people.csiro.au/q/j/james-quach"
+    },
+    {
+      "name": "Thai Ly",
+      "reason": "CSIRO profile establishes an Experimental Scientist role, UNSW doctorate and Lucas Heights workplace, but the additional Vietnamese evidence required for the ambiguous surname Ly was not established: https://people.csiro.au/l/t/thai-ly"
+    },
+    {
+      "name": "Wilson Nguyen",
+      "reason": "QIMR profile confirms Research Officer in virology, distinct from rostered Microsoft cryptographer vp-3129. No affirmative Vietnamese signal beyond Nguyen was established: https://www.qimrb.edu.au/about/our-people/dr-wilson-nguyen"
+    },
+    {
+      "name": "Binh-Long Nguyen",
+      "reason": "Current role is PhD Candidate at QUT/CSIRO Robotics: https://people.csiro.au/n/b/binhlong-nguyen"
+    },
+    {
+      "name": "Duy Nguyen",
+      "reason": "CSIRO profile identifies the Impossible-Without-You fellowship as 2023–2026; an ongoing appointment beyond that fixed term was not established: https://people.csiro.au/n/d/duy-nguyen"
+    },
+    {
+      "name": "Sonny Truong",
+      "reason": "CSIRO profile supplies doctorate and Vietnamese education but does not establish a current career appointment or title: https://people.csiro.au/t/s/sonny-truong"
+    },
+    {
+      "name": "Chi Nguyen — CSIRO",
+      "reason": "Hydrology doctorate is documented, but the individual profile does not establish a current career research role. Rostered Arizona education scholar vp-0225 is a different person: https://people.csiro.au/n/c/chi-nguyen"
+    },
+    {
+      "name": "Huy Pham",
+      "reason": "Individual CSIRO page lacks a qualifying title, doctorate and publication evidence: https://people.csiro.au/p/h/huy-pham"
+    },
+    {
+      "name": "Ngoc My Hanh Duong",
+      "reason": "Individual CSIRO page lacks role and qualification evidence: https://people.csiro.au/d/n/ngocmyhanh-duong"
+    },
+    {
+      "name": "Hong Nguyen",
+      "reason": "Senior HSE Advisor, not an eligible research appointment: https://people.csiro.au/n/h/hong-nguyen"
+    },
+    {
+      "name": "Liz Do",
+      "reason": "Asset & Compliance Coordinator, not a research role: https://people.csiro.au/d/l/liz-do"
+    },
+    {
+      "name": "Alvin Lam",
+      "reason": "IP Manager and patent attorney, not a research appointment: https://people.csiro.au/l/a/alvin-lam"
+    },
+    {
+      "name": "Mario Dinh",
+      "reason": "Profile lists bachelor's and master's degrees but no qualifying current appointment, research doctorate or sufficient current-employer publication evidence: https://people.csiro.au/d/m/mario-dinh"
+    },
+    {
+      "name": "Tina Nguyen",
+      "reason": "Strategy Consultant; profile lists an honours bachelor's degree and does not establish the required research qualification or publication record: https://people.csiro.au/n/t/tina-nguyen"
+    },
+    {
+      "name": "Helen Le",
+      "reason": "Research Technician/Research Projects Officer; qualifying doctorate or current-employer publication threshold was not established: https://people.csiro.au/l/h/helen-le"
+    },
+    {
+      "name": "Sophie Tran",
+      "reason": "Army Electrical and Mechanical Engineering Officer performing engineering, managerial and operational duties; qualifying research role not established: https://www.dst.defence.gov.au/event/national-science-week-2021/faces-stem-defence/sophie-tran"
+    },
+    {
+      "name": "Hanh Nguyen — Bureau of Meteorology",
+      "reason": "Climate-scientist leads and publications were located, but no acceptable individual current-employer profile or personal website was found. Rostered Riverside physician vp-0886 is a different person. Employer researcher listing examined: https://www.bom.gov.au/government-and-industry/research-and-development/our-researchers"
+    },
+    {
+      "name": "Minh N Tran",
+      "reason": "ANSTO Research Impact Report identifies a research contact, but no acceptable individual current-employer profile establishing the current appointment was located: https://www.ansto.gov.au/media/7773/download?inline="
+    },
+    {
+      "name": "Duy (Victor) Nguyen",
+      "reason": "Geoscience Australia petroleum-engineering lead has publication biography evidence, but no acceptable individual employer profile establishing the current appointment was located: https://connectsci.au/ep/article/64/2/S423/23642/The-central-and-southeast-offshore-Otway-Basin"
+    },
+    {
+      "name": "Nghi Nguyen — WEHI",
+      "reason": "Listed as Senior Research Officer, but only a laboratory team page was located; that cannot serve as profileUrl under this brief: https://www.wehi.edu.au/laboratory/sleebs-lab/"
+    },
+    {
+      "name": "Tu Quan Nguyen",
+      "reason": "MCRI profile explicitly identifies a PhD Student: https://www.mcri.edu.au/researcher-details/tu-nguyen"
+    },
+    {
+      "name": "Cindy Pham",
+      "reason": "Profile explicitly describes the appointment as Postdoctoral Research Officer: https://www.mcri.edu.au/researcher-details/cindy-pham"
+    },
+    {
+      "name": "Quan Nguyen — Florey",
+      "reason": "Senior Technical Officer performing animal-care and technical-support duties; qualifying career research role and qualification not established: https://florey.edu.au/researcher/quan-nguyen/"
+    },
+    {
+      "name": "Sabrina Nguyen",
+      "reason": "Honours Student: https://hudson.org.au/researcher-profile/sabrina-nguyen/"
+    },
+    {
+      "name": "David Tran",
+      "reason": "Masters Student: https://hudson.org.au/researcher-profile/david-tran/"
+    },
+    {
+      "name": "Nhi Thao Tran",
+      "reason": "Postdoctoral Scientist: https://hudson.org.au/researcher-profile/nhi-tran/"
+    },
+    {
+      "name": "Thanh Nha Uyen Le",
+      "reason": "Hudson's Sex Development group lists a Postdoctoral Scientist appointment: https://hudson.org.au/research-group/sex-development/"
+    },
+    {
+      "name": "Thy Duong",
+      "reason": "Research Assistant with master's qualification; research doctorate or sufficient qualifying publication evidence was not established: https://baker.edu.au/our-people/thy-duong"
+    },
+    {
+      "name": "Khoa Tran",
+      "reason": "Individual QIMR biography explicitly describes the current role as postdoctoral researcher: https://www.qimrb.edu.au/about/our-people/khoa-tran"
+    },
+    {
+      "name": "Vu Tran",
+      "reason": "QIMR individual page lists PhD Student: https://www.qimrb.edu.au/about/our-people/vu-tran/"
+    },
+    {
+      "name": "Ngoc Quynh Le",
+      "reason": "QIMR individual page lists PhD Student: https://www.qimrb.edu.au/about/our-people/ngoc-quynh-le"
+    },
+    {
+      "name": "Mia Nguyen",
+      "reason": "CMRI page lists Research Assistant without the qualification or publication evidence needed by the brief: https://www.cmrijeansforgenes.org.au/researchers/mia-nguyen"
+    },
+    {
+      "name": "Hanh Thi Hong Nguyen",
+      "reason": "AgResearch publication and secondary-profile leads were located, but no acceptable individual current-employer profile or personal website establishing the current role was found. Employer directory examined: https://www.agresearch.co.nz/about-us/our-people/"
+    },
+    {
+      "name": "Phuong Nguyen — Scion",
+      "reason": "Located evidence describes a PhD student in a March 2017 team document; no current career appointment was established: https://www.scionresearch.com/__data/assets/pdf_file/0014/38201/Team-Profile-Clean-Technologies.pdf"
+    },
+    {
+      "name": "Nguyen Khanh Ngoc",
+      "reason": "Plant & Food Research story concerns a scientist employed at SOFRI in Vietnam, outside the geographic scope: https://www.plantandfood.com/pt-br/article/nguyen-khanh-ngoc-sustainable-legacy"
+    },
+    {
+      "name": "Phuong Mai Le",
+      "reason": "NRC research and publication evidence was located, but no acceptable individual current-employer profile or personal website was found. NRC news is insufficient as profileUrl: https://nrc.canada.ca/en/stories/nrc-breaks-new-ground-identifying-sources-vanillin-vanillas-flavour-booster"
+    },
+    {
+      "name": "Phuong Lan Pham",
+      "reason": "Secondary directory and publication leads support NRC research activity, but no acceptable individual current-employer profile or personal website was located. All 20 pages of NRC's public science directory were examined: https://nrc.canada.ca/en/corporate/contact-us/nrc-directory-science-professionals"
+    },
+    {
+      "name": "Cuong Nguyen — NRC Canada",
+      "reason": "NRC news identifies Senior Research Officer and current project leadership, but no acceptable individual employer profile was located: https://www.nrc.canada.ca/en/stories/first-its-kind-satellite-measure-wind-clouds-chosen-next-european-space-mission"
+    },
+    {
+      "name": "Hai D. T. Nguyen",
+      "reason": "AAFC links an individual scientist profile, but opening it failed first with HTTP 502 and then a timeout. The inaccessible profile was not accepted as verified: https://profils-profiles.science.gc.ca/en/profile/hai-dt-nguyen-phd"
+    },
+    {
+      "name": "Kathy Nguyen",
+      "reason": "Government directory identifies Senior Biologist/Toxicologist at Health Canada, but an affirmative Vietnamese signal beyond the surname and sufficient qualifying research-role evidence were not established."
+    },
+    {
+      "name": "Duc-Phong Le",
+      "reason": "Bank of Canada author page was opened, but it supplies publications without a current appointment title. Current career employment therefore remains unverified: https://www.bankofcanada.ca/profile/duc-phong-le/"
+    },
+    {
+      "name": "Alexandre Tran",
+      "reason": "OHRI profile establishes Clinician Scientist and medical qualifications, but no affirmative Vietnamese signal beyond the surname was established: https://ohri.ca/en/find-researcher/alexandre-tran"
+    },
+    {
+      "name": "Nhu Le",
+      "reason": "BC Cancer profile explicitly lists Emeritus Scientist, outside this brief's current career-appointment scope: https://www.bccrc.ca/dept/phs/people/nhu-le"
+    },
+    {
+      "name": "Deby Huynh",
+      "reason": "BC Cancer directory lists Pathology Records Clerk, not a research appointment: https://www.bccrc.ca/dept/lcr/people?page=1"
+    },
+    {
+      "name": "Tri Giang Phan",
+      "reason": "Already rostered as vp-1209; the roster stores the same Garvan individual profile. The live material describes a conjoint UNSW appointment, so a move was not established: https://www.garvan.org.au/people/researchers/tri-phan"
+    },
+    {
+      "name": "Ly Vu",
+      "reason": "find-roster-matches identifies existing vp-0510 at UBC. BC Cancer material also describes the UBC appointment; this is not a new person or a demonstrated move."
+    }
+  ]
+}

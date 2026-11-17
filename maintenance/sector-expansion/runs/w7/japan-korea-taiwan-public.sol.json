@@ -1,0 +1,162 @@
+{
+  "slice": "japan-korea-taiwan-public",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Anh Khoa Augustin Lu",
+        "university": "National Institute for Materials Science",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Quantum Materials Simulation Group, Research Center for Materials Nanoarchitectonics",
+        "city": "Tsukuba",
+        "state": "Ibaraki",
+        "country": "Japan",
+        "researchAreas": [
+          "Computational materials science",
+          "First-principles calculations",
+          "Machine learning interatomic potentials",
+          "Semiconductor materials"
+        ],
+        "phdInstitution": "KU Leuven",
+        "phdYear": 2017,
+        "profileUrl": "https://samurai.nims.go.jp/profiles/lu_augustin?locale=en",
+        "websiteUrl": "https://www.augustin.lu/"
+      },
+      "evidence": {
+        "currentRole": "https://samurai.nims.go.jp/profiles/lu_augustin?locale=en — \"Senior Researcher\". Non-fixed-term classification inferred from NIMS's official career-path mapping, which places Principal/Senior Researcher in the permanent employee category: https://www.nims.go.jp/eng/hr-development/index.html. Permanent-position employment guidance: https://www.nims.go.jp/eng/employment/technical/permanent-researcher.html.",
+        "doctorateOrPapers": "https://www.nims.go.jp/mana/2026/abstracts/augustin_lu.html — employer biography records a Ph.D. from KU Leuven and imec in 2017.",
+        "vietnameseSignal": "https://www.augustin.lu/cv.html — explicitly lists Vietnamese as a native language, alongside French; affirmative evidence beyond his Vietnamese given names.",
+        "location": "https://samurai.nims.go.jp/profiles/lu_augustin?locale=en — \"305-0044 1-1 Namiki Tsukuba Ibaraki JAPAN\".",
+        "dedup": "Searched public/data.json and already-proposed.txt for Anh Khoa Augustin Lu and Augustin Lu; no match. npm run find-roster-matches with his full name, NIMS profile, personal website, and ORCID 0000-0003-4702-0933 returned no roster or retired-id matches."
+      }
+    }
+  ],
+  "possible_move": [],
+  "rejected": [
+    {
+      "name": "Tra Thi Huong Dinh",
+      "reason": "RIKEN individual profile confirms Research and Development Scientist and doctoral training, but non-fixed-term employment was not established. Held for the permanent-only restriction: https://www.riken.jp/en/about/people/2025summer-2/index.html."
+    },
+    {
+      "name": "Nhu Ngoc Quynh Vo",
+      "reason": "Current RIKEN team directory lists Research Scientist, but no qualifying individual employer profile or evidence of non-fixed-term employment was found: https://pgn.riken.jp/English/member_e.html."
+    },
+    {
+      "name": "Linh Thuy Tran",
+      "reason": "RIKEN lists a postdoctoral appointment, outside the permanent-staff restriction: https://www.riken.jp/research/labs/ims/bottomup_cell_bio/index.html."
+    },
+    {
+      "name": "Giang Nhan Tran",
+      "reason": "RIKEN laboratory records departure on 2024-03-31; the laboratory subsequently closed. No current eligible appointment established: https://www2.riken.jp/ExtremePhotonics/attosec/index.html."
+    },
+    {
+      "name": "Minh Chu Ngo",
+      "reason": "AIST engineering ceramics directory lists Researcher, and recent papers establish research activity in Nagoya. However, no qualifying individual employer profile or personal site stating the current appointment was found; non-fixed-term status also remains unverified: https://unit.aist.go.jp/mmri/en/groups/engceram.html."
+    },
+    {
+      "name": "Ngoc Linh Tran",
+      "reason": "Current AIST organization listing supports a research appointment, but the available organization and multi-person interview pages do not satisfy the individual-profile rule. Non-fixed-term status was not established: https://unit.aist.go.jp/ischem/en/organization/index.html."
+    },
+    {
+      "name": "Thuy Nguyen",
+      "reason": "AIST Chemical Process Technology organization listing supports a current research affiliation, but no qualifying individual profile, resolved identity, or non-fixed-term appointment evidence was found: https://unit.aist.go.jp/cpt/en/intro/organization.html."
+    },
+    {
+      "name": "Van An Le",
+      "reason": "Listed as an AIST postdoctoral researcher, outside the permanent-staff restriction: https://www.digiarc.aist.go.jp/en/team/ccart/."
+    },
+    {
+      "name": "Thao Doan Nguyen",
+      "reason": "Current NIMS directory identifies an ICYS Research Fellow appointment, a fixed-term category rather than permanent staff: https://samurai.nims.go.jp/directories/D?locale=en."
+    },
+    {
+      "name": "Thien Duc Ngo",
+      "reason": "NIMS individual record identifies Postdoctoral Research Fellow, outside the permanent-staff restriction: https://samurai.nims.go.jp/profiles/ngo_duc_thien/publications?locale=en."
+    },
+    {
+      "name": "Thanh Le",
+      "reason": "Opened NICT individual profile confirms Researcher and a 2025 SOKENDAI doctorate, but non-fixed-term employment could not be established. NICT offers multiple researcher contract categories, so the title alone is insufficient: https://www2.nict.go.jp/wslab/en/thanh.html; https://www.nict.go.jp/en/employment/staff-e.html."
+    },
+    {
+      "name": "Nam Khanh Nguyen",
+      "reason": "Opened NICT individual page lists Researcher and doctoral training, but does not establish non-fixed-term employment: https://www.nict.go.jp/resil/suits/members/member8.html."
+    },
+    {
+      "name": "Minh-Son Dao",
+      "reason": "Current NICT directory lists Research Manager, but no qualifying individual employer profile or personal website stating the current role was found. A directory entry and biographical PDF cannot substitute for the required profile: https://bdirc.nict.go.jp/en/member/."
+    },
+    {
+      "name": "Anh-Khoa Tran",
+      "reason": "Current NICT directory lists Senior Researcher, but no qualifying individual profile or non-fixed-term employment evidence was found. Broad roster name matches also require identity resolution before any addition: https://bdirc.nict.go.jp/en/member/."
+    },
+    {
+      "name": "Thi Mai Phuong Nguyen",
+      "reason": "Current NICT directory lists Researcher, but no qualifying individual profile or non-fixed-term employment evidence was found: https://bdirc.nict.go.jp/en/member/."
+    },
+    {
+      "name": "Duy Thanh Pham",
+      "reason": "Current NICT directory lists Researcher, but no qualifying individual profile or evidence of non-fixed-term employment was found: https://bdirc.nict.go.jp/en/member/."
+    },
+    {
+      "name": "Tien Dat Pham",
+      "reason": "NICT's current Access Network Laboratory directory lists Senior Researcher, but no qualifying individual employer profile or personal site stating the current role was found: https://www.nict.go.jp/accesslab/members.html."
+    },
+    {
+      "name": "Duc Khiem Tran",
+      "reason": "NIBIOHN laboratory directory identifies an external collaborating researcher with a specially appointed role at the Institute for Radiation Sciences, rather than permanent NIBIOHN staff: https://www.nibn.go.jp/vaccine_material_project/english/member/."
+    },
+    {
+      "name": "Kien Le Pham",
+      "reason": "Older OIST annual reports list Staff Scientist, but a current individual profile and non-fixed-term appointment were not established. The fuzzy roster hit for Kien Pham at Yale was insufficient to establish identity: https://www.oist.jp/research/research-units/qsu/fy2022-annual-report."
+    },
+    {
+      "name": "Duc-Khanh Nguyen",
+      "reason": "OIST lists a former Postdoctoral Scholar appointment for 2023–2025, outside the current permanent-staff restriction: https://www.oist.jp/research/research-units/representations/members."
+    },
+    {
+      "name": "Minh Chau Nguyen",
+      "reason": "Located ETRI senior-researcher evidence in a 2022 conference biography, but no current qualifying individual employer profile or personal site was found. The dated conference document cannot establish the required current appointment: https://www.icact.org/upload/2022/0341/20220341_biography.pdf."
+    },
+    {
+      "name": "Dung Xuan Nguyen",
+      "reason": "Older IBS individual page is superseded by the December 2025 PCS newsletter reporting his move to ICISE in Quy Nhon, Vietnam. Not current permanent IBS staff outside Vietnam: https://pcs.ibs.re.kr/PCSNewsletter_December_2025.pdf."
+    },
+    {
+      "name": "Truong Tai Nguyen",
+      "reason": "Academia Sinica's current Institute of Earth Sciences directory lists Postdoctoral Fellow, outside the permanent-staff restriction: https://www.earth.sinica.edu.tw/en/member/list/9."
+    },
+    {
+      "name": "Thi Duyen Tran",
+      "reason": "Academia Sinica's current Institute of Earth Sciences directory lists Postdoctoral Fellow, outside the permanent-staff restriction: https://www.earth.sinica.edu.tw/en/member/list/9."
+    },
+    {
+      "name": "Cong Nghia Nguyen",
+      "reason": "Academia Sinica's current Institute of Earth Sciences directory lists Postdoctoral Fellow, outside the permanent-staff restriction: https://www.earth.sinica.edu.tw/en/member/list/9."
+    },
+    {
+      "name": "Hong Thuy Vy Nguyen",
+      "reason": "Academia Sinica's graduate profile identifies the current role as Postdoctoral Fellow at its Genomics Research Center, outside the permanent-staff restriction: https://tigp.sinica.edu.tw/pages/3290."
+    },
+    {
+      "name": "Tuan-Hung Ngo",
+      "reason": "Academia Sinica-hosted CV identifies Postdoctoral Researcher, outside the permanent-staff restriction: https://rcec.sinica.edu.tw/upload/2021/08/20210805160735657.pdf."
+    },
+    {
+      "name": "Bao-Ngoc Phan",
+      "reason": "Current ASIAA directory identifies Visiting Scholar with a university affiliation in Vietnam, rather than permanent Academia Sinica staff: https://www.asiaa.sinica.edu.tw/people/."
+    },
+    {
+      "name": "Lee-Moi Pham",
+      "reason": "Academia Sinica documents a permanent research career, but no affirmative Vietnamese identity evidence beyond the surname was established. The surname alone does not meet the brief: https://www.sinica.edu.tw/en/news_content/558/3409."
+    },
+    {
+      "name": "Hong Quan Nguyen",
+      "reason": "ITRI's individual employee story establishes Vietnamese background and research-related work, but supplies no exact current job title or person-specific work city; non-fixed-term employment was also not established. The headquarters footer was not used as location evidence: https://www.itri.org.tw/english/ListStyle.aspx?DisplayStyle=01_content&MGID=1311546600016331255&MmmID=617731531422621676&SiteID=1."
+    },
+    {
+      "name": "Vu Anh Truong",
+      "reason": "Opened NHRI individual profile confirms Assistant Investigator since February 2026, a National Tsing Hua University doctorate, Vietnamese education, and Zhunan location. However, non-fixed-term employment was not established, so held under the permanent-only restriction: https://cs.nhri.edu.tw/en/vu-anh-truong-en/."
+    }
+  ]
+}

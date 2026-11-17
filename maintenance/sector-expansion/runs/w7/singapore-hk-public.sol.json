@@ -1,0 +1,147 @@
+{
+  "slice": "singapore-hk-public",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Minh Van Do",
+        "university": "Singapore-MIT Alliance for Research and Technology",
+        "institutionType": "Independent nonprofit research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Mens, Manus, and Machina (M3S)",
+        "city": "Singapore",
+        "country": "Singapore",
+        "researchAreas": [
+          "Computer Vision",
+          "Robot Perception",
+          "Embodied AI",
+          "Resource-Efficient AI"
+        ],
+        "profileUrl": "https://m3s.mit.edu/our-team/do-van-minh",
+        "websiteUrl": "https://minh.do/"
+      },
+      "evidence": {
+        "currentRole": "https://m3s.mit.edu/our-team/do-van-minh — \"Research Engineer\". The employer identifies Do Van Minh as an M3S researcher. His linked personal site, https://minh.do/, records SMART employment from 2024 to present.",
+        "doctorateOrPapers": "https://m3s.mit.edu/our-team/do-van-minh lists two accepted 2026 conference papers, explicitly identifying him as a SMART author: (1) \"4D Reconstruction with Events & RGB\", ECCV 2026 Workshop on Neuromorphic Vision; (2) \"Two-finger soft gripper with a scaled-pad contact interface for dual-mode grasping and surface cleaning\", IROS 2026. These satisfy the brief's two-paper alternative; no doctorate is claimed.",
+        "vietnameseSignal": "https://minh.do/ documents his bachelor's education at Danang University of Science and Technology, Vietnam, during 2011–2016. The employer uses Do Van Minh; its linked personal site uses Minh Do.",
+        "location": "https://minh.do/ describes his current SMART workplace as \"a research center of the Massachusetts Institute of Technology (MIT) in Singapore\".",
+        "dedup": "Searched public/data.json for Minh Van Do, Van Minh Do, Do Van Minh, Minh Do, and all three identity URLs. Ran npm run find-roster-matches with both full-name orders and https://m3s.mit.edu/our-team/do-van-minh, https://minhdov.github.io/, and https://minh.do/. Matches vp-0005, vp-1599, and vp-2590 are different people: respectively an EPFL-trained UIUC professor, a Toronto-trained political scientist, and a Greenwich management researcher; this candidate has NTU engineering education and SMART robotics publications. No identity-URL match or matching name in already-proposed.txt."
+      }
+    }
+  ],
+  "possible_move": [],
+  "rejected": [
+    {
+      "name": "Thang Quyet Tran",
+      "reason": "Already rostered as vp-2440; exact employer-profile URL and name match confirmed by find-roster-matches: https://research.a-star.edu.sg/researcher/thang-quyet-tran/."
+    },
+    {
+      "name": "Andrew Ngo",
+      "reason": "Already rostered as vp-2441 with the same employer-profile URL: https://research.a-star.edu.sg/researcher/andrew-ngo/."
+    },
+    {
+      "name": "Son Tung Ha",
+      "reason": "Already rostered as vp-2442; name and employer-profile URL match confirmed by find-roster-matches: https://research.a-star.edu.sg/researcher/son-tung-ha-tony/."
+    },
+    {
+      "name": "Thu Ha Do",
+      "reason": "Already rostered as vp-2443; name and employer-profile URL match confirmed by find-roster-matches: https://research.a-star.edu.sg/researcher/thu-ha-do/."
+    },
+    {
+      "name": "Huy Dat Tran",
+      "reason": "Already rostered as vp-2605; exact employer-profile URL and name match confirmed by find-roster-matches: https://research.a-star.edu.sg/researcher/huy-dat-tran/."
+    },
+    {
+      "name": "Vinh Truong",
+      "reason": "Already rostered as vp-2714. His directory affiliation is ISCE2, outside the specifically named A*STAR institutes."
+    },
+    {
+      "name": "Thanh Xuan Hoang",
+      "reason": "Already rostered as vp-3330 and present in maintenance/sector-expansion/already-proposed.txt."
+    },
+    {
+      "name": "Neil Hoai Nguyen Huynh",
+      "reason": "Already rostered as vp-3331 and present in maintenance/sector-expansion/already-proposed.txt."
+    },
+    {
+      "name": "Vinh-Tan Nguyen",
+      "reason": "Already rostered as vp-3332 and present in maintenance/sector-expansion/already-proposed.txt."
+    },
+    {
+      "name": "My Ha Dao",
+      "reason": "Already rostered as vp-3615 and present in maintenance/sector-expansion/already-proposed.txt."
+    },
+    {
+      "name": "Hong-Son Chu",
+      "reason": "Already rostered as vp-3623 and present in maintenance/sector-expansion/already-proposed.txt."
+    },
+    {
+      "name": "Ngoc Minh Nguyen",
+      "reason": "Present in maintenance/sector-expansion/already-proposed.txt; skipped."
+    },
+    {
+      "name": "Van Tung Tran",
+      "reason": "Present in maintenance/sector-expansion/already-proposed.txt; skipped."
+    },
+    {
+      "name": "Hong-Quang Pham",
+      "reason": "Outside this slice. His personal site still states I2R, but the opened current employer page identifies him as Senior Research Scientist at Salesforce AI Research: https://www.salesforce.com/blog/author/hong-quang-pham/?bc=OTH."
+    },
+    {
+      "name": "Duc Thinh Khong",
+      "reason": "SMART DiSTAP's staff directory identifies a Research Scientist, but no qualifying individual profileUrl was found. Available employer evidence consists of a staff-list page and a news interview, both excluded as profileUrl by the brief: https://distap.mit.edu/people-tabby-format-no-edit/ and https://smart.mit.edu/post/a-day-in-the-life-of-dr-khong-duc-thinh-research-scientist-at-smart-distap."
+    },
+    {
+      "name": "Van-Anh (Julia) Nguyen",
+      "reason": "Current employer profile explicitly says Postdoctoral Associate: https://m3s.mit.edu/our-team/van-anh-(julia)-nguyen."
+    },
+    {
+      "name": "Nu Zen Na Nguyen",
+      "reason": "SMART's people directory lists Postdoctoral Associate, an excluded trainee appointment: https://smart.mit.edu/contact/people-directory."
+    },
+    {
+      "name": "Hoang Long Pham",
+      "reason": "Employer biography explicitly identifies a SMART Postdoctoral Fellow: https://amr.smart.mit.edu/staff-and-students/pham-hoang-long."
+    },
+    {
+      "name": "Chau-Minh Phan",
+      "reason": "CEVR lists Assistant Scientific Director, but the appointment announcement explicitly specifies a five-year term; excluded from the requested permanent-staff slice. No qualifying individual CEVR profile was found. Sources: https://www.cevr.hk/en/about/our-team and https://uwaterloo.ca/optometry-vision-science/news/accelerating-commercialization-vision-research."
+    },
+    {
+      "name": "April Thi Thuy Nguyen",
+      "reason": "CTSCB's current team directory explicitly lists Post-Doctoral Fellow: https://www.hkstemcell.hk/meet-our-team/."
+    },
+    {
+      "name": "Bui Do Phuong Tung",
+      "reason": "Singapore-ETH Centre's Future Resilient Systems directory lists Research Assistant. A permanent career appointment, qualifying doctorate or publication alternative, and individual current-employer profile were not established: https://frs.ethz.ch/people/researchers.html."
+    },
+    {
+      "name": "Anh Tuan Do",
+      "reason": "An individual A*STAR profile was discovered, but opening it returned a JavaScript bot check. Its current title and biography therefore could not be verified on the live page; search snippets were not accepted: https://www.a-star.edu.sg/qinc/about-qinc/management/dr-do-anh-tuan."
+    },
+    {
+      "name": "Duc Vinh Le",
+      "reason": "Found in A*STAR's indexed researcher listing and IHPC publications, but no accessible individual current-employer profile or qualifying personal site was found. The main directory returned a bot check: https://www.a-star.edu.sg/Research/researcher-results."
+    },
+    {
+      "name": "Si Bui Quang Tran",
+      "reason": "IHPC publication leads were found, but no individual current-employer profile or personal site establishing a current career appointment was found."
+    },
+    {
+      "name": "Su Tran-To Chinh",
+      "reason": "BII staff-list and early-career biography leads were found, but no qualifying individual profileUrl could be verified. A*STAR's main-site pages encountered bot checks; list pages and search snippets were not substituted."
+    },
+    {
+      "name": "Le Quan Ngoc Tran",
+      "reason": "SIMTech publication and conference leads were found, but no qualifying individual current-employer profile or personal site establishing the current appointment was found."
+    },
+    {
+      "name": "Duc-Minh Pham",
+      "reason": "SIMTech conference and publication leads were found, but no qualifying individual current-employer profile or personal site establishing the current appointment was found."
+    },
+    {
+      "name": "HKCMS",
+      "reason": "The supplied acronym could not be resolved to a scientific employer or research-centre people directory. Search results instead identified unrelated organizations; no employer identity was guessed."
+    }
+  ]
+}

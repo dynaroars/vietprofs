@@ -1,0 +1,312 @@
+{
+  "slice": "uk-nordic-benelux-public",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Thanh-Huong Bui",
+        "university": "SINTEF",
+        "institutionType": "Independent nonprofit research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "SINTEF Industry, Biotechnology and Nanomedicine",
+        "city": "Trondheim",
+        "country": "Norway",
+        "researchAreas": [
+          "Analytical Chemistry",
+          "Mass Spectrometry",
+          "Nanomedicines",
+          "Nucleic Acid Therapeutics"
+        ],
+        "phdInstitution": "University of Greifswald",
+        "phdYear": 2014,
+        "profileUrl": "https://www.sintef.no/en/all-employees/employee/huong.bui/"
+      },
+      "evidence": {
+        "currentRole": "https://www.sintef.no/en/all-employees/employee/huong.bui/ — \"Senior Engineer\". The biography describes research in analytical methods and nanomedicines; employer-listed publications include a 2025 Molecular Therapy Nucleic Acids article and several 2024 research articles.",
+        "doctorateOrPapers": "https://www.sintef.no/en/all-employees/employee/huong.bui/ explicitly records a 2014 PhD in Pharmaceutical Biology from the University of Greifswald.",
+        "vietnameseSignal": "The employer profile gives the Vietnamese compound given name Thanh-Huong alongside Bui.",
+        "location": "https://www.sintef.no/en/all-employees/employee/huong.bui/ — \"Office: Trondheim\".",
+        "dedup": "Checked public/data.json, name-order variants, profile URL, ORCID and already-proposed.txt; ran npm run find-roster-matches. Name hits vp-1201 Huong Thanh Bui and vp-1893 Thanh Bui concern tourism and economics respectively; vp-1201 has a Griffith University doctorate, unlike this analytical chemist's Greifswald doctorate. No identity-URL match."
+      }
+    },
+    {
+      "entry": {
+        "name": "Phuc Hong Huynh Evertsen",
+        "university": "SINTEF",
+        "institutionType": "Independent nonprofit research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "SINTEF Community, Architecture, Materials and Structures",
+        "city": "Trondheim",
+        "country": "Norway",
+        "researchAreas": [
+          "Circular Economy",
+          "Digital Innovation",
+          "Innovation Management",
+          "Academic Spin-offs"
+        ],
+        "phdInstitution": "Nord University",
+        "phdYear": 2023,
+        "profileUrl": "https://www.sintef.no/en/all-employees/employee/phuc.evertsen/"
+      },
+      "evidence": {
+        "currentRole": "https://www.sintef.no/en/all-employees/employee/phuc.evertsen/ — \"Research Scientist\".",
+        "doctorateOrPapers": "The employer profile records a PhD in Business from Nord University. The university thesis identifies the author and year: https://nordopen.nord.no/nord-xmlui/bitstream/handle/11250/3067118/Evertsen_excl_art_2-4.pdf?sequence=4 — PhD in Business, 2023.",
+        "vietnameseSignal": "The employer's full name contains the Vietnamese given-name tokens Phuc and Hong alongside Huynh; this is more than a shared surname.",
+        "location": "https://www.sintef.no/en/all-employees/employee/phuc.evertsen/ — \"7034 Trondheim\".",
+        "dedup": "Checked full and shortened names, profile URL, ORCID and already-proposed.txt. npm run find-roster-matches returned no roster or retired-ID matches for Phuc Hong Huynh Evertsen or Phuc Huynh Evertsen."
+      }
+    },
+    {
+      "entry": {
+        "name": "Vu To Nakstad",
+        "university": "SINTEF",
+        "institutionType": "Independent nonprofit research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "SINTEF Industry, Biotechnology and Nanomedicine",
+        "city": "Trondheim",
+        "country": "Norway",
+        "researchAreas": [
+          "Drug Screening",
+          "Cancer Biology",
+          "Antibacterial Drug Discovery"
+        ],
+        "profileUrl": "https://www.sintef.no/en/all-employees/employee/vu.nakstad/"
+      },
+      "evidence": {
+        "currentRole": "https://www.sintef.no/en/all-employees/employee/vu.nakstad/ — \"Research Scientist\". The profile documents research publications extending back to 2017.",
+        "doctorateOrPapers": "Two recent employer-listed papers link this author to SINTEF Industry, Biotechnology and Nanomedicine: Model-guided discovery of MTOR-oriented synergistic drug combinations in colorectal cancer (23 July 2026), https://www.sintef.no/en/publications/publication/01a0b566dec1-e65a22d1-6d3c-448a-934e-bad071957281/; Discovery of MBL-AB01: a novel antibacterial xanthone antibiotic with high activity against methicillin-resistant Staphylococcus aureus (listed as 2025), https://www.sintef.no/en/publications/publication/019b0cd0fd4b-0eec1dce-7c01-47a6-a87c-10c11b0e175a/.",
+        "vietnameseSignal": "The employer's displayed name contains the Vietnamese name-token pair Vu To before Nakstad; discovery came from the given-name scan of the N directory.",
+        "location": "https://www.sintef.no/en/all-employees/employee/vu.nakstad/ — \"7034 Trondheim\".",
+        "dedup": "Checked the full name and profile URL against public/data.json and already-proposed.txt; npm run find-roster-matches returned no roster or retired-ID matches."
+      }
+    },
+    {
+      "entry": {
+        "name": "Thanh Hai Bui",
+        "university": "RISE Research Institutes of Sweden",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Human Centered AI",
+        "city": "Gothenburg",
+        "country": "Sweden",
+        "researchAreas": [
+          "Trustworthy Artificial Intelligence",
+          "Human-AI Interaction",
+          "Behaviour Modelling",
+          "Sustainable Mobility"
+        ],
+        "phdInstitution": "Linköping University",
+        "phdYear": 2005,
+        "profileUrl": "https://www.ri.se/en/person/thanh-bui"
+      },
+      "evidence": {
+        "currentRole": "https://www.ri.se/en/person/thanh-bui — \"senior researcher\" in the Human Centered AI unit.",
+        "doctorateOrPapers": "The current employer profile records a PhD in Media Technology from Linköping University. The matching author biography gives 2005 and the same institution: https://library.imaging.org/admin/apis/public/api/ist/website/downloadArticle/cgiv/3/1/art00010.",
+        "vietnameseSignal": "The employer gives the full name Thanh Hai Bui; the matching publication biography additionally records undergraduate education at Hanoi University of Technology.",
+        "location": "https://www.ri.se/en/person/thanh-bui — \"Göteborg\", the Swedish name for Gothenburg.",
+        "dedup": "Checked Thanh Hai Bui, Thanh Bui, profile URL, employer-linked ORCID and already-proposed.txt; ran npm run find-roster-matches. The name hit vp-1893 is an economics lecturer at St Andrews, distinct from this Linköping-trained AI researcher. No identity-URL match."
+      }
+    },
+    {
+      "entry": {
+        "name": "Huong Nguyen",
+        "university": "RISE Research Institutes of Sweden",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "city": "Pitea",
+        "country": "Sweden",
+        "researchAreas": [
+          "Biomass Gasification",
+          "Thermochemical Conversion",
+          "Biofuels",
+          "Catalytic Gas Upgrading"
+        ],
+        "phdInstitution": "Chalmers University of Technology",
+        "phdYear": 2017,
+        "profileUrl": "https://www.ri.se/en/person/huong-nguyen"
+      },
+      "evidence": {
+        "currentRole": "https://www.ri.se/en/person/huong-nguyen — \"Gruppchef\". The profile links current research projects on chemical recycling, biomass-to-methanol conversion and renewable fuels.",
+        "doctorateOrPapers": "https://research.chalmers.se/en/publication/253260 records Huong Nguyen's 2017 doctoral thesis on catalytic upgrading of biomass-derived gas. Identity is connected through the employer-linked ORCID 0000-0003-3081-7612, also attached to the Chalmers paper https://doi.org/10.1021/acs.energyfuels.7b03558.",
+        "vietnameseSignal": "The employer profile gives the Vietnamese given name Huong alongside Nguyen.",
+        "location": "https://www.ri.se/en/person/huong-nguyen — \"Piteå\"; entry city is transliterated.",
+        "dedup": "Checked public/data.json, name variants, current profile URL, ORCID, Chalmers identity URL and already-proposed.txt; ran npm run find-roster-matches. No URL match. Name hits were compared by discipline and education, including vp-2029 at La Trobe (management; Melbourne PhD 2014), vp-0514 at McGill (weed science; Iowa State PhD 2022), and vp-1420 at NIST (Northwestern PhD 2013); these differ from the Chalmers energy researcher."
+      }
+    },
+    {
+      "entry": {
+        "name": "Daniel Nguyen",
+        "university": "VTT Technical Research Centre of Finland",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Flexible Electronics Integration",
+        "city": "Oulu",
+        "country": "Finland",
+        "researchAreas": [
+          "Wearable Sensors",
+          "Embedded Systems",
+          "Biomedical Instrumentation",
+          "Flexible Electronics"
+        ],
+        "profileUrl": "https://cris.vtt.fi/en/persons/daniel-nguyen/"
+      },
+      "evidence": {
+        "currentRole": "https://cris.vtt.fi/en/persons/daniel-nguyen/ — \"Research Scientist\". A 2022 author biography also identifies him as a VTT research scientist.",
+        "doctorateOrPapers": "The employer profile directly links Daniel Nguyen to Semi-quantitative Lateral Flow Assay Using a Handheld Device with a Transmissive Readout (IEEE Sensors Journal, 2026), AI-enabled Application Process Interface for On-device Personalized Blood Pressure Monitoring (ISVLSI, 2025), and Sustainable Optofluidic Patch Concept for Continuous Monitoring of Health (MeMeA, 2024). The 2026 paper is available at https://cris.vtt.fi/ws/portalfiles/portal/131040388/JSEN.2025.3618661.pdf.",
+        "vietnameseSignal": "https://oulurepo.oulu.fi/bitstream/handle/10024/32417/nbnfi-fe2022042630435.pdf?isAllowed=y&sequence=1 identifies him as Dung (Daniel) Nguyen and records a bachelor's degree from Vietnam National University, Hanoi.",
+        "location": "https://cris.vtt.fi/ws/portalfiles/portal/131040388/JSEN.2025.3618661.pdf — \"90570 Oulu, Finland\" in the authors' VTT affiliation.",
+        "dedup": "Checked Daniel Nguyen, Dung Nguyen, profile URL and already-proposed.txt; ran npm run find-roster-matches for both names. No URL match. The Daniel hit vp-2486 is a finance lecturer with a La Trobe doctorate; other Dung-name hits have different fields and education."
+      }
+    },
+    {
+      "entry": {
+        "name": "Van Nguyen",
+        "university": "Wageningen University & Research",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Business Unit Greenhouse Horticulture, Rootzone Dynamics",
+        "city": "Bleiswijk",
+        "country": "Netherlands",
+        "researchAreas": [
+          "Soilless Growing Media",
+          "Root Environment",
+          "Sustainable Horticulture",
+          "Renewable Plant Fibres"
+        ],
+        "phdInstitution": "University of Bonn",
+        "phdYear": 2022,
+        "profileUrl": "https://www.wur.nl/en/persons/dr-thv-van-nguyen"
+      },
+      "evidence": {
+        "currentRole": "https://www.wur.nl/en/persons/dr-thv-van-nguyen — \"Researcher Root Environment & Growing Media\". The biography distinguishes the current research position, begun in May 2023, from a completed Bonn postdoc.",
+        "doctorateOrPapers": "The employer biography explicitly records PhD research at the University of Bonn in 2018–2022, followed by a 2022–2023 postdoc.",
+        "vietnameseSignal": "The employer biography records a BSc in Biotechnology at the University of Science, Vietnam, and earlier professional work in Vietnam.",
+        "location": "https://www.wur.nl/en/persons/dr-thv-van-nguyen — \"2665MV BLEISWIJK\".",
+        "dedup": "Checked name-order variants, both WUR profiles, ORCID and already-proposed.txt; ran npm run find-roster-matches. No identity-URL match. Exact-name hit vp-0674 is a Monash nursing academic with a Deakin PhD in 2017; the other broader name hits concern different disciplines and education."
+      }
+    },
+    {
+      "entry": {
+        "name": "Khanh Pham",
+        "university": "Wageningen University & Research",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Crop Health",
+        "city": "Bleiswijk",
+        "country": "Netherlands",
+        "researchAreas": [
+          "Plant Pathology",
+          "Crop Health",
+          "Plant Disease Detection",
+          "Horticulture"
+        ],
+        "profileUrl": "https://research.wur.nl/en/persons/khanh-pham/"
+      },
+      "evidence": {
+        "currentRole": "https://research.wur.nl/en/persons/khanh-pham/ — \"Research Officer\". The linked employer contact page gives the staff title \"DLO HBO Onderzoeker\"; the employer publication record documents a longstanding research career.",
+        "doctorateOrPapers": "Two recent papers are linked directly to this employer profile: Postharvest Phytophthora rot of pome fruit (March 2026), https://research.wur.nl/en/publications/postharvest-phytophthora-rot-of-pome-fruit/; Impact of Pseudomonas syringae on sweet cherry and plum trees in nurseries and in early-stage sweet cherry orchards (2025), https://research.wur.nl/en/publications/impact-of-pseudomonas-syringae-on-sweet-cherry-and-plum-trees-in-/.",
+        "vietnameseSignal": "The employer profile gives the Vietnamese given name Khanh alongside Pham.",
+        "location": "https://www.wur.nl/en/persons/ing-ktk-khanh-pham — \"2665MV BLEISWIJK\".",
+        "dedup": "Checked both employer profiles, name-order variants and already-proposed.txt; ran npm run find-roster-matches. No URL match. vp-1271 is an aerospace researcher with a Notre Dame doctorate; vp-2465 is a materials professor with a Freiberg doctorate. Both differ from this crop-health researcher."
+      }
+    }
+  ],
+  "possible_move": [],
+  "rejected": [
+    {
+      "name": "Kelly Nguyen",
+      "reason": "Already rostered under the fuller name Thi Hoang Duong Nguyen, vp-1248. The live profile URL https://mrclmb.ac.uk/research-leaders/kelly-nguyen/ matches that entry exactly."
+    },
+    {
+      "name": "Duy Truong Pham",
+      "reason": "The individual employer page explicitly marks him as Sanger Institute Alumni, despite the directory displaying a research title: https://www.sanger.ac.uk/person/pham-duy/."
+    },
+    {
+      "name": "Anh Phuong Le",
+      "reason": "Sanger's people directory identifies a PhD student: https://www.sanger.ac.uk/people/people-directory/."
+    },
+    {
+      "name": "My H. Pham",
+      "reason": "Sanger's people directory identifies a PhD student: https://www.sanger.ac.uk/people/people-directory/."
+    },
+    {
+      "name": "My Phan",
+      "reason": "Sanger's people directory identifies a Postdoctoral Fellow: https://www.sanger.ac.uk/people/people-directory/."
+    },
+    {
+      "name": "Anh-Hang Nguyen",
+      "reason": "VTT's Silicon Photonics directory identifies a Postdoctoral Researcher, excluded from this permanent-staff slice: https://cris.vtt.fi/en/organisations/ba76-microelectronics-and-photonics/persons/."
+    },
+    {
+      "name": "Tran Ngo",
+      "reason": "Current VTT research-scientist profile found, but no completed doctorate and only one qualifying recent journal article were established; reports and theses do not satisfy the two-paper requirement: https://cris.vtt.fi/en/persons/tran-ngo/."
+    },
+    {
+      "name": "Van Dung Truong",
+      "reason": "The VTT biography explicitly identifies a current part-time doctoral candidate. A permanent career appointment distinct from doctoral training was not established: https://cris.vtt.fi/en/persons/van-dung-truong/."
+    },
+    {
+      "name": "Duc Le",
+      "reason": "Held for conflicting qualification/training evidence. VTT lists Research Scientist and recent papers, but the photonics programme and 2025 doctoral-pilot material identify a PhD student; a 2026 paper biography instead claims a 2024 doctorate. Current permanent non-trainee status was not resolved. Sources: https://cris.vtt.fi/en/persons/duc-le/ ; https://prein.fi/events/i-deep-doctoral-pilot-annual-event-2025/ ; https://cris.vtt.fi/ws/portalfiles/portal/131040388/JSEN.2025.3618661.pdf."
+    },
+    {
+      "name": "Tri Huu Nguyen",
+      "reason": "Employer page lists Senior Engineer, but a doctorate or two recent research papers was not established: https://www.sintef.no/en/all-employees/employee/trihuu.nguyen/."
+    },
+    {
+      "name": "Chi Huong Do Hoang",
+      "reason": "Employer page lists Senior Engineer, but a doctorate or two recent research papers was not established: https://www.sintef.no/en/all-employees/employee/chih.hoang/."
+    },
+    {
+      "name": "Huan V. D. Than",
+      "reason": "SINTEF's staff directory identifies Knowledge Administrator in Organisation and Support Services, rather than an eligible research role: https://www.sintef.no/en/all-employees/?alpha=T."
+    },
+    {
+      "name": "Bjorn Nguyen",
+      "reason": "Employer page lists Projektledare, without establishing a research role, doctorate or qualifying publication record; no affirmative Vietnamese signal beyond the surname was established: https://www.ri.se/en/person/bjorn-nguyen."
+    },
+    {
+      "name": "Huy Vu",
+      "reason": "The employer's individual page supplies contact details and Gothenburg location but no current title or qualification evidence: https://www.ri.se/sv/person/huy-vu."
+    },
+    {
+      "name": "Hao Pham",
+      "reason": "Employer profile identifies a PhD candidate: https://research.wur.nl/en/persons/hao-pham/."
+    },
+    {
+      "name": "Hanh Tran",
+      "reason": "Indexed WUR directory lead described a Junior Researcher with an MSc in Education and Learning Sciences; the individual page returned 404, and eligible permanent non-university research employment was not established: https://www.wur.nl/en/persons/hh-hanh-tran-msc."
+    },
+    {
+      "name": "Duc Nguyen-Manh",
+      "reason": "UKAEA publication and conference evidence supports research activity, but no acceptable live individual current-employer profile or personal site establishing the current role was found. A filtered publications list is insufficient as profileUrl: https://scientific-publications.ukaea.uk/all-papers/?wpv_post_search=Duc+Nguyen-Manh."
+    },
+    {
+      "name": "Van Dai Nguyen",
+      "reason": "An imec internship advertisement names him as supervising scientist, but no acceptable individual employer profile or personal site establishing his current role was found: https://www.imec-int.com/en/work-at-imec/job-opportunities/exploring-interplay-between-exchange-coupling-and-dzyaloshinskii."
+    },
+    {
+      "name": "Hieu Le",
+      "reason": "STFC's Scientific Computing directory lists Scientific Computing Graduate; a qualifying permanent research appointment and doctorate or publication record were not established: https://www.sc.stfc.ac.uk/team/."
+    },
+    {
+      "name": "Mai Hoang",
+      "reason": "STFC's Scientific Computing directory identifies CoSeC Administrator, Business Administration, which is outside the research-role criteria: https://www.sc.stfc.ac.uk/team/."
+    },
+    {
+      "name": "Tu Nguyen",
+      "reason": "VITO's employer article identifies a PhD student; no later permanent staff appointment was established: https://vito.be/en/news/day-life-tu-nguyen."
+    },
+    {
+      "name": "Directory coverage limitations",
+      "reason": "Surname and given-name searches were attempted across the assigned employers. Exhaustive directory coverage could not be verified: Francis Crick's A–Z directory and UKHSA's profiles directory returned 403; NPL's full directory repeatedly timed out on subsequent reads; Rothamsted pages 9–11 were inaccessible. Several other employers exposed only partial or search-indexed staff listings. These access gaps must not be interpreted as evidence that no eligible people work there."
+    }
+  ]
+}

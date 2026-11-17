@@ -1,0 +1,106 @@
+{
+  "slice": "asia-industry",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Thai-Hoang Nguyen",
+        "university": "Samsung Electronics",
+        "institutionType": "Corporate research lab",
+        "track": "Industry Research",
+        "rank": "Researcher",
+        "department": "Memory Business",
+        "city": "Hwaseong",
+        "state": "Gyeonggi-do",
+        "country": "South Korea",
+        "researchAreas": [
+          "AI-assisted electronic design automation",
+          "Non-volatile memory systems",
+          "Neural network accelerators"
+        ],
+        "phdInstitution": "Sungkyunkwan University",
+        "profileUrl": "https://thaihoang.org/",
+        "websiteUrl": "https://thaihoang.org/",
+        "scholarUrl": "https://scholar.google.com/citations?user=sHnWdyAAAAAJ",
+        "confirmed": false
+      },
+      "evidence": {
+        "currentRole": "https://thaihoang.org/ — \"Researcher\" at Memory Business, Samsung Electronics; appointment listed as January 2024–Present. Personal-site fallback: no individual Samsung profile found.",
+        "doctorateOrPapers": "https://thaihoang.org/ — identifies a PhD in Computer Engineering and combined MS-PhD studies at Sungkyunkwan University.",
+        "vietnameseSignal": "https://thaihoang.org/ — Vietnamese given name Thai-Hoang and undergraduate education at Danang University of Science and Technology, Vietnam.",
+        "location": "https://thaihoang.org/ — current Samsung appointment explicitly lists \"Hwaseong, South Korea\".",
+        "dedup": "Searched public/data.json for the full name, reversed name order, homepage and Scholar identifier; no exact identity match. Ran npm run find-roster-matches with name and all discovered identity URLs. Compared its 17 partial-name hits against education, research fields and affiliations; none matches this Sungkyunkwan-trained memory researcher. Absent from already-proposed.txt."
+      }
+    }
+  ],
+  "possible_move": [],
+  "rejected": [
+    {
+      "name": "Tuan Thanh Ta",
+      "reason": "Opened individual Toshiba profile https://www.global.toshiba/ww/technology/corporate/rdc/rd/researchers/ta.html and researchers directory. Profile confirms a doctorate and IoT Edge R&D affiliation but supplies no current job title to quote as required. No qualifying source establishing his current work city was obtained; historical publications and patent addresses were insufficient."
+    },
+    {
+      "name": "L. Anh Hoang",
+      "reason": "https://www.global.toshiba/ww/recruit/corporate.html identifies a Vietnamese Research Scientist, but it is a shared careers page. No qualifying individual profile, doctorate or two recent employer-affiliated papers, and sourced work city were established."
+    },
+    {
+      "name": "Hung Quoc Bui",
+      "reason": "NEC lead remained unsupported by an individual employer profile or personal site stating the current appointment. NEC's researcher directory did not expose sufficient profile content. LinkedIn was not fetched."
+    },
+    {
+      "name": "Thanh-Toan Nguyen",
+      "reason": "Huawei Hong Kong formal-methods lead: no qualifying current individual employer profile or personal homepage was located. Former NUS records and publication leads cannot establish the current appointment. LinkedIn was not fetched."
+    },
+    {
+      "name": "Tu Nguyen",
+      "reason": "Huawei lead: no qualifying current employer profile or personal appointment page was obtained. Available location lead pointed to Munich, outside this Asia slice."
+    },
+    {
+      "name": "Binh Thien Nguyen",
+      "reason": "Listed in NTT's Computational Modeling Research Group at https://www.rd.ntt/e/cs/team_project/media/computational_modeling/, but no qualifying individual profile establishing a permanent career appointment was found; available lead described a postdoctoral appointment."
+    },
+    {
+      "name": "Duc Phuc Nguyen",
+      "reason": "Former NTT researcher. https://sites.google.com/site/phucnguyen1907/education-background states that NTT employment ended in October 2023 and lists NICT from November 2023; current employer is outside this corporate-employer slice."
+    },
+    {
+      "name": "Duc Thien Nguyen",
+      "reason": "https://ducthiennguyen.github.io/ lists a Rakuten Research Scientist role in Tokyo alongside ongoing PhD studies. Student status excludes him under the roster rules; a completed doctorate or qualifying publication record at Rakuten was not established. The Oracle roster entry vp-3278 is a different person with a Singapore Management University doctorate."
+    },
+    {
+      "name": "Duy Khuong Nguyen",
+      "reason": "Rakuten publication archive yielded 2021–2022 UserBERT bylines, but no qualifying current appointment profile or sourced current work city was found."
+    },
+    {
+      "name": "An Tran",
+      "reason": "Grab author-directory lead. Opened https://antran89.github.io/, which still states AIQ employment and contains old updates; it cannot establish a current Grab appointment. Grab's shared author index is not an acceptable individual profile."
+    },
+    {
+      "name": "Bac Nguyen",
+      "reason": "Already rostered as vp-3032 at Mirelo. Opened https://bacnguyencong.github.io/, which confirms Mirelo employment in Berlin and identifies Sony AI as former employment."
+    },
+    {
+      "name": "Trung Thanh Nguyen",
+      "reason": "Toshiba lead at https://thanhhff.github.io/ describes a PhD candidate beginning an AI research internship in October 2026; student and intern appointments are excluded."
+    },
+    {
+      "name": "Tien Dat Nguyen",
+      "reason": "LG AI Research publication https://www.lgresearch.ai/publication/view?seq=51 explicitly identifies him with KAIST. No qualifying current LG career appointment profile was found."
+    },
+    {
+      "name": "Quang Phuoc Nguyen",
+      "reason": "NAVER lead surfaced through historical machine-translation material. No qualifying current individual NAVER profile or personal appointment page and sourced current work city were located."
+    },
+    {
+      "name": "Thuong Nguyen Canh",
+      "reason": "Tencent publication lead concerned former Tencent America employment; no qualifying current Tencent appointment in Asia was established."
+    },
+    {
+      "name": "Quoc Phong Nguyen",
+      "reason": "Historical Singtel/Trustwave research lead; already rostered as vp-3178 at Amazon Science. No verified current Singtel appointment supporting a move was found."
+    },
+    {
+      "name": "Rick Nguyen",
+      "reason": "ByteDance Singapore lead concerned program management; no career scientific research role, doctorate or qualifying employer-affiliated publication record was established."
+    }
+  ]
+}

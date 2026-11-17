@@ -1,0 +1,193 @@
+{
+  "slice": "nasa-noaa-nist",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Quynh Dang",
+        "university": "National Institute of Standards and Technology",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Cryptographic Technology Group, Computer Security Division, Information Technology Laboratory",
+        "city": "Gaithersburg",
+        "state": "Maryland",
+        "country": "United States",
+        "researchAreas": [
+          "Cryptography",
+          "Post-Quantum Cryptography",
+          "Hash-Based Digital Signatures"
+        ],
+        "profileUrl": "https://www.nist.gov/people/quynh-dang"
+      },
+      "evidence": {
+        "currentRole": "[NIST personal profile](https://www.nist.gov/people/quynh-dang) — \"Computer Scientist\"; identified as federal staff in the Cryptographic Technology Group.",
+        "doctorateOrPapers": "No doctorate claimed. Current-employer publications within 2023-11-17–2026-11-17: (1) Scott Fluhrer and Quynh Dang, Smaller Sphincs+, Cryptology ePrint 2024/018, received 2024-01-05 and revised 2025-01-16; explicitly identifies Dang's NIST affiliation and email: https://eprint.iacr.org/2024/018. (2) Additional Digital Signatures second-round research report, NIST IR 8610, May 2026; names Quynh Dang with NIST affiliation and ORCID 0009-0005-9801-6805; approved by NIST's Editorial Review Board on 2026-05-05: https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=962093. (3) Fourth-round post-quantum standardization research report, published 2025-03-11, also listed on the personal profile: https://www.nist.gov/publications/status-report-fourth-round-nist-post-quantum-cryptography-standardization-process. The latter two publications are NIST research reports.",
+        "vietnameseSignal": "Vietnamese given-name token Quynh accompanies Dang on the opened employer profile: https://www.nist.gov/people/quynh-dang. No diacritic name reconstructed.",
+        "location": "[NIST IR 8610, page 2](https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=962093) — \"NIST, Gaithersburg, Maryland, USA\" in Quynh Dang's author affiliation, rather than the website's headquarters footer.",
+        "dedup": "Searched public/data.json for Quynh Dang, Quynh H. Dang, name-order variants, and the profile URL. Ran npm run find-roster-matches for Quynh Dang and Quynh H. Dang, including the employer profile and linked ORCID URL: no roster or retired-ID matches. Checked maintenance/sector-expansion/already-proposed.txt, including reordered name tokens: no match. Did not attribute the unrelated optical-physics papers mixed into DBLP's Quynh Dang record to this researcher."
+      }
+    }
+  ],
+  "possible_move": [
+    {
+      "name": "Khuong H. Tran",
+      "id": "vp-3008",
+      "note": "Possible employer-mapping correction, not a new person: roster says NASA Ames Research Center; the opened personal profile explicitly identifies Bay Area Environmental Research Institute alongside NASA Earth eXchange and lists a joint NASA Ames/BAERI research-scientist appointment since 2024. The profile URL and South Dakota State University doctorate resolve identity. https://www.nasa.gov/people/khuong-tran/"
+    },
+    {
+      "name": "QuynhGiao Nguyen",
+      "id": "vp-3012",
+      "note": "Possible appointment correction requiring current confirmation: roster says NASA Glenn Research Center, Environmental Durability Branch. An opened NASA page under Langley identifies a Program Element Manager appointment in the Game Changing Development Program. That biography dates to 2021 and was updated in 2023, so it does not establish a newly occurring move or definitively settle the present duty station. https://www.nasa.gov/centers-and-facilities/langley/quynhgiao-nguyen/"
+    }
+  ],
+  "rejected": [
+    {
+      "name": "Huong Giang Nguyen",
+      "reason": "Already rostered as Huong Giang T. Nguyen, vp-1420; exact employer-profile URL match confirmed by find-roster-matches. https://www.nist.gov/people/huong-giang-nguyen"
+    },
+    {
+      "name": "Long Phan",
+      "reason": "Already rostered as vp-1654; exact name and employer-profile URL match. https://www.nist.gov/people/long-phan"
+    },
+    {
+      "name": "Thinh Bui",
+      "reason": "Already rostered as vp-1655; exact name and employer-profile URL match. https://www.nist.gov/people/thinh-bui"
+    },
+    {
+      "name": "Thao T. Nguyen",
+      "reason": "Already rostered as vp-2968 with the same NIST personal profile. https://www.nist.gov/people/thao-t-nguyen"
+    },
+    {
+      "name": "Thinh Dang",
+      "reason": "Opened NIST personal page establishes federal staff membership and recent research publications but supplies no current job title to quote, as BRIEF3 requires. No roster or retired-ID match; held for title verification. https://www.nist.gov/people/thinh-dang"
+    },
+    {
+      "name": "Thuc Mai",
+      "reason": "Own biography describes an NRC postdoctoral appointment, while its staff classification says Fed. A current career title could not be resolved from the conflicting page. https://www.nist.gov/people/thuc-mai"
+    },
+    {
+      "name": "Son T. Le",
+      "reason": "Opened NIST profile identifies an associate research appointment and a Brown doctorate, but a continuing, non-trainee appointment with the listed employer was not established. https://www.nist.gov/people/son-t-le"
+    },
+    {
+      "name": "Dat Duthinh",
+      "reason": "The older Structures Group directory explicitly warns that it is outdated. Its personal-profile link returned 404; no acceptable live personal profile established. https://www.nist.gov/el/mssd/structures-group-staff-directory"
+    },
+    {
+      "name": "Quang Vu Le",
+      "reason": "Opened personal page lacks a current job title and doctorate information; two qualifying recent papers were not established. https://www.nist.gov/people/quang-vu-le"
+    },
+    {
+      "name": "Hien Nguyen",
+      "reason": "NIST biography lists master's and bachelor's degrees; two papers within the required three-year window were not established. https://www.nist.gov/people/hien-nguyen"
+    },
+    {
+      "name": "Diep Nguyen",
+      "reason": "NIST profile identifies a graduate student. https://www.nist.gov/people/diep-nguyen"
+    },
+    {
+      "name": "Hoang Tran",
+      "reason": "NIST directory identifies contractor status in the Computer Facilities Group, without an eligible research appointment. https://www.nist.gov/people/hoang-tran"
+    },
+    {
+      "name": "Duy Nguyen",
+      "reason": "NIST directory identifies contractor desktop-support work. https://www.nist.gov/people/duy-nguyen"
+    },
+    {
+      "name": "Cecile Pham",
+      "reason": "NIST biography describes patenting and licensing management rather than an eligible career research role. https://www.nist.gov/people/cecile-pham"
+    },
+    {
+      "name": "Mai Tran (Kimmai)",
+      "reason": "NIST page describes an Industry Analyst with a Rice doctorate; eligibility as a career researcher and the additional Vietnamese signal required for Mai were not established. This page also conflicts with roster vp-3023, Ngoc Thanh Mai Tran, which cites the same URL but describes a different education and research identity. Do not treat the URL match as proof that these are the same person. https://www.nist.gov/people/mai-tran"
+    },
+    {
+      "name": "Hai M. Nguyen",
+      "reason": "Opened JPL personal page establishes a UCLA statistics doctorate and Pasadena address, and the group directory lists current membership. However, the personal page supplies no exact current job title to quote. Held under BRIEF3's title requirement. https://uq.jpl.nasa.gov/home/nguyen/"
+    },
+    {
+      "name": "Tu-Hoa Pham",
+      "reason": "Opened JPL personal profile explicitly marks former membership. https://robotics.jpl.nasa.gov/who-we-are/people/tu-hoa_pham/"
+    },
+    {
+      "name": "Tam T. Nguyen",
+      "reason": "Opened JPL personal profile explicitly marks former membership. https://robotics.jpl.nasa.gov/who-we-are/people/tam_nguyen/"
+    },
+    {
+      "name": "Michelle Tran",
+      "reason": "JPL biography identifies a postdoctoral researcher who joined in February 2025. https://www.jpl.nasa.gov/site/research/mttran/"
+    },
+    {
+      "name": "Daniel Tran",
+      "reason": "Opened JPL personal biography lists a bachelor's degree; two qualifying recent papers and an affirmative Vietnamese signal beyond the surname were not established. https://ai.jpl.nasa.gov/public/people/dannyt/"
+    },
+    {
+      "name": "Long Nguyen",
+      "reason": "Goddard profile identifies KBR as the employer, making this contractor-only NASA personnel under the brief's exclusions. https://science.gsfc.nasa.gov/sci/bio/long.nguyen"
+    },
+    {
+      "name": "Ngoc Tuan Truong",
+      "reason": "Goddard profile explicitly identifies a postdoctoral appointment and UMBC employment. https://science.gsfc.nasa.gov/solarsystem/planetarysystems/bio/tuan.n.truong-1/"
+    },
+    {
+      "name": "Nhut Truong",
+      "reason": "Goddard spotlight is a lead rather than an acceptable current personal employment profile; a career NASA appointment was not established. https://science.gsfc.nasa.gov/600/ECSS/spotlight/Nhut-Truong/"
+    },
+    {
+      "name": "T. Paul Bui",
+      "reason": "NASA explicitly records retirement on 2023-05-31. Recent papers show BAERI affiliations, while the older NASA personal biography still describes staff service. No current-employer personal page establishing an eligible continuing appointment was found. https://www.nasa.gov/ames/earth-science/highlights/2023-2/"
+    },
+    {
+      "name": "Louis Nguyen",
+      "reason": "Already retired from the roster as vp-2970 following review of the doctorate/publication requirement. The retired-ID ledger records insufficient qualifying recent publications; this run did not establish evidence warranting restoration. https://www.nasa.gov/people/louis-nguyen/"
+    },
+    {
+      "name": "Peter B. Tran",
+      "reason": "Opened NASA personal profile establishes research leadership, but no doctorate or two qualifying recent papers; its selected publications and presentations predate the required window. https://www.nasa.gov/people/peter-b-tran/"
+    },
+    {
+      "name": "Huy Tran",
+      "reason": "NASA biography lists a bachelor's degree; a doctorate or two qualifying recent papers was not established. https://www.nasa.gov/people/huy-tran/"
+    },
+    {
+      "name": "Quang-Viet Nguyen",
+      "reason": "Historical Glenn research and NASA Headquarters program-officer material surfaced, but no acceptable live personal page establishing a current appointment within the assigned centers was found."
+    },
+    {
+      "name": "Huu P. Trinh",
+      "reason": "Marshall publications and historical program material surfaced, but no acceptable current employer personal profile was found."
+    },
+    {
+      "name": "Jonathan Lee (Dien Le)",
+      "reason": "Marshall research appears in historical news and technology-transfer material; an acceptable current personal employment profile and the doctorate/recent-paper requirement were not established."
+    },
+    {
+      "name": "Thao Tran",
+      "reason": "USDA's directory initially exposed an older microbiologist profile and 2024 publications, but reopening the personal URL returned invalid or no longer available. Cached biographical text does not establish current employment. https://www.ars.usda.gov/people-locations/person?person-id=57546"
+    },
+    {
+      "name": "Nhi (Amy) Tran",
+      "reason": "USDA alphabetical directory link returned invalid or no longer available. https://www.ars.usda.gov/people-locations/person?person-id=57709"
+    },
+    {
+      "name": "Quynhchi Pham",
+      "reason": "USDA personal URL returned invalid or no longer available. https://www.ars.usda.gov/people-locations/person?person-id=53031"
+    },
+    {
+      "name": "Maily Pham",
+      "reason": "Opened EPA biography describes current quality-assurance management and a bachelor's degree; an eligible research appointment and two qualifying recent papers were not established. https://www.epa.gov/sciencematters/meet-epa-research-chemist-maily-pham"
+    },
+    {
+      "name": "Phuong A. Le",
+      "reason": "USGS directory lead identifies IT/data-management work; an eligible career research appointment and doctorate or two qualifying recent papers were not established. https://www.usgs.gov/staff-profiles/phuong-a-le"
+    },
+    {
+      "name": "Sieu-Cuong San",
+      "reason": "NCAR directory lead resolves to a postdoctoral researcher at the University of Colorado, rather than a verified continuing NCAR research appointment. https://www.colorado.edu/atlas/sieu-cuong-san"
+    },
+    {
+      "name": "Rebecca Trinh",
+      "reason": "AOML newsletter names a biological oceanographer joining NGI, but no acceptable current-employer personal profile was found; newsletter material alone cannot serve as profileUrl. https://www.aoml.noaa.gov/wp-content/uploads/2026/01/2026-October-December-keynotes.pdf"
+    }
+  ]
+}

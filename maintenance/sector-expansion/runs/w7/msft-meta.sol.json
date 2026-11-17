@@ -1,0 +1,115 @@
+{
+  "slice": "msft-meta",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Dat T. Nguyen",
+        "university": "Meta",
+        "institutionType": "Corporate research lab",
+        "track": "Industry Research",
+        "rank": "Researcher",
+        "department": "Reality Labs",
+        "city": "Menlo Park",
+        "state": "California",
+        "country": "United States",
+        "researchAreas": [
+          "Wireless Technologies",
+          "Signal Processing",
+          "Machine Learning",
+          "Human-Centric Sensing"
+        ],
+        "phdInstitution": "National University of Singapore",
+        "profileUrl": "https://dattnguyen.com/",
+        "confirmed": false
+      },
+      "evidence": {
+        "currentRole": "https://dattnguyen.com/ — \"Research Scientist at Meta Reality Labs\". Opened his personal homepage; no individual employer biography was found.",
+        "doctorateOrPapers": "https://dattnguyen.com/ — explicitly states that he received his PhD from the National University of Singapore, supervised by John Ho, researching wireless physiological sensing and microwave metamaterials.",
+        "vietnameseSignal": "https://dattnguyen.com/ — Vietnamese given-name token Dat accompanies Nguyen.",
+        "location": "https://jglobal.jst.go.jp/en/detail?JGLOBAL_ID=202502230604231603 — Nguyen Dat T.'s author-specific affiliation on the 2025 paper Wireless Respiration Tracking Using Smart Glasses is \"Meta Platforms, Inc.,Menlo Park,CA,USA,94025\". This is the indexed paper affiliation, not an inference from headquarters.",
+        "dedup": "Searched public/data.json for the name, name-order variants and dattnguyen.com; checked already-proposed.txt; ran npm run find-roster-matches with the name and personal URL. Only vp-0167 Dat-Dao Nguyen matched by name: an accounting scholar with a Concordia doctorate, distinct from this NUS-trained sensing researcher. No identity-URL or retired-ID match."
+      }
+    },
+    {
+      "entry": {
+        "name": "Linh Tran",
+        "university": "Meta",
+        "institutionType": "Corporate research lab",
+        "track": "Industry Research",
+        "rank": "Researcher",
+        "department": "Meta AI",
+        "city": "London",
+        "country": "United Kingdom",
+        "phdInstitution": "Imperial College London",
+        "profileUrl": "https://github.com/narthnil",
+        "confirmed": false
+      },
+      "evidence": {
+        "currentRole": "https://github.com/narthnil — \"Research Scientist @ Meta AI\". Opened his self-authored personal GitHub profile. No individual employer biography was found; the linked custom website https://www.linht.com/ and its CV timed out.",
+        "doctorateOrPapers": "https://github.com/narthnil — his personal biography explicitly identifies an Imperial College London PhD and a previous research scientist appointment at Autodesk AI Lab.",
+        "vietnameseSignal": "https://github.com/narthnil — Vietnamese given-name token Linh accompanies Tran.",
+        "location": "https://github.com/narthnil — personal profile lists \"London\". His indexed personal CV, https://www.linht.com/pdf/CV_Linh_Tran.pdf, corroborates London, UK and describes generative-model research at Meta; the PDF could not be opened successfully.",
+        "dedup": "Searched public/data.json for Linh Tran, name-order variants and identity URLs; checked already-proposed.txt; ran npm run find-roster-matches with the name, GitHub profile, custom website and CV URL. Name-only matches vp-0620, vp-0700, vp-1792, vp-2248 and vp-3527 concern economics, education, business or medicine, distinct from this Imperial-trained computer-science researcher previously at Autodesk. No identity-URL or retired-ID match."
+      }
+    }
+  ],
+  "possible_move": [],
+  "rejected": [
+    {
+      "name": "John Nguyen",
+      "reason": "His employer profile remains live, but its linked personal site identifies AMI Labs as his current employer and Meta FAIR as previous employment. The matcher also found retired vp-3001, already documenting this departure. https://johnlnguyen.com/"
+    },
+    {
+      "name": "Matt Le",
+      "reason": "Opened his official Meta profile and verified a research engineer appointment, New York City location and multiple recent publications. No affirmative Vietnamese signal beyond the shared surname was established. https://ai.meta.com/people/1852792045150192/matt-le/"
+    },
+    {
+      "name": "Son Ho",
+      "reason": "An April 2026 institutional biography explicitly describes his Microsoft Azure Research appointment as visiting. His formerly indexed Microsoft individual page now redirects to the general directory. Excluded under the temporary-role rule. https://cse.hkust.edu.hk/pg/seminars/S26/ho.html"
+    },
+    {
+      "name": "ThuVan Pham",
+      "reason": "The indexed Microsoft biography describes a senior software engineer on Central Engineering; opening the individual URL now redirects to the general directory. A current career research appointment and qualifying credentials were not verified. https://www.microsoft.com/en-us/research/people/thuvanp/"
+    },
+    {
+      "name": "Trung Dang",
+      "reason": "Opened the employer biography, which explicitly labels him Research Engineer (Alum). It does not establish current Microsoft employment. https://www.microsoft.com/applied-sciences/people/trung-dang"
+    },
+    {
+      "name": "Minh Bui",
+      "reason": "Opened the employer biography, which identifies a Research Intern (2022), rather than a current career appointment. https://www.microsoft.com/applied-sciences/people/minh-bui"
+    },
+    {
+      "name": "Hoang Nguyen",
+      "reason": "Microsoft Research New England's people directory lists a Pre-Doctoral Research Assistant appointment, outside the eligible career research roles. https://www.microsoft.com/en-us/research/lab/microsoft-research-new-england/people/"
+    },
+    {
+      "name": "Prune Truong",
+      "reason": "Her current personal homepage identifies Google as her employer and Microsoft as a former internship host; outside this slice. https://prunetruong.com/"
+    },
+    {
+      "name": "Khoi Viet Pham",
+      "reason": "Third-party sources suggest Meta research employment, but the opened personal GitHub profile still lists University of Maryland and supplies no current Meta role. No qualifying employer biography or personal site asserting current employment was verified. https://github.com/vkhoi"
+    },
+    {
+      "name": "Tuyen Tran",
+      "reason": "Research employment appeared in third-party leads, but no qualifying individual employer biography or personal site stating the current role was verified. Workshop and contact-aggregator pages were insufficient."
+    },
+    {
+      "name": "Tuan A. Tran",
+      "reason": "Opened his personal homepage and CV: they establish Meta machine-learning engineering, a Hannover doctorate and Stuttgart remote employment. Research output in his current Meta job and membership in FAIR, Reality Labs Research or GenAI were not identity-resolved. His listed industry publications concern earlier Bosch work. https://antoine-tran.github.io/ ; https://antoine-tran.github.io/files/cv.pdf"
+    },
+    {
+      "name": "Hieu Hoang",
+      "reason": "Opened his personal homepage, which states a current Microsoft senior research scientist role in machine translation. No current sourced work city or individual MSR biography was established; former University of Edinburgh affiliations were not used to infer his present location. https://hieuhoang.github.io/"
+    },
+    {
+      "name": "Minh Tran",
+      "reason": "Third-party leads describe a USC-trained Meta research scientist, but no qualifying current employer biography or personal site asserting that appointment was verified. Former university biographies and internships were insufficient."
+    },
+    {
+      "name": "Chuong Nguyen",
+      "reason": "Third-party leads suggest Meta computational-imaging research employment, but no qualifying current individual employer biography or personal site was verified. The CSIRO researcher with the same name is a separate identity."
+    }
+  ]
+}

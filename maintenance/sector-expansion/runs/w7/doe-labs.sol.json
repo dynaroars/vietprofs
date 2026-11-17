@@ -1,0 +1,184 @@
+{
+  "slice": "doe-labs",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Anh Tran",
+        "university": "Sandia National Laboratories",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Center for Computing Research",
+        "city": "Albuquerque",
+        "state": "New Mexico",
+        "country": "United States",
+        "researchAreas": [
+          "Scientific Machine Learning",
+          "Bayesian Optimization",
+          "Uncertainty Quantification",
+          "Computational Materials Science"
+        ],
+        "phdInstitution": "Georgia Institute of Technology",
+        "phdYear": 2018,
+        "profileUrl": "https://www.sandia.gov/ccr/staff/anh-tran/"
+      },
+      "evidence": {
+        "currentRole": "https://www.sandia.gov/ccr/staff/anh-tran/ — \"staff member\"; the biography explicitly documents conversion from postdoctoral appointee to staff in September 2020 and research in scientific machine learning.",
+        "doctorateOrPapers": "https://www.sandia.gov/ccr/staff/anh-tran/ — PhD in Mechanical Engineering, Georgia Institute of Technology, December 2018. The profile also lists three 2025 research publications.",
+        "vietnameseSignal": "https://www.sandia.gov/ccr/staff/anh-tran/ — Vietnamese given name Anh together with surname Tran.",
+        "location": "https://www.sandia.gov/ccr/staff/anh-tran/ — individual contact address: \"Albuquerque, NM 87185-1323\".",
+        "dedup": "Checked public/data.json for name-order variants and the profile URL, checked already-proposed.txt for exact names, and ran find-roster-matches for Anh Tran and Tran Anh with the URL. Same-name hits were resolved as different people by research field and education: vp-0063 has a mathematics doctorate from Georgia Tech in 2012; vp-0285 has a Rhode Island doctorate from 1973; vp-3152 has a UCLA doctorate and semiconductor process-modeling career. Other returned matches have different names, disciplines or appointments. No matching Sandia identity or retired ID was found."
+      }
+    },
+    {
+      "entry": {
+        "name": "Sonny S. Ly",
+        "university": "Lawrence Livermore National Laboratory",
+        "institutionType": "Public research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Laser Material Interaction Science Group, Materials Science Division",
+        "city": "Livermore",
+        "state": "California",
+        "country": "United States",
+        "researchAreas": [
+          "Laser Physics",
+          "Laser-Material Interactions",
+          "Laser Spectroscopy",
+          "Laser Materials Processing"
+        ],
+        "phdInstitution": "University of California, Davis",
+        "phdYear": 2012,
+        "profileUrl": "https://people.llnl.gov/ly2"
+      },
+      "evidence": {
+        "currentRole": "https://people.llnl.gov/ly2 — \"Staff Scientist and Deputy Group Leader, Laser-Material Interactions\". LLNL's May 13, 2026 biography corroborates his current leadership role: https://www.llnl.gov/article/54401/meet-llnl-laser-material-interaction-deputy-group-leader-sonny-ly",
+        "doctorateOrPapers": "https://people.llnl.gov/ly2 — PhD in Applied Science-Engineering, University of California at Davis, 2012.",
+        "vietnameseSignal": "https://www.llnl.gov/article/54401/meet-llnl-laser-material-interaction-deputy-group-leader-sonny-ly — LLNL explicitly describes him as \"Originally from Vietnam\" and says he moved to the United States as a young child.",
+        "location": "https://arxiv.org/pdf/2512.08719 — the December 2025 paper assigns Sonny S. Ly to affiliation 2: \"Lawrence Livermore National Laboratory, 7000 East Avenue, Livermore, California, USA\".",
+        "dedup": "Checked public/data.json for Sonny, Sonny Ly, Sonny S. Ly, reversed names and the profile URL; checked already-proposed.txt; ran find-roster-matches with the staff-profile and LLNL-biography URLs. No roster or retired-ID matches. The roster's Sonny Pham is a different person."
+      }
+    }
+  ],
+  "possible_move": [
+    {
+      "name": "Bang L. H. Nguyen",
+      "id": "vp-3324",
+      "note": "Roster lists Los Alamos National Laboratory. The NLR profile opened during this run labeled Bang Nguyen \"Researcher IV-Electrical Engineering\": https://research-hub.nlr.gov/en/persons/bang-nguyen/ . However, his personal CV still lists LANL employment from February 2023 to present: https://nlebang.github.io/cv/ . The NLR URL returned 404 on the final recheck. Resolve whether this is a stale affiliation or an actual move before editing; do not assign another ID. Name-and-URL matching returned vp-3324."
+    }
+  ],
+  "rejected": [
+    {
+      "name": "Loc Truong",
+      "reason": "Held for an explicit current work-city source. His own PNNL profile establishes Data Scientist status: https://www.pnnl.gov/people/loc-truong . Two recent papers explicitly establish PNNL affiliation: https://arxiv.org/html/2602.09158v1 and https://arxiv.org/html/2608.27750v1 . PNNL's January 2026 article has a Seattle dateline and a Seattle portrait, but neither explicitly establishes his office location: https://www.pnnl.gov/news-media/generative-ai-speeds-cybersecurity-defenses . Did not infer Richland from headquarters. The matcher returned vp-1916 Phuoc Loc Truong, a different mechanical-engineering researcher."
+    },
+    {
+      "name": "Long Ngoc Dinh",
+      "reason": "Opened https://people.llnl.gov/dinh1 through LLNL's staff links, but the individual page supplies no current title, biography or doctorate. Held despite research and staff leads elsewhere."
+    },
+    {
+      "name": "Alex Vu",
+      "reason": "Opened https://people.llnl.gov/vu4 through LLNL's staff links. The individual page lacks a current title and education; affirmative Vietnamese evidence beyond the surname was also not established."
+    },
+    {
+      "name": "Thanh Hua",
+      "reason": "Argonne research and principal-engineer leads were found, but no qualifying individual employer staff profile was located. News and team pages cannot substitute for the required profile."
+    },
+    {
+      "name": "Buu Q. Pham",
+      "reason": "Ames lists him on research-team pages, including https://www.ameslab.gov/cbs/ecp-gamess , but no individual employer staff page was located. Held under the staff-profile-only requirement."
+    },
+    {
+      "name": "Thanh-Tam Truong",
+      "reason": "SRNL research and award leads were found, but https://www.srnl.gov/wms-speakers/ only lists Tam Truong among speakers. No qualifying individual staff profile establishing the current title was located."
+    },
+    {
+      "name": "Khang Nguyen",
+      "reason": "Opened https://inl.elsevierpure.com/en/persons/khang-nguyen/ . The biography establishes Vietnamese background and a 2026 doctorate, but does not establish a current career-staff title or work city. Could not distinguish a permanent research appointment from a postdoctoral appointment."
+    },
+    {
+      "name": "Nga Thi Thuy Nguyen-Fotiadis",
+      "reason": "LANL publication and historical staff-scientist leads were found, but the author-profile output page rendered only the repository shell: https://laro.lanl.gov/esploro/profile/nga_nguyenfotiadis/output/publication?institution=01LANL_INST . A current title on an accessible individual staff page was not verified."
+    },
+    {
+      "name": "Tri Duc Tran",
+      "reason": "Opened https://laro.lanl.gov/esploro/profile/tri_tran . It identifies the person and LANL but does not establish a career research title, doctorate or qualifying recent publication record."
+    },
+    {
+      "name": "Thao Thi Tam Nguyen",
+      "reason": "Recent LANL mechanics publications were found, but no qualifying individual employer staff page with a current career-research title was located."
+    },
+    {
+      "name": "Liem X. Dang",
+      "reason": "Opened https://www.emsl.pnnl.gov/people/liem-dang . The page identifies PNNL affiliation and projects but does not establish a current staff title or doctorate. Held rather than infer continuing employment from historical publications."
+    },
+    {
+      "name": "Long Le",
+      "reason": "Opened https://www.pnnl.gov/people/long-le . The page labels him Materials Scientist but supplies no doctorate, work city or explicit career-staff appointment history, and lists only one recent paper. Earlier postdoctoral-award evidence does not establish conversion to career staff."
+    },
+    {
+      "name": "Trieu Mai",
+      "reason": "The NLR individual profile https://research-hub.nlr.gov/en/persons/trieu-mai/ conflicts with newer ESIG employment leads. Current DOE-laboratory employment was not established. The ESIG biography https://www.esig.energy/trieu-mai/ returned 403 when opened."
+    },
+    {
+      "name": "Giang Huynh",
+      "reason": "https://inl.elsevierpure.com/en/persons/giang-huynh/ explicitly identifies a postdoctoral appointment; excluded by the career-staff requirement."
+    },
+    {
+      "name": "Thuy Le",
+      "reason": "The biography at https://www.pnnl.gov/people/thuy-le identifies a postdoctoral researcher, despite the broader Materials Scientist heading."
+    },
+    {
+      "name": "Nhu (Jessica) Nguyen",
+      "reason": "https://energy.sandia.gov/staff/nhu-jessica-nguyen/ identifies a Postdoctoral Researcher; excluded."
+    },
+    {
+      "name": "Aramy Truong",
+      "reason": "https://www.pnnl.gov/people/aramy-truong identifies a Post-bachelor's Research Associate; no qualifying career-staff appointment was established."
+    },
+    {
+      "name": "Theresa Pham",
+      "reason": "https://www.pnnl.gov/people/theresa-pham identifies a Post Masters Research Associate; no qualifying career-staff appointment was established."
+    },
+    {
+      "name": "Linh Truong",
+      "reason": "https://www.pnnl.gov/people/linh-truong describes communications work rather than a qualifying career research role."
+    },
+    {
+      "name": "Allan Tuan",
+      "reason": "https://www.pnnl.gov/people/allan-tuan-phd-mba describes commercialization management; a qualifying research appointment was not established."
+    },
+    {
+      "name": "Phong T. Nguyen",
+      "reason": "https://www.ornl.gov/staff-profile/phong-t-nguyen identifies a Radiological Control Technician; no research doctorate or qualifying recent research record was established."
+    },
+    {
+      "name": "Minh Thanh Vu",
+      "reason": "https://www.cnls.lanl.gov/External/profile.php?id=1734 identifies a CNLS postdoctoral appointment; excluded."
+    },
+    {
+      "name": "Phuc An Nguyen",
+      "reason": "Brookhaven's current catalysis directory identifies a Visiting Graduate Student from SUNY Stony Brook: https://www.bnl.gov/chemistry/crs/people.php . Excluded."
+    },
+    {
+      "name": "Thang Duc Pham",
+      "reason": "https://extremecomputingtraining.anl.gov/program/people/thang-pham identifies a postdoctoral appointment; excluded."
+    },
+    {
+      "name": "Thien Truong",
+      "reason": "https://research-hub.nlr.gov/en/persons/thien-truong/ explicitly identifies \"Postdoctoral Researcher-Materials Science\"; excluded despite a doctorate and Vietnamese education."
+    },
+    {
+      "name": "Alexander Nguyen",
+      "reason": "SLAC's directory lists Staff Engineer 2, but the individual profile https://profiles.stanford.edu/210577 did not expose sufficient biography to verify research output, doctorate or affirmative Vietnamese evidence beyond the surname."
+    },
+    {
+      "name": "Jasmine K. Nguyen",
+      "reason": "SLAC's directory lists Staff Engineer 2, but the individual profile https://profiles.stanford.edu/304239 did not expose sufficient evidence of a qualifying research career, doctorate or Vietnamese background."
+    },
+    {
+      "name": "Tue Duc Ngo",
+      "reason": "SLAC's directory lists an electron-safety engineering associate role. The individual profile https://profiles.stanford.edu/tue-ngo did not establish a doctorate or qualifying research publication record."
+    }
+  ]
+}

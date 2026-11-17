@@ -1,0 +1,159 @@
+{
+  "slice": "econ-policy",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Hiep Hong Le",
+        "university": "ISEAS – Yusof Ishak Institute",
+        "institutionType": "Think tank",
+        "track": "Policy & Think Tank",
+        "rank": "Researcher",
+        "department": "Vietnam Studies Programme; Regional Strategic and Political Studies Programme",
+        "city": "Singapore",
+        "country": "Singapore",
+        "researchAreas": [
+          "Vietnamese Politics",
+          "Political Economy",
+          "Foreign Policy",
+          "International Economic Integration"
+        ],
+        "phdInstitution": "University of New South Wales",
+        "phdYear": 2015,
+        "profileUrl": "https://www.iseas.edu.sg/about-us/researchers/le-hong-hiep"
+      },
+      "evidence": {
+        "currentRole": "https://www.iseas.edu.sg/about-us/researchers/le-hong-hiep — \"Senior Fellow\"; also coordinates the Vietnam Studies Programme.",
+        "doctorateOrPapers": "https://www.iseas.edu.sg/about-us/researchers/le-hong-hiep — explicitly records a PhD in Political and International Studies from the University of New South Wales in 2015.",
+        "vietnameseSignal": "https://www.iseas.edu.sg/about-us/researchers/le-hong-hiep — Vietnamese given names Hong Hiep; biography documents education at the Diplomatic Academy of Vietnam and previous Vietnamese government and university employment.",
+        "location": "https://www.iseas.edu.sg/contact-us/ — \"Address: 30 Heng Mui Keng Terrace, Singapore 119614\"; the current staff profile places his appointment in the institute's Vietnam Studies Programme.",
+        "dedup": "Searched public/data.json for Hiep Hong Le, Hong Hiep Le, Le Hong Hiep, token-order variants, and the profile URL: no matches. npm run find-roster-matches with both normalized name orders and the profile URL returned no roster or retired-id matches. No matching name-order variant in maintenance/sector-expansion/already-proposed.txt. No existing ISEAS employer spelling found."
+      }
+    },
+    {
+      "entry": {
+        "name": "Dung Trung Huynh",
+        "university": "ISEAS – Yusof Ishak Institute",
+        "institutionType": "Think tank",
+        "track": "Policy & Think Tank",
+        "rank": "Researcher",
+        "department": "ASEAN Studies Centre",
+        "city": "Singapore",
+        "country": "Singapore",
+        "researchAreas": [
+          "Indo-Pacific Security",
+          "Political Economy",
+          "Technology and International Relations",
+          "Foreign Policy",
+          "ASEAN Institutions"
+        ],
+        "phdInstitution": "Pardee RAND Graduate School",
+        "profileUrl": "https://www.iseas.edu.sg/about-us/researchers/huynh-trung-dung/"
+      },
+      "evidence": {
+        "currentRole": "https://www.iseas.edu.sg/about-us/researchers/huynh-trung-dung/ — \"Senior Fellow\", ASEAN Studies Centre. The page explicitly identifies his Fulbright University Vietnam appointment as former.",
+        "doctorateOrPapers": "https://fulbright.edu.vn/our-team/huynh-trung-dung — biography explicitly records a PhD in Policy Analysis from Pardee RAND Graduate School. Used for education only; the current appointment is verified on ISEAS's page.",
+        "vietnameseSignal": "https://fulbright.edu.vn/our-team/huynh-trung-dung — Vietnamese given names Trung Dung, undergraduate education in Vietnam, and eight years of service in Vietnam's Ministry of Foreign Affairs.",
+        "location": "https://orcid.org/0000-0002-8636-8476 — indexed employment record states \"ISEAS - Yusof Ishak Institute: Singapore, SG\". https://www.iseas.edu.sg/contact-us/ independently gives \"Address: 30 Heng Mui Keng Terrace, Singapore 119614\".",
+        "dedup": "Searched public/data.json for Dung Trung Huynh, Huynh Trung Dung, Dung Huynh, token-order variants, and the profile URL: no exact identity or URL matches. npm run find-roster-matches with the employer, ORCID, and former-employer URLs flagged vp-0011 Dung T. Huynh. Resolved as different people: vp-0011 is a University of Texas at Dallas computer scientist with a 1978 Saarland doctorate; this candidate holds a Pardee RAND policy-analysis doctorate and researches international relations. No matching name-order variant in already-proposed.txt."
+      }
+    }
+  ],
+  "possible_move": [
+    {
+      "name": "Benoit Nguyen",
+      "id": "vp-2949",
+      "note": "Roster says Banque de France, Monetary Policy and Financial Studies Division. The opened ECB profile lists the current position as \"Team Lead - Financial Markets\", Market Operations, and lists Banque de France employment as previous experience. The doctorate and employment history establish the same identity; find-roster-matches returned vp-2949. https://www.ecb.europa.eu/pub/research/authors/profiles/benoit-nguyen.en.html"
+    },
+    {
+      "name": "Trang Thu Tran",
+      "id": "vp-2941",
+      "note": "Roster says The World Bank, Finance, Competitiveness, and Innovation Global Practice. The same opened employer-hosted profile now identifies her as Senior Economist in the Economic and Market Research Unit of the International Finance Corporation. Exact profile-URL match and matching Maryland doctorate establish identity. This is an existing-record employer/unit update within the World Bank Group. https://blogs.worldbank.org/en/team/t/trang-tran"
+    }
+  ],
+  "rejected": [
+    {
+      "name": "Dung Doan",
+      "reason": "Held for the required location evidence. Opened current World Bank biography confirms Economist, Social Protection and Jobs, and the former CGHE biography confirms an ANU economics PhD. A university podcast identifies Sydney, but no city was verified through the source types permitted by the brief: her own page, employer page, CV, or recent paper affiliation. Name matches to vp-0770 and vp-1094 are different researchers with different fields and doctorates. https://blogs.worldbank.org/en/team/d/dung-doan ; https://www.researchcghe.org/people/dung-doan/ ; https://devpolicytalks.simplecast.com/episodes/the-gains-and-pains-of-working-away-from-home"
+    },
+    {
+      "name": "Giap Minh Bui",
+      "reason": "Opened ADB-hosted biography confirms Principal Natural Resources and Agriculture Economist, but no research doctorate, qualifying pair of recent papers, or permitted city evidence was verified. https://events.development.asia/author/giap-minh-bui"
+    },
+    {
+      "name": "Nga Thi Viet Nguyen",
+      "reason": "Opened World Bank biography confirms Senior Economist but states a master's degree. A research doctorate or two qualifying papers from the last three years, together with a permitted city source, was not verified. https://blogs.worldbank.org/en/team/n/nga-thi-viet-nguyen"
+    },
+    {
+      "name": "Linh Khuat",
+      "reason": "Current employer biography explicitly identifies a consultant appointment and current PhD-student status. https://www.worldbank.org/en/about/people/l/linh-khuat"
+    },
+    {
+      "name": "Linh Hoang Vu",
+      "reason": "Opened employer biography places the economist in Hanoi, Vietnam. https://blogs.worldbank.org/en/team/l/linh-hoang-vu"
+    },
+    {
+      "name": "Huong Lan Dao",
+      "reason": "Opened employer biography explicitly places the senior health systems specialist in the Hanoi office in Vietnam. https://blogs.worldbank.org/en/team/h/huong-lan-dao"
+    },
+    {
+      "name": "Phuong Hoang Ai Nguyen",
+      "reason": "Opened employer biography explicitly places the senior environmental specialist in Hanoi, Vietnam. https://blogs.worldbank.org/en/team/p/phuong-hoang-ai-nguyen"
+    },
+    {
+      "name": "Nguyen Thi Lan Huong",
+      "reason": "FAO's team listing supplies an economist role and agricultural-economics doctorate, but no qualifying individual employer biography was found. The link attached to her name resolves to email protection rather than a personal profile. https://www.fao.org/global-perspectives-studies/team/ar/"
+    },
+    {
+      "name": "Nhan Tran",
+      "reason": "WHO role and doctorate surfaced through institutional news and other UN organizations' speaker biographies, but no individual page published by his current employer or maintained personal site was verified. Conference biographies and news cannot serve as profileUrl under this brief. https://www.unssc.org/about-unssc/speakers-and-collaborators/dr-nhan-tran ; https://2022.itf-oecd.org/speaker/nhan-tran"
+    },
+    {
+      "name": "Thi Minh Phuong Ngo",
+      "reason": "UNICEF Innocenti's current team directory lists Chief, Foresight and Policy, but no qualifying individual employer biography, doctorate or qualifying recent publication pair, and individual work-city evidence were verified. https://www.unicef.org/innocenti/our-team"
+    },
+    {
+      "name": "Tran Nhu Trang",
+      "reason": "Lead appears in UNICEF Innocenti report authorship, but a current career appointment and qualifying individual employer profile were not verified. Report authorship alone does not establish eligibility. https://www.unicef.org/innocenti/media/9036/file/UNICEF-Innocenti-GRASSP-VietNam-Report-2024-EN.pdf.pdf"
+    },
+    {
+      "name": "Kim P. Huynh",
+      "reason": "Opened Bank of Canada page is an author archive without a current job title. Other organizations describe a senior research adviser role, but that does not supply the required current-employer title quotation. An affirmative Vietnamese signal beyond the shared surname was also not established. The roster's Kim Huynh at ANU is a different political scientist. https://www.bankofcanada.ca/profile/kim-huynh/"
+    },
+    {
+      "name": "Tran-Minh Vu",
+      "reason": "Opened Bank of Canada page is an author archive with an old publication and no current appointment statement. https://www.bankofcanada.ca/profile/tran-minh-vu/"
+    },
+    {
+      "name": "Valerie Nguyen",
+      "reason": "Opened Atlanta Fed page identifies Economic Research Analyst. A research doctorate or qualifying pair of recent papers and an affirmative Vietnamese signal beyond the surname were not verified. https://www.atlantafed.org/en/who-we-are/people/research/staff/valerie-nguyen"
+    },
+    {
+      "name": "Nghia Nguyen",
+      "reason": "Current ADBI directory lists Capacity Building Fellow. A stable career research appointment satisfying the brief was not verified. https://www.adb.org/adbi/about/staff-profiles"
+    },
+    {
+      "name": "Brigitte Roth Tran",
+      "reason": "Career economist role and doctorate are supported, but no affirmative Vietnamese signal beyond the surname Tran was found. The compound surname does not establish Vietnamese identity under this brief. https://rothtran.com/"
+    },
+    {
+      "name": "Linda Nguyen",
+      "reason": "No qualifying individual current-employer biography was found. Directory and third-party leads did not establish a research doctorate or two qualifying recent papers; LinkedIn was not fetched."
+    },
+    {
+      "name": "Peter Nguyen",
+      "reason": "Skipped because the exact name appears in maintenance/sector-expansion/already-proposed.txt."
+    },
+    {
+      "name": "Phu Huynh",
+      "reason": "Already rostered as vp-3626 at the International Labour Organization; not a new candidate."
+    },
+    {
+      "name": "Thao Liz Nguyen",
+      "reason": "Already rostered as vp-2951 at RAND Corporation; not a new candidate."
+    },
+    {
+      "name": "Huong Le Thu",
+      "reason": "Already rostered as vp-2952. Both the stored CSIS page and linked Crisis Group page returned HTTP 403 when opened, so no employer change is asserted from unverified live content."
+    }
+  ]
+}

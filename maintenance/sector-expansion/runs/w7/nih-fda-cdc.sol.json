@@ -1,0 +1,131 @@
+{
+  "slice": "nih-fda-cdc",
+  "candidates": [],
+  "possible_move": [],
+  "rejected": [
+    {
+      "name": "Dat Duong",
+      "reason": "Held for missing qualifying profileUrl. NHGRI identifies him as a Ph.D.-holding Staff Scientist in the Medical Genomics Unit, but only directory and team listings were found: https://www.genome.gov/staff/Benjamin-Solomon-MD. No individual employer profile or maintained personal site stating the current role was located. His former personal homepage returned 404. npm run find-roster-matches returned no roster or retired-ID matches."
+    },
+    {
+      "name": "Minh Bui",
+      "reason": "Held because the individual employer profile could not be opened: https://ccr.cancer.gov/staff-directory/minh-bui returned 403. Indexed content identifies a Senior Research Assistant studying centromeric chromatin, with a University of Maryland biology Ph.D. awarded in 2009 and a Bethesda address. Roster matching surfaced namesakes, including the ANU researcher; the NCI scientist's education and research differ. The brief requires successfully opening the personal employer page."
+    },
+    {
+      "name": "Cu Nguyen",
+      "reason": "The indexed CBIIT Staff Scientist profile redirects to the general CBIIT page: https://datascience.cancer.gov/about/staff-directory/cu-nguyen → https://www.cancer.gov/about-nci/organization/cbiit. No qualifying live personal profile was verified. Indexed education lists a bachelor's degree; two recent qualifying papers were not established."
+    },
+    {
+      "name": "Huu Tho Nguyen",
+      "reason": "Not a current NIH candidate. A newer employer page identifies him as a Research Scientist at Case Western Reserve University and states that his NIMH Research Fellow appointment ended in 2025: https://case.edu/medicine/pathology/research/pathology-labs/anderson-lab. The remaining NIMH lab listing is stale. Case Western Reserve University is outside this slice."
+    },
+    {
+      "name": "Duy T. Tran",
+      "reason": "His personal NEI page states 'Scientific Information Officer'; a current career research appointment was not established from that page: https://www.nei.nih.gov/about/staff/duy-tran."
+    },
+    {
+      "name": "Kim-Thu Tran",
+      "reason": "NIMH lists a Data Scientist, but no individual employer profile, research doctorate, or identity-resolved pair of recent research papers was verified: https://www.nimh.nih.gov/about/staff-directories/intramural-research-irp-organizational-locator."
+    },
+    {
+      "name": "Kimberly T. Truong",
+      "reason": "NIEHS explicitly lists 'Contractor - Data Scientist' and an M.Sc.; contractor-only personnel are excluded: https://portal.niehs.nih.gov/staff/allScientists."
+    },
+    {
+      "name": "Chi U. Nguyen",
+      "reason": "NCI DCEG lists 'Research Assoc I' with employment category 'Contractor': https://dceg2.cancer.gov/cgi-bin/Personnel.pl?1=ALL."
+    },
+    {
+      "name": "Tam-Anh Tran",
+      "reason": "NCI DCEG lists a Fellow rather than a career staff appointment: https://dceg2.cancer.gov/cgi-bin/Personnel.pl?1=ALL."
+    },
+    {
+      "name": "Thi Van Trinh Tran",
+      "reason": "Explicitly a Postdoctoral Fellow: https://dceg.cancer.gov/fellowship-training/fellowship-experience/meet-fellows/iteb/tran-thi-van-trinh."
+    },
+    {
+      "name": "Thong T. Luong",
+      "reason": "NCI DCEG lists a Fellow rather than a career staff appointment: https://dceg2.cancer.gov/cgi-bin/Personnel.pl?1=ALL."
+    },
+    {
+      "name": "Phuc Tran",
+      "reason": "NIMH lists 'Postdoc Fellow (Visiting Fellow)': https://www.nimh.nih.gov/about/staff-directories/intramural-research-irp-organizational-locator."
+    },
+    {
+      "name": "Alexander Bui",
+      "reason": "NIMH lists a fellowship appointment; the associated biography describes a recent undergraduate planning further training: https://www.nimh.nih.gov/about/staff-directories/intramural-research-irp-organizational-locator."
+    },
+    {
+      "name": "Trang Nguyen",
+      "reason": "NIMH explicitly lists 'Professional Services Contractor': https://www.nimh.nih.gov/about/staff-directories/intramural-research-irp-organizational-locator."
+    },
+    {
+      "name": "Phuoc Pham",
+      "reason": "NIMH lists 'Biomed. Engineering Technician'; a qualifying doctorate or recent publication record and a personal employer profile were not verified: https://www.nimh.nih.gov/about/staff-directories/intramural-research-irp-organizational-locator."
+    },
+    {
+      "name": "Hoan Le",
+      "reason": "NIMH lists 'System Administrator', without evidence of a current research role: https://www.nimh.nih.gov/about/staff-directories/intramural-research-irp-organizational-locator."
+    },
+    {
+      "name": "Van N. Pham",
+      "reason": "NICHD lists 'Lab Manager'; no personal employer profile or qualifying doctorate/recent-paper evidence was verified: https://www.nichd.nih.gov/research/atNICHD/Investigators/weinstein/personnel."
+    },
+    {
+      "name": "Thien Nguyen",
+      "reason": "NICHD's lab people page identifies a Postdoctoral Fellow. Recent publications and mentoring activity do not independently establish promotion to a career appointment: https://www.nichd.nih.gov/research/atNICHD/Investigators/gandjbakhche/people."
+    },
+    {
+      "name": "Helena Bui",
+      "reason": "NHLBI lists a Postbaccalaureate Fellow: https://www.nhlbi.nih.gov/science/cardiovascular-epidemiology-and-genomics."
+    },
+    {
+      "name": "Chung Tran",
+      "reason": "NEI lists a Postbaccalaureate Fellow: https://www.nei.nih.gov/research-and-training/research-labs-and-branches/retinal-development-genetics-and-therapy-section."
+    },
+    {
+      "name": "Cuong Tran",
+      "reason": "NLM lists 'ADMINISTRATIVE OFFICER', without evidence of a career scientific research role: https://www.nlm.nih.gov/contacts/division_of_intramural_research_directory.html."
+    },
+    {
+      "name": "Linda H. Huynh",
+      "reason": "The NICHD biography describes a science-writing and communications role, rather than current research employment: https://www.nichd.nih.gov."
+    },
+    {
+      "name": "Tieuvi Nguyen",
+      "reason": "CDRH lists Division Director for Ophthalmic Devices within product evaluation. No qualifying personal employer profile or current research role was verified: https://www.fda.gov/about-fda/cdrh-offices/cdrh-management-directory-organization."
+    },
+    {
+      "name": "Jessica Nguyen",
+      "reason": "CDRH lists Assistant Director for Bladder Dysfunction and Urinary Incontinence Devices. The directory establishes a regulatory-review leadership role; a qualifying personal employer profile and career research role were not verified: https://www.fda.gov/about-fda/cdrh-offices/cdrh-management-directory-organization."
+    },
+    {
+      "name": "Xinh-Xinh Nguyen",
+      "reason": "FDA research-award material identifies a 'TSI Fellow (CBER)'; no subsequent career appointment and qualifying personal employer profile were verified: https://www.fda.gov/science-research/about-science-research-fda."
+    },
+    {
+      "name": "Tai Huynh",
+      "reason": "The FDA source describes a mentored summer fellowship project at NCTR, rather than an established career appointment. No current personal employer profile was found: https://www.fda.gov/media/184233/download."
+    },
+    {
+      "name": "Quynhien Tran",
+      "reason": "Located in historical FDA Commissioner's Fellowship material from 2008. That record cannot establish a current career appointment, and no current personal employer profile was verified."
+    },
+    {
+      "name": "Kimberly H. Nguyen",
+      "reason": "CDC publications and the museum page provide leads, but the museum's 'Meet Commander Kimberly Nguyen' link goes to a video. No qualifying current personal CDC profile was verified: https://www.cdc.gov/museum/online/story-of-cdc/immunization/index.html. Roster matching surfaced Kimberly A. Nguyen at Houston; identity resolution remains necessary before any addition."
+    },
+    {
+      "name": "Duc B. Nguyen",
+      "reason": "CDC publication and historical EIS records establish past scientific activity, but no current personal employer profile with an exact current title was verified. Publication bylines and historical fellowship records do not satisfy the brief."
+    },
+    {
+      "name": "David P. Bui",
+      "reason": "Historical CDC EIS and publication records were found, but no current personal CDC employer profile was verified. Later publications also include a David Bui affiliated with California public health, requiring identity and current-employer resolution."
+    },
+    {
+      "name": "Sonny Hoang",
+      "reason": "No qualifying personal CDC employer page or maintained personal site stating the current role was found. Search-result leads alone were insufficient; LinkedIn was not fetched."
+    }
+  ]
+}

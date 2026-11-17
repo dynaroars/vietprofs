@@ -1,0 +1,152 @@
+{
+  "slice": "ibm-intel-bell",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Tung D. Le",
+        "university": "IBM Research",
+        "institutionType": "Corporate research lab",
+        "track": "Industry Research",
+        "rank": "Researcher",
+        "city": "Tokyo",
+        "country": "Japan",
+        "researchAreas": [
+          "Deep learning compilers",
+          "High-performance computing",
+          "Parallel program optimization"
+        ],
+        "phdInstitution": "The Graduate University for Advanced Studies (SOKENDAI)",
+        "phdYear": 2016,
+        "profileUrl": "https://research.ibm.com/people/tung-leduc",
+        "websiteUrl": "https://tungld.github.io/"
+      },
+      "evidence": {
+        "currentRole": "https://research.ibm.com/people/tung-leduc — \"Senior Research Scientist, AI Compiler | ONNX | MLIR\"",
+        "doctorateOrPapers": "https://tungld.github.io/education.html — lists 2013–2016 Ph.D. at SOKENDAI/NII.",
+        "vietnameseSignal": "Vietnamese given name Tung; https://tungld.github.io/education.html additionally documents bachelor's and master's education at HUST, linking to hust.edu.vn.",
+        "location": "https://research.ibm.com/people/tung-leduc — \"IBM Research - Japan Tokyo, Japan\"",
+        "dedup": "Searched public/data.json for Tung D. Le, Duc Tung Le, Le Duc Tung, tung-leduc, and tungld.github.io; checked already-proposed.txt. Ran npm run find-roster-matches with the name and repeated --url arguments for the IBM profile, personal homepage, and education page. Name-only matches vp-1415 and vp-1617 are different people: Oxford-trained molecular microbiologist and Wayne State-trained mathematician, respectively, versus this SOKENDAI-trained computing researcher."
+      }
+    },
+    {
+      "entry": {
+        "name": "Viet Duong",
+        "university": "NEC Laboratories America",
+        "institutionType": "Corporate research lab",
+        "track": "Industry Research",
+        "rank": "Researcher",
+        "department": "Data Science and System Security",
+        "city": "Princeton",
+        "state": "New Jersey",
+        "country": "United States",
+        "researchAreas": [
+          "Interpretable machine learning",
+          "Weak supervision",
+          "Concept-based learning",
+          "Out-of-distribution detection",
+          "Trustworthy artificial intelligence"
+        ],
+        "phdInstitution": "College of William & Mary",
+        "profileUrl": "https://www.nec-labs.com/research/data-science-system-security/people/viet-duong/"
+      },
+      "evidence": {
+        "currentRole": "https://www.nec-labs.com/research/data-science-system-security/people/viet-duong/ — \"Researcher\"",
+        "doctorateOrPapers": "https://www.nec-labs.com/research/data-science-system-security/people/viet-duong/ — explicitly identifies his Ph.D. in Computer Science from the College of William & Mary. Graduation year is not stated.",
+        "vietnameseSignal": "Vietnamese given name Viet appears on his employer-owned individual profile: https://www.nec-labs.com/research/data-science-system-security/people/viet-duong/.",
+        "location": "https://www.nec-labs.com/research/data-science-system-security/people/viet-duong/ — \"based in Princeton, New Jersey\"",
+        "dedup": "Searched public/data.json for Viet Duong, Duong Viet, and viet-duong; checked already-proposed.txt. npm run find-roster-matches with the name and employer profile returned no roster or retired-id matches."
+      }
+    }
+  ],
+  "possible_move": [],
+  "rejected": [
+    {
+      "name": "Hoang Le",
+      "reason": "Held for location verification. Opened https://www.hoangle.net/, which confirms a current Qualcomm AI Research role and Portland State University Ph.D., 2020. No employer-owned individual profile was found. The explicit San Diego affiliation located was in the 2022 MobileCodec paper; no sufficiently recent permitted source establishing his current city was found. Roster matcher also returned namesakes requiring resolution before admission."
+    },
+    {
+      "name": "Le Hang Nguyen",
+      "reason": "Held because no acceptable individual profile was found. Recent research affiliations establish Nokia Bell Labs, Stuttgart, including https://oulurepo.oulu.fi/bitstream/handle/10024/53713/nbnfioulu-202501161197.pdf?isAllowed=y&sequence=1, but papers cannot substitute for profileUrl. Nokia directory pages 7 and 11–16 remained inaccessible after retries, so directory coverage could not be completed."
+    },
+    {
+      "name": "Dinh Thai Bui",
+      "reason": "Held: research publications support a Bell Labs connection, but no current employer-owned individual profile or maintained personal site establishing the current role was found. https://www.sciencedirect.com/science/article/pii/S0167739X22001984 is a publication, not an acceptable profileUrl."
+    },
+    {
+      "name": "Hoang Truong",
+      "reason": "Held: the Bell Labs Cambridge affiliation found was in a 2022 paper, https://alessandro-montanari.github.io/papers/ICASSP22.pdf. No acceptable current individual profile establishing a career appointment was found."
+    },
+    {
+      "name": "Viet-Hoang Tran",
+      "reason": "Held: https://cloudlargescale-uclouvain.github.io/team reports an alumni placement at Nokia, Belgium, but does not establish a current Bell Labs research title. No acceptable current employer-owned individual profile or maintained personal site was found."
+    },
+    {
+      "name": "Khuong Nhat Nguyen",
+      "reason": "Held: Samsung Research America publications and https://orcid.org/0000-0003-2631-350X provide useful leads, but no acceptable employer-owned individual profile or personal site was found. ORCID cannot serve as profileUrl."
+    },
+    {
+      "name": "Dung Trung Vo",
+      "reason": "Held: Samsung's publication directory identifies Dung Vo as an author, including https://sra.samsung.com/publications/extremely-light-weight-learning-based-ldr-to-pq-hdr-conversion-using-bernstein-curves/. No acceptable individual profile establishing the current title and work city was found."
+    },
+    {
+      "name": "Minh Dinh",
+      "reason": "Held: historical Samsung publication bylines identify a Samsung Design Innovation Center collaborator, but no current individual profile establishing a qualifying research role, doctorate or qualifying recent papers, and work city was found. Lead: https://sra.samsung.com/publications/coughtrigger-earbuds-imu-based-cough-detection-activator-using-an-energy-efficient-sensitivity-prioritized-time-series-classifier/."
+    },
+    {
+      "name": "Thuy Nguyen",
+      "reason": "Held: https://research.samsung.com/blog/Distributed-Multiple-Input-Multiple-Output-D-MIMO-for-Ubiquitous-Uplink-Performance credits Samsung Research America authorship, but is a research article rather than an individual profile. Current title, doctorate or qualifying paper evidence, and city were not fully verified."
+    },
+    {
+      "name": "Hung Ly",
+      "reason": "Held: https://www.qualcomm.com/research/cellphone-unseen-connections lists a Senior Staff Engineer among featured inventors, but is a group exhibit page. No acceptable individual profile, research doctorate or two qualifying recent papers, and sourced current city were established."
+    },
+    {
+      "name": "Tien Viet Nguyen",
+      "reason": "Held: Qualcomm publications and patent records surfaced, including https://patentsgazette.uspto.gov/week45/OG/html/1552-2/US12795702-20261110.html, but no acceptable current employer-owned individual profile or maintained personal site was found. Patents do not establish the required doctorate-or-papers qualification."
+    },
+    {
+      "name": "Quan Tran",
+      "reason": "Held: Intel's 2026 silicon-photonics paper establishes research authorship and a Santa Clara affiliation, https://www.intel.com/content/dam/www/central-libraries/us/en/documents/2026-09/spie-pw-2026-published-1-.pdf. No acceptable individual profile establishing the current title was found."
+    },
+    {
+      "name": "Nam Nguyen N",
+      "reason": "Held: Intel names this person among INT31 researchers at https://www.intel.com/content/www/us/en/security/security-practices/blogs/tdx-offensive-security-research-approach.html. This is another researcher's article; no acceptable own profile, doctorate-or-papers evidence, and work city were established."
+    },
+    {
+      "name": "Vu Nguyen",
+      "reason": "Held: the Intel Labs lead was a 2010 project factsheet, https://download.intel.com/newsroom/kits/idf/2010_fall/pdfs/IDF_Day_0_Intel_Labs_Megabriefing_Factsheet.pdf. No acceptable current individual profile was found."
+    },
+    {
+      "name": "Thai Le",
+      "reason": "Intel's available biography describes storage/performance software engineering and server-lab management; a qualifying current research appointment and doctorate or two recent research papers were not established. Source: https://www.intel.com/content/www/us/en/developer/articles/code-sample/create-a-hello-world-program-using-persistent-collections-for-java-pcj.html."
+    },
+    {
+      "name": "Vincent Nguyen",
+      "reason": "HPE's 2026 biography describes server architecture, hardware development, validation, and product planning, and lists a bachelor's degree. A qualifying research appointment plus doctorate or two recent research papers was not established. Employer biography landing page opened: https://www.hpe.com/psnow/doc/a00150136enw?jumpid=in_pdfviewer-psnow."
+    },
+    {
+      "name": "Thy Tran",
+      "reason": "Current university biographies identify Global Front End Procurement leadership following an earlier DRAM Process Integration role; a current career research appointment was not established. Micron's author bio retains the older role. Sources: https://www.ischool.berkeley.edu/people/thy-tran and https://in.micron.com/about/blog/blog-authors/author-bio/thy-tran."
+    },
+    {
+      "name": "Trinh Duc Truong",
+      "reason": "Held: Hiroshima University documents a doctorate and Micron Japan employment, https://www.hiroshima-u.ac.jp/gcdc_yr/news/86791, but no acceptable employer-owned individual profile or maintained personal site establishing the current research title and work city was found."
+    },
+    {
+      "name": "Julien Nguyen",
+      "reason": "The Applied Materials lead concerns venture-capital investing rather than a qualifying research appointment, and dates to 2003. Source: https://ir.appliedmaterials.com/news-releases/news-release-details/applied-materials-ventures-invests-early-stage-startup-grandis/."
+    },
+    {
+      "name": "Sykaa Tran",
+      "reason": "Employer-owned profile explicitly identifies a Lab & Office Coordinator in Headquarters, an administrative support role. Source opened: https://www.merl.com/people/tran."
+    },
+    {
+      "name": "Van Thanh Le",
+      "reason": "Listed as a Media Analytics intern rather than career research staff on NEC's current directory: https://www.nec-labs.com/research/media-analytics/people/."
+    },
+    {
+      "name": "Binh Huy Le",
+      "reason": "Already rostered at AMD Research as vp-3163; not a new candidate."
+    }
+  ]
+}

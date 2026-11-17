@@ -1,0 +1,114 @@
+{
+  "slice": "google",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Huan Nguyen",
+        "university": "Google",
+        "institutionType": "Corporate research lab",
+        "track": "Industry Research",
+        "rank": "Researcher",
+        "department": "Linux kernel team",
+        "city": "Sunnyvale",
+        "state": "California",
+        "country": "United States",
+        "researchAreas": [
+          "Linux kernel development",
+          "Binary analysis",
+          "System security"
+        ],
+        "phdInstitution": "Stony Brook University",
+        "phdYear": 2025,
+        "profileUrl": "https://www.research.google/people/huannguyen/"
+      },
+      "evidence": {
+        "currentRole": "https://www.research.google/people/huannguyen/ — \"researcher and engineer\"; the bio states he currently works on Google's Linux kernel team.",
+        "doctorateOrPapers": "https://www.research.google/people/huannguyen/ — confirms a Ph.D. in Computer Science from Stony Brook University in 2025 and lists Analyzing Bytes: Pre-Disassembly Static Binary Analysis (2026).",
+        "vietnameseSignal": "https://www.research.google/people/huannguyen/ — Vietnamese given-name token Huan accompanies Nguyen, providing a signal beyond the surname alone.",
+        "location": "https://github.com/nhuhuan — his personal profile lists \"Google\" and \"Sunnyvale, CA\". https://pldi26.sigplan.org/profile/huannguyen independently lists Google and United States.",
+        "dedup": "Checked public/data.json, name-order matching, every supplied identity URL, maintenance/retired-ids.json, and already-proposed.txt. Ran npm run find-roster-matches with Huan Nguyen and both Google profile URL forms, github.com/nhuhuan, and ORCID 0009-0003-3976-9941. Three name-only hits are different people: vp-1647 Huan X. Nguyen researches wireless communications and earned a UNSW PhD in 2007; vp-2384 Huan Mark Nguyen works in pharmacy; vp-3033 Nhu Huan Nguyen researches microwave components and earned a Grenoble PhD in 2021. No identity URL matched."
+      }
+    }
+  ],
+  "possible_move": [
+    {
+      "name": "Philip Pham",
+      "id": "vp-2997",
+      "note": "Roster says Google DeepMind; the opened Google profile says he is currently a software engineer at Waymo applying machine learning to motion planning, and describes Google Research as previous employment: https://research.google/people/philippham/. npm run find-roster-matches matched both name and the exact stored profileUrl. Verify current Waymo research eligibility before updating."
+    }
+  ],
+  "rejected": [
+    {
+      "name": "An Nguyen",
+      "reason": "Opened https://research.google/people/annguyen/. The bio describes a product engineer and Tech Lead Manager, states a bachelor's degree, and lists one 2026 paper. Neither a research doctorate nor two recent employer-affiliated papers was established."
+    },
+    {
+      "name": "Tony (Tuan) Nguyen",
+      "reason": "Opened https://research.google/people/258787/. It states Senior Staff Software Engineer and lists one 2024 paper. Could not establish a doctorate, a second qualifying recent paper, or a sourced work city."
+    },
+    {
+      "name": "Viet Dang",
+      "reason": "Opened https://research.google/people/106409/. A Southampton PhD is documented, but no acceptable source established his current work city. The profile lists only a 2019 publication, leaving current research activity insufficiently established."
+    },
+    {
+      "name": "Bao N. Nguyen",
+      "reason": "Opened https://research.google/people/105198/. A Maryland PhD is documented, but the described work concerns CI/CD and continuous testing; the only listed publication is from 2017. Current qualifying research work and an acceptable sourced city were not established."
+    },
+    {
+      "name": "Ngot Bui",
+      "reason": "Recent research leads surfaced, but no personal current-employer page or accessible personal site stating the current role was found. Third-party employment and location listings cannot replace the required profile evidence. npm run find-roster-matches returned no roster or retired-ID matches."
+    },
+    {
+      "name": "Anh Truong",
+      "reason": "Research leads indicate a move from Adobe to Google DeepMind, but no current employer personal profile was found. The personal site linked by Stanford's HCI directory, https://anhtruong.org/, was inaccessible. A qualifying doctorate or two recent papers at Google and an acceptable sourced city were not established."
+    },
+    {
+      "name": "Karen Truong",
+      "reason": "Found Google/DeepMind publication and acknowledgement leads, including https://deepmind.google/research/publications/240658/, but no qualifying current personal profile, doctorate or two recent employer papers, sourced city, and affirmative Vietnamese signal beyond the surname were established."
+    },
+    {
+      "name": "William Giang",
+      "reason": "Google Quantum AI publication bylines surfaced, but no personal current-employer profile or personal site establishing a qualifying research role was found. A Vietnamese signal beyond Giang and an acceptable location source were also missing."
+    },
+    {
+      "name": "Khoa Vo",
+      "reason": "Waymo lists him on https://waymo.com/research/offboard-3d-object-detection-from-point-cloud-sequences/, but this is a publication page. No current personal employer profile or personal site establishing the role, doctorate or two recent employer papers, and work city was found."
+    },
+    {
+      "name": "Patrick Nguyen",
+      "reason": "Waymo publication bylines and third-party Google scientist biographies surfaced, but no qualifying personal page published by the current employer or personal site confirming the current role was found. The roster's vp-0780 is a surgeon and was not treated as the same person."
+    },
+    {
+      "name": "Vinh Quoc Tran",
+      "reason": "Google and DeepMind publication/contributor lists surfaced, but no qualifying current personal profile, doctorate or fully verified recent employer publication pair, and sourced work city were established. npm run find-roster-matches returned no roster or retired-ID matches."
+    },
+    {
+      "name": "Mary Phuong",
+      "reason": "DeepMind research bylines and external speaker biographies support a research lead, but no qualifying personal current-employer page or personal site was found. Work city and an affirmative Vietnamese signal beyond the name were not established."
+    },
+    {
+      "name": "Remi Lam",
+      "reason": "DeepMind GraphCast author material surfaced, but no affirmative Vietnamese signal beyond the ambiguous surname Lam was established. No qualifying personal current-employer profile or personal site confirming the role and city was found."
+    },
+    {
+      "name": "Nicolas Nguyen",
+      "reason": "DeepMind publication leads do not establish employment. His collaborator's team page places him among doctoral-student collaborations: https://www.cvernade.com/team. A current career appointment at a slice employer was not established."
+    },
+    {
+      "name": "Tung Nguyen",
+      "reason": "https://tung-nd.github.io/ describes Google DeepMind internship/student-research experience and a search for full-time research roles. A current career appointment at a slice employer was not established."
+    },
+    {
+      "name": "Hoang Huy Nguyen",
+      "reason": "The Georgia Tech profile and CV describe a doctoral researcher whose DeepMind contributions occurred during internships, rather than an established career appointment: https://www.isye.gatech.edu/users/hoang-nguyen."
+    },
+    {
+      "name": "Xuan Long Do",
+      "reason": "Google publication leads resolve to a doctoral student at NUS, rather than a verified career Google appointment: https://www.comp.nus.edu.sg/~kanmy/wing/author/xuan-long-do/."
+    },
+    {
+      "name": "Alden Hung",
+      "reason": "DeepMind publication and conference leads surfaced, but a qualifying current personal employer profile, acceptable sourced city, and affirmative Vietnamese signal beyond the ambiguous name were not established."
+    }
+  ]
+}

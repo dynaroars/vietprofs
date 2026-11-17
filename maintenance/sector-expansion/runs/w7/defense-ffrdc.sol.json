@@ -1,0 +1,157 @@
+{
+  "slice": "defense-ffrdc",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Anh Tran",
+        "university": "Sandia National Laboratories",
+        "institutionType": "Public research institute",
+        "track": "Government & Defense",
+        "rank": "Researcher",
+        "department": "Scientific Machine Learning, Center for Computing Research",
+        "city": "Albuquerque",
+        "state": "New Mexico",
+        "country": "United States",
+        "researchAreas": [
+          "Scientific Machine Learning",
+          "Uncertainty Quantification",
+          "Optimal Experimental Design",
+          "Computational Materials Science"
+        ],
+        "phdInstitution": "Georgia Institute of Technology",
+        "phdYear": 2018,
+        "profileUrl": "https://www.sandia.gov/ccr/staff/anh-tran/"
+      },
+      "evidence": {
+        "currentRole": "https://www.sandia.gov/ccr/staff/anh-tran/ — \"staff member\"; the opened employer profile states that he converted from a postdoctoral appointment to staff in September 2020 and works in Scientific Machine Learning. https://www.sandia.gov/ccr/ describes the center's national-security research mission.",
+        "doctorateOrPapers": "https://www.sandia.gov/ccr/staff/anh-tran/ — Ph.D. in Mechanical Engineering, Georgia Institute of Technology, December 2018.",
+        "vietnameseSignal": "Vietnamese given name Anh together with surname Tran, explicitly published on https://www.sandia.gov/ccr/staff/anh-tran/.",
+        "location": "https://www.sandia.gov/ccr/staff/anh-tran/ — \"Albuquerque, NM 87185-1323\"; the biography also explicitly places his Sandia appointment in Albuquerque.",
+        "dedup": "Searched public/data.json for Anh Tran, name-order variants, and the exact profile URL; ran npm run find-roster-matches for both Anh Tran and Tran Anh with the profile URL; checked maintenance/retired-ids.json and maintenance/sector-expansion/already-proposed.txt. No URL or already-proposed match. Name hits were compared by discipline and education: vp-0063 is a mathematician with a 2012 Georgia Tech PhD; vp-0285 is a deceased electrical engineer with a 1973 Rhode Island PhD; vp-3152 is a Lam Research researcher with a UCLA PhD. Other returned records concern different names, disciplines, or education."
+      }
+    }
+  ],
+  "possible_move": [],
+  "rejected": [
+    {
+      "name": "Trang Nguyen — MIT Lincoln Laboratory",
+      "reason": "Opened https://www.ll.mit.edu/biographies/trang-nguyen. Profile lists BS and MS degrees; no doctorate or two qualifying papers since 2023-11-17 verified. Matching retired ID vp-2960 must be restored rather than assigned a new ID if eligibility is later established."
+    },
+    {
+      "name": "Bich T. Vu",
+      "reason": "Opened https://www.ll.mit.edu/biographies/bich-t-vu and https://www.ll.mit.edu/lab-pop/72876. Profile lists master's degrees; two qualifying recent papers were not verified. Dedup matched retired ID vp-2961."
+    },
+    {
+      "name": "Lillian Nguyen",
+      "reason": "APL directory lists Software Engineer, and employer technical-digest biography lists an MA. No research doctorate, two qualifying recent papers, or affirmative Vietnamese signal beyond surname verified. Directory: https://www.jhuapl.edu/about/people?page=16."
+    },
+    {
+      "name": "Minh Agon Huebner",
+      "reason": "Opened https://www.jhuapl.edu/about/people/minh-huebner. Current responsibilities are finance, construction, facilities, and business services; this is not an eligible research role."
+    },
+    {
+      "name": "Quang T. Luong",
+      "reason": "Current APL program listing names him as a program manager, but no qualifying personal employer profile or personal site establishing the current role was found. https://www.jhuapl.edu/work/mission-areas/global-health/programs."
+    },
+    {
+      "name": "Liem C. Huynh",
+      "reason": "Found APL award and educational-program mentions, but no current personal employer bio establishing an eligible research appointment and doctorate or recent-paper qualification. https://www.jhuapl.edu/news/news-releases/210512-2020-Annual-APL-Achievement-Awards."
+    },
+    {
+      "name": "Harrison Nguyen — Johns Hopkins APL",
+      "reason": "APL research-award mentions are leads only. No current personal employer profile, identity-resolved doctorate evidence, or Vietnamese signal beyond surname verified. https://www.jhuapl.edu/technical-digest/issues/vol-37-no-4-2025/awards-23-24."
+    },
+    {
+      "name": "Benjamin J. Tran",
+      "reason": "Matched retired ID vp-3027. AFRL news is historical, and no qualifying current research bio was verified. The retirement ledger records a subsequent acquisition-leadership role and insufficient doctorate/publication evidence. Historical source: https://afresearchlab.com/news/afrl-branch-chief-honored-with-dayton-business-journal-forty-under-40-award/."
+    },
+    {
+      "name": "Man Nguyen — AFRL quantum group",
+      "reason": "Employer search listing explicitly identifies a Booz Allen Hamilton contractor, excluded by the brief. Opening the group page returned 403. https://www.afrl.af.mil/About-Us/Fact-Sheets/Fact-Sheet-Display/Article/3018095/afrlritq-superconducting-and-hybrid-quantum-systems/."
+    },
+    {
+      "name": "Quang M. Nguyen",
+      "reason": "Found current ARL electromagnetic-materials research reports and an army.mil civilian author address, but no qualifying personal employer profile or personal site. Report pages cannot serve as profileUrl. https://arl.devcom.army.mil/arlreport/arl-tr-10467/."
+    },
+    {
+      "name": "Tuan Ton",
+      "reason": "ARL radar report establishes an author lead, but no current personal employer bio, qualifying personal site, or doctorate evidence verified. https://arl.devcom.army.mil/arlreport/arl-tn-1144/."
+    },
+    {
+      "name": "Hung Ly — Naval Research Laboratory",
+      "reason": "Found historical antenna-research references, but no current personal employer profile or personal site establishing present NRL employment. Historical employer source: https://www.nrl.navy.mil/Portals/38/PDF%20Files/2015_NRL_Review.pdf."
+    },
+    {
+      "name": "Minh N. Nguyen — The Aerospace Corporation",
+      "reason": "Found an older software-standard approval identifying a department director, but no current personal employer bio and qualifying research-role evidence. https://aerospace.org/sites/default/files/2025-04/TR-RS-2020-00012%20-%20Software%20Development%20Standard%20for%20Space%20Systems_0.pdf."
+    },
+    {
+      "name": "Anh Dang — The Aerospace Corporation",
+      "reason": "Historical reports identify an Aerospace contributor, but no current personal employer profile, doctorate, or qualifying recent publication record verified. https://aerospace.org/sites/default/files/maiw/TOR-2014-02162.pdf."
+    },
+    {
+      "name": "Minh Nguyen — MITRE",
+      "reason": "Found historical communications papers, but no current personal employer profile or personal site establishing present MITRE employment. https://www.mitre.org/news-insights/publication/airport-wireless-lan-technology-survey-and-simulation-tool-development."
+    },
+    {
+      "name": "Duy Huynh — MITRE",
+      "reason": "Found historical summit-report authorship, but no current personal employer bio establishing an eligible research appointment. https://www.mitre.org/news-insights/publication/october-2016-federal-mobile-computing-summit-report."
+    },
+    {
+      "name": "Nhan Nguyen — Institute for Defense Analyses",
+      "reason": "Found acknowledgment for analytics support, but no current personal employer profile, qualifying research role, or doctorate evidence. https://www.ida.org/-/media/feature/publications/o/op/opportunities-to-advance-department-of-defense-technology-transfer-with-partnership-intermediary/p-20450.ashx."
+    },
+    {
+      "name": "Thoi Nguyen — CNA",
+      "reason": "Historical report coauthor; no current personal employer profile found after checking CNA's six-page expert directory and name searches. https://www.cna.org/analyses/2011/feasibility-of-nuclear-power-on-us-military-installations."
+    },
+    {
+      "name": "Ai-Linh T. Alten",
+      "reason": "Given-name pass found a GTRI Research Engineer II promotion. No qualifying personal employer profile, research doctorate, or two qualifying recent papers verified. https://gtri.gatech.edu/newsroom/spring-2025-research-faculty-promotions?page=2."
+    },
+    {
+      "name": "Thoai T. Pham",
+      "reason": "GTRI promotion list establishes Research Engineer II, but no qualifying personal employer profile, doctorate, or two qualifying recent papers verified. https://gtri.gatech.edu/newsroom/spring-2025-research-faculty-promotions?page=2."
+    },
+    {
+      "name": "Phu Chieu Le",
+      "reason": "GTRI promotion list places him in Research Support, Operations Division. No personal profile establishing an eligible research role and doctorate or recent-paper qualification verified. https://gtri.gatech.edu/newsroom/spring-2025-research-faculty-promotions?page=2."
+    },
+    {
+      "name": "Tan Minh Tran",
+      "reason": "Found historical GTRI employment listings, but no current personal employer profile or personal site establishing present employment. https://history.gtri.gatech.edu/files/media/gtrinsider-/GTRInsider_2006_02.pdf."
+    },
+    {
+      "name": "Tricia Nguyen — NIWC Atlantic",
+      "reason": "Found an overseas-support officer interview, but no qualifying personal research bio or doctorate/publication evidence. https://www.niwcatlantic.navy.mil/Media/Article/3606655/technically-speaking-podcast-niwc-atlantic-overseas-support-ep15/."
+    },
+    {
+      "name": "Hoang Thai Nguyen",
+      "reason": "Los Alamos publication-portal lead did not establish a current career staff appointment; another lead describes a postdoctoral fellowship. No qualifying current staff bio verified. https://laro.lanl.gov/esploro/profile/hoang_nguyen/overview?institution=01LANL_INST&recordUsage=false&skipUsageReporting=true."
+    },
+    {
+      "name": "Minh-Tam Hoang",
+      "reason": "Recent publication affiliations identify the University of Minnesota, and its research-group directory lists graduate-student status. Not verified as current Los Alamos career staff. https://mara.cems.umn.edu/people/graduate-students."
+    },
+    {
+      "name": "Brian Kha Tran",
+      "reason": "Current personal site identifies a California State University Long Beach assistant professorship and a former Los Alamos postdoctoral fellowship. Outside this non-university-employer slice. https://www.btran.science/."
+    },
+    {
+      "name": "Nga Thi Thuy Nguyen-Fotiadis",
+      "reason": "Promising Los Alamos radiography and machine-learning lead, but opening the employer publication profile returned 403; no accessible personal employer bio with a current title or qualifying personal site verified. https://laro.lanl.gov/esploro/profile/nga_nguyenfotiadis/output/undefined."
+    },
+    {
+      "name": "Thuy-Ai Dang Nguyen",
+      "reason": "Found Los Alamos explosives publications and an older postdoctoral description, but no current personal employer bio or personal site establishing conversion to career staff. https://laro.lanl.gov/esploro/outputs/journalArticle/High-Fidelity-Mock-Development-for-the-Insensitive/9916362473503761?institution=01LANL_INST."
+    },
+    {
+      "name": "Cuong Ly",
+      "reason": "Found nuclear-forensics publication leads, but no current personal employer profile or personal site establishing a career Los Alamos research role. https://laro.lanl.gov/esploro/outputs/journalArticle/Review-of-Multi-Faceted-Morphologic-Signatures-of/9916500768903761."
+    },
+    {
+      "name": "Mary Tran-Gyamfi",
+      "reason": "Opened employer profile; work described is bioenergy rather than a defense program, education lists a bachelor's degree, and two qualifying recent papers were not verified. https://www.sandia.gov/bioscience-people/staff/mary-tran-gyamfi/."
+    }
+  ]
+}

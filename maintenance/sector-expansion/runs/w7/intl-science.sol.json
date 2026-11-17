@@ -1,0 +1,209 @@
+{
+  "slice": "intl-science",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Binh Thanh Nguyen",
+        "university": "International Institute for Applied Systems Analysis",
+        "institutionType": "Independent nonprofit research institute",
+        "track": "Research",
+        "rank": "Researcher",
+        "department": "Pollution Management Research Group, Energy, Climate, and Environment Program",
+        "city": "Laxenburg",
+        "country": "Austria",
+        "researchAreas": [
+          "Data Warehousing",
+          "Data Mining",
+          "Environmental Modelling"
+        ],
+        "phdInstitution": "Technical University of Vienna",
+        "phdYear": 2001,
+        "profileUrl": "https://iiasa.ac.at/staff/binh-nguyen"
+      },
+      "evidence": {
+        "currentRole": "[IIASA personal staff page](https://iiasa.ac.at/staff/binh-nguyen), opened in this run — \"Research Scholar/Software Engineer\". Biography records employment since February 2008.",
+        "doctorateOrPapers": "[IIASA biography](https://iiasa.ac.at/staff/binh-nguyen) records a doctorate in data warehousing from the Technical University of Vienna, June 2001. Also coauthored the 2026 paper [Cost-effective mitigation strategies for air quality management in Uttar Pradesh, India](https://pure.iiasa.ac.at/id/eprint/21501/1/1-s2.0-S0301479726012442-main.pdf).",
+        "vietnameseSignal": "[Employer biography](https://iiasa.ac.at/staff/binh-nguyen) gives the full name Binh Thanh Nguyen and previous teaching employment at Hue University, Vietnam.",
+        "location": "[2026 paper, first page](https://pure.iiasa.ac.at/id/eprint/21501/1/1-s2.0-S0301479726012442-main.pdf) assigns Binh Nguyen to affiliation a, the same Pollution Management group as his staff biography — \"Schlossplatz 1, Laxenburg, A-2361, Austria\".",
+        "dedup": "Searched public/data.json for full name, reordered names and profile URL; ran npm run find-roster-matches for Binh Thanh Nguyen, Nguyen Thanh Binh and Binh Nguyen with the employer URL. No URL or exact full-name match. Compared fuzzy matches by discipline and education: particularly vp-0654 is an Ottawa radiologist, vp-1528 has a 2014 NUS doctorate, vp-3148 has a 2021 Macquarie doctorate, and vp-3342 is an organic chemist with a 2008 doctorate. Other matches concern different names, specialties or degrees. Checked already-proposed.txt; its Thanh Binh Nguyen lead is distinct from this IIASA researcher."
+      }
+    },
+    {
+      "entry": {
+        "name": "Huong Thi Giang Tran",
+        "university": "World Health Organization",
+        "institutionType": "Policy & international organization",
+        "track": "Policy & Think Tank",
+        "rank": "Administrator",
+        "department": "Division of Health Promotion, Disease Prevention and Control, Regional Office for the Western Pacific",
+        "city": "Manila",
+        "country": "Philippines",
+        "researchAreas": [
+          "Public Health",
+          "Infectious Disease Prevention and Control",
+          "Noncommunicable Diseases"
+        ],
+        "phdInstitution": "National Institute of Hygiene and Epidemiology",
+        "profileUrl": "https://www.who.int/westernpacific/about/governance/regional-director/speeches/huong-thi-giang-tran"
+      },
+      "evidence": {
+        "currentRole": "[WHO personal biography](https://www.who.int/westernpacific/about/governance/regional-director/speeches/huong-thi-giang-tran), opened in this run — \"Director, Division of Health Promotion, Disease Prevention and Control\".",
+        "doctorateOrPapers": "[Employer biography](https://www.who.int/westernpacific/about/governance/regional-director/speeches/huong-thi-giang-tran) records a PhD in Public Health from the National Institute of Hygiene and Epidemiology, Viet Nam. Her ongoing research activity is also supported by the 2025 paper [Tuberculosis among foreign-born populations in the Western Pacific Region](https://link.springer.com/article/10.1186/s41182-025-00866-7).",
+        "vietnameseSignal": "[WHO biography](https://www.who.int/westernpacific/about/governance/regional-director/speeches/huong-thi-giang-tran) explicitly identifies her as Vietnamese and documents her previous leadership at Vietnam's Ministry of Health.",
+        "location": "[2025 research paper, Authors and Affiliations](https://link.springer.com/article/10.1186/s41182-025-00866-7) explicitly assigns Huong Thi Giang Tran to \"World Health Organization Regional Office for the Western Pacific, Manila, Philippines\" and identifies her as WHO staff.",
+        "dedup": "Searched public/data.json for Huong Thi Giang Tran, Tran Thi Giang Huong and the profile URL; ran npm run find-roster-matches with both name orders and the employer URL. No exact-name or URL match. Fuzzy hits vp-0164, vp-2098, vp-2145, vp-3118 and vp-3547 have different disciplines and doctoral institutions: information systems, mathematics, education or biotechnology. Checked already-proposed.txt; neither full-name form is listed."
+      }
+    }
+  ],
+  "possible_move": [],
+  "rejected": [
+    {
+      "name": "Jennifer Ngo-Anh",
+      "reason": "Already rostered at the European Space Agency as vp-3647 and present in already-proposed.txt."
+    },
+    {
+      "name": "Phuong Hong Nguyen",
+      "reason": "Already rostered at IFPRI as vp-1216. Current employer biography: https://www.ifpri.org/profile/phuong-hong-nguyen/."
+    },
+    {
+      "name": "Van Schepler-Luu",
+      "reason": "Already rostered at IRRI as vp-1329; not a new candidate."
+    },
+    {
+      "name": "Tina Tu Trinh Nguyen",
+      "reason": "CERN's November 2026 staff-election notice identifies her within the Graduate category; the procurement directory supplies no qualifying career research appointment. https://staff-asociation.web.cern.ch/article/staff-council-election-2026 and https://business-with-cern.web.cern.ch/contacts/supplies/."
+    },
+    {
+      "name": "Minh Toan Nguyen",
+      "reason": "ICTP lists a postdoctoral appointment, which is excluded. https://www.ictp.it/math/people."
+    },
+    {
+      "name": "Nhat Minh Pham",
+      "reason": "ICTP lists an ERC PhD student appointment. https://www.ictp.it/cmsp/people."
+    },
+    {
+      "name": "Thi Kim Thanh Nguyen",
+      "reason": "ICTP associate rather than permanent scientific staff; employer reporting identifies her substantive appointment in Vietnam. https://www.ictp.it/cmsp/people and https://www.ictp.it/news/2024/7/vietnam-success-story."
+    },
+    {
+      "name": "Ho Hai Phung",
+      "reason": "Listed as an ICTP Associate, not a permanent staff researcher. https://www.ictp.it/math/people."
+    },
+    {
+      "name": "Thi Ha Giang Pham",
+      "reason": "Listed among ICTP associates; no qualifying permanent ICTP appointment established. https://www.ictp.it/esp/people."
+    },
+    {
+      "name": "Viet Phuong Nguyen",
+      "reason": "ERRA supplies an IAEA analyst biography and doctorate evidence, but no personal page published by IAEA or qualifying personal website was located. Conference biography cannot serve as profileUrl. https://erranet.org/speaker/phuong-nguyen-viet/."
+    },
+    {
+      "name": "Giang N. Nguyen",
+      "reason": "IAEA nuclear-security lead appeared in meeting documentation, but no qualifying personal employer page or sufficient doctorate/publication evidence was established."
+    },
+    {
+      "name": "Minh-Long Nguyen",
+      "reason": "IAEA staff references found were historical newsletter and organizational-chart material; no current personal employer page was established."
+    },
+    {
+      "name": "Lydie Evrard",
+      "reason": "Current IAEA eligibility was not established; newer evidence indicates departure to Andra. Available biography lists engineering and master's qualifications rather than a research doctorate. https://www.assemblee-nationale.fr/dyn/docs/CRCANR5L17S2025PO419865N045.raw and https://www.nrc.gov/public-meetings-hearings/conferences-symposia/regulatory-information-conference/presenter-biographies/lydie-evrard."
+    },
+    {
+      "name": "Hung Nguyen-Viet",
+      "reason": "Current ILRI personal page establishes Regional Director, ILRI Asia and Senior Principal Scientist, but does not establish his current physical work city outside Vietnam. Older Nairobi evidence predates the August 2025 role change. Held rather than assuming location. https://www.ilri.org/people/hung-nguyen-viet."
+    },
+    {
+      "name": "Chi Nguyen",
+      "reason": "ILRI communications role based in Vietnam; fails both role and location requirements. https://www.ilri.org/index.php/people/chi-nguyen."
+    },
+    {
+      "name": "Thanh Nguyen",
+      "reason": "ILRI biography describes regional operations management in Hanoi, not a qualifying research appointment outside Vietnam. https://www.ilri.org/people/thanh-nguyen."
+    },
+    {
+      "name": "Trang Le",
+      "reason": "ILRI lists a PhD fellowship and Vietnam location. https://www.ilri.org/people/trang-le."
+    },
+    {
+      "name": "Hung Van Nguyen",
+      "reason": "IRRI research role found, but no acceptable personal employer profile was verified. An employer-hosted consortium contact page associates him with the Vietnam office, so older Philippines affiliations cannot establish current outside-Vietnam eligibility. https://sites.google.com/irri.org/dsrc/contact-us."
+    },
+    {
+      "name": "Ong Quoc Cuong",
+      "reason": "Employer research report identifies his IRRI work location as Can Tho, Vietnam. https://cgspace.cgiar.org/server/api/core/bitstreams/bb3e2929-7b7a-4e9a-87a5-c2b825e04f5d/content."
+    },
+    {
+      "name": "Trang Vu",
+      "reason": "Employer research report identifies her IRRI work location as Hanoi, Vietnam. https://cgspace.cgiar.org/server/api/core/bitstreams/bb3e2929-7b7a-4e9a-87a5-c2b825e04f5d/content."
+    },
+    {
+      "name": "Marian Hanna Nguyen",
+      "reason": "Found on an IRRI project team page, but no qualifying personal employer profile, doctorate evidence or sufficient affirmative Vietnamese signal beyond surname was established. https://s3-ap-southeast-1.amazonaws.com/pathotracer.irri.org/app/who-we-are.html."
+    },
+    {
+      "name": "Nhuong Tran",
+      "reason": "Research and doctorate leads are credible, but no current personal WorldFish employer page was located. Current WorldFish people and expert directories omit him; third-party biographies and historical project lists cannot satisfy profileUrl. https://worldfishcenter.org/about-us/our-people and https://www.vietnampolicystudies.org/nhuongtran."
+    },
+    {
+      "name": "Nguyen Hong Nguyen",
+      "reason": "WorldFish references found were historical research material and a taxonomy page, not a current personal employer profile. https://worldfishcenter.org/taxonomy/term/11093."
+    },
+    {
+      "name": "Rodolfo Dam Lam",
+      "reason": "WorldFish personal page confirms a scientist role and doctorate, but no affirmative Vietnamese signal beyond ambiguous surname tokens was established. https://worldfishcenter.org/person/rodolfo-dam-lam."
+    },
+    {
+      "name": "Nga Nguyen",
+      "reason": "Employer biography explicitly places her at the Alliance of Bioversity International and CIAT in Hanoi. https://alliancebioversityciat.org/who-we-are/nga-nguyen."
+    },
+    {
+      "name": "Tuyen Thi Thanh Huynh",
+      "reason": "CIAT research leadership is documented, but available employer and institutional evidence places her in Vietnam. https://alliancebioversityciat.org/who-we-are/tuyen-huynh."
+    },
+    {
+      "name": "Thierry Tran",
+      "reason": "CIAT personal profile confirms research employment in Cali and a doctorate, but no affirmative Vietnamese signal beyond surname was established. https://alliancebioversityciat.org/who-we-are/thierry-tran."
+    },
+    {
+      "name": "Thao Tran",
+      "reason": "IARC currently lists a postdoctoral scientist appointment. https://www.iarc.who.int/teams-red/."
+    },
+    {
+      "name": "Phuong Uyen Tran",
+      "reason": "IARC's 2024–2025 biennial report lists her as a student through August 2025; no current career research appointment was established. https://events.iarc.who.int/event/120/attachments/259/1905/SC62-2_IARC_Biennial_Report_ENG_2024-2025.pdf."
+    },
+    {
+      "name": "Tim Nguyen",
+      "reason": "WHO program-leadership evidence exists, but a complete combination of current personal employer profile, affirmative Vietnamese signal and doctorate or two recent employer-affiliated papers was not established."
+    },
+    {
+      "name": "Duy Truong Pham",
+      "reason": "Sanger's personal page explicitly marks him as alumni. https://www.sanger.ac.uk/person/pham-duy/."
+    },
+    {
+      "name": "My Phan",
+      "reason": "Sanger's personal page lists an excluded postdoctoral role and alumni status. https://www.sanger.ac.uk/person/phan-my/."
+    },
+    {
+      "name": "Anh Phuong Le",
+      "reason": "Sanger's personal page identifies a PhD student appointment. https://www.sanger.ac.uk/person/le-anh-phuong/."
+    },
+    {
+      "name": "My H. Pham",
+      "reason": "Sanger's directory lists a PhD student appointment. https://www.sanger.ac.uk/people/people-directory/."
+    },
+    {
+      "name": "Kevin Ly",
+      "reason": "Sanger's directory lists a PhD student appointment. https://www.sanger.ac.uk/people/people-directory/."
+    },
+    {
+      "name": "Harry Hung",
+      "reason": "Sanger confirms a senior bioinformatician role and doctorate, but no affirmative Vietnamese signal was established; the ambiguous name alone is insufficient. https://www.sanger.ac.uk/person/hung-harry/."
+    },
+    {
+      "name": "Julien Wolf",
+      "reason": "Surfaced through the Dinh token in a linked website address, but his personal site identifies a postdoctoral appointment at ESO. https://jwolf-dinh.github.io/julien-wolf-homepage/."
+    }
+  ]
+}

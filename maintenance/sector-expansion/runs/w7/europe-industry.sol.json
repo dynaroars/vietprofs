@@ -1,0 +1,113 @@
+{
+  "slice": "europe-industry",
+  "candidates": [
+    {
+      "entry": {
+        "name": "Anh-Quan Cao",
+        "university": "valeo.ai",
+        "institutionType": "Corporate research lab",
+        "track": "Industry Research",
+        "rank": "Researcher",
+        "department": "valeo.ai",
+        "city": "Paris",
+        "country": "France",
+        "researchAreas": [
+          "Computer Vision",
+          "3D Scene Understanding",
+          "Autonomous Driving"
+        ],
+        "phdInstitution": "Université Paris Sciences et Lettres",
+        "phdYear": 2024,
+        "profileUrl": "https://anhquancao.github.io/",
+        "websiteUrl": "https://anhquancao.github.io/",
+        "confirmed": false
+      },
+      "evidence": {
+        "currentRole": "https://anhquancao.github.io/ — \"I am a Research Scientist at Valeo.ai, working on 3D perception for autonomous driving.\" Opened during this run. The current employer directory independently lists him as Research Scientist and links to this personal site: https://valeoai.github.io/team/ . Using confirmed:false because the individual profile is personally published.",
+        "doctorateOrPapers": "https://radar.inria.fr/report/2024/astra/index.html — doctoral dissertation bibliography identifies Anh-Quan Cao's Learning Semantics and Geometry for Scene Understanding, Université Paris sciences et lettres, December 2024. His personal page independently records his December 2024 defense.",
+        "vietnameseSignal": "https://programmes.polytechnique.edu/en/testimony/msct-alumni-phd-candidate-in-computer-vision-and-machine-learning — \"My name is Anh-Quan Cao, I am from Vietnam.\"",
+        "location": "https://valeoai.github.io/OccAny/ — \"Valeo.ai, Paris, France\", directly beneath the author names Anh-Quan Cao and Tuan-Hung Vu. The employer team page also gives its Paris street address.",
+        "dedup": "Searched public/data.json for Anh-Quan Cao, Cao Anh-Quan and anhquancao.github. Checked maintenance/sector-expansion/already-proposed.txt. Ran npm run find-roster-matches for Anh-Quan Cao, Anh Quan Cao and Cao Anh Quan with https://anhquancao.github.io/; every run returned no roster or retired-id matches."
+      }
+    }
+  ],
+  "possible_move": [],
+  "rejected": [
+    {
+      "name": "An Nguyen",
+      "reason": "His current Siemens Healthineers role concerns enterprise AI strategy, architecture and delivery; the page does not establish publishing research in that current role. His separate FAU appointment is explicitly a part-time postdoc. https://annguy.github.io/"
+    },
+    {
+      "name": "Song Duong",
+      "reason": "Criteo's current research directory lists him as a PhD Student, an excluded trainee appointment. https://ailab.criteo.com/research-team/"
+    },
+    {
+      "name": "Cam Ly Nguyen",
+      "reason": "Publication-biography lead at Criteo; no acceptable current individual employer profile or personal site establishing a European research appointment and sourced work city was verified. https://www.jstage.jst.go.jp/article/transinf/E109.D/3/E109.D_2025FCP0007/_pdf"
+    },
+    {
+      "name": "Hieu Do",
+      "reason": "Ericsson publication biographies support a research role and doctorate, but no acceptable individual employer profile or personal site was verified. Article biographies and PDFs cannot serve as profileUrl under this brief. https://www.ericsson.com/en/reports-and-papers/ericsson-technology-review/articles/evolving-lte-to-fit-the-5g-future"
+    },
+    {
+      "name": "Tan Tai Do",
+      "reason": "University alumni pages identify an Ericsson research affiliation, but no current individual Ericsson profile or qualifying personal site was verified. https://commsys.isy.liu.se/alumni.html"
+    },
+    {
+      "name": "Phuong Le Cao",
+      "reason": "University and publication leads identify Ericsson and a doctorate, but no acceptable current individual employer profile or personal site was verified. https://people.kth.se/~oech/group.html"
+    },
+    {
+      "name": "Huy Q. Tran",
+      "reason": "A conference biography identifies a Nokia Bell Labs research-engineer role in Paris-Saclay, but no acceptable current individual employer profile or personal site was verified. https://n-ai-twork.sciencesconf.org/data/pages/Program4.pdf"
+    },
+    {
+      "name": "Le Hang Nguyen",
+      "reason": "Recent paper affiliations support Nokia Bell Labs in Stuttgart, but no acceptable current individual employer profile or personal site was verified. Nokia's researcher-directory endpoint repeatedly timed out. https://oulurepo.oulu.fi/bitstream/handle/10024/53713/nbnfioulu-202501161197.pdf?isAllowed=y&sequence=1"
+    },
+    {
+      "name": "Huu Binh Minh Tran",
+      "reason": "His current personal page places his Ericsson research appointment in Yokohama, Japan, outside this Europe/UK slice. https://tranhuubinhminh.com/research/"
+    },
+    {
+      "name": "Thi Quynh Van Hoang",
+      "reason": "Recent publications identify Thales Research and Technology, but no acceptable current individual Thales profile or personal site was verified. Publication affiliations and consortium pages do not satisfy the required profileUrl standard. https://www.researchsquare.com/article/rs-6154719/latest.pdf"
+    },
+    {
+      "name": "Sy Dat Le",
+      "reason": "A 2026 conference biography identifies an Airbus fiber-optics technology role and doctorate, but no acceptable individual Airbus profile or personal site was verified. https://epic-photonics.com/events/epic-technology-meeting-on-optical-fiber-sensors-at-airbus/"
+    },
+    {
+      "name": "Pham Tran Anh Quang",
+      "reason": "Huawei research leads were found, but no current employer-published individual profile or qualifying personal site was verified. Bibliographic and third-party profiles remain leads only. https://dblp.org/pid/43/10798.html"
+    },
+    {
+      "name": "Lam Ngoc Dinh",
+      "reason": "Recent Huawei-associated research papers were found, but no acceptable current individual employer profile or personal site establishing the present role and work city was verified. https://dblp.org/pid/308/1985.html"
+    },
+    {
+      "name": "Dinh-Thuy Phan-Huy",
+      "reason": "Orange's current expert directory lists her, but its individual link goes to LinkedIn. No employer-published individual profile or personal site was verified; the directory itself is prohibited as profileUrl. https://techinsights.orange.com/en/community"
+    },
+    {
+      "name": "Eric Tran Dang",
+      "reason": "An Orange article identifies him as head of a research program, but no qualifying individual profile, doctorate or qualifying recent publication record, and sourced work city were verified. https://techinsights.orange.com/en/networks/mobile-networks/understand-and-manage-your-digital-footprint-at-home"
+    },
+    {
+      "name": "Helene Tran",
+      "reason": "A professional-society biography supports a Servier research-director role and doctorate, but no acceptable individual employer profile or personal site was verified. An affirmative Vietnamese signal beyond the surname also remains unverified. https://oligotherapeutics.org/the-society/board-directors/helene-tran-phd/"
+    },
+    {
+      "name": "The Quyen Nguyen",
+      "reason": "Servier research lead; no acceptable current individual employer profile or personal site establishing the role and sourced work city was verified. The third-party directory is insufficient. https://theorg.com/org/servier/offices/hq"
+    },
+    {
+      "name": "Quang Duong",
+      "reason": "His personal page lists an ongoing UT Austin PhD and Arm internships, rather than an eligible career research appointment. https://quangduong.me/"
+    },
+    {
+      "name": "Tran Nguyen Le",
+      "reason": "The NAVER publication lead resolves to a current assistant professor at Technical University of Denmark, outside this non-university employer slice. https://orbit.dtu.dk/en/persons/tran-nguyen-le/"
+    }
+  ]
+}
