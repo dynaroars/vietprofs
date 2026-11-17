@@ -22346,6 +22346,126 @@
       "identitySignals": [],
       "retrievedAt": "2026-11-17T21:21:37.912Z",
       "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3674": {
+      "name": "Thi Thu Le",
+      "outcome": "found",
+      "pageUrl": "https://www.hereon.de/institutes/hydrogen_technology/materials_design/team/099212/index.php.en",
+      "imageUrl": "https://www.hereon.de/imperia/md/assets/main/institutes/hydrogen_technology/material_design/images/team/fittosize_150_0_1ae2d44f546d6c47ad3e7c7549dc1ae9_wtn-staff-picture-kate-2023-04-25.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-17T22:02:16.559Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-3675": {
+      "name": "Thu Thi Pham",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-17T22:01:53.612Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3676": {
+      "name": "Vy Dang",
+      "outcome": "needs_review",
+      "pageUrl": "https://www.idos-research.de/en/vy-dang/",
+      "imageUrl": "https://www.idos-research.de/fileadmin/_processed_/b/3/csm_German_Institute_of_Development_and_Sustainability_EN_Dang_Lynders_Reiners_21.08.2023.pdf_b20460e773.png",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-17T22:02:00.511Z",
+      "note": "candidate requires visual review before acceptance"
+    },
+    "vp-3677": {
+      "name": "Le Thuy Truong",
+      "outcome": "found",
+      "pageUrl": "https://www.sintef.no/alle-ansatte/ansatt/lethuy.truong/",
+      "imageUrl": "https://www.sintef.no/contentassets/1962fbd50e2f44f4b4de1a70c446a65e/lethuy.truong-sintef.no.jpg?width=180&height=180&mode=crop&scale=both",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-17T22:02:01.630Z"
+    },
+    "vp-3678": {
+      "name": "Thao Mai",
+      "outcome": "needs_review",
+      "pageUrl": "https://moredun.org.uk/people/staff-directory/thao-mai",
+      "imageUrl": "https://moredun.org.uk/wp-content/uploads/2021/09/Moredun-staff-portrait-e1698161520350.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "institution",
+        "department",
+        "stored_roster_url",
+        "profile_markup"
+      ],
+      "retrievedAt": "2026-11-17T22:02:02.469Z",
+      "note": "candidate requires visual review before acceptance"
+    },
+    "vp-3679": {
+      "name": "Trung Ngoc Trinh",
+      "outcome": "found",
+      "pageUrl": "https://www.sintef.no/en/all-employees/employee/trung.trinh/",
+      "imageUrl": "https://www.sintef.no/contentassets/9f79e01f976c45f0a737ac80b0955d7e/trung.trinh-sintef.no.jpg?width=180&height=180&mode=crop&scale=both",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-17T22:02:03.106Z"
+    },
+    "vp-3680": {
+      "name": "Duc H. Le",
+      "outcome": "found",
+      "pageUrl": "https://cris.vtt.fi/en/persons/duc-le/",
+      "imageUrl": "https://cris.vtt.fi/files-asset/78889409/US_visa_size_1_.jpg?w=160&f=jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-17T22:02:16.768Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-3681": {
+      "name": "Thuc Uyen Nguyen-Thi",
+      "outcome": "found",
+      "pageUrl": "https://liser.elsevierpure.com/en/persons/thuc-uyen-nguyen-thi/",
+      "imageUrl": "https://liser.elsevierpure.com/files-asset/72672007/181.jpg?w=160&f=jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-17T22:02:17.056Z",
+      "note": "MEDIUM candidate stored after visual review"
     }
   }
 }
