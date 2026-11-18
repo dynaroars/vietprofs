@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-17T14:00:00.000Z",
+  "updatedAt": "2026-11-18T14:00:00.000Z",
   "relationships": [
     {
       "id": "rel-coauthor-vp-0015-vp-0018",
@@ -3175,6 +3175,48 @@
       "notes": ""
     },
     {
+      "id": "rel-coauthor-vp-1205-vp-3729",
+      "type": "coauthor",
+      "sourceId": "vp-1205",
+      "targetId": "vp-3729",
+      "sources": [
+        "https://doi.org/10.1007/s11634-007-0011-2",
+        "https://doi.org/10.1016/j.patcog.2013.07.012",
+        "https://doi.org/10.1007/s10994-014-5455-y",
+        "https://doi.org/10.1007/s10898-009-9481-4"
+      ],
+      "evidence": "Crossref records list Tao Pham Dinh (vp-1205) and Hoai Minh Le (vp-3729) on each retained work (small author lists, not consortium papers); names, DC programming/DCA research area and Rouen/Metz affiliation history match the roster entries.",
+      "works": [
+        {
+          "identifier": "doi:10.1007/s11634-007-0011-2",
+          "title": "Fuzzy clustering based on nonconvex optimisation approaches using difference of convex (DC) functions algorithms",
+          "date": "2007-07-25",
+          "url": "https://doi.org/10.1007/s11634-007-0011-2"
+        },
+        {
+          "identifier": "doi:10.1016/j.patcog.2013.07.012",
+          "title": "New and efficient DCA based algorithms for minimum sum-of-squares clustering",
+          "date": "2014-01-01",
+          "url": "https://doi.org/10.1016/j.patcog.2013.07.012"
+        },
+        {
+          "identifier": "doi:10.1007/s10994-014-5455-y",
+          "title": "Feature selection in machine learning: an exact penalty approach using a Difference of Convex function Algorithm",
+          "date": "2014-07-04",
+          "url": "https://doi.org/10.1007/s10994-014-5455-y"
+        },
+        {
+          "identifier": "doi:10.1007/s10898-009-9481-4",
+          "title": "A combined DCA: GA for constructing highly nonlinear balanced boolean functions in cryptography",
+          "date": "2009-11-05",
+          "url": "https://doi.org/10.1007/s10898-009-9481-4"
+        }
+      ],
+      "verifiedAt": "2026-11-18T14:00:00.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
       "id": "rel-coauthor-vp-1235-vp-1250",
       "type": "coauthor",
       "sourceId": "vp-1235",
@@ -3532,6 +3574,48 @@
         }
       ],
       "verifiedAt": "2026-11-09T14:12:22.787Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-1444-vp-3729",
+      "type": "coauthor",
+      "sourceId": "vp-1444",
+      "targetId": "vp-3729",
+      "sources": [
+        "https://doi.org/10.1007/s11634-007-0011-2",
+        "https://doi.org/10.1016/j.patcog.2013.07.012",
+        "https://doi.org/10.1007/s10994-014-5455-y",
+        "https://doi.org/10.1007/s10898-009-9481-4"
+      ],
+      "evidence": "Crossref records list both authors on each retained work (small author lists, not consortium papers); names, DC programming/DCA research area and Rouen/Metz affiliation history match the roster entries.",
+      "works": [
+        {
+          "identifier": "doi:10.1007/s11634-007-0011-2",
+          "title": "Fuzzy clustering based on nonconvex optimisation approaches using difference of convex (DC) functions algorithms",
+          "date": "2007-07-25",
+          "url": "https://doi.org/10.1007/s11634-007-0011-2"
+        },
+        {
+          "identifier": "doi:10.1016/j.patcog.2013.07.012",
+          "title": "New and efficient DCA based algorithms for minimum sum-of-squares clustering",
+          "date": "2014-01-01",
+          "url": "https://doi.org/10.1016/j.patcog.2013.07.012"
+        },
+        {
+          "identifier": "doi:10.1007/s10994-014-5455-y",
+          "title": "Feature selection in machine learning: an exact penalty approach using a Difference of Convex function Algorithm",
+          "date": "2014-07-04",
+          "url": "https://doi.org/10.1007/s10994-014-5455-y"
+        },
+        {
+          "identifier": "doi:10.1007/s10898-009-9481-4",
+          "title": "A combined DCA: GA for constructing highly nonlinear balanced boolean functions in cryptography",
+          "date": "2009-11-05",
+          "url": "https://doi.org/10.1007/s10898-009-9481-4"
+        }
+      ],
+      "verifiedAt": "2026-11-18T14:00:00.000Z",
       "direct": false,
       "notes": ""
     },
@@ -4440,6 +4524,21 @@
       "evidence": "Oanh Nguyen's (vp-0209) own CV lists \"Ph.D. in Mathematics, Yale University. Advisor: Professor Van Vu\"; matches vp-0711 (Van H. Vu).",
       "works": [],
       "verifiedAt": "2026-09-23T04:55:00.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-doctoral-advisor-vp-1444-vp-3729",
+      "type": "doctoral-advisor",
+      "sourceId": "vp-1444",
+      "targetId": "vp-3729",
+      "sources": [
+        "https://hal.univ-lorraine.fr/tel-01749011v1/document",
+        "https://lcoms.univ-lorraine.fr/node/350"
+      ],
+      "evidence": "The official HAL (Université de Lorraine) record of the 2007 Université Paul Verlaine - Metz thesis by Hoai Minh Le lists Hoai An Le Thi as Directeur de thèse, and its acknowledgments say the thesis was prepared under her direction; the LCOMS profile confirms his 2007 Metz PhD.",
+      "works": [],
+      "verifiedAt": "2026-11-18T14:00:00.000Z",
       "direct": false,
       "notes": ""
     },
