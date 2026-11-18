@@ -688,6 +688,7 @@ const FIELD_OVERRIDES = new Map([
   ['Mesures Physiques, IUT Saint-Nazaire|Nantes Université', 'Engineering'],
   ['Odontology|Université Paris Cité', 'Health Sciences'],
   ['Hematology|Sorbonne Université', 'Health Sciences'],
+  ['Department of Hematology & Hematopoietic Cell Transplantation|City of Hope', 'Health Sciences'],
   [
     'Department of Electronic Systems|Norwegian University of Science and Technology',
     'Engineering',
