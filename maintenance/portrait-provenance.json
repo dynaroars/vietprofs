@@ -23125,6 +23125,21 @@
       "identitySignals": [],
       "retrievedAt": "2026-11-17T05:12:42.140Z",
       "note": "Removed 2026-11-17 by links rotation: stored portraitSource was the Google Scholar photo of user YuxaWN0AAAAJ, a different Viet Hung Nguyen (Le Quy Don Technical University, information security), not the LIMOS/Universite Clermont Auvergne professor. The LIMOS profile page shows no photo; refill only from an identity-verified official source."
+    },
+    "vp-3743": {
+      "name": "Cattram Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://www.mcri.edu.au/researcher-details/cattram-nguyen",
+      "imageUrl": "https://www.mcri.edu.au/images/profiles/cattram-nguyen.jpeg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-18T04:00:00.000Z",
+      "note": "Stored by the 2026-11-18 audit with the #1313 add: alt text 'photo of Dr Cattram Nguyen' on the MCRI profile; 400x400, portrait_faces ok, checked by eye."
     }
   }
 }
