@@ -824,5 +824,12 @@
     "name": "Toan Thang Phan",
     "university": "National University of Singapore",
     "reason": "Adjunct appointment: the official NUS Discovery profile (https://discovery.nus.edu.sg/974-toan-thang-phan, read 2026-11-17) gives his title as \"Adjunct Research Associate Professor\", Surgery, and says he is a founding director and CSO of the CellResearch Corporation group of companies. Adjunct posts are excluded (ROSTER_MAINTENANCE.md). No protected directFields. From #1319. Re-add on evidence of a full-time non-adjunct appointment."
+  },
+  "vp-0493": {
+    "replacedBy": null,
+    "retiredAt": "2026-11-18",
+    "name": "Quang-Cuong Pham",
+    "university": "Nanyang Technological University",
+    "reason": "Left NTU: the official DR-NTU person record (HR source workday-hr::10003263, API https://dr.ntu.edu.sg/server/api/core/items/f789ac63-2d5b-4884-b5fa-ae6c52a793ed, read 2026-11-18) is deactivated with ntu.person.enddate 2025-01-03. His Eureka Robotics Series A release (PRNewswire, 2024-12-12) names him only as Co-founder & CEO; the 'on leave' mentions are undated and older, and personal.ntu.edu.sg/cuong was last updated 2021. Eureka Robotics is a startup, not an eligible corporate research lab. From #1322. Re-add under this id on evidence of a current eligible appointment."
   }
 }
