@@ -26,7 +26,9 @@ eligibility/name rules in `ROSTER_MAINTENANCE.md`. Spell each employer the way e
    page, staff bio, economist page), which you actually opened in this run. Never construct a URL
    from a pattern. Not acceptable: team/lab/list pages, news, PDFs, ORCID, Scholar, ResearchGate,
    LinkedIn, conference bios, a former employer. If the employer publishes no page, the person's
-   own site stating the current role is acceptable with `"confirmed": false`.
+   own site stating the current role is acceptable with `"confirmed": false`. An official, current
+   team or member-list page is acceptable when it shows this person's title (2026-11-17 rule in
+   `ROSTER_MAINTENANCE.md`); a list without titles or an alumni list is not.
 2. Quote the exact current title from that page in `evidence.currentRole`.
 3. Career research role (Research Scientist, Staff/Principal Scientist, Research Engineer who
    publishes, Economist, Senior Fellow, Program Officer/Manager, lab staff scientist). NOT:

@@ -49,7 +49,7 @@ left a duplicate of an existing entry, guessed `vietnameseName` values, and a qu
 `profileUrl`s pointing at Scholar, DBLP, or a former university.
 
 1. **Current, on the employer's own page.** `profileUrl` is a page the current employer publishes
-   that names the person (people page, author page, staff bio, economist directory). When the
+   that names the person (people page, author page, staff bio, economist directory, or a current team/member list that gives their title; see the 2026-11-17 evidence rule in `ROSTER_MAINTENANCE.md`, which also covers sourcing `city`). When the
    employer publishes none, which is common at OpenAI, Anthropic, Apple, and defense labs, use the
    person's own site or LinkedIn stating the current role and set `"confirmed": false`. Scholar,
    DBLP, ORCID, a conference bio, or a paper byline alone never establishes a current appointment,

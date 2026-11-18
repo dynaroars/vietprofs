@@ -609,6 +609,16 @@ Each entry should use the following conventions:
   - Defense/government, corporate, and policy entries: `Government & Defense`, `Industry Research`, `Policy & Think Tank`, or `Research`.
 - `institutionType`, when present, must be `University`, `Public research institute`, `Independent nonprofit research institute`, `Corporate research lab`, `Policy & international organization`, or `Think tank`. Omit it for ordinary university records; it is required for non-university institutes, corporate research labs, policy organizations, and think tanks. Non-university entries in `public/data.json` must use the `Research` track.
 - `profileUrl` must be a current, working academic or official institutional profile and must not be a Google Scholar URL. Store Scholar separately in `scholarUrl` (must be a canonical citations profile URL `https://scholar.google.com/citations?user=...`, never a search query). Store one maintained personal or lab homepage in `websiteUrl` (there is no separate lab field; prefer the personal page when both exist); store a verified LinkedIn profile in `linkedinUrl` (must be a direct personal profile URL `https://linkedin.com/in/...` or `https://www.linkedin.com/in/...`, never search or company pages). Verify Scholar and LinkedIn matches strictly: confirm name, institution, and publication/field overlap before attaching them — never guess from name alone. Prefer LinkedIn profiles directly linked from the faculty member's institutional bio or homepage.
+- Evidence for a non-university entry (owner rule 2026-11-17). An individual profile page is
+  preferred, but an official team, group, or member-list page on the current employer's site is
+  acceptable `profileUrl` evidence when it names the person with their current title and is
+  itself current (no "alumni", "former members", or stale date). A list without a title, an
+  alumni page, or a page at a former employer is not. `city` must come from a page, CV, or paper
+  affiliation that states it, or, for a single-site employer (one research campus, such as
+  SCCH in Hagenberg or the Moredun Institute in Penicuik), from the employer's own address. For a
+  multi-site organization (Amazon, Meta, Salesforce, Google DeepMind, CSIRO, a national
+  institute with several campuses) never use the headquarters or an OpenAlex institution city:
+  hold the person until a source names their site.
 - `lastUpdatedAt` is not stored in `public/data.json`. It lives in `public/updates.json`, keyed by
   id, and the site merges it in when it loads the roster. Never edit that file by hand: `npm test`
   (via `npm run stamp-updates`) stamps every entry whose content changed since the last commit, and
