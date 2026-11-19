@@ -11,21 +11,28 @@
 
 1. **Routing:** Follow the "Where each kind of change lands" table in `AGENTS.md` (existing-ID
    edits → PR; new people → Issue; never commit directly to `main`).
-2. **Batch:** At most 20 roster entries per run, in id order after the highest id listed in the
-   last `[scheduled:honors]` PR, wrapping at the end of the roster. One batch per run; the rotation
-   continues across runs.
-3. **Per entry:** Open the official profile and, where available, the CV or homepage. Search the
+2. **Batch:** At most 20 roster entries per run, in id order after the highest id checked by the
+   most recent `[scheduled:honors]` run, whether it ended in a PR or a no-change Issue (take
+   whichever is newer, never only the last PR), wrapping at the end of the roster. One batch per
+   run; the rotation continues across runs.
+3. **Carry-overs get one retry:** an entry the previous run listed as "not checked" (fetch
+   blocked, or the page had no degree or honor data) is retried once, at the start of the batch.
+   If it fails again, list it under "Unreachable, skipped" in your PR or Issue and don't carry it
+   forward; the auditor or a manual session can take it from there. Carry-overs never take more
+   than 5 of the 20 slots, so every run checks at least 15 entries it hasn't seen.
+4. **Per entry:** Open the official profile and, where available, the CV or homepage. Search the
    awarding bodies for honors that meet the bar in section 3 (academies, society fellowships,
    career awards, major awards, named chairs) and check that each stored honor still has a working
    HTTPS source naming the person. Check degree fields against section 2. Record only what a source
    states; leave a field empty rather than guess.
-4. **Protected values:** Never change an honor on an entry whose `directFields` lists `honors`; a
+5. **Protected values:** Never change an honor on an entry whose `directFields` lists `honors`; a
    conflict goes to an Issue for the owner.
-5. **Submit:** Branch `maintenance/honors-<YYYY-MM-DD>`, run
+6. **Submit:** Branch `maintenance/honors-<YYYY-MM-DD>`, run
    `npm test && npm run build && git diff --check`, commit `public/data.json` and
    `public/updates.json`, push, and open a PR titled `[scheduled:honors] Honors and degrees
    (<first id>–<last id>)`. In the body, list every entry checked, including those with no change,
-   so the next run knows where to resume. Do not merge it; the auditor (`TASKS/AUDIT_ISSUES_PRS.md`)
+   so the next run knows where to resume. A run with no changes files a `[scheduled:honors]` Issue
+   instead, with the same lists; the next run resumes from it. Do not merge it; the auditor (`TASKS/AUDIT_ISSUES_PRS.md`)
    reviews and merges.
 
 ---

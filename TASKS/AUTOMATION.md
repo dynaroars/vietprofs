@@ -375,10 +375,11 @@ accepted. Never replace a portrait protected by `directFields`.
 ### Honors and degrees (`honors`)
 
 Playbook: `TASKS/audit_facts_and_honors.md`. Cap: 20 roster entries, in id order after the highest
-id in the last `[scheduled:honors]` PR, wrapping at the end of the roster, so every entry gets an
-honors and degree pass about every seven months. If that PR lists entries as not checked, start the
-batch with those, then continue after its range. List any entries you don't check in your own PR
-the same way. Fixes to those entries go in the batch PR, with
+id checked by the most recent `[scheduled:honors]` run (its PR, or its Issue when it changed
+nothing), wrapping at the end of the roster, so every entry gets an honors and degree pass about
+every seven months. Entries that run lists as not checked get one retry at the start of the batch
+(at most 5 slots); an entry that fails twice goes under "Unreachable, skipped" and is not carried
+again. List any entries you don't check in your own PR or Issue the same way. Fixes to those entries go in the batch PR, with
 every checked entry listed. New eligible people noticed along the way get one `New candidate:`
 Issue each.
 
@@ -393,12 +394,15 @@ employers), and `TASKS/candidate_intake.md` (eligibility and enrichment).
    (Crossref/OpenAlex co-authors of rostered scholars), Wed `feeders` on odd ISO weeks (OpenAlex
    authors who published at a Vietnamese university and are now abroad, most-published first) and
    `gaps` on even ISO weeks (feeder-vs-faculty gap report, then
-   `./scripts/faculty-discovery-queries.ts` for the top uncovered gap university), Thu `labs`
-   (alumni pages on rostered `websiteUrl`s), Fri web search: on odd ISO weeks per `discover_new_faculty.md` (one field
+   `./scripts/faculty-discovery-queries.ts` for the top uncovered gap university), Thu `newhires`
+   (university new-faculty announcements and department directories, per
+   `discover_new_faculty.md` "New-hire channel"; falls back to `labs`, alumni pages on rostered
+   `websiteUrl`s), Fri web search: on odd ISO weeks per `discover_new_faculty.md` (one field
    or institution group; given-name tokens once that field's surname sweep is done), on even ISO
    weeks per `discover_industry_labs.md` (one employer group, filed as a `New industry batch`), Sat `logs`
    (out-of-roster leads in `maintenance/relationship-research.json`). Run
-   `npm run discover-leads -- --mode=<channel> --limit=<n>` (never `--mode=all`). If the day's channel
+   `npm run discover-leads -- --mode=<channel> --limit=<n>` (never `--mode=all`) for the database
+   channels; `newhires` and the Fri web search have no script mode. If the day's channel
    yields fewer than 5 promising leads, fall back to the next channel in the list.
 2. **Skip covered ground:** read the `[scheduled:discover]` Issues of the last 30 days (open and
    closed) and skip leads, gap universities, seed labs, or fields they already list.
