@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-18T14:00:00.000Z",
+  "updatedAt": "2026-11-19T14:00:00.000Z",
   "relationships": [
     {
       "id": "rel-coauthor-vp-0015-vp-0018",
@@ -4652,6 +4652,138 @@
       "verifiedAt": "2026-09-23T04:45:00.000Z",
       "direct": true,
       "notes": "Owner-directed: repository owner asked to check his own CV for connections."
+    },
+    {
+      "id": "rel-coauthor-vp-0283-vp-3720",
+      "type": "coauthor",
+      "sourceId": "vp-0283",
+      "targetId": "vp-3720",
+      "sources": [
+        "https://www.depts.ttu.edu/pss/people/faculty/tran-son/tran-son.php",
+        "https://clementelab.unl.edu/person/truyen-quach/",
+        "https://doi.org/10.1007/s00438-009-0436-8",
+        "https://doi.org/10.1371/journal.pone.0046487",
+        "https://doi.org/10.1371/journal.pone.0084886",
+        "https://doi.org/10.1007/s11033-014-3695-3"
+      ],
+      "evidence": "OpenAlex author records (API) list 4 shared works (each with at most 25 authors, errata excluded) naming Lam-Son Phan Tran (vp-0283) and Truyen Ngoc Quach (vp-3720). Identity signals: full-name match, the roster institutions or their recorded affiliations on the works, and matching research area; the OpenAlex author profiles' affiliations were checked against the roster entries.",
+      "works": [
+        {
+          "identifier": "doi:10.1007/s00438-009-0436-8",
+          "title": "Molecular characterization of stress-inducible GmNAC genes in soybean",
+          "date": "2009-03-10",
+          "url": "https://doi.org/10.1007/s00438-009-0436-8"
+        },
+        {
+          "identifier": "doi:10.1371/journal.pone.0046487",
+          "title": "Evaluation of Candidate Reference Genes for Normalization of Quantitative RT-PCR in Soybean Tissues under Various Abiotic Stress Conditions",
+          "date": "2012-09-28",
+          "url": "https://doi.org/10.1371/journal.pone.0046487"
+        },
+        {
+          "identifier": "doi:10.1371/journal.pone.0084886",
+          "title": "Functional Analysis of Water Stress-Responsive Soybean GmNAC003 and GmNAC004 Transcription Factors in Lateral Root Development in Arabidopsis",
+          "date": "2014-01-23",
+          "url": "https://doi.org/10.1371/journal.pone.0084886"
+        },
+        {
+          "identifier": "doi:10.1007/s11033-014-3695-3",
+          "title": "Overexpression of AtDREB1D transcription factor improves drought tolerance in soybean",
+          "date": "2014-09-05",
+          "url": "https://doi.org/10.1007/s11033-014-3695-3"
+        }
+      ],
+      "verifiedAt": "2026-11-19T14:00:00.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-0205-vp-3720",
+      "type": "coauthor",
+      "sourceId": "vp-0205",
+      "targetId": "vp-3720",
+      "sources": [
+        "https://cafnr.missouri.edu/directory/henry-nguyen/",
+        "https://clementelab.unl.edu/person/truyen-quach/",
+        "https://doi.org/10.1007/s00438-009-0436-8",
+        "https://doi.org/10.1371/journal.pone.0046487",
+        "https://doi.org/10.1371/journal.pone.0084886",
+        "https://doi.org/10.1007/s11033-014-3695-3",
+        "https://doi.org/10.1007/s00438-014-0978-2"
+      ],
+      "evidence": "OpenAlex author records (API) list 5 shared works (each with at most 25 authors, errata excluded) naming Henry T. Nguyen (vp-0205) and Truyen Ngoc Quach (vp-3720). Identity signals: full-name match, the roster institutions or their recorded affiliations on the works, and matching research area; the OpenAlex author profiles' affiliations were checked against the roster entries.",
+      "works": [
+        {
+          "identifier": "doi:10.1007/s00438-009-0436-8",
+          "title": "Molecular characterization of stress-inducible GmNAC genes in soybean",
+          "date": "2009-03-10",
+          "url": "https://doi.org/10.1007/s00438-009-0436-8"
+        },
+        {
+          "identifier": "doi:10.1371/journal.pone.0046487",
+          "title": "Evaluation of Candidate Reference Genes for Normalization of Quantitative RT-PCR in Soybean Tissues under Various Abiotic Stress Conditions",
+          "date": "2012-09-28",
+          "url": "https://doi.org/10.1371/journal.pone.0046487"
+        },
+        {
+          "identifier": "doi:10.1371/journal.pone.0084886",
+          "title": "Functional Analysis of Water Stress-Responsive Soybean GmNAC003 and GmNAC004 Transcription Factors in Lateral Root Development in Arabidopsis",
+          "date": "2014-01-23",
+          "url": "https://doi.org/10.1371/journal.pone.0084886"
+        },
+        {
+          "identifier": "doi:10.1007/s11033-014-3695-3",
+          "title": "Overexpression of AtDREB1D transcription factor improves drought tolerance in soybean",
+          "date": "2014-09-05",
+          "url": "https://doi.org/10.1007/s11033-014-3695-3"
+        },
+        {
+          "identifier": "doi:10.1007/s00438-014-0978-2",
+          "title": "Genome-wide expression analysis of soybean NF-Y genes reveals potential function in development and drought response",
+          "date": "2014-12-26",
+          "url": "https://doi.org/10.1007/s00438-014-0978-2"
+        }
+      ],
+      "verifiedAt": "2026-11-19T14:00:00.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-coauthor-vp-2539-vp-3715",
+      "type": "coauthor",
+      "sourceId": "vp-2539",
+      "targetId": "vp-3715",
+      "sources": [
+        "https://lirsa.cnam.fr/le-laboratoire/membres/aurelie-viet-ha-tran-vu--1366656.kjsp?RH=1337076011992",
+        "https://www.litem.univ-evry.fr/le-litem/membres/chercheuses-chercheurs.html",
+        "https://openalex.org/W7130794843",
+        "https://openalex.org/W7130801644",
+        "https://openalex.org/W7223074503"
+      ],
+      "evidence": "OpenAlex author records (API) list 3 shared works (each with at most 25 authors, errata excluded) naming Aurélie Viet Ha Tran Vu (vp-2539) and Phu Dao-Le Flecher (vp-3715). Identity signals: full-name match, the roster institutions or their recorded affiliations on the works, and matching research area; the OpenAlex author profiles' affiliations were checked against the roster entries.",
+      "works": [
+        {
+          "identifier": "openalex:W7130794843",
+          "title": "Exploratory study of climate change disclosure practices in a historical perspective: the case of Danone Group",
+          "date": "2025-09-25",
+          "url": "https://openalex.org/W7130794843"
+        },
+        {
+          "identifier": "openalex:W7130801644",
+          "title": "Shaping climate change disclosures through time: insights from the case of Danone Group",
+          "date": "2025-10-31",
+          "url": "https://openalex.org/W7130801644"
+        },
+        {
+          "identifier": "openalex:W7223074503",
+          "title": "Assessing the evolution of sustainability assurance practices and quality: a longitudinal study in an international comparative perspective",
+          "date": "2026-06-04",
+          "url": "https://openalex.org/W7223074503"
+        }
+      ],
+      "verifiedAt": "2026-11-19T14:00:00.000Z",
+      "direct": false,
+      "notes": ""
     }
   ],
   "external": [
@@ -6154,6 +6286,141 @@
       "works": [],
       "verifiedAt": "2026-11-17T14:00:00.000Z",
       "notes": "Co-supervision stated on the source page."
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-3709",
+      "role": "mentor",
+      "name": "Hyacinthe Randriamahazaka",
+      "affiliation": "",
+      "url": "",
+      "sources": [
+        "https://theses.hal.science/tel-02464796v1"
+      ],
+      "evidence": "The HAL thesis record for the doctoral thesis by Thuan Nguyen Pham Truong lists Hyacinthe Randriamahazaka among its thesis directors (director field).",
+      "works": [],
+      "verifiedAt": "2026-11-19T14:00:00.000Z",
+      "notes": "Thesis record matched to the roster entry by full name and field; co-direction as listed."
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-3709",
+      "role": "mentor",
+      "name": "Jalal Ghilane",
+      "affiliation": "",
+      "url": "",
+      "sources": [
+        "https://theses.hal.science/tel-02464796v1"
+      ],
+      "evidence": "The HAL thesis record for the doctoral thesis by Thuan Nguyen Pham Truong lists Jalal Ghilane among its thesis directors (director field).",
+      "works": [],
+      "verifiedAt": "2026-11-19T14:00:00.000Z",
+      "notes": "Thesis record matched to the roster entry by full name and field; co-direction as listed."
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-3713",
+      "role": "mentor",
+      "name": "Patricia Desgreys",
+      "affiliation": "",
+      "url": "",
+      "sources": [
+        "https://pastel.hal.science/tel-01163015v1"
+      ],
+      "evidence": "The HAL thesis record for the doctoral thesis by Dang Kien Germain Pham lists Patricia Desgreys among its thesis directors (director field).",
+      "works": [],
+      "verifiedAt": "2026-11-19T14:00:00.000Z",
+      "notes": "Thesis record matched to the roster entry by full name and field; co-direction as listed."
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-3713",
+      "role": "mentor",
+      "name": "Patrick Loumeau",
+      "affiliation": "",
+      "url": "",
+      "sources": [
+        "https://pastel.hal.science/tel-01163015v1"
+      ],
+      "evidence": "The HAL thesis record for the doctoral thesis by Dang Kien Germain Pham lists Patrick Loumeau among its thesis directors (director field).",
+      "works": [],
+      "verifiedAt": "2026-11-19T14:00:00.000Z",
+      "notes": "Thesis record matched to the roster entry by full name and field; co-direction as listed."
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-3715",
+      "role": "mentor",
+      "name": "Jean-Laurent Viviani",
+      "affiliation": "",
+      "url": "",
+      "sources": [
+        "https://hal.science/tel-04354523v1"
+      ],
+      "evidence": "The HAL thesis record for the doctoral thesis by Phu Dao-Le Flécher lists Jean-Laurent Viviani among its thesis directors (director field).",
+      "works": [],
+      "verifiedAt": "2026-11-19T14:00:00.000Z",
+      "notes": "Thesis record matched to the roster entry by full name and field; co-direction as listed."
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-3715",
+      "role": "mentor",
+      "name": "Peter Walton",
+      "affiliation": "",
+      "url": "",
+      "sources": [
+        "https://hal.science/tel-04354523v1"
+      ],
+      "evidence": "The HAL thesis record for the doctoral thesis by Phu Dao-Le Flécher lists Peter Walton among its thesis directors (director field).",
+      "works": [],
+      "verifiedAt": "2026-11-19T14:00:00.000Z",
+      "notes": "Thesis record matched to the roster entry by full name and field; co-direction as listed."
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-3716",
+      "role": "mentor",
+      "name": "Pierre Chainais",
+      "affiliation": "",
+      "url": "",
+      "sources": [
+        "https://theses.hal.science/tel-01457156v2"
+      ],
+      "evidence": "The HAL thesis record for the doctoral thesis by Hong-Phuong Dang lists Pierre Chainais among its thesis directors (director field).",
+      "works": [],
+      "verifiedAt": "2026-11-19T14:00:00.000Z",
+      "notes": "Thesis record matched to the roster entry by full name and field."
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-3719",
+      "role": "mentor",
+      "name": "Camille Cornand",
+      "affiliation": "",
+      "url": "",
+      "sources": [
+        "https://theses.hal.science/tel-02493353v1"
+      ],
+      "evidence": "The HAL thesis record for the doctoral thesis by Gaëtan Le Quang lists Camille Cornand among its thesis directors (director field).",
+      "works": [],
+      "verifiedAt": "2026-11-19T14:00:00.000Z",
+      "notes": "Thesis record matched to the roster entry by full name and field; co-direction as listed."
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-3719",
+      "role": "mentor",
+      "name": "Laurence Scialom",
+      "affiliation": "",
+      "url": "",
+      "sources": [
+        "https://theses.hal.science/tel-02493353v1"
+      ],
+      "evidence": "The HAL thesis record for the doctoral thesis by Gaëtan Le Quang lists Laurence Scialom among its thesis directors (director field).",
+      "works": [],
+      "verifiedAt": "2026-11-19T14:00:00.000Z",
+      "notes": "Thesis record matched to the roster entry by full name and field; co-direction as listed."
     }
   ]
 }
