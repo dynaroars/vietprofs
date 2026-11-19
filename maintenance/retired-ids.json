@@ -831,5 +831,12 @@
     "name": "Quang-Cuong Pham",
     "university": "Nanyang Technological University",
     "reason": "Left NTU: the official DR-NTU person record (HR source workday-hr::10003263, API https://dr.ntu.edu.sg/server/api/core/items/f789ac63-2d5b-4884-b5fa-ae6c52a793ed, read 2026-11-18) is deactivated with ntu.person.enddate 2025-01-03. His Eureka Robotics Series A release (PRNewswire, 2024-12-12) names him only as Co-founder & CEO; the 'on leave' mentions are undated and older, and personal.ntu.edu.sg/cuong was last updated 2021. Eureka Robotics is a startup, not an eligible corporate research lab. From #1322. Re-add under this id on evidence of a current eligible appointment."
+  },
+  "vp-2998": {
+    "replacedBy": null,
+    "retiredAt": "2026-11-19",
+    "name": "Thu Nguyen-Phuoc",
+    "university": "Meta FAIR",
+    "reason": "Left Meta: her own page (https://monkeyoverflow.com/about, read 2026-11-19) says 'I'm currently at Prometheus, working on AI for the physical world. ... Before Prometheus, I was a Senior AI Research Scientist at Meta Reality Labs.' No source gives her title or site at Prometheus (likely Project Prometheus, the physical-AI startup), and no 2025-26 paper carries that affiliation, so a current research role isn't shown. From #1332. Re-add under this id on evidence of a research title at an organization that publishes research."
   }
 }
