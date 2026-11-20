@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-19T14:00:00.000Z",
+  "updatedAt": "2026-11-20T14:00:00.000Z",
   "relationships": [
     {
       "id": "rel-coauthor-vp-0015-vp-0018",
@@ -6286,6 +6286,81 @@
       "works": [],
       "verifiedAt": "2026-11-17T14:00:00.000Z",
       "notes": "Co-supervision stated on the source page."
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-3682",
+      "role": "mentor",
+      "name": "Mickaël Blaise",
+      "affiliation": "Institut de Recherche en Infectiologie de Montpellier",
+      "url": "",
+      "sources": [
+        "https://theses.hal.science/tel-04416254v1"
+      ],
+      "evidence": "The HAL thesis record for the doctoral thesis by this person lists Mickaël Blaise as thesis director (director field).",
+      "works": [],
+      "verifiedAt": "2026-11-20T14:00:00.000Z",
+      "notes": "Thesis author matched to roster by full name; coauthored Blaise-lab papers (2019-2023) with the same name at IPBS."
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-3683",
+      "role": "mentor",
+      "name": "Alain Marty",
+      "affiliation": "CEA Institut Nanosciences et Cryogénie",
+      "url": "",
+      "sources": [
+        "https://theses.hal.science/tel-00815762v1"
+      ],
+      "evidence": "The HAL thesis record (Grenoble, 2012) lists Alain Marty as thesis director (Dir.), with Jean-Philippe Attané and Laurent Vila also named.",
+      "works": [],
+      "verifiedAt": "2026-11-20T14:00:00.000Z",
+      "notes": "Matches the imec profile (PhD Nanophysics, Université Grenoble Alpes, 2012)."
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-3692",
+      "role": "mentor",
+      "name": "Vijay Vazirani",
+      "affiliation": "",
+      "url": "",
+      "sources": [
+        "https://sites.google.com/view/tungtmai/"
+      ],
+      "evidence": "Tung Mai's personal site says he received his Ph.D. at Georgia Institute of Technology under the guidance of Prof. Vijay Vazirani.",
+      "works": [],
+      "verifiedAt": "2026-11-20T14:00:00.000Z",
+      "notes": "Advisor named on the scholar's own site."
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-3693",
+      "role": "mentor",
+      "name": "David Israeli",
+      "affiliation": "Genethon / INSERM",
+      "url": "",
+      "sources": [
+        "https://theses.hal.science/tel-03485606v1"
+      ],
+      "evidence": "The HAL thesis record for the doctoral thesis by this person lists David Israeli as thesis director (director field). (co-direction as listed).",
+      "works": [],
+      "verifiedAt": "2026-11-20T14:00:00.000Z",
+      "notes": "Thesis (Université d'Évry, INTEGRARE lab at Genethon) matches roster affiliation; coauthored papers with both."
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-3693",
+      "role": "mentor",
+      "name": "Isabelle Richard",
+      "affiliation": "Genethon / INSERM",
+      "url": "",
+      "sources": [
+        "https://theses.hal.science/tel-03485606v1"
+      ],
+      "evidence": "The HAL thesis record for the doctoral thesis by this person lists Isabelle Richard as thesis director (director field). (co-direction as listed).",
+      "works": [],
+      "verifiedAt": "2026-11-20T14:00:00.000Z",
+      "notes": "Thesis (Université d'Évry, INTEGRARE lab at Genethon) matches roster affiliation; coauthored papers with both."
     },
     {
       "type": "doctoral-advisor",
