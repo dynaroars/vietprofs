@@ -64,6 +64,8 @@ const surnameFirstAllowlist = new Set<string>([
   'Nguyen Lam', // Memorial University (Grenfell) profile and CV nguyenlammath; Lam is his surname and Nguyen his given name.
   'Hoang Anh Truong Igarashi', // Tohoku profile "Hoang Anh Truong Igarashi" (goes by Anh Igarashi); Hoang Anh is her given name, Truong her Vietnamese surname, Igarashi her married name.
   'Duong Tommy Hua', // UCLA Health profile "Duong Tommy Hua, MD"; Hua is his surname, Duong (Tommy) his given name.
+  'Mai T. Nguyen Mintz', // Einstein profile "Mai T. Nguyen Mintz, MD"; Mai is her given name, Nguyen her Vietnamese surname, Mintz her married name.
+  'Mai Tran-Ngoc', // UW Medicine profile "Mai Tran-Ngoc, MD"; Mai is her given name and Tran-Ngoc her compound surname.
   'Le Mai Tu', // published as "Dre Le Mai Tu" across Université de Sherbrooke directory; Tu is her surname and Le Mai is her given name.
   'Dinh Ha Duy Thuy', // published as "Dinh Ha Duy Thuy" across Kyoto University directory and Researchmap; Dinh is his surname and Thuy is his given name.
   'Ha Thanh Dong', // published as "Ha Thanh Dong" / "Dr. Ha Thanh Dong" on AIT faculty directory; Dong is his surname and Ha is his given name.
@@ -336,6 +338,7 @@ const portraits = new Set();
 // institution (vp-0675/vp-1574, vp-0806/vp-1581, ... merged 2026-09-27). Pairs confirmed to be
 // different people go in DISTINCT_PEOPLE with how that was confirmed.
 const DISTINCT_PEOPLE = new Set<string>([
+  'vp-0437 vp-4483', // Khoa Tran (Biology, Tufts School of Arts and Sciences) and Khoa Tran (Pediatric Gastroenterology, Tufts School of Medicine, MD): separate Tufts profiles in different schools
   'vp-4378 vp-4432', // Phuc D. Nguyen (Family and Community Medicine) and Phuc P. Nguyen (Cardiovascular Medicine), UTHealth Houston: separate McGovern faculty pages with different middle initials
   'vp-0186 vp-4169', // Thuy Linh Nguyen Tu (Social and Cultural Analysis, NYU FAS) and Thuy Nguyen (Cardiothoracic Surgery, NYU Langone MD): separate NYU profiles
   'vp-0972 vp-0973', // Katherine Nguyen (Rheumatology) and Katherine Nguyen Williams (Psychiatry), UC San Diego: separate UCSD profiles
