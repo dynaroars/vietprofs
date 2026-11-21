@@ -60,6 +60,7 @@ const surnameFirstAllowlist = new Set<string>([
   'Dinh Ho Tong Minh', // published as "Dinh Ho Tong Minh" across INRAE, IEEE, and Nature; Ho Tong Minh is his compound surname and Dinh is his given name.
   'Chau Trinh-Shevrin', // published as "Chau Trinh-Shevrin" across NYU directory and publications; Trinh-Shevrin is her surname and Chau is her given name.
   'Ha Thai', // University of Sydney profile "Dr Ha Thai"; full published name Ha Minh Hai Thai, so Thai is the surname and Ha her given name.
+  'Hoang Linh Doan Kaestner', // SMU profile "KAESTNER Doan Hoang Linh"; Hoang Linh is her given name, Doan her Vietnamese surname, Kaestner her married name.
   'Le Mai Tu', // published as "Dre Le Mai Tu" across Université de Sherbrooke directory; Tu is her surname and Le Mai is her given name.
   'Dinh Ha Duy Thuy', // published as "Dinh Ha Duy Thuy" across Kyoto University directory and Researchmap; Dinh is his surname and Thuy is his given name.
   'Ha Thanh Dong', // published as "Ha Thanh Dong" / "Dr. Ha Thanh Dong" on AIT faculty directory; Dong is his surname and Ha is his given name.
