@@ -2,7 +2,8 @@
 
 You are finding Vietnamese and Vietnamese-diaspora faculty and career researchers at universities
 and public research institutes in countries the roster covers thinly, who are NOT yet in
-`public/data.json`. Stay inside the one slice given in your prompt (a set of countries).
+`public/data.json`. Stay inside the one slice given in your prompt (a set of countries, or US
+institutions outside the research flagships the roster already covers well; treat those the same way).
 
 Read first: the eligibility, appointment-track, and name rules in `ROSTER_MAINTENANCE.md`. Spell
 each university the way existing `public/data.json` entries spell it (grep for it) before
