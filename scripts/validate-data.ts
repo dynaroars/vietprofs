@@ -336,6 +336,7 @@ const portraits = new Set();
 // institution (vp-0675/vp-1574, vp-0806/vp-1581, ... merged 2026-09-27). Pairs confirmed to be
 // different people go in DISTINCT_PEOPLE with how that was confirmed.
 const DISTINCT_PEOPLE = new Set<string>([
+  'vp-0186 vp-4169', // Thuy Linh Nguyen Tu (Social and Cultural Analysis, NYU FAS) and Thuy Nguyen (Cardiothoracic Surgery, NYU Langone MD): separate NYU profiles
   'vp-0972 vp-0973', // Katherine Nguyen (Rheumatology) and Katherine Nguyen Williams (Psychiatry), UC San Diego: separate UCSD profiles
   'vp-0673 vp-1700', // Lan K. Nguyen (Biochemistry) and Lan Nguyen (Accounting), Monash: separate Monash research profiles (#223)
   'vp-1744 vp-1996', // Thanh Le (Business, Associate Professor) and Thanh Le Hoang (Computing, Lecturer in AI), Wollongong: separate UOW Scholars profiles
