@@ -338,6 +338,9 @@ const portraits = new Set();
 // institution (vp-0675/vp-1574, vp-0806/vp-1581, ... merged 2026-09-27). Pairs confirmed to be
 // different people go in DISTINCT_PEOPLE with how that was confirmed.
 const DISTINCT_PEOPLE = new Set<string>([
+  'vp-0880 vp-4577', // Matthew Thai-Khang Nguyen (Emergency Medicine) and Matthew D. Nguyen (Ophthalmology), Weill Cornell: separate WCM profiles with different middle names
+  'vp-4378 vp-4567', // Phuc D. Nguyen and Phuc X. Nguyen, UTHealth Houston Family and Community Medicine: two separate McGovern faculty pages (phuc-d-nguyen-md, phuc-x-nguyen-md)
+  'vp-4432 vp-4567', // Phuc P. Nguyen (Cardiovascular Medicine) and Phuc X. Nguyen (Family and Community Medicine), UTHealth Houston: separate McGovern faculty pages
   'vp-3452 vp-4508', // Thanh D. Nguyen (Radiology, Associate Professor) and Alana Thanh Huyen Nguyen (Hematology and Medical Oncology, Assistant Professor), Weill Cornell: separate WCM Scholars profiles
   'vp-0437 vp-4483', // Khoa Tran (Biology, Tufts School of Arts and Sciences) and Khoa Tran (Pediatric Gastroenterology, Tufts School of Medicine, MD): separate Tufts profiles in different schools
   'vp-4378 vp-4432', // Phuc D. Nguyen (Family and Community Medicine) and Phuc P. Nguyen (Cardiovascular Medicine), UTHealth Houston: separate McGovern faculty pages with different middle initials
