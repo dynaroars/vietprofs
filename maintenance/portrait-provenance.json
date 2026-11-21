@@ -23260,6 +23260,62 @@
       "identitySignals": [],
       "retrievedAt": "2026-11-18T11:04:47.885Z",
       "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-3749": {
+      "name": "Anh Tong",
+      "outcome": "found",
+      "pageUrl": "https://sdml-ku.github.io/people/",
+      "imageUrl": "https://sdml-ku.github.io/images/portraits/photo_anhtong.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution"
+      ],
+      "retrievedAt": "2026-11-21T05:00:35.894Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-3752": {
+      "name": "Sabrina Anh-Tu Hoa",
+      "outcome": "found",
+      "pageUrl": "https://www.chumontreal.qc.ca/en/crchum/chercheurs/sabrina-anh-tu-hoa",
+      "imageUrl": "https://www.chumontreal.qc.ca/sites/default/files/styles/researcher_17_20_desktop/public/sabrina-anh-tu-hoa_4.jpeg?itok=tJ74waHA",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution"
+      ],
+      "retrievedAt": "2026-11-21T05:00:36.578Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-3755": {
+      "name": "Thinh Tuan Chu",
+      "outcome": "found",
+      "pageUrl": "https://qgg.au.dk/en/about-qgg/contact/show/person/chu.thinh@qgg.au.dk",
+      "imageUrl": "https://ipure8.au.dk/current/photos/a996e251-e8bb-444a-a1e6-2086669d6ee9-new.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution"
+      ],
+      "retrievedAt": "2026-11-21T05:00:37.247Z",
+      "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-3756": {
+      "name": "Anh The To",
+      "outcome": "found",
+      "pageUrl": "https://research-hub.nlr.gov/en/persons/anh-to/",
+      "imageUrl": "https://research-hub.nlr.gov/files-asset/71069968/anh-to.jpg?w=160&f=jpg",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution"
+      ],
+      "retrievedAt": "2026-11-21T05:00:37.626Z",
+      "note": "MEDIUM candidate stored after visual review"
     }
   }
 }
