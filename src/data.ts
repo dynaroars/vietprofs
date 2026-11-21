@@ -1937,9 +1937,14 @@ function matchesSearchScope(person: RosterEntry, scope: string, target: string):
       Math.floor(person.phdYear! / 10) * 10 === Number.parseInt(target, 10)
     );
   }
-  return scopedValuesFor(person, scope).some(
-    (value) => Boolean(value) && stripDiacritics(value!.toLowerCase()).includes(target),
-  );
+  // A multi-word name query also matches across middle names ("name: minh ta" finds
+  // "Minh Cao Ta"). Other scopes keep phrase matching ("Machine Learning" stays a phrase).
+  const terms = scope === 'name' ? target.split(/\s+/).filter(Boolean) : [];
+  return scopedValuesFor(person, scope).some((value) => {
+    if (!value) return false;
+    const text = stripDiacritics(value.toLowerCase());
+    return text.includes(target) || (terms.length > 1 && terms.every((t) => text.includes(t)));
+  });
 }
 
 function matchesRelationshipScope(

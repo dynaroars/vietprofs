@@ -127,3 +127,12 @@ test('rankMatches keeps every match, ranking word starts (including after hyphen
   ]);
   assert.deepEqual(rankMatches(names, 'duc'), ['Tuan Phung-Duc']);
 });
+
+test('rankMatches finds multi-word queries across skipped middle names, whole words first', () => {
+  const names = ['Minh Tam Truong', 'Minh Cao Ta', 'Tan Minh Nguyen', 'Minh-Tan Pham', 'Ta Minh'];
+  assert.deepEqual(rankMatches(names, 'minh ta'), [
+    'Minh Cao Ta',
+    'Minh Tam Truong',
+    'Minh-Tan Pham',
+  ]);
+});
