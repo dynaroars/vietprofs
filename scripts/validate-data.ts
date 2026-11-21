@@ -338,6 +338,7 @@ const portraits = new Set();
 // institution (vp-0675/vp-1574, vp-0806/vp-1581, ... merged 2026-09-27). Pairs confirmed to be
 // different people go in DISTINCT_PEOPLE with how that was confirmed.
 const DISTINCT_PEOPLE = new Set<string>([
+  'vp-2305 vp-4614', // Julie L. Le (Psychiatry and Family Medicine) and Julie Le (Breast Surgery), UC San Diego: separate UCSD profiles in different departments
   'vp-0880 vp-4577', // Matthew Thai-Khang Nguyen (Emergency Medicine) and Matthew D. Nguyen (Ophthalmology), Weill Cornell: separate WCM profiles with different middle names
   'vp-4378 vp-4567', // Phuc D. Nguyen and Phuc X. Nguyen, UTHealth Houston Family and Community Medicine: two separate McGovern faculty pages (phuc-d-nguyen-md, phuc-x-nguyen-md)
   'vp-4432 vp-4567', // Phuc P. Nguyen (Cardiovascular Medicine) and Phuc X. Nguyen (Family and Community Medicine), UTHealth Houston: separate McGovern faculty pages
