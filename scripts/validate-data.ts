@@ -66,6 +66,7 @@ const surnameFirstAllowlist = new Set<string>([
   'Duong Tommy Hua', // UCLA Health profile "Duong Tommy Hua, MD"; Hua is his surname, Duong (Tommy) his given name.
   'Mai T. Nguyen Mintz', // Einstein profile "Mai T. Nguyen Mintz, MD"; Mai is her given name, Nguyen her Vietnamese surname, Mintz her married name.
   'Mai Tran-Ngoc', // UW Medicine profile "Mai Tran-Ngoc, MD"; Mai is her given name and Tran-Ngoc her compound surname.
+  'Chau Le Neason', // Baylor College of Medicine profile "Chau Le Neason, MD"; Chau is her given name, Le her Vietnamese surname, Neason her married name.
   'Le Mai Tu', // published as "Dre Le Mai Tu" across Université de Sherbrooke directory; Tu is her surname and Le Mai is her given name.
   'Dinh Ha Duy Thuy', // published as "Dinh Ha Duy Thuy" across Kyoto University directory and Researchmap; Dinh is his surname and Thuy is his given name.
   'Ha Thanh Dong', // published as "Ha Thanh Dong" / "Dr. Ha Thanh Dong" on AIT faculty directory; Dong is his surname and Ha is his given name.
@@ -338,6 +339,7 @@ const portraits = new Set();
 // institution (vp-0675/vp-1574, vp-0806/vp-1581, ... merged 2026-09-27). Pairs confirmed to be
 // different people go in DISTINCT_PEOPLE with how that was confirmed.
 const DISTINCT_PEOPLE = new Set<string>([
+  'vp-2345 vp-4695', // Thu Tran (Family and Community Medicine) and Amanda Hien Thu Tran (Pediatric Anesthesiology), UT Southwestern: separate UTSW profiles
   'vp-2305 vp-4614', // Julie L. Le (Psychiatry and Family Medicine) and Julie Le (Breast Surgery), UC San Diego: separate UCSD profiles in different departments
   'vp-0880 vp-4577', // Matthew Thai-Khang Nguyen (Emergency Medicine) and Matthew D. Nguyen (Ophthalmology), Weill Cornell: separate WCM profiles with different middle names
   'vp-4378 vp-4567', // Phuc D. Nguyen and Phuc X. Nguyen, UTHealth Houston Family and Community Medicine: two separate McGovern faculty pages (phuc-d-nguyen-md, phuc-x-nguyen-md)
