@@ -5,6 +5,7 @@
 //   node scripts/discover-leads.ts --mode=coauthors   # Crossref co-authors of rostered scholars
 //   node scripts/discover-leads.ts --mode=feeders     # OpenAlex authors who published at a Vietnamese university, now abroad
 //   node scripts/discover-leads.ts --mode=network     # OpenAlex co-authors of a rotating slice of the roster
+//   node scripts/discover-leads.ts --mode=pairs       # OpenAlex minor surname x Vietnamese given name, rotating
 //   node scripts/discover-leads.ts --mode=labs        # Alumni/people/collaborator pages on stored websiteUrl
 //   node scripts/discover-leads.ts --mode=logs        # Out-of-roster leads in maintenance/relationship-research.json
 //   node scripts/discover-leads.ts --mode=gaps        # Feeder-vs-faculty institution & research-institute gap report
@@ -837,6 +838,91 @@ async function discoverFromNetwork(
     }));
 }
 
+// Vietnamese surnames outside the main sweep lists, many shared with Chinese/Korean spellings, so a
+// bare surname search drowns in non-Vietnamese authors (OpenAlex has thousands of "Tong"s). Each
+// is searched paired with a strongly Vietnamese given name instead. A 2026-11-20 full pass (5,655
+// queries) found 518 unrostered leads, including Anh Tong (Korea University), who no other
+// channel could reach because Tong was in no surname list. `--limit` / 8 surnames per run,
+// rotating by day.
+const PAIR_SURNAMES = [
+  'tong',
+  'ta',
+  'lam',
+  'ha',
+  'ho',
+  'to',
+  'tu',
+  'chu',
+  'cao',
+  'thai',
+  'ly',
+  'luu',
+  'mac',
+  'khau',
+  'giap',
+  'diep',
+  'thach',
+  'nham',
+  'la',
+  'lu',
+  'au',
+  'ton',
+  'lai',
+  'tang',
+  'khuc',
+  'tiet',
+  'mach',
+  'nong',
+  'lieu',
+];
+const PAIR_GIVEN_NAMES = (
+  'anh thanh minh tuan hieu huy duc trung quang linh phuong thuy huong trang ngoc khanh dung ' +
+  'hung cuong thang viet phuc dat tien thao vinh nhat nhung giang truc diem hanh loan uyen ' +
+  'quynh khoa kiet nghia phong thinh toan binh hien hoai huu khai khoi lien loc ngan nhi oanh ' +
+  'quoc thien thi cong duy manh phuoc thuan tung nguyet tuyet hoang nhan trinh dinh hau'
+).split(' ');
+
+async function discoverFromPairs(
+  matchRoster: Awaited<ReturnType<typeof loadRosterContext>>['matchRoster'],
+): Promise<Lead[]> {
+  const perRun = Math.max(1, Math.floor(limit / 5));
+  const day = Math.floor(Date.now() / 86_400_000);
+  const start = (day * perRun) % PAIR_SURNAMES.length;
+  const surnames = [...PAIR_SURNAMES, ...PAIR_SURNAMES].slice(start, start + perRun);
+  console.error(`  Surnames this run: ${surnames.join(', ')}`);
+  const leads = new Map<string, Lead & { works: number }>();
+  for (const surname of surnames) {
+    for (const given of PAIR_GIVEN_NAMES) {
+      if (given === surname) continue;
+      const data = await openAlex(
+        `authors?filter=display_name.search:${encodeURIComponent(`${surname} ${given}`)},works_count:>9,last_known_institutions.country_code:!vn,last_known_institutions.type:education|facility|government|nonprofit&select=id,display_name,works_count,last_known_institutions&per_page=200`,
+      );
+      for (const author of data.results ?? []) {
+        if (leads.has(author.id)) continue;
+        const name = (author.display_name ?? '').trim();
+        const tokens = nameTokens(name);
+        if (!tokens.includes(surname) || !tokens.includes(given)) continue;
+        const insts: any[] = author.last_known_institutions ?? [];
+        if (insts.some((i) => i.country_code === 'VN')) continue;
+        const current = insts[0];
+        if (!current?.display_name) continue;
+        if (!hasVietnameseSurnameAndGivenName(name, current.country_code)) continue;
+        const { matchedEntries, retiredMatches } = matchRoster(name);
+        if (matchedEntries.length || retiredMatches.length) continue;
+        leads.set(author.id, {
+          name,
+          institution: `${current.display_name} (${current.country_code})`,
+          channel: 'openalex-pairs',
+          sourceUrl: author.id,
+          evidence: `OpenAlex: ${author.works_count} works; surname "${surname}" with given name "${given}"`,
+          works: author.works_count ?? 0,
+        });
+      }
+    }
+  }
+  return [...leads.values()].sort((a, b) => b.works - a.works).map(({ works, ...lead }) => lead);
+}
+
 async function analyzeGaps(roster: RosterEntry[]) {
   const norm = (s: string) =>
     s
@@ -936,6 +1022,16 @@ if (mode === 'all' || mode === 'network') {
     const networkLeads = await discoverFromNetwork(roster, matchRoster);
     console.error(`  Found ${networkLeads.length} leads from the co-author network.`);
     allLeads.push(...networkLeads);
+  }
+}
+
+if (mode === 'all' || mode === 'pairs') {
+  if (!openAlexApiKey) console.error('Skipping pairs: no OpenAlex API key.');
+  else {
+    console.error('Scanning OpenAlex for minor Vietnamese surnames paired with given names...');
+    const pairLeads = await discoverFromPairs(matchRoster);
+    console.error(`  Found ${pairLeads.length} leads from surname/given-name pairs.`);
+    allLeads.push(...pairLeads);
   }
 }
 

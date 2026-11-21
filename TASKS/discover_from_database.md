@@ -38,6 +38,7 @@ npm run discover-leads -- --mode=grants --limit=100
 npm run discover-leads -- --mode=coauthors --limit=60
 npm run discover-leads -- --mode=feeders
 npm run discover-leads -- --mode=network --limit=60
+npm run discover-leads -- --mode=pairs --limit=40   # minor surnames (Tong, Ta, Lam, Ha, Cao, Luu, ...) x Vietnamese given names, 8 surnames per run, rotating daily
 npm run discover-leads -- --mode=labs --limit=30
 npm run discover-leads -- --mode=gaps
 ```
