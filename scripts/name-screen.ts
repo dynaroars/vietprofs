@@ -64,6 +64,14 @@ const WEAK_SURNAMES = new Set([
   'au',
   'ton',
   'that',
+  // Added 2026-11-20: Anh Tong (Korea University) was missed because Tong was in no list.
+  'tong',
+  'tang',
+  'khuc',
+  'tiet',
+  'mach',
+  'nong',
+  'lieu',
 ]);
 
 const VIET_GIVEN_TOKENS = new Set([
