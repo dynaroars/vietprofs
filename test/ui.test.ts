@@ -257,6 +257,15 @@ test('authoritative full Vietnamese names preserve accent marks and Vietnamese o
   assert.equal(vietnameseName(byName('Ha Ta')), 'Tạ Hà');
   assert.equal(vietnameseName(byName('Hai-Dang Nguyen')), 'Nguyễn Hải-Đăng');
   assert.equal(vietnameseName(byName('Lien-Hang T. Nguyen')), 'Nguyễn T. Liên-Hằng');
+  // An inferred reading (vietnameseNameInferred) wins over the rule-based fallback.
+  assert.equal(
+    vietnameseName({
+      ...byName('Lien-Hang T. Nguyen'),
+      vietnameseName: undefined,
+      vietnameseNameInferred: 'Nguyễn Thị Liên Hằng',
+    }),
+    'Nguyễn Thị Liên Hằng',
+  );
   assert.equal(vietnameseName(byName('Thanh Thai Nguyen')), 'Nguyễn Thái Thanh');
   assert.equal(vietnameseName(byName('Son Thanh Dam')), 'Đàm Thanh Sơn');
   assert.equal(vietnameseName(byName('Thai Luan Vu')), 'Vũ Thái Luân');
