@@ -35,7 +35,8 @@
     "test:e2e": "npm run build && node --test test/browser-smoke.e2e.ts",
     "format": "biome format --write .",
     "normalize-alma-maters": "node scripts/normalize-alma-maters.ts",
-    "advisor-leads": "node scripts/advisor-leads.ts"
+    "advisor-leads": "node scripts/advisor-leads.ts",
+    "lab-alumni-leads": "node scripts/lab-alumni-leads.ts"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.14.0",

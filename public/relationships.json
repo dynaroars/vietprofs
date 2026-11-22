@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-22T14:49:58.000Z",
+  "updatedAt": "2026-11-22T15:02:42.000Z",
   "relationships": [
     {
       "id": "rel-coauthor-vp-0015-vp-0018",
@@ -4813,6 +4813,62 @@
       "verifiedAt": "2026-11-22T14:49:58.000Z",
       "direct": false,
       "notes": "Co-supervised; the other two supervisors are not on the roster."
+    },
+    {
+      "id": "rel-doctoral-advisor-vp-0044-vp-1180",
+      "type": "doctoral-advisor",
+      "sourceId": "vp-0044",
+      "targetId": "vp-1180",
+      "sources": [
+        "https://www.cise.ufl.edu/~mythai/"
+      ],
+      "evidence": "My T. Thai's (vp-0044) maintained University of Florida site lists under Former Students \"Minh Vu (Ph.D., December 2023). Los Alamos National Laboratory\"; this matches vp-1180 (Minh N. Vu, Los Alamos National Laboratory, PhD University of Florida 2023).",
+      "works": [],
+      "verifiedAt": "2026-11-22T15:02:42.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-doctoral-advisor-vp-0079-vp-0083",
+      "type": "doctoral-advisor",
+      "sourceId": "vp-0079",
+      "targetId": "vp-0083",
+      "sources": [
+        "https://sites.google.com/view/ucsdvpl/member"
+      ],
+      "evidence": "Truong Q. Nguyen's (vp-0079) UCSD Video Processing Lab member page lists under \"Past PhD Students (Previous to UCSD)\": \"Trac Tran, Univ. of Wisconsin-Madison, ECE Dept., 1998, Prof. at Johns Hopkins University\"; this matches vp-0083 (Trac D. Tran, Johns Hopkins ECE, PhD University of Wisconsin-Madison 1998).",
+      "works": [],
+      "verifiedAt": "2026-11-22T15:02:42.000Z",
+      "direct": false,
+      "notes": "Advisor moved: supervised at Wisconsin before joining UCSD."
+    },
+    {
+      "id": "rel-postdoctoral-mentor-vp-0802-vp-0751",
+      "type": "postdoctoral-mentor",
+      "sourceId": "vp-0802",
+      "targetId": "vp-0751",
+      "sources": [
+        "https://tanmnguyen89.github.io/"
+      ],
+      "evidence": "Tan Minh Nguyen's (vp-0802) group page lists under Alumni \"Thieu Ngoc Vo (Research Fellow 2023-2025, now Assistant Professor in the Department of Computer Science at the University of Bath)\"; this matches vp-0751 (Thieu Ngoc Vo, University of Bath). A Research Fellow in the PI's NUS group is a postdoctoral position.",
+      "works": [],
+      "verifiedAt": "2026-11-22T15:02:42.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-postdoctoral-mentor-vp-1537-vp-3118",
+      "type": "postdoctoral-mentor",
+      "sourceId": "vp-1537",
+      "targetId": "vp-3118",
+      "sources": [
+        "https://sites.google.com/view/doresearch/group/former-members"
+      ],
+      "evidence": "Loi H. Do's (vp-1537) research group lists under Former Members, Postdoctoral Scholars: \"Thi Tran (09/2020-09/2022, currently scientist at Solugen)\"; this matches vp-3118 (Thi Tran, Solugen, PhD and postdoc at the University of Houston).",
+      "works": [],
+      "verifiedAt": "2026-11-22T15:02:42.000Z",
+      "direct": false,
+      "notes": ""
     }
   ],
   "external": [
