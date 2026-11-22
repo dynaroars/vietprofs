@@ -341,6 +341,10 @@ institution ("Gerald Ngo Teke"). Owner rulings of 2026-11-10 added four more:
   and took the Vietnamese surname by marriage: reject. The reverse order (Viann Nguyen-Feng, Felice
   Le-Scherban, Johannes Tran-Gia) is a Vietnamese person who added a spouse's name: accept. A
   Vietnamese given name (Hoa Briscoe-Tran) counts as Vietnamese evidence whatever the surname order.
+- **Vietnamese given name, non-Vietnamese surname.** A Vietnamese given or middle name with a
+  non-Vietnamese surname (Kim Anh Woodrow, Daniel Cuong O'Neill) counts. So does a non-Vietnamese-first
+  hyphenated surname when other evidence shows the person is Vietnamese, such as a degree from a
+  Vietnamese university (Ruby Brownen-Trinh). Owner ruling, 2026-11-21.
 - **Ethnic Chinese from Vietnam count.** A person born in Vietnam, or whose parents came from
   Vietnam, is Vietnamese diaspora even when documented as ethnically Chinese (Vincent T. Ho, Tommy
   Tran). Documented Vietnam origin is sufficient evidence; don't hold these for an owner decision.
