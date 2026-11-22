@@ -428,6 +428,7 @@ const REVIEWED_VIETNAMESE = new Set([
   'Ruby Brownen-Trinh',
   // Fused Vietnamese tokens: Huyvu = Huy Vũ, Ledoan = Lê Đoàn (UTC schedule lists Andrew Huyvu Ledoan).
   'Andrew Huyvu Ledoan',
+  'Philippe Nghe',
 ]);
 
 function normalizedParts(name: string): string[] {
