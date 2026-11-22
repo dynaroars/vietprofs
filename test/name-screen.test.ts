@@ -52,6 +52,7 @@ const NON_VIETNAMESE: [string, string?][] = [
 // Western given names with shared surnames, hyphenated Vietnamese given names, and Vietnamese
 // faculty in East Asia.
 const VIETNAMESE: [string, string?][] = [
+  ['Daniel Tuan-Dan Le', 'United States'],
   ['Ryan Doan'],
   ['Wendy Quach'],
   ['Kevin Le'],

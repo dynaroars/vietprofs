@@ -426,8 +426,6 @@ const REVIEWED_VIETNAMESE = new Set([
   // Foreign Trade University (Hanoi) degree; owner ruling 2026-11-21 (NonViet-Viet hyphen allowed
   // with other Vietnamese evidence).
   'Ruby Brownen-Trinh',
-  // Purdue publishes the full name; "Tuan-Dan" is Vietnamese (Tuấn), "Dan" alone looks Chinese.
-  'Daniel Tuan-Dan Le',
 ]);
 
 function normalizedParts(name: string): string[] {
@@ -472,6 +470,15 @@ export function screenVietnameseName(name: string, country?: string): NameScreen
     if (pieces.length < 2 || pieces.some((p) => p.length > 7)) continue;
     // The surname doesn't count here: Ngo/Phan are also Chinese (Chong-Wah Ngo, Chia-Wei Phan).
     if (tokens.some((t) => !pieces.includes(t) && !CHINESE_TOO.has(t) && vietOnly(t))) continue;
+    // Outside East Asia, a Vietnamese given name in the hyphenated part with a Vietnamese surname
+    // last (Daniel Tuan-Dan Le: Tuấn) is Vietnamese even when the other piece looks Chinese.
+    if (
+      !EAST_ASIA.has(where) &&
+      !CHINESE_REGIONS.has(where) &&
+      ALL_SURNAMES.has(last) &&
+      pieces.some((p) => VIET_GIVEN_TOKENS.has(p))
+    )
+      continue;
     if (
       pieces.every((p) => isVietToken(p) || cjkShaped(p)) &&
       pieces.some(cjkNotViet) &&
