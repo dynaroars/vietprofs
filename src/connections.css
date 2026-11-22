@@ -219,3 +219,74 @@
     grid-template-columns: 1fr;
   }
 }
+
+.lineage-subheading {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 1.25rem 0 0.25rem;
+  color: var(--text-primary);
+}
+
+.lineage-actions {
+  margin-top: 0.75rem;
+}
+
+.lineage-focus-btn {
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  background: var(--tag-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  padding: 0.45rem 0.8rem;
+  cursor: pointer;
+}
+
+.lineage-focus-btn:hover {
+  background: var(--hover-bg);
+}
+
+.mentorship-lineage-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.6rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.mentorship-lineage-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.65rem 0.8rem;
+  background: var(--hover-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+}
+
+.lineage-gen-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.15rem 0.45rem;
+  border-radius: 999px;
+  background: var(--tag-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+}
+
+.lineage-chain {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.88rem;
+}
+
+.lineage-edge-tag {
+  color: var(--text-muted);
+  font-weight: 700;
+}

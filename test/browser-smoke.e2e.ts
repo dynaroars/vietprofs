@@ -1399,11 +1399,13 @@ test('Gov & Labs and Industry views use sector wording, not professor or Univers
     for (const sector of ['labs', 'industry'] as const) {
       for (const view of ['', '&view=insights']) {
         await page.goto(`${baseUrl}/?sector=${sector}${view}`, { waitUntil: 'networkidle' });
-        // Entry text is data (a few genuinely carry a Professor title); the surrounding page
-        // chrome and insights copy must not.
+        // Entry text and pathway trajectory rows are data (a few genuinely carry a Professor
+        // title); the surrounding page chrome and insights copy must not.
         const text = await page.evaluate(() => {
           const clone = document.querySelector('#app')?.cloneNode(true) as HTMLElement;
-          clone.querySelectorAll('.entry').forEach((entry) => entry.remove());
+          clone
+            .querySelectorAll('.entry, .pathway-trajectory-item')
+            .forEach((entry) => entry.remove());
           return clone.innerText || clone.textContent || '';
         });
         assert.doesNotMatch(text, /professor|faculty/i, `${sector}${view}`);

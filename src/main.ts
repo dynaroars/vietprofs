@@ -51,11 +51,15 @@ import { renderAddFab } from './add-fab.ts';
 import { ICONS } from './see-also.ts';
 import { renderShareMenu } from './share.ts';
 import {
+  buildDiasporaSnapshotMarkdown,
+  renderDiasporaSnapshot,
   renderFunFacts,
   renderGrowthChart,
   renderHealthPanel,
   type GrowthMetricKey,
 } from './insights.ts';
+import { renderPathwayResults, type PathwayStage } from './pathways.ts';
+import type { Lang } from './i18n-vi.ts';
 import {
   createCommandHandler,
   createSearchController,
@@ -141,6 +145,8 @@ const KEYWORD_LABELS: Record<string, string> = {
   honors: 'Honors',
   phd: 'PhD',
   undergrad: 'Ugrad',
+  trained: 'Trained',
+  city: 'City',
   connection: 'Connection',
 };
 
@@ -155,6 +161,8 @@ const KEYWORD_ICONS: Record<string, string> = {
   honors: '🏅',
   phd: '🎓',
   undergrad: '📚',
+  trained: '🎒',
+  city: '📍',
   connection: '🔗',
 };
 
@@ -177,6 +185,8 @@ const KEYWORD_EXAMPLES: Record<string, string> = {
   honors: 'NSF CAREER Award',
   phd: 'University of New Mexico',
   undergrad: 'Pennsylvania State University',
+  trained: 'Hanoi University of Science and Technology',
+  city: 'Boston',
   connection: 'co-author, mentorship',
 };
 
@@ -581,6 +591,18 @@ async function init() {
     ['department', uniqueDepartments(roster)],
     ['phd', uniquePhdInstitutions(roster)],
     ['undergrad', uniqueUndergradInstitutions(roster)],
+    [
+      'trained',
+      [
+        ...new Set([
+          ...uniqueUndergradInstitutions(roster),
+          ...uniquePhdInstitutions(roster),
+          ...roster.map((p) => p.msInstitution).filter((v): v is string => Boolean(v)),
+          ...roster.map((p) => p.postdocInstitution).filter((v): v is string => Boolean(v)),
+        ]),
+      ].sort(),
+    ],
+    ['city', uniqueCities(roster)],
   ]);
   const searchInput = document.getElementById('search') as HTMLInputElement;
   // The full placeholder doesn't fit a phone-width box.
@@ -1185,6 +1207,10 @@ async function init() {
     }
   }
 
+  let snapshotLang: Lang = 'en';
+  let pathwayInstitution: string | undefined;
+  let pathwayStage: PathwayStage | undefined;
+
   function update({ fromSearch = false } = {}) {
     applySearchPlaceholder();
     if (fromSearch) {
@@ -1225,6 +1251,12 @@ async function init() {
         locationSelect.value,
         scopedRoster,
         activeSector,
+        {
+          snapshotLang,
+          pathwayInstitution,
+          pathwayStage,
+          baseUrl: import.meta.env.BASE_URL,
+        },
       );
       renderQueryPlan(locRoster.length, 'insights');
       syncUrl();
@@ -1440,6 +1472,68 @@ async function init() {
       }
       return;
     }
+    const snapshotLangBtn = target.closest<HTMLButtonElement>('[data-snapshot-lang]');
+    if (snapshotLangBtn?.dataset.snapshotLang) {
+      snapshotLang = snapshotLangBtn.dataset.snapshotLang === 'vi' ? 'vi' : 'en';
+      const snapshotEl = document.getElementById('diaspora-snapshot');
+      if (snapshotEl) {
+        snapshotEl.outerHTML = renderDiasporaSnapshot(sectorRoster(), snapshotLang);
+      }
+      return;
+    }
+    const copySnapshotBtn = target.closest<HTMLButtonElement>('[data-copy-snapshot]');
+    if (copySnapshotBtn) {
+      const lang: Lang = copySnapshotBtn.dataset.copySnapshot === 'vi' ? 'vi' : 'en';
+      const markdown = buildDiasporaSnapshotMarkdown(sectorRoster(), lang);
+      navigator.clipboard
+        ?.writeText(markdown)
+        .then(() =>
+          showToast(
+            lang === 'vi'
+              ? 'Đã sao chép bản tóm tắt Markdown.'
+              : 'Copied Markdown snapshot to clipboard.',
+          ),
+        )
+        .catch(() =>
+          showToast(
+            lang === 'vi'
+              ? 'Không thể sao chép tự động vào bộ nhớ tạm.'
+              : 'Could not copy snapshot to clipboard.',
+          ),
+        );
+      return;
+    }
+    const pathwayTrigger = target.closest<HTMLButtonElement>(
+      '[data-pathway-inst], [data-pathway-stage], #pathway-explore-btn',
+    );
+    if (pathwayTrigger) {
+      const input = document.getElementById('pathway-institution-input') as HTMLInputElement | null;
+      const nextInst = (pathwayTrigger.dataset.pathwayInst ?? input?.value ?? '').trim();
+      if (!nextInst) return;
+      const nextStage =
+        (pathwayTrigger.dataset.pathwayStage as PathwayStage | undefined) ??
+        (pathwayTrigger.id === 'pathway-explore-btn' ? 'undergrad' : (pathwayStage ?? 'undergrad'));
+      pathwayInstitution = nextInst;
+      pathwayStage = nextStage;
+      if (input) input.value = nextInst;
+      document
+        .querySelectorAll<HTMLButtonElement>('#pathway-explorer .pathway-chip')
+        .forEach((chip) => {
+          const active = (chip.dataset.pathwayInst ?? '').toLowerCase() === nextInst.toLowerCase();
+          chip.classList.toggle('is-active', active);
+          chip.setAttribute('aria-pressed', String(active));
+        });
+      const resultsEl = document.getElementById('pathway-results');
+      if (resultsEl) {
+        resultsEl.innerHTML = renderPathwayResults(
+          sectorRoster(),
+          pathwayInstitution,
+          pathwayStage,
+          import.meta.env.BASE_URL,
+        );
+      }
+      return;
+    }
     const rankedItem = target.closest<HTMLButtonElement>('[data-search]');
     if (rankedItem && rankedItem.dataset.search) {
       const rankedScope = rankedItem.dataset.scope;
@@ -1457,14 +1551,25 @@ async function init() {
   });
 
   document.getElementById('roster').addEventListener('keydown', (event) => {
+    const targetEl = event.target as HTMLElement;
+    if (event.key === 'Enter' && targetEl.id === 'pathway-institution-input') {
+      event.preventDefault();
+      document.getElementById('pathway-explore-btn')?.click();
+      return;
+    }
     if (event.key !== 'Enter' && event.key !== ' ') return;
-    const country = (event.target as Element).closest<SVGElement>(
-      '.world-map-country, .world-map-pin',
-    );
+    const country = targetEl.closest<SVGElement>('.world-map-country, .world-map-pin');
     if (!country) return;
     event.preventDefault();
     event.stopPropagation();
     country.dispatchEvent(new MouseEvent('click', { bubbles: true }));
+  });
+
+  document.getElementById('roster').addEventListener('change', (event) => {
+    const targetEl = event.target as HTMLElement;
+    if (targetEl.id === 'pathway-institution-input') {
+      document.getElementById('pathway-explore-btn')?.click();
+    }
   });
 
   // mousemove fires continuously while the pointer is over the insights dashboard, so the chart's

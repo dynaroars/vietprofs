@@ -57,6 +57,7 @@ export function withUpdates(roster: Roster, updates: RosterUpdates): Roster {
   );
 }
 
+import { canonicalAlmaMater } from './alma-mater.ts';
 import { COUNTRY_FLAGS, COUNTRY_TO_CONTINENT, TRACKS } from './roster-constants.ts';
 import type { RelationshipDatabase } from './relationships.ts';
 export {
@@ -1755,6 +1756,51 @@ export function uniqueUndergradInstitutions(roster: Roster): string[] {
   return sortedUnique(roster.map((p) => p.undergradInstitution));
 }
 
+export interface CityHub {
+  city: string;
+  state?: string;
+  country: string;
+  count: number;
+  institutions: number;
+}
+
+export function buildTopCities(roster: Roster, limit = 10): CityHub[] {
+  const buckets = new Map<
+    string,
+    { city: string; state?: string; country: string; count: number; institutions: Set<string> }
+  >();
+  for (const p of roster) {
+    const city = p.city?.trim();
+    if (!city) continue;
+    const country = p.country || 'United States';
+    const state = canonicalState(p.state, country) || p.state?.trim() || undefined;
+    const key = [city.toLowerCase(), (state ?? '').toLowerCase(), country.toLowerCase()].join('\0');
+    let entry = buckets.get(key);
+    if (!entry) {
+      entry = { city, state, country, count: 0, institutions: new Set<string>() };
+      buckets.set(key, entry);
+    }
+    entry.count += 1;
+    if (p.university) entry.institutions.add(p.university);
+  }
+  return [...buckets.values()]
+    .map((entry) => ({
+      city: entry.city,
+      state: entry.state,
+      country: entry.country,
+      count: entry.count,
+      institutions: entry.institutions.size,
+    }))
+    .sort(
+      (a, b) =>
+        b.count - a.count ||
+        b.institutions - a.institutions ||
+        a.city.localeCompare(b.city) ||
+        a.country.localeCompare(b.country),
+    )
+    .slice(0, limit);
+}
+
 export function buildDecadeCounts(roster: Roster): [string, number][] {
   const counts = new Map<string, number>();
   for (const p of roster) {
@@ -1774,7 +1820,7 @@ export function buildTopPhdInstitutions(roster: Roster, limit = 8): [string, num
 }
 
 export function buildTopUndergradInstitutions(roster: Roster, limit = 8): [string, number][] {
-  return countBy(roster, (p) => p.undergradInstitution).slice(0, limit);
+  return countBy(roster, (p) => canonicalAlmaMater(p.undergradInstitution)).slice(0, limit);
 }
 
 const PAIRING_SEPARATOR = '\u0000';
@@ -1926,6 +1972,16 @@ function scopedValuesFor(person: RosterEntry, scope: string): (string | undefine
       return [person.phdInstitution, person.phdYear?.toString()];
     case 'undergrad':
       return [person.undergradInstitution];
+    case 'trained':
+      return [
+        person.undergradInstitution,
+        person.msInstitution,
+        person.phdInstitution,
+        person.postdocInstitution,
+        person.mdInstitution,
+      ];
+    case 'city':
+      return [person.city];
     case 'country':
       return [person.country];
     default:

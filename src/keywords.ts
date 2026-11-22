@@ -29,6 +29,11 @@ export const KEYWORD_ALIASES: Record<string, string> = {
   undergrad: 'undergrad',
   ugrad: 'undergrad',
   ugradinst: 'undergrad',
+  trained: 'trained',
+  alma: 'trained',
+  almamater: 'trained',
+  alumni: 'trained',
+  city: 'city',
   connection: 'connection',
   connections: 'connection',
 };

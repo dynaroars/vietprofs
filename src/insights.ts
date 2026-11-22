@@ -9,12 +9,15 @@ import {
   buildLocationObservations,
   buildPhdToFacultyPairings,
   buildQualifiedObservations,
+  buildTopCities,
+  buildTopCountries,
   buildTopPhdInstitutions,
   buildTopUndergradInstitutions,
   buildTopUniversities,
   buildTrackCounts,
   buildUsObservations,
   countryFlag,
+  sectorOf,
   type Roster,
 } from './data.ts';
 import type { StatsHistoryPoint } from './stats-history.ts';
@@ -22,6 +25,8 @@ import { STATE_GRID } from './state-grid.ts';
 import { abbreviateInsightText, escapeHtml } from './utils.ts';
 import { renderWorldMap } from './world-map.ts';
 import { deriveRosterStats, type DerivedRosterStats } from './derived-stats.ts';
+import { fieldVi, placeVi, type Lang } from './i18n-vi.ts';
+import { buildAlmaMaterIndex, renderPathwayExplorer, type PathwayStage } from './pathways.ts';
 
 export { renderWorldMap };
 
@@ -219,6 +224,239 @@ export function renderTopFacultyHubs(
       <p class="insights-caption">${escapeHtml(desc)}</p>
       <div class="ranked-list">${uniRows}</div>
     </div>
+  `;
+}
+
+export function renderCityHubs(
+  subRoster: Roster,
+  title = 'Top City & Metro Hubs',
+  desc = 'Cities with the largest concentrations of listed researchers — click a city to find peers nearby.',
+): string {
+  const cities = buildTopCities(subRoster, 10);
+  if (!cities.length) return '';
+  const maxCount = cities[0].count;
+  const rows = cities
+    .map((hub, idx) => {
+      const pct = Math.round((hub.count / maxCount) * 100);
+      const flag = countryFlag(hub.country);
+      const regionPart =
+        hub.country === 'United States' && hub.state
+          ? STATE_ABBR[hub.state] || hub.state
+          : hub.country;
+      const placeLabel =
+        hub.city.toLowerCase() === hub.country.toLowerCase()
+          ? `${flag} ${hub.city}`
+          : `${flag} ${hub.city}, ${regionPart}`;
+      const instLabel = `${hub.institutions} ${hub.institutions === 1 ? 'org' : 'orgs'}`;
+      return `
+        <button type="button" class="ranked-item" data-search="${escapeHtml(hub.city)}" data-scope="city" title="Find researchers in ${escapeHtml(hub.city)}, ${escapeHtml(hub.country)}">
+          <div class="ranked-header">
+            <span class="ranked-name"><span class="ranked-num">${idx + 1}.</span> ${escapeHtml(placeLabel)} <span class="city-hub-meta">· ${escapeHtml(instLabel)}</span></span>
+            <span class="ranked-count">${hub.count}</span>
+          </div>
+          <div class="ranked-track"><div class="ranked-bar" style="width: ${pct}%;"></div></div>
+        </button>
+      `;
+    })
+    .join('');
+
+  return `
+    <div class="insights-section">
+      <h3 class="insights-heading">${escapeHtml(title)}</h3>
+      <p class="insights-caption">${escapeHtml(desc)}</p>
+      <div class="ranked-list">${rows}</div>
+    </div>
+  `;
+}
+
+export interface DiasporaSnapshotData {
+  total: number;
+  institutions: number;
+  countries: number;
+  cities: number;
+  sectors: { academia: number; labs: number; industry: number };
+  topCountries: [string, number][];
+  topFields: [string, number][];
+  topCities: ReturnType<typeof buildTopCities>;
+  topVnFeeders: Array<{ institution: string; count: number }>;
+  honorsPeople: number;
+  totalHonors: number;
+}
+
+export function computeDiasporaSnapshot(roster: Roster): DiasporaSnapshotData {
+  const sectors = { academia: 0, labs: 0, industry: 0 };
+  const institutions = new Set<string>();
+  const countries = new Set<string>();
+  const cities = new Set<string>();
+  let honorsPeople = 0;
+  let totalHonors = 0;
+
+  for (const p of roster) {
+    sectors[sectorOf(p)] += 1;
+    if (p.university) institutions.add(p.university);
+    countries.add(p.country || 'United States');
+    if (p.city)
+      cities.add(`${p.city.toLowerCase()}|${(p.country || 'United States').toLowerCase()}`);
+    if (p.honors?.length) {
+      honorsPeople += 1;
+      totalHonors += p.honors.length;
+    }
+  }
+
+  const topVnFeeders = buildAlmaMaterIndex(roster)
+    .filter((entry) => entry.isVietnamese && entry.byStage.undergrad > 0)
+    .sort(
+      (a, b) =>
+        b.byStage.undergrad - a.byStage.undergrad || a.institution.localeCompare(b.institution),
+    )
+    .slice(0, 5)
+    .map((entry) => ({ institution: entry.institution, count: entry.byStage.undergrad }));
+
+  return {
+    total: roster.length,
+    institutions: institutions.size,
+    countries: countries.size,
+    cities: cities.size,
+    sectors,
+    topCountries: buildTopCountries(roster, 5),
+    topFields: buildFieldCounts(roster).slice(0, 5),
+    topCities: buildTopCities(roster, 5),
+    topVnFeeders,
+    honorsPeople,
+    totalHonors,
+  };
+}
+
+export function buildDiasporaSnapshotMarkdown(roster: Roster, lang: Lang = 'en'): string {
+  const s = computeDiasporaSnapshot(roster);
+  const fmt = (n: number) => new Intl.NumberFormat('en-US').format(n);
+  const isVi = lang === 'vi';
+  const countriesLine = s.topCountries
+    .map(([c, n]) => `${isVi ? placeVi(c) : c} (${fmt(n)})`)
+    .join(', ');
+  const fieldsLine = s.topFields.map(([f, n]) => `${isVi ? fieldVi(f) : f} (${fmt(n)})`).join(', ');
+  const citiesLine = s.topCities.map((h) => `${h.city} (${fmt(h.count)})`).join(', ');
+  const vnLine = s.topVnFeeders.map((v) => `${v.institution} (${fmt(v.count)})`).join(', ');
+
+  if (isVi) {
+    return [
+      '# Tóm tắt Cộng đồng Nghiên cứu Việt Nam ở Nước ngoài (VietProfs)',
+      '',
+      `- **Quy mô danh bạ:** ${fmt(s.total)} nhà khoa học và giảng viên tại ${fmt(s.institutions)} cơ sở, ${fmt(s.cities)} thành phố thuộc ${fmt(s.countries)} quốc gia và vùng lãnh thổ.`,
+      `- **Phân bố khu vực:** Học thuật (${fmt(s.sectors.academia)}), Viện nghiên cứu & Chính phủ (${fmt(s.sectors.labs)}), Nghiên cứu công nghiệp (${fmt(s.sectors.industry)}).`,
+      `- **Quốc gia tập trung nhiều nhất:** ${countriesLine}.`,
+      `- **Thành phố tập trung nhiều nhất:** ${citiesLine}.`,
+      `- **Lĩnh vực nổi bật:** ${fieldsLine}.`,
+      ...(vnLine
+        ? [`- **Đại học tại Việt Nam có nhiều cựu sinh viên nhất (bậc đại học):** ${vnLine}.`]
+        : []),
+      `- **Giải thưởng & vinh danh được ghi nhận:** ${fmt(s.totalHonors)} giải thưởng/danh hiệu của ${fmt(s.honorsPeople)} người.`,
+      '',
+      '_Nguồn: VietProfs (https://vietprofs.roars.dev) — thống kê trực tiếp từ các trường dữ liệu đã xác minh trong danh bạ._',
+    ].join('\n');
+  }
+
+  return [
+    '# State of the Vietnamese Research Diaspora — VietProfs Snapshot',
+    '',
+    `- **Roster scope:** ${fmt(s.total)} listed scholars across ${fmt(s.institutions)} institutions, ${fmt(s.cities)} cities, and ${fmt(s.countries)} countries/territories.`,
+    `- **Sector breakdown:** Academia (${fmt(s.sectors.academia)}), Gov, Defense & Labs (${fmt(s.sectors.labs)}), Industry Research (${fmt(s.sectors.industry)}).`,
+    `- **Top host countries:** ${countriesLine}.`,
+    `- **Top city hubs:** ${citiesLine}.`,
+    `- **Largest fields:** ${fieldsLine}.`,
+    ...(vnLine ? [`- **Top Vietnamese undergraduate alma maters on record:** ${vnLine}.`] : []),
+    `- **Verified honors:** ${fmt(s.totalHonors)} recorded honors across ${fmt(s.honorsPeople)} scholars.`,
+    '',
+    '_Source: VietProfs (https://vietprofs.roars.dev) — reproducible snapshot computed directly from verified roster fields._',
+  ].join('\n');
+}
+
+export function renderDiasporaSnapshot(roster: Roster, lang: Lang = 'en'): string {
+  if (!roster.length) return '';
+  const s = computeDiasporaSnapshot(roster);
+  const isVi = lang === 'vi';
+  const fmt = (n: number) => new Intl.NumberFormat('en-US').format(n);
+
+  const countriesText = s.topCountries
+    .map(([c, n]) => `${countryFlag(c)} ${isVi ? placeVi(c) : c} (${fmt(n)})`)
+    .join(' · ');
+  const fieldsText = s.topFields
+    .map(([f, n]) => `${isVi ? fieldVi(f) : f} (${fmt(n)})`)
+    .join(' · ');
+  const citiesText = s.topCities
+    .map((h) => `${countryFlag(h.country)} ${h.city} (${fmt(h.count)})`)
+    .join(' · ');
+  const vnFeedersText = s.topVnFeeders.map((v) => `${v.institution} (${fmt(v.count)})`).join(' · ');
+
+  return `
+    <section class="diaspora-snapshot" id="diaspora-snapshot" lang="${lang}">
+      <div class="snapshot-header">
+        <div>
+          <span class="insights-badge">${isVi ? 'BẢN TÓM TẮT CỘNG ĐỒNG' : 'DIASPORA SNAPSHOT'}</span>
+          <h3 class="insights-heading">${isVi ? 'Toàn cảnh Cộng đồng Nghiên cứu Việt Nam ở Nước ngoài' : 'State of the Vietnamese Research Diaspora'}</h3>
+          <p class="insights-caption">${isVi ? 'Số liệu trực tiếp từ các trường đã xác minh trong danh bạ VietProfs.' : 'Reproducible summary computed directly from verified VietProfs roster fields.'}</p>
+        </div>
+        <div class="snapshot-actions">
+          <div class="snapshot-lang-toggle" role="group" aria-label="Snapshot language">
+            <button type="button" class="snapshot-lang-btn${!isVi ? ' is-active' : ''}" data-snapshot-lang="en" aria-pressed="${!isVi}">EN</button>
+            <button type="button" class="snapshot-lang-btn${isVi ? ' is-active' : ''}" data-snapshot-lang="vi" aria-pressed="${isVi}">Tiếng Việt</button>
+          </div>
+          <button type="button" class="snapshot-copy-btn" data-copy-snapshot="${lang}">
+            ${isVi ? 'Sao chép tóm tắt' : 'Copy Markdown'}
+          </button>
+        </div>
+      </div>
+
+      <div class="snapshot-metrics">
+        <div class="snapshot-metric">
+          <span class="snapshot-metric-value">${fmt(s.total)}</span>
+          <span class="snapshot-metric-label">${isVi ? 'Học giả & nhà nghiên cứu' : 'Listed scholars'}</span>
+        </div>
+        <div class="snapshot-metric">
+          <span class="snapshot-metric-value">${fmt(s.institutions)}</span>
+          <span class="snapshot-metric-label">${isVi ? 'Trường & viện nghiên cứu' : 'Institutions'}</span>
+        </div>
+        <div class="snapshot-metric">
+          <span class="snapshot-metric-value">${fmt(s.countries)}</span>
+          <span class="snapshot-metric-label">${isVi ? 'Quốc gia & vùng lãnh thổ' : 'Countries'}</span>
+        </div>
+        <div class="snapshot-metric">
+          <span class="snapshot-metric-value">${fmt(s.cities)}</span>
+          <span class="snapshot-metric-label">${isVi ? 'Thành phố' : 'Cities'}</span>
+        </div>
+      </div>
+
+      <dl class="snapshot-facts">
+        <div class="snapshot-fact-row">
+          <dt>${isVi ? 'Khu vực' : 'Sectors'}</dt>
+          <dd>${isVi ? `🎓 Học thuật (${fmt(s.sectors.academia)}) · 🏛️ Viện & Chính phủ (${fmt(s.sectors.labs)}) · 🏢 Công nghiệp (${fmt(s.sectors.industry)})` : `🎓 Academia (${fmt(s.sectors.academia)}) · 🏛️ Gov & Labs (${fmt(s.sectors.labs)}) · 🏢 Industry (${fmt(s.sectors.industry)})`}</dd>
+        </div>
+        <div class="snapshot-fact-row">
+          <dt>${isVi ? 'Quốc gia hàng đầu' : 'Top host countries'}</dt>
+          <dd>${escapeHtml(countriesText)}</dd>
+        </div>
+        <div class="snapshot-fact-row">
+          <dt>${isVi ? 'Trung tâm đô thị' : 'Top city hubs'}</dt>
+          <dd>${escapeHtml(citiesText)}</dd>
+        </div>
+        <div class="snapshot-fact-row">
+          <dt>${isVi ? 'Lĩnh vực lớn nhất' : 'Largest fields'}</dt>
+          <dd>${escapeHtml(fieldsText)}</dd>
+        </div>
+        ${
+          vnFeedersText
+            ? `<div class="snapshot-fact-row">
+          <dt>${isVi ? 'Đại học nguồn tại VN' : 'Top VN undergrad feeders'}</dt>
+          <dd>${escapeHtml(vnFeedersText)}</dd>
+        </div>`
+            : ''
+        }
+        <div class="snapshot-fact-row">
+          <dt>${isVi ? 'Vinh danh & giải thưởng' : 'Verified honors'}</dt>
+          <dd>${isVi ? `${fmt(s.totalHonors)} giải thưởng và danh hiệu của ${fmt(s.honorsPeople)} người` : `${fmt(s.totalHonors)} recorded honors across ${fmt(s.honorsPeople)} scholars`}</dd>
+        </div>
+      </dl>
+    </section>
   `;
 }
 
@@ -450,13 +688,22 @@ export function renderGrowthChart(
   `;
 }
 
+export interface FunFactsOptions {
+  snapshotLang?: Lang;
+  pathwayInstitution?: string;
+  pathwayStage?: PathwayStage;
+  baseUrl?: string;
+}
+
 export function renderFunFacts(
   visibleRoster: Roster,
   selectedLocationLabel: string,
   selectedLocation: string,
   fullRoster: Roster,
   sector: 'all' | 'academia' | 'labs' | 'industry' = 'all',
+  options: FunFactsOptions = {},
 ) {
+  const { snapshotLang = 'en', pathwayInstitution, pathwayStage, baseUrl = './' } = options;
   const rosterEl = document.getElementById('roster');
   const countEl = document.getElementById('result-count');
   if (countEl) {
@@ -547,6 +794,13 @@ export function renderFunFacts(
                     : 'Organizations with the most people in the selected location; click to search.',
                 )
               : '',
+            selectedRoster.length
+              ? renderCityHubs(
+                  selectedRoster,
+                  `${selectedIsUs ? 'Top U.S. ' : 'Top '}City & Metro Hubs`,
+                  'Cities with the largest concentrations of listed researchers in this location; click to find peers nearby.',
+                )
+              : '',
           ].join(''),
         )}
         ${category(
@@ -597,7 +851,12 @@ export function renderFunFacts(
                     ? 'Global institutions outside the U.S. with the most Vietnamese academics; click to search.'
                     : 'Organizations outside the U.S. with the most people; click to search.',
                 )
-              : ''),
+              : '') +
+            renderCityHubs(
+              fullRoster,
+              'Top Global City & Metro Hubs',
+              'Find peers near you — cities worldwide with the largest clusters of Vietnamese researchers; click any city to filter.',
+            ),
         )}
         ${category(
           disciplinesTitle,
@@ -609,9 +868,11 @@ export function renderFunFacts(
         ${category(
           'Diaspora Pathways &amp; Educational Origins',
           academic
-            ? 'Top undergraduate feeders, doctoral alma maters, and international academic career pairings.'
-            : 'Top undergraduate feeders, doctoral alma maters, and PhD-to-host-country pairings.',
-          renderAlmaMaterOriginsMap(fullRoster) + renderAcademicFlowSummary(fullRoster, academic),
+            ? 'Explore concrete trajectories from your university, top undergraduate feeders, doctoral alma maters, and international career pairings.'
+            : 'Explore concrete trajectories from your university, top undergraduate feeders, and doctoral alma maters.',
+          renderPathwayExplorer(fullRoster, pathwayInstitution, pathwayStage, baseUrl) +
+            renderAlmaMaterOriginsMap(fullRoster) +
+            renderAcademicFlowSummary(fullRoster, academic),
         )}
         ${category(
           generationsTitle,
@@ -634,8 +895,9 @@ export function renderFunFacts(
         <section class="insights-section-block insights-main-block" id="pathways-section">
           <div class="insights-section-header">
             <span class="insights-badge">DIASPORA INSIGHTS</span>
-            <p class="insights-main-desc">${academic ? 'Geographic distributions, PhD graduation cohorts, alma mater feeder networks, and academic disciplines.' : 'Geographic distributions, PhD graduation cohorts, alma mater feeder networks, and fields.'}</p>
+            <p class="insights-main-desc">${academic ? 'Geographic distributions, city hubs, PhD graduation cohorts, alma mater pathway explorer, and academic disciplines.' : 'Geographic distributions, city hubs, PhD graduation cohorts, alma mater pathway explorer, and fields.'}</p>
           </div>
+          ${renderDiasporaSnapshot(fullRoster, snapshotLang)}
           ${selectedSection}
           ${worldSection}
         </section>

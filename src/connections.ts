@@ -2,6 +2,7 @@ import './style.css';
 import './connections.css';
 import './stats-components.css';
 import { initGraphExplorer, renderGraphExplorer } from './connections-graph.ts';
+import { analyzeMentorshipLineages } from './connection-layouts.ts';
 import { renderAddFab } from './add-fab.ts';
 import { renderSeeAlso } from './see-also.ts';
 import { escapeHtml, formatLocalTimestamp } from './utils.ts';
@@ -157,6 +158,89 @@ function renderAllConnections(roster: Roster, database: RelationshipDatabase): s
   </details>`;
 }
 
+function renderMentorshipLineages(roster: Roster, database: RelationshipDatabase): string {
+  const byId = new Map(roster.map((person) => [person.id, person]));
+  const analysis = analyzeMentorshipLineages(database.relationships);
+  if (analysis.mentorshipEdgeCount === 0) {
+    return '<p class="no-data">No verified mentorship links have been recorded yet.</p>';
+  }
+
+  const cards = [
+    [
+      'Mentorship links',
+      formatNumber(analysis.mentorshipEdgeCount),
+      'Advisor & postdoc mentor edges',
+    ],
+    ['Verified mentors', formatNumber(analysis.mentorCount), 'Distinct advisors on record'],
+    ['Verified mentees', formatNumber(analysis.menteeCount), 'Distinct advisees on record'],
+    [
+      'Longest lineage',
+      `${analysis.maxGenerations} gen`,
+      analysis.multiGenChains.length
+        ? `${analysis.multiGenChains.length} multi-generation chain${analysis.multiGenChains.length === 1 ? '' : 's'}`
+        : 'Direct mentor → mentee pairs',
+    ],
+  ];
+
+  const mentorRows = analysis.topMentors
+    .slice(0, 12)
+    .map((mentor) => ({ mentor, person: byId.get(mentor.id) }))
+    .filter((row): row is { mentor: (typeof analysis.topMentors)[number]; person: RosterEntry } =>
+      Boolean(row.person),
+    );
+
+  const mentorsTable = mentorRows.length
+    ? `<h3 class="lineage-subheading">Top Verified Mentors</h3>
+      <p class="stat-sub">Roster members with verified advisor or postdoctoral mentor links to other roster members.</p>
+      <div class="stats-table-wrapper"><table class="stats-table"><thead><tr><th>Mentor</th><th>Institution</th><th>Roles</th><th class="num-col">Mentees</th></tr></thead>
+      <tbody>${mentorRows
+        .map(
+          ({ mentor, person }) =>
+            `<tr><td>${personLink(person)}</td><td>${escapeHtml(person.university)}</td><td>${escapeHtml(mentor.types.map((t) => TYPE_LABELS[t]).join(', '))}</td><td class="num-col">${formatNumber(mentor.count)}</td></tr>`,
+        )
+        .join('')}</tbody></table></div>`
+    : '';
+
+  const chainsHtml = analysis.multiGenChains.length
+    ? `<h3 class="lineage-subheading">Multi-Generational Academic Lineages</h3>
+      <p class="stat-sub">Verified advisor-to-advisee chains spanning three or more roster members.</p>
+      <ol class="mentorship-lineage-list">${analysis.multiGenChains
+        .slice(0, 10)
+        .map((chain) => {
+          const steps = chain.ids
+            .map((id, idx) => {
+              const person = byId.get(id);
+              const label = person ? personLink(person) : escapeHtml(id);
+              const edge = chain.edges[idx];
+              const arrow = edge
+                ? ` <span class="lineage-edge-tag" title="${escapeHtml(TYPE_LABELS[edge.type])}">→</span> `
+                : '';
+              return `<span class="lineage-node">${label}</span>${arrow}`;
+            })
+            .join('');
+          return `<li class="mentorship-lineage-item"><span class="lineage-gen-badge">${chain.ids.length} gen</span><div class="lineage-chain">${steps}</div></li>`;
+        })
+        .join('')}</ol>`
+    : '';
+
+  return `
+    <div class="browser-metric-grid">${cards
+      .map(
+        ([label, value, detail]) => `<article class="browser-metric-card">
+      <p class="browser-metric-label">${escapeHtml(label)}</p>
+      <p class="browser-metric-value">${escapeHtml(value)}</p>
+      <p class="browser-metric-detail">${escapeHtml(detail)}</p>
+    </article>`,
+      )
+      .join('')}</div>
+    <div class="lineage-actions">
+      <button type="button" id="focus-lineage-btn" class="lineage-focus-btn">Open Mentorship Lineage View in Graph ↑</button>
+    </div>
+    ${chainsHtml}
+    ${mentorsTable}
+  `;
+}
+
 function renderConnections(roster: Roster, database: RelationshipDatabase): string {
   return `<main><article class="man-page stats-man-page">
     ${runningHead()}
@@ -166,6 +250,7 @@ function renderConnections(roster: Roster, database: RelationshipDatabase): stri
     </div></div></section>
     <section class="man-section"><h2>AT A GLANCE</h2>${renderMetrics(roster, database)}</section>
     ${renderGraphExplorer()}
+    <section class="man-section"><h2>MENTORSHIP &amp; ACADEMIC LINEAGES</h2>${renderMentorshipLineages(roster, database)}</section>
     <section class="man-section"><h2>CONNECTIONS BY TYPE</h2>${renderTypeBreakdown(database)}</section>
     <section class="man-section"><h2>MOST CONNECTED PEOPLE</h2><p class="stat-sub">Counts every verified edge touching the person, in either direction.</p>${renderTopConnected(roster, database)}</section>
     <section class="man-section"><h2>ALL CONNECTIONS</h2>${renderAllConnections(roster, database)}</section>
@@ -202,6 +287,11 @@ async function init(): Promise<void> {
     ]);
     app.innerHTML = renderConnections(roster, database);
     initGraphExplorer(roster, database);
+    document.getElementById('focus-lineage-btn')?.addEventListener('click', () => {
+      const lineageBtn = document.querySelector<HTMLButtonElement>('[data-mode="lineage"]');
+      lineageBtn?.click();
+      document.querySelector('.connection-explorer')?.scrollIntoView({ behavior: 'smooth' });
+    });
     // Land ready to type in "Find a person", as the directory does with its search.
     if (document.activeElement === document.body)
       document.querySelector<HTMLInputElement>('#network-search')?.focus({ preventScroll: true });

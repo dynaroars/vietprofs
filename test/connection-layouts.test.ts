@@ -1,6 +1,10 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { connectionPath, lineageLayout } from '../src/connection-layouts.ts';
+import {
+  analyzeMentorshipLineages,
+  connectionPath,
+  lineageLayout,
+} from '../src/connection-layouts.ts';
 import type { AcademicRelationship } from '../src/relationships.ts';
 
 function edge(
@@ -54,4 +58,25 @@ test('lineage keeps cycles and their descendants visible without claiming a vali
   const empty = lineageLayout([]);
   assert.equal(empty.points.size, 0);
   assert.equal(empty.hasCycle, false);
+});
+
+test('analyzeMentorshipLineages counts top mentors and detects multi-generational chains', () => {
+  const analysis = analyzeMentorshipLineages([
+    edge('a', 'b', 'doctoral-advisor'),
+    edge('a', 'c', 'postdoctoral-mentor'),
+    edge('b', 'd', 'doctoral-advisor'),
+    edge('a', 'd', 'coauthor'), // non-mentorship should be excluded
+  ]);
+  assert.equal(analysis.mentorshipEdgeCount, 3);
+  assert.equal(analysis.mentorCount, 2);
+  assert.equal(analysis.menteeCount, 3);
+  assert.equal(analysis.maxGenerations, 3);
+  assert.equal(analysis.topMentors[0].id, 'a');
+  assert.equal(analysis.topMentors[0].count, 2);
+  assert.equal(analysis.multiGenChains.length, 1);
+  assert.deepEqual(analysis.multiGenChains[0].ids, ['a', 'b', 'd']);
+
+  const empty = analyzeMentorshipLineages([edge('x', 'y', 'coauthor')]);
+  assert.equal(empty.mentorshipEdgeCount, 0);
+  assert.equal(empty.multiGenChains.length, 0);
 });

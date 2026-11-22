@@ -3,10 +3,13 @@ import assert from 'node:assert/strict';
 import {
   renderHealthPanel,
   renderGrowthChart,
+  renderCityHubs,
+  renderDiasporaSnapshot,
+  buildDiasporaSnapshotMarkdown,
   relativeHeatTier,
   calculationBasis,
 } from '../src/insights.ts';
-import type { RosterEntry } from '../src/data.ts';
+import { buildTopCities, filterRoster, type RosterEntry } from '../src/data.ts';
 
 const sampleRoster: RosterEntry[] = [
   {
@@ -78,4 +81,72 @@ test('growth history switches metrics, handles declining code size, and spaces p
   assert.match(renderGrowthChart(history), /data-metric="count"/);
   assert.equal(renderGrowthChart([]), '');
   assert.equal(renderGrowthChart(history.slice(0, 1)), '');
+});
+
+test('buildTopCities and renderCityHubs group researchers by city with institution counts', () => {
+  const cityRoster: RosterEntry[] = [
+    {
+      id: 'vp-0010',
+      name: 'An Nguyen',
+      university: 'MIT',
+      department: 'CS',
+      city: 'Boston',
+      state: 'Massachusetts',
+      country: 'United States',
+      track: 'Tenure-line',
+      profileUrl: 'https://mit.edu/an',
+    },
+    {
+      id: 'vp-0011',
+      name: 'Binh Tran',
+      university: 'Harvard University',
+      department: 'Economics',
+      city: 'Boston',
+      state: 'Massachusetts',
+      country: 'United States',
+      track: 'Tenure-line',
+      profileUrl: 'https://harvard.edu/bt',
+    },
+    {
+      id: 'vp-0012',
+      name: 'Chi Le',
+      university: 'University of Melbourne',
+      department: 'Physics',
+      city: 'Melbourne',
+      state: 'Victoria',
+      country: 'Australia',
+      track: 'Tenure-line',
+      profileUrl: 'https://unimelb.edu.au/cl',
+    },
+  ];
+
+  const hubs = buildTopCities(cityRoster, 5);
+  assert.equal(hubs[0].city, 'Boston');
+  assert.equal(hubs[0].count, 2);
+  assert.equal(hubs[0].institutions, 2);
+
+  const html = renderCityHubs(cityRoster);
+  assert.match(html, /Boston, MA/);
+  assert.match(html, /2 orgs/);
+  assert.match(html, /data-scope="city"/);
+
+  const cityMatches = filterRoster(cityRoster, { query: 'Boston', searchScope: 'city' });
+  assert.equal(cityMatches.length, 2);
+});
+
+test('renderDiasporaSnapshot and buildDiasporaSnapshotMarkdown support English and Vietnamese', () => {
+  const enHtml = renderDiasporaSnapshot(sampleRoster, 'en');
+  assert.match(enHtml, /State of the Vietnamese Research Diaspora/);
+  assert.match(enHtml, /data-snapshot-lang="vi"/);
+  assert.doesNotMatch(enHtml, /undefined|NaN/);
+
+  const viHtml = renderDiasporaSnapshot(sampleRoster, 'vi');
+  assert.match(viHtml, /Toàn cảnh Cộng đồng Nghiên cứu Việt Nam ở Nước ngoài/);
+  assert.match(viHtml, /Sao chép tóm tắt/);
+  assert.doesNotMatch(viHtml, /undefined|NaN/);
+
+  const mdEn = buildDiasporaSnapshotMarkdown(sampleRoster, 'en');
+  assert.match(mdEn, /# State of the Vietnamese Research Diaspora/);
+  const mdVi = buildDiasporaSnapshotMarkdown(sampleRoster, 'vi');
+  assert.match(mdVi, /Tóm tắt Cộng đồng Nghiên cứu Việt Nam/);
 });

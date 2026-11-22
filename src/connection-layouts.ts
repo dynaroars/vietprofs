@@ -136,3 +136,111 @@ export function lineageLayout(edges: AcademicRelationship[]): {
   }
   return { points, height: Math.max(240, y + rowHeight), width, hasCycle: unresolved.length > 0 };
 }
+
+export interface MentorSummary {
+  id: string;
+  count: number;
+  types: AcademicRelationship['type'][];
+}
+
+export interface MentorshipLineageChain {
+  ids: string[];
+  edges: AcademicRelationship[];
+}
+
+export interface MentorshipAnalysis {
+  mentorshipEdgeCount: number;
+  mentorCount: number;
+  menteeCount: number;
+  maxGenerations: number;
+  topMentors: MentorSummary[];
+  multiGenChains: MentorshipLineageChain[];
+}
+
+/** Summarizes verified advisor/mentor edges: top mentors and multi-generational chains (3+ people). */
+export function analyzeMentorshipLineages(edges: AcademicRelationship[]): MentorshipAnalysis {
+  const mentorshipEdges = edges.filter(isMentorship);
+  if (!mentorshipEdges.length) {
+    return {
+      mentorshipEdgeCount: 0,
+      mentorCount: 0,
+      menteeCount: 0,
+      maxGenerations: 0,
+      topMentors: [],
+      multiGenChains: [],
+    };
+  }
+
+  const mentors = new Map<
+    string,
+    { mentees: Set<string>; types: Set<AcademicRelationship['type']> }
+  >();
+  const mentees = new Set<string>();
+  const outgoing = new Map<string, AcademicRelationship[]>();
+  const incomingCount = new Map<string, number>();
+
+  for (const edge of mentorshipEdges) {
+    mentees.add(edge.targetId);
+    let m = mentors.get(edge.sourceId);
+    if (!m) {
+      m = { mentees: new Set(), types: new Set() };
+      mentors.set(edge.sourceId, m);
+    }
+    m.mentees.add(edge.targetId);
+    m.types.add(edge.type);
+
+    if (!outgoing.has(edge.sourceId)) outgoing.set(edge.sourceId, []);
+    outgoing.get(edge.sourceId)!.push(edge);
+    incomingCount.set(edge.targetId, (incomingCount.get(edge.targetId) ?? 0) + 1);
+  }
+
+  const topMentors: MentorSummary[] = [...mentors.entries()]
+    .map(([id, info]) => ({
+      id,
+      count: info.mentees.size,
+      types: [...info.types].sort(),
+    }))
+    .sort((a, b) => b.count - a.count || a.id.localeCompare(b.id));
+
+  // Find maximal cycle-free directed paths starting from roots (no incoming mentorship edge).
+  // If a component is purely cyclic, skip it so traversal always terminates.
+  const roots = [...outgoing.keys()].filter((id) => (incomingCount.get(id) ?? 0) === 0).sort();
+
+  const chains: MentorshipLineageChain[] = [];
+  let maxEdgeDepth = 1;
+
+  function dfs(current: string, pathIds: string[], pathEdges: AcademicRelationship[]): void {
+    const nextEdges = (outgoing.get(current) ?? []).filter((e) => !pathIds.includes(e.targetId));
+    if (!nextEdges.length) {
+      if (pathEdges.length > maxEdgeDepth) maxEdgeDepth = pathEdges.length;
+      if (pathEdges.length >= 2) {
+        chains.push({ ids: [...pathIds], edges: [...pathEdges] });
+      }
+      return;
+    }
+    for (const edge of nextEdges) {
+      pathIds.push(edge.targetId);
+      pathEdges.push(edge);
+      dfs(edge.targetId, pathIds, pathEdges);
+      pathIds.pop();
+      pathEdges.pop();
+    }
+  }
+
+  for (const root of roots) {
+    dfs(root, [root], []);
+  }
+
+  chains.sort(
+    (a, b) => b.ids.length - a.ids.length || a.ids.join('->').localeCompare(b.ids.join('->')),
+  );
+
+  return {
+    mentorshipEdgeCount: mentorshipEdges.length,
+    mentorCount: mentors.size,
+    menteeCount: mentees.size,
+    maxGenerations: maxEdgeDepth + 1,
+    topMentors,
+    multiGenChains: chains,
+  };
+}

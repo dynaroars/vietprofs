@@ -1406,3 +1406,398 @@ button.chart-row-btn:hover {
   pointer-events: none;
   z-index: 1;
 }
+
+/* City & Metro Hub meta label */
+.city-hub-meta {
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+/* Bilingual Diaspora Snapshot card */
+.diaspora-snapshot {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.15rem 1.25rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.snapshot-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.snapshot-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.snapshot-lang-toggle {
+  display: inline-flex;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.snapshot-lang-btn,
+.snapshot-copy-btn {
+  font: inherit;
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: var(--card-bg);
+  border: none;
+  padding: 0.35rem 0.65rem;
+  cursor: pointer;
+  transition:
+    background 0.15s ease,
+    color 0.15s ease;
+}
+
+.snapshot-lang-btn.is-active {
+  background: var(--accent-color);
+  color: #fff;
+}
+
+.snapshot-copy-btn {
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+}
+
+.snapshot-copy-btn:hover,
+.snapshot-lang-btn:not(.is-active):hover {
+  background: var(--hover-bg);
+  color: var(--text-primary);
+}
+
+.snapshot-metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 0.65rem;
+}
+
+.snapshot-metric {
+  background: var(--tag-bg);
+  border-radius: var(--radius-sm);
+  padding: 0.65rem 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.snapshot-metric-value {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.snapshot-metric-label {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+}
+
+.snapshot-facts {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  margin: 0;
+  font-size: var(--text-xs);
+}
+
+.snapshot-fact-row {
+  display: grid;
+  grid-template-columns: minmax(135px, 180px) 1fr;
+  gap: 0.5rem;
+  padding-top: 0.45rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.snapshot-fact-row dt {
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.snapshot-fact-row dd {
+  margin: 0;
+  color: var(--text-primary);
+  line-height: 1.45;
+}
+
+/* "Start From My University" Pathway Explorer */
+.pathway-explorer {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.15rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.pathway-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.pathway-search-label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.pathway-input-row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.pathway-input {
+  flex: 1;
+  min-width: 0;
+  font: inherit;
+  font-size: var(--text-sm);
+  color: var(--text-primary);
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 0.45rem 0.7rem;
+}
+
+.pathway-explore-btn,
+.pathway-browse-btn {
+  font: inherit;
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: #fff;
+  background: var(--accent-color);
+  border: 1px solid var(--accent-color);
+  border-radius: var(--radius-sm);
+  padding: 0.45rem 0.85rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.pathway-explore-btn:hover,
+.pathway-browse-btn:hover {
+  opacity: 0.92;
+}
+
+.pathway-quick-picks,
+.pathway-stage-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.pathway-quick-label {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-right: 0.2rem;
+}
+
+.pathway-chip,
+.pathway-stage-btn {
+  font: inherit;
+  font-size: var(--text-xs);
+  color: var(--text-secondary);
+  background: var(--tag-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-full);
+  padding: 0.25rem 0.65rem;
+  cursor: pointer;
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease;
+}
+
+.pathway-chip:hover,
+.pathway-stage-btn:hover {
+  background: var(--hover-bg);
+  color: var(--text-primary);
+}
+
+.pathway-chip.is-active,
+.pathway-stage-btn.is-active {
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+  color: #fff;
+  font-weight: 600;
+}
+
+.pathway-chip-count {
+  opacity: 0.75;
+  font-size: 0.7rem;
+  margin-left: 0.15rem;
+}
+
+.pathway-results {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.pathway-empty {
+  padding: 0.85rem 1rem;
+  background: var(--tag-bg);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+
+.pathway-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.6rem;
+}
+
+.pathway-kpi {
+  background: var(--tag-bg);
+  border-radius: var(--radius-sm);
+  padding: 0.6rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.pathway-kpi-label {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+}
+
+.pathway-kpi-value {
+  font-family: var(--font-heading);
+  font-size: var(--text-base);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.pathway-kpi-small {
+  font-size: var(--text-xs);
+  font-family: var(--font-body);
+  font-weight: 600;
+}
+
+.pathway-trajectories-card {
+  border-top: 1px solid var(--border-color);
+  padding-top: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.pathway-trajectories-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.pathway-trajectory-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.pathway-trajectory-item {
+  padding: 0.6rem 0.75rem;
+  background: var(--tag-bg);
+  border-radius: var(--radius-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.pathway-trajectory-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.4rem;
+}
+
+.pathway-person-link {
+  font-weight: 600;
+  font-size: var(--text-sm);
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.pathway-person-link:hover {
+  text-decoration: underline;
+}
+
+.pathway-person-dept {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+}
+
+.pathway-steps {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: var(--text-xs);
+  color: var(--text-secondary);
+}
+
+.pathway-step {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 0.15rem 0.45rem;
+}
+
+.pathway-arrow {
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+@media (max-width: 560px) {
+  .snapshot-fact-row {
+    grid-template-columns: 1fr;
+    gap: 0.15rem;
+  }
+
+  .pathway-input-row {
+    flex-direction: column;
+  }
+
+  /* Phones: steps stack as a timeline; wrapped arrows otherwise land on lines of their own. */
+  .pathway-steps {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.2rem;
+    padding-left: 0.6rem;
+    border-left: 2px solid var(--border-color);
+  }
+
+  .pathway-step {
+    border: 0;
+    background: none;
+    padding: 0.1rem 0;
+  }
+
+  .pathway-arrow {
+    display: none;
+  }
+}
