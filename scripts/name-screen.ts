@@ -437,6 +437,10 @@ const REVIEWED_VIETNAMESE = new Set([
   'Christine L. Mai',
   // Nguy = Ngụy; Cooper profile lists Vietnamese among his languages.
   'Steven T. Nguy',
+  // Vassar sociologist; says "I'm Vietnamese" in a published interview.
+  'Catherine Do Tan',
+  // OUHSC hospitalist; Vietnamese given name Nhi on the official faculty page.
+  'Nhi Nai',
 ]);
 
 function normalizedParts(name: string): string[] {
