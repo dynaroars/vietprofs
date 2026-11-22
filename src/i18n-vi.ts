@@ -38,6 +38,8 @@ export const PLACE_VI: Record<string, string> = {
   Belgium: 'Bỉ',
   Brazil: 'Brazil',
   Brunei: 'Brunei',
+  Romania: 'Romania',
+  Laos: 'Lào',
   Canada: 'Canada',
   Chile: 'Chile',
   China: 'Trung Quốc',

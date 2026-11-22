@@ -59,7 +59,6 @@ import {
 import {
   createCommandHandler,
   createSearchController,
-  focusQuietly,
   hideCommandOutput as hideCommandOutputEl,
   parseKeywordQuery as parseKeywordQueryShared,
   setupSearchHelp,
@@ -1679,11 +1678,9 @@ async function init() {
     }
   });
 
+  // No autofocus on load: a focused search box swallows the browser's own keys (Firefox's '/'
+  // and "'" quick find, Space/arrow scrolling).
   update();
-  // Land ready to type, as on cspicks; leave focus alone if the reader already moved it.
-  if (document.activeElement === document.body) {
-    focusQuietly(searchInput);
-  }
 
   console.info(`%cVietProfs ${__BUILD_COMMIT__}`, 'color:#2e9e64;font-weight:bold;font-size:16px');
 }

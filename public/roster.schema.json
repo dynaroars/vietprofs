@@ -30,6 +30,10 @@
         "type": "string",
         "description": "Authoritative native name with Vietnamese diacritics (Surname-first)"
       },
+      "vietnameseNameInferred": {
+        "type": "string",
+        "description": "Vietnamese form (Surname-first, with diacritics) inferred from the romanized name by a careful reading of its name order and spelling, not from a source; shown only when vietnameseName is absent"
+      },
       "university": {
         "$ref": "#/$defs/nonEmptyString",
         "description": "Canonical institution name"

@@ -19,6 +19,8 @@ export interface RosterEntry {
   rank?: string;
   track?: string;
   vietnameseName?: string;
+  /** Vietnamese form inferred from the romanized name (order and diacritics), not sourced. */
+  vietnameseNameInferred?: string;
   researchAreas?: string[];
   honors?: Honor[];
   /** A completed postdoc, recorded as education. A current postdoc is not eligible for the roster. */
@@ -504,6 +506,7 @@ export function looksSurnameFirst(name: string): boolean {
 
 export function vietnameseName(person: RosterEntry): string {
   if (person.vietnameseName?.trim()) return vietnameseGivenNames(person.vietnameseName.trim());
+  if (person.vietnameseNameInferred?.trim()) return person.vietnameseNameInferred.trim();
   const current = displayName(person.name).trim();
   const tokens = current.split(/\s+/).filter(Boolean);
   if (tokens.length < 2) return vietnameseGivenNames(current);

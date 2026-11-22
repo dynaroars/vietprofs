@@ -59,6 +59,16 @@ const surnameFirstAllowlist = new Set<string>([
   'Tran Trung Luu', // published as "Tran Trung Luu" / "T. T. Luu" across Nature, HKU directory, and ORCID; Luu is his surname and Tran Trung is his given name.
   'Dinh Ho Tong Minh', // published as "Dinh Ho Tong Minh" across INRAE, IEEE, and Nature; Ho Tong Minh is his compound surname and Dinh is his given name.
   'Chau Trinh-Shevrin', // published as "Chau Trinh-Shevrin" across NYU directory and publications; Trinh-Shevrin is her surname and Chau is her given name.
+  'Ha Thai', // University of Sydney profile "Dr Ha Thai"; full published name Ha Minh Hai Thai, so Thai is the surname and Ha her given name.
+  'Hoang Linh Doan Kaestner', // SMU profile "KAESTNER Doan Hoang Linh"; Hoang Linh is her given name, Doan her Vietnamese surname, Kaestner her married name.
+  'Nguyen Lam', // Memorial University (Grenfell) profile and CV nguyenlammath; Lam is his surname and Nguyen his given name.
+  'Hoang Anh Truong Igarashi', // Tohoku profile "Hoang Anh Truong Igarashi" (goes by Anh Igarashi); Hoang Anh is her given name, Truong her Vietnamese surname, Igarashi her married name.
+  'Duong Tommy Hua', // UCLA Health profile "Duong Tommy Hua, MD"; Hua is his surname, Duong (Tommy) his given name.
+  'Mai T. Nguyen Mintz', // Einstein profile "Mai T. Nguyen Mintz, MD"; Mai is her given name, Nguyen her Vietnamese surname, Mintz her married name.
+  'Mai Tran-Ngoc', // UW Medicine profile "Mai Tran-Ngoc, MD"; Mai is her given name and Tran-Ngoc her compound surname.
+  'Chau Le Neason', // Baylor College of Medicine profile "Chau Le Neason, MD"; Chau is her given name, Le her Vietnamese surname, Neason her married name.
+  'Chau Khuong', // Monash profile "Chau Khuong"; Chau (Châu) is the given name, Khuong (Khương) the surname.
+  'Duong Than', // UW Tacoma "Duong (Rita) Than"; Duong is the given name, Than (Thân) the surname.
   'Le Mai Tu', // published as "Dre Le Mai Tu" across Université de Sherbrooke directory; Tu is her surname and Le Mai is her given name.
   'Dinh Ha Duy Thuy', // published as "Dinh Ha Duy Thuy" across Kyoto University directory and Researchmap; Dinh is his surname and Thuy is his given name.
   'Ha Thanh Dong', // published as "Ha Thanh Dong" / "Dr. Ha Thanh Dong" on AIT faculty directory; Dong is his surname and Ha is his given name.
@@ -331,6 +341,17 @@ const portraits = new Set();
 // institution (vp-0675/vp-1574, vp-0806/vp-1581, ... merged 2026-09-27). Pairs confirmed to be
 // different people go in DISTINCT_PEOPLE with how that was confirmed.
 const DISTINCT_PEOPLE = new Set<string>([
+  'vp-2345 vp-4695', // Thu Tran (Family and Community Medicine) and Amanda Hien Thu Tran (Pediatric Anesthesiology), UT Southwestern: separate UTSW profiles
+  'vp-2370 vp-4796', // Vinh Nguyen (Associate Professor) and Brian Vinh Nguyen (2026 residency graduate, Assistant Professor), Minnesota Anesthesiology: separate UMN bios
+  'vp-0313 vp-4886', // Mai Thi Nguyen (Urban Studies and Planning) and Mai H. Nguyen (San Diego Supercomputer Center), UC San Diego: different fields and middle initials
+  'vp-2305 vp-4614', // Julie L. Le (Psychiatry and Family Medicine) and Julie Le (Breast Surgery), UC San Diego: separate UCSD profiles in different departments
+  'vp-0880 vp-4577', // Matthew Thai-Khang Nguyen (Emergency Medicine) and Matthew D. Nguyen (Ophthalmology), Weill Cornell: separate WCM profiles with different middle names
+  'vp-4378 vp-4567', // Phuc D. Nguyen and Phuc X. Nguyen, UTHealth Houston Family and Community Medicine: two separate McGovern faculty pages (phuc-d-nguyen-md, phuc-x-nguyen-md)
+  'vp-4432 vp-4567', // Phuc P. Nguyen (Cardiovascular Medicine) and Phuc X. Nguyen (Family and Community Medicine), UTHealth Houston: separate McGovern faculty pages
+  'vp-3452 vp-4508', // Thanh D. Nguyen (Radiology, Associate Professor) and Alana Thanh Huyen Nguyen (Hematology and Medical Oncology, Assistant Professor), Weill Cornell: separate WCM Scholars profiles
+  'vp-0437 vp-4483', // Khoa Tran (Biology, Tufts School of Arts and Sciences) and Khoa Tran (Pediatric Gastroenterology, Tufts School of Medicine, MD): separate Tufts profiles in different schools
+  'vp-4378 vp-4432', // Phuc D. Nguyen (Family and Community Medicine) and Phuc P. Nguyen (Cardiovascular Medicine), UTHealth Houston: separate McGovern faculty pages with different middle initials
+  'vp-0186 vp-4169', // Thuy Linh Nguyen Tu (Social and Cultural Analysis, NYU FAS) and Thuy Nguyen (Cardiothoracic Surgery, NYU Langone MD): separate NYU profiles
   'vp-0972 vp-0973', // Katherine Nguyen (Rheumatology) and Katherine Nguyen Williams (Psychiatry), UC San Diego: separate UCSD profiles
   'vp-0673 vp-1700', // Lan K. Nguyen (Biochemistry) and Lan Nguyen (Accounting), Monash: separate Monash research profiles (#223)
   'vp-1744 vp-1996', // Thanh Le (Business, Associate Professor) and Thanh Le Hoang (Computing, Lecturer in AI), Wollongong: separate UOW Scholars profiles
