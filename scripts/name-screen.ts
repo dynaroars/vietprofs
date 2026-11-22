@@ -420,6 +420,16 @@ const CHINESE_REGIONS = new Set([
 const KOREA = new Set(['south korea', 'korea', 'republic of korea', 'kr']);
 const AFRICA = new Set(['cameroon', 'nigeria', 'ghana', 'gabon', 'cm', 'ng', 'gh', 'ga']);
 
+// Names whose pattern trips a rule below but whose Vietnamese identity is documented. Each needs
+// a source; keep this list short and prefer fixing a rule when a pattern recurs.
+const REVIEWED_VIETNAMESE = new Set([
+  // Foreign Trade University (Hanoi) degree; owner ruling 2026-11-21 (NonViet-Viet hyphen allowed
+  // with other Vietnamese evidence).
+  'Ruby Brownen-Trinh',
+  // Purdue publishes the full name; "Tuan-Dan" is Vietnamese (Tuấn), "Dan" alone looks Chinese.
+  'Daniel Tuan-Dan Le',
+]);
+
 function normalizedParts(name: string): string[] {
   return name
     .split(' - ')[0]
@@ -438,6 +448,9 @@ function normalizedParts(name: string): string[] {
 // leads need the usual appointment check, not a name rejection. `country` is the candidate's
 // institution country, when known.
 export function screenVietnameseName(name: string, country?: string): NameScreen {
+  if (REVIEWED_VIETNAMESE.has(name.split(' - ')[0].trim())) {
+    return { likely: true, reason: 'reviewed: Vietnamese despite the name pattern' };
+  }
   const tokens = nameTokens(name.replace(/[‐-―−]/g, '-'));
   if (tokens.length < 2) return { likely: true, reason: 'single-token name (not screened)' };
   const parts = normalizedParts(name);
