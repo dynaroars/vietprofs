@@ -163,3 +163,16 @@ Producer notes:
   assistant clinical professors without full-time evidence, pages without the person's name or
   title, and names whose order could not be confirmed.
 - Held for an owner ruling: Vincent T. Ho (Harvard/Dana-Farber), Saigon-born, ethnically Chinese.
+
+## w24 (2026-11-22)
+
+`slices17.tsv` (inst224–inst265), Codex gpt-6.1-sol only. 78 added (vp-5127 to vp-5204).
+
+- Given-name second pass on the 15 richest US academic-medicine centers: 38 added (best since
+  w18). Surname sweeps had missed people with common surnames; searching by given name works.
+- Osteopathic, dental and pharmacy schools, US regional universities and liberal arts colleges: 29.
+- Non-US second-tier slices (Taiwan, Japan, Korea, China, SE Asia, Germany, Max Planck/Helmholtz,
+  Italy/Spain, Russia, Israel/Turkey, Ireland): ~0–1 each. Canadian hospitals gave 21 leads but
+  most were Quebec "de clinique" or hospital-based titles without full-time evidence; 4 added.
+- Skipped on rules: plain Instructors, pages without a rank, AU Senior Research Officers
+  (postdoc level), lab managers, Czech "lektor".
