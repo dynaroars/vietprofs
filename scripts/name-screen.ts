@@ -429,6 +429,10 @@ const REVIEWED_VIETNAMESE = new Set([
   // Fused Vietnamese tokens: Huyvu = Huy Vũ, Ledoan = Lê Đoàn (UTC schedule lists Andrew Huyvu Ledoan).
   'Andrew Huyvu Ledoan',
   'Philippe Nghe',
+  // Chiem = Chiêm (Vietnamese romanization); Olive View-UCLA directory expands his name to Alan Tu Chiem.
+  'Alan Chiem',
+  // Viet given name + married surname; her UCLA biography says she was born in Vietnam.
+  'Mytien T. Goldberg',
 ]);
 
 function normalizedParts(name: string): string[] {

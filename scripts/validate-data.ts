@@ -25,6 +25,8 @@ const schemaFile = resolve('public/roster.schema.json');
 // faculty pages, or an explicit maiden-name pattern) — see the git history for the check —
 // are allowlisted so the test doesn't force a wrong "fix" on them.
 const surnameFirstAllowlist = new Set<string>([
+  'Trinh To Tat', // BCM profile slug trinh-tat; Trinh To is her given name, Tat her surname.
+  'Vuong Prieto', // UTHealth Cizik nursing profile "Dr Vuong Prieto"; Vuong is the given name, Prieto the surname.
   'Vuong Chu', // University of Westminster directory titles the page "Chu, Vuong"; Chu is his surname and Vuong his given name.
   'Hoang Le-Huy', // Université Laval homepage hoang-le-huy.fsg.ulaval.ca publishes "Hoang Le-Huy"; Le-Huy is his compound surname and Hoang his given name.
   'Phan Luu', // Neurosom/BEL leadership pages list "Phan Luu" (Chief Science Officer) and he publishes as "Luu, P." (EEG work with D. M. Tucker); Luu is his surname
@@ -344,6 +346,8 @@ const portraits = new Set();
 // institution (vp-0675/vp-1574, vp-0806/vp-1581, ... merged 2026-09-27). Pairs confirmed to be
 // different people go in DISTINCT_PEOPLE with how that was confirmed.
 const DISTINCT_PEOPLE = new Set<string>([
+  'vp-2203 vp-5128', // Khoa B. Nguyen (Dermatology) and Dieu-Thu Khoa Nguyen (HS Associate Clinical Professor of Medicine, Olive View), UCLA: separate profiles.ucla.edu pages, different departments
+  'vp-4696 vp-5151', // David Truong Bui (Anesthesiology, surname Bui) and David Truong (DPM, Orthopaedic Surgery), UT Southwestern: different surnames and departments
   'vp-1892 vp-5061', // Yen Tran (Associate Professor, innovation; ORCID 0009-0007-6169-9918) and Yen Tran (Assistant Professor, finance, joined 2025; ORCID 0000-0001-5336-3284), Heriot-Watt EBS: separate portal profiles
   'vp-2345 vp-4695', // Thu Tran (Family and Community Medicine) and Amanda Hien Thu Tran (Pediatric Anesthesiology), UT Southwestern: separate UTSW profiles
   'vp-2370 vp-4796', // Vinh Nguyen (Associate Professor) and Brian Vinh Nguyen (2026 residency graduate, Assistant Professor), Minnesota Anesthesiology: separate UMN bios
