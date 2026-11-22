@@ -176,3 +176,9 @@ Producer notes:
   most were Quebec "de clinique" or hospital-based titles without full-time evidence; 4 added.
 - Skipped on rules: plain Instructors, pages without a rank, AU Senior Research Officers
   (postdoc level), lab managers, Czech "lektor".
+
+## w25 (2026-11-22)
+
+`slices18.tsv` (inst266–inst320): the w24 given-name second pass applied to the other 55 US
+academic-medicine centers. 35 added (vp-5205 to vp-5239), ~0.6 per slice, versus 2.5 for the 15
+richest centers in w24. The given-name channel is now largely spent for US medicine.
