@@ -68,6 +68,7 @@ const surnameFirstAllowlist = new Set<string>([
   'Mai Tran-Ngoc', // UW Medicine profile "Mai Tran-Ngoc, MD"; Mai is her given name and Tran-Ngoc her compound surname.
   'Chau Le Neason', // Baylor College of Medicine profile "Chau Le Neason, MD"; Chau is her given name, Le her Vietnamese surname, Neason her married name.
   'Chau Khuong', // Monash profile "Chau Khuong"; Chau (Châu) is the given name, Khuong (Khương) the surname.
+  'Duong Than', // UW Tacoma "Duong (Rita) Than"; Duong is the given name, Than (Thân) the surname.
   'Le Mai Tu', // published as "Dre Le Mai Tu" across Université de Sherbrooke directory; Tu is her surname and Le Mai is her given name.
   'Dinh Ha Duy Thuy', // published as "Dinh Ha Duy Thuy" across Kyoto University directory and Researchmap; Dinh is his surname and Thuy is his given name.
   'Ha Thanh Dong', // published as "Ha Thanh Dong" / "Dr. Ha Thanh Dong" on AIT faculty directory; Dong is his surname and Ha is his given name.
