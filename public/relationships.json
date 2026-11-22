@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-22T15:02:42.000Z",
+  "updatedAt": "2026-11-22T19:02:06.000Z",
   "relationships": [
     {
       "id": "rel-coauthor-vp-0015-vp-0018",
@@ -4869,6 +4869,191 @@
       "verifiedAt": "2026-11-22T15:02:42.000Z",
       "direct": false,
       "notes": ""
+    },
+    {
+      "id": "rel-doctoral-advisor-vp-2164-vp-1804",
+      "type": "doctoral-advisor",
+      "sourceId": "vp-2164",
+      "targetId": "vp-1804",
+      "sources": [
+        "https://hdl.handle.net/10072/381509"
+      ],
+      "evidence": "Griffith University Research Repository record of the 2018 PhD thesis \"Piezoresistive Effect in 4H Silicon Carbide towards Mechanical Sensing in Harsh Environments\" by Nguyen Tuan, Khoa (vp-1804, Tuan-Khoa Nguyen, Griffith PhD 2018) lists supervisors \"Dao, Dung\" and \"Zhu, Yong\"; this matches vp-2164 (Dzung Viet Dao, Griffith).",
+      "works": [],
+      "verifiedAt": "2026-11-22T19:02:06.000Z",
+      "direct": false,
+      "notes": "Co-supervised; Yong Zhu is not on the roster."
+    },
+    {
+      "id": "rel-doctoral-advisor-vp-2164-vp-1422",
+      "type": "doctoral-advisor",
+      "sourceId": "vp-2164",
+      "targetId": "vp-1422",
+      "sources": [
+        "https://hdl.handle.net/10072/365574"
+      ],
+      "evidence": "Griffith University Research Repository record of the 2017 PhD thesis by Dinh, Toan Khac (vp-1422, Toan Dinh, Griffith PhD) lists supervisors \"Dao, Dzung\" and \"Nguyen, Nam-Trung\"; this matches vp-2164 (Dzung Viet Dao, Griffith).",
+      "works": [],
+      "verifiedAt": "2026-11-22T19:02:06.000Z",
+      "direct": false,
+      "notes": "Co-supervised with vp-0501."
+    },
+    {
+      "id": "rel-doctoral-advisor-vp-0501-vp-1422",
+      "type": "doctoral-advisor",
+      "sourceId": "vp-0501",
+      "targetId": "vp-1422",
+      "sources": [
+        "https://hdl.handle.net/10072/365574"
+      ],
+      "evidence": "Griffith University Research Repository record of the 2017 PhD thesis by Dinh, Toan Khac (vp-1422, Toan Dinh) lists supervisors \"Dao, Dzung\" and \"Nguyen, Nam-Trung\"; this matches vp-0501 (Nam-Trung Nguyen, Griffith).",
+      "works": [],
+      "verifiedAt": "2026-11-22T19:02:06.000Z",
+      "direct": false,
+      "notes": "Associate supervisor; principal supervisor vp-2164."
+    },
+    {
+      "id": "rel-doctoral-advisor-vp-2164-vp-0504",
+      "type": "doctoral-advisor",
+      "sourceId": "vp-2164",
+      "targetId": "vp-0504",
+      "sources": [
+        "https://hdl.handle.net/10072/366955"
+      ],
+      "evidence": "Griffith University Research Repository record of the 2016 PhD thesis by Phan, Hoang-Phuong (vp-0504, Griffith PhD 2016) lists supervisors \"Dao, Dzung\" and \"Nguyen, Nam-Trung\"; this matches vp-2164 (Dzung Viet Dao, Griffith).",
+      "works": [],
+      "verifiedAt": "2026-11-22T19:02:06.000Z",
+      "direct": false,
+      "notes": "Co-supervised with vp-0501."
+    },
+    {
+      "id": "rel-doctoral-advisor-vp-0501-vp-0504",
+      "type": "doctoral-advisor",
+      "sourceId": "vp-0501",
+      "targetId": "vp-0504",
+      "sources": [
+        "https://hdl.handle.net/10072/366955"
+      ],
+      "evidence": "Griffith University Research Repository record of the 2016 PhD thesis by Phan, Hoang-Phuong (vp-0504) lists supervisors \"Dao, Dzung\" and \"Nguyen, Nam-Trung\"; this matches vp-0501 (Nam-Trung Nguyen, Griffith).",
+      "works": [],
+      "verifiedAt": "2026-11-22T19:02:06.000Z",
+      "direct": false,
+      "notes": "Associate supervisor; principal supervisor vp-2164."
+    },
+    {
+      "id": "rel-doctoral-advisor-vp-2164-vp-1736",
+      "type": "doctoral-advisor",
+      "sourceId": "vp-2164",
+      "targetId": "vp-1736",
+      "sources": [
+        "https://hdl.handle.net/10072/411259",
+        "https://profiles.uts.edu.au/quan.nguyen-1"
+      ],
+      "evidence": "Griffith University Research Repository record of the 2021 PhD thesis \"Physical Sensing Effects in AlGaN/GaN Heterostructure and Applications\" by Nguyen, Quan H lists supervisor \"Dao, Dzung V\"; the UTS profile of vp-1736 (Quan Nguyen) states \"He received the PhD degree in electrical engineering from the Queensland Quantum and Advanced Technologies Research Institute, Griffith University, in 2021\" (PhD 1 Mar 2019 - 1 Sep 2021).",
+      "works": [],
+      "verifiedAt": "2026-11-22T19:02:06.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-doctoral-advisor-vp-0917-vp-2722",
+      "type": "doctoral-advisor",
+      "sourceId": "vp-0917",
+      "targetId": "vp-2722",
+      "sources": [
+        "https://u-aizu.ac.jp/labs/ce-cc/members.html",
+        "https://www.brad.ac.uk/staff/vmai/"
+      ],
+      "evidence": "The alumni list of the Computer Communications Lab at the University of Aizu, headed by \"PHAM T. Anh, Professor\" (vp-0917), includes \"Mai Viet Vuong (PhD, Spring 2017), first job: postdoc, KAIST, Korea\"; this matches vp-2722 (Vuong Mai, University of Aizu PhD 2017, now Bradford).",
+      "works": [],
+      "verifiedAt": "2026-11-22T19:02:06.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-doctoral-advisor-vp-0917-vp-0923",
+      "type": "doctoral-advisor",
+      "sourceId": "vp-0917",
+      "targetId": "vp-0923",
+      "sources": [
+        "https://u-aizu.ac.jp/labs/ce-cc/members.html"
+      ],
+      "evidence": "The alumni list of the Computer Communications Lab at the University of Aizu, headed by \"PHAM T. Anh, Professor\" (vp-0917), includes \"LE D. Hoang (PhD, Fall 2021, first job: Postdoc at UoA)\"; this matches vp-0923 (Hoang D. Le, Aizu PhD 2021, now on the lab faculty).",
+      "works": [],
+      "verifiedAt": "2026-11-22T19:02:06.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-doctoral-advisor-vp-0917-vp-0919",
+      "type": "doctoral-advisor",
+      "sourceId": "vp-0917",
+      "targetId": "vp-0919",
+      "sources": [
+        "https://u-aizu.ac.jp/labs/ce-cc/members.html"
+      ],
+      "evidence": "The alumni list of the Computer Communications Lab at the University of Aizu, headed by \"PHAM T. Anh, Professor\" (vp-0917), includes \"Pham Van Thanh (PhD, Spring 2019)\", listed among collaborators as \"Assistant Professor, Department of Mathematical and Systems Engineering, Shizuoka University\"; this matches vp-0919 (Thanh V. Pham, Shizuoka, Aizu PhD 2019).",
+      "works": [],
+      "verifiedAt": "2026-11-22T19:02:06.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-doctoral-advisor-vp-0917-vp-5071",
+      "type": "doctoral-advisor",
+      "sourceId": "vp-0917",
+      "targetId": "vp-5071",
+      "sources": [
+        "https://u-aizu.ac.jp/labs/ce-cc/members.html"
+      ],
+      "evidence": "The alumni list of the Computer Communications Lab at the University of Aizu, headed by \"PHAM T. Anh, Professor\" (vp-0917), includes \"Tran T. Thanh Huyen (PhD, Fall 2020, current: Postdoc at Riken)\" and lists her as a CCL postdoctoral researcher 2020-2021; this matches vp-5071 (Thi Thanh Huyen Tran, Tohoku, Aizu PhD 2020).",
+      "works": [],
+      "verifiedAt": "2026-11-22T19:02:06.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-doctoral-advisor-vp-0843-vp-2211",
+      "type": "doctoral-advisor",
+      "sourceId": "vp-0843",
+      "targetId": "vp-2211",
+      "sources": [
+        "https://hdl.handle.net/10119/17603"
+      ],
+      "evidence": "The JAIST Repository record of the doctoral thesis (博士(情報科学), granted 2021-12-24) on locality-sensitive hashing for clustering massive categorical and mixed datasets by \"Nguyen, Mau Toan\" (vp-2211, Toan Nguyen-Mau) states \"Supervisor: Huynh Nam Van\"; this matches vp-0843 (Van-Nam Huynh, JAIST).",
+      "works": [],
+      "verifiedAt": "2026-11-22T19:02:06.000Z",
+      "direct": false,
+      "notes": ""
+    },
+    {
+      "id": "rel-doctoral-advisor-vp-0928-vp-3762",
+      "type": "doctoral-advisor",
+      "sourceId": "vp-0928",
+      "targetId": "vp-3762",
+      "sources": [
+        "https://hdl.handle.net/10119/18770"
+      ],
+      "evidence": "The JAIST Repository record of the doctoral thesis \"An evidence-based framework to reveal uncertainty...\" (博士(知識科学), granted 2023-09-22) by \"HA, Minh Quuan\" (kana はー みん くぇっと, i.e. Ha Minh Quyet; vp-3762) states \"Supervisor: DAM, Hieu Chi\"; this matches vp-0928 (Hieu Chi Dam, JAIST).",
+      "works": [],
+      "verifiedAt": "2026-11-22T19:02:06.000Z",
+      "direct": false,
+      "notes": "The repository misspells the given name as Quuan; the kana reading and topic identify vp-3762."
+    },
+    {
+      "id": "rel-doctoral-advisor-vp-0543-vp-3697",
+      "type": "doctoral-advisor",
+      "sourceId": "vp-0543",
+      "targetId": "vp-3697",
+      "sources": [
+        "https://sites.google.com/site/namletran",
+        "https://mural.maynoothuniversity.ie/view/ethesisauthor/Pham=3AThuy_M=2E=3A=3A.html"
+      ],
+      "evidence": "Le-Nam Tran's (vp-0543) academic site lists among his PhD students \"Minh-Thuy Pham (2015 - 2019, co-supervised with Prof Ronan Farrell, Maynooth University)\", and Maynooth's archive holds the 2019 PhD thesis \"On the MIMO Capacity with Multiple Power Constraints\" by Pham, Thuy M.; this matches vp-3697 (Thuy M. Pham, Maynooth PhD).",
+      "works": [],
+      "verifiedAt": "2026-11-22T19:02:06.000Z",
+      "direct": false,
+      "notes": "Co-supervised; Ronan Farrell is not on the roster."
     }
   ],
   "external": [

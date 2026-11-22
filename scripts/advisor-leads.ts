@@ -60,6 +60,9 @@ function sameInstitution(a: string, b: string): boolean {
   const wa = words(a);
   const wb = words(b);
   const shared = [...wa].filter((w) => wb.has(w)).length;
+  // A one-word name ("Boston University" -> boston) must match exactly, or it would also match
+  // "University of Massachusetts Boston".
+  if (Math.min(wa.size, wb.size) === 1) return wa.size === wb.size && shared === 1;
   return shared > 0 && shared >= Math.min(wa.size, wb.size) * 0.67;
 }
 
