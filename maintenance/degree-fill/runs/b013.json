@@ -1,0 +1,239 @@
+{
+  "batch": "b013",
+  "results": [
+    {
+      "id": "vp-1446",
+      "found": true,
+      "doctorate": "Dr.-Ing.",
+      "phdInstitution": "Karlsruhe Institute of Technology",
+      "msInstitution": "Karlsruhe Institute of Technology",
+      "postdocInstitution": "University of Waterloo",
+      "source": "https://cuee.snu.ac.kr/bbs/board.php?bo_table=sub2_1&wr_id=1",
+      "quote": "Ph.D. (Dr.-Ing. ... University of Karlsruhe (KIT) ... Dipl. Math. (M.Sc. equivalent), University of Karlsruhe (KIT) ... Postdoc ... University of Waterloo",
+      "note": "The profile explicitly treats the mathematics diploma as master's equivalent. No doctorate year or bachelor's institution was stated."
+    },
+    {
+      "id": "vp-1448",
+      "found": true,
+      "doctorate": "Dr. med.",
+      "phdInstitution": "University of Freiburg",
+      "phdYear": "2005",
+      "mdInstitution": "University of Freiburg",
+      "msInstitution": "Heidelberg University",
+      "source": "https://www.hygiene.uni-wuerzburg.de/institut/mitarbeiter/curriculum-vitae-pd-dr-med-thien-tri-lam/",
+      "quote": "Dr. med. Thiên-Trí Lâm ... 2005 ... MD awarded by the University of Freiburg ... 2019 ... Master of Medical Education (MME, University of Heidelberg)",
+      "note": "The German Dr. med. is identified in the CV heading; its English education table labels the 2005 award MD. The existing undergradYear 1996 is not substantiated: the CV identifies 1996–1997 as development-aid employment."
+    },
+    {
+      "id": "vp-1449",
+      "found": false,
+      "note": "SickKids and University of Toronto profiles list MD and MScCH credentials but no awarding institutions or degree dates. The supplied Kim Lab website concerns gut development and cannot safely be attributed to this immunologist. No bachelor's evidence supports the existing undergradYear 2024."
+    },
+    {
+      "id": "vp-1450",
+      "found": true,
+      "mdInstitution": "Midwestern University",
+      "msInstitution": "Midwestern University",
+      "source": "https://www.rfuclinics.com/our-providers/luu-thanh/",
+      "quote": "He earned his medical and his master’s degree in biomedical science at Midwestern University",
+      "note": "The university clinic identifies him as Thanh Luu, DO. The DO is a professional medical degree, not a research doctorate."
+    },
+    {
+      "id": "vp-1452",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "University of California, Los Angeles",
+      "phdYear": "2003",
+      "msInstitution": "California State University, Long Beach",
+      "source": "https://www.calstatela.edu/sites/default/files/2014-15.pdf",
+      "quote": "M.S.W., 1999, CSU, Long Beach; Ph.D., 2003, University of California, Los Angeles",
+      "note": "University catalog, PDF page 704. Existing bachelor's institution and year agree with the catalog and are omitted."
+    },
+    {
+      "id": "vp-1456",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "The University of Sydney",
+      "source": "https://staff-profiles.cqu.edu.au/home/view/26034",
+      "quote": "She completed her PhD at The University of Sydney",
+      "note": "The supplied profile URL was inaccessible; the current CQUniversity profile is at record 26034. No explicit doctorate completion year was found."
+    },
+    {
+      "id": "vp-1457",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "Queensland University of Technology",
+      "phdYear": "2015",
+      "undergradInstitution": "University of Transport and Communications",
+      "undergradYear": "2008",
+      "msInstitution": "Linköping University",
+      "source": "https://leminhkieu.github.io/cv.pdf",
+      "quote": "Hanoi University of Transport and Communications (UTC) ... BSC. ... 2003 - 2008 ... Linköping University (LiU) ... MSC. ... Queensland University of Technology (QUT) ... PHD. ... 2011-2015",
+      "note": "Education section on PDF page 5. The bachelor's dates contradict existing undergradYear 2019."
+    },
+    {
+      "id": "vp-1461",
+      "found": false,
+      "note": "Both supplied university homepages identify a doctorate in computer science but give no awarding institution or year. Search surfaced an Aix-Marseille II thesis lead from 2000, but the linked publisher material returned 403; no institution or year is accepted from that inaccessible source."
+    },
+    {
+      "id": "vp-1463",
+      "found": false,
+      "note": "The CentraleSupélec profile contains no education history. A matching information-retrieval dissertation appears in bibliographic search results, but its HAL record and full text were inaccessible, and the DBLP record could not be opened. Awarding institution and year remain unverified."
+    },
+    {
+      "id": "vp-1466",
+      "found": false,
+      "note": "The faculty profile repeatedly timed out or returned 502; the lab homepage states no education. Search surfaced an official Wayne State catalog education entry, but both its live HTML page and catalog PDF timed out, so those degree details were not accepted."
+    },
+    {
+      "id": "vp-1474",
+      "found": false,
+      "note": "The live LabexMER memorial explicitly identifies a doctorate d'État ès sciences and graduation from École Normale Supérieure, but supplies no doctoral institution/year or identifiable bachelor's degree. A potentially useful LOPS memorial PDF returned 403."
+    },
+    {
+      "id": "vp-1478",
+      "found": false,
+      "note": "The official personnel and individual pages describe research and teaching, not education; teaching DUT and master's courses is not degree evidence. A matching concrete-mechanics dissertation lead was found, but the HAL repository denied access and its full text could not be verified there."
+    },
+    {
+      "id": "vp-1484",
+      "found": true,
+      "msInstitution": "Harvard University",
+      "source": "https://profiles.ucsf.edu/ngoc.ly",
+      "quote": "Harvard School of Public Health | MPH | 2004 | Public Health",
+      "note": "Existing mdInstitution University of Rochester agrees with the profile and is omitted. Clinical residency and pulmonary fellowship were not classified as research postdocs. No bachelor's education is stated."
+    },
+    {
+      "id": "vp-1486",
+      "found": true,
+      "undergradInstitution": "Elizabethtown College",
+      "undergradYear": "1982",
+      "mdInstitution": "Temple University",
+      "msInstitution": "Emory University",
+      "source": "https://anchorstudy.org/emory/team/nguyen_Minh-Ly",
+      "quote": "B.S. In Chemistry and Mathematics, Elizabethtown College, 1982 ... M.D., Temple University School of Medicine ... M.P.H Epidemiology, Rollins School of Public Health",
+      "note": "The ANCHOR study's Emory team biography matches her institution, specialty and research. Its bachelor's year contradicts existing undergradYear 2025. The supplied Emory profile rendered no individual biography."
+    },
+    {
+      "id": "vp-1488",
+      "found": true,
+      "doctorate": "Doctorat en sciences",
+      "phdInstitution": "University of Lille",
+      "phdYear": "2011",
+      "source": "https://pepite-depot.univ-lille.fr/LIBRE/EDBSL/2011/2011LIL2S010.pdf",
+      "quote": "Université Lille Nord de France ... Présentée par Thi Ha Chau TRAN ... DOCTEUR EN SCIENCES ... Spécialité : Neuroscience ... Soutenue le 01/06/ 2011",
+      "note": "Identity matches the full name and ophthalmology research on age-related macular degeneration. The historical Lille institution is normalized to University of Lille. No bachelor's or medical-school institution was established."
+    },
+    {
+      "id": "vp-1517",
+      "found": true,
+      "doctorate": "Doctorate",
+      "phdInstitution": "Karlsruhe Institute of Technology",
+      "phdYear": "1995",
+      "postdocInstitution": "University of California, San Diego",
+      "source": "https://vds-physics.univie.ac.at/fileadmin/user_upload/p_vds_physics/Events/2025/Summer_Academy_2025/CV-Hoang-Sept-2024-VDS.pdf",
+      "quote": "12/1995: Doctorate “summa cum laude” at University of Karlsruhe ... 10/1996 - 09/1998: Postdoc researcher ... University of California, San Diego",
+      "note": "The CV says Doctorate without specifying its German degree abbreviation. Its physics diploma was not recorded as a bachelor's degree."
+    },
+    {
+      "id": "vp-1530",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "Institut national de la recherche scientifique",
+      "phdYear": "2017",
+      "undergradInstitution": "Hanoi University of Science and Technology",
+      "undergradYear": "2010",
+      "msInstitution": "Southern Taiwan University of Science and Technology",
+      "postdocInstitution": "Rutgers University",
+      "source": "https://sites.google.com/view/htn-ncat/",
+      "quote": "Ph.D. ... (INRS) ... April 201 7 ... M.Eng. ... Southern Taiwan University ... B.S. ... Hanoi University of Science and Technology ... 2010 ... postdoctoral associates ... Rut gers University ... (2019-2020)",
+      "note": "Institution names and typographical spacing are normalized. The page also explicitly lists completed postdoctoral appointments at the University of Utah and Iowa State University."
+    },
+    {
+      "id": "vp-1534",
+      "found": true,
+      "doctorate": "DEng",
+      "phdInstitution": "Asian Institute of Technology",
+      "phdYear": "2003",
+      "undergradInstitution": "Ho Chi Minh City University of Technology",
+      "undergradYear": "1997",
+      "msInstitution": "Asian Institute of Technology",
+      "source": "https://curtin.edu.my/about/learning-and-teaching/engineering-and-science/departments/civil-and-construction-engineering/",
+      "quote": "DEng, ... Asian Institute of Technology, Thailand, 2003 ... MEng, ... Asian Institute of Technology ... BEng, Telecommunication, HCMC University of Technology, Vietnam, 1997",
+      "note": "His own Academic history section contradicts existing phdYear 2022 and undergraduate institution/year Curtin University, 1999. Other people's qualifications elsewhere on this long department page were excluded."
+    },
+    {
+      "id": "vp-1539",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "Gran Sasso Science Institute / Karlstad University",
+      "phdYear": "2020",
+      "undergradInstitution": "University of Science, Vietnam National University Ho Chi Minh City",
+      "undergradYear": "2015",
+      "postdocInstitution": "Indiana University Bloomington",
+      "source": "https://sites.google.com/view/thoa-thieu/home",
+      "quote": "Gran Sasso Science Institute ... Karlstad University ... (Double Ph.D. degree) ... 2011-2015: B.S. ... the University of Science ... Zorn Postdoc Fellow ... Indiana University Bloomington",
+      "note": "Existing phdYear 2016 contradicts the doctoral record at https://www.kau.se/en/mathematics/research/doctoral-and-licentiate-theses: \"Doctoral thesis\"; \"2020-12-03 Thoa Thieu\". The homepage identifies 2016 as the start of doctoral study. Existing msInstitution is omitted."
+    },
+    {
+      "id": "vp-1555",
+      "found": false,
+      "note": "The Griffith Experts profile and its biography route were inaccessible. Other official Griffith pages identify her research but state no completed degree institutions or dates. QUT-related search leads did not establish completion; LinkedIn snippets and unrelated namesakes were not used."
+    },
+    {
+      "id": "vp-1557",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "National Cheng Kung University",
+      "phdYear": "2021",
+      "source": "https://ba.ntust.edu.tw/p/412-1098-11114.php?Lang=en",
+      "quote": "2021 | Ph.D. in Graduate Institute of International Business, National Cheng Kung University",
+      "note": "The department's individual faculty page explicitly supplies the degree and year under Education / Professional Experiences."
+    },
+    {
+      "id": "vp-1591",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "University of Bristol",
+      "phdYear": "2021",
+      "msInstitution": "University of Bristol",
+      "postdocInstitution": "University of Bristol",
+      "source": "https://www.bristol.ac.uk/people/person/Duc-Nguyen-8b75e851-ce31-4aa6-bce3-0d8756fd998c/",
+      "quote": "MEng in 2019 and a PhD in 2021 ... University of Bristol ... postdoctoral research and teaching roles at the Bristol Composites Institute",
+      "note": "The biography explicitly describes the postdoctoral roles as preceding his 2023 lecturer appointment."
+    },
+    {
+      "id": "vp-1592",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "Liverpool John Moores University",
+      "phdYear": "2018",
+      "undergradInstitution": "Hanoi University of Science and Technology",
+      "undergradYear": "2008",
+      "msInstitution": "Pohang University of Science and Technology",
+      "source": "https://www.gla.ac.uk/schools/computing/staff/nguyentruong/",
+      "quote": "PhD, MSc, and BSc ... Liverpool John Moores University ... Pohang University of Science and Technology ... Hanoi University of Science and Technology ... 2018 ... 2008",
+      "note": "The official biography maps these degrees, institutions and dates respectively. His personal homepage gives a different master's year, which is outside the requested output fields."
+    },
+    {
+      "id": "vp-1593",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "Japan Advanced Institute of Science and Technology",
+      "source": "https://www.southampton.ac.uk/people/659l2y/doctor-tan-viet-tuyen-nguyen",
+      "quote": "Tuyen obtained a PhD degree in Information Science, majoring in Robotics, at Japan Advanced Institute of Science and Technology",
+      "note": "No explicit doctorate year or other degree institution was found on the official profile."
+    },
+    {
+      "id": "vp-1597",
+      "found": true,
+      "mdInstitution": "Johns Hopkins University",
+      "undergradInstitution": "Johns Hopkins University",
+      "undergradYear": "2003",
+      "source": "https://surgery.wustl.edu/people/trang-nguyen/",
+      "quote": "Medical Degree Johns Hopkins University School of Medicine, Baltimore MD ... Bachelor’s Degree Biomedical Engineering Johns Hopkins University School of Medicine, Baltimore, MD 2003",
+      "note": "Institution names are normalized to the university. The medical degree and clinical surgical fellowship were not classified as a research doctorate or postdoc."
+    }
+  ]
+}

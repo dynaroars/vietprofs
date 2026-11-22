@@ -1,0 +1,211 @@
+{
+  "batch": "b003",
+  "results": [
+    {
+      "id": "vp-0432",
+      "found": false,
+      "source": "https://faculty.mdanderson.org/profiles/christopher_nguyen.html",
+      "note": "Education lists the already-recorded McGill MD and clinical residency/fellowship training. No additional requested degree fields found; no bachelor's year stated."
+    },
+    {
+      "id": "vp-0433",
+      "found": false,
+      "source": "https://faculty.mdanderson.org/profiles/sydney_pham.html",
+      "quote": "2012 | The University of Texas at Austin, Austin, Texas, US, Radio-TV-Film, Bachelor of Science (B.S.)",
+      "note": "Contradiction: existing undergradYear is 2017; official education lists 2012. Both degree institutions are already recorded; no additional requested fields found."
+    },
+    {
+      "id": "vp-0434",
+      "found": true,
+      "mdInstitution": "Western University of Health Sciences",
+      "source": "https://faculty.mdanderson.org/profiles/an_ngo.html",
+      "quote": "2008 | Western University of Health Sciences, Pomona, California, US, Osteopathic Medicine, DO",
+      "note": "DO is recorded as medical education, not a research doctorate. Existing bachelor's institution and year agree with the page."
+    },
+    {
+      "id": "vp-0437",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "University of Wisconsin–Madison",
+      "postdocInstitution": "University of Pennsylvania",
+      "source": "https://as.tufts.edu/new-arts-and-sciences-faculty-fall-2025",
+      "quote": "University of Pennsylvania where he was a Postdoctoral Researcher ... Tran earned his PhD from the University of Wisconsin-Madison.",
+      "note": "Ellipses separate verbatim excerpts. Department biography mentions undergraduate study at the University of Colorado but does not explicitly identify a bachelor's degree or campus."
+    },
+    {
+      "id": "vp-0439",
+      "found": true,
+      "msInstitution": "Purdue University",
+      "source": "https://medicine.tulane.edu/departments/radiology-debakey/faculty/jeremy-binh-nguyen-md-facr",
+      "quote": "a Master of Science in Physics from Purdue University",
+      "note": "Bachelor's institution and medical school are already recorded. No bachelor's completion year or research doctorate stated."
+    },
+    {
+      "id": "vp-0441",
+      "found": false,
+      "source": "https://dentistry.uth.edu/directory/profile/long-d-tran",
+      "note": "Official profile identifies PharmD and DDS credentials but provides no readable degree institutions. Neither professional doctorate qualifies for phdInstitution; no additional eligible education evidence found."
+    },
+    {
+      "id": "vp-0442",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "University of Saskatchewan",
+      "phdYear": "2008",
+      "undergradInstitution": "Hanoi University of Science and Technology",
+      "undergradYear": "2002",
+      "msInstitution": "University of Saskatchewan",
+      "postdocInstitution": "McGill University",
+      "source": "https://blogs.uakron.edu/tran/about/",
+      "quote": "M.Sc. degree ... and the Ph.D. degree from the University of Saskatchewan, Canada in 2004 and 2008, respectively",
+      "note": "Additional source: https://www.uakron.edu/engineering/filesdocs/tran_ece_cv_022023.pdf. Excerpts: \"Hanoi University of Technology, Hanoi, Vietnam ... B.Sc., Department of Electrical Engineering, June 2002\"; \"05/2008-07/2011 NSERC Postdoctoral Scholar, McGill University\". Bachelor's institution normalized to its current name. Homepage calls the bachelor's B.Eng.; CV calls it B.Sc."
+    },
+    {
+      "id": "vp-0443",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "University of Florida",
+      "phdYear": "2008",
+      "postdocInstitution": "Michigan State University",
+      "source": "https://sites.google.com/view/nguyen-ngoc-hung/homepage",
+      "quote": "a postdoctoral fellow at Michigan State University ... Ph.D. in 2008 from the University of Florida",
+      "note": "Ellipses separate verbatim excerpts from the biography."
+    },
+    {
+      "id": "vp-0444",
+      "found": true,
+      "msInstitution": "East Carolina University",
+      "source": "https://www.uab.edu/medicine/physicalmedicine/faculty/nguyen-vu-q-m-d-mba",
+      "quote": "his MBA from East Carolina University",
+      "note": "Existing bachelor's and medical institutions agree with the biography. The page does not state a bachelor's completion year; 2022 is the UAB appointment year."
+    },
+    {
+      "id": "vp-0445",
+      "found": true,
+      "msInstitution": "Indiana University Indianapolis",
+      "source": "https://www.uab.edu/medicine/peds/rheumatology/rheumatology-faculty?catid=189&id=2983:brittany-huynh-m-d&view=article",
+      "quote": "Masters in Public Health-Indiana University Indianapolis Fairbanks School of Public Health",
+      "note": "Medical school is already recorded. Pediatric clinical fellowships are not recorded as postdoctoral research training."
+    },
+    {
+      "id": "vp-0446",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "Brown University",
+      "phdYear": "2021",
+      "undergradInstitution": "Stanford University",
+      "postdocInstitution": "Stanford University",
+      "source": "https://ioa.ucla.edu/people/kelly-nguyen",
+      "quote": "B.A. ... Stanford University in 2012 ... Ph.D. in Ancient History from Brown University in 2021",
+      "note": "Contradiction: existing undergradYear is 2023; official education states 2012. Additional source: https://classics.ucla.edu/wp-content/uploads/2023/08/Classics-Newsletter-Summer-23-.pdf: \"she was an inaugural IDEAL Provostial Postdoctoral Fellow for studies in race and ethnicity at Stanford University\". Ellipses separate verbatim excerpts."
+    },
+    {
+      "id": "vp-0448",
+      "found": true,
+      "mdInstitution": "University of Texas Health Science Center at San Antonio",
+      "source": "https://www.ucihealth.org/clinicians/ninh-nguyen-1487734653",
+      "quote": "Nguyen earned his medical degree at the University of Texas Health Science Center at San Antonio, Tex.",
+      "note": "Existing bachelor's institution and 1986 completion year are confirmed by https://www.faculty.uci.edu/profile/?facultyId=5621. Surgical fellowships are clinical training."
+    },
+    {
+      "id": "vp-0452",
+      "found": false,
+      "source": "https://www.rchsd.org/doctors/thu-duong-md/",
+      "quote": "Medical School\nEastern Virginia School of Medicine",
+      "note": "Contradiction: existing mdInstitution is University of Rochester; the employer's clinical profile lists Eastern Virginia School of Medicine. UCSD Profiles supplies no education. No additional requested fields found."
+    },
+    {
+      "id": "vp-0455",
+      "found": true,
+      "msInstitution": "University of Rochester",
+      "source": "https://www.esm.rochester.edu/pdf/notes/NotesJune2003.pdf",
+      "quote": "Alexandra Nguyen, MM ’00",
+      "note": "Eastman School of Music's official alumni publication identifies her completed MM. CU Boulder confirms graduate study at Eastman: https://www.colorado.edu/music/alexandra-nguyen, \"completed graduate degrees in piano accompanying and chamber music at the Eastman School of Music\"."
+    },
+    {
+      "id": "vp-0460",
+      "found": true,
+      "doctorate": "EdD",
+      "phdInstitution": "University of Houston",
+      "phdYear": "2022",
+      "undergradInstitution": "Louisiana State University Health Sciences Center New Orleans",
+      "source": "https://www.opt.uh.edu/profiles/chi-nguyen.cfm",
+      "quote": "Bachelor of Science ... Louisiana State University Medical Center ... University of Houston ... Doctor of Education (EdD) degree in 2022.",
+      "note": "Ellipses separate verbatim excerpts. Biography explicitly places the bachelor's institution in New Orleans; institution normalized to its current name. Existing MBA institution agrees."
+    },
+    {
+      "id": "vp-0463",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "Northeastern University",
+      "undergradInstitution": "University of Florida",
+      "msInstitution": "Massachusetts Institute of Technology",
+      "source": "https://www.uml.edu/docs/tangents_spring12_tcm18-271853.pdf",
+      "quote": "a B.S degree from the University of Florida, a M.S. from MIT, and a Ph.D. from Northeastern University, all in mathematics.",
+      "note": "Official departmental newsletter, page 3. No degree completion years stated."
+    },
+    {
+      "id": "vp-0465",
+      "found": true,
+      "mdInstitution": "Des Moines University",
+      "source": "https://med.umn.edu/bio/lahn-nguyen",
+      "quote": "She received her DO from Des Moines University College of Medicine.",
+      "note": "DO is medical education, not a research doctorate. Existing Drake University bachelor's institution agrees with the biography."
+    },
+    {
+      "id": "vp-0466",
+      "found": false,
+      "source": "https://med.umn.edu/bio/mai-nguyen",
+      "note": "Official profile and Experts@Minnesota checked. Medical school is already recorded; residency and orthopedic trauma fellowship are clinical training. No additional requested degree fields or explicit bachelor's completion year found."
+    },
+    {
+      "id": "vp-0467",
+      "found": false,
+      "source": "https://dentistry.unc.edu/person/tung-nguyen/",
+      "note": "Official faculty profile returned HTTP 403. Other accessible UNC pages did not state his degree institutions; third-party speaker biographies were not used under the brief's source restrictions."
+    },
+    {
+      "id": "vp-0469",
+      "found": false,
+      "source": "https://health.usf.edu/medicine/neurology/faculty#hung-tran",
+      "note": "Official directory lists MD, musculoskeletal/EMG practice and James A. Haley Veterans' Hospital affiliation but no education institutions. No identity-resolved official education page found."
+    },
+    {
+      "id": "vp-0470",
+      "found": false,
+      "source": "https://health.usf.edu/medicine/neurology/faculty#johanna-tran",
+      "note": "Official USF directory and VA material identify the physician but do not state degree institutions. Third-party medical-school claims were not used under the brief's source restrictions."
+    },
+    {
+      "id": "vp-0471",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "University of California, Irvine",
+      "mdInstitution": "University of Arizona College of Medicine",
+      "source": "https://www.moffitt.org/providers/nam-tran/",
+      "quote": "University of California-Irvine, where he received a Ph.D. in neuroscience ... Medical School: ... University of Arizona College of Medicine - MD",
+      "note": "Employer biography explicitly identifies his USF appointment and neurosurgical specialty, resolving identity. Ellipses separate verbatim excerpts."
+    },
+    {
+      "id": "vp-0472",
+      "found": false,
+      "source": "https://health.usf.edu/medicine/neurology/faculty/tvu6",
+      "note": "Official education lists only the already-recorded Pennsylvania State University MD, dated 1989. No additional requested education fields found."
+    },
+    {
+      "id": "vp-0475",
+      "found": false,
+      "source": "https://profiles.utsouthwestern.edu/profile/96328/benjamin-nguyen.html",
+      "note": "Academic and linked clinical profiles checked. Baylor medical school is already recorded; remaining training is clinical. No bachelor's institution or explicit bachelor's completion year found; 1996 is the medical degree year."
+    },
+    {
+      "id": "vp-0608",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "The Hong Kong Polytechnic University",
+      "source": "https://theses.lib.polyu.edu.hk/bitstream/200/7992/1/b28111448.pdf",
+      "quote": "NGUYEN THI HONG HAI\nPh.D\nTHE HONG KONG POLYTECHNIC UNIVERSITY\n2015",
+      "note": "Identity matches name, heritage-tourism research and PolyU history on the Greenwich profile. Thesis title: Heritage tourists' perceptions of authenticity, its antecedents and consequence. Cover is dated 2015; submission page says August 2014, so no conferral year reported. No explicit bachelor's completion year found."
+    }
+  ]
+}

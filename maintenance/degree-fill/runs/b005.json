@@ -1,0 +1,213 @@
+{
+  "batch": "b005",
+  "results": [
+    {
+      "id": "vp-0709",
+      "found": true,
+      "doctorate": "D.Sc.",
+      "phdInstitution": "George Washington University",
+      "phdYear": "1982",
+      "source": "https://engineering.catholic.edu/connect-contact/faculty-directory/charles-c-nguyen",
+      "quote": "D.Sc., Electrical Engineering, George Washington University, 1982",
+      "note": "The profile also lists a 1978 Dipl. Ing.; its equivalence to a bachelor's degree is not explicitly stated."
+    },
+    {
+      "id": "vp-0711",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "Yale University",
+      "phdYear": "1998",
+      "undergradInstitution": "Eötvös Loránd University",
+      "undergradYear": "1994",
+      "source": "https://hub.hku.hk/cris/rp/rp03649",
+      "quote": "1989-1994 | Eötvös Loránd University | B.Sc\n1994-1998 | Yale University | Ph.D.",
+      "note": "Contradiction: existing undergradYear 2024 conflicts with the official qualifications table, which ends the B.Sc. in 1994."
+    },
+    {
+      "id": "vp-0724",
+      "found": true,
+      "doctorate": "Doctorat",
+      "phdInstitution": "University of Lille",
+      "phdYear": "2011",
+      "source": "https://pepite-depot.univ-lille.fr/LIBRE/EDSPI/2011/50376-2011-Ha_Minh.pdf",
+      "quote": "UNIVERSITÉ DE LILLE 1 ... THÈSE DE DOCTORAT ... Cuong HA MINH ... Date de soutenance : le 17 novembre 2011",
+      "note": "Identity matches the official profile's woven-composite mechanics specialty and compatible appointment timeline. Institution normalized from Lille 1 to University of Lille. Title-page text was available through the repository's indexed PDF; direct opening exceeded the browser's size limit."
+    },
+    {
+      "id": "vp-0726",
+      "found": false,
+      "note": "Checked the Stanford profile and linked lab website. Listed BS, MSc and MD institutions are already recorded. Additional training is clinical residency and clinical fellowships; no research doctorate or explicit research postdoc was found. https://med.stanford.edu/profiles/QUAN%20DONG%20NGUYEN"
+    },
+    {
+      "id": "vp-0727",
+      "found": true,
+      "undergradInstitution": "The University of Texas at Austin",
+      "mdInstitution": "UNT Health Fort Worth",
+      "source": "https://med.uth.edu/pediatrics/2024/06/21/thao-l-nguyen-do-faap/",
+      "quote": "Bachelor of Science in Biochemistry with Honors from the University of Texas at Austin ... Doctor of Osteopathic Medicine from the Texas College of Osteopathic Medicine",
+      "note": "The same biography identifies the medical school's parent as University of North Texas Health Science Center. Current institutional name verified at https://www.unthealth.edu/marketing-and-communications/resources/media-contact.html: \"The official name of this institution is UNT Health Fort Worth.\" DO is a professional medical degree, not a research doctorate."
+    },
+    {
+      "id": "vp-0728",
+      "found": false,
+      "note": "Checked academic and linked clinical profiles. MD institution is already recorded; the other doctorate is a PharmD from Drake University, which is excluded. No bachelor's institution, research doctorate or explicit research postdoc was found. Existing undergradYear 2021 remains unverified. https://profiles.utsouthwestern.edu/profile/117881/hung-luu.html ; https://utswmed.org/doctors/hung-luu/"
+    },
+    {
+      "id": "vp-0729",
+      "found": true,
+      "doctorate": "Interdisciplinary PhD",
+      "phdInstitution": "The University of British Columbia",
+      "phdYear": "1994",
+      "undergradYear": "1986",
+      "postdocInstitution": "Rockefeller University",
+      "source": "https://pathology.ubc.ca/2022/12/01/hanh-huynh/",
+      "quote": "University of British Columbia, Interdisciplinary PhD, Neurosciences & Exp. Pathology, 1989-1994 ... B.Sc., Cell Biology, 1983-1986",
+      "note": "Contradiction: existing undergradYear 1983 is the start of the bachelor's interval; completion is 1986. Second source https://www.med.ubc.ca/news/if-you-keep-hating-it-eats-away-at-you/ states: \"He spent a year as a postdoctoral fellow in New York, working in the Rockefeller University lab of a Nobel Prize winner\"."
+    },
+    {
+      "id": "vp-0730",
+      "found": false,
+      "note": "The official PBA profile lists a PharmD from Texas Southern University and an MPH from Texas A&M University, whose institution is already recorded. The PharmD is excluded; postgraduate residency/fellowship training is not explicitly identified as a research postdoc. https://www.pba.edu/directory/lan-bui/"
+    },
+    {
+      "id": "vp-0732",
+      "found": true,
+      "mdInstitution": "UNT Health Fort Worth",
+      "source": "https://umc.edu/Faculty/Truong_Le_Melanie_N/",
+      "quote": "Texas College of Osteopathic Medicine, DO, Osteopathic Medicine | 2014",
+      "note": "DO is a professional medical degree. Texas College of Osteopathic Medicine belongs to UNT Health Fort Worth; current parent name verified at https://www.unthealth.edu/marketing-and-communications/resources/media-contact.html: \"The official name of this institution is UNT Health Fort Worth.\" Clinical neuro-ophthalmology fellowships were not recorded as research postdocs."
+    },
+    {
+      "id": "vp-0733",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "Texas Woman's University",
+      "phdYear": "2006",
+      "undergradInstitution": "The University of Texas Health Science Center at Houston",
+      "msInstitution": "The University of Texas Health Science Center at Houston",
+      "source": "https://catalog.twu.edu/graduate/faculty/",
+      "quote": "B.S., University of Texas Health Science Center-Houston; M.S., University of Texas Health Science Center-Houston; Ph.D., Texas Woman's University",
+      "note": "The official catalog's education text was available in search results, although direct fetching timed out. Second source https://twu.edu/nursing/news/tuong-vi-ho-phd-a-leader-in-the-vietnamese-community/ identifies \"Tuong-Vi Ho, PhD (’06)\"."
+    },
+    {
+      "id": "vp-0742",
+      "found": true,
+      "doctorate": "Doctorate ès Sciences",
+      "phdInstitution": "University of Paris",
+      "phdYear": "1963",
+      "undergradYear": "1957",
+      "source": "https://physicstoday.aip.org/news/jean-tran-thanh-van-wins-2011-tate-medal",
+      "quote": "undergraduate degrees in mathematics and physics in 1957 ... Doctorate ès Sciences degree from the University of Paris in 1963",
+      "note": "The AIP award announcement explicitly states both completion years. It does not name the undergraduate institution. University of Paris is retained as the historical awarding institution because it has no single current successor."
+    },
+    {
+      "id": "vp-0750",
+      "found": true,
+      "msInstitution": "University of Maryland, College Park",
+      "source": "https://www.loyola.edu/academics/visual-performing-arts/about/faculty-staff/nguyen-nguyen.html",
+      "quote": "M.M., University of Maryland",
+      "note": "M.M. is a master's degree. The separately listed MFA is excluded by the brief. The personal website returned 403."
+    },
+    {
+      "id": "vp-0758",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "National Taiwan University of Science and Technology",
+      "phdYear": "2022",
+      "undergradInstitution": "Can Tho University",
+      "undergradYear": "2016",
+      "msInstitution": "National Taiwan University of Science and Technology",
+      "postdocInstitution": "Academia Sinica",
+      "source": "https://www.tnlelab.com/members/pi",
+      "quote": "2022: Ph.D. ... National Taiwan University of Science and Technology ... 2018: Master ... 2016: Bachelor in Chemistry, Can Tho University ... Postdoctoral Research Associate ... Academia Sinica",
+      "note": "Ellipses separate verbatim excerpts. The education section lists PhD 2018–2022, master's 2016–2018 and bachelor's 2012–2016. The completed Academia Sinica postdoc ran February 2022–January 2025."
+    },
+    {
+      "id": "vp-0759",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "Sungkyunkwan University",
+      "phdYear": "2016",
+      "undergradInstitution": "University of Science, Vietnam National University Ho Chi Minh City",
+      "undergradYear": "2008",
+      "postdocInstitution": "Sungkyunkwan University",
+      "source": "https://sites.google.com/view/phuonggroup/professor",
+      "quote": "Sungkyunkwan University (SKKU), South Korea (2016). ... BSc in Physics: ... University of Science, ... Vietnam National University, VN (2008)",
+      "note": "The first excerpt is under the Ph.D. education bullet. The same page lists \"Postdoctoral Researcher\" at the same Sungkyunkwan institution, ending \"(2016-2017)\"."
+    },
+    {
+      "id": "vp-0774",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "Nanhua University",
+      "phdYear": "2023",
+      "msInstitution": "Lunghwa University of Science and Technology",
+      "source": "https://ib3.nhu.edu.tw/Web/Pages?mid=1501&n=%E5%B0%88%E4%BB%BB%E6%95%99%E5%B8%AB",
+      "quote": "Yen Thi Do ... 臺灣南華大學企業管理學系管理科學博士\n臺灣龍華科技大學企業管理學系碩士",
+      "note": "Second source https://nhuir.nhu.edu.tw/bitstream/987654321/29738/1/111NHU00457011-001.pdf states: \"Graduate Date: May 2023 Degree Conferred: Ph. D.\" Identity matches name, management specialty, institution and faculty timeline. The faculty page names a bachelor's institution as 美國格瑞國際大學; its official English name could not be resolved confidently, so that field is omitted."
+    },
+    {
+      "id": "vp-0778",
+      "found": false,
+      "note": "Checked the Tulane profile and personal site's About page. Neither supplies additional eligible education fields; existing bachelor's information was not repeated. https://liberalarts.tulane.edu/communication/people/daniella-zalcman ; https://www.dan.iella.net/about"
+    },
+    {
+      "id": "vp-0779",
+      "found": true,
+      "doctorate": "DrPH",
+      "phdInstitution": "University at Albany, State University of New York",
+      "phdYear": "2008",
+      "msInstitution": "East Stroudsburg University of Pennsylvania",
+      "source": "https://www.albany.edu/cihs/faculty/trang-nguyen",
+      "quote": "DrPH - University at Albany, Epidemiology 2008\nMPH - East Stroudsburg University of Pennsylvania, Epidemiology and Community Health 2000",
+      "note": "Existing undergradYear 2008 is associated with the DrPH on this page, not a bachelor's degree. No bachelor's institution or completion year is stated."
+    },
+    {
+      "id": "vp-0780",
+      "found": false,
+      "note": "Official faculty biography and education list BA and MD information already recorded, followed by surgical internship/residency. No additional eligible degree or research postdoc was found. https://directory.uthscsa.edu/academics/profile/nguyenp1"
+    },
+    {
+      "id": "vp-0781",
+      "found": false,
+      "note": "The official education section lists only University of Notre Dame BS, 2013, and Texas A&M MD, 2017; both institutions and the bachelor's year are already recorded. https://medicine.tamu.edu/faculty-listings/nguyen-e.html"
+    },
+    {
+      "id": "vp-0782",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "University of California, Irvine",
+      "phdYear": "2017",
+      "undergradInstitution": "University of California, Irvine",
+      "undergradYear": "2004",
+      "source": "https://eng81.banjo.eng.uci.edu/news/2025/6/quoc-viet-dang-selected-fulbright-scholar-will-travel-vietnam",
+      "quote": "at UCI, receiving a bachelor’s degree in information and computer science in 2004 and a doctorate in electrical engineering and computer science in 2017",
+      "note": "Doctorate type is explicit in https://ai2.cgu.edu.tw/p/16-1059-107501.php?Lang=en: \"received his Ph.D. in Computer Systems and Software from the University of California, Irvine, United States in 2017\". Stored faculty URL redirects to the directory; stored personal URL returned 502."
+    },
+    {
+      "id": "vp-0786",
+      "found": false,
+      "note": "Contradiction: existing phdYear 2020 refers to an MD, not a research doctorate. The Stanford profile states \"Medical Doctorate, Stanford University School of Medicine (2020)\" and lists the already-recorded bachelor's degree. No PhD institution should be filled from this evidence. https://profiles.stanford.edu/138089"
+    },
+    {
+      "id": "vp-0787",
+      "found": false,
+      "note": "UCLA lists the already-recorded MD, internship/residency and a clinical nephrology fellowship. No additional eligible degree or explicit research postdoc was found. The Cedars-Sinai training already stored as postdocInstitution is labeled a clinical fellowship on this page. https://www.uclahealth.org/providers/minhtri-nguyen"
+    },
+    {
+      "id": "vp-0788",
+      "found": false,
+      "note": "Ohio State's credentials section lists the already-recorded MD institution and internal medicine internship/residency. No additional eligible education field was found. https://wexnermedical.osu.edu/find-a-doctor/tran-nguyen-100001229"
+    },
+    {
+      "id": "vp-0789",
+      "found": false,
+      "note": "Checked Keck Medicine and the linked USC faculty profile. They describe the already-recorded UC San Diego medical degree, clinical residency and gynecologic oncology fellowship; no research doctorate or other missing eligible degree was found. https://www.keckmedicine.org/provider/Huyen-Q-Pham/ ; https://keck.usc.edu/faculty-search/huyen-q-pham/"
+    },
+    {
+      "id": "vp-0791",
+      "found": false,
+      "note": "Vanderbilt lists the already-recorded BA and MD institutions plus clinical internship, residency and cornea fellowship. No additional eligible education field was found. The Vanderbilt training already stored as postdocInstitution is explicitly clinical subspecialty fellowship training. https://www.vumc.org/ophthalmology/person/uyen-l-tran-md"
+    }
+  ]
+}

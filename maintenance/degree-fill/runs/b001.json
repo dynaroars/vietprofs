@@ -1,0 +1,171 @@
+{
+  "batch": "b001",
+  "results": [
+    {
+      "id": "vp-0077",
+      "found": false,
+      "note": "Official UGA profile and lab members page state no degrees; lab homepage repeatedly timed out. No accessible, identity-resolved dissertation record verified."
+    },
+    {
+      "id": "vp-0186",
+      "found": false,
+      "note": "NYU faculty profile returned HTTP 405. Accessible NYU humanities profile states no education; NYU bulletin lists an academic doctorate without an institution."
+    },
+    {
+      "id": "vp-0198",
+      "found": true,
+      "msInstitution": "New York University",
+      "source": "https://www.oceanvuong.com/about",
+      "quote": "He subsequently received his MFA in Poetry from NYU.",
+      "note": "MFA recorded as a master's, not a research doctorate; bachelor's fields already present."
+    },
+    {
+      "id": "vp-0199",
+      "found": false,
+      "note": "Official profile and linked CV list JD, Northeastern University (1995), and BA, Oberlin College (1990). Bachelor's fields already present; JD excluded."
+    },
+    {
+      "id": "vp-0200",
+      "found": false,
+      "note": "Official profile and linked CV list JD, Yale University (1987), and BA, Mount Holyoke College (1983). Bachelor's fields already present; JD excluded."
+    },
+    {
+      "id": "vp-0201",
+      "found": false,
+      "note": "Official profile, personal site and linked CV checked. CV lists JD, NYU (2013), and BA, Bates College (2007); bachelor's fields already present, JD excluded."
+    },
+    {
+      "id": "vp-0202",
+      "found": false,
+      "note": "Official profile and personal CV checked. CV lists 1981 BAS and 1985 MS, Stanford University, plus 1993 MFA, Yale University. Existing Stanford master's is supported; no missing requested fields found."
+    },
+    {
+      "id": "vp-0223",
+      "found": true,
+      "doctorate": "DrPH",
+      "phdInstitution": "University of California, Berkeley",
+      "msInstitution": "Yale University",
+      "source": "https://aas.sfsu.edu/mai-nhung-le",
+      "quote": "Dr.PH. University of California at Berkeley, Public Health\nM.P.H. Yale University School of Medicine, Epidemiology and Public Health",
+      "note": "Education section specifies DrPH, although narrative calls it a PhD. No completion years stated on the accessible profile; older bulletin with years returned 404."
+    },
+    {
+      "id": "vp-0229",
+      "found": false,
+      "note": "Official profile lists JD, Harvard Law School, and AB, Harvard College. Undergraduate fields already present; JD excluded."
+    },
+    {
+      "id": "vp-0230",
+      "found": false,
+      "note": "Official profile lists BFA, University of Iowa, and MFA, California Institute of the Arts; institutions already present. Personal biography gives no bachelor's completion year or research doctorate."
+    },
+    {
+      "id": "vp-0234",
+      "found": false,
+      "note": "Official profile, personal biography and CV checked. BFA, University of Texas at El Paso, and MFA, Yale University, already recorded; no additional requested fields stated."
+    },
+    {
+      "id": "vp-0235",
+      "found": true,
+      "msInstitution": "California Institute of the Arts",
+      "source": "https://www.newschool.edu/parsons/faculty/h-lan-thao-lam/",
+      "quote": "they hold an MFA from California Institute of the Arts",
+      "note": "MFA recorded as a master's, not a research doctorate. Linked collaborative site supplied no additional degree details."
+    },
+    {
+      "id": "vp-0241",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "University of Maryland, College Park",
+      "phdYear": "2011",
+      "undergradInstitution": "University of Maryland, College Park",
+      "msInstitution": "University of Maryland, College Park",
+      "source": "https://eng.umd.edu/istem",
+      "quote": "He received his B.S., M.S., and Ph.D. in mechanical engineering from the University of Maryland, College Park.",
+      "note": "Dissertation: https://api.drum.lib.umd.edu/server/api/core/bitstreams/5f05b841-62fd-4e62-86b3-e4a18ad41d8b/content — \"Vincent Nguyen, Doctor of Philosophy, 2011\". Identity matches mechanical engineering and the university's explicit degree history."
+    },
+    {
+      "id": "vp-0247",
+      "found": false,
+      "note": "UTK profile and teaching faculty directory give no education or CV. A Missouri mathematics dissertation names Hung Le, but no sufficient link to this UTK person was established; not attributed."
+    },
+    {
+      "id": "vp-0254",
+      "found": false,
+      "note": "Official profile lists PharmD, University of Michigan (2015), and BS, University of California, Davis (2011). Bachelor's fields already present; PharmD excluded. Completed medical informatics fellowship is not explicitly labeled a postdoc; linked CV could not be fetched."
+    },
+    {
+      "id": "vp-0256",
+      "found": false,
+      "note": "Stored UNM profile URL was inaccessible. Current directory links https://business.unm.edu/faculty-research/faculty-profile.html?username=cnguyen, whose readable content contains no education."
+    },
+    {
+      "id": "vp-0261",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "VNU University of Social Sciences and Humanities, Hanoi",
+      "source": "https://www.ussh.vnu.edu.vn/vi/dao-tao/luan-an/ttla-xay-dung-hoi-thoai-cho-giao-trinh-tieng-viet-thuc-hanh-duoi-goc-nhin-cua-ly-thuyet-tuong-tac-hoi-thoai-19264.html",
+      "quote": "INFORMATION ON DOCTORAL THESIS ... NGUYỄN KIM YẾN ... TRƯỜNG ĐẠI HỌC KHOA HỌC XÃ HỘI VÀ NHÂN VĂN, ĐHQGHN",
+      "note": "Official dissertation notice dated September 18, 2019 matches name, linguistics and Vietnamese-language pedagogy. UW confirms completion: https://asian.washington.edu/news/2022/02/16/asian-ll-welcomes-new-faculty-member-yen-kim-nguyen — \"a Ph.D. in Linguistics in 2019\". Existing degree years omitted; bachelor's institution not stated."
+    },
+    {
+      "id": "vp-0264",
+      "found": false,
+      "note": "Official profile lists Harvard undergraduate degree and Harvard JD. Undergraduate fields already present; JD excluded. Profile inconsistently labels the bachelor's AB in narrative and BS in Education, without contradicting the recorded institution."
+    },
+    {
+      "id": "vp-0268",
+      "found": false,
+      "note": "UCLA profile contains no education. Official faculty catalog lists MA without an institution; UCLA expert profile and institutional biography supplied no degree institution or year."
+    },
+    {
+      "id": "vp-0276",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "University of Southern California",
+      "phdYear": "2013",
+      "source": "https://catalogs.rutgers.edu/generated/nb-ug_2425/pg459.html",
+      "quote": "Triet Pham, Ph.D., Southern California",
+      "note": "Linked personal CV returned 404. Official USC dissertation list: https://dornsife.usc.edu/mathematics/probability/ — \"RECENT Ph.D. GRADUATES, THEIR ADVISORS, AND DISSERTATIONS ... 2013 ... Pham, Triet (Zhang)\". Dissertation concerns stochastic games and semimartingales, consistent with his Rutgers stochastic-analysis research area."
+    },
+    {
+      "id": "vp-0288",
+      "found": true,
+      "msInstitution": "University of Michigan",
+      "source": "https://english.wisc.edu/staff/nguyen-beth-bich-minh/",
+      "quote": "MFA, University of Michigan",
+      "note": "Personal biography independently confirms the MFA; recorded as a master's, not a research doctorate. No bachelor's institution or completion year stated."
+    },
+    {
+      "id": "vp-0291",
+      "found": false,
+      "source": "https://www.bumc.bu.edu/surgery/files/2025/12/BMC-Surgery-Annual-Report-2025_SPR.pdf",
+      "quote": "Hau Pham, DPM",
+      "note": "Contradiction: official report identifies a DPM, not an MD, and lists Boston University as the faculty affiliation, not a medical school attended. Existing mdInstitution is unsupported by this source; no new eligible education field found."
+    },
+    {
+      "id": "vp-0293",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "University of California, Santa Cruz",
+      "phdYear": "2021",
+      "undergradInstitution": "University of California, Los Angeles",
+      "undergradYear": "2012",
+      "msInstitution": "University of California, Los Angeles",
+      "postdocInstitution": "University of California, Merced",
+      "source": "https://tpqn.org/wp-content/uploads/2026/09/tn-cv-09.2026.pdf",
+      "quote": "2021 Ph.D. ... University of California, Santa Cruz ... 2012 BA, Asian American Studies, University of California, Los Angeles",
+      "note": "Contradicts recorded bachelor's institution (Ho Chi Minh City University of Technology) and year (2000). Second source: https://tpqn.org/about/ — \"an M.A. at the University of California, Los Angeles\"; \"Postdoctoral Fellow (UC PPFP) ... University of California, Merced\". Biography explicitly describes the Merced postdoc as previous."
+    },
+    {
+      "id": "vp-0299",
+      "found": false,
+      "note": "UCSD profile's Education section says 'Coming soon'; current official literature catalog identifies an MFA but gives no institution. No additional permitted source verified its institution or bachelor's details."
+    },
+    {
+      "id": "vp-0317",
+      "found": false,
+      "note": "Current UTHealth profile confirms BS in Dental Hygiene and MS in Health Studies from Texas Woman's University, both already present. No bachelor's completion year or research doctorate stated."
+    }
+  ]
+}

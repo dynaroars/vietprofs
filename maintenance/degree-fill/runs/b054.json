@@ -1,0 +1,204 @@
+{
+  "batch": "b054",
+  "results": [
+    {
+      "id": "vp-4133",
+      "found": false,
+      "note": "The supplied catalog and JSOM faculty directory state no education. A same-name economics CV was found, but its identity could not be securely connected to this JSOM instructor; no degrees imported."
+    },
+    {
+      "id": "vp-4137",
+      "found": true,
+      "undergradInstitution": "University of California, San Diego",
+      "undergradYear": "2009",
+      "msInstitution": "Widener University",
+      "source": "https://www.med.upenn.edu/apps/faculty/index.php/g275/p8408199",
+      "quote": "B.A. (Psychology)\nUniversity of California San Diego, 2009.\nM.A. (Clinical Psychology )\nWidener University, 2015.",
+      "note": "The listed PsyD is excluded by the brief."
+    },
+    {
+      "id": "vp-4138",
+      "found": false,
+      "note": "Jefferson faculty profile, research profile, and lab website identify a PhD but do not state its institution or year; no other requested education fields found."
+    },
+    {
+      "id": "vp-4139",
+      "found": true,
+      "undergradInstitution": "Texas Christian University",
+      "mdInstitution": "University of Nebraska",
+      "source": "https://www.plasticsurgery.pitt.edu/people/vu-t-nguyen-md",
+      "quote": "undergraduate studies at Texas Christian University ... earned his medical degree from the University of Nebraska.",
+      "note": "The source names University of Nebraska without specifying a campus."
+    },
+    {
+      "id": "vp-4140",
+      "found": true,
+      "undergradInstitution": "University of California, Irvine",
+      "mdInstitution": "New York Medical College",
+      "source": "https://www.anesthesiology.pitt.edu/people/khoa-n-nguyen-md",
+      "quote": "University of California, Irvine, BS, Biology\nNew York Medical College, MD"
+    },
+    {
+      "id": "vp-4141",
+      "found": true,
+      "undergradInstitution": "University of California, Berkeley",
+      "undergradYear": "2009",
+      "mdInstitution": "Stanford University",
+      "msInstitution": "Harvard University",
+      "source": "https://www.med.upenn.edu/apps/faculty/index.php/g275/p9820041",
+      "quote": "BS ... University of California, Berkeley, 2009.\nMD\nStanford University ... MPH ... Harvard T. H. Chan School of Public Health"
+    },
+    {
+      "id": "vp-4142",
+      "found": true,
+      "mdInstitution": "University of Virginia",
+      "source": "https://profiles.hopkinsmedicine.org/provider/luu-van-pham/2706552",
+      "quote": "Medical Education: University of Virginia School of Medicine, MD, 2007"
+    },
+    {
+      "id": "vp-4143",
+      "found": true,
+      "mdInstitution": "University of Maryland",
+      "source": "https://profiles.hopkinsmedicine.org/provider/duc-m-nguyen/2700988",
+      "quote": "completed his medical degree at the University of Maryland School of Medicine"
+    },
+    {
+      "id": "vp-4144",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "The George Washington University",
+      "phdYear": "2024",
+      "undergradInstitution": "Georgetown University",
+      "undergradYear": "2013",
+      "msInstitution": "Marymount University",
+      "source": "https://static1.squarespace.com/static/646e87c2ad81ad1d22988876/t/64e781995105e33fa55181e2/1692893593548/CMN_23cv.pdf",
+      "quote": "Ph.D. ... 2024\nThe George Washington University ... M.S. ... Marymount University ... B.S. Human Sciences 2013\nGeorgetown University",
+      "note": "The linked 2023 CV describes doctoral candidacy. Completion is corroborated by https://www.medstarhealth.org/doctors/claudia-mai-nguyen-phd: \"Claudia Mai Nguyen, PHD\" and \"Graduate: George Washington University (2024)\"."
+    },
+    {
+      "id": "vp-4145",
+      "found": true,
+      "undergradInstitution": "University of Virginia",
+      "mdInstitution": "University of Virginia",
+      "source": "https://anesthesiology.vcu.edu/about/our-team/vivien-bui-huynh-md.html",
+      "quote": "Undergraduate: Chemistry, University of Virginia, Charlottesville, VA\nMedical School: University of Virginia School of Medicine, Charlottesville, VA"
+    },
+    {
+      "id": "vp-4146",
+      "found": false,
+      "note": "The official faculty page lists MD credentials and LAC + USC residency/fellowship, but no medical-school institution. No qualifying official education source found; third-party and LinkedIn claims were not imported."
+    },
+    {
+      "id": "vp-4147",
+      "found": true,
+      "undergradInstitution": "Brown University",
+      "undergradYear": "1995",
+      "mdInstitution": "Temple University",
+      "source": "https://www.med.upenn.edu/apps/faculty/index.php/g275/p8677909",
+      "quote": "Sc.B (Biology)\nBrown University, 1995.\nMD\nTemple University School of Medicine, 1999."
+    },
+    {
+      "id": "vp-4148",
+      "found": true,
+      "mdInstitution": "University of Rochester",
+      "source": "https://www.anesthesiology.pitt.edu/people/lieu-tran-md",
+      "quote": "MD, University of Rochester School of Medicine and Dentistry"
+    },
+    {
+      "id": "vp-4149",
+      "found": true,
+      "mdInstitution": "Eastern Virginia Medical School",
+      "msInstitution": "Washington and Lee University",
+      "source": "https://profiles.hopkinsmedicine.org/provider/dominique-luong-vinh/2704762",
+      "quote": "Graduate School: Washington and Lee University, MBA, 2010 ... Medical Education: Eastern Virginia Medical School, MD, 1988"
+    },
+    {
+      "id": "vp-4150",
+      "found": true,
+      "mdInstitution": "Northwestern University",
+      "source": "https://peoria.medicine.uic.edu/profiles/khanh-linh-ngo-jason/",
+      "quote": "Medical School:\nDoctor of Medicine, Northwestern University, Feinberg School of Medicine, Chicago, IL"
+    },
+    {
+      "id": "vp-4151",
+      "found": false,
+      "note": "The supplied leadership page states no education. The linked individual profile https://www.uhhospitals.org/doctors/Nguyen-Vu-1104189695 repeatedly timed out. An official UH article describes Stanford undergraduate attendance without explicitly stating a completed bachelor's degree; no degree imported."
+    },
+    {
+      "id": "vp-4152",
+      "found": false,
+      "note": "The department profile and linked research profile https://profiles.uchicago.edu/profiles/display/13049748 contain no education history. No qualifying official source for the medical-school institution found."
+    },
+    {
+      "id": "vp-4153",
+      "found": true,
+      "undergradInstitution": "California State University",
+      "undergradYear": "1993",
+      "mdInstitution": "University of California, Irvine",
+      "source": "https://medicine.iu.edu/faculty/25854/phuong-loi",
+      "quote": "1997 | MD | University of California, Irvine\n1993 | BS | California State University",
+      "note": "The source does not specify the California State University campus."
+    },
+    {
+      "id": "vp-4154",
+      "found": true,
+      "undergradInstitution": "University of Maryland",
+      "undergradYear": "1988",
+      "mdInstitution": "University of Maryland",
+      "source": "https://medicine.iu.edu/faculty/4841/vu-toan",
+      "quote": "1992 | MD | University of Maryland\n1988 | BS | University of Maryland"
+    },
+    {
+      "id": "vp-4156",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "Harvard University",
+      "phdYear": "2004",
+      "postdocInstitution": "Johns Hopkins University",
+      "source": "https://connects.catalyst.harvard.edu/Profiles/display/Person/18357",
+      "quote": "Harvard Medical School, Boston, MA\nPhD\n2004\nNeurobiology\nJohns Hopkins University School of Medicine, Baltimore, MD\nPostdoc\n2011\nNeuroscience",
+      "note": "Education text was readable in the search-indexed institutional page; direct opening rendered only an iframe."
+    },
+    {
+      "id": "vp-4157",
+      "found": true,
+      "undergradInstitution": "Harvard University",
+      "mdInstitution": "University of Vermont",
+      "source": "https://www.massgeneralbrigham.org/en/doctors/b/thanh-barbie-3000900",
+      "quote": "undergraduate degree cum laude from Harvard University ... medical degree with the highest rank of superior from the University of Vermont College of Medicine"
+    },
+    {
+      "id": "vp-4158",
+      "found": true,
+      "mdInstitution": "University of Chicago",
+      "source": "https://www.massgeneralbrigham.org/en/doctors/n/louis-nguyen-3003260",
+      "quote": "Medical Education: University of Chicago, Pritzker School of Medicine, 1995"
+    },
+    {
+      "id": "vp-4159",
+      "found": true,
+      "undergradInstitution": "University of Virginia",
+      "mdInstitution": "Tulane University",
+      "msInstitution": "Duke University",
+      "postdocInstitution": "Harvard University",
+      "source": "https://www.mghchoir.com/team",
+      "quote": "undergraduate training at the University of Virginia ... MD at Tulane University ... Master's in Global Health at Duke University ... Harvard post-doctoral fellowship"
+    },
+    {
+      "id": "vp-4160",
+      "found": true,
+      "undergradInstitution": "Brandeis University",
+      "mdInstitution": "Tufts University",
+      "source": "https://profiles.umassmed.edu/display/36775909",
+      "quote": "Brandeis University, Waltham, MA, United States | BS ... Tufts University School of Medicine, Boston, MA, United States | MD"
+    },
+    {
+      "id": "vp-4161",
+      "found": true,
+      "msInstitution": "Harvard University",
+      "mdInstitution": "Hanoi Medical University",
+      "source": "https://profiles.umassmed.edu/display/56271432",
+      "quote": "Harvard TH Chan School of Public Health, Boston, MA, United States | MS ... Hanoi Medical University, Hanoi, HN, Vietnam | MD"
+    }
+  ]
+}

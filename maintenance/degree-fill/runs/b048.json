@@ -1,0 +1,199 @@
+{
+  "batch": "b048",
+  "results": [
+    {
+      "id": "vp-3847",
+      "found": false,
+      "note": "Official profile confirms a PhD in Logistics Management but gives no awarding institution or year. No qualifying institutional degree record located."
+    },
+    {
+      "id": "vp-3848",
+      "found": false,
+      "note": "Shenzhen University profile states a doctorate but names no institution or year; its education-history section has no content."
+    },
+    {
+      "id": "vp-3851",
+      "found": true,
+      "msInstitution": "Asian Institute of Technology",
+      "source": "https://researcher.apu.ac.jp/apuhp/KgApp?Language=2&resId=S001596",
+      "quote": "2005/08～2007/08 〔Doctorial Course (1st Semester)〕, Engineering and Technology, Asian Institute of Technology, Completed, Masters Degree in Engineering",
+      "note": "The completed qualification is explicitly a master's degree, despite the course-category wording."
+    },
+    {
+      "id": "vp-3855",
+      "found": false,
+      "note": "UCSI profile lists an MSc and Bachelor of Pharmacy without awarding institutions or years. The Dr title alone does not establish a research doctorate."
+    },
+    {
+      "id": "vp-3856",
+      "found": true,
+      "doctorate": "Doctoral dissertation",
+      "phdInstitution": "Umeå University",
+      "phdYear": "2023",
+      "source": "https://www.diva-portal.org/smash/get/diva2%3A1730514/FULLTEXT01.pdf",
+      "quote": "Minh H. Vu\nDepartment of Radiation Sciences Umeå 2023 ... UMEÅ UNIVERSITY DISSERTATION New Series No 2219",
+      "note": "The person's official Umeå profile links this dissertation directly. Repository landing pages presented bot checks, but the dissertation PDF was readable."
+    },
+    {
+      "id": "vp-3860",
+      "found": true,
+      "msInstitution": "National University of Singapore",
+      "source": "https://www.edx.org/bio/jodie-luu",
+      "quote": "Jodie Luu Tran Huynh Loan holds a master’s degree in Communications & New Media from the National University of Singapore",
+      "note": "NUS course-instructor biography on edX; identity matches the CELC lecturer and her listed edX teaching project."
+    },
+    {
+      "id": "vp-3861",
+      "found": true,
+      "undergradInstitution": "Cornell University",
+      "undergradYear": "2006",
+      "msInstitution": "Cornell University",
+      "source": "https://bizfaculty.nus.edu.sg/wp-content/uploads/sites/139/2026/05/Tam-Trinh-CV.pdf",
+      "quote": "Cornell University\nM.Eng., Operations Research & Industrial Engineering ... B.Sc., Operations Research & Engineering, summa cum laude with honors (2006)",
+      "note": "CV lists no research doctorate. Stanford and Harvard entries are certificates or executive education."
+    },
+    {
+      "id": "vp-3862",
+      "found": false,
+      "note": "DiSTAP lists the person but no degree history. Searches did not locate a qualifying institutional dissertation record; LinkedIn snippets were not used to assign degrees."
+    },
+    {
+      "id": "vp-3868",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "École Polytechnique Fédérale de Lausanne",
+      "undergradInstitution": "École Polytechnique Fédérale de Lausanne",
+      "msInstitution": "École Polytechnique Fédérale de Lausanne",
+      "postdocInstitution": "École Polytechnique Fédérale de Lausanne",
+      "source": "https://cibm.ch/community/thanh-phong-le/",
+      "quote": "earned his BSc and MSc in Physics from EPFL ... postdoctoral researcher in the Laboratory for Functional and Metabolic Imaging at EPFL",
+      "note": "Doctorate source: https://people.epfl.ch/jean-noel.hyacinthe?lang=en — \"Past EPFL PhD Students as codirector ... Thanh Phong Lê (2023)\". CIBM describes the postdoc as preceding his August 2024 appointment. Existing phdYear omitted."
+    },
+    {
+      "id": "vp-3869",
+      "found": false,
+      "note": "AIT research portal lists appointment, publications, activities, and awards but no education. No identity-resolved institutional degree record located."
+    },
+    {
+      "id": "vp-3871",
+      "found": true,
+      "mdInstitution": "University of Münster",
+      "source": "https://www.klinikum.uni-heidelberg.de/personen/priv-doz-dr-med-t-hien-tran-3634/",
+      "quote": "1992\nGraduation from University of Münster Medical School",
+      "note": "Profile separately lists an M.D. degree in 1993 without an awarding institution. Habilitation at Heidelberg is not a doctoral degree; research fellowships were not assumed to be postdocs."
+    },
+    {
+      "id": "vp-3872",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "Aalborg University",
+      "phdYear": "2017",
+      "source": "https://vbn.aau.dk/en/publications/matching-to-openly-innovate-with-suppliers-the-phenomenon-of-inno/",
+      "quote": "PhD thesis (Degree Awarded) ... year = \"2017\" ... Ph.d.-serien for Det Ingeniør- og Naturvidenskabelige Fakultet, Aalborg Universitet",
+      "note": "Her official profile links the university research record; thesis author is Linda Nhu Laursen."
+    },
+    {
+      "id": "vp-3873",
+      "found": false,
+      "note": "UMC profiles provide no degree institutions or years. The clinical page names his dissertation-prize-winning thesis, but the prize year was not treated as a degree year. The Pure thesis filter returned 403."
+    },
+    {
+      "id": "vp-3876",
+      "found": false,
+      "note": "IFE profile has no education. University of Oslo announces her Philosophiae Doctor defense for 24 November 2025: https://www.mn.uio.no/ifi/forskning/aktuelt/arrangementer/disputaser/2025/Nguyen.html. The announcement does not confirm completion, so no awarded doctorate was recorded."
+    },
+    {
+      "id": "vp-3877",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "Korea Advanced Institute of Science and Technology",
+      "source": "https://www.hiof.no/iio/itk/english/people/aca/ttdinh/",
+      "quote": "Nga Dinh got her Ph.D. degree from the Korean Advanced Institute of Science and Technology (KAIST), Korea.",
+      "note": "Institution name normalized to its official English form. No degree year stated."
+    },
+    {
+      "id": "vp-3879",
+      "found": false,
+      "note": "Munich profile lists teaching responsibilities and contact information but no education. No qualifying source explicitly identifying a degree institution located."
+    },
+    {
+      "id": "vp-3881",
+      "found": true,
+      "doctorate": "Doctorate (Promotion; subtype not stated)",
+      "phdInstitution": "University of Hamburg",
+      "phdYear": "2021",
+      "source": "https://www.wiso.uni-hamburg.de/fachbereich-sozoek/professuren/beblo/04-forschung/02-dissertationen.html",
+      "quote": "Thuy Trang Schwenke-Lam (co-reviewer, completed on Dec 15, 2021)",
+      "note": "The dissertation title matches her IU publication list. Author biography: https://www.waxmann.com/autorinnen/Trang-Schwenke-Lam — \"promovierte an der Universität Hamburg in der Interkulturellen und International Vergleichenden Erziehungswissenschaft.\" Publisher biography was search-readable; direct opening presented a browser check."
+    },
+    {
+      "id": "vp-3882",
+      "found": true,
+      "doctorate": "Doctoral dissertation",
+      "phdInstitution": "University of Pardubice",
+      "phdYear": "2013",
+      "source": "https://theses.cz/th_search/prace_na_stejne_tema?ks=anodicka+rozpousteci+voltametrie",
+      "quote": "(Dai Long Vu)\n2013, Disertační práce, Fakulta chemicko-technologická / Univerzita Pardubice",
+      "note": "University confirmation: https://www.upce.cz/sites/default/files/public/luva3059/zpravodaj-76_93408.pdf — \"Ing. Dai Long Vu obhájil 12. 9. 2013 v oboru Analytická chemie\". Thesis concerns carbon electrodes in electroanalysis, consistent with his analytical-chemistry publications."
+    },
+    {
+      "id": "vp-3884",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "Budapest University of Technology and Economics",
+      "phdYear": "2023",
+      "source": "https://phd.epito.bme.hu/node/18388?language=en",
+      "quote": "On 17th November 2023 Trung Hoang, former PhD student, currently research assistant of our department successfully defended his PhD thesis",
+      "note": "Official BME announcement links his staff page and dissertation, Modal analysis of thin-walled structures: analytical and numerical methods development."
+    },
+    {
+      "id": "vp-3888",
+      "found": false,
+      "note": "Charles University department and staff directories identify him, including the MUDr. title, but provide no medical-school institution, degree year, or research-doctorate history."
+    },
+    {
+      "id": "vp-3889",
+      "found": true,
+      "doctorate": "Doctoral dissertation",
+      "phdInstitution": "University of Chemistry and Technology, Prague",
+      "phdYear": "2019",
+      "source": "https://theses.cz/id/sqvf1y/",
+      "quote": "Van Minh Duong, MSc. ... Disertační práce ... Vysoká škola chemicko-technologická v Praze, Fakulta technologie ochrany prostředí. 2019.",
+      "note": "Dissertation: Emissions of selected pollutants from small emissions sources. Search-readable repository metadata agrees with the official profile's UCT Prague education entry for 2019. Other education entries lack degree labels and were not mapped."
+    },
+    {
+      "id": "vp-3892",
+      "found": true,
+      "doctorate": "Candidate of Technical Sciences",
+      "phdInstitution": "Irkutsk National Research Technical University",
+      "phdYear": "2005",
+      "source": "https://tekhnosfera.com/sovershenstvovanie-konstruktivnyh-parametrov-vibratsionnyh-stankov-impulsnogo-deystviya",
+      "quote": "диссертации на соискание учёной степени кандидата технических наук ... Иркутск - 2005 ... Иркутского государственного технического университета",
+      "note": "Reproduced dissertation abstract names Ле Чи Винь. His official ISTU profile gives the identical dissertation title, resolving identity. Institution normalized to its current name."
+    },
+    {
+      "id": "vp-3895",
+      "found": false,
+      "note": "Hon Hai profile and employer material list research expertise but no degree institutions or years. No identity-resolved institutional dissertation record located."
+    },
+    {
+      "id": "vp-3897",
+      "found": true,
+      "undergradInstitution": "Polytechnique Montréal",
+      "msInstitution": "Polytechnique Montréal",
+      "source": "https://www.polymtl.ca/expertises/en/nguyen-thi-linh-chi",
+      "quote": "Bachelor in Mechanical Engineering, Polytechnique Montréal\nMaster in Biomedical Engineering, Polytechnique Montréal",
+      "note": "No research doctorate or bachelor's completion year stated."
+    },
+    {
+      "id": "vp-3903",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "University of East London",
+      "undergradYear": "2009",
+      "source": "https://repository.uel.ac.uk/download/29bf07770e9d57e1b347847c49ed987a948294449746a9f395e068fa80e1c39c/3101562/2024_PhD_Le.pdf",
+      "quote": "A thesis submitted to The University of East London for the degree of Doctor of Philosophy",
+      "note": "Bachelor's year source: https://www.uel.ac.uk/about-uel/staff/kent-le — \"2009 BA (Hons) English (first degree)\". The profile does not name the bachelor's or master's institutions. Existing phdYear omitted."
+    }
+  ]
+}

@@ -1,0 +1,225 @@
+{
+  "batch": "b043",
+  "results": [
+    {
+      "id": "vp-3562",
+      "found": false,
+      "note": "FDA profile states only the Georgetown medical degree already recorded. No additional education fields verified."
+    },
+    {
+      "id": "vp-3563",
+      "found": true,
+      "doctorate": "PhD",
+      "phdYear": "2020",
+      "msInstitution": "Gachon University",
+      "source": "https://opus.bsz-bw.de/inmdok/frontdoor/deliver/index/docId/927/file/INM_Jahresbericht_2023.pdf",
+      "quote": "earned a PhD in Biology from the Max Planck Institute for Molecular Biomedicine in 2020",
+      "note": "The employer report attributes the PhD to the Max Planck institute; the awarding university is not explicit, so phdInstitution is omitted. Second source: https://www.uni-muenster.de/CiM-IMPRS/students/alumni/duong_cao_nguyen.html — \"MSc. in Biological Sciences, Gachon University, South Korea\"."
+    },
+    {
+      "id": "vp-3564",
+      "found": true,
+      "doctorate": "Dr. rer. nat.",
+      "phdInstitution": "Technical University of Berlin",
+      "phdYear": "2012",
+      "source": "https://api-depositonce.tu-berlin.de/server/api/core/bitstreams/c796f6b8-7867-4606-9634-00c35473692f/content",
+      "quote": "der Technischen Universität Berlin ... Doktor der Naturwissenschaften Dr. rer. nat. ... Tag der wissenschaftlichen Aussprache: 12 September 2012",
+      "note": "Dissertation identifies Duc V. Dinh and concerns MOVPE growth of nitride semiconductors, matching the rostered research field."
+    },
+    {
+      "id": "vp-3570",
+      "found": true,
+      "doctorate": "Doctor of Engineering",
+      "phdInstitution": "Jeonbuk National University",
+      "phdYear": "2016",
+      "undergradInstitution": "University of Science, Vietnam National University Ho Chi Minh City",
+      "undergradYear": "2007",
+      "msInstitution": "University of Science, Vietnam National University Ho Chi Minh City",
+      "postdocInstitution": "Jeonbuk National University",
+      "source": "https://sites.google.com/view/duythanhtranlab/professor",
+      "quote": "2016: Doctor of Engineering ... Chonbuk National University ... Master of Science ... 2007: Bachelor of Science ... University of Science, National University HCMC ... 2016-2019: Postdoc fellow ... JBNU.",
+      "note": "The lab page explicitly lists the same University of Science for the master's and bachelor's. Chonbuk and JBNU are normalized to Jeonbuk National University."
+    },
+    {
+      "id": "vp-3586",
+      "found": false,
+      "note": "Allen Institute biography states only the University of Washington bachelor's already recorded; no year or additional degree institution is given."
+    },
+    {
+      "id": "vp-3594",
+      "found": false,
+      "note": "UNMC lists the Creighton medical degree already recorded, an internal medicine residency, and a geriatric medicine fellowship. No additional degree or research postdoc verified."
+    },
+    {
+      "id": "vp-3595",
+      "found": false,
+      "note": "Pittsburgh profile lists the medical degree already recorded and clinical training. The MS appears in her credentials, but its institution was not verified."
+    },
+    {
+      "id": "vp-3612",
+      "found": true,
+      "mdInstitution": "Stanford University",
+      "msInstitution": "University of California, San Francisco",
+      "source": "https://kpresearcherprofiles.org/profiles/display/1012116",
+      "quote": "Stanford University School of Medicine, Palo Alto, CA | M.D. | 06/1998 ... University of California, San Francisco | M.A.S. | 06/2007 | Clinical Research"
+    },
+    {
+      "id": "vp-3614",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "Vietnam National University, Hanoi",
+      "phdYear": "2008",
+      "source": "https://www.reklim.de/en/the-network/research-profiles-junior-scientists/",
+      "quote": "Hanoi National University in Vietnam, where she got her PhD. in 2008.",
+      "note": "Institution name normalized from Hanoi National University. The 2016 biography describes an ongoing postdoc, without an explicit completion statement."
+    },
+    {
+      "id": "vp-3615",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "National University of Singapore",
+      "phdYear": "2011",
+      "undergradInstitution": "Ho Chi Minh City University of Technology",
+      "undergradYear": "2002",
+      "msInstitution": "National University of Singapore",
+      "source": "https://d197for5662m48.cloudfront.net/documents/publicationstatus/172770/preprint_pdf/813a5006444695361d4aa184abf9b978.pdf",
+      "quote": "B.S. ... Ho Chi Minh City University of Technology in 2002 ... M.Eng. ... PhD ... National University of Singapore in 2004 and 2011, respectively.",
+      "note": "Author biography identifies the same IHPC principal scientist and computational fluid dynamics research."
+    },
+    {
+      "id": "vp-3616",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "KU Leuven",
+      "phdYear": "2008",
+      "source": "https://www.iupfood.be/files/PDFs/Newsletter-spring-2009.pdf",
+      "quote": "SUMMARY PhD ... KULeuven, December 19, 2008 QUANG TRI HO",
+      "note": "The thesis concerns multiscale gas transport in fruit. Identity matches the food-science researcher; the unrelated Vien Quang Tri Ho immunology doctorate was excluded."
+    },
+    {
+      "id": "vp-3619",
+      "found": true,
+      "undergradInstitution": "Stanford University",
+      "mdInstitution": "Columbia University",
+      "msInstitution": "Stanford University",
+      "source": "https://divisionofresearch.kaiserpermanente.org/researchers/vivian-ho/",
+      "quote": "bachelor’s degree ... Stanford University ... medical degree ... Columbia University College of Physicians & Surgeons ... Stanford University, where she also earned a Master of Science"
+    },
+    {
+      "id": "vp-3624",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "Norwegian University of Science and Technology",
+      "phdYear": "2006",
+      "source": "https://papers.acg.uwa.edu.au/d/1952_09_Trinh/09_Trinh.pdf",
+      "quote": "Got Ph.D. in rock engineering in 2006 at Norwegian University of Science and Technology.",
+      "note": "Author biography identifies Nghia Quoc Trinh as a senior researcher at SINTEF Building and Infrastructure."
+    },
+    {
+      "id": "vp-3625",
+      "found": true,
+      "postdocInstitution": "Max Delbrück Center for Molecular Medicine",
+      "source": "https://www.mdc-berlin.de/news/news/perfecting-tools-rewrite-genomes",
+      "quote": "Van Trung Chu, a postdoctoral fellow in Klaus’ group",
+      "note": "The 2015 employer article documents the earlier MDC postdoc. Current profile https://www.mdc-berlin.de/person/dr-van-trung-chu identifies him as \"Scientist\". Doctoral institution and year were not verified."
+    },
+    {
+      "id": "vp-3626",
+      "found": false,
+      "note": "ILO profile gives no education. Institutional speaker biographies name Northwestern University and Johns Hopkins University but do not specify degree types, so no bachelor's or master's mapping was inferred."
+    },
+    {
+      "id": "vp-3628",
+      "found": false,
+      "note": "NIST profile lists appointment, contact details, ORCID, and publications without education. No identity-resolved degree institution verified."
+    },
+    {
+      "id": "vp-3630",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "University of Waterloo",
+      "phdYear": "2015",
+      "source": "https://dspacemainprd01.lib.uwaterloo.ca/server/api/core/bitstreams/a8d516ca-f086-4ae9-8037-bc94f5e41683/content",
+      "quote": "Tam Thanh Tran ... presented to the University of Waterloo ... Doctor of Philosophy in Biology ... Waterloo, Ontario, Canada, 2015",
+      "note": "Dissertation concerns engineering Sinorhizobium meliloti and Pseudomonas putida for polymer production, matching the research history described by NORCE."
+    },
+    {
+      "id": "vp-3631",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "University of Toronto",
+      "undergradInstitution": "University of Ottawa",
+      "msInstitution": "Queen Mary University of London",
+      "source": "https://ihpme.utoronto.ca/faculty-profile/quynh-pham/",
+      "quote": "PhD (IHPME, University of Toronto) MSc (Barts, Queen Mary University of London) BSc (OHRI, University of Ottawa)"
+    },
+    {
+      "id": "vp-3633",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "Colorado School of Mines",
+      "phdYear": "2021",
+      "source": "https://www.osti.gov/servlets/purl/1861417/",
+      "quote": "PhD Thesis: Long Le, Colorado School of Mines, 2021",
+      "note": "The university's ARPA-E final report concerns proton-conducting ceramic cells and identifies Long Le with collaborators Neal Sullivan and Ryan O'Hayre, matching his research record."
+    },
+    {
+      "id": "vp-3634",
+      "found": true,
+      "doctorate": "Doctorat",
+      "phdInstitution": "École Polytechnique",
+      "phdYear": "2011",
+      "source": "https://citeseerx.ist.psu.edu/document?doi=c97dc61b004b967ed5424a1f88b95e2734c3162b&repid=rep1&type=pdf",
+      "quote": "DOCTEUR DE L’ÉCOLE POLYTECHNIQUE ... Thuong Van Du TRAN ... Soutenue le 7 décembre 2011",
+      "note": "University-hosted mirror of the dissertation on transmembrane protein structure prediction. The original HAL page denied access."
+    },
+    {
+      "id": "vp-3636",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "University of Bath",
+      "phdYear": "2017",
+      "source": "https://purehost.bath.ac.uk/ws/portalfiles/portal/187907487/VU_Anh_Ngoc_PhD_Thesis_corrected_18_08_2017.pdf",
+      "quote": "PHD ... Award date: 2017 ... Awarding institution: University of Bath",
+      "note": "Dissertation names Anh Ngoc Vu and studies civil society activism in Vietnam, matching NatCen's description. The unrelated Twente engineering dissertation was excluded."
+    },
+    {
+      "id": "vp-3637",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "Kyushu University",
+      "phdYear": "2019",
+      "source": "https://api.lib.kyushu-u.ac.jp/opac_download_md/2534380/math0250.pdf",
+      "quote": "出版情報：Kyushu University, 2019, 博士（機能数理学）, 課程博士 ... Ph.D. Thesis ... Thi Thai Le",
+      "note": "Dissertation on Kelvin-Helmholtz instability matches the ZIB research field and publications."
+    },
+    {
+      "id": "vp-3638",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "University of North Carolina at Chapel Hill",
+      "phdYear": "1998",
+      "undergradInstitution": "University of California, Berkeley",
+      "undergradYear": "1991",
+      "source": "https://www.med.upenn.edu/apps/faculty/index.php/g20000220/p137332",
+      "quote": "B.A. (Biophysics) University of California – Berkeley, 1991. Ph.D. (Cell Biology) University of North Carolina – Chapel Hill, 1998.",
+      "note": "Penn and Curie describe the same cytoskeleton, cellular pattern formation, and fission-yeast research."
+    },
+    {
+      "id": "vp-3640",
+      "found": false,
+      "note": "PNNL profile states no education. A publication biography describes Kha Le as a current University of Washington PhD student; no completed doctorate or other degree institution was verified."
+    },
+    {
+      "id": "vp-3641",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "Université Paris Cité",
+      "phdYear": "2016",
+      "postdocInstitution": "Friedrich Alexander University Erlangen-Nuremberg",
+      "source": "https://gs.elaba.lt/object/elaba%3A260039930/260039930.pdf",
+      "quote": "Ph.D. ... Université Paris Cité in 2016 ... Postdoctoral Researcher for one year ... FAU Erlangen–Nuremberg",
+      "note": "Conference author biography identifies the PDI scientist and states that the FAU postdoc preceded his November 2017 arrival at PDI."
+    }
+  ]
+}

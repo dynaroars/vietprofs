@@ -1,0 +1,176 @@
+{
+  "_": "Manual rulings on held degree-fill results. override: found fields that replace stored values (official page or own CV). drop: stored fields that the source contradicts and nothing replaces. rejectPhd: the doctorate is professional, keep the rest.",
+  "vp-0293": {
+    "override": [
+      "undergradInstitution",
+      "undergradYear"
+    ]
+  },
+  "vp-0446": {
+    "override": [
+      "undergradYear"
+    ],
+    "set": {
+      "undergradYear": "2012"
+    }
+  },
+  "vp-0613": {
+    "drop": [
+      "undergradYear"
+    ]
+  },
+  "vp-0620": {
+    "drop": [
+      "undergradYear"
+    ]
+  },
+  "vp-0711": {
+    "override": [
+      "undergradYear"
+    ]
+  },
+  "vp-0729": {
+    "override": [
+      "undergradYear"
+    ]
+  },
+  "vp-0779": {
+    "drop": [
+      "undergradYear"
+    ]
+  },
+  "vp-0895": {
+    "override": [
+      "msInstitution"
+    ]
+  },
+  "vp-0942": {
+    "drop": [
+      "undergradYear"
+    ]
+  },
+  "vp-0977": {
+    "override": [
+      "undergradYear"
+    ]
+  },
+  "vp-0979": {
+    "override": [
+      "undergradYear"
+    ]
+  },
+  "vp-0980": {
+    "override": [
+      "undergradYear"
+    ]
+  },
+  "vp-1013": {
+    "drop": [
+      "undergradYear"
+    ]
+  },
+  "vp-1022": {
+    "drop": [
+      "undergradYear"
+    ]
+  },
+  "vp-1034": {
+    "override": [
+      "undergradYear"
+    ]
+  },
+  "vp-1061": {
+    "drop": [
+      "undergradYear"
+    ]
+  },
+  "vp-1130": {
+    "drop": [
+      "undergradYear"
+    ],
+    "set": {
+      "undergradYear": "1966"
+    }
+  },
+  "vp-1366": {
+    "override": [
+      "phdYear"
+    ]
+  },
+  "vp-1436": {
+    "override": [
+      "mdInstitution"
+    ]
+  },
+  "vp-1438": {
+    "override": [
+      "undergradInstitution",
+      "mdInstitution"
+    ],
+    "drop": [
+      "undergradYear"
+    ]
+  },
+  "vp-1439": {
+    "override": [
+      "mdInstitution"
+    ]
+  },
+  "vp-1440": {
+    "override": [
+      "undergradInstitution",
+      "undergradYear",
+      "mdInstitution"
+    ]
+  },
+  "vp-1441": {
+    "override": [
+      "mdInstitution"
+    ]
+  },
+  "vp-1457": {
+    "override": [
+      "undergradYear"
+    ]
+  },
+  "vp-1486": {
+    "override": [
+      "undergradYear"
+    ]
+  },
+  "vp-1488": {
+    "drop": [
+      "undergradYear"
+    ]
+  },
+  "vp-1534": {
+    "override": [
+      "undergradInstitution",
+      "undergradYear",
+      "phdYear"
+    ]
+  },
+  "vp-1539": {
+    "override": [
+      "phdYear"
+    ],
+    "set": {
+      "phdInstitution": "Karlstad University"
+    }
+  },
+  "vp-4007": {
+    "rejectPhd": true
+  },
+  "vp-4216": {
+    "rejectPhd": true
+  },
+  "vp-3557": {
+    "acceptPhd": true
+  },
+  "vp-3695": {
+    "acceptPhd": true
+  },
+  "vp-3843": {
+    "acceptPhd": true
+  }
+}

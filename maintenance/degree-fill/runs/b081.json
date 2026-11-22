@@ -1,0 +1,209 @@
+{
+  "batch": "b081",
+  "results": [
+    {
+      "id": "vp-4988",
+      "found": false,
+      "note": "Arizona profile lists no education. Searches surfaced Penn State and Osaka namesakes, but no source unambiguously connects their degrees to the Arizona researcher."
+    },
+    {
+      "id": "vp-4989",
+      "found": true,
+      "undergradInstitution": "East Texas Baptist University",
+      "msInstitution": "University of Nevada, Las Vegas",
+      "source": "https://tftv.arizona.edu/profile/irenenguyen/",
+      "quote": "MFA in Theatre Arts with an emphasis in Scenic Design from the University of Nevada, Las Vegas, and a BA from East Texas Baptist University.",
+      "note": "MFA is recorded as a master's degree, not a research doctorate. Personal website returned 403."
+    },
+    {
+      "id": "vp-4990",
+      "found": false,
+      "note": "Supplied directory URL is unavailable. Replacement directory https://dan.uwo.ca/people/full-time-faculty/index.html lists Thi (Christina) Huynh without education or an individual profile link. No qualifying degree source found."
+    },
+    {
+      "id": "vp-4991",
+      "found": false,
+      "note": "McMaster Experts profile contains no education. Additional institutional and clinical searches did not establish degree-granting institutions."
+    },
+    {
+      "id": "vp-4992",
+      "found": true,
+      "mdInstitution": "Western University",
+      "undergradInstitution": "Carleton University",
+      "undergradYear": "2004",
+      "source": "https://experts.mcmaster.ca/people/qngo",
+      "quote": "MD\nWestern University (2002 - 2006)\nB.Sc\nCarleton University (1999 - 2004)",
+      "note": "Master's entry is explicitly MHPE (c), so completion is not established and msInstitution is omitted."
+    },
+    {
+      "id": "vp-4994",
+      "found": false,
+      "note": "SEAFLI profile states no degrees. Wisconsin's 2021 commencement program lists Hong Thi Dinh among master's degree candidates; candidacy alone does not establish completion. A committee CV search result mentions an MA, but its live page presented a bot challenge."
+    },
+    {
+      "id": "vp-4996",
+      "found": true,
+      "undergradInstitution": "Emily Carr University of Art + Design",
+      "undergradYear": "2009",
+      "msInstitution": "Scuola Politecnica di Design",
+      "source": "https://design.osu.edu/sites/default/files/2026-03/amandahuynh_osu-cv_select_20260223.pdf",
+      "quote": "Emily Carr University of Art + Design, Vancouver, Canada\n2005 – 2009\nBachelor of Design (BDes) Industrial Design",
+      "note": "Second source https://design.osu.edu/people/huynh.310 states: \"MSc, Food Design, Scuola Politecnica di Design (2016)\". The faculty page labels the 2009 Emily Carr degree MDes; the linked CV explicitly calls it BDes."
+    },
+    {
+      "id": "vp-5000",
+      "found": false,
+      "note": "Boston University profile and additional university searches provide appointment and publications but no explicit education. Dental-practitioner namesakes were not used."
+    },
+    {
+      "id": "vp-5001",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "Northeastern University",
+      "phdYear": "2022",
+      "undergradInstitution": "Polytechnic University of Turin",
+      "source": "https://www.khoury.northeastern.edu/people/tien-vo-huu/",
+      "quote": "PhD in Cybersecurity, Northeastern University\nBS in Computer Engineering, Polytechnic University of Turin — Italy",
+      "note": "Second source https://khoury.northeastern.edu/~noubir/index.html states: \"Tien Vo-Huu (BS University of Turin, Italy, PhD'2022)\" under graduated PhD alumni. Official pages' indexed text was readable, but direct fetches returned 429. The individual profile specifies Polytechnic University of Turin."
+    },
+    {
+      "id": "vp-5002",
+      "found": true,
+      "msInstitution": "Columbia University",
+      "source": "https://apply.jrn.columbia.edu/register/facultytextduyknight102220",
+      "quote": "Duy Linh Tu ('99 M.S.)",
+      "note": "Columbia Journalism School's official faculty spotlight identifies its master's alumnus; the supplied faculty profile also explicitly identifies him as a graduate of its program."
+    },
+    {
+      "id": "vp-5004",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "University of Missouri",
+      "undergradInstitution": "Foreign Trade University",
+      "msInstitution": "Wright State University",
+      "source": "https://catalog.missouri.edu/faculty/",
+      "quote": "Hoang, Hoa Thi; Sr Resrch Asoc; Applied Soc Sci; Doctor of Philosophy; University of Missouri",
+      "note": "Catalog indexed text was readable; direct fetch timed out. Second source https://fapri.missouri.edu/staff-member/hoa-t-k-hoang/ states: \"Master’s degree in Social and Applied Economics from Wright State University\" and \"BA in International Economics at Foreign Trade University in Hanoi, Vietnam.\" No completion year stated."
+    },
+    {
+      "id": "vp-5006",
+      "found": true,
+      "mdInstitution": "Kansas City University",
+      "msInstitution": "William Woods University",
+      "source": "https://www.pdx.edu/business/profile/tien-james",
+      "quote": "D.O.\nUniversity of Health Sciences\nMBA\nWilliam Woods University",
+      "note": "DO is a professional medical degree. Institution name normalized using https://digitalcommons.kansascity.edu/archives/: \"University of Health Sciences (UHS), August 1980 - June 2004\" and \"Kansas City University (KCU), 2015 - present day.\""
+    },
+    {
+      "id": "vp-5009",
+      "found": false,
+      "note": "Utah directory lists Research Scientist (PhD) I but no degree institution or year. A physics dissertation citation surfaced, but its dissertation record could not be verified. Houston chemistry and San Diego engineering namesakes were excluded."
+    },
+    {
+      "id": "vp-5011",
+      "found": true,
+      "msInstitution": "University of Georgia",
+      "source": "https://www.cmlt.uga.edu/directory/people/minh-trang-thi-nguyen",
+      "quote": "She completed her M.Ed. at the University of Georgia",
+      "note": "Linked DOCX CV could not be read through the web tool; an in-memory download attempt failed because network name resolution was unavailable."
+    },
+    {
+      "id": "vp-5014",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "Northwestern University",
+      "phdYear": "2013",
+      "source": "https://www.math.northwestern.edu/graduate/alumni.html",
+      "quote": "2013 | Ian Le | David Nadler | Higher Laminations and Affine Buildings | University of Chicago",
+      "note": "Official graduate dissertation listing matches the research title indexed in his ANU research portal. Corroborating source https://uwaterloo.ca/daily-bulletin/2018-08-03 states: \"He received his PhD in mathematics from Northwestern University in 2013.\""
+    },
+    {
+      "id": "vp-5018",
+      "found": false,
+      "note": "NTU team page identifies Bich Ngoc Ann Tran as Principal Research Fellow but states no education. Additional institutional searches found no identity-resolved degree source; other Bich Ngoc Tran profiles were excluded."
+    },
+    {
+      "id": "vp-5031",
+      "found": true,
+      "undergradInstitution": "University of Virginia",
+      "msInstitution": "University of Virginia",
+      "source": "https://www.law.virginia.edu/faculty/profile/cql7a/1594761",
+      "quote": "Le earned his B.A., with high distinction, and M.A. (in government) from the University of Virginia.",
+      "note": "JD is not a research doctorate."
+    },
+    {
+      "id": "vp-5035",
+      "found": true,
+      "undergradInstitution": "San Francisco State University",
+      "undergradYear": "1995",
+      "source": "https://health.ucdavis.edu/nursing/ourteam/faculty/Luu_Bio.html",
+      "quote": "Luu earned a Bachelor of Science Degree in Biochemistry from San Francisco State University in 1995.",
+      "note": "PharmD is not a research doctorate or medical degree for the requested fields."
+    },
+    {
+      "id": "vp-5039",
+      "found": true,
+      "undergradInstitution": "California State University, Chico",
+      "msInstitution": "University of Colorado Boulder",
+      "source": "https://art.uark.edu/undergraduate-program/studio-art/ceramics.php",
+      "quote": "Lopez received a B.F.A. from California State University of Chico and an M.F.A. from the University of Colorado at Boulder.",
+      "note": "Institution names normalized. MFA is recorded as a master's degree, not a research doctorate. Personal website could not be fetched."
+    },
+    {
+      "id": "vp-5040",
+      "found": true,
+      "mdInstitution": "University of Oklahoma",
+      "source": "https://medicine.ouhsc.edu/academic-departments/pediatrics/divisions/hospital-medicine/fellowship/faculty-and-staff/matthew-le-md",
+      "quote": "Matthew Le, MD ... Education: ... University of Oklahoma College of Medicine, Oklahoma City, OK"
+    },
+    {
+      "id": "vp-5041",
+      "found": true,
+      "mdInstitution": "Touro University California",
+      "source": "https://osu.cloud-cme.com/assets/osu/data/2022_spring_fling_virtual_syllabus.pdf",
+      "quote": "Mark Thai, D.O.\nDr. Mark Thai graduated from Touro California",
+      "note": "Official employer CME biography. DO is recorded as a professional medical degree."
+    },
+    {
+      "id": "vp-5043",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "University of Notre Dame",
+      "phdYear": "2022",
+      "msInstitution": "University of Notre Dame",
+      "source": "https://math.nd.edu/graduate/doctorates-awarded/",
+      "quote": "2022 ... Doan Le ... On the Coisotropic Subalgebras of a Complex Semisimple Lie Algebra",
+      "note": "Doctoral dissertation listing explicitly identifies his placement at IUPUI. Second source https://archives.nd.edu/commencement/2015-05-15_Commencement.pdf states: \"Doan Vu Ngoc Le, Tay Ninh, Viet Nam / Degree: Master of Science / Major Subject: Mathematics\". Linked doctoral repository redirected to an inaccessible page."
+    },
+    {
+      "id": "vp-5045",
+      "found": true,
+      "undergradInstitution": "University of California, Los Angeles",
+      "undergradYear": "1998",
+      "msInstitution": "University of California, Los Angeles",
+      "mdInstitution": "Case Western Reserve University",
+      "source": "https://hsc.unm.edu/directory/tran-huy.html",
+      "quote": "Bachelor of Science, University of California, Los Angeles ... 1998 ... Master of Science, University of California, Los Angeles ... Medical Doctorate, Case Western Reserve University",
+      "note": "Clinical internship, residency, and neurocritical-care fellowship are not recorded as postdoctoral research."
+    },
+    {
+      "id": "vp-5047",
+      "found": true,
+      "undergradInstitution": "Tufts University",
+      "undergradYear": "1997",
+      "source": "https://www.usfca.edu/law/faculty/monalisa-vu",
+      "quote": "Tufts University, BA in Political Science, 1997",
+      "note": "JD is not a research doctorate."
+    },
+    {
+      "id": "vp-5048",
+      "found": true,
+      "undergradInstitution": "University of California, Davis",
+      "undergradYear": "1999",
+      "msInstitution": "Western University of Health Sciences",
+      "source": "https://www.chapman.edu/our-faculty/files/curriculum-vita/mayngan-stone.pdf",
+      "quote": "Bachelor of Science in Biology: University of California, Davis, CA: 1999",
+      "note": "Second source https://www.chapman.edu/our-faculty/mayngan-stone.aspx states: \"Western University of Health Sciences, Master of Science\"."
+    }
+  ]
+}

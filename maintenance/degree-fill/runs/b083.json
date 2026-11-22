@@ -1,0 +1,68 @@
+{
+  "batch": "b083",
+  "results": [
+    {
+      "id": "vp-5109",
+      "found": false,
+      "note": "Hamburg profile lists contact and teaching information but no education or CV. Additional searches found no identity-matched degree evidence."
+    },
+    {
+      "id": "vp-5112",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "ESPCI Paris – PSL",
+      "msInstitution": "Sorbonne University",
+      "postdocInstitution": "AMOLF",
+      "source": "https://www.lbe.espci.fr/spip.php?id_rubrique=12&page=rubrique",
+      "quote": "master ... at Université Pierre et Marie Curie (now Sorbonne Université). He did a PhD at ESPCI Paris",
+      "note": "Completed postdoc corroborated at https://www.ip-paris.fr/actualites/arn-et-ia-les-recherches-de-philippe-nghe-aux-frontieres-des-origines-de-la-vie-et-de-la : “après une thèse à l’ESPCI et un postdoctorat à AMOLF (Pays-Bas)”. No degree year verified."
+    },
+    {
+      "id": "vp-5113",
+      "found": false,
+      "note": "Lille profile and Parcours tab contain no education history. Official hospital information and dissertation searches did not establish her degree institutions."
+    },
+    {
+      "id": "vp-5114",
+      "found": false,
+      "note": "Oslo profile is under construction and lists no education. A university press release dated 2016-01-13 announces his forthcoming doctoral defense, but completed-degree details were not verified: https://kommunikasjon.ntb.no/pressemelding/9145013/fant-molekyl-som-kan-bremse-munnhulekreft?publisherId=7755763"
+    },
+    {
+      "id": "vp-5116",
+      "found": true,
+      "doctorate": "Doctor of Agriculture",
+      "phdInstitution": "Hiroshima University",
+      "phdYear": "2019",
+      "source": "https://hiroshima.repo.nii.ac.jp/record/2003180/files/k8029_3.pdf",
+      "quote": "NGUYEN VAN QUAN ... Hiroshima University ... Doctor of Agriculture ... September 2019",
+      "note": "Repository dissertation: Medicinal and Pharmaceutical Properties of Momilactones A and B; name, field and timeline match. Degree text was available in indexed repository content; direct PDF retrieval returned HTTP 429. Supplied PHIS page presented a verification challenge."
+    },
+    {
+      "id": "vp-5117",
+      "found": false,
+      "note": "Gachon's Korean and English directories identify LO THI VAN, Bioscience, with email vanbio93@gmail.com, but their Education sections are empty. Searches found no identity-matched degree record."
+    },
+    {
+      "id": "vp-5122",
+      "found": true,
+      "doctorate": "Doctor of Philosophy",
+      "phdInstitution": "Murdoch University",
+      "phdYear": "2020",
+      "undergradInstitution": "Academy of Finance",
+      "undergradYear": "2008",
+      "msInstitution": "Curtin University",
+      "source": "https://researchportal.murdoch.edu.au/esploro/profile/thi_le",
+      "quote": "2016–2020, Doctor of Philosophy, Murdoch University ... 2010–2012, Master Degree, Curtin University ... 2004–2008, Bachelor of Accountancy(B.Acy.or B.Acc.or B.Accty), Academy Of Finance",
+      "note": "Education text was available in indexed official research-portal content; direct retrieval returned HTTP 403."
+    },
+    {
+      "id": "vp-5124",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "Monash University",
+      "source": "https://www.womenin-ai.com/",
+      "quote": "Dr Thuy-Linh Nguyen holds a PhD in Computer Science at Monash University",
+      "note": "ACU academic group's member biography matches the supplied profile's name, school and expertise. No doctorate year verified."
+    }
+  ]
+}

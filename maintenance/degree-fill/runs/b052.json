@@ -1,0 +1,221 @@
+{
+  "batch": "b052",
+  "results": [
+    {
+      "id": "vp-4044",
+      "found": true,
+      "mdInstitution": "UNT Health Fort Worth",
+      "source": "https://catalog.shsu.edu/graduate-and-professional/faculty/faculty.pdf",
+      "quote": "DO, Univ of N. Texas Hlth Sci Cnt",
+      "note": "Institution normalized to its current name; https://www.unthealth.edu/marketing-and-communications/resources/media-contact.html states: \"The official name of this institution is UNT Health Fort Worth.\""
+    },
+    {
+      "id": "vp-4045",
+      "found": false,
+      "note": "Checked the department directory, linked faculty profile, and other UHD search results. No explicit degree institutions or years found; excluded a younger Northwestern doctoral student with the same name."
+    },
+    {
+      "id": "vp-4046",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "Charles Darwin University",
+      "undergradInstitution": "The University of Queensland",
+      "undergradYear": "2005",
+      "source": "https://researchnow.flinders.edu.au/en/persons/thuy-pham/",
+      "quote": "PhD, ... Charles Darwin University ... Bachelor (Honours), Environmental Management/Tropical Forestry, University of Queensland ... 2002 → 2005",
+      "note": "Existing phdYear omitted. Ellipses separate verbatim excerpts from the education section."
+    },
+    {
+      "id": "vp-4047",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "University of Liverpool",
+      "source": "https://www.rmit.edu.au/profiles/n/tram-nguyen3",
+      "quote": "She completed her PhD in Management Studies at the University of Liverpool (2019)",
+      "note": "Existing phdYear omitted."
+    },
+    {
+      "id": "vp-4049",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "The University of Texas at Arlington",
+      "phdYear": "2024",
+      "source": "https://mavmatrix.uta.edu/financerealestate_dissertations/45/",
+      "quote": "University of Texas at Arlington ... Summer 2024 ... Doctor of Philosophy in Finance",
+      "note": "Dissertation author Hanh T. H. Phan matches the name, finance/real-estate field, and timeline. Identity corroboration: https://sicss.io/participants identifies Chatham's Hanh Phan as a UTA finance/real-estate PhD."
+    },
+    {
+      "id": "vp-4054",
+      "found": true,
+      "undergradInstitution": "University at Buffalo",
+      "undergradYear": "2014",
+      "msInstitution": "University at Buffalo",
+      "source": "https://management.buffalo.edu/faculty/academic-departments/accounting-law/faculty/cassie-phuong-nguyen.html",
+      "quote": "MS, School of Management, University at Buffalo\nBS, School of Management, University at Buffalo",
+      "note": "Linked CV https://management.buffalo.edu/content/dam/mgt/Faculty-and-Research/Accounting-Law/Documents/cassie-phuong-nguyen.pdf states: \"Bachelor of Science in Accounting, May 2014\"."
+    },
+    {
+      "id": "vp-4055",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "University of North Texas",
+      "undergradYear": "2008",
+      "msInstitution": "University at Buffalo",
+      "source": "https://www.unomaha.edu/college-of-business-administration/news/2023/10/chen-le-papers.php",
+      "quote": "Bachelor of Science ... in 2008 ... master’s in financial economics from University at Buffalo ... Ph.D. in Accounting from University or North Texas.",
+      "note": "Source's 'University or North Texas' is a typographical error normalized to University of North Texas. Bachelor's institution is not named."
+    },
+    {
+      "id": "vp-4060",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "Virginia Commonwealth University",
+      "source": "https://catalog.towson.edu/undergraduate/university/faculty/faculty.pdf",
+      "quote": "Nhung Hendy\nProfessor\nManagement\n2005\nPh.D., Virginia Commonwealth University",
+      "note": "The faculty-list year is not identified as a graduation year, so no phdYear reported."
+    },
+    {
+      "id": "vp-4063",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "West Virginia University",
+      "undergradInstitution": "Pennsylvania Western University",
+      "msInstitution": "West Virginia University",
+      "source": "https://catalog.uis.edu/faculty/faculty.pdf",
+      "quote": "B.S. Clarion University of Pennsylvania, M.A. West Virginia University, Ph.D. West Virginia University",
+      "note": "Clarion normalized to its current successor institution. https://www.pennwest.edu/_resources/docs/about/offices-services/clery-report-clarion2022.pdf states: \"California, Clarion and Edinboro universities integrated to become Pennsylvania Western University on July 1, 2022.\""
+    },
+    {
+      "id": "vp-4066",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "University of Central Florida",
+      "undergradInstitution": "Inter American University of Puerto Rico",
+      "msInstitution": "University of Central Florida",
+      "source": "https://www.centralstate.edu/sites/default/files/2023-04/2022-2023%20Catalog%20-rev%20FINAL.pdf",
+      "quote": "B.A., Inter American University, Puerto Rico\nM.A. & Ph.D. University of Central Florida (*2018)",
+      "note": "The parenthetical catalog year is not explicitly a degree year; omitted."
+    },
+    {
+      "id": "vp-4067",
+      "found": true,
+      "undergradInstitution": "Michigan State University",
+      "source": "https://www.ketchum.edu/directory/nhung-tran",
+      "quote": "BS, Michigan State University",
+      "note": "OD and optometry residency are not research doctorates or postdoctoral research appointments."
+    },
+    {
+      "id": "vp-4068",
+      "found": true,
+      "undergradInstitution": "University of South Alabama",
+      "msInstitution": "University of Phoenix",
+      "source": "https://uwf.edu/ukcoh/departments/school-of-nursing/faculty/minh-phuoc-tina-ho.html",
+      "quote": "BSN at the University of South Alabama, MSN and Master’s in Health Care Administration (MHA) at the University of Phoenix",
+      "note": "DNP excluded from research-doctorate fields."
+    },
+    {
+      "id": "vp-4072",
+      "found": true,
+      "mdInstitution": "Johns Hopkins University",
+      "source": "https://profiles.icahn.mssm.edu/vinh-tung-nguyen",
+      "quote": "MD, Johns Hopkins University School of Medicine"
+    },
+    {
+      "id": "vp-4073",
+      "found": true,
+      "mdInstitution": "New York Medical College",
+      "source": "https://doctors.matherhospital.org/details/1499/tien-nguyen-cardiology-east_setauket",
+      "quote": "Medical Schools\nNew York Medical College, 1993 - 1995",
+      "note": "Official Northwell/Mather employer profile matches the cardiologist in East Setauket."
+    },
+    {
+      "id": "vp-4074",
+      "found": true,
+      "mdInstitution": "University of Arizona",
+      "source": "https://www.youtube.com/watch?v=NomFNs2lzs8",
+      "quote": "Dr. Truong earned her medical degree from University of Arizona, School of Medicine.",
+      "note": "RWJBarnabas Health's official video description identifies the Rutgers vascular surgeon. Description available in search; opening the video page was throttled."
+    },
+    {
+      "id": "vp-4075",
+      "found": true,
+      "undergradInstitution": "University of California, Los Angeles",
+      "mdInstitution": "Rosalind Franklin University of Medicine and Science",
+      "msInstitution": "University of Rochester",
+      "source": "https://facultyaffairs.rbhs.rutgers.edu/alp-aspiringtrack26-27/",
+      "quote": "bachelor degree ... university of California in Los Angeles ... medical degree ... Rosalind Franklin university ... master of clinical investigation ... university of Rochester",
+      "note": "Ellipses separate verbatim excerpts from Minh-Tu Do's biography."
+    },
+    {
+      "id": "vp-4076",
+      "found": true,
+      "undergradInstitution": "University of Virginia",
+      "mdInstitution": "Chicago College of Osteopathic Medicine",
+      "msInstitution": "University of Houston",
+      "source": "https://profiles.hopkinsmedicine.org/provider/thuy-l-ngo/2703614",
+      "quote": "undergraduate degree ... University of Virginia ... D.O. from the Chicago College of Osteopathic Medicine ... M.Ed. from the University of Houston.",
+      "note": "Ellipses separate verbatim excerpts. Clinical residency and fellowship excluded from postdocInstitution."
+    },
+    {
+      "id": "vp-4077",
+      "found": true,
+      "mdInstitution": "Augusta University",
+      "undergradInstitution": "University of Georgia",
+      "undergradYear": "2009",
+      "source": "https://www.augusta.edu/faculty/directory/view.php?id=KHNGUYEN",
+      "quote": "MD, Medicine Augusta University, 2013\nBS, Biochemistry and Molecular Biology University of Georgia, 2009"
+    },
+    {
+      "id": "vp-4078",
+      "found": true,
+      "mdInstitution": "Johns Hopkins University",
+      "undergradInstitution": "Johns Hopkins University",
+      "undergradYear": "2003",
+      "source": "https://medschool.duke.edu/profile/khoi-duc",
+      "quote": "M.D., Johns Hopkins University, School of Medicine 2007 ... B.A., Johns Hopkins University 2003",
+      "note": "Education text was available in the search-indexed official profile; the opened page omitted its dynamic education section."
+    },
+    {
+      "id": "vp-4079",
+      "found": true,
+      "mdInstitution": "University of Virginia",
+      "source": "https://www.uvahealth.com/providers/Tri-Le-1174847669",
+      "quote": "Dr. Le received his medical degree from the University of Virginia School of Medicine."
+    },
+    {
+      "id": "vp-4080",
+      "found": true,
+      "mdInstitution": "University of Florida",
+      "source": "https://www.vumc.org/anesthesiology/person/huong-cindy-thi-le-md",
+      "quote": "MD, University of Florida College of Medicine, Gainesville, FL (2002)"
+    },
+    {
+      "id": "vp-4081",
+      "found": true,
+      "mdInstitution": "The University of Texas Health Science Center at Houston",
+      "source": "https://www.vumc.org/anesthesiology/node/1699",
+      "quote": "MD, McGovern Medical School, University of Texas Medical School at Houston, Houston, TX (2014)"
+    },
+    {
+      "id": "vp-4082",
+      "found": true,
+      "mdInstitution": "Pham Ngoc Thach University of Medicine",
+      "source": "https://www.universityclinicalhealth.com/hieu-quang-vo-md",
+      "quote": "Medical Degree:\nCentre Univ. De Form. Et Perfect. Des Prof. De Sante, Ho Chi Minh City, Vietnam",
+      "note": "Historical institution normalized to its current name; institutional history: https://www.auf.org/membre/universite-de-medecine-pham-ngoc-thach-2/. UTHSC's linked individual profile timed out."
+    },
+    {
+      "id": "vp-4084",
+      "found": true,
+      "mdInstitution": "University of North Carolina at Chapel Hill",
+      "source": "https://www.nm.org/doctors/1326054669",
+      "quote": "MD, University of North Carolina School of Medicine - 1997",
+      "note": "Official Northwestern Medicine profile linked from the faculty page."
+    },
+    {
+      "id": "vp-4085",
+      "found": false,
+      "note": "Northwestern faculty profile and official research-news pages identify a PhD but state no degree institution or year. No identity-resolved dissertation record found; LinkedIn's institution and dates lack an explicit degree type and were not used."
+    }
+  ]
+}

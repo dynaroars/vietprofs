@@ -85,7 +85,10 @@ export const ALMA_MATERS: AlmaMaterInfo[] = [
     name: 'VNU University of Engineering and Technology',
     short: 'UET',
     vi: 'Trường Đại học Công nghệ, ĐHQG Hà Nội',
-    variants: ['university of engineering and technology, vietnam national university, hanoi'],
+    variants: [
+      'university of engineering and technology, vietnam national university, hanoi',
+      'university of engineering and technology, vietnam national university hanoi',
+    ],
   },
   {
     name: 'Foreign Trade University',
@@ -123,7 +126,10 @@ export const ALMA_MATERS: AlmaMaterInfo[] = [
     name: 'University of Medicine and Pharmacy at Ho Chi Minh City',
     short: 'UMP HCMC',
     vi: 'Đại học Y Dược TP. Hồ Chí Minh',
-    variants: ['ho chi minh city university of medicine and pharmacy'],
+    variants: [
+      'ho chi minh city university of medicine and pharmacy',
+      'university of medicine and pharmacy, ho chi minh city',
+    ],
   },
   {
     name: 'Ho Chi Minh City University of Technology and Education',
@@ -134,7 +140,10 @@ export const ALMA_MATERS: AlmaMaterInfo[] = [
     name: 'Ho Chi Minh City University of Architecture',
     short: 'UAH',
     vi: 'Trường Đại học Kiến trúc TP. Hồ Chí Minh',
-    variants: ['university of architecture, ho chi minh city'],
+    variants: [
+      'university of architecture, ho chi minh city',
+      'university of architecture ho chi minh city',
+    ],
   },
   {
     name: 'Hanoi University of Civil Engineering',
@@ -149,6 +158,10 @@ export const ALMA_MATERS: AlmaMaterInfo[] = [
     variants: [
       'danang university of technology',
       'university of science and technology, the university of danang',
+      'the university of danang – university of science and technology',
+      'university of danang - university of science and technology',
+      'the university of danang - university of science and technology',
+      'the university of danang, university of science and technology',
     ],
   },
   { name: 'Hanoi Medical University', short: 'HMU', vi: 'Trường Đại học Y Hà Nội' },
@@ -158,7 +171,11 @@ export const ALMA_MATERS: AlmaMaterInfo[] = [
     name: 'Hanoi University',
     short: 'HANU',
     vi: 'Trường Đại học Hà Nội',
-    variants: ['hanoi university, hanoi'],
+    variants: [
+      'hanoi university, hanoi',
+      'hanoi foreign studies university',
+      'hanoi university of foreign studies',
+    ],
   },
   { name: 'Diplomatic Academy of Vietnam', short: 'DAV', vi: 'Học viện Ngoại giao' },
   { name: 'Banking Academy of Vietnam', short: 'BAV', vi: 'Học viện Ngân hàng' },
@@ -187,6 +204,57 @@ export const ALMA_MATERS: AlmaMaterInfo[] = [
     name: 'Thai Nguyen University of Technology',
     short: 'TNUT',
     vi: 'Trường Đại học Kỹ thuật Công nghiệp, Đại học Thái Nguyên',
+  },
+  {
+    name: 'VNU University of Social Sciences and Humanities, Hanoi',
+    short: 'USSH',
+    vi: 'Trường Đại học Khoa học Xã hội và Nhân văn, ĐHQG Hà Nội',
+    variants: ['university of social sciences and humanities, vietnam national university, hanoi'],
+  },
+  {
+    name: 'University of Social Sciences and Humanities, Vietnam National University Ho Chi Minh City',
+    short: 'HCMUSSH',
+    vi: 'Trường Đại học Khoa học Xã hội và Nhân văn, ĐHQG-HCM',
+    variants: [
+      'ho chi minh city university of social sciences and humanities',
+      'university of social sciences and humanities, ho chi minh city',
+    ],
+  },
+  {
+    name: 'University of Information Technology, Vietnam National University Ho Chi Minh City',
+    short: 'UIT',
+    vi: 'Trường Đại học Công nghệ Thông tin, ĐHQG-HCM',
+    variants: [
+      'vietnam national university ho chi minh city, university of information technology',
+    ],
+  },
+  {
+    name: 'International University, Vietnam National University Ho Chi Minh City',
+    short: 'HCMIU',
+    vi: 'Trường Đại học Quốc tế, ĐHQG-HCM',
+  },
+  {
+    name: 'Banking University of Ho Chi Minh City',
+    short: 'BUH',
+    vi: 'Trường Đại học Ngân hàng TP. Hồ Chí Minh',
+    variants: ['ho chi minh city university of banking'],
+  },
+  {
+    name: 'Academy of Finance',
+    short: 'AOF',
+    vi: 'Học viện Tài chính',
+    variants: ['hanoi academy of finance'],
+  },
+  {
+    name: 'University of Science and Technology of Hanoi',
+    short: 'USTH',
+    vi: 'Trường Đại học Khoa học và Công nghệ Hà Nội',
+  },
+  { name: 'Vietnam Maritime University', short: 'VMU', vi: 'Trường Đại học Hàng hải Việt Nam' },
+  {
+    name: 'Hue University of Sciences',
+    vi: 'Trường Đại học Khoa học, Đại học Huế',
+    variants: ['university of sciences, hue university'],
   },
   { name: 'Can Tho University', vi: 'Trường Đại học Cần Thơ' },
   { name: 'Hue University', vi: 'Đại học Huế' },

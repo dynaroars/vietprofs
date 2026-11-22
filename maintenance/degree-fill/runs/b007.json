@@ -1,0 +1,169 @@
+{
+  "batch": "b007",
+  "results": [
+    {
+      "id": "vp-0858",
+      "found": false,
+      "note": "Illinois profile lists no education. No additional degree information was verified on an accessible official page."
+    },
+    {
+      "id": "vp-0859",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "University of Illinois Urbana-Champaign",
+      "phdYear": "2014",
+      "undergradInstitution": "University of Washington",
+      "undergradYear": "2001",
+      "mdInstitution": "University of Illinois Chicago",
+      "source": "https://www.senate.illinois.edu/2024-2025/20241209senate/EP25031_FINAL_20241209.pdf",
+      "quote": "Univ of Washington-Seattle, Bachelor of Science, 2001;\nUniv of Illinois at Chicago, Doctor of Medicine, 2011;\nUniv of IL Urbana-Champaign, Doctor of Philosophy, 2014;",
+      "note": "PDF page 153 identifies Kim-Phung Thi Nguyen with knguyen1, matching the faculty profile."
+    },
+    {
+      "id": "vp-0860",
+      "found": false,
+      "note": "Loma Linda profile identifies a DO but lists no education institutions. The education subpage was inaccessible; no identity-resolved official degree source was verified."
+    },
+    {
+      "id": "vp-0861",
+      "found": false,
+      "note": "https://llu.edu/academics/faculty/nguyen-thuy-huynh/education lists only the already-recorded medical institution: 'Doctor of Medicine, American Univ of Caribbean, 1991'. No additional eligible field found."
+    },
+    {
+      "id": "vp-0862",
+      "found": false,
+      "note": "USC profile confirms the already-recorded MD institution and describes residency and clinical fellowship training. No additional eligible degree or research postdoc found; linked CTSI profile returned 404 on follow-up."
+    },
+    {
+      "id": "vp-0864",
+      "found": true,
+      "undergradInstitution": "Bates College",
+      "source": "https://healthcare.utah.edu/find-a-doctor/duy-pham",
+      "quote": "Undergraduate | Biological Chemistry - Bates College | B.S."
+    },
+    {
+      "id": "vp-0866",
+      "found": false,
+      "note": "NYU's indexed faculty page lists only the already-recorded MD from the University of California, Los Angeles. Direct retrieval timed out; no additional eligible field verified."
+    },
+    {
+      "id": "vp-0867",
+      "found": true,
+      "mdInstitution": "Oklahoma State University",
+      "source": "https://nyulangone.org/doctors/1902267925/tuan-nguyen",
+      "quote": "DO from Oklahoma State University, 2016"
+    },
+    {
+      "id": "vp-0869",
+      "found": false,
+      "source": "https://findadoctor.kansashealthsystem.com/provider/trang-t-ho/1220716",
+      "quote": "Medical School: University of Kansas School of Medicine, Doctor of Medicine, 2007",
+      "note": "KUMC faculty profile repeatedly returned 502. The health-system profile confirms the existing medical institution but gives no additional eligible field. It lists medical graduation in 2007; the batch's undergradYear 2013 remains unverified."
+    },
+    {
+      "id": "vp-0870",
+      "found": false,
+      "note": "KUMC faculty profile repeatedly returned 502. Searches found no accessible, identity-resolved official source stating additional eligible education fields."
+    },
+    {
+      "id": "vp-0871",
+      "found": true,
+      "mdInstitution": "Des Moines University",
+      "source": "https://uihc.org/providers/than-pham",
+      "quote": "DO, Des Moines University, Des Moines, Iowa",
+      "note": "The separately listed PharmD is excluded under the brief."
+    },
+    {
+      "id": "vp-0872",
+      "found": true,
+      "undergradInstitution": "University of Florida",
+      "undergradYear": "2008",
+      "mdInstitution": "Tufts University School of Medicine",
+      "source": "https://www.centerforboneandjoint.com/md/huy-nguyen-md",
+      "quote": "Tufts University School of Medicine\nDoctor of Medicine\n2009 - 2013\nUniversity of Florida\nBachelor of Science, Microbiology and Cell Science\n2004 - 2008",
+      "note": "Identity corroborated by this employer profile's Brown appointment and University Orthopedics employment. Brown's linked practice page states he left in May 2022 for Florida: https://universityorthopedics.com/physicians/nguyen/index.html."
+    },
+    {
+      "id": "vp-0873",
+      "found": true,
+      "msInstitution": "University of Texas Health Science Center at Houston",
+      "source": "https://health.ucdavis.edu/pediatrics/team/42636/anh-nguyen",
+      "quote": "M.P.H., Public Health, University of Texas School of Public Health, Houston TX 2015"
+    },
+    {
+      "id": "vp-0874",
+      "found": true,
+      "msInstitution": "University of Texas at Arlington",
+      "source": "https://utswmed.org/doctors/kimloan-phi-nguyen/",
+      "quote": "a master’s degree in health care administration and a bachelor’s degree in biology from the University of Texas at Arlington."
+    },
+    {
+      "id": "vp-0875",
+      "found": false,
+      "note": "UF Health Jacksonville faculty page was blocked by robots/access restrictions. No additional eligible field was verified on another official employer page; LinkedIn snippets were not used to infer degrees."
+    },
+    {
+      "id": "vp-0876",
+      "found": false,
+      "source": "https://www.uh.edu/pharmacy/about-us/directory-home/pptr-faculty/kimberly-nguyen/",
+      "quote": "Pharm.D., University of Houston, Houston, Texas",
+      "note": "Profile lists a PharmD and pharmacy residencies, which do not populate the requested fields. No bachelor's institution or year is stated; existing undergradYear 2019 remains unsupported by this page."
+    },
+    {
+      "id": "vp-0878",
+      "found": false,
+      "note": "Pittsburgh profile lists only the already-recorded undergraduate and medical institutions and an anesthesiology residency. No additional eligible field or degree year stated."
+    },
+    {
+      "id": "vp-0879",
+      "found": false,
+      "note": "Icahn profile lists the already-recorded Georgetown MD, internal medicine residency, and cardiology clinical fellowship. No additional eligible education field found."
+    },
+    {
+      "id": "vp-0880",
+      "found": true,
+      "undergradInstitution": "University of California, Los Angeles",
+      "source": "https://vivo.weill.cornell.edu/display/cwid-mtn9004",
+      "quote": "B.S., University of California, Los Angeles 2205",
+      "note": "The page literally prints 2205. This apparent source error was not reported as undergradYear or silently corrected."
+    },
+    {
+      "id": "vp-0882",
+      "found": false,
+      "note": "The current Stanford profile and printable profile contain no education. Search-indexed older Stanford materials mention education, but their education content could not be verified on live retrieval; no new field reported."
+    },
+    {
+      "id": "vp-0883",
+      "found": false,
+      "source": "https://profiles.stanford.edu/lisa-huynh",
+      "quote": "Residency: UPMC Physical Medicine and Rehabilitation Residency (2014) PA",
+      "note": "Profile confirms the existing MD institution but states no bachelor's institution or year. The listed 2014 is a residency year, not support for the batch's undergradYear 2014. Clinical fellowship was not classified as a research postdoc."
+    },
+    {
+      "id": "vp-0884",
+      "found": true,
+      "undergradInstitution": "University of California, Los Angeles",
+      "source": "https://profiles.stanford.edu/mai-truong",
+      "quote": "Dr. Truong received her Bachelor of Science from the University of California, Los Angeles in Neuroscience, graduating with honors.",
+      "note": "No bachelor's year is stated. The existing undergradYear 2020 is unsupported by this page, which separately lists medical education completed in 2003; no replacement year inferred."
+    },
+    {
+      "id": "vp-0885",
+      "found": false,
+      "note": "Stanford's indexed bio confirms the already-recorded Stanford BS in 2007 and UT Southwestern medical degree, followed by residency and a clinical hematology/oncology fellowship. Direct profile retrieval failed; no additional eligible field verified."
+    },
+    {
+      "id": "vp-0886",
+      "found": false,
+      "note": "UCR announcement confirms the already-recorded Creighton bachelor's and Virginia Commonwealth University medical education. No degree years, research doctorate, master's, or research postdoc stated; linked UCR profile yielded no readable content."
+    },
+    {
+      "id": "vp-0887",
+      "found": true,
+      "mdInstitution": "Sidney Kimmel Medical College at Thomas Jefferson University",
+      "source": "https://medschool.kp.org/content/dam/kp/som/homepage/student-life/KPSOM%20Catalog.pdf",
+      "quote": "Thien H. Nguyen, Clinical Assistant Professor. MD, Sidney Kimmel Medical College at Thomas Jefferson University",
+      "note": "Listed on catalog page 231. The faculty profile's linked physician page timed out."
+    }
+  ]
+}

@@ -1,0 +1,231 @@
+{
+  "batch": "b020",
+  "results": [
+    {
+      "id": "vp-1941",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "University of Tsukuba",
+      "phdYear": "2015",
+      "undergradInstitution": "University of Tsukuba",
+      "undergradYear": "2010",
+      "msInstitution": "University of Tsukuba",
+      "postdocInstitution": "University of Tsukuba",
+      "source": "https://trios.tsukuba.ac.jp/en/researcher/0000004370",
+      "quote": "2015-03 | Ph.D. | University of Tsukuba\n2012-03 | Master | University of Tsukuba\n2010-03 | Bachelor | University of Tsukuba",
+      "note": "Same page: \"2015-04 -- 2015-07 | University of TsukubaPostdoc\"."
+    },
+    {
+      "id": "vp-1943",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "Japan Advanced Institute of Science and Technology",
+      "phdYear": "2009",
+      "undergradInstitution": "University of New South Wales",
+      "undergradYear": "2002",
+      "msInstitution": "Japan Advanced Institute of Science and Technology",
+      "postdocInstitution": "Kyoto University",
+      "source": "https://www.bic.kyoto-u.ac.jp/pathway/canhhao/CHNGUYEN_CV.pdf",
+      "quote": "2009 PhD ... Japan Advanced Institute of Science and Technology (JAIST) ... MS at JAIST ... 2002 BS ... University of New South Wales",
+      "note": "Ellipses separate verbatim excerpts. Same CV: \"Kyoto University\"; \"Postdoctoral researcher\". The work-history block records the completed Kyoto postdoc during April 2009–May 2013."
+    },
+    {
+      "id": "vp-1944",
+      "found": true,
+      "doctorate": "博士（農学）",
+      "phdInstitution": "Kyushu University",
+      "phdYear": "2024",
+      "source": "https://api.lib.kyushu-u.ac.jp/opac_download_md/7329537/agr1241_abstract.pdf",
+      "quote": "出版情報：Kyushu University, 2024, 博士（農学）, 課程博士",
+      "note": "Dissertation identifies Pham Thanh Dong and concerns an AI-based plant phenotyping platform, matching the current faculty profile's research."
+    },
+    {
+      "id": "vp-1945",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "Japan Advanced Institute of Science and Technology",
+      "phdYear": "2013",
+      "undergradInstitution": "VNU University of Science",
+      "undergradYear": "2008",
+      "msInstitution": "Japan Advanced Institute of Science and Technology",
+      "source": "https://researchers.general.hokudai.ac.jp/search/detail.html?lang=en&st=researcher&systemId=8e58d579faf50fb3520e17560c007669",
+      "quote": "PhD, Japan Advanced Institute of Science and Technology ... Sep. 2013 ... Master ... 2004 - 2008, Vietnam National University, Hanoi/Hanoi University of Science ... Bachelor",
+      "note": "Ellipses separate education-table excerpts. The JAIST master's row covers October 2009–September 2010. Another master's row names Hanoi University of Science; the singular msInstitution field uses JAIST."
+    },
+    {
+      "id": "vp-1946",
+      "found": false,
+      "note": "Stored AMU profile was inaccessible. Searches of employer pages and name variants did not establish an identity-matched education source."
+    },
+    {
+      "id": "vp-1947",
+      "found": false,
+      "note": "AMU directory returned no education. Searches found biographical leads, but no accessible employer page or unambiguous dissertation record explicitly establishing the degree institution."
+    },
+    {
+      "id": "vp-1948",
+      "found": true,
+      "doctorate": "ph.d. (philosophiae doctor)",
+      "phdInstitution": "University of Oslo",
+      "phdYear": "2021",
+      "source": "https://www.odont.uio.no/iko/forskning/aktuelt/arrangementer/disputaser/2021/",
+      "quote": "19. mars 2021 ... Maria H Pham ... graden ph.d. (philosophiae doctor)",
+      "note": "Completed dissertation also appears on the employer's departmental merits page: https://www.odont.uio.no/iko/english/about/organization/units/biomaterials/Merits/ — \"2021\"; \"Maria H. Pham - Cellular responses to fluoride-modified titanium surfaces\". Topic matches her profile's publications."
+    },
+    {
+      "id": "vp-1949",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "Blekinge Institute of Technology",
+      "phdYear": "2015",
+      "undergradInstitution": "Hanoi University of Science and Technology",
+      "undergradYear": "2004",
+      "msInstitution": "Hanoi University of Science and Technology",
+      "source": "https://www.bth.se/om-bth/personer/thi-my-chinh-chu",
+      "quote": "Bachelor and Master’s degrees from Hanoi University of Technology ... 2004 and 2007, respectively ... Blekinge Institute of Technology (BTH) ... Ph.D. ... 2015",
+      "note": "Ellipses separate verbatim biography excerpts. Hanoi University of Technology is normalized to its current English name."
+    },
+    {
+      "id": "vp-1952",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "University of Nottingham",
+      "phdYear": "2014",
+      "source": "https://people.cs.nott.ac.uk/psabl/",
+      "quote": "University of Nottingham ... Previous PhD students ... Trang Doan Thu ... Procedural reflection in agent prgramming languages (graduated 2014)",
+      "note": "Supervisor's official university page explicitly records graduation. Identity matches the agent-programming publications attributed to Trang Doan. The indexed dissertation PDF returned 404 and was not used for its submission year."
+    },
+    {
+      "id": "vp-1959",
+      "found": true,
+      "doctorate": "Doctorat",
+      "phdInstitution": "Sorbonne University",
+      "phdYear": "1999",
+      "undergradInstitution": "Université Paris-Saclay",
+      "undergradYear": "1994",
+      "msInstitution": "University of Montpellier",
+      "source": "https://www.metis.upmc.fr/sites/default/files/media/public_pperso/cv_ttNguyenTu.pdf",
+      "quote": "1996-1999 ... Doctorat ... Université P & M Curie ... 1996 ... D.E.A. ... Université Montpellier 2 ... 1994 ... Licence ... Université Paris Sud Orsay",
+      "note": "Ellipses separate verbatim education-table excerpts. Historical institutions are normalized to their current successor names. Existing postdocInstitution was omitted."
+    },
+    {
+      "id": "vp-1963",
+      "found": false,
+      "note": "Nantes profile states no education; the associated SPHERE page describes doctoral work without a completed research doctorate. An indexed Toulouse medical thesis was found, but its PDF returned 403, so no degree field is reported."
+    },
+    {
+      "id": "vp-1964",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "KU Leuven",
+      "phdYear": "2020",
+      "undergradInstitution": "Hanoi National University of Education",
+      "undergradYear": "2008",
+      "msInstitution": "Hasselt University",
+      "postdocInstitution": "KU Leuven",
+      "source": "https://www.maastrichtuniversity.nl/td-tran",
+      "quote": "2020-2023. Postdoc researcher (KU Leuven, Belgium). ... 2015-2020. PhD ... Master of Biostatistics (Hasselt University, Belgium). ... 2004-2008. Bachelor ... Hanoi National University of Education",
+      "note": "Ellipses separate verbatim career-history excerpts. The page also records a mathematics master's at Hanoi National University of Education; the singular msInstitution field uses Hasselt."
+    },
+    {
+      "id": "vp-1965",
+      "found": false,
+      "note": "Westminster profile contains no education. Its linked Westminster Research profile returned 403. Searches did not locate an accessible identity-matched degree source; the economist at Middlesex is a different person."
+    },
+    {
+      "id": "vp-1966",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "Virginia Polytechnic Institute and State University",
+      "phdYear": "2021",
+      "source": "https://researchportal.northumbria.ac.uk/en/persons/dr-nhung-nguyen/",
+      "quote": "Public Administration, PhD, Virginia Polytechnic Institute and State University\nAward Date: 15 May 2021"
+    },
+    {
+      "id": "vp-1967",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "University of Gothenburg",
+      "phdYear": "2015",
+      "undergradInstitution": "University of Science, Vietnam National University Ho Chi Minh City",
+      "undergradYear": "2004",
+      "msInstitution": "University of Science, Vietnam National University Ho Chi Minh City",
+      "postdocInstitution": "University of Gothenburg",
+      "source": "https://thenhuphangroup.com/thi-ngoc-nhu-phan/",
+      "quote": "2011- 2015 PhD ... University of Gothenburg ... 2006-2008 MSc ... Ho Chi Minh City University of Natural Sciences ... 2000-2004 Bachelor ... Post-doctoral Researcher",
+      "note": "Ellipses separate verbatim biography excerpts. Completed Gothenburg postdocs are listed for 2015–2016 and 2019–2020. The Vietnamese institution is normalized to its current English name."
+    },
+    {
+      "id": "vp-1969",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "Charles Darwin University",
+      "phdYear": "2023",
+      "source": "https://researchers.cdu.edu.au/en/persons/hoang-huong-le/",
+      "quote": "Le, H. H. (Author) ... 2023\nStudent thesis: Doctor of Philosophy (PhD) - CDU",
+      "note": "The profile links her thesis, Searching for Social Justice in Teacher Education in one Australian Regional University."
+    },
+    {
+      "id": "vp-1973",
+      "found": false,
+      "note": "Macquarie profile provides no education. A University of Utah PhD placement listing matches his published research title, but direct access returned 403; no degree is accepted from the search excerpt alone."
+    },
+    {
+      "id": "vp-1974",
+      "found": false,
+      "note": "Macquarie profile and employer research-centre listings contain no education. Searches using the full name and finance publication context did not locate an accessible, identity-matched degree statement."
+    },
+    {
+      "id": "vp-1975",
+      "found": false,
+      "note": "Melbourne Find an Expert profile lists research interests but no education. Searches returned several unrelated Phuong Nguyens; no accessible permitted source explicitly established this food-science lecturer's degrees."
+    },
+    {
+      "id": "vp-1977",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "University of Ulsan",
+      "phdYear": "2015",
+      "undergradInstitution": "University of Science and Technology, The University of Danang",
+      "undergradYear": "2009",
+      "postdocInstitution": "National University of Singapore",
+      "source": "https://pureadmin.qub.ac.uk/ws/files/183698841/ALL_TII_15_1120.pdf",
+      "quote": "B.S. ... Danang University of Technology ... 2009 ... Ph.D. ... University of Ulsan, Korea in 2015 ... Post-Doctoral Research Fellow ... National University of Singapore",
+      "note": "Ellipses separate verbatim author-biography excerpts in the current employer's repository. His linked personal page documents the subsequent completion of the Singapore appointment: https://sites.google.com/view/mienvan/."
+    },
+    {
+      "id": "vp-1979",
+      "found": false,
+      "note": "UQ Experts profile and Business School research pages describe appointments, publications and supervision but provide no explicit education. No identity-matched dissertation or linked CV was located."
+    },
+    {
+      "id": "vp-1980",
+      "found": false,
+      "note": "Warwick profile contains no education. Searches using Anh Tuan Le and Anhtuan Le with the cybersecurity research context did not locate an accessible official degree statement or unambiguous dissertation record."
+    },
+    {
+      "id": "vp-1983",
+      "found": false,
+      "note": "Adelaide profile contains no degree history. A biography in a linked publication mentions a PhD in International Relations without naming its institution; no supported institution or degree year was established."
+    },
+    {
+      "id": "vp-1986",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "University of East London",
+      "phdYear": "2019",
+      "msInstitution": "University of Sydney",
+      "source": "https://pure.roehampton.ac.uk/portal/en/persons/tri-tri-nguyen/",
+      "quote": "Accounting and Finance, PhD ... University of East London ... Award Date: 23 Aug 2019 ... Accounting, MSc, University of Sydney",
+      "note": "Ellipses separate verbatim education-section excerpts."
+    },
+    {
+      "id": "vp-1987",
+      "found": true,
+      "msInstitution": "University of Brighton",
+      "source": "https://research.brighton.ac.uk/en/persons/mylinh-nguyen/",
+      "quote": "Master, University of Brighton\nSept 2009 → Jun 2013",
+      "note": "Biography identifies the qualification as an MDes in Textiles with Business Studies. No research doctorate or separate bachelor's degree is stated."
+    }
+  ]
+}

@@ -1,0 +1,193 @@
+{
+  "batch": "b002",
+  "results": [
+    {
+      "id": "vp-0331",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "University of California, Los Angeles",
+      "phdYear": "1989",
+      "undergradInstitution": "Whittier College",
+      "undergradYear": "1977",
+      "source": "https://medicine.iu.edu/faculty/15114/duong-taihung",
+      "quote": "1989 | PhD | University of California, Los Angeles\n1977 | BA | Whittier College"
+    },
+    {
+      "id": "vp-0334",
+      "found": false,
+      "note": "GMU emeriti catalog lists LLB, MA and PhD without awarding institutions or years. The PDF repeatedly timed out; alternate GMU pages supplied no explicit degree details."
+    },
+    {
+      "id": "vp-0335",
+      "found": false,
+      "note": "Nicholls profile repeatedly timed out. Official faculty listings state no education. A potentially matching UNO dissertation record was located, but its redirected record was inaccessible; no degree inferred from LinkedIn snippets."
+    },
+    {
+      "id": "vp-0342",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "Clemson University",
+      "phdYear": "2017",
+      "source": "https://scholars.duke.edu/person/hy.huynh/credentials",
+      "quote": "Clemson University · 2017 Ph.D."
+    },
+    {
+      "id": "vp-0343",
+      "found": true,
+      "mdInstitution": "University of Alabama at Birmingham",
+      "source": "https://umc.edu/Faculty/Huynh_Thy_N/",
+      "quote": "University of Alabama School of Medicine, MD, Medicine | 2014",
+      "note": "Undergraduate fields already recorded. Residency and clinical fellowships were not treated as research doctorates or postdocs."
+    },
+    {
+      "id": "vp-0346",
+      "found": false,
+      "note": "UAB biography confirms the already-recorded medical school. No bachelor's institution, research doctorate or additional eligible degree was found; stored undergradYear 2024 remains unverified."
+    },
+    {
+      "id": "vp-0359",
+      "found": true,
+      "msInstitution": "Arizona State University",
+      "source": "https://search.asu.edu/profile/43716",
+      "quote": "M.Ed. Adult and Higher Education, Arizona State University 1991"
+    },
+    {
+      "id": "vp-0363",
+      "found": false,
+      "source": "https://www.bumc.bu.edu/neurology/profile/thanh-n-nguyen-md-frcpc-fsvin-faha/",
+      "quote": "Medical School: McGill University, Montréal (2000)",
+      "note": "Official neurology profile confirms the existing MD institution; no additional eligible degree found. Stored undergradYear 2018 is unsupported; the profile associates 2018–2019 with a teaching award."
+    },
+    {
+      "id": "vp-0379",
+      "found": false,
+      "note": "Personal site's About page confirms the existing Yale BA and UC San Diego MA and additionally lists an MFA from Cal State LA. No missing bachelor's year or research doctorate found."
+    },
+    {
+      "id": "vp-0380",
+      "found": true,
+      "msInstitution": "New York University",
+      "source": "https://experts.calstatela.edu/expert/phung-huynh/",
+      "quote": "M.F.A., Studio Art, New York University",
+      "note": "Recorded as a master's degree, not a research doctorate. This profile supplies no bachelor's completion year; stored undergradYear 2013 remains unverified."
+    },
+    {
+      "id": "vp-0384",
+      "found": false,
+      "source": "https://www.chapman.edu/our-faculty/viet-huong-nguyen.aspx",
+      "quote": "University of California, Los Angeles, Master of Public Health\nUniversity of Southern California, Master of Science",
+      "note": "Existing UCLA master's institution is valid; the page additionally documents a USC MS. Undergraduate fields already recorded. PharmD was not treated as a research doctorate."
+    },
+    {
+      "id": "vp-0388",
+      "found": false,
+      "source": "https://ealac.columbia.edu/chung-nguyen/",
+      "quote": "MA: Linguistics and Applied Linguistics, Vietnam National University\nBA: English Language and Culture, Hanoi University",
+      "note": "Both institutions already recorded. No degree years or research doctorate stated. Stored undergradYear 2017 remains unverified; the linked VietTBLT site supplies no additional education."
+    },
+    {
+      "id": "vp-0389",
+      "found": true,
+      "undergradYear": "1995",
+      "msInstitution": "Harvard University",
+      "mdInstitution": "Albert Einstein College of Medicine",
+      "postdocInstitution": "The Rockefeller University",
+      "source": "https://weillcornell.org/qatruong",
+      "quote": "M.P.H. Harvard School of Public Health ... M.D. Albert Einstein College of Medicine ... B.A. ... 1995 ... one year as Postdoctoral Research Fellow ... The Rockefeller University",
+      "note": "Cornell's patient-care profile explicitly describes the completed Rockefeller research postdoc. The stored VIVO URL redirected to an inaccessible Scholars page."
+    },
+    {
+      "id": "vp-0394",
+      "found": true,
+      "mdInstitution": "Johns Hopkins University",
+      "source": "https://baptisthealth.net/doctors/tom-c-nguyen/2638767",
+      "quote": "The Johns Hopkins University School of Medicine\nMedical School, 2002",
+      "note": "Contradiction: stored undergradYear 2002 is identified here as medical-school completion, not bachelor's completion. FIU's profile identifies the same Baptist Health physician."
+    },
+    {
+      "id": "vp-0401",
+      "found": false,
+      "note": "Maryville faculty and central directory listings provide appointment and contact details but no education or CV. No identity-resolved eligible degree source found; stored undergradYear 2012 remains unverified."
+    },
+    {
+      "id": "vp-0410",
+      "found": false,
+      "note": "OHSU profile lists only the already-recorded MD, pediatric residency and neonatal-perinatal clinical fellowship. No additional eligible degree found; linked Pure profile was inaccessible."
+    },
+    {
+      "id": "vp-0411",
+      "found": true,
+      "msInstitution": "Oregon Health & Science University",
+      "mdInstitution": "Tufts University",
+      "postdocInstitution": "University of California, San Francisco",
+      "source": "https://www.ohsu.edu/people/khanh-p-nguyen-md-mcr",
+      "quote": "M.D., 2006, Tufts University School of Medicine ... M.C.R., 2019, Oregon Health & Science University ... Post-doctoral Fellow, University of California, San Francisco, 2008-2011"
+    },
+    {
+      "id": "vp-0412",
+      "found": false,
+      "note": "OHSU profile confirms the existing Michigan BSE (2010) and Virginia Commonwealth MD. Remaining training comprises clinical residency and fellowships; no additional eligible degree or research postdoc stated."
+    },
+    {
+      "id": "vp-0413",
+      "found": false,
+      "source": "https://www.ohsu.edu/people/angela-tu-nguyen-md",
+      "quote": "M.D., 2013, Virginia Commonwealth University ... Pediatrics, Johns Hopkins Hospital, Baltimore, MD, 2016",
+      "note": "Existing MD institution confirmed. Contradiction: stored undergradYear 2016 corresponds to pediatric residency completion on this page. No bachelor's institution or research doctorate stated."
+    },
+    {
+      "id": "vp-0418",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "Rutgers University",
+      "undergradInstitution": "Rutgers University",
+      "source": "https://catalogs.rutgers.edu/generated/nb-ug_2425/pg116.html",
+      "quote": "Kim-Phuong Le, B.S., Ph.D., Rutgers",
+      "note": "Department and lab profiles supply no degree institutions or years; the official university catalog explicitly identifies both institutions."
+    },
+    {
+      "id": "vp-0424",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "Washington University in St. Louis",
+      "phdYear": "1986",
+      "undergradInstitution": "Saint Louis University",
+      "undergradYear": "1982",
+      "msInstitution": "Washington University in St. Louis",
+      "postdocInstitution": "The George Washington University",
+      "source": "https://www.seattleu.edu/media/seattle-university/directory/faculty--staff-directory/files/artsci/Le-Xuan-Hy-CV-2019.pdf",
+      "quote": "Post-Doctoral training ... George Washington University ... 1993-1999 ... Ph.D. and M.A. ... Washington University ... 1986 & 1984 ... B.A. ... St. Louis University ... 1982"
+    },
+    {
+      "id": "vp-0427",
+      "found": false,
+      "source": "https://www.foxchase.org/minhhuyen-nguyen",
+      "quote": "MD, Harvard Medical School, Boston, MA, 1987",
+      "note": "Existing MD institution confirmed. Contradiction: stored undergradYear 1987 is explicitly the MD year. No bachelor's education or research doctorate stated."
+    },
+    {
+      "id": "vp-0429",
+      "found": true,
+      "mdInstitution": "The University of Texas Southwestern Medical Center",
+      "source": "https://faculty.mdanderson.org/profiles/thao_bui.html",
+      "quote": "1991 | University of Texas, Southwestern Medical School ... MD\n1987 | University of Dallas ... BS in Biochemistry",
+      "note": "Contradiction: stored undergradYear 1992 should be reviewed; the official degree table explicitly lists the bachelor's in 1987."
+    },
+    {
+      "id": "vp-0430",
+      "found": true,
+      "undergradInstitution": "University of California, Los Angeles",
+      "source": "https://faculty.mdanderson.org/profiles/hop_trancao.html",
+      "quote": "2000 | University of California Los Angeles, Los Angeles, California, US, Physiological Sciences, BS",
+      "note": "Contradiction: stored undergradYear 2013 conflicts with the explicitly listed bachelor's year 2000. Existing UC San Diego MD institution confirmed."
+    },
+    {
+      "id": "vp-0431",
+      "found": true,
+      "undergradInstitution": "University of California, Irvine",
+      "source": "https://faculty.mdanderson.org/profiles/quynh_nguyen.html",
+      "quote": "1997 | University of California at Irvine, Irvine, California, US, Biological Sciences, BS",
+      "note": "Contradiction: stored undergradYear 2016 conflicts with the explicitly listed bachelor's year 1997. Existing Harvard master's and George Washington MD institutions confirmed."
+    }
+  ]
+}

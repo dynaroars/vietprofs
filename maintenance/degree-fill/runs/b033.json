@@ -1,0 +1,201 @@
+{
+  "batch": "b033",
+  "results": [
+    {
+      "id": "vp-2574",
+      "found": false,
+      "note": "Official Nanterre profile lists no education. The 2021 machine-learning dissertation belongs to an unresolved namesake; combustion dissertations found name Tran as supervisor, not graduate."
+    },
+    {
+      "id": "vp-2591",
+      "found": false,
+      "note": "UWE profile describes teaching experience but states no degrees. Searches of UWE and the named previous employer, Portsmouth, found no identity-resolved education record."
+    },
+    {
+      "id": "vp-2599",
+      "found": true,
+      "mdInstitution": "Touro University California",
+      "source": "https://fresno.ucsf.edu/tim-nguyen-nguyen",
+      "quote": "receive his medical degree with Honors from Touro University California.",
+      "note": "Rutgers undergraduate institution is already recorded. No additional explicitly supported degree field found."
+    },
+    {
+      "id": "vp-2602",
+      "found": false,
+      "note": "Shiley profile confirms the already-recorded medical school and lists clinical residency and fellowship training. No additional qualifying education field found."
+    },
+    {
+      "id": "vp-2606",
+      "found": true,
+      "doctorate": "Doctorat",
+      "phdInstitution": "Université Paris Cité",
+      "phdYear": "1998",
+      "undergradInstitution": "Aix-Marseille University",
+      "undergradYear": "1986",
+      "msInstitution": "Université Paris Cité",
+      "source": "https://gric.univ-lehavre.fr/IMG/pdf/cv_bui_2025docx.pdf",
+      "quote": "1986 : Licence ... Université d’Aix-Marseille. ... 1993 : D.E.A ... Université Paris VII ... 1998 : Doctorat ... Université Paris VII",
+      "note": "Degree passages were readable in indexed official CV text; direct PDF retrieval returned 403. Paris VII is normalized to its current successor, Université Paris Cité."
+    },
+    {
+      "id": "vp-2607",
+      "found": true,
+      "doctorate": "Doctorat",
+      "phdInstitution": "Université Paris Cité",
+      "phdYear": "1992",
+      "undergradInstitution": "Université Paris Cité",
+      "undergradYear": "1982",
+      "msInstitution": "Université Paris Cité",
+      "source": "https://gric.univ-lehavre.fr/IMG/pdf/cv_veronique_ha_van_oct_2020.pdf",
+      "quote": "1992 Doctorat ... Université Paris Diderot Paris VII. ... 1983 Maîtrise d’anglais ... Université Paris VII. ... 1982 Licence d’anglais. Université Paris VII.",
+      "note": "CV education section explicitly dates these qualifications. Paris Diderot/Paris VII is normalized to its current successor, Université Paris Cité."
+    },
+    {
+      "id": "vp-2613",
+      "found": false,
+      "note": "LSPM profile and team pages state no education. Dissertations found under this name concern unrelated fields; none could be unambiguously connected to the plasma researcher."
+    },
+    {
+      "id": "vp-2617",
+      "found": false,
+      "note": "Official LRS directory states no education. A potentially relevant 2006 gas-sensor dissertation was located through a third-party copy, but the official HAL record was access-blocked and identity was not independently resolved."
+    },
+    {
+      "id": "vp-2619",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "The University of Western Australia",
+      "phdYear": "1994",
+      "undergradInstitution": "The University of Western Australia",
+      "source": "https://research-repository.uwa.edu.au/en/persons/du-huynh/",
+      "quote": "Du Huynh obtained her Bachelors Degree with honours in Computer Science and her PhD both from UWA.",
+      "note": "Year source: https://research-repository.uwa.edu.au/en/publications/feature-based-stereo-vision-on-a-mobile-platform/ — \"Qualification | Doctor of Philosophy\"; \"Publication status | Unpublished - 1994\". The dissertation record links directly to her institutional profile."
+    },
+    {
+      "id": "vp-2623",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "The Ohio State University",
+      "phdYear": "2004",
+      "source": "https://rave.ohiolink.edu/etdc/view?acc_num=osu1093830567",
+      "quote": "2004, Doctor of Philosophy, Ohio State University, Biomedical Engineering.",
+      "note": "Dissertation author is Trong-Kha Truong; its subject is susceptibility effects in ultra-high-field brain MRI, matching his research and career timeline."
+    },
+    {
+      "id": "vp-2624",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "University of Iowa",
+      "undergradInstitution": "Drake University",
+      "source": "https://medicine.ouhsc.edu/directory/details/bao-g-vu-phd",
+      "quote": "Ph.D. University of Iowa\nB.S. Drake University",
+      "note": "A separate University of Iowa fellowship is listed without explicitly identifying it as a completed postdoc; postdocInstitution is omitted."
+    },
+    {
+      "id": "vp-2628",
+      "found": false,
+      "note": "NYU profile lists the already-recorded medical education and clinical residencies/fellowship. No additional qualifying degree or explicitly identified research postdoc found."
+    },
+    {
+      "id": "vp-2630",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "George Washington University",
+      "phdYear": "2014",
+      "postdocInstitution": "Children's National Hospital",
+      "source": "https://vetmed.tamu.edu/common/directory/CV/PNghiem.pdf",
+      "quote": "Children’s National Medical Center (CNMC) ... The George Washington University (GWU) ... Ph.D. ... 01/2014 ... CNMC ... Post-doc ... 07/2014",
+      "note": "Explicit training table was readable in indexed official CV text; direct retrieval returned 403. Children's National Medical Center is normalized to its current name. DVM is excluded."
+    },
+    {
+      "id": "vp-2631",
+      "found": true,
+      "undergradInstitution": "University of Virginia",
+      "mdInstitution": "University of Virginia",
+      "msInstitution": "University of Pittsburgh",
+      "source": "https://profiles.mountsinai.org/son-duong",
+      "quote": "Bachelor of Science ... University of Virginia ... medical doctorate at the University of Virginia School of Medicine ... Master of Science ... University of Pittsburgh",
+      "note": "The supplied /son-q-duong URL returned 404; the working official profile explicitly states all three degrees."
+    },
+    {
+      "id": "vp-2632",
+      "found": false,
+      "note": "Ohio State profiles confirm the already-recorded Michigan medical degree and describe clinical residency/research-track training. No additional qualifying degree or completed research postdoc explicitly stated."
+    },
+    {
+      "id": "vp-2639",
+      "found": false,
+      "note": "UBC divisional page contains no education; its individual profile link returned 404 on follow-up. A published interview mentions McGill medical education, but no readable official employer education source was verified."
+    },
+    {
+      "id": "vp-2640",
+      "found": false,
+      "note": "Alberta directory states no education. A conference biography says he graduated from Monash but does not explicitly identify the degree; no degree institution was inferred."
+    },
+    {
+      "id": "vp-2641",
+      "found": true,
+      "mdInstitution": "University of Zurich",
+      "msInstitution": "University of Bern",
+      "postdocInstitution": "Vanderbilt University",
+      "source": "https://nephrologie.insel.ch/fileadmin/Nephrologie_und_Hypertonie/CV/Huynh-DO-CVUS_May_2016_without_GCP.pdf",
+      "quote": "1987 Doctor in Medicine, University of Zürich Medical School, Switzerland",
+      "note": "Second source: https://www.dbmr.unibe.ch/e40513/e483390/e633636/files633640/Jahresbericht2013_eng.pdf, p.49: \"Postdoc (1996-1999) at Vanderbilt University (US).\"; \"Master in Medical Education (2009) at University of Bern and University of Illinois, Chicago (US).\" The master's was joint with Illinois Chicago. No research doctorate classification inferred from the medical title."
+    },
+    {
+      "id": "vp-2646",
+      "found": false,
+      "note": "Official profile lists a Northeastern PharmD, which is excluded by the brief, and the already-recorded Connecticut research fellowship. No additional qualifying education field found."
+    },
+    {
+      "id": "vp-2647",
+      "found": false,
+      "note": "Oakland directory lists no education. Corewell's physician profile confirms the already-recorded Wayne State MD and lists clinical residency/fellowship only."
+    },
+    {
+      "id": "vp-2648",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "The Open University",
+      "phdYear": "2008",
+      "undergradInstitution": "University of North Carolina",
+      "undergradYear": "2001",
+      "msInstitution": "Grenoble School of Management",
+      "source": "https://www.essca.eu/app/uploads/academ/resumes/cv_5139_en.pdf",
+      "quote": "2008 Doctorate/PhD ... Open University ... 2003 Master of Science ... Grenoble School of Management ... 2001 Bachelor ... University of North Carolina",
+      "note": "Explicit education table was readable in indexed official CV text; direct PDF retrieval returned 403. The CV does not specify a North Carolina campus. The 2022 habilitation is separate."
+    },
+    {
+      "id": "vp-2649",
+      "found": false,
+      "note": "Melbourne profile was inaccessible. Other readable pages describe medical qualifications and a higher MD, which the brief excludes; no additional permitted field or contradiction to existing institutions was established."
+    },
+    {
+      "id": "vp-2651",
+      "found": true,
+      "doctorate": "PhD",
+      "phdInstitution": "Mayo Clinic College of Medicine and Science",
+      "phdYear": "2005",
+      "mdInstitution": "Mayo Clinic College of Medicine and Science",
+      "source": "https://keck.usc.edu/faculty-search/david-tran/",
+      "quote": "Dr Tran received his MD and PhD degrees from the Mayo Clinic College of Medicine in 2005",
+      "note": "Institution normalized to its current name. Both supplied lab URLs returned 520; the official USC faculty profile explicitly states both degrees and their year."
+    },
+    {
+      "id": "vp-2652",
+      "found": false,
+      "note": "The Montréal portrait and additional official biographies yielded no new qualifying fields beyond the already-recorded medical and master's institutions. Clinical specialty training was not classified as a research postdoc."
+    },
+    {
+      "id": "vp-2657",
+      "found": true,
+      "undergradInstitution": "University of California, Irvine",
+      "undergradYear": "1988",
+      "mdInstitution": "University of California, San Diego",
+      "msInstitution": "University of California, San Francisco",
+      "source": "https://profiles.stanford.edu/mindie-nguyen?tab=bio",
+      "quote": "B.S., University of California, Irvine ... (1988) ... M.D., Univ. of California, San Diego ... M.A.S., Univ. of Calif., San Francisco",
+      "note": "Stanford's Professional Education section explicitly lists the bachelor's, MD, and Master of Advanced Studies. Clinical gastroenterology fellowship was not classified as a research postdoc."
+    }
+  ]
+}
