@@ -359,6 +359,10 @@ const DISTINCT_PEOPLE = new Set<string>([
   'vp-0129 vp-2340', // Tran N. H. Nguyen (Biomedical Engineering, PhD) and Tran T. Nguyen (Hospital Medicine, MD), UT Southwestern: separate UTSW profiles
   'vp-2416 vp-2417', // Hong Loan Nguyen (General Internal Medicine) and Loan T. Nguyen (Pediatrics Hospital Medicine), Baylor College of Medicine: separate BCM profiles 27617 and 27539
   'vp-0020 vp-0414', // Truong X. Tran (Computer Science, Harrisburg; Alabama-Huntsville PhD) and Tran Truong (Linguistics, University Park; Chicago PhD): separate PSU profiles (#559)
+  'vp-0653 vp-3458', // Peter V. Nguyen (Physiology, Alberta, emeritus neuroscientist) and Peter Nguyen (Religious Studies, Holy Cross, theologian): both Toronto PhDs, separate official profiles
+  'vp-3077 vp-3582', // John Hoang (plasma etch, Lam Research) and John Dzung Hoang Mai (BioMEMS, USC Biomedical Engineering): both UCLA PhDs, different surnames and fields
+  'vp-2127 vp-3662', // Vu Hoang (PDE and fluid dynamics, UTSA Mathematics) and Hoang Thai Duong Vu (numerical hydraulics, KIT IWU, PhD 2018): both KIT PhDs, different fields and profiles
+  'vp-0150 vp-3663', // Nguyen Pham (Marketing, Monmouth) and Pham Huy Nguyen (soft robotics, Empa, PhD 2020): both ASU PhDs, different fields and profiles
   'vp-1135 vp-2974', // Tuan Minh Nguyen (Materials Science Division, UC Irvine PhD) and Tuan H. Nguyen (Global Security Directorate / CGSR, Iowa State PhD), Lawrence Livermore National Laboratory: separate LLNL profiles
 ]);
 const allEntries = roster as RosterEntry[];
