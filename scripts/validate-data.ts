@@ -25,6 +25,8 @@ const schemaFile = resolve('public/roster.schema.json');
 // faculty pages, or an explicit maiden-name pattern) — see the git history for the check —
 // are allowlisted so the test doesn't force a wrong "fix" on them.
 const surnameFirstAllowlist = new Set<string>([
+  'Ha My Vy', // Mount Sinai Do lab page; publishes as "Ha My T. Vy" (OpenAlex), so Vy is her surname.
+  'Tran T. La', // Northwestern Feinberg profile "Tran T. La"; Tran is the given name, La the surname.
   'Trinh To Tat', // BCM profile slug trinh-tat; Trinh To is her given name, Tat her surname.
   'Vuong Prieto', // UTHealth Cizik nursing profile "Dr Vuong Prieto"; Vuong is the given name, Prieto the surname.
   'Vuong Chu', // University of Westminster directory titles the page "Chu, Vuong"; Chu is his surname and Vuong his given name.
