@@ -121,7 +121,6 @@ export function renderWorldMap(roster: Roster, selectedLocation?: string): strin
           <h3 class="insights-heading">Global Diaspora Geographic Heatmap</h3>
           <span class="world-map-host-badge">🌐 ${counts.size} Host Countries</span>
         </div>
-        <p class="insights-caption">Density across host nations — darker/vibrant heatmap shading indicates larger communities. Hover over any country or badge to inspect details; click to filter roster.</p>
       </div>
 
       <div class="world-map-svg-wrap">

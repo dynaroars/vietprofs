@@ -191,7 +191,6 @@ function renderMentorshipLineages(roster: Roster, database: RelationshipDatabase
 
   const mentorsTable = mentorRows.length
     ? `<h3 class="lineage-subheading">Top Verified Mentors</h3>
-      <p class="stat-sub">Roster members with verified advisor or postdoctoral mentor links to other roster members.</p>
       <div class="stats-table-wrapper"><table class="stats-table"><thead><tr><th>Mentor</th><th>Institution</th><th>Roles</th><th class="num-col">Mentees</th></tr></thead>
       <tbody>${mentorRows
         .map(
@@ -203,7 +202,6 @@ function renderMentorshipLineages(roster: Roster, database: RelationshipDatabase
 
   const chainsHtml = analysis.multiGenChains.length
     ? `<h3 class="lineage-subheading">Multi-Generational Academic Lineages</h3>
-      <p class="stat-sub">Verified advisor-to-advisee chains spanning three or more roster members.</p>
       <ol class="mentorship-lineage-list">${analysis.multiGenChains
         .slice(0, 10)
         .map((chain) => {
@@ -245,14 +243,13 @@ function renderConnections(roster: Roster, database: RelationshipDatabase): stri
   return `<main><article class="man-page stats-man-page">
     ${runningHead()}
     <section class="man-section name-section"><div class="identity"><div class="identity-details"><div class="name-heading"><h1>Research Connections</h1></div>
-      <p class="synopsis">Verified doctoral, postdoctoral, and collaborative links discovered among roster members.</p>
       <p class="synopsis stats-snapshot">Last updated: <time datetime="${escapeHtml(database.updatedAt)}">${escapeHtml(formatLocalTimestamp(database.updatedAt))}</time></p>
     </div></div></section>
     <section class="man-section"><h2>AT A GLANCE</h2>${renderMetrics(roster, database)}</section>
     ${renderGraphExplorer()}
     <section class="man-section"><h2>MENTORSHIP &amp; ACADEMIC LINEAGES</h2>${renderMentorshipLineages(roster, database)}</section>
     <section class="man-section"><h2>CONNECTIONS BY TYPE</h2>${renderTypeBreakdown(database)}</section>
-    <section class="man-section"><h2>MOST CONNECTED PEOPLE</h2><p class="stat-sub">Counts every verified edge touching the person, in either direction.</p>${renderTopConnected(roster, database)}</section>
+    <section class="man-section"><h2>MOST CONNECTED PEOPLE</h2>${renderTopConnected(roster, database)}</section>
     <section class="man-section"><h2>ALL CONNECTIONS</h2>${renderAllConnections(roster, database)}</section>
     <section class="man-section privacy-section"><h2>METHODOLOGY</h2><div class="privacy-note">
       <p>Every connection listed here is independently verified against public evidence (advisor pages, dissertations, shared publications, shared grant or patent records) before being added — see each row's source link. Coauthor, grant-collaborator, and patent-coinventor links require multiple independently attributable shared works; advisor and mentor links are directional and verified against an official advisor-side listing where possible. This view only shows connections between two people already on the VietProfs roster.</p>
@@ -266,7 +263,7 @@ function renderLoading(): string {
 }
 
 function renderError(message: string): string {
-  return `<main><article class="man-page stats-man-page">${runningHead()}<section class="man-section name-section"><h1>Research Connections</h1><p class="synopsis">Verified academic connections among roster members.</p></section>
+  return `<main><article class="man-page stats-man-page">${runningHead()}<section class="man-section name-section"><h1>Research Connections</h1></section>
     <section class="man-section"><h2>CONNECTIONS</h2><div class="stats-error-box" role="alert"><p class="error-title">Connections data is temporarily unavailable.</p><p class="error-detail">${escapeHtml(message)}</p><button type="button" id="retry-btn" class="retry-btn">Retry</button></div></section>${renderSeeAlso(base, 'connections')}</article></main>${renderAddFab(`${base}submit.html`)}`;
 }
 

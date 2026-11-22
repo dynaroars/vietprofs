@@ -7,7 +7,6 @@ import {
   renderDiasporaSnapshot,
   buildDiasporaSnapshotMarkdown,
   relativeHeatTier,
-  calculationBasis,
 } from '../src/insights.ts';
 import { buildTopCities, filterRoster, type RosterEntry } from '../src/data.ts';
 
@@ -39,14 +38,6 @@ test('relativeHeatTier assigns correct shading buckets relative to max', () => {
   assert.equal(relativeHeatTier(20, 100), 2);
   assert.equal(relativeHeatTier(50, 100), 3);
   assert.equal(relativeHeatTier(80, 100), 4);
-});
-
-test('calculationBasis outputs structured HTML details block', () => {
-  const html = calculationBasis(sampleRoster, 'World');
-  assert.match(html, /class="calculation-details"/);
-  assert.match(html, /scope=World/);
-  assert.match(html, /records=2/);
-  assert.match(html, /universities=2/);
 });
 
 test('renderHealthPanel renders the roster health dashboard without undefined or null', () => {

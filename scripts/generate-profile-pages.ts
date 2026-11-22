@@ -408,9 +408,7 @@ function profilePage(
           ({ person: who, relations }) =>
             `<li class="connection-item">${who} (${relations.join('; ')})</li>`,
         )
-        .join(
-          '',
-        )}</ul><p class="section-note">${vi ? 'Chỉ hiển thị các kết nối đã được xác minh qua nguồn. Tên có liên kết đến trang VietProfs là người có trong danh bạ; các tên khác thì không.' : 'Only source-verified connections are shown. Names that link to a VietProfs page are on the roster; the others are not.'}</p></section>`
+        .join('')}</ul></section>`
     : '';
   const rawRecord = escapeHtml(JSON.stringify(person, null, 2));
   const editUrl = `${site}submit.html?edit=${encodeURIComponent(person.id)}`;

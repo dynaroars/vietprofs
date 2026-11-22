@@ -405,12 +405,10 @@ export function renderPathwayResults(
     <div class="insights-grid pathway-columns">
       <div class="insights-card">
         <h4 class="insights-heading">Where They Earned PhDs</h4>
-        <p class="insights-caption">Doctoral institutions recorded for these alumni; click to search.</p>
         ${renderMiniRankedList(pathways.nextPhdInstitutions, 'phd', 'No PhD institutions recorded for this group.')}
       </div>
       <div class="insights-card">
         <h4 class="insights-heading">Where They Are Today</h4>
-        <p class="insights-caption">Current host countries in the roster; click to filter.</p>
         ${renderMiniRankedList(pathways.hostCountries, 'country', 'No host country data recorded.')}
       </div>
     </div>
@@ -419,7 +417,7 @@ export function renderPathwayResults(
       <div class="pathway-trajectories-header">
         <div>
           <h4 class="insights-heading">Recorded Career Trajectories</h4>
-          <p class="insights-caption">Showing ${pathways.trajectories.length} of ${pathways.total} alumni from ${almaMaterHtml(pathways.institution)} based on explicit degree fields.</p>
+          <p class="insights-caption">Showing ${pathways.trajectories.length} of ${pathways.total} alumni from ${almaMaterHtml(pathways.institution)}.</p>
         </div>
         <div class="pathway-header-actions">
           ${hubPath ? `<a class="pathway-browse-btn pathway-alumni-link" href="${escapeHtml(`${baseUrl}${hubPath}`)}">All ${escapeHtml(almaMaterInfo(pathways.institution)?.short ?? pathways.institution)} alumni page →</a>` : ''}
@@ -480,7 +478,6 @@ export function renderPathwayExplorer(
         <div>
           <span class="insights-badge">START FROM MY UNIVERSITY</span>
           <h3 class="insights-heading">Pathway Explorer</h3>
-          <p class="insights-caption">Pick a Vietnamese or international alma mater to see where its alumni earned PhDs and where they work today.</p>
         </div>
       </div>
 

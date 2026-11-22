@@ -157,7 +157,7 @@ export function renderGraphExplorer(): string {
           <button type="button" id="network-fit">Fit graph</button>
           <button type="button" id="network-reset">Reset size</button>
         </div>
-        <p class="network-help" id="network-help">Graphs open at a readable size. Drag the background to explore more groups. Drag a person to rearrange. Select a person or line for details. Use Tab and Enter to select people and connections.</p>
+        <p class="network-help sr-only" id="network-help">Graphs open at a readable size. Drag the background to explore more groups. Drag a person to rearrange. Select a person or line for details. Use Tab and Enter to select people and connections.</p>
         <div class="network-canvas"><svg id="network-svg" viewBox="0 0 800 500" role="group" aria-label="Verified academic relationship graph" aria-describedby="network-help"></svg></div>
         <div id="network-legend" class="network-legend" aria-label="Relationship legend"></div>
       </div>
