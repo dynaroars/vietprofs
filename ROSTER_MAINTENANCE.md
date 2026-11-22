@@ -341,6 +341,9 @@ institution ("Gerald Ngo Teke"). Owner rulings of 2026-11-10 added four more:
   and took the Vietnamese surname by marriage: reject. The reverse order (Viann Nguyen-Feng, Felice
   Le-Scherban, Johannes Tran-Gia) is a Vietnamese person who added a spouse's name: accept. A
   Vietnamese given name (Hoa Briscoe-Tran) counts as Vietnamese evidence whatever the surname order.
+- **Ethnic Chinese from Vietnam count.** A person born in Vietnam, or whose parents came from
+  Vietnam, is Vietnamese diaspora even when documented as ethnically Chinese (Vincent T. Ho, Tommy
+  Tran). Documented Vietnam origin is sufficient evidence; don't hold these for an owner decision.
 - **"Mai" alone is not enough.** Mai is also a Chinese, German and Arabic name (Liqiang Mai, Volker
   Mai, Mai M. Khalaf). A name whose only Vietnamese token is Mai is rejected.
 - **Gaelic "Mac".** "Mac ___" surnames (Ralph Mac Nally) and Mac as a Western given name or nickname
