@@ -1,7 +1,13 @@
-import { canonicalAlmaMater } from '../src/alma-mater.ts';
+import {
+  almaMaterLabel,
+  almaMaterPath,
+  almaMaterSearchTerms,
+  canonicalAlmaMater,
+} from '../src/alma-mater.ts';
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import {
+  almaMaterHtml,
   buildAlmaMaterIndex,
   buildUniversityPathways,
   defaultPathwayInstitution,
@@ -152,4 +158,21 @@ test('isVietnameseInstitution skips foreign schools that share a keyword', () =>
   );
   assert.equal(isVietnameseInstitution('Vietnam-Tokyo Polytechniques University'), true);
   assert.equal(isVietnameseInstitution('University of Transport and Communications'), true);
+});
+
+test('alma mater acronyms, alumni paths and search terms resolve every spelling', () => {
+  assert.equal(almaMaterPath('University of Science, VNU-HCM'), 'alumni/hcmus.html');
+  assert.equal(almaMaterPath('Diplomatic Academy of Vietnam'), 'alumni/dav.html');
+  assert.equal(almaMaterPath('Can Tho University'), 'alumni/can-tho-university.html');
+  assert.equal(almaMaterLabel('Hanoi University of Technology'), 'HUST');
+  assert.equal(almaMaterLabel('Can Tho University'), 'Can Tho University');
+  assert.deepEqual(almaMaterSearchTerms('Ho Chi Minh City University of Science'), [
+    'University of Science, Vietnam National University Ho Chi Minh City',
+    'HCMUS',
+    'Trường Đại học Khoa học Tự nhiên, ĐHQG-HCM',
+  ]);
+  assert.match(
+    almaMaterHtml('Hanoi University of Science and Technology'),
+    /<abbr[^>]*title="Hanoi University of Science and Technology[^"]*">HUST<\/abbr>/,
+  );
 });

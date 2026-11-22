@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-20T14:00:00.000Z",
+  "updatedAt": "2026-11-22T14:49:58.000Z",
   "relationships": [
     {
       "id": "rel-coauthor-vp-0015-vp-0018",
@@ -4784,6 +4784,35 @@
       "verifiedAt": "2026-11-19T14:00:00.000Z",
       "direct": false,
       "notes": ""
+    },
+    {
+      "id": "rel-doctoral-advisor-vp-0052-vp-0039",
+      "type": "doctoral-advisor",
+      "sourceId": "vp-0052",
+      "targetId": "vp-0039",
+      "sources": [
+        "https://www.cics.umass.edu/about/directory/vp-nguyen"
+      ],
+      "evidence": "The repository owner confirmed that Tam Vu (vp-0052) was the doctoral advisor of VP (Phuc) Nguyen (vp-0039). VP Nguyen's UMass Amherst profile lists his PhD in computer science from the University of Colorado Boulder (2018), where Tam Vu then directed the Mobile and Networked Systems Lab; the two coauthored that lab's 2018 MobiSys and CapBand papers.",
+      "works": [],
+      "verifiedAt": "2026-11-22T14:48:38.000Z",
+      "direct": true,
+      "notes": "Owner-directed (2026-11-22): owner confirmed the advisor after a search found no public dissertation record naming him."
+    },
+    {
+      "id": "rel-doctoral-advisor-vp-0052-vp-2170",
+      "type": "doctoral-advisor",
+      "sourceId": "vp-0052",
+      "targetId": "vp-2170",
+      "sources": [
+        "https://ora.ox.ac.uk/objects/uuid:02258612-9d32-443d-ac79-8a4be1609d3e",
+        "https://www.cs.ox.ac.uk/people/nhat.pham"
+      ],
+      "evidence": "The Oxford Research Archive record of Nhat Pham's (vp-2170) DPhil thesis lists \"Vu, T\" as a supervisor alongside Niki Trigoni and Andrew Markham, and his Oxford Computer Science profile states the DPhil \"was supervised by Prof. Niki Trigoni, Prof. Andrew Markam, and Prof. Tam Vu\"; this matches vp-0052 (Tam Vu), then also affiliated with Oxford.",
+      "works": [],
+      "verifiedAt": "2026-11-22T14:49:58.000Z",
+      "direct": false,
+      "notes": "Co-supervised; the other two supervisors are not on the roster."
     }
   ],
   "external": [

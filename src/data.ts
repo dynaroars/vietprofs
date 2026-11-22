@@ -57,7 +57,7 @@ export function withUpdates(roster: Roster, updates: RosterUpdates): Roster {
   );
 }
 
-import { canonicalAlmaMater } from './alma-mater.ts';
+import { almaMaterSearchTerms, canonicalAlmaMater } from './alma-mater.ts';
 import { COUNTRY_FLAGS, COUNTRY_TO_CONTINENT, TRACKS } from './roster-constants.ts';
 import type { RelationshipDatabase } from './relationships.ts';
 export {
@@ -135,9 +135,20 @@ function searchableFields(person: RosterEntry) {
     person.mdInstitution,
     person.undergradInstitution,
     person.msInstitution,
+    ...degreeSearchTerms(person),
     ...(person.researchAreas ?? []),
     ...(person.honors ?? []).flatMap((honor) => [honor.name, honor.organization]),
   ];
+}
+
+// Acronyms and Vietnamese names of known Vietnamese alma maters (HCMUS, Bách khoa Hà Nội).
+function degreeSearchTerms(person: RosterEntry): string[] {
+  return [
+    person.undergradInstitution,
+    person.msInstitution,
+    person.phdInstitution,
+    person.postdocInstitution,
+  ].flatMap(almaMaterSearchTerms);
 }
 
 function normalizeSearchText(value: unknown): string {
@@ -1969,9 +1980,13 @@ function scopedValuesFor(person: RosterEntry, scope: string): (string | undefine
     case 'honors':
       return (person.honors ?? []).flatMap((honor) => [honor.name, honor.organization]);
     case 'phd':
-      return [person.phdInstitution, person.phdYear?.toString()];
+      return [
+        person.phdInstitution,
+        person.phdYear?.toString(),
+        ...almaMaterSearchTerms(person.phdInstitution),
+      ];
     case 'undergrad':
-      return [person.undergradInstitution];
+      return [person.undergradInstitution, ...almaMaterSearchTerms(person.undergradInstitution)];
     case 'trained':
       return [
         person.undergradInstitution,
@@ -1979,6 +1994,7 @@ function scopedValuesFor(person: RosterEntry, scope: string): (string | undefine
         person.phdInstitution,
         person.postdocInstitution,
         person.mdInstitution,
+        ...degreeSearchTerms(person),
       ];
     case 'city':
       return [person.city];

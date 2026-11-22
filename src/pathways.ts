@@ -8,7 +8,7 @@ import {
   type Roster,
   type RosterEntry,
 } from './data.ts';
-import { canonicalAlmaMater } from './alma-mater.ts';
+import { almaMaterInfo, almaMaterPath, canonicalAlmaMater } from './alma-mater.ts';
 import { escapeHtml } from './utils.ts';
 
 export type PathwayStage = 'undergrad' | 'ms' | 'phd' | 'postdoc' | 'all';
@@ -59,6 +59,29 @@ const NON_VIETNAMESE_INSTITUTION_PATTERN =
 export function isVietnameseInstitution(name: string | undefined): boolean {
   if (!name || NON_VIETNAMESE_INSTITUTION_PATTERN.test(name)) return false;
   return VIETNAMESE_INSTITUTION_PATTERN.test(name);
+}
+
+/** A school name as shown: its acronym (full name on hover) when it has one, escaped. */
+export function almaMaterHtml(name: string): string {
+  const info = almaMaterInfo(name);
+  const full = canonicalAlmaMater(name);
+  if (!info?.short) return escapeHtml(full);
+  return `<abbr class="alma-abbr" title="${escapeHtml([info.name, info.vi].filter(Boolean).join(' · '))}">${escapeHtml(info.short)}</abbr>`;
+}
+
+/** Alumni hub path for a Vietnamese school with enough alumni for a static page, else undefined. */
+export function alumniHubPath(roster: Roster, name: string): string | undefined {
+  const canonical = canonicalAlmaMater(name);
+  if (!isVietnameseInstitution(canonical)) return undefined;
+  const alumni = roster.filter((person) =>
+    [
+      person.undergradInstitution,
+      person.msInstitution,
+      person.phdInstitution,
+      person.postdocInstitution,
+    ].some((school) => canonicalAlmaMater(school) === canonical),
+  ).length;
+  return alumni >= 3 ? almaMaterPath(canonical) : undefined;
 }
 
 function normalizedInst(value: string | undefined): string {
@@ -272,7 +295,8 @@ function renderMiniRankedList(
   return `<div class="ranked-list">${items
     .map(([label, count]) => {
       const pct = Math.round((count / max) * 100);
-      const display = scope === 'country' ? `${countryFlag(label)} ${label}` : label;
+      const display =
+        scope === 'country' ? escapeHtml(`${countryFlag(label)} ${label}`) : almaMaterHtml(label);
       const attrs =
         scope === 'country'
           ? `data-filter="country" data-value="${escapeHtml(label)}"`
@@ -282,7 +306,7 @@ function renderMiniRankedList(
       return `
         <button type="button" class="ranked-item" ${attrs} title="Filter directory by ${escapeHtml(label)}">
           <div class="ranked-header">
-            <span class="ranked-name">${escapeHtml(display)}</span>
+            <span class="ranked-name">${display}</span>
             <span class="ranked-count">${count}</span>
           </div>
           <div class="ranked-track"><div class="ranked-bar" style="width: ${pct}%;"></div></div>
@@ -293,19 +317,18 @@ function renderMiniRankedList(
 
 function renderTrajectoryRow(person: RosterEntry, baseUrl: string): string {
   const steps: string[] = [];
-  if (person.undergradInstitution) {
-    steps.push(
-      `UG: ${person.undergradInstitution}${person.undergradYear ? ` (${person.undergradYear})` : ''}`,
-    );
-  }
-  if (person.msInstitution) steps.push(`MS: ${person.msInstitution}`);
-  if (person.phdInstitution) {
-    steps.push(`PhD: ${person.phdInstitution}${person.phdYear ? ` (${person.phdYear})` : ''}`);
-  }
-  if (person.postdocInstitution) steps.push(`Postdoc: ${person.postdocInstitution}`);
+  const school = (label: string, name: string, year?: number | string) =>
+    `${label}: ${almaMaterHtml(name)}${year ? ` (${escapeHtml(String(year))})` : ''}`;
+  if (person.undergradInstitution)
+    steps.push(school('UG', person.undergradInstitution, person.undergradYear));
+  if (person.msInstitution) steps.push(school('MS', person.msInstitution));
+  if (person.phdInstitution) steps.push(school('PhD', person.phdInstitution, person.phdYear));
+  if (person.postdocInstitution) steps.push(school('Postdoc', person.postdocInstitution));
   const role = canonicalRank(person) || person.track || '';
   const country = person.country || 'United States';
-  steps.push(`Now: ${person.university}${role ? ` (${role})` : ''} ${countryFlag(country)}`);
+  steps.push(
+    escapeHtml(`Now: ${person.university}${role ? ` (${role})` : ''} ${countryFlag(country)}`),
+  );
 
   return `
     <li class="pathway-trajectory-item">
@@ -314,7 +337,7 @@ function renderTrajectoryRow(person: RosterEntry, baseUrl: string): string {
         <span class="pathway-person-dept">${escapeHtml(fieldOf(person.department, person.university, person.researchAreas))}</span>
       </div>
       <div class="pathway-steps">${steps
-        .map((step) => `<span class="pathway-step">${escapeHtml(step)}</span>`)
+        .map((step) => `<span class="pathway-step">${step}</span>`)
         .join('<span class="pathway-arrow" aria-hidden="true">→</span>')}</div>
     </li>`;
 }
@@ -348,6 +371,7 @@ export function renderPathwayResults(
   if (pathways.sectors.industry) sectorParts.push(`${pathways.sectors.industry} Industry`);
 
   const topField = pathways.topFields[0]?.[0] ?? '—';
+  const hubPath = alumniHubPath(roster, pathways.institution);
 
   return `
     <div class="pathway-stage-row" role="group" aria-label="Training stage at ${escapeHtml(pathways.institution)}">
@@ -395,11 +419,14 @@ export function renderPathwayResults(
       <div class="pathway-trajectories-header">
         <div>
           <h4 class="insights-heading">Recorded Career Trajectories</h4>
-          <p class="insights-caption">Showing ${pathways.trajectories.length} of ${pathways.total} alumni from ${escapeHtml(pathways.institution)} based on explicit degree fields.</p>
+          <p class="insights-caption">Showing ${pathways.trajectories.length} of ${pathways.total} alumni from ${almaMaterHtml(pathways.institution)} based on explicit degree fields.</p>
         </div>
-        <button type="button" class="pathway-browse-btn" data-search="${escapeHtml(pathways.institution)}" data-scope="${directoryScope}">
-          Browse all ${pathways.total} in directory →
-        </button>
+        <div class="pathway-header-actions">
+          ${hubPath ? `<a class="pathway-browse-btn pathway-alumni-link" href="${escapeHtml(`${baseUrl}${hubPath}`)}">All ${escapeHtml(almaMaterInfo(pathways.institution)?.short ?? pathways.institution)} alumni page →</a>` : ''}
+          <button type="button" class="pathway-browse-btn" data-search="${escapeHtml(pathways.institution)}" data-scope="${directoryScope}">
+            Browse all ${pathways.total} in directory →
+          </button>
+        </div>
       </div>
       <ol class="pathway-trajectory-list">
         ${pathways.trajectories.map((person) => renderTrajectoryRow(person, baseUrl)).join('')}
@@ -443,7 +470,7 @@ export function renderPathwayExplorer(
     .slice(0, 400)
     .map(
       (entry) =>
-        `<option value="${escapeHtml(entry.institution)}">${escapeHtml(entry.institution)} (${entry.total})</option>`,
+        `<option value="${escapeHtml(entry.institution)}">${escapeHtml(almaMaterInfo(entry.institution)?.short ? `${almaMaterInfo(entry.institution)?.short} · ` : '')}${escapeHtml(entry.institution)} (${entry.total})</option>`,
     )
     .join('');
 
@@ -480,7 +507,7 @@ export function renderPathwayExplorer(
           ${quickPicks
             .map((entry) => {
               const isActive = entry.institution.toLowerCase() === activeInst.toLowerCase();
-              return `<button type="button" class="pathway-chip${isActive ? ' is-active' : ''}" data-pathway-inst="${escapeHtml(entry.institution)}" data-pathway-stage="undergrad" aria-pressed="${isActive}">${escapeHtml(entry.institution)} <span class="pathway-chip-count">${entry.byStage.undergrad}</span></button>`;
+              return `<button type="button" class="pathway-chip${isActive ? ' is-active' : ''}" data-pathway-inst="${escapeHtml(entry.institution)}" data-pathway-stage="undergrad" aria-pressed="${isActive}" title="${escapeHtml(entry.institution)}">${escapeHtml(almaMaterInfo(entry.institution)?.short ?? entry.institution)} <span class="pathway-chip-count">${entry.byStage.undergrad}</span></button>`;
             })
             .join('')}
         </div>

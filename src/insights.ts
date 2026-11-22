@@ -26,7 +26,14 @@ import { abbreviateInsightText, escapeHtml } from './utils.ts';
 import { renderWorldMap } from './world-map.ts';
 import { deriveRosterStats, type DerivedRosterStats } from './derived-stats.ts';
 import { fieldVi, placeVi, type Lang } from './i18n-vi.ts';
-import { buildAlmaMaterIndex, renderPathwayExplorer, type PathwayStage } from './pathways.ts';
+import {
+  almaMaterHtml,
+  alumniHubPath,
+  buildAlmaMaterIndex,
+  renderPathwayExplorer,
+  type PathwayStage,
+} from './pathways.ts';
+import { almaMaterInfo } from './alma-mater.ts';
 
 export { renderWorldMap };
 
@@ -91,7 +98,7 @@ export function renderAlmaMaterOriginsMap(subRoster: Roster): string {
       return `
         <button type="button" class="ranked-item" data-search="${escapeHtml(inst)}" data-scope="undergrad" title="Search people with undergrad degree from ${escapeHtml(inst)}">
           <div class="ranked-header">
-            <span class="ranked-name"><span class="ranked-num">${idx + 1}.</span> ${escapeHtml(inst)}</span>
+            <span class="ranked-name"><span class="ranked-num">${idx + 1}.</span> ${almaMaterHtml(inst)}</span>
             <span class="ranked-count">${count}</span>
           </div>
           <div class="ranked-track"><div class="ranked-bar" style="width: ${pct}%;"></div></div>
@@ -106,7 +113,7 @@ export function renderAlmaMaterOriginsMap(subRoster: Roster): string {
       return `
         <button type="button" class="ranked-item" data-search="${escapeHtml(inst)}" data-scope="phd" title="Search people with PhD from ${escapeHtml(inst)}">
           <div class="ranked-header">
-            <span class="ranked-name"><span class="ranked-num">${idx + 1}.</span> ${escapeHtml(inst)}</span>
+            <span class="ranked-name"><span class="ranked-num">${idx + 1}.</span> ${almaMaterHtml(inst)}</span>
             <span class="ranked-count">${count}</span>
           </div>
           <div class="ranked-track"><div class="ranked-bar" style="width: ${pct}%;"></div></div>
@@ -336,7 +343,12 @@ export function buildDiasporaSnapshotMarkdown(roster: Roster, lang: Lang = 'en')
     .join(', ');
   const fieldsLine = s.topFields.map(([f, n]) => `${isVi ? fieldVi(f) : f} (${fmt(n)})`).join(', ');
   const citiesLine = s.topCities.map((h) => `${h.city} (${fmt(h.count)})`).join(', ');
-  const vnLine = s.topVnFeeders.map((v) => `${v.institution} (${fmt(v.count)})`).join(', ');
+  const vnLine = s.topVnFeeders
+    .map((v) => {
+      const short = almaMaterInfo(v.institution)?.short;
+      return `${v.institution}${short ? ` (${short})` : ''}: ${fmt(v.count)}`;
+    })
+    .join(', ');
 
   if (isVi) {
     return [
@@ -386,7 +398,15 @@ export function renderDiasporaSnapshot(roster: Roster, lang: Lang = 'en'): strin
   const citiesText = s.topCities
     .map((h) => `${countryFlag(h.country)} ${h.city} (${fmt(h.count)})`)
     .join(' · ');
-  const vnFeedersText = s.topVnFeeders.map((v) => `${v.institution} (${fmt(v.count)})`).join(' · ');
+  const vnFeedersHtml = s.topVnFeeders
+    .map((v) => {
+      const path = alumniHubPath(roster, v.institution);
+      const label = `${almaMaterHtml(v.institution)} (${fmt(v.count)})`;
+      return path
+        ? `<a class="snapshot-alumni-link" href="./${escapeHtml(path)}">${label}</a>`
+        : label;
+    })
+    .join(' · ');
 
   return `
     <section class="diaspora-snapshot" id="diaspora-snapshot" lang="${lang}">
@@ -444,10 +464,10 @@ export function renderDiasporaSnapshot(roster: Roster, lang: Lang = 'en'): strin
           <dd>${escapeHtml(fieldsText)}</dd>
         </div>
         ${
-          vnFeedersText
+          vnFeedersHtml
             ? `<div class="snapshot-fact-row">
           <dt>${isVi ? 'Đại học nguồn tại VN' : 'Top VN undergrad feeders'}</dt>
-          <dd>${escapeHtml(vnFeedersText)}</dd>
+          <dd>${vnFeedersHtml}</dd>
         </div>`
             : ''
         }

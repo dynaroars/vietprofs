@@ -184,6 +184,8 @@ Whenever a search surfaces an advisor, advisee, postdoctoral mentor, or postdoct
 
 Write verified relationships to `public/relationships.json`. Record unresolved and excluded outcomes only in the non-public research-state file. Stop searching a candidate once the evidence standard is met or the bounded sources are exhausted.
 
+**Advisors who have moved.** The roster stores only where people work now, so an advisor who has since changed institutions never lines up with students whose PhD institution is the advisor's old school (Tam Vu supervised CU Boulder PhDs, then moved to Dartmouth; VP Nguyen's advisor was missed this way). Before searching the web, check `maintenance/advisor-leads.json`, written by `npm run advisor-leads` (`-- --ids=vp-0039,...` for the batch; it needs an OpenAlex key). It lists roster coauthors who were affiliated with the person's PhD institution on papers from the PhD years and were last author on most of them. Each entry is a **lead**: verify it to the evidence standard above, because a lab collaborator can look exactly like an advisor (Truong Hoang coauthored 19 papers with Tam Vu but was advised by Nikolaus Correll and Jacob Segil). When a lead is verified or ruled out, set its `status` to `verified` or `ruled-out` with a one-line reason.
+
 ### Step 3: Resolve publication identities
 
 Prefer an authenticated or officially published ORCID when available. Otherwise resolve an OpenAlex, Crossref, PubMed, DBLP, or comparable author identity using multiple signals. Never accept name-only matching, particularly for common Vietnamese names and initials.

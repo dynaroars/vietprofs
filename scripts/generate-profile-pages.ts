@@ -23,7 +23,9 @@ import {
   vietnameseName,
   withUpdates,
 } from '../src/data.ts';
+import { almaMaterInfo, almaMaterPath, canonicalAlmaMater } from '../src/alma-mater.ts';
 import { missingFields, REQUESTABLE_FIELDS } from '../src/missing-fields.ts';
+import { isVietnameseInstitution } from '../src/pathways.ts';
 import { renderSeeAlso } from '../src/see-also.ts';
 import { renderAddFab } from '../src/add-fab.ts';
 import { renderShareMenu } from '../src/share.ts';
@@ -62,6 +64,7 @@ const peopleDir = resolve(output, 'people');
 const fieldsDir = resolve(output, 'fields');
 const regionsDir = resolve(output, 'regions');
 const universitiesDir = resolve(output, 'universities');
+const alumniDir = resolve(output, 'alumni');
 const viDir = resolve(output, 'vi');
 const commit =
   process.env.VITE_GIT_COMMIT ||
@@ -150,6 +153,8 @@ interface RelatedContext {
   byField: ReadonlyMap<string, RosterEntry[]>;
   universityHubs: ReadonlySet<string>;
   fieldHubs: ReadonlySet<string>;
+  /** Vietnamese alma mater (canonical name) -> its alumni hub path. */
+  alumniHubs: ReadonlyMap<string, string>;
 }
 
 function pairHash(a: string, b: string) {
@@ -288,8 +293,24 @@ function profilePage(
     ? `<section class="man-section"><h2>${vi ? 'NGHIÊN CỨU' : 'RESEARCH'}</h2><ul>${person.researchAreas.map((area) => `<li><a href="${site}${directoryPage}?${sectorParam}q=${encodeURIComponent(area)}" class="research-area-link">${escapeHtml(area)}</a></li>`).join('')}</ul></section>`
     : '';
   const education = vi ? educationVi(person) : formatEducationDetails(person, { fullLabels: true });
+  const alumniLinks = [
+    ...new Set(
+      [
+        person.undergradInstitution,
+        person.msInstitution,
+        person.phdInstitution,
+        person.postdocInstitution,
+      ].map((school) => canonicalAlmaMater(school)),
+    ),
+  ]
+    .filter((school): school is string => Boolean(school && related.alumniHubs.has(school)))
+    .map((school) => {
+      const info = almaMaterInfo(school);
+      const label = info?.short ?? (vi ? (info?.vi ?? school) : school);
+      return `<a href="../${related.alumniHubs.get(school)}" title="${escapeHtml([school, info?.vi].filter(Boolean).join(' · '))}">${vi ? `Cựu sinh viên ${escapeHtml(label)}` : `${escapeHtml(label)} alumni`}</a>`;
+    });
   const educationSection = education.length
-    ? `<section class="man-section"><h2>${vi ? 'HỌC VẤN' : 'EDUCATION'}</h2><ul>${education.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul></section>`
+    ? `<section class="man-section"><h2>${vi ? 'HỌC VẤN' : 'EDUCATION'}</h2><ul>${education.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul>${alumniLinks.length ? `<p class="section-note">${alumniLinks.join(' · ')}</p>` : ''}</section>`
     : '';
   const honors = person.honors?.length
     ? `<section class="man-section"><h2>${vi ? 'GIẢI THƯỞNG & DANH HIỆU' : 'HONORS'}</h2><ul>${person.honors.map((honor) => `<li>${honor.source ? `<a href="${escapeHtml(honor.source)}" rel="noopener noreferrer">` : ''}${escapeHtml(honor.name)}${honor.year ? ` (${honor.year})` : ''}${honor.source ? '</a>' : ''}</li>`).join('')}</ul></section>`
@@ -584,7 +605,7 @@ if (button) {
 }
 
 interface HubConfig {
-  categoryType: 'Discipline' | 'Region' | 'Discipline × Region' | 'Institution';
+  categoryType: 'Discipline' | 'Region' | 'Discipline × Region' | 'Institution' | 'Alma Mater';
   categoryName: string;
   categoryTitle: string;
   categorySubtitle: string;
@@ -593,6 +614,8 @@ interface HubConfig {
   canonicalPath: string;
   interactiveUrl: string;
   otherCategories: { label: string; viLabel: string; path: string }[];
+  /** Extra text after a roster row's role, e.g. the degree an alumnus earned there. */
+  noteFor?: (person: RosterEntry, lang: Lang) => string;
   field?: string;
   region?: string;
   lang?: Lang;
@@ -603,6 +626,7 @@ const CATEGORY_TYPE_VI: Record<HubConfig['categoryType'], string> = {
   Region: 'Khu vực',
   'Discipline × Region': 'Lĩnh vực × Khu vực',
   Institution: 'Tổ chức',
+  'Alma Mater': 'Trường đã học',
 };
 
 // The Vietnamese twin of an English hub: same people, Vietnamese wording, paths under vi/.
@@ -637,6 +661,15 @@ function vietnameseHub(hub: HubConfig): HubConfig {
           title: `Giáo sư & nhà khoa học người Việt ngành ${field} tại ${place}`,
           subtitle: `Nhà nghiên cứu gốc Việt ngành ${field} tại ${place}`,
           description: `Danh sách ${people} ngành ${field} tại các trường đại học, viện nghiên cứu và doanh nghiệp ở ${place}.`,
+        };
+      }
+      case 'Alma Mater': {
+        const school = almaMaterInfo(hub.categoryName)?.vi ?? hub.categoryName;
+        return {
+          name: school,
+          title: `Cựu sinh viên ${school} trên VietProfs`,
+          subtitle: hub.categoryName,
+          description: `Danh sách ${n} giảng viên, nhà nghiên cứu và nhà khoa học người Việt ở nước ngoài từng học tại ${school}, cùng con đường học tập và nơi làm việc hiện nay.`,
         };
       }
       case 'Institution':
@@ -759,12 +792,13 @@ function categoryHubPage(config: HubConfig) {
       ]
         .filter(Boolean)
         .join(', ');
+      const note = config.noteFor?.(person, lang);
       const flag =
         person.country && !sharedCountry
           ? `<span class="country-flag" title="${escapeHtml(vi ? placeVi(person.country) : person.country)}">${countryFlag(person.country)}</span>`
           : '';
       const [shown, other] = vi && native ? [native, name] : [name, native];
-      return `<li class="hub-roster-item"><a class="hub-person-name" href="${rootPrefix}${langPath(personPath(person.id), lang)}">${escapeHtml(shown)}</a>${other && other !== shown ? ` <span class="hub-person-native">(${escapeHtml(other)})</span>` : ''} <span class="hub-person-role">${escapeHtml(role)}</span>${flag ? ` ${flag}` : ''}</li>`;
+      return `<li class="hub-roster-item"><a class="hub-person-name" href="${rootPrefix}${langPath(personPath(person.id), lang)}">${escapeHtml(shown)}</a>${other && other !== shown ? ` <span class="hub-person-native">(${escapeHtml(other)})</span>` : ''} <span class="hub-person-role">${escapeHtml(role)}</span>${note ? ` <span class="hub-person-note">${escapeHtml(note)}</span>` : ''}${flag ? ` ${flag}` : ''}</li>`;
     })
     .join('\n            ');
 
@@ -1010,6 +1044,7 @@ async function main() {
     rm(fieldsDir, { recursive: true, force: true }),
     rm(regionsDir, { recursive: true, force: true }),
     rm(universitiesDir, { recursive: true, force: true }),
+    rm(alumniDir, { recursive: true, force: true }),
     rm(viDir, { recursive: true, force: true }),
   ]);
 
@@ -1034,7 +1069,30 @@ async function main() {
       );
     universitySlugs.set(path, university);
   }
+  // Alumni hubs: everyone who studied at a Vietnamese school, at any degree stage.
+  const DEGREE_STAGES = [
+    ['undergradInstitution', 'undergradYear', 'Undergrad', 'Đại học'],
+    ['msInstitution', undefined, 'MS', 'Thạc sĩ'],
+    ['phdInstitution', 'phdYear', 'PhD', 'Tiến sĩ'],
+    ['postdocInstitution', undefined, 'Postdoc', 'Sau tiến sĩ'],
+  ] as const;
+  const byAlmaMater = new Map<string, RosterEntry[]>();
+  for (const person of roster) {
+    const schools = new Set(
+      DEGREE_STAGES.map(([field]) => canonicalAlmaMater(person[field])).filter(
+        (school): school is string => Boolean(school) && isVietnameseInstitution(school),
+      ),
+    );
+    for (const school of schools)
+      byAlmaMater.set(school, [...(byAlmaMater.get(school) ?? []), person]);
+  }
+  const alumniHubPaths = new Map(
+    [...byAlmaMater]
+      .filter(([, people]) => hasEnoughPeopleForRosterHub(people.length))
+      .map(([school]) => [school, almaMaterPath(school)] as const),
+  );
   const related: RelatedContext = {
+    alumniHubs: alumniHubPaths,
     byUniversity,
     byField,
     universityHubs: new Set(universityHubNames),
@@ -1253,12 +1311,58 @@ async function main() {
     };
   });
 
+  const alumniHubs: HubConfig[] = [...byAlmaMater]
+    .filter(([, people]) => hasEnoughPeopleForRosterHub(people.length))
+    .sort((a, b) => a[0].localeCompare(b[0]))
+    .map(([school, people]) => {
+      const info = almaMaterInfo(school);
+      const label = info?.short ? `${school} (${info.short})` : school;
+      return {
+        categoryType: 'Alma Mater' as const,
+        categoryName: school,
+        categoryTitle: `${info?.short ?? school} Alumni on VietProfs`,
+        categorySubtitle: [label, info?.vi].filter(Boolean).join(' · '),
+        description: `Directory of ${people.length} Vietnamese-diaspora faculty, researchers and scientists who studied at ${label}, with their degree paths and where they work today.`,
+        people,
+        canonicalPath: almaMaterPath(school),
+        interactiveUrl: `index.html?q=${encodeURIComponent(`Trained: ${info?.short ?? school}`)}`,
+        otherCategories: [],
+        noteFor: (person: RosterEntry, lang: Lang) =>
+          `· ${DEGREE_STAGES.filter(([field]) => canonicalAlmaMater(person[field]) === school)
+            .map(([, yearField, en, viLabel]) => {
+              const year = yearField ? person[yearField] : undefined;
+              return `${lang === 'vi' ? viLabel : en}${year ? ` ${year}` : ''}`;
+            })
+            .join(', ')}`,
+      };
+    });
+  const alumniPaths = new Set<string>();
+  for (const hub of alumniHubs) {
+    if (alumniPaths.has(hub.canonicalPath))
+      throw new Error(`Alumni hub path collision at ${hub.canonicalPath}`);
+    alumniPaths.add(hub.canonicalPath);
+  }
+  for (const hub of alumniHubs)
+    hub.otherCategories = [...alumniHubs]
+      .sort((a, b) => b.people.length - a.people.length)
+      .filter((other) => other !== hub)
+      .slice(0, 24)
+      .map((other) => {
+        const info = almaMaterInfo(other.categoryName);
+        return {
+          label: `${info?.short ?? other.categoryName} alumni`,
+          viLabel: `Cựu sinh viên ${info?.short ?? info?.vi ?? other.categoryName}`,
+          path: other.canonicalPath,
+        };
+      });
+
   const englishHubs = [
     ...fieldHubs,
     ...continentHubs,
     ...countryHubs,
     ...intersectionHubs,
     ...universityHubs,
+    ...alumniHubs,
   ];
   const vietnameseHubs = englishHubs.map(vietnameseHub);
   await Promise.all(
@@ -1281,7 +1385,7 @@ async function main() {
   if (!development) {
     const hubUrls = [...englishHubs, ...vietnameseHubs].map(
       (hub) =>
-        `  <url>\n    <loc>${absoluteUrl(hub.canonicalPath)}</loc>\n    <changefreq>weekly</changefreq>\n    <priority>${hub.categoryType === 'Discipline × Region' || hub.categoryType === 'Institution' ? '0.7' : '0.8'}</priority>\n  </url>`,
+        `  <url>\n    <loc>${absoluteUrl(hub.canonicalPath)}</loc>\n    <changefreq>weekly</changefreq>\n    <priority>${hub.categoryType === 'Discipline × Region' || hub.categoryType === 'Institution' || hub.categoryType === 'Alma Mater' ? '0.7' : '0.8'}</priority>\n  </url>`,
     );
     const profileUrls = allEntries.flatMap((person) =>
       (['en', 'vi'] as const).map(
@@ -1293,7 +1397,7 @@ async function main() {
     await writeFile(resolve(output, 'sitemap.xml'), sitemap);
   }
   console.log(
-    `Generated ${allEntries.length} profile pages, ${fieldHubs.length} field hubs, ${continentHubs.length + countryHubs.length} region hubs, ${intersectionHubs.length} field-region hubs, and ${universityHubs.length} university hubs, each in English and Vietnamese${development ? ', for development.' : ', and sitemap entries.'}`,
+    `Generated ${allEntries.length} profile pages, ${fieldHubs.length} field hubs, ${continentHubs.length + countryHubs.length} region hubs, ${intersectionHubs.length} field-region hubs, ${universityHubs.length} university hubs, and ${alumniHubs.length} alumni hubs, each in English and Vietnamese${development ? ', for development.' : ', and sitemap entries.'}`,
   );
 }
 
