@@ -426,6 +426,8 @@ const REVIEWED_VIETNAMESE = new Set([
   // Foreign Trade University (Hanoi) degree; owner ruling 2026-11-21 (NonViet-Viet hyphen allowed
   // with other Vietnamese evidence).
   'Ruby Brownen-Trinh',
+  // Fused Vietnamese tokens: Huyvu = Huy Vũ, Ledoan = Lê Đoàn (UTC schedule lists Andrew Huyvu Ledoan).
+  'Andrew Huyvu Ledoan',
 ]);
 
 function normalizedParts(name: string): string[] {
