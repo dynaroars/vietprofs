@@ -343,6 +343,7 @@ const portraits = new Set();
 // institution (vp-0675/vp-1574, vp-0806/vp-1581, ... merged 2026-09-27). Pairs confirmed to be
 // different people go in DISTINCT_PEOPLE with how that was confirmed.
 const DISTINCT_PEOPLE = new Set<string>([
+  'vp-1892 vp-5061', // Yen Tran (Associate Professor, innovation; ORCID 0009-0007-6169-9918) and Yen Tran (Assistant Professor, finance, joined 2025; ORCID 0000-0001-5336-3284), Heriot-Watt EBS: separate portal profiles
   'vp-2345 vp-4695', // Thu Tran (Family and Community Medicine) and Amanda Hien Thu Tran (Pediatric Anesthesiology), UT Southwestern: separate UTSW profiles
   'vp-2370 vp-4796', // Vinh Nguyen (Associate Professor) and Brian Vinh Nguyen (2026 residency graduate, Assistant Professor), Minnesota Anesthesiology: separate UMN bios
   'vp-0313 vp-4886', // Mai Thi Nguyen (Urban Studies and Planning) and Mai H. Nguyen (San Diego Supercomputer Center), UC San Diego: different fields and middle initials
