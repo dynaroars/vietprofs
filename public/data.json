@@ -9072,7 +9072,8 @@
     "country": "United States",
     "portrait": "portraits/275-lan-nguyen-chaplin-northwestern-university.webp",
     "portraitSource": "https://www.medill.northwestern.edu/_imgs/directory/faculty/lan_chaplin_750x1125.jpg",
-    "undergradYear": 2018
+    "undergradYear": 2018,
+    "undergradInstitution": "University of Pennsylvania"
   },
   {
     "id": "vp-0273",
@@ -9340,7 +9341,23 @@
     "phdYear": 1997,
     "phdInstitution": "Szent Istvan University, Hungary",
     "msInstitution": "Szent Istvan University, Hungary",
-    "websiteUrl": "https://www.depts.ttu.edu/igcast/Research/lab-tran/Tran_Lab.php"
+    "websiteUrl": "https://www.depts.ttu.edu/igcast/Research/lab-tran/Tran_Lab.php",
+    "honors": [
+      {
+        "name": "Fellow, The World Academy of Sciences (TWAS)",
+        "year": 2020,
+        "category": "academy",
+        "organization": "The World Academy of Sciences",
+        "source": "https://www.depts.ttu.edu/pss/people/faculty/tran-son/tran-son.php"
+      },
+      {
+        "name": "Fellow, National Academy of Sciences, India",
+        "year": 2023,
+        "category": "academy",
+        "organization": "National Academy of Sciences, India",
+        "source": "https://www.depts.ttu.edu/pss/people/faculty/tran-son/tran-son.php"
+      }
+    ]
   },
   {
     "id": "vp-0284",
@@ -9383,7 +9400,9 @@
     "portrait": "portraits/288-anh-tran-university-of-massachusetts-lowell.webp",
     "portraitSource": "https://www.uml.edu/images/tran-anh-1400-opt_tcm18-38859.jpg?w=x",
     "undergradYear": 1966,
-    "rank": "Professor"
+    "rank": "Professor",
+    "msInstitution": "University of Rhode Island",
+    "undergradInstitution": "National Taiwan University"
   },
   {
     "id": "vp-0286",
@@ -9455,7 +9474,8 @@
       }
     ],
     "websiteUrl": "https://ngolab.che.wisc.edu/",
-    "undergradYear": 2015
+    "undergradYear": 2015,
+    "undergradInstitution": "Virginia Tech"
   },
   {
     "id": "vp-0288",
@@ -9478,7 +9498,16 @@
     "portrait": "portraits/291-beth-nguyen-university-of-wisconsin-madison.webp",
     "portraitSource": "https://creativewriting.wisc.edu/wp-content/uploads/sites/458/2021/12/nguyen_full-239x300-1-e1640652876842.jpeg",
     "websiteUrl": "https://www.bethminhnguyen.com/",
-    "undergradYear": 2022
+    "undergradYear": 2022,
+    "honors": [
+      {
+        "name": "Guggenheim Fellowship",
+        "year": 2024,
+        "category": "career_award",
+        "organization": "John Simon Guggenheim Memorial Foundation",
+        "source": "https://english.wisc.edu/staff/nguyen-beth-bich-minh/"
+      }
+    ]
   },
   {
     "id": "vp-0289",
