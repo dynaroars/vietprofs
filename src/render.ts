@@ -212,7 +212,8 @@ export function renderRosterEntry(
       <div class="entry-content">
         <div class="entry-name-row">
           <a class="entry-name" href="${escapeHtml(`${baseUrl}${personPath(person.id)}`)}">${escapeHtml(visibleName)}</a>
-          <span class="entry-vietnamese-name">(${escapeHtml(nativeName)})</span> ${locBadge}${profileIcon}${personalSiteIcon}${scholarIcon}${linkedinIcon}${favoriteToggle}
+          <span class="entry-vietnamese-name">(${escapeHtml(nativeName)})</span>
+          <span class="entry-links">${locBadge}${profileIcon}${personalSiteIcon}${scholarIcon}${linkedinIcon}${favoriteToggle}</span>
         </div>
         <div class="entry-meta">${escapeHtml(entryMeta)}</div>
         ${educationDetails.length ? `<div class="entry-details">${educationDetails.map((value) => escapeHtml(value)).join('; ')}</div>` : ''}

@@ -208,6 +208,24 @@
   margin-left: auto;
 }
 
+/* Flag, link icons and star wrap as one group, so on a narrow card they move to the next line
+   together instead of one by one. */
+.entry-links {
+  display: inline-flex;
+  flex: 1 1 auto;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+@media (max-width: 560px) {
+  /* Icons keep their 44px touch targets, which already space them; drop the extra gap. */
+  .entry-links {
+    gap: 0;
+  }
+}
+
 .tag-more {
   cursor: help;
 }
