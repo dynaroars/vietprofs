@@ -251,6 +251,7 @@ a.entry-name:focus-visible {
 .entry-meta {
   color: var(--text-muted);
   font-size: var(--text-sm);
+  overflow-wrap: anywhere;
 }
 
 .entry .loc-badge-link {

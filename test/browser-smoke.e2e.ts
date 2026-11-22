@@ -632,7 +632,7 @@ test('combined field and location filters link to their static intersection hub'
   await page.waitForLoadState('networkidle');
   assert.equal(
     await textOf(page.locator('h1')),
-    'Vietnamese Health Sciences Researchers & Scholars in Japan',
+    'Vietnamese Health Sciences Researchers & Scholars in Japan 🇯🇵',
   );
   await page.close();
 });
@@ -714,7 +714,7 @@ test('filter choices stay stable and stale filters recover', async () => {
   await page.locator('#field-filter').selectOption('Biological & Biomedical Sciences');
   assert.ok((await page.locator('.entry').count()) > 0);
   assert.equal(await page.locator('#track-filter option[value="Tenure-line"]').count(), 1);
-  assert.equal(await page.locator('#track-filter option[value="Teaching"]').count(), 0);
+  assert.equal(await page.locator('#track-filter option[value="Policy & Think Tank"]').count(), 0);
   assert.equal(
     await page.locator('#field-filter option[value="Earth & Environmental Sciences"]').count(),
     1,

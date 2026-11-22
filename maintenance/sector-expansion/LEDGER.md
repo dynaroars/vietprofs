@@ -132,3 +132,34 @@ Lessons:
 - Most rejections are evidence, not eligibility: team/member-list pages, alumni pages at a
   former employer, no stated title, and no sourced work city (Amazon, Salesforce, DeepMind,
   multi-site institutes). Without a looser evidence rule the remaining pool is small.
+
+## Under-covered sweep (2026-11-21)
+
+Owner goal: 1,000 more people from Codex and agy, focusing on areas earlier sweeps did not
+target; Claude audited every candidate live and added passes directly (no Issues). Result:
+1,006 added (vp-3757 to vp-4771) in ~11 hours over waves w10–w18. Briefs: `BRIEF3.md`
+(non-academic), `BRIEF4.md` (universities and institutes in thin countries and US
+non-flagships); slices in `slices4.tsv`–`slices11.tsv`.
+
+| Source | Approx. added | Notes |
+| :-- | --: | :-- |
+| US academic medicine: specialty slices (`slices8`/`slices9`) and single-institution sweeps (`slices10`/`slices11`) | ~520 | Best yield by far: 10–25 per slice. California and Texas centers (UCI, UCSF, UCLA, Loma Linda, Kaiser Tyson, Baylor, MD Anderson, UTSW) richest. Central/West halves ~3x East halves. |
+| US regional, private, business and state second-pass slices (`slices6`/`slices7`/`slices8`) | ~250 | Region-plus-many-institutions slices yield 8–25; nationwide discipline slices yield 2–5. |
+| Non-US universities and institutes (`slices4`/`slices5`) | ~200 | Canada, Australia, France (regional + grandes écoles), UK post-92, Taiwan, Japan, Nordics, central/eastern Europe, Russia gave the most. |
+| Industry and labs | ~25 | Corporate researchers rarely have a citable page; DOE/NASA/NIH/defense slices returned ~0 (covered by earlier sweeps). |
+| Minor-surname OpenAlex pairs leads (FIND3) | ~17 | ~4% yield; most leads were postdocs, students, or back in Vietnam. |
+
+Producer notes:
+
+- Codex gpt-6.1-sol did most of the work: 4–20 minutes per slice, accurate titles and URLs.
+- agy works only with `--settings` allowing read-only commands (`grep`, `sed`, `cat`, `head`,
+  `rg`, `find-roster-matches`); before that it cited Scholar, ORCID or paper affiliations or
+  produced nothing. With it, its French and UK slices were clean. Quota still runs out after
+  ~10 long slices (resets in under an hour). Its output schema varies (`institution`,
+  `location{}`, lowercase ranks), so map it before review. 404 URLs from agy were recovered by a
+  Codex FIND pass.
+- Common rejections: Korean research-professor and Japanese 特任 contract posts, postdoc-level
+  research fellows, non-continuing lecturers and instructors, community colleges, Canadian
+  assistant clinical professors without full-time evidence, pages without the person's name or
+  title, and names whose order could not be confirmed.
+- Held for an owner ruling: Vincent T. Ho (Harvard/Dana-Farber), Saigon-born, ethnically Chinese.
