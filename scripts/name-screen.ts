@@ -433,6 +433,10 @@ const REVIEWED_VIETNAMESE = new Set([
   'Alan Chiem',
   // Viet given name + married surname; her UCLA biography says she was born in Vietnam.
   'Mytien T. Goldberg',
+  // Shriners/Harvard profile lists Vietnamese among her languages.
+  'Christine L. Mai',
+  // Nguy = Ngụy; Cooper profile lists Vietnamese among his languages.
+  'Steven T. Nguy',
 ]);
 
 function normalizedParts(name: string): string[] {
