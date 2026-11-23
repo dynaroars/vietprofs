@@ -27,6 +27,7 @@ const schemaFile = resolve('public/roster.schema.json');
 const surnameFirstAllowlist = new Set<string>([
   'Nguyen Park', // GW PA Studies faculty list "Nguyen Park"; Nguyen is her given name, Park her surname (her essay names Vietnamese as her family language).
   'Le My Tran Ozor', // Texas State profile: given name Le My, Vietnamese surname Tran retained before married surname Ozor.
+  'Mai Linh Spencer', // UC Law SF; Vietnamese given name Mai Linh with non-Vietnamese surname Spencer.
   'Mai Thai', // Occidental sociology; given name Mai, Vietnamese surname Thai (Thái) in Western order.
   'Mai K. Nguyen-Verger', // ETIS profile: given name Mai Khuong; Vietnamese surname Nguyen hyphenated with married surname Verger.
   'Nguyen Q. Minh', // UCSD CER directory lists "Minh, Nguyen"; publishes as Nguyen Q. Minh (OpenAlex, 141 works), so Minh is his Western-order surname.
