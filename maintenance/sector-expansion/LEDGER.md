@@ -182,3 +182,14 @@ Producer notes:
 `slices18.tsv` (inst266–inst320): the w24 given-name second pass applied to the other 55 US
 academic-medicine centers. 35 added (vp-5205 to vp-5239), ~0.6 per slice, versus 2.5 for the 15
 richest centers in w24. The given-name channel is now largely spent for US medicine.
+
+## w26 (2026-11-22)
+
+`slices19.tsv` (inst321–inst372): given-name second pass on the main (non-medical) campuses of
+large US universities, grouped by region. 20 added (vp-5240 to vp-5259), ~0.4 per slice; 33 of 52
+slices returned nothing. Surname sweeps had already covered these campuses well.
+
+- Skipped: Harold Linh Cole (Penn; middle name Linh is the only signal) and three community
+  college faculty (Hostos, Kingsborough, UH Maui College).
+- Name-order calls: Nguyen Q. Minh (UCSD CER lists "Minh, Nguyen"; publishes as Nguyen Q. Minh),
+  Le My Tran Ozor (given name Le My, retained surname Tran).
