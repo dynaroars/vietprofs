@@ -441,10 +441,15 @@ const REVIEWED_VIETNAMESE = new Set([
   'Catherine Do Tan',
   // OUHSC hospitalist; Vietnamese given name Nhi on the official faculty page.
   'Nhi Nai',
+  // CSUN profile: "Vietnamese American queer sociologist".
   'Gina Masequesmay',
+  // UNSW optometry; Vietnamese spelling of given name Siêu with surname Khưu.
   'Sieu Khuu',
+  // La Trobe profile lists Vietnamese language proficiency.
   'Kate Mai',
+  // JCU article: Vietnamese maternal grandmother, raised in Vietnamese language and culture.
   'Florence Boulard',
+  // UOW: came to Australia from Vietnam.
   'Joseph Tonien',
 ]);
 
