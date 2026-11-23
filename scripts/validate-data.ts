@@ -26,6 +26,7 @@ const schemaFile = resolve('public/roster.schema.json');
 // are allowlisted so the test doesn't force a wrong "fix" on them.
 const surnameFirstAllowlist = new Set<string>([
   'Nguyen Park', // GW PA Studies faculty list "Nguyen Park"; Nguyen is her given name, Park her surname (her essay names Vietnamese as her family language).
+  'Le My Tran Ozor', // Texas State profile: given name Le My, Vietnamese surname Tran retained before married surname Ozor.
   'Nguyen Q. Minh', // UCSD CER directory lists "Minh, Nguyen"; publishes as Nguyen Q. Minh (OpenAlex, 141 works), so Minh is his Western-order surname.
   'Ha My Vy', // Mount Sinai Do lab page; publishes as "Ha My T. Vy" (OpenAlex), so Vy is her surname.
   'Tran T. La', // Northwestern Feinberg profile "Tran T. La"; Tran is the given name, La the surname.
