@@ -230,3 +230,11 @@ and the UK the least. Skipped: lecturers at private non-university providers (Me
 of Technology, Canterbury Institute of Management, Excelsia University College, Whitecliffe),
 The Georges Be Duc (name-only signal). Kept Manukau Institute of Technology (NZ polytechnic,
 Unitec precedent). Name-order allowlist: Mai K. Nguyen-Verger.
+
+## w31 (2026-11-23)
+
+`slices23.tsv` (inst489–inst508): remaining field × region slices for continental Europe and
+Asia, medical schools in five non-US regions, and the Middle East/Africa/Latin America. 12 added
+(vp-5383 to vp-5393, plus reinstated vp-1512 Van Anh Nguyen, Innsbruck, whose 2026-09-12 entry had
+been retired for lacking a source), ~0.6 per slice. Middle East/Africa/Latin America slices
+returned nothing; French PU-PH and Japanese universities supplied most hits.
