@@ -211,3 +211,12 @@ non-medical pass. Held: 21 Canadian clinical-title physicians (Université de Mo
 clinique", Laval, UBC, U of T, McGill) without full-time evidence. Skipped: associate/assistant
 lecturers, language instructors (Polish wykładowca, Russian преподаватель), Hungarian tanársegéd,
 a Manitoba senior instructor.
+
+## w29 (2026-11-23)
+
+`slices21.tsv` (inst399–inst438): third, narrow-scope pass on single non-US institutions or small
+groups, querying staff directories one given-name or surname token at a time. 35 added (vp-5305
+to vp-5339), ~0.9 per slice, mostly from France, the UK, Japan, Taiwan, Thailand and China.
+Name-screen reviewed: Chooc Ly Tan (CV: Afro/Vietnamese/Cambodian heritage), Hainam Do (fused Hải
+Nam). Thu Thuy Dang (Clermont Auvergne INP) entered as Associate Professor from the CNU section 61
+electoral list (maître de conférences); the employer profile only says "Permanent".
