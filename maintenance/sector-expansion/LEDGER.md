@@ -278,3 +278,11 @@ CCLCM faculty list URL is already vp-5216's.
 Korea, SE Asia, Sino-foreign campuses/HK/Macau, mainland China, Australia/NZ and Canada. 10 added
 (vp-5442 to vp-5451), ~0.7 per slice; 8 of 14 slices empty, so earlier passes covered Japan and
 Taiwan well. Name-screen reviewed: Jennifer Ma, Emmanuelle Richez.
+
+## w37 (2026-11-23)
+
+`slices29.tsv` (14 industry slices, BRIEF3): fourth pass on corporate research labs by given-name
+tokens (big tech, AI startups, enterprise, autonomy/robotics, pharma by region, Asia/Europe
+industry, energy/aerospace). 1 added (vp-5452 Hieu Hoang, Microsoft Research, personal site,
+unconfirmed); 12 of 14 slices empty. Skipped a Novartis data scientist (no research role shown).
+The industry channel is spent.
