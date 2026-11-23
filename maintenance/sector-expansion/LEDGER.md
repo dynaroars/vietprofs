@@ -254,3 +254,12 @@ California privates, Texas regionals and privates, Pacific Northwest, Mountain W
 CUNY/SUNY/NJ, Mid-Atlantic, Virginia/Carolinas, Southeast, New England). 17 added (vp-5403 to
 vp-5419), ~1.2 per slice — better than the w26 large-campus pass, so w34 extends it. Phu Phan
 (CSUDH) uses the catalog addendum as profileUrl because the department page is already vp-0367's.
+
+## w34 (2026-11-23)
+
+`slices26.tsv` (inst543–inst557): US professional schools nationwide (pharmacy, osteopathic,
+dental, optometry/podiatry, nursing, law, art/design/music), engineering-focused schools, liberal
+arts colleges, religious universities, and smaller state universities not named in w33. 13 added
+(vp-5420 to vp-5432), ~0.9 per slice; law and art schools gave the most. Skipped Euane Newen
+(Stony Brook dentistry; only signal is Vietnamese as a spoken language). Name-order allowlist:
+Mai Linh Spencer.
