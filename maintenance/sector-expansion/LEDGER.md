@@ -271,3 +271,10 @@ systems, children's hospitals, cancer centers, VA researchers with university ti
 of public health. 9 added (vp-5433 to vp-5441), ~0.75 per slice; most slices returned 0–1.
 Timmy Nguyen (CCLCM, Cleveland Clinic Florida) uses his Cleveland Clinic provider page because the
 CCLCM faculty list URL is already vp-5216's.
+
+## w36 (2026-11-23)
+
+`slices28.tsv` (inst570–inst583): smaller/private universities in Japan (5 slices), Taiwan (3),
+Korea, SE Asia, Sino-foreign campuses/HK/Macau, mainland China, Australia/NZ and Canada. 10 added
+(vp-5442 to vp-5451), ~0.7 per slice; 8 of 14 slices empty, so earlier passes covered Japan and
+Taiwan well. Name-screen reviewed: Jennifer Ma, Emmanuelle Richez.
