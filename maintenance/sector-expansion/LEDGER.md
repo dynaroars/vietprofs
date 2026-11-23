@@ -246,3 +246,11 @@ INRAE/IRD, Inria, CEA group, Pasteur/Curie, German, Benelux/Nordic, UK, Japanese
 Asian, Australian/NZ and Canadian institutes, non-US central banks). 9 added (vp-5394 to vp-5402),
 ~0.45 per slice; 12 of 20 slices returned nothing. Skipped three permanent ingénieur de recherche /
 lab-manager posts (IPGP platform, Géoazur, INRAE Thonon) as technical-support roles.
+
+## w33 (2026-11-23)
+
+`slices25.tsv` (inst529–inst542): smaller US four-year institutions by region (Cal State,
+California privates, Texas regionals and privates, Pacific Northwest, Mountain West, Midwest,
+CUNY/SUNY/NJ, Mid-Atlantic, Virginia/Carolinas, Southeast, New England). 17 added (vp-5403 to
+vp-5419), ~1.2 per slice — better than the w26 large-campus pass, so w34 extends it. Phu Phan
+(CSUDH) uses the catalog addendum as profileUrl because the department page is already vp-0367's.
