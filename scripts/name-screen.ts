@@ -441,6 +441,11 @@ const REVIEWED_VIETNAMESE = new Set([
   'Catherine Do Tan',
   // OUHSC hospitalist; Vietnamese given name Nhi on the official faculty page.
   'Nhi Nai',
+  'Gina Masequesmay',
+  'Sieu Khuu',
+  'Kate Mai',
+  'Florence Boulard',
+  'Joseph Tonien',
 ]);
 
 function normalizedParts(name: string): string[] {
