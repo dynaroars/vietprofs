@@ -286,3 +286,16 @@ tokens (big tech, AI startups, enterprise, autonomy/robotics, pharma by region, 
 industry, energy/aerospace). 1 added (vp-5452 Hieu Hoang, Microsoft Research, personal site,
 unconfirmed); 12 of 14 slices empty. Skipped a Novartis data scientist (no research role shown).
 The industry channel is spent.
+
+## w38 (2026-11-23)
+
+`slices30.tsv` (inst584–inst599): Europe single-region slices (Germany by state, Czechia/Slovakia,
+Poland/Hungary/Baltics, UK by region, Benelux, Nordics, Austria/Switzerland, Italy/Spain/Portugal),
+given-name tokens. 2 added (vp-5453 Milena Le Viet-Błaszczyk, Łódź adiunkt; vp-5454 Thierry Pham
+Hoang, UMONS forensic psychology), ~0.13 per slice; 14 of 16 slices empty. Europe is spent.
+
+## w39 (2026-11-23)
+
+`slices31.tsv` (inst600–inst615): second, narrower pass on smaller US four-year institutions,
+split by metro or state (CA ×4, TX ×2, WA/OR, DMV, GA, FL, Gulf South/OK, MA, NYC/LI, PA/NJ,
+IL/MN/WI, Mountain West).
