@@ -238,3 +238,11 @@ Asia, medical schools in five non-US regions, and the Middle East/Africa/Latin A
 (vp-5383 to vp-5393, plus reinstated vp-1512 Van Anh Nguyen, Innsbruck, whose 2026-09-12 entry had
 been retired for lacking a source), ~0.6 per slice. Middle East/Africa/Latin America slices
 returned nothing; French PU-PH and Japanese universities supplied most hits.
+
+## w32 (2026-11-23)
+
+`slices24.tsv` (inst509–inst528): non-US public research institutes (CNRS institutes, INSERM,
+INRAE/IRD, Inria, CEA group, Pasteur/Curie, German, Benelux/Nordic, UK, Japanese, Korean/Taiwanese,
+Asian, Australian/NZ and Canadian institutes, non-US central banks). 9 added (vp-5394 to vp-5402),
+~0.45 per slice; 12 of 20 slices returned nothing. Skipped three permanent ingénieur de recherche /
+lab-manager posts (IPGP platform, Géoazur, INRAE Thonon) as technical-support roles.
