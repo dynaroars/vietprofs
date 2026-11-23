@@ -308,3 +308,5 @@ to Associate Professor comes from the April 2026 provost announcement.
 `slices32.tsv` (inst616–inst627): the complementary state groups w39 left out (Virginia
 south, Carolinas, TN/KY, Ohio, MI/IN, MO/KS/IA/NE, northern New England and CT/RI, upstate New York,
 AR/MS/WV/DE, HI/AK/NM/ID/MT/WY), HBCUs nationwide, and online universities plus military academies.
+Not run: every job failed at once with "Your workspace is out of credits" from Codex. Rerun
+slices32.tsv unchanged once Codex credits are restored.
