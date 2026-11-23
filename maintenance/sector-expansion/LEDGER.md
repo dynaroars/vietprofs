@@ -193,3 +193,21 @@ slices returned nothing. Surname sweeps had already covered these campuses well.
   college faculty (Hostos, Kingsborough, UH Maui College).
 - Name-order calls: Nguyen Q. Minh (UCSD CER lists "Minh, Nguyen"; publishes as Nguyen Q. Minh),
   Le My Tran Ozor (given name Le My, retained surname Tran).
+
+## w27 (2026-11-22)
+
+OpenAlex channel: authors at education/healthcare institutions outside Vietnam with a Vietnamese
+surname and a distinctly Vietnamese given name, ≥30 works and ≥5 since 2024, not matching a roster
+name (4,055 raw → 188 leads in 16 batches; Codex FIND3 brief). 3 added (vp-5302 to vp-5304).
+Almost all leads were postdocs, research fellows, students, hospital clinicians, staff scientists
+or Korean research professors. Not worth repeating for academia.
+
+## w28 (2026-11-22)
+
+`slices20.tsv` (inst373–inst398): given-name second pass on non-US universities (Australia, NZ,
+Canada, France, Benelux/Switzerland, Germany, Nordics, UK, Japan, Korea, Taiwan, SE Asia, Middle
+East, central Europe). 42 added (vp-5260 to vp-5301), ~1.6 per slice — much better than the US
+non-medical pass. Held: 21 Canadian clinical-title physicians (Université de Montréal "de
+clinique", Laval, UBC, U of T, McGill) without full-time evidence. Skipped: associate/assistant
+lecturers, language instructors (Polish wykładowca, Russian преподаватель), Hungarian tanársegéd,
+a Manitoba senior instructor.
