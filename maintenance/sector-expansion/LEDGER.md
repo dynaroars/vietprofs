@@ -263,3 +263,11 @@ arts colleges, religious universities, and smaller state universities not named 
 (vp-5420 to vp-5432), ~0.9 per slice; law and art schools gave the most. Skipped Euane Newen
 (Stony Brook dentistry; only signal is Vietnamese as a spoken language). Name-order allowlist:
 Mai Linh Spencer.
+
+## w35 (2026-11-23)
+
+`slices27.tsv` (inst558–inst569): newer and community-based US MD schools by region, large health
+systems, children's hospitals, cancer centers, VA researchers with university titles, and schools
+of public health. 9 added (vp-5433 to vp-5441), ~0.75 per slice; most slices returned 0–1.
+Timmy Nguyen (CCLCM, Cleveland Clinic Florida) uses his Cleveland Clinic provider page because the
+CCLCM faculty list URL is already vp-5216's.
