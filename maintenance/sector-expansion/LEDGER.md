@@ -220,3 +220,13 @@ to vp-5339), ~0.9 per slice, mostly from France, the UK, Japan, Taiwan, Thailand
 Name-screen reviewed: Chooc Ly Tan (CV: Afro/Vietnamese/Cambodian heritage), Hainam Do (fused Hải
 Nam). Thu Thuy Dang (Clermont Auvergne INP) entered as Associate Professor from the CNU section 61
 electoral list (maître de conférences); the employer profile only says "Permanent".
+
+## w30 (2026-11-23)
+
+`slices22.tsv` (inst439–inst488): discipline × region slices outside the US (10 fields each for
+AU/NZ, UK/IE, France/Belgium/Switzerland and Canada; 5 fields each for continental Europe and
+Asia). 43 added (vp-5340 to vp-5382), ~0.9 per slice; France and Japan gave the most, Canada
+and the UK the least. Skipped: lecturers at private non-university providers (Melbourne Institute
+of Technology, Canterbury Institute of Management, Excelsia University College, Whitecliffe),
+The Georges Be Duc (name-only signal). Kept Manukau Institute of Technology (NZ polytechnic,
+Unitec precedent). Name-order allowlist: Mai K. Nguyen-Verger.
