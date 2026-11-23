@@ -299,3 +299,12 @@ Hoang, UMONS forensic psychology), ~0.13 per slice; 14 of 16 slices empty. Europ
 `slices31.tsv` (inst600–inst615): second, narrower pass on smaller US four-year institutions,
 split by metro or state (CA ×4, TX ×2, WA/OR, DMV, GA, FL, Gulf South/OK, MA, NYC/LI, PA/NJ,
 IL/MN/WI, Mountain West).
+7 added (vp-5455 to vp-5461), ~0.44 per slice; 10 of 16 slices empty. Daniel Ngoc Tran (UT
+Dallas Associate Professor of Instruction) is on the Teaching track; Tony Bui's Regis promotion
+to Associate Professor comes from the April 2026 provost announcement.
+
+## w40 (2026-11-23)
+
+`slices32.tsv` (inst616–inst627): the complementary state groups w39 left out (Virginia
+south, Carolinas, TN/KY, Ohio, MI/IN, MO/KS/IA/NE, northern New England and CT/RI, upstate New York,
+AR/MS/WV/DE, HI/AK/NM/ID/MT/WY), HBCUs nationwide, and online universities plus military academies.
