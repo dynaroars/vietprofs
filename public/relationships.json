@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-23T14:00:00.000Z",
+  "updatedAt": "2026-11-24T00:00:00.000Z",
   "relationships": [
     {
       "id": "rel-coauthor-vp-0015-vp-0018",
@@ -6769,6 +6769,21 @@
     },
     {
       "type": "doctoral-advisor",
+      "personId": "vp-5431",
+      "role": "mentor",
+      "name": "Alexander G. Ramm",
+      "affiliation": "Kansas State University",
+      "url": "",
+      "sources": [
+        "https://www.westga.edu/share/documents/vitae/vita_090558.pdf"
+      ],
+      "evidence": "Nguyen Hoang's curriculum vitae on the University of West Georgia site lists a Ph.D. in Mathematics from Kansas State University (2006–2011), thesis 'Numerical solutions to some ill-posed problems', with 'Advisor: Prof. Alexander G. Ramm'.",
+      "works": [],
+      "verifiedAt": "2026-11-24T00:00:00.000Z",
+      "notes": ""
+    },
+    {
+      "type": "doctoral-advisor",
       "personId": "vp-5452",
       "role": "mentor",
       "name": "Miles Osborne",
@@ -6796,6 +6811,36 @@
       "works": [],
       "verifiedAt": "2026-11-23T14:00:00.000Z",
       "notes": "Personal site (evidence standard 3); co-supervision as listed. Neither is in the roster (find-roster-matches)."
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-5455",
+      "role": "mentor",
+      "name": "Kevin Ochsner",
+      "affiliation": "Columbia University",
+      "url": "",
+      "sources": [
+        "https://www.sandiego.edu/cas/neuroscience-cognition-behavior/faculty-and-staff/biography.php?profile_id=17360"
+      ],
+      "evidence": "The official University of San Diego profile says Monica Thieu earned her Ph.D. in psychology from Columbia University under Dr. Kevin Ochsner.",
+      "works": [],
+      "verifiedAt": "2026-11-24T00:00:00.000Z",
+      "notes": ""
+    },
+    {
+      "type": "postdoctoral-mentor",
+      "personId": "vp-5455",
+      "role": "mentor",
+      "name": "Philip Kragel",
+      "affiliation": "Emory University",
+      "url": "",
+      "sources": [
+        "https://www.sandiego.edu/cas/neuroscience-cognition-behavior/faculty-and-staff/biography.php?profile_id=17360"
+      ],
+      "evidence": "The official University of San Diego profile says she completed NIH IRACDA postdoctoral training at Emory University, in research under Dr. Philip Kragel.",
+      "works": [],
+      "verifiedAt": "2026-11-24T00:00:00.000Z",
+      "notes": ""
     }
   ]
 }
