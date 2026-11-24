@@ -211,3 +211,102 @@ non-medical pass. Held: 21 Canadian clinical-title physicians (Université de Mo
 clinique", Laval, UBC, U of T, McGill) without full-time evidence. Skipped: associate/assistant
 lecturers, language instructors (Polish wykładowca, Russian преподаватель), Hungarian tanársegéd,
 a Manitoba senior instructor.
+
+## w29 (2026-11-23)
+
+`slices21.tsv` (inst399–inst438): third, narrow-scope pass on single non-US institutions or small
+groups, querying staff directories one given-name or surname token at a time. 35 added (vp-5305
+to vp-5339), ~0.9 per slice, mostly from France, the UK, Japan, Taiwan, Thailand and China.
+Name-screen reviewed: Chooc Ly Tan (CV: Afro/Vietnamese/Cambodian heritage), Hainam Do (fused Hải
+Nam). Thu Thuy Dang (Clermont Auvergne INP) entered as Associate Professor from the CNU section 61
+electoral list (maître de conférences); the employer profile only says "Permanent".
+
+## w30 (2026-11-23)
+
+`slices22.tsv` (inst439–inst488): discipline × region slices outside the US (10 fields each for
+AU/NZ, UK/IE, France/Belgium/Switzerland and Canada; 5 fields each for continental Europe and
+Asia). 43 added (vp-5340 to vp-5382), ~0.9 per slice; France and Japan gave the most, Canada
+and the UK the least. Skipped: lecturers at private non-university providers (Melbourne Institute
+of Technology, Canterbury Institute of Management, Excelsia University College, Whitecliffe),
+The Georges Be Duc (name-only signal). Kept Manukau Institute of Technology (NZ polytechnic,
+Unitec precedent). Name-order allowlist: Mai K. Nguyen-Verger.
+
+## w31 (2026-11-23)
+
+`slices23.tsv` (inst489–inst508): remaining field × region slices for continental Europe and
+Asia, medical schools in five non-US regions, and the Middle East/Africa/Latin America. 12 added
+(vp-5383 to vp-5393, plus reinstated vp-1512 Van Anh Nguyen, Innsbruck, whose 2026-09-12 entry had
+been retired for lacking a source), ~0.6 per slice. Middle East/Africa/Latin America slices
+returned nothing; French PU-PH and Japanese universities supplied most hits.
+
+## w32 (2026-11-23)
+
+`slices24.tsv` (inst509–inst528): non-US public research institutes (CNRS institutes, INSERM,
+INRAE/IRD, Inria, CEA group, Pasteur/Curie, German, Benelux/Nordic, UK, Japanese, Korean/Taiwanese,
+Asian, Australian/NZ and Canadian institutes, non-US central banks). 9 added (vp-5394 to vp-5402),
+~0.45 per slice; 12 of 20 slices returned nothing. Skipped three permanent ingénieur de recherche /
+lab-manager posts (IPGP platform, Géoazur, INRAE Thonon) as technical-support roles.
+
+## w33 (2026-11-23)
+
+`slices25.tsv` (inst529–inst542): smaller US four-year institutions by region (Cal State,
+California privates, Texas regionals and privates, Pacific Northwest, Mountain West, Midwest,
+CUNY/SUNY/NJ, Mid-Atlantic, Virginia/Carolinas, Southeast, New England). 17 added (vp-5403 to
+vp-5419), ~1.2 per slice — better than the w26 large-campus pass, so w34 extends it. Phu Phan
+(CSUDH) uses the catalog addendum as profileUrl because the department page is already vp-0367's.
+
+## w34 (2026-11-23)
+
+`slices26.tsv` (inst543–inst557): US professional schools nationwide (pharmacy, osteopathic,
+dental, optometry/podiatry, nursing, law, art/design/music), engineering-focused schools, liberal
+arts colleges, religious universities, and smaller state universities not named in w33. 13 added
+(vp-5420 to vp-5432), ~0.9 per slice; law and art schools gave the most. Skipped Euane Newen
+(Stony Brook dentistry; only signal is Vietnamese as a spoken language). Name-order allowlist:
+Mai Linh Spencer.
+
+## w35 (2026-11-23)
+
+`slices27.tsv` (inst558–inst569): newer and community-based US MD schools by region, large health
+systems, children's hospitals, cancer centers, VA researchers with university titles, and schools
+of public health. 9 added (vp-5433 to vp-5441), ~0.75 per slice; most slices returned 0–1.
+Timmy Nguyen (CCLCM, Cleveland Clinic Florida) uses his Cleveland Clinic provider page because the
+CCLCM faculty list URL is already vp-5216's.
+
+## w36 (2026-11-23)
+
+`slices28.tsv` (inst570–inst583): smaller/private universities in Japan (5 slices), Taiwan (3),
+Korea, SE Asia, Sino-foreign campuses/HK/Macau, mainland China, Australia/NZ and Canada. 10 added
+(vp-5442 to vp-5451), ~0.7 per slice; 8 of 14 slices empty, so earlier passes covered Japan and
+Taiwan well. Name-screen reviewed: Jennifer Ma, Emmanuelle Richez.
+
+## w37 (2026-11-23)
+
+`slices29.tsv` (14 industry slices, BRIEF3): fourth pass on corporate research labs by given-name
+tokens (big tech, AI startups, enterprise, autonomy/robotics, pharma by region, Asia/Europe
+industry, energy/aerospace). 1 added (vp-5452 Hieu Hoang, Microsoft Research, personal site,
+unconfirmed); 12 of 14 slices empty. Skipped a Novartis data scientist (no research role shown).
+The industry channel is spent.
+
+## w38 (2026-11-23)
+
+`slices30.tsv` (inst584–inst599): Europe single-region slices (Germany by state, Czechia/Slovakia,
+Poland/Hungary/Baltics, UK by region, Benelux, Nordics, Austria/Switzerland, Italy/Spain/Portugal),
+given-name tokens. 2 added (vp-5453 Milena Le Viet-Błaszczyk, Łódź adiunkt; vp-5454 Thierry Pham
+Hoang, UMONS forensic psychology), ~0.13 per slice; 14 of 16 slices empty. Europe is spent.
+
+## w39 (2026-11-23)
+
+`slices31.tsv` (inst600–inst615): second, narrower pass on smaller US four-year institutions,
+split by metro or state (CA ×4, TX ×2, WA/OR, DMV, GA, FL, Gulf South/OK, MA, NYC/LI, PA/NJ,
+IL/MN/WI, Mountain West).
+7 added (vp-5455 to vp-5461), ~0.44 per slice; 10 of 16 slices empty. Daniel Ngoc Tran (UT
+Dallas Associate Professor of Instruction) is on the Teaching track; Tony Bui's Regis promotion
+to Associate Professor comes from the April 2026 provost announcement.
+
+## w40 (2026-11-23)
+
+`slices32.tsv` (inst616–inst627): the complementary state groups w39 left out (Virginia
+south, Carolinas, TN/KY, Ohio, MI/IN, MO/KS/IA/NE, northern New England and CT/RI, upstate New York,
+AR/MS/WV/DE, HI/AK/NM/ID/MT/WY), HBCUs nationwide, and online universities plus military academies.
+Not run: every job failed at once with "Your workspace is out of credits" from Codex. Rerun
+slices32.tsv unchanged once Codex credits are restored.

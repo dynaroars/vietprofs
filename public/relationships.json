@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-22T19:02:06.000Z",
+  "updatedAt": "2026-11-23T14:00:00.000Z",
   "relationships": [
     {
       "id": "rel-coauthor-vp-0015-vp-0018",
@@ -6766,6 +6766,36 @@
       "works": [],
       "verifiedAt": "2026-11-19T14:00:00.000Z",
       "notes": "Thesis record matched to the roster entry by full name and field; co-direction as listed."
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-5452",
+      "role": "mentor",
+      "name": "Miles Osborne",
+      "affiliation": "",
+      "url": "",
+      "sources": [
+        "https://hieuhoang.github.io/"
+      ],
+      "evidence": "The scholar's maintained personal academic site says that before his current work he did his PhD and his supervisors were Philipp Koehn and Miles Osborne.",
+      "works": [],
+      "verifiedAt": "2026-11-23T14:00:00.000Z",
+      "notes": "Personal site (evidence standard 3); co-supervision as listed. Neither is in the roster (find-roster-matches)."
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-5452",
+      "role": "mentor",
+      "name": "Philipp Koehn",
+      "affiliation": "",
+      "url": "",
+      "sources": [
+        "https://hieuhoang.github.io/"
+      ],
+      "evidence": "The scholar's maintained personal academic site says that before his current work he did his PhD and his supervisors were Philipp Koehn and Miles Osborne.",
+      "works": [],
+      "verifiedAt": "2026-11-23T14:00:00.000Z",
+      "notes": "Personal site (evidence standard 3); co-supervision as listed. Neither is in the roster (find-roster-matches)."
     }
   ]
 }

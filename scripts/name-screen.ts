@@ -451,6 +451,14 @@ const REVIEWED_VIETNAMESE = new Set([
   'Florence Boulard',
   // UOW: came to Australia from Vietnam.
   'Joseph Tonien',
+  // Goldsmiths; personal CV describes her heritage as "French-born Afro/Vietnamese/Cambodian".
+  'Chooc Ly Tan',
+  // UNNC; fused given name Hainam (Hải Nam) with surname Đỗ.
+  'Hainam Do',
+  // McMaster social work; her report names her parents as Chinese-Vietnamese refugees from Vietnam.
+  'Jennifer Ma',
+  // Windsor political science; personal site describes her Franco-Vietnamese heritage.
+  'Emmanuelle Richez',
 ]);
 
 function normalizedParts(name: string): string[] {
