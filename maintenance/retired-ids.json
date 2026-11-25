@@ -182,7 +182,7 @@
     "reason": "Removed: moved to industry, Lantheus (6db08ed)."
   },
   "vp-1245": {
-    "replacedBy": "vp-0706",
+    "replacedBy": "vp-0702",
     "retiredAt": "2026-09-11",
     "name": "Hieu Pham Trung Nguyen",
     "university": "Texas Tech University",
@@ -852,5 +852,12 @@
     "name": "Vinh Q. Nguyen - The University of Hong Kong",
     "university": "The University of Hong Kong",
     "reason": "Left the University of Hong Kong: his HKU Business School profile (https://www.hkubs.hku.hk/people/vinh-q-nguyen) now redirects to the school home page, and his own site (https://sites.google.com/view/vinhnguyenresearch/teaching, read 2026-11-24) lists HKU teaching 2018-2024 and describes him as 'Financial Economist & Educator, Washington DC-Baltimore Area', teaching one GWU course since Fall 2025. No eligible current appointment found: he is not in the GW School of Business faculty directory. Found in #1357. Re-add under this id if a full-time faculty appointment is documented."
+  },
+  "vp-0706": {
+    "replacedBy": "vp-0702",
+    "retiredAt": "2026-11-25",
+    "name": "Hieu Pham Trung Nguyen",
+    "university": "Texas Tech University",
+    "reason": "Duplicate of vp-0702 (same person: McGill PhD 2012 and Ajou MS in both; his CV hosted on the Texas Tech ECE site, https://www.depts.ttu.edu/ece/faculty/hieu_nguyen/CV_HieuPTNguyen-26.pdf, lists NJIT Assistant then Associate Professor before Texas Tech, and the NJIT page now returns 404). Kept the older id with the current Texas Tech facts. From #1361."
   }
 }
