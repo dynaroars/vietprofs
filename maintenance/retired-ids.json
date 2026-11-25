@@ -859,5 +859,12 @@
     "name": "Hieu Pham Trung Nguyen",
     "university": "Texas Tech University",
     "reason": "Duplicate of vp-0702 (same person: McGill PhD 2012 and Ajou MS in both; his CV hosted on the Texas Tech ECE site, https://www.depts.ttu.edu/ece/faculty/hieu_nguyen/CV_HieuPTNguyen-26.pdf, lists NJIT Assistant then Associate Professor before Texas Tech, and the NJIT page now returns 404). Kept the older id with the current Texas Tech facts. From #1361."
+  },
+  "vp-0722": {
+    "replacedBy": null,
+    "retiredAt": "2026-11-25",
+    "name": "Duy Duong-Tran",
+    "university": "United States Naval Academy",
+    "reason": "No longer an eligible appointment: his own site (https://sites.google.com/view/dduongtr/home, read 2026-11-25) says he 'served as a tenure-track Assistant Professor in the Department of Mathematics at the United States Naval Academy' from 2023-2026 and is now Assistant Director of Graduate Studies in Data Science at Harvard; the Harvard SEAS person page (https://seas.harvard.edu/person/duy-duong-tran) gives that staff title and no faculty rank. Program administration is not an eligible track (ROSTER_MAINTENANCE.md, Admin and Staff). No protected directFields. From #1362. Re-add under this id on evidence of a current faculty or eligible research appointment."
   }
 }
