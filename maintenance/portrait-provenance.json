@@ -2582,7 +2582,7 @@
         "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-11-18T11:06:32.769Z",
+      "retrievedAt": "2026-11-25T11:05:02.346Z",
       "note": "candidate failed 120x120 or portrait-aspect validation"
     },
     "vp-1474": {
@@ -4591,17 +4591,19 @@
     },
     "vp-1921": {
       "name": "Dang Mao Nguyen",
-      "outcome": "not_found",
-      "pageUrl": "https://lermab.univ-lorraine.fr/lermab/organisation/membres-eebi/",
+      "outcome": "needs_review",
+      "pageUrl": "https://lermab.univ-lorraine.fr/membres-eebi/",
       "imageUrl": "https://lermab.univ-lorraine.fr/wp-content/uploads/2025/05/4.png",
       "sourceType": "official_faculty",
       "confidence": "MEDIUM",
       "identitySignals": [
         "name",
+        "institution",
+        "department",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-11-01T17:16:08.294Z",
-      "note": "2026-11-01 deep audit: name-matched candidate failed --store checks (image could not be downloaded)"
+      "retrievedAt": "2026-11-25T11:05:29.707Z",
+      "note": "candidate requires visual review before acceptance"
     },
     "vp-1922": {
       "name": "Thi Thanh Binh Nguyen",
@@ -4874,17 +4876,18 @@
     },
     "vp-1947": {
       "name": "Chi Thuat Nguyen",
-      "outcome": "not_found",
+      "outcome": "needs_review",
       "pageUrl": "https://amu.edu.pl/uniwersytet/wyszukiwarka-pracownikow/osoba?id=10001721&alias=Thuat-Nguyen%20Chi",
       "imageUrl": "https://amu.edu.pl/__data/assets/file/0021/48405/person.svg",
       "sourceType": "official_faculty",
       "confidence": "MEDIUM",
       "identitySignals": [
         "name",
+        "department",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-11-01T17:16:08.294Z",
-      "note": "2026-11-01 deep audit: name-matched candidate failed --store checks (image could not be downloaded)"
+      "retrievedAt": "2026-11-25T11:05:34.325Z",
+      "note": "candidate requires visual review before acceptance"
     },
     "vp-1948": {
       "name": "Maria Ngoc Thi Huong Pham",
@@ -5023,16 +5026,9 @@
     "vp-1957": {
       "name": "Thi Xuan Trinh Nguyen",
       "outcome": "not_found",
-      "pageUrl": "https://seeds.office.hiroshima-u.ac.jp/profile/en.d7e9f54cf06d397e520e17560c007669.html",
-      "imageUrl": "https://seeds.office.hiroshima-u.ac.jp/profile/image/portrait/d7e9f54cf06d397e520e17560c007669.jpg",
-      "sourceType": "official_faculty",
-      "confidence": "MEDIUM",
-      "identitySignals": [
-        "name",
-        "stored_roster_url"
-      ],
-      "retrievedAt": "2026-11-01T17:25:28.434Z",
-      "note": "2026-11-01 deep audit: own-page profile photo failed --store checks (image could not be downloaded)"
+      "identitySignals": [],
+      "retrievedAt": "2026-11-25T11:05:38.040Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1958": {
       "name": "Tan Ngoc Nguyen",
@@ -5074,16 +5070,9 @@
     "vp-1961": {
       "name": "Thi Thuy Hien Tran",
       "outcome": "not_found",
-      "pageUrl": "https://www.gipsa-lab.grenoble-inp.fr/team/thi-thuy-hien-tran/",
-      "imageUrl": "https://www.gipsa-lab.grenoble-inp.fr/wp-content/uploads/2026/04/Pas-dimage-GIPSA.png",
-      "sourceType": "official_faculty",
-      "confidence": "MEDIUM",
-      "identitySignals": [
-        "name",
-        "stored_roster_url"
-      ],
-      "retrievedAt": "2026-11-01T17:16:08.294Z",
-      "note": "2026-11-01 deep audit: name-matched candidate failed --store checks (face check none (0 faces))"
+      "identitySignals": [],
+      "retrievedAt": "2026-11-25T11:06:03.935Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1962": {
       "name": "Ngoc Son Nguyen",
@@ -8261,7 +8250,7 @@
         "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-11-14T22:47:07.933Z",
+      "retrievedAt": "2026-11-25T11:05:27.066Z",
       "note": "candidate failed 120x120 or portrait-aspect validation"
     },
     "vp-1861": {
@@ -8466,7 +8455,7 @@
         "department",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-11-14T22:47:00.625Z",
+      "retrievedAt": "2026-11-25T11:05:22.997Z",
       "note": "candidate failed 120x120 or portrait-aspect validation"
     },
     "vp-1840": {
@@ -8665,7 +8654,7 @@
         "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-10-28T11:03:55.067Z",
+      "retrievedAt": "2026-11-25T11:05:20.375Z",
       "note": "candidate failed 120x120 or portrait-aspect validation"
     },
     "vp-1794": {
@@ -8746,16 +8735,9 @@
     "vp-1786": {
       "name": "Le Anh Nguyen Long",
       "outcome": "not_found",
-      "pageUrl": "https://research.utwente.nl/en/persons/le-anh-nguyen-long/",
-      "imageUrl": "https://research.utwente.nl/assets/no-portrait-473c6d005990baa1f418d9c668dcd4ec.png",
-      "sourceType": "official_faculty",
-      "confidence": "MEDIUM",
-      "identitySignals": [
-        "name",
-        "stored_roster_url"
-      ],
-      "retrievedAt": "2026-11-01T17:16:08.293Z",
-      "note": "2026-11-01 deep audit: name-matched candidate failed --store checks (face check none (0 faces))"
+      "identitySignals": [],
+      "retrievedAt": "2026-11-25T11:05:06.858Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
     },
     "vp-1745": {
       "name": "Le Chung Tran",
@@ -8823,7 +8805,7 @@
         "rank",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-11-18T11:07:56.259Z",
+      "retrievedAt": "2026-11-25T11:05:05.844Z",
       "note": "candidate failed 120x120 or portrait-aspect validation"
     },
     "vp-2171": {
@@ -11400,7 +11382,7 @@
     },
     "vp-2351": {
       "name": "Quyen Do",
-      "outcome": "needs_review",
+      "outcome": "not_found",
       "pageUrl": "https://profiles.utsouthwestern.edu/profile/117118/quyen-do.html",
       "imageUrl": "https://profileplus.swmed.edu/facultydata/117118/images/do.png",
       "sourceType": "official_faculty",
@@ -11413,7 +11395,7 @@
         "stored_roster_url"
       ],
       "retrievedAt": "2026-11-04T22:00:10.513Z",
-      "note": "candidate requires visual review before acceptance"
+      "note": "Review rejected 2026-11-25: 70x102 thumbnail below minimum size"
     },
     "vp-2352": {
       "name": "Courtney Tran",
@@ -12980,7 +12962,7 @@
     },
     "vp-2470": {
       "name": "Thuy Hien Le",
-      "outcome": "needs_review",
+      "outcome": "not_found",
       "pageUrl": "https://unifind.unior.it/resource/person/20803?language=en_US",
       "imageUrl": "https://unora.unior.it//rm/public/picture/img/it.cilea.ga.model.Person/7c6dd84e-9413-4adc-81b7-eb3dffe3b16f.fragment",
       "sourceType": "official_faculty",
@@ -12992,7 +12974,7 @@
         "stored_roster_url"
       ],
       "retrievedAt": "2026-11-04T22:36:11.646Z",
-      "note": "candidate requires visual review before acceptance"
+      "note": "Review rejected 2026-11-25: full-body photo with flags, not a headshot"
     },
     "vp-2471": {
       "name": "Federico Nguyen",
@@ -13147,14 +13129,14 @@
     },
     "vp-2484": {
       "name": "Daniel Tran",
-      "outcome": "needs_review",
+      "outcome": "not_found",
       "identitySignals": [
         "name",
         "institution",
         "stored_roster_url"
       ],
       "retrievedAt": "2026-11-04T22:40:29.771Z",
-      "note": "candidate from discovery Issue requires visual review",
+      "note": "Review rejected 2026-11-25: photo aspect 1.57 exceeds 1.55 gate; staff photo with tablet/building background",
       "imageUrl": "https://www.osu.cz/include/foto.php?kmen=63256",
       "pageUrl": "https://pdf.osu.eu/kik/daniel-tran/63256/",
       "sourceType": "official_faculty",
@@ -13487,7 +13469,7 @@
     },
     "vp-2509": {
       "name": "Johannes Tran-Gia",
-      "outcome": "needs_review",
+      "outcome": "not_found",
       "pageUrl": "https://www.ukw.de/nuklearmedizin/team/nuklearmedizin-detail/name/tran-gia-johannes/",
       "imageUrl": "https://www.ukw.de/fileadmin/_processed_/c/8/csm_ukw_nuklearmedizin_trangia_j_4a1b00a520.jpg",
       "sourceType": "official_faculty",
@@ -13498,7 +13480,7 @@
         "stored_roster_url"
       ],
       "retrievedAt": "2026-11-04T22:48:35.698Z",
-      "note": "candidate requires visual review before acceptance"
+      "note": "Review rejected 2026-11-25: photo aspect 1.63 exceeds 1.55 gate (page photo is the right person)"
     },
     "vp-2510": {
       "name": "Duc Duy Pham",
@@ -13876,7 +13858,7 @@
     },
     "vp-2543": {
       "name": "Minh Phong Bui",
-      "outcome": "needs_review",
+      "outcome": "not_found",
       "pageUrl": "https://compalg.inf.elte.hu/en/content/staff.t.44378",
       "imageUrl": "https://compalg.inf.elte.hu/en/content/media/97/16/14ca2fbf58932492afedbcda3aadfcd2f35b2e075e7a1b29d5407833fe5b/BuiMinP_compalg.png",
       "sourceType": "official_faculty",
@@ -13889,7 +13871,7 @@
         "stored_roster_url"
       ],
       "retrievedAt": "2026-11-04T23:11:12.197Z",
-      "note": "candidate requires visual review before acceptance"
+      "note": "Review rejected 2026-11-25: image URL returns 404"
     },
     "vp-2544": {
       "name": "Hiep Quang Luong",
@@ -14751,7 +14733,7 @@
     },
     "vp-2615": {
       "name": "Thu Trang Vu",
-      "outcome": "needs_review",
+      "outcome": "not_found",
       "pageUrl": "https://www.tuj.ac.jp/directory/vu-thu-trang",
       "imageUrl": "https://www.tuj.ac.jp/sites/japan/files/styles/tu_image_style_thumbnail/public/temple/profiles/Vu-Thu-Trang_0.jpg?h=d59d6d48&itok=uN04yq9a",
       "sourceType": "official_faculty",
@@ -14761,11 +14743,12 @@
         "institution",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-11-05T04:12:13.577606Z"
+      "retrievedAt": "2026-11-05T04:12:13.577606Z",
+      "note": "Review rejected 2026-11-25: image URL unreachable"
     },
     "vp-2618": {
       "name": "Thang Pham",
-      "outcome": "needs_review",
+      "outcome": "found",
       "pageUrl": "https://imis.xidian.edu.cn/info/1017/1932.htm",
       "imageUrl": "https://imis.xidian.edu.cn/__local/D/3E/FB/8FEF73C0B810822E2E6647DFE14_0F33C098_AF80.jpg",
       "sourceType": "official_faculty",
@@ -14775,7 +14758,8 @@
         "institution",
         "stored_roster_url"
       ],
-      "retrievedAt": "2026-11-05T04:12:13.577617Z"
+      "retrievedAt": "2026-11-25T11:02:49.374Z",
+      "note": "MEDIUM candidate stored after visual review"
     },
     "vp-2684": {
       "name": "Julie H. T. Dang",
@@ -15292,7 +15276,7 @@
     },
     "vp-2722": {
       "name": "Vuong Mai",
-      "outcome": "needs_review",
+      "outcome": "not_found",
       "pageUrl": "https://www.bradford.ac.uk/staff/vmai",
       "imageUrl": "https://www.bradford.ac.uk/__data/assets/image/0018/54351/21774.jpg",
       "sourceType": "official_faculty",
@@ -15305,7 +15289,7 @@
         "stored_roster_url"
       ],
       "retrievedAt": "2026-11-10T03:15:20.473Z",
-      "note": "candidate requires visual review before acceptance"
+      "note": "Review rejected 2026-11-25: candid event photo with microphone and other heads, not a headshot"
     },
     "vp-2723": {
       "name": "Howard Cam Luong",
@@ -15699,7 +15683,7 @@
     },
     "vp-2751": {
       "name": "Tami Dinh",
-      "outcome": "needs_review",
+      "outcome": "not_found",
       "pageUrl": "https://www.unisg.ch/de/universitaet/ueber-uns/organisation/detail/person-id/499c08fc-8412-4855-bcf4-51691ab37d67/",
       "imageUrl": "https://integration.unisg.ch/handler/PortraitStreamer/byHsgEntityId/88b6abb6-d969-477e-955a-ea2a54dffcd3",
       "sourceType": "official_faculty",
@@ -15712,7 +15696,7 @@
         "stored_roster_url"
       ],
       "retrievedAt": "2026-11-10T15:40:07.507Z",
-      "note": "candidate requires visual review before acceptance"
+      "note": "Review rejected 2026-11-25: 100x130 thumbnail below minimum size"
     },
     "vp-2752": {
       "name": "Hao T. Duong",
@@ -15749,7 +15733,7 @@
     },
     "vp-2756": {
       "name": "Justin C. Bui",
-      "outcome": "needs_review",
+      "outcome": "not_found",
       "pageUrl": "https://engineering.nyu.edu/faculty/justin-bui",
       "imageUrl": "https://engineering.nyu.edu/sites/default/files/styles/cinema_medium_default_1x/public/2026-09/Bui.jpg?h=8f9cfe54&itok=bHnfuvzm",
       "sourceType": "official_faculty",
@@ -15762,7 +15746,7 @@
         "stored_roster_url"
       ],
       "retrievedAt": "2026-11-10T15:40:24.871Z",
-      "note": "candidate requires visual review before acceptance"
+      "note": "Review rejected 2026-11-25: aspect 1.78 exceeds gate"
     },
     "vp-2758": {
       "name": "Vinh Bui",
@@ -23332,6 +23316,123 @@
       ],
       "retrievedAt": "2026-11-21T05:00:37.626Z",
       "note": "MEDIUM candidate stored after visual review"
+    },
+    "vp-5452": {
+      "name": "Hieu Hoang",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-25T11:03:01.811Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-5453": {
+      "name": "Milena Le Viet-Błaszczyk",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-25T11:03:19.670Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-5454": {
+      "name": "Thierry Pham Hoang",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-25T11:03:42.815Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-5455": {
+      "name": "Monica Thieu",
+      "outcome": "needs_review",
+      "pageUrl": "https://www.sandiego.edu/cas/neuroscience-cognition-behavior/faculty-and-staff/biography.php?profile_id=17360",
+      "imageUrl": "https://www.sandiego.edu/assets/directory/uploads/images/17360.png",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-25T11:04:01.642Z",
+      "note": "candidate requires visual review before acceptance"
+    },
+    "vp-5456": {
+      "name": "Daniel Ngoc Tran",
+      "outcome": "needs_review",
+      "pageUrl": "https://profiles.utdallas.edu/tran.daniel",
+      "imageUrl": "https://profiles.utdallas.edu/img/default.png",
+      "sourceType": "official_faculty",
+      "confidence": "MEDIUM",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-25T11:04:10.540Z",
+      "note": "candidate requires visual review before acceptance"
+    },
+    "vp-5457": {
+      "name": "Troy Van Nguyen",
+      "outcome": "found",
+      "pageUrl": "https://www.fit.edu/faculty-profiles/n/nguyen-troy/",
+      "imageUrl": "https://pxl-fitedu.terminalfour.net/fit-in/1400x1400/filters:format(webp)/prod01/fit-cdn-pxl/faculty-profiles/n/nguyen-troy/tnguyen.full.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-25T11:04:10.981Z"
+    },
+    "vp-5458": {
+      "name": "Biddy Tran",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-25T11:04:12.484Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-5459": {
+      "name": "David Minh",
+      "outcome": "not_found",
+      "identitySignals": [],
+      "retrievedAt": "2026-11-25T11:04:29.722Z",
+      "note": "no identity-verified candidate exposed by inspected pages"
+    },
+    "vp-5460": {
+      "name": "Trang T. Phan",
+      "outcome": "found",
+      "pageUrl": "https://www.augustana.edu/academics/faculty-directory/trang-t-phan",
+      "imageUrl": "https://www.augustana.edu/files/styles/faculty_profile_image/public/profile-photos/Phan_Trang.jpg?itok=O2AL4sE8",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-25T11:04:55.949Z"
+    },
+    "vp-5461": {
+      "name": "Tony Bui",
+      "outcome": "found",
+      "pageUrl": "https://www.regis.edu/academics/faculty-finder/faculty/tony-bui",
+      "imageUrl": "https://www.regis.edu/academics/faculty-finder/images/tony-bui-480x480.jpg",
+      "sourceType": "official_faculty",
+      "confidence": "HIGH",
+      "identitySignals": [
+        "name",
+        "institution",
+        "department",
+        "rank",
+        "stored_roster_url"
+      ],
+      "retrievedAt": "2026-11-25T11:04:56.898Z"
     }
   }
 }
