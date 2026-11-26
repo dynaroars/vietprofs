@@ -24,3 +24,12 @@ maintenance/website-candidates.json
 maintenance/discovery-leads.json
 maintenance/bulk-discovery-1000.json
 public/stats-history.json
+
+# Raw LLM run output after w9 (archived locally as runs-archive-*.tar.zst)
+maintenance/sector-expansion/runs/w[1-9][0-9]*/
+maintenance/sector-expansion/runs/w*test/
+maintenance/sector-expansion/runs-archive-*.tar.zst
+
+# Local tool state
+.playwright-mcp/
+.claude/
