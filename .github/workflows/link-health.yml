@@ -48,9 +48,10 @@ jobs:
             sed -n '/Link & Content Verification Summary/,$p' link-report.txt | head -c 60000
             echo '```'
           } > body.md
-          existing=$(gh issue list --state open --search "\"$title\" in:title" --json number --jq '.[0].number')
-          if [ -n "$existing" ]; then
-            gh issue comment "$existing" --body-file body.md
-          else
-            gh issue create --title "$title" --body-file body.md
-          fi
+          # One Issue per monthly report: open the new one, then close last month's as superseded,
+          # so the auditor always works from a current snapshot instead of an ever-growing thread.
+          previous=$(gh issue list --state open --search "\"$title\" in:title" --json number --jq '.[].number')
+          new_url=$(gh issue create --title "$title" --body-file body.md)
+          for n in $previous; do
+            gh issue close "$n" --comment "Superseded by $new_url. Entries still failing are listed there; resolved ones dropped out."
+          done

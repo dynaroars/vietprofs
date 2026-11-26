@@ -38,7 +38,21 @@ Policy (eligibility, evidence, routing of Issues/PRs/direct pushes) lives in `AG
 
 ## Schedule
 
-Cloud routines live at <https://claude.ai/code/routines> (environment: Default, network access **Full** since 2026-09-24; edit it on the new-session screen at claude.ai/code: open the environment selector under the message box, hover the Default row under **Cloud**, and click the settings icon on its right; `OPENALEX_API_KEY` is set there under **Environment variables**). Cron is UTC; ET
+Cloud routines live at <https://claude.ai/code/routines> (environment: Default, network access **Full** since 2026-09-24; edit it on the new-session screen at claude.ai/code: open the environment selector under the message box, hover the Default row under **Cloud**, and click the settings icon on its right; `OPENALEX_API_KEY` is set there under **Environment variables**). Since 2026-11-26 its
+**Setup script** pre-installs OpenCV, a working Pillow, and Playwright Chromium, so the face check
+and Chromium fallbacks work without per-run installs; the install commands in the sections below
+stay as a fallback if that script is ever removed:
+
+```bash
+#!/bin/bash
+# Portrait face check (scripts/portrait_faces.py) needs OpenCV; the image's system Pillow is broken.
+python3 -m pip install -q opencv-python-headless numpy || true
+python3 -m pip install -q --force-reinstall --ignore-installed pillow || true
+# Headless Chromium for Playwright fallbacks (version from vietprofs package-lock.json).
+npx -y playwright@1.64.1 install chromium || true
+```
+
+Cron is UTC; ET
 is shown for convenience (EDT; add an hour in winter).
 
 Each routine attaches only the `Claude_Docs` connector. Don't add `Claude_Code_Remote`: with it,
@@ -81,7 +95,7 @@ Outside the cloud:
 
 | What | Where | When | Notes |
 | :-- | :-- | :-- | :-- |
-| Link-health report | GitHub Action `.github/workflows/link-health.yml` | 1st of month, 08:00 UTC; manual via `gh workflow run link-health.yml` | Opens or comments on the "Link-health report (automated)" Issue. No model involved. |
+| Link-health report | GitHub Action `.github/workflows/link-health.yml` | 1st of month, 08:00 UTC; manual via `gh workflow run link-health.yml` | Opens a fresh "Link-health report (automated)" Issue each month and closes the previous one as superseded (unfinished entries reappear in the new report if still failing). No model involved. |
 | Automation watchdog | GitHub Action `.github/workflows/automation-watchdog.yml` | Mon and Thu 12:00 UTC; manual via `gh workflow run automation-watchdog.yml` | Opens or comments on one "Automation watchdog (automated)" Issue when a PR has been open more than 5 days (auditor stopped or PR stuck) or a producer has had no output of its own for about two cron cycles (discover, links, relationships 4 days; honors 6; portraits 15; keep these in step with the Schedule table); closes it when checks pass. No model involved. |
 | Browser tests | GitHub Action `.github/workflows/browser-tests.yml` | On pushes and PRs to `main` that change code or pages; manual via `gh workflow run browser-tests.yml` | Runs `npm run test:e2e` (Playwright). Skipped when only roster, portrait, relationship, maintenance, paper, `TASKS/`, or Markdown files change, so data routines never wait on it; it does not gate the Pages deploy. A red run on a code PR means don't merge it yet. No model involved. |
 | Branch cleanup | GitHub Action `.github/workflows/delete-pr-branches.yml` | Whenever a PR is merged or closed; sweep Mondays 13:00 UTC; manual via `gh workflow run delete-pr-branches.yml` | Deletes a PR's branch once all its PRs are closed, because cloud agents can't delete branches. Keeps `main`, branches with an open PR, and branches that never had a PR. No model involved. |
