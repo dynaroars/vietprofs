@@ -267,11 +267,11 @@ function renderShell() {
         <option value="all">All Employers</option>
       </select>
       <select id="sort-order" class="field-select sort-select" aria-label="Sort order">
-        <option value="random">Random order</option>
-        <option value="vp-newest">Most recently added</option>
-        <option value="recent">Most recently updated</option>
-        <option value="last-name">Last name</option>
-        <option value="first-name">First name</option>
+        <option value="random">Random Order</option>
+        <option value="vp-newest">Recently Added</option>
+        <option value="recent">Recently Updated</option>
+        <option value="last-name">Last Name</option>
+        <option value="first-name">First Name</option>
       </select>
     </div>
     <nav class="browser-shelf" id="browser-shelf" aria-label="Saved browser data" hidden></nav>

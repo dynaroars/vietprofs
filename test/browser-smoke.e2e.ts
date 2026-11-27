@@ -574,11 +574,11 @@ test('the + button opens the form and the header links switch views in place', a
   ]);
   assert.equal(await page.locator('#institution-type-filter').count(), 0);
   assert.deepEqual(await page.locator('.controls #sort-order option').allInnerTexts(), [
-    'Random order',
-    'Most recently added',
-    'Most recently updated',
-    'Last name',
-    'First name',
+    'Random Order',
+    'Recently Added',
+    'Recently Updated',
+    'Last Name',
+    'First Name',
   ]);
   const chips = page.locator('.example-chip');
   assert.equal(await chips.count(), 4);
