@@ -186,3 +186,36 @@ test('missing-field prompts skip what an entry already has and gaps that are exp
   ]);
   assert.ok(!missingFields({ ...base, track: 'Deceased' }).includes('linkedinUrl'));
 });
+
+test('social preview cards and SEO metadata cover English and Vietnamese entry points', async () => {
+  for (const filename of ['vietprofs-og.png', 'vietprofs-og-vi.png']) {
+    const bytes = await readFile(new URL(`../public/${filename}`, import.meta.url));
+    assert.deepEqual(bytes.subarray(0, 8), Buffer.from([137, 80, 78, 71, 13, 10, 26, 10]));
+    // PNG IHDR width and height live at bytes 16..23 (big-endian uint32).
+    assert.equal(bytes.readUInt32BE(16), 1200, `${filename} width`);
+    assert.equal(bytes.readUInt32BE(20), 630, `${filename} height`);
+  }
+
+  for (const page of ['index.html', 'connections.html', 'submit.html']) {
+    const html = await readFile(new URL(`../${page}`, import.meta.url), 'utf8');
+    assert.match(
+      html,
+      /property="og:image" content="https:\/\/vietprofs\.roars\.dev\/vietprofs-og\.png"/,
+    );
+    assert.match(html, /property="og:image:width" content="1200"/);
+    assert.match(html, /property="og:image:height" content="630"/);
+    assert.match(html, /name="twitter:card" content="summary_large_image"/);
+  }
+
+  const indexHtml = await readFile(new URL('../index.html', import.meta.url), 'utf8');
+  assert.match(indexHtml, /property="og:site_name" content="VietProfs"/);
+  assert.match(indexHtml, /"@type": "SearchAction"/);
+
+  const generator = await readFile(
+    new URL('../scripts/generate-profile-pages.ts', import.meta.url),
+    'utf8',
+  );
+  assert.match(generator, /function renderIndexFallback/);
+  assert.match(generator, /vietprofs-og-vi\.png/);
+  assert.match(generator, /<loc>\$\{siteUrl\}\/connections\.html<\/loc>/);
+});

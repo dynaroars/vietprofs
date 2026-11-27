@@ -17,6 +17,7 @@
     "typecheck": "tsc --noEmit",
     "analyze": "node scripts/analyze-roster.ts",
     "figures": "npm run build && node scripts/capture-figures.ts",
+    "og-image": "node scripts/generate-og-image.ts",
     "validate-data": "node scripts/validate-data.ts",
     "check-links": "node scripts/check-links.ts",
     "prevalidate-data": "npm run assign-profile-ids",

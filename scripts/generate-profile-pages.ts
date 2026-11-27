@@ -270,12 +270,18 @@ function profilePage(
   const title = `${shownName} — VietProfs`;
   const ogImage = person.portrait
     ? absoluteUrl(person.portrait)
-    : absoluteUrl('vietprofs-bamboo-v-512.png');
+    : absoluteUrl(vi ? 'vietprofs-og-vi.png' : 'vietprofs-og.png');
   const ogImageAlt = person.portrait
     ? vi
       ? `Ảnh chân dung ${name}`
       : `Portrait of ${name}`
-    : 'VietProfs bamboo V logo';
+    : vi
+      ? 'VietProfs — Danh bạ nhà nghiên cứu và nhà khoa học người Việt'
+      : 'VietProfs — Global Directory of Vietnamese Researchers & Scientists';
+  const ogImageDims = person.portrait
+    ? ''
+    : '\n  <meta property="og:image:width" content="1200">\n  <meta property="og:image:height" content="630">';
+  const twitterCard = person.portrait ? 'summary' : 'summary_large_image';
   const role = [rankLabel(person, lang), person.department, person.university]
     .filter(Boolean)
     .join(', ');
@@ -566,9 +572,9 @@ if (button) {
   <meta property="og:title" content="${escapeHtml(title)}">
   <meta property="og:description" content="${escapeHtml(description)}">
   <meta property="og:url" content="${canonicalUrl}">
-  <meta property="og:image" content="${escapeHtml(ogImage)}">
+  <meta property="og:image" content="${escapeHtml(ogImage)}">${ogImageDims}
   <meta property="og:image:alt" content="${escapeHtml(ogImageAlt)}">
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="${twitterCard}">
   <meta name="twitter:title" content="${escapeHtml(title)}">
   <meta name="twitter:description" content="${escapeHtml(description)}">
   <meta name="twitter:image" content="${escapeHtml(ogImage)}">
@@ -710,8 +716,10 @@ function categoryHubPage(config: HubConfig) {
   const basePath = vi ? config.canonicalPath.replace(/^vi\//, '') : config.canonicalPath;
   const canonicalUrl = absoluteUrl(config.canonicalPath);
   const title = `${config.categoryTitle} (${config.people.length}) — VietProfs`;
-  const ogImage = absoluteUrl('vietprofs-bamboo-v-512.png');
-  const ogImageAlt = 'VietProfs bamboo V logo';
+  const ogImage = absoluteUrl(vi ? 'vietprofs-og-vi.png' : 'vietprofs-og.png');
+  const ogImageAlt = vi
+    ? 'VietProfs — Danh bạ giáo sư và nhà khoa học người Việt trên thế giới'
+    : 'VietProfs — Global Directory of Vietnamese Professors, Researchers & Scientists';
   const sectionLabel = 'HUB(7)';
   const rootPrefix = '../'.repeat(config.canonicalPath.split('/').length - 1);
 
@@ -824,8 +832,10 @@ function categoryHubPage(config: HubConfig) {
   <meta property="og:description" content="${escapeHtml(config.description)}">
   <meta property="og:url" content="${canonicalUrl}">
   <meta property="og:image" content="${escapeHtml(ogImage)}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="${escapeHtml(ogImageAlt)}">
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="${escapeHtml(title)}">
   <meta name="twitter:description" content="${escapeHtml(config.description)}">
   <meta name="twitter:image" content="${escapeHtml(ogImage)}">
@@ -896,15 +906,19 @@ function vietnameseHomePage(
   roster: RosterEntry[],
   fieldHubs: HubConfig[],
   regionHubs: HubConfig[],
+  alumniHubs: HubConfig[],
+  universityHubs: HubConfig[],
   countryCount: number,
 ) {
   const canonicalUrl = absoluteUrl('vi/');
   const title = 'VietProfs — Danh bạ giáo sư & nhà khoa học người Việt trên thế giới';
   const description = `Danh bạ ${roster.length} giáo sư, nhà nghiên cứu và nhà khoa học người Việt và gốc Việt tại ${countryCount} quốc gia, trong các trường đại học, viện nghiên cứu, cơ quan chính phủ và doanh nghiệp.`;
-  const ogImage = absoluteUrl('vietprofs-bamboo-v-512.png');
-  const hubLinks = (hubs: HubConfig[]) =>
+  const ogImage = absoluteUrl('vietprofs-og-vi.png');
+  const ogImageAlt = 'VietProfs — Danh bạ giáo sư và nhà khoa học người Việt trên thế giới';
+  const hubLinks = (hubs: HubConfig[], limit?: number) =>
     [...hubs]
       .sort((a, b) => b.people.length - a.people.length)
+      .slice(0, limit ?? hubs.length)
       .map(
         (hub) =>
           `<a class="hub-crosslink" href="../${hub.canonicalPath}">${escapeHtml(hub.categoryName)} (${hub.people.length})</a>`,
@@ -938,11 +952,14 @@ function vietnameseHomePage(
   <meta property="og:description" content="${escapeHtml(description)}">
   <meta property="og:url" content="${canonicalUrl}">
   <meta property="og:image" content="${ogImage}">
-  <meta property="og:image:alt" content="Logo VietProfs">
-  <meta name="twitter:card" content="summary">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="${escapeHtml(ogImageAlt)}">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="${escapeHtml(title)}">
   <meta name="twitter:description" content="${escapeHtml(description)}">
   <meta name="twitter:image" content="${ogImage}">
+  <meta name="twitter:image:alt" content="${escapeHtml(ogImageAlt)}">
   <link rel="icon" type="image/svg+xml" href="../vietprofs-bamboo-v.svg">
   <link rel="apple-touch-icon" href="../vietprofs-bamboo-v-512.png">
   <link rel="manifest" href="../manifest.webmanifest">
@@ -962,7 +979,7 @@ function vietnameseHomePage(
           <h2>VIETPROFS</h2>
           <div class="name-heading">
             <div class="name-title"><h1>Giáo sư & nhà khoa học người Việt trên thế giới</h1></div>
-            <div class="profile-actions"><a class="submission-link" href="../index.html">Mở danh bạ tương tác (tiếng Anh)</a><a class="submission-link lang-switch" href="../index.html" hreflang="en" lang="en">English</a></div>
+            <div class="profile-actions">${renderShareMenu({ title, url: canonicalUrl })}<a class="submission-link" href="../index.html">Mở danh bạ tương tác (tiếng Anh)</a><a class="submission-link lang-switch" href="../index.html" hreflang="en" lang="en">English</a></div>
           </div>
           <p class="native">Danh bạ cộng đồng học thuật và khoa học người Việt ở nước ngoài</p>
         </section>
@@ -988,13 +1005,80 @@ function vietnameseHomePage(
             ${hubLinks(regionHubs)}
           </nav>
         </section>
+        <section class="man-section">
+          <h2>CỰU SINH VIÊN TIÊU BIỂU</h2>
+          <nav class="hub-crosslinks" aria-label="Cựu sinh viên">
+            ${hubLinks(alumniHubs, 24)}
+          </nav>
+        </section>
+        <section class="man-section">
+          <h2>TRƯỜNG &amp; VIỆN TIÊU BIỂU</h2>
+          <nav class="hub-crosslinks" aria-label="Trường và viện nghiên cứu">
+            ${hubLinks(universityHubs, 24)}
+          </nav>
+        </section>
         ${renderSeeAlso('../')}
       </article>
     </main>
     ${renderAddFab('../submit.html', 'Đề xuất hoặc cập nhật thông tin')}
+    <script src="../share.js?v=${assetVersion.share}" defer></script>
   </div>
 </body>
 </html>`;
+}
+
+// Static crawlable fallback injected into dist/index.html inside <div id="app"> so search
+// engines and non-JS clients see live counts and links to every top hub right at "/".
+// Browsers replace #app immediately on startup via renderShell() in src/main.ts.
+function renderIndexFallback(
+  roster: RosterEntry[],
+  fieldHubs: HubConfig[],
+  regionHubs: HubConfig[],
+  alumniHubs: HubConfig[],
+  universityHubs: HubConfig[],
+  countryCount: number,
+  organizationCount: number,
+): string {
+  const hubItems = (hubs: HubConfig[], limit?: number) =>
+    [...hubs]
+      .sort((a, b) => b.people.length - a.people.length)
+      .slice(0, limit ?? hubs.length)
+      .map(
+        (hub) =>
+          `<li><a href="./${hub.canonicalPath}">${escapeHtml(hub.categoryName)} (${hub.people.length})</a></li>`,
+      )
+      .join('');
+  return `<main class="prerendered-directory">
+      <h1>VietProfs — Directory of Vietnamese Professors, Researchers, and Scientists</h1>
+      <p>Searchable directory of ${roster.length.toLocaleString('en-US')} Vietnamese and Vietnamese-diaspora professors, researchers, and scientists across ${countryCount} countries and ${organizationCount.toLocaleString('en-US')} universities, government and nonprofit laboratories, and corporate research labs worldwide.</p>
+      <nav aria-label="Primary sections">
+        <ul>
+          <li><a href="./?sector=academia">Academia</a></li>
+          <li><a href="./?sector=labs">Government, Defense &amp; Nonprofit Labs</a></li>
+          <li><a href="./?sector=industry">Industry Research</a></li>
+          <li><a href="./vi/" hreflang="vi" lang="vi">Tiếng Việt (Vietnamese Directory)</a></li>
+          <li><a href="./connections.html">Research Connections</a></li>
+          <li><a href="./submit.html">Submit or Update an Entry</a></li>
+          <li><a href="./vietprofs.pdf">Read the Paper (PDF)</a></li>
+        </ul>
+      </nav>
+      <section>
+        <h2>Browse by Discipline</h2>
+        <nav aria-label="Browse by discipline"><ul>${hubItems(fieldHubs)}</ul></nav>
+      </section>
+      <section>
+        <h2>Browse by Region</h2>
+        <nav aria-label="Browse by region"><ul>${hubItems(regionHubs)}</ul></nav>
+      </section>
+      <section>
+        <h2>Browse by Alma Mater</h2>
+        <nav aria-label="Browse by alma mater"><ul>${hubItems(alumniHubs, 24)}</ul></nav>
+      </section>
+      <section>
+        <h2>Top Universities &amp; Institutions</h2>
+        <nav aria-label="Top universities and institutions"><ul>${hubItems(universityHubs, 24)}</ul></nav>
+      </section>
+    </main>`;
 }
 
 async function main() {
@@ -1370,17 +1454,51 @@ async function main() {
       await writeFile(outputFile, categoryHubPage(hub));
     }),
   );
+  const countryCount = Object.keys(countryCounts).length;
+  const organizationCount = byUniversity.size;
   await writeFile(
     resolve(viDir, 'index.html'),
     vietnameseHomePage(
       roster,
       fieldHubs.map(vietnameseHub),
       [...continentHubs, ...countryHubs].map(vietnameseHub),
-      Object.keys(countryCounts).length,
+      alumniHubs.map(vietnameseHub),
+      universityHubs.map(vietnameseHub),
+      countryCount,
     ),
   );
 
   if (!development) {
+    const indexPath = resolve(output, 'index.html');
+    const builtIndex = await readFile(indexPath, 'utf8');
+    const liveDescription = `Searchable directory of ${roster.length.toLocaleString('en-US')} Vietnamese professors, researchers, and scientists across ${countryCount} countries in academia, government and nonprofit labs, and industry worldwide.`;
+    const enrichedIndex = builtIndex
+      .replace(
+        /<meta name="description" content="[^"]*"\s*\/?>/,
+        `<meta name="description" content="${escapeHtml(liveDescription)}" />`,
+      )
+      .replace(
+        /<meta property="og:description" content="[^"]*"\s*\/?>/,
+        `<meta property="og:description" content="${escapeHtml(liveDescription)}" />`,
+      )
+      .replace(
+        /<meta name="twitter:description" content="[^"]*"\s*\/?>/,
+        `<meta name="twitter:description" content="${escapeHtml(liveDescription)}" />`,
+      )
+      .replace(
+        '<div id="app"></div>',
+        `<div id="app">\n    ${renderIndexFallback(
+          roster,
+          fieldHubs,
+          [...continentHubs, ...countryHubs],
+          alumniHubs,
+          universityHubs,
+          countryCount,
+          organizationCount,
+        )}\n  </div>`,
+      );
+    await writeFile(indexPath, enrichedIndex);
+
     const hubUrls = [...englishHubs, ...vietnameseHubs].map(
       (hub) =>
         `  <url>\n    <loc>${absoluteUrl(hub.canonicalPath)}</loc>\n    <changefreq>weekly</changefreq>\n    <priority>${hub.categoryType === 'Discipline × Region' || hub.categoryType === 'Institution' || hub.categoryType === 'Alma Mater' ? '0.7' : '0.8'}</priority>\n  </url>`,
@@ -1391,7 +1509,7 @@ async function main() {
           `  <url>\n    <loc>${absoluteUrl(langPath(personPath(person.id), lang))}</loc>${person.lastUpdatedAt ? `\n    <lastmod>${person.lastUpdatedAt.slice(0, 10)}</lastmod>` : ''}\n    <changefreq>monthly</changefreq>\n    <priority>0.7</priority>\n  </url>`,
       ),
     );
-    const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url>\n    <loc>${siteUrl}/</loc>\n    <changefreq>daily</changefreq>\n    <priority>1.0</priority>\n  </url>\n  <url>\n    <loc>${siteUrl}/vi/</loc>\n    <changefreq>daily</changefreq>\n    <priority>0.9</priority>\n  </url>\n  <url>\n    <loc>${siteUrl}/submit.html</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.5</priority>\n  </url>\n${hubUrls.join('\n')}\n${profileUrls.join('\n')}\n</urlset>\n`;
+    const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url>\n    <loc>${siteUrl}/</loc>\n    <changefreq>daily</changefreq>\n    <priority>1.0</priority>\n  </url>\n  <url>\n    <loc>${siteUrl}/vi/</loc>\n    <changefreq>daily</changefreq>\n    <priority>0.9</priority>\n  </url>\n  <url>\n    <loc>${siteUrl}/connections.html</loc>\n    <changefreq>weekly</changefreq>\n    <priority>0.8</priority>\n  </url>\n  <url>\n    <loc>${siteUrl}/submit.html</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.5</priority>\n  </url>\n${hubUrls.join('\n')}\n${profileUrls.join('\n')}\n</urlset>\n`;
     await writeFile(resolve(output, 'sitemap.xml'), sitemap);
   }
   console.log(
