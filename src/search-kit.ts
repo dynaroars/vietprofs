@@ -162,7 +162,8 @@ function debounce(fn: () => void, delayMs: number): () => void {
 function termsInOrder(words: readonly string[], terms: readonly string[], exact: boolean): boolean {
   let i = 0;
   for (const term of terms) {
-    while (i < words.length && !(exact ? words[i] === term : words[i].startsWith(term))) i++;
+    const matches = (word: string) => (exact ? word === term : word.startsWith(term));
+    while (i < words.length && !matches(words[i] ?? '')) i++;
     if (i === words.length) return false;
     i++;
   }

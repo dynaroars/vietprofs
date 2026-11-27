@@ -7,6 +7,8 @@ interface ImportMeta {
 declare module '*.css';
 
 declare const __BUILD_COMMIT__: string;
+declare const __SITE_UPDATED__: string;
+declare const __SITE_UPDATED_LABEL__: string;
 
 interface Document {
   getElementById(elementId: 'app'): HTMLElement;

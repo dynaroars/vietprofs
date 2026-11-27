@@ -224,6 +224,7 @@ function renderShell() {
           <a class="icon-link roars-link" href="https://roars.dev" target="_blank" rel="noopener noreferrer" aria-label="ROARS Lab website" title="ROARS Lab website"></a>
         </div>
       </div>
+      <p class="site-updated">Updated <time datetime="${escapeHtml(__SITE_UPDATED__)}">${escapeHtml(__SITE_UPDATED_LABEL__)}</time></p>
     </header>
     <div class="controls">
       <div class="search-box">

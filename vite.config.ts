@@ -18,6 +18,24 @@ const commit =
       return 'development';
     }
   })();
+// The site's "Updated" date: the latest commit (every data change is a commit and deploys).
+const lastUpdated =
+  (() => {
+    try {
+      return execFileSync('git', ['log', '-1', '--format=%cI'], {
+        cwd: root,
+        encoding: 'utf8',
+      }).trim();
+    } catch {
+      return '';
+    }
+  })() || new Date().toISOString();
+const lastUpdatedLabel = new Intl.DateTimeFormat('en-US', {
+  year: 'numeric',
+  month: 'short',
+  day: 'numeric',
+  timeZone: 'America/New_York',
+}).format(new Date(lastUpdated));
 // public/share.js keeps a fixed name and the host caches it for hours; a content hash in the query
 // makes a changed file load fresh (scripts/generate-profile-pages.ts does the same for its pages).
 const shareVersion = createHash('sha256')
@@ -31,6 +49,8 @@ export default defineConfig({
   base: './',
   define: {
     __BUILD_COMMIT__: JSON.stringify(commit),
+    __SITE_UPDATED__: JSON.stringify(lastUpdated),
+    __SITE_UPDATED_LABEL__: JSON.stringify(lastUpdatedLabel),
   },
   plugins: [
     {
