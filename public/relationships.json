@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-26T00:00:00.000Z",
+  "updatedAt": "2026-11-27T00:00:00.000Z",
   "relationships": [
     {
       "id": "rel-coauthor-vp-0015-vp-0018",
@@ -6769,6 +6769,36 @@
     },
     {
       "type": "doctoral-advisor",
+      "personId": "vp-5383",
+      "role": "mentor",
+      "name": "Laurent Fargues",
+      "affiliation": "",
+      "url": "",
+      "sources": [
+        "https://nguyenkieuhieu.github.io/"
+      ],
+      "evidence": "His personal site says he defended his PhD at University Paris 13 in 2019 under the supervision of Prof. Pascal Boyer and Prof. Laurent Fargues.",
+      "verifiedAt": "2026-11-27T00:00:00.000Z",
+      "works": [],
+      "notes": ""
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-5383",
+      "role": "mentor",
+      "name": "Pascal Boyer",
+      "affiliation": "Université Sorbonne Paris Nord",
+      "url": "",
+      "sources": [
+        "https://nguyenkieuhieu.github.io/"
+      ],
+      "evidence": "His personal site says he defended his PhD at University Paris 13 in 2019 under the supervision of Prof. Pascal Boyer and Prof. Laurent Fargues.",
+      "verifiedAt": "2026-11-27T00:00:00.000Z",
+      "works": [],
+      "notes": ""
+    },
+    {
+      "type": "doctoral-advisor",
       "personId": "vp-5395",
       "role": "mentor",
       "name": "André Capron",
@@ -6915,6 +6945,51 @@
       "evidence": "The official University of San Diego profile says she completed NIH IRACDA postdoctoral training at Emory University, in research under Dr. Philip Kragel.",
       "works": [],
       "verifiedAt": "2026-11-24T00:00:00.000Z",
+      "notes": ""
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-5467",
+      "role": "mentor",
+      "name": "Jamal Atif",
+      "affiliation": "PSL University, CNRS",
+      "url": "",
+      "sources": [
+        "https://virginie-do.github.io/"
+      ],
+      "evidence": "Her personal site says she was advised by Nicolas Usunier (FAIR), Jamal Atif and Jérôme Lang (PSL University, CNRS).",
+      "verifiedAt": "2026-11-27T00:00:00.000Z",
+      "works": [],
+      "notes": ""
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-5467",
+      "role": "mentor",
+      "name": "Jérôme Lang",
+      "affiliation": "PSL University, CNRS",
+      "url": "",
+      "sources": [
+        "https://virginie-do.github.io/"
+      ],
+      "evidence": "Her personal site says she was advised by Nicolas Usunier (FAIR), Jamal Atif and Jérôme Lang (PSL University, CNRS).",
+      "verifiedAt": "2026-11-27T00:00:00.000Z",
+      "works": [],
+      "notes": ""
+    },
+    {
+      "type": "doctoral-advisor",
+      "personId": "vp-5467",
+      "role": "mentor",
+      "name": "Nicolas Usunier",
+      "affiliation": "FAIR (Meta)",
+      "url": "",
+      "sources": [
+        "https://virginie-do.github.io/"
+      ],
+      "evidence": "Her personal site says she was advised by Nicolas Usunier (FAIR), Jamal Atif and Jérôme Lang (PSL University, CNRS).",
+      "verifiedAt": "2026-11-27T00:00:00.000Z",
+      "works": [],
       "notes": ""
     }
   ]
